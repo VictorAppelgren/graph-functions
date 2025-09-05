@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T14:03:08",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EK37KZHEK",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article provides updated financial forecasts and operational insights for Walmart, a key retail company influencing consumer spending and market sentiment, necessitating a dedicated node for accurate macro analysis.",
+      "id": "walmart",
+      "name": "Walmart",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Walmart is a major retail company, requiring a dedicated company node."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Walmart is a retail company, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

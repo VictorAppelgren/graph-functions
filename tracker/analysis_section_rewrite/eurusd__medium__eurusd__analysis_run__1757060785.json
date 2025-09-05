@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-09-05T10:29:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "medium",
+    "test": "True",
+    "run_id": "eurusd__analysis_run__1757060785",
+    "article_ids": "['95J0259BT', 'AJ8DZTV8N', '8AL2MYAN4', 'W88WPFTP3', 'KCKB73IZT']",
+    "selected_articles_count": "5",
+    "material_chars": "5023",
+    "output_chars": "1763",
+    "saved": "False",
+    "saved_field": "medium_analysis",
+    "status": "generated_no_save"
+  },
+  "details": {
+    "llm": {
+      "model": "bound=ChatOpenAI(client=<openai.resources.chat.completions.completions.Completions object at 0x10a50c890>, async_client=<openai.resources.chat.completions.completions.AsyncCompletions object at 0x10adf4690>, root_client=<openai.OpenAI object at 0x10a50c150>, root_async_client=<openai.AsyncOpenAI object at 0x10adf4210>, model_name='openai/gpt-oss-20b', temperature=0.3, model_kwargs={}, openai_api_key=SecretStr('**********'), openai_api_base='http://gate04.cfa.handels.gu.se:8787/v1', request_timeout=900.0, max_retries=0) kwargs={} config={} config_factories=[]",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Add explicit canonical‑handle mapping**: for every claim about DXY, UST10Y, CNY, and USDCNH, insert an inline sign/magnitude pair (e.g., *DXY ↓ 1‑2 % (2025‑09‑02 → 2026‑03‑31)*, *UST10Y ↑ 4‑4.5 %*, *CNY ↑ 1‑3 %*).  \n2. **Insert dated catalyst windows**: attach each trigger to its article’s publication date and a 3‑6‑month horizon (e.g., *Tariff order (2025‑09‑02 → 2026‑03‑31)*, *Fed independence threat (2025‑08‑31 → 2026‑03‑31)*, *China‑Russia oil trade surge (2025‑09‑04 → 2026‑03‑31)*, *EU digital‑sovereignty push (2025‑09‑05 → 2026‑03‑31)*).  \n3. **Cite each source explicitly**: use the article title or a short identifier in parentheses after every factual claim (e.g., *“The tariff apocalypse is here”*).  \n4. **Structure scenarios**: create a concise table or bullet list with **Base Case** (DXY ↓ 1‑2 %, UST10Y ↑ 4‑4.5 %, CNY ↑ 1‑3 %), **Alt 1** (Fed stays independent, tariffs rolled back → DXY ≈ 0 %, UST10Y ≈ 3.5‑4 %, CNY ≈ 0‑1 %), **Alt 2** (China‑Russia trade slows → DXY ↓ 0‑1 %, UST10Y ↑ 3.5‑4 %, CNY ↓ 0‑1 %).  \n5. **Add watch‑list signals and invalidations**: list key indicators (Fed minutes, tariff enforcement pace, China‑Russia oil volumes, EU cloud spending) and state that a dovish Fed stance or tariff rollback invalidates the base case.  \n6. **Quantify all claims**: replace vague phrases (“likely to lift”, “could weaken”) with precise ranges drawn from the articles (e.g., *CNY +1‑3 %*, *consumer prices +5‑10 %*).  \n7. **Remove generic platitudes**: delete any sentence that does not tie directly to a handle or catalyst (e.g., “the shift signals a broader geopolitical realignment” can be shortened to “EU digital‑sovereignty push → modest DXY impact, potential long‑term risk premium”).  \n8. **Add a confidence rating**: conclude with a single‑word rating (“moderate”) and a brief justification tied to the number of converging catalysts.  \n9. **Ensure all content stays within the 3‑6 month horizon**: any mention of longer‑term effects (e.g., “long‑term risk premium”) should be framed as a potential outcome of the 3‑6 month catalysts.  \n\nImplement these edits to transform the draft into a concise, evidence‑anchored, market‑mapped scenario that meets the Argos standards.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__medium__eurusd__analysis_run__1757060785"
+}

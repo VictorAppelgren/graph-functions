@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T23:55:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1N8X6GTA2",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significant economic transformation and investment opportunities in Saudi Arabia and the UAE, necessitating a new atomic node to capture the macroeconomic implications of these sovereign wealth funds and their impact on global investing.",
+      "id": "middle_east_sovereign_funds",
+      "name": "Middle East Sovereign Funds",
+      "type": "macro",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Sovereign wealth funds drive macroeconomic transformation and investment flows in the Middle East, influencing global markets."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "Sovereign wealth funds are macro capital allocators that influence global asset markets and investment flows, directly impacting tradable assets and macro policy dynamics.",
+      "confidence": 0.95,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "This query is constructed to comprehensively capture the diverse aspects of investment opportunities and strategies in the Middle East, particularly focusing on Saudi Arabia and the UAE. It includes relevant financial terms, key players, and contextual factors that influence U.S. investment decisions, ensuring a robust dataset for analysis and decision-making.",
+      "query": "(Saudi Arabia OR KSA OR UAE OR United Arab Emirates OR Gulf States OR Middle East) OR (Vision 2030 OR NEOM OR Public Investment Fund OR PIF OR Abu Dhabi Investment Authority OR Mubadala OR sovereign wealth fund OR wealth fund OR capital allocation) OR (investment OR investments OR investing OR investor OR capital OR funding OR finance OR financial OR market OR markets OR opportunity OR opportunities OR growth OR development) OR (U.S. investors OR American investors OR foreign investment OR joint ventures OR partnerships OR strategic alliances) OR (demographics OR population OR youth OR consumer services OR healthcare OR education OR technology OR tourism) OR (stability OR political stability OR economic stability OR centralized control OR long-term planning) OR (news OR analysis OR report OR trend OR trends OR insight OR outlook OR forecast OR update OR recent OR latest) OR (culture OR respect OR trust OR relationships OR local partner OR alignment OR engagement OR execution OR expertise)"
+    },
+    "importance_classification": {
+      "importance": 3,
+      "rationale": "Middle East sovereign wealth funds (PIF, Abu Dhabi Investment Authority, Mubadala) are significant macro capital allocators that shape sectoral investment flows and long‑term growth trajectories. Their decisions influence asset prices and sector dynamics over a medium horizon (days to months) rather than generating immediate intraday market moves. Thus they qualify as meaningful drivers with sector/thematic scope, fitting the medium‑importance level (3)."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:328"
+}

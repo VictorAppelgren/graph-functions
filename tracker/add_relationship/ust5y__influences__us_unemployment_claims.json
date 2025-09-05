@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T15:00:02",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust5y",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "US 5Y Treasury Yield is a leading indicator of future unemployment claims, influencing labor market expectations.",
+    "candidate_motivation": "These topics directly influence or are closely correlated with the US 5Y Treasury Yield through monetary policy, inflation expectations, term‑structure dynamics, and currency movements.",
+    "existing_links_count": "18",
+    "candidate_count": "10",
+    "all_nodes_count": "36",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust30y', 'sofr', 'dxy', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "18",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218224798715348367",
+    "rel_id": "ust5y__influences__us_unemployment_claims",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5Y Treasury Yield is a leading indicator of future unemployment claims, influencing labor market expectations.",
+      "type": "INFLUENCES",
+      "source": "ust5y",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__influences__us_unemployment_claims"
+}

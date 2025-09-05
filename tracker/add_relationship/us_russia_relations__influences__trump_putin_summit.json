@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:24:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_russia_relations",
+    "target_id": "trump_putin_summit",
+    "selection_motivation": "US‑Russia relations directly shape the occurrence and agenda of the Trump‑Putin summit, a key diplomatic event influencing global geopolitical dynamics.",
+    "candidate_motivation": "These topics are the most plausible direct or closely linked influences on U.S.-Russia relations, as they capture Ukraine-related geopolitics, cyber confrontations, and high-level diplomacy.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ukraine_geopolitical_security', 'ukraine_post_war_instability', 'ukraine_peace_negotiations', 'ukraine_conflict', 'ukraine_diplomacy', 'us_russia_ukraine_diplomacy', 'us_russia_cybersecurity_incident', 'trump_putin_summit', 'trump_putin_meeting', 'eu_geopolitics_ukraine']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_land_deal'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080933",
+    "rel_id": "us_russia_relations__influences__trump_putin_summit",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'trump_putin_summit'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_land_deal'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US‑Russia relations directly shape the occurrence and agenda of the Trump‑Putin summit, a key diplomatic event influencing global geopolitical dynamics.",
+      "type": "INFLUENCES",
+      "source": "us_russia_relations",
+      "target": "trump_putin_summit"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_russia_relations__influences__trump_putin_summit"
+}

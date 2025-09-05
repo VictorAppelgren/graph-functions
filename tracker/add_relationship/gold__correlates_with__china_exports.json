@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T22:25:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "china_exports",
+    "selection_motivation": "In Q1 2025, China’s exports rose 5%, signaling stronger domestic demand for gold and driving the price higher.",
+    "candidate_motivation": "Gold is a macro‑commodity that reacts strongly to inflation expectations, interest‑rate policy, currency strength, risk sentiment, and the performance of other commodities and equity markets. The following topics are the most likely direct or competitive influences or peers of Gold based on these relationships.",
+    "existing_links_count": "10",
+    "candidate_count": "25",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'euribor', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'fed_powell_rate_cut_hint_2025', 'us_unemployment_claims', 'spx', 'sx5e', 'copper', 'wti', 'brent', 'wheat', 'india_industrial_output', 'china_exports', 'china_credit_impulse']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186700700835383342",
+    "rel_id": "gold__correlates_with__china_exports",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "In Q1 2025, China’s exports rose 5%, signaling stronger domestic demand for gold and driving the price higher.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "china_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__china_exports"
+}

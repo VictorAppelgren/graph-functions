@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T16:14:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_geopolitical_security",
+    "target_id": "eu_geopolitics_ukraine",
+    "selection_motivation": "Ukraine Geopolitical Security directly shapes EU geopolitical strategy in the Ukraine conflict, influencing policy decisions, sanctions, and diplomatic initiatives.",
+    "candidate_motivation": "The selected topics are closely related to geopolitical dynamics, economic conditions, and security issues that could influence or correlate with Ukraine's geopolitical security situation.",
+    "existing_links_count": "10",
+    "candidate_count": "8",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_russia_ukraine_diplomacy', 'ukraine_sovereignty', 'ukraine_conflict', 'ukraine_peace_negotiations', 'russia_economic_crisis', 'us_russia_relations', 'eu_geopolitics_ukraine', 'ukraine_geopolitical_security']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966396548",
+    "rel_id": "ukraine_geopolitical_security__influences__eu_geopolitics_ukraine",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Geopolitical Security directly shapes EU geopolitical strategy in the Ukraine conflict, influencing policy decisions, sanctions, and diplomatic initiatives.",
+      "type": "INFLUENCES",
+      "source": "ukraine_geopolitical_security",
+      "target": "eu_geopolitics_ukraine"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_geopolitical_security__influences__eu_geopolitics_ukraine"
+}

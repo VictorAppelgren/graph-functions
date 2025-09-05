@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T10:54:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_online_gaming_legislation_2025",
+    "target_id": "gaming_pricing_strategies",
+    "selection_motivation": "India’s 2025 online gaming legislation will directly shape how game developers and publishers set pricing models, impacting revenue streams and consumer affordability, making a causal influence link to gaming pricing strategies essential for accurate market modeling.",
+    "candidate_motivation": "The legislation directly impacts the online gaming sector in India, so topics that touch on gaming economics, creator investment, or pricing strategies are the most likely to be influenced or correlated.",
+    "existing_links_count": "1",
+    "candidate_count": "2",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "2",
+    "candidate_ids_preview": "['gaming_pricing_strategies', 'creator_economy_investment']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_online_gaming_legislation_2025', 'target': 'creator_economy_investment'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845392",
+    "rel_id": "india_online_gaming_legislation_2025__influences__gaming_pricing_strategies",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_online_gaming_legislation_2025', 'target': 'creator_economy_investment'}, {'type': 'INFLUENCES', 'source': 'india_online_gaming_legislation_2025', 'target': 'gaming_pricing_strategies'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India’s 2025 online gaming legislation will directly shape how game developers and publishers set pricing models, impacting revenue streams and consumer affordability, making a causal influence link to gaming pricing strategies essential for accurate market modeling.",
+      "type": "INFLUENCES",
+      "source": "india_online_gaming_legislation_2025",
+      "target": "gaming_pricing_strategies"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_online_gaming_legislation_2025__influences__gaming_pricing_strategies"
+}

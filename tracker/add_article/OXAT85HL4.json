@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T23:59:21",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OXAT85HL4",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US tariffs and trade policy affect yields and currency.",
+      "existing_ids": [
+        "ust10y",
+        "ust2y",
+        "dxy",
+        "usd_cny",
+        "china_exports",
+        "china_credit_impulse",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "spx",
+        "gold"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a legal ruling that declares President Trump’s tariff policy illegal, directly affecting U.S. trade policy and its enforcement, which is a regulatory change."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a recent court ruling and potential Supreme Court review, directly affecting current U.S. trade policy and market sentiment."
+    },
+    "article_node": {
+      "id": "OXAT85HL4",
+      "title": "Tariff Legal Battle Continues as China, India, Russia Tighten Ties",
+      "summary": "The Bloomberg Businessweek Daily episode focuses on the legal uncertainty surrounding President Trump’s tariff policy after an appeals court ruled the tariffs illegal, with potential Supreme Court review. The discussion highlights how the ruling could affect trade relationships, especially with China, Russia, and India, and examines the broader impact on U.S. trade policy and market sentiment. Meanwhile, analysts touch on corporate news such as Kraft Heinz’s planned breakup and broader market movements, underscoring the interconnectedness of policy, trade, and corporate strategy.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-02/bloomberg-businessweek-daily-9-02-2025-video?srnd=phx-economics-v2",
+      "published_at": "2025-09-02T20:32:05.194000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "OXAT85HL4"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:07:48",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "equity_market_vs_economy",
+    "target_id": "us_10y",
+    "selection_motivation": "Equity market performance strongly drives investor risk appetite and the demand for safe assets, directly influencing the US 10‑Year Treasury Yield, a key macro indicator tied to equity‑market sentiment.",
+    "candidate_motivation": "These topics comprise the primary macro, policy, and cross-asset drivers that typically influence or correlate with equity market behavior relative to the economy.",
+    "existing_links_count": "2",
+    "candidate_count": "29",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "29",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'sp500', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'core_monthly_cpi', 'core_cpi', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'stagflation', 'macro_risks_technology', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_brazil', 'us_inflation_expectations', 'tariff_driven_inflation']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559533737",
+    "rel_id": "equity_market_vs_economy__influences__us_10y",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Equity market performance strongly drives investor risk appetite and the demand for safe assets, directly influencing the US 10‑Year Treasury Yield, a key macro indicator tied to equity‑market sentiment.",
+      "type": "INFLUENCES",
+      "source": "equity_market_vs_economy",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "equity_market_vs_economy__influences__us_10y"
+}

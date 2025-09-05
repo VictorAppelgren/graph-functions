@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T22:38:10",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "494DWKN4F",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and anticipated rate cuts lift UST yields and equity futures, while Trump tariff litigation adds trade‑policy uncertainty.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports Fed officials' cautious stance on future rate hikes, which is a policy statement from a central bank."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node specified in the prompt; unable to assess impact on a specific graph node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events—upcoming jobs data, Fed rate‑cut expectations, trade policy uncertainty, and short‑term market reactions—making it a current‑time‑frame assessment."
+    },
+    "article_node": {
+      "id": "494DWKN4F",
+      "title": "Stocks, Bonds Rise on Growing Fed-Cut Bets",
+      "summary": "Stocks and bonds rise as investors bet on a rapid Fed rate‑cut cycle ahead of the upcoming jobs report. President Trump has asked the Supreme Court to uphold his global tariff program, adding uncertainty to trade policy. European leaders are meeting Zelenskyy to discuss security guarantees for Ukraine, while Fed officials signal a cautious stance on future rate hikes. Robinhood CIO Stephanie Guild highlights opportunities in non‑MAG‑7 stocks amid market volatility.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-04/bloomberg-brief-9-4-2025-video",
+      "published_at": "2025-09-04T12:00:31.425000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "494DWKN4F"
+}

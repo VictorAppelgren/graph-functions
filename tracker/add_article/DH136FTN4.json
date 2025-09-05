@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:33:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DH136FTN4",
+    "status": "success",
+    "topic_id": "us_chip_export_tax"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the U.S. government's potential stake in Intel and its implications for chip sales, which aligns with the existing node on U.S. Chip Export Revenue Sharing.",
+      "existing_node_ids": "us_chip_export_tax",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a regulatory change regarding chip export taxes, which directly impacts the semiconductor industry and trade."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses changes in export regulations that could affect the semiconductor industry, directly impacting the US chip export tax."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses the implications of the US chip export tax, which are likely to have lasting effects on the semiconductor industry and global supply chains."
+    },
+    "article_node": {
+      "id": "DH136FTN4",
+      "title": "‘Devil’s in Details’ With Trump Intel Stake: PIMCO's Cantrill",
+      "summary": "The Trump administration is considering taking a stake in Intel, which may require Congressional approval due to the power of the purse. Additionally, the government plans to receive a portion of revenues from Chinese chip sales by Nvidia and AMD, indicating a shift in U.S. government interaction with American companies. Meanwhile, there are discussions about an IPO for Fannie Mae and Freddie Mac, though significant regulatory hurdles remain. The appointment of a new Fed chair could also impact monetary policy, but any nominee will need Senate confirmation.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-14/-devil-s-in-the-details-with-trump-intel-stake-pimco-video?srnd=all",
+      "published_at": "2025-08-14T21:29:08.605000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "DH136FTN4"
+}

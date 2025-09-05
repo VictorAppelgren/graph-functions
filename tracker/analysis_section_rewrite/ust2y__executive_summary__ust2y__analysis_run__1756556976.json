@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T15:04:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust2y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "ust2y__analysis_run__1756556976",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8826",
+    "output_chars": "1395",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is overly verbose and mixes explanatory prose with data that should be distilled into a crisp, 4‑6‑sentence brief.  Each sentence must end with a clear causal link back to mortgage rates, an explicit sign/magnitude mapping to the canonical proxy **ust10y**, and a concrete catalyst window (date or event).  Remove any drift toward other assets (e.g., DXY, equity indices) and keep the focus strictly on the 30‑year fixed‑rate.  Add inline citations for every driver: Fed policy (LF0UUL917, 7XH2DKEKV), inflation expectations (LF0UUL917, 7XH2DKEKV), debt‑driven Treasury supply (LF0UUL917), loan‑demand dynamics (LF0UUL917), and balance‑sheet contraction (LF0UUL917).  Quantify the outlook: “Mortgage rates will trade 6.5‑7.0 % over the next 12–18 months, with a 10–20 bp upside if core CPI falls below 2.5 % by 1 Oct 2025 (LF0UUL917, 7XH2DKEKV).”  List catalysts in bullet form: • Fed policy meeting 16‑17 Sept 2025 (Fed rate & balance‑sheet stance); • Core CPI release 1 Oct 2025; • Q4 2025 Treasury yield moves; • Monthly mortgage‑origination data.  Finally, state the primary risk: “A Fed rate hike or a 5 % rise in the debt‑to‑GDP ratio could push rates toward the upper 7 % band (LF0UUL917).”  Trim the narrative to these concise, data‑anchored points.",
+      "tokens": {}
+    }
+  },
+  "id": "ust2y__executive_summary__ust2y__analysis_run__1756556976"
+}

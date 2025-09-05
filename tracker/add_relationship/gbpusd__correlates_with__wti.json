@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T05:38:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gbpusd",
+    "target_id": "wti",
+    "selection_motivation": "Oil price movements materially affect the GBP/USD pair through the UK’s net oil import exposure, creating a measurable correlation.",
+    "candidate_motivation": "GBP/USD is driven by dollar strength, UK and US yield dynamics, inflation and employment data, commodity price swings, and central‑bank policy moves; these topics are the most likely to influence or correlate with the pair.",
+    "existing_links_count": "13",
+    "candidate_count": "23",
+    "all_nodes_count": "41",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['usdcny', 'usdjpy', 'eurusd', 'dxy', 'fed_policy', 'ecb_policy', 'uk_30yr_gilt_yield', 'gilt10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'us_crude_inventory', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'wheat']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188952500649068028",
+    "rel_id": "gbpusd__correlates_with__wti",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements materially affect the GBP/USD pair through the UK’s net oil import exposure, creating a measurable correlation.",
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "wti"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gbpusd__correlates_with__wti"
+}

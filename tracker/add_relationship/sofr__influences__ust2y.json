@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:27:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sofr",
+    "target_id": "ust2y",
+    "selection_motivation": "SOFR is the overnight benchmark tied to Fed policy; movements in SOFR directly affect short‑term Treasury yields, making it a primary driver of the 2‑year yield.",
+    "candidate_motivation": "SOFR is a core overnight repo benchmark that is tightly linked to Fed policy, Treasury yields, and U.S. borrowing costs; it also influences the dollar, inflation expectations, and equity valuations, so the most relevant peers and correlates are the U.S. monetary policy framework, Treasury yield curve, dollar index, inflation measures, euro‑area equivalents, and major FX and equity benchmarks.",
+    "existing_links_count": "0",
+    "candidate_count": "15",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'euro_inflation', 'ecb_policy', 'euribor', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'spx']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161632",
+    "rel_id": "sofr__influences__ust2y",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "SOFR is the overnight benchmark tied to Fed policy; movements in SOFR directly affect short‑term Treasury yields, making it a primary driver of the 2‑year yield.",
+      "type": "INFLUENCES",
+      "source": "sofr",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sofr__influences__ust2y"
+}

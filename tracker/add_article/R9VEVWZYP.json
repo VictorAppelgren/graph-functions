@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:45:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "R9VEVWZYP",
+    "topic_discovery_motivation": "Article discusses political shifts within the Scottish Conservative Party, reflecting broader trends in political alignment and governance that may impact investment sentiment.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 4,
+      "existing_ids": [],
+      "new_names": [
+        "Scottish Conservative Party",
+        "Jeremy Balfour",
+        "Russell Findlay",
+        "political alignment trends"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article is about a political resignation, which does not fit any of the specified categories."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports the resignation of a Scottish Conservative MSP, indicating a shift in party dynamics and internal politics, which is directly relevant to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate political event affecting the Scottish Conservative Party, namely the resignation of an MSP and its implications for the upcoming election."
+    },
+    "article_node": {
+      "id": "R9VEVWZYP",
+      "title": "MSP Jeremy Balfour resigns from Conservatives",
+      "summary": "Scottish Conservative MSP Jeremy Balfour has resigned from the party, citing concerns over its shift towards reactionary politics under new leader Russell Findlay. Balfour, who will sit as an independent until the May Holyrood election, criticized the party for ignoring senior MSPs and lacking a positive platform for Scotland. His departure follows that of Jamie Greene, who also left the Tories, accusing them of adopting a 'Trump-esque' style and moving away from socially liberal values.",
+      "source": "https://www.bbc.co.uk/news/articles/c5ylwxwlpx1o",
+      "published_at": "2025-08-22T06:37:28.728000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "R9VEVWZYP"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:09:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_treasury_yields",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_treasury_yields__analysis_run__1756084180",
+    "article_ids": "['Y474W9FO9', 'OGK8WLL69', '22PL3Q360', 'SGB2PAZGK', 'JPAIHPA4N']",
+    "selected_articles_count": "5",
+    "material_chars": "124558",
+    "output_chars": "6723",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "You're close but the piece underserves a multi‑year, first‑principles framework and a disciplined regime map. Actionable edits: (1) reframe around a formal horizon map with invariant anchors (real rate differentials, terms‑of‑trade/BoP, productivity, policy reaction function) and clearly stated regimes (base, upside, downside) plus explicit transition conditions; show how those regimes causally drive market pricing over time, per the SECTION FOCUS. (2) ground every major arc in first‑principles and link to a causal chain: CPI surprises or moderation drive Fed pivots (cite JPAIHPA4N), which shifts term structure and risk premia; RWA tokenization scales via regulatory clarity and custodial standards (cite Y474W9FO9); crypto as treasury/credit‑market plumbing (cite OGK8WLL69); tariff/policy tensions alter supply chains and BoP dynamics (cite SGB2PAZGK). (3) quantify base case and scenarios with the numbers available: $16T RWA by 2030; $4.2B US Treasury tokenization in 2025; ETH near ATHs; potential yield paths on CPI surprises (cite the above IDs); avoid qualitative adjectives without anchors. (4) articulate a clean transmission map: how RWA liquidity, custody standards, and cross‑border regulation interact to price risk; how crypto treasury flows and ETF/inflow dynamics feed yields; how tariffs alter inflation risk and external demand. (5) address conflicts and biases across sources—note that Fox News tariff pieces reflect political signaling; weigh them against macro channels and present a balanced view with explicit assumptions. (6) tighten citations so each factual claim has an ID after it; avoid aggregating multiple claims under a single source when possible; consider dropping the Ford/untethered auto‑industry material unless tied to a regime‑relevant cyclical channel with explicit linkage. (7) specify catalysts and invalidation points: e.g., a CPI print that derails the dovish pivot, a delay or acceleration in RWA custody standards, regulatory shifts that accelerate or cap cross‑border securitization, or a tariff path that materially alters inflation and external balances; (8) finish with a crisp base‑case, a couple of explicit risks, a watchlist (CPI path, RWA regulatory progress, ETH ETF/treasury inflows), and a clear confidence level. The draft currently relies on mixed narratives; restructuring along these axes will unlock world‑class depth (IDs: Y474W9FO9, OGK8WLL69, JPAIHPA4N, SGB2PAZGK, 22PL3Q360 may be kept only as a tangential cyclicity note).",
+      "tokens": {}
+    }
+  },
+  "id": "us_treasury_yields__fundamental__us_treasury_yields__analysis_run__1756084180"
+}

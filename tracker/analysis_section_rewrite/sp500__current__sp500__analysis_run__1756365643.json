@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T09:28:12",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "current",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756365643",
+    "article_ids": "['XQF4R2JQJ', 'MSPXAOHU8', 'T7HLAX8QN', 'E9KQQQ0FK', 'RAV2UWRTT']",
+    "selected_articles_count": "5",
+    "material_chars": "151184",
+    "output_chars": "2524",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is too broad and lacks a tight 0‑3‑week causal chain. Re‑structure it into three sections—macro drivers, sector‑specific catalysts, and individual‑stock outlooks—each with a clear reaction function and key levels. For macro, quantify the Fed’s dovish stance (e.g., Powell’s Jackson‑Hole hint → S&P 500 +1.5% today, Nvidia +3.5% after earnings) and the AI‑bubble risk (MIT report → Nvidia down 3.5% today, other AI stocks 3–5%). For sectors, tie the European penny‑stock rally to the STOXX 600 1.40% lift from lower U.S. borrowing costs (XQF4R2JQJ) and the Hong Kong tech gains to Powell’s rate‑cut hint (T7HLAX8QN). For each stock, list concrete catalysts (e.g., Nvidia Q2 earnings on Aug 28, MIT report release on Aug 26, Powell’s speech on Sept 5, Evergrande debt‑resolution news) and quantify upside ranges (Nvidia revenue +20–30% YoY → S&P up 1–2%; Tractial cash runway 7 mo → 5–10% upside if new capital raised). Add inline citations (e.g., (XQF4R2JQJ), (MSPXAOHU8), (T7HLAX8QN)) after each numeric claim, and reconcile conflicting figures (e.g., Nvidia revenue 44.1 B vs 18.8 B net income). Finally, state clear invalidation points (e.g., Nvidia misses revenue target → S&P falls 1%; AI report confirms bubble → tech stocks drop 5%) and what to monitor next (Nvidia earnings, Powell’s speech, Evergrande status). This will give the analysis depth, coherence, and actionable signals.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__current__sp500__analysis_run__1756365643"
+}

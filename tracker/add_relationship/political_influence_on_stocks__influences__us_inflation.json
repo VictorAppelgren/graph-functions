@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:22:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "political_influence_on_stocks",
+    "target_id": "us_inflation",
+    "selection_motivation": "Political influence on stocks drives fiscal and monetary policy decisions that directly shape US inflation expectations, making a direct link to US inflation essential for accurate macro‑financial modeling.",
+    "candidate_motivation": "These topics are the most probable direct or competitive influences on stocks via policy levers (monetary and fiscal), trade tensions, and geopolitical risk, aligning with the source's focus on political influence on equities.",
+    "existing_links_count": "5",
+    "candidate_count": "31",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "31",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'tariff_driven_inflation', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_brazil', 'us_trade_policy_inflation', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'china_us_tariff_truce', 'us_china_tariffs', 'us_export_policy_ai_chips', 'us_china_ai_chip_exports', 'us_china_ai_chip_agreement', 'china_nvidia_policy', 'china_semiconductor_policy', 'china_ai_semiconductors', 'nvidia_china_geopolitics', 'geopolitics_corporate_strategy', 'ukraine_conflict', 'ukraine_peace_negotiations', 'ukraine_diplomacy', 'ukraine_geopolitics', 'russia_economic_crisis', 'russian_sanctions', 'eu_geopolitics_ukraine']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587100",
+    "rel_id": "political_influence_on_stocks__influences__us_inflation",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Political influence on stocks drives fiscal and monetary policy decisions that directly shape US inflation expectations, making a direct link to US inflation essential for accurate macro‑financial modeling.",
+      "type": "INFLUENCES",
+      "source": "political_influence_on_stocks",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "political_influence_on_stocks__influences__us_inflation"
+}

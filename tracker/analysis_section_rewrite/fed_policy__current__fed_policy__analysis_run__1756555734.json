@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:14:28",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756555734",
+    "article_ids": "['3952FOSRQ', 'Z7K8PC4G5', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "107096",
+    "output_chars": "1167",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Quantify Probabilities & Dates** – Add the exact 89 % probability of a September cut from 97MD1FHW8 and the exact release date of the July PCE (e.g., 15 Sep 2025).  \n2. **Specify Cut Size** – Clarify that Waller hinted at a 25‑bp (0.25 %) cut (U21K4ALYQ).  \n3. **Causal Link Tariffs → Inflation → Yields** – Cite how the court ruling (3952FOSRQ) removes 10 % universal tariffs, lowering import‑price inflation and compressing the term premium.  \n4. **Define Yield Thresholds** – State support at 4.20 % and resistance at 4.25 % for the 10‑year.  \n5. **Range Justification** – Explain the ±10 bp range by referencing the current 4.23 % level and the 89 % cut odds (97MD1FHW8).  \n6. **Invalidate Conditions** – Explicitly note that a core PCE drop below 2.5 % or an actual Fed cut would lower yields (97MD1FHW8, U21K4ALYQ).  \n7. **Tariff‑Risk Impact** – Add that an increase in tariff risk would raise import‑price inflation, pushing yields higher (3952FOSRQ).  \n8. **Concise Action** – Remove any generic statements (“high probability”) and replace with the concrete numbers above.  \n9. **Citation Consistency** – Ensure every claim has an inline (ID) citation; e.g., “core PCE rose 0.3 % to 2.9 % (97MD1FHW8).”  \n\nImplement these edits to meet the 0–3 week horizon, maintain causal clarity, and satisfy the truth‑over‑verbosity rule.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1756555734"
+}

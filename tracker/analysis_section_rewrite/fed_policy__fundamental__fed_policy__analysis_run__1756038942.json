@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:35:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756038942",
+    "article_ids": "['C3ODMIQKZ', 'TN66GHPAT', '37UZC9X8I', 'H7Q52FKDH', 'GX057ADL7']",
+    "selected_articles_count": "5",
+    "material_chars": "114524",
+    "output_chars": "5776",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strengths exist in tying macro streams to tech-capital cycles, but to reach world-class quality you should: (1) replace the current ad‑hoc narrative with a clean, first‑principles regime map for a multi‑year horizon—state invariant anchors (real rate differentials, terms‑of‑trade, productivity, BoP/policy reaction functions) and explicit regime definitions (e.g., Regime A: monetary easing in US/DMs with inflation contained; Regime B: inflation persists and policy stays tight; Regime C: neutral/late-cycle); (2) spell out the causal chain from policy to market pricing (policy stance → financial conditions via the dollar and yields → corporate investment and AI deployment; include transmission through risk premia, credit spreads, and capex cycles); (3) outline transition conditions and trigger events, with a clear base case plus upside/downside regimes keyed to real-time data (CPI, payrolls, wage growth, Jackson Hole rhetoric) and sanctions/ geopolitics; (4) anchor all forward‑looking statements to explicit numbers drawn from the sources (e.g., 10‑year yields around 4.23% and pricing of a September Fed cut around 25–50bp per GX057ADL7; the call for a 50bp cut by Scott Bessent in GX057ADL7; FX/dollar impulse described in 37UZC9X8I); (5) quantify and disequilibrate: attach ranges to the base case (e.g., dollar softness, modestly higher risk appetite, capex cycles) and specify how much your outcomes shift with a 0.2–0.5pp CPI surprise or a 25–50bp policy surprise; (6) tighten the linkage from micro debt/loan factors to macro through a consumer-finance channel (C3ODMIQKZ) only as a micro anchor, not as the engine of the multi-year thesis; (7) fix sourcing discipline: map every assertion to a cited source with exact IDs and reconcile conflicts (e.g., Fed Jackson Hole not equivalent to a rate decision, but markets infer policy paths; juxtapose Bloomberg/TV commentary (37UZC9X8I) with the Horizons transcript (GX057ADL7) and the sectoral updates (TN66GHPAT, H7Q52FKDH)); (8) present a crisp, readable base case plus explicit watch items and a confidence score; and (9) ensure the analysis adheres to the horizon focus by front‑loading regime definitions and using a consistent, multi‑year causal chain rather than episodic, single‑source snippets.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1756038942"
+}

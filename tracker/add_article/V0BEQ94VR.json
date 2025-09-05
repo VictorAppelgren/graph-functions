@@ -1,0 +1,39 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T13:51:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "V0BEQ94VR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy uncertainty from the Cook removal threat pushes US 10Y yields higher, weakens the dollar, and pressures equity markets.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "dxy",
+        "eurusd",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article discusses President Trump’s attempt to remove Fed Governor Lisa Cook, which is an official political statement affecting Fed policy and independence."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a high‑profile attempt to remove a Fed governor, raising immediate concerns about Fed independence, bond market volatility, and dollar strength—directly affecting the Fed policy node and related rate expectations."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate political actions and their short‑term impact on Fed independence, bond markets, and the dollar."
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "V0BEQ94VR"
+}

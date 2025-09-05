@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:24:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZUZ7GFNM2",
+    "topic_discovery_motivation": "Article discusses IRLAB Therapeutics' focus on Parkinson's disease treatments, relevant to healthcare and pharmaceutical investment analysis.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 4,
+      "existing_ids": [],
+      "new_names": [
+        "IRLAB Therapeutics",
+        "Parkinson's disease treatments",
+        "Mesdopetam",
+        "Pirepemat"
+      ]
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article announces the release of an interim financial report for IRLAB Therapeutics AB, which is a company earnings event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major event (interim report) for IRLAB Therapeutics AB, directly impacting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a scheduled presentation of an interim report, which is a medium-term event rather than a long-term structural change or an immediate occurrence."
+    },
+    "article_node": {
+      "id": "ZUZ7GFNM2",
+      "title": "IRLAB: Invitation to The Interim Report for Q2 2025 Presentation and Webcast",
+      "summary": "IRLAB Therapeutics AB will present its interim report for January - June 2025 on August 27, 2025, at 10:00 CEST via digital webcast. The report will be available on their website, along with a recorded version of the presentation. The company is focused on developing treatments for Parkinson's disease, with several candidates in various stages of clinical trials, including Mesdopetam and Pirepemat.",
+      "source": "https://finance.yahoo.com/news/irlab-invitation-interim-report-q2-062000910.html",
+      "published_at": "2025-08-22T06:20:00+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "ZUZ7GFNM2"
+}

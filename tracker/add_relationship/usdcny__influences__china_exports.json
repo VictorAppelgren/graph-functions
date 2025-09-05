@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T15:59:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usdcny",
+    "target_id": "china_exports",
+    "selection_motivation": "USD/CNY depreciation drives Chinese exports; a 1% yuan depreciation correlates with a 5‑10% rise in export volumes, and the upcoming export data release on 2025‑10‑15 provides a catalyst.",
+    "candidate_motivation": "USD/CNY is driven by U.S. monetary policy, Treasury yields, dollar strength, U.S. macro data, and Chinese trade/credit conditions. It also correlates with other FX pairs and the U.S. dollar index.",
+    "existing_links_count": "11",
+    "candidate_count": "15",
+    "all_nodes_count": "34",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'china_exports', 'china_credit_impulse', 'usdjpy', 'gbpusd', 'ecb_policy', 'euro_inflation']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182196001696383872",
+    "rel_id": "usdcny__influences__china_exports",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/CNY depreciation drives Chinese exports; a 1% yuan depreciation correlates with a 5‑10% rise in export volumes, and the upcoming export data release on 2025‑10‑15 provides a catalyst.",
+      "type": "INFLUENCES",
+      "source": "usdcny",
+      "target": "china_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdcny__influences__china_exports"
+}

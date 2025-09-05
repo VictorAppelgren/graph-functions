@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:53:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "US2UXXYUJ",
+    "status": "rejected",
+    "reject_category": "micro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the increasing consumption of meat in the U.S. despite a rise in vegetarianism, indicating a significant macro trend that impacts food industry dynamics and consumer behavior, warranting a new node.",
+      "id": "us_meat_consumption",
+      "name": "US Meat Consumption",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "micro_driver",
+      "motivation": "Consumer preferences for healthier, more sustainable, and ethical food options, coupled with growing awareness of the environmental and health impacts of animal-based products."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "US Meat Consumption is a specific industry consumption metric, not a macro driver or tradable asset; it falls under disallowed industry verticals.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

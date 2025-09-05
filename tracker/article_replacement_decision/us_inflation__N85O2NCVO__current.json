@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T07:57:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "N85O2NCVO",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['U21K4ALYQ', '97MD1FHW8', '3952FOSRQ', '3DN5GGP1G', '3YAQ8JUPL', '128BENV6R', 'LLN6N4H3Z', '1G54B8R46', 'S1OY7ISLY']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "invalid_llm_selection",
+    "target_id": "128BENV6R",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": null,
+      "motivation": "The article focuses on Apple iPhone rumors, which do not map to any canonical macro handle (indices, rates, FX, commodities, credit, vol, etc.) and lacks a macro‑level catalyst window, making it irrelevant for the graph."
+    }
+  },
+  "id": "us_inflation__N85O2NCVO__current"
+}

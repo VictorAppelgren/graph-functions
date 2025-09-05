@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T01:20:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756595330",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "4879",
+    "output_chars": "966",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft follows the required 4‑mover‑line and 2‑trade‑line format, but it contains a few non‑compliant elements that should be cleaned up before publication:\n\n1. **Remove the explanatory “Main‑focus check” block** – it is not part of the mandated output.  \n2. **Probabilities must be evidence‑driven** – the source material suggests a 5‑10 % pullback is “moderate confidence” and a 3‑5 % upside is also “moderate confidence.”  Re‑weight the probabilities to reflect this: pullback 35 %, upside 30 %, the secondary upside scenario 25 %, and the secondary downside scenario 30 %.  \n3. **Ensure every numeric claim has a citation** – the target levels (4 750 and 4 200) already have citations, but the entry (4 500) and stop (4 200) should also reference the same source (B1KYJ1GPU)(3YAQ8JUPL) to satisfy the “specific facts or numbers” rule.  \n4. **Keep the trade lines concise** – each line must contain exactly 10 fields in the order specified.  The current lines already meet this, but double‑check that no hidden commas or extra spaces create an 11th field.  \n5. **Add a brief asset identifier if desired** – while not required, appending “spx” after the direction (e.g., “Up spx”) can improve clarity for readers who skim the output.  \n\nAfter applying these edits, the output will be a clean, compliant, high‑signal swing‑trade outlook that meets all ARGOS standards.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756595330"
+}

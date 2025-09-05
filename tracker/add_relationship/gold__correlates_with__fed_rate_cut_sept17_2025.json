@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T12:10:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "Gold price movements are strongly correlated with expectations of Fed rate cuts, as investors move into safe‑haven assets ahead of anticipated monetary easing.",
+    "candidate_motivation": "Gold is a commodity and safe‑haven asset whose price is strongly driven by macro fundamentals—especially inflation expectations, the U.S. dollar, and U.S. monetary policy.  Therefore topics that directly influence or are influenced by these factors are the most plausible peers or influences.",
+    "existing_links_count": "19",
+    "candidate_count": "10",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1220477698040662062",
+    "rel_id": "gold__correlates_with__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold price movements are strongly correlated with expectations of Fed rate cuts, as investors move into safe‑haven assets ahead of anticipated monetary easing.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__fed_rate_cut_sept17_2025"
+}

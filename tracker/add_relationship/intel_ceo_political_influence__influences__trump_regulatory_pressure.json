@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:09:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_ceo_political_influence",
+    "target_id": "trump_regulatory_pressure",
+    "selection_motivation": "The CEO's political influence directly shapes the regulatory stance of the Trump administration toward Intel, making this a key driver of policy outcomes.",
+    "candidate_motivation": "These topics represent direct political actions, policy levers, and CEO-level political dynamics that could influence Intel's leadership decisions, strategic risk, and stock sensitivity in a geopolitically charged semiconductor landscape.",
+    "existing_links_count": "3",
+    "candidate_count": "12",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['intel_ceo_trump_meeting', 'intel_ceo_tan', 'trump_regulatory_pressure', 'intel_ceo_pressure', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_relations', 'china_nvidia_policy', 'geopolitics_corporate_strategy', 'intel_stock_trump_influence']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'us_tariffs_on_technology'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216477",
+    "rel_id": "intel_ceo_political_influence__influences__trump_regulatory_pressure",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_political_influence', 'target': 'trump_regulatory_pressure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The CEO's political influence directly shapes the regulatory stance of the Trump administration toward Intel, making this a key driver of policy outcomes.",
+      "type": "INFLUENCES",
+      "source": "intel_ceo_political_influence",
+      "target": "trump_regulatory_pressure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_ceo_political_influence__influences__trump_regulatory_pressure"
+}

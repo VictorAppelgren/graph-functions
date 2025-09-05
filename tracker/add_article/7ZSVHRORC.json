@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T16:18:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7ZSVHRORC",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and labor data shape bond yields, equity futures, and commodity pricing, while OPEC+ supply outlook influences oil and gold moves.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_crude_inventory",
+        "ust10y",
+        "ust30y",
+        "ust2y",
+        "ust5y",
+        "gold",
+        "wti"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a favorable court ruling that lifted Google and the Mag‑7, a legal development affecting those companies."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions and near‑term catalysts such as a court ruling, short‑term bond yield movements, and the Fed’s expected rate cut later this month."
+    },
+    "article_node": {
+      "id": "7ZSVHRORC",
+      "title": "Futures Rebound As Google Jumps On Court Ruling, Bond Selloff Fades",
+      "summary": "US equity futures bounce after a two‑day slide, driven by a favorable court ruling that lifted Google and the Mag‑7, pushing S&P futures 0.5% and Nasdaq 0.7% higher. Global bond sell‑off eases, with US 30‑year yields up 2bp while European and Japanese long‑dated bonds fall; gold gains its seventh straight session and WTI falls 1.7% amid OPEC+ supply‑boost speculation. Cyclicals are positioned to outperform as the yield curve steepens, and the Fed is expected to cut rates later this month, with JOLTS and the Beige Book as key catalysts.",
+      "source": "https://www.zerohedge.com/market-recaps/futures-rebound-google-jumps-court-ruling-bond-selloff-fades",
+      "published_at": "2025-09-03T08:36:42-04:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "7ZSVHRORC"
+}

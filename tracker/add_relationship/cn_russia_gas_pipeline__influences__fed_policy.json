@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T01:21:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "cn_russia_gas_pipeline",
+    "target_id": "fed_policy",
+    "selection_motivation": "China's gas imports via the pipeline raise inflation expectations, which directly influence Fed policy decisions.",
+    "candidate_motivation": "The source topic concerns a major energy supply corridor that directly impacts China’s gas imports, so topics linked to China’s energy and macro environment, global oil and commodity markets, currency dynamics, and interest‑rate/credit markets that are sensitive to energy prices and geopolitical risk are plausible influences or peers.",
+    "existing_links_count": "7",
+    "candidate_count": "35",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "35",
+    "candidate_ids_preview": "['china_exports', 'china_credit_impulse', 'china_pos2_pipeline', 'usdcny', 'dxy', 'us_inflation', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'wheat', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'us_crude_inventory', 'usdjpy', 'gbpusd', 'eurusd', 'sx5e', 'spx', 'bund10y', 'uk_30yr_gilt_yield', 'gilt10y', 'jgb10y', 'eu_defense_spending', 'eur_at1_issuance']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586671",
+    "rel_id": "cn_russia_gas_pipeline__influences__fed_policy",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China's gas imports via the pipeline raise inflation expectations, which directly influence Fed policy decisions.",
+      "type": "INFLUENCES",
+      "source": "cn_russia_gas_pipeline",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cn_russia_gas_pipeline__influences__fed_policy"
+}

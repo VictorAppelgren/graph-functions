@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T16:13:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M53DE4YVW",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation expectations and tariff‑driven price hikes feed into Treasury yields and Fed policy.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Apple pricing changes for new iPhone models, which is a company update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Apple’s announced price hikes for the iPhone 17 Pro and Pro Max are likely to influence AAPL stock and the broader tech sector, potentially affecting equity indices such as the S&P 500, warranting a moderate impact assessment."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an imminent pricing announcement for the iPhone 17 series at Apple’s September 9 event, which is an immediate event affecting Apple’s product pricing and market perception."
+    },
+    "article_node": {
+      "id": "M53DE4YVW",
+      "title": "Modest iPhone 17 Pro price increase rumor challenged by new estimate",
+      "summary": "TrendForce reports that the iPhone 17 Pro and Pro Max will see significant price hikes of $200 and $100 respectively, with the Pro’s base storage rising to 256GB and the Pro Max remaining at 256GB. The base iPhone 17 will stay at $799, while the Pro Max is expected to cost $1,299. JP Morgan’s forecast of a $100 increase for the Pro is contradicted by TrendForce’s higher estimates, and the Air model is projected to start at $1,099. Apple will announce final pricing at its September 9 event.",
+      "source": "https://appleinsider.com/articles/25/09/04/modest-iphone-17-pro-price-increase-rumor-challenged-by-new-estimate",
+      "published_at": "2025-09-04T12:02:49+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "M53DE4YVW"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T19:30:54",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "N9CTD4I2N",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Apple iPhone 17 Air release may pressure Apple stock and S&P 500.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Apple's rumored iPhone 17 Air launch and product details, which is a company news update not related to earnings."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Rumor of iPhone 17 Air launch; no confirmed release, limited immediate impact on Apple stock or macro markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on an upcoming product launch and associated production issues, which are medium‑term events likely to influence Apple’s market dynamics within the next year."
+    },
+    "article_node": {
+      "id": "N9CTD4I2N",
+      "title": "Why I Won't Be Buying the iPhone 17 Air on Release Day",
+      "summary": "Apple's rumored iPhone 17 Air, slated for a September 2025 launch, is expected to feature a titanium chassis, a 6.6‑inch OLED display, a single 48‑MP camera, and a 2,800‑mAh battery that may struggle to last a full day. The article highlights potential first‑day production issues such as bending and overheating, a price point around $899, and the use of an A19 chip and new Wi‑Fi/5G silicon. It also touches on Apple’s broader hardware roadmap, including the iPhone 15 Pro’s titanium design and USB‑C upgrade, and notes that the iPhone 17 Air’s slim profile may appeal to style‑conscious buyers but could compromise camera versatility and battery life.",
+      "source": "https://www.howtogeek.com/why-i-wont-be-buying-the-iphone-17-air-on-release-day/",
+      "published_at": "2025-08-30T14:30:15+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "N9CTD4I2N"
+}

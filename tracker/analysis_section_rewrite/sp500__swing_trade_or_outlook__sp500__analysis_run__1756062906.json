@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:23:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756062906",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19578",
+    "output_chars": "1613",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong effort and solid regime framing, but to reach world-class quality you should (1) lock Movers to exactly 4 lines: two Up and two Down, each with the same 3–6 month horizon, a tight Driver/Mechanism, a concrete What to watch line (measurable triggers), and a probability anchored in the material (e.g., Regime A 50%, Regime B 30%, Regime C 20%) with inline IDs only for asserted facts; remove any stray or overlapping items and limit to catalysts that actually drive regime shifts (tariff cadence, capex milestones, major AI/data-center deployments, and observed real-rate/risk-premia signals). (2) Rebuild the probabilities to reflect explicit regime weights from the sources (A ≈ 50%, B ≈ 30%, C ≈ 20%) rather than ad hoc percentages; cite the weights where used and avoid mixing numbers that aren’t supported. (3) Reformat the Outlook line to the exact Required fields: Direction | Horizon | Expected path/levels | Decision signals | Invalidation | Trigger | Probability % | Confidence, and keep it to 1 line if possible; ensure it clearly states bullish/neutral/bearish direction and a concrete trigger (e.g., a policy shift or capex miss). (4) Strengthen the causal chain: clearly articulate a single, first‑principles transmission from tariffs and policy to capital reallocation (U.S. fabs/AI infra) and then to asset prices, linking each mover to a specific leg of that chain with one or two numeric markers. (5) Tighten What to watch with precise, source-backed metrics (e.g., tariff announcements, capex guidance from major fabs/AI data-centers, Nvidia AI compute orders, Red Sea shipping/energy indicators, GMV/revenue or capex milestones) and drop nonessential items unless they are central to regime transitions; if you keep items like Shopify/YouTube, bind them to the regime story and cite them consistently. (6) Audit sources for conflicts and resolve them: correct factual slips (e.g., the Starbucks CEO reference) and ensure every numeric claim has a source ID; reconcile any contradictions across SGB2PAZGK, NL5YYTLF2, STBVARD8F, I2SJU04DF, NBX9RA9WX, QGXA2WQJ3, 22PL3Q360, 65UUBU0OR, O4ZEED2EB, etc. (7) Trim overstated or speculative elements to preserve credibility and ensure every line is numerically grounded. (8) Confirm tradability in the Trade/Outlook Plan; if non‑tradable, convert to a concise Outlook line with precise levels and invalidation triggers. Implement these edits to deliver a crisp, numerically grounded, first‑principles Swing Trade/Outlook that faithfully mirrors the material and formatting constraints.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756062906"
+}

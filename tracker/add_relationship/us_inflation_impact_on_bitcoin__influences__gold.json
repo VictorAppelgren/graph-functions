@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:58:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_impact_on_bitcoin",
+    "target_id": "gold",
+    "selection_motivation": "US inflation influences Bitcoin’s price, and Bitcoin is widely regarded as a digital gold; linking the inflation impact node to gold enables cross‑asset correlation analysis and better risk‑management insights.",
+    "candidate_motivation": "Bitcoin is highly sensitive to macro inflation expectations and monetary policy; the most influential peers are inflation indicators, policy rates, currency moves, and broad risk sentiment that affect both inflation-sensitive assets and crypto markets.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation_data', 'fed_policy', 'us_10y', 'usd', 'gold', 'oil', 'sp500', 'stablecoins', 'ibit_investments', 'swift_bitcoin_parallels']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_bitcoin', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137442579",
+    "rel_id": "us_inflation_impact_on_bitcoin__influences__gold",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_bitcoin', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_bitcoin', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US inflation influences Bitcoin’s price, and Bitcoin is widely regarded as a digital gold; linking the inflation impact node to gold enables cross‑asset correlation analysis and better risk‑management insights.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_impact_on_bitcoin",
+      "target": "gold"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_impact_on_bitcoin__influences__gold"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T12:32:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_10y",
+    "target_id": "core_monthly_cpi",
+    "selection_motivation": "US 10‑Year Treasury Yield is a primary gauge of market inflation expectations, which directly shape core monthly CPI readings.",
+    "candidate_motivation": "The US 10Y Treasury Yield is predominantly driven by domestic inflation dynamics and Fed policy expectations. The shortlisted topics represent key macro variables and policy signals that strongly move or correlate with yields.",
+    "existing_links_count": "11",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'core_monthly_cpi', 'us_inflation_data', 'us_treasury_yields', 'usd']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1204713999833235463",
+    "rel_id": "us_10y__influences__core_monthly_cpi",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑Year Treasury Yield is a primary gauge of market inflation expectations, which directly shape core monthly CPI readings.",
+      "type": "INFLUENCES",
+      "source": "us_10y",
+      "target": "core_monthly_cpi"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_10y__influences__core_monthly_cpi"
+}

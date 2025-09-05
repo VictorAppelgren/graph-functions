@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T11:27:31",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WEUM3ZICE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and falling 10‑year yields support equity gains and boost expectations of a September rate cut, while JOLTS and PMI data reinforce the outlook.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article cites Alphabet's 9% jump following an antitrust ruling and Apple's 3% rise after a court decision on its Google search deal, indicating regulatory actions affecting company performance."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Difficulty assessing node relevance due to missing node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to Fed signals, court rulings, and commodity price changes, which are short‑term events."
+    },
+    "article_node": {
+      "id": "WEUM3ZICE",
+      "title": "Stocks Supported as Chances Improve for a Fed Rate Cut",
+      "summary": "The S&P 500 rose 0.51%, Nasdaq up 0.79% and the Dow slipped 0.05% as markets rallied on the backdrop of falling 10‑year Treasury yields and heightened expectations of a Fed rate cut.  Megacap tech names led the rally, with Alphabet jumping 9% after an antitrust ruling and Apple up 3% following a court decision on its Google search deal, while energy stocks fell as WTI dropped over 2%.  Fed officials signaled a likely cut at the next meeting, with futures pricing a 25‑bp cut at 95% probability, reinforcing the positive sentiment for the equity market. ",
+      "source": "https://www.nasdaq.com/articles/stocks-supported-chances-improve-fed-rate-cut",
+      "published_at": "2025-09-03T22:28:39+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "WEUM3ZICE"
+}

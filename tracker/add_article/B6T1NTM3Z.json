@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T12:15:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "B6T1NTM3Z",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Political uncertainty from potential Senate rule change could pressure US Treasury yields and Fed policy expectations.",
+      "existing_ids": [
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article describes a political maneuver by Senate Republicans threatening to use the nuclear option, which does not fit any of the predefined categories such as macroeconomic events, earnings, regulation, policy statements, central bank actions, economic data releases, geopolitical events, company updates, or market commentary. Therefore it falls under 'other'."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The node reference is missing, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on an immediate political event that could influence short‑term policy and market sentiment."
+    },
+    "article_node": {
+      "id": "B6T1NTM3Z",
+      "title": "Top Senate Republican ready to 'roll over' Democrats with rule change to confirm Trump nominees",
+      "summary": "Senate Republicans, led by Majority Whip John Barrasso, are threatening to use the nuclear option to fast‑track President Trump’s pending nominees after Democrats, led by Chuck Schumer, block them. Trump has demanded that the Senate stay in Washington to approve the entire slate, while Republicans propose rule changes or recess appointments to bypass filibusters. Negotiations collapsed when Trump accused Democrats of political extortion, leaving the Senate without a deal and setting the stage for a potential rules overhaul when lawmakers return in September.",
+      "source": "https://www.foxnews.com/politics/top-senate-republican-ready-roll-over-democrats-rule-change-confirm-trump-nominees",
+      "published_at": "2025-08-30T05:00:53-04:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "B6T1NTM3Z"
+}

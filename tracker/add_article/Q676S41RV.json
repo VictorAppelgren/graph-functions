@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T03:11:40",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Q676S41RV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; a $350M funding round for Sierra signals robust venture capital appetite, likely lifting tech‑heavy indices (S&P 500, Nasdaq) and boosting risk sentiment reflected in US Treasury yields and the DXY, while prompting a modest gold safe‑haven response.",
+      "existing_ids": [
+        "spx",
+        "ndx",
+        "dxy",
+        "gold",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a new funding round for Sierra, a startup, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Insufficient information about the target node to determine relevance of the Sierra funding article."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent funding round, an immediate event affecting Sierra’s valuation and expansion plans."
+    },
+    "article_node": {
+      "id": "Q676S41RV",
+      "title": "Bret Taylor's Sierra raises $350M at a $10B valuation",
+      "summary": "Sierra, a customer‑service AI agent startup founded by former Salesforce co‑CEO Bret Taylor and Google veteran Clay Bavor, closed a $350 million round led by Greenoaks Capital, valuing the company at $10 billion. The funding brings total capital raised to $635 million and follows earlier $110 million and $175 million rounds. Sierra already serves hundreds of enterprise customers such as SoFi, Ramp, and Brex, and plans to use the new capital to expand its platform, US growth, and international presence.",
+      "source": "https://techcrunch.com/2025/09/04/bret-taylors-sierra-raises-350m-at-a-10b-valuation/",
+      "published_at": "2025-09-04T23:33:40+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "Q676S41RV"
+}

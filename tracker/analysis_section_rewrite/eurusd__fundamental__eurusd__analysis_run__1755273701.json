@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-15T18:01:41",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755273701",
+    "article_ids": "['BOG34JP5K', 'HWGNUP2XG', 'J8D0E7VC2', 'XPGIRT4RH', 'OD4H7F875']",
+    "selected_articles_count": "5",
+    "material_chars": "126373",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "fundamental_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-oss",
+      "feedback": "The article’s headline “Apollo 13” re‑launching into IMAX theaters for 30th anniversary should be in title case: **“Apollo 13” Re‑Launching into IMAX Theaters for 30th Anniversary**.  All headings that follow the same pattern need the same treatment (e.g., “Universal Pictures’ 1995 movie” → “Universal Pictures’ 1995 Movie”).  Replace every instance of “theaters” with “Theaters”, “anniversary” with “Anniversary”, and “movie” with “Movie” when they appear in headings.  Ensure that any quoted titles such as “Earthrise” or “Apollo 8” are capitalized correctly and that the article’s main title follows the style guide’s title‑case rule.  No other style changes are required.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__fundamental__eurusd__analysis_run__1755273701"
+}

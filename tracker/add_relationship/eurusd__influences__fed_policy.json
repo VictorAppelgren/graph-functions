@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:56:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eurusd",
+    "target_id": "fed_policy",
+    "selection_motivation": "EURUSD is directly driven by Fed policy decisions, which set the policy stance and influence expectations of future rates.",
+    "candidate_motivation": "EURUSD is a currency cross; its movement is driven by monetary policy, inflation, yield spreads, and commodity prices. Topics that directly influence these factors or are co‑moved with the USD/DXY are strong candidates for influence or correlation.",
+    "existing_links_count": "21",
+    "candidate_count": "27",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'fed_rate_cut_sept17_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'bund10y', 'gilt10y', 'jgb10y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'wheat', 'spx', 'sx5e']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1236239197224832819",
+    "rel_id": "eurusd__influences__fed_policy",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD is directly driven by Fed policy decisions, which set the policy stance and influence expectations of future rates.",
+      "type": "INFLUENCES",
+      "source": "eurusd",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influences__fed_policy"
+}

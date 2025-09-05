@@ -1,0 +1,62 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T21:02:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2TMBNCD82",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US tariffs lift UST 10Y yields by 2‑4 bp and weaken the dollar, while BOE rate cut supports equity indices and commodity prices rise modestly.",
+      "existing_ids": [
+        "ust10y",
+        "dxy",
+        "spx",
+        "ndx",
+        "brent",
+        "wti",
+        "gold",
+        "copper",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "gilt10y",
+        "uk_30yr_gilt_yield",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports the U.S. tariffs taking effect, which is an official policy change by the U.S. government."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Insufficient node context to assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on immediate market reactions to tariffs and a BoE rate cut, affecting yields and equity prices on the day of the announcement."
+    },
+    "article_node": {
+      "id": "2TMBNCD82",
+      "title": "Higher Tariffs Take Effect, New 100% Levy on Chips; BOE Set to Cut",
+      "summary": "U.S. tariffs, including a 100% chip levy and a 39% Swiss import duty, took effect at midnight, lifting the U.S. 10‑year yield by 2‑4 bp and boosting semiconductor stocks. The Bank of England’s 25‑bp rate cut, announced the same day, supported equity markets and tightened the U.S. dollar index, while the tariff hike is expected to pressure global trade flows, especially India’s 50% duty.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-07/daybreak-europe-8-07-2025-video?srnd=phx-technology",
+      "published_at": "2025-08-07T06:51:02.380000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 16,
+      "successful": 16
+    }
+  },
+  "id": "2TMBNCD82"
+}

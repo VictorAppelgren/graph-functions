@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T15:56:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "brent",
+    "target_id": "us_inflation",
+    "selection_motivation": "Brent price swings are a primary driver of the US energy inflation component, which materially feeds into overall US inflation metrics.",
+    "candidate_motivation": "Brent Crude Oil is a benchmark for global energy markets; its price is driven by supply‑demand fundamentals, geopolitical events, and macro factors such as U.S. oil inventories, sanctions, and monetary policy that affect demand and currency strength. Therefore, topics that directly influence oil prices, U.S. energy supply, or macro conditions that impact demand are the most plausible peers or influences.",
+    "existing_links_count": "12",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'us_crude_inventory', 'us_sanctions_iranshipping', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'gold', 'copper']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1294785992380647580",
+    "rel_id": "brent__influences__us_inflation",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Brent price swings are a primary driver of the US energy inflation component, which materially feeds into overall US inflation metrics.",
+      "type": "INFLUENCES",
+      "source": "brent",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__influences__us_inflation"
+}

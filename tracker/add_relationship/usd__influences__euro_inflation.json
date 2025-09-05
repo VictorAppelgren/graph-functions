@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T11:38:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "euro_inflation",
+    "selection_motivation": "USD exchange rate movements directly influence import/export price dynamics in the Euro area, making USD a primary driver of Euro area inflation.",
+    "candidate_motivation": "The US Dollar is tightly linked to macro‑financial variables, commodity prices, and global equity markets. Topics that directly influence its value, such as monetary policy, inflation expectations, exchange rates, and key commodity prices, are the strongest candidates for influence or correlation.",
+    "existing_links_count": "12",
+    "candidate_count": "20",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'sp500', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'eur', '30yr_tips_auction', 'lower_interest_rates', 'us_inflation_expectations', 'us_wholesale_inflation', 'us_inflation_impact_on_bitcoin']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'usd', 'target': 'eur'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218224798715346958",
+    "rel_id": "usd__influences__euro_inflation",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'usd', 'target': 'eur'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD exchange rate movements directly influence import/export price dynamics in the Euro area, making USD a primary driver of Euro area inflation.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__euro_inflation"
+}

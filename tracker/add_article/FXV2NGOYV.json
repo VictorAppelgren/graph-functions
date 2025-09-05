@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T14:15:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FXV2NGOYV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; UK labor market cooling signals BOE rate path, influencing GBP/USD and UK gilt yields.",
+      "existing_ids": [
+        "gbpusd",
+        "gilt10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports UK unemployment rate and payroll data, which constitutes an economic data release."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a recent decline in UK employment, signalling a slowdown that could affect growth, inflation expectations and policy decisions in the UK economy."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports recent changes in UK employment metrics, reflecting short‑term labor market conditions and immediate business sentiment."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "FXV2NGOYV"
+}

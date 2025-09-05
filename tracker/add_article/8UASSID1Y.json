@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T16:40:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8UASSID1Y",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; European bank AT1 bond issuance at ~7% signals tightening credit conditions, widening spreads by ~20‑30 bp over US 10Y Treasury yields (~3.5%) in the near term.",
+      "existing_ids": [
+        "ust10y"
+      ],
+      "new_names": [
+        "European AT1 bonds"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports that ING and Credit Agricole issued new U.S. dollar AT1 bonds, a corporate action not related to earnings, fitting the company_update category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article announces new U.S. dollar AT1 bond issuances by European banks ING and Credit Agricole, directly impacting the AT1 bond market, European bank capital structures, and broader credit markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific issuance event and pricing, indicating immediate market activity."
+    },
+    "article_node": {
+      "id": "8UASSID1Y",
+      "title": "ING, Credit Agricole Issue U.S. Dollar AT1 Bonds",
+      "summary": "European banks ING and Credit Agricole have issued new U.S. dollar AT1 bonds, with ING's 7.2‑year issue priced around 7.375% and Credit Agricole's 10‑year deal at about 7.625%. CreditSights analysts view fair values near 6.5% for ING and just inside 7% for Credit Agricole. These AT1 bonds are high‑risk instruments used to meet regulatory capital requirements.",
+      "source": "https://www.morningstar.com/news/dow-jones/202509025071/ing-credit-agricole-issue-us-dollar-at1-bonds",
+      "published_at": "2025-09-02T08:36:00-05:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "8UASSID1Y"
+}

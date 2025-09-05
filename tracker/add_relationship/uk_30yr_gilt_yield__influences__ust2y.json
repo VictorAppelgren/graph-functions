@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T21:39:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "ust2y",
+    "selection_motivation": "UK 30‑year gilt yields are a key benchmark for global risk appetite; movements in the UK long end directly transmit to US short‑term rates via carry‑trade flows and risk‑on sentiment.",
+    "candidate_motivation": "These topics are likely strong influences or peers to UK 30‑Year Gilt Yield because they represent parallel sovereign yields, monetary policy, inflation, and currency dynamics that directly affect gilt pricing and risk premia.",
+    "existing_links_count": "13",
+    "candidate_count": "14",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['gilt10y', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'gbpusd', 'dxy', 'us_core_pce', 'sofr']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327749",
+    "rel_id": "uk_30yr_gilt_yield__influences__ust2y",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 30‑year gilt yields are a key benchmark for global risk appetite; movements in the UK long end directly transmit to US short‑term rates via carry‑trade flows and risk‑on sentiment.",
+      "type": "INFLUENCES",
+      "source": "uk_30yr_gilt_yield",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_30yr_gilt_yield__influences__ust2y"
+}

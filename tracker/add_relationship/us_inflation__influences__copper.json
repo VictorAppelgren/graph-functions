@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T09:18:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation",
+    "target_id": "copper",
+    "selection_motivation": "US inflation directly influences commodity prices, notably copper, through expectations of higher input costs and demand shifts. This link captures a key inflation‑commodity transmission channel.",
+    "candidate_motivation": "US Inflation is directly driven by monetary policy, labor and services data, commodity prices, and bond yields; it also influences and is influenced by currency moves and equity markets. Therefore, topics that capture Fed actions, core inflation measures, labor and services indicators, Treasury yields, major commodity prices, and key FX/stock indices are the most plausible direct influences or peers.",
+    "existing_links_count": "15",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'euro_inflation', 'sx5e', 'spx', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'us_crude_inventory']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'us_inflation', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_inflation', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'us_inflation', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7059393515414881670",
+    "rel_id": "us_inflation__influences__copper",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'us_inflation', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_inflation', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'us_inflation', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US inflation directly influences commodity prices, notably copper, through expectations of higher input costs and demand shifts. This link captures a key inflation‑commodity transmission channel.",
+      "type": "INFLUENCES",
+      "source": "us_inflation",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation__influences__copper"
+}

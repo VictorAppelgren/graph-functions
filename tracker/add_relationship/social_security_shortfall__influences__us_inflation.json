@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:42:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "social_security_shortfall",
+    "target_id": "us_inflation",
+    "selection_motivation": "Linking the Social Security Shortfall to US Inflation highlights the potential impact of inflation on the sustainability of social security funding, providing critical insights for fiscal policy analysis.",
+    "candidate_motivation": "The selected topics are closely related to economic policies and financial markets that could influence or be influenced by the Social Security Shortfall, particularly in terms of fiscal policy, inflation, and economic stability.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1611",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariff_policies', 'us_national_debt', 'us_fiscal_outlook', 'social_security_age_70', 'us_inflation_impact_on_stocks', 'us_inflation_data']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'social_security_shortfall', 'target': 'us_national_debt'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163899",
+    "rel_id": "social_security_shortfall__influences__us_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'social_security_shortfall', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'social_security_shortfall', 'target': 'us_national_debt'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking the Social Security Shortfall to US Inflation highlights the potential impact of inflation on the sustainability of social security funding, providing critical insights for fiscal policy analysis.",
+      "type": "INFLUENCES",
+      "source": "social_security_shortfall",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "social_security_shortfall__influences__us_inflation"
+}

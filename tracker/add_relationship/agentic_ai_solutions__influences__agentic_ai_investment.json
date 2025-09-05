@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T14:35:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "agentic_ai_solutions",
+    "target_id": "agentic_ai_investment",
+    "selection_motivation": "Agentic AI Solutions' products and services directly influence CFOs to allocate capital toward agentic AI initiatives, making the company a primary driver of such investment flows.",
+    "candidate_motivation": "Agentic AI Solutions is a specialized AI product line, so its most relevant relationships are with other AI‑focused initiatives, competitors, and corporate investment activities in the AI space. The selected topics represent direct competitors, related AI applications, and corporate investment signals that are likely to influence or be influenced by Agentic AI Solutions.",
+    "existing_links_count": "3",
+    "candidate_count": "14",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'blueflame_ai', 'grok_4', 'grok_ai_bias', 'ai_ideological_bias', 'ai_application_companies', 'ai_productivity', 'ai_supply_chain_optimization', 'ai_infrastructure', 'ai_in_education', 'ai_in_entertainment', 'ai_startup_ideation', 'ai_in_k12_education', 'agentic_ai_investment']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'ai_governance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216292",
+    "rel_id": "agentic_ai_solutions__influences__agentic_ai_investment",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'ai_governance'}, {'type': 'INFLUENCES', 'source': 'agentic_ai_solutions', 'target': 'agentic_ai_investment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Agentic AI Solutions' products and services directly influence CFOs to allocate capital toward agentic AI initiatives, making the company a primary driver of such investment flows.",
+      "type": "INFLUENCES",
+      "source": "agentic_ai_solutions",
+      "target": "agentic_ai_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "agentic_ai_solutions__influences__agentic_ai_investment"
+}

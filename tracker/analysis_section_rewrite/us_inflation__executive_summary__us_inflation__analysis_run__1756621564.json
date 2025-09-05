@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T08:48:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756621564",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7463",
+    "output_chars": "1019",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is factually sound and fully cited, but it exceeds the 4–6‑sentence limit and contains a few redundant explanatory paragraphs that dilute the core house view. Condense the narrative into a tight bullet‑style brief that keeps only the essential DXY thesis, the 3–6‑month upside range, the key catalysts, the primary risks, and the watch list, all with inline citations. Remove the “Structural regime analysis” paragraph (it repeats the Fed‑balance‑sheet/curve logic already implied in the DXY lift sentence) and the second‑level discussion of the regime’s long‑run drivers. Keep the sentence that links the Fed’s 25 bp cut to a ~200 bp DXY rise (Z7O1DCHS7)(LF0UUL917) and the 10‑year yield context (97MD1FHW8)(U21K4ALYQ)(3YAQ8JUPL). Tighten the risk paragraph to a single sentence: “Key upside‑risks include a Fed surprise hike >25 bp or CPI >2.5 % (Z7O1DCHS7)(7XH2DKEKV), tariff rollback (XTQIQRP5K), or a rapid Ukraine de‑escalation (XTQIQRP5K).” Finally, list the watch signals in one sentence: “Watch July CPI (2025‑09‑10), Fed minutes (2025‑09‑16‑17), tariff announcements (≈2025‑09‑01), and Ukraine developments (XTQIQRP5K)(7XH2DKEKV)(3952FOSRQ).” This will produce a concise, decision‑useful brief that meets the 4–6‑sentence requirement while preserving all evidence links.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756621564"
+}

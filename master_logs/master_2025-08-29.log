@@ -1,0 +1,786 @@
+2025-08-29T10:08:17 | Topic removed | name=US-China Trade Policy | id=us_china_trade_policy | element_id=4:1261c812-078c-477f-8006-c216977b0e7c:1242 | rels=6 | reason=minimal_prune_not_crucial
+2025-08-29T10:08:17 | Topic removed | name=Euro Area Inflation | id=euro_inflation | element_id=4:1261c812-078c-477f-8006-c216977b0e7c:1811 | rels=0 | reason=minimal_prune_not_crucial
+2025-08-29T10:08:17 | Topic removed | name=Fed Policy Uncertainty | id=fed_policy_uncertainty | element_id=4:1261c812-078c-477f-8006-c216977b0e7c:3852 | rels=5 | reason=minimal_prune_not_crucial
+2025-08-29T10:08:17 | Topic removed | name=Household Balance Sheet | id=household_balance_sheet | element_id=4:1261c812-078c-477f-8006-c216977b0e7c:3865 | rels=2 | reason=minimal_prune_not_crucial
+2025-08-29T10:08:17 | Topic removed | name=US Inflation | id=us_inflation | element_id=4:1261c812-078c-477f-8006-c216977b0e7c:3930 | rels=0 | reason=minimal_prune_not_crucial
+2025-08-29T11:22:35 | Retrieved articles | Fed Policy | Retrieved 4 from API
+2025-08-29T11:32:04 | Enrichment check | fed_policy | section=fundamental
+2025-08-29T11:40:34 | Enrichment check | usdcny | section=fundamental
+2025-08-29T11:45:51 | Enrichment check | usdcny | section=fundamental
+2025-08-29T11:49:11 | Enrichment check | usdcny | section=fundamental
+2025-08-29T11:49:30 | Enrichment check | usdcny | section=fundamental
+2025-08-29T11:50:09 | Enrichment check | usdcny | section=fundamental
+2025-08-29T11:59:04 | Enrichment check | usdcny | section=fundamental
+2025-08-29T12:08:27 | Enrichment check | usdcny | section=fundamental
+2025-08-29T12:09:46 | Enrichment check | usdcny | section=fundamental
+2025-08-29T12:10:47 | Enrichment check | usdcny | section=medium
+2025-08-29T12:12:54 | Enrichment check | usdcny | section=current
+2025-08-29T12:21:37 | Enrichment check | usdcny | section=fundamental
+2025-08-29T12:22:14 | Enrichment check | usdcny | section=medium
+2025-08-29T13:35:55 | Enrichment check | usdcny | section=fundamental
+2025-08-29T13:36:16 | Enrichment check | usdcny | section=medium
+2025-08-29T13:37:00 | Enrichment check | usdcny | section=current
+2025-08-29T13:37:22 | Enrichment check | fed_policy | section=fundamental
+2025-08-29T13:37:51 | Enrichment check | fed_policy | section=medium
+2025-08-29T13:49:11 | Enrichment check | usdcny | section=fundamental
+2025-08-29T13:49:55 | Enrichment check | usdcny | section=medium
+2025-08-29T13:50:22 | Enrichment check | usdcny | section=current
+2025-08-29T13:50:55 | Enrichment check | fed_policy | section=fundamental
+2025-08-29T13:52:06 | Node relationship created | fed_policy->ust10y | type=INFLUENCES
+2025-08-29T13:52:06 | Replacement of article skipped | fed_policy | tf=current cnt=1 < 5
+2025-08-29T13:52:07 | Added article | V0BEQ94VR | to existing topic fed_policy
+2025-08-29T13:52:29 | Node relationship created | ust10y->dxy | type=INFLUENCES
+2025-08-29T13:52:29 | Replacement of article skipped | ust10y | tf=current cnt=1 < 5
+2025-08-29T13:52:29 | Added article | V0BEQ94VR | to existing topic ust10y
+2025-08-29T13:52:47 | Retrieved articles | German 10Y Bund Yield | Retrieved 10 from API
+2025-08-29T13:52:47 | Node relationship created | dxy->eurusd | type=INFLUENCES
+2025-08-29T13:52:47 | Replacement of article skipped | dxy | tf=current cnt=1 < 5
+2025-08-29T13:52:47 | Added article | V0BEQ94VR | to existing topic dxy
+2025-08-29T13:53:10 | Node relationship created | eurusd->dxy | type=COMPONENT_OF
+2025-08-29T13:53:10 | Replacement of article skipped | eurusd | tf=current cnt=1 < 5
+2025-08-29T13:53:10 | Added article | V0BEQ94VR | to existing topic eurusd
+2025-08-29T13:53:47 | Node relationship created | fed_policy->spx | type=INFLUENCES
+2025-08-29T13:53:48 | Replacement of article skipped | spx | tf=current cnt=1 < 5
+2025-08-29T13:53:48 | Added article | V0BEQ94VR | to existing topic spx
+2025-08-29T13:53:48 | Backfill added | V0BEQ94VR -> fed_policy | section=fundamental
+2025-08-29T13:54:12 | Enrichment check | fed_policy | section=medium
+2025-08-29T13:55:13 | Node relationship created | us_inflation->fed_policy | type=INFLUENCES
+2025-08-29T13:55:13 | Replacement of article skipped | us_inflation | tf=current cnt=1 < 5
+2025-08-29T13:55:13 | Added article | HCYCKF3PN | to existing topic us_inflation
+2025-08-29T13:55:31 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-08-29T13:55:31 | Replacement of article skipped | fed_policy | tf=current cnt=2 < 5
+2025-08-29T13:55:31 | Added article | HCYCKF3PN | to existing topic fed_policy
+2025-08-29T13:55:53 | Node relationship created | ust10y->us_inflation | type=CORRELATES_WITH
+2025-08-29T13:55:53 | Replacement of article skipped | ust10y | tf=current cnt=2 < 5
+2025-08-29T13:55:54 | Added article | HCYCKF3PN | to existing topic ust10y
+2025-08-29T13:56:13 | Node relationship created | ust2y->dxy | type=INFLUENCES
+2025-08-29T13:56:13 | Replacement of article skipped | ust2y | tf=current cnt=1 < 5
+2025-08-29T13:56:14 | Added article | HCYCKF3PN | to existing topic ust2y
+2025-08-29T13:56:36 | Node relationship created | dxy->ust10y | type=INFLUENCES
+2025-08-29T13:56:37 | Replacement of article skipped | dxy | tf=current cnt=2 < 5
+2025-08-29T13:56:37 | Added article | HCYCKF3PN | to existing topic dxy
+2025-08-29T13:57:05 | Node relationship created | eurusd->ust10y | type=CORRELATES_WITH
+2025-08-29T13:57:05 | Replacement of article skipped | eurusd | tf=current cnt=2 < 5
+2025-08-29T13:57:05 | Added article | HCYCKF3PN | to existing topic eurusd
+2025-08-29T13:57:05 | Backfill added | HCYCKF3PN -> fed_policy | section=medium
+2025-08-29T13:58:12 | Node relationship created | fed_policy->ust2y | type=INFLUENCES
+2025-08-29T13:58:12 | Replacement of article skipped | fed_policy | tf=medium cnt=0 < 5
+2025-08-29T13:58:12 | Added article | GZ9VV1RV0 | to existing topic fed_policy
+2025-08-29T13:58:27 | Node relationship created | us_inflation->ust10y | type=INFLUENCES
+2025-08-29T13:58:27 | Replacement of article skipped | us_inflation | tf=medium cnt=0 < 5
+2025-08-29T13:58:27 | Added article | GZ9VV1RV0 | to existing topic us_inflation
+2025-08-29T13:58:46 | Node relationship created | ust10y->bund10y | type=CORRELATES_WITH
+2025-08-29T13:58:46 | Replacement of article skipped | ust10y | tf=medium cnt=0 < 5
+2025-08-29T13:58:47 | Added article | GZ9VV1RV0 | to existing topic ust10y
+2025-08-29T13:58:47 | Backfill added | GZ9VV1RV0 -> fed_policy | section=medium
+2025-08-29T13:58:47 | Enrichment check | fed_policy | section=current
+2025-08-29T13:58:47 | Enrichment check | bund10y | section=fundamental
+2025-08-29T14:01:32 | Enrichment check | ust10y | section=fundamental
+2025-08-29T14:03:24 | Enrichment check | ust10y | section=medium
+2025-08-29T14:04:02 | Node relationship created | fed_policy->us_inflation | type=INFLUENCES
+2025-08-29T14:04:02 | Replacement of article skipped | fed_policy | tf=medium cnt=0 < 5
+2025-08-29T14:04:02 | Added article | V075F0GSV | to existing topic fed_policy
+2025-08-29T14:04:42 | Node relationship created | us_inflation->ust2y | type=INFLUENCES
+2025-08-29T14:04:42 | Replacement of article skipped | us_inflation | tf=medium cnt=0 < 5
+2025-08-29T14:04:42 | Added article | V075F0GSV | to existing topic us_inflation
+2025-08-29T14:05:09 | Node relationship created | ust10y->spx | type=INFLUENCES
+2025-08-29T14:05:09 | Replacement of article skipped | ust10y | tf=medium cnt=0 < 5
+2025-08-29T14:05:09 | Added article | V075F0GSV | to existing topic ust10y
+2025-08-29T14:05:41 | Node relationship created | spx->ust10y | type=CORRELATES_WITH
+2025-08-29T14:05:41 | Replacement of article skipped | spx | tf=current cnt=2 < 5
+2025-08-29T14:05:41 | Added article | VDO8D9T7M | to existing topic spx
+2025-08-29T14:05:47 | Node relationship created | bund10y->eurusd | type=INFLUENCES
+2025-08-29T14:05:48 | Replacement of article skipped | bund10y | tf=medium cnt=0 < 5
+2025-08-29T14:05:48 | Added article | V075F0GSV | to existing topic bund10y
+2025-08-29T14:06:39 | Node relationship created | us_inflation->ust5y | type=INFLUENCES
+2025-08-29T14:06:39 | Replacement of article skipped | us_inflation | tf=current cnt=2 < 5
+2025-08-29T14:06:39 | Added article | VDO8D9T7M | to existing topic us_inflation
+2025-08-29T14:06:45 | Node relationship created | euro_inflation->ecb_policy | type=INFLUENCES
+2025-08-29T14:06:45 | Replacement of article skipped | euro_inflation | tf=medium cnt=0 < 5
+2025-08-29T14:06:45 | Added article | V075F0GSV | to existing topic euro_inflation
+2025-08-29T14:07:08 | Node relationship created | fed_policy->dxy | type=INFLUENCES
+2025-08-29T14:07:08 | Replacement of article skipped | fed_policy | tf=current cnt=3 < 5
+2025-08-29T14:07:08 | Added article | VDO8D9T7M | to existing topic fed_policy
+2025-08-29T14:07:20 | Node relationship created | sx5e->ust10y | type=CORRELATES_WITH
+2025-08-29T14:07:20 | Replacement of article skipped | sx5e | tf=medium cnt=0 < 5
+2025-08-29T14:07:20 | Added article | V075F0GSV | to existing topic sx5e
+2025-08-29T14:08:03 | Node relationship created | ust10y->ust30y | type=INFLUENCES
+2025-08-29T14:08:03 | Replacement of article skipped | ust10y | tf=current cnt=3 < 5
+2025-08-29T14:08:03 | Added article | VDO8D9T7M | to existing topic ust10y
+2025-08-29T14:08:03 | Backfill added | VDO8D9T7M -> ust10y | section=medium
+2025-08-29T14:08:10 | Node relationship created | us_inflation->spx | type=INFLUENCES
+2025-08-29T14:08:10 | Replacement of article skipped | spx | tf=medium cnt=0 < 5
+2025-08-29T14:08:10 | Added article | V075F0GSV | to existing topic spx
+2025-08-29T14:08:44 | Node relationship created | gold->ust10y | type=CORRELATES_WITH
+2025-08-29T14:08:44 | Replacement of article skipped | gold | tf=medium cnt=0 < 5
+2025-08-29T14:08:44 | Added article | V075F0GSV | to existing topic gold
+2025-08-29T14:09:09 | Node relationship created | wti->us_inflation | type=INFLUENCES
+2025-08-29T14:09:09 | Replacement of article skipped | wti | tf=medium cnt=0 < 5
+2025-08-29T14:09:10 | Added article | V075F0GSV | to existing topic wti
+2025-08-29T14:10:00 | Node relationship created | brent->dxy | type=CORRELATES_WITH
+2025-08-29T14:10:00 | Replacement of article skipped | brent | tf=medium cnt=0 < 5
+2025-08-29T14:10:00 | Added article | V075F0GSV | to existing topic brent
+2025-08-29T14:10:31 | Node relationship created | dxy->ust5y | type=INFLUENCES
+2025-08-29T14:10:31 | Replacement of article skipped | dxy | tf=medium cnt=0 < 5
+2025-08-29T14:10:31 | Added article | V075F0GSV | to existing topic dxy
+2025-08-29T14:10:53 | Relationship duplicate | fed_policy->spx | type=INFLUENCES
+2025-08-29T14:10:53 | Replacement of article skipped | spx | tf=current cnt=3 < 5
+2025-08-29T14:10:53 | Added article | QJEVQZHQR | to existing topic spx
+2025-08-29T14:11:26 | Node relationship created | ecb_policy->eurusd | type=INFLUENCES
+2025-08-29T14:11:26 | Replacement of article skipped | eurusd | tf=medium cnt=0 < 5
+2025-08-29T14:11:26 | Added article | V075F0GSV | to existing topic eurusd
+2025-08-29T14:12:07 | Node relationship created | dxy->ust2y | type=INFLUENCES
+2025-08-29T14:12:07 | Replacement of article skipped | dxy | tf=current cnt=3 < 5
+2025-08-29T14:12:07 | Added article | QJEVQZHQR | to existing topic dxy
+2025-08-29T14:12:22 | Node relationship created | gbpusd->dxy | type=CORRELATES_WITH
+2025-08-29T14:12:22 | Replacement of article skipped | gbpusd | tf=medium cnt=0 < 5
+2025-08-29T14:12:22 | Added article | V075F0GSV | to existing topic gbpusd
+2025-08-29T14:12:45 | Node relationship created | ust10y->eurusd | type=INFLUENCES
+2025-08-29T14:12:45 | Replacement of article skipped | ust10y | tf=current cnt=4 < 5
+2025-08-29T14:12:45 | Added article | QJEVQZHQR | to existing topic ust10y
+2025-08-29T14:13:24 | Node relationship created | bund10y->ecb_policy | type=INFLUENCES
+2025-08-29T14:13:24 | Replacement of article skipped | bund10y | tf=current cnt=1 < 5
+2025-08-29T14:13:24 | Added article | QJEVQZHQR | to existing topic bund10y
+2025-08-29T14:13:53 | Node relationship created | gilt10y->gbpusd | type=INFLUENCES
+2025-08-29T14:13:53 | Replacement of article skipped | gilt10y | tf=current cnt=1 < 5
+2025-08-29T14:13:53 | Added article | QJEVQZHQR | to existing topic gilt10y
+2025-08-29T14:15:19 | Node relationship created | ecb_policy->sx5e | type=INFLUENCES
+2025-08-29T14:15:20 | Replacement of article skipped | sx5e | tf=current cnt=1 < 5
+2025-08-29T14:15:20 | Added article | QJEVQZHQR | to existing topic sx5e
+2025-08-29T14:15:35 | Node relationship created | fed_policy->ust30y | type=INFLUENCES
+2025-08-29T14:15:35 | Replacement of article skipped | fed_policy | tf=current cnt=4 < 5
+2025-08-29T14:15:36 | Added article | QJEVQZHQR | to existing topic fed_policy
+2025-08-29T14:15:53 | Node relationship created | ecb_policy->bund10y | type=INFLUENCES
+2025-08-29T14:15:53 | Replacement of article skipped | ecb_policy | tf=current cnt=1 < 5
+2025-08-29T14:15:53 | Added article | QJEVQZHQR | to existing topic ecb_policy
+2025-08-29T14:15:54 | Backfill added | QJEVQZHQR -> ust10y | section=medium
+2025-08-29T14:15:54 | Enrichment check | ust10y | section=current
+2025-08-29T14:15:54 | Pipeline complete | pipeline | run complete
+2025-08-29T14:15:54 | Retrieved articles | US 2Y Treasury Yield | Retrieved 10 from API
+2025-08-29T14:28:43 | Enrichment check | usdcny | section=fundamental
+2025-08-29T14:29:15 | Enrichment check | usdcny | section=medium
+2025-08-29T14:29:44 | Enrichment check | usdcny | section=current
+2025-08-29T14:31:13 | Node relationship created | usdcny->dxy | type=COMPONENT_OF
+2025-08-29T14:31:13 | Replacement of article skipped | usdcny | tf=current cnt=1 < 5
+2025-08-29T14:31:13 | Added article | XHDE9MSFQ | to intended topic usdcny
+2025-08-29T14:31:47 | Node relationship created | fed_policy->ust5y | type=INFLUENCES
+2025-08-29T14:31:52 | Article replaced | fed_policy | old=V0BEQ94VR new=XHDE9MSFQ
+2025-08-29T14:31:55 | Triggered rewrite | fed_policy | new_article=XHDE9MSFQ
+2025-08-29T14:42:29 | Enrichment check | usdcny | section=fundamental
+2025-08-29T14:43:09 | Enrichment check | usdcny | section=medium
+2025-08-29T14:43:35 | Enrichment check | usdcny | section=current
+2025-08-29T14:44:20 | Enrichment check | fed_policy | section=fundamental
+2025-08-29T14:44:50 | Enrichment check | fed_policy | section=medium
+2025-08-29T14:45:20 | Retrieved articles | China Exports | Retrieved 10 from API
+2025-08-29T14:48:04 | Topic added | name=US Unemployment Claims | category=macro_driver | importance=2
+2025-08-29T14:48:28 | Node relationship created | us_unemployment_claims->fed_policy | type=INFLUENCES
+2025-08-29T14:48:28 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=1 < 5
+2025-08-29T14:48:28 | Added article | HCYCKF3PN | to new topic us_unemployment_claims
+2025-08-29T14:48:28 | Backfill added | HCYCKF3PN -> fed_policy | section=medium
+2025-08-29T14:48:30 | Topic rejected | name=Councillor Audrey Dempsey who made 'white racism' claim joins Reform | category=None | failure=proposal_null
+2025-08-29T14:48:30 | Failed to create new topic for article | OGKPK3ZTT | to new topic None
+2025-08-29T14:48:30 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for OGKPK3ZTT
+2025-08-29T14:50:01 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-08-29T14:50:01 | Replacement of article skipped | us_inflation | tf=current cnt=3 < 5
+2025-08-29T14:50:01 | Added article | EIGII8HNM | to existing topic us_inflation
+2025-08-29T14:50:09 | Node relationship created | us_unemployment_claims->ust10y | type=INFLUENCES
+2025-08-29T14:50:09 | Replacement of article skipped | us_unemployment_claims | tf=medium cnt=0 < 5
+2025-08-29T14:50:09 | Added article | GZ9VV1RV0 | to existing topic us_unemployment_claims
+2025-08-29T14:50:10 | Backfill added | GZ9VV1RV0 -> fed_policy | section=medium
+2025-08-29T14:50:10 | Enrichment check | fed_policy | section=current
+2025-08-29T14:50:10 | Enrichment check | bund10y | section=fundamental
+2025-08-29T14:50:37 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T14:50:57 | No replacement of article | fed_policy | new_article=EIGII8HNM
+2025-08-29T14:51:01 | Triggered rewrite | fed_policy | new_article=EIGII8HNM
+2025-08-29T14:51:01 | Error | - | Backfill link_orphan_articles failed for EIGII8HNM Error: Unsupported problem type: rewrites_skipped_0_articles
+2025-08-29T14:51:40 | Enrichment check | bund10y | section=medium
+2025-08-29T14:53:08 | Node relationship created | ust10y->ust2y | type=CORRELATES_WITH
+2025-08-29T14:53:08 | Replacement of article skipped | ust10y | tf=current cnt=4 < 5
+2025-08-29T14:53:08 | Added article | 1G54B8R46 | to existing topic ust10y
+2025-08-29T14:54:50 | Node relationship created | china_exports->usdcny | type=INFLUENCES
+2025-08-29T14:54:50 | Replacement of article skipped | china_exports | tf=current cnt=1 < 5
+2025-08-29T14:54:50 | Added article | 1G54B8R46 | to existing topic china_exports
+2025-08-29T14:55:52 | Node relationship created | spx->ust2y | type=CORRELATES_WITH
+2025-08-29T14:55:52 | Replacement of article skipped | spx | tf=current cnt=3 < 5
+2025-08-29T14:55:52 | Added article | 2SW2RSVRM | to existing topic spx
+2025-08-29T14:56:04 | Node relationship created | us_inflation->dxy | type=INFLUENCES
+2025-08-29T14:56:04 | Replacement of article skipped | us_inflation | tf=current cnt=4 < 5
+2025-08-29T14:56:04 | Added article | 1G54B8R46 | to existing topic us_inflation
+2025-08-29T14:57:00 | Node relationship created | bund10y->dxy | type=INFLUENCES
+2025-08-29T14:57:00 | Replacement of article skipped | bund10y | tf=current cnt=2 < 5
+2025-08-29T14:57:00 | Added article | VDO8D9T7M | to intended topic bund10y
+2025-08-29T14:57:26 | Node relationship created | spx->ust5y | type=CORRELATES_WITH
+2025-08-29T14:57:26 | Replacement of article skipped | spx | tf=current cnt=4 < 5
+2025-08-29T14:57:26 | Added article | 1G54B8R46 | to existing topic spx
+2025-08-29T14:58:43 | Node relationship created | us_unemployment_claims->ust2y | type=INFLUENCES
+2025-08-29T14:58:43 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=2 < 5
+2025-08-29T14:58:43 | Added article | VDO8D9T7M | to existing topic us_unemployment_claims
+2025-08-29T14:59:33 | Node relationship created | ust2y->ust10y | type=INFLUENCES
+2025-08-29T14:59:33 | Replacement of article skipped | ust2y | tf=current cnt=2 < 5
+2025-08-29T14:59:33 | Added article | VDO8D9T7M | to existing topic ust2y
+2025-08-29T14:59:37 | Topic rejected | name=GE HealthCare unveils Vivid Pioneer, its most advanced AI-powered cardiovascular ultrasound system, designed to enhance speed and image quality for improved diagnostic confidence and workflow efficiency | category=None | failure=proposal_null
+2025-08-29T14:59:37 | Failed to create new topic for article | 4E23W4543 | to new topic None
+2025-08-29T15:00:56 | Relationship duplicate | fed_policy->ust5y | type=INFLUENCES
+2025-08-29T15:00:56 | Replacement of article skipped | ust5y | tf=current cnt=1 < 5
+2025-08-29T15:00:56 | Added article | VDO8D9T7M | to existing topic ust5y
+2025-08-29T15:01:14 | Node relationship created | gold->dxy | type=CORRELATES_WITH
+2025-08-29T15:01:14 | Replacement of article skipped | gold | tf=medium cnt=1 < 5
+2025-08-29T15:01:14 | Added article | E8958LXZX | to existing topic gold
+2025-08-29T15:01:35 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WBOK790XG
+2025-08-29T15:01:43 | Node relationship created | ust30y->ust10y | type=CORRELATES_WITH
+2025-08-29T15:01:44 | Replacement of article skipped | ust30y | tf=current cnt=1 < 5
+2025-08-29T15:01:44 | Added article | VDO8D9T7M | to existing topic ust30y
+2025-08-29T15:01:44 | Backfill added | VDO8D9T7M -> bund10y | section=medium
+2025-08-29T15:02:22 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for GUTGNG4IC
+2025-08-29T15:03:31 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XSFLRE8ZT
+2025-08-29T15:05:36 | Node relationship created | ust2y->ust5y | type=INFLUENCES
+2025-08-29T15:05:36 | Replacement of article skipped | ust2y | tf=current cnt=2 < 5
+2025-08-29T15:05:36 | Added article | DM7LED6EO | to existing topic ust2y
+2025-08-29T15:06:40 | Node relationship created | ecb_policy->euro_inflation | type=INFLUENCES
+2025-08-29T15:06:40 | Replacement of article skipped | ecb_policy | tf=medium cnt=0 < 5
+2025-08-29T15:06:41 | Added article | V075F0GSV | to existing topic ecb_policy
+2025-08-29T15:06:41 | Backfill added | V075F0GSV -> bund10y | section=medium
+2025-08-29T15:06:41 | Enrichment check | bund10y | section=current
+2025-08-29T15:06:41 | Enrichment check | ust10y | section=fundamental
+2025-08-29T15:06:58 | Node relationship created | ust10y->ust5y | type=CORRELATES_WITH
+2025-08-29T15:06:58 | Replacement of article skipped | ust10y | tf=current cnt=4 < 5
+2025-08-29T15:06:58 | Added article | DM7LED6EO | to existing topic ust10y
+2025-08-29T15:07:14 | Node relationship created | spx->ust30y | type=CORRELATES_WITH
+2025-08-29T15:07:56 | No replacement of article | spx | new_article=0QKLPBCAP
+2025-08-29T15:08:20 | Node relationship created | dxy->ust30y | type=INFLUENCES
+2025-08-29T15:08:20 | Replacement of article skipped | dxy | tf=current cnt=2 < 5
+2025-08-29T15:08:20 | Added article | DM7LED6EO | to existing topic dxy
+2025-08-29T15:08:21 | Enrichment check | china_exports | section=fundamental
+2025-08-29T15:08:27 | Triggered rewrite | spx | new_article=0QKLPBCAP
+2025-08-29T15:08:28 | Error | - | Backfill link_orphan_articles failed for 0QKLPBCAP Error: Unsupported problem type: rewrites_skipped_0_articles
+2025-08-29T15:09:06 | Enrichment check | ust10y | section=medium
+2025-08-29T15:10:05 | Enrichment check | china_exports | section=medium
+2025-08-29T15:10:31 | Node relationship created | fed_policy->gold | type=INFLUENCES
+2025-08-29T15:10:55 | No replacement of article | fed_policy | new_article=D0R3LX8F7
+2025-08-29T15:11:05 | Triggered rewrite | fed_policy | new_article=D0R3LX8F7
+2025-08-29T15:11:05 | Error | - | Backfill link_orphan_articles failed for D0R3LX8F7 Error: Unsupported problem type: rewrites_skipped_0_articles
+2025-08-29T15:11:20 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Y978UO2HQ
+2025-08-29T15:11:57 | Enrichment check | china_exports | section=current
+2025-08-29T15:14:26 | Node relationship created | spx->us_inflation | type=CORRELATES_WITH
+2025-08-29T15:14:26 | Replacement of article skipped | spx | tf=medium cnt=1 < 5
+2025-08-29T15:14:26 | Added article | KNWKYIQ1W | to existing topic spx
+2025-08-29T15:15:12 | Pipeline complete | pipeline | run complete
+2025-08-29T15:15:15 | Retrieved articles | China Credit Impulse | Retrieved 10 from API
+2025-08-29T15:16:15 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T15:16:21 | No replacement of article | us_inflation | new_article=QJEVQZHQR
+2025-08-29T15:16:34 | Triggered rewrite | us_inflation | new_article=QJEVQZHQR
+2025-08-29T15:16:48 | Node relationship created | us_inflation->euro_inflation | type=INFLUENCES
+2025-08-29T15:16:48 | Replacement of article skipped | us_inflation | tf=fundamental cnt=1 < 5
+2025-08-29T15:16:48 | Added article | H86O3XRUJ | to existing topic us_inflation
+2025-08-29T15:18:26 | Node relationship created | ust10y->gold | type=CORRELATES_WITH
+2025-08-29T15:18:27 | Replacement of article skipped | ust10y | tf=fundamental cnt=1 < 5
+2025-08-29T15:18:27 | Added article | H86O3XRUJ | to existing topic ust10y
+2025-08-29T16:26:13 | Enrichment check | usdcny | section=fundamental
+2025-08-29T16:26:58 | Enrichment check | usdcny | section=medium
+2025-08-29T16:28:44 | Node relationship created | usdcny->fed_policy | type=INFLUENCES
+2025-08-29T16:28:44 | Replacement of article skipped | usdcny | tf=current cnt=2 < 5
+2025-08-29T16:28:44 | Added article | QJEVQZHQR | to intended topic usdcny
+2025-08-29T16:29:07 | Node relationship created | us_unemployment_claims->us_inflation | type=INFLUENCES
+2025-08-29T16:29:07 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=3 < 5
+2025-08-29T16:29:07 | Added article | QJEVQZHQR | to existing topic us_unemployment_claims
+2025-08-29T16:29:08 | Backfill added | QJEVQZHQR -> usdcny | section=medium
+2025-08-29T16:29:21 | Enrichment check | usdcny | section=current
+2025-08-29T16:29:21 | Enrichment check | us_unemployment_claims | section=fundamental
+2025-08-29T16:30:49 | Enrichment check | us_unemployment_claims | section=medium
+2025-08-29T16:32:19 | Enrichment check | us_unemployment_claims | section=current
+2025-08-29T16:32:19 | Enrichment check | fed_policy | section=fundamental
+2025-08-29T16:32:49 | Enrichment check | fed_policy | section=medium
+2025-08-29T16:35:20 | Node relationship created | us_unemployment_claims->ust30y | type=INFLUENCES
+2025-08-29T16:35:21 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=4 < 5
+2025-08-29T16:35:21 | Added article | B1JE9YGKN | to existing topic us_unemployment_claims
+2025-08-29T16:35:47 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T16:35:47 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-08-29T16:35:53 | No replacement of article | fed_policy | new_article=B1JE9YGKN
+2025-08-29T16:35:59 | Triggered rewrite | fed_policy | new_article=B1JE9YGKN
+2025-08-29T17:08:04 | Enrichment check | usdcny | section=fundamental
+2025-08-29T17:08:05 | Retrieved articles | US 30Y Treasury Yield | Retrieved 10 from API
+2025-08-29T17:08:33 | Enrichment check | usdcny | section=medium
+2025-08-29T17:09:24 | Enrichment check | usdcny | section=current
+2025-08-29T17:09:24 | Enrichment check | us_unemployment_claims | section=fundamental
+2025-08-29T17:10:29 | Enrichment check | us_unemployment_claims | section=medium
+2025-08-29T17:14:36 | Node relationship created | gold->us_inflation | type=CORRELATES_WITH
+2025-08-29T17:14:37 | Replacement of article skipped | gold | tf=fundamental cnt=0 < 5
+2025-08-29T17:14:37 | Added article | XUP8IRL2R | to existing topic gold
+2025-08-29T17:16:33 | Node relationship removed | fed_policy->gold | type=INFLUENCES
+2025-08-29T17:16:33 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T17:16:34 | Replacement of article skipped | fed_policy | tf=fundamental cnt=0 < 5
+2025-08-29T17:16:34 | Added article | XUP8IRL2R | to existing topic fed_policy
+2025-08-29T17:16:43 | Enrichment check | us_unemployment_claims | section=current
+2025-08-29T17:16:43 | Enrichment check | fed_policy | section=fundamental
+2025-08-29T17:17:52 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-08-29T17:17:52 | Replacement of article skipped | us_inflation | tf=fundamental cnt=1 < 5
+2025-08-29T17:17:52 | Added article | XUP8IRL2R | to existing topic us_inflation
+2025-08-29T17:18:55 | Node relationship created | ust10y->gilt10y | type=CORRELATES_WITH
+2025-08-29T17:18:55 | Replacement of article skipped | ust10y | tf=fundamental cnt=1 < 5
+2025-08-29T17:18:55 | Added article | XUP8IRL2R | to existing topic ust10y
+2025-08-29T17:19:13 | Enrichment check | fed_policy | section=medium
+2025-08-29T17:19:19 | Node relationship created | ust2y->us_inflation | type=INFLUENCES
+2025-08-29T17:19:19 | Replacement of article skipped | ust2y | tf=fundamental cnt=0 < 5
+2025-08-29T17:19:19 | Added article | XUP8IRL2R | to existing topic ust2y
+2025-08-29T17:19:42 | Node relationship created | ust5y->dxy | type=INFLUENCES
+2025-08-29T17:19:42 | Replacement of article skipped | ust5y | tf=fundamental cnt=0 < 5
+2025-08-29T17:19:42 | Added article | XUP8IRL2R | to existing topic ust5y
+2025-08-29T17:20:03 | Node relationship created | dxy->usdjpy | type=INFLUENCES
+2025-08-29T17:20:04 | Replacement of article skipped | dxy | tf=fundamental cnt=0 < 5
+2025-08-29T17:20:04 | Added article | XUP8IRL2R | to existing topic dxy
+2025-08-29T17:20:41 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T17:20:41 | Node relationship created | us_inflation->eurusd | type=INFLUENCES
+2025-08-29T17:20:41 | Replacement of article skipped | us_inflation | tf=medium cnt=0 < 5
+2025-08-29T17:20:41 | Added article | 0G55KW339 | to existing topic us_inflation
+2025-08-29T17:21:42 | Enrichment check | fed_policy | section=current
+2025-08-29T17:21:43 | Enrichment check | bund10y | section=fundamental
+2025-08-29T17:21:56 | Replacement of article skipped | fed_policy | tf=medium cnt=0 < 5
+2025-08-29T17:21:56 | Added article | 0G55KW339 | to existing topic fed_policy
+2025-08-29T17:22:44 | Node relationship created | ust10y->usdcny | type=INFLUENCES
+2025-08-29T17:22:44 | Replacement of article skipped | ust10y | tf=medium cnt=0 < 5
+2025-08-29T17:22:44 | Added article | 0G55KW339 | to existing topic ust10y
+2025-08-29T17:24:36 | Node relationship created | ust2y->ust30y | type=INFLUENCES
+2025-08-29T17:24:36 | Replacement of article skipped | ust2y | tf=medium cnt=0 < 5
+2025-08-29T17:24:36 | Added article | 0G55KW339 | to existing topic ust2y
+2025-08-29T17:25:06 | Node relationship created | ust30y->bund10y | type=CORRELATES_WITH
+2025-08-29T17:25:06 | Replacement of article skipped | ust30y | tf=medium cnt=0 < 5
+2025-08-29T17:25:07 | Added article | 0G55KW339 | to existing topic ust30y
+2025-08-29T17:26:00 | Node relationship created | ust2y->usdcny | type=INFLUENCES
+2025-08-29T17:26:00 | Replacement of article skipped | ust2y | tf=medium cnt=0 < 5
+2025-08-29T17:26:00 | Added article | V075F0GSV | to existing topic ust2y
+2025-08-29T17:26:42 | Node relationship created | ust5y->spx | type=INFLUENCES
+2025-08-29T17:26:42 | Replacement of article skipped | ust5y | tf=medium cnt=0 < 5
+2025-08-29T17:26:42 | Added article | V075F0GSV | to existing topic ust5y
+2025-08-29T17:27:44 | Node relationship created | ust30y->dxy | type=CORRELATES_WITH
+2025-08-29T17:27:44 | Replacement of article skipped | ust30y | tf=medium cnt=0 < 5
+2025-08-29T17:27:44 | Added article | V075F0GSV | to existing topic ust30y
+2025-08-29T17:28:07 | Node relationship created | gilt10y->dxy | type=INFLUENCES
+2025-08-29T17:28:07 | Replacement of article skipped | gilt10y | tf=medium cnt=0 < 5
+2025-08-29T17:28:07 | Added article | V075F0GSV | to existing topic gilt10y
+2025-08-29T17:28:50 | Node relationship created | ecb_policy->euribor | type=INFLUENCES
+2025-08-29T17:28:50 | Replacement of article skipped | ecb_policy | tf=medium cnt=1 < 5
+2025-08-29T17:28:50 | Added article | DM50JW41T | to existing topic ecb_policy
+2025-08-29T17:29:04 | Node relationship created | usdjpy->dxy | type=COMPONENT_OF
+2025-08-29T17:29:04 | Replacement of article skipped | usdjpy | tf=medium cnt=0 < 5
+2025-08-29T17:29:04 | Added article | V075F0GSV | to existing topic usdjpy
+2025-08-29T17:29:05 | Backfill added | V075F0GSV -> bund10y | section=fundamental
+2025-08-29T17:29:55 | Enrichment check | bund10y | section=medium
+2025-08-29T17:30:42 | Node relationship removed | us_inflation->ust5y | type=INFLUENCES
+2025-08-29T17:30:43 | Node relationship created | us_inflation->ust5y | type=INFLUENCES
+2025-08-29T17:30:48 | No replacement of article | us_inflation | new_article=QH3MJMTBN
+2025-08-29T17:30:58 | Triggered rewrite | us_inflation | new_article=QH3MJMTBN
+2025-08-29T17:34:43 | Saved analysis | us_inflation | field "fundamental_analysis" len=2466
+2025-08-29T17:35:09 | Enrichment check | ust30y | section=fundamental
+2025-08-29T17:37:01 | Enrichment check | ust30y | section=medium
+2025-08-29T17:37:10 | Node relationship created | bund10y->euro_inflation | type=INFLUENCES
+2025-08-29T17:37:10 | Replacement of article skipped | bund10y | tf=current cnt=2 < 5
+2025-08-29T17:37:10 | Added article | QJEVQZHQR | to intended topic bund10y
+2025-08-29T17:37:56 | Node relationship created | eurusd->us_inflation | type=CORRELATES_WITH
+2025-08-29T17:37:56 | Replacement of article skipped | eurusd | tf=current cnt=2 < 5
+2025-08-29T17:37:56 | Added article | QJEVQZHQR | to existing topic eurusd
+2025-08-29T17:38:31 | Node relationship created | ust10y->usdjpy | type=INFLUENCES
+2025-08-29T17:38:31 | Replacement of article skipped | usdjpy | tf=current cnt=1 < 5
+2025-08-29T17:38:31 | Added article | QJEVQZHQR | to existing topic usdjpy
+2025-08-29T17:38:51 | Enrichment check | ust30y | section=current
+2025-08-29T17:39:08 | Node relationship created | euro_inflation->bund10y | type=INFLUENCES
+2025-08-29T17:39:08 | Replacement of article skipped | euro_inflation | tf=current cnt=1 < 5
+2025-08-29T17:39:08 | Added article | QJEVQZHQR | to existing topic euro_inflation
+2025-08-29T17:40:09 | Node relationship created | fed_policy->gold | type=INFLUENCES
+2025-08-29T17:40:09 | Replacement of article skipped | gold | tf=current cnt=1 < 5
+2025-08-29T17:40:09 | Added article | QJEVQZHQR | to existing topic gold
+2025-08-29T17:40:52 | Node relationship created | wti->dxy | type=INFLUENCES
+2025-08-29T17:40:53 | Replacement of article skipped | wti | tf=current cnt=1 < 5
+2025-08-29T17:40:53 | Added article | QJEVQZHQR | to existing topic wti
+2025-08-29T17:41:42 | Node relationship created | brent->us_inflation | type=INFLUENCES
+2025-08-29T17:41:42 | Replacement of article skipped | brent | tf=current cnt=1 < 5
+2025-08-29T17:41:42 | Added article | QJEVQZHQR | to existing topic brent
+2025-08-29T17:41:50 | Node relationship created | ust30y->us_inflation | type=CORRELATES_WITH
+2025-08-29T17:41:50 | Replacement of article skipped | ust30y | tf=current cnt=1 < 5
+2025-08-29T17:41:50 | Added article | VDO8D9T7M | to intended topic ust30y
+2025-08-29T17:42:18 | Node relationship created | dxy->copper | type=INFLUENCES
+2025-08-29T17:42:18 | Replacement of article skipped | copper | tf=current cnt=1 < 5
+2025-08-29T17:42:18 | Added article | QJEVQZHQR | to existing topic copper
+2025-08-29T17:42:34 | Node relationship created | dxy->gold | type=CORRELATES_WITH
+2025-08-29T17:42:35 | Replacement of article skipped | dxy | tf=current cnt=3 < 5
+2025-08-29T17:42:35 | Added article | VDO8D9T7M | to existing topic dxy
+2025-08-29T17:43:06 | Node relationship created | china_exports->china_credit_impulse | type=INFLUENCES
+2025-08-29T17:43:06 | Replacement of article skipped | china_exports | tf=current cnt=2 < 5
+2025-08-29T17:43:06 | Added article | QJEVQZHQR | to existing topic china_exports
+2025-08-29T17:43:21 | Node relationship created | sx5e->spx | type=PEERS
+2025-08-29T17:43:21 | Replacement of article skipped | sx5e | tf=current cnt=2 < 5
+2025-08-29T17:43:21 | Added article | VDO8D9T7M | to existing topic sx5e
+2025-08-29T17:43:21 | Backfill added | VDO8D9T7M -> ust30y | section=current
+2025-08-29T17:43:21 | Pipeline complete | pipeline | run complete
+2025-08-29T17:43:22 | Retrieved articles | Copper | Retrieved 10 from API
+2025-08-29T17:43:55 | Node relationship created | china_credit_impulse->china_exports | type=INFLUENCES
+2025-08-29T17:43:55 | Replacement of article skipped | china_credit_impulse | tf=current cnt=1 < 5
+2025-08-29T17:43:55 | Added article | QJEVQZHQR | to existing topic china_credit_impulse
+2025-08-29T17:44:23 | Node relationship created | ust2y->sofr | type=CORRELATES_WITH
+2025-08-29T17:44:23 | Replacement of article skipped | ust2y | tf=current cnt=3 < 5
+2025-08-29T17:44:24 | Added article | QJEVQZHQR | to existing topic ust2y
+2025-08-29T17:44:51 | Node relationship created | ust5y->ust10y | type=INFLUENCES
+2025-08-29T17:44:52 | Replacement of article skipped | ust5y | tf=current cnt=2 < 5
+2025-08-29T17:44:52 | Added article | QJEVQZHQR | to existing topic ust5y
+2025-08-29T17:45:19 | Node relationship created | ust30y->spx | type=CORRELATES_WITH
+2025-08-29T17:45:19 | Replacement of article skipped | ust30y | tf=current cnt=2 < 5
+2025-08-29T17:45:20 | Added article | QJEVQZHQR | to existing topic ust30y
+2025-08-29T17:45:20 | Backfill added | QJEVQZHQR -> bund10y | section=medium
+2025-08-29T17:45:38 | Enrichment check | bund10y | section=current
+2025-08-29T17:45:39 | Enrichment check | ust10y | section=fundamental
+2025-08-29T17:47:03 | Node relationship created | gold->ust2y | type=CORRELATES_WITH
+2025-08-29T17:47:03 | Replacement of article skipped | gold | tf=fundamental cnt=1 < 5
+2025-08-29T17:47:03 | Added article | B6K0ZJQ59 | to existing topic gold
+2025-08-29T17:47:07 | Enrichment check | ust10y | section=medium
+2025-08-29T17:48:44 | Node relationship created | us_unemployment_claims->spx | type=INFLUENCES
+2025-08-29T17:48:44 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=4 < 5
+2025-08-29T17:48:44 | Added article | P8AP425FM | to existing topic us_unemployment_claims
+2025-08-29T17:50:04 | Node relationship created | spx->dxy | type=CORRELATES_WITH
+2025-08-29T17:50:13 | No replacement of article | spx | new_article=P8AP425FM
+2025-08-29T17:50:24 | Triggered rewrite | spx | new_article=P8AP425FM
+2025-08-29T17:53:20 | Saved analysis | spx | field "fundamental_analysis" len=1689
+2025-08-29T17:56:21 | Saved analysis | spx | field "medium_analysis" len=1025
+2025-08-29T17:59:27 | Saved analysis | spx | field "current_analysis" len=2054
+2025-08-29T18:00:34 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-08-29T18:00:34 | Node relationship created | fed_policy->eurusd | type=INFLUENCES
+2025-08-29T18:00:55 | No replacement of article | fed_policy | new_article=QH3MJMTBN
+2025-08-29T18:01:26 | Triggered rewrite | fed_policy | new_article=QH3MJMTBN
+2025-08-29T18:02:48 | Saved analysis | spx | field "movers_scenarios" len=753
+2025-08-29T18:05:44 | Saved analysis | spx | field "swing_trade_or_outlook" len=798
+2025-08-29T18:09:21 | Saved analysis | spx | field "executive_summary" len=622
+2025-08-29T18:09:21 | Rewrite complete | spx | total_chars=6941
+2025-08-29T18:09:21 | Added article | P8AP425FM | to existing topic spx
+2025-08-29T18:10:23 | Node relationship created | copper->dxy | type=CORRELATES_WITH
+2025-08-29T18:10:23 | Replacement of article skipped | copper | tf=fundamental cnt=0 < 5
+2025-08-29T18:10:23 | Added article | ACNBUVLCU | to existing topic copper
+2025-08-29T18:11:44 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T18:11:44 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-08-29T18:11:44 | Replacement of article skipped | fed_policy | tf=fundamental cnt=1 < 5
+2025-08-29T18:11:45 | Added article | ZV3QI3K19 | to existing topic fed_policy
+2025-08-29T18:12:26 | Node relationship created | ecb_policy->ust10y | type=INFLUENCES
+2025-08-29T18:12:27 | Replacement of article skipped | ecb_policy | tf=fundamental cnt=1 < 5
+2025-08-29T18:12:27 | Added article | ZV3QI3K19 | to existing topic ecb_policy
+2025-08-29T18:13:05 | Node relationship created | eurusd->ust2y | type=CORRELATES_WITH
+2025-08-29T18:13:06 | Replacement of article skipped | eurusd | tf=fundamental cnt=1 < 5
+2025-08-29T18:13:06 | Added article | ZV3QI3K19 | to existing topic eurusd
+2025-08-29T18:15:05 | Node relationship created | dxy->spx | type=INFLUENCES
+2025-08-29T18:15:05 | Replacement of article skipped | dxy | tf=fundamental cnt=1 < 5
+2025-08-29T18:15:05 | Added article | ZV3QI3K19 | to existing topic dxy
+2025-08-29T18:15:51 | Node relationship created | ust10y->euro_inflation | type=CORRELATES_WITH
+2025-08-29T18:15:51 | Replacement of article skipped | ust10y | tf=fundamental cnt=2 < 5
+2025-08-29T18:15:52 | Added article | ZV3QI3K19 | to existing topic ust10y
+2025-08-29T18:16:26 | Node relationship created | ust2y->fed_policy | type=CORRELATES_WITH
+2025-08-29T18:16:26 | Replacement of article skipped | ust2y | tf=fundamental cnt=1 < 5
+2025-08-29T18:16:26 | Added article | ZV3QI3K19 | to existing topic ust2y
+2025-08-29T18:17:10 | Node relationship created | ust30y->ust5y | type=CORRELATES_WITH
+2025-08-29T18:17:10 | Replacement of article skipped | ust30y | tf=fundamental cnt=1 < 5
+2025-08-29T18:17:10 | Added article | ZV3QI3K19 | to existing topic ust30y
+2025-08-29T18:17:39 | Node relationship created | bund10y->ust10y | type=INFLUENCES
+2025-08-29T18:17:39 | Replacement of article skipped | bund10y | tf=fundamental cnt=1 < 5
+2025-08-29T18:17:39 | Added article | ZV3QI3K19 | to existing topic bund10y
+2025-08-29T18:18:11 | Node relationship created | gilt10y->bund10y | type=INFLUENCES
+2025-08-29T18:18:12 | Replacement of article skipped | gilt10y | tf=fundamental cnt=1 < 5
+2025-08-29T18:18:12 | Added article | ZV3QI3K19 | to existing topic gilt10y
+2025-08-29T18:18:33 | Node relationship created | jgb10y->usdjpy | type=INFLUENCES
+2025-08-29T18:18:34 | Replacement of article skipped | jgb10y | tf=fundamental cnt=1 < 5
+2025-08-29T18:18:34 | Added article | ZV3QI3K19 | to existing topic jgb10y
+2025-08-29T18:19:31 | Relationship duplicate | fed_policy->gold | type=INFLUENCES
+2025-08-29T18:19:32 | Replacement of article skipped | gold | tf=fundamental cnt=2 < 5
+2025-08-29T18:19:32 | Added article | ZV3QI3K19 | to existing topic gold
+2025-08-29T18:20:36 | Node relationship created | wti->brent | type=CORRELATES_WITH
+2025-08-29T18:20:36 | Replacement of article skipped | wti | tf=fundamental cnt=1 < 5
+2025-08-29T18:20:36 | Added article | ZV3QI3K19 | to existing topic wti
+2025-08-29T18:21:05 | Node relationship created | brent->ust10y | type=INFLUENCES
+2025-08-29T18:21:06 | Replacement of article skipped | brent | tf=fundamental cnt=1 < 5
+2025-08-29T18:21:06 | Added article | ZV3QI3K19 | to existing topic brent
+2025-08-29T18:21:39 | Node relationship created | copper->gold | type=CORRELATES_WITH
+2025-08-29T18:21:39 | Replacement of article skipped | copper | tf=fundamental cnt=1 < 5
+2025-08-29T18:21:39 | Added article | ZV3QI3K19 | to existing topic copper
+2025-08-29T18:22:38 | Relationship duplicate | fed_policy->spx | type=INFLUENCES
+2025-08-29T18:22:38 | Replacement of article skipped | spx | tf=fundamental cnt=2 < 5
+2025-08-29T18:22:39 | Added article | ZV3QI3K19 | to existing topic spx
+2025-08-29T18:23:09 | Node relationship created | euro_inflation->sx5e | type=INFLUENCES
+2025-08-29T18:23:10 | Replacement of article skipped | sx5e | tf=fundamental cnt=1 < 5
+2025-08-29T18:23:10 | Added article | ZV3QI3K19 | to existing topic sx5e
+2025-08-29T18:24:45 | Relationship duplicate | ust10y->usdcny | type=INFLUENCES
+2025-08-29T18:24:45 | Replacement of article skipped | usdcny | tf=fundamental cnt=1 < 5
+2025-08-29T18:24:46 | Added article | ZV3QI3K19 | to existing topic usdcny
+2025-08-29T18:25:37 | Node relationship created | china_exports->dxy | type=INFLUENCES
+2025-08-29T18:25:37 | Replacement of article skipped | china_exports | tf=fundamental cnt=1 < 5
+2025-08-29T18:25:37 | Added article | ZV3QI3K19 | to existing topic china_exports
+2025-08-29T18:26:05 | Node relationship created | china_credit_impulse->usdcny | type=INFLUENCES
+2025-08-29T18:26:05 | Replacement of article skipped | china_credit_impulse | tf=fundamental cnt=1 < 5
+2025-08-29T18:26:06 | Added article | ZV3QI3K19 | to existing topic china_credit_impulse
+2025-08-29T18:26:30 | Node relationship removed | us_inflation->euro_inflation | type=INFLUENCES
+2025-08-29T18:26:30 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T18:26:31 | Replacement of article skipped | us_inflation | tf=fundamental cnt=2 < 5
+2025-08-29T18:26:31 | Added article | ZV3QI3K19 | to existing topic us_inflation
+2025-08-29T18:26:43 | Node relationship created | euro_inflation->eurusd | type=INFLUENCES
+2025-08-29T18:26:43 | Replacement of article skipped | euro_inflation | tf=fundamental cnt=1 < 5
+2025-08-29T18:26:44 | Added article | ZV3QI3K19 | to existing topic euro_inflation
+2025-08-29T18:27:14 | Node relationship created | sofr->ust2y | type=INFLUENCES
+2025-08-29T18:27:14 | Replacement of article skipped | sofr | tf=fundamental cnt=1 < 5
+2025-08-29T18:27:14 | Added article | ZV3QI3K19 | to existing topic sofr
+2025-08-29T18:27:39 | Node relationship created | euribor->bund10y | type=COMPONENT_OF
+2025-08-29T18:27:39 | Replacement of article skipped | euribor | tf=fundamental cnt=1 < 5
+2025-08-29T18:27:39 | Added article | ZV3QI3K19 | to existing topic euribor
+2025-08-29T18:27:39 | Enrichment check | copper | section=fundamental
+2025-08-29T18:28:23 | Enrichment check | copper | section=medium
+2025-08-29T18:29:50 | Enrichment check | copper | section=current
+2025-08-29T18:30:16 | Pipeline complete | pipeline | run complete
+2025-08-29T18:30:18 | Retrieved articles | US 5Y Treasury Yield | Retrieved 10 from API
+2025-08-29T18:34:29 | Node relationship created | copper->ust10y | type=CORRELATES_WITH
+2025-08-29T18:34:29 | Replacement of article skipped | copper | tf=fundamental cnt=1 < 5
+2025-08-29T18:34:29 | Added article | W39GQ2BFZ | to existing topic copper
+2025-08-29T18:35:13 | Node relationship created | spx->fed_policy | type=CORRELATES_WITH
+2025-08-29T18:35:13 | Replacement of article skipped | spx | tf=fundamental cnt=2 < 5
+2025-08-29T18:35:14 | Added article | W39GQ2BFZ | to existing topic spx
+2025-08-29T18:36:17 | Node relationship created | spx->sx5e | type=CORRELATES_WITH
+2025-08-29T18:36:17 | Replacement of article skipped | spx | tf=fundamental cnt=2 < 5
+2025-08-29T18:36:17 | Added article | 7S4T54YAW | to existing topic spx
+2025-08-29T18:37:22 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-08-29T18:37:30 | No replacement of article | spx | new_article=5GZPY1XUE
+2025-08-29T18:37:31 | Added article | 5GZPY1XUE | to existing topic spx
+2025-08-29T18:39:47 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T18:39:47 | Node relationship created | us_inflation->usdjpy | type=INFLUENCES
+2025-08-29T18:39:48 | Replacement of article skipped | us_inflation | tf=fundamental cnt=2 < 5
+2025-08-29T18:39:48 | Added article | P78XKPAXN | to existing topic us_inflation
+2025-08-29T18:41:21 | Node relationship removed | fed_policy->ust5y | type=INFLUENCES
+2025-08-29T18:41:21 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T18:41:21 | Replacement of article skipped | fed_policy | tf=medium cnt=1 < 5
+2025-08-29T18:41:21 | Added article | XQMF22EFB | to existing topic fed_policy
+2025-08-29T18:42:19 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-08-29T18:42:19 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T18:42:20 | Replacement of article skipped | us_inflation | tf=medium cnt=1 < 5
+2025-08-29T18:42:20 | Added article | XQMF22EFB | to existing topic us_inflation
+2025-08-29T18:42:52 | Node relationship created | ust10y->copper | type=INFLUENCES
+2025-08-29T18:42:52 | Replacement of article skipped | ust10y | tf=medium cnt=1 < 5
+2025-08-29T18:42:52 | Added article | XQMF22EFB | to existing topic ust10y
+2025-08-29T18:43:30 | Node relationship created | dxy->usdcny | type=INFLUENCES
+2025-08-29T18:43:31 | Replacement of article skipped | dxy | tf=medium cnt=1 < 5
+2025-08-29T18:43:31 | Added article | XQMF22EFB | to existing topic dxy
+2025-08-29T18:43:58 | Node relationship created | eurusd->ust5y | type=INFLUENCES
+2025-08-29T18:43:58 | Replacement of article skipped | eurusd | tf=medium cnt=1 < 5
+2025-08-29T18:43:58 | Added article | XQMF22EFB | to existing topic eurusd
+2025-08-29T18:43:59 | Enrichment check | ust5y | section=fundamental
+2025-08-29T18:44:39 | Enrichment check | ust5y | section=medium
+2025-08-29T18:45:33 | Enrichment check | ust5y | section=current
+2025-08-29T18:45:33 | Pipeline complete | pipeline | run complete
+2025-08-29T18:45:33 | Retrieved articles | GBP/USD | Retrieved 0 from API
+2025-08-29T18:45:34 | Enrichment check | gbpusd | section=fundamental
+2025-08-29T18:46:19 | Enrichment check | gbpusd | section=medium
+2025-08-29T18:46:47 | Enrichment check | gbpusd | section=current
+2025-08-29T18:47:30 | Pipeline complete | pipeline | run complete
+2025-08-29T18:47:31 | Retrieved articles | UK 10Y Gilt Yield | Retrieved 10 from API
+2025-08-29T18:50:45 | Node relationship created | ust10y->sx5e | type=INFLUENCES
+2025-08-29T18:50:48 | No replacement of article | ust10y | new_article=QIEGXN543
+2025-08-29T18:50:51 | Triggered rewrite | ust10y | new_article=QIEGXN543
+2025-08-29T18:54:40 | Saved analysis | ust10y | field "fundamental_analysis" len=2330
+2025-08-29T18:56:02 | Saved analysis | ust10y | field "medium_analysis" len=1409
+2025-08-29T18:59:44 | Saved analysis | ust10y | field "current_analysis" len=1875
+2025-08-29T19:02:34 | Saved analysis | ust10y | field "drivers" len=1061
+2025-08-29T19:04:57 | Saved analysis | ust10y | field "movers_scenarios" len=551
+2025-08-29T19:07:06 | Saved analysis | ust10y | field "swing_trade_or_outlook" len=841
+2025-08-29T19:08:50 | Saved analysis | ust10y | field "executive_summary" len=1313
+2025-08-29T19:08:50 | Rewrite complete | ust10y | total_chars=9380
+2025-08-29T19:08:50 | Added article | QIEGXN543 | to existing topic ust10y
+2025-08-29T19:09:13 | Node relationship created | ust2y->us_unemployment_claims | type=CORRELATES_WITH
+2025-08-29T19:09:13 | Replacement of article skipped | ust2y | tf=current cnt=4 < 5
+2025-08-29T19:09:13 | Added article | QIEGXN543 | to existing topic ust2y
+2025-08-29T19:09:33 | Node relationship created | ust5y->ust30y | type=INFLUENCES
+2025-08-29T19:09:33 | Replacement of article skipped | ust5y | tf=current cnt=3 < 5
+2025-08-29T19:09:33 | Added article | QIEGXN543 | to existing topic ust5y
+2025-08-29T19:09:49 | Relationship duplicate | fed_policy->ust30y | type=INFLUENCES
+2025-08-29T19:09:49 | Replacement of article skipped | ust30y | tf=current cnt=3 < 5
+2025-08-29T19:09:50 | Added article | QIEGXN543 | to existing topic ust30y
+2025-08-29T19:10:27 | Relationship duplicate | fed_policy->dxy | type=INFLUENCES
+2025-08-29T19:10:27 | Replacement of article skipped | dxy | tf=current cnt=4 < 5
+2025-08-29T19:10:27 | Added article | QIEGXN543 | to existing topic dxy
+2025-08-29T19:11:16 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-08-29T19:11:22 | No replacement of article | spx | new_article=PVR13ETC2
+2025-08-29T19:11:22 | Added article | PVR13ETC2 | to existing topic spx
+2025-08-29T19:11:46 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:11:47 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-08-29T19:11:51 | No replacement of article | us_inflation | new_article=PVR13ETC2
+2025-08-29T19:11:51 | Added article | PVR13ETC2 | to existing topic us_inflation
+2025-08-29T19:13:13 | Node relationship created | china_exports->ust10y | type=INFLUENCES
+2025-08-29T19:13:13 | Replacement of article skipped | china_exports | tf=current cnt=3 < 5
+2025-08-29T19:13:13 | Added article | BY233O0QM | to existing topic china_exports
+2025-08-29T19:13:34 | Node relationship created | ust10y->fed_policy | type=CORRELATES_WITH
+2025-08-29T19:13:38 | No replacement of article | ust10y | new_article=BY233O0QM
+2025-08-29T19:13:39 | Added article | BY233O0QM | to existing topic ust10y
+2025-08-29T19:13:48 | Node relationship created | wheat->dxy | type=CORRELATES_WITH
+2025-08-29T19:13:48 | Replacement of article skipped | wheat | tf=current cnt=1 < 5
+2025-08-29T19:13:48 | Added article | BY233O0QM | to existing topic wheat
+2025-08-29T19:15:45 | Node relationship removed | us_inflation->usdjpy | type=INFLUENCES
+2025-08-29T19:15:45 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-08-29T19:15:50 | No replacement of article | us_inflation | new_article=HOHU35S67
+2025-08-29T19:15:50 | Added article | HOHU35S67 | to existing topic us_inflation
+2025-08-29T19:17:02 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:17:02 | Node relationship created | fed_policy->ust5y | type=INFLUENCES
+2025-08-29T19:17:06 | No replacement of article | fed_policy | new_article=HOHU35S67
+2025-08-29T19:17:09 | Triggered rewrite | fed_policy | new_article=HOHU35S67
+2025-08-29T19:21:21 | Saved analysis | fed_policy | field "fundamental_analysis" len=2631
+2025-08-29T19:22:56 | Saved analysis | fed_policy | field "medium_analysis" len=1297
+2025-08-29T19:25:21 | Saved analysis | fed_policy | field "current_analysis" len=1156
+2025-08-29T19:27:41 | Saved analysis | fed_policy | field "drivers" len=794
+2025-08-29T19:28:53 | Saved analysis | fed_policy | field "movers_scenarios" len=813
+2025-08-29T19:31:15 | Saved analysis | fed_policy | field "swing_trade_or_outlook" len=767
+2025-08-29T19:32:58 | Saved analysis | fed_policy | field "executive_summary" len=40
+2025-08-29T19:32:58 | Rewrite complete | fed_policy | total_chars=7498
+2025-08-29T19:32:58 | Added article | HOHU35S67 | to existing topic fed_policy
+2025-08-29T19:34:05 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-08-29T19:34:05 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:34:09 | No replacement of article | fed_policy | new_article=IP88R9ODP
+2025-08-29T19:34:09 | Added article | IP88R9ODP | to existing topic fed_policy
+2025-08-29T19:34:46 | Relationship duplicate | us_inflation->usdcny | type=INFLUENCES
+2025-08-29T19:34:46 | Replacement of article skipped | usdcny | tf=current cnt=2 < 5
+2025-08-29T19:34:46 | Added article | IP88R9ODP | to existing topic usdcny
+2025-08-29T19:35:04 | Node relationship created | ust10y->gbpusd | type=INFLUENCES
+2025-08-29T19:35:12 | No replacement of article | ust10y | new_article=IP88R9ODP
+2025-08-29T19:35:12 | Added article | IP88R9ODP | to existing topic ust10y
+2025-08-29T19:35:21 | Replacement of article skipped | ust2y | tf=current cnt=4 < 5
+2025-08-29T19:35:21 | Added article | IP88R9ODP | to existing topic ust2y
+2025-08-29T19:36:02 | Relationship duplicate | fed_policy->ust30y | type=INFLUENCES
+2025-08-29T19:36:02 | Replacement of article skipped | ust30y | tf=current cnt=3 < 5
+2025-08-29T19:36:02 | Added article | IP88R9ODP | to existing topic ust30y
+2025-08-29T19:36:29 | Node relationship created | china_exports->spx | type=INFLUENCES
+2025-08-29T19:36:30 | Replacement of article skipped | china_exports | tf=current cnt=3 < 5
+2025-08-29T19:36:30 | Added article | IP88R9ODP | to existing topic china_exports
+2025-08-29T19:37:27 | Node relationship created | china_credit_impulse->dxy | type=INFLUENCES
+2025-08-29T19:37:27 | Replacement of article skipped | china_credit_impulse | tf=current cnt=1 < 5
+2025-08-29T19:37:27 | Added article | IP88R9ODP | to existing topic china_credit_impulse
+2025-08-29T19:37:31 | Enrichment check | gilt10y | section=fundamental
+2025-08-29T19:39:01 | Enrichment check | gilt10y | section=medium
+2025-08-29T19:40:28 | Node relationship created | gilt10y->ust10y | type=INFLUENCES
+2025-08-29T19:40:28 | Replacement of article skipped | gilt10y | tf=current cnt=2 < 5
+2025-08-29T19:40:28 | Added article | VDO8D9T7M | to intended topic gilt10y
+2025-08-29T19:40:28 | Backfill added | VDO8D9T7M -> gilt10y | section=medium
+2025-08-29T19:40:39 | Enrichment check | gilt10y | section=current
+2025-08-29T19:40:39 | Pipeline complete | pipeline | run complete
+2025-08-29T19:40:40 | Retrieved articles | Euro Stoxx 50 | Retrieved 0 from API
+2025-08-29T19:40:40 | Enrichment check | sx5e | section=fundamental
+2025-08-29T19:41:21 | Enrichment check | sx5e | section=medium
+2025-08-29T19:41:43 | Enrichment check | sx5e | section=current
+2025-08-29T19:41:43 | Pipeline complete | pipeline | run complete
+2025-08-29T19:41:44 | Retrieved articles | SOFR | Retrieved 10 from API
+2025-08-29T19:44:11 | Node relationship created | fed_policy->ecb_policy | type=PEERS
+2025-08-29T19:44:15 | No replacement of article | fed_policy | new_article=U21K4ALYQ
+2025-08-29T19:44:15 | Added article | U21K4ALYQ | to existing topic fed_policy
+2025-08-29T19:44:55 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-08-29T19:44:55 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:44:59 | No replacement of article | us_inflation | new_article=U21K4ALYQ
+2025-08-29T19:44:59 | Added article | U21K4ALYQ | to existing topic us_inflation
+2025-08-29T19:45:21 | Relationship duplicate | ust10y->ust30y | type=INFLUENCES
+2025-08-29T19:45:25 | No replacement of article | ust10y | new_article=U21K4ALYQ
+2025-08-29T19:45:25 | Added article | U21K4ALYQ | to existing topic ust10y
+2025-08-29T19:46:13 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:46:13 | Node relationship created | fed_policy->usdjpy | type=INFLUENCES
+2025-08-29T19:46:14 | Replacement of article skipped | fed_policy | tf=medium cnt=1 < 5
+2025-08-29T19:46:14 | Added article | LYMZ7AFDY | to existing topic fed_policy
+2025-08-29T19:46:36 | Node relationship created | us_unemployment_claims->dxy | type=INFLUENCES
+2025-08-29T19:46:36 | Replacement of article skipped | us_unemployment_claims | tf=medium cnt=0 < 5
+2025-08-29T19:46:36 | Added article | LYMZ7AFDY | to existing topic us_unemployment_claims
+2025-08-29T19:47:03 | Node relationship created | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-08-29T19:47:04 | Replacement of article skipped | spx | tf=medium cnt=1 < 5
+2025-08-29T19:47:04 | Added article | LYMZ7AFDY | to existing topic spx
+2025-08-29T19:47:25 | Node relationship created | sofr->ust10y | type=INFLUENCES
+2025-08-29T19:47:25 | Replacement of article skipped | ust10y | tf=medium cnt=1 < 5
+2025-08-29T19:47:25 | Added article | LYMZ7AFDY | to existing topic ust10y
+2025-08-29T19:49:13 | Node relationship removed | fed_policy->usdjpy | type=INFLUENCES
+2025-08-29T19:49:13 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:49:13 | Replacement of article skipped | fed_policy | tf=fundamental cnt=2 < 5
+2025-08-29T19:49:13 | Added article | LF0UUL917 | to existing topic fed_policy
+2025-08-29T19:49:41 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:49:41 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-08-29T19:49:41 | Replacement of article skipped | us_inflation | tf=fundamental cnt=3 < 5
+2025-08-29T19:49:41 | Added article | LF0UUL917 | to existing topic us_inflation
+2025-08-29T19:50:09 | Node relationship created | ust10y->jgb10y | type=CORRELATES_WITH
+2025-08-29T19:50:09 | Replacement of article skipped | ust10y | tf=fundamental cnt=3 < 5
+2025-08-29T19:50:10 | Added article | LF0UUL917 | to existing topic ust10y
+2025-08-29T19:50:31 | Node relationship created | ust2y->eurusd | type=INFLUENCES
+2025-08-29T19:50:31 | Replacement of article skipped | ust2y | tf=fundamental cnt=2 < 5
+2025-08-29T19:50:32 | Added article | LF0UUL917 | to existing topic ust2y
+2025-08-29T19:50:51 | Node relationship created | ust5y->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:50:51 | Replacement of article skipped | ust5y | tf=fundamental cnt=1 < 5
+2025-08-29T19:50:51 | Added article | LF0UUL917 | to existing topic ust5y
+2025-08-29T19:51:20 | Relationship duplicate | fed_policy->ust30y | type=INFLUENCES
+2025-08-29T19:51:21 | Replacement of article skipped | ust30y | tf=fundamental cnt=2 < 5
+2025-08-29T19:51:21 | Added article | LF0UUL917 | to existing topic ust30y
+2025-08-29T19:51:49 | Relationship duplicate | fed_policy->dxy | type=INFLUENCES
+2025-08-29T19:51:49 | Replacement of article skipped | dxy | tf=fundamental cnt=2 < 5
+2025-08-29T19:51:49 | Added article | LF0UUL917 | to existing topic dxy
+2025-08-29T19:52:18 | Node relationship created | sofr->ust5y | type=INFLUENCES
+2025-08-29T19:52:18 | Replacement of article skipped | sofr | tf=fundamental cnt=2 < 5
+2025-08-29T19:52:18 | Added article | LF0UUL917 | to existing topic sofr
+2025-08-29T19:53:13 | Node relationship created | ust2y->bund10y | type=CORRELATES_WITH
+2025-08-29T19:53:20 | No replacement of article | ust2y | new_article=3U94LCJKF
+2025-08-29T19:53:24 | Triggered rewrite | ust2y | new_article=3U94LCJKF
+2025-08-29T19:54:35 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-08-29T19:54:35 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:54:40 | No replacement of article | us_inflation | new_article=97MD1FHW8
+2025-08-29T19:54:40 | Added article | 97MD1FHW8 | to existing topic us_inflation
+2025-08-29T19:55:50 | No replacement of article | fed_policy | new_article=97MD1FHW8
+2025-08-29T19:55:50 | Added article | 97MD1FHW8 | to existing topic fed_policy
+2025-08-29T19:56:14 | Node relationship created | ust10y->gold | type=INFLUENCES
+2025-08-29T19:56:20 | No replacement of article | ust10y | new_article=97MD1FHW8
+2025-08-29T19:56:20 | Added article | 97MD1FHW8 | to existing topic ust10y
+2025-08-29T19:56:53 | Error | - | Relationship create error | ?->? | type=null Error: 'source'
+2025-08-29T19:58:15 | Node relationship created | dxy->sx5e | type=INFLUENCES
+2025-08-29T19:58:20 | No replacement of article | dxy | new_article=7XH2DKEKV
+2025-08-29T19:58:23 | Triggered rewrite | dxy | new_article=7XH2DKEKV
+2025-08-29T19:59:43 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T19:59:43 | Node relationship created | fed_policy->bund10y | type=INFLUENCES
+2025-08-29T19:59:47 | No replacement of article | fed_policy | new_article=HFUQY8O7W
+2025-08-29T19:59:48 | Added article | HFUQY8O7W | to existing topic fed_policy
+2025-08-29T20:00:40 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T20:00:40 | Relationship duplicate | us_inflation->ust5y | type=INFLUENCES
+2025-08-29T20:00:45 | No replacement of article | us_inflation | new_article=HFUQY8O7W
+2025-08-29T20:00:45 | Added article | HFUQY8O7W | to existing topic us_inflation
+2025-08-29T20:01:24 | Node relationship created | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-08-29T20:01:29 | No replacement of article | ust10y | new_article=HFUQY8O7W
+2025-08-29T20:01:29 | Added article | HFUQY8O7W | to existing topic ust10y
+2025-08-29T20:02:02 | Node relationship created | ust2y->spx | type=INFLUENCES
+2025-08-29T20:02:05 | No replacement of article | ust2y | new_article=HFUQY8O7W
+2025-08-29T20:02:07 | Triggered rewrite | ust2y | new_article=HFUQY8O7W
+2025-08-29T20:03:17 | Node relationship removed | fed_policy->bund10y | type=INFLUENCES
+2025-08-29T20:03:18 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-08-29T20:03:18 | Replacement of article skipped | fed_policy | tf=medium cnt=2 < 5
+2025-08-29T20:03:18 | Added article | Z7O1DCHS7 | to existing topic fed_policy
+2025-08-29T20:04:11 | Node relationship removed | dxy->copper | type=INFLUENCES
+2025-08-29T20:04:12 | Node relationship created | dxy->wti | type=INFLUENCES
+2025-08-29T20:04:12 | Replacement of article skipped | dxy | tf=medium cnt=2 < 5
+2025-08-29T20:04:12 | Added article | Z7O1DCHS7 | to existing topic dxy
+2025-08-29T20:04:52 | Node relationship created | eurusd->ust30y | type=CORRELATES_WITH
+2025-08-29T20:04:52 | Replacement of article skipped | eurusd | tf=medium cnt=2 < 5
+2025-08-29T20:04:52 | Added article | Z7O1DCHS7 | to existing topic eurusd
+2025-08-29T20:05:30 | Replacement of article skipped | ust10y | tf=medium cnt=2 < 5
+2025-08-29T20:05:30 | Added article | Z7O1DCHS7 | to existing topic ust10y
+2025-08-29T20:05:44 | Replacement of article skipped | ust2y | tf=medium cnt=1 < 5
+2025-08-29T20:05:45 | Added article | Z7O1DCHS7 | to existing topic ust2y
+2025-08-29T20:06:10 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-08-29T20:06:10 | Replacement of article skipped | us_inflation | tf=medium cnt=2 < 5
+2025-08-29T20:06:10 | Added article | Z7O1DCHS7 | to existing topic us_inflation
+2025-08-29T20:07:03 | Node relationship removed | dxy->sx5e | type=INFLUENCES
+2025-08-29T20:07:04 | Node relationship created | dxy->brent | type=INFLUENCES
+2025-08-29T20:07:07 | No replacement of article | dxy | new_article=UEMV4BE8U
+2025-08-29T20:07:14 | Triggered rewrite | dxy | new_article=UEMV4BE8U
+2025-08-29T20:08:07 | Node relationship created | spx->bund10y | type=CORRELATES_WITH
+2025-08-29T20:08:09 | No replacement of article | spx | new_article=QQQGQC98H
+2025-08-29T20:08:09 | Added article | QQQGQC98H | to existing topic spx
+2025-08-29T20:08:35 | Node relationship removed | fed_policy->us_inflation | type=INFLUENCES
+2025-08-29T20:08:35 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-08-29T20:08:43 | No replacement of article | fed_policy | new_article=QQQGQC98H
+2025-08-29T20:08:43 | Added article | QQQGQC98H | to existing topic fed_policy
+2025-08-29T20:09:21 | Node relationship created | us_unemployment_claims->eurusd | type=INFLUENCES
+2025-08-29T20:09:21 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=4 < 5
+2025-08-29T20:09:21 | Added article | QQQGQC98H | to existing topic us_unemployment_claims
+2025-08-29T20:10:05 | Node relationship removed | ust10y->gold | type=CORRELATES_WITH
+2025-08-29T20:10:05 | Node relationship created | ust10y->ust30y | type=CORRELATES_WITH
+2025-08-29T20:10:09 | No replacement of article | ust10y | new_article=QQQGQC98H
+2025-08-29T20:10:09 | Added article | QQQGQC98H | to existing topic ust10y
+2025-08-29T20:10:57 | Node relationship created | dxy->bund10y | type=CORRELATES_WITH
+2025-08-29T20:11:00 | No replacement of article | dxy | new_article=QQQGQC98H
+2025-08-29T20:11:03 | Triggered rewrite | dxy | new_article=QQQGQC98H
+2025-08-29T20:11:03 | Enrichment check | sofr | section=fundamental
+2025-08-29T20:11:03 | Enrichment check | sofr | section=medium
+2025-08-29T20:11:57 | Enrichment check | sofr | section=current

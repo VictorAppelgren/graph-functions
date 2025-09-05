@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T01:46:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NSQ1I98RR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US climate policy shift (DOE report) could widen 10Y yield by 5-10 bp in 2024-25, with a catalyst window in July 2024.",
+      "existing_ids": [
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses a scientific critique of a DOE report, not a policy statement, regulation, macro event, earnings, or other predefined category."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to map the article to, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term climate policy and scientific consensus, which are structural drivers affecting the economy and markets."
+    },
+    "article_node": {
+      "id": "NSQ1I98RR",
+      "title": "Scientists Slam Trump Administration's Climate Report",
+      "summary": "Scientists from around the world have publicly rebuked a July DOE report that downplayed climate change, arguing it cherry‑picked data and misrepresented scientific consensus. The critique, led by 85 climate experts, highlights errors such as claiming CO₂ benefits agriculture and ignoring ocean warming impacts. The report’s findings are seen as a tool to advance fossil‑fuel interests amid a broader Trump climate rollback agenda. The scientific community’s rapid response underscores the potential policy influence of the DOE review.",
+      "source": "https://time.com/7314000/trump-administration-climate-report-scientists/",
+      "published_at": "2025-09-02T19:21:06+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "NSQ1I98RR"
+}

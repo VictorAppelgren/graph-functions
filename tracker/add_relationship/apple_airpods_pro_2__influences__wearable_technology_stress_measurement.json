@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:53:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_airpods_pro_2",
+    "target_id": "wearable_technology_stress_measurement",
+    "selection_motivation": "Apple AirPods Pro 2 incorporates advanced health sensors enabling real‑time stress measurement, positioning it as a key driver for the wearable technology stress measurement domain.",
+    "candidate_motivation": "AirPods Pro 2 sits at the center of Apple’s hardware ecosystem, so its strongest influences and peers are other Apple devices, key product features, and the policy/supply-chain context shaping premium wearables.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['iphone_17', 'iphone_innovation_stagnation', 'airpods_live_translation', 'apple_siri_overhaul', 'apple_us_manufacturing', 'apple_antitrust_ai', 'apple_trademark_litigation', 'apple_cinemas_trademark_dispute', 'apple_cinemas_trademark_lawsuit', 'wearable_technology_stress_measurement']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'airpods_live_translation'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'iphone_17'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'apple_siri_overhaul'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765706",
+    "rel_id": "apple_airpods_pro_2__influences__wearable_technology_stress_measurement",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'wearable_technology_stress_measurement'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'airpods_live_translation'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'iphone_17'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'apple_siri_overhaul'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Apple AirPods Pro 2 incorporates advanced health sensors enabling real‑time stress measurement, positioning it as a key driver for the wearable technology stress measurement domain.",
+      "type": "INFLUENCES",
+      "source": "apple_airpods_pro_2",
+      "target": "wearable_technology_stress_measurement"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_airpods_pro_2__influences__wearable_technology_stress_measurement"
+}

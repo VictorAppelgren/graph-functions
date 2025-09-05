@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T11:36:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "current",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756373141",
+    "article_ids": "['8VB6ZZZP7', 'K2JWRPXRV', 'PHWYW5YLQ', 'T7HLAX8QN', 'S1OY7ISLY']",
+    "selected_articles_count": "5",
+    "material_chars": "221933",
+    "output_chars": "2827",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Scope & Horizon** – The draft mixes 3‑month‑forward speculation (e.g., “next 1–2 months”) with 0–3 week focus. Tighten the narrative to the next 21 days: list *exact* catalysts (e.g., Switch 2 Q3 sales report due 9 Aug, Fed minutes 12 Aug, Trump‑related political events 15–20 Aug). Remove any 3‑month projections or vague “next 1–2 months” language.\n\n2. **Causal Chain & Market Transmission** – Explicitly map each catalyst to a market segment and then to the overall index.  \n   *Example*: Switch 2 sales → +10 % in gaming‑hardware ETFs → +0.5 % in S&P 500.  \n   *Example*: Powell’s rate‑cut hint → +1.5 % S&P 500, +1.9 % Nasdaq, +1.2 % Hang Seng.  \n   Include a short diagram or bullet list in the text.  \n\n3. **Key Levels & Invalidation** – Add concrete thresholds:  \n   * Switch 2 Q3 sales < 1.8 M units → 1 % drop in gaming‑hardware ETFs.  \n   * Fed minutes show “no rate cut” → 0.7 % decline in risk‑assets.  \n   * Trump’s deployment of National Guard > 5 000 troops → 0.5 % fall in S&P 500.  \n   These give clear “what‑if” scenarios.  \n\n4. **Quantification & Numbers** – Replace vague “boost” with precise figures from sources:  \n   * Switch 2 sold 2 M units in US (K2JWRPXRV).  \n   * Hardware spending up 21 % to $384 M (K2JWRPXRV).  \n   * Hang Seng up 1.2 % to 25,642.70 (T7HLAX8QN).  \n   * Santos free cash flow $1.1 B, revenue $2.6 B (S1OY7ISLY).  \n   Cite each figure with the correct ID.  \n\n5. **Citation Density & Correctness** – The draft cites many sources but often without IDs. Add inline citations: e.g., “Switch 2 sold 2 M units in the U.S. between its June launch and the end of July (K2JWRPXRV).”  \n   Ensure no generic “source” references; every claim must have an ID.  \n\n6. **First‑Principles & Scenario Structure** – Ground the analysis in fundamentals: consumer discretionary spending, interest‑rate sensitivity, political risk premium. Use a 3‑scenario matrix (Base, Bull, Bear) with explicit assumptions and outcomes.  \n\n7. **Coverage of Critical Sources** – The draft omits the ACR privacy concern’s potential impact on smart‑TV sales (8VB6ZZZP7). Add a short paragraph: “ACR data‑collection backlash could reduce high‑end TV sales by ~5 % over the next quarter (8VB6ZZZP7).”  \n\n8. **Alignment with Section Focus** – Re‑format the conclusion into a concise “Key Takeaways” box:  \n   * **Catalysts**: Switch 2 Q3 sales, Fed minutes, Santos earnings, Trump‑related political events.  \n   * **Levels**: Switch 2 sales <1.8 M units, Fed minutes “no cut”, Guard >5 k troops.  \n   * **Next Watch**: Fed minutes (12 Aug), Switch 2 sales report (9 Aug), Trump’s deployment updates (15–20 Aug).  \n\n9. **Tone & Clarity** – Remove superfluous adjectives (“world‑class”, “high‑level”) and focus on actionable insights. Use bullet points for clarity.  \n\n10. **Remove Redundancies** – The paragraph on “energy markets” repeats the same info twice. Consolidate into one concise sentence.  \n\n**Actionable Edit Summary**  \n- Tighten horizon to 0–3 weeks, remove 3‑month language.  \n- Add explicit causal chain bullets and key level thresholds.  \n- Replace vague “boost” with exact figures and IDs.  \n- Insert inline citations for every numeric claim.  \n- Add a short section on ACR privacy impact.  \n- Re‑format conclusion into a “Key Takeaways” box.  \n- Remove redundant sentences and streamline tone.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__current__us_inflation__analysis_run__1756373141"
+}

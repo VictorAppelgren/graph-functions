@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:39:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756077930",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18193",
+    "output_chars": "1634",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong core ideas exist, but to reach world‑class quality they must be rewritten as a 4–6 sentence executive brief with a single, decision‑ready house view. Actionable edits: (1) crystallize a linear causal chain from micro anchors (15% savings; Chanel‑quality purchases) to steadier credit demand and selective durable‑goods investment, then to asset prices, tying each step to specific sources (1GVYF2V8O/2QRLB974F; NL5YYTLF2; 22PL3Q360/W2622L6WW). (2) Ground the base case in first principles and quantify: AI productivity lift ~1–1.5% of trend GDP (UPV3X2MQ6) and the EV cycle’s profitability risk (22PL3Q360; W2622L6WW), with explicit ranges where cited. (3) Present 3–4 explicit catalysts/triggers with thresholds and clear invalidation points (e.g., yield moves of 50–75 bp in 3 months; EPJYXB7DX; 218AGGUXB; NL5YYTLF2), plus a concise 0–3 week playbook. (4) Reconcile conflicts and constrain scope by linking the Brookings/UBI automation debate to a policy premia thesis (NL5YYTLF2) and noting Finland’s UBI result as a non‑employment boost signal, not a macro certainty. (5) Prune repetition and horizon segmentation so the 0–3 week, 0–3/3–6 month base, and Alt A/Alt B paths fit into a single, cohesive paragraph; ensure every factual claim cites an ID and all critical sources are covered (1GVYF2V8O; 2QRLB974F; NL5YYTLF2; UPV3X2MQ6; 22PL3Q360; W2622L6WW; EPJYXB7DX; 218AGGUXB; ILYC1M41F; YQOMV2HAJ; V8TEZOR8R; T1QE6JPIX; U6HXAJR4J; LLN6N4H3Z; CDBMWIUTB; STBVARD8F; R3WNA7L7A).",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756077930"
+}

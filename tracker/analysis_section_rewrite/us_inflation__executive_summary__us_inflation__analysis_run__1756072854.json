@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:12:02",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756072854",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "22527",
+    "output_chars": "1315",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft overplays anecdotes and length, and it fails to deliver the crisp, 4–6 sentence executive brief a professional investor would use; to upgrade, tighten into a three-regime house view anchored in first principles (neutral/real rate, AI-driven TFP, balance-of-payments/terms of trade, and a policy-reaction function) with one-sentence summaries for Regimes A, B, and C and a single causal chain linking AI labor risk to saving/investment behavior to asset pricing and macro growth, all tied directly to NL5YYTLF2; prune the Chanel-suit/15% rule anecdotes or recast them as formal transmission channels supported by 1GVYF2V8O or equivalent sources, and collapse Ford into a single, numerically anchored case (e.g., 17% YTD return, ~5.0% dividend yield, 8–10x forward P/E, ~$1.3B EV loss, ROIC ~10%) with sources (22PL3Q360, W2622L6WW) rather than dispersed phrasing; replace the alt‑scenario proliferation with three explicit scenarios (A/B/C) each with concrete catalysts and clearly stated invalidation signals, and present them with probabilistic weights that sum to 100% plus a concise near-term catalyst set (tariff pass-through, export ratios, auto financing costs, central-bank messaging) drawn tightly from IDs such as EPJYXB7DX, 0J41Q7KTX, S15934PBQ, CDBMWIUTB, and U6HXAJR4J; ensure every factual claim is traceable to an ID from SOURCE MATERIAL and reconcile conflicts (e.g., tariff pass-through debates) by citing primary vs. dissenting sources and, where appropriate, presenting sensitivity ranges; collapse the long macro/micro blocks into a single, on-screen schematic that maps drivers to regime, probability, trigger, and market implication, and finish with a concise 3–4 item watch-list (labor data, policy/Tariff guidance, AI/EV capex cadence, and Jackson Hole commentary) plus a cautious confidence note; finally, enforce discipline on language and length to meet the 4–6 sentence/bullet brief and ensure all macro anchors and market implications are anchored to the IDs in the Citations list.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756072854"
+}

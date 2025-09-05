@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T19:33:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BA8P0P5XN",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article introduces Executive Order 14253, \"Restoring Truth and Sanity to American History,\" a new policy that could influence cultural sentiment and political risk, warranting a dedicated atomic node for accurate graph analytics and LLM reasoning.",
+      "id": "restoring_truth_sanity",
+      "name": "Restoring Truth and Sanity to American History",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Executive Order shaping cultural narrative and political risk"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Policy concerns a cultural review, not a macro driver or policy regime that directly influences markets.",
+      "confidence": 0.9,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

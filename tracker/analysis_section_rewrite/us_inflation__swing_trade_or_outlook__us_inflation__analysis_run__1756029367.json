@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:06:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756029367",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16475",
+    "output_chars": "1158",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong foundation, but the piece would be world-class with tighter adherence to the 4-movers format and sharper first-principles causality. Actionable edits: (1) Rebuild Movers & Scenarios as exactly 4 lines, with 2 Up and 2 Down, each line strictly: Up/Down | Time window | Driver/Mechanism | What to watch | Probability %. Use 0–6 months for horizon and cap each line to crisp, non-narrative drivers (remove multi-clause prose). (2) Convert the two Up lines into concise, first-principles drivers (e.g., cloud/AI capex delivering durable backlog and Azure/AI growth) and two Down lines into explicit drag signals (labor/governance sensitivities and macro regime risk). For each line, add explicit catalysts and explicit invalidation triggers (e.g., “backlog deceleration below X% vs. Y%,” “Azure/AI growth decelerates below Z%,” “labour/governance signal worsens margins,” “policy regime shifts”). (3) Anchor every numerical claim to a cited material ID and keep the What-to-watch succinct; where possible, replace long sentences with compact bullets within the line. Ensure probabilities are justified by the cited facts (e.g., backlog, growth rates) and reconcile any conflicts (e.g., AI-driven productivity versus labor-management signals) in a brief reconciliation note id-linked to sources (0G3A676BP, 4LQD15CFU, TN66GHPAT, UPV3X2MQ6, etc.). (4) The Outlook/Swing Trade must be separate and actionable if the asset is tradable; deliver 1–2 lines only, with the required fields in the exact order (Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100); if not tradable, provide a single Outlook line with the prescribed fields; ensure the swing-trade content is forward-looking, quantitative, and tied to the four-mover catalysts. (5) Tighten the overall narrative flow to a coherent transmission: articulate the causal chain from first principles (productivity via cloud/AI) to durable cash flows to multiple expansion, then to potential drag from labor/governance and macro regime shifts, with explicit, sourced triggers and invalidations for each thread. (6) Remove extraneous macro paragraphs and non-evidentiary claims (e.g., unrelated Range/real estate anecdotes) to avoid mix of sources and ensure every line’s facts map cleanly to the provided IDs. (7) Do a final pass for citation hygiene: place IDs only after facts they support, avoid any unsourced numbers, and ensure every line’s numbers have a matching in-text citation. This will deliver clean, four-line movers with precise triggers, plus a crisp Swing Trade/Outlook that is fully aligned to the SOURCE MATERIAL.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756029367"
+}

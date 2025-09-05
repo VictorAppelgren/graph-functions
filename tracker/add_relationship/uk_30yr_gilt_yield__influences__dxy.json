@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T00:49:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "dxy",
+    "selection_motivation": "UK gilt yields affect GBP strength, which directly influences the DXY index; linking them captures this cross‑asset transmission.",
+    "candidate_motivation": "The UK 30‑year gilt yield is a sovereign debt benchmark that moves with global rate dynamics, monetary policy signals, and inflation expectations, so the strongest peers and influences are other sovereign yields, policy announcements, and macro data that shape rate expectations.",
+    "existing_links_count": "3",
+    "candidate_count": "15",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['gilt10y', 'ust30y', 'ust10y', 'ust2y', 'ust5y', 'bund10y', 'jgb10y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'fed_powell_rate_cut_hint_2025', 'gbpusd', 'dxy']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160517",
+    "rel_id": "uk_30yr_gilt_yield__influences__dxy",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt yields affect GBP strength, which directly influences the DXY index; linking them captures this cross‑asset transmission.",
+      "type": "INFLUENCES",
+      "source": "uk_30yr_gilt_yield",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_30yr_gilt_yield__influences__dxy"
+}

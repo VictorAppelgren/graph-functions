@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T19:08:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_infrastructure",
+    "target_id": "amd_data_center_growth",
+    "selection_motivation": "AI infrastructure is a primary driver of data center expansion for chip manufacturers, making it a key influence on AMD’s data center growth.",
+    "candidate_motivation": "AI Infrastructure is directly tied to the hardware, data‑center, and supply‑chain ecosystem that powers AI workloads, so topics that describe AI‑specific infrastructure, chip export policies, and data‑center growth are the most likely strong peers or influences.",
+    "existing_links_count": "6",
+    "candidate_count": "8",
+    "all_nodes_count": "1023",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['nvidia_ai_infrastructure', 'amd_data_center_growth', 'ai_supply_chain_optimization', 'us_chip_export_controls', 'us_chip_export_tax', 'us_chip_trade_policy', 'us_chip_revenue_policy', 'us_chip_revenue_sharing']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080453",
+    "rel_id": "ai_infrastructure__influences__amd_data_center_growth",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI infrastructure is a primary driver of data center expansion for chip manufacturers, making it a key influence on AMD’s data center growth.",
+      "type": "INFLUENCES",
+      "source": "ai_infrastructure",
+      "target": "amd_data_center_growth"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_infrastructure__influences__amd_data_center_growth"
+}

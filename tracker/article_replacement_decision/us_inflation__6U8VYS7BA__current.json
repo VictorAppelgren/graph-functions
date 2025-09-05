@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T16:49:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "6U8VYS7BA",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['U1KRCQOYR', 'S7M6BJSRT', '8J67I6RWY', '8VMO3PFEO', '4B5JK15SY', '85Q95ZIZH', 'S15934PBQ', 'XB5ZRN1VP', 'Q4G7EPJJ6']",
+    "mode": "MUST_REPLACE",
+    "target_id": "Q4G7EPJJ6",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "Q4G7EPJJ6",
+      "motivation": "The competing timeframe bucket for home/deals coverage is at capacity; removing a closely related, older item (Q4G7EPJJ6) frees space for the newer Pottery Barn outdoor sectional deal and reduces duplication in the graph."
+    }
+  },
+  "id": "us_inflation__6U8VYS7BA__current"
+}

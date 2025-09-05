@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T10:29:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "usdcny",
+    "selection_motivation": "China’s export growth raises foreign demand for USD, directly impacting the USD/CNY exchange rate.",
+    "candidate_motivation": "These topics are likely to influence or correlate with China Exports because they affect the competitiveness of Chinese goods through exchange rates, global commodity price swings, domestic credit conditions, and monetary policy that shapes demand and export financing.",
+    "existing_links_count": "10",
+    "candidate_count": "17",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'oil_price_decline', 'wti', 'brent']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1211469399274292510",
+    "rel_id": "china_exports__influences__usdcny",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s export growth raises foreign demand for USD, directly impacting the USD/CNY exchange rate.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "usdcny"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__usdcny"
+}

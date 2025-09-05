@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T10:48:28",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NAANALEBV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Tesla leadership concerns and AI focus are likely to influence the valuation and risk profile of leading AI and semiconductor firms such as Nvidia, TSM, Google, and Apple.",
+      "existing_ids": [
+        "NVDA",
+        "TSM",
+        "GOOGL",
+        "AAPL"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses concerns about Tesla’s leadership and operational risk, which is a company update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article signals a potential governance risk that could weigh on Tesla’s valuation and its weight in the Nasdaq‑100, implying a moderate impact on the index and related equity exposure."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to Tesla’s leadership and succession planning."
+    },
+    "article_node": {
+      "id": "NAANALEBV",
+      "title": "Big Business This Week: Is Elon Musk toxic for Tesla?",
+      "summary": "Elon Musk’s leadership of Tesla is under scrutiny as sales decline and investors worry about his distraction with AI and other ventures.  The article highlights the need for a succession plan and stronger management bench to sustain operations, especially for the robotaxi rollout.  Musk’s focus on high‑profile projects and political stances is seen as a potential risk to Tesla’s long‑term stability.",
+      "source": "https://www.cheddar.com/media/big-business-this-week-is-elon-musk-toxic-for-tesla/",
+      "published_at": "2025-08-29T11:00:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "NAANALEBV"
+}

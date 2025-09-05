@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T02:55:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust30y",
+    "target_id": "brent",
+    "selection_motivation": "UST30Y reflects long‑term inflation expectations and risk sentiment, which are key drivers of Brent Crude Oil prices; a rise in long‑term yields signals higher expected inflation and tighter policy, pushing Brent higher.",
+    "candidate_motivation": "The US 30Y Treasury Yield is directly driven by Fed policy decisions, short‑term yield dynamics, inflation expectations, and broader risk sentiment, which are reflected in the listed topics. These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "20",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust5y', 'ust2y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'dxy', 'spx', 'sx5e', 'euro_inflation', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'ecb_policy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7079659713738049692",
+    "rel_id": "ust30y__influences__brent",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UST30Y reflects long‑term inflation expectations and risk sentiment, which are key drivers of Brent Crude Oil prices; a rise in long‑term yields signals higher expected inflation and tighter policy, pushing Brent higher.",
+      "type": "INFLUENCES",
+      "source": "ust30y",
+      "target": "brent"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__influences__brent"
+}

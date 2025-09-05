@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-21T14:37:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OTQXOO8PR",
+    "status": "success",
+    "topic_id": "gaza_humanitarian_aid"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article describes Italy’s large-scale medical evacuation and humanitarian aid to Gaza, matching the existing Gaza Humanitarian Aid node.",
+      "existing_node_ids": "gaza_humanitarian_aid",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Article summary not provided, so unable to determine relevant category for the node 'gaza_humanitarian_aid'."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to lack of article summary."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess the time frame due to lack of article summary."
+    },
+    "article_node": {
+      "id": "OTQXOO8PR",
+      "title": "Italy leads on Gaza medical evacuations as US freezes humanitarian pathways",
+      "summary": "Italy has carried out a large-scale medical evacuation of Gazan children, treating over 180 minors and 396 relatives, in a labor-intensive humanitarian effort coordinated with multiple ministries and international agencies. The operation faces challenges such as incomplete medical records, dehydration, and the need for long-term housing and cultural mediation for families who cannot return to Gaza. A tragic death of a patient at Pisa’s hospital highlights the risks involved. In contrast, the United States has suspended all visitor visas for Gazans, citing security concerns, a move that contrasts with Italy’s openness and raises legal and diplomatic questions. The article underscores Italy’s commitment to humanitarian principles amid a broader crisis in Gaza and the divergent approaches of European and U.S. policy makers.",
+      "source": "https://www.yahoo.com/news/articles/italy-leads-gaza-medical-evacuations-113332330.html",
+      "published_at": "2025-08-21T11:33:32+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "OTQXOO8PR"
+}

@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T18:53:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "uk_30yr_gilt_yield",
+    "selection_motivation": "This link is the weakest correlation and least supported by recent data.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link is the weakest correlation and least supported by recent data.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255329141",
+    "rel_id": "jgb10y__influences__uk_30yr_gilt_yield",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "prioritized_link": {
+      "motivation": "JGB yields embody global rate expectations that feed into U.S. inflation dynamics; higher JGB yields signal tightening global rates, which tend to dampen U.S. core PCE inflation expectations, making a direct influence link warranted.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "us_core_pce"
+    },
+    "llm_raw_response": {
+      "motivation": "This link is the weakest correlation and least supported by recent data.",
+      "remove_link": "uk_30yr_gilt_yield"
+    },
+    "removal_decision": {
+      "motivation": "This link is the weakest correlation and least supported by recent data.",
+      "remove_link": "uk_30yr_gilt_yield"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(Japan 10Y JGB OR Japan 10-year JGB OR Japan 10-year Japanese government bond OR Japan 10-year Japanese sovereign bond OR Japan 10-year JGB yield OR Japan 10-year JGB rates OR Japan 10-year JGB rate OR Japan 10-year JGB yields OR Japan 10-year JGB yield OR Japan 10-year JGB OR Japan 10-year JGB) OR (JGB10Y OR JGB10 OR JGB10Y yield OR JGB10 yield OR JGB10Y rates OR JGB10 rates) OR (Japanese 10-year bond OR Japanese 10-year government bond OR Japanese 10-year sovereign bond OR 10-year Japanese bond OR 10-year Japanese government bond OR 10-year Japanese sovereign bond) OR (10-year JGB OR 10-year JGB yield OR 10-year JGB rates) OR (Japan 10-year yield OR Japan 10-year bond yield OR Japan 10-year government bond yield OR Japan 10-year sovereign bond yield) OR (Japan 10-year yield curve OR 10-year yield curve) OR (BOJ policy OR BOJ rate OR BOJ policy decision OR BOJ policy meeting OR Bank of Japan) OR (Japan yield OR Japanese yield) OR (JGB yield OR JGB rates) OR (Japan 10-year bond OR Japan 10-year government bond) OR (Japan 10-year JGB market OR JGB10Y market) OR (Japan 10-year JGB news OR JGB10Y news OR JGB10 news) OR (Japan 10-year JGB analysis OR JGB10Y analysis OR JGB10 analysis)",
+      "name": "Japan 10Y JGB Yield",
+      "id": "jgb10y",
+      "last_queried": "2025-09-03T03:23:40.760000000+00:00",
+      "queries": 3
+    }
+  },
+  "id": "jgb10y__influences__uk_30yr_gilt_yield"
+}

@@ -1,0 +1,43 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T00:16:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0J41Q7KTX",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed rate cut hint and trade war inflation push yields lower, affecting 10Y, 2Y, 5Y, 30Y and USD index.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_unemployment_claims",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "Article contains Fed Chair Powell’s official statement about a potential rate cut next month, qualifying as a policy statement from a policymaker."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified; cannot determine relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate policy signals and near‑term trade dynamics that directly affect the node."
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "0J41Q7KTX"
+}

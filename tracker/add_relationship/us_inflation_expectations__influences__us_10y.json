@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:51:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_expectations",
+    "target_id": "us_10y",
+    "selection_motivation": "Inflation expectations are a primary driver of long‑term Treasury yields, as investors adjust required returns to compensate for expected price level changes; linking to the US 10Y Treasury Yield improves risk‑adjusted yield curve modeling and macro‑financial analytics.",
+    "candidate_motivation": "These topics are the strongest direct or correlated influences on US inflation expectations, encompassing the actual inflation signals, policy expectations, and key price drivers that shape the outlook.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'core_monthly_cpi', 'core_cpi', 'us_inflation_data', 'fed_policy', 'us_10y', 'usd', 'tariff_driven_inflation', 'us_tariffs_semiconductors', 'oil']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510072171",
+    "rel_id": "us_inflation_expectations__influences__us_10y",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Inflation expectations are a primary driver of long‑term Treasury yields, as investors adjust required returns to compensate for expected price level changes; linking to the US 10Y Treasury Yield improves risk‑adjusted yield curve modeling and macro‑financial analytics.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_expectations",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_expectations__influences__us_10y"
+}

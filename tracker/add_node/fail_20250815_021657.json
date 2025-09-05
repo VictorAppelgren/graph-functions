@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:16:44",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8P3H88BMH",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Invivyd's significant revenue growth driven by its COVID-19 monoclonal antibody PEMGARDA, which is crucial for understanding trends in biotech revenue generation and regulatory impacts on market performance.",
+      "id": "invivyd",
+      "name": "Invivyd",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "The topic is a company, Invivyd, not a macro driver, asset, policy, geography, or industry vertical."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Invivyd is a biotech company, an industry vertical, not a macro driver or tradable asset per the policy.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

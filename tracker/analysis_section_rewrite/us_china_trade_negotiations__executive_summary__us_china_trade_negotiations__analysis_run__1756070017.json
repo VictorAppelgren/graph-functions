@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:24:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_china_trade_negotiations",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_china_trade_negotiations__analysis_run__1756070017",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19639",
+    "output_chars": "1180",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong scaffold, but tighten for a world‑class brief: collapse the draft into 4–6 crisp lines, each tethered to a single primary source ID and with explicit transitions between Regime 1–3; map every claim to core anchors (e.g., 0UOO8VW2V, KFTWPFGAF, SGB2PAZGK for regime framing; D5M2JYKVS for near‑term tariff/licensing signals; I35H3FBSN for Intel governance/54-week timing; M6M4LNMC4 for governance risk and Apple risk backdrop) and reconcile any conflicts rather than listing sources ad hoc; replace the sprawling causal narration with a principled first‑principles chain: policy action alters capex timing in domestic silicon/AI infra, which reprices suppliers/credit and shifts macro risk premia that drive multiples, discount rates, and onshore margins; quantify the house view with explicit numbers from the material (60–70% base Regime 2, 20–30% Regime 3; 10% baseline/30% top line tariffs; circa 2.6% S&P futures move; Intel ~10% equity stake) and clearly label the range and uncertainty; restructure the near‑term horizon into concrete catalysts and invalidation points (export‑control list expansions; Nvidia licensing outcomes; Intel governance terms; clear 0–14/14–42/42–90 day milestones) and tighten the watchlist to 2–3 items per window; purge repetition and hedging language, ensure 4–6 sentences/bullets total, and explicitly indicate where each assertion is sourced to avoid cross‑source ambiguity.",
+      "tokens": {}
+    }
+  },
+  "id": "us_china_trade_negotiations__executive_summary__us_china_trade_negotiations__analysis_run__1756070017"
+}

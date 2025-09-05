@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T20:30:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust2y",
+    "target_id": "uk_30yr_gilt_yield",
+    "selection_motivation": "US 2Y yield movements signal Fed policy expectations and global liquidity, which directly affect the risk premium and steepness of long‑term UK gilt yields, warranting a causal influence link.",
+    "candidate_motivation": "US 2Y Treasury Yield is a short‑term benchmark that reacts strongly to Fed policy moves, short‑term rates (SOFR), inflation expectations (US Inflation, US Core PCE), and dollar‑index dynamics, while it is tightly correlated with other U.S. Treasury maturities and comparable European sovereign yields.",
+    "existing_links_count": "20",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sofr', 'us_inflation', 'us_core_pce', 'ust10y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'dxy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6937796325475877381",
+    "rel_id": "ust2y__influences__uk_30yr_gilt_yield",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 2Y yield movements signal Fed policy expectations and global liquidity, which directly affect the risk premium and steepness of long‑term UK gilt yields, warranting a causal influence link.",
+      "type": "INFLUENCES",
+      "source": "ust2y",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__influences__uk_30yr_gilt_yield"
+}

@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T22:31:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4LDHF4T77",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; PubMatic class action may depress its stock and spill into the broader tech index.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a securities class action lawsuit filed against PubMatic Inc., a legal development affecting the company."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a securities class action against PubMatic Inc., which could influence its share price but has limited macro or cross‑asset implications."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a securities class action that could materially affect PubMatic’s valuation over the next few months to a year, indicating a medium‑term impact rather than a long‑term structural change or an immediate market shock."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "4LDHF4T77"
+}

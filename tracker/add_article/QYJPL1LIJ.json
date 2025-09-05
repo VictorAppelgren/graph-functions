@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:15:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "QYJPL1LIJ",
+    "status": "success",
+    "topic_id": "dc_federal_intervention"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the federalization of D.C. police and its implications for local governance, which aligns with existing discussions on federal intervention in urban crime dynamics.",
+      "existing_node_ids": "dc_federal_intervention",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The node refers to a federal intervention, which typically involves actions taken by a central bank or government to influence the economy, making it relevant to central bank actions."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses federal intervention, which directly relates to the node on dc_federal_intervention, indicating a significant impact on policy and governance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses the implications of federal intervention on economic conditions, suggesting a longer-term impact rather than immediate events."
+    },
+    "article_node": {
+      "id": "QYJPL1LIJ",
+      "title": "DC mayor travels to Martha's Vineyard amid Trump's federalized crime crackdown of city",
+      "summary": "Washington, D.C. Mayor Muriel Bowser traveled to Martha's Vineyard for a family commitment while President Donald Trump has federalized the city's police department due to rising crime rates. Bowser criticized Trump's actions as an intrusion on the city's autonomy, despite acknowledging a decrease in overall crime rates. The federalization comes amid concerns over violent crime, particularly involving juveniles, with Trump asserting that his intervention is necessary to restore safety in the capital.",
+      "source": "https://www.foxnews.com/politics/dc-mayor-travels-marthas-vineyard-amid-trumps-federalized-crime-crackdown-city",
+      "published_at": "2025-08-14T17:08:57-04:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "QYJPL1LIJ"
+}

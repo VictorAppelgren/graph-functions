@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T07:40:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "ba",
+    "selection_motivation": "WTI price movements directly affect airline fuel costs, thereby influencing Boeing’s order pipeline and revenue.",
+    "candidate_motivation": "Boeing’s performance is driven by macro‑factors that affect demand for air travel, production costs, and financing.  Key drivers include commodity prices (oil), credit conditions (US Treasury yields), monetary policy (Fed actions), and broader economic activity indicators that influence airline spending and capital budgeting.",
+    "existing_links_count": "15",
+    "candidate_count": "16",
+    "all_nodes_count": "42",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'wti', 'brent', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'dxy']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1263260794989054025",
+    "rel_id": "wti__influences__ba",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "WTI price movements directly affect airline fuel costs, thereby influencing Boeing’s order pipeline and revenue.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "ba"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__ba"
+}

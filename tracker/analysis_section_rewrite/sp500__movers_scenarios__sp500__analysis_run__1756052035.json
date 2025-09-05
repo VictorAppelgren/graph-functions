@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T18:21:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756052035",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19710",
+    "output_chars": "1328",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This analysis is strong on regime framing and clear base-case anchors, but to reach world-class quality you should (i) translate the causal chain into a first-principles ROIC vs WACC framework and explicitly show how EV margin inflection, Model E cash flow, tariff/inflation dynamics, and real-rate trajectories drive cash flow and multiple re-pricing, anchoring the math to the concrete numbers in 22PL3Q360 (EV loss ~$1.3B; adj margin 4.3%; ROIC ~10.1%) and 65UUBU0OR (forward P/E ~10%; dividend ~5%), (ii) restructure into four explicit Up/Down scenarios with 3–6 and 12–24 month horizons as testable, one-sentence lines, each with concrete triggers (e.g., EV margin milestone achieved, tariff relief progress, real-rate threshold crossed) and explicit invalidation criteria, and attach probability estimates derived from the regime map, (iii) raise SECTION FOCUS compliance by making every causal claim, driver, and trigger testable, time-bounded, and numbers-backed—no qualitative assertions without a numeric anchor—while maintaining compactness, (iv) tighten scenario sources by placing in-line IDs after every factual claim and reconciling any conflicts (e.g., JD Power quality signals versus income-driven valuation) so all critical sources (22PL3Q360, 65UUBU0OR, JD Power 2025 IQS) are represented and harmonized, (v) improve quantification by using precise probability bands tied to regime-test evidence (e.g., probability of EV-margin inflection within 3–6 months, probability of tariff normalization by 12–24 months) rather than broad qualitative likelihoods, and (vi) ensure consistency in time horizons and wording across the whole piece (base case, upside, downside) plus a concise watch-list with 4–6 datapoints and thresholds from the cited sources, all delivered with disciplined prose and minimal filler.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756052035"
+}

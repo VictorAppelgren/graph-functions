@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T23:31:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FSRLGZQO1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; RTX contract expected to tighten RTX credit spread by 10‑20 bp over the next 12 months, with a catalyst window Aug 1‑31 2024.",
+      "existing_ids": [
+        "ba"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports new defense contracts awarded to Palantir and RTX, which is a company‑specific news event unrelated to earnings, thus fitting the company_update category."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers relevant to this node."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "FSRLGZQO1"
+}

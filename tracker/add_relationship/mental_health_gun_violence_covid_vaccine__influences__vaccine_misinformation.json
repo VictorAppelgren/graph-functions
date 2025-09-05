@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:18:48",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "mental_health_gun_violence_covid_vaccine",
+    "target_id": "vaccine_misinformation",
+    "selection_motivation": "Vaccine misinformation is a primary driver of COVID‑19 vaccine skepticism, which in turn fuels both mental health deterioration and gun violence, making it a direct influence on the phenomenon.",
+    "candidate_motivation": "These topics are the strongest peers, influences, or correlates given the intersection of mental health, gun violence, and vaccine skepticism, particularly around misinformation dynamics and violent outcomes. They cover vaccine misinformation themes and broader disinformation that can shape risk perceptions and behavior.",
+    "existing_links_count": "0",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['vaccine_misinformation_impact', 'vaccine_misinformation', 'vaccine_misinformation_violence', 'vaccine_disinformation_violence', 'ai_generated_misinformation', 'disinformation_campaigns', 'mental_health_gun_violence', 'mental_health_violence']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559533372",
+    "rel_id": "mental_health_gun_violence_covid_vaccine__influences__vaccine_misinformation",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_gun_violence_covid_vaccine', 'target': 'vaccine_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Vaccine misinformation is a primary driver of COVID‑19 vaccine skepticism, which in turn fuels both mental health deterioration and gun violence, making it a direct influence on the phenomenon.",
+      "type": "INFLUENCES",
+      "source": "mental_health_gun_violence_covid_vaccine",
+      "target": "vaccine_misinformation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "mental_health_gun_violence_covid_vaccine__influences__vaccine_misinformation"
+}

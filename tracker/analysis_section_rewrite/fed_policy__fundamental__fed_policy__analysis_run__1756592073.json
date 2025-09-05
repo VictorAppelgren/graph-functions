@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:14:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756592073",
+    "article_ids": "['1ZRJSOWD9', 'LF0UUL917', '4PRAW7Z7Y', 'ZV3QI3K19', 'PA57YBYVQ']",
+    "selected_articles_count": "5",
+    "material_chars": "201926",
+    "output_chars": "821",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target and well‑structured, but a few tweaks will tighten the causal chain and satisfy the citation‑and‑brevity rules:\n\n1. **Add inline citations for all Fed‑related claims** – the mortgage‑rate article (LF0UUL917) already contains the Fed’s policy stance, the next FOMC meeting (Sept 16‑17 2025), the 10‑year Treasury yield, and the balance‑sheet contraction that feeds the term premium.  Insert (LF0UUL917) after each of these points so every claim is traceable.\n\n2. **Explicitly link the “term premium” and “real‑rate differential” to the mortgage‑rate article** – add a brief parenthetical note that the article attributes the 25–50 bp lift to the widening term premium and higher real rates.\n\n3. **Tie the base‑case range (6.5–6.7 %) and the 20–50 bp risk range directly to LF0UUL917** – a short citation after the sentence that projects the 6.5–6.7 % band will reinforce the evidence base.\n\n4. **Keep the language concise** – trim any superfluous words (e.g., “in a structural view” → “structurally”) to meet the “action over prose” guideline.\n\n5. **Maintain the focus on the asset** – all sentences already reference mortgage rates; no drift is present, so no removal is needed.\n\nImplement these edits and the analysis will meet the Argos standards for depth, clarity, and defensibility.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1756592073"
+}

@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:13:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EMYXVU8EE",
+    "topic_discovery_motivation": "Article discusses historical and political themes related to Russia, which may connect to existing geopolitical nodes.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "gulag",
+        "Soviet political repression",
+        "Russian labor camps"
+      ]
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the historical geopolitical context of the Soviet era, highlighting the gulag system and its impact on theater practitioners, which falls under geopolitical events."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article merely references the historical concept of the gulag and does not present new developments or significant impact on the node’s current relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses the historical origins and long-term structural drivers of the gulag system, a fundamental aspect of the node."
+    },
+    "article_node": {
+      "id": "EMYXVU8EE",
+      "title": "Qué significa gulag",
+      "summary": "The word of the day is 'gulag,' referring to a 20th-century system of Russian labor camps for political prisoners. It has appeared in 43 articles on NYTimes.com over the past year, including a piece about actor Jon Bernthal's experiences in Moscow. The article highlights the dangers faced by theater practitioners during the Soviet era, where risking imprisonment and gulag was a reality.",
+      "source": "https://www.nytimes.com/es/2025/08/22/espanol/que-significa-gulag.html",
+      "published_at": "2025-08-22T07:00:23.888000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "EMYXVU8EE"
+}

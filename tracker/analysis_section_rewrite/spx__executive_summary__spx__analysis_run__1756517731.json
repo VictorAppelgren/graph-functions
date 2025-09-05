@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T03:48:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756517731",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6628",
+    "output_chars": "783",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your brief is already concise and hits the main catalysts, risks and watch‑items, but it needs a few tightening edits to meet the 4–6‑sentence, handle‑mapped, action‑oriented standard. 1) Add the canonical handles in the first two sentences: “S&P 500 (spx) fell 0.74 % (B1KYJ1GPU) and Nasdaq (ndx) slid 1.28 % (B1KYJ1GPU)”. 2) Merge the watch‑item list into a single sentence at the end: “Watch the appellate decision, NHTSA updates, and the Fed’s policy path (LJZYDXVL3, 5GZPY1XUE)”. 3) Keep the confidence qualifier but make it a brief range: “confidence is moderate (≈50 %)”. 4) Ensure every sentence ends with a citation ID and that the causal chain is explicitly tied to Tesla’s valuation (e.g., “legal‑risk premium tightening compresses Tesla’s margin, driving a 1‑3 % decline”). 5) Remove any extraneous wording so the brief stays within 5 sentences. These changes will satisfy the handle‑mapping, catalyst window, and actionable‑style requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756517731"
+}

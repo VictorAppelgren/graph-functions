@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T22:47:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756673241",
+    "article_ids": "['GXYXMKIG5', '3952FOSRQ', 'Z7K8PC4G5', '3YAQ8JUPL', 'U21K4ALYQ']",
+    "selected_articles_count": "5",
+    "material_chars": "106480",
+    "output_chars": "1600",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft already hits the key points (UST10Y, Fed cut probability, Cook firing, tariff ruling) and includes a clear 0‑3‑week horizon, magnitude ranges (20‑30 bp decline, 10‑15 bp rise), and a list of catalysts and thresholds. To bring it to world‑class quality, tighten the causal chain, add concrete numbers, and embed inline citations.  \n\n**Actionable edits**  \n1. **Quantify current levels** – state that the 10‑year is at 4.23 % (4.20‑4.25 % range), the Fed policy rate is 4.3 %, and core PCE was 2.6 % (vs. 2.8 % expected).  \n2. **Explicitly link each driver to the yield** – e.g., “tariff removal (3952FOSRQ) cuts import‑price inflation, compressing the term premium and pulling the 10‑year down 5‑10 bp”; “Cook firing (GXYXMKIG5) could trigger a 25‑bp short‑term cut, raising long‑term yields by 10‑15 bp as inflation expectations adjust.”  \n3. **Add inline citations** – after each factual claim insert the source ID in parentheses (e.g., (U21K4ALYQ)).  \n4. **Clarify thresholds** – state that a break above 4.30 % signals Fed‑independence risk, while a sustained dip below 4.20 % confirms September cut expectations.  \n5. **Include next catalysts** – list Fed minutes (2025‑09‑01), court ruling on Cook (expected 2025‑09‑05), any new tariff announcements, and the next core PCE release (2025‑09‑15).  \n6. **Add a brief risk/reversal scenario** – if the court allows the firing, model a 10‑15 bp rise; if core PCE spikes, model a 5‑10 bp rise.  \n7. **Trim generic language** – replace “market is pricing in” with specific yield movements.  \n\nWith these edits the analysis will meet the acceptance gate, provide a defensible, concise view, and give PMs clear directional signals for the next 0‑3 weeks.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1756673241"
+}

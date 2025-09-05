@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T17:38:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "sx5e",
+    "selection_motivation": "WTI price movements directly drive European equity valuations through inflation expectations and corporate earnings, making WTI a primary driver of the Euro Stoxx 50.",
+    "candidate_motivation": "WTI Crude Oil is driven by supply‑demand fundamentals, geopolitical shocks, and macro‑financial conditions. Topics that track oil price trends, inventories, sanctions, and supply disruptions are direct peers or influences, while broader macro drivers such as Fed policy, inflation, Treasury yields, and currency movements provide strong correlational links.",
+    "existing_links_count": "15",
+    "candidate_count": "25",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['brent', 'us_crude_inventory', 'oil_price_decline', 'us_sanctions_iranshipping', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'euro_inflation', 'us_core_pce', 'us_services_pmi', 'ust10y', 'ust2y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'spx', 'sx5e', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'us_unemployment_claims']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1344325588281722953",
+    "rel_id": "wti__influences__sx5e",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "WTI price movements directly drive European equity valuations through inflation expectations and corporate earnings, making WTI a primary driver of the Euro Stoxx 50.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__sx5e"
+}

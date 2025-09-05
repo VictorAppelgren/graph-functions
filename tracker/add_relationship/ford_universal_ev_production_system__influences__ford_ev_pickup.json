@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:06:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ford_universal_ev_production_system",
+    "target_id": "ford_ev_pickup",
+    "selection_motivation": "The Ford Universal EV Production System directly enables the manufacturing of Ford Electric Pickup vehicles, making it a primary driver of that product line.",
+    "candidate_motivation": "These topics form the strongest possible influences, correlates, or peers to Ford Universal EV Production System by spanning Ford's own electrification initiatives, critical manufacturing tech and supply-chain inputs, and key competitive/policy dynamics in the EV ecosystem.",
+    "existing_links_count": "1",
+    "candidate_count": "21",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['ford_ev_investment', 'ford_ev_investment_louisville', 'ford_electric_vehicle_strategy', 'ford_ev_pickup', 'ford_ai_quality_assurance', 'revel_ev_charging', 'lam_research', 'applied_materials', 'nvidia_ai_infrastructure', 'nvidia_amd_chip_revenue_agreement', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_ai_semiconductors', 'us_china_ai_chip_exports', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'us_china_trade_talks', 'us_china_trade_war_2025', 'tesla_autopilot_litigation', 'daimler_truck_unusual_items', 'iveco_ev_towing_record']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ford_universal_ev_production_system', 'target': 'ford_ev_investment'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160402",
+    "rel_id": "ford_universal_ev_production_system__influences__ford_ev_pickup",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ford_universal_ev_production_system', 'target': 'ford_ev_investment'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_production_system', 'target': 'ford_ev_pickup'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ford Universal EV Production System directly enables the manufacturing of Ford Electric Pickup vehicles, making it a primary driver of that product line.",
+      "type": "INFLUENCES",
+      "source": "ford_universal_ev_production_system",
+      "target": "ford_ev_pickup"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ford_universal_ev_production_system__influences__ford_ev_pickup"
+}

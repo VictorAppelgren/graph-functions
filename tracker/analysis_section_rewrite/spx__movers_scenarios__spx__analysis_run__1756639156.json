@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T13:45:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756639156",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6224",
+    "output_chars": "659",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is off‑track: all four items focus on ETH, yet the SECTION FOCUS demands S&P 500, DXY, and related macro drivers. Delete the crypto entries and replace them with two Up and two Down items that map to canonical handles (spx, dxy, ust10y, us_core_pce). For the Up scenario, use the Fed’s September 20 cut (fed_policy) to lift tech earnings and reduce discount rates, projecting spx +1 % to +4 % over 3–6 mo (FAN5RYW6T) with a 30 % probability; for DXY, note the expected 200 bp drop to 95.8 by Aug 31 followed by a 0.5–1 % rise as the Fed cuts steepen the curve (Z7O1DCHS7)(B1KYJ1GPU) with 70 % probability. For the Down scenario, cite the risk of a Fed pause or hike (fed_policy) that would dampen valuations, projecting spx –6 % to –9 % (FAN5RYW6T) at 60 % probability; also include a DXY decline if inflation eases sharply, reducing the yield advantage (us_core_pce, ust10y) with 35 % probability. Ensure each line is a single sentence, includes the catalyst window (e.g., September 20 FOMC, October 15 CPI), and cites the relevant IDs.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756639156"
+}

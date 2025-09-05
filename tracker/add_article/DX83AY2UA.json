@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T03:22:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DX83AY2UA",
+    "status": "success",
+    "topic_id": "us_urban_crime"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses a missing person case that could relate to broader themes of public safety and crime, which are relevant to existing nodes on urban crime dynamics.",
+      "existing_node_ids": "us_urban_crime",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses urban crime trends and their implications for economic conditions, which can be considered a macroeconomic event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses trends in urban crime, which directly relates to the node on US urban crime."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and patterns in urban crime, which are influenced by various socio-economic factors over time."
+    },
+    "article_node": {
+      "id": "DX83AY2UA",
+      "title": "Authorities Find Body Believed to Be 23-Year-Old Man Who Disappeared After Hailing a Ride to Rocky Mountain National Park",
+      "summary": "Authorities have discovered a body believed to be that of Blake Kieckhafer, a 23-year-old man from Omaha, Nebraska, who went missing after taking a ride share to Rocky Mountain National Park on August 7. The remains were found above Emerald Lake, and search efforts began after his family reported him missing on August 11. The Larimer County Coroner's Office will confirm the identity of the body.",
+      "source": "https://www.yahoo.com/news/articles/authorities-body-believed-23-old-002055877.html",
+      "published_at": "2025-08-15T00:20:55+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "DX83AY2UA"
+}

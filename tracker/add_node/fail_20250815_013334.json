@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:33:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3O1P16JK8",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses a proposed city-run grocery store initiative by NYC mayoral candidate Zohran Mamdani, which could significantly impact local food prices and the grocery market structure, warranting a new node to analyze its macroeconomic implications.",
+      "id": "nyc_city_run_grocery_stores",
+      "name": "NYC City-Run Grocery Stores",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Reduce food insecurity and lower grocery costs"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Local city policy on grocery stores is too granular and not a macro driver or policy regime affecting broader markets.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T18:36:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_impact_on_software_industry",
+    "target_id": "ai_productivity",
+    "selection_motivation": "AI Impact on Software Industry directly drives productivity gains across software development, making it a primary influencer of AI Productivity.",
+    "candidate_motivation": "The source topic concerns how AI is reshaping the software industry, so relevant nodes are those that directly involve AI technologies, software companies, or AI‑driven business models. These topics are likely to influence, correlate with, or be peers to the source within the knowledge graph.",
+    "existing_links_count": "2",
+    "candidate_count": "14",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'ai_ideological_bias', 'ai_human_skills_gap', 'ai_human_skills', 'ai_application_companies', 'ai_infrastructure', 'ai_productivity', 'ai_supply_chain_optimization', 'ai_evaluation_monitoring', 'ai_stock_comparison_figma_palantir', 'ai_stock_performance', 'ai_stock_underperformance', 'ai_generated_content_seo', 'ai_generated_misinformation']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_impact_on_software_industry', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_impact_on_software_industry', 'target': 'ai_application_companies'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745848548",
+    "rel_id": "ai_impact_on_software_industry__influences__ai_productivity",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_impact_on_software_industry', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_impact_on_software_industry', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_impact_on_software_industry', 'target': 'ai_application_companies'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI Impact on Software Industry directly drives productivity gains across software development, making it a primary influencer of AI Productivity.",
+      "type": "INFLUENCES",
+      "source": "ai_impact_on_software_industry",
+      "target": "ai_productivity"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_impact_on_software_industry__influences__ai_productivity"
+}

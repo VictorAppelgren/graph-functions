@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:09:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_tensions",
+    "target_id": "us_china_supply_chain_risks",
+    "selection_motivation": "Trade tensions directly heighten uncertainty and risk in cross-border supply chains, making US-China Supply Chain Risks a natural downstream effect.",
+    "candidate_motivation": "These topics are the closest peers, influences, or correlates to the source due to direct bilateral trade frictions, tariff dynamics, and technology/export-control links with China.",
+    "existing_links_count": "3",
+    "candidate_count": "19",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'us_china_tariff_truce', 'china_us_tariff_truce', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_chip_export_controls', 'us_export_policy_ai_chips', 'us_chip_trade_china', 'us_chip_exports_china', 'us_china_ai_chip_exports', 'china_ai_semiconductors', 'china_nvidia_policy', 'nvidia_china_geopolitics', 'china_semiconductor_policy', 'us_china_supply_chain_risks', 'tariff_driven_inflation']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559532272",
+    "rel_id": "us_china_trade_tensions__influences__us_china_supply_chain_risks",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_supply_chain_risks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trade tensions directly heighten uncertainty and risk in cross-border supply chains, making US-China Supply Chain Risks a natural downstream effect.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_tensions",
+      "target": "us_china_supply_chain_risks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_tensions__influences__us_china_supply_chain_risks"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T16:28:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NO2ID3B4D",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Boeing earnings and backlog expansion support positive stock movement.",
+      "existing_ids": [
+        "ba"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Boeing's Q2 2025 earnings, including core loss per share, jet deliveries, backlog, and free cash flow expectations."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess impact on a specific market handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on Boeing’s Q2 2025 results, backlog, production rates, and short‑term contract and tariff developments, all of which are immediate operational events."
+    },
+    "article_node": {
+      "id": "NO2ID3B4D",
+      "title": "Boeing (BA) Q2 2025 Earnings Call Transcript",
+      "summary": "Boeing reported a significant improvement in its Q2 2025 results, posting a core loss per share of $1.24 and delivering 150 commercial jets—the highest second‑quarter figure since 2018—while its backlog rose to $522 billion. Production rates for the 737 and 787 were stabilized at 38 and 7 aircraft per month, respectively, and the company expects free cash flow of roughly $3 billion for the year. Boeing also secured a $2.8 billion Space Force contract and highlighted recent tariff‑reduction agreements with the EU, UK, and Japan that should lower input costs. Management emphasized ongoing production ramp plans, supply‑chain improvements, and a focus on maintaining high‑quality deliveries to support its long‑term margin recovery and $10 billion free‑cash‑flow target.",
+      "source": "https://www.fool.com/earnings/call-transcripts/2025/08/06/boeing-ba-q2-2025-earnings-call-transcript/",
+      "published_at": "2025-08-06T12:48:07+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "NO2ID3B4D"
+}

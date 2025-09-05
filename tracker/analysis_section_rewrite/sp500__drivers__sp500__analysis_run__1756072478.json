@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:59:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756072478",
+    "drivers_count": "5",
+    "material_chars": "2136",
+    "output_chars": "4810",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong scaffold and relevant anchors (AI productivity, Ford EV dynamics, oil regime ballast, and a four-regime EURUSD spine) are evident, but the causal chain needs tighter, testable links and explicit regime probabilities; the piece would benefit from a world-class upgrade that (1) builds a clean 4–5 step causal flow from policy-regime shifts to discount rates to earnings power, to capex/EV-cycle re-pricing and then to cross-asset valuations, with each step anchored to a specific source; (2) delivers a crisp SECTION FOCUS cross‑topic map (macro/policy/flows/valuation) plus a concise watch-list of decisive triggers with horizons (e.g., Jackson Hole wage-inflation signals, semiconductor capex cadence, auto-margin trajectory including Ford’s Q2 numbers, oil surprises ± mbpd, and EURUSD breaks in the regime bands); (3) hardens first-pr principles grounding by presenting a simple discount-rate/earnings-power framework and clearly labeling how Regimes A/B/C would reprice sector earnings and multiples, with quantitative sensitivities rather than qualitative statements; (4) enforces strict quantification by inserting explicit numbers and ranges tied to sources (Ford EV losses ≈ $1.3B; auto margin ≈ 4.3%; ROIC ≈ 10.1%; 2025 revenue midpoint ≈ $900m; Brent ≈ mid-60s; WTI ≈ low-60s; 2025–26 refinery runs near highs; 2–3 mbpd oil-supply deltas); (5) tightens citation discipline so every factual claim is linked to an ID and critical sources are reconciled, with a transparent base-case probability split across Regimes A/B/C and explicit sensitivity tests; (6) addresses conflicts by presenting a probability-weighted baseline plus near-term scenario tests rather than a single point view; (7) improves readability by eliminating repetition and using concise, parallel phrasing, and (8) after revision provide a minimal, explicit watch-list and a one-sentence concluding synthesis that maps the regime-conditional re-pricing of discount rates, earnings power, and cross-asset risk premia to the five source IDs (22PL3Q360, T1QE6JPIX, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756072478"
+}

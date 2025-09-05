@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T12:03:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust2y",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "US 2‑year Treasury yields are highly sensitive to labor‑market sentiment; spikes in unemployment claims signal weaker demand and lower expected inflation, which historically drive 2‑year yields down, establishing a strong correlation.",
+    "candidate_motivation": "US 2‑year Treasury yields are highly sensitive to short‑term monetary policy, inflation expectations, and the overall shape of the yield curve. They also co‑move with other Treasury maturities and the dollar index, making Fed‑policy announcements, inflation data, and dollar‑related topics natural peers or correlates.",
+    "existing_links_count": "20",
+    "candidate_count": "12",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust5y', 'ust30y', 'sofr', 'dxy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218225898226976028",
+    "rel_id": "ust2y__correlates_with__us_unemployment_claims",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 2‑year Treasury yields are highly sensitive to labor‑market sentiment; spikes in unemployment claims signal weaker demand and lower expected inflation, which historically drive 2‑year yields down, establishing a strong correlation.",
+      "type": "CORRELATES_WITH",
+      "source": "ust2y",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__correlates_with__us_unemployment_claims"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:15:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_generated_content_seo",
+    "target_id": "ai_generated_misinformation",
+    "selection_motivation": "AI-generated content optimized for SEO can amplify misinformation by increasing its visibility and reach, directly influencing the prevalence of AI-generated misinformation.",
+    "candidate_motivation": "These topics are the strongest adjacent or competitive AI-focused topics that would plausibly influence, correlate with, or align with AI-Generated Content and SEO through shared AI content creation, platform dynamics, governance, and infrastructure.",
+    "existing_links_count": "1",
+    "candidate_count": "14",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'grok_4', 'grok_chatbot', 'grok_ai_bias', 'nebius_ai_infrastructure', 'ai_app_store_rivalry', 'generative_ai_film', 'k12_ai_integration', 'ai_generated_misinformation', 'deepfake_ai_medical', 'perplexity_chrome_bid', 'ai_governance', 'ai_supply_chain_optimization', 'ai_infrastructure']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_generated_content_seo', 'target': 'ai_productivity'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531046",
+    "rel_id": "ai_generated_content_seo__influences__ai_generated_misinformation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_generated_content_seo', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_generated_content_seo', 'target': 'ai_generated_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI-generated content optimized for SEO can amplify misinformation by increasing its visibility and reach, directly influencing the prevalence of AI-generated misinformation.",
+      "type": "INFLUENCES",
+      "source": "ai_generated_content_seo",
+      "target": "ai_generated_misinformation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_generated_content_seo__influences__ai_generated_misinformation"
+}

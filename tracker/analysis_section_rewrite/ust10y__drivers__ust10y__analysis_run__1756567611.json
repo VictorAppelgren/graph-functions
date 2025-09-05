@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:37:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756567611",
+    "drivers_count": "7",
+    "material_chars": "3021",
+    "output_chars": "1166",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly identifies the Fed‑cut probability, tariff shock, and Treasury spread dynamics, but it over‑relies on generic “will fall 200 bp” language and repeats the same source IDs without clarifying the causal chain’s directionality. Tighten the narrative by mapping each driver to a canonical handle with an explicit sign and magnitude range: e.g., “Fed 25‑bp cut → +57 bp steepening of 2‑yr/10‑yr spread → +200 bp DXY decline” (Z7O1DCHS7). Replace vague “dollar demand” with “dollar supply‑demand imbalance” and quantify the tariff impact: “29‑31 Aug tariff announcement → −200 bp DXY” (Z7O1DCHS7). Explicitly state the medium‑term pullback mechanism: Fed easing offsets tariff drag via the spread. Add a counter‑scenario: “If PCE > 3.0 % on 2025‑08‑30, DXY could rise 70 bp” (7XH2DKEKV). Remove redundant sentences that repeat the same point. Ensure every claim cites a unique source ID and that the causal chain flows from policy → Treasury spread → DXY. Finally, provide a concise watch‑list: Fed meeting (Sep 1), tariff announcement (Aug 29‑31), PCE (Aug 30), NFP (Aug 31), 2‑yr/10‑yr spread trend. This will satisfy the truth‑over‑verbosity rule, map to canonical handles, and give a clear, actionable signal set.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756567611"
+}

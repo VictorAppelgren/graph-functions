@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T16:00:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8547O47CB",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; copper supply and demand dynamics influence copper pricing and downstream industrial demand for electronics cooling solutions.",
+      "existing_ids": [
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses materials for computer heatsinks, which is not a macro event, earnings, regulation, policy, central bank action, economic data, geopolitical event, company update, or market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article offers a technical comparison of metals for computer heatsinks but does not report a market‑moving event or catalyst; it merely informs material choice considerations."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "8547O47CB",
+      "title": "Which of these materials is the best conductor of heat?",
+      "summary": "The article compares common metals for computer heatsinks, noting that copper (401 W/mK) and aluminum (205 W/mK) are the most widely used due to their balance of conductivity, cost, weight, and manufacturability. Silver offers higher conductivity (≈430 W/mK) but is expensive and less durable, while diamond and graphene have superior thermal properties but are impractical for mass production. The choice of material ultimately depends on trade‑offs among thermal performance, weight, durability, and cost.",
+      "source": "https://www.techspot.com/trivia/49-which-materials-best-conductor-heat/",
+      "published_at": "2025-08-31T14:03:00-05:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "8547O47CB"
+}

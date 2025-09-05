@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T14:33:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6QYR1JT7L",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: risk; the Gaza conflict raises geopolitical risk, driving safe‑haven demand for gold, widening US Treasury yields, strengthening the dollar (DXY), and tightening equity markets (SPX, Euro Stoxx 50).",
+      "existing_ids": [
+        "gold",
+        "wti",
+        "brent",
+        "dxy",
+        "eurusd",
+        "spx",
+        "sx5e",
+        "ust10y",
+        "ust30y",
+        "ust5y",
+        "ust2y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports Belgium’s decision to formally recognize a Palestinian state, a political action with geopolitical implications for the Middle East and international relations."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Unable to assess relevance due to missing node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a political decision that could alter geopolitical risk sentiment and influence market expectations over the medium term, but it does not represent a long‑term structural change."
+    },
+    "article_node": {
+      "id": "6QYR1JT7L",
+      "title": "Belgium to Recognize Palestinian State, Joining Pressure on Israel",
+      "summary": "Belgium announced it will formally recognize a Palestinian state at the upcoming United Nations General Assembly, a move contingent on the release of hostages and the removal of Hamas from governance. The recognition is part of a broader international effort to pressure Israel to end its war in Gaza. Belgium’s foreign minister Maxime Prévot stated the formalization would occur by royal decree once conditions are met.",
+      "source": "https://www.nytimes.com/2025/09/02/world/europe/belgium-palestinian-state.html",
+      "published_at": "2025-09-02T11:18:21.764000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "6QYR1JT7L"
+}

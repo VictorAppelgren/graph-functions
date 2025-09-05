@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:52:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756064494",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15808",
+    "output_chars": "1837",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft shows solid regime framing and a credible chain from macro regime to asset pricing, but it needs tighter formatting, crisper first-principles links, and fully source-backed, conflict-free numbers. Actionable edits: (1) Reformat to exactly four Mover lines as required—two Up and two Down, each with the exact fields: Direction | Time window | Driver/Mechanism | What to watch | Probability %. Use 3–6 months as the common horizon for all four lines to satisfy the constraint; drop any extra lines (the current “Long” swing line crosses the Swing Trade limit and should instead live in the 1–2-line Outlook). (2) Tighten the causal chain: for each line, explicitly connect Regime A/B/C to asset-pricing channels (discount-rate path, earnings durability, credit conditions, sector multipliers) and name the asset class (ACMR) with a minimal, first-principles arithmetic like: if real rates compress by X bps and AI capex supports Y, P/E multiples re-rate by Z; cite the exact numbers from the sources you’re using (e.g., 50 bp Sep cut, 150–175 bp total by year-end from C22MKA9VY; ACMR fundamentals from SK994CBWR). (3) Anchors for probability: replace opaque “65%/60%/55%/50%” with probability bands grounded in the cited triggers (e.g., 50–60% if Fed path follows the 50 bp cut in Sep and total 150–175 bp by year-end; 20–30% if data surprises push Regime B/C; cite the underlying facts (C22MKA9VY, SK994CBWR, 37UZC9X8I)). (4) Clean up citations: ensure every factual/number claim has an in-text ID and remove non-ID labels like “Scraped Source 3” unless that source ID exists in the material; replace with the actual IDs (e.g., 0J41Q7KTX, F8GF45MEU, NL5YYTLF2, T1QE6JPIX, SGB2PAZGK, J99EM2TPZ, RHFWI02JT, CDBMWIUTB, H7Q52FKDH, 22PL3Q360, etc.). (5) Strengthen trades: if ACMR is tradable, supply a single Swing Trade line with concrete levels (Direction: Long; Horizon: 0–6 months; Entry: ~30.5; Stop: ~28.0; Target: ~34.8; R/R: ~3:1; Invalidation: Fed path deviates beyond the stated window; Trigger: onset of the Fed rate-cut cycle; Probability: 60%; Confidence: 70%), citing SK994CBWR/C22MKA9VY. (6) Resolve conflicts and scope: explicitly reconcile the base-case Regime distribution for equities (A ~50%, B ~30%, C ~20%) with the macro framework and guard against overgeneralizing autos/AI exposure—tie every line to a concrete, monitorable catalyst (e.g., Fed path, tariff pause, or WFE capex signal) and note invalidation criteria. (7) Presentation polish: ensure each line stays succinct, uses parallel structure, and avoids duplicative drivers; replace broad phrases with precise triggers (e.g., “Fed confirms 50 bp cut in Sep” rather than “onset of rate-cut cycle” if that exact signal is in the source). Implementing these edits will yield a compliant, world-class Swing Trade outlook that is forward-looking, quantitatively anchored, and fully aligned to the provided material.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756064494"
+}

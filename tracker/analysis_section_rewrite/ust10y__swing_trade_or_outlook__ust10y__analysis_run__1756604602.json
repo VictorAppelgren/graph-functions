@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T04:10:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756604602",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7034",
+    "output_chars": "625",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is overly verbose, mixes multiple assets (UST10Y, DXY, Fed policy) without a clear causal chain, and repeats the same catalysts in several lines. Tighten the focus to a single swing‑trade thesis on the UST10Y, keep the four “Up/Down” lines strictly to the asset, and eliminate redundant “Down” scenarios that mirror the “Up” case. Replace the generic probability percentages with evidence‑based ranges: e.g., 65 % for a Fed‑cut‑driven decline to 4.15 % (U21K4ALYQ) and 30 % for a tariff‑hardening lift to 4.30 % (1DEM6P1Y2). Remove the DXY‑centric “Down” line and instead use a single “Down” line that captures the risk of a dollar rally compressing the 2‑yr/10‑yr spread (97MD1FHW8). Consolidate the trade plan into one swing‑trade line: “Down | 2‑4 weeks | Fed cut compresses term premium | 16‑17 Sep FOMC, 30 Aug PCE | 4.15 % | 4.30 % | 1.5‑1.7 % R/R | Fed hike or tariff hardening | 65 % | 80”. Ensure every driver has an inline ID, avoid repeating the same catalyst twice, and drop any sentence that does not directly link to the UST10Y’s yield path. This will satisfy the 4‑line mover requirement, keep the plan concise, and provide a clear, actionable swing‑trade thesis.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756604602"
+}

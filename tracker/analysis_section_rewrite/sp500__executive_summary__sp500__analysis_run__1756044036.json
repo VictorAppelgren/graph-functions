@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T16:11:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756044036",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16016",
+    "output_chars": "1281",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The analysis scaffolds a solid Regime A/B/C thesis but drifts into off‑topic detail and unfocused prose; to reach world‑class quality, compress to a 4–6 sentence house view that clearly links Regime A’s cloud/AI growth (MSFT/Shopify) to durable FCF and multiples, and position Regime B as a cash‑flow ballast with explicit upside/downside levers. Actionable edits: (1) tighten the causal chain into GMV/revenue growth → margin/ROIC uplift → FCF/dividend support → equity multiples, anchoring every knot to cited numbers (e.g., MSFT Azure +39% cloud growth; Q4 rev +18%; Shopify +31% rev; GMV ~$163B; US e‑commerce GMV share >12%) and tying them to the regime framework (0G3A676BP; IGP1Q4ZEJ). (2) restructure into a crisp Base/Upside/Downside/Alt that binds to a 3–6 month ladder with explicit triggers and invalidations, using the sources’ 0–4/4–8/8–12/24 week windows and concrete thresholds (e.g., IPO cadence 95 deals in 2025; Russell 2000 discount backdrop; tariff relief as a Regime A swing factor; Q7VVGNSQE). (3) Eliminate or relocate clearly tangential items (Beasley/NBA cap moves; Moscow overlay; Disney monetization vignette) to a separate risk notes section unless they are explicitly mapped to regime dynamics; (4) deploy a minimal, numeric 1–2 sentence sensitivity around a regime‑shift catalyst (tariff relief or AI capex acceleration) to illustrate potential multiple re‑rating magnitude; (5) codify a single, coherent set of sources for each claim (map every assertion to 0G3A676BP, W2622L6WW, 65UUBU0OR, IGP1Q4ZEJ, QGXA2WQJ3, 19NO2GMNF, NBX9RA9WX, Q7VVGNSQE, 4661GWFP7, 2YP1X9B4T, U3ZK13ZQI) and reconcile any apparent conflicts in a brief note; (6) ensure tone, formatting, and transitions mirror a professional, executive summary: decisive, synthesis‑driven, and free of repetition.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756044036"
+}

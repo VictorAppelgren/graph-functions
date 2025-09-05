@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T15:59:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8EJQ5QEWE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodity; Trump’s executive orders to accelerate fossil fuel infrastructure are likely to lift demand for midstream oil and gas services, supporting oil prices and related commodity markets.",
+      "existing_ids": [
+        "oil"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses regulatory changes in the form of executive orders by President Trump that streamline environmental reviews and prioritize pipeline projects."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article only briefly mentions AirIQ Inc. with modest financials and no direct impact from the executive orders, so the effect on the node is minimal."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on policy changes (executive orders) that will influence midstream oil and gas companies over the next few years, indicating a medium-term impact."
+    },
+    "article_node": {
+      "id": "8EJQ5QEWE",
+      "title": "AirIQ Reports First Quarter 2026 Earnings",
+      "summary": "Trump’s 2025 executive orders aim to accelerate fossil fuel infrastructure, giving a boost to midstream oil and gas companies that transport and store energy. The orders streamline environmental reviews, declare a national energy emergency, and prioritize pipeline and storage projects, especially in Alaska and offshore drilling areas. As a result, 22 midstream firms—including Chevron, Kinder Morgan, Williams, and Cheniere—are positioned to benefit from increased production and LNG export demand. The article also highlights AirIQ Inc., a Canadian IoT asset‑management firm, noting its modest financials and recent earnings decline.",
+      "source": "https://finance.yahoo.com/news/airiq-reports-first-quarter-2026-122412780.html",
+      "published_at": "2025-08-23T12:24:12+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "8EJQ5QEWE"
+}

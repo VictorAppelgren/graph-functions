@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T01:04:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "A6V3EB8XL",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['6OOEK8TUR', 'U6HXAJR4J', 'CDBMWIUTB', 'M5SPVKG33', 'WC68LCU9R', '0J41Q7KTX', 'I35H3FBSN', 'LLN6N4H3Z', '218AGGUXB']",
+    "mode": "MUST_REPLACE",
+    "target_id": "6OOEK8TUR",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "6OOEK8TUR",
+      "motivation": "The competing timeframe bucket is at capacity; remove the overlapping article 6OOEK8TUR to reduce redundancy in Nancy Mace–related signals and preserve analytical signal for the new piece."
+    }
+  },
+  "id": "us_inflation__A6V3EB8XL__current"
+}

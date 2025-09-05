@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:25:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756041424",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16529",
+    "output_chars": "924",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft coherently links macro regime anchors to moat platforms but needs sharper causal logic, tighter alignment to the SECTION FOCUS, and explicit, data-grounded probabilities; to upgrade, (1) build a concise, testable causal map from each invariant driver (aging demographics/LTC cost, persistent inflation, software/cloud/healthcare moats, tariff/policy responses) to a single regime outcome with explicit thresholds (e.g., tariff pass-through or inflation prints crossing a defined band triggers a higher discount/required return) and pre‑specified check-points; (2) convert to exactly four Up/Down items in the required format, standardize horizons (e.g., 0–4 weeks, 0–3 months, 3–6 months) per line, and attach a concrete, source-grounded probability to each line derived from the evidence rather than heuristic defaults; (3) ground the base/alternative scenarios in first principles (discount-rate dynamics, moat re-rating mechanics, durability of cash flows) and lock in clearly defined catalysts (tariff/pricing signals, AI productivity milestones, debt dynamics) plus explicit invalidation rules; (4) replace broad claims with numbers from the sources (e.g., $3,800 per household impact from IGP1Q4ZEJ; UNH FCF yield >9%; MSFT/SHOP Azure momentum with 39% YoY AI/cloud growth; Azure contracted revenue ≈ $368B) and attribute each to the exact IDs; (5) enforce strict citation discipline so every factual assertion has a parenthetical ID, reconcile conflicts (e.g., tariff pass-through vs inflation paths) by stating the dominant read for base-case and the conditions under which alternate reads prevail; (6) scrub the prose for redundancy and ensure watchlists are actionably tied to each trigger with 2–4 week data points (e.g., Pacaso/mogul cadence, HeartSciences milestones, UAS capex signals) rather than scattered teases; and (7) validate the four lines’ probabilities with a transparent method (e.g., conditional on specific triggers, not fixed percentages) and provide a brief justification inline. If you implement these edits, ensure the four lines render as Up/Down | Time window | Driver/Mechanism | What to watch | Probability% with concrete, sourced triggers.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756041424"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T01:21:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "ecb_policy",
+    "target_id": "fed_policy",
+    "selection_motivation": "ECB policy and Fed policy are peers as the two largest central banks; linking them captures cross‑border monetary policy coordination and spillovers.",
+    "candidate_motivation": "ECB Policy directly shapes euro‑area rates, inflation, and currency dynamics, and is closely watched alongside other major central banks and global bond markets. Therefore topics that capture comparable policy actions, euro‑area yields, inflation, and key currency or bond markets are strong peers or influences.",
+    "existing_links_count": "6",
+    "candidate_count": "15",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'bund10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'gilt10y', 'sx5e', 'sofr', 'us_inflation', 'euro_inflation', 'euribor', 'dxy', 'usdjpy', 'eurusd']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155178801978673070",
+    "rel_id": "ecb_policy__peers__fed_policy",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy and Fed policy are peers as the two largest central banks; linking them captures cross‑border monetary policy coordination and spillovers.",
+      "type": "PEERS",
+      "source": "ecb_policy",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__peers__fed_policy"
+}

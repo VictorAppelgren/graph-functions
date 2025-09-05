@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T00:20:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "china_macro",
+    "selection_motivation": "Oil price movements directly affect China’s macroeconomic indicators such as inflation, GDP growth, and trade balance, making it a primary driver of China macro.",
+    "candidate_motivation": "Oil prices are strongly driven by macro‑economic data, commodity benchmarks, currency movements, and trade policy—especially U.S. and China tariffs—so these topics are the most likely direct influences or peers.",
+    "existing_links_count": "10",
+    "candidate_count": "12",
+    "all_nodes_count": "1032",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_10y', 'china_macro', 'gold', 'copper', 'wheat', 'usd', 'eur', 'us_tariffs_brazil', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327242",
+    "rel_id": "oil__influences__china_macro",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements directly affect China’s macroeconomic indicators such as inflation, GDP growth, and trade balance, making it a primary driver of China macro.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "china_macro"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__china_macro"
+}

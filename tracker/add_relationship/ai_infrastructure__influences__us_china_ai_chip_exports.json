@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:56:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_infrastructure",
+    "target_id": "us_china_ai_chip_exports",
+    "selection_motivation": "AI infrastructure expansion directly increases the production capacity and export volume of AI chips, making it a primary driver of US‑China AI chip export flows.",
+    "candidate_motivation": "These topics are the strongest peers and influences for AI Infrastructure, spanning core AI hardware players, data-center demand, and regulatory/geopolitical factors that directly affect AI deployment and supply chains.",
+    "existing_links_count": "8",
+    "candidate_count": "16",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['nvidia_ai_infrastructure', 'nvidia_amd_chip_revenue_agreement', 'nvidia_low_power_gpus', 'nvidia_china_geopolitics', 'amd_data_center_growth', 'nebius_ai_infrastructure', 'southeast_asia_data_centres', 'us_data_centers_electricity_impact', 'us_tariffs_semiconductors', 'us_export_policy_ai_chips', 'us_chip_export_controls', 'us_china_ai_chip_exports', 'china_nvidia_policy', 'china_chip_competition', 'us_china_trade_talks', 'intel_ceo_tan']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407454302",
+    "rel_id": "ai_infrastructure__influences__us_china_ai_chip_exports",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_ai_chip_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI infrastructure expansion directly increases the production capacity and export volume of AI chips, making it a primary driver of US‑China AI chip export flows.",
+      "type": "INFLUENCES",
+      "source": "ai_infrastructure",
+      "target": "us_china_ai_chip_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_infrastructure__influences__us_china_ai_chip_exports"
+}

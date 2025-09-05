@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:10:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756065465",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17149",
+    "output_chars": "2615",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is rich in source mapping but overly long, unfocused, and not clearly delivering a tight 4–6 sentence executive house view; the causal chain from AI productivity, policy, and external balances to asset pricing is plausible but the payoff to a professional investor is obfuscated by repetition, mixed horizons, and scattered catalysts; to upgrade, compress to a crisp 4–6 sentence house view anchored in a 2×2 regime map (A: AI-led productivity with retraining; B: tariff/industrial-policy shock; C: policy retrenchment; D: Tariff relief/easing external pressures) with explicit, observable triggers (A→B: automation pace/unemployment thresholds from NL5YYTLF2; B→C: tariff trajectories/industrial reallocation signals; C→D: geopolitical de‑escalation or missteps; D→A: sustained AI gains and external balance stabilization), and attach every assertion to a citation from the source IDs; replace generic narration with quantified anchors (e.g., 25% U.S. employment at high automation exposure; Big Beautiful Bill debt impulse ~2.4–4 trillion; GM capex and output targets ~2 million units and $4B domestic spend; HeartSciences’ $32B ECG market; Range/Pacaso/Mogul yields/IRRs) so the numbers drive the narrative rather than decorate it (NL5YYTLF2)(WTNT85IPR)(UPV3X2MQ6)(ILY C1M41F)(V8TEZOR8R)(6OOEK8TUR)(S15934PBQ)(CDBMWIUTB); craft a tight near-term catalyst/watchlist (AI capex announcements; tariff announcements/read-throughs; GM earnings cadence; HeartSciences FDA/Medicare milestones; oil/energy data) with 6–8 items, each with timing and a simple invalidate or confirm trigger; ensure consistency by reconciling any conflicts between sources (e.g., tariff timing vs policy credibility) and assigning a preferred stance with probabilities, then deliver in a single compact paragraph of 4–6 sentences or bullets.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756065465"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:43:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_sanctions",
+    "target_id": "us_tariffs_on_technology",
+    "selection_motivation": "Iranian nuclear sanctions directly trigger U.S. technology tariffs on Iranian goods, making the sanctions a primary driver of that policy.",
+    "candidate_motivation": "The selected topics are closely related to geopolitical and economic factors that influence or are influenced by Iran's nuclear sanctions, particularly in terms of energy markets and international trade relations.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['oil', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'iran_nuclear_program', 'us_china_tariff_truce', 'russia_economic_crisis', 'us_tariffs_on_technology', 'us_china_chip_negotiations', 'us_russia_relations', 'ukraine_geopolitics']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373219454",
+    "rel_id": "iran_nuclear_sanctions__influences__us_tariffs_on_technology",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_tariffs_on_technology'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Iranian nuclear sanctions directly trigger U.S. technology tariffs on Iranian goods, making the sanctions a primary driver of that policy.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_sanctions",
+      "target": "us_tariffs_on_technology"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_sanctions__influences__us_tariffs_on_technology"
+}

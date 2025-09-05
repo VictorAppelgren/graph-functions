@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T05:04:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ETDTU2ZPJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates and commodities; Fed policy and inflation expectations drive UST yields, while oil price decline pressures commodity prices and corporate earnings.",
+      "existing_ids": [
+        "oil_price_decline",
+        "fed_policy",
+        "us_inflation",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "china_exports",
+        "china_credit_impulse"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market commentary on recent equity and commodity price movements and anticipates the Fed rate decision."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was specified to evaluate the article's impact against."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports short‑term market movements and immediate expectations for China shares, global indices, and oil prices, focusing on the next trading day and the Fed decision."
+    },
+    "article_node": {
+      "id": "ETDTU2ZPJ",
+      "title": "China Shares May Take Further Damage On Wednesday",
+      "summary": "China shares have declined for three consecutive trading days, with the Shanghai Composite hovering just above 3,360 and expected to open lower on Wednesday. Global markets remain muted ahead of the Fed’s rate decision, while U.S. indices also fell, led by a pullback in technology stocks. Oil prices slipped amid concerns about future demand and potential excess supply.",
+      "source": "https://www.nasdaq.com/articles/china-shares-may-take-further-damage-wednesday",
+      "published_at": "2025-09-03T01:03:58+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "ETDTU2ZPJ"
+}

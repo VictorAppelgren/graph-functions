@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T23:53:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sofr",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "US unemployment claims and SOFR move together as indicators of short‑term monetary conditions; linking them captures the labor‑market‑rate nexus for cross‑asset analytics.",
+    "candidate_motivation": "SOFR is a Fed‑backed overnight funding rate that directly influences short‑term Treasury yields and is a key input for Fed policy decisions; it also correlates with broader macro variables such as inflation, core PCE, unemployment, and the dollar index. Therefore, topics that are either policy drivers, short‑term Treasury benchmarks, or major macro indicators that affect or are affected by SOFR are the most plausible influences or peers.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'ust2y', 'ust5y', 'ust10y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'dxy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443789408",
+    "rel_id": "sofr__correlates_with__us_unemployment_claims",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'sofr', 'target': 'us_unemployment_claims'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US unemployment claims and SOFR move together as indicators of short‑term monetary conditions; linking them captures the labor‑market‑rate nexus for cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "sofr",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sofr__correlates_with__us_unemployment_claims"
+}

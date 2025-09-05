@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T13:25:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "copper",
+    "target_id": "ust2y",
+    "selection_motivation": "Copper price is highly inversely correlated with short‑term US Treasury yields; adding this link captures the term‑structure sensitivity and improves cross‑asset analytics.",
+    "candidate_motivation": "Copper is a global industrial metal whose price is driven by growth, manufacturing activity, and risk‑sentiment.  It is strongly correlated with key macro handles such as US and Eurozone inflation, core PCE, and the US Treasury yield curve, and inversely related to the USD index.  Fed policy signals and China’s industrial output/exports also shape copper demand, making them logical influences or peers.",
+    "existing_links_count": "19",
+    "candidate_count": "15",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'euro_inflation', 'dxy', 'sx5e', 'spx', 'china_exports', 'china_credit_impulse']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175441701766956422",
+    "rel_id": "copper__correlates_with__ust2y",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price is highly inversely correlated with short‑term US Treasury yields; adding this link captures the term‑structure sensitivity and improves cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "copper",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__correlates_with__ust2y"
+}

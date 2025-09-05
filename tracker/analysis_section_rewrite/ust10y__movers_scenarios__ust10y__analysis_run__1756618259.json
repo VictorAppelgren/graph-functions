@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:42:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756618259",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7843",
+    "output_chars": "687",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft lines miss the required “watch” signal and over‑state probabilities; replace each outcome clause with a concrete trigger (e.g., “watch September 5 payrolls and September 12 Fed meeting for robust job growth” for the Up case, “watch Q3 earnings releases and ARM‑payment metrics for a tech‑sector miss” for the Down case), collapse the two Up lines into one (Fed‑rate‑cut + resilient labor market) and the two Down lines into one (Fed‑rate‑cut + weak payrolls + tech earnings miss), and recalibrate probabilities to 55% for the Up scenario and 65% for the Down scenario, citing FAN5RYW6T, KX6AOMQZ5, and U21K4ALYQ where appropriate. Ensure each line follows the strict format: Up/Down | Sep 12 – Dec 2025 | <driver> | <watch signal> | <prob %>, with a single driver/mechanism and a single watch event, and add at least one inline citation per line.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__movers_scenarios__ust10y__analysis_run__1756618259"
+}

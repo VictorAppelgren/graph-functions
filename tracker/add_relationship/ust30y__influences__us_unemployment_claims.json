@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T14:01:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust30y",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "US 30‑year Treasury yields influence long‑term borrowing costs and growth expectations, which in turn affect unemployment claims.",
+    "candidate_motivation": "The 30‑year Treasury yield is a long‑term rate benchmark that moves in tandem with other sovereign yields, monetary policy signals, macro fundamentals and global risk sentiment; therefore topics that directly influence or mirror these dynamics—other long‑term U.S. and foreign yields, Fed policy announcements, inflation data, key equity and currency indices, and global liquidity metrics—are the most plausible peers or correlates.",
+    "existing_links_count": "20",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['ust10y', 'ust5y', 'ust2y', 'uk_30yr_gilt_yield', 'gilt10y', 'bund10y', 'jgb10y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'dxy', 'spx', 'sx5e', 'gold', 'sofr', 'ecb_policy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7284573496783406123",
+    "rel_id": "ust30y__influences__us_unemployment_claims",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 30‑year Treasury yields influence long‑term borrowing costs and growth expectations, which in turn affect unemployment claims.",
+      "type": "INFLUENCES",
+      "source": "ust30y",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__influences__us_unemployment_claims"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T12:53:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "QFDWCTAYB",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['DBFSBGOEX', '0VMWQTKHB', '9X7XOLXMH', '48JXC9VDP', '0G3A676BP', 'YNN8UQC3G', 'V7GV8YBQU', 'UJHUKJQUY']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article among the allowed IDs covers Shopify, so the new piece does not clearly supersede any current entry and should not replace or degrade existing content."
+    }
+  },
+  "id": "sp500__QFDWCTAYB__fundamental"
+}

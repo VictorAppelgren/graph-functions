@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:30:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_misinformation",
+    "target_id": "journalist_safety_gaza",
+    "selection_motivation": "Misinformation campaigns in Gaza directly erode journalists' safety by fostering hostile narratives and targeting, making it a primary driver of safety risks.",
+    "candidate_motivation": "These topics are the most plausible strong influences or peers to Gaza Misinformation, including disinformation campaigns in geopolitical conflicts and Gaza-specific journalist safety and killings that shape misinformation dynamics.",
+    "existing_links_count": "1",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['disinformation_campaigns', 'journalist_safety_gaza', 'gaza_journalist_killings', 'journalist_assassinations_gaza', 'gaza_humanitarian_crisis', 'gaza_humanitarian_aid']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_misinformation', 'target': 'disinformation_campaigns'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163152",
+    "rel_id": "gaza_misinformation__influences__journalist_safety_gaza",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_misinformation', 'target': 'disinformation_campaigns'}, {'type': 'INFLUENCES', 'source': 'gaza_misinformation', 'target': 'journalist_safety_gaza'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Misinformation campaigns in Gaza directly erode journalists' safety by fostering hostile narratives and targeting, making it a primary driver of safety risks.",
+      "type": "INFLUENCES",
+      "source": "gaza_misinformation",
+      "target": "journalist_safety_gaza"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gaza_misinformation__influences__journalist_safety_gaza"
+}

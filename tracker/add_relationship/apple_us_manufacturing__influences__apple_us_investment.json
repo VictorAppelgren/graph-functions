@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T19:17:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_us_manufacturing",
+    "target_id": "apple_us_investment",
+    "selection_motivation": "Apple’s US manufacturing commitment directly drives its US investment decisions, making it a primary driver of investment flows.",
+    "candidate_motivation": "Apple’s U.S. manufacturing commitment is directly tied to its investment strategy, regulatory environment, and antitrust scrutiny in the U.S., making those topics the most relevant peers or influences.",
+    "existing_links_count": "1",
+    "candidate_count": "4",
+    "all_nodes_count": "1024",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['apple_us_investment', 'apple_antitrust', 'apple_antitrust_claims', 'apple_antitrust_ai']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_china_chip_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163447",
+    "rel_id": "apple_us_manufacturing__influences__apple_us_investment",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'apple_us_investment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Apple’s US manufacturing commitment directly drives its US investment decisions, making it a primary driver of investment flows.",
+      "type": "INFLUENCES",
+      "source": "apple_us_manufacturing",
+      "target": "apple_us_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_us_manufacturing__influences__apple_us_investment"
+}

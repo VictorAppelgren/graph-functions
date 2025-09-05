@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T11:15:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756371726",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9394",
+    "output_chars": "911",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Revise the four lines to tighten the causal chain, use sharper thresholds, and avoid repeating the same “watch” items:  \n1) For Ford’s Up, replace “if Q3 EV losses stay below US$1.5B and revenue growth exceeds 2%” with a single, data‑driven trigger such as “EV losses <US$1.2B and revenue growth >2.5%” and cite (W2622L6WW)(22PL3Q360).  \n2) For Netflix’s Up, condense the driver to “ad‑tier revenue share >12% and password‑crack churn <4%” and cite (61SVFUKBY).  \n3) For Ford’s Down, shift the trigger to “consumer‑spending decline or EV adoption slowdown” rather than repeating the same earnings watch, and keep the probability grounded in recent macro data (cite relevant source).  \n4) For Netflix’s Down, specify a concrete catalyst such as “content‑spend overrun >$18B or subscriber churn >5%” and cite (61SVFUKBY).  \nEnsure each line remains a single sentence, uses only the required citation IDs for facts or numbers, and rounds probabilities to whole numbers (e.g., 55%, 60%, 45%, 50%).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756371726"
+}

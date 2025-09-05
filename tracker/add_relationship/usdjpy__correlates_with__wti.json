@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T05:39:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdjpy",
+    "target_id": "wti",
+    "selection_motivation": "USD/JPY exhibits a strong positive correlation with oil price movements; the 2024‑08‑01 oil price decline driven by OPEC production cuts created a clear causal link.",
+    "candidate_motivation": "USD/JPY is highly sensitive to relative monetary policy, yield differentials, dollar strength, and global risk sentiment; therefore topics that influence US and Japanese rates, inflation, dollar dynamics, and major risk assets are strong peers or influences.",
+    "existing_links_count": "13",
+    "candidate_count": "31",
+    "all_nodes_count": "41",
+    "candidate_ids_len": "31",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'usdcny', 'gbpusd', 'eurusd', 'jgb10y', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'euro_inflation', 'ecb_policy', 'dxy', 'oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'wti', 'brent', 'copper', 'gold', 'wheat', 'spx', 'sx5e']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182197101208013017",
+    "rel_id": "usdjpy__correlates_with__wti",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/JPY exhibits a strong positive correlation with oil price movements; the 2024‑08‑01 oil price decline driven by OPEC production cuts created a clear causal link.",
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "wti"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__correlates_with__wti"
+}

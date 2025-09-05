@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:46:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_governance",
+    "target_id": "openai_gpt5_competition",
+    "selection_motivation": "AI governance establishes regulatory frameworks that shape how AI models compete, directly influencing the competitive dynamics of high‑profile releases such as OpenAI GPT‑5.",
+    "candidate_motivation": "These topics are the strongest anchors for governance-related dynamics around AI models and transparency. They cover model competition, bias, misinformation, and geopolitics of AI infrastructure and semiconductors.",
+    "existing_links_count": "3",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'ai_ideological_bias', 'grok_ai_bias', 'ai_generated_misinformation', 'nvidia_ai_infrastructure', 'us_china_ai_chip_exports', 'us_tariffs_semiconductors', 'china_ai_semiconductors']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_generated_misinformation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627959035",
+    "rel_id": "ai_governance__influences__openai_gpt5_competition",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'openai_gpt5_competition'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_generated_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI governance establishes regulatory frameworks that shape how AI models compete, directly influencing the competitive dynamics of high‑profile releases such as OpenAI GPT‑5.",
+      "type": "INFLUENCES",
+      "source": "ai_governance",
+      "target": "openai_gpt5_competition"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_governance__influences__openai_gpt5_competition"
+}

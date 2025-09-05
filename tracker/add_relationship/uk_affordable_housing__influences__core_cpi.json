@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:33:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "uk_affordable_housing",
+    "target_id": "core_cpi",
+    "selection_motivation": "Affordable housing reduces household housing cost burden, a core component of the consumer price index, so it directly influences core CPI.",
+    "candidate_motivation": "These topics capture the macro, policy, and labor dynamics most likely to influence UK affordable housing, including employment, wages, policy levers, and financing costs.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['uk_labour_market', 'uk_job_market', 'uk_apprenticeships', 'uk_food_poverty', 'euribor', 'core_monthly_cpi', 'core_cpi', 'stagflation']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_affordable_housing', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'uk_affordable_housing', 'target': 'uk_labour_market'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845620",
+    "rel_id": "uk_affordable_housing__influences__core_cpi",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_affordable_housing', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'uk_affordable_housing', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'uk_affordable_housing', 'target': 'uk_labour_market'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Affordable housing reduces household housing cost burden, a core component of the consumer price index, so it directly influences core CPI.",
+      "type": "INFLUENCES",
+      "source": "uk_affordable_housing",
+      "target": "core_cpi"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_affordable_housing__influences__core_cpi"
+}

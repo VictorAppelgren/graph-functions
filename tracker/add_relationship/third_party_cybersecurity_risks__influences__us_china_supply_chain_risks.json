@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:07:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "third_party_cybersecurity_risks",
+    "target_id": "us_china_supply_chain_risks",
+    "selection_motivation": "Third‑party cyber risk is a primary driver of supply‑chain disruptions, especially in the US‑China context, making it a key influencer of US‑China supply chain risk.",
+    "candidate_motivation": "These topics are the most plausible direct peers or influencers for Third-Party Cybersecurity Risks, spanning vendor risk, regulatory/incidence dynamics, and defense/critical infrastructure implications.",
+    "existing_links_count": "6",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['ml_cybersecurity', 'us_cybersecurity_incidents', 'third_party_vendor_risk', 'us_china_supply_chain_risks', 'intrusion_dod_contract', 'us_federal_court_cybersecurity']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593767814",
+    "rel_id": "third_party_cybersecurity_risks__influences__us_china_supply_chain_risks",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_china_supply_chain_risks'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Third‑party cyber risk is a primary driver of supply‑chain disruptions, especially in the US‑China context, making it a key influencer of US‑China supply chain risk.",
+      "type": "INFLUENCES",
+      "source": "third_party_cybersecurity_risks",
+      "target": "us_china_supply_chain_risks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "third_party_cybersecurity_risks__influences__us_china_supply_chain_risks"
+}

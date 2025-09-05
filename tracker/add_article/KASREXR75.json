@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T01:16:57",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "KASREXR75",
+    "status": "success",
+    "topic_id": "dc_federal_intervention"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the deployment of National Guard troops in Washington D.C., which aligns with existing discussions around federal control and public safety, making it relevant for analysis of urban crime dynamics and federal intervention.",
+      "existing_node_ids": "dc_federal_intervention",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The node refers to a federal intervention, which typically involves a central bank decision or action to influence the economy."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses federal intervention, which directly relates to the node on dc_federal_intervention, indicating a significant impact on economic policies and market conditions."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses the implications of federal intervention on economic conditions, which typically have long-lasting effects."
+    },
+    "article_node": {
+      "id": "KASREXR75",
+      "title": "National Guard patrolling DC's Union Station draw heckles, photo ops and little action",
+      "summary": "President Trump has deployed 800 National Guard troops to Washington, D.C., citing a public safety emergency despite crime rates in the city declining. The troops are tasked with supporting law enforcement and guarding federal property, but many residents and local leaders question the necessity of this military presence, arguing that crime is at its lowest level in decades. Critics express concerns about the implications for civil liberties and the effectiveness of such measures, while some travelers at Union Station voiced both support and disapproval of the deployment.",
+      "source": "https://www.usatoday.com/story/news/politics/2025/08/14/national-guard-dc-union-station/85659275007/",
+      "published_at": "2025-08-14T22:02:07+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "KASREXR75"
+}

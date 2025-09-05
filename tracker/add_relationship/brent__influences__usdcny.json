@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T04:21:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "brent",
+    "target_id": "usdcny",
+    "selection_motivation": "Brent crude price movements influence U.S. dollar strength via the DXY, which directly affects the USD/CNY exchange rate; a direct link captures this causal path for better graph analytics.",
+    "candidate_motivation": "These topics are likely strong influences or peers to Brent Crude Oil because commodity prices are driven by currency exposure, monetary policy, macroeconomic indicators, and direct commodity competition.",
+    "existing_links_count": "12",
+    "candidate_count": "15",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['wti', 'dxy', 'fed_policy', 'us_inflation', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_core_pce', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182196001696385180",
+    "rel_id": "brent__influences__usdcny",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Brent crude price movements influence U.S. dollar strength via the DXY, which directly affects the USD/CNY exchange rate; a direct link captures this causal path for better graph analytics.",
+      "type": "INFLUENCES",
+      "source": "brent",
+      "target": "usdcny"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__influences__usdcny"
+}

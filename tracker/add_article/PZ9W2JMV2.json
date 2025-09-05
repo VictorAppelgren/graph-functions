@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T23:52:57",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PZ9W2JMV2",
+    "status": "success",
+    "topic_id": "dc_federal_control"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the federal intervention in local law enforcement in Washington D.C., which aligns with the existing node on federal control of police in D.C. and highlights the implications for public safety and local governance.",
+      "existing_node_ids": "dc_federal_control",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The node relates to federal control, which may involve regulatory changes or policy statements."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses federal control, which directly relates to the governance and regulatory environment impacting economic activities."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing regulatory frameworks and their implications for federal control, suggesting a longer-term impact on the economy."
+    },
+    "article_node": {
+      "id": "PZ9W2JMV2",
+      "title": "Police chief orders more cooperation with immigration agents as federal activity takes root in D.C.",
+      "summary": "The Washington, D.C. police chief has initiated increased cooperation with federal immigration officials, allowing officers to share information and transport immigration agents, which marks a significant shift from the district's previous policy against such collaboration. This change comes amid heightened federal law enforcement presence in the city, as President Trump deploys National Guard troops to assist with crime control and public safety. Mayor Muriel Bowser has expressed concern over the federal takeover of local law enforcement but is attempting to navigate the situation pragmatically, suggesting that the increased federal resources could benefit public safety despite the unsettling nature of the intervention.",
+      "source": "https://www.bostonglobe.com/2025/08/14/nation/dc-police-immigration-agents/",
+      "published_at": "2025-08-14T20:48:33.261000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "PZ9W2JMV2"
+}

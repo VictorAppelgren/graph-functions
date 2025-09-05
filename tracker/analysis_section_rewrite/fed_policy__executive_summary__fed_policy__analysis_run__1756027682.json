@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:38:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756027682",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21489",
+    "output_chars": "2085",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong macro scaffolding and a coherent regime-forward logic are evident, but the draft overfits a multi-page narrative into a single analysis that fails SECTION FOCUS: it isn’t a crisp 4–6 sentence executive brief with a clear house view, catalysts, risks, and watch-items. Actionable edits to world-class quality: (1) compress to a 4–6 sentence house view that starts with a single baseline (Regime A: inflation contained with easing; front-end pricing near 50bp of cuts and a 4.2%–4.3% 10‑yr yield, a softer USD, and a range-bound equity/gold complex) and clearly tie outcomes to ACMR; anchor each numeric claim to a source (GX057ADL7 for regime signals; C22MKA9VY for the 50bp Sep cut and 150–175bp by year-end; 4.2%–4.3% yield; SK994CBWR for the USD34.76 target and 2025 guidance); (2) deliver a near-term/medium-term tiering: base/bull/bear with explicit catalysts, thresholds, and invalidations, e.g., base: Sep–Nov price path to USD34–36 with ACMR 2025 revenue USD850–950m; bull: faster/larger easing and stronger IPOs lifting ACMR toward USD38–42; bear: policy frictions or weak RussellSMID lowering the multiple toward USD30–32; invalidate by rate-path deviation, IPO momentum collapse, or WFE ramp disappointment, each tied to source IDs; (3) restructure the ACMR section to isolate a concise set of triggers, thresholds (e.g., Sep/Nov milestones), and a tight price-path band; remove duplication (e.g., repeated “Regime A/B/C” statements) and keep the near-term price tag anchored to SK994CBWR; (4) sharpen the watch-list and cadence: 0–3 week signals should center on CPI/wage prints (V7GV8YBQU), 10-year yield breaks, and ACMR milestones, with monthly cadence anchored to C22MKA9VY and Q7VVGNSQE; (5) reconcile source conflicts by selecting a single baseline macro map (e.g., Regime A with Regime B/C overlay) and showing how the other regimes would reprice ACMR, rather than treating them as parallel worlds; (6) elevate realism and risk management by replacing long-form macro narration with precise, source-backed risk flags and probability weights (base ≈40–50%, bull ≈20–30%, bear ≈20% with the cadence tied to Jackson Hole/Iran/AI-policy/news), and ensure every factual claim uses an ID from the SOURCE MATERIAL (GX057ADL7, 37UZC9X8I, H7Q52FKDH, C22MKA9VY, SK994CBWR, Q7VVGNSQE, K0WFSW29E, YB758UDBU, V7GV8YBQU, 0G3A676BP, J99EM2TPZ, 9W8ZUIBDY, etc.). In short, deliver a tight 4–6 sentence executive brief plus 4–6 bullet-style lines (catalysts, risks, watch-list, invalidations) that are fully sourced, numerically anchored, and free of repetition or extraneous macro-tangents.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756027682"
+}

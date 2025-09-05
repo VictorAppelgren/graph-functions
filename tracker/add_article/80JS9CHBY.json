@@ -1,0 +1,39 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T05:21:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "80JS9CHBY",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates, FX, equities, and safe‑haven gold; heightened Ukraine war risk premium pushes US Treasury yields up 10‑20bp, lifts the dollar index by ~0.5‑1%, depresses the S&P 500, and boosts gold by 5‑10%.",
+      "existing_ids": [
+        "ust10y",
+        "dxy",
+        "gold",
+        "spx",
+        "eurusd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses Trump's foreign policy rhetoric and a meeting with Putin, which is a geopolitical event."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses Trump’s stance on Ukraine war and foreign policy, but without node context it’s unclear how it maps to a canonical handle; likely limited relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent statements and a meeting between Trump and Putin, highlighting a short‑term shift in foreign policy rhetoric and immediate controversies."
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "80JS9CHBY"
+}

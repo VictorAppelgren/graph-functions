@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T04:39:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "us_tariffs_brazil",
+    "selection_motivation": "US Tariffs as a macro policy directly shape the specific tariff regime imposed on Brazil, influencing trade volumes and bilateral economic dynamics.",
+    "candidate_motivation": "US Tariffs are a policy tool that directly affects trade flows, commodity prices, and international relations. Topics that are specific tariff measures, trade agreements, or sector‑specific tariff policies are the most likely to influence or be influenced by US Tariffs.",
+    "existing_links_count": "10",
+    "candidate_count": "3",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "3",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182196001696384424",
+    "rel_id": "us_tariffs__influences__us_tariffs_brazil",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Tariffs as a macro policy directly shape the specific tariff regime imposed on Brazil, influencing trade volumes and bilateral economic dynamics.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariffs_brazil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs__influences__us_tariffs_brazil"
+}

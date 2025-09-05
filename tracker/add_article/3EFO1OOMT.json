@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T05:25:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3EFO1OOMT",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Fed policy and HHS regulatory actions influence health‑policy risk premium and potential Fed stance on inflation expectations.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "Article describes removal of Dr. Paul Offit from the FDA’s Vaccines and Related Biological Products Advisory Committee, a regulatory change enacted by HHS, fitting the 'regulation' category."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node context provided to map the article to a canonical market handle; cannot assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific, immediate event affecting the node."
+    },
+    "article_node": {
+      "id": "3EFO1OOMT",
+      "title": "Vaccine expert who is a frequent critic of RFK Jr. is blocked from participating in FDA advisory committee",
+      "summary": "Dr. Paul Offit, a prominent vaccine scientist and critic of HHS Secretary Robert F. Kennedy Jr., was barred from serving on the FDA’s Vaccines and Related Biological Products Advisory Committee after his term expired and paperwork was reportedly held up by HHS. The move follows Kennedy’s broader purge of CDC and FDA vaccine advisers amid accusations of conflicts of interest and a push for stricter vaccine oversight. Offit’s exclusion highlights tensions between public health experts and the current administration’s vaccine policy direction.",
+      "source": "https://www.cnn.com/2025/09/02/health/offit-fda-vrbpac",
+      "published_at": "2025-09-03T02:18:20.415000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "3EFO1OOMT"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T13:57:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ba",
+    "target_id": "ust5y",
+    "selection_motivation": "Boeing’s equity performance is strongly linked to medium‑term Treasury yields, reflecting capital‑spending sensitivity; adding this correlation improves risk‑factor mapping for the airline sector.",
+    "candidate_motivation": "Boeing’s earnings and valuation are driven by macro‑level factors that affect its cost of capital, fuel expenses, and export competitiveness. The listed topics capture those key levers—interest rates, inflation, fuel prices, and currency strength—along with a near‑term policy catalyst that could shift the company’s outlook.",
+    "existing_links_count": "6",
+    "candidate_count": "12",
+    "all_nodes_count": "34",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['ust10y', 'fed_policy', 'us_inflation', 'us_core_pce', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'wti', 'brent', 'oil_price_decline', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443787930",
+    "rel_id": "ba__correlates_with__ust5y",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing’s equity performance is strongly linked to medium‑term Treasury yields, reflecting capital‑spending sensitivity; adding this correlation improves risk‑factor mapping for the airline sector.",
+      "type": "CORRELATES_WITH",
+      "source": "ba",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__correlates_with__ust5y"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T16:10:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_credit_impulse",
+    "target_id": "brent",
+    "selection_motivation": "China's sudden credit expansion dampens global oil demand, directly depressing Brent prices.",
+    "candidate_motivation": "These topics are likely strong influences or correlates to China Credit Impulse because they shape Chinese economic activity, global liquidity, currency dynamics, and commodity prices—all key drivers of credit conditions in China.",
+    "existing_links_count": "10",
+    "candidate_count": "28",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "28",
+    "candidate_ids_preview": "['china_exports', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'usdcny', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'spx', 'sx5e', 'us_services_pmi', 'india_industrial_output', 'us_sanctions_iranshipping', 'usdjpy', 'gbpusd', 'euro_inflation']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1195706800578495778",
+    "rel_id": "china_credit_impulse__influences__brent",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China's sudden credit expansion dampens global oil demand, directly depressing Brent prices.",
+      "type": "INFLUENCES",
+      "source": "china_credit_impulse",
+      "target": "brent"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_credit_impulse__influences__brent"
+}

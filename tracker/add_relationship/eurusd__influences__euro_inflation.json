@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:34:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eurusd",
+    "target_id": "euro_inflation",
+    "selection_motivation": "EURUSD movements alter euro‑area import price dynamics, directly feeding into euro‑area inflation expectations and realized CPI, making the exchange rate a key driver of euro inflation.",
+    "candidate_motivation": "EURUSD is directly influenced by USD strength, Eurozone policy, and relative yield differentials, so topics that capture these drivers or cross‑currency pairs are the most likely strong influences or peers.",
+    "existing_links_count": "9",
+    "candidate_count": "16",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['usdcny', 'usdjpy', 'gbpusd', 'dxy', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'bund10y', 'gilt10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'euribor']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814275379",
+    "rel_id": "eurusd__influences__euro_inflation",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD movements alter euro‑area import price dynamics, directly feeding into euro‑area inflation expectations and realized CPI, making the exchange rate a key driver of euro inflation.",
+      "type": "INFLUENCES",
+      "source": "eurusd",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influences__euro_inflation"
+}

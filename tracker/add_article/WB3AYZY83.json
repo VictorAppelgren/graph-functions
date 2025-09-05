@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T00:39:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WB3AYZY83",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Tron’s 60% fee cut and dominant USDT rail shift USD liquidity, tightening US Treasury yields and the DXY.",
+      "existing_ids": [
+        "dxy",
+        "ust10y",
+        "ust5y",
+        "ust2y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a corporate decision to reduce transaction fees, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article concerns a fee change for the Tron cryptocurrency, which does not map to any of the canonical market handles (FX, rates, commodities, equities, credit, etc.) and therefore has no direct impact on the node’s scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent fee cut and its immediate impact on Tron’s transaction costs and user volume, describing a short‑term operational change."
+    },
+    "article_node": {
+      "id": "WB3AYZY83",
+      "title": "Tron Votes to Slash Network Fees 60% to Defend Stablecoin Dominance",
+      "summary": "Tron slashed its transaction fees by 60% on August 29, cutting energy unit prices from 210 to 100 sun to counter the erosion of its competitive edge caused by rising TRX prices. The reduction lowers USDT transfer costs from $1.64 to $4.28, but is expected to drive volume growth and add roughly 12 million users, offsetting the short‑term revenue hit. Despite the fee cut, Tron remains dominant with $24.6 billion in daily USDT volume and a 98.56 % share of the stablecoin ecosystem. The fee policy will be reviewed quarterly, linked to TRX price movements and network activity to balance profitability and market position.",
+      "source": "https://finance.yahoo.com/news/tron-votes-slash-network-fees-205816765.html",
+      "published_at": "2025-08-30T20:58:16+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "WB3AYZY83"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-16T01:20:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AP1QB3SKB",
+    "status": "success",
+    "topic_id": "apple"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the apple node.",
+      "existing_node_ids": "apple",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Unable to determine category due to missing article summary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to determine impact due to missing article summary."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to determine time frame due to lack of article summary."
+    },
+    "article_node": {
+      "id": "AP1QB3SKB",
+      "title": "IBD Smart NYSE + Nasdaq Tables -- Aug 15, 2025",
+      "summary": "The article explains how IBD rates stocks across 33 industry sectors using a composite score that combines EPS growth, relative strength, industry group strength, SMR (sales, profit, ROE), and accumulation/distribution metrics. Each rating ranges from 1 to 99 or A–E, with higher numbers indicating stronger performance. The piece also details visual cues such as color-coded stock names, 52‑week high indicators, and volume change highlights to help investors quickly identify top performers.",
+      "source": "https://www.investors.com/data-tables/ibd-smart-nyse-nasdaq-tables-aug-15-2025/",
+      "published_at": "2025-08-15T22:09:33+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "AP1QB3SKB"
+}

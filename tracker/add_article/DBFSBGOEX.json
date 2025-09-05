@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T15:22:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DBFSBGOEX",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; The analysis of Return On Equity (ROE) for Progress Software Corporation highlights its financial health and performance relative to industry standards, which can influence investor sentiment and stock valuation.",
+      "existing_ids": [
+        "sp500"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article discusses a company's profitability metrics and financial health, which is related to company earnings or financial results."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article provides specific financial metrics (ROE, debt-to-equity ratio) that directly inform the financial health of Progress Software Corporation, offering useful data for investors and analysts."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses key financial metrics that reflect the company's long-term profitability and debt structure."
+    },
+    "article_node": {
+      "id": "DBFSBGOEX",
+      "title": "Did Progress Software Corporation (NASDAQ:PRGS) Use Debt To Deliver Its ROE Of 13%?",
+      "summary": "The article discusses the importance of Return On Equity (ROE) as a measure of a company's profitability, specifically analyzing Progress Software Corporation (NASDAQ:PRGS), which has an ROE of 13%. This figure indicates that for every dollar invested by shareholders, the company generates a profit of $0.13, which is comparable to the industry average of 14%. Despite this, the company's performance has been underwhelming, with declining earnings and a high debt-to-equity ratio of 322.1%, raising concerns about its financial health.",
+      "source": "https://finance.yahoo.com/news/did-progress-software-corporation-nasdaq-122000967.html",
+      "published_at": "2025-08-22T12:20:00+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "DBFSBGOEX"
+}

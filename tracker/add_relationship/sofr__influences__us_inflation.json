@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T19:36:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sofr",
+    "target_id": "us_inflation",
+    "selection_motivation": "SOFR is the overnight repo benchmark that sets short‑term borrowing costs; shifts in SOFR directly alter consumer and business spending, which in turn drive headline inflation expectations.",
+    "candidate_motivation": "SOFR is the overnight repo benchmark that tracks the cost of borrowing U.S. dollars, so it is most strongly linked to U.S. monetary policy, Treasury yields, the dollar’s value, and inflation expectations. These topics directly influence or are influenced by the same drivers that move SOFR.",
+    "existing_links_count": "9",
+    "candidate_count": "10",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'ust2y', 'ust5y', 'ust10y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'fed_powell_rate_cut_hint_2025', 'us_unemployment_claims']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255328864",
+    "rel_id": "sofr__influences__us_inflation",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "SOFR is the overnight repo benchmark that sets short‑term borrowing costs; shifts in SOFR directly alter consumer and business spending, which in turn drive headline inflation expectations.",
+      "type": "INFLUENCES",
+      "source": "sofr",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sofr__influences__us_inflation"
+}

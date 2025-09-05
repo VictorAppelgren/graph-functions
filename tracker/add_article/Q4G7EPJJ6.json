@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T16:08:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Q4G7EPJJ6",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Labor Day promotions signal a near-term shift in consumer discretionary demand and inflation expectations, potentially affecting retail-related equities and macro pricing.",
+      "existing_ids": [
+        "us_inflation",
+        "core_monthly_cpi",
+        "core_cpi",
+        "us_inflation_data",
+        "us_inflation_stock_impact",
+        "us_inflation_expectations"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a promotional sale by Pottery Barn, which is a company news event."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a single retailer’s discount on a specific outdoor sectional and lists other seasonal sales, but it does not signal a significant shift or event affecting the broader economy or industry."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on short‑term, seasonal sales events (Labor Day promotions) that affect consumer purchasing behavior in the near term."
+    },
+    "article_node": {
+      "id": "Q4G7EPJJ6",
+      "title": "This stylish Pottery Barn outdoor sectional is now over $550 off",
+      "summary": "Pottery Barn is offering its Indio Eucalyptus Outdoor Sectional at 20% off ($2,235 from $2,794), a six‑piece, FSC‑certified eucalyptus set in a weathered gray finish that can be reconfigured for any patio size; cushions and an optional ottoman are sold separately and the piece should be covered in winter. The article also highlights a range of Labor Day sales, from major appliance discounts at Samsung, Lowe’s, and GE to outdoor gear deals at REI, kitchenware savings from HexClad, mattress discounts from Saatva, and back‑to‑school bargains across apparel, tech, and supplies. These promotions run through early September, giving shoppers a final chance to upgrade homes, kitchens, and dorms before fall.",
+      "source": "https://www.freep.com/story/shopping/2025/08/24/pottery-barn-indio-eucalyptus-outdoor-sectional-over-550-off-for-labor-day/85743319007/",
+      "published_at": "2025-08-24T13:00:48+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "Q4G7EPJJ6"
+}

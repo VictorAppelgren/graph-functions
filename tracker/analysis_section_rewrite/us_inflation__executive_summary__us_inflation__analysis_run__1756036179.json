@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:03:18",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756036179",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18714",
+    "output_chars": "1286",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong on fundamentals and sources, but the analysis needs a tighter, decision‑useful, 4–6 sentence house view with a sharper causal chain. Actionable edits: (1) collapse to a crisp Base/Catalysts/Invalidation/Watchlist frame, 4–6 sentences total, removing the long, multi‑topic riff that includes weather/energy/private markets unless you explicitly tie them to portfolio risks or liquidity implications; (2) tighten the causal chain from AI/cloud monetization to cash flow to multiple expansion, and anchor it with explicit first‑principles logic (scarcity of moats, durable FCF, capital allocation) and a simple sensitivity backbone (e.g., how a 50–100bp shift in discount rates or a cloud capex slowdown would impact value); (3) replace vague language with quantified anchors from the sources: Azure 39% growth, cloud CAGR 21.2% to 2030, UNH FCF yield >9%, Lulu cash $1.3B and no debt, forward multiple ~13.5x, and the 368B contracted base for Azure (cite 0G3A676BP; IGP1Q4ZEJ); (4) convert narrative into explicit catalysts and invalidations with thresholds: sustained cloud/AI capex momentum and 13F/mega‑cap inflows as catalysts; material cloud capex slowdown, regulatory/DOT risk, or real‑rates shock as invalidation signals, each tied to a source; (5) ensure every factual claim is sourced and reconciled when conflicting (e.g., UNH YTD −41% vs “robust” cash generation) and state the time horizon for each number; (6) prune or clearly connect the noncore sections (private markets, weather, U.S./China tariff notes) to the core thesis or relocate to a separate risk/monitoring addendum; (7) craft a tight watchlist with 4–5 trigger levels (e.g., CPI/payroll alignment, Shopify GMV/revenue/margin prints, 10‑year yield around 4.2%, and a specific energy/tariff signal) and explicit activation/invalidation rules; (8) maintain executive tone and avoid repetition by removing duplicated points (the same macro/driver points appear in multiple paragraphs) and ensuring each sentence advances the thesis.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756036179"
+}

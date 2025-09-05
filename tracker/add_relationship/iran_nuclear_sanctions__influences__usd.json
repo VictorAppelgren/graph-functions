@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:36:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_sanctions",
+    "target_id": "usd",
+    "selection_motivation": "Iran nuclear sanctions directly influence global trade dynamics and risk sentiment, causing the US dollar to appreciate as investors seek a safe‑haven currency and as sanctions are largely US‑led, making USD a primary channel for the sanctions’ economic impact.",
+    "candidate_motivation": "These topics are the most plausible strong influences, correlates, or peers to Iran Nuclear Sanctions, given sanctions drive oil and currency dynamics and are tightly linked to Iran's nuclear policy.",
+    "existing_links_count": "5",
+    "candidate_count": "4",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['iran_nuclear_program', 'oil', 'gold', 'usd']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_tariffs_on_technology'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186904702",
+    "rel_id": "iran_nuclear_sanctions__influences__usd",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_tariffs_on_technology'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Iran nuclear sanctions directly influence global trade dynamics and risk sentiment, causing the US dollar to appreciate as investors seek a safe‑haven currency and as sanctions are largely US‑led, making USD a primary channel for the sanctions’ economic impact.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_sanctions",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_sanctions__influences__usd"
+}

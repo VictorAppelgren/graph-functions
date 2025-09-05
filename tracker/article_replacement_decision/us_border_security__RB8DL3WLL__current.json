@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T02:41:48",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_border_security",
+    "new_article_id": "RB8DL3WLL",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['SPFMRVV3Q', 'CXGM0ZKFR', 'GUBBEMNJM', '28JN0D5JB', '19Y00MQT5', 'HFIN75AHQ', '8ORA7QA8E']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "Current topic has no existing articles to supersede; the new summary does not clearly replace or outrank any prior entry, so no action is required."
+    }
+  },
+  "id": "us_border_security__RB8DL3WLL__current"
+}

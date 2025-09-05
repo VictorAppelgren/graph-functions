@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T05:00:00",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "current",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756090582",
+    "article_ids": "['RAV2UWRTT', '4LDHF4T77', 'Y4QWID79M', 'Z5IA1CYUF', '4VN4UTWX1']",
+    "selected_articles_count": "5",
+    "material_chars": "77060",
+    "output_chars": "3693",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall assessment: the draft correctly centers Hutchmed’s 0–3 week drivers (leadership transition, upcoming data/webcasts) but it should be rebuilt as a tight, horizon‑first brief with explicit catalysts, thresholds, and invalidations, plus a disciplined separation of Hutchmed fundamentals from the adjacent litigation headlines. Strengths include noting the Acting CEO appointment and the SACHI/SANOVO milestones and flagging ASCO as a near‑term catalyst; gaps include a weak causal chain, sparse numeric context, and a format that blends multiple stories without clear watchpoints.\n\nActionable edits to upgrade to world‑class quality (compact, 0–3 week focus):\n- Re‑structure into a two‑part, horizon‑driven outline: (1) immediate drivers and catalysts tied to Hutchmed (leadership continuity, health status clarification, SACHI Phase III PFS signal, SANOVO enrollment completion, ASCO data/webcast timing, any China approvals) and (2) market transmission and reaction function with explicit thresholds and invalidations.\n- Build a clear causal chain from event to market impact: leadership change mitigates execution risk if Su’s absence is temporary and board commentary stays constructive; otherwise, ongoing ambiguity caps upside. Tie each milestone to a concrete market reaction pathway (data cadence → narrative momentum → multiple expansion/discount).\n- Quantify context from sources: insert numeric anchors where available (SANOVO enrollment completed; SACHI Phase III PFS benefit described as “significant” without a numeric magnitude; S&P Global Sustainability Yearbook China 2025 inclusion with top‑10% CSA status; CSA sample size 1,662 with 164 selected). If a numeric value isn’t in the sources, state the exact language and keep the precise descriptor (e.g., “significant PFS benefit” rather than a specific figure).\n- Explicitly spell out thresholds and invalidation points: Su’s status/board commentary update timelines; ASCO data webcast timing and whether data is presented (late‑breaking oral at ASCO) and any interim results timing; completion status of SANOVO data readouts; any unexpected negative commentary from the board; if no data/readouts by a defined date, shift to scenario planning.\n- Implement a three‑scenario structure (base/bull/bear) with qualitative probability ranges anchored to data cadence rather than price targets, and attach each scenario to specific catalysts and risks (e.g., positive ASCO/SANOVO readouts → higher probability of near‑term multiple expansion; persistent leadership uncertainty or negative data → downside bias).\n- Separate Hutchmed narrative from external litigation headlines: treat PubMatic/Biohaven/Spirit Aviation as a separate risk channel that can influence sentiment on high‑beta names but clarify it does not alter Hutchmed’s fundamental data cadence; provide a concise, isolated risk line with the relevant deadlines.\n- Tighten monitoring list and levels to watch: Su’s health/status update window; board commentary on governance/execution risk; ASCO webcast timing and data interpretation; SANOVO enrollment completion details; any NMPA/China approvals milestone if mentioned; and any new developments in the Rosen/Schall actions that could spill over to market sentiment.\n- Revise tone and refrain from unwarranted precision beyond sources: avoid implied stock price targets or precise implied moves; emphasize directional risk/reward and data cadence rather than numeric upside estimates.\n- Improve attribution integrity: after every Hutchmed‑specific claim, attach one of these IDs (RAV2UWRTT or Y4QWID79M) to ensure all core statements map to source material; similarly cite the separate litigation headlines with 4LDHF4T77, 4VN4UTWX1, and Z5IA1CYUF exactly where they support the risk framing.\n- Ensure concise, world‑class clarity by delivering a single, cohesive paragraph that ends with a crisp “watchlist” and “invalidation” section, rather than a combined narrative plus a separate risk paragraph; keep within the horizon and avoid extraneous macro context.\n\nThese edits will yield a sharper, data‑driven 0–3 week view with explicit catalysts, thresholds, and risk controls, fully aligned to the SECTION FOCUS and grounded in first‑principles reasoning, while preserving correct source attributions (RAV2UWRTT, Y4QWID79M, 4LDHF4T77, 4VN4UTWX1, Z5IA1CYUF).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__current__sp500__analysis_run__1756090582"
+}

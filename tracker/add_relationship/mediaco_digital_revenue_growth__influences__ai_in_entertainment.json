@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:21:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "mediaco_digital_revenue_growth",
+    "target_id": "ai_in_entertainment",
+    "selection_motivation": "MediaCo’s expanding digital revenue fuels investment in AI-driven content creation and recommendation, directly driving broader AI adoption within the entertainment sector.",
+    "candidate_motivation": "These topics reflect direct peers and drivers of a media company's digital revenue growth—competitive streaming ecosystems, large-content partnerships, and AI-enabled monetization. They capture the major platform players and technology trends that can shift digital ad, subscription, and content-revenue dynamics.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['disney_streaming_consolidation', 'espn_fox_bundle', 'paramount_skydance_merger', 'netflix_tvos_redesign', 'amazon_growth_segments', 'youtube_age_verification', 'youtube_age_estimation', 'alphabet_ai_gemini', 'threads_growth', 'ai_in_entertainment', 'generative_ai_film']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'mediaco_digital_revenue_growth', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'mediaco_digital_revenue_growth', 'target': 'disney_streaming_consolidation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846383",
+    "rel_id": "mediaco_digital_revenue_growth__influences__ai_in_entertainment",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'mediaco_digital_revenue_growth', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'mediaco_digital_revenue_growth', 'target': 'disney_streaming_consolidation'}, {'type': 'INFLUENCES', 'source': 'mediaco_digital_revenue_growth', 'target': 'ai_in_entertainment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "MediaCo’s expanding digital revenue fuels investment in AI-driven content creation and recommendation, directly driving broader AI adoption within the entertainment sector.",
+      "type": "INFLUENCES",
+      "source": "mediaco_digital_revenue_growth",
+      "target": "ai_in_entertainment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "mediaco_digital_revenue_growth__influences__ai_in_entertainment"
+}

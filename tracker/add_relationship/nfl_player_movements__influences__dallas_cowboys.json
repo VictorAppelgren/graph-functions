@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T01:24:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nfl_player_movements",
+    "target_id": "dallas_cowboys",
+    "selection_motivation": "Linking NFL Player Movements to the Dallas Cowboys provides insights into how player acquisitions and departures directly impact team performance and strategy, which is crucial for understanding market dynamics in the NFL.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with NFL Player Movements due to their relevance in sports economics, player contracts, and market dynamics surrounding player transfers and injuries.",
+    "existing_links_count": "3",
+    "candidate_count": "9",
+    "all_nodes_count": "1612",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['nfl_player_injuries', 'nfl_racial_bias', 'college_football_coaches_hot_seat', 'fantasy_football_wr_tiers_2025', 'nfl_quarterback_rankings_2025', 'dallas_cowboys', 'pittsburgh_steelers_roster_changes_2025', 'travis_kelce_entertainment', 'kelce_swift_relationship']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'nfl_racial_bias'}, {'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'nfl_player_injuries'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407452248",
+    "rel_id": "nfl_player_movements__influences__dallas_cowboys",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'nfl_racial_bias'}, {'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'nfl_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_movements', 'target': 'dallas_cowboys'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking NFL Player Movements to the Dallas Cowboys provides insights into how player acquisitions and departures directly impact team performance and strategy, which is crucial for understanding market dynamics in the NFL.",
+      "type": "INFLUENCES",
+      "source": "nfl_player_movements",
+      "target": "dallas_cowboys"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nfl_player_movements__influences__dallas_cowboys"
+}

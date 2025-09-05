@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T03:58:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust30y",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "The 30‑year Treasury yield is highly sensitive to Fed policy cuts; the upcoming September 17, 2025 rate cut will materially move the 30‑year curve, establishing a strong correlation.",
+    "candidate_motivation": "The 30‑year UST yield is driven by long‑term inflation expectations, Fed policy stance, and the relative term premium of U.S. debt versus other maturities. Thus, topics that directly influence or are tightly correlated with long‑term rates—Fed policy signals, inflation data, and other U.S. Treasury maturities—are the most plausible peers or influences.",
+    "existing_links_count": "20",
+    "candidate_count": "8",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust5y', 'ust2y']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218225898226976066",
+    "rel_id": "ust30y__correlates_with__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 30‑year Treasury yield is highly sensitive to Fed policy cuts; the upcoming September 17, 2025 rate cut will materially move the 30‑year curve, establishing a strong correlation.",
+      "type": "CORRELATES_WITH",
+      "source": "ust30y",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__correlates_with__fed_rate_cut_sept17_2025"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:42:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_policing_initiative",
+    "target_id": "national_guard_dc_deployment",
+    "selection_motivation": "The initiative directly entails deploying the National Guard as a core enforcement component, making it a primary driver of that deployment.",
+    "candidate_motivation": "These topics represent the most plausible direct or competitive policy and security dynamics surrounding a DC-focused federal policing initiative, including federal interventions, police control, and emergency deployments that could influence or be influenced by the source.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['dc_federal_intervention', 'dc_federal_control', 'national_guard_dc_deployment', 'federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'trump_dc_militarization', 'us_crime_rates_2024']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'dc_federal_intervention'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216705",
+    "rel_id": "dc_federal_policing_initiative__influences__national_guard_dc_deployment",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'national_guard_dc_deployment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The initiative directly entails deploying the National Guard as a core enforcement component, making it a primary driver of that deployment.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_policing_initiative",
+      "target": "national_guard_dc_deployment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dc_federal_policing_initiative__influences__national_guard_dc_deployment"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T21:07:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "rare_earth_elements",
+    "target_id": "us_rare_earth_sourcing",
+    "selection_motivation": "Rare earth element supply directly drives U.S. sourcing strategies, making it a primary driver of US rare earth sourcing decisions.",
+    "candidate_motivation": "Rare Earth Elements are strategic inputs with tightly linked mining supply, processing, and geopolitical dynamics; this shortlist focuses on the main supply-side players, recycling, and the key US-China trade levers that directly affect REE availability and pricing.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['usa_rare_earth', 'us_rare_earth_sourcing', 'domestic_rare_earth_sourcing', 'rare_earth_recycling', 'australia_rare_earths', 'us_china_trade_talks', 'us_china_tariff_truce']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'rare_earth_elements', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162188",
+    "rel_id": "rare_earth_elements__influences__us_rare_earth_sourcing",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'rare_earth_elements', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'rare_earth_elements', 'target': 'us_rare_earth_sourcing'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Rare earth element supply directly drives U.S. sourcing strategies, making it a primary driver of US rare earth sourcing decisions.",
+      "type": "INFLUENCES",
+      "source": "rare_earth_elements",
+      "target": "us_rare_earth_sourcing"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "rare_earth_elements__influences__us_rare_earth_sourcing"
+}

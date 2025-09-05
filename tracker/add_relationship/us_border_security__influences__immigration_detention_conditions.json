@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:07:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_border_security",
+    "target_id": "immigration_detention_conditions",
+    "selection_motivation": "US Border Security directly determines the operational capacity and resource allocation of immigration detention facilities, making it a primary driver of detention conditions.",
+    "candidate_motivation": "These topics directly intersect with border control, immigration policy, and security enforcement, making them plausible influences or peers to US Border Security. They cover policy levers (visa integrity, travel flows) and security deployments that frequently interact with border operations.",
+    "existing_links_count": "10",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_border_security_policy', 'us_immigration_conditions', 'immigration_detention_conditions', 'us_visa_integrity_fee_2026', 'national_guard_dc_deployment', 'trump_national_guard_dc', 'dc_federal_control', 'national_guard_domestic_deployment']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_2023'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_border_security_policy'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397693",
+    "rel_id": "us_border_security__influences__immigration_detention_conditions",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_2023'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_border_security_policy'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'immigration_detention_conditions'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Border Security directly determines the operational capacity and resource allocation of immigration detention facilities, making it a primary driver of detention conditions.",
+      "type": "INFLUENCES",
+      "source": "us_border_security",
+      "target": "immigration_detention_conditions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_border_security__influences__immigration_detention_conditions"
+}

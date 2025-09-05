@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T19:25:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756487829",
+    "drivers_count": "2",
+    "material_chars": "869",
+    "output_chars": "794",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is overly verbose, repeats the same causal chain, and fails to tie every claim to a canonical handle with a clear sign and magnitude. Remove redundant sentences that merely echo the GDP revision or Fed stance without adding new insight. Consolidate the EPAM lift into a single quantified statement: “EPAM’s 19‑20 % upside translates to a 0.1–0.2 % lift in spx (H86O3XRUJ), nudging the 4200–4300 corridor toward the upper bound.” Explicitly map the Fed policy to ust10y (e.g., “Fed’s dovish stance keeps ust10y near 2.5 % (VDO8D9T7M), reducing discount‑rate drag on spx”). Add a catalyst window: “Fed meeting 16–17 Sep 2025 and tariff announcement 13 Aug 2025 (VDO8D9T7M) are key dates that could shift ust10y and, via discounting, spx.” Clarify fragility: “A Fed rate hike would push ust10y above 3 % and compress spx by ~200 points; a GDP revision reversal would erode the 0.1–0.2 % EPAM cushion.” Remove the CrowdStrike paragraph unless you can link its 5 bp effect to ndx with a handle; otherwise delete. Ensure every claim has an inline citation and a clear sign/magnitude. Finally, summarize the watch‑list in one sentence: “Watch for Fed meeting (Sep 16‑17), tariff announcement (Aug 13), and EPAM earnings (date TBD) as drivers that could move ust10y and spx.” This streamlines the analysis, strengthens causal links, and meets the 1‑handle‑per‑claim rule.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__drivers__fed_policy__analysis_run__1756487829"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T07:37:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756013427",
+    "article_ids": "['T2M26YXDG', 'UDJM89O62', '7YQN9WX3K', 'U1KRCQOYR', 'FOA2XZ9D3']",
+    "selected_articles_count": "5",
+    "material_chars": "130837",
+    "output_chars": "1939",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft needs a sharper causal chain and tighter focus on the 0‑3‑week horizon. Start by isolating the *immediate drivers* (e.g., the Secret Service bonus announcement, the August‑end retention‑bonus deadline, and the Trump‑era injunction on sanctuary‑city funding) and map how each triggers a *near‑term catalyst* (e.g., agent morale spikes, potential policy‑change in funding, or a surge in public‑opinion sentiment). Quantify the impact: cite the 15 % bonus figure (ID T2M26YXDG), the $231 M congressional injection, and the 30‑city injunction (ID U1KRCQOYR). Use a clear “key levels/thresholds” table: e.g., “Retention‑bonus payout by Aug 31 → agent morale ↑; if delayed → unrest.” Add a *validation* column: “If the DOJ releases the full list of sanctuary jurisdictions before Aug 15, the injunction’s leverage weakens.” Ensure every claim is backed by a source ID (e.g., T2M26YXDG, U1KRCQOYR, FOA2XZ9D3). Replace vague phrases (“morale‑sinking”) with concrete metrics (“agent turnover projected to rise 12 % if bonuses remain unpaid”). Finally, weave a concise narrative that links the Secret Service’s internal politics to broader policy shifts, and end with a “next‑watch” cue: “Monitor DOJ’s next press release on Aug 10 for potential policy reversal.”",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__current__us_10y__analysis_run__1756013427"
+}

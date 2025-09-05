@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T09:48:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust5y",
+    "target_id": "jgb10y",
+    "selection_motivation": "US 5Y Treasury yields are a global risk sentiment gauge that strongly correlates with Japanese 10Y JGB yields, reflecting cross‑currency risk appetite.",
+    "candidate_motivation": "US 5‑year Treasury yields are driven by short‑term Fed policy, inflation expectations, and cross‑currency dynamics, and are closely correlated with other U.S. Treasury maturities and global sovereign yields. Therefore, topics that directly influence or are closely related to U.S. Treasury rates—such as Fed actions, inflation data, other U.S. Treasury maturities, and comparable foreign sovereign yields—are the most plausible peers or influencers.",
+    "existing_links_count": "20",
+    "candidate_count": "14",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['ust10y', 'ust30y', 'ust2y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'sofr', 'dxy', 'bund10y', 'gilt10y', 'jgb10y', 'ecb_policy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1206966899158549903",
+    "rel_id": "ust5y__correlates_with__jgb10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5Y Treasury yields are a global risk sentiment gauge that strongly correlates with Japanese 10Y JGB yields, reflecting cross‑currency risk appetite.",
+      "type": "CORRELATES_WITH",
+      "source": "ust5y",
+      "target": "jgb10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__correlates_with__jgb10y"
+}

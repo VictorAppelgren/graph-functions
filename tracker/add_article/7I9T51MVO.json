@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-16T00:00:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7I9T51MVO",
+    "status": "success",
+    "topic_id": "us_treasury"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the US Treasury node.",
+      "existing_node_ids": "us_treasury",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Insufficient information about the article to determine a relevant category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "No article summary provided, so impact on the US Treasury node cannot be determined with confidence. Assigning a low impact score as a conservative estimate."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess due to missing article summary."
+    },
+    "article_node": {
+      "id": "7I9T51MVO",
+      "title": "Friends Left Note on Hiker’s Car in Case He Didn’t Return from Waterfall. He Was Found Trapped 2 Days Later",
+      "summary": "A 46‑year‑old hiker, Ryan Wardwell, was rescued by helicopter after spending two days trapped behind the Seven Teacups waterfalls in Sequoia National Forest. He had fallen off his rappel lines and become stuck in a dark cave beneath the waterfall, where he could not escape or dry out. Rescue teams located him with a drone, lowered a helicopter crew member into the cave, and hoisted both men to safety, treating Wardwell for minor injuries and dehydration. The incident highlights the dangers of white‑water canyoneering and urges hikers to assess their experience and equipment before venturing into such environments.",
+      "source": "https://www.yahoo.com/news/articles/friends-left-note-hiker-car-205743164.html",
+      "published_at": "2025-08-15T20:57:43+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "7I9T51MVO"
+}

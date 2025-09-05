@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T14:01:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "copper",
+    "selection_motivation": "Oil price fluctuations directly affect industrial energy costs and demand, which are key drivers of copper prices, making a causal link highly valuable for portfolio risk assessment.",
+    "candidate_motivation": "Oil is a commodity whose price is driven by macroeconomic conditions and often moves in tandem with other commodities; therefore inflation metrics, treasury yields, and related commodity prices are strong influences or peers.",
+    "existing_links_count": "9",
+    "candidate_count": "8",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['gold', 'copper', 'wheat', 'us_10y', 'us_inflation', 'us_inflation_data', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation_data'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966394892",
+    "rel_id": "oil__influences__copper",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation_data'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price fluctuations directly affect industrial energy costs and demand, which are key drivers of copper prices, making a causal link highly valuable for portfolio risk assessment.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__copper"
+}

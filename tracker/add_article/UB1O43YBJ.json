@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T09:47:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UB1O43YBJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; global long‑term bond yields are rising, steepening curves as debt‑sustainability and inflation concerns weigh, pushing US 30‑year up, 2‑year down, and similar moves in Japan, Australia, UK, and Europe.",
+      "existing_ids": [
+        "ust30y",
+        "ust2y",
+        "ust10y",
+        "bund10y",
+        "gilt10y",
+        "uk_30yr_gilt_yield"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides a market analysis of the bond selloff and the underlying macro concerns (fiscal deficits, debt sustainability, inflation expectations) without referencing a specific data release or policy action, fitting the definition of market commentary."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant rise in U.S. 30‑year Treasury yields, directly impacting the ust30y node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a current selloff in long‑dated yields driven by fiscal deficit and debt sustainability concerns, signalling a medium‑term shift in bond market dynamics."
+    },
+    "article_node": {
+      "id": "UB1O43YBJ",
+      "title": "Global Bond Selloff Deepens With Longer Debt Leading Losses",
+      "summary": "Global bond markets are experiencing a deep selloff, with long‑dated yields climbing to levels not seen since the late 1990s and early 2000s. Japan’s 20‑year notes hit a 1999 high, Australian 10‑year yields rose to July levels, and U.S. 30‑year yields approached the 5% threshold. The rally reflects growing worries over fiscal deficits, debt sustainability, and potential inflation, prompting investors to seek steepener strategies to profit from widening long‑short spreads.",
+      "source": "https://finance.yahoo.com/news/global-bond-selloff-deepens-longer-062442646.html?_guc_consent_skip=1756885227",
+      "published_at": "2025-09-03T06:24:42+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "UB1O43YBJ"
+}

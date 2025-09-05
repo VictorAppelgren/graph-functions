@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:10:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_ai_chip_exports",
+    "target_id": "us_export_policy_ai_chips",
+    "selection_motivation": "US-China AI Chip Exports directly inform U.S. export policy decisions on AI chips, as export volumes and restrictions shape the policy framework.",
+    "candidate_motivation": "These topics represent the strongest direct policy, trade, and geopolitical connections to US-China AI chip exports, including export controls, bilateral agreements, tariffs, and China-specific semiconductor policies that could influence or be influenced by AI-chip flows.",
+    "existing_links_count": "1",
+    "candidate_count": "12",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['us_china_ai_chip_exports', 'us_chip_export_controls', 'us_export_policy_ai_chips', 'us_china_ai_chip_agreement', 'us_chip_sales_agreement', 'us_chip_exports_china', 'us_china_trade_talks', 'us_tariffs_semiconductors', 'china_semiconductor_policy', 'china_ai_semiconductors', 'nvidia_china_geopolitics', 'us_china_trade_relations']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_ai_chip_exports', 'target': 'us_chip_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407452965",
+    "rel_id": "us_china_ai_chip_exports__influences__us_export_policy_ai_chips",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_ai_chip_exports', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_ai_chip_exports', 'target': 'us_export_policy_ai_chips'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China AI Chip Exports directly inform U.S. export policy decisions on AI chips, as export volumes and restrictions shape the policy framework.",
+      "type": "INFLUENCES",
+      "source": "us_china_ai_chip_exports",
+      "target": "us_export_policy_ai_chips"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_ai_chip_exports__influences__us_export_policy_ai_chips"
+}

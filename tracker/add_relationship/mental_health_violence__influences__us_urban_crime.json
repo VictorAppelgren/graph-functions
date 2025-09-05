@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:19:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "mental_health_violence",
+    "target_id": "us_urban_crime",
+    "selection_motivation": "Mental health and violence are key drivers of urban crime incidence, making this link essential for understanding the causal chain behind US urban crime dynamics.",
+    "candidate_motivation": "These topics represent direct public health, safety, and violence dynamics that could plausibly influence mental health trends and violence levels, including misinformation effects, gun-violence patterns, and high-profile crisis events.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['vaccine_misinformation', 'vaccine_misinformation_impact', 'vaccine_misinformation_violence', 'mental_health_gun_violence_covid_vaccine', 'us_urban_crime', 'us_crime_rates_2024', 'gaza_journalist_safety', 'gaza_journalist_killings', 'uvalde_school_shooting_response', 'uvalde_school_shooting', 'uvalde_school_shooting_legal_implications']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'vaccine_misinformation_violence'}, {'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'mental_health_gun_violence_covid_vaccine'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559533400",
+    "rel_id": "mental_health_violence__influences__us_urban_crime",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'vaccine_misinformation_violence'}, {'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'mental_health_gun_violence_covid_vaccine'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Mental health and violence are key drivers of urban crime incidence, making this link essential for understanding the causal chain behind US urban crime dynamics.",
+      "type": "INFLUENCES",
+      "source": "mental_health_violence",
+      "target": "us_urban_crime"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "mental_health_violence__influences__us_urban_crime"
+}

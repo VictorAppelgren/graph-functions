@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T08:51:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MW52K7BJA",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; tariff‑related cost pressures on Apple may lift US inflation, Fed policy, and US Treasury yields, feeding into the DXY.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "ust10y",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a company price change for a new product line, which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "Apple’s announced price increases and potential tariff‑related cost pressures directly affect the company’s revenue and pricing strategy, which is material to its equity valuation."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a product launch and pricing decision that will affect Apple’s sales and margins over the coming months, indicating a medium‑term impact."
+    },
+    "article_node": {
+      "id": "MW52K7BJA",
+      "title": "iPhone 17 Pro Max Price Hike Rumors: Safe From Tariffs But Increase Is Coming",
+      "summary": "Apple is expected to raise prices on its iPhone 17 Pro series, with the Pro Max potentially costing up to $100 more than last year’s model, while the Pro could see a $200 bump. The company has avoided Trump‑era tariffs on its devices, but analysts predict that tariff‑related cost pressures will be passed on to consumers. The new lineup, featuring the A19 Pro chip and design updates, is slated for launch at a September 9 event.",
+      "source": "https://www.techtimes.com/articles/311811/20250905/iphone-17-pro-max-price-hike-rumors-safe-tariffs-increase-coming.htm",
+      "published_at": "2025-09-05T01:40:20-04:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "MW52K7BJA"
+}

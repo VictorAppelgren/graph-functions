@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T11:48:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "D3B41F5M1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Amazon and Alphabet growth via cloud, AI, and advertising will lift the S&P 500 and Nasdaq 100.",
+      "existing_ids": [
+        "spx",
+        "ndx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides a forecast of Amazon and Alphabet’s future market capitalization relative to Apple, discussing growth drivers and risks—an analysis of market expectations rather than a specific event or data release."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess impact against; unable to determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers (cloud, AI, advertising) that are expected to shape the companies’ valuations over several years."
+    },
+    "article_node": {
+      "id": "D3B41F5M1",
+      "title": "Prediction: 2 Stocks That'll Be Worth More Than Apple 3 Years From Now",
+      "summary": "Amazon and Alphabet are projected to surpass Apple in market capitalization by 2028, driven by strong growth in cloud computing, AI services, and advertising revenues. Amazon’s AWS remains a profit engine, while its AI‑powered logistics and expanding ad business fuel momentum. Alphabet’s dominant search advertising, rapid cloud expansion, and AI integration support its valuation climb, though antitrust risks could pose a downside. Both companies’ diversified tech ecosystems position them to outpace Apple’s slower AI adoption and tariff exposure.",
+      "source": "https://finance.yahoo.com/news/prediction-2-stocks-thatll-worth-083200776.html",
+      "published_at": "2025-09-04T08:32:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "D3B41F5M1"
+}

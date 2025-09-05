@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T13:11:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756637762",
+    "drivers_count": "12",
+    "material_chars": "5231",
+    "output_chars": "1458",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Edit Instructions**  \n1. **Clarify magnitude and sign** – State the DXY move in basis‑points (30–50 bp up over 3–6 mo) and explicitly note the 0.5–1 % lift from the September cut.  \n2. **Correct the contradictory “decline ~200 bp” sentence** – The source (Z7O1DCHS7, 7XH2DKEKV) actually projects a 200 bp *rise* to ~95.8 by Aug 31; adjust wording accordingly.  \n3. **Add missing quantitative anchors** – Include the 10‑yr Treasury range (4.10–4.25 %) and 2‑yr yield (≈4.20–4.30 %) to ground the term‑premium logic.  \n4. **Streamline risk scenarios** – Condense the Fed‑hike, spread‑flattening, and inflation‑surge risks into a single bullet, citing (7XH2DKEKV) and (XTQIQRP5K).  \n5. **Refine the watch list** – Replace the generic “daily movements in the 2‑yr/10‑yr spread” with concrete thresholds:  \n   - 2‑yr/10‑yr spread < 30 bp  \n   - 10‑yr yield > 4.25 % or < 4.10 %  \n   - September Fed meeting (25‑26 Sep)  \n   - Early‑August CPI (9 Aug)  \n   - August 30 PCE & August 31 NFP  \n   - US core PCE (30 Aug)  \n   All items should carry inline citations.  \n6. **Remove redundant sentences** – The paragraph about “Fed policy sets the short‑term rate…” and the later “Fed policy decisions” can be merged into one concise causal chain.  \n7. **Ensure every claim has a citation** – Add missing IDs where needed (e.g., (U21K4ALYQ) for the 10‑yr range, (1DEM6P1Y2) for tariff impact).  \n8. **Maintain focus on DXY** – Verify that no sentence drifts to other assets; if it does, either link it back to DXY or delete it.  \n\nImplement these edits to tighten the narrative, reinforce evidence, and meet the acceptance gate criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__drivers__spx__analysis_run__1756637762"
+}

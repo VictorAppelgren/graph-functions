@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:06:48",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_trade_policy_inflation",
+    "target_id": "us_tariff_policies",
+    "selection_motivation": "US Trade Policy and Inflation directly shapes tariff policy decisions, making it a primary driver of US Tariff Policies.",
+    "candidate_motivation": "The selected topics are closely related to US Trade Policy and Inflation, as they either directly influence or are influenced by trade policies and inflationary pressures in the economy.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'us_tariffs', 'us_china_trade_relations', 'us_tariff_policies', 'us_trade_policy_inflation', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_tariffs_pharmaceuticals_semiconductors']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216211",
+    "rel_id": "us_trade_policy_inflation__influences__us_tariff_policies",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_tariff_policies'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Trade Policy and Inflation directly shapes tariff policy decisions, making it a primary driver of US Tariff Policies.",
+      "type": "INFLUENCES",
+      "source": "us_trade_policy_inflation",
+      "target": "us_tariff_policies"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_trade_policy_inflation__influences__us_tariff_policies"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T15:03:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "E1S46520V",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; Rising drug costs in the NSCLC market could contribute to US CPI and core PCE pressure over the next year.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis and commentary on the growth prospects, drivers, and barriers in the global non‑small cell lung cancer treatment market, which is a market‑level discussion rather than a specific company event or macro data release."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses a specific medical oncology market and does not directly impact any of the canonical macro or market handles (e.g., indices, rates, FX, commodities, credit, or systemic risk) covered by the model."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article outlines long‑term structural drivers—immunotherapies, targeted agents, diagnostics, and R&D collaborations—projected to shape the NSCLC market through 2035."
+    },
+    "article_node": {
+      "id": "E1S46520V",
+      "title": "Non-Small Cell Lung Cancer (NSCLC) Market Growth Trends and Business Opportunities 2025-2035 by Region",
+      "summary": "The global non‑small cell lung cancer (NSCLC) treatment market is projected to grow rapidly through 2035, driven by advances in immunotherapies, targeted therapies, and combination regimens that improve survival and reduce side effects. Key innovations include immune checkpoint inhibitors (pembrolizumab, nivolumab), EGFR/ALK/ROS1 inhibitors, and emerging CAR‑T and vaccine approaches, alongside liquid biopsy and companion diagnostics that broaden patient access. However, high drug costs, resistance, and limited awareness in low‑ and middle‑income regions remain significant barriers, prompting major pharma players to pursue collaborations and R&D to expand affordable options and early detection strategies.",
+      "source": "https://finance.yahoo.com/news/non-small-cell-lung-cancer-111600375.html",
+      "published_at": "2025-09-02T11:16:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "E1S46520V"
+}

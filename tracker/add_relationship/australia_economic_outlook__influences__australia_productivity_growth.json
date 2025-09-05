@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T01:53:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "australia_economic_outlook",
+    "target_id": "australia_productivity_growth",
+    "selection_motivation": "Australia’s economic outlook is fundamentally driven by its productivity growth; linking the two captures the causal relationship essential for forecasting and risk assessment.",
+    "candidate_motivation": "These topics are the most plausible direct influences or correlates for the Australia Economic Outlook. They reflect Australia's commodity export exposure, China-linked demand, and domestic investment dynamics.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['china_macro', 'australia_productivity_growth', 'aus_superannuation_property_investment', 'australia_rare_earths', 'rare_earth_elements', 'oil', 'gold', 'copper', 'wheat']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161530",
+    "rel_id": "australia_economic_outlook__influences__australia_productivity_growth",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'australia_productivity_growth'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Australia’s economic outlook is fundamentally driven by its productivity growth; linking the two captures the causal relationship essential for forecasting and risk assessment.",
+      "type": "INFLUENCES",
+      "source": "australia_economic_outlook",
+      "target": "australia_productivity_growth"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "australia_economic_outlook__influences__australia_productivity_growth"
+}

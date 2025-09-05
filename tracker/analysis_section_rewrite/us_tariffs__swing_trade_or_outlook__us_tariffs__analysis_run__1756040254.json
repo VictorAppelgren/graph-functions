@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:07:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_tariffs__analysis_run__1756040254",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15414",
+    "output_chars": "1847",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has solid macro framing and credible source anchors, but it fails the world‑class bar on strict mover formatting, explicit first‑principles causality, and transparent, source‑anchored probabilities. For upgrade: (1) recast into exactly four Movers lines that meet the 5-field format and pull from a single horizon per line (Up/Down | Time window | Driver/Mechanism | What to watch | Probability %); use two Up and two Down, and let at least one line capture a near‑term 0–3 weeks trigger while the other three cover 3–6 months. Each line should embed a tight causal chain (Regime A: tariff framework with 15% MFN, carve‑outs, non‑binding status; Regime B: deregulation/competition tilt with CRA/REINS signals; transmission: tariff pass‑through, margins, capex, pricing power, supply chains) and name explicit catalysts/invalidation points (e.g., progress on autos carve‑outs and wine/steel timing; CRA/REINS reform progress; tariff cadence; renewal or expansion of the 90‑day pause; DOJ actions). (2) Base the magnitude and direction on first‑principles anchors and cite only IDs when asserting facts/numbers; if you state pass‑through shares, margin impact, or price effects, attach the corresponding source ID (e.g., RHFWI02JT, 9W8ZUIBDY, QRX2HD4X0, 2SJORBV6H, AJTHKYXQ3, WLXM1819K, OFY11YO0I, RHXDOHQQX) right after the claim. (3) Tighten the probability discipline: derive each line’s probability from the material (not generic belief) and either (a) keep the four lines as mutually informative, noting that probabilities are conditional rather than exclusive, or (b) reweight so the four probabilities form a coherent, non‑overlapping set (suggest explicit anchors, e.g., 40% for Regime B/deregulation path with CRA/REINS, 35% for gradual Regime A carve‑outs, 25% for Bearish protectionism, 20–25% for policy‑risk around the 90‑day pause). (4) Sharpen the “What to watch” to include concrete catalysts and clear invalidation triggers; each Watch item should read like an if/then with a date or threshold (e.g., “CR A/REINS reform progress by Q3 2025; failure triggers re‑pricing; autos carve‑out timing clarified by Brussels legislation; if auto relief delays beyond X date, watch margins for autos and suppliers”). (5) Align the Outlook/Trade Plan with the asset class reality: if the target is a tradable instrument, supply the Swing Trade line with precise entry/stop/targets and risk metrics; if not tradable, provide a concise 1‑line Outlook with direction, horizon, expected path/levels, decision signals, invalidation, trigger, and confidence, all rooted in the same source set. (6) Reconcile conflicts explicitly in the write‑up: where Regime A and Regime B imply different macro paths, present a crisp base case plus explicit alt paths with their own catalysts and invalidate points, and ensure the four movers and the outlook reference the same cross‑source signals (e.g., tariff posture, cross‑border friction via Adyen data QRX2HD4X0, Japan/India input‑cost channels 2SJORBV6H, UK DCTS signals WLXM1819K, DOJ actions OFY11YO0I, and the 90‑day pause RHXDOHQQX). (7) Finally, prune nonessential context and avoid duplicating near‑term threads in the long‑horizon movers; ensure the four lines deliver a clean, decision‑ready signal set that maps neatly into the 1–2 line Outlook unless you must deliver a non‑tradable macro stance, in which case compress to a single, crisp Outlook line with the requested fields.",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs__swing_trade_or_outlook__us_tariffs__analysis_run__1756040254"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T16:19:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756563217",
+    "article_ids": "['3952FOSRQ', 'Z7K8PC4G5', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "107096",
+    "output_chars": "1461",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is largely on target but needs tightening to meet the “exclusive asset” rule and the citation‑style rigor required for Argos.  \n1. **Explicit handle & sign** – The opening sentence should state the 10‑year yield’s direction and magnitude (e.g., “UST10Y is up 2.3 bps to 4.23% (97MD1FHW8)”).  \n2. **Inline citations** – Every substantive claim must reference a source ID. Add citations after: (a) the 2‑year yield figure (97MD1FHW8), (b) the 0.593 % spread (calculated from 97MD1FHW8), (c) the Fed’s 89 % cut odds (97MD1FHW8), (d) core PCE 2.6 % (U21K4ALYQ), (e) the court ruling date (3952FOSRQ).  \n3. **Avoid drift** – Remove or re‑frame any mention of “oil prices” or “stock market slide” unless directly tied to the 10‑year’s reaction. If kept, link them explicitly to the yield’s risk‑premium channel.  \n4. **Threshold clarity** – State the key threshold (4 % level) with a clear sign (“above 4 % would signal a tightening pivot”).  \n5. **Catalyst window** – Emphasize the near‑term window: the August 29 court ruling (3952FOSRQ) and the upcoming September Fed meeting (U21K4ALYQ).  \n6. **Quantify ranges** – When discussing “potential lift” or “tailwind,” give a concrete range (e.g., “a 10‑year rise of 5–10 bps if tariff risk re‑emerges”).  \n\nApply these edits to keep the piece tightly focused on UST10Y, fully sourced, and within the 0–3‑week horizon.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1756563217"
+}

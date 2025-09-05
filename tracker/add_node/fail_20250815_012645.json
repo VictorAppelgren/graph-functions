@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:26:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "THK7VEP7F",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the urgent need for federal aid in response to flooding in Wisconsin, which is a critical macro-level event impacting local economies and recovery efforts, warranting a dedicated node.",
+      "id": "fema_aid_wisconsin",
+      "name": "FEMA Aid Wisconsin",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Federal disaster aid request is a macro-level driver affecting economic recovery."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific disaster aid request is not a macro driver or policy regime that broadly influences markets; it is a localized event rather than a macro anchor.",
+      "confidence": 0.9,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

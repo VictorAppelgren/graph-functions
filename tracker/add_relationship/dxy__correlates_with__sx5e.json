@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T02:54:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "dxy",
+    "target_id": "sx5e",
+    "selection_motivation": "DXY movements reflect dollar strength relative to euro, which directly impacts eurozone equity valuations and thus Euro Stoxx 50 performance; a strong correlation exists between DXY and Euro Stoxx 50 returns.",
+    "candidate_motivation": "The US Dollar Index is primarily driven by US monetary policy, inflation expectations, and Treasury yields, and it is tightly correlated with major currency pairs, commodity prices, and equity indices. Therefore, topics that directly influence or are strongly correlated with DXY are likely to be strong influences, correlates, or peers.",
+    "existing_links_count": "20",
+    "candidate_count": "20",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_unemployment_claims', 'us_services_pmi', 'fed_powell_rate_cut_hint_2025', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'gold', 'wti', 'brent', 'copper', 'sx5e', 'spx']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218225898226976926",
+    "rel_id": "dxy__correlates_with__sx5e",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "DXY movements reflect dollar strength relative to euro, which directly impacts eurozone equity valuations and thus Euro Stoxx 50 performance; a strong correlation exists between DXY and Euro Stoxx 50 returns.",
+      "type": "CORRELATES_WITH",
+      "source": "dxy",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__correlates_with__sx5e"
+}

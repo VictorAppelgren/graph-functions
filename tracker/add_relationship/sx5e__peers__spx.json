@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T17:43:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "sx5e",
+    "target_id": "spx",
+    "selection_motivation": "Euro Stoxx 50 and S&P 500 are both leading broad equity indices, serving as peers for global equity exposure.",
+    "candidate_motivation": "Euro Stoxx 50 is a European equity index whose performance is driven by European macro fundamentals, monetary policy, bond yields, currency moves, global risk sentiment, and commodity prices. Therefore, topics covering ECB policy, Euro area inflation, German 10‑year Bund yield, US Treasury yields, US inflation, Fed policy, key FX rates, the US Dollar Index, major US equity peers, and core commodities are plausible influences or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "27",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['euro_inflation', 'ecb_policy', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'fed_policy', 'sofr', 'euribor', 'spx', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'gold', 'wti', 'brent', 'copper', 'wheat', 'gilt10y', 'jgb10y', 'us_unemployment_claims', 'china_exports', 'china_credit_impulse']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152927002164987430",
+    "rel_id": "sx5e__peers__spx",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 and S&P 500 are both leading broad equity indices, serving as peers for global equity exposure.",
+      "type": "PEERS",
+      "source": "sx5e",
+      "target": "spx"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__peers__spx"
+}

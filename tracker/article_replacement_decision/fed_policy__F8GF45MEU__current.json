@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T19:33:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "F8GF45MEU",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['K0WFSW29E', 'YB758UDBU', 'S7M6BJSRT', 'XQWTVR71K', 'ZBVVXT0W4', '85Q95ZIZH', 'XB5ZRN1VP', '8E5QMHLIH', 'U6HXAJR4J']",
+    "mode": "MUST_REPLACE",
+    "target_id": "K0WFSW29E",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "K0WFSW29E",
+      "motivation": "The competing timeframe bucket is at capacity; removing article K0WFSW29E from the competing set preserves capacity for the new Bethel housing piece and maintains balanced coverage of the topic."
+    }
+  },
+  "id": "fed_policy__F8GF45MEU__current"
+}

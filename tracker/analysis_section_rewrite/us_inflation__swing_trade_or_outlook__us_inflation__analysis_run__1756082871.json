@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T02:58:07",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756082871",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17537",
+    "output_chars": "1772",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Your draft has solid macro-crypto grounding and clear policy-led intuition, but it fails the required four-mover format and Swing Trade delivery. Actionable upgrades: (1) reformat into exactly four mover lines in this order: Up | 0–3 weeks; Up | 3–6 months; Down | 0–3 weeks; Down | 3–6 months, each with a crisp Driver/Mechanism and a tight What to watch line anchored to concrete catalysts (Powell/Jackson Hole, GENIUS/Project Crypto momentum, Bitmine ETF inflows, Nvidia AI demand), and attach a single source-backed Probability % after the line (e.g., 85% via 17F49LURJ; 65% via OGK8WLL69; 20–15% via the same sources) using in-text IDs. (2) Remove the separate Outlook block and replace it with 1–2 Swing Trade lines for the tradable crypto pair (ETH/USD or BTC/USD) using the exact field order: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence %. Base-case targets should center ETH around 4,000–5,000 and BTC risk-on ranges, with downside anchors at mid-to-high 3,000s to 4,000s as appropriate; cite price anchors with IDs. (3) Tighten the first-principles/scenario structure: label Base/Up/Down regimes explicitly, specify testable invalidation metrics (e.g., hawkish Fed shift, regulatory reversals, or sharp ETF outflows), and map each mover to a regime-diagnostic watchlist. (4) Increase numeric rigor and consistency: ensure all time windows, price anchors, and probabilities are sourced and reconciled across lines; avoid mixing disparate sources (e.g., NL5YYTLF2 vs OGK8WLL69) unless you adjudicate them in the watch line. (5) Improve citation discipline: place the IDs immediately after the factual claim they support, and ensure every number or anchor comes from the cited material; if conflicts arise, acknowledge them succinctly in the watch/invalidations rather than in prose.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756082871"
+}

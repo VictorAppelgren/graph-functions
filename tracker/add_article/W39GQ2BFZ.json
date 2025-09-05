@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T18:33:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "W39GQ2BFZ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; AI hardware manufacturing drives copper demand, lifting copper price +1% to +3% over next 3 months. Tech sector exposure lifts S&P 500 modestly +0.5% to +1% over next 3 months.",
+      "existing_ids": [
+        "copper",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article describes Google’s product launch of generative AI integration into smartwatches (Galaxy Watch 8, Pixel Watch), which is a company news event not related to earnings."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The node reference is not provided, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "W39GQ2BFZ",
+      "title": "The future of AI hardware isn’t one device — it’s an entire ecosystem",
+      "summary": "The article discusses the evolving wearable market, noting a decline in consumer enthusiasm for smartwatches despite continued growth forecasts. It highlights Google's push to embed its generative AI, Gemini, into devices like the Galaxy Watch 8 and Pixel Watch, aiming to make AI a ubiquitous, on‑body assistant. While the technology promises richer context and hands‑free interactions, users report challenges in learning new voice commands and integrating AI into daily routines. The piece also contrasts the smartwatch industry's slower upgrade cycle with smartphones, suggesting that AI may ultimately drive renewed interest if it delivers tangible, intuitive benefits.",
+      "source": "https://www.theverge.com/report/767765/ai-hardware-google-pixel-gemini-wearables-ambient-computing",
+      "published_at": "2025-08-29T15:30:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "W39GQ2BFZ"
+}

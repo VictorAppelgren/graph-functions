@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T12:22:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust5y",
+    "target_id": "oil_price_decline",
+    "selection_motivation": "Oil price decline and 5‑year Treasury yields move in tandem as inflation expectations shift, making them strongly correlated.",
+    "candidate_motivation": "The 5‑year Treasury yield is heavily influenced by monetary policy expectations, inflation outlook, short‑term rates, term‑structure dynamics, and global risk sentiment. Therefore, topics that directly affect or correlate with these drivers—Fed policy moves, inflation data, short‑term and long‑term yields, currency, equity markets, commodities, and comparable sovereign yields—are the most plausible peers or influences.",
+    "existing_links_count": "20",
+    "candidate_count": "27",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust30y', 'ust2y', 'sofr', 'dxy', 'usdjpy', 'gbpusd', 'eurusd', 'sx5e', 'euro_inflation', 'ecb_policy', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'gold', 'wti', 'brent', 'copper', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184448901021697423",
+    "rel_id": "ust5y__correlates_with__oil_price_decline",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline and 5‑year Treasury yields move in tandem as inflation expectations shift, making them strongly correlated.",
+      "type": "CORRELATES_WITH",
+      "source": "ust5y",
+      "target": "oil_price_decline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__correlates_with__oil_price_decline"
+}

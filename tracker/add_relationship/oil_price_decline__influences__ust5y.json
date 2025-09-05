@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T20:59:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "ust5y",
+    "selection_motivation": "Oil price decline materially reduces inflation expectations, tightening 5‑year Treasury yields; this driver is missing from the graph.",
+    "candidate_motivation": "These topics are likely to influence or correlate with the US 5Y Treasury Yield because they affect inflation expectations, monetary policy stance, global rate benchmarks, commodity-driven inflation, and market sentiment that drive U.S. Treasury pricing.",
+    "existing_links_count": "19",
+    "candidate_count": "32",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "32",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'us_services_pmi', 'uk_30yr_gilt_yield', 'fed_rate_cut_sept17_2025', 'us_sanctions_iranshipping', 'usdcny', 'us_unemployment_claims', 'fed_policy', 'bund10y', 'ust10y', 'ust2y', 'ust30y', 'copper', 'gbpusd', 'gilt10y', 'sofr', 'us_inflation', 'jgb10y', 'ecb_policy', 'wheat', 'spx', 'euro_inflation', 'euribor', 'gold', 'wti', 'brent', 'dxy', 'us_core_pce', 'usdjpy', 'fed_powell_rate_cut_hint_2025', 'eurusd']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137438732",
+    "rel_id": "oil_price_decline__influences__ust5y",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_crude_inventory'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline materially reduces inflation expectations, tightening 5‑year Treasury yields; this driver is missing from the graph.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "ust5y"
+    }
+  },
+  "id": "oil_price_decline__influences__ust5y"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T14:33:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NQ7Y9Q0IM",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Article discusses local infrastructure issues and public sentiment, which may relate to broader themes of urban planning and public works management.",
+      "existing_ids": [],
+      "new_names": [
+        "urban_infrastructure_issues",
+        "public_sentiment_on_infrastructure",
+        "road_closure_impacts"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Southern Water taking over the site to repair a broken sewer, which is a company news event."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a local sinkhole affecting a short road segment on the Isle of Wight, with limited broader economic impact beyond the immediate area."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent sinkhole incident causing a temporary road closure, with repairs scheduled to begin soon."
+    },
+    "article_node": {
+      "id": "NQ7Y9Q0IM",
+      "title": "Sinkhole the size of 10p coin forces closure of road",
+      "summary": "A small sinkhole in Cowes on the Isle of Wight has caused the closure of a 79-meter stretch of road for over a week due to concerns about a larger void beneath the surface. Local residents have expressed frustration over the prolonged closure, with some questioning the priorities of the highway authority. Repairs are set to begin on August 26, with Southern Water taking over the site to address a broken sewer beneath the road.",
+      "source": "https://www.dailymail.co.uk/news/article-15024689/Sinkhole-size-10p-coin-sparks-traffic-chaos-forces-closure-road-week.html",
+      "published_at": "2025-08-22T12:29:15+01:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "NQ7Y9Q0IM"
+}

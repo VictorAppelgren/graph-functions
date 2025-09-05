@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T01:39:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust10y",
+    "target_id": "us_core_pce",
+    "selection_motivation": "US 10‑year Treasury yield is a primary gauge of inflation expectations and directly feeds into core PCE calculations, making it a clear driver rather than merely correlated.",
+    "candidate_motivation": "US 10Y Treasury Yield is directly driven by Fed policy, the term‑structure of rates, and macroeconomic data, and it is closely correlated with other sovereign yields and the dollar index. Therefore, topics that influence or are influenced by these factors are the most plausible peers or correlates.",
+    "existing_links_count": "24",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sofr', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'dxy', 'usdcny', 'gbpusd', 'usdjpy', 'eurusd']",
+    "existing_links_before_len": "24",
+    "existing_links_before_preview": "[{'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:21",
+    "rel_id": "ust10y__influences__us_core_pce",
+    "existing_links_after_len": "24",
+    "existing_links_after_preview": "[{'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑year Treasury yield is a primary gauge of inflation expectations and directly feeds into core PCE calculations, making it a clear driver rather than merely correlated.",
+      "type": "INFLUENCES",
+      "source": "ust10y",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__influences__us_core_pce"
+}

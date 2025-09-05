@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T11:41:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eur",
+    "target_id": "gold",
+    "selection_motivation": "The euro’s value and ECB policy directly impact gold demand as a hedge, making the euro a primary driver of gold price movements.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain, covering currency exchange, monetary policy, inflation dynamics, benchmark yields, equity indices, commodity prices, and global macro factors that directly or indirectly affect the Euro.",
+    "existing_links_count": "9",
+    "candidate_count": "17",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['eurusd', 'euro_inflation', 'us_inflation', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'us_inflation_expectations', 'usd', 'lower_interest_rates', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'sp500']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euribor'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441641999",
+    "rel_id": "eur__influences__gold",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'gold'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The euro’s value and ECB policy directly impact gold demand as a hedge, making the euro a primary driver of gold price movements.",
+      "type": "INFLUENCES",
+      "source": "eur",
+      "target": "gold"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eur__influences__gold"
+}

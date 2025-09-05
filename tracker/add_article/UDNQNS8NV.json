@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T11:42:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UDNQNS8NV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Chinese biofuel exports increase supply, contributing to the European biofuels slump and affecting renewable fuel pricing.",
+      "existing_ids": [
+        "china_exports"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Shell’s decision to halt construction of its Rotterdam biofuels facility and record a $780 million impairment is a company‑specific operational update, not an earnings release or regulatory change."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate operational decision by Shell to halt construction of a Rotterdam biofuels facility, reflecting short‑term market conditions and competitive pressures."
+    },
+    "article_node": {
+      "id": "UDNQNS8NV",
+      "title": "Shell Abandons Netherlands Biofuels Facility Project",
+      "summary": "Shell has decided not to restart construction of its Rotterdam biofuels facility after a commercial and technical review found the project no longer competitive amid a prolonged slump in the biofuels market. The company took a $780 million impairment when it paused work in July 2024, citing insufficient competitiveness to meet customers’ demand for affordable, low‑carbon fuels. The decision follows similar moves by rivals such as BP, heightened competition from Chinese imports, and regulatory changes in Sweden and Finland that have increased the supply of renewable fuels.",
+      "source": "https://www.morningstar.com/news/dow-jones/202509031661/shell-abandons-netherlands-biofuels-facility-project",
+      "published_at": "2025-09-03T03:39:00-05:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "UDNQNS8NV"
+}

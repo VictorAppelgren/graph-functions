@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-30T13:23:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IY7V4C50X",
+    "suggested_names": "['APE']",
+    "topic_category": "company",
+    "topic_category_motivation": "Ownership breakdown informs shareholder influence and price volatility.",
+    "should_add": "False",
+    "motivation_for_relevance": "Ownership structure of a single company is micro‑level and does not map to a macro driver, tradable asset, or policy regime; it offers no scalable macro insight for trading decisions.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Provides detailed ownership breakdown for APE, enabling assessment of shareholder influence and potential price volatility.",
+      "id": "ape_ownership",
+      "name": "Eagers Automotive Ownership Structure",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

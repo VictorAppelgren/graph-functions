@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T00:46:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755987801",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "6523",
+    "output_chars": "856",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit plan (to reach a world‑class, 4–6‑sentence house view):**  \n1. **Condense the draft** into 4–6 concise sentences or a short bullet list; remove all repetitive phrasing (e.g., the repeated “high operating leverage” and “strong earnings quality” lines).  \n2. **Anchor every claim in a single, relevant source**—e.g., cite SK994CBWR once for Q2 results, revenue guidance, margins, and the Ultra C wb upgrade; use FOM34PUWA only for the UAS job‑growth figure; LZG5YWQMC for CPI/producer price data; V7GV8YBQU for S&P risk‑premia; J99EM2TPZ for oil oversupply.  \n3. **Prioritize specificity**: state the revenue guidance range ($850–$950 m), gross margin (49.4 %), net margin (13.8 %), and valuation ($34.76/share, 14 % upside).  \n4. **Structure the narrative**:  \n   - **Catalysts** (Q3 earnings beat, Fed rate cut, easing export controls) – cite SK994CBWR.  \n   - **Risks** (Fed hike, US–China tension, supply‑chain bottlenecks) – cite SK994CBWR.  \n   - **Watch list** (Fed Oct 2025, Q3 earnings Aug 2025, China export‑control Q4 2025, UAS job data, competitor launches) – cite SK994CBWR, FOM34PUWA.  \n5. **Integrate macro context succinctly**: mention that Fed rate‑cut expectations (Powell comments) are buoyant for tech, but inflation (CPI 2.7 %) and oil oversupply (J99EM2TPZ) temper risk‑premia.  \n6. **Eliminate generic platitudes** (“high operating leverage” → “49.4 % gross margin fuels 37 % earnings growth”) and replace them with first‑principles logic (margin expansion → earnings acceleration).  \n7. **Ensure coherence of the causal chain**: Ultra C wb ramp → higher utilization in advanced‑node fabs → revenue at upper guidance → sustained earnings trajectory.  \n8. **Finalize the paragraph**: e.g., “ACMR’s Q2 2025 results (215 m rev, 30 m NI, 49.4 % gross margin) confirm a 37 % earnings‑growth trajectory and justify a 14 % upside to $34.76/share. The patent‑pending N2‑bubbling Ultra C wb line is set to capture AI‑driven advanced‑node fabs, pushing revenue toward the $950 m upper guidance. Key catalysts over the next 3–6 months are a Q3 earnings beat, a Fed rate cut, and easing export controls (SK994CBWR). Upside is invalidated by a Fed hike, heightened US–China tensions, or supply‑chain bottlenecks (SK994CBWR). Watch the Fed Oct 2025 meeting, Q3 earnings Aug 2025, China export‑control policy Q4 2025, UAS job data, and competitor launches (FOM34PUWA). The base‑case remains attractive but is sensitive to geopolitical and policy shocks.”  \n\nFollow this plan to produce a crisp, decision‑useful brief that meets the 4–6‑sentence, high‑signal, citation‑dense criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__executive_summary__us_10y__analysis_run__1755987801"
+}

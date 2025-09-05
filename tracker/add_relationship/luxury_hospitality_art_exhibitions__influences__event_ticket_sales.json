@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:25:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "luxury_hospitality_art_exhibitions",
+    "target_id": "event_ticket_sales",
+    "selection_motivation": "Luxury hospitality and art exhibitions directly generate demand for event ticket sales by attracting high‑net‑worth clientele and driving event‑centric tourism, creating a clear causal influence.",
+    "candidate_motivation": "These topics represent adjacent domains in the luxury experiential economy—travel demand, events, and premium dining/brands that could strongly influence or correlate with luxury hospitality and art exhibitions.",
+    "existing_links_count": "2",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['panama_casco_antiguo', 'event_ticket_sales', 'airbnb_expansion_markets', 'chloe_brand_revival', 'cava', 'restaurant_brands_international']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'luxury_hospitality_art_exhibitions', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'luxury_hospitality_art_exhibitions', 'target': 'euro_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847429",
+    "rel_id": "luxury_hospitality_art_exhibitions__influences__event_ticket_sales",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'luxury_hospitality_art_exhibitions', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'luxury_hospitality_art_exhibitions', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'luxury_hospitality_art_exhibitions', 'target': 'event_ticket_sales'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Luxury hospitality and art exhibitions directly generate demand for event ticket sales by attracting high‑net‑worth clientele and driving event‑centric tourism, creating a clear causal influence.",
+      "type": "INFLUENCES",
+      "source": "luxury_hospitality_art_exhibitions",
+      "target": "event_ticket_sales"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "luxury_hospitality_art_exhibitions__influences__event_ticket_sales"
+}

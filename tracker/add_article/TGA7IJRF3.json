@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T16:06:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TGA7IJRF3",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Trump’s rollback of clean‑energy subsidies and China’s export surge push US inflation and China credit, influencing Fed policy and China exports.",
+      "existing_ids": [
+        "fed_policy",
+        "china_exports",
+        "china_credit_impulse",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a policy change by the Trump administration, rolling back clean‑energy subsidies and cutting climate‑tech funding, which is an official policy statement affecting environmental policy and renewable technology markets."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "TGA7IJRF3",
+      "title": "The Download: unnerving AI avatars, and Trump’s climate gift to China",
+      "summary": "AI avatars are rapidly improving, with Synthesia’s latest model producing hyperrealistic, expressive clones that may soon converse with users, raising questions about authenticity and interaction. Meanwhile, Trump’s administration is rolling back clean‑energy subsidies and cutting funding for climate‑tech, a move that could further entrench China’s dominance in solar manufacturing and other renewable technologies. The combination of advancing AI personas and policy shifts underscores a broader trend of technological progress coupled with a retreat from supportive environmental measures.",
+      "source": "https://www.technologyreview.com/2025/09/04/1123066/the-download-unnerving-ai-avatars-and-trumps-climate-gift-to-china/",
+      "published_at": "2025-09-04T08:10:00-04:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "TGA7IJRF3"
+}

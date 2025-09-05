@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T11:29:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "copper",
+    "target_id": "us_inflation_expectations",
+    "selection_motivation": "Copper price movements are a leading indicator of US inflation expectations, shaping consumer price forecasts and influencing monetary policy outlooks.",
+    "candidate_motivation": "Copper is a base metal whose price is driven by global industrial demand, macroeconomic conditions, and currency movements. Therefore, topics related to major economies, inflation, monetary policy, and other commodities are the most plausible influences or peers.",
+    "existing_links_count": "3",
+    "candidate_count": "13",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_inflation', 'china_macro', 'oil', 'usd', 'fed_policy', 'ecb_policy', 'us_10y', 'euro_inflation', 'sp500', 'eurostoxx50', 'gold', 'eur', 'us_inflation_expectations']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'china_macro'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627956748",
+    "rel_id": "copper__influences__us_inflation_expectations",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price movements are a leading indicator of US inflation expectations, shaping consumer price forecasts and influencing monetary policy outlooks.",
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "us_inflation_expectations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__influences__us_inflation_expectations"
+}

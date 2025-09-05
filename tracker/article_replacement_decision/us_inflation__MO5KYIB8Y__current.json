@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T16:21:19",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "MO5KYIB8Y",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['YUJ7ZHQTN', 'HW5TSPJ8K', '3M2SHE57Q', 'VSD8OH1LE', 'TO2X2W4B3', 'LHD5VA4OU', 'SGMY2QN32', '8PKUF1A17', 'KG6I1KTXK']",
+    "mode": "MUST_REPLACE",
+    "target_id": "YUJ7ZHQTN",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "YUJ7ZHQTN",
+      "motivation": "The new article provides significant updates on PPL Corporation's dividend declaration and financial performance, making existing articles redundant."
+    }
+  },
+  "id": "us_inflation__MO5KYIB8Y__current"
+}

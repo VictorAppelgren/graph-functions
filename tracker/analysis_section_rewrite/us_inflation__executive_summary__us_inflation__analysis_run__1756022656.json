@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:17:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756022656",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17004",
+    "output_chars": "1153",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has strengths in its two-regime framing and its use of credible, source-backed data, but to reach world-class, compress to a 4–6 sentence executive brief and sharpen the causal chain, with explicit milestones, tighter scope, and precise, source-grounded numbers. Actionable edits: (1) state a crisp base-case thesis up front (cloud/AI as the durable earnings anchor; EV/subsidy as a policy-sensitive overlay) and map the causal chain (cloud capex → backlog visibility → durable cash flow; policy/tariff dynamics → EV equity re-pricing), tying each claim to a core source (e.g., 0G3A676BP for Microsoft/Backlog, TN66GHPAT for long-run cloud demand, P0K0UEOHU for Rivian/Tesla) in 1–2 sentences. (2) replace or prune tangential macro/data (Pacaso, HeartSciences, AUVSI) with a tight watch-list and explicit triggers, e.g., near-term milestones for Azure/backlog, Rivian R2 ramp milestones, and EV-policy extensions, with 0–3 and 3–6 month windows. (3) inject precise, decision-useful numbers and ranges cross-checked to sources (Azure growth 30–40% range implied by 39% YoY; backlog $368B up 37% YoY; Rivian EBITDA breakeven by 2027 with a $6.6B DOE loan; Grand View cloud CAGR 21.2%; include these exact figures with their IDs). (4) tighten the narrative to reduce repetition and ensure the conclusion is concise: the cloud/AI regime is the multi-year anchor; EV exposure offers optionality highly contingent on policy and ramp execution; monitoring should center on Azure/backlog trajectory, Rivian R2 cost/mile milestones, and EV-credits/tariff policy signals. (5) fix data conflicts and ensure all critical claims have a single, primary source citation and no uncited assertions; replace or reconcile any outdated/defunct references (e.g., AUVSI projections) with current equivalents (e.g., 2015–2025 UAS labor data) and clearly label any reconciliations. (6) maintain executive style with 4–6 sentences total, and keep the citations tightly attached to the statements they support (0G3A676BP, TN66GHPAT, P0K0UEOHU, 4LQD15CFU, UPV3X2MQ6, FOM34PUWA, A7VLN74BK, V8TEZOR8R, J99EM2TPZ, S7M6BJSRT).",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756022656"
+}

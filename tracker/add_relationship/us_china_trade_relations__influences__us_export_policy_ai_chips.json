@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:47:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_relations",
+    "target_id": "us_export_policy_ai_chips",
+    "selection_motivation": "US-China trade relations directly shape U.S. export policy on AI chips, a key driver for semiconductor supply chain dynamics and market access.",
+    "candidate_motivation": "These topics are the most plausible peers or influences due to direct ties to bilateral trade dynamics, technology controls, and supply-chain exposure between the US and China.",
+    "existing_links_count": "10",
+    "candidate_count": "9",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_china_trade_talks', 'us_china_trade_war_2025', 'us_china_supply_chain_risks', 'us_export_policy_ai_chips', 'us_chip_export_controls', 'us_china_ai_chip_agreement', 'nvidia_china_geopolitics', 'china_semiconductor_policy', 'china_nvidia_policy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_supply_chain_risks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397221",
+    "rel_id": "us_china_trade_relations__influences__us_export_policy_ai_chips",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_supply_chain_risks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China trade relations directly shape U.S. export policy on AI chips, a key driver for semiconductor supply chain dynamics and market access.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_relations",
+      "target": "us_export_policy_ai_chips"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_relations__influences__us_export_policy_ai_chips"
+}

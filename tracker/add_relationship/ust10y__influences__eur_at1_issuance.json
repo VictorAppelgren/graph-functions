@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T23:50:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust10y",
+    "target_id": "eur_at1_issuance",
+    "selection_motivation": "US 10‑year Treasury yields directly affect European bank funding costs, thereby influencing the volume of AT1 bond issuance.",
+    "candidate_motivation": "US 10Y Treasury Yield is driven by monetary policy, inflation expectations, liquidity, and global risk sentiment. Therefore topics that directly influence or correlate with these factors—such as Fed policy, inflation data, other US Treasury maturities, global yields, FX rates, equity indices, commodities, and macro events—are plausible influences or peers.",
+    "existing_links_count": "21",
+    "candidate_count": "32",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "32",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust30y', 'ust2y', 'ust5y', 'dxy', 'euro_inflation', 'ecb_policy', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'sx5e', 'spx', 'gold', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory', 'usdcny', 'gbpusd', 'usdjpy', 'eurusd', 'fed_powell_rate_cut_hint_2025', 'eur_at1_issuance', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'india_industrial_output']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395390",
+    "rel_id": "ust10y__influences__eur_at1_issuance",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eur_at1_issuance'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑year Treasury yields directly affect European bank funding costs, thereby influencing the volume of AT1 bond issuance.",
+      "type": "INFLUENCES",
+      "source": "ust10y",
+      "target": "eur_at1_issuance"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__influences__eur_at1_issuance"
+}

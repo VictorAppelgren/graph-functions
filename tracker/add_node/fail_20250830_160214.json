@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-30T16:01:41",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "61SVFUKBY",
+    "suggested_names": "['us_media']",
+    "topic_category": "company",
+    "topic_category_motivation": "Article provides updated growth, valuation, and 2030 outlook for Netflix, justifying a dedicated company node.",
+    "should_add": "False",
+    "motivation_for_relevance": "Netflix is a single company; not a macro driver, tradable asset, or policy regime. The policy excludes industry or company-level nodes that lack a direct market-mapped macro impact.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article provides updated growth, valuation, and 2030 outlook for Netflix, justifying a dedicated company node.",
+      "id": "NFLX",
+      "name": "Netflix",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

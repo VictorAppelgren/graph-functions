@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T06:09:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "44ZI7RUNL",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: FX and equity; Populist surge in the UK, France and Germany will pressure GBP/USD, EUR/USD and European equity indices, while bond yields may tighten due to heightened political risk.",
+      "existing_ids": [
+        "gbpusd",
+        "eurusd",
+        "bund10y",
+        "gilt10y",
+        "sx5e"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a shift in political sentiment in major European economies, which is a geopolitical event that can influence markets."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article does not provide evidence of impact on the node's scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on current polling data indicating a shift in political sentiment, an immediate event affecting political risk."
+    },
+    "article_node": {
+      "id": "44ZI7RUNL",
+      "title": "Populist Right Wing Parties Lead Polls in Europe’s Biggest Economies",
+      "summary": "LONDON—For the first time, populist or far-right parties are leading the polls in Europe’s three biggest countries of the U.K., France, and Germany, the latest sign of growing voter discontent in much of the continent following years of high immigration and inflation.\n\nFar-right and anti-immigration parties have already entered government in countries such as Italy, Finland and the Netherlands. But this year marks the first time that they have been ahead in Europe’s biggest economies at the same...",
+      "source": "https://www.wsj.com/world/europe/right-wing-europe-dd4f1156",
+      "published_at": "2025-08-31T03:00:00+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "44ZI7RUNL"
+}

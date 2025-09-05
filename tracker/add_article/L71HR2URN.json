@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T14:01:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "L71HR2URN",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; the Trump administration’s policy to end foreign aid to Eastern Europe signals a fiscal tightening that could lift Treasury yields as the deficit shrinks.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports an official U.S. policy decision to terminate a security assistance program, which is a formal policy statement by the administration."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a new executive order terminating a security assistance program, an immediate policy change affecting U.S. military aid."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 1
+    }
+  },
+  "id": "L71HR2URN"
+}

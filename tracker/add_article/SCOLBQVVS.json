@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T17:02:08",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SCOLBQVVS",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US defense spending on cobalt and stockpiling signals fiscal stimulus and supply‑chain resilience, likely tightening US 10Y/5Y yields and raising Fed policy expectations.",
+      "existing_ids": [
+        "ust10y",
+        "ust5y",
+        "ust30y",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Article reports USCM’s retention of the Haynes Cobalt Project and the U.S. Defense Logistics Agency’s program, representing a company update on strategic assets."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article details a U.S. domestic initiative to secure cobalt supply, a critical metal for defense and energy transition, potentially affecting cobalt supply expectations and commodity markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article highlights a long‑term strategic shift toward domestic critical‑metal supply, driven by defense and energy‑transition priorities, indicating a structural change rather than a short‑term event."
+    },
+    "article_node": {
+      "id": "SCOLBQVVS",
+      "title": "USCM Retains Haynes Cobalt Asset in Idaho Amid US Stockpiling and Lack of Domestic Production",
+      "summary": "U.S. Critical Metals Corp. (USCM) has retained 100% ownership of the Haynes Cobalt Project in Idaho, a past‑producing asset adjacent to Jervois Mining’s only U.S. cobalt mine. The move comes as the U.S. Defense Logistics Agency launches a $500 million, five‑year program to acquire 7,480 t of cobalt, underscoring the nation’s heavy reliance on imports and the strategic need for domestic supply. USCM views the Idaho property as a key asset for defense, aerospace and energy‑transition industries, and highlights recent U.S. government support for critical metals, including a $400 million equity investment in MP Materials. The company plans further exploration to confirm the property’s potential to bridge future supply gaps for the U.S. critical‑metals supply chain.",
+      "source": "https://finance.yahoo.com/news/uscm-retains-haynes-cobalt-asset-132000677.html?.tsrc=rss&_guc_consent_skip=1756992858",
+      "published_at": "2025-09-04T13:20:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "SCOLBQVVS"
+}

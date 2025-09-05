@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:52:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariff_inflation",
+    "target_id": "tariff_driven_inflation",
+    "selection_motivation": "This link connects the specific inflationary impact of US tariffs to the broader macroeconomic concept of tariff‑driven inflation, enabling aggregation and inference across tariff‑related inflation nodes.",
+    "candidate_motivation": "Topics that are most likely to drive or reflect tariff-driven inflation, including direct tariff measures, policy rhetoric, and related international trade dynamics that influence price pressures and inflation readings.",
+    "existing_links_count": "5",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['us_inflation', 'tariff_driven_inflation', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariff_policies', 'us_tariffs', 'us_china_trade_relations', 'us_china_tariffs', 'us_china_tariff_truce', 'us_tariffs_inflation']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587560",
+    "rel_id": "us_tariff_inflation__influences__tariff_driven_inflation",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'tariff_driven_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "This link connects the specific inflationary impact of US tariffs to the broader macroeconomic concept of tariff‑driven inflation, enabling aggregation and inference across tariff‑related inflation nodes.",
+      "type": "INFLUENCES",
+      "source": "us_tariff_inflation",
+      "target": "tariff_driven_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariff_inflation__influences__tariff_driven_inflation"
+}

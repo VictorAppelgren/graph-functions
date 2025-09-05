@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:22:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust10y",
+    "target_id": "us_inflation",
+    "selection_motivation": "US 10‑year Treasury yield is a key barometer of inflation expectations and moves closely with US CPI data; linking them captures the inflation‑yield nexus for cross‑asset analytics.",
+    "candidate_motivation": "US 10Y Treasury Yield is a core benchmark for U.S. fixed income and is directly influenced by monetary policy, inflation expectations, and macro‑economic data, while also serving as a peer to other sovereign yields and a driver for equity and currency markets. The selected topics are those that either set the policy backdrop, provide comparable yield benchmarks, or represent key economic indicators and market indices that typically move in tandem with the 10‑year U.S. Treasury.",
+    "existing_links_count": "20",
+    "candidate_count": "13",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'dxy', 'spx', 'sx5e', 'bund10y', 'jgb10y', 'ecb_policy', 'us_unemployment_claims', 'sofr']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182197101208012020",
+    "rel_id": "ust10y__correlates_with__us_inflation",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ecb_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑year Treasury yield is a key barometer of inflation expectations and moves closely with US CPI data; linking them captures the inflation‑yield nexus for cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "ust10y",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__correlates_with__us_inflation"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:00:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756032725",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15932",
+    "output_chars": "1182",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 months | Intel’s passive stake with path to ~15% voting power and a governance overlay | Watch vesting toward ~15% voting power, governance alignment, and policy-clarity-driven market response (XQWTVR71K)(0G3A676BP)(4LQD15CFU) | 60%\nUp | 3–6 months | Regime A acceleration as Shopify‑anchored platform moat and Microsoft‑driven cloud demand translate into sustained monetization and margin leverage | Watch Azure high‑30s growth, Shopify GMV +27%, revenue +29%, and FCF ~16% with backlog visibility and SFN-divestiture cash returns as moat re-rating (0G3A676BP)(QFDWCTAYB)(48JXC9VDP) | 70%\nDown | 0–3 months | Policy-tightening risk or governance friction if vesting stalls toward ~15% voting power and AI‑cycle fragility intensifies | Watch vesting progress (XQWTVR71K), AI‑market fragility signals (OB27SL8WU), and policy commentary that could recalibrate discount rates (0G3A676BP) | 25%\nDown | 3–6 months | AI leadership reverts to a narrower growth‑meme regime; GMV/revenue momentum decelerates and margins tighten | Watch backlog QoQ progression (0G3A676BP), AI capex signals and enterprise adoption timelines (4LQD15CFU), and policy-rate trajectories that inform discount rates (TN66GHPAT)(UVEQ2SJ0W) | 30%",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756032725"
+}

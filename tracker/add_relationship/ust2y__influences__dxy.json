@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T13:56:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust2y",
+    "target_id": "dxy",
+    "selection_motivation": "Short-term Treasury yields directly influence the USD through capital flows, making ust2y a key driver of the DXY.",
+    "candidate_motivation": "US 2Y Treasury Yield is a short‑term benchmark that reacts strongly to Fed policy decisions, short‑term rate proxies like SOFR, and inflation expectations, and it moves in tandem with other U.S. Treasury yields and the dollar index.",
+    "existing_links_count": "0",
+    "candidate_count": "7",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['fed_policy', 'sofr', 'ust10y', 'ust5y', 'ust30y', 'us_inflation', 'dxy']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118476060",
+    "rel_id": "ust2y__influences__dxy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Short-term Treasury yields directly influence the USD through capital flows, making ust2y a key driver of the DXY.",
+      "type": "INFLUENCES",
+      "source": "ust2y",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__influences__dxy"
+}

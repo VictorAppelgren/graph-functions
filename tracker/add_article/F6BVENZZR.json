@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T11:35:45",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "F6BVENZZR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US foreign policy stance on Venezuelan sovereign debt may influence US Treasury yields via risk premium.",
+      "existing_ids": [
+        "ust10y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a U.S. Government filing a Statement of Interest in a court case concerning bond validity, constituting a legal development/regulatory action."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a legal challenge that could materially affect Gold Reserve Ltd.'s bid for PDVH shares and its valuation, potentially impacting its credit risk and market perception."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent U.S. government filing and immediate legal challenges affecting Gold Reserve Ltd.’s bid for PDVH shares, indicating an event that will influence the node in the short term."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "F6BVENZZR"
+}

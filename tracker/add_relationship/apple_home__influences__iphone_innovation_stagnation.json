@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T23:23:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_home",
+    "target_id": "iphone_innovation_stagnation",
+    "selection_motivation": "Linking Apple Home to iPhone Innovation Stagnation highlights the potential impact of stagnating innovation on Apple's home ecosystem, which is crucial for understanding market dynamics and consumer behavior.",
+    "candidate_motivation": "The selected topics are closely related to technology, consumer electronics, and market dynamics that could influence or correlate with Apple Home's market presence and strategic direction.",
+    "existing_links_count": "2",
+    "candidate_count": "18",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['apple_us_investment', 'apple_antitrust', 'apple_trademark_litigation', 'apple_trademark_disputes', 'apple_airpods_pro_2', 'apple_workout_buddy', 'apple_games_preview', 'apple_liquid_glass', 'apple_cinemas_trademark_dispute', 'apple_cinemas_trademark_lawsuit', 'apple_a20_chip', 'm1_macbook_air', 'macbook_air_m2_discount', 'iphone_innovation_stagnation', 'iphone_17', 'iphone_17_colors', 'macbook_air_m4_discounts', 'apple_home']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_home', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'apple_home', 'target': 'apple_antitrust'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080614",
+    "rel_id": "apple_home__influences__iphone_innovation_stagnation",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_home', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'apple_home', 'target': 'iphone_innovation_stagnation'}, {'type': 'INFLUENCES', 'source': 'apple_home', 'target': 'apple_antitrust'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Apple Home to iPhone Innovation Stagnation highlights the potential impact of stagnating innovation on Apple's home ecosystem, which is crucial for understanding market dynamics and consumer behavior.",
+      "type": "INFLUENCES",
+      "source": "apple_home",
+      "target": "iphone_innovation_stagnation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_home__influences__iphone_innovation_stagnation"
+}

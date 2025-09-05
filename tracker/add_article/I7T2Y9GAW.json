@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:15:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "I7T2Y9GAW",
+    "status": "success",
+    "topic_id": "intel_ceo_management"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights significant movements in Intel's stock due to potential government intervention, which aligns with the existing node on Intel's CEO management and political influence. This mapping provides insights into how political actions can impact stock performance.",
+      "existing_node_ids": "intel_ceo_management",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses the management strategies and decisions of Intel's CEO, which are relevant to company operations but not specifically tied to earnings or financial results."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses Intel's management strategies and decisions, which directly relate to the CEO's role and impact on the company."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses strategic decisions and management practices that will shape the company's direction over time."
+    },
+    "article_node": {
+      "id": "I7T2Y9GAW",
+      "title": "Stock Movers: Intel, Bullish, Tapestry",
+      "summary": "Intel's shares surged following reports that the Trump administration is considering a government stake in the company to support its Ohio factory hub, which has faced delays. Meanwhile, Bullish's shares rose on its second trading day, focusing on crypto trading for institutional investors, although its products are not available to US users. Tapestry's shares fell significantly after it projected lower-than-expected earnings for 2026, despite a 69% increase in shares since April.",
+      "source": "https://www.bloomberg.com/news/audio/2025-08-14/stock-movers-intel-bullish-tapestry-podcast",
+      "published_at": "2025-08-14T21:09:40.891000+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "I7T2Y9GAW"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:16:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hybrid_ad_environments",
+    "target_id": "interlock_cyberattack",
+    "selection_motivation": "The vulnerabilities in hybrid AD and Entra ID directly enabled the Interlock Cyberattack, making the attack a direct consequence of these weaknesses.",
+    "candidate_motivation": "The source topic concerns security vulnerabilities in hybrid identity solutions, so only topics directly related to cybersecurity incidents, legal aspects of cyber risk, or other identity‑management threats are plausible peers or influences.",
+    "existing_links_count": "0",
+    "candidate_count": "2",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "2",
+    "candidate_ids_preview": "['interlock_cyberattack', 'us_federal_court_cybersecurity']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846028",
+    "rel_id": "hybrid_ad_environments__influences__interlock_cyberattack",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hybrid_ad_environments', 'target': 'interlock_cyberattack'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The vulnerabilities in hybrid AD and Entra ID directly enabled the Interlock Cyberattack, making the attack a direct consequence of these weaknesses.",
+      "type": "INFLUENCES",
+      "source": "hybrid_ad_environments",
+      "target": "interlock_cyberattack"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "hybrid_ad_environments__influences__interlock_cyberattack"
+}

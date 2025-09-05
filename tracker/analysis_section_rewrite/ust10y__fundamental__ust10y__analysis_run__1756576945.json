@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T20:02:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756576945",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "1426",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is solid in terms of causal logic and macro‑pillars, but it fails the **acceptance gate** because it does **not map to a canonical handle** (e.g., UST 10y) and it lacks a **dated catalyst window**.  Below are concrete edits to bring it to world‑class quality:\n\n1. **Add canonical mapping**  \n   - Insert a sentence that explicitly ties mortgage rates to the UST 10y:  \n     *“30‑year fixed‑rate mortgage rates are ≈ 1.5–2.0 pp above the UST 10y yield (LF0UUL917).”*  \n   - Cite the source ID after the statement.\n\n2. **Specify catalyst window**  \n   - Add a catalyst clause with a clear date range:  \n     *“Key catalysts will be the Fed’s FOMC meetings (next on 16‑17 Sept 2025) and the 3‑month core CPI release (15 Sept 2025).”*  \n   - Provide magnitude ranges: *“A 25 bp rise in the 10‑year yield would lift mortgage rates by ~30 bp.”*  \n   - Cite relevant IDs.\n\n3. **Trim excess prose**  \n   - Remove narrative fluff (“high‑rate regime”, “structural regime persists”) and keep only actionable, quantified statements.\n\n4. **Add confidence and risk language**  \n   - End with a concise confidence rating (“moderate”) and a short risk list (Fed rate hike, inflation spike, debt growth).\n\n5. **Ensure every claim has a citation**  \n   - After each quantitative claim, add the source ID in parentheses.\n\n**Revised paragraph (≈ 120 words)**\n\n> 30‑year fixed‑rate mortgage rates are ≈ 1.5–2.0 pp above the UST 10y yield (LF0UUL917).  The Fed’s ongoing balance‑sheet contraction and a 2 % inflation target keep the 10‑year term premium elevated, anchoring mortgage rates at 6.5–7.0 % until the next FOMC meeting (16‑17 Sept 2025) or the core CPI release (15 Sept 2025).  A 25 bp rise in the 10‑year yield would lift mortgage rates by ~30 bp; a Fed rate hike would add 50–100 bp.  Risks: Fed reversal, inflation resurgence, debt‑driven term premium.  Confidence: moderate.  (LF0UUL917)\n\nApply these edits to satisfy the gate and improve clarity, depth, and citation density.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756576945"
+}

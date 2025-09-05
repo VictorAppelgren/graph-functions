@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:26:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756066459",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20072",
+    "output_chars": "1612",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft nails the big ideas but fails the 4–6 sentence/point brief and the strict, executive-utility standard; tighten into a single house view anchored to a 3-regime framework, with explicit triggers, a clean causal chain, and numeric anchors drawn only from the source IDs. Actionable edits: (1) compress to 4–6 sentences or bullets that state: the regime map, the primary catalysts, the asset- pricing implications for autos/AI/semis/defensives, and the core risks/watch items; (2) convert the current multi-block dump into one cohesive narrative where Regime A/B/C have explicit transition triggers (e.g., wage-growth momentum, inflation persistence, Jackson Hole policy signals, Chips Act/Intel capex cadence, tariff posture) and assign probabilistic weights; (3) bind every factual claim to a source ID (e.g., Ford metrics 22PL3Q360, ACMR 22PL3Q360, Disney ESPN monetization 37UZC9X8I, tariff/energy dynamics NL5YYTLF2/J99EM2TPZ) and remove or source any extraneous items (the Bethel/8‑30g notes) unless they have a direct macro-to-credit channel; (4) articulate a crisp, first-principles causal chain: Fed tilt drives discount rates and risk premia → re-pricing of sector earnings → asset-price outcomes (autos, AI/semis, defensives) with explicit numeric implications (e.g., expected multiple bands under Regime A vs B); (5) specify 0–3 week invalidations and longer-horizon invalidations (e.g., energy-price regime break, tariff pivot, or a meaningful acceleration in wage growth) and tie them to concrete triggers; (6) replace broad narrative with a focused 3–path macro roadmap and a single house view for 3–6 months plus a brief longer-term contingency; (7) ensure concise, risk-balanced language and eliminate repetition or overly granular ancillary data; (8) preserve—at minimum—the cited channel list for each claim to maintain density without drifting into non-sourced assertions.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756066459"
+}

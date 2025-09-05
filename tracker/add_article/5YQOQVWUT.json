@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T03:29:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5YQOQVWUT",
+    "status": "success",
+    "topic_id": "nfl_player_injuries"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the performance of the Pittsburgh Steelers, which is relevant for analyzing trends in the NFL and player dynamics, suggesting a connection to the existing node on NFL Player Injuries.",
+      "existing_node_ids": "nfl_player_injuries",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The node relates to injuries of NFL players, which does not fit into any of the specified categories related to macroeconomics, finance, or regulation."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of NFL player injuries on team performance and fan engagement, which directly relates to this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses the impact of player injuries on team performance and league dynamics, which can have both immediate and longer-term implications."
+    },
+    "article_node": {
+      "id": "5YQOQVWUT",
+      "title": "Steelers offense a mixed bag in joint practice with Bucs; run game ‘sloppy’",
+      "summary": "During a joint practice with the Tampa Bay Buccaneers, the Pittsburgh Steelers showcased mixed results, excelling in the Seven Shots drill but struggling in a two-minute drill. Head coach Mike Tomlin confirmed that quarterback Aaron Rodgers will not play in the upcoming preseason game, and several key players have been ruled out. The Steelers' offense is still developing, particularly in situational football, while the defense has shown dominance throughout training camp.",
+      "source": "https://www.nytimes.com/athletic/6554592/2025/08/14/steelers-offense-joint-practice-bucs/",
+      "published_at": "2025-08-15T00:19:46+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "5YQOQVWUT"
+}

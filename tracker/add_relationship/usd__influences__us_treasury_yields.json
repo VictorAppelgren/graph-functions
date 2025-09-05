@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:11:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "us_treasury_yields",
+    "selection_motivation": "USD is a primary driver of US Treasury yields through its impact on demand for safe assets and global capital flows.",
+    "candidate_motivation": "US Dollar movements are driven by US monetary policy, inflation trajectories, and yields, with spillovers from major global policy and trade dynamics that shape capital flows into or out of USD-denominated assets.",
+    "existing_links_count": "11",
+    "candidate_count": "25",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['us_inflation', 'core_monthly_cpi', 'us_inflation_data', 'us_inflation_expectations', 'tariff_driven_inflation', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs', 'us_china_trade_talks', 'us_10y', 'us_treasury_yields', 'fed_policy', 'ecb_policy', 'euro_inflation', 'eur', 'oil', 'gold', 'copper', 'ukraine_geopolitical_security', 'ukraine_conflict', 'russia_economic_crisis', 'us_china_ai_chip_exports', 'us_tariffs_pharmaceuticals_semiconductors', 'us_chip_export_controls', 'us_chip_exports_china']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1191203200951123982",
+    "rel_id": "usd__influences__us_treasury_yields",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD is a primary driver of US Treasury yields through its impact on demand for safe assets and global capital flows.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "us_treasury_yields"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__us_treasury_yields"
+}

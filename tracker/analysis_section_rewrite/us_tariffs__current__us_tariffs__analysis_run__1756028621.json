@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:48:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "section": "current",
+    "test": "False",
+    "run_id": "us_tariffs__analysis_run__1756028621",
+    "article_ids": "['CWVWSACA7', 'DNG58CC09', 'DGG6HXUFZ', 'VCZKKPORO', 'WC37STSUD']",
+    "selected_articles_count": "5",
+    "material_chars": "192083",
+    "output_chars": "2949",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong start tying 0–3 week drivers to tariffs, energy disruption, and policy signaling, but the piece needs a tighter, source-faithful causal chain and clearer, source-backed thresholds. Actionable edits: 1) fix citation discipline by mapping every assertion to exact IDs from the SOURCE MATERIAL (avoid vague (13) or non-existent refs); anchor near-term drivers to precise IDs: India tariffs (DGG6HXUFZ), EU–US framework/tariff terms (8 and 9), Druzhba energy disruption (CWVWSACA7), and tariff-revenue/credit framing (DNG58CC09, 19; and 27 for rare-earth/energy context as relevant). 2) restructure into a crisp 0–3 week narrative: immediate drivers (India 50% tariffs on Aug 27 per DGG6HXUFZ; 15% MFN on EU imports under the framework per 9/8), near-term catalysts (Jackson Hole fed commentary; explicit tariff announcements; Druzhba pipeline moves), and positioning dynamics (retail, energy, and industrials). 3) specify catalysts/triggers and invalidation with concrete thresholds: tariff escalation beyond 25–30% in a major line or failure of inflation to decelerate would invalidate a dovish pivot; a clear, credible inflation deceleration or a surprise CPI/PCE print could validate a softer path. Tie to Jackson Hole (Powell speech) as a pivotal inflection; tie to India/EU tariff moves and energy prices as immediate price signals. 4) quantify via numbers and ranges: use exact figures from sources (India 50% next week; EU MFN 15% under framework; Druzhba energy disruption; 750B energy purchases and 40B AI chips in the EU framework draft; 44% of India’s seafood exports to US, if relevant for sector impact) and keep to a concise set of metrics (10-year yield around 4.3–4.5% as a pricing anchor; tariff receipts near $30B/month as a medium-term signal cited by analysts; tariff pass-through pressures in wholesale and consumer prices). 5) address conflicts and reconciliation: EU wine/spirits carve-out remains unresolved in the framework (8/9); acknowledge both the potential for relief on autos from the EU side and the continued 50% India tariff threat, and reconcile with the energy-flow narrative (CWVWSACA7; 16; 21) to avoid over‑generalization. 6) sharpen the market‑transmission map into three explicit channels: (a) cost pass-through in import‑intensive sectors and observable wholesale-price moves (cite DGG6HXUFZ, 27); (b) tariff revenue as deficit offset and rating/credit implications (cite 19, 9); (c) policy uncertainty's impact on rate paths and equity risk premia in Jackson Hole context (cite WC37STSUD, 11). 7) tighten the conclusion to a single, testable base‑case with clearly delineated upside/downside paths and monitoring checklist: watch Jackson Hole rhetoric for hawkish/dovish tilt, watch India/EU tariff progression dates, watch Druzhba‑related energy price swings, and watch 10-year yields for breakpoints near 4.5% that would imply risk-off regimes; invalidation would be a sustained inflation surprise or a credible, rapid tariff escalation that lifts medium-term inflation expectations. 8) trim extraneous content, remove long‑form narrative digressions, and ensure every sentence maps to a concrete data point or regulatory action from the cited IDs. Implementing these changes will produce a world-class, sources-consistent, 0–3 week stress-test of tariff/policy transmission with explicit levels, triggers, and next-step monitoring.",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs__current__us_tariffs__analysis_run__1756028621"
+}

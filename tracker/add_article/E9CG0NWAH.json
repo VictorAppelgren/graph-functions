@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-25T02:06:08",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "E9CG0NWAH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; streaming/entertainment shifts from Netflix’s title removals can influence consumer discretionary sentiment and media/tech equity exposure.",
+      "existing_ids": [
+        "sp500",
+        "ai_in_entertainment"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses Netflix’s upcoming removal of popular titles, which is a company update about its content strategy."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article's relevance to the node is unclear without knowing the node's specific focus, but it discusses streaming services and actor death, which could be of low to medium relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article discusses immediate changes to streaming content, upcoming title departures, new releases, and recent events such as an actor’s death, all of which affect the node in the short term."
+    },
+    "article_node": {
+      "id": "E9CG0NWAH",
+      "title": "This Zach Cregger horror is one of the best Netflix movies leaving this month (August 2025)",
+      "summary": "The article warns that several popular Netflix titles will soon leave the service and recommends alternatives such as Sicario, 17 Again, and other films across Netflix, Hulu, Amazon Prime, HBO Max, and Disney+. It also includes brief synopses and reviews of a wide range of movies—from thriller and horror to comedy and drama—and offers guides to the best new releases on each streaming platform. Additionally, it reports on the death of actor Matthew Perry and highlights his most notable roles. The piece serves as a comprehensive movie‑watching guide for the month’s streaming options and recent film releases.",
+      "source": "https://www.digitaltrends.com/movies/netflix-movies-leaving-this-month-you-have-to-watch-august-2025/",
+      "published_at": "2025-08-24T16:00:00-07:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "E9CG0NWAH"
+}

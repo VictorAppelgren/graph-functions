@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T00:25:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1Y1TTQJY7",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities, FX, commodities; Russia’s hybrid threat narrative and NATO infrastructure upgrades are likely to tighten risk sentiment, weighing on the S&P 500 and Euro Stoxx 50, pushing the USD higher, strengthening gold, and compressing US Treasury yields. Catalyst: 2025‑2029 window of potential conventional or hybrid attacks and Corridor 8 investment.",
+      "existing_ids": [
+        "spx",
+        "sx5e",
+        "gold",
+        "dxy",
+        "eurusd",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article describes Russia’s sabotage of NATO infrastructure and the resulting security and investment responses, which constitutes a geopolitical event affecting international security and defense policy."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess impact against; cannot determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "1Y1TTQJY7",
+      "title": "Russia Wants to Dismantle NATO – 'Hybrid Threats' are Next",
+      "summary": "Russia is pursuing a strategy to dismantle NATO through hybrid threats, conducting sabotage of critical infrastructure such as DHL hubs and railways across Europe. The attacks highlight vulnerabilities in NATO’s logistics backbone, prompting calls for re‑armament and investment in infrastructure, notably the Corridor 8 upgrade linking the Adriatic to the Black Sea. NATO must strengthen its physical deterrence to prevent a conventional attack on a member before 2029 and to safeguard its eastern flank. The UK‑North Macedonia partnership and £5 billion UK Export Finance support aim to accelerate these upgrades, but Washington must also back similar projects to maintain transatlantic security.",
+      "source": "https://www.newsmax.com/colonelwesmartin/putin-germany-dhl/2025/09/02/id/1224835/",
+      "published_at": "2025-09-02T17:16:40-04:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "1Y1TTQJY7"
+}

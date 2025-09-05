@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T04:36:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "spx",
+    "selection_motivation": "Bund10y’s influence on the US S&P 500 is comparatively weaker than its impact on euro‑equity indices, making the spx link the least critical for the new euro‑equity focus.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "Bund10y’s influence on the US S&P 500 is comparatively weaker than its impact on euro‑equity indices, making the spx link the least critical for the new euro‑equity focus.",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510069473",
+    "rel_id": "bund10y__influences__spx",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "spx"
+    },
+    "prioritized_link": {
+      "motivation": "Bund yields are a key benchmark for European sovereign rates and strongly influence euro‑equity valuations; a higher Bund10y typically depresses the Euro Stoxx 50.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "sx5e"
+    },
+    "llm_raw_response": {
+      "motivation": "Bund10y’s influence on the US S&P 500 is comparatively weaker than its impact on euro‑equity indices, making the spx link the least critical for the new euro‑equity focus.",
+      "remove_link": "spx"
+    },
+    "removal_decision": {
+      "motivation": "Bund10y’s influence on the US S&P 500 is comparatively weaker than its impact on euro‑equity indices, making the spx link the least critical for the new euro‑equity focus.",
+      "remove_link": "spx"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(Bund OR German Bund OR Bunds OR \"Bund 10Y\" OR \"Bund 10-year\" OR \"10Y Bund\" OR \"10-year Bund\" OR \"Bund 10-year yield\" OR \"Bund 10Y yield\" OR \"10-year Bund yield\" OR \"10Y Bund yield\" OR \"German 10-year bond\" OR \"German 10-year government bond\" OR \"German 10-year sovereign bond\" OR \"German 10-year debt\" OR \"10-year German bond\" OR \"10-year German government bond\" OR \"10-year German sovereign bond\" OR \"10-year German debt\" OR \"German 10-year yield\" OR \"German 10-year bond yield\" OR \"German 10-year government bond yield\" OR \"German 10-year sovereign bond yield\" OR \"German 10-year debt yield\" OR \"10-year German yield\" OR \"10-year German bond yield\" OR \"10-year German government bond yield\" OR \"10-year German sovereign bond yield\" OR \"10-year German debt yield\") AND (yield OR \"yield curve\" OR \"yield curve 10-year\" OR \"yield 10-year\" OR \"yield 10Y\") AND (news OR analysis OR report OR update OR trend OR outlook OR market OR trading OR finance OR economic OR inflation OR rates OR rate OR Fed OR ECB OR policy OR monetary OR bond OR bonds OR government OR sovereign OR debt)",
+      "name": "German 10Y Bund Yield",
+      "id": "bund10y",
+      "last_queried": "2025-09-02T15:30:05.088000000+00:00",
+      "queries": 3
+    }
+  },
+  "id": "bund10y__influences__spx"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T15:17:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M5N888WD1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; Columbia Banking System's presentation at the Barclays Global Financial Services Conference highlights trends in regional banking and potential impacts on credit markets.",
+      "existing_ids": [
+        "us_chip_trade_policy",
+        "us_inflation",
+        "us_treasury_yields"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article announces a company event (presentation at a conference) which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant event—Columbia Banking System, Inc. presenting at a major global financial services conference—directly impacting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a scheduled presentation in September 2025, which is a medium‑term event for the bank rather than a long‑term structural change or an immediate occurrence."
+    },
+    "article_node": {
+      "id": "M5N888WD1",
+      "title": "Columbia Banking System to Present at the Barclays Global Financial Services Conference",
+      "summary": "Columbia Banking System, Inc. will present at the Barclays 23rd Annual Global Financial Services Conference on September 10, 2025, at 11:15 a.m. ET. The presentation will be available via a live audiocast on their investor relations website. Columbia, headquartered in Tacoma, Washington, is the parent company of Columbia Bank, a major regional bank in the western U.S. with over $50 billion in assets, offering a range of banking and wealth management services.",
+      "source": "https://www.morningstar.com/news/pr-newswire/20250822sf55820/columbia-banking-system-to-present-at-the-barclays-global-financial-services-conference",
+      "published_at": "2025-08-22T07:15:00-05:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "M5N888WD1"
+}

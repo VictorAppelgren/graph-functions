@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:10:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "political_influence_on_stocks",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "Political influence on stocks drives policy makers to adjust U.S. export controls to protect domestic firms, directly impacting semiconductor supply chains and stock valuations.",
+    "candidate_motivation": "These topics are the most plausible direct or competitive influences on stock outcomes through policy, macro variables, and geopolitics. They include monetary policy, tariff/trade actions, and Sino-American relations, which historically drive equity markets.",
+    "existing_links_count": "4",
+    "candidate_count": "19",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_talks', 'china_us_tariff_truce', 'us_china_trade_relations', 'us_chip_export_controls', 'us_chip_exports_china', 'us_tariffs', 'us_trade_policy_inflation', 'us_inflation_stock_impact', 'us_inflation_data', 'eurusd', 'usd', 'geopolitics_corporate_strategy', 'political_influence_on_stocks', 'us_china_ai_chip_agreement']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901852",
+    "rel_id": "political_influence_on_stocks__influences__us_chip_export_controls",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Political influence on stocks drives policy makers to adjust U.S. export controls to protect domestic firms, directly impacting semiconductor supply chains and stock valuations.",
+      "type": "INFLUENCES",
+      "source": "political_influence_on_stocks",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "political_influence_on_stocks__influences__us_chip_export_controls"
+}

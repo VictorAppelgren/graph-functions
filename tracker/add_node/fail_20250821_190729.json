@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T19:07:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JASZ1XB3Z",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article introduces Sethera Therapeutics, a biotech company whose new enzymatic macrocyclization platform could materially influence the peptide therapeutics market, warranting a dedicated company node for analysis.",
+      "id": "sethera_therapeutics",
+      "name": "Sethera Therapeutics",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Sethera Therapeutics is a biotech company developing a novel enzymatic platform for peptide therapeutics, warranting a dedicated company node for analysis."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Sethera Therapeutics is a biotech company, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

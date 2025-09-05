@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T14:41:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_stock_buybacks",
+    "target_id": "us_tariffs_pharmaceuticals_semiconductors",
+    "selection_motivation": "Corporate buyback activity signals financial strength and can enhance lobbying influence, thereby shaping tariff policy on pharmaceuticals and semiconductors.",
+    "candidate_motivation": "US Stock Buybacks are closely related to stock market performance and corporate financial strategies, making topics like S&P 500, US Inflation, and Fed Policy strong influences or correlates. Additionally, US Tariffs on Pharmaceuticals and Semiconductors may impact corporate buyback decisions.",
+    "existing_links_count": "4",
+    "candidate_count": "4",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['sp500', 'us_inflation', 'fed_policy', 'us_tariffs_pharmaceuticals_semiconductors']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587086",
+    "rel_id": "us_stock_buybacks__influences__us_tariffs_pharmaceuticals_semiconductors",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Corporate buyback activity signals financial strength and can enhance lobbying influence, thereby shaping tariff policy on pharmaceuticals and semiconductors.",
+      "type": "INFLUENCES",
+      "source": "us_stock_buybacks",
+      "target": "us_tariffs_pharmaceuticals_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_stock_buybacks__influences__us_tariffs_pharmaceuticals_semiconductors"
+}

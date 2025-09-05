@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:58:35",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9SRRUQLCV",
+    "status": "success",
+    "topic_id": "nfl_player_injuries"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses NFL player injuries and their implications, which aligns with the existing node related to NFL player injuries, making it relevant for analysis of player performance and team dynamics.",
+      "existing_node_ids": "nfl_player_injuries",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses injuries to NFL players, which does not relate to macroeconomic events, earnings, regulations, or other financial categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of NFL player injuries on team performance and fan engagement, making it highly relevant to this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses the ongoing impact of player injuries on team performance and league dynamics, which suggests a longer-term perspective."
+    },
+    "article_node": {
+      "id": "9SRRUQLCV",
+      "title": "Broncos edge rusher Nik Bonitto misses practice after bone spur procedure, expected back next week",
+      "summary": "Broncos edge rusher Nik Bonitto missed practice as he recovers from foot surgery but is expected to return next week. Coach Sean Payton confirmed Bonitto's absence is due to a bone spur removal, not contract negotiations, as the team recently secured extensions for players Zach Allen and Courtland Sutton. Meanwhile, former rugby star Louis Rees-Zammit has signed with Bristol Bears after an 18-month stint in American football, and quarterbacks Bryce Young and C.J. Stroud reflected on their NFL journeys during a joint practice.",
+      "source": "https://apnews.com/article/nik-bonitto-broncos-7f9df315aaa70e78a71f586a3b176ac4",
+      "published_at": "2025-08-14T21:56:56+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "9SRRUQLCV"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T14:20:23",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756642823",
+    "article_ids": "['KLK2Z03BO', 'LF0UUL917', 'H86O3XRUJ', '4PRAW7Z7Y', 'ZV3QI3K19']",
+    "selected_articles_count": "5",
+    "material_chars": "179472",
+    "output_chars": "3001",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft fails the acceptance gate because it never anchors the narrative to a canonical handle with a clear sign and magnitude, nor does it tie any event to a specific catalyst window. It references “UST 10y yields” but does not map that to the canonical handle **ust10y** (or any other handle such as **dxy**, **us10y‑term‑premium**, etc.). The only source cited is **LF0UUL917**, which provides data but not a causal link to a handle. To make the piece compliant:\n\n1. **Add a handle mapping** – e.g. “UST 10y yields (ust10y) are currently at 4.15 % (+/- 0.05 %)” with a sign (+) and magnitude range.  \n2. **Specify a catalyst window** – e.g. “Fed’s balance‑sheet contraction (July 2025–Sept 2025) is expected to widen the term premium by 10–15 bp, pushing mortgage rates up.” Cite the exact source (LF0UUL917) for the dates and magnitude.  \n3. **Tie every claim to a causal chain** – explicitly state: Fed policy → fed funds rate → term‑premium → mortgage rate.  \n4. **Quantify ranges** – e.g. “Mortgage rates likely to trade 6.5–7.0 % (± 0.2 %) over the next 12–18 months.”  \n5. **Remove drift** – any mention of “real‑rate differential” or “inflation expectations” must be linked back to the handle (ust10y) and the catalyst window.  \n\nOnce these edits are made, the draft will satisfy the mapping and catalyst requirements and can be accepted.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1756642823"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T21:01:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "climate_loss_damage_funding",
+    "target_id": "climate_judiciary_project",
+    "selection_motivation": "The Climate Judiciary Project is a legal initiative designed to address climate loss and damage; funding from climate_loss_damage_funding directly enables its development and enforcement.",
+    "candidate_motivation": "These topics are the most plausible direct or near-direct influences on climate loss and damage funding due to shared climate risk exposure, policy, and resilience financing dynamics. They encompass climate finance mechanisms, risk governance, and adaptation/damage cost mobilization.",
+    "existing_links_count": "3",
+    "candidate_count": "13",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['sustainability_leadership', 'sustainability_reframing', 'sustainable_power_infrastructure_split_corp', 'nature_based_solutions', 'global_plastics_treaty', 'climate_judiciary_project', 'ccus_hubs_asia', 'solar_powered_aviation', 'urban_heatwaves', 'heatwaves', 'glacier_outburst_flooding', 'melting_glaciers_bodies', 'europe_heatwaves_wildfires']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'bric_program'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'nature_based_solutions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397169",
+    "rel_id": "climate_loss_damage_funding__influences__climate_judiciary_project",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'bric_program'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'nature_based_solutions'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'climate_judiciary_project'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Climate Judiciary Project is a legal initiative designed to address climate loss and damage; funding from climate_loss_damage_funding directly enables its development and enforcement.",
+      "type": "INFLUENCES",
+      "source": "climate_loss_damage_funding",
+      "target": "climate_judiciary_project"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "climate_loss_damage_funding__influences__climate_judiciary_project"
+}

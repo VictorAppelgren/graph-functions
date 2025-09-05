@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T10:11:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LCHKSBRBS",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US tariffs and de‑minimis removal are likely to lift inflation expectations and pressure Treasury yields, while weaker consumer spending on apparel may dampen core PCE growth.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Lululemon’s Q2 revenue miss and discusses the impact of tariffs on full‑year profits, which is a company earnings announcement."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses a single company's product strategy and tariff impact, which does not directly influence any canonical market handle or broader macro theme."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses a near‑term revenue miss and tariff impacts, as well as a medium‑term strategy to refresh the product mix, indicating a medium‑term horizon."
+    },
+    "article_node": {
+      "id": "LCHKSBRBS",
+      "title": "Lululemon is feeling the squeeze, and its CEO says the brand's gotten predictable",
+      "summary": "Lululemon’s CEO Calvin McDonald said the brand’s product life cycles have become too long, making its casual offerings predictable and failing to excite customers. The company’s Q2 revenue missed expectations, and tariffs are expected to cut full‑year profits by $240 million. Lululemon plans to increase new styles to 35% of its assortment and refresh iconic items to regain momentum.",
+      "source": "https://www.businessinsider.com/lululemon-ceo-earnings-new-products-colors-trends-consumer-spend-behavior-2025-9",
+      "published_at": "2025-09-05T06:35:46+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "LCHKSBRBS"
+}

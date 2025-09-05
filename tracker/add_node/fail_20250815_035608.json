@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:55:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "KSBYV9KE5",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Light AI's innovative approach to healthcare diagnostics using AI technology, which has significant implications for healthcare costs and efficiency, warranting a new atomic node for investment analysis.",
+      "id": "light_ai_health_diagnostics",
+      "name": "Light AI Health Diagnostics",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company providing AI-based diagnostic solutions, relevant to investment analysis."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Light AI is a healthcare technology company, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

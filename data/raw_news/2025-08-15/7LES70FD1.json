@@ -1,0 +1,128 @@
+{
+  "url": "https://www.howtogeek.com/update-your-plex-server-now-to-fix-this-security-vulnerability/",
+  "authorsByline": "Arol Wright",
+  "articleId": "4506f6b15d624358a9ad08a62f8ce534",
+  "source": {
+    "domain": "howtogeek.com",
+    "location": {
+      "country": "us",
+      "state": "VA",
+      "county": "Fairfax County",
+      "city": "McNair",
+      "coordinates": {
+        "lat": 38.9695316,
+        "lon": -77.3859479
+      }
+    }
+  },
+  "imageUrl": "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2025/05/plex.jpg",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-15T20:25:10+00:00",
+  "addDate": "2025-08-15T20:33:58.289100+00:00",
+  "refreshDate": "2025-08-15T20:33:58.289102+00:00",
+  "score": 1.0,
+  "title": "Update Your Plex Server Now to Fix This Security Vulnerability",
+  "description": "We don't know how bad it is, but you should get to it nonetheless.",
+  "content": "Bug bounty programs are extremely useful to reinforce security in the software we use daily. If you use Plex, a vulnerability has been discovered via said program\u2014and you'll want to update as soon as you get a chance, because it sounds serious.\n\nPlex has started warning users that they should immediately update their software to patch a newly discovered, yet-to-be-detailed vulnerability. The company took the unusual step of directly emailing users running affected server versions, so it must be a pretty serious one.\n\nThe security issue impacts Plex Media Server versions 1.41.7.x through 1.42.0.x. In an email sent to users on Thursday, four days after the patch was quietly released, Plex confirmed the vulnerability was responsibly disclosed through its bug bounty program. According to Plex, \"thanks to that user, we were able to address the issue, release an updated version of the server, and continue to improve our security and defenses.\" However, Plex has remained tight-lipped about the nature and severity of the flaw. As of the time I'm writing this, not even a CVE-ID, the standard identifier for publicly known cybersecurity vulnerabilities, has been assigned.\n\nThe company has also not provided any technical details that would clarify whether the bug could allow data exposure, denial of service, or a more severe remote code execution (RCE) attack. This is fine, though. Since it's not a publicly disclosed vulnerability, Plex doesn't want attackers to go poking around possible entry points and potentially coming across the vulnerability by themselves, and it also doesn't want them to know how much, or how little, they can do with it. What they can do, however, is reverse-engineer the update to identify the underlying vulnerability, so you'll want to download it as soon as you can. Once understood, they can develop exploits to target any servers that remain unpatched\u2014you'd be surprised by the number of people who decide to just never update their servers. Seeing how the company felt it necessary to actually email people about it, it's definitely more on the serious side.\n\nPlex has contended with serious security issues in the past, with some having far-reaching consequences beyond its own ecosystem. In March 2023, the U.S. Cybersecurity and Infrastructure Security Agency (CISA) added a three-year-old Plex vulnerability, identified as CVE-2020-5741, to its catalog of known exploited vulnerabilities. This RCE flaw, if successfully exploited, could allow an attacker to execute arbitrary code on a user\u2019s server.\n\nThe patched and secure version is Plex Media Server 1.42.1.10060, which is available through the server's built-in update mechanism or directly from the official Plex downloads page. If you have a Plex server, download the update as soon as you can.",
+  "medium": "Article",
+  "links": [
+    "https://www.howtogeek.com/plex-photos-music-returning-to-core-app/",
+    "https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerability-immediately/"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "Plex Media Server versions",
+      "weight": 0.104691915
+    },
+    {
+      "name": "Plex Media Server",
+      "weight": 0.10338553
+    },
+    {
+      "name": "Plex",
+      "weight": 0.10127398
+    },
+    {
+      "name": "known exploited vulnerabilities",
+      "weight": 0.09845581
+    },
+    {
+      "name": "affected server versions",
+      "weight": 0.09355536
+    },
+    {
+      "name": "serious security issues",
+      "weight": 0.089246705
+    },
+    {
+      "name": "Bug bounty programs",
+      "weight": 0.07553096
+    },
+    {
+      "name": "users",
+      "weight": 0.07548701
+    },
+    {
+      "name": "Your Plex Server",
+      "weight": 0.06646361
+    },
+    {
+      "name": "a Plex server",
+      "weight": 0.06646361
+    }
+  ],
+  "topics": [],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/Computers & Electronics/Computer Security/Network Security",
+      "score": 0.8720703125
+    },
+    {
+      "name": "/News/Technology News",
+      "score": 0.74072265625
+    },
+    {
+      "name": "/Computers & Electronics/Computer Security/Other",
+      "score": 0.433837890625
+    },
+    {
+      "name": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+      "score": 0.38671875
+    }
+  ],
+  "sentiment": {
+    "positive": 0.0831069,
+    "negative": 0.57941693,
+    "neutral": 0.3374762
+  },
+  "summary": "Plex has issued a warning to its users that they should immediately update their software to fix a newly discovered security vulnerability. The vulnerability affects Plex Media Server versions 1.41.7.0.x through 1.42.0x. The company confirmed that the vulnerability was discovered through its bug bounty program and was able to address it and release an updated version of the server. However, the company has not specified the exact nature and severity of the flaw, nor has provided any technical details regarding whether it could allow data exposure, denial of service, or a more severe remote code execution (Rcheche) attack. The patched and secure version is available through the server's built-in update mechanism or from the official Plex downloads page.",
+  "shortSummary": "Plex urges users to immediately update their servers to address a potentially serious security vulnerability discovered via its bug bounty program, requiring immediate action.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": false,
+  "reprintGroupId": "8b46a5e44a51469d93d9467174a30a06",
+  "places": [],
+  "scraped_sources": [
+    {
+      "url": "https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerability-immediately/",
+      "text": "Plex has notified some of its users on Thursday to urgently update their media servers due to a recently patched security vulnerability.\nThe company has yet to assign a CVE-ID to track the flaw and didn't provide additional details regarding the patch, only saying that it impacts Plex Media Server versions 1.41.7.x to 1.42.0.x.\nYesterday, four days after releasing security updates that addressed the mysterious security bug, Plex emailed those running affected versions to update their software as soon as possible.\n\"We recently received a report via our bug bounty program that there was a potential security issue affecting Plex Media Server versions 1.41.7.x to 1.42.0.x. Thanks to that user, we were able to address the issue, release an updated version of the server, and continue to improve our security and defenses,\" the company said in the email.\n\"You're receiving this notice because our information indicates that a Plex Media Server owned by your Plex account is running an older version of the server. We strongly recommend that everyone update their Plex Media Server to the most recent version as soon as possible, if you have not already done so.\"\nPlex Media Server 1.42.1.10060, the version that patches this vulnerability, can be downloaded from the server management page or the official downloads page.\nWhile Plex hasn't shared any details regarding the vulnerability so far, users are advised to follow the company's advice and patch their software before threat actors reverse engineer the patches and develop an exploit.\nAlthough Plex has experienced its share of critical and high-severity security flaws over the years, this is one of the few instances where the company has emailed customers about securing their systems against a specific vulnerability.\nIn March 2023, CISA tagged a three-year-old remote code execution (RCE) flaw (CVE-2020-5741) in the Plex Media Server as actively exploited in attacks. As Plex explained two years earlier, when it released patches, successful exploitation can allow attackers to make the server execute malicious code.\nWhile the cybersecurity agency didn't provide any information on the attacks exploiting CVE-2020-5741, they were likely linked to LastPass' disclosure that one of its senior DevOps engineers' computers had been hacked in 2022 to install a keylogger by abusing a third-party media software RCE bug.\nThe attackers exploited this access to steal the engineer's credentials and compromise the LastPass corporate vault, resulting in a massive data breach in August 2022 after stealing LastPass's production backups and critical database backups.\nThe same month, Plex also notified users of a data breach and asked them to reset passwords after an attacker gained access to a database containing emails, usernames, and encrypted passwords.\nPicus Blue Report 2025 is Here: 2X increase in password cracking\n46% of environments had passwords cracked, nearly doubling from 25% last year.\nGet the Picus Blue Report 2025 now for a comprehensive look at more findings on prevention, detection, and data exfiltration trends.\nPost a Comment Community Rules\nYou need to login in order to post a comment\nNot a member yet? Register Now"
+    },
+    {
+      "url": "https://www.howtogeek.com/plex-photos-music-returning-to-core-app/",
+      "text": "Plex says that it's bringing music and photos functionality back to its core video streaming app. This is a major reversal of the multi-app approach that Plex announced about 10 months ago, though the company notes that Plexamp and Photos will still be offered as optional standalone apps.\nThe decision to break music and photos out of the core Plex app took a lot of people by surprise, but it wasn't necessarily a \"bad\" idea. As you may know, Plex is currently in the late stages of a full app rewrite. Its new app, which is available in some capacity on TVs and mobile devices, is designed to offer a more focused and modern streaming experience (plus a unified codebase for easier, faster app development). So, instead of muddying things up with photos or music integrations, Plex chose to silo these features into a set of standalone apps\u2014Plexamp, which has been around for years, and Photos, a new app.\nPlenty of customers saw the merits of a standalone Photos app. Still, Plex's announcement was met with a sea of complaints. The core Plex app has always been an all-in-one hub for video, music, and photos\u2014people just aren't willing to give up the super-unified app experience.\nRemoving music and photos functionality from the core app broke a lot of stuff, too. Plexamp and Photos aren't available on smart TVs, so if you use the redesigned Plex core app on a TV, you're effectively locked out of these features. There's also some weirdness with music video libraries (which are forced into Plexamp for some reason), among other problems.\nNow, the latest Plex app review for Roku (v8.4.0) brings music and photos back to the core Plex app experience. This will be the standard behavior for the redesigned Plex app going forward, though it'll take some time to reach all devices, as the new Plex app is currently in an awkward early-access late-development limbo.\nI should clarify that this change applies to both the Plex TV and mobile apps. Also, Plex will continue supporting the standalone Plexamp and Photos apps.\nIt's good to see a company listen to its customers, though I think that this debacle could've been avoided if Plex had just taken a more careful approach with its app overhaul. Like, you'd think that the whole Sonos thing would be top of mind, but Plex got ahead of itself and made silly mistakes.\nPlex Pass\nA Plex Pass subscription takes your media server to the next level, with remote streaming, hardware transcoding, offline downloads, and more.\nSource: Plex"
+    }
+  ],
+  "argos_summary": "Plex Media Server users running versions 1.41.7.x through 1.42.0.x are urged to update immediately after the company released a patch for a serious, undisclosed vulnerability discovered via its bug\u2011bounty program. The fix, available in version\u202f1.42.1.10060, has not yet been assigned a CVE ID and Plex has withheld technical details to prevent exploitation. The company\u2019s unusual step of emailing affected customers underscores the severity, echoing past incidents such as the 2020 RCE flaw (CVE\u20112020\u20115741) that was actively exploited. Users should download the update from the Plex server or official download page as soon as possible.",
+  "argos_id": "7LES70FD1"
+}

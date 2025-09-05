@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:12:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "B88HG8GT8",
+    "status": "rejected",
+    "reject_category": "",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Tesla's advancements in autonomous driving technology and its implications for the market, warranting a dedicated node to analyze the impact of these developments on trading decisions.",
+      "id": "tesla_robotaxi",
+      "name": "Tesla Robotaxi",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": null,
+      "motivation": "The project aims to create a robust, scalable, and maintainable system for managing a large number of users and their associated data, ensuring security, performance, and ease of integration with other services."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Tesla Robotaxi is a specific product/service (operational niche) and does not represent a macro driver, tradable asset, policy regime, or macro geography; it falls outside the scope of a trading‑focused macro knowledge graph.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

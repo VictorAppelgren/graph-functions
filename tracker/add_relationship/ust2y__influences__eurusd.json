@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T19:50:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust2y",
+    "target_id": "eurusd",
+    "selection_motivation": "US 2‑year Treasury yields drive carry‑trade flows and global risk appetite, which in turn move the EUR/USD pair; historically, yield changes precede EUR/USD moves.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "9",
+    "candidate_count": "15",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'sofr', 'ust10y', 'ust5y', 'ust30y', 'us_inflation', 'us_unemployment_claims', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'bund10y', 'gilt10y', 'jgb10y']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255328540",
+    "rel_id": "ust2y__influences__eurusd",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 2‑year Treasury yields drive carry‑trade flows and global risk appetite, which in turn move the EUR/USD pair; historically, yield changes precede EUR/USD moves.",
+      "type": "INFLUENCES",
+      "source": "ust2y",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__influences__eurusd"
+}

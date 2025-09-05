@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T17:03:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XV3AVKBDB",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US sanctions on Iranian oil shipping may lift oil prices, tightening inflation expectations and pushing US 10Y yields higher.",
+      "existing_ids": [
+        "us_sanctions_iranshipping"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a political speech by a U.S. Representative that could influence geopolitical risk regarding U.S. foreign policy and the Gaza conflict."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact because the target node is not specified; without node context the relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent political speech with immediate implications for domestic political discourse and U.S. foreign policy perception."
+    },
+    "article_node": {
+      "id": "XV3AVKBDB",
+      "title": "House Dem lashes out at pro-Israel 'motherf---ers' during fiery speech: 'We ain't going anywhere'",
+      "summary": "Rep. Rashida Tlaib delivered a fiery, profanity‑laden speech at a pro‑Palestinian conference in Detroit, calling pro‑Israel politicians \"genocide enablers\" and asserting that the U.S. is complicit in the Gaza conflict. She reiterated her longstanding anti‑Israel stance, including the slogan \"From the river to the sea,\" and warned that the U.S. government is defunding aid to Palestinians while supporting Israel’s military actions. The speech has intensified criticism of Tlaib, who was already censured by Congress in 2023 for similar remarks, and has drawn attention to the broader debate over U.S. foreign policy and domestic political polarization.",
+      "source": "https://www.foxnews.com/politics/dem-squad-member-lashes-out-pro-israel-movement-fiery-speech",
+      "published_at": "2025-09-03T09:41:10-04:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "XV3AVKBDB"
+}

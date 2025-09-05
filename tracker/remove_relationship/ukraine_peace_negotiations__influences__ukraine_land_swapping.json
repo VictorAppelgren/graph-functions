@@ -1,0 +1,63 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-25T00:36:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_peace_negotiations",
+    "target_id": "ukraine_land_swapping",
+    "selection_motivation": "The influence on land swapping is the least directly supported by recent data and has the weakest causal link to the peace negotiations, making it the optimal candidate to remove to accommodate the more critical Donbas region link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The influence on land swapping is the least directly supported by recent data and has the weakest causal link to the peace negotiations, making it the optimal candidate to remove to accommodate the more critical Donbas region link.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'zelensky_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_land_swapping'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitics'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082001",
+    "rel_id": "ukraine_peace_negotiations__influences__ukraine_land_swapping",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'zelensky_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitics'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "ukraine_peace_negotiations",
+      "target": "ukraine_land_swapping"
+    },
+    "prioritized_link": {
+      "motivation": "Ukraine Peace Negotiations directly shape the political and security dynamics of the Donbas region, making it a primary driver of outcomes there.",
+      "type": "INFLUENCES",
+      "source": "ukraine_peace_negotiations",
+      "target": "donbas_region"
+    },
+    "llm_raw_response": {
+      "motivation": "The influence on land swapping is the least directly supported by recent data and has the weakest causal link to the peace negotiations, making it the optimal candidate to remove to accommodate the more critical Donbas region link.",
+      "remove_link": "ukraine_land_swapping"
+    },
+    "removal_decision": {
+      "motivation": "The influence on land swapping is the least directly supported by recent data and has the weakest causal link to the peace negotiations, making it the optimal candidate to remove to accommodate the more critical Donbas region link.",
+      "remove_link": "ukraine_land_swapping"
+    },
+    "source_node": {
+      "last_updated": "2023-10-06",
+      "implications": "",
+      "level": "main",
+      "current_analysis": "",
+      "importance": 5,
+      "query": "(Ukraine OR Ukrain* OR Kyiv OR Kiev OR Volodymyr Zelensky OR Zelensky OR Zelenski OR President Zelensky OR President of Ukraine) OR (Russia OR Russian OR Kremlin OR Vladimir Putin OR President Putin OR Putin) OR (Trump OR Donald Trump OR President Trump OR U.S. President OR U.S. administration) OR (negotiations OR talks OR discussions OR diplomacy OR diplomatic OR agreement OR ceasefire OR peace OR resolution OR settlement) OR (deception OR mislead OR manipulate OR propaganda OR misinformation OR strategy OR tactics) OR (European leaders OR Europe OR NATO OR allies OR support OR coalition OR partnership) OR (war OR conflict OR invasion OR aggression OR military OR hostilities OR ceasefire OR truce OR peace talks OR territorial exchange OR concessions) OR (news OR analysis OR report OR update OR insight OR trend OR development OR coverage OR commentary)",
+      "motivation": "The article highlights the geopolitical dynamics surrounding Ukraine's position in peace negotiations, necessitating a dedicated node to analyze the implications of these negotiations on global markets and political stability.",
+      "last_queried_at": "2025-08-15T06:23:51+00:00",
+      "importance_rationale": "clearly missclassified as macro; event type should be 4",
+      "type": "macro",
+      "fundamental_analysis": "",
+      "queries": 4,
+      "parent_id": "RKBJFN",
+      "name": "Ukraine Peace Negotiations",
+      "id": "ukraine_peace_negotiations",
+      "last_queried": "2025-08-19T04:39:19.627000000+00:00",
+      "medium_analysis": "",
+      "status": "active"
+    }
+  },
+  "id": "ukraine_peace_negotiations__influences__ukraine_land_swapping"
+}

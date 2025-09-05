@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:41:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756067407",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15487",
+    "output_chars": "1523",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is data-rich and methodical but requires tighter discipline to hit world-class quality: first, lock the SECTION FOCUS by delivering exactly four lines (2 Up, 2 Down) with uniform structure and testable catalysts, then a single Swing Trade/Outlook line if the asset is tradable (GM is tradable in the material) or a concise Outlook line otherwise; prune narrative fat and ensure each line uses crisp drivers, a measurable watchpoint, and a probability that can be traced to a source claim. Second, base every probabilistic number on explicit evidence or regime probabilities in the material (e.g., Regime A ~50%, Regime B ~30%, Regime C ~20%), and attach in-text IDs for any numeric assertion; avoid ad hoc percentages unless anchored, and otherwise present as clearly labeled ranges or qualitative bands with a cited fact. Third, strengthen the causal chain by mapping first-principles channels (AI-enabled capex lift to semis/data-center margins; policy re-scoping affecting incentives and BoP; tariff/energy shocks feeding inflation and FX) into each line so the Up/Down drivers are not merely thematic but stem from invariant mechanisms. Fourth, tighten catalysts, invalidation, and triggers: replace vague “watch for milestones” language with concrete, verifiable thresholds (e.g., Orion/Factory ZERO ramp milestones, Cadillac/V-Series cadence milestones, tariff announcements with observed price moves, or auto-loan-rate inflection points) and anchor them to the cited IDs. Fifth, normalize the numeric detail and cross-source consistency: harmonize Ford/GM capex data, oil regime framing, and policy signals so there aren’t conflicting baselines about margins, ROIC, or EV rollout timing; explicitly reconcile any divergences (e.g., GM capex cadence vs. 3–6 month macro regime) in a short, cited synthesis paragraph. Sixth, improve citation discipline: ensure every material factual claim that informs a line carries an in-text ID (e.g., S15934PBQ for tariff pass-through; CDBMWIUTB for auto-loan rates; WTNT85IPR for Cadillac/EV cadence; 22PL3Q360 for Ford/ACMR context) and avoid extraneous sources; ensure critical items are covered (GM, WTNT85IPR, S15934PBQ, CDBMWIUTB, F8GF45MEU, SGB2PAZGK, J99EM2TPZ) and any conflicts are reconciled in a brief synthesis. Finally, the Swing Trade component should be a fully specified, 1-line plan with a narrow, data-backed entry/stop/target or a 1-line Outlook if not tradable, but since GM is tradable, prefer a single precise Swing Trade line: specify direction, horizon, entry, stop, target, R/R, invalidation, trigger, probability, and confidence anchored to concrete signals (cite the corresponding IDs). In short: rewrite to a minimal, four-line, probability-grounded, catalyst-driven framework with a single, crisp GM Swing Trade line; anchor every assertion to explicit sources, resolve internal contradictions with a one‑paragraph cross-source reconciliation, and replace qualitative fluff with measurable thresholds and principled transmission channels.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756067407"
+}

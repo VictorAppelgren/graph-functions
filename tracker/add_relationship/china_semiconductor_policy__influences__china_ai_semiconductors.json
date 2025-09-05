@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:59:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_semiconductor_policy",
+    "target_id": "china_ai_semiconductors",
+    "selection_motivation": "China Semiconductor Policy directly shapes the regulatory and investment environment for AI semiconductor development in China, making it a primary driver for the China AI Semiconductors node.",
+    "candidate_motivation": "These topics directly shape the competitive and policy environment for China's AI semiconductors, including export controls, trade relations, and supplier dynamics with Nvidia. They represent the strongest external influences and peers likely to interact with China AI Semiconductors.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['china_nvidia_policy', 'nvidia_china_geopolitics', 'china_semiconductor_policy', 'china_chip_competition', 'us_china_ai_chip_exports', 'us_export_policy_ai_chips', 'us_tariffs_semiconductors', 'us_china_trade_relations']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_ai_semiconductors', 'target': 'us_chip_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593767784",
+    "rel_id": "china_semiconductor_policy__influences__china_ai_semiconductors",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_chip_sales'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'china_ai_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China Semiconductor Policy directly shapes the regulatory and investment environment for AI semiconductor development in China, making it a primary driver for the China AI Semiconductors node.",
+      "type": "INFLUENCES",
+      "source": "china_semiconductor_policy",
+      "target": "china_ai_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_semiconductor_policy__influences__china_ai_semiconductors"
+}

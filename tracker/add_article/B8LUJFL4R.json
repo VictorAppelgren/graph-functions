@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T15:45:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "B8LUJFL4R",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; UK 30‑year gilt yields and GBP/USD are under pressure due to fiscal deficits and global yield rise.",
+      "existing_ids": [
+        "uk_30yr_gilt_yield",
+        "gbpusd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of market conditions (bond yields, currency weakness) and fiscal implications for the upcoming budget, which is a market commentary."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major fiscal event—high bond yields and a £20 bn borrowing requirement for the UK budget—directly affecting UK fiscal policy and public finance, which is central to the node’s domain."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events affecting the UK fiscal stance and bond yields, relevant to the current period."
+    },
+    "article_node": {
+      "id": "B8LUJFL4R",
+      "title": "Five ways it’s about to get even worse for Rachel Reeves",
+      "summary": "Rachel Reeves faces mounting pressure ahead of her November Budget as bond yields hit 1998 highs and the pound weakens, forcing the government to raise at least £20 bn to shore up public finances. Global yield increases suggest limited relief for borrowing costs, while market turmoil and uncertain growth forecasts add to the challenge. The Chancellor must navigate these headwinds to avoid worsening fiscal conditions.",
+      "source": "https://www.telegraph.co.uk/business/2025/09/03/the-five-reasons-why-things-will-only-get-worse-for-reeves/",
+      "published_at": "2025-09-03T13:41:00+01:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "B8LUJFL4R"
+}

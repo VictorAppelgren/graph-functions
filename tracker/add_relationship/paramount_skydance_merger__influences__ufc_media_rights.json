@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:46:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "paramount_skydance_merger",
+    "target_id": "ufc_media_rights",
+    "selection_motivation": "The Paramount‑Skydance merger consolidates content libraries and production capabilities, positioning the combined entity to secure high‑profile media rights such as UFC, making the merger a primary driver of the UFC media rights deal.",
+    "candidate_motivation": "The Paramount Skydance merger is a major media-industry consolidation event, so the strongest influences, correlates, and peers are other large content/streaming players and market reactions to such deals, including related rights deals and competitive dynamics.",
+    "existing_links_count": "2",
+    "candidate_count": "4",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['paramount_skydance', 'ufc_media_rights', 'disney_streaming_consolidation', 'netflix_tvos_redesign']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'paramount_skydance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845945",
+    "rel_id": "paramount_skydance_merger__influences__ufc_media_rights",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'ufc_media_rights'}, {'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'paramount_skydance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Paramount‑Skydance merger consolidates content libraries and production capabilities, positioning the combined entity to secure high‑profile media rights such as UFC, making the merger a primary driver of the UFC media rights deal.",
+      "type": "INFLUENCES",
+      "source": "paramount_skydance_merger",
+      "target": "ufc_media_rights"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "paramount_skydance_merger__influences__ufc_media_rights"
+}

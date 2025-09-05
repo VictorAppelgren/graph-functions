@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T02:36:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wheat",
+    "target_id": "ust10y",
+    "selection_motivation": "Wheat price changes directly affect US inflation expectations, which are a primary driver of the 10‑year Treasury yield; linking wheat to ust10y captures this causal transmission path.",
+    "candidate_motivation": "Wheat price is driven by global supply‑demand, currency movements, inflation expectations, and commodity‑price spillovers. Therefore topics that capture inflation data, monetary policy, major export markets, key currencies, and related commodity or equity indices are likely strong influences or correlates.",
+    "existing_links_count": "2",
+    "candidate_count": "19",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'fed_policy', 'ecb_policy', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'usdcny', 'usdjpy', 'wti', 'brent', 'gold', 'spx', 'sx5e', 'bund10y', 'gilt10y', 'jgb10y', 'ust10y', 'ust2y']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118476796",
+    "rel_id": "wheat__influences__ust10y",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wheat', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Wheat price changes directly affect US inflation expectations, which are a primary driver of the 10‑year Treasury yield; linking wheat to ust10y captures this causal transmission path.",
+      "type": "INFLUENCES",
+      "source": "wheat",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wheat__influences__ust10y"
+}

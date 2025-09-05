@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:12:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_revenue_policy",
+    "target_id": "us_export_policy_ai_chips",
+    "selection_motivation": "US Chip Revenue Policy directly shapes the regulatory framework governing AI chip exports, making it a key driver of the export policy.",
+    "candidate_motivation": "These topics directly affect semiconductor revenue through policy instruments (export controls, tariffs) and through US-China tech competition. They also include major chip-policy conversations and relevant industry players that would plausibly pressure or reflect US Chip Revenue Policy.",
+    "existing_links_count": "3",
+    "candidate_count": "19",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_chip_export_controls', 'us_chip_revenue_sharing', 'us_chip_sales_agreement', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'china_semiconductor_policy', 'china_nvidia_policy', 'nvidia_china_geopolitics', 'china_chip_competition', 'us_china_ai_chip_exports', 'us_chip_trade_policy', 'us_export_policy_ai_chips', 'nvidia_amd_chip_revenue_agreement', 'intel_ceo_tan', 'intel_stock_trump_influence', 'china_us_tariff_truce']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814272343",
+    "rel_id": "us_chip_revenue_policy__influences__us_export_policy_ai_chips",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_chip_revenue_policy', 'target': 'us_export_policy_ai_chips'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Chip Revenue Policy directly shapes the regulatory framework governing AI chip exports, making it a key driver of the export policy.",
+      "type": "INFLUENCES",
+      "source": "us_chip_revenue_policy",
+      "target": "us_export_policy_ai_chips"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_chip_revenue_policy__influences__us_export_policy_ai_chips"
+}

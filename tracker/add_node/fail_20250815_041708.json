@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:16:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "H02CXYAWT",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Berkshire Hathaway's significant investment in UnitedHealth, which is a key player in the healthcare sector and relevant for macro investment analysis, warranting a dedicated node for tracking its market impact.",
+      "id": "unitedhealth",
+      "name": "UnitedHealth",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "UnitedHealth is a corporate entity whose ownership changes affect market dynamics, so it is a company node."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "UnitedHealth is a single company, an industry vertical, not a macro driver or tradable asset per policy.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

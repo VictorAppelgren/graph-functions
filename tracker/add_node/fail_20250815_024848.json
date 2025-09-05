@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:48:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EUVPY6CT3",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the launch of the FIS Investor Service Suite, which is crucial for understanding the evolving landscape of investor servicing and regulatory compliance in financial markets, warranting a dedicated node for analysis.",
+      "id": "fis_investor_service_suite",
+      "name": "FIS Investor Service Suite",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "It is a company-level entity launching a product suite, so it belongs to the company category."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Product solution for investor servicing; not a macro driver, asset, policy, or geography.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

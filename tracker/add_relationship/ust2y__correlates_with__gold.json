@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T09:50:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust2y",
+    "target_id": "gold",
+    "selection_motivation": "UST2Y yields are a primary short‑term rate gauge that inversely drives gold demand; the correlation is strong across regimes and provides a clear risk‑premium signal.",
+    "candidate_motivation": "These topics are likely to influence or correlate with the US 2‑year Treasury yield through monetary policy, inflation expectations, term‑structure dynamics, credit spreads, commodity prices, and cross‑currency risk.",
+    "existing_links_count": "20",
+    "candidate_count": "30",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "30",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'sx5e', 'spx', 'dxy', 'usdcny', 'eurusd', 'usdjpy', 'gbpusd', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'sofr', 'euribor', 'ecb_policy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1215974098413290780",
+    "rel_id": "ust2y__correlates_with__gold",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UST2Y yields are a primary short‑term rate gauge that inversely drives gold demand; the correlation is strong across regimes and provides a clear risk‑premium signal.",
+      "type": "CORRELATES_WITH",
+      "source": "ust2y",
+      "target": "gold"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__correlates_with__gold"
+}

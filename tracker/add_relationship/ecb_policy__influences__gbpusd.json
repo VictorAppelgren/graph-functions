@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T11:59:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "gbpusd",
+    "selection_motivation": "ECB policy decisions shape euro valuation, which through the USD and DXY channels exerts a direct influence on GBP/USD movements.",
+    "candidate_motivation": "ECB Policy directly shapes euro‑area inflation expectations, sovereign yields, and the euro‑denominated equity market, while its stance also influences the USD‑based FX rates and global rate benchmarks. These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "11",
+    "candidate_count": "9",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['euro_inflation', 'bund10y', 'sx5e', 'dxy', 'eurusd', 'usdcny', 'usdjpy', 'gbpusd', 'fed_policy']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069014446",
+    "rel_id": "ecb_policy__influences__gbpusd",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy decisions shape euro valuation, which through the USD and DXY channels exerts a direct influence on GBP/USD movements.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "gbpusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__gbpusd"
+}

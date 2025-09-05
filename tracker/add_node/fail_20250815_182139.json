@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T18:21:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "10FV7ZYE1",
+    "status": "rejected",
+    "reject_category": "ambiguous",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports a new tactical improvement in Russian ballistic missiles that enhances maneuverability, a critical factor affecting Ukraine's Patriot air defense effectiveness and broader missile defense strategy.",
+      "id": "russian_missile_maneuverability",
+      "name": "Russian Missile Maneuverability Upgrade",
+      "type": "technology",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "ambiguous",
+      "motivation": "Topic describes a technology upgrade to Russian ballistic missiles, not a macro driver, asset, policy, geography, or company, so ambiguous."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific military technology upgrade, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

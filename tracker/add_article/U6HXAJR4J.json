@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T18:15:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "U6HXAJR4J",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; central bank independence shaping policy credibility and rate expectations for ECB and Fed with spillovers to US inflation and yields and EUR/USD dynamics.",
+      "existing_ids": [
+        "ecb_policy",
+        "fed_policy",
+        "us_inflation",
+        "us_10y",
+        "eurusd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "Lagarde's remarks constitute an official statement about central bank independence, which is a policy statement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant statement by Christine Lagarde on central bank independence, directly affecting the ECB and its policy stance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent statements and political pressures affecting central bank policy, highlighting current events and immediate implications for monetary policy."
+    },
+    "article_node": {
+      "id": "U6HXAJR4J",
+      "title": "Lagarde Says Central-Bank Independence Is Critically Important",
+      "summary": "European Central Bank President Christine Lagarde emphasized the importance of central bank independence, warning that government interference in setting interest rates can lead to dysfunction and instability. She drew on her experience at the IMF to illustrate how threatened independence can derail policy. Lagarde also noted that in the U.S., Fed Chair Jerome Powell faces criticism from President Donald Trump over rate decisions, while officials at Jackson Hole expressed support for him.",
+      "source": "https://finance.yahoo.com/news/lagarde-says-central-bank-independence-151317268.html",
+      "published_at": "2025-08-24T15:13:17+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "U6HXAJR4J"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:20:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nfl_player_injuries",
+    "target_id": "zack_wheeler_injury",
+    "selection_motivation": "Linking NFL player injuries to the impact of Zack Wheeler's injury provides insights into how injuries in different sports can affect player movements and contract negotiations, enhancing cross-sport analysis.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with NFL Player Injuries due to their relevance in sports, health, and economic factors affecting player performance and team dynamics.",
+    "existing_links_count": "6",
+    "candidate_count": "7",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['nfl_player_movements', 'cameron_heyward_contract_dispute', 'zack_wheeler_injury', 'tyrod_taylor_injury', 'wnba_player_injuries', 'astros_injury_josh_hader', 'caitlin_clark_injury']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'cameron_heyward_contract_dispute'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': '49ers_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_player_movements'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'wnba_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'tyrod_taylor_injury'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080349",
+    "rel_id": "nfl_player_injuries__influences__zack_wheeler_injury",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'zack_wheeler_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'cameron_heyward_contract_dispute'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': '49ers_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_player_movements'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'wnba_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'tyrod_taylor_injury'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking NFL player injuries to the impact of Zack Wheeler's injury provides insights into how injuries in different sports can affect player movements and contract negotiations, enhancing cross-sport analysis.",
+      "type": "INFLUENCES",
+      "source": "nfl_player_injuries",
+      "target": "zack_wheeler_injury"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nfl_player_injuries__influences__zack_wheeler_injury"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T19:30:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_urban_crime",
+    "new_article_id": "42PBUGIKP",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['C9L5KZZJZ', 'SPFMRVV3Q', 'UK8ESTOZL', 'LPH8ZNDFC', '1L38JDK4D']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not clearly supersede any existing article; there is no matching ID to replace, so no action is taken."
+    }
+  },
+  "id": "us_urban_crime__42PBUGIKP__current"
+}

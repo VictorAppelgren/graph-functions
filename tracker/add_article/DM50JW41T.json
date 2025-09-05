@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T17:26:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DM50JW41T",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; EU Regulation 2024/1623 reduces IRB capital advantage, tightening bank capital and potentially widening credit spreads.",
+      "existing_ids": [
+        "ecb_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a regulatory change (EU Regulation 2024/1623) affecting Bigbank AS's capital model rollout, fitting the 'regulation' category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses a regulatory change affecting a specific bank’s capital strategy, but without knowing the target node the relevance is uncertain; the impact is likely limited to that bank’s capital allocation and not broadly market‑wide."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article describes a regulatory change (EU 2024/1623) that alters capital advantage and prompts a shift in capital management strategy, indicating a medium‑term structural adjustment rather than an immediate event or long‑term fundamental trend."
+    },
+    "article_node": {
+      "id": "DM50JW41T",
+      "title": "Renewal of Bigbank AS Strategy",
+      "summary": "Bigbank AS has halted its internal ratings‑based (IRB) model rollout after EU Regulation (EU) 2024/1623 reduced the capital advantage of IRB versus standardised approaches. The bank will instead concentrate on improving loan portfolio quality, data management, and model enhancement to optimise capital use and return. The move reflects a broader shift toward capital management amid regulatory tightening, while maintaining a focus on loan quality and efficient capital allocation.",
+      "source": "https://finance.yahoo.com/news/renewal-bigbank-strategy-140000036.html?_guc_consent_skip=1756476494",
+      "published_at": "2025-08-29T14:00:00+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "DM50JW41T"
+}

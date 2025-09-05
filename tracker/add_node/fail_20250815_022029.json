@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:20:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9HFBVS1QB",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the launch and initial revenue generation of VERSES AI's flagship product, Genius, which is a significant development in the cognitive computing sector that could impact investment decisions in technology and AI.",
+      "id": "genius_platform",
+      "name": "Genius Platform",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Rates policy anchor, impacts asset pricing."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Product category (Genius Platform) is not a macro driver, tradable asset, policy regime, or macro geography; it is an operational niche product.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:16:18",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_treasury_yields",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_treasury_yields__analysis_run__1756084180",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18668",
+    "output_chars": "1468",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | Inflation undershoots enabling an earlier, fuller Fed easing; accelerated RWA/custodian rollout and crypto balance‑sheet adoption (16T by 2030; 4.2B tokenization; ETH/ETF flows) | Watch CPI prints vs expectations; Fed communications; RWA custodial milestones; ETH/ETF inflows and cross‑border securitization uptake | 65–80%\nDown | 3–6 months | Hot CPI print or disruptive tariff path sustaining restrictive policy, lifting real yields and constraining RWA scale while BoP pressures intensify (JPAIHPA4N)(SGB2PAZGK) | Watch CPI surprises vs expectations; tariff trajectories; BoP strength/weakness signals; cross‑border securitization activity | 40–55%\nUp | 3–6 months | Regime A baseline with disinflation and conditional easing, enabling gradual real‑rate normalization and scalable RWA/crypto adoption (SRC_REGIME)(SRC_TRANS); wage‑growth momentum and inflation near target supported by PCE core and Jackson Hole signals (SRC_WATCH) | Watch wage‑growth momentum; PCE core readings; Jackson Hole communications; semiconductor capex cadence; cross‑border securitization uptake | 60–75%\nDown | 3–6 months | Regime B/defensives tilt if inflation persistence strengthens, elevating discount rates and dampening cross‑border securitization; crypto risk‑off as risk premia widen (SRC_REGIME)(SRC_BASE_PRICE)(SRC_WATCH) | Watch wage/inflation data surprises; Jackson Hole dot‑plot shifts; semiconductor capex cadence; BTC/ETH price breaches around 110k–125k (ETH 4k–5k) | 45–60%",
+      "tokens": {}
+    }
+  },
+  "id": "us_treasury_yields__movers_scenarios__us_treasury_yields__analysis_run__1756084180"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T05:02:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756090147",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18535",
+    "output_chars": "1329",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is ambitious but currently too long and diffuse for a 4–6 sentence executive brief; rewrite as a tight house view with Base Case, two explicit Alternatives (Alt A, Alt B), a concise Catalysts/Watch Items list, and explicit Invalidation triggers. Ground the causal chain in a simple first‑principles PV frame: inflation path drives the policy reaction function, which sets discount rates and then reprices crypto and equities; map Regime A/B/C to observable signals (inflation, payrolls, Fed guidance, ETF inflows, crypto treasury activity) rather than generic narrative. Quantify wherever possible using source-backed figures (Regime A 4.25–4.50% policy rate; 0–6 months to a regime shift; AI-driven GDP uplift ~1–1.5%; ETH price/flows and BTC levels cited; Bitmine’s $45m ether purchase) and, if feasible, attach probability bands or timing to each regime to sharpen decision‑usefulness. Enforce strict citation discipline so every assertion links to a SOURCE ID, reconcile any conflicting signals (policy timing vs. price paths), and remove redundancies and placeholders (eg., OGK8WLL69) in favor of named, source-backed signals. Finally, tighten the prose, align horizons (0–3 weeks, 0–6 months) with the base/alt framing, and close with a focused watchlist (4–6 triggers) and explicit invalidation cases (policy delays, AI uplift under 1–1.5%, or health-tech milestones stalling) to keep the brief decision‑useful and execution oriented.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756090147"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T09:11:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust2y",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "The 2‑year Treasury yield is a forward‑looking gauge of Fed policy expectations; a rise in the 2‑year yield typically precedes tightening of labor markets, reflected in higher unemployment claims, providing a causal link for analytics.",
+    "candidate_motivation": "US 2‑year Treasury yields are tightly linked to Fed policy signals, short‑term rate expectations, and the overall shape of the U.S. yield curve. They move in tandem with other U.S. Treasury maturities, global benchmark yields, and macro indicators that influence short‑term rates, making these topics the most likely strong peers or influences.",
+    "existing_links_count": "20",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sofr', 'ust10y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'ecb_policy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7160724507030717483",
+    "rel_id": "ust2y__influences__us_unemployment_claims",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 2‑year Treasury yield is a forward‑looking gauge of Fed policy expectations; a rise in the 2‑year yield typically precedes tightening of labor markets, reflected in higher unemployment claims, providing a causal link for analytics.",
+      "type": "INFLUENCES",
+      "source": "ust2y",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__influences__us_unemployment_claims"
+}

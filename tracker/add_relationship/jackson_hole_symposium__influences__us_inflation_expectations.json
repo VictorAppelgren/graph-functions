@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T15:37:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jackson_hole_symposium",
+    "target_id": "us_inflation_expectations",
+    "selection_motivation": "The Jackson Hole Symposium is a primary forum where Fed officials and economists discuss inflation outlook, directly shaping market expectations of future inflation; linking it to US Inflation Expectations captures this causal influence and improves predictive analytics.",
+    "candidate_motivation": "The Jackson Hole Symposium is a premier forum for central bank officials and macroeconomic policy discussion, so topics directly tied to U.S. and European monetary policy, inflation dynamics, and key interest rate benchmarks are the most likely strong influences or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "14",
+    "all_nodes_count": "1020",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_10y', 'usd', 'eur', 'eurusd', 'us_inflation_data', 'us_inflation_expectations', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_bitcoin', 'us_inflation_impact_on_healthcare_stocks', 'stephen_miran_fed_appointment']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jackson_hole_symposium', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163473",
+    "rel_id": "jackson_hole_symposium__influences__us_inflation_expectations",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jackson_hole_symposium', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'jackson_hole_symposium', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Jackson Hole Symposium is a primary forum where Fed officials and economists discuss inflation outlook, directly shaping market expectations of future inflation; linking it to US Inflation Expectations captures this causal influence and improves predictive analytics.",
+      "type": "INFLUENCES",
+      "source": "jackson_hole_symposium",
+      "target": "us_inflation_expectations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jackson_hole_symposium__influences__us_inflation_expectations"
+}

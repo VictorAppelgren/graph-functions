@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:43:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "5g_infrastructure",
+    "target_id": "broadband_equity_access_deployment",
+    "selection_motivation": "5G infrastructure is a key driver of broadband expansion, directly influencing the federal BEAD program's deployment goals.",
+    "candidate_motivation": "These topics are the most plausible strong influences, correlates, or peers to 5G Infrastructure due to direct relevance to telecom deployment, broadband policy, satellite connectivity, and the semiconductors supply chain that enables 5G networks. They reflect adjacent infrastructure and regulatory factors that could shape 5G outcomes.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['ast_space_mobile', 'starlink_pricing_strategy', 'broadband_equity_access_deployment', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'us_china_ai_chip_exports', 'telecom_argentina_acquisition_tma', 'ai_infrastructure', 'technology_communications_sector']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': '5g_infrastructure', 'target': 'ev_infrastructure_funding'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846889",
+    "rel_id": "5g_infrastructure__influences__broadband_equity_access_deployment",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': '5g_infrastructure', 'target': 'ev_infrastructure_funding'}, {'type': 'INFLUENCES', 'source': '5g_infrastructure', 'target': 'broadband_equity_access_deployment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "5G infrastructure is a key driver of broadband expansion, directly influencing the federal BEAD program's deployment goals.",
+      "type": "INFLUENCES",
+      "source": "5g_infrastructure",
+      "target": "broadband_equity_access_deployment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "5g_infrastructure__influences__broadband_equity_access_deployment"
+}

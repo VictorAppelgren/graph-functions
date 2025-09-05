@@ -1,0 +1,37 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T12:43:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M6M4LNMC4",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; US tech sector may see volatility due to trade secret litigation and heightened US-China tech rivalry.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": [
+        "us_tech_sector"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Apple's lawsuit against a former engineer is a company news event unrelated to earnings, fitting the company_update category"
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The lawsuit directly involves Apple, potentially affecting its valuation and reputation, which is relevant to the Apple node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific lawsuit and DOJ action, indicating an immediate event affecting the node."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 1
+    }
+  },
+  "id": "M6M4LNMC4"
+}

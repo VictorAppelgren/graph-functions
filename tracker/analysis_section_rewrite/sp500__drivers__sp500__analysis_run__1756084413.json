@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:19:12",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756084413",
+    "drivers_count": "7",
+    "material_chars": "3022",
+    "output_chars": "2876",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall assessment: the analysis articulates a plausible macro-to-crypto transmission via a regime-based path tied to inflation, policy, and energy, and it uses concrete price anchors (ETH 4,000–5,000; BTC ~124k then ~112k) plus company-level metrics (Ford EV losses ~$1.3B; adj. EBIT ~4.3%; ROIC ~10.1%; revenue CAGR ~2.5% 2014–2024) and ACMR anchors, but it falters on clarity, causal rigor, and consistency with the source IDs; several passages are tangential or garbled (e.g., the oil regime details and the EURUSD/Pixel 9-Pro references), and multiple assertions lack explicit, sourced quantification. Actionable edits: (1) render a single, explicit causal chain from inflation path (CPI momentum and wage growth) to the Fed reaction function, to discount-rate/risk-premia shifts, to financial-conditions-driven re-pricing of crypto/AI infra; anchor every link to a cited base source (OGK8WLL69 for CPI/rate-cut timing, Y6SQOEK69 for Regime mechanics, 22PL3Q360 for Ford/EV economics, J99EM2TPZ/T1QE6JPIX for oil paths, HWGNUP2XG/UVEQ2SJ0W for FX) and drop all non-source-backed or irrelevant asides; (2) implement a clean Regime A/B/C map with explicit thresholds (e.g., CPI momentum deceleration rate, wage-growth pace, policy-rate trajectory, and time horizon), plus clear transition criteria and a probabilistic path (e.g., A→B probability p1, B→C p2) with a short invalidation rule; (3) quantify the baseline path: specify a numeric band for discount rates and 10Y yields implied by the regime, and attach price targets for ETH/BTC under each regime; where sources give numbers (Ford metrics, ACMR revenue, oil outputs, etc.), present them in a consistent format (4% GM, 10.1% ROIC, 900m 2025 revenue, ~2.5% revenue CAGR) and fix truncations (replace “≈4” with “≈4%,” complete the 2025 energy-path figures, remove stray digits like 15/9); (4) tighten the linkage to SECTION FOCUS: synthesize macro, policy, flows/positioning, and valuation/technical channels in a compact cross-topic map, then provide a concise watch-list of decisive signals (CPI prints, wage data, Jackson Hole commentary, semiconductor-capex cadence, oil-supply/demand shifts, futures-implied rate cuts, crypto/liquidity metrics) with explicit triggers (e.g., CPI momentum fading below a threshold; rate-cut futures rising above a level; oil regime moving from Regime A to B); (5) reconcile conflicts across sources by stating where forecasts diverge (e.g., oil-probability weights, energy-driven discount-rate sensitivity) and justify the chosen stance with the most corroborated data; (6) fix formatting and language to improve readability: remove the irrelevant EURUSD/Pixel references, collapse duplicative sentences, ensure every claim has a cited ID, and delete stray citations (the standalone \"15\" and \"9\" at the end); (7) ensure a concise, world-class standard by condensing to a clear baseline narrative with 1–2 alternative paths and a 5–7-signal watch-list, anchored to the eight core sources (OGK8WLL69, Y6SQOEK69, 22PL3Q360, J99EM2TPZ, T1QE6JPIX, 5S9GJV2O3, HWGNUP2XG, UVEQ2SJ0W) and nothing else.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756084413"
+}

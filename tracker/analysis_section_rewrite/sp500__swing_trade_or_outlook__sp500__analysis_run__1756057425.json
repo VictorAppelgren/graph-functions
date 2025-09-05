@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T19:57:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756057425",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "13472",
+    "output_chars": "1607",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft nearly hits the structure but needs strict formatting discipline and tighter sourcing logic to reach world-class quality. Actionable edits: (1) Reflow Movers & Scenarios into exactly four lines (two Up, two Down), each line as: Up/Down | Time window | Driver/Mechanism (explicit first-principles drivers: auto-cycle demand, EV unit economics, ROIC vs. cost of capital, governance incentives) | What to watch (precise metrics) | Probability % (anchor to material; use a narrow, evidence-based band such as 60–75% for Up, 25–40% for Down). Move any longer narrative out of this section and cite numbers only where facts appear. (2) In each line, attach concrete metrics from the sources (e.g., 5.2% yield, forward P/E ~10.3x; Q2 EV loss ~$1.3B, EBIT margin ~4.3%, ROIC ~10.1%), with IDs immediately after the facts; avoid generic statements with no citation. (3) Calibrate probabilities to evidence, not intuition, and clearly label ranges (e.g., Up 60–75%, Down 25–40%), noting any conflicts between sources and how you would reconcile them. (4) Rebuild the Swing Trade Plan to exact fields: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence; fill with Ford-specifics (e.g., Up, 4–6 weeks, entry near current price, stop 6%, target 12–15%, R/R 2.0, invalidation tariff/policy risk unresolved, trigger Q2 EV profitability improvement, Probability 60%, Confidence 75). (5) Consolidate the macro/regime discussion into a separate, concise section that explains the three-way regime logic (base, bull, bear), ties each to explicit catalysts, and uses RE concisely with IDs; ensure the causal chain flows from auto-cycle demand to EV-margin evolution to ROIC and valuation, then reconcile any conflicts between sources (e.g., EV drag vs. dividend yield) with explicit invalidation points. (6) Audit coverage of critical sources: ensure all pivotal numbers and claims have in-text IDs, and that no single claim relies on non-source-derived intuition; prune any extraneous references or conflicting data points from the movers section and keep the focus tight, actionable, and execution-ready.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756057425"
+}

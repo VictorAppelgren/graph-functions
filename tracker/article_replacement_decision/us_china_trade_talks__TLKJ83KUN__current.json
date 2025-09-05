@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T21:55:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_china_trade_talks",
+    "new_article_id": "TLKJ83KUN",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['0BHR62KGO', 'HQ67JJ8YW', 'CM6N2W35K', 'PSRZJ6OCU', '4CJPTXOL0', 'YVP1ZG37H']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not clearly supersede any existing article; there is no matching prior entry to replace, so no action is warranted."
+    }
+  },
+  "id": "us_china_trade_talks__TLKJ83KUN__current"
+}

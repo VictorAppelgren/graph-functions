@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:14:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "china_us_tariff_truce",
+    "selection_motivation": "Trump’s tariff policy created pressure that ultimately led to the China‑US tariff truce, a pivotal event in U.S.–China trade relations.",
+    "candidate_motivation": "These topics capture the most direct tariff-linked forces surrounding Trump Tariffs, including sector-specific US tariffs, US-China trade dynamics, and inflationary spillovers.",
+    "existing_links_count": "10",
+    "candidate_count": "14",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_brazil', 'us_india_tariffs', 'us_china_tariffs', 'china_us_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'us_tariff_policies', 'tariff_driven_inflation', 'us_tariff_inflation', 'us_tariffs']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593767239",
+    "rel_id": "trump_tariffs__influences__china_us_tariff_truce",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'china_us_tariff_truce'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump’s tariff policy created pressure that ultimately led to the China‑US tariff truce, a pivotal event in U.S.–China trade relations.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "china_us_tariff_truce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_tariffs__influences__china_us_tariff_truce"
+}

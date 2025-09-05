@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T21:39:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756582772",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "1767",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Canonical Handle Mapping** – The draft currently references mortgage rates but does not link to a canonical handle. Add an explicit mapping to *ust10y* (or *mortgage_rate* if you create a new handle). For example: “30‑year mortgage rates are currently 6.5–7.0 % and track the 10‑year UST yield at 4.5–5.0 %.” Cite the source (ID LF0UUL917) after the numbers.  \n2. **Magnitude Ranges & Catalyst Window** – Include a clear range for the expected movement (e.g., “Fed’s next meeting (Sept 2025) could lower the 10‑year yield by 10–20 bp, pulling mortgage rates down by 10–20 bp”). Add a catalyst window: “Fed policy meeting 2025‑09‑16‑17; Q3 2025 inflation report; UST10y yield change.”  \n3. **First‑Principles Anchor** – Explicitly state the invariant: “Mortgage rates ≈ UST10y + spread + inflation premium.” Provide the spread range (e.g., 2–3 bp).  \n4. **Causal Chain** – Tighten the chain: Fed policy → federal funds rate → UST10y → mortgage spread → mortgage rate. Use inline citations (ID LF0UUL917) for each link.  \n5. **Avoid Drift** – The draft is focused on mortgage rates; keep all sentences tied to that asset. Remove any generic commentary on “housing‑loan demand” unless you quantify it (e.g., “loan demand decline of 5 % → 2 bp upward pressure”).  \n6. **Structure** – Re‑format into a concise, bullet‑style executive summary:  \n   - **Base case**: 30‑yr mortgage 6.5–7.0 %, driven by 10‑yr UST 4.5–5.0 %.  \n   - **Catalysts**: Fed meeting 2025‑09‑16‑17, Q3 2025 inflation data, UST10y yield moves.  \n   - **Risks**: Inflation spike >3 %, debt‑to‑GDP rise >1 %, Fed tightening acceleration.  \n   - **Confidence**: Moderate‑high.  \n\nImplement these edits to satisfy the acceptance gate and align with the “Action over prose” style.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756582772"
+}

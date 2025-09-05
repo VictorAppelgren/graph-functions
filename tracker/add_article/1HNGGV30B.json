@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T08:38:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1HNGGV30B",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; AI-driven wage premium pressures US inflation and Fed policy.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article reports on a trend in AI-driven wage increases, which is a market commentary on labor market dynamics."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article highlights a substantial AI‑driven wage premium for content professionals, signaling a broader labor‑market trend that could affect wage inflation and demand for AI‑exposed talent."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article highlights a structural shift in labor markets driven by AI adoption, indicating a long‑term wage premium that will likely persist."
+    },
+    "article_node": {
+      "id": "1HNGGV30B",
+      "title": "The AI boom's latest job winners: OpenAI is paying nearly $400,000 for a content strategist",
+      "summary": "The AI boom is driving up salaries for content professionals, with OpenAI offering up to $393,000 for a content strategist and Meta paying similar levels for a GenAI content engineer. These roles demand extensive experience and AI‑specific skills, reflecting a broader trend of high pay in AI‑exposed industries. The trend is evident across tech firms, from Duolingo to PayPal, and is supported by PwC’s findings that AI talent commands a 56% wage premium. New job titles such as \"AI Content Creator\" have surged, underscoring the growing value of human creativity in the AI era.",
+      "source": "https://www.businessinsider.com/content-strategist-openai-meta-salary-job-posting-ai-generative-prompt-2025-9",
+      "published_at": "2025-09-05T04:39:51+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "1HNGGV30B"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T18:56:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756053999",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17774",
+    "output_chars": "1692",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is rich on Ford fundamentals but fails the SECTION FOCUS tests: it drifts into broad AI/regime lore and non-Ford material, uses long, multi-year horizons that are unsuitable for a Swing Trade, and presents more than four “Movers” lines (with extraneous headings and non‑Ford drivers) rather than the required compact, four-line Up/Down set anchored to a tradable Ford outlook. Actionable edits to reach world-class quality: (1) scope strictly to Ford (EV capex, profitability, cash flow, ROIC vs WACC, tariff/policy risk) and drop the Nvidia/Costa/Disney‑style items from Movers; (2) redefine Movers & Scenarios as exactly four lines, 2 Up and 2 Down, each formatted: Up/Down | Time window (0–3m or 0–6m) | Driver/Mechanism | What to watch | Probability %; base the drivers on Ford-specific dynamics (two consecutive EV EBIT breakevens as the near-term inflection, and disciplined $50B EV capex through 2026 with pacing) and on tariff/policy risks; assign probabilities within Ford’s evidence envelope (e.g., near-term ~40–60% for Up, ~35–60% for Down, with explicit ranges tied to the cited Ford numbers); (3) ensure each “What to watch” line cites precise Ford facts (Q2 EV loss of ~$1.3B, adj margin ~4.3%, ROIC ~10%, $50B capex through 2026, capex pause of up to $12B) with targeted IDs; (4) replace the current 2–3/3–5+ year horizons with Swing Trade horizons in 0–3m and 3–6m windows and describe exact entry/stop/target/R‑R/invalidations only in the separate Swing Trade plan (price triggers such as a break above/below key moving averages or a two‑quarter profitability read, plus ROIC vs WACC crossovers); (5) craft the Trade/Outlook line as one concise Swing Trade plan if Ford remains tradable, including Entry, Stop, Target, R/R, Invalidation, Trigger, Probability, and Confidence, all sourced from the Ford‑centric material; (6) tighten the prose to a crisp, first‑principles chain (macro demand anchors fixed costs and EV capex, EV profitability as the inflection driver, cash flow and dividend headroom underpinting multiple/valuation) and present it with a focused, repeatable causal chain; (7) limit citations to factual Ford items and two or three critical numeric anchors, placing IDs only after those facts, and avoid overloading the lines with extraneous sources; (8) deliver four clean one‑sentence Up/Down lines plus a single 1–2 line Swing Trade Outlook that is immediately actionable, with clearly stated triggers and invalidation, so the piece reads as a coherent, model‑driven, tradable Ford Swing Trade rather than a broad macro narrative.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756053999"
+}

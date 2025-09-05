@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T04:38:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "wheat",
+    "selection_motivation": "Oil price movements are a primary driver of wheat price volatility through energy and transportation cost channels, making a direct influence link highly actionable for commodity and agricultural market analysis.",
+    "candidate_motivation": "Oil’s price is driven by macro‑economic, geopolitical, and commodity‑market factors. Topics that directly influence or are tightly correlated with oil include inflation measures, currency strength, treasury yields, and other energy or commodity prices, as well as sector‑specific impacts on oil‑related stocks.",
+    "existing_links_count": "10",
+    "candidate_count": "9",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_10y', 'usd', 'gold', 'copper', 'wheat', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882697738",
+    "rel_id": "oil__influences__wheat",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements are a primary driver of wheat price volatility through energy and transportation cost channels, making a direct influence link highly actionable for commodity and agricultural market analysis.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "wheat"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__wheat"
+}

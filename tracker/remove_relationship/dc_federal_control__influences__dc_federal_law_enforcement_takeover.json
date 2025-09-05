@@ -1,0 +1,43 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-14T23:53:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_control",
+    "target_id": "dc_federal_law_enforcement_takeover",
+    "selection_motivation": "The link to 'dc_federal_law_enforcement_takeover' is less critical as it overlaps with other links related to federal intervention and policing, making it a redundant connection that can be removed to accommodate the new link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to 'dc_federal_law_enforcement_takeover' is less critical as it overlaps with other links related to federal intervention and policing, making it a redundant connection that can be removed to accommodate the new link.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'trump_dc_public_safety'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_governance'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_policing'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_policy'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_law_enforcement_takeover'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161392",
+    "rel_id": "dc_federal_control__influences__dc_federal_law_enforcement_takeover",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'trump_dc_public_safety'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_governance'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_policing'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_policy'}]",
+    "status": "error",
+    "error": "Object of type DateTime is not JSON serializable"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "dc_federal_control",
+      "target": "dc_federal_law_enforcement_takeover"
+    },
+    "prioritized_link": {
+      "motivation": "Linking D.C. Federal Control of Police to Trump's Federalization of D.C. Police highlights the direct influence of federal control on the federalization efforts, providing insights into the political dynamics affecting law enforcement in D.C.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_control",
+      "target": "trump_dc_police_federalization"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to 'dc_federal_law_enforcement_takeover' is less critical as it overlaps with other links related to federal intervention and policing, making it a redundant connection that can be removed to accommodate the new link.",
+      "remove_link": "dc_federal_law_enforcement_takeover"
+    },
+    "removal_decision": {
+      "motivation": "The link to 'dc_federal_law_enforcement_takeover' is less critical as it overlaps with other links related to federal intervention and policing, making it a redundant connection that can be removed to accommodate the new link.",
+      "remove_link": "dc_federal_law_enforcement_takeover"
+    },
+    "source_node": {
+      "last_updated": 

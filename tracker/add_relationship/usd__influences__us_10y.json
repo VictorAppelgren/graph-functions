@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:37:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "us_10y",
+    "selection_motivation": "USD strength directly impacts demand for US Treasuries, making it a primary driver of the 10‑year yield.",
+    "candidate_motivation": "These topics are the most plausible strong influences, correlates, or peers to the US Dollar, encompassing policy signals, currency dynamics, and key macro drivers. They are likely to interact directly with dollar valuation and broad financial conditions.",
+    "existing_links_count": "11",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'core_monthly_cpi', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'eur', 'oil', 'gold']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137438734",
+    "rel_id": "usd__influences__us_10y",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD strength directly impacts demand for US Treasuries, making it a primary driver of the 10‑year yield.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__us_10y"
+}

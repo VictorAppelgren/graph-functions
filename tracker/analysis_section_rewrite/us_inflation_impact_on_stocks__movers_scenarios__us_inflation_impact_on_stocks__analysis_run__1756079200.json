@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:52:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation_impact_on_stocks",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation_impact_on_stocks__analysis_run__1756079200",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17060",
+    "output_chars": "1518",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–4 weeks | Strengthen causal chain with explicit first-principles steps: policy stance shifts drive financial conditions, lift risk appetite, and reprice crypto/AI infrastructure, anchored to Regime A→B triggers (CPI momentum aligned with the 0.30%–0.40% MoM path and futures-implied easing) (OGK8WLL69) | What to watch: CPI momentum and curve-implied rate cuts to confirm regime transition | 72%\nUp | 8–16 weeks | Tie Regime C re-rating to quantified liquidity flows: roughly $50 billion per quarter in private credit with CMBS exposure up 30% to $15.6 billion on 20–30 year tenors and crypto tailwinds (Bitmine ETH purchase) (OBQMETU6O)(OGK8WLL69)(V9HASRVZA) | What to watch: durability of AI cash flows, CMBS/private-credit inflows, ETF inflows, and regulatory clarity sustaining liquidity | 60%\nDown | 0–4 weeks | Tariff pass-through risks inflation and tightens the Fed path, capping near-term risk-on with tariff dynamics (OGK8WLL69) | What to watch: tariff posture shifts and payrolls data for policy timing; a renewed inflation surprise could push yields higher and cap equities | 25%\nDown | 4–8 weeks | AI project underperformance and tighter credit conditions threaten AI financing and broader growth equities, delaying regime shift and pressuring valuations as debt-path revisions loom (EPJYXB7DX)(OBQMETU6O) | What to watch: AI cash-flow durability, CMBS/private-credit underwriting standards, and debt-path revisions; a weaker debt path could widen risk premia and cap valuations | 30%",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation_impact_on_stocks__movers_scenarios__us_inflation_impact_on_stocks__analysis_run__1756079200"
+}

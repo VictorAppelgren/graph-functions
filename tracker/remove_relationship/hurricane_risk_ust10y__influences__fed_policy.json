@@ -1,0 +1,54 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T12:38:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hurricane_risk_ust10y",
+    "target_id": "fed_policy",
+    "selection_motivation": "The hurricane risk link to fed_policy lacks a clear causal path or explicit impact magnitude, making it the weakest influence among the existing links.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The hurricane risk link to fed_policy lacks a clear causal path or explicit impact magnitude, making it the weakest influence among the existing links.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845662",
+    "rel_id": "hurricane_risk_ust10y__influences__fed_policy",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_core_pce'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "fed_policy"
+    },
+    "prioritized_link": {
+      "motivation": "Atlantic hurricane season risk elevates global risk sentiment, driving safe‑haven demand and pushing gold higher.",
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "gold"
+    },
+    "llm_raw_response": {
+      "motivation": "The hurricane risk link to fed_policy lacks a clear causal path or explicit impact magnitude, making it the weakest influence among the existing links.",
+      "remove_link": "fed_policy"
+    },
+    "removal_decision": {
+      "motivation": "The hurricane risk link to fed_policy lacks a clear causal path or explicit impact magnitude, making it the weakest influence among the existing links.",
+      "remove_link": "fed_policy"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(tropical wave OR easterly wave OR tropical disturbance OR tropical depression OR tropical storm OR hurricane OR cyclone OR tropical cyclone OR Atlantic OR \"Atlantic Ocean\" OR \"Atlantic hurricane season\" OR 2025 OR NHC OR \"National Hurricane Center\" OR NOAA OR \"National Oceanic and Atmospheric Administration\" OR forecast OR prediction OR probability OR chance OR development OR formation OR develop) AND (news OR update OR report OR analysis OR forecast OR outlook OR trend OR movement OR volatility OR change OR shift OR impact)",
+      "motivation": "The article signals a rising Atlantic hurricane risk that is expected to lift UST 10y yields by 5‑10 bp over the next month.",
+      "name": "Atlantic Hurricane Season Risk on UST 10y",
+      "id": "hurricane_risk_ust10y",
+      "last_queried": "2025-09-04T21:41:46.190000000+00:00",
+      "importance_rationale": "The topic describes a potential hurricane event with a short‑term catalyst window but does not provide an explicit sign or magnitude for how it would affect UST 10y yields, nor a clear causal transmission path that would inform actionable trading. Without a concrete handle mapping and actionable impact, it fails the acceptance gate for actionable macro/market insights.",
+      "type": "macro",
+      "queries": 4
+    }
+  },
+  "id": "hurricane_risk_ust10y__influences__fed_policy"
+}

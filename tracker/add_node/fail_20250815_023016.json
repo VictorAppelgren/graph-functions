@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:30:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GM9L63BNA",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Artemis Gold's focus on the Blackwater Mine, a significant asset in the precious metals sector, warranting a dedicated node for investment analysis and market impact.",
+      "id": "blackwater_mine",
+      "name": "Blackwater Mine",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "Blackwater Mine is a specific mining asset, not a macro driver or policy."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Blackwater Mine is a specific mining asset, an operational niche not a macro driver or tradable instrument; it does not support macro trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

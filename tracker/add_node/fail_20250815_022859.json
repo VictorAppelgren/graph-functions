@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:28:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HEGGC1XJ6",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The merger of Vyome Therapeutics and ReShape Lifesciences creates a new entity that will trade under a distinct symbol, which is relevant for tracking market performance and investment decisions.",
+      "id": "vyome_holdings",
+      "name": "Vyome Holdings",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company name and merger details indicate a corporate entity."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific company in healthcare sector, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

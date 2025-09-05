@@ -1,0 +1,59 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T10:39:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "D2E0FEKSK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; European bond market volatility and US Treasury yield moves signal tightening expectations and fiscal pressure, while gold and equity futures reflect risk sentiment.",
+      "existing_ids": [
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "gilt10y",
+        "uk_30yr_gilt_yield",
+        "gbpusd",
+        "gold",
+        "spx",
+        "sx5e",
+        "euro_inflation",
+        "euro_at1_issuance",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article references Chinese President Xi's massive military parade, which is a geopolitical event that can influence global markets."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant movements in bond markets, yields, gold, and equity futures, indicating a high probability of a Fed rate cut, which directly impacts macro market dynamics."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to a specific event, affecting short‑term yields and commodity prices."
+    },
+    "article_node": {
+      "id": "D2E0FEKSK",
+      "title": "EUROPE Bond markets rattle as Xi's tanks roll",
+      "summary": "European bond markets rattled after Chinese President Xi's massive military parade, amid concerns over mounting government deficits. U.S. Treasury yields rose, Japanese 30‑year yields hit record highs, and sterling fell as gilt yields spiked. Gold surged to an all‑time high at $3,546.99, while equity futures in Europe showed modest gains. Markets are pricing in a high probability of a 25‑bp Fed rate cut this month, with weak labor data potentially boosting cut odds.",
+      "source": "https://www.reuters.com/world/china/global-markets-view-europe-2025-09-03/",
+      "published_at": "2025-09-03T04:39:23.357000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 13,
+      "successful": 13
+    }
+  },
+  "id": "D2E0FEKSK"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T19:27:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "spx",
+    "target_id": "china_exports",
+    "selection_motivation": "S&P 500 performance is a leading indicator of global risk appetite, which directly influences Chinese export demand through changes in global consumption of Chinese goods.",
+    "candidate_motivation": "The S&P 500 is a broad US equity index whose performance is driven by macroeconomic indicators, monetary policy, interest rates, and commodity prices, and it is closely correlated with other major indices and market sentiment. Therefore, topics that directly influence or correlate with US equities—such as Fed policy, inflation measures, Treasury yields, the dollar index, key commodity prices, and peer equity indices—are the most plausible influences or peers.",
+    "existing_links_count": "22",
+    "candidate_count": "21",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'sx5e', 'euro_inflation', 'dxy', 'gold', 'wti', 'brent', 'copper', 'wheat', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'ba']",
+    "existing_links_before_len": "22",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202462200019552265",
+    "rel_id": "spx__influences__china_exports",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "S&P 500 performance is a leading indicator of global risk appetite, which directly influences Chinese export demand through changes in global consumption of Chinese goods.",
+      "type": "INFLUENCES",
+      "source": "spx",
+      "target": "china_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__influences__china_exports"
+}

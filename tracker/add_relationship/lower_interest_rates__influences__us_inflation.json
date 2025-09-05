@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T04:03:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "lower_interest_rates",
+    "target_id": "us_inflation",
+    "selection_motivation": "Lower interest rates are a significant driver of inflation dynamics, making a link to US Inflation essential for understanding the broader economic impacts.",
+    "candidate_motivation": "Lower interest rates typically influence various economic indicators and asset classes, making topics related to inflation, monetary policy, and financial markets strong candidates for correlation or influence.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "1617",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'core_monthly_cpi', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariff_policies', 'us_stock_buybacks', 'us_chip_export_tax']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118477520",
+    "rel_id": "lower_interest_rates__influences__us_inflation",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'lower_interest_rates', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Lower interest rates are a significant driver of inflation dynamics, making a link to US Inflation essential for understanding the broader economic impacts.",
+      "type": "INFLUENCES",
+      "source": "lower_interest_rates",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "lower_interest_rates__influences__us_inflation"
+}

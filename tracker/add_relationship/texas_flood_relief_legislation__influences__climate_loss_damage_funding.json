@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:03:02",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "texas_flood_relief_legislation",
+    "target_id": "climate_loss_damage_funding",
+    "selection_motivation": "Texas Flood Relief Legislation establishes a state-level framework for addressing climate-related flood damages, thereby influencing national climate loss and damage funding initiatives.",
+    "candidate_motivation": "These topics are the most plausible policy and funding levers that could influence Texas flood relief legislation, reflecting federal disaster resilience programs and climate-finance considerations.",
+    "existing_links_count": "2",
+    "candidate_count": "4",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['us_flooding_events', 'bric_program', 'climate_loss_damage_funding', 'national_guard_dc_deployment']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'bric_program'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373215930",
+    "rel_id": "texas_flood_relief_legislation__influences__climate_loss_damage_funding",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'climate_loss_damage_funding'}, {'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'bric_program'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Texas Flood Relief Legislation establishes a state-level framework for addressing climate-related flood damages, thereby influencing national climate loss and damage funding initiatives.",
+      "type": "INFLUENCES",
+      "source": "texas_flood_relief_legislation",
+      "target": "climate_loss_damage_funding"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "texas_flood_relief_legislation__influences__climate_loss_damage_funding"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T00:14:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UK8ESTOZL",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: crime; NYC crime rates and policing influence local economic and investment sentiment.",
+      "existing_ids": [
+        "us_urban_crime"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses a police commissioner not running for mayor and her political statements, which does not fit any of the predefined categories."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a significant career decision of the node, affecting its political trajectory."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent decision by the police commissioner regarding a mayoral race, which is an immediate event."
+    },
+    "article_node": {
+      "id": "UK8ESTOZL",
+      "title": "Here’s what Jessica Tisch said when asked if she’ll  run for NYC mayor in 4 years",
+      "summary": "Police Commissioner Jessica Tisch declined to run for New York City mayor, describing herself as a public servant rather than a politician. At a breakfast event in Southampton, she praised the NYPD’s record, opposed President Trump’s National Guard deployment, and condemned anti‑Israel protests while affirming the department’s respect for free speech. Tisch highlighted record low violent crime and her past work as sanitation commissioner. The event drew supporters of former Governor Cuomo, Mayor Adams, and Democratic candidate Zohran Mamdani, reflecting the city’s political climate.",
+      "source": "https://nypost.com/2025/08/23/us-news/heres-what-jessica-tisch-said-when-asked-if-shell-run-for-nyc-mayor-in-4-years/",
+      "published_at": "2025-08-23T19:50:50+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "UK8ESTOZL"
+}

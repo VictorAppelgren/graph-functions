@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T05:39:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdjpy",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "The fed_powell_rate_cut_hint_2025 link is a speculative future hint lacking a concrete catalyst and canonical handle, making it the weakest correlation among existing links.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The fed_powell_rate_cut_hint_2025 link is a speculative future hint lacking a concrete catalyst and canonical handle, making it the weakest correlation among existing links.",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179945301394327769",
+    "rel_id": "usdjpy__correlates_with__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "prioritized_link": {
+      "motivation": "USD/JPY exhibits a strong positive correlation with oil price movements; the 2024‑08‑01 oil price decline driven by OPEC production cuts created a clear causal link.",
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "wti"
+    },
+    "llm_raw_response": {
+      "motivation": "The fed_powell_rate_cut_hint_2025 link is a speculative future hint lacking a concrete catalyst and canonical handle, making it the weakest correlation among existing links.",
+      "remove_link": "fed_powell_rate_cut_hint_2025"
+    },
+    "removal_decision": {
+      "motivation": "The fed_powell_rate_cut_hint_2025 link is a speculative future hint lacking a concrete catalyst and canonical handle, making it the weakest correlation among existing links.",
+      "remove_link": "fed_powell_rate_cut_hint_2025"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "((USDJPY OR USD/JPY OR USDJPY) OR (JPYUSD) OR (USD OR US$ OR US Dollar OR US$) OR (JPY OR Japanese Yen OR yen) OR (exchange rate OR currency OR forex OR FX OR FX pair OR currency pair OR FX market OR FX trading) OR (market OR markets OR trading OR trader OR traders OR speculation OR speculator OR investment OR investor OR hedge OR hedging OR position OR positioning) OR (news OR update OR breaking OR recent OR latest OR today OR report OR analysis OR forecast OR outlook OR trend OR volatility OR movement OR change OR shift OR impact) OR (central bank OR Fed OR Federal Reserve OR ECB OR European Central Bank OR BOJ OR Bank of Japan OR monetary policy OR interest rate OR rates OR rate hike OR rate cut OR inflation OR GDP OR growth OR recession OR economic) OR (geopolitical OR political OR risk OR risks OR sentiment OR confidence OR uncertainty OR crisis OR crises OR development OR developments) OR (trade OR tariffs OR trade policy OR trade war OR trade tensions) OR (capital flow OR capital markets OR liquidity OR term premium))",
+      "name": "USD/JPY",
+      "id": "usdjpy",
+      "last_queried": "2025-09-03T02:16:53.662000000+00:00",
+      "queries": 5
+    }
+  },
+  "id": "usdjpy__correlates_with__fed_powell_rate_cut_hint_2025"
+}

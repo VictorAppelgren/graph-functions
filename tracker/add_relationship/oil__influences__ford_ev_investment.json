@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:48:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "ford_ev_investment",
+    "selection_motivation": "Oil price spikes directly increase the cost advantage of electric vehicles, prompting automakers such as Ford to accelerate EV investment; capturing this causal link is essential for modeling EV sector dynamics in investment research.",
+    "candidate_motivation": "Oil is tightly linked to energy producers, geopolitics, and macro policy; the shortlist captures direct supply/demand drivers (oil majors, LNG, EV demand), dollar/currency dynamics, and sanctions or conflicts that can materially move oil prices.",
+    "existing_links_count": "11",
+    "candidate_count": "13",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['conocophillips_dividend_policy', 'cheniere_energy', 'tecogen_clean_energy', 'ford_ev_investment', 'ford_ev_investment_louisville', 'ev_infrastructure_funding', 'usd', 'iran_nuclear_sanctions', 'russia_economic_crisis', 'ukraine_geopolitical_security', 'middle_east_sovereign_funds', 'us_china_tariff_truce', 'us_china_trade_talks']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'middle_east_sovereign_funds'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'saudi_vision_2030'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202462200019550218",
+    "rel_id": "oil__influences__ford_ev_investment",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ford_ev_investment'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'saudi_vision_2030'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price spikes directly increase the cost advantage of electric vehicles, prompting automakers such as Ford to accelerate EV investment; capturing this causal link is essential for modeling EV sector dynamics in investment research.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "ford_ev_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__ford_ev_investment"
+}

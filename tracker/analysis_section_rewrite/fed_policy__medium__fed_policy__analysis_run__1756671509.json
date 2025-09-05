@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T22:18:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756671509",
+    "article_ids": "['GK86UUQPN', 'NIT6JFIQF', 'B50S2PG8O', 'GKC24ERTI', '7GU5QDMM4']",
+    "selected_articles_count": "5",
+    "material_chars": "88562",
+    "output_chars": "1087",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n- **Canonical Handle**: Replace every “10‑year yield” reference with the exact handle `ust10y` and state the sign and magnitude explicitly (e.g., “ust10y down 10‑20 bp”).  \n- **Missing Citations**: Add a citation to GK86UUQPN when you mention the August jobs report (“August jobs report (GK86UUQPN)”).  \n- **Magnitude Precision**: Where you say “Fed has room to cut”, quote the 25‑bp cut language from 7GU5QDMM4 and then translate that into the expected 10‑20 bp yield move.  \n- **Cross‑Asset Note**: Briefly note that a 10‑20 bp fall in ust10y would likely weaken the DXY (dxy) and lift the USD index, adding a small cross‑asset link.  \n- **Catalyst & Horizon Clarity**: Keep the 3‑6‑month horizon and list the four catalysts (August jobs, September Fed meeting, Oct 14 tariff ruling, Cook hearing) in a concise bullet or sentence.  \n- **Invalidation & Watch Signals**: Explicitly state the invalidation scenarios (labor market improves, tariffs rolled back, Fed reasserts independence) and the watch signals (August employment data, September Fed minutes, Oct 14 tariff ruling, Cook hearing outcome).  \n- **Confidence Level**: Keep the “moderate‑high” confidence but back it with the cited sources.  \n\nImplement these edits to tighten the mapping, citations, and cross‑asset linkage, ensuring the draft meets the acceptance gate and maintains elite, actionable clarity.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1756671509"
+}

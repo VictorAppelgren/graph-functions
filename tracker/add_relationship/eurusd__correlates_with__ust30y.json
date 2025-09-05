@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T14:32:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "eurusd",
+    "target_id": "ust30y",
+    "selection_motivation": "EURUSD and long‑term U.S. Treasury yields move together through carry and risk‑on dynamics, a key factor for currency valuation.",
+    "candidate_motivation": "EURUSD is directly driven by U.S. and euro‑area macro fundamentals, monetary policy, and relative yield spreads, so topics that influence or reflect these factors are the most likely peers or influencers.",
+    "existing_links_count": "21",
+    "candidate_count": "15",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'us_unemployment_claims', 'us_services_pmi']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202463299531181875",
+    "rel_id": "eurusd__correlates_with__ust30y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD and long‑term U.S. Treasury yields move together through carry and risk‑on dynamics, a key factor for currency valuation.",
+      "type": "CORRELATES_WITH",
+      "source": "eurusd",
+      "target": "ust30y"
+    }
+  },
+  "id": "eurusd__correlates_with__ust30y"
+}

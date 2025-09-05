@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T16:54:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PYB6DRPRH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy tightening from Trump’s One Big Beautiful Bill will lift UST10Y by 5‑10 bp over July 2025‑2026.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article describes new federal student‑loan limits and the revocation of international student visas, which are regulatory changes affecting higher‑education funding and enrollment."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article does not provide a specific node to assess impact on; no mapping to a canonical handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights policy changes that are expected to influence student enrollment and higher‑education funding over the next few years, indicating a medium‑term impact rather than an immediate or purely long‑term effect."
+    },
+    "article_node": {
+      "id": "PYB6DRPRH",
+      "title": "Ohio’s Gen Z college students navigate Trump’s second term, from axing DEI to student loan changes",
+      "summary": "Ohio college students are expressing deep concern over President Trump’s second‑term policies, citing the consolidation of power, the rollback of DEI initiatives, and the elimination of Grad PLUS loans as major catalysts for anxiety. The new federal student‑loan limits and the revocation of international student visas are prompting fears of financial hardship and disrupted academic plans. These developments are expected to influence student enrollment, career choices, and the broader higher‑education funding landscape in the coming years.",
+      "source": "https://www.cleveland.com/education/2025/08/ohios-gen-z-college-students-navigate-trumps-second-term-from-axing-dei-to-student-loan-changes.html",
+      "published_at": "2025-08-31T09:30:00+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "PYB6DRPRH"
+}

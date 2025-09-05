@@ -1,0 +1,1734 @@
+2025-09-02T10:02:10 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-02T10:03:50 | Enrichment check | oil_price_decline | section=medium
+2025-09-02T10:07:57 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-02T10:13:09 | Node relationship created | oil_price_decline->fed_policy | type=INFLUENCES
+2025-09-02T10:13:10 | Replacement of article skipped | oil_price_decline | tf=current cnt=2 < 5
+2025-09-02T10:13:10 | Added article | X6CH6Y0B2 | to intended topic oil_price_decline
+2025-09-02T10:14:13 | Node relationship removed | wti->ust5y | type=INFLUENCES
+2025-09-02T10:14:13 | Node relationship created | wti->us_unemployment_claims | type=INFLUENCES
+2025-09-02T10:14:13 | Replacement of article skipped | wti | tf=current cnt=4 < 5
+2025-09-02T10:14:13 | Added article | X6CH6Y0B2 | to existing topic wti
+2025-09-02T10:14:56 | Node relationship removed | brent->ust5y | type=INFLUENCES
+2025-09-02T10:14:56 | Node relationship created | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T10:14:56 | Replacement of article skipped | brent | tf=current cnt=3 < 5
+2025-09-02T10:14:57 | Added article | X6CH6Y0B2 | to existing topic brent
+2025-09-02T10:15:29 | Node relationship removed | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-02T10:15:29 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T10:15:30 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T10:15:30 | Added article | X6CH6Y0B2 | to existing topic fed_policy
+2025-09-02T10:15:30 | Backfill added | X6CH6Y0B2 -> oil_price_decline | section=fundamental
+2025-09-02T10:18:29 | Node relationship created | oil_price_decline->ust2y | type=INFLUENCES
+2025-09-02T10:18:29 | Replacement of article skipped | oil_price_decline | tf=current cnt=2 < 5
+2025-09-02T10:18:29 | Added article | H164FXM0Q | to existing topic oil_price_decline
+2025-09-02T10:19:16 | Node relationship removed | wti->us_unemployment_claims | type=INFLUENCES
+2025-09-02T10:19:16 | Node relationship created | wti->ust30y | type=INFLUENCES
+2025-09-02T10:19:16 | Replacement of article skipped | wti | tf=current cnt=4 < 5
+2025-09-02T10:19:16 | Added article | H164FXM0Q | to existing topic wti
+2025-09-02T10:20:10 | Node relationship removed | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T10:20:10 | Node relationship created | brent->gold | type=INFLUENCES
+2025-09-02T10:20:10 | Replacement of article skipped | brent | tf=current cnt=3 < 5
+2025-09-02T10:20:11 | Added article | H164FXM0Q | to existing topic brent
+2025-09-02T10:20:46 | Error | - | Fatal provider error | news_api | rate limit 429 Retry-After=None
+2025-09-02T10:20:47 | Retrieved articles | SOFR | Retrieved 10 from API
+2025-09-02T10:20:47 | Retrieved articles | SOFR | Retrieved 10 from API
+2025-09-02T10:20:58 | Retrieved articles | WTI Crude Oil | Retrieved 10 from API
+2025-09-02T10:21:11 | Retrieved articles | Fed Powell Rate Cut Hint (Jackson Hole 2025) | Retrieved 10 from API
+2025-09-02T10:22:25 | Topic added | name=WTI | category=asset | importance=1
+2025-09-02T10:24:04 | Node relationship removed | wti->ust2y | type=INFLUENCES
+2025-09-02T10:24:05 | Node relationship created | wti->ust5y | type=INFLUENCES
+2025-09-02T10:24:05 | Replacement of article skipped | wti | tf=current cnt=4 < 5
+2025-09-02T10:24:05 | Added article | H164FXM0Q | to new topic wti
+2025-09-02T10:24:05 | Backfill added | H164FXM0Q -> oil_price_decline | section=fundamental
+2025-09-02T10:26:47 | Node relationship created | oil_price_decline->brent | type=INFLUENCES
+2025-09-02T10:26:47 | Replacement of article skipped | oil_price_decline | tf=fundamental cnt=2 < 5
+2025-09-02T10:26:47 | Added article | 1D0NI21BO | to existing topic oil_price_decline
+2025-09-02T10:27:04 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T10:27:04 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-09-02T10:27:05 | Replacement of article skipped | fed_policy | no competing candidates in timeframe fundamental
+2025-09-02T10:27:05 | Added article | S9KMMAORW | to existing topic fed_policy
+2025-09-02T10:28:57 | Node relationship removed | wti->ust30y | type=INFLUENCES
+2025-09-02T10:28:57 | Node relationship created | wti->ust2y | type=INFLUENCES
+2025-09-02T10:28:57 | Replacement of article skipped | wti | tf=fundamental cnt=2 < 5
+2025-09-02T10:28:57 | Added article | 1D0NI21BO | to existing topic wti
+2025-09-02T10:29:03 | Node relationship removed | us_inflation->us_inflation | type=INFLUENCES
+2025-09-02T10:29:03 | Node relationship created | us_inflation->usdjpy | type=INFLUENCES
+2025-09-02T10:29:03 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T10:29:03 | Added article | S9KMMAORW | to existing topic us_inflation
+2025-09-02T10:29:59 | Node relationship removed | brent->ust2y | type=INFLUENCES
+2025-09-02T10:29:59 | Node relationship created | brent->ust30y | type=INFLUENCES
+2025-09-02T10:29:59 | Replacement of article skipped | brent | tf=fundamental cnt=2 < 5
+2025-09-02T10:29:59 | Added article | 1D0NI21BO | to existing topic brent
+2025-09-02T10:29:59 | Backfill added | 1D0NI21BO -> oil_price_decline | section=fundamental
+2025-09-02T10:30:39 | Node relationship removed | ust10y->eurusd | type=INFLUENCES
+2025-09-02T10:30:39 | Node relationship created | ust10y->ust30y | type=INFLUENCES
+2025-09-02T10:30:39 | Replacement of article skipped | ust10y | no competing candidates in timeframe fundamental
+2025-09-02T10:30:40 | Added article | S9KMMAORW | to existing topic ust10y
+2025-09-02T10:32:28 | Node relationship created | spx->usdcny | type=INFLUENCES
+2025-09-02T10:32:28 | Replacement of article skipped | spx | no competing candidates in timeframe fundamental
+2025-09-02T10:32:28 | Added article | S9KMMAORW | to existing topic spx
+2025-09-02T10:34:45 | Node relationship created | oil_price_decline->us_core_pce | type=INFLUENCES
+2025-09-02T10:34:45 | Replacement of article skipped | oil_price_decline | tf=fundamental cnt=3 < 5
+2025-09-02T10:34:45 | Added article | T1QE6JPIX | to existing topic oil_price_decline
+2025-09-02T10:36:42 | Node relationship created | oil_price_decline->ust30y | type=INFLUENCES
+2025-09-02T10:36:42 | Replacement of article skipped | oil_price_decline | tf=medium cnt=1 < 5
+2025-09-02T10:36:42 | Added article | RK92OL92V | to existing topic oil_price_decline
+2025-09-02T10:36:48 | Node relationship removed | wti->ust2y | type=INFLUENCES
+2025-09-02T10:36:48 | Node relationship created | wti->ust30y | type=INFLUENCES
+2025-09-02T10:36:48 | Replacement of article skipped | wti | tf=fundamental cnt=3 < 5
+2025-09-02T10:36:49 | Added article | T1QE6JPIX | to existing topic wti
+2025-09-02T10:36:58 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-09-02T10:36:58 | Node relationship created | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-02T10:36:58 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T10:36:58 | Added article | 2CDLZVD5W | to existing topic fed_policy
+2025-09-02T10:39:13 | Node relationship removed | us_inflation->usdjpy | type=INFLUENCES
+2025-09-02T10:39:13 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-09-02T10:39:13 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T10:39:13 | Added article | RK92OL92V | to existing topic us_inflation
+2025-09-02T10:39:35 | Node relationship removed | brent->fed_policy | type=INFLUENCES
+2025-09-02T10:39:35 | Node relationship created | brent->ust2y | type=INFLUENCES
+2025-09-02T10:39:35 | Replacement of article skipped | brent | tf=fundamental cnt=3 < 5
+2025-09-02T10:39:35 | Added article | T1QE6JPIX | to existing topic brent
+2025-09-02T10:42:27 | Topic added | name=US Crude Inventories | category=macro_driver | importance=1
+2025-09-02T10:44:19 | Node relationship created | us_crude_inventory->oil_price_decline | type=INFLUENCES
+2025-09-02T10:44:19 | Replacement of article skipped | us_crude_inventory | tf=fundamental cnt=1 < 5
+2025-09-02T10:44:19 | Added article | T1QE6JPIX | to new topic us_crude_inventory
+2025-09-02T10:44:20 | Backfill added | T1QE6JPIX -> oil_price_decline | section=fundamental
+2025-09-02T10:44:20 | Enrichment check | oil_price_decline | section=medium
+2025-09-02T10:44:27 | Node relationship removed | fed_policy->sofr | type=INFLUENCES
+2025-09-02T10:44:28 | Node relationship created | fed_policy->usdjpy | type=INFLUENCES
+2025-09-02T10:44:28 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T10:44:28 | Added article | CA29WCJUD | to existing topic fed_policy
+2025-09-02T10:44:42 | Node relationship removed | oil_price_decline->fed_policy | type=INFLUENCES
+2025-09-02T10:44:42 | Node relationship created | oil_price_decline->wti | type=INFLUENCES
+2025-09-02T10:44:43 | Replacement of article skipped | oil_price_decline | tf=current cnt=2 < 5
+2025-09-02T10:44:43 | Added article | I0H236CZV | to existing topic oil_price_decline
+2025-09-02T10:46:01 | Node relationship removed | wti->ust30y | type=INFLUENCES
+2025-09-02T10:46:01 | Node relationship created | wti->ust2y | type=INFLUENCES
+2025-09-02T10:46:01 | Replacement of article skipped | wti | tf=current cnt=4 < 5
+2025-09-02T10:46:01 | Added article | I0H236CZV | to existing topic wti
+2025-09-02T10:50:35 | Retrieved articles | Brent Crude Oil | Retrieved 10 from API
+2025-09-02T10:50:35 | Retrieved articles | Brent Crude Oil | Retrieved 10 from API
+2025-09-02T10:54:09 | Node relationship removed | spx->china_exports | type=CORRELATES_WITH
+2025-09-02T10:54:09 | Node relationship created | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T10:54:10 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T10:54:10 | Added article | SL2SE57CF | to existing topic spx
+2025-09-02T10:54:51 | Enrichment check | hurricane_risk_ust10y | section=fundamental
+2025-09-02T10:54:55 | Enrichment check | copper | section=fundamental
+2025-09-02T11:00:04 | Node relationship created | copper->oil_price_decline | type=CORRELATES_WITH
+2025-09-02T11:00:05 | Replacement of article skipped | copper | tf=medium cnt=4 < 5
+2025-09-02T11:00:05 | Added article | 5QSHU3I7S | to existing topic copper
+2025-09-02T11:00:05 | Backfill added | 5QSHU3I7S -> copper | section=fundamental
+2025-09-02T11:00:54 | Enrichment check | copper | section=medium
+2025-09-02T11:04:23 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-09-02T11:04:23 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:04:23 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T11:04:23 | Added article | G4RVFXBAM | to existing topic us_inflation
+2025-09-02T11:05:06 | Node relationship created | copper->spx | type=INFLUENCES
+2025-09-02T11:05:06 | Replacement of article skipped | copper | tf=current cnt=4 < 5
+2025-09-02T11:05:06 | Added article | Z7O1DCHS7 | to intended topic copper
+2025-09-02T11:06:02 | Enrichment check | brent | section=fundamental
+2025-09-02T11:06:02 | Enrichment check | brent | section=medium
+2025-09-02T11:06:32 | Node relationship removed | fed_policy->usdjpy | type=INFLUENCES
+2025-09-02T11:06:32 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:06:32 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T11:06:32 | Added article | Z7O1DCHS7 | to existing topic fed_policy
+2025-09-02T11:10:23 | Node relationship removed | dxy->brent | type=INFLUENCES
+2025-09-02T11:10:23 | Relationship duplicate | oil_price_decline->dxy | type=INFLUENCES
+2025-09-02T11:10:23 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T11:10:23 | Added article | Z7O1DCHS7 | to existing topic dxy
+2025-09-02T11:13:37 | Node relationship removed | brent->ust30y | type=INFLUENCES
+2025-09-02T11:13:37 | Node relationship created | brent->fed_policy | type=INFLUENCES
+2025-09-02T11:13:38 | Replacement of article skipped | brent | tf=current cnt=3 < 5
+2025-09-02T11:13:38 | Added article | HQKY762UV | to intended topic brent
+2025-09-02T11:15:06 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:15:06 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-09-02T11:15:06 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T11:15:06 | Added article | LJPVWLH1Z | to existing topic us_inflation
+2025-09-02T11:16:07 | Node relationship removed | dxy->gold | type=INFLUENCES
+2025-09-02T11:16:07 | Relationship duplicate | dxy->ust30y | type=INFLUENCES
+2025-09-02T11:16:07 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T11:16:07 | Added article | HQKY762UV | to existing topic dxy
+2025-09-02T11:17:29 | Node relationship removed | ust10y->gold | type=INFLUENCES
+2025-09-02T11:17:30 | Node relationship created | ust10y->ust5y | type=INFLUENCES
+2025-09-02T11:17:30 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T11:17:30 | Added article | LJPVWLH1Z | to existing topic ust10y
+2025-09-02T11:18:10 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:18:10 | Node relationship created | fed_policy->usdjpy | type=INFLUENCES
+2025-09-02T11:18:10 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T11:18:10 | Added article | HQKY762UV | to existing topic fed_policy
+2025-09-02T11:18:42 | Node relationship removed | dxy->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T11:18:42 | Node relationship created | dxy->gold | type=CORRELATES_WITH
+2025-09-02T11:18:42 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T11:18:42 | Added article | LJPVWLH1Z | to existing topic dxy
+2025-09-02T11:19:01 | Enrichment check | brent | section=fundamental
+2025-09-02T11:19:01 | Enrichment check | brent | section=medium
+2025-09-02T11:19:13 | Node relationship removed | ust10y->us_inflation | type=INFLUENCES
+2025-09-02T11:19:13 | Node relationship created | ust10y->usdcny | type=INFLUENCES
+2025-09-02T11:19:13 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T11:19:13 | Added article | HQKY762UV | to existing topic ust10y
+2025-09-02T11:19:44 | Enrichment check | brent | section=current
+2025-09-02T11:19:44 | Enrichment summary | topic=brent (Brent Crude Oil) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T11:19:44 | Pipeline complete | pipeline | run complete
+2025-09-02T11:19:51 | Retrieved articles | US Dollar Index (DXY) | Retrieved 10 from API
+2025-09-02T11:20:27 | Node relationship removed | ust2y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:20:27 | Node relationship created | ust2y->fed_policy | type=INFLUENCES
+2025-09-02T11:20:27 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T11:20:27 | Added article | HQKY762UV | to existing topic ust2y
+2025-09-02T11:21:13 | Node relationship created | ust5y->ust2y | type=CORRELATES_WITH
+2025-09-02T11:21:13 | Replacement of article skipped | ust5y | tf=current cnt=1 < 5
+2025-09-02T11:21:13 | Added article | HQKY762UV | to existing topic ust5y
+2025-09-02T11:22:36 | Node relationship removed | ust30y->wti | type=INFLUENCES
+2025-09-02T11:22:36 | Node relationship created | ust30y->usdcny | type=INFLUENCES
+2025-09-02T11:22:37 | Replacement of article skipped | ust30y | tf=current cnt=1 < 5
+2025-09-02T11:22:37 | Added article | HQKY762UV | to existing topic ust30y
+2025-09-02T11:23:36 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-09-02T11:23:36 | Node relationship created | us_inflation->usdjpy | type=INFLUENCES
+2025-09-02T11:23:36 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T11:23:37 | Added article | HQKY762UV | to existing topic us_inflation
+2025-09-02T11:24:25 | Node relationship removed | fed_policy->ust5y | type=INFLUENCES
+2025-09-02T11:24:25 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:24:26 | Replacement of article skipped | fed_policy | no competing candidates in timeframe fundamental
+2025-09-02T11:24:26 | Added article | S5M9KZG32 | to existing topic fed_policy
+2025-09-02T11:25:24 | Node relationship removed | us_core_pce->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:25:24 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T11:25:24 | Replacement of article skipped | us_core_pce | tf=current cnt=3 < 5
+2025-09-02T11:25:24 | Added article | HQKY762UV | to existing topic us_core_pce
+2025-09-02T11:25:24 | Backfill added | HQKY762UV -> brent | section=medium
+2025-09-02T11:25:24 | Enrichment check | brent | section=current
+2025-09-02T11:25:25 | Enrichment summary | topic=brent (Brent Crude Oil) | 0 new fundamental articles, 1 new medium article, 0 new current articles
+2025-09-02T11:25:25 | Pipeline complete | pipeline | run complete
+2025-09-02T11:25:30 | Retrieved articles | USD/JPY | Retrieved 0 from API
+2025-09-02T11:25:31 | Enrichment check | usdjpy | section=fundamental
+2025-09-02T11:25:57 | Node relationship removed | us_inflation->usdjpy | type=INFLUENCES
+2025-09-02T11:25:57 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:25:57 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T11:25:57 | Added article | S5M9KZG32 | to existing topic us_inflation
+2025-09-02T11:26:54 | Enrichment check | dxy | section=fundamental
+2025-09-02T11:26:54 | Enrichment check | dxy | section=medium
+2025-09-02T11:26:55 | Enrichment check | dxy | section=current
+2025-09-02T11:26:55 | Enrichment summary | topic=dxy (US Dollar Index (DXY)) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T11:26:55 | Pipeline complete | pipeline | run complete
+2025-09-02T11:27:01 | Retrieved articles | Fed Policy | Retrieved 4 from API
+2025-09-02T11:30:41 | Node relationship created | usdjpy->us_inflation | type=CORRELATES_WITH
+2025-09-02T11:30:41 | Replacement of article skipped | usdjpy | tf=fundamental cnt=2 < 5
+2025-09-02T11:30:41 | Added article | HYJA10SKI | to intended topic usdjpy
+2025-09-02T11:30:55 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:30:55 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-09-02T11:30:55 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T11:30:55 | Added article | F1V8S5T5F | to existing topic fed_policy
+2025-09-02T11:32:57 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T11:32:57 | Added article | HYJA10SKI | to existing topic us_inflation
+2025-09-02T11:33:18 | Node relationship removed | ust10y->usdcny | type=INFLUENCES
+2025-09-02T11:33:18 | Node relationship created | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:33:18 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T11:33:19 | Added article | F1V8S5T5F | to existing topic ust10y
+2025-09-02T11:34:06 | Node relationship created | us_core_pce->euro_inflation | type=CORRELATES_WITH
+2025-09-02T11:34:06 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=2 < 5
+2025-09-02T11:34:06 | Added article | HYJA10SKI | to existing topic us_core_pce
+2025-09-02T11:34:06 | Backfill added | HYJA10SKI -> usdjpy | section=fundamental
+2025-09-02T11:34:06 | Enrichment check | usdjpy | section=medium
+2025-09-02T11:34:06 | Enrichment check | usdjpy | section=current
+2025-09-02T11:34:41 | Node relationship removed | ust2y->fed_policy | type=INFLUENCES
+2025-09-02T11:34:41 | Node relationship created | ust2y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T11:34:41 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T11:34:41 | Added article | F1V8S5T5F | to existing topic ust2y
+2025-09-02T11:35:54 | Node relationship removed | ust5y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T11:35:54 | Node relationship created | ust5y->usdjpy | type=INFLUENCES
+2025-09-02T11:35:54 | Replacement of article skipped | ust5y | tf=current cnt=2 < 5
+2025-09-02T11:35:54 | Added article | F1V8S5T5F | to existing topic ust5y
+2025-09-02T11:36:41 | Node relationship created | usdjpy->fed_policy | type=CORRELATES_WITH
+2025-09-02T11:36:41 | Replacement of article skipped | usdjpy | tf=current cnt=1 < 5
+2025-09-02T11:36:41 | Added article | VFWZRSTZO | to intended topic usdjpy
+2025-09-02T11:36:50 | Node relationship removed | ust30y->us_inflation | type=INFLUENCES
+2025-09-02T11:36:50 | Node relationship created | ust30y->fed_policy | type=INFLUENCES
+2025-09-02T11:36:51 | Replacement of article skipped | ust30y | tf=current cnt=2 < 5
+2025-09-02T11:36:51 | Added article | F1V8S5T5F | to existing topic ust30y
+2025-09-02T11:40:18 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T11:40:18 | Added article | VFWZRSTZO | to existing topic fed_policy
+2025-09-02T11:40:19 | Enrichment check | bund10y | section=fundamental
+2025-09-02T11:40:32 | Node relationship removed | dxy->ust5y | type=CORRELATES_WITH
+2025-09-02T11:40:32 | Node relationship created | dxy->copper | type=CORRELATES_WITH
+2025-09-02T11:40:32 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T11:40:32 | Added article | F1V8S5T5F | to existing topic dxy
+2025-09-02T11:41:23 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T11:41:23 | Node relationship created | us_inflation->sofr | type=INFLUENCES
+2025-09-02T11:41:23 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T11:41:23 | Added article | VFWZRSTZO | to existing topic us_inflation
+2025-09-02T11:43:27 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T11:43:27 | Added article | HQP2IQAQ6 | to existing topic ust10y
+2025-09-02T11:43:59 | Node relationship created | dxy->brent | type=INFLUENCES
+2025-09-02T11:43:59 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T11:43:59 | Added article | HQP2IQAQ6 | to existing topic dxy
+2025-09-02T11:44:13 | Enrichment check | fed_policy | section=fundamental
+2025-09-02T11:44:13 | Enrichment check | fed_policy | section=medium
+2025-09-02T11:44:13 | Enrichment check | fed_policy | section=current
+2025-09-02T11:44:14 | Enrichment summary | topic=fed_policy (Fed Policy) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T11:44:14 | Pipeline complete | pipeline | run complete
+2025-09-02T11:44:21 | Retrieved articles | US Core PCE | Retrieved 10 from API
+2025-09-02T11:46:37 | Topic rejected | name=Bulk Asset Sale Drives Ready Capital Dividend Growth and Stabilization | category=None | failure=proposal_null
+2025-09-02T11:46:37 | Failed to create new topic for article | SM2IQ774C | to new topic None
+2025-09-02T11:52:58 | Topic rejected | name=IEP Corporate Bond Issuance (Aug 19 2025) | category=company | failure=relevance_gate_reject
+2025-09-02T11:52:58 | Failed to create new topic for article | 1EQUYDETU | to new topic None
+2025-09-02T11:53:48 | Topic rejected | name=Clearway Energy Inc. | category=company | failure=relevance_gate_reject
+2025-09-02T11:53:48 | Failed to create new topic for article | X234SZYRS | to new topic None
+2025-09-02T11:56:23 | Topic rejected | name=Enphase Energy Introduces Next-Generation Battery System For Smarter, Simpler Home Power | category=None | failure=proposal_null
+2025-09-02T11:56:23 | Failed to create new topic for article | L1ZSAWMU3 | to new topic None
+2025-09-02T11:57:31 | Replacement of article skipped | bund10y | tf=medium cnt=1 < 5
+2025-09-02T11:57:31 | Added article | AAS9CVN58 | to existing topic bund10y
+2025-09-02T11:58:09 | Enrichment check | us_core_pce | section=fundamental
+2025-09-02T11:58:09 | Enrichment check | us_core_pce | section=medium
+2025-09-02T11:58:09 | Enrichment check | us_core_pce | section=current
+2025-09-02T11:58:09 | Enrichment summary | topic=us_core_pce (US Core PCE) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T11:58:09 | Pipeline complete | pipeline | run complete
+2025-09-02T11:58:15 | Retrieved articles | US Inflation | Retrieved 10 from API
+2025-09-02T11:58:44 | Node relationship created | euro_inflation->dxy | type=INFLUENCES
+2025-09-02T11:58:44 | Replacement of article skipped | euro_inflation | tf=medium cnt=2 < 5
+2025-09-02T11:58:44 | Added article | AAS9CVN58 | to existing topic euro_inflation
+2025-09-02T11:59:30 | Node relationship removed | ecb_policy->ust30y | type=INFLUENCES
+2025-09-02T11:59:30 | Node relationship created | ecb_policy->gbpusd | type=INFLUENCES
+2025-09-02T11:59:30 | Replacement of article skipped | ecb_policy | tf=medium cnt=3 < 5
+2025-09-02T11:59:31 | Added article | AAS9CVN58 | to existing topic ecb_policy
+2025-09-02T12:00:28 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T12:00:28 | Added article | AAS9CVN58 | to existing topic ust10y
+2025-09-02T12:01:20 | Node relationship removed | ust30y->fed_policy | type=INFLUENCES
+2025-09-02T12:01:20 | Node relationship created | ust30y->bund10y | type=INFLUENCES
+2025-09-02T12:01:20 | Replacement of article skipped | ust30y | tf=medium cnt=3 < 5
+2025-09-02T12:01:21 | Added article | AAS9CVN58 | to existing topic ust30y
+2025-09-02T12:01:55 | Replacement of article skipped | ust2y | tf=medium cnt=4 < 5
+2025-09-02T12:01:55 | Added article | AAS9CVN58 | to existing topic ust2y
+2025-09-02T12:02:30 | Replacement of article skipped | ust5y | tf=medium cnt=3 < 5
+2025-09-02T12:02:31 | Added article | AAS9CVN58 | to existing topic ust5y
+2025-09-02T12:03:34 | Node relationship removed | dxy->sx5e | type=INFLUENCES
+2025-09-02T12:03:34 | Node relationship created | dxy->gilt10y | type=INFLUENCES
+2025-09-02T12:03:34 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T12:03:34 | Added article | AAS9CVN58 | to existing topic dxy
+2025-09-02T12:05:32 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T12:05:32 | Relationship duplicate | oil_price_decline->us_core_pce | type=INFLUENCES
+2025-09-02T12:05:32 | Replacement of article skipped | us_core_pce | tf=medium cnt=3 < 5
+2025-09-02T12:05:32 | Added article | AAS9CVN58 | to existing topic us_core_pce
+2025-09-02T12:06:45 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-09-02T12:06:46 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T12:06:46 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T12:06:46 | Added article | AAS9CVN58 | to existing topic us_inflation
+2025-09-02T12:06:53 | Topic rejected | name=Why Google Is Really Warning 2.5 Billion Gmail Users to Stop Using Their Password | category=None | failure=proposal_null
+2025-09-02T12:06:53 | Failed to create new topic for article | ARLPWQN85 | to new topic None
+2025-09-02T12:08:35 | Node relationship created | sx5e->fed_policy | type=CORRELATES_WITH
+2025-09-02T12:08:35 | Replacement of article skipped | sx5e | tf=medium cnt=2 < 5
+2025-09-02T12:08:35 | Added article | AAS9CVN58 | to existing topic sx5e
+2025-09-02T12:09:33 | Node relationship removed | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T12:09:33 | Node relationship created | spx->oil_price_decline | type=CORRELATES_WITH
+2025-09-02T12:09:33 | Replacement of article skipped | spx | no competing candidates in timeframe medium
+2025-09-02T12:09:33 | Added article | AAS9CVN58 | to existing topic spx
+2025-09-02T12:11:56 | Node relationship removed | spx->oil_price_decline | type=CORRELATES_WITH
+2025-09-02T12:11:56 | Node relationship created | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T12:11:56 | Replacement of article skipped | spx | no competing candidates in timeframe medium
+2025-09-02T12:11:56 | Added article | 6K5OWEEJM | to existing topic spx
+2025-09-02T12:12:03 | Node relationship removed | gold->usdcny | type=CORRELATES_WITH
+2025-09-02T12:12:03 | Node relationship created | gold->wti | type=CORRELATES_WITH
+2025-09-02T12:12:03 | Replacement of article skipped | gold | no competing candidates in timeframe medium
+2025-09-02T12:12:04 | Added article | AAS9CVN58 | to existing topic gold
+2025-09-02T12:13:09 | Node relationship created | wheat->euro_inflation | type=INFLUENCES
+2025-09-02T12:13:09 | Replacement of article skipped | wheat | tf=medium cnt=2 < 5
+2025-09-02T12:13:09 | Added article | AAS9CVN58 | to existing topic wheat
+2025-09-02T12:13:09 | Backfill added | AAS9CVN58 -> bund10y | section=fundamental
+2025-09-02T12:15:54 | Node relationship created | bund10y->jgb10y | type=CORRELATES_WITH
+2025-09-02T12:15:55 | Replacement of article skipped | bund10y | tf=current cnt=2 < 5
+2025-09-02T12:15:55 | Added article | ZUXOHE4Q9 | to intended topic bund10y
+2025-09-02T12:15:55 | Backfill added | ZUXOHE4Q9 -> bund10y | section=fundamental
+2025-09-02T12:16:08 | Node relationship removed | fed_policy->us_inflation | type=INFLUENCES
+2025-09-02T12:16:08 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-09-02T12:16:08 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T12:16:08 | Added article | BYBIFD1VG | to existing topic fed_policy
+2025-09-02T12:17:48 | Topic rejected | name=EU V2G Adoption | category=macro_driver | failure=relevance_gate_reject
+2025-09-02T12:17:48 | Failed to create new topic for article | KNA2K74JK | to new topic None
+2025-09-02T12:17:48 | Enrichment check | us_inflation | section=fundamental
+2025-09-02T12:17:48 | Enrichment check | us_inflation | section=medium
+2025-09-02T12:17:48 | Enrichment check | us_inflation | section=current
+2025-09-02T12:17:49 | Enrichment summary | topic=us_inflation (US Inflation) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T12:17:49 | Pipeline complete | pipeline | run complete
+2025-09-02T12:17:56 | Retrieved articles | Japan 10Y JGB Yield | Retrieved 10 from API
+2025-09-02T12:17:56 | Enrichment check | bund10y | section=medium
+2025-09-02T12:22:11 | Node relationship removed | ust2y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T12:22:11 | Node relationship created | ust2y->us_inflation | type=INFLUENCES
+2025-09-02T12:22:12 | Replacement of article skipped | ust2y | no competing candidates in timeframe fundamental
+2025-09-02T12:22:12 | Added article | LHR9JQYOK | to existing topic ust2y
+2025-09-02T12:23:23 | Node relationship removed | ust5y->usdcny | type=INFLUENCES
+2025-09-02T12:23:23 | Node relationship created | ust5y->usdcny | type=INFLUENCES
+2025-09-02T12:23:23 | Replacement of article skipped | ust5y | no competing candidates in timeframe fundamental
+2025-09-02T12:23:23 | Added article | LHR9JQYOK | to existing topic ust5y
+2025-09-02T12:24:25 | Node relationship removed | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T12:24:25 | Relationship duplicate | hurricane_risk_ust10y->ust10y | type=INFLUENCES
+2025-09-02T12:24:25 | Replacement of article skipped | ust10y | no competing candidates in timeframe fundamental
+2025-09-02T12:24:25 | Added article | LHR9JQYOK | to existing topic ust10y
+2025-09-02T12:25:57 | Node relationship removed | ust30y->usdcny | type=INFLUENCES
+2025-09-02T12:25:57 | Node relationship created | ust30y->us_inflation | type=INFLUENCES
+2025-09-02T12:25:57 | Replacement of article skipped | ust30y | no competing candidates in timeframe fundamental
+2025-09-02T12:25:57 | Added article | LHR9JQYOK | to existing topic ust30y
+2025-09-02T12:26:29 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T12:26:29 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-02T12:26:29 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T12:26:29 | Added article | LHR9JQYOK | to existing topic us_inflation
+2025-09-02T12:27:00 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T12:27:00 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=3 < 5
+2025-09-02T12:27:01 | Added article | LHR9JQYOK | to existing topic us_core_pce
+2025-09-02T12:28:49 | Node relationship removed | dxy->ust30y | type=INFLUENCES
+2025-09-02T12:28:49 | Node relationship created | dxy->sx5e | type=INFLUENCES
+2025-09-02T12:28:49 | Replacement of article skipped | dxy | no competing candidates in timeframe fundamental
+2025-09-02T12:28:49 | Added article | LHR9JQYOK | to existing topic dxy
+2025-09-02T12:30:37 | Node relationship removed | spx->copper | type=CORRELATES_WITH
+2025-09-02T12:30:37 | Node relationship created | spx->wti | type=CORRELATES_WITH
+2025-09-02T12:30:37 | Replacement of article skipped | spx | no competing candidates in timeframe fundamental
+2025-09-02T12:30:38 | Added article | LHR9JQYOK | to existing topic spx
+2025-09-02T12:31:26 | Topic rejected | name=Top Japanese beverage giant Suntory's chief resigns as he faces a drug probe | category=None | failure=proposal_null
+2025-09-02T12:31:26 | Failed to create new topic for article | PNG5N6V6B | to new topic None
+2025-09-02T12:32:16 | Node relationship created | usdjpy->us_core_pce | type=CORRELATES_WITH
+2025-09-02T12:32:16 | Replacement of article skipped | usdjpy | tf=current cnt=2 < 5
+2025-09-02T12:32:16 | Added article | STVPB86MF | to existing topic usdjpy
+2025-09-02T12:33:19 | Node relationship removed | dxy->brent | type=INFLUENCES
+2025-09-02T12:33:19 | Node relationship created | dxy->ust30y | type=INFLUENCES
+2025-09-02T12:33:19 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T12:33:19 | Added article | STVPB86MF | to existing topic dxy
+2025-09-02T12:36:41 | Node relationship created | gbpusd->fed_policy | type=CORRELATES_WITH
+2025-09-02T12:36:41 | Replacement of article skipped | gbpusd | tf=current cnt=4 < 5
+2025-09-02T12:36:41 | Added article | APOB9BVLB | to existing topic gbpusd
+2025-09-02T12:37:44 | Node relationship removed | dxy->usdcny | type=INFLUENCES
+2025-09-02T12:37:44 | Relationship duplicate | us_unemployment_claims->dxy | type=INFLUENCES
+2025-09-02T12:37:44 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T12:37:45 | Added article | APOB9BVLB | to existing topic dxy
+2025-09-02T12:50:39 | Enrichment check | us_crude_inventory | section=fundamental
+2025-09-02T12:59:53 | Topic rejected | name=UK 30-Year Gilt Yield | category=asset | failure=relevance_gate_reject
+2025-09-02T12:59:53 | Failed to create new topic for article | APOB9BVLB | to new topic None
+2025-09-02T12:59:54 | Enrichment check | jgb10y | section=fundamental
+2025-09-02T13:05:49 | Retrieved articles | Wheat | Retrieved 10 from API
+2025-09-02T13:06:16 | Enrichment check | ust30y | section=fundamental
+2025-09-02T13:06:16 | Enrichment check | ust30y | section=medium
+2025-09-02T13:11:49 | Node relationship removed | spx->usdcny | type=INFLUENCES
+2025-09-02T13:11:49 | Relationship duplicate | oil_price_decline->spx | type=INFLUENCES
+2025-09-02T13:11:50 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T13:11:50 | Added article | 4NEH95RLO | to existing topic spx
+2025-09-02T13:13:35 | Node relationship created | spx->oil_price_decline | type=INFLUENCES
+2025-09-02T13:13:35 | Replacement of article skipped | spx | no competing candidates in timeframe fundamental
+2025-09-02T13:13:35 | Added article | BK3YLOO3Z | to existing topic spx
+2025-09-02T13:14:50 | Node relationship removed | sx5e->copper | type=CORRELATES_WITH
+2025-09-02T13:14:50 | Node relationship created | sx5e->ust2y | type=CORRELATES_WITH
+2025-09-02T13:14:50 | Replacement of article skipped | sx5e | tf=fundamental cnt=2 < 5
+2025-09-02T13:14:51 | Added article | BK3YLOO3Z | to existing topic sx5e
+2025-09-02T13:15:01 | Enrichment check | wheat | section=fundamental
+2025-09-02T13:38:06 | Enrichment check | wheat | section=medium
+2025-09-02T13:38:06 | Enrichment check | wheat | section=current
+2025-09-02T13:41:43 | Node relationship removed | brent->gold | type=INFLUENCES
+2025-09-02T13:41:43 | Node relationship created | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T13:41:43 | Replacement of article skipped | brent | tf=current cnt=3 < 5
+2025-09-02T13:41:44 | Added article | AOS07L14J | to existing topic brent
+2025-09-02T13:42:53 | Node relationship removed | wti->us_core_pce | type=INFLUENCES
+2025-09-02T13:42:53 | Node relationship created | wti->oil_price_decline | type=INFLUENCES
+2025-09-02T13:42:54 | Replacement of article skipped | wti | tf=current cnt=4 < 5
+2025-09-02T13:42:54 | Added article | AOS07L14J | to existing topic wti
+2025-09-02T13:43:36 | Node relationship created | gold->ust5y | type=INFLUENCES
+2025-09-02T13:43:36 | Replacement of article skipped | gold | tf=current cnt=1 < 5
+2025-09-02T13:43:36 | Added article | AOS07L14J | to existing topic gold
+2025-09-02T13:44:06 | Node relationship created | wheat->fed_policy | type=INFLUENCES
+2025-09-02T13:44:06 | Replacement of article skipped | wheat | tf=current cnt=0 < 5
+2025-09-02T13:44:06 | Added article | AOS07L14J | to existing topic wheat
+2025-09-02T13:45:25 | Node relationship removed | oil_price_decline->ust30y | type=INFLUENCES
+2025-09-02T13:45:25 | Node relationship created | oil_price_decline->fed_policy | type=INFLUENCES
+2025-09-02T13:45:25 | Replacement of article skipped | oil_price_decline | tf=current cnt=2 < 5
+2025-09-02T13:45:25 | Added article | AOS07L14J | to existing topic oil_price_decline
+2025-09-02T13:46:23 | Node relationship removed | fed_policy->ust30y | type=INFLUENCES
+2025-09-02T13:46:23 | Node relationship created | fed_policy->us_inflation | type=INFLUENCES
+2025-09-02T13:46:23 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T13:46:23 | Added article | AOS07L14J | to existing topic fed_policy
+2025-09-02T13:47:14 | Node relationship created | us_crude_inventory->wti | type=INFLUENCES
+2025-09-02T13:47:14 | Replacement of article skipped | us_crude_inventory | tf=current cnt=0 < 5
+2025-09-02T13:47:14 | Added article | AOS07L14J | to existing topic us_crude_inventory
+2025-09-02T13:47:38 | Node relationship created | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T13:47:38 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T13:47:38 | Added article | AOS07L14J | to existing topic dxy
+2025-09-02T13:47:38 | Backfill added | AOS07L14J -> wheat | section=current
+2025-09-02T13:49:00 | Node relationship created | wheat->bund10y | type=INFLUENCES
+2025-09-02T13:49:00 | Replacement of article skipped | wheat | tf=fundamental cnt=1 < 5
+2025-09-02T13:49:01 | Added article | 83648C4UH | to intended topic wheat
+2025-09-02T13:49:38 | Node relationship created | gbpusd->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T13:49:38 | Replacement of article skipped | gbpusd | tf=fundamental cnt=1 < 5
+2025-09-02T13:49:38 | Added article | 83648C4UH | to existing topic gbpusd
+2025-09-02T13:50:28 | Node relationship removed | dxy->copper | type=CORRELATES_WITH
+2025-09-02T13:50:28 | Node relationship created | dxy->jgb10y | type=CORRELATES_WITH
+2025-09-02T13:50:28 | Replacement of article skipped | dxy | no competing candidates in timeframe fundamental
+2025-09-02T13:50:28 | Added article | 83648C4UH | to existing topic dxy
+2025-09-02T13:50:28 | Backfill added | 83648C4UH -> wheat | section=current
+2025-09-02T13:50:28 | Enrichment summary | topic=wheat (Wheat) | 0 new fundamental articles, 0 new medium articles, 2 new current articles
+2025-09-02T13:50:29 | Pipeline complete | pipeline | run complete
+2025-09-02T13:50:34 | Retrieved articles | EURUSD | Retrieved 0 from API
+2025-09-02T13:50:35 | Enrichment check | eurusd | section=fundamental
+2025-09-02T13:53:07 | Enrichment check | eurusd | section=medium
+2025-09-02T13:53:07 | Enrichment check | eurusd | section=current
+2025-09-02T13:53:07 | Enrichment summary | topic=eurusd (EURUSD) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T13:53:07 | Pipeline complete | pipeline | run complete
+2025-09-02T13:53:24 | Enrichment check | ust10y | section=fundamental
+2025-09-02T13:53:24 | Enrichment check | ust10y | section=medium
+2025-09-02T13:53:24 | Enrichment check | ust10y | section=current
+2025-09-02T13:53:24 | Enrichment summary | topic=ust10y (US 10Y Treasury Yield) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T13:53:24 | Pipeline complete | pipeline | run complete
+2025-09-02T13:53:25 | Retrieved articles | US 2Y Treasury Yield | Retrieved 10 from API
+2025-09-02T13:58:32 | Topic added | name=China gas imports from Russia via Power of Siberia 2 | category=macro_driver | importance=2
+2025-09-02T13:58:56 | Node relationship created | cn_russia_gas_pipeline->china_exports | type=INFLUENCES
+2025-09-02T13:58:56 | Replacement of article skipped | cn_russia_gas_pipeline | tf=fundamental cnt=1 < 5
+2025-09-02T13:58:56 | Added article | 3SHOQHFS4 | to new topic cn_russia_gas_pipeline
+2025-09-02T14:00:22 | Node relationship created | copper->euro_inflation | type=INFLUENCES
+2025-09-02T14:00:22 | Replacement of article skipped | copper | tf=fundamental cnt=3 < 5
+2025-09-02T14:00:22 | Added article | MQ5D9B34J | to existing topic copper
+2025-09-02T14:02:15 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-09-02T14:02:15 | Node relationship created | fed_policy->ust30y | type=INFLUENCES
+2025-09-02T14:02:16 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T14:02:16 | Added article | MGIDBVU8U | to existing topic fed_policy
+2025-09-02T14:03:11 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T14:03:11 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T14:03:11 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T14:03:11 | Added article | MGIDBVU8U | to existing topic us_inflation
+2025-09-02T14:03:42 | Replacement of article skipped | us_core_pce | tf=current cnt=3 < 5
+2025-09-02T14:03:42 | Added article | MGIDBVU8U | to existing topic us_core_pce
+2025-09-02T14:04:41 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=2 < 5
+2025-09-02T14:04:41 | Added article | MGIDBVU8U | to existing topic us_unemployment_claims
+2025-09-02T14:05:30 | Node relationship removed | ust10y->euribor | type=INFLUENCES
+2025-09-02T14:05:30 | Node relationship created | ust10y->sx5e | type=INFLUENCES
+2025-09-02T14:05:30 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T14:05:30 | Added article | MGIDBVU8U | to existing topic ust10y
+2025-09-02T14:06:03 | Node relationship removed | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T14:06:03 | Node relationship created | dxy->usdcny | type=INFLUENCES
+2025-09-02T14:06:03 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T14:06:03 | Added article | MGIDBVU8U | to existing topic dxy
+2025-09-02T14:08:12 | Node relationship removed | eurusd->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T14:08:12 | Node relationship created | eurusd->gilt10y | type=CORRELATES_WITH
+2025-09-02T14:08:12 | Replacement of article skipped | eurusd | tf=current cnt=4 < 5
+2025-09-02T14:08:12 | Added article | MGIDBVU8U | to existing topic eurusd
+2025-09-02T14:10:07 | Node relationship removed | spx->gold | type=CORRELATES_WITH
+2025-09-02T14:10:07 | Node relationship created | spx->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-02T14:10:07 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T14:10:08 | Added article | MGIDBVU8U | to existing topic spx
+2025-09-02T14:10:49 | Node relationship removed | sx5e->brent | type=CORRELATES_WITH
+2025-09-02T14:10:49 | Node relationship created | sx5e->ust30y | type=CORRELATES_WITH
+2025-09-02T14:10:49 | Replacement of article skipped | sx5e | tf=current cnt=3 < 5
+2025-09-02T14:10:49 | Added article | MGIDBVU8U | to existing topic sx5e
+2025-09-02T14:11:03 | Enrichment check | ust2y | section=fundamental
+2025-09-02T14:11:03 | Enrichment check | ust2y | section=medium
+2025-09-02T14:11:03 | Enrichment check | ust2y | section=current
+2025-09-02T14:11:03 | Enrichment summary | topic=ust2y (US 2Y Treasury Yield) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T14:11:03 | Pipeline complete | pipeline | run complete
+2025-09-02T14:11:10 | Retrieved articles | Oil Price Decline | Retrieved 0 from API
+2025-09-02T14:11:10 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-02T14:11:10 | Enrichment check | oil_price_decline | section=medium
+2025-09-02T14:12:17 | Enrichment check | oil_price_decline | section=current
+2025-09-02T14:12:18 | Enrichment summary | topic=oil_price_decline (Oil Price Decline) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T14:12:18 | Pipeline complete | pipeline | run complete
+2025-09-02T14:12:19 | Retrieved articles | S&P 500 | Retrieved 10 from API
+2025-09-02T14:14:03 | Topic rejected | name=Landslide Flattens Sudan Village, Kills More Than 1,000: Armed Group | category=None | failure=proposal_null
+2025-09-02T14:14:03 | Failed to create new topic for article | 8NB05BU2S | to new topic None
+2025-09-02T14:14:04 | Enrichment check | spx | section=fundamental
+2025-09-02T14:14:04 | Enrichment check | spx | section=medium
+2025-09-02T14:14:04 | Enrichment check | spx | section=current
+2025-09-02T14:14:04 | Enrichment summary | topic=spx (S&P 500) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T14:14:04 | Pipeline complete | pipeline | run complete
+2025-09-02T14:14:05 | Retrieved articles | GBP/USD | Retrieved 0 from API
+2025-09-02T14:14:06 | Enrichment check | gbpusd | section=fundamental
+2025-09-02T14:16:26 | Enrichment check | brent | section=fundamental
+2025-09-02T14:16:49 | Node relationship created | fed_policy->gbpusd | type=INFLUENCES
+2025-09-02T14:16:49 | Replacement of article skipped | gbpusd | tf=fundamental cnt=2 < 5
+2025-09-02T14:16:49 | Added article | FXV2NGOYV | to existing topic gbpusd
+2025-09-02T14:17:55 | Node relationship created | gilt10y->jgb10y | type=CORRELATES_WITH
+2025-09-02T14:17:56 | Replacement of article skipped | gilt10y | tf=fundamental cnt=2 < 5
+2025-09-02T14:17:56 | Added article | FXV2NGOYV | to existing topic gilt10y
+2025-09-02T14:17:56 | Backfill added | FXV2NGOYV -> gbpusd | section=fundamental
+2025-09-02T14:17:56 | Enrichment check | gbpusd | section=medium
+2025-09-02T14:20:51 | Enrichment check | gbpusd | section=current
+2025-09-02T14:20:51 | Enrichment summary | topic=gbpusd (GBP/USD) | 1 new fundamental article, 0 new medium articles, 0 new current articles
+2025-09-02T14:20:51 | Pipeline complete | pipeline | run complete
+2025-09-02T14:20:58 | Retrieved articles | India Industrial Output | Retrieved 10 from API
+2025-09-02T14:21:18 | Node relationship created | fed_powell_rate_cut_hint_2025->ust5y | type=INFLUENCES
+2025-09-02T14:21:19 | Replacement of article skipped | fed_powell_rate_cut_hint_2025 | tf=current cnt=2 < 5
+2025-09-02T14:21:19 | Added article | X6CH6Y0B2 | to existing topic fed_powell_rate_cut_hint_2025
+2025-09-02T14:21:19 | Backfill added | X6CH6Y0B2 -> brent | section=fundamental
+2025-09-02T14:23:36 | Retrieved articles | Euro Area Inflation | Retrieved 10 from API
+2025-09-02T14:23:46 | Node relationship removed | wti->oil_price_decline | type=INFLUENCES
+2025-09-02T14:23:46 | Node relationship created | wti->ust30y | type=INFLUENCES
+2025-09-02T14:23:46 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T14:23:46 | Added article | NAI2JN8I3 | to existing topic wti
+2025-09-02T14:25:26 | Node relationship removed | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T14:25:27 | Node relationship created | brent->ust30y | type=INFLUENCES
+2025-09-02T14:25:27 | Replacement of article skipped | brent | tf=current cnt=4 < 5
+2025-09-02T14:25:27 | Added article | NAI2JN8I3 | to existing topic brent
+2025-09-02T14:27:09 | Node relationship removed | fed_policy->ust30y | type=INFLUENCES
+2025-09-02T14:27:09 | Node relationship created | fed_policy->ust5y | type=INFLUENCES
+2025-09-02T14:27:10 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T14:27:10 | Added article | NAI2JN8I3 | to existing topic fed_policy
+2025-09-02T14:27:10 | Backfill added | NAI2JN8I3 -> brent | section=fundamental
+2025-09-02T14:27:10 | Enrichment check | brent | section=medium
+2025-09-02T14:28:02 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-09-02T14:28:02 | Node relationship created | us_inflation->usdjpy | type=INFLUENCES
+2025-09-02T14:28:02 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T14:28:02 | Added article | ONKIHTUXI | to existing topic us_inflation
+2025-09-02T14:29:27 | Replacement of article skipped | us_core_pce | tf=medium cnt=3 < 5
+2025-09-02T14:29:28 | Added article | ONKIHTUXI | to existing topic us_core_pce
+2025-09-02T14:32:24 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T14:32:24 | Added article | ONKIHTUXI | to existing topic ust10y
+2025-09-02T14:33:17 | Node relationship removed | wti->ust30y | type=INFLUENCES
+2025-09-02T14:33:17 | Node relationship created | wti->oil_price_decline | type=INFLUENCES
+2025-09-02T14:33:17 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T14:33:18 | Added article | HQKY762UV | to existing topic wti
+2025-09-02T14:33:18 | Backfill added | HQKY762UV -> brent | section=medium
+2025-09-02T14:33:27 | Replacement of article skipped | ust2y | tf=medium cnt=4 < 5
+2025-09-02T14:33:27 | Added article | ONKIHTUXI | to existing topic ust2y
+2025-09-02T14:37:51 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-02T14:37:51 | Replacement of article skipped | ndx | tf=current cnt=0 < 5
+2025-09-02T14:37:51 | Added article | SL2SE57CF | to existing topic ndx
+2025-09-02T14:41:56 | Node relationship created | india_industrial_output->ust2y | type=INFLUENCES
+2025-09-02T14:41:56 | Replacement of article skipped | india_industrial_output | tf=medium cnt=1 < 5
+2025-09-02T14:41:56 | Added article | HK7SBX6FF | to existing topic india_industrial_output
+2025-09-02T14:42:28 | Node relationship removed | gold->fed_policy | type=CORRELATES_WITH
+2025-09-02T14:42:28 | Node relationship created | gold->brent | type=CORRELATES_WITH
+2025-09-02T14:42:29 | Replacement of article skipped | gold | no competing candidates in timeframe medium
+2025-09-02T14:42:29 | Added article | 6QYR1JT7L | to existing topic gold
+2025-09-02T14:42:55 | Node relationship removed | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T14:42:55 | Node relationship created | ust10y->gold | type=CORRELATES_WITH
+2025-09-02T14:42:56 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T14:42:56 | Added article | SL2SE57CF | to existing topic ust10y
+2025-09-02T14:44:44 | Node relationship removed | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-02T14:44:44 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T14:44:44 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T14:44:45 | Added article | HK7SBX6FF | to existing topic fed_policy
+2025-09-02T14:45:10 | Node relationship removed | wti->euro_inflation | type=INFLUENCES
+2025-09-02T14:45:10 | Node relationship created | wti->us_crude_inventory | type=INFLUENCES
+2025-09-02T14:45:10 | Replacement of article skipped | wti | tf=medium cnt=2 < 5
+2025-09-02T14:45:10 | Added article | 6QYR1JT7L | to existing topic wti
+2025-09-02T14:46:05 | Node relationship removed | gold->ecb_policy | type=CORRELATES_WITH
+2025-09-02T14:46:05 | Node relationship created | gold->fed_policy | type=CORRELATES_WITH
+2025-09-02T14:46:06 | Replacement of article skipped | gold | tf=current cnt=1 < 5
+2025-09-02T14:46:06 | Added article | SL2SE57CF | to existing topic gold
+2025-09-02T14:47:48 | Node relationship removed | us_inflation->usdjpy | type=INFLUENCES
+2025-09-02T14:47:48 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-02T14:47:49 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T14:47:49 | Added article | HK7SBX6FF | to existing topic us_inflation
+2025-09-02T14:48:14 | Node relationship removed | brent->ust2y | type=INFLUENCES
+2025-09-02T14:48:15 | Node relationship created | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T14:48:15 | Replacement of article skipped | brent | tf=medium cnt=1 < 5
+2025-09-02T14:48:15 | Added article | 6QYR1JT7L | to existing topic brent
+2025-09-02T14:49:08 | Node relationship removed | wti->oil_price_decline | type=INFLUENCES
+2025-09-02T14:49:08 | Node relationship created | wti->us_core_pce | type=INFLUENCES
+2025-09-02T14:49:08 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T14:49:08 | Added article | SL2SE57CF | to existing topic wti
+2025-09-02T14:51:24 | Replacement of article skipped | us_core_pce | tf=medium cnt=4 < 5
+2025-09-02T14:51:24 | Added article | HK7SBX6FF | to existing topic us_core_pce
+2025-09-02T14:51:40 | Node relationship removed | dxy->sx5e | type=INFLUENCES
+2025-09-02T14:51:40 | Node relationship created | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T14:51:40 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T14:51:40 | Added article | 6QYR1JT7L | to existing topic dxy
+2025-09-02T14:52:04 | Node relationship removed | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T14:52:04 | Node relationship created | brent->us_crude_inventory | type=INFLUENCES
+2025-09-02T14:52:04 | Replacement of article skipped | brent | tf=current cnt=4 < 5
+2025-09-02T14:52:05 | Added article | SL2SE57CF | to existing topic brent
+2025-09-02T14:54:20 | Node relationship created | eurusd->ust2y | type=INFLUENCES
+2025-09-02T14:54:20 | Replacement of article skipped | eurusd | tf=medium cnt=2 < 5
+2025-09-02T14:54:20 | Added article | 6QYR1JT7L | to existing topic eurusd
+2025-09-02T14:54:30 | Node relationship removed | ust10y->gbpusd | type=INFLUENCES
+2025-09-02T14:54:30 | Node relationship created | ust10y->eurusd | type=INFLUENCES
+2025-09-02T14:54:31 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T14:54:31 | Added article | HK7SBX6FF | to existing topic ust10y
+2025-09-02T14:54:47 | Node relationship created | usdcny->ust10y | type=INFLUENCES
+2025-09-02T14:54:47 | Replacement of article skipped | usdcny | tf=current cnt=2 < 5
+2025-09-02T14:54:47 | Added article | SL2SE57CF | to existing topic usdcny
+2025-09-02T14:57:29 | Node relationship removed | spx->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-02T14:57:30 | Node relationship created | spx->gold | type=CORRELATES_WITH
+2025-09-02T14:57:30 | Replacement of article skipped | spx | no competing candidates in timeframe medium
+2025-09-02T14:57:30 | Added article | 6QYR1JT7L | to existing topic spx
+2025-09-02T14:57:39 | Node relationship removed | ust2y->us_inflation | type=INFLUENCES
+2025-09-02T14:57:39 | Node relationship created | ust2y->fed_policy | type=INFLUENCES
+2025-09-02T14:57:39 | Replacement of article skipped | ust2y | no competing candidates in timeframe medium
+2025-09-02T14:57:39 | Added article | HK7SBX6FF | to existing topic ust2y
+2025-09-02T14:57:41 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T14:57:41 | Added article | SL2SE57CF | to existing topic fed_policy
+2025-09-02T14:59:43 | Node relationship removed | sx5e->euribor | type=CORRELATES_WITH
+2025-09-02T14:59:43 | Node relationship created | sx5e->brent | type=CORRELATES_WITH
+2025-09-02T14:59:43 | Replacement of article skipped | sx5e | tf=medium cnt=2 < 5
+2025-09-02T14:59:43 | Added article | 6QYR1JT7L | to existing topic sx5e
+2025-09-02T15:00:02 | Node relationship removed | ust5y->usdcny | type=INFLUENCES
+2025-09-02T15:00:02 | Node relationship created | ust5y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T15:00:02 | Replacement of article skipped | ust5y | tf=medium cnt=4 < 5
+2025-09-02T15:00:03 | Added article | HK7SBX6FF | to existing topic ust5y
+2025-09-02T15:00:32 | Node relationship removed | china_exports->china_credit_impulse | type=INFLUENCES
+2025-09-02T15:00:32 | Node relationship created | china_exports->eurusd | type=INFLUENCES
+2025-09-02T15:00:32 | Replacement of article skipped | china_exports | tf=current cnt=4 < 5
+2025-09-02T15:00:32 | Added article | SL2SE57CF | to existing topic china_exports
+2025-09-02T15:02:52 | Node relationship removed | ust10y->sx5e | type=INFLUENCES
+2025-09-02T15:02:52 | Node relationship created | ust10y->usdcny | type=INFLUENCES
+2025-09-02T15:02:53 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T15:02:53 | Added article | 6QYR1JT7L | to existing topic ust10y
+2025-09-02T15:03:08 | Node relationship removed | ust30y->sofr | type=CORRELATES_WITH
+2025-09-02T15:03:08 | Node relationship created | ust30y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T15:03:08 | Replacement of article skipped | ust30y | tf=medium cnt=4 < 5
+2025-09-02T15:03:08 | Added article | HK7SBX6FF | to existing topic ust30y
+2025-09-02T15:03:56 | Topic added | name=US Services PMI | category=macro_driver | importance=2
+2025-09-02T15:05:18 | Node relationship removed | ust30y->us_inflation | type=INFLUENCES
+2025-09-02T15:05:18 | Node relationship created | ust30y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T15:05:19 | Replacement of article skipped | ust30y | tf=medium cnt=4 < 5
+2025-09-02T15:05:19 | Added article | 6QYR1JT7L | to existing topic ust30y
+2025-09-02T15:05:26 | Node relationship created | us_services_pmi->fed_policy | type=INFLUENCES
+2025-09-02T15:05:26 | Replacement of article skipped | us_services_pmi | tf=current cnt=0 < 5
+2025-09-02T15:05:26 | Added article | SL2SE57CF | to new topic us_services_pmi
+2025-09-02T15:05:26 | Backfill added | SL2SE57CF -> brent | section=medium
+2025-09-02T15:06:32 | Node relationship created | ust5y->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T15:06:32 | Replacement of article skipped | ust5y | tf=medium cnt=4 < 5
+2025-09-02T15:06:32 | Added article | 6QYR1JT7L | to existing topic ust5y
+2025-09-02T15:09:11 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T15:09:11 | Node relationship created | us_inflation->us_services_pmi | type=INFLUENCES
+2025-09-02T15:09:11 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T15:09:11 | Added article | E1S46520V | to existing topic us_inflation
+2025-09-02T15:09:36 | Node relationship removed | ust2y->fed_policy | type=INFLUENCES
+2025-09-02T15:09:36 | Node relationship created | ust2y->us_services_pmi | type=INFLUENCES
+2025-09-02T15:09:37 | Replacement of article skipped | ust2y | no competing candidates in timeframe medium
+2025-09-02T15:09:37 | Added article | 6QYR1JT7L | to existing topic ust2y
+2025-09-02T15:11:04 | Node relationship created | us_core_pce->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T15:11:04 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=3 < 5
+2025-09-02T15:11:04 | Added article | E1S46520V | to existing topic us_core_pce
+2025-09-02T15:11:56 | Node relationship removed | brent->fed_policy | type=INFLUENCES
+2025-09-02T15:11:56 | Node relationship created | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T15:11:56 | Replacement of article skipped | brent | no competing candidates in timeframe current
+2025-09-02T15:11:56 | Added article | Z7O1DCHS7 | to intended topic brent
+2025-09-02T15:12:56 | Node relationship created | us_services_pmi->usdjpy | type=INFLUENCES
+2025-09-02T15:12:56 | Replacement of article skipped | usdjpy | tf=current cnt=3 < 5
+2025-09-02T15:12:57 | Added article | Z7O1DCHS7 | to existing topic usdjpy
+2025-09-02T15:13:42 | Node relationship created | cn_russia_gas_pipeline->china_credit_impulse | type=INFLUENCES
+2025-09-02T15:13:42 | Replacement of article skipped | cn_russia_gas_pipeline | tf=fundamental cnt=2 < 5
+2025-09-02T15:13:42 | Added article | 2AN2CK3K4 | to existing topic cn_russia_gas_pipeline
+2025-09-02T15:46:25 | Node relationship created | oil_price_decline->gbpusd | type=INFLUENCES
+2025-09-02T15:46:25 | Replacement of article skipped | gbpusd | no competing candidates in timeframe current
+2025-09-02T15:46:25 | Added article | Z7O1DCHS7 | to existing topic gbpusd
+2025-09-02T15:48:45 | Node relationship created | usdcny->eurusd | type=INFLUENCES
+2025-09-02T15:48:45 | Replacement of article skipped | usdcny | tf=current cnt=3 < 5
+2025-09-02T15:48:45 | Added article | Z7O1DCHS7 | to existing topic usdcny
+2025-09-02T15:50:30 | Node relationship removed | ust10y->usdcny | type=INFLUENCES
+2025-09-02T15:50:30 | Node relationship created | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T15:50:30 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T15:50:30 | Added article | Z7O1DCHS7 | to existing topic ust10y
+2025-09-02T15:52:28 | Node relationship removed | spx->oil_price_decline | type=INFLUENCES
+2025-09-02T15:52:28 | Node relationship created | fed_powell_rate_cut_hint_2025->spx | type=INFLUENCES
+2025-09-02T15:52:28 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T15:52:28 | Added article | PTG0NPCTL | to existing topic spx
+2025-09-02T15:52:50 | Node relationship created | ust2y->ecb_policy | type=CORRELATES_WITH
+2025-09-02T15:52:51 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T15:52:51 | Added article | Z7O1DCHS7 | to existing topic ust2y
+2025-09-02T15:52:51 | Backfill added | Z7O1DCHS7 -> brent | section=medium
+2025-09-02T15:55:27 | Node relationship removed | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T15:55:27 | Node relationship created | ust10y->usdcny | type=INFLUENCES
+2025-09-02T15:55:27 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T15:55:27 | Added article | PTG0NPCTL | to existing topic ust10y
+2025-09-02T15:56:08 | Node relationship created | cn_russia_gas_pipeline->usdcny | type=INFLUENCES
+2025-09-02T15:56:08 | Replacement of article skipped | cn_russia_gas_pipeline | tf=medium cnt=1 < 5
+2025-09-02T15:56:08 | Added article | GBZF2IAID | to existing topic cn_russia_gas_pipeline
+2025-09-02T15:56:09 | Enrichment check | euro_inflation | section=fundamental
+2025-09-02T15:56:27 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T15:56:27 | Added article | PTG0NPCTL | to existing topic ust2y
+2025-09-02T15:58:33 | Enrichment check | euro_inflation | section=medium
+2025-09-02T15:58:33 | Enrichment check | euro_inflation | section=current
+2025-09-02T15:59:45 | Enrichment summary | topic=euro_inflation (Euro Area Inflation) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T15:59:45 | Pipeline complete | pipeline | run complete
+2025-09-02T15:59:52 | Node relationship removed | oil_price_decline->fed_policy | type=INFLUENCES
+2025-09-02T15:59:52 | Node relationship created | oil_price_decline->us_crude_inventory | type=INFLUENCES
+2025-09-02T15:59:53 | Replacement of article skipped | oil_price_decline | tf=medium cnt=1 < 5
+2025-09-02T15:59:53 | Added article | V075F0GSV | to existing topic oil_price_decline
+2025-09-02T16:00:08 | Node relationship removed | wti->us_crude_inventory | type=INFLUENCES
+2025-09-02T16:00:08 | Node relationship created | wti->ust30y | type=INFLUENCES
+2025-09-02T16:00:08 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T16:00:08 | Added article | PTG0NPCTL | to existing topic wti
+2025-09-02T16:00:22 | Retrieved articles | Euribor | Retrieved 10 from API
+2025-09-02T16:04:04 | Node relationship removed | sofr->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T16:04:04 | Node relationship created | sofr->us_services_pmi | type=INFLUENCES
+2025-09-02T16:04:05 | Replacement of article skipped | sofr | tf=medium cnt=0 < 5
+2025-09-02T16:04:05 | Added article | V075F0GSV | to existing topic sofr
+2025-09-02T16:04:09 | Node relationship removed | gold->bund10y | type=CORRELATES_WITH
+2025-09-02T16:04:09 | Node relationship created | gold->eurusd | type=CORRELATES_WITH
+2025-09-02T16:04:09 | Replacement of article skipped | gold | tf=current cnt=1 < 5
+2025-09-02T16:04:09 | Added article | PTG0NPCTL | to existing topic gold
+2025-09-02T16:05:06 | Replacement of article skipped | us_core_pce | tf=medium cnt=4 < 5
+2025-09-02T16:05:06 | Added article | V075F0GSV | to existing topic us_core_pce
+2025-09-02T16:05:18 | Node relationship removed | fed_policy->us_inflation | type=INFLUENCES
+2025-09-02T16:05:18 | Node relationship created | fed_policy->ust30y | type=INFLUENCES
+2025-09-02T16:05:18 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T16:05:18 | Added article | PTG0NPCTL | to existing topic fed_policy
+2025-09-02T16:06:46 | Node relationship created | euribor->sx5e | type=INFLUENCES
+2025-09-02T16:06:46 | Replacement of article skipped | euribor | tf=medium cnt=0 < 5
+2025-09-02T16:06:46 | Added article | V075F0GSV | to existing topic euribor
+2025-09-02T16:06:46 | Backfill added | V075F0GSV -> brent | section=medium
+2025-09-02T16:06:47 | Enrichment check | brent | section=current
+2025-09-02T16:06:47 | Enrichment summary | topic=brent (Brent Crude Oil) | 2 new fundamental articles, 4 new medium articles, 0 new current articles
+2025-09-02T16:06:47 | Enrichment check | gilt10y | section=fundamental
+2025-09-02T16:07:23 | Topic rejected | name=Nematicides Market worth $3.06 billion by 2030- Exclusive Report by MarketsandMarkets™ | category=None | failure=proposal_null
+2025-09-02T16:07:23 | Failed to create new topic for article | Z56GMNAB2 | to new topic None
+2025-09-02T16:07:24 | Enrichment check | india_industrial_output | section=fundamental
+2025-09-02T16:10:29 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T16:10:30 | Node relationship created | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-02T16:10:30 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T16:10:30 | Added article | TDI5LPM6M | to existing topic fed_policy
+2025-09-02T16:11:04 | Node relationship removed | us_inflation->us_services_pmi | type=INFLUENCES
+2025-09-02T16:11:04 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T16:11:04 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T16:11:04 | Added article | TDI5LPM6M | to existing topic us_inflation
+2025-09-02T16:11:58 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T16:11:58 | Node relationship created | us_core_pce->us_inflation | type=INFLUENCES
+2025-09-02T16:11:59 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe medium
+2025-09-02T16:11:59 | Added article | TDI5LPM6M | to existing topic us_core_pce
+2025-09-02T16:13:16 | Node relationship removed | ust10y->gilt10y | type=INFLUENCES
+2025-09-02T16:13:16 | Node relationship created | ust10y->gbpusd | type=INFLUENCES
+2025-09-02T16:13:16 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T16:13:16 | Added article | TDI5LPM6M | to existing topic ust10y
+2025-09-02T16:14:21 | Node relationship removed | ust2y->gilt10y | type=INFLUENCES
+2025-09-02T16:14:22 | Node relationship created | ust2y->usdjpy | type=INFLUENCES
+2025-09-02T16:14:22 | Replacement of article skipped | ust2y | no competing candidates in timeframe medium
+2025-09-02T16:14:22 | Added article | TDI5LPM6M | to existing topic ust2y
+2025-09-02T16:15:08 | Node relationship removed | ust5y->gilt10y | type=INFLUENCES
+2025-09-02T16:15:09 | Node relationship created | ust5y->gilt10y | type=INFLUENCES
+2025-09-02T16:15:09 | Replacement of article skipped | ust5y | no competing candidates in timeframe medium
+2025-09-02T16:15:09 | Added article | TDI5LPM6M | to existing topic ust5y
+2025-09-02T16:16:01 | Node relationship removed | ust30y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T16:16:01 | Node relationship created | ust30y->fed_policy | type=INFLUENCES
+2025-09-02T16:16:01 | Replacement of article skipped | ust30y | no competing candidates in timeframe medium
+2025-09-02T16:16:01 | Added article | TDI5LPM6M | to existing topic ust30y
+2025-09-02T16:17:20 | Node relationship removed | dxy->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-02T16:17:20 | Node relationship created | dxy->brent | type=CORRELATES_WITH
+2025-09-02T16:17:20 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T16:17:21 | Added article | TDI5LPM6M | to existing topic dxy
+2025-09-02T16:18:05 | Node relationship removed | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T16:18:05 | Node relationship created | us_unemployment_claims->us_services_pmi | type=INFLUENCES
+2025-09-02T16:18:05 | Replacement of article skipped | us_unemployment_claims | tf=medium cnt=3 < 5
+2025-09-02T16:18:05 | Added article | TDI5LPM6M | to existing topic us_unemployment_claims
+2025-09-02T16:18:49 | Node relationship created | us_services_pmi->ust10y | type=INFLUENCES
+2025-09-02T16:18:49 | Replacement of article skipped | us_services_pmi | tf=medium cnt=1 < 5
+2025-09-02T16:18:50 | Added article | TDI5LPM6M | to existing topic us_services_pmi
+2025-09-02T16:20:06 | Enrichment check | india_industrial_output | section=medium
+2025-09-02T16:20:50 | Node relationship removed | spx->gold | type=CORRELATES_WITH
+2025-09-02T16:20:50 | Node relationship created | spx->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T16:20:50 | Replacement of article skipped | spx | no competing candidates in timeframe fundamental
+2025-09-02T16:20:50 | Added article | WTBE54AFV | to existing topic spx
+2025-09-02T16:20:50 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-02T16:20:50 | Replacement of article skipped | ndx | tf=fundamental cnt=0 < 5
+2025-09-02T16:20:50 | Added article | WTBE54AFV | to existing topic ndx
+2025-09-02T16:23:28 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-09-02T16:23:28 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T16:23:28 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T16:23:28 | Added article | IJXB7LNLE | to existing topic us_inflation
+2025-09-02T16:24:20 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T16:24:20 | Added article | IJXB7LNLE | to existing topic fed_policy
+2025-09-02T16:24:59 | Node relationship removed | ust10y->euro_inflation | type=CORRELATES_WITH
+2025-09-02T16:24:59 | Node relationship created | ust10y->gilt10y | type=CORRELATES_WITH
+2025-09-02T16:25:00 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T16:25:00 | Added article | IJXB7LNLE | to existing topic ust10y
+2025-09-02T16:25:31 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T16:25:32 | Added article | IJXB7LNLE | to existing topic ust2y
+2025-09-02T16:26:24 | Node relationship removed | ust5y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T16:26:24 | Node relationship created | ust5y->usdcny | type=INFLUENCES
+2025-09-02T16:26:24 | Replacement of article skipped | ust5y | tf=current cnt=3 < 5
+2025-09-02T16:26:24 | Added article | IJXB7LNLE | to existing topic ust5y
+2025-09-02T16:27:20 | Node relationship removed | ust30y->fed_policy | type=INFLUENCES
+2025-09-02T16:27:20 | Node relationship created | ust30y->jgb10y | type=INFLUENCES
+2025-09-02T16:27:20 | Replacement of article skipped | ust30y | tf=current cnt=3 < 5
+2025-09-02T16:27:20 | Added article | IJXB7LNLE | to existing topic ust30y
+2025-09-02T16:28:06 | Node relationship removed | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T16:28:06 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T16:28:06 | Replacement of article skipped | us_core_pce | tf=current cnt=4 < 5
+2025-09-02T16:28:07 | Added article | IJXB7LNLE | to existing topic us_core_pce
+2025-09-02T16:28:51 | Enrichment check | euribor | section=fundamental
+2025-09-02T16:33:13 | Enrichment check | euribor | section=medium
+2025-09-02T16:35:03 | Enrichment check | euribor | section=current
+2025-09-02T16:36:38 | Enrichment summary | topic=euribor (Euribor) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T16:36:38 | Pipeline complete | pipeline | run complete
+2025-09-02T16:36:45 | Retrieved articles | Gold | Retrieved 10 from API
+2025-09-02T16:37:38 | Enrichment check | india_industrial_output | section=current
+2025-09-02T16:37:38 | Enrichment summary | topic=india_industrial_output (India Industrial Output) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T16:37:38 | Pipeline complete | pipeline | run complete
+2025-09-02T16:38:14 | Retrieved articles | USD/CNY | Retrieved 10 from API
+2025-09-02T16:38:51 | Enrichment check | gilt10y | section=medium
+2025-09-02T16:44:03 | Node relationship removed | gilt10y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T16:44:03 | Node relationship created | gilt10y->sx5e | type=INFLUENCES
+2025-09-02T16:44:03 | Replacement of article skipped | gilt10y | no competing candidates in timeframe current
+2025-09-02T16:44:04 | Added article | ZHP7CT70G | to intended topic gilt10y
+2025-09-02T16:44:48 | Topic rejected | name=UK 30-Year Gilt Yield | category=asset | failure=relevance_gate_reject
+2025-09-02T16:44:48 | Failed to create new topic for article | ZHP7CT70G | to new topic None
+2025-09-02T16:44:48 | Backfill added | ZHP7CT70G -> gilt10y | section=medium
+2025-09-02T16:46:36 | Node relationship removed | ust10y->ust5y | type=INFLUENCES
+2025-09-02T16:46:36 | Node relationship created | ust10y->us_services_pmi | type=INFLUENCES
+2025-09-02T16:46:37 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T16:46:37 | Added article | 8UASSID1Y | to existing topic ust10y
+2025-09-02T16:47:14 | Node relationship created | gbpusd->eurusd | type=CORRELATES_WITH
+2025-09-02T16:47:14 | Replacement of article skipped | gbpusd | no competing candidates in timeframe current
+2025-09-02T16:47:14 | Added article | ZHP7CT70G | to existing topic gbpusd
+2025-09-02T16:47:59 | Topic rejected | name=UK 30-Year Gilt Yield | category=asset | failure=relevance_gate_reject
+2025-09-02T16:47:59 | Failed to create new topic for article | ZHP7CT70G | to new topic None
+2025-09-02T16:50:17 | Topic added | name=European AT1 bond issuance | category=asset | importance=2
+2025-09-02T16:50:38 | Node relationship created | gilt10y->usdjpy | type=CORRELATES_WITH
+2025-09-02T16:50:38 | Replacement of article skipped | gilt10y | tf=medium cnt=2 < 5
+2025-09-02T16:50:38 | Added article | MGG2N7IIZ | to intended topic gilt10y
+2025-09-02T16:52:47 | Node relationship created | eur_at1_issuance->ecb_policy | type=CORRELATES_WITH
+2025-09-02T16:52:47 | Replacement of article skipped | eur_at1_issuance | tf=current cnt=1 < 5
+2025-09-02T16:52:47 | Added article | 8UASSID1Y | to new topic eur_at1_issuance
+2025-09-02T16:54:18 | Topic added | name=UK 30-Year Gilt Yield | category=macro_driver | importance=1
+2025-09-02T16:55:03 | Topic rejected | name=What $400,000 can buy you in Hunterdon County, Aug. 25 to 31 | category=None | failure=proposal_null
+2025-09-02T16:55:03 | Failed to create new topic for article | PK5OAUXE6 | to new topic None
+2025-09-02T16:55:10 | Node relationship created | uk_30yr_gilt_yield->gbpusd | type=INFLUENCES
+2025-09-02T16:55:10 | Replacement of article skipped | uk_30yr_gilt_yield | tf=medium cnt=1 < 5
+2025-09-02T16:55:10 | Added article | MGG2N7IIZ | to new topic uk_30yr_gilt_yield
+2025-09-02T16:55:10 | Backfill added | MGG2N7IIZ -> gilt10y | section=medium
+2025-09-02T16:55:39 | Topic rejected | name=Asia-Pacific Mivan Construction Market Report 2025 | category=None | failure=proposal_null
+2025-09-02T16:55:39 | Failed to create new topic for article | 7F93FQLIC | to new topic None
+2025-09-02T16:55:46 | Enrichment check | gold | section=fundamental
+2025-09-02T16:56:47 | Replacement of article skipped | gold | no competing candidates in timeframe medium
+2025-09-02T16:56:47 | Added article | F8P4XUTSH | to existing topic gold
+2025-09-02T16:58:22 | Node relationship removed | copper->china_exports | type=INFLUENCES
+2025-09-02T16:58:22 | Node relationship created | copper->us_inflation | type=INFLUENCES
+2025-09-02T16:58:22 | Replacement of article skipped | copper | tf=medium cnt=4 < 5
+2025-09-02T16:58:22 | Added article | F8P4XUTSH | to existing topic copper
+2025-09-02T17:00:32 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T17:00:32 | Added article | 46EPPZ497 | to existing topic fed_policy
+2025-09-02T17:00:32 | Enrichment check | usdcny | section=fundamental
+2025-09-02T17:15:00 | Enrichment check | usdcny | section=medium
+2025-09-02T17:30:04 | Enrichment check | usdcny | section=current
+2025-09-02T17:30:04 | Enrichment summary | topic=usdcny (USD/CNY) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T17:30:04 | Pipeline complete | pipeline | run complete
+2025-09-02T17:30:06 | Retrieved articles | German 10Y Bund Yield | Retrieved 10 from API
+2025-09-02T17:32:01 | Enrichment check | gold | section=medium
+2025-09-02T17:32:01 | Enrichment check | gold | section=current
+2025-09-02T17:32:42 | Node relationship created | uk_30yr_gilt_yield->ust10y | type=CORRELATES_WITH
+2025-09-02T17:32:42 | Replacement of article skipped | uk_30yr_gilt_yield | tf=current cnt=1 < 5
+2025-09-02T17:32:42 | Added article | K1VNVJPYJ | to existing topic uk_30yr_gilt_yield
+2025-09-02T17:32:42 | Backfill added | K1VNVJPYJ -> gilt10y | section=medium
+2025-09-02T17:35:08 | Enrichment summary | topic=gold (Gold) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T17:35:08 | Pipeline complete | pipeline | run complete
+2025-09-02T17:35:15 | Retrieved articles | China Exports | Retrieved 10 from API
+2025-09-02T17:35:44 | Enrichment check | gilt10y | section=current
+2025-09-02T17:35:44 | Enrichment summary | topic=gilt10y (UK 10Y Gilt Yield) | 0 new fundamental articles, 3 new medium articles, 0 new current articles
+2025-09-02T17:35:44 | Enrichment check | sx5e | section=fundamental
+2025-09-02T17:38:53 | Enrichment check | sx5e | section=medium
+2025-09-02T17:40:43 | Node relationship removed | fed_policy->gbpusd | type=INFLUENCES
+2025-09-02T17:40:43 | Node relationship created | fed_policy->us_inflation | type=INFLUENCES
+2025-09-02T17:40:43 | Replacement of article skipped | fed_policy | no competing candidates in timeframe fundamental
+2025-09-02T17:40:43 | Added article | 211XL3CDY | to existing topic fed_policy
+2025-09-02T17:40:56 | Enrichment check | sx5e | section=current
+2025-09-02T17:45:56 | Node relationship removed | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-02T17:45:56 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-09-02T17:45:56 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T17:45:57 | Added article | XTYF990XO | to existing topic fed_policy
+2025-09-02T17:48:48 | Topic rejected | name=US Defense Spending | category=macro_driver | failure=importance_remove
+2025-09-02T17:48:49 | Failed to create new topic for article | XTYF990XO | to new topic None
+2025-09-02T17:51:18 | Node relationship created | sx5e->copper | type=INFLUENCES
+2025-09-02T17:51:18 | Replacement of article skipped | sx5e | tf=current cnt=3 < 5
+2025-09-02T17:51:18 | Added article | ZWPE530NG | to intended topic sx5e
+2025-09-02T17:53:25 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-09-02T17:53:25 | Node relationship created | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-02T17:53:25 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T17:53:25 | Added article | 9F6DP5GIL | to existing topic fed_policy
+2025-09-02T17:53:38 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T17:53:38 | Node relationship created | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T17:53:39 | Replacement of article skipped | us_core_pce | tf=current cnt=4 < 5
+2025-09-02T17:53:39 | Added article | ZWPE530NG | to existing topic us_core_pce
+2025-09-02T17:55:01 | Node relationship removed | us_inflation->sofr | type=INFLUENCES
+2025-09-02T17:55:01 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-02T17:55:01 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T17:55:01 | Added article | 9F6DP5GIL | to existing topic us_inflation
+2025-09-02T17:55:15 | Node relationship removed | fed_policy->usdjpy | type=INFLUENCES
+2025-09-02T17:55:16 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T17:55:16 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T17:55:16 | Added article | ZWPE530NG | to existing topic fed_policy
+2025-09-02T17:57:08 | Node relationship created | us_services_pmi->us_core_pce | type=INFLUENCES
+2025-09-02T17:57:08 | Replacement of article skipped | us_services_pmi | tf=current cnt=0 < 5
+2025-09-02T17:57:08 | Added article | ZWPE530NG | to existing topic us_services_pmi
+2025-09-02T17:57:26 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T17:57:26 | Node relationship created | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T17:57:26 | Replacement of article skipped | fed_policy | no competing candidates in timeframe fundamental
+2025-09-02T17:57:26 | Added article | IJRJJ85IE | to existing topic fed_policy
+2025-09-02T17:57:47 | Node relationship removed | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T17:57:47 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T17:57:47 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T17:57:47 | Added article | 9F6DP5GIL | to existing topic us_core_pce
+2025-09-02T18:01:00 | Node relationship removed | us_unemployment_claims->us_services_pmi | type=INFLUENCES
+2025-09-02T18:01:00 | Node relationship created | us_unemployment_claims->usdcny | type=INFLUENCES
+2025-09-02T18:01:01 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=2 < 5
+2025-09-02T18:01:01 | Added article | ZWPE530NG | to existing topic us_unemployment_claims
+2025-09-02T18:01:07 | Node relationship removed | us_inflation->ust5y | type=INFLUENCES
+2025-09-02T18:01:07 | Node relationship created | us_inflation->ust5y | type=INFLUENCES
+2025-09-02T18:01:07 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T18:01:07 | Added article | IJRJJ85IE | to existing topic us_inflation
+2025-09-02T18:01:16 | Node relationship removed | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T18:01:16 | Node relationship created | dxy->spx | type=INFLUENCES
+2025-09-02T18:01:16 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T18:01:17 | Added article | 9F6DP5GIL | to existing topic dxy
+2025-09-02T18:02:53 | Node relationship created | us_crude_inventory->us_inflation | type=INFLUENCES
+2025-09-02T18:02:54 | Replacement of article skipped | us_crude_inventory | tf=current cnt=0 < 5
+2025-09-02T18:02:54 | Added article | ZWPE530NG | to existing topic us_crude_inventory
+2025-09-02T18:04:10 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T18:04:10 | Node relationship created | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T18:04:10 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=3 < 5
+2025-09-02T18:04:10 | Added article | IJRJJ85IE | to existing topic us_core_pce
+2025-09-02T18:04:22 | Node relationship removed | spx->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T18:04:22 | Node relationship created | spx->copper | type=CORRELATES_WITH
+2025-09-02T18:04:22 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T18:04:22 | Added article | 9F6DP5GIL | to existing topic spx
+2025-09-02T18:05:37 | Node relationship removed | ust10y->us_services_pmi | type=INFLUENCES
+2025-09-02T18:05:37 | Node relationship created | ust10y->eur_at1_issuance | type=INFLUENCES
+2025-09-02T18:05:38 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T18:05:38 | Added article | ZWPE530NG | to existing topic ust10y
+2025-09-02T18:06:52 | Node relationship removed | ust10y->ust30y | type=INFLUENCES
+2025-09-02T18:06:52 | Relationship duplicate | fed_policy->ust10y | type=INFLUENCES
+2025-09-02T18:06:52 | Replacement of article skipped | ust10y | no competing candidates in timeframe fundamental
+2025-09-02T18:06:52 | Added article | IJRJJ85IE | to existing topic ust10y
+2025-09-02T18:07:15 | Node relationship removed | ust10y->us_services_pmi | type=INFLUENCES
+2025-09-02T18:07:15 | Node relationship created | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T18:07:15 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T18:07:15 | Added article | 9F6DP5GIL | to existing topic ust10y
+2025-09-02T18:08:10 | Node relationship removed | ust2y->us_services_pmi | type=INFLUENCES
+2025-09-02T18:08:10 | Node relationship created | ust2y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T18:08:10 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T18:08:10 | Added article | ZWPE530NG | to existing topic ust2y
+2025-09-02T18:09:12 | Node relationship removed | ust2y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T18:09:13 | Node relationship created | ust2y->gilt10y | type=CORRELATES_WITH
+2025-09-02T18:09:13 | Replacement of article skipped | ust2y | no competing candidates in timeframe fundamental
+2025-09-02T18:09:13 | Added article | IJRJJ85IE | to existing topic ust2y
+2025-09-02T18:10:31 | Node relationship removed | ust5y->gilt10y | type=INFLUENCES
+2025-09-02T18:10:32 | Node relationship created | ust5y->gold | type=INFLUENCES
+2025-09-02T18:10:32 | Replacement of article skipped | ust5y | tf=current cnt=3 < 5
+2025-09-02T18:10:32 | Added article | ZWPE530NG | to existing topic ust5y
+2025-09-02T18:11:59 | Node relationship removed | ust5y->us_core_pce | type=INFLUENCES
+2025-09-02T18:11:59 | Node relationship created | oil_price_decline->ust5y | type=INFLUENCES
+2025-09-02T18:12:00 | Replacement of article skipped | ust5y | no competing candidates in timeframe fundamental
+2025-09-02T18:12:00 | Added article | IJRJJ85IE | to existing topic ust5y
+2025-09-02T18:13:22 | Node relationship removed | us_unemployment_claims->usdcny | type=INFLUENCES
+2025-09-02T18:13:22 | Node relationship created | us_unemployment_claims->us_services_pmi | type=INFLUENCES
+2025-09-02T18:13:22 | Replacement of article skipped | us_unemployment_claims | tf=fundamental cnt=1 < 5
+2025-09-02T18:13:22 | Added article | 26H097JA0 | to existing topic us_unemployment_claims
+2025-09-02T18:13:36 | Node relationship removed | ust30y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T18:13:36 | Node relationship created | ust30y->uk_30yr_gilt_yield | type=CORRELATES_WITH
+2025-09-02T18:13:36 | Replacement of article skipped | ust30y | tf=current cnt=3 < 5
+2025-09-02T18:13:37 | Added article | ZWPE530NG | to existing topic ust30y
+2025-09-02T18:15:31 | Node relationship removed | ust30y->gilt10y | type=INFLUENCES
+2025-09-02T18:15:31 | Node relationship created | ust30y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T18:15:32 | Replacement of article skipped | ust30y | no competing candidates in timeframe fundamental
+2025-09-02T18:15:32 | Added article | IJRJJ85IE | to existing topic ust30y
+2025-09-02T18:15:36 | Node relationship created | us_services_pmi->us_inflation | type=INFLUENCES
+2025-09-02T18:15:36 | Replacement of article skipped | us_services_pmi | tf=fundamental cnt=0 < 5
+2025-09-02T18:15:36 | Added article | 26H097JA0 | to existing topic us_services_pmi
+2025-09-02T18:17:39 | Node relationship removed | spx->copper | type=CORRELATES_WITH
+2025-09-02T18:17:39 | Node relationship created | spx->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T18:17:39 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T18:17:39 | Added article | ZWPE530NG | to existing topic spx
+2025-09-02T18:17:39 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-02T18:17:40 | Replacement of article skipped | ndx | tf=current cnt=0 < 5
+2025-09-02T18:17:40 | Added article | ZWPE530NG | to existing topic ndx
+2025-09-02T18:20:18 | Node relationship removed | dxy->sofr | type=CORRELATES_WITH
+2025-09-02T18:20:18 | Node relationship created | dxy->copper | type=CORRELATES_WITH
+2025-09-02T18:20:19 | Replacement of article skipped | dxy | no competing candidates in timeframe fundamental
+2025-09-02T18:20:19 | Added article | IJRJJ85IE | to existing topic dxy
+2025-09-02T18:20:30 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T18:20:31 | Added article | ZWPE530NG | to existing topic dxy
+2025-09-02T18:31:26 | Node relationship created | fed_policy->gold | type=INFLUENCES
+2025-09-02T18:31:27 | Replacement of article skipped | gold | tf=current cnt=1 < 5
+2025-09-02T18:31:27 | Added article | ZWPE530NG | to existing topic gold
+2025-09-02T18:34:31 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T18:34:31 | Node relationship created | us_inflation->wti | type=INFLUENCES
+2025-09-02T18:34:31 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T18:34:31 | Added article | CXWDXE6EY | to existing topic us_inflation
+2025-09-02T18:34:40 | Node relationship removed | wti->fed_policy | type=INFLUENCES
+2025-09-02T18:34:40 | Node relationship created | wti->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T18:34:41 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T18:34:41 | Added article | ZWPE530NG | to existing topic wti
+2025-09-02T18:35:50 | Replacement of article skipped | brent | no competing candidates in timeframe current
+2025-09-02T18:35:50 | Added article | ZWPE530NG | to existing topic brent
+2025-09-02T18:35:59 | Node relationship removed | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T18:36:00 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T18:36:00 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T18:36:00 | Added article | CXWDXE6EY | to existing topic fed_policy
+2025-09-02T18:38:44 | Node relationship removed | copper->us_core_pce | type=INFLUENCES
+2025-09-02T18:38:44 | Node relationship created | copper->dxy | type=INFLUENCES
+2025-09-02T18:38:44 | Replacement of article skipped | copper | tf=current cnt=4 < 5
+2025-09-02T18:38:44 | Added article | ZWPE530NG | to existing topic copper
+2025-09-02T18:38:45 | Backfill added | ZWPE530NG -> sx5e | section=current
+2025-09-02T18:38:55 | Node relationship removed | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T18:38:55 | Node relationship created | us_core_pce->gold | type=INFLUENCES
+2025-09-02T18:38:56 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T18:38:56 | Added article | CXWDXE6EY | to existing topic us_core_pce
+2025-09-02T18:42:28 | Replacement of article skipped | fed_policy | no competing candidates in timeframe fundamental
+2025-09-02T18:42:28 | Added article | FU1WG2TMC | to existing topic fed_policy
+2025-09-02T18:43:53 | Replacement of article skipped | ust10y | no competing candidates in timeframe fundamental
+2025-09-02T18:43:54 | Added article | FU1WG2TMC | to existing topic ust10y
+2025-09-02T18:44:54 | Node relationship created | sx5e->dxy | type=INFLUENCES
+2025-09-02T18:44:54 | Replacement of article skipped | sx5e | tf=current cnt=4 < 5
+2025-09-02T18:44:54 | Added article | Z7O1DCHS7 | to intended topic sx5e
+2025-09-02T18:47:37 | Replacement of article skipped | ust2y | no competing candidates in timeframe fundamental
+2025-09-02T18:47:37 | Added article | FU1WG2TMC | to existing topic ust2y
+2025-09-02T18:47:44 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T18:47:44 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T18:47:44 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T18:47:44 | Added article | WJOOO1RNJ | to existing topic us_inflation
+2025-09-02T18:48:04 | Enrichment check | china_exports | section=fundamental
+2025-09-02T18:48:04 | Enrichment check | china_exports | section=medium
+2025-09-02T18:48:55 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T18:48:55 | Relationship duplicate | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T18:48:55 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T18:48:55 | Added article | Z7O1DCHS7 | to existing topic us_inflation
+2025-09-02T18:49:33 | Node relationship removed | us_core_pce->us_inflation | type=INFLUENCES
+2025-09-02T18:49:33 | Node relationship created | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T18:49:33 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T18:49:33 | Added article | WJOOO1RNJ | to existing topic us_core_pce
+2025-09-02T18:50:09 | Enrichment check | china_exports | section=current
+2025-09-02T18:50:09 | Enrichment summary | topic=china_exports (China Exports) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T18:50:09 | Pipeline complete | pipeline | run complete
+2025-09-02T18:50:16 | Retrieved articles | US Unemployment Claims | Retrieved 10 from API
+2025-09-02T18:50:24 | Node relationship removed | us_core_pce->us_inflation | type=INFLUENCES
+2025-09-02T18:50:24 | Relationship duplicate | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T18:50:24 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T18:50:24 | Added article | Z7O1DCHS7 | to existing topic us_core_pce
+2025-09-02T18:50:48 | Node relationship removed | fed_policy->sofr | type=INFLUENCES
+2025-09-02T18:50:48 | Node relationship created | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T18:50:48 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T18:50:48 | Added article | WJOOO1RNJ | to existing topic fed_policy
+2025-09-02T18:52:24 | Node relationship removed | sofr->spx | type=INFLUENCES
+2025-09-02T18:52:24 | Node relationship created | sofr->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T18:52:25 | Replacement of article skipped | sofr | tf=current cnt=2 < 5
+2025-09-02T18:52:25 | Added article | Z7O1DCHS7 | to existing topic sofr
+2025-09-02T18:52:25 | Backfill added | Z7O1DCHS7 -> sx5e | section=current
+2025-09-02T18:52:25 | Enrichment summary | topic=sx5e (Euro Stoxx 50) | 0 new fundamental articles, 0 new medium articles, 2 new current articles
+2025-09-02T18:52:25 | Enrichment check | wti | section=fundamental
+2025-09-02T18:52:46 | Node relationship removed | dxy->copper | type=CORRELATES_WITH
+2025-09-02T18:52:46 | Node relationship created | dxy->sofr | type=CORRELATES_WITH
+2025-09-02T18:52:47 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T18:52:47 | Added article | WJOOO1RNJ | to existing topic dxy
+2025-09-02T18:54:01 | Node relationship removed | ust10y->gold | type=CORRELATES_WITH
+2025-09-02T18:54:02 | Node relationship created | ust10y->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T18:54:02 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T18:54:02 | Added article | WJOOO1RNJ | to existing topic ust10y
+2025-09-02T18:54:53 | Node relationship removed | ust2y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T18:54:54 | Node relationship created | ust2y->fed_policy | type=INFLUENCES
+2025-09-02T18:54:54 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T18:54:54 | Added article | WJOOO1RNJ | to existing topic ust2y
+2025-09-02T18:55:42 | Node relationship created | ust5y->us_core_pce | type=INFLUENCES
+2025-09-02T18:55:42 | Replacement of article skipped | ust5y | tf=current cnt=3 < 5
+2025-09-02T18:55:42 | Added article | WJOOO1RNJ | to existing topic ust5y
+2025-09-02T18:55:48 | Enrichment check | wti | section=medium
+2025-09-02T18:56:46 | Node relationship removed | ust30y->bund10y | type=INFLUENCES
+2025-09-02T18:56:47 | Node relationship created | ust30y->usdcny | type=INFLUENCES
+2025-09-02T18:56:47 | Replacement of article skipped | ust30y | tf=current cnt=3 < 5
+2025-09-02T18:56:47 | Added article | WJOOO1RNJ | to existing topic ust30y
+2025-09-02T18:59:49 | Node relationship removed | us_inflation->ust5y | type=INFLUENCES
+2025-09-02T18:59:49 | Node relationship created | us_inflation->ust5y | type=INFLUENCES
+2025-09-02T18:59:49 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T18:59:50 | Added article | MP7FVK538 | to existing topic us_inflation
+2025-09-02T19:00:58 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T19:00:58 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:00:59 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T19:00:59 | Added article | FV71FXMMQ | to existing topic us_inflation
+2025-09-02T19:01:42 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T19:01:42 | Added article | MP7FVK538 | to existing topic fed_policy
+2025-09-02T19:03:26 | Node relationship removed | us_core_pce->gold | type=INFLUENCES
+2025-09-02T19:03:27 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:03:27 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T19:03:27 | Added article | MP7FVK538 | to existing topic us_core_pce
+2025-09-02T19:04:43 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:04:44 | Relationship duplicate | us_services_pmi->us_inflation | type=INFLUENCES
+2025-09-02T19:04:44 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T19:04:44 | Added article | JX19BLXAI | to existing topic us_inflation
+2025-09-02T19:05:02 | Node relationship removed | ust10y->eur_at1_issuance | type=INFLUENCES
+2025-09-02T19:05:03 | Node relationship created | ust10y->gold | type=INFLUENCES
+2025-09-02T19:05:03 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T19:05:03 | Added article | MP7FVK538 | to existing topic ust10y
+2025-09-02T19:12:59 | Node relationship removed | fed_policy->ust30y | type=INFLUENCES
+2025-09-02T19:12:59 | Node relationship created | fed_policy->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:12:59 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T19:12:59 | Added article | 6OZ2R0LHJ | to existing topic fed_policy
+2025-09-02T19:14:47 | Node relationship removed | wti->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:14:47 | Node relationship created | wti->us_crude_inventory | type=INFLUENCES
+2025-09-02T19:14:47 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T19:14:48 | Added article | HQKY762UV | to intended topic wti
+2025-09-02T19:14:48 | Backfill added | HQKY762UV -> wti | section=medium
+2025-09-02T19:15:42 | Node relationship created | spx->copper | type=INFLUENCES
+2025-09-02T19:15:42 | Replacement of article skipped | spx | no competing candidates in timeframe fundamental
+2025-09-02T19:15:42 | Added article | 1Z9H7N99O | to existing topic spx
+2025-09-02T19:15:57 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-02T19:15:58 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T19:15:58 | Added article | 6OZ2R0LHJ | to existing topic us_inflation
+2025-09-02T19:18:14 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T19:18:14 | Added article | 6OZ2R0LHJ | to existing topic us_core_pce
+2025-09-02T19:18:29 | Enrichment check | us_unemployment_claims | section=fundamental
+2025-09-02T19:19:31 | Node relationship created | us_services_pmi->spx | type=INFLUENCES
+2025-09-02T19:19:31 | Replacement of article skipped | us_services_pmi | tf=current cnt=0 < 5
+2025-09-02T19:19:31 | Added article | 6OZ2R0LHJ | to existing topic us_services_pmi
+2025-09-02T19:19:42 | Enrichment check | us_unemployment_claims | section=medium
+2025-09-02T19:19:42 | Enrichment check | us_unemployment_claims | section=current
+2025-09-02T19:19:43 | Enrichment summary | topic=us_unemployment_claims (US Unemployment Claims) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T19:19:43 | Pipeline complete | pipeline | run complete
+2025-09-02T19:19:51 | Retrieved articles | China Credit Impulse | Retrieved 10 from API
+2025-09-02T19:21:26 | Node relationship removed | wti->us_crude_inventory | type=INFLUENCES
+2025-09-02T19:21:26 | Node relationship created | wti->usdcny | type=INFLUENCES
+2025-09-02T19:21:26 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T19:21:26 | Added article | SL2SE57CF | to intended topic wti
+2025-09-02T19:21:27 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-02T19:21:27 | Replacement of article skipped | ndx | tf=current cnt=0 < 5
+2025-09-02T19:21:27 | Added article | SL2SE57CF | to existing topic ndx
+2025-09-02T19:21:27 | Backfill added | SL2SE57CF -> wti | section=medium
+2025-09-02T19:21:39 | Node relationship removed | us_unemployment_claims->us_services_pmi | type=INFLUENCES
+2025-09-02T19:21:39 | Node relationship created | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:21:39 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=2 < 5
+2025-09-02T19:21:40 | Added article | 6OZ2R0LHJ | to existing topic us_unemployment_claims
+2025-09-02T19:26:59 | Node relationship removed | wti->usdcny | type=INFLUENCES
+2025-09-02T19:26:59 | Node relationship created | wti->fed_policy | type=INFLUENCES
+2025-09-02T19:27:00 | Replacement of article skipped | wti | no competing candidates in timeframe current
+2025-09-02T19:27:00 | Added article | 7XH2DKEKV | to intended topic wti
+2025-09-02T19:27:10 | Node relationship removed | fed_policy->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:27:10 | Node relationship created | fed_policy->ust30y | type=INFLUENCES
+2025-09-02T19:27:10 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T19:27:10 | Added article | ZDCU0OUZO | to existing topic fed_policy
+2025-09-02T19:28:56 | Node relationship removed | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T19:28:57 | Node relationship created | fed_policy->usdjpy | type=INFLUENCES
+2025-09-02T19:28:57 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T19:28:57 | Added article | 7XH2DKEKV | to existing topic fed_policy
+2025-09-02T19:31:47 | Node relationship removed | us_inflation->fed_policy | type=INFLUENCES
+2025-09-02T19:31:47 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:31:47 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T19:31:47 | Added article | 7XH2DKEKV | to existing topic us_inflation
+2025-09-02T19:32:53 | Node relationship removed | us_unemployment_claims->ust5y | type=INFLUENCES
+2025-09-02T19:32:54 | Node relationship created | us_unemployment_claims->ust5y | type=INFLUENCES
+2025-09-02T19:32:54 | Replacement of article skipped | us_unemployment_claims | tf=medium cnt=4 < 5
+2025-09-02T19:32:54 | Added article | 3CPQSMVVI | to existing topic us_unemployment_claims
+2025-09-02T19:34:07 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:34:07 | Node relationship created | us_core_pce->us_inflation | type=INFLUENCES
+2025-09-02T19:34:07 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T19:34:07 | Added article | 7XH2DKEKV | to existing topic us_core_pce
+2025-09-02T19:37:09 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T19:37:09 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-09-02T19:37:09 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T19:37:09 | Added article | 3CPQSMVVI | to existing topic fed_policy
+2025-09-02T19:37:10 | Enrichment check | bund10y | section=fundamental
+2025-09-02T19:37:18 | Node relationship created | hurricane_risk_ust10y->fed_policy | type=INFLUENCES
+2025-09-02T19:37:18 | Replacement of article skipped | hurricane_risk_ust10y | tf=current cnt=0 < 5
+2025-09-02T19:37:18 | Added article | 6DHB4W7R8 | to existing topic hurricane_risk_ust10y
+2025-09-02T19:37:25 | Node relationship created | us_services_pmi->us_unemployment_claims | type=INFLUENCES
+2025-09-02T19:37:25 | Replacement of article skipped | us_services_pmi | tf=current cnt=1 < 5
+2025-09-02T19:37:25 | Added article | 7XH2DKEKV | to existing topic us_services_pmi
+2025-09-02T19:39:48 | Enrichment check | bund10y | section=medium
+2025-09-02T19:40:11 | Node relationship removed | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T19:40:11 | Node relationship created | us_unemployment_claims->us_services_pmi | type=INFLUENCES
+2025-09-02T19:40:11 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=3 < 5
+2025-09-02T19:40:11 | Added article | 7XH2DKEKV | to existing topic us_unemployment_claims
+2025-09-02T19:41:39 | Node relationship removed | eurusd->usdcny | type=INFLUENCES
+2025-09-02T19:41:39 | Node relationship created | eurusd->spx | type=INFLUENCES
+2025-09-02T19:41:39 | Replacement of article skipped | eurusd | no competing candidates in timeframe current
+2025-09-02T19:41:39 | Added article | 7XH2DKEKV | to existing topic eurusd
+2025-09-02T19:42:52 | Node relationship removed | fed_policy->sofr | type=INFLUENCES
+2025-09-02T19:42:52 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T19:42:52 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T19:42:52 | Added article | UWIKB5JCE | to existing topic fed_policy
+2025-09-02T19:43:06 | Node relationship created | usdjpy->ust30y | type=CORRELATES_WITH
+2025-09-02T19:43:07 | Replacement of article skipped | usdjpy | tf=current cnt=4 < 5
+2025-09-02T19:43:07 | Added article | 7XH2DKEKV | to existing topic usdjpy
+2025-09-02T19:44:53 | Node relationship created | gbpusd->dxy | type=INFLUENCES
+2025-09-02T19:44:53 | Replacement of article skipped | gbpusd | no competing candidates in timeframe current
+2025-09-02T19:44:53 | Added article | 7XH2DKEKV | to existing topic gbpusd
+2025-09-02T19:46:18 | Node relationship removed | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T19:46:18 | Node relationship created | ust10y->sx5e | type=INFLUENCES
+2025-09-02T19:46:18 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T19:46:18 | Added article | 7XH2DKEKV | to existing topic ust10y
+2025-09-02T19:46:28 | Node relationship created | hurricane_risk_ust10y->dxy | type=INFLUENCES
+2025-09-02T19:46:28 | Replacement of article skipped | hurricane_risk_ust10y | tf=current cnt=0 < 5
+2025-09-02T19:46:28 | Added article | 7W5MAFEI8 | to existing topic hurricane_risk_ust10y
+2025-09-02T19:48:33 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T19:48:33 | Added article | 7W5MAFEI8 | to existing topic ust10y
+2025-09-02T19:48:33 | Enrichment check | china_credit_impulse | section=fundamental
+2025-09-02T19:48:53 | Node relationship removed | ust2y->usdcny | type=INFLUENCES
+2025-09-02T19:48:54 | Node relationship created | ust2y->us_services_pmi | type=INFLUENCES
+2025-09-02T19:48:54 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T19:48:54 | Added article | 7XH2DKEKV | to existing topic ust2y
+2025-09-02T19:48:55 | Backfill added | 7XH2DKEKV -> wti | section=medium
+2025-09-02T19:48:55 | Enrichment check | wti | section=current
+2025-09-02T19:48:55 | Enrichment summary | topic=wti (WTI Crude Oil) | 0 new fundamental articles, 3 new medium articles, 0 new current articles
+2025-09-02T19:48:55 | Enrichment check | euribor | section=fundamental
+2025-09-02T19:53:38 | Enrichment check | euribor | section=medium
+2025-09-02T19:53:45 | Enrichment check | bund10y | section=current
+2025-09-02T19:53:45 | Enrichment summary | topic=bund10y (German 10Y Bund Yield) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T19:53:45 | Pipeline complete | pipeline | run complete
+2025-09-02T19:53:52 | Retrieved articles | US 30Y Treasury Yield | Retrieved 10 from API
+2025-09-02T19:54:43 | Enrichment check | china_credit_impulse | section=medium
+2025-09-02T19:54:51 | Enrichment check | euribor | section=current
+2025-09-02T19:58:18 | Enrichment summary | topic=euribor (Euribor) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T19:58:18 | Enrichment check | gold | section=fundamental
+2025-09-02T19:58:23 | Enrichment check | china_credit_impulse | section=current
+2025-09-02T20:03:33 | Node relationship removed | gilt10y->ust2y | type=INFLUENCES
+2025-09-02T20:03:33 | Relationship duplicate | gilt10y->ust30y | type=INFLUENCES
+2025-09-02T20:03:33 | Replacement of article skipped | gilt10y | no competing candidates in timeframe current
+2025-09-02T20:03:33 | Added article | G69EIAX6A | to existing topic gilt10y
+2025-09-02T20:04:25 | Node relationship created | uk_30yr_gilt_yield->ust30y | type=CORRELATES_WITH
+2025-09-02T20:04:25 | Replacement of article skipped | uk_30yr_gilt_yield | tf=current cnt=1 < 5
+2025-09-02T20:04:25 | Added article | G69EIAX6A | to existing topic uk_30yr_gilt_yield
+2025-09-02T20:07:49 | Node relationship removed | spx->bund10y | type=CORRELATES_WITH
+2025-09-02T20:07:49 | Node relationship created | spx->oil_price_decline | type=CORRELATES_WITH
+2025-09-02T20:07:49 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T20:07:49 | Added article | 69649LWLC | to existing topic spx
+2025-09-02T20:08:39 | Node relationship removed | ust10y->gilt10y | type=CORRELATES_WITH
+2025-09-02T20:08:39 | Relationship duplicate | ust10y->ust5y | type=CORRELATES_WITH
+2025-09-02T20:08:39 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T20:08:40 | Added article | 69649LWLC | to existing topic ust10y
+2025-09-02T20:10:05 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T20:10:05 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-09-02T20:10:06 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T20:10:06 | Added article | 69649LWLC | to existing topic fed_policy
+2025-09-02T20:11:02 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T20:11:02 | Node relationship created | us_inflation->fed_policy | type=INFLUENCES
+2025-09-02T20:11:03 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T20:11:03 | Added article | 69649LWLC | to existing topic us_inflation
+2025-09-02T20:12:07 | Node relationship removed | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T20:12:07 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T20:12:07 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T20:12:07 | Added article | 69649LWLC | to existing topic us_core_pce
+2025-09-02T20:13:25 | Node relationship created | gold->ust2y | type=INFLUENCES
+2025-09-02T20:13:25 | Replacement of article skipped | gold | tf=current cnt=1 < 5
+2025-09-02T20:13:25 | Added article | 69649LWLC | to existing topic gold
+2025-09-02T20:14:55 | Node relationship removed | dxy->jgb10y | type=CORRELATES_WITH
+2025-09-02T20:14:55 | Node relationship created | dxy->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T20:14:55 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T20:14:55 | Added article | 69649LWLC | to existing topic dxy
+2025-09-02T20:36:20 | Topic rejected | name=UK Shafik Adviser | category=policy | failure=relevance_gate_reject
+2025-09-02T20:36:20 | Failed to create new topic for article | 1UJPXQDSD | to new topic None
+2025-09-02T20:37:09 | Enrichment check | ust30y | section=fundamental
+2025-09-02T20:37:09 | Enrichment check | ust30y | section=medium
+2025-09-02T20:37:09 | Enrichment check | ust30y | section=current
+2025-09-02T20:37:09 | Enrichment summary | topic=ust30y (US 30Y Treasury Yield) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T20:37:09 | Pipeline complete | pipeline | run complete
+2025-09-02T20:37:16 | Retrieved articles | Boeing | Retrieved 6 from API
+2025-09-02T20:41:47 | Node relationship created | ba->dxy | type=INFLUENCES
+2025-09-02T20:41:47 | Replacement of article skipped | ba | tf=medium cnt=4 < 5
+2025-09-02T20:41:47 | Added article | 6ARUC6UYH | to existing topic ba
+2025-09-02T20:43:46 | Node relationship created | ba->ust2y | type=INFLUENCES
+2025-09-02T20:43:46 | Replacement of article skipped | ba | no competing candidates in timeframe medium
+2025-09-02T20:43:46 | Added article | R33PXPMPB | to existing topic ba
+2025-09-02T20:45:26 | Node relationship removed | fed_policy->gold | type=INFLUENCES
+2025-09-02T20:45:26 | Node relationship created | fed_policy->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T20:45:26 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T20:45:26 | Added article | R33PXPMPB | to existing topic fed_policy
+2025-09-02T20:47:16 | Replacement of article skipped | ba | tf=current cnt=3 < 5
+2025-09-02T20:47:17 | Added article | 780TRIQBC | to existing topic ba
+2025-09-02T20:48:21 | Node relationship removed | spx->copper | type=INFLUENCES
+2025-09-02T20:48:21 | Relationship duplicate | fed_powell_rate_cut_hint_2025->spx | type=INFLUENCES
+2025-09-02T20:48:22 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T20:48:22 | Added article | 780TRIQBC | to existing topic spx
+2025-09-02T20:49:58 | Node relationship created | ba->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T20:49:58 | Replacement of article skipped | ba | no competing candidates in timeframe medium
+2025-09-02T20:49:59 | Added article | 1PO7F53GQ | to existing topic ba
+2025-09-02T20:51:06 | Node relationship removed | spx->oil_price_decline | type=CORRELATES_WITH
+2025-09-02T20:51:06 | Node relationship created | spx->gold | type=CORRELATES_WITH
+2025-09-02T20:51:07 | Replacement of article skipped | spx | no competing candidates in timeframe medium
+2025-09-02T20:51:07 | Added article | 1PO7F53GQ | to existing topic spx
+2025-09-02T20:53:29 | Node relationship created | ba->ust5y | type=INFLUENCES
+2025-09-02T20:53:29 | Replacement of article skipped | ba | tf=current cnt=4 < 5
+2025-09-02T20:53:29 | Added article | 7TSHHZEQZ | to existing topic ba
+2025-09-02T20:55:47 | Node relationship removed | fed_policy->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T20:55:47 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-02T20:55:47 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T20:55:47 | Added article | 7TSHHZEQZ | to existing topic fed_policy
+2025-09-02T20:58:50 | Node relationship removed | ba->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T20:58:50 | Node relationship created | ba->usdjpy | type=INFLUENCES
+2025-09-02T20:58:50 | Replacement of article skipped | ba | no competing candidates in timeframe medium
+2025-09-02T20:58:50 | Added article | TO69AB3LB | to existing topic ba
+2025-09-02T20:58:51 | Enrichment check | ba | section=fundamental
+2025-09-02T20:58:51 | Enrichment check | ba | section=medium
+2025-09-02T20:58:51 | Enrichment check | ba | section=current
+2025-09-02T20:58:51 | Enrichment summary | topic=ba (Boeing) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T20:58:51 | Pipeline complete | pipeline | run complete
+2025-09-02T20:58:58 | Retrieved articles | Copper | Retrieved 10 from API
+2025-09-02T21:06:26 | Node relationship removed | us_inflation->eurusd | type=INFLUENCES
+2025-09-02T21:06:27 | Node relationship created | us_inflation->brent | type=INFLUENCES
+2025-09-02T21:06:27 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T21:06:27 | Added article | ID6AHI9ZV | to existing topic us_inflation
+2025-09-02T21:07:19 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T21:07:19 | Error | - | Relationship create error | us_core_pce->usd_cny | type=INFLUENCES Error: Cannot create link: source or target node missing. Link: {'motivation': 'US Core PCE drives Fed policy and dollar strength, which directly impacts the USD/CNY exchange rate.', 'type': 'INFLUENCES', 's
+2025-09-02T21:08:19 | Topic rejected | name=Every fusion startup that has raised over $100M | category=None | failure=proposal_null
+2025-09-02T21:08:19 | Failed to create new topic for article | PX1JH0O4Q | to new topic None
+2025-09-02T21:11:33 | Node relationship removed | fed_policy->usdjpy | type=INFLUENCES
+2025-09-02T21:11:33 | Node relationship created | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T21:11:33 | Replacement of article skipped | fed_policy | no competing candidates in timeframe fundamental
+2025-09-02T21:11:33 | Added article | M18BT6THA | to existing topic fed_policy
+2025-09-02T21:12:42 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-09-02T21:12:42 | Node relationship created | us_inflation->us_services_pmi | type=INFLUENCES
+2025-09-02T21:12:42 | Replacement of article skipped | us_inflation | no competing candidates in timeframe fundamental
+2025-09-02T21:12:42 | Added article | M18BT6THA | to existing topic us_inflation
+2025-09-02T21:13:59 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T21:13:59 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=3 < 5
+2025-09-02T21:13:59 | Added article | M18BT6THA | to existing topic us_core_pce
+2025-09-02T21:15:06 | Node relationship created | us_services_pmi->dxy | type=INFLUENCES
+2025-09-02T21:15:06 | Replacement of article skipped | us_services_pmi | tf=fundamental cnt=0 < 5
+2025-09-02T21:15:06 | Added article | M18BT6THA | to existing topic us_services_pmi
+2025-09-02T21:16:23 | Replacement of article skipped | us_unemployment_claims | tf=fundamental cnt=1 < 5
+2025-09-02T21:16:23 | Added article | M18BT6THA | to existing topic us_unemployment_claims
+2025-09-02T21:17:07 | Node relationship removed | ust10y->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-02T21:17:07 | Node relationship created | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T21:17:07 | Replacement of article skipped | ust10y | no competing candidates in timeframe fundamental
+2025-09-02T21:17:07 | Added article | M18BT6THA | to existing topic ust10y
+2025-09-02T21:17:33 | Replacement of article skipped | ust2y | no competing candidates in timeframe fundamental
+2025-09-02T21:17:33 | Added article | M18BT6THA | to existing topic ust2y
+2025-09-02T21:18:12 | Replacement of article skipped | ust5y | no competing candidates in timeframe fundamental
+2025-09-02T21:18:13 | Added article | M18BT6THA | to existing topic ust5y
+2025-09-02T21:19:06 | Node relationship removed | ust30y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T21:19:06 | Node relationship created | ust30y->fed_policy | type=INFLUENCES
+2025-09-02T21:19:06 | Replacement of article skipped | ust30y | no competing candidates in timeframe fundamental
+2025-09-02T21:19:06 | Added article | M18BT6THA | to existing topic ust30y
+2025-09-02T21:20:23 | Node relationship removed | dxy->gilt10y | type=INFLUENCES
+2025-09-02T21:20:23 | Node relationship created | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T21:20:23 | Replacement of article skipped | dxy | no competing candidates in timeframe fundamental
+2025-09-02T21:20:23 | Added article | M18BT6THA | to existing topic dxy
+2025-09-02T21:21:58 | Node relationship removed | eurusd->gold | type=INFLUENCES
+2025-09-02T21:21:59 | Node relationship created | oil_price_decline->eurusd | type=INFLUENCES
+2025-09-02T21:21:59 | Replacement of article skipped | eurusd | tf=fundamental cnt=1 < 5
+2025-09-02T21:21:59 | Added article | M18BT6THA | to existing topic eurusd
+2025-09-02T21:22:58 | Relationship duplicate | ba->spx | type=COMPONENT_OF
+2025-09-02T21:22:58 | Replacement of article skipped | spx | no competing candidates in timeframe fundamental
+2025-09-02T21:22:58 | Added article | M18BT6THA | to existing topic spx
+2025-09-02T21:24:20 | Node relationship removed | sofr->us_services_pmi | type=INFLUENCES
+2025-09-02T21:24:20 | Node relationship created | sofr->us_unemployment_claims | type=INFLUENCES
+2025-09-02T21:24:20 | Replacement of article skipped | sofr | tf=fundamental cnt=2 < 5
+2025-09-02T21:24:21 | Added article | M18BT6THA | to existing topic sofr
+2025-09-02T21:25:39 | Node relationship created | euro_inflation->us_core_pce | type=INFLUENCES
+2025-09-02T21:25:39 | Replacement of article skipped | euro_inflation | tf=fundamental cnt=0 < 5
+2025-09-02T21:25:39 | Added article | M18BT6THA | to existing topic euro_inflation
+2025-09-02T21:26:33 | Node relationship created | euribor->ust10y | type=INFLUENCES
+2025-09-02T21:26:33 | Replacement of article skipped | euribor | tf=fundamental cnt=0 < 5
+2025-09-02T21:26:33 | Added article | M18BT6THA | to existing topic euribor
+2025-09-02T21:28:07 | Node relationship removed | gbpusd->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T21:28:07 | Node relationship created | gbpusd->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T21:28:07 | Replacement of article skipped | gbpusd | tf=fundamental cnt=2 < 5
+2025-09-02T21:28:07 | Added article | M18BT6THA | to existing topic gbpusd
+2025-09-02T21:30:24 | Node relationship created | usdjpy->usdcny | type=CORRELATES_WITH
+2025-09-02T21:30:24 | Replacement of article skipped | usdjpy | tf=fundamental cnt=2 < 5
+2025-09-02T21:30:24 | Added article | M18BT6THA | to existing topic usdjpy
+2025-09-02T21:32:47 | Node relationship created | usdcny->ust30y | type=INFLUENCES
+2025-09-02T21:32:47 | Replacement of article skipped | usdcny | tf=fundamental cnt=1 < 5
+2025-09-02T21:32:47 | Added article | M18BT6THA | to existing topic usdcny
+2025-09-02T21:34:12 | Node relationship removed | us_inflation->us_services_pmi | type=INFLUENCES
+2025-09-02T21:34:12 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-02T21:34:13 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T21:34:13 | Added article | NJ71O1ZXW | to existing topic us_inflation
+2025-09-02T21:36:09 | Node relationship removed | copper->ust2y | type=INFLUENCES
+2025-09-02T21:36:09 | Node relationship created | copper->china_credit_impulse | type=INFLUENCES
+2025-09-02T21:36:09 | Replacement of article skipped | copper | no competing candidates in timeframe medium
+2025-09-02T21:36:09 | Added article | NJ71O1ZXW | to existing topic copper
+2025-09-02T21:37:32 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T21:37:32 | Added article | NJ71O1ZXW | to existing topic fed_policy
+2025-09-02T21:39:59 | Node relationship removed | copper->china_credit_impulse | type=INFLUENCES
+2025-09-02T21:39:59 | Node relationship created | copper->us_core_pce | type=INFLUENCES
+2025-09-02T21:39:59 | Replacement of article skipped | copper | tf=fundamental cnt=4 < 5
+2025-09-02T21:40:00 | Added article | A06Z9M1KC | to existing topic copper
+2025-09-02T21:40:03 | Enrichment check | copper | section=fundamental
+2025-09-02T21:40:03 | Enrichment check | copper | section=medium
+2025-09-02T21:40:03 | Enrichment check | copper | section=current
+2025-09-02T21:40:03 | Enrichment summary | topic=copper (Copper) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T21:40:03 | Pipeline complete | pipeline | run complete
+2025-09-02T21:40:09 | Retrieved articles | US 5Y Treasury Yield | Retrieved 10 from API
+2025-09-02T21:42:11 | Topic rejected | name=Natera: A Buy As Positive Growth And Cashflow Outweigh Unprofitability | category=None | failure=proposal_null
+2025-09-02T21:42:11 | Failed to create new topic for article | 8NSH67ALO | to new topic None
+2025-09-02T21:43:35 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T21:43:35 | Added article | 1FP2ND7NZ | to existing topic fed_policy
+2025-09-02T21:44:17 | Node relationship removed | us_inflation->wti | type=INFLUENCES
+2025-09-02T21:44:17 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T21:44:17 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T21:44:17 | Added article | 1FP2ND7NZ | to existing topic us_inflation
+2025-09-02T21:45:25 | Node relationship removed | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T21:45:26 | Node relationship created | dxy->sx5e | type=INFLUENCES
+2025-09-02T21:45:26 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T21:45:26 | Added article | 1FP2ND7NZ | to existing topic dxy
+2025-09-02T21:45:46 | Topic rejected | name=Lumber Prices Hit 2025 Low | category=None | failure=proposal_null
+2025-09-02T21:45:47 | Failed to create new topic for article | 1FP2ND7NZ | to new topic None
+2025-09-02T21:46:32 | Topic rejected | name=Lumber Prices Hit 2025 Low | category=None | failure=proposal_null
+2025-09-02T21:46:32 | Failed to create new topic for article | WBQ84GXBM | to new topic None
+2025-09-02T21:49:23 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T21:49:23 | Added article | 6HK1DZHJL | to existing topic fed_policy
+2025-09-02T21:50:37 | Node relationship removed | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T21:50:37 | Node relationship created | ust10y->gilt10y | type=CORRELATES_WITH
+2025-09-02T21:50:37 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T21:50:37 | Added article | 6HK1DZHJL | to existing topic ust10y
+2025-09-02T21:51:20 | Node relationship removed | ust2y->fed_policy | type=INFLUENCES
+2025-09-02T21:51:20 | Node relationship created | ust2y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T21:51:20 | Replacement of article skipped | ust2y | no competing candidates in timeframe medium
+2025-09-02T21:51:21 | Added article | 6HK1DZHJL | to existing topic ust2y
+2025-09-02T21:52:14 | Node relationship created | ust5y->gilt10y | type=CORRELATES_WITH
+2025-09-02T21:52:14 | Replacement of article skipped | ust5y | no competing candidates in timeframe medium
+2025-09-02T21:52:14 | Added article | 6HK1DZHJL | to existing topic ust5y
+2025-09-02T21:53:06 | Node relationship removed | ust30y->fed_policy | type=INFLUENCES
+2025-09-02T21:53:07 | Node relationship created | ust30y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T21:53:07 | Replacement of article skipped | ust30y | no competing candidates in timeframe medium
+2025-09-02T21:53:07 | Added article | 6HK1DZHJL | to existing topic ust30y
+2025-09-02T21:55:36 | Node relationship removed | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T21:55:37 | Node relationship created | spx->copper | type=CORRELATES_WITH
+2025-09-02T21:55:37 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T21:55:37 | Added article | S2973F6M2 | to existing topic spx
+2025-09-02T21:55:47 | Enrichment check | ust5y | section=fundamental
+2025-09-02T21:55:47 | Enrichment check | ust5y | section=medium
+2025-09-02T21:55:47 | Enrichment check | ust5y | section=current
+2025-09-02T21:55:48 | Enrichment summary | topic=ust5y (US 5Y Treasury Yield) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T21:55:48 | Pipeline complete | pipeline | run complete
+2025-09-02T21:55:49 | Retrieved articles | UK 10Y Gilt Yield | Retrieved 10 from API
+2025-09-02T21:59:24 | Enrichment check | gilt10y | section=fundamental
+2025-09-02T21:59:25 | Enrichment check | gilt10y | section=medium
+2025-09-02T21:59:25 | Enrichment check | gilt10y | section=current
+2025-09-02T21:59:25 | Enrichment summary | topic=gilt10y (UK 10Y Gilt Yield) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T21:59:25 | Pipeline complete | pipeline | run complete
+2025-09-02T21:59:27 | Retrieved articles | Atlantic Hurricane Season Risk on UST 10y | Retrieved 10 from API
+2025-09-02T22:06:55 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:06:56 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-09-02T22:06:56 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T22:06:56 | Added article | SMU8NNRK6 | to existing topic us_inflation
+2025-09-02T22:07:31 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:07:32 | Node relationship created | us_core_pce->ust30y | type=INFLUENCES
+2025-09-02T22:07:32 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T22:07:32 | Added article | SMU8NNRK6 | to existing topic us_core_pce
+2025-09-02T22:08:39 | Node relationship removed | ust10y->ecb_policy | type=CORRELATES_WITH
+2025-09-02T22:08:39 | Node relationship created | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T22:08:39 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T22:08:39 | Added article | SMU8NNRK6 | to existing topic ust10y
+2025-09-02T22:09:44 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T22:09:44 | Added article | SMU8NNRK6 | to existing topic ust2y
+2025-09-02T22:10:43 | Replacement of article skipped | ust5y | tf=current cnt=4 < 5
+2025-09-02T22:10:43 | Added article | SMU8NNRK6 | to existing topic ust5y
+2025-09-02T22:12:26 | Node relationship removed | ust30y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T22:12:26 | Relationship duplicate | fed_powell_rate_cut_hint_2025->ust30y | type=INFLUENCES
+2025-09-02T22:12:26 | Replacement of article skipped | ust30y | tf=current cnt=4 < 5
+2025-09-02T22:12:26 | Added article | SMU8NNRK6 | to existing topic ust30y
+2025-09-02T22:13:19 | Node relationship removed | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T22:13:19 | Node relationship created | fed_policy->sx5e | type=INFLUENCES
+2025-09-02T22:13:19 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T22:13:19 | Added article | SMU8NNRK6 | to existing topic fed_policy
+2025-09-02T22:16:20 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=4 < 5
+2025-09-02T22:16:20 | Added article | SMU8NNRK6 | to existing topic us_unemployment_claims
+2025-09-02T22:16:58 | Node relationship created | us_services_pmi->ust2y | type=INFLUENCES
+2025-09-02T22:16:58 | Replacement of article skipped | us_services_pmi | tf=current cnt=2 < 5
+2025-09-02T22:16:58 | Added article | SMU8NNRK6 | to existing topic us_services_pmi
+2025-09-02T22:18:54 | Topic rejected | name=US Immigration Enforcement Policy | category=policy | failure=relevance_gate_reject
+2025-09-02T22:18:54 | Failed to create new topic for article | 4IDN0S3TB | to new topic None
+2025-09-02T22:25:51 | Replacement of article skipped | gold | tf=current cnt=2 < 5
+2025-09-02T22:25:51 | Added article | HRW52N18N | to existing topic gold
+2025-09-02T22:27:11 | Node relationship removed | ust10y->ust2y | type=INFLUENCES
+2025-09-02T22:27:11 | Node relationship created | ust10y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:27:11 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T22:27:11 | Added article | HRW52N18N | to existing topic ust10y
+2025-09-02T22:28:13 | Node relationship removed | ust2y->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-02T22:28:13 | Node relationship created | ust2y->sx5e | type=CORRELATES_WITH
+2025-09-02T22:28:14 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T22:28:14 | Added article | HRW52N18N | to existing topic ust2y
+2025-09-02T22:28:35 | Replacement of article skipped | ust5y | no competing candidates in timeframe current
+2025-09-02T22:28:35 | Added article | HRW52N18N | to existing topic ust5y
+2025-09-02T22:29:22 | Node relationship created | ust30y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:29:22 | Replacement of article skipped | ust30y | no competing candidates in timeframe current
+2025-09-02T22:29:22 | Added article | HRW52N18N | to existing topic ust30y
+2025-09-02T22:30:08 | Replacement of article skipped | fed_policy | no competing candidates in timeframe current
+2025-09-02T22:30:08 | Added article | HRW52N18N | to existing topic fed_policy
+2025-09-02T22:31:24 | Node relationship removed | dxy->gbpusd | type=INFLUENCES
+2025-09-02T22:31:24 | Node relationship created | dxy->gilt10y | type=INFLUENCES
+2025-09-02T22:31:25 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T22:31:25 | Added article | HRW52N18N | to existing topic dxy
+2025-09-02T22:33:08 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-09-02T22:33:08 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:33:08 | Replacement of article skipped | us_inflation | no competing candidates in timeframe current
+2025-09-02T22:33:08 | Added article | HRW52N18N | to existing topic us_inflation
+2025-09-02T22:33:55 | Node relationship removed | us_core_pce->us_inflation | type=INFLUENCES
+2025-09-02T22:33:55 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:33:55 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe current
+2025-09-02T22:33:56 | Added article | HRW52N18N | to existing topic us_core_pce
+2025-09-02T22:34:03 | Enrichment check | hurricane_risk_ust10y | section=fundamental
+2025-09-02T22:35:14 | Enrichment check | hurricane_risk_ust10y | section=medium
+2025-09-02T22:37:16 | Node relationship created | hurricane_risk_ust10y->ust30y | type=INFLUENCES
+2025-09-02T22:37:16 | Replacement of article skipped | hurricane_risk_ust10y | tf=current cnt=0 < 5
+2025-09-02T22:37:17 | Added article | 32H5BDK86 | to intended topic hurricane_risk_ust10y
+2025-09-02T22:39:03 | Node relationship removed | ust10y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:39:03 | Node relationship created | ust10y->bund10y | type=INFLUENCES
+2025-09-02T22:39:04 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T22:39:04 | Added article | 32H5BDK86 | to existing topic ust10y
+2025-09-02T22:40:25 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-09-02T22:40:26 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T22:40:26 | Added article | 32H5BDK86 | to existing topic spx
+2025-09-02T22:41:24 | Node relationship removed | dxy->sx5e | type=INFLUENCES
+2025-09-02T22:41:24 | Node relationship created | dxy->copper | type=INFLUENCES
+2025-09-02T22:41:24 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T22:41:24 | Added article | 32H5BDK86 | to existing topic dxy
+2025-09-02T22:41:25 | Backfill added | 32H5BDK86 -> hurricane_risk_ust10y | section=medium
+2025-09-02T22:42:15 | Enrichment check | china_credit_impulse | section=fundamental
+2025-09-02T22:42:17 | Retrieved articles | Euro Stoxx 50 | Retrieved 0 from API
+2025-09-02T22:42:17 | Enrichment check | sx5e | section=fundamental
+2025-09-02T22:42:17 | Enrichment check | sx5e | section=medium
+2025-09-02T22:42:17 | Enrichment check | sx5e | section=current
+2025-09-02T22:42:17 | Enrichment summary | topic=sx5e (Euro Stoxx 50) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T22:42:17 | Pipeline complete | pipeline | run complete
+2025-09-02T22:42:19 | Retrieved articles | ECB Policy | Retrieved 4 from API
+2025-09-02T22:43:46 | Node relationship created | hurricane_risk_ust10y->wti | type=INFLUENCES
+2025-09-02T22:43:46 | Replacement of article skipped | hurricane_risk_ust10y | tf=medium cnt=0 < 5
+2025-09-02T22:43:46 | Added article | ZLKH2WU64 | to existing topic hurricane_risk_ust10y
+2025-09-02T22:44:38 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T22:44:38 | Added article | ZLKH2WU64 | to existing topic ust10y
+2025-09-02T22:44:38 | Backfill added | ZLKH2WU64 -> hurricane_risk_ust10y | section=medium
+2025-09-02T22:44:38 | Enrichment check | hurricane_risk_ust10y | section=current
+2025-09-02T22:46:16 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-09-02T22:46:16 | Replacement of article skipped | spx | no competing candidates in timeframe current
+2025-09-02T22:46:17 | Added article | LPTBBC012 | to existing topic spx
+2025-09-02T22:46:45 | Enrichment check | china_credit_impulse | section=medium
+2025-09-02T22:46:50 | Topic rejected | name=Anthropic | category=company | failure=relevance_gate_reject
+2025-09-02T22:46:50 | Failed to create new topic for article | LPTBBC012 | to new topic None
+2025-09-02T22:48:01 | Node relationship removed | fed_policy->sx5e | type=INFLUENCES
+2025-09-02T22:48:01 | Node relationship created | fed_policy->us_services_pmi | type=INFLUENCES
+2025-09-02T22:48:01 | Replacement of article skipped | fed_policy | no competing candidates in timeframe medium
+2025-09-02T22:48:01 | Added article | W88WPFTP3 | to existing topic fed_policy
+2025-09-02T22:48:44 | Enrichment check | china_credit_impulse | section=current
+2025-09-02T22:50:03 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:50:03 | Node relationship created | us_inflation->us_services_pmi | type=INFLUENCES
+2025-09-02T22:50:04 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T22:50:04 | Added article | W88WPFTP3 | to existing topic us_inflation
+2025-09-02T22:50:17 | Enrichment summary | topic=china_credit_impulse (China Credit Impulse) | 0 new fundamental articles, 0 new medium articles, 0 new current articles
+2025-09-02T22:50:17 | Enrichment check | ba | section=fundamental
+2025-09-02T22:50:17 | Enrichment check | ba | section=medium
+2025-09-02T22:50:17 | Enrichment check | ba | section=current
+2025-09-02T22:51:12 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T22:51:13 | Node relationship created | us_core_pce->us_services_pmi | type=INFLUENCES
+2025-09-02T22:51:13 | Replacement of article skipped | us_core_pce | no competing candidates in timeframe medium
+2025-09-02T22:51:13 | Added article | W88WPFTP3 | to existing topic us_core_pce
+2025-09-02T22:51:20 | Node relationship created | hurricane_risk_ust10y->us_core_pce | type=INFLUENCES
+2025-09-02T22:51:20 | Replacement of article skipped | hurricane_risk_ust10y | tf=medium cnt=0 < 5
+2025-09-02T22:51:20 | Added article | ZLKH2WU64 | to intended topic hurricane_risk_ust10y
+2025-09-02T22:52:36 | Node relationship created | us_services_pmi->ust5y | type=INFLUENCES
+2025-09-02T22:52:36 | Replacement of article skipped | us_services_pmi | tf=medium cnt=2 < 5
+2025-09-02T22:52:36 | Added article | W88WPFTP3 | to existing topic us_services_pmi
+2025-09-02T22:52:36 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=us_10y Error: Failed to fetch node from Neo4j: Node with id 'us_10y' not found.
+2025-09-02T22:52:36 | Replacement of article skipped | us_10y | tf=medium cnt=0 < 5
+2025-09-02T22:52:36 | Added article | W88WPFTP3 | to existing topic us_10y
+2025-09-02T22:53:31 | Node relationship removed | dxy->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T22:53:32 | Node relationship created | dxy->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T22:53:32 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T22:53:32 | Added article | ZLKH2WU64 | to existing topic dxy
+2025-09-02T22:55:35 | Node relationship removed | dxy->copper | type=INFLUENCES
+2025-09-02T22:55:35 | Node relationship created | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T22:55:35 | Replacement of article skipped | dxy | no competing candidates in timeframe medium
+2025-09-02T22:55:35 | Added article | W88WPFTP3 | to existing topic dxy
+2025-09-02T22:56:56 | Node relationship created | gold->us_inflation | type=INFLUENCES
+2025-09-02T22:56:56 | Replacement of article skipped | gold | no competing candidates in timeframe medium
+2025-09-02T22:56:56 | Added article | ZLKH2WU64 | to existing topic gold
+2025-09-02T22:59:10 | Node relationship created | eurusd->gold | type=INFLUENCES
+2025-09-02T22:59:10 | Replacement of article skipped | eurusd | tf=medium cnt=3 < 5
+2025-09-02T22:59:11 | Added article | W88WPFTP3 | to existing topic eurusd
+2025-09-02T22:59:53 | Enrichment check | ecb_policy | section=fundamental
+2025-09-02T22:59:53 | Enrichment check | ecb_policy | section=medium
+2025-09-02T22:59:53 | Enrichment check | ecb_policy | section=current
+2025-09-02T23:00:09 | Node relationship removed | wti->spx | type=INFLUENCES
+2025-09-02T23:00:09 | Node relationship created | wti->gold | type=INFLUENCES
+2025-09-02T23:00:09 | Replacement of article skipped | wti | tf=medium cnt=2 < 5
+2025-09-02T23:00:10 | Added article | ZLKH2WU64 | to existing topic wti
+2025-09-02T23:00:40 | Node relationship removed | brent->oil_price_decline | type=INFLUENCES
+2025-09-02T23:00:41 | Node relationship created | brent->wti | type=INFLUENCES
+2025-09-02T23:00:41 | Replacement of article skipped | brent | tf=medium cnt=1 < 5
+2025-09-02T23:00:41 | Added article | ZLKH2WU64 | to existing topic brent
+2025-09-02T23:01:50 | Node relationship removed | spx->copper | type=CORRELATES_WITH
+2025-09-02T23:01:50 | Node relationship created | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-02T23:01:50 | Replacement of article skipped | spx | no competing candidates in timeframe medium
+2025-09-02T23:01:50 | Added article | ZLKH2WU64 | to existing topic spx
+2025-09-02T23:03:04 | Node relationship removed | sx5e->ust30y | type=CORRELATES_WITH
+2025-09-02T23:03:04 | Node relationship created | sx5e->eur_at1_issuance | type=CORRELATES_WITH
+2025-09-02T23:03:04 | Replacement of article skipped | sx5e | tf=medium cnt=2 < 5
+2025-09-02T23:03:04 | Added article | ZLKH2WU64 | to existing topic sx5e
+2025-09-02T23:03:31 | Replacement of article skipped | ust5y | no competing candidates in timeframe medium
+2025-09-02T23:03:31 | Added article | ZLKH2WU64 | to existing topic ust5y
+2025-09-02T23:05:22 | Node relationship removed | ust30y->sx5e | type=INFLUENCES
+2025-09-02T23:05:23 | Node relationship created | ust30y->us_services_pmi | type=INFLUENCES
+2025-09-02T23:05:23 | Replacement of article skipped | ust30y | no competing candidates in timeframe medium
+2025-09-02T23:05:23 | Added article | ZLKH2WU64 | to existing topic ust30y
+2025-09-02T23:06:14 | Node relationship removed | ust2y->us_services_pmi | type=INFLUENCES
+2025-09-02T23:06:14 | Node relationship created | ust2y->usdcny | type=INFLUENCES
+2025-09-02T23:06:14 | Replacement of article skipped | ust2y | no competing candidates in timeframe medium
+2025-09-02T23:06:14 | Added article | ZLKH2WU64 | to existing topic ust2y
+2025-09-02T23:06:14 | Backfill added | ZLKH2WU64 -> hurricane_risk_ust10y | section=current
+2025-09-02T23:27:19 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-02T23:27:19 | Replacement of article skipped | ndx | tf=medium cnt=0 < 5
+2025-09-02T23:27:19 | Added article | 1PO7F53GQ | to existing topic ndx
+2025-09-02T23:28:50 | Replacement of article skipped | ust10y | no competing candidates in timeframe medium
+2025-09-02T23:28:50 | Added article | 1PO7F53GQ | to existing topic ust10y
+2025-09-02T23:28:56 | Node relationship created | hurricane_risk_ust10y->ust2y | type=INFLUENCES
+2025-09-02T23:28:57 | Replacement of article skipped | hurricane_risk_ust10y | tf=medium cnt=0 < 5
+2025-09-02T23:28:57 | Added article | D8J1J88U8 | to intended topic hurricane_risk_ust10y
+2025-09-02T23:31:06 | Node relationship removed | ust5y->usdcny | type=INFLUENCES
+2025-09-02T23:31:06 | Node relationship created | ust5y->gbpusd | type=INFLUENCES
+2025-09-02T23:31:06 | Replacement of article skipped | ust5y | no competing candidates in timeframe medium
+2025-09-02T23:31:06 | Added article | 1PO7F53GQ | to existing topic ust5y
+2025-09-02T23:31:14 | Node relationship removed | us_inflation->us_services_pmi | type=INFLUENCES
+2025-09-02T23:31:14 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-02T23:31:14 | Replacement of article skipped | us_inflation | no competing candidates in timeframe medium
+2025-09-02T23:31:14 | Added article | D8J1J88U8 | to existing topic us_inflation
+2025-09-02T23:31:14 | Backfill added | D8J1J88U8 -> hurricane_risk_ust10y | section=current
+2025-09-02T23:31:14 | Enrichment summary | topic=hurricane_risk_ust10y (Atlantic Hurricane Season Risk on UST 10y) | 0 new fundamental articles, 2 new medium articles, 2 new current articles
+2025-09-02T23:31:14 | Pipeline complete | pipeline | run complete
+2025-09-02T23:31:21 | Retrieved articles | WTI Crude Oil | Retrieved 10 from API
+2025-09-02T23:31:53 | Node relationship removed | ust2y->sx5e | type=CORRELATES_WITH
+2025-09-02T23:31:54 | Node relationship created | ust2y->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-02T23:31:54 | Replacement of article skipped | ust2y | no competing candidates in timeframe medium
+2025-09-02T23:31:54 | Added article | 1PO7F53GQ | to existing topic ust2y
+2025-09-02T23:31:54 | Backfill added | 1PO7F53GQ -> ba | section=current
+2025-09-02T23:31:54 | Enrichment summary | topic=ba (Boeing) | 0 new fundamental articles, 0 new medium articles, 1 new current article
+2025-09-02T23:31:54 | Enrichment check | china_exports | section=fundamental
+2025-09-02T23:34:23 | Enrichment check | china_exports | section=medium
+2025-09-02T23:34:45 | Replacement of article skipped | ecb_policy | tf=current cnt=2 < 5
+2025-09-02T23:34:45 | Added article | A5LPH3RBB | to intended topic ecb_policy
+2025-09-02T23:40:44 | Node relationship removed | sx5e->eur_at1_issuance | type=CORRELATES_WITH
+2025-09-02T23:40:45 | Node relationship created | sx5e->ust30y | type=CORRELATES_WITH
+2025-09-02T23:40:45 | Replacement of article skipped | sx5e | no competing candidates in timeframe current
+2025-09-02T23:40:45 | Added article | A5LPH3RBB | to existing topic sx5e
+2025-09-02T23:41:54 | Node relationship created | euro_inflation->ust2y | type=INFLUENCES
+2025-09-02T23:41:54 | Replacement of article skipped | euro_inflation | tf=current cnt=1 < 5
+2025-09-02T23:41:54 | Added article | A5LPH3RBB | to existing topic euro_inflation
+2025-09-02T23:41:54 | Backfill added | A5LPH3RBB -> ecb_policy | section=current
+2025-09-02T23:41:54 | Enrichment summary | topic=ecb_policy (ECB Policy) | 0 new fundamental articles, 0 new medium articles, 1 new current article
+2025-09-02T23:41:55 | Pipeline complete | pipeline | run complete
+2025-09-02T23:41:56 | Topic rejected | name=EU military spending jumped last year, expected to increase further in 2025 | category=None | failure=proposal_null
+2025-09-02T23:41:56 | Failed to create new topic for article | 1Y0USM7BL | to new topic None
+2025-09-02T23:42:02 | Retrieved articles | US Crude Inventories | Retrieved 10 from API
+2025-09-02T23:43:50 | Node relationship removed | china_exports->us_core_pce | type=INFLUENCES
+2025-09-02T23:43:50 | Node relationship created | china_exports->ust30y | type=INFLUENCES
+2025-09-02T23:43:51 | Replacement of article skipped | china_exports | tf=medium cnt=2 < 5
+2025-09-02T23:43:51 | Added article | W88WPFTP3 | to intended topic china_exports
+2025-09-02T23:45:35 | Node relationship created | usdcny->cn_russia_gas_pipeline | type=INFLUENCES
+2025-09-02T23:45:35 | Replacement of article skipped | usdcny | tf=medium cnt=2 < 5
+2025-09-02T23:45:35 | Added article | W88WPFTP3 | to existing topic usdcny
+2025-09-02T23:48:08 | Node relationship created | usdjpy->usdcny | type=PEERS
+2025-09-02T23:48:08 | Replacement of article skipped | usdjpy | tf=medium cnt=3 < 5
+2025-09-02T23:48:09 | Added article | W88WPFTP3 | to existing topic usdjpy
+2025-09-02T23:50:05 | Node relationship removed | ust10y->usdcny | type=INFLUENCES
+2025-09-02T23:50:05 | Node relationship created | ust10y->eur_at1_issuance | type=INFLUENCES
+2025-09-02T23:50:05 | Replacement of article skipped | ust10y | no competing candidates in timeframe current
+2025-09-02T23:50:05 | Added article | W55CADR2T | to existing topic ust10y
+2025-09-02T23:50:57 | Node relationship removed | spx->us_services_pmi | type=CORRELATES_WITH
+2025-09-02T23:50:57 | Node relationship created | spx->copper | type=CORRELATES_WITH
+2025-09-02T23:50:57 | Replacement of article skipped | spx | no competing candidates in timeframe medium
+2025-09-02T23:50:57 | Added article | W88WPFTP3 | to existing topic spx
+2025-09-02T23:52:10 | Node relationship removed | ust2y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T23:52:10 | Node relationship created | ust2y->us_services_pmi | type=INFLUENCES
+2025-09-02T23:52:10 | Replacement of article skipped | ust2y | no competing candidates in timeframe current
+2025-09-02T23:52:10 | Added article | W55CADR2T | to existing topic ust2y
+2025-09-02T23:53:05 | Node relationship removed | sx5e->bund10y | type=CORRELATES_WITH
+2025-09-02T23:53:06 | Node relationship created | sx5e->wti | type=CORRELATES_WITH
+2025-09-02T23:53:06 | Replacement of article skipped | sx5e | tf=medium cnt=3 < 5
+2025-09-02T23:53:06 | Added article | W88WPFTP3 | to existing topic sx5e
+2025-09-02T23:54:39 | Node relationship removed | ust5y->jgb10y | type=INFLUENCES
+2025-09-02T23:54:39 | Node relationship created | ust5y->usdcny | type=INFLUENCES
+2025-09-02T23:54:39 | Replacement of article skipped | ust5y | no competing candidates in timeframe current
+2025-09-02T23:54:39 | Added article | W55CADR2T | to existing topic ust5y
+2025-09-02T23:55:20 | Node relationship created | gold->fed_policy | type=INFLUENCES
+2025-09-02T23:55:20 | Replacement of article skipped | gold | no competing candidates in timeframe medium
+2025-09-02T23:55:20 | Added article | W88WPFTP3 | to existing topic gold
+2025-09-02T23:57:15 | Node relationship created | wti->us_crude_inventory | type=CORRELATES_WITH
+2025-09-02T23:57:16 | Replacement of article skipped | wti | tf=medium cnt=3 < 5
+2025-09-02T23:57:16 | Added article | W88WPFTP3 | to existing topic wti
+2025-09-02T23:57:30 | Node relationship removed | ust30y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-02T23:57:30 | Node relationship created | ust30y->us_unemployment_claims | type=INFLUENCES
+2025-09-02T23:57:30 | Replacement of article skipped | ust30y | no competing candidates in timeframe current
+2025-09-02T23:57:30 | Added article | W55CADR2T | to existing topic ust30y
+2025-09-02T23:59:20 | Topic rejected | name=Harvey Norman Holdings Full Year 2025 Earnings: Beats Expectations | category=None | failure=proposal_null
+2025-09-02T23:59:21 | Failed to create new topic for article | ZKYOUW01R | to new topic None
+2025-09-02T23:59:30 | Node relationship removed | brent->ust30y | type=INFLUENCES
+2025-09-02T23:59:31 | Error | - | Relationship create error | brent->us2y | type=INFLUENCES Error: Cannot create link: source or target node missing. Link: {'motivation': 'Brent crude price movements shape US inflation expectations, which in turn drive Fed policy decisions that are reflected in the
+2025-09-02T23:59:37 | Node relationship removed | dxy->oil_price_decline | type=INFLUENCES
+2025-09-02T23:59:38 | Node relationship created | dxy->gbpusd | type=INFLUENCES
+2025-09-02T23:59:38 | Replacement of article skipped | dxy | no competing candidates in timeframe current
+2025-09-02T23:59:38 | Added article | W55CADR2T | to existing topic dxy

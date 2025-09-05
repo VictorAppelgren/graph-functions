@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:46:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eur",
+    "target_id": "eurostoxx50",
+    "selection_motivation": "The euro is the base currency for all constituents of the Euro Stoxx 50, so movements in the euro directly drive index performance and investor expectations.",
+    "candidate_motivation": "These topics represent the strongest direct or competitive links to the Euro through currency movements, euro-area inflation dynamics, and monetary policy, with US macro variables shaping euro-dollar interactions.",
+    "existing_links_count": "5",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['eurusd', 'euro_inflation', 'ecb_policy', 'us_inflation', 'usd', 'eurostoxx50', 'euribor', 'us_10y']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373215759",
+    "rel_id": "eur__influences__eurostoxx50",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurostoxx50'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The euro is the base currency for all constituents of the Euro Stoxx 50, so movements in the euro directly drive index performance and investor expectations.",
+      "type": "INFLUENCES",
+      "source": "eur",
+      "target": "eurostoxx50"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eur__influences__eurostoxx50"
+}

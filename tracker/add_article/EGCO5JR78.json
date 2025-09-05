@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T12:39:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EGCO5JR78",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: FX; UK immigration policy review may pressure GBP/USD and UK gilt yields.",
+      "existing_ids": [
+        "gbpusd",
+        "gilt10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports an official UK government policy review of the European Convention on Human Rights, which is a policy statement from a governing body."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a potential policy review that will likely unfold over several months, impacting immigration and asylum policy but not producing immediate market moves."
+    },
+    "article_node": {
+      "id": "EGCO5JR78",
+      "title": "Labour to Review Changes to ECHR as UK Migrant Debate Flares",
+      "summary": "The UK government will look into whether it should seek changes to the European Convention on Human Rights, as the ruling Labour party seeks to blunt criticism of its handling of immigration and asylum issues.\n\nLabour believes that the ECHR — a post-War convention that came into force in 1953 — needs to be reformed, Education Secretary Bridget Phillipson told Sky News on Sunday, speaking for the government. She said Home Secretary Yvette Cooper was “committed” to reviewing Article 8 of the treat...",
+      "source": "https://www.bloomberg.com/news/articles/2025-08-31/labour-to-review-changes-to-echr-as-uk-migrant-debate-flares",
+      "published_at": "2025-08-31T09:34:00.973000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "EGCO5JR78"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T00:23:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "new_article_id": "2LYI30HBA",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['MF8ZAFVAY', 'JY0YOJGAJ', '0R5LB61YY', '5JQEA5Z1T', '73G2X5JK2', 'FOA2XZ9D3', '08EIPMJ89', '7YQN9WX3K', 'U1KRCQOYR']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "MF8ZAFVAY",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No competing article exists; new article adds unique value."
+    }
+  },
+  "id": "us_10y__2LYI30HBA__current"
+}

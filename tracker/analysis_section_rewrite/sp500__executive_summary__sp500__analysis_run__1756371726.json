@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T11:19:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756371726",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9394",
+    "output_chars": "1171",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a solid starting point but still reads like a long‑form memo rather than a 4–6‑sentence executive brief. Tighten the narrative by collapsing the three company segments into a single, coherent house view that foregrounds the key catalyst (low equity risk premium + dividend yield) and the primary risk (EV transition losses & consumer slowdown). Replace generic phrases (“moderate upside”) with concrete upside ranges (e.g., “Ford could trade at 10–12× forward P/E if dividend remains sustainable”) and embed the Netflix P/E compression trajectory (51.7× now → 35–40× by 2030). Remove the long list of watch signals; instead, list 3–4 high‑impact triggers (Powell’s remarks, Q3 earnings, Netflix ad‑tier uptake, Japanese bank deal pipeline). Ensure every claim is supported by a source ID—e.g., cite (W2622L6WW) for Ford’s yield, (22PL3Q360) for EV losses, (61SVFUKBY) for Netflix content spend, (PA57YBYVQ) for Japanese bank deals, (O4ZEED2EB) for CEO pay. Drop the unrelated commodity, crypto, and fixed‑income digressions unless they directly influence the equity risk premium. Finally, quantify the confidence level (“moderate‑high”) and end with a concise recommendation (e.g., “Hold Ford; overweight Netflix if ad‑tier gains materialize”). This will produce a crisp, decision‑useful brief that meets the 4–6 sentence constraint.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756371726"
+}

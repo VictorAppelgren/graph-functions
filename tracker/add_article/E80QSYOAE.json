@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T19:32:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "E80QSYOAE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Alphabet and Apple stock surges lift the S&P 500, reflecting broader tech valuation lift.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a U.S. court ruling that bars exclusive contracts for Google’s search products, representing a legal development in competition regulation."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Uncertain about the node's scope; the article concerns antitrust and search market, which could affect competition policy nodes."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a court ruling that will reshape search market structure and competition dynamics, a change that will unfold over the medium term rather than being an immediate price shock."
+    },
+    "article_node": {
+      "id": "E80QSYOAE",
+      "title": "How the Google ruling reshapes search, AI, and defaults",
+      "summary": "The U.S. court’s ruling in U.S. v. Google bars exclusive contracts for Google Search, Chrome, Assistant and Gemini, while permitting the company to share search index and user‑interaction data with rivals. It leaves the paid‑default model intact, allowing Apple to auction the on‑ramp and Google to continue collecting fees. Investors reacted positively, with Alphabet and Apple shares rising, and regulators tout the decision as a win for competition. The order marks a shift toward treating search as regulated infrastructure rather than a monopoly.",
+      "source": "https://finance.yahoo.com/news/google-ruling-reshapes-search-ai-161726689.html",
+      "published_at": "2025-09-03T16:17:26+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "E80QSYOAE"
+}

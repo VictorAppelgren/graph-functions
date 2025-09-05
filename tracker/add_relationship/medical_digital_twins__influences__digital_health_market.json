@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:31:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "medical_digital_twins",
+    "target_id": "digital_health_market",
+    "selection_motivation": "Medical Digital Twins are a primary driver of the Digital Health Market, enabling predictive analytics and personalized care that accelerate market adoption.",
+    "candidate_motivation": "These topics are the most plausible direct influences, correlates, or peers to Medical Digital Twins given their focus on medical AI, neuroengineering, and digital health applications.",
+    "existing_links_count": "1",
+    "candidate_count": "6",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['digital_health_market', 'healthtech_collaborations', 'brain_computer_interfaces', 'neuropace_epilepsy', 'neuroglee_mayo_partnership', 'ai_healthcare_advice']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'medical_digital_twins', 'target': 'vaccine_misinformation_impact'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847146",
+    "rel_id": "medical_digital_twins__influences__digital_health_market",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'medical_digital_twins', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'medical_digital_twins', 'target': 'digital_health_market'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Medical Digital Twins are a primary driver of the Digital Health Market, enabling predictive analytics and personalized care that accelerate market adoption.",
+      "type": "INFLUENCES",
+      "source": "medical_digital_twins",
+      "target": "digital_health_market"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "medical_digital_twins__influences__digital_health_market"
+}

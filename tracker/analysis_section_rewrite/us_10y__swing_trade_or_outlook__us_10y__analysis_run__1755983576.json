@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T23:43:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755983576",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8696",
+    "output_chars": "658",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft meets the 4‑line mover‑scenario requirement but needs tightening to reach world‑class rigor. 1) **Scenario lines**: keep the exact format but add a concrete trigger date or numeric threshold for each driver (e.g., “Q3 earnings release on 15 Oct 2025” or “CPI > 2.8 % on 10 Aug 2025”). 2) **Probabilities**: back each % with a source citation and explain the evidence (e.g., “70 % probability of ACMR Q3 beat based on 2025 guidance 850‑950 M and current 30.53 $ price” (SK994CBWR)). 3) **Trade line**: specify the asset (ACMR), use the correct field order, and include all required elements:  \n`Up | 3‑6 mo | ACMR | 30.53 | 28.00 | 34.76 | 1.5 | Fed rate hike (LZG5YWQMC) | Q3 earnings beat (SK994CBWR) | 70% | 80`.  \n4) **Citations**: attach IDs only to factual statements or numbers; avoid citing for generic assertions. 5) **Clarity**: replace vague “AI upskilling” with a measurable metric (e.g., “IBM’s 7.8 k AI‑replacement layoffs” (4LQD15CFU)) and link it to the probability. 6) **Avoid filler**: remove the stray “$28 | $24 | $34 | 1.5” line that mixes trade and scenario data. 7) **Consistency**: ensure all numbers come from the source material (e.g., use ACMR’s 30.53 $ current price, 34.76 $ consensus target). 8) **Confidence**: set a realistic confidence (e.g., 80) based on the convergence of earnings quality, low leverage, and macro tailwinds (SK994CBWR). Apply these edits to produce a concise, evidence‑anchored swing‑trade plan that aligns with the section focus.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__swing_trade_or_outlook__us_10y__analysis_run__1755983576"
+}

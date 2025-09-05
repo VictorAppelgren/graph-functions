@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:11:35",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "86Q7P3TR6",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Amazon's ability to mitigate geopolitical risks and improve logistics, which are critical factors for investment decisions in the current market environment, warranting a dedicated node.",
+      "id": "amazon_geopolitical_risk_management",
+      "name": "Amazon Geopolitical Risk Management",
+      "type": "company",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "AI adoption"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company‑specific risk‑management capability, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

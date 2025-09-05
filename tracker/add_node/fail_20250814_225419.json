@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:53:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6NUNP4P06",
+    "status": "rejected",
+    "reject_category": "valuation",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the competitive pressures from Amazon's advertising division on Trade Desk, necessitating a new node to analyze the impact of Amazon's advertising growth on market dynamics.",
+      "id": "amazon_advertising",
+      "name": "Amazon Advertising Growth",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "valuation",
+      "motivation": "Valuation concerns and growth deceleration amid competition from Amazon"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Amazon Advertising Growth is an industry‑specific driver, not a macroeconomic factor, tradable asset, policy regime, or geographic anchor, so it does not meet the macro relevance criteria.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

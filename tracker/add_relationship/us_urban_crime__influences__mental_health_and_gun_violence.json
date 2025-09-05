@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:49:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_urban_crime",
+    "target_id": "mental_health_and_gun_violence",
+    "selection_motivation": "US urban crime dynamics directly influence mental health outcomes and gun violence prevalence, creating a critical feedback loop that shapes both public safety and health policy.",
+    "candidate_motivation": "The source topic concerns U.S. urban crime dynamics, so relevant nodes are those that directly influence, correlate with, or are peers in the domain of crime, policing, social policy, and related social issues in the U.S. These include policy interventions, demographic trends, organized crime, and specific high-profile incidents that shape or reflect urban crime patterns.",
+    "existing_links_count": "9",
+    "candidate_count": "18",
+    "all_nodes_count": "102",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['dc_crime_crisis', 'federal_intervention_urban_crime', 'racialized_narratives_urban_crime', 'dc_federal_control', 'homelessness_initiatives', 'violence_public_health_workers', 'human_trafficking_enforcement', 'clemency_system', '2025_us_migration_trends', 'immigration_detention_conditions', 'nyc_immigration_detention_conditions', 'la_immigration_raids_economic_impact', 'mental_health_violence', 'mental_health_gun_violence', 'mexico_cartel_extraditions', 'us_mexico_cartel_terrorism', 'uvalde_school_shooting_response', 'uvalde_school_shooting_legal_implications']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'uvalde_school_shooting_response'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'uvalde_school_shooting_legal_implications'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_crime_crisis'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_control'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'racialized_narratives_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'violence_public_health_workers'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'human_trafficking_enforcement'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'homelessness_initiatives'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'US urban crime dynamics directly influence mental health outcomes and gun violence prevalence, creating a critical feedback loop that shapes both public safety and health policy.', 'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'mental_health_and_gun_violence'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US urban crime dynamics directly influence mental health outcomes and gun violence prevalence, creating a critical feedback loop that shapes both public safety and health policy.",
+      "type": "INFLUENCES",
+      "source": "us_urban_crime",
+      "target": "mental_health_and_gun_violence"
+    }
+  },
+  "id": "us_urban_crime__influences__mental_health_and_gun_violence"
+}

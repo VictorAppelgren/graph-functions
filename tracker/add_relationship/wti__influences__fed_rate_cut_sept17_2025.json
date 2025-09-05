@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T01:18:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "Oil price declines reduce inflation expectations and commodity‑driven demand, creating a strong impetus for the Fed to cut rates in September 2025.",
+    "candidate_motivation": "WTI Crude Oil is a core commodity whose price is driven by supply/demand fundamentals, currency strength, monetary policy, and macro‑financial conditions. The listed topics capture those key drivers and their potential impact on oil pricing.",
+    "existing_links_count": "15",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'brent', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1353332787536463945",
+    "rel_id": "wti__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price declines reduce inflation expectations and commodity‑driven demand, creating a strong impetus for the Fed to cut rates in September 2025.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__fed_rate_cut_sept17_2025"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:05:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756072478",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15983",
+    "output_chars": "1503",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is thorough and source‑rich but fails the SECTION FOCUS: it sprawls across 6–8 dense paragraphs with many horizon layers and too many numbers without a single crisp, 4–6 sentence executive brief. Actionable edits: condense to 4–6 concise bullets or sentences that deliver a single coherent house view, then map catalysts, risks, and watch items to specific sources. Reframe the causal chain with a first‑principles spine: policy posture (tariffs) drives domestic capex in semis/AI/data‑center infra, which boosts supply‑side productivity and shifts inflation/real‑rates, feeding back into risk premia and market pricing; anchor every claim to a cited ID (e.g., SGB2PAZGK for regime mapping, O4ZEED2EB for CEO pay, 22PL3Q360 and 65UUBU0OR for Ford, STBVARD8F for Nvidia/Costa/AI infra, QGXA2WQJ3 for Shopify, NBX9RA9WX/I2SJU04DF for shocks, J99EM2TPZ for oil). Collapse sector details about Ford, Coca‑Cola, Disney, and GM into the same 1–2 lines that illustrate how policy/capex signals translate into earnings power and multiple risk, and remove meta‑statements about macro anchors outside the sources. Structure the 0–3/3–6/6–12 month horizons into a compact, decision‑useful map with explicit triggers: tariff path (baseline ~10%, China reciprocity up to 34%, episodic 145%), Nvidia AI cycle momentum, Costa Coffee sale progress to £2B, GM/Ford capex and auto margins, and a potential regime shift risk; attach the exact numbers after each trigger (e.g., 17% YTD Ford, 4.3% Q2 margin, 5.18% dividend, 945 TWh data‑center demand by 2030, Shopify GMV +27% YoY and revenue +29% YoY). Finally, ensure every assertion has a citation, reconcile any conflicts by noting them as sector signals (e.g., AI upside vs. EV cycle drag) rather than contradictions, and drop the expansive 0–5+ month prose in favor of a tight, executive‑style brief that stays within 4–6 sentences and uses only the cited IDs (e.g., SGB2PAZGK, STBVARD8F, 22PL3Q360, 65UUBU0OR, QGXA2WQJ3, I2SJU04DF, NBX9RA9WX, J99EM2TPZ, U3ZK13ZQI, WTNT85IPR, YX2J8NHZ1, 4661GWFP7, T1QE6JPIX, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756072478"
+}

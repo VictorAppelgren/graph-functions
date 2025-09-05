@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T16:58:44",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "46EPPZ497",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US health policy shifts and Medicaid cuts signal fiscal tightening and potential inflationary pressure, affecting Treasury yields.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a policy announcement by the U.S. administration regarding school fitness tests, which qualifies as a policy statement."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a US federal policy on school fitness testing that could influence public health programs such as Medicaid and nutrition assistance, making it relevant to a node representing US health policy or public health initiatives."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a policy announcement that will influence public health programs over the medium term."
+    },
+    "article_node": {
+      "id": "46EPPZ497",
+      "title": "Hidden message behind Trump's 'hot-or-not' test for kids leaves analyst alarmed",
+      "summary": "President Trump and Health and Human Services Secretary Robert F. Kennedy Jr. announced plans to reinstate the presidential fitness test for schoolchildren, a move criticized by health experts and activists as a nostalgic, punitive measure that could undermine public health initiatives. Amanda Marcotte argues the test is rooted in unscientific notions of fitness and serves to justify cuts to healthcare and food assistance, while highlighting the broader ‘Make America Healthy Again’ agenda that favors the wealthy and marginalizes vulnerable populations. The proposal has sparked backlash from educators, public health advocates, and lawmakers who warn that the test could exacerbate health disparities and distract from essential services such as Medicaid and nutrition programs.",
+      "source": "https://www.rawstory.com/trump-rfk-fitness/",
+      "published_at": "2025-09-02T13:37:31+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "46EPPZ497"
+}

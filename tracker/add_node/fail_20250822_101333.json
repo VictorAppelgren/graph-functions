@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T10:13:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "RAX1C61NL",
+    "status": "rejected",
+    "reject_category": "event",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses Hurricane Erin, which has significant implications for coastal economies and infrastructure along the East Coast, warranting a dedicated node to analyze its macroeconomic impacts.",
+      "id": "hurricane_erin",
+      "name": "Hurricane Erin",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "event",
+      "motivation": "Weather event causing coastal flooding and beach closures"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Hurricane Erin is a natural disaster event, not a macro driver, tradable asset, or macro policy/regime; it does not fit the allowed macro anchors for a trading-focused knowledge graph.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

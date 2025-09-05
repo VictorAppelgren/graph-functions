@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:05:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "corporate_governance",
+    "target_id": "us_stock_buybacks",
+    "selection_motivation": "Corporate governance frameworks directly dictate board approval thresholds and shareholder rights that drive the decision to repurchase shares, making it a primary driver of US stock buybacks.",
+    "candidate_motivation": "These topics cover the macroeconomic environment and corporate capital-allocation decisions that directly influence stock buyback activity, including market context, financing costs, and governance-driven payout choices.",
+    "existing_links_count": "10",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['sp500', 'fed_policy', 'us_10y', 'lower_interest_rates', 'us_inflation', 'us_inflation_data', 'equity_market_vs_economy', 'corporate_governance', 'conocophillips_dividend_policy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'political_influence_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'equity_market_vs_economy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373219570",
+    "rel_id": "corporate_governance__influences__us_stock_buybacks",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'us_stock_buybacks'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'sustainability_leadership'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'ai_governance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Corporate governance frameworks directly dictate board approval thresholds and shareholder rights that drive the decision to repurchase shares, making it a primary driver of US stock buybacks.",
+      "type": "INFLUENCES",
+      "source": "corporate_governance",
+      "target": "us_stock_buybacks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "corporate_governance__influences__us_stock_buybacks"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T04:26:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust5y",
+    "target_id": "us_services_pmi",
+    "selection_motivation": "US Services PMI is a leading indicator of economic activity that tracks closely with short‑term Treasury yields; a strong correlation exists between the 5‑year yield and PMI releases.",
+    "candidate_motivation": "The US 5‑year Treasury yield is directly driven by monetary policy, inflation expectations, and short‑term economic indicators, and it is closely correlated with other US and global yields, the dollar, and key commodity prices. Therefore, topics that capture Fed actions, US macro data, other maturity yields, the USD index, and major commodities are the most plausible influences, correlates, or peers.",
+    "existing_links_count": "20",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust30y', 'ust2y', 'sofr', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'bund10y', 'gilt10y', 'jgb10y', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1204715099344864655",
+    "rel_id": "ust5y__correlates_with__us_services_pmi",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Services PMI is a leading indicator of economic activity that tracks closely with short‑term Treasury yields; a strong correlation exists between the 5‑year yield and PMI releases.",
+      "type": "CORRELATES_WITH",
+      "source": "ust5y",
+      "target": "us_services_pmi"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__correlates_with__us_services_pmi"
+}

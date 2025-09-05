@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T12:55:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "U0KSGZASI",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; copper tariffs raise input costs, feeding into US inflation and Fed policy.",
+      "existing_ids": [
+        "copper",
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article describes how U.S. tariffs are expected to increase consumer price pressures and inflation expectations, which constitutes a macroeconomic event affecting inflation dynamics."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess relevance due to missing node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on U.S. tariff policy and its anticipated inflationary impact over the coming months, indicating a medium‑term outlook for cost pressures and price expectations."
+    },
+    "article_node": {
+      "id": "U0KSGZASI",
+      "title": "Tariffs Leave Businesses Struggling With Pricing Decisions",
+      "summary": "U.S. tariffs have heightened uncertainty for businesses, with many firms anticipating higher costs and supply‑chain disruptions. Small‑mid‑market companies lacking financing are especially vulnerable, while larger firms plan to renegotiate or shift to domestic suppliers. Rising consumer price pressures from tariffs are expected to add to inflation, with the Fed projecting cumulative effects in the coming months. The overall outlook signals increased cost‑pressure on firms and a potential uptick in inflationary expectations.",
+      "source": "https://www.pymnts.com/business/2025/tariffs-leave-businesses-struggling-with-pricing-decisions/",
+      "published_at": "2025-08-31T20:20:20+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "U0KSGZASI"
+}

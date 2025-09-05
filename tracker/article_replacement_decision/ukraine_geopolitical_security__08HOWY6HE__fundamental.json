@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T15:53:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ukraine_geopolitical_security",
+    "new_article_id": "08HOWY6HE",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['NUGGFHR1S', 'Q7NI866C5', 'E44Y2BJ6C', 'JD2AW8V54', 'PIF7FLBKM']",
+    "mode": "CAN_REPLACE",
+    "target_id": "NUGGFHR1S",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "NUGGFHR1S",
+      "motivation": "The new article provides the first physical evidence of an institution for the elderly in the Byzantine period, clearly superseding existing articles on the topic."
+    }
+  },
+  "id": "ukraine_geopolitical_security__08HOWY6HE__fundamental"
+}

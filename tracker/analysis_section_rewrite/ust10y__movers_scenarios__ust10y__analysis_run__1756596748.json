@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T01:49:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756596748",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9324",
+    "output_chars": "756",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "- **Asset focus**: Pick one canonical handle (e.g., ust10y or spx) and drop all other assets; each line must map to that handle with a clear sign (+/-) and magnitude (e.g., “+5–10 bp”).  \n- **Causal chain**: Explicitly state the mechanism in one clause (e.g., “Fed cut → 10‑yr yield falls 5–10 bp → mortgage rates drop 1–2 bp”).  \n- **Catalyst window**: Replace vague “1‑2 weeks” with exact dates tied to releases (e.g., “Sept 5‑12: Fed minutes & core PCE”).  \n- **Probability justification**: Provide a brief rationale for each % (e.g., “80 % probability because market pricing of a 25‑bp cut is 89 % pre‑meeting”).  \n- **Citations**: Attach an ID only when asserting a specific fact or number; remove generic statements without evidence.  \n- **Single‑sentence format**: Ensure each line is one sentence, no filler, e.g., “Up | Sept 5‑12 | Fed cut → 10‑yr yield +5–10 bp → mortgage rates +1–2 bp | Watch Fed minutes & core PCE | 80 % (U21K4ALYQ).”  \n- **Remove redundant lines**: The “Treasury auction tightening” and “inflation easing” items lack handle mapping and causal clarity; delete or merge into the chosen asset’s narrative.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__movers_scenarios__ust10y__analysis_run__1756596748"
+}

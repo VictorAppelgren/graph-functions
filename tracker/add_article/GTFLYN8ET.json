@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:30:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GTFLYN8ET",
+    "status": "success",
+    "topic_id": "nfl_player_injuries"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the recovery and performance of NFL quarterbacks, which is relevant for analyzing player injuries and their impact on team performance, aligning with the existing node for NFL player injuries.",
+      "existing_node_ids": "nfl_player_injuries",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The node relates to injuries of NFL players, which does not fit into any of the specified categories related to macroeconomics or markets."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of player injuries in the NFL, which directly relates to the node on NFL player injuries."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses the impact of player injuries on team performance and league dynamics, which can have lasting effects on the sport."
+    },
+    "article_node": {
+      "id": "GTFLYN8ET",
+      "title": "Love's absence, Colts QB battle are feature attractions of joint practice with Packers",
+      "summary": "During a joint practice between the Green Bay Packers and Indianapolis Colts, quarterback Jordan Love discussed his recent thumb surgery and his recovery timeline, aiming to be ready for the season opener against Detroit. Love expressed caution about returning to practice to avoid re-injury. Meanwhile, Colts quarterback Anthony Richardson is set to play extensively in the upcoming preseason game, despite recent injuries affecting his performance.",
+      "source": "https://www.sfchronicle.com/sports/article/love-s-absence-colts-qb-battle-are-feature-20818410.php",
+      "published_at": "2025-08-14T23:28:33+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "GTFLYN8ET"
+}

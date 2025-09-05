@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:14:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756048046",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19063",
+    "output_chars": "1081",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | Ford Regime A easing with a September 25–50bp cut and a softer dollar lifting AI-capex momentum and multiples, with Intel’s roughly 10% stake adding optionality to AI-infra spend (GX057ADL7)(22PL3Q360) | Fed guidance, dollar trajectory, and progress on Intel governance to gauge upside | 60%\nUp | 3–6 months | AI-productivity uplift per Range thesis could lift potential growth by about 1–1.5% annually, supporting higher capex and equity upside, with Range adoption signals and AI-driven productivity data as the barometers (UPV3X2MQ6) | Range adoption signals and AI-driven productivity data | 55%\nDown | 3–6 months | Tariff-extension expiry or new tariffs reintroduce inflation pressures and squeeze pricing power, dampening AI-capex tempo (RHXDOHQQX) | Watch tariff schedules and retailer margins | 40%\nDown | 3–6 months | Higher-for-longer rate scenario with stronger inflation prints could push yields toward the upper-mid-4% range, compressing equity multiples and pressuring cash-flow–driven names (GX057ADL7) | Watch inflation data and Fed guidance | 40%",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756048046"
+}

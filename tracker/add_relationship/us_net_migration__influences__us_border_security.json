@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T10:08:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_net_migration",
+    "target_id": "us_border_security",
+    "selection_motivation": "US Net Migration directly drives demand for border security measures, as higher net inflows increase pressure on border enforcement resources.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with US Net Migration due to their connections to economic conditions, labor markets, and immigration policies, which are directly impacted by migration trends.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "1028",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_illegal_immigration_2023', 'us_border_security', 'us_tariffs_brazil', 'us_trade_policy_inflation', 'us_immigration_conditions', 'us_china_trade_relations', 'us_tariff_policies', 'us_student_loan_repayment', 'us_food_stamp_policy', 'us_national_debt']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118475432",
+    "rel_id": "us_net_migration__influences__us_border_security",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_net_migration', 'target': 'us_border_security'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Net Migration directly drives demand for border security measures, as higher net inflows increase pressure on border enforcement resources.",
+      "type": "INFLUENCES",
+      "source": "us_net_migration",
+      "target": "us_border_security"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_net_migration__influences__us_border_security"
+}

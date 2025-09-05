@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T15:29:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_stock_buybacks",
+    "new_article_id": "YUJ7ZHQTN",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['QN8BJOAKI', 'BIETVIXJK', 'RNFI7J8QE', 'ZZKMI48VA', 'V5SEROCMY']",
+    "mode": "CAN_REPLACE",
+    "target_id": "QN8BJOAKI",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "QN8BJOAKI",
+      "motivation": "The new article provides a detailed analysis of Bullish's growth potential and market positioning, which is more relevant and timely compared to existing articles that lack this specific focus."
+    }
+  },
+  "id": "us_stock_buybacks__YUJ7ZHQTN__current"
+}

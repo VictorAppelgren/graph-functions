@@ -1,0 +1,142 @@
+{
+  "url": "https://www.techspot.com/news/109082-normal-computing-tapes-out-world-first-thermodynamic-chip.html",
+  "authorsByline": "Skye Jacobs",
+  "articleId": "d2da2ee10256448299f1f53083478d8e",
+  "source": {
+    "domain": "techspot.com",
+    "location": {
+      "country": "us",
+      "state": "FL",
+      "county": "Miami-Dade County",
+      "city": "Miami",
+      "coordinates": {
+        "lat": 25.7741728,
+        "lon": -80.19362
+      }
+    }
+  },
+  "imageUrl": "https://www.techspot.com/images2/news/bigimage/2025/08/2025-08-14-image-24.jpg",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-15T09:55:00-05:00",
+  "addDate": "2025-08-15T15:12:23.972805+00:00",
+  "refreshDate": "2025-08-15T15:12:23.972807+00:00",
+  "score": 1.0,
+  "title": "Normal Computing tapes out the world's first thermodynamic chip for AI and scientific computing",
+  "description": "Thermodynamic computing is similar to probabilistic computing, where randomness and noise aren't obstacles to overcome but valuable tools for solving complex problems. Traditional computer chips consume significant...",
+  "content": "Serving tech enthusiasts for over 25 years.TechSpot means tech analysis and advice you can trust\n\nWhat just happened? Normal Computing, a young company founded by alumni of Google Brain, Google X, and Palantir, has introduced what it calls a new era in computing. The startup announced the successful tape-out of CN101, the first thermodynamic computing chip, positioning itself at the forefront of efforts to make computing significantly more efficient by leveraging the fundamental physics of silicon.\n\nThermodynamic computing is similar to probabilistic computing, where randomness and noise aren't obstacles to overcome but valuable tools for solving complex problems. Traditional computer chips consume significant energy ensuring every calculation produces the exact same result every time.\n\nNormal's chips, called Physics-Based ASICs, take a different approach. They harness natural fluctuations, energy dissipation, and inherent randomness within the chip to perform computations, particularly for artificial intelligence and scientific workloads. According to the company, this method can make certain computations up to 1,000 times more efficient.\n\nThe CN101 chip is built on what Normal calls the Carnot architecture, a design that accelerates complex tasks by allowing the chip's physical state changes to contribute to finding solutions. Unlike conventional chips that strive to eliminate or control noise, CN101 embraces it.\n\nIn this system, components start in a semi-random configuration. The problem is encoded by adjusting the interactions among these components. As the system gradually settles into equilibrium, its final state represents the solution.\n\nNormal Computing's first prototype demonstrated that useful computational work can be achieved using noise, such as matrix inversion and Gaussian sampling \u2013 both important for many AI tasks.\n\nThe chip is built from interconnected physical resonators. At the beginning of each calculation, these resonators start with semi-random values. The problem is encoded in the way the resonators are linked together. Over time, their interactions naturally converge to an equilibrium state, which is then read as the solution.\n\n\"In a conventional chip, everything is very highly controlled,\" said Gavin Crooks, Normal Computing staff research scientist, to IEEE Spectrum. \"Take your foot off the control little bit, and the thing will naturally start behaving more stochastically.\"\n\nThe first version of the chip relied on capacitor-inductor resonators, but this design was difficult to scale to larger chips. To address this, Normal removed the components that made scaling hard \u2013 such as inductors \u2013 and moved toward a fully silicon-based design.\n\nThe CN101 chip is optimized for the types of tasks common in large-scale AI and scientific computing, including linear algebra, matrix operations, and a custom lattice random walk algorithm for probabilistic calculations. These operations are foundational for engineering simulations and machine learning workloads.\n\nNormal's goal is to maximize computational work per watt, per rack in a data center, and per dollar spent \u2013 a critical priority as energy constraints tighten. By embracing noise and randomness, CN101 aims to deliver faster response times and higher throughput, particularly for AI inference, potentially transforming how large-scale computing tasks are executed.\n\nAnd this is only the beginning. The company has ambitious plans for future chips:\n\u2022 CN201 (expected in 2026) will target high-resolution diffusion models and a broader set of AI challenges.\n\u2022 CN301 (planned for late 2027 or early 2028) will handle large-scale video diffusion models and push the limits of generative AI efficiency.\n\nWith CN101 now taped out, Normal Computing has begun testing and benchmarking the chip. These results will guide the design of the next generation. Although significant challenges remain, such as ensuring reliable performance at commercial scale, creating a working thermodynamic computing chip in silicon could mark a turning point for the industry.\n\nIf successful, Normal's chips could complement CPUs, GPUs, quantum processors, and other emerging technologies, helping meet the ever-growing compute demands of AI and large data centers.",
+  "medium": "Article",
+  "links": [
+    "https://www.techspot.com/news/107202-nvidia-unveils-new-blackwell-ultra-b300-ai-gpu.html",
+    "https://spectrum.ieee.org/thermodynamic-computing-normal-computing",
+    "https://www.techspot.com/news/109065-danish-students-built-drone-can-fly-swim.html",
+    "https://www.normalcomputing.com/blog/normal-computing-announces-tape-out-of-worlds-first-thermodynamic-computing-chip"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "larger chips",
+      "weight": 0.0961928
+    },
+    {
+      "name": "conventional chips",
+      "weight": 0.08664662
+    },
+    {
+      "name": "future chips",
+      "weight": 0.086048044
+    },
+    {
+      "name": "Traditional computer chips",
+      "weight": 0.08110623
+    },
+    {
+      "name": "Normal Computing",
+      "weight": 0.075530335
+    },
+    {
+      "name": "Normal Computing staff research scientist",
+      "weight": 0.07028659
+    },
+    {
+      "name": "Thermodynamic computing",
+      "weight": 0.06832542
+    },
+    {
+      "name": "many AI tasks",
+      "weight": 0.06736769
+    },
+    {
+      "name": "scientific computing",
+      "weight": 0.06424065
+    },
+    {
+      "name": "AI challenges",
+      "weight": 0.06334067
+    }
+  ],
+  "topics": [
+    {
+      "name": "AI"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/News/Technology News",
+      "score": 0.97900390625
+    },
+    {
+      "name": "/Computers & Electronics/Computer Hardware/Computer Components",
+      "score": 0.52734375
+    },
+    {
+      "name": "/Science/Physics",
+      "score": 0.400634765625
+    },
+    {
+      "name": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+      "score": 0.321533203125
+    },
+    {
+      "name": "/Science/Computer Science/Other",
+      "score": 0.303955078125
+    },
+    {
+      "name": "/Science/Engineering & Technology/Other",
+      "score": 0.3017578125
+    }
+  ],
+  "sentiment": {
+    "positive": 0.19347158,
+    "negative": 0.23857762,
+    "neutral": 0.56795084
+  },
+  "summary": "Normal Computing, a startup founded by alumni of Google Brain, Google X, and Palantir, has announced the world's first thermodynamic computing chip, CN101, designed to make computing significantly more efficient by leveraging the physics of silicon. The company's chips, called Physics-Based ASICs, use natural fluctuations, energy dissipation, and inherent randomness within the chip to perform computations, particularly for AI and scientific computing. The chip is built on what Normal calls the Carnot architecture, which accelerates complex tasks by allowing the chip's physical state changes to contribute to finding solutions. The first version of the chip used capacitor-inductor resonators, but this design was difficult to scale to larger chips, so Normal moved towards a fully silicon-based design and removed the components that made scaling difficult. The CN101 chip is optimized for tasks such as AI inference, which could transform how large-scale computing tasks are executed.",
+  "shortSummary": "Normal Computing has developed the world's first thermodynamic computing chip, CN101, harnesses natural fluctuations and randomness to accelerate large-scale computing and enhance efficiency for AI and scientific workloads.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": false,
+  "reprintGroupId": "b47aa8f406634c7ea8852632f7084eb8",
+  "places": [],
+  "scraped_sources": [
+    {
+      "url": "https://www.normalcomputing.com/blog/normal-computing-announces-tape-out-of-worlds-first-thermodynamic-computing-chip",
+      "text": "Normal Computing today announced the successful tape-out of CN101, the world's first thermodynamic computing chip. This critical engineering milestone represents a key step toward validating Normal\u2019s Carnot architecture, purpose-built to accelerate computational tasks by harnessing the intrinsic dynamics of physical systems and achieving up to 1000\u00d7 energy consumption efficiency on targeted AI and scientific workloads. By enabling significantly more AI within fixed datacenter energy budgets, CN101 maximizes total compute output and pairs this with low-latency, high-throughput performance for production inference.\nNormal chips are Physics-Based ASICs that harness natural dynamics such as fluctuations, dissipation, and stochasticity to compute far more efficiently than traditional chips. While CPUs and GPUs consume substantial energy enforcing deterministic logic, Normal's chips exploit stochasticity to accelerate AI reasoning. This approach was recently highlighted by IEEE Spectrum, underscoring its potential to dramatically enhance computational efficiency over traditional methods (read article).\nCN101 specifically targets computational tasks critical to AI and scientific computing, demonstrating significant acceleration in two areas:\n- Linear Algebra & Matrix Operations:\nEfficiently solves large-scale linear systems foundational to engineering, scientific computing, and optimization tasks. - Stochastic Sampling with Lattice Random Walk (LRW):\nImplements Normal's proprietary LRW-based sampling, significantly accelerating probabilistic computations essential for scientific simulations and Bayesian inference methods.\nCN101 is a foundational step toward Normal Computing\u2019s vision of commercializing thermodynamic computing at scale, enabling significantly more AI performance per watt, rack, and dollar - maximizing AI output within existing energy budgets.\nUpcoming roadmap milestones include:\n- 2026: CN201 - High-resolution diffusion models and expanded AI workloads.\n- Late 2027 / Early 2028: CN301 - scaling to advanced video diffusion models.\n\u201cIn recent months, we have seen that AI capabilities are approaching a flattening curve with today\u2019s energy budgets and architecture, even as we plan to scale training runs another 10,000x in the next 5 years. Thermodynamic computing has the potential to define the next decades\u2019 scaling laws by exploiting the physical realization of AI algorithms, including post-autoregressive architectures. Achieving first silicon success is a historic moment for this emerging paradigm \u2013 executed by a radically small engineering team.\u201d \u2013 Faris Sbahi, CEO at Normal Computing\nWith CN101 taped out, Normal Computing transitions directly into characterization and benchmarking. Findings will guide the development of the forthcoming CN201 and CN301 chips, scaling Normal\u2019s thermodynamic computing vision for scaling AI workloads.\n\u201cOur vision to scale diffusion models with our stochastic hardware starts with demonstrating key applications on CN101 this year, then achieving state-of-the-art performance on medium-scale GenAI tasks next year with CN201, and finally achieving multiple orders-of-magnitude performance improvements for large-scale GenAI with CN301 two years from now.\u201d \u2013 Patrick Coles, Chief Scientist at Normal Computing\n\u201cCN101 represents the first silicon demonstration of our thermodynamic architecture that leverages randomness, metastability, and noise to perform sampling tasks. By characterizing CN101, we\u2019ll be able to lay the groundwork for understanding how these random processes behave on real silicon, and chart a clear path towards scaling up our architecture to support state-of-the-art diffusion models.\u201d \u2013 Zach Belateche, Silicon Engineering Lead at Normal Computing\nAbout Normal Computing\nFounded in 2022 by veterans from Google Brain, Google X, and Palantir, Normal Computing spans New York, San Francisco, London, and Copenhagen. Normal Computing is dedicated to addressing the fundamental limits of traditional computing infrastructure. The Normal Computing team builds foundational software and hardware for the physical world - partnering with the semiconductor industry through AI software that speeds up complex hardware engineering with zero defects, reducing costs, and developing thermodynamic computing hardware to power the next generation of energy-efficient, scalable AI infrastructure."
+    },
+    {
+      "url": "https://spectrum.ieee.org/thermodynamic-computing-normal-computing",
+      "text": "A new computing paradigm\u2014thermodynamic computing\u2014has entered the scene. Okay, okay, maybe it\u2019s just probabilistic computing by a new name. They both use noise (such as that caused by thermal fluctuations) instead of fighting it, to perform computations. But still, it\u2019s a new physical approach.\n\u201cIf you\u2019re talking about computing paradigms, no, it\u2019s this same computing paradigm,\u201d as probabilistic computing, says Behtash Behin-Aein, the chief technology officer and founder of probabilistic computing startup Ludwig Computing (named after Ludwig Boltzmann, a scientist largely responsible for the field of, you guessed it, thermodynamics). \u201cBut it\u2019s a new implementation,\u201d he adds.\nIn a recent publication in Nature Communications, New York city\u2013based startup Normal Computing detailed its first prototype of what it calls a thermodynamic computer. It demonstrated that it can use the computer to harness noise to invert matrices. It also demonstrated Gaussian sampling, which underlies some AI applications.\nHow Noise Can Aid Some Computing Problems\nConventionally, noise is the enemy of computation. However, certain applications actually rely on artificially generated noise. And using naturally occurring noise can be vastly more efficient.\n\u201cWe\u2019re focusing on algorithms that are able to leverage noise, stochasticity, and nondeterminism,\u201d says Zachary Belateche, silicon engineering lead at Normal Computing. \u201cThat algorithm space turns out to be huge, everything from scientific computing to AI to linear algebra. But a thermodynamic computer is not going to be helping you check your email anytime soon.\u201d\nFor these applications, a thermodynamic\u2014or probabilistic\u2014computer starts out with its components in some semi-random state. Then, the problem the user is trying to solve is programmed into the interactions between the components. Over time, these interactions allow the components to come to equilibrium. This equilibrium is the solution to the computation.\nThis approach is a natural fit for certain scientific computing applications that already include randomness, such as Monte Carlo simulations. It is also well suited for AI image generation algorithm stable diffusion, and a type of AI known as probabilistic AI. Surprisingly, it also appears to be well suited for some linear algebra computations that are not inherently probabilistic. This makes the approach more broadly applicable to AI training.\n\u201cNow we see with AI that a paradigm of CPUs and GPUs is being used, but it\u2019s being used because it was there. There was nothing else. Say I found a gold mine. I want to basically dig it. Do I have a shovel? Or do I have a bulldozer? I have a shovel, just dig,\u201d says Mohammad C. Bozchalui, the CEO and cofounder of Ludwig Computing. \u201cWe are saying this is a different world which requires a different tool.\u201d\nNormal Computing\u2019s Approach\nNormal Computing\u2019s prototype chip, which it termed the stochastic processing unit (SPU), consists of eight capacitor-inductor resonators and random noise generators. Each resonator is connected to each other resonator via a tunable coupler. The resonators are initialized with randomly generated noise, and the problem under study is programmed into the couplings. After the system reaches equilibrium, the resonator units are read out to obtain the solution.\n\u201cIn a conventional chip, everything is very highly controlled,\u201d says Gavin Crooks, a staff research scientist at Normal Computing. \u201cTake your foot off the control little bit, and the thing will naturally start behaving more stochastically.\u201d\nAlthough this was a successful proof of concept, the Normal Computing team acknowledges that this prototype is not scalable. But they have amended their design, getting rid of tricky-to-scale inductors. They now plan to create their next design in silico, rather than on a printed circuit board, and expect their next chip to come out later this year.\nHow far this technology can be scaled remains to be seen. The design is CMOS-compatible, but there is a lot to be worked out before it can be used to solve large-scale real-world problems. \u201cIt\u2019s amazing what they have done,\u201d Bozchalui of Ludwig Computing says. \u201cBut at the same time, there is a lot to be worked to really take it from what [it] is today to [a] commercial product to something that can be used at the scale.\u201d\nA Different Vision\nAlthough probabilistic computing and thermodynamic computing are essentially the same paradigm, there is a cultural difference. The companies and researchers working on probabilistic computing almost exclusively trace their academic roots to the group of Supryo Datta at Purdue University. The three cofounders of Normal Computing, however, have no ties to Purdue and come from backgrounds in quantum computing.\nThis results in the Normal Computing cofounders having a slightly different vision. They imagine a world where different kinds of physics are utilized for their own computing hardware, and every problem that needs solving is matched with the most optimal hardware implementation.\n\u201cWe coined this term physics-based ASICs,\u201d Normal Computing\u2019s Belateche says, referring to application-specific integrated circuits. In their vision, a future computer will have access to conventional CPUs and GPUs, but also a quantum computing chip, a thermodynamic computing chip, and any other paradigm people might dream up. And each computation will be sent to an ASIC that uses the physics that\u2019s most appropriate for the problem at hand.\nThis article appears in the August 2025 print issue as \u201cThermodynamic Computing Is the Hot New Trend.\u201d\n- Generating Power on Earth From the Coldness of Deep Space \u203a\n- What\u2019s a Time Crystal? \u203a\n- The Future of Computing Depends on Making It Reversible \u203a\nDina Genkina is an associate editor at IEEE Spectrum focused on computing and hardware. She holds a PhD in atomic physics and lives in Brooklyn."
+    }
+  ],
+  "argos_summary": "Normal Computing has taped out CN101, the world\u2019s first thermodynamic computing chip that uses natural noise and stochastic dynamics to solve AI and scientific workloads up to 1,000\u00d7 more efficiently than conventional silicon. The chip, built on a Carnot architecture, encodes problems in the interactions of silicon\u2011based resonators, letting the system settle into equilibrium to produce solutions for tasks such as matrix inversion and Gaussian sampling. Normal plans to scale this approach with CN201 in 2026 for high\u2011resolution diffusion models and CN301 by 2028 for large\u2011scale video diffusion, aiming to complement CPUs, GPUs, and quantum processors in data centers. The technology promises significant energy\u2011efficiency gains, potentially transforming how large\u2011scale AI inference and scientific simulations are performed. The company\u2019s founders, veterans of Google Brain, X, and Palantir, emphasize a future where specialized physics\u2011based ASICs match each computation to the most appropriate hardware paradigm.",
+  "argos_id": "BOG34JP5K"
+}

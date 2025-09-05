@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T19:17:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_rare_earth_sourcing",
+    "target_id": "usa_rare_earth",
+    "selection_motivation": "US Rare Earth Sourcing directly drives the overall supply of rare earths in the United States, making it a primary causal factor for the broader USA Rare Earth node.",
+    "candidate_motivation": "The source topic is about US rare earth sourcing, so the most relevant peers or influences are other topics that directly reference rare earths, their sourcing, or related industry activities in the US or globally.",
+    "existing_links_count": "2",
+    "candidate_count": "4",
+    "all_nodes_count": "1024",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['us_rare_earth_sourcing', 'usa_rare_earth', 'rare_earth_elements', 'rare_earth_recycling']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_rare_earth_sourcing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_rare_earth_sourcing', 'target': 'us_semiconductor_tariffs'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847137",
+    "rel_id": "us_rare_earth_sourcing__influences__usa_rare_earth",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_rare_earth_sourcing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_rare_earth_sourcing', 'target': 'us_semiconductor_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_rare_earth_sourcing', 'target': 'usa_rare_earth'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Rare Earth Sourcing directly drives the overall supply of rare earths in the United States, making it a primary causal factor for the broader USA Rare Earth node.",
+      "type": "INFLUENCES",
+      "source": "us_rare_earth_sourcing",
+      "target": "usa_rare_earth"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_rare_earth_sourcing__influences__usa_rare_earth"
+}

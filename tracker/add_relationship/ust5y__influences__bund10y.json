@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:04:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust5y",
+    "target_id": "bund10y",
+    "selection_motivation": "US 5‑year Treasury yield is a primary benchmark for global risk appetite; elevated yields tend to lift European sovereign yields through carry‑trade flows and risk‑sentiment spill‑over, making ust5y a direct driver of bund10y.",
+    "candidate_motivation": "US 5Y Treasury Yield is tightly linked to other US Treasury maturities, monetary policy signals, and key macro‑economic indicators; these topics are the most likely to influence, correlate with, or serve as peers to the 5‑year yield.",
+    "existing_links_count": "8",
+    "candidate_count": "13",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'fed_policy', 'sofr', 'us_inflation', 'us_unemployment_claims', 'dxy', 'spx', 'sx5e', 'bund10y', 'gilt10y', 'jgb10y']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255328655",
+    "rel_id": "ust5y__influences__bund10y",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5‑year Treasury yield is a primary benchmark for global risk appetite; elevated yields tend to lift European sovereign yields through carry‑trade flows and risk‑sentiment spill‑over, making ust5y a direct driver of bund10y.",
+      "type": "INFLUENCES",
+      "source": "ust5y",
+      "target": "bund10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__influences__bund10y"
+}

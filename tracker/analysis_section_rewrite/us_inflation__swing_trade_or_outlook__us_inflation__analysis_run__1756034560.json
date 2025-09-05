@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:33:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756034560",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18396",
+    "output_chars": "1405",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The current ANALYSIS DRAFT overreaches on breadth without delivering four clean Movers lines, clamps the horizon to 3–6 months but uses inconsistent drivers, and embeds a Swing Trade section that is under-specified (no concrete entry/stop/trigger levels) and mixes generic narrative with numbers; to reach world-class quality, reframe into exactly 4 Movers lines (2 Up, 2 Down) with a single, crisp time window (3–6 months), each line anchored to a distinct, first-principles driver (cloud/AI moats, platform cash flow, macro/policy tailwinds, etc.), and a singular, tight “What to watch” flag based only on the material; calibrate probabilities to explicit material evidence (e.g., base-case bullish read from Shopify + Azure momentum; bear risk from GMV/margin pressures) and attach in-text IDs after each factual claim used to justify the probability; drop extraneous Alt-A/Alt-B private-market prose from Movers and fold it into a separate scenario outline if needed. For the Swing Trade, convert to a fully specified tradable-plan line (and keep to the required 1–2 lines) with concrete fields: Direction Up; Horizon 3–6 months; Entry at a defined breakout level on high volume (no vague “leadership signals”); Stop at a concrete swing-low; Target 12–18%; R/R 1.5–2.0; Invalidation only on a material deterioration in GMV/margin or cloud growth; Trigger: close above breakout with volume; Probability % and Confidence % anchored to the same evidence, e.g., 60% and 75. Ensure the four Movers lines assert distinct causal links (Base Case: cloud/AI capex → platform moat → cash flow → multiple expansion; Bull path: continued monetization and margin discipline; Bear: deceleration risk; Policy/ labour dynamics as a separate macro risk) and that all numeric claims trace to the cited IDs (0G3A676BP, QFDWCTAYB, 4LQD15CFU, TN66GHPAT, U1KRCQOYR, GX057ADL7, J99EM2TPZ, RHXDOHQQX) with no extraneous sources. Finally, prune the draft’s long, multi-topic paragraphs into a tight, citation-forward deck, ensuring the movers cover the required coverage and that the Outlook/Swing Trade remains precise, actionable, and strictly follows the format constraints.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756034560"
+}

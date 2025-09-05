@@ -1,0 +1,29 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-28T12:44:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DRW2E1P5J",
+    "suggested_names": "['US-China Trade Policy']",
+    "topic_category": "policy",
+    "topic_category_motivation": "US-China trade policy directly influences Nvidia's China sales and broader tech sector dynamics.",
+    "should_add": "True",
+    "motivation_for_relevance": "US-China trade policy is a macro-level policy driver that directly influences trade flows, corporate earnings, and market sentiment, making it a relevant anchor for trading decisions.",
+    "importance_classification": "4",
+    "importance_classification_rationale": "US‑China trade policy is a policy‑level driver that shapes corporate earnings, supply chains, and cross‑asset spillovers. It is not a high‑frequency, intraday signal, but it can influence markets over days to months and warrants periodic monitoring for regime shifts. Hence it falls into the supporting‑signal, low‑centrality category (importance 4).",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights uncertainty in Nvidia's China sales due to US-China trade policy, a key macro driver affecting US tech firms.",
+      "id": "us_china_trade_policy",
+      "name": "US-China Trade Policy",
+      "type": "policy"
+    },
+    "generated_query": {
+      "motivation": "The query aggregates all key identifiers for Nvidia, its semiconductor and AI chip products, China market dynamics, US‑China trade tensions, regulatory and export control context, leadership, financial guidance, and market reaction terms to comprehensively capture relevant coverage while maintaining specificity for graph analytics.",
+      "query": "(NVIDIA OR Nvidia OR NVDA OR NVDA.O OR NVDA.N OR NVDA.NS) OR (chip OR chips OR semiconductor OR semiconductors OR AI chip OR AI chips OR H20 chip OR H20 chips OR H2O chip OR H2O chips) OR (China OR China sales OR China business OR China market OR Pequim OR Beijing OR PRC OR \"People's Republic of China\") OR (US-China trade war OR US-China trade tensions OR US-China trade dispute OR US-China trade conflict) OR (trade war OR trade tensions OR trade dispute OR trade conflict) OR (export controls OR export restrictions OR export control OR \"export control on semiconductors\" OR \"export control on chips\") OR (regulatory risk OR regulatory uncertainty OR regulator OR regulators) OR (Jensen Huang OR CEO OR \"Chief Executive Officer\") OR (Q3 OR \"third quarter\" OR quarterly OR \"quarterly earnings\" OR earnings OR revenue OR \"revenue forecast\" OR \"revenue outlook\" OR guidance OR forecast) OR (share repurchase OR \"share buyback\" OR buyback OR \"stock buyback\" OR \"share repurchase program\") OR (stock OR shares OR \"share price\" OR \"stock price\" OR \"market cap\" OR capitalization) OR (news OR analysis OR report OR update OR breaking OR latest OR recent OR today OR trend OR market OR \"market analysis\")"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:1242"
+}

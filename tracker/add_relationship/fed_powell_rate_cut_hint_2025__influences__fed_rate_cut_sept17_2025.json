@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:18:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_powell_rate_cut_hint_2025",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "The Powell rate‑cut hint is a direct precursor to the scheduled Fed rate cut on Sept 17 2025, establishing a causal influence from the hint to the actual policy action.",
+    "candidate_motivation": "Fed rate‑cut hints directly shape monetary policy expectations, Treasury yields, inflation outlooks, and the valuation of major FX and equity markets; thus the most relevant influences are Fed policy, Treasury yields, inflation data, and the key market handles that react to a change in stance.",
+    "existing_links_count": "10",
+    "candidate_count": "21",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'euro_inflation', 'ecb_policy', 'dxy', 'eurusd', 'usdjpy', 'gbpusd', 'spx', 'sx5e', 'sofr', 'bund10y', 'uk_30yr_gilt_yield', 'gilt10y', 'jgb10y']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1405124183251226303",
+    "rel_id": "fed_powell_rate_cut_hint_2025__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Powell rate‑cut hint is a direct precursor to the scheduled Fed rate cut on Sept 17 2025, establishing a causal influence from the hint to the actual policy action.",
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_powell_rate_cut_hint_2025__influences__fed_rate_cut_sept17_2025"
+}

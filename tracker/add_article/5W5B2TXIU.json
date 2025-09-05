@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T00:33:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5W5B2TXIU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and independence debate influence UST yields and market sentiment.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports on political figures issuing statements or urging actions regarding federal policy, fitting the policy_statement category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to determine relevance due to missing node context, but the article covers Fed policy and energy sector moves which could impact macro markets; given uncertainty, assign a low impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate political actions and policy announcements that affect the Fed and energy sector."
+    },
+    "article_node": {
+      "id": "5W5B2TXIU",
+      "title": "Stephen Miran Faces Senate Hearing",
+      "summary": "Bloomberg’s \"Balance of Power\" highlighted a Senate hearing on Stephen Miran’s Fed nomination, with Senator Elizabeth Warren urging oversight of the President’s attacks on the Federal Reserve. Representative Byron Donalds supported releasing Jeffrey Epstein files and discussed congressional provisions. Energy Secretary Chris Wright detailed Trump administration moves affecting the energy sector, including offshore wind and LNG policies.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-04/balance-of-power-late-edition-9-02-2025-video?srnd=phx-technology",
+      "published_at": "2025-09-04T00:07:06.516000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "5W5B2TXIU"
+}

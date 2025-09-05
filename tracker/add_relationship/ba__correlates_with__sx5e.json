@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T16:28:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ba",
+    "target_id": "sx5e",
+    "selection_motivation": "Boeing's equity performance is strongly correlated with global equity markets, including Euro Stoxx 50, reflecting shared sensitivity to defense spending and airline demand.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on Boeing's role as a major defense contractor, equity constituent, and fuel‑intensive manufacturer, linking it to defense spending, US Treasury rates, macro growth indicators, commodity prices, and currency dynamics.",
+    "existing_links_count": "15",
+    "candidate_count": "23",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'spx', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sx5e', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'us_unemployment_claims']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'eu_defense_spending'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161930902884843674",
+    "rel_id": "ba__correlates_with__sx5e",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'sx5e'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'eu_defense_spending'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing's equity performance is strongly correlated with global equity markets, including Euro Stoxx 50, reflecting shared sensitivity to defense spending and airline demand.",
+      "type": "CORRELATES_WITH",
+      "source": "ba",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__correlates_with__sx5e"
+}

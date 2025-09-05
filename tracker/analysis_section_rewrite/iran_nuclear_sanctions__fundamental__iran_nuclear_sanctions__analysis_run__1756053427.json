@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T18:37:07",
+  "processed": false,
+  "inputs": {
+    "topic_id": "iran_nuclear_sanctions",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "iran_nuclear_sanctions__analysis_run__1756053427",
+    "article_ids": "['FRDXP10EY', 'FRDXP10EY', 'FRDXP10EY']",
+    "selected_articles_count": "3",
+    "material_chars": "18130",
+    "output_chars": "3218",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "High-signal critique and concrete edits: the draft correctly centers the snapback mechanism and the late-August 2025 deadline but treats diplomacy in isolation from a multi-year, regime-structure framework; to reach world-class quality, recast into a regime-based, first-principles macro frame (invariants: policy reaction functions of the E3, Iran’s BoP/external position, terms of trade, and external financing costs; regime states: (A) snapback activated, (B) extended negotiations with partial relief, (C) no deal/continued stalemate) and specify clear transition conditions (deadline hit, extension offered/accepted, renewed IAEA cooperation) and probabilities anchored to the source timeline. Build a explicit causal chain from political triggers to market pricing: E3 signaling and snapback credibility raise sanctions risk premia and Iran’s external financing costs, constrict external access, depress the rial and import-capacity channel, and affect oil revenue/flow assumptions; tie this to observable market signals (risk spreads, sovereign credit perception, energy backlog) in a way that can be tested over years; define base-case plus two to three scenarious with entry/exit triggers and invalidation conditions (e.g., Iran resumes IAEA cooperation or an extension is formally agreed, vs. a renewed conflict or unilateral snapback). Quantify where possible using only the source data: end-August 2025 as the de facto trigger; the snapback mechanism as the legal pathway; Iran’s enrichment level (60%) and the note that IAEA ties have been limited or suspended since the war; use these as anchors for regime-detection thresholds rather than vague adjectives. Strengthen “what to watch” with concrete signals: (i) public E3/IAEA statements and any Istanbul-style diplomatic progress, (ii) Iran’s re-engagement with the IAEA, (iii) any formal extension/negotiating framework, (iv) timing of external-financing cost shifts or currency stress indicators. Ensure the write-up uses only FRDXP10EY as the source, harmonizes all references to that ID, and removes any non-sourced or speculative data; tighten the prose to a single, structured paragraph that clearly separates base case, alternative paths, catalysts/triggers, invalidation, and the multi-year transmission to pricing, with a concise confidence statement.",
+      "tokens": {}
+    }
+  },
+  "id": "iran_nuclear_sanctions__fundamental__iran_nuclear_sanctions__analysis_run__1756053427"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:50:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "eur",
+    "selection_motivation": "ECB policy directly sets monetary conditions that determine the euro's value, making it a primary driver of the EUR node.",
+    "candidate_motivation": "ECB Policy directly shapes euro-area monetary conditions and inflation dynamics, creating strong links to related macro assets and markets. The strongest plausible influences/correlates/peers include euro-area inflation, the euro, EURUSD, US Fed Policy and US Dollar, plus major eurozone and global equity and commodity indicators that react to rate expectations (S&P 500, Eurostoxx 50, Oil, Gold).",
+    "existing_links_count": "3",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['euro_inflation', 'eur', 'eurusd', 'usd', 'fed_policy', 'sp500', 'eurostoxx50', 'oil', 'gold']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586246",
+    "rel_id": "ecb_policy__influences__eur",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eur'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy directly sets monetary conditions that determine the euro's value, making it a primary driver of the EUR node.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "eur"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__eur"
+}

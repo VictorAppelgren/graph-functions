@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:09:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gold",
+    "target_id": "euro_inflation",
+    "selection_motivation": "Gold is a global inflation hedge; its price movements are strongly correlated with inflation expectations in major economies, including the Euro area, making a direct influence link to Euro Area Inflation highly informative for cross‑currency inflation analysis.",
+    "candidate_motivation": "These topics represent the core macro drivers and cross-asset interactions that typically influence gold's price, including USD strength, inflation expectations, and central-bank policy signals. The shortlist focuses on the strongest direct links (FX, yields, inflation data, and major policy) and related risk indicators that historically move gold.",
+    "existing_links_count": "8",
+    "candidate_count": "12",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['usd', 'eurusd', 'us_10y', '30yr_tips_auction', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'core_monthly_cpi', 'core_cpi', 'oil', 'sp500']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186699601323753483",
+    "rel_id": "gold__influences__euro_inflation",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold is a global inflation hedge; its price movements are strongly correlated with inflation expectations in major economies, including the Euro area, making a direct influence link to Euro Area Inflation highly informative for cross‑currency inflation analysis.",
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__influences__euro_inflation"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T17:47:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "P8AP425FM",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: labor and equities; JCPenney store closure adds ~76 jobs to US unemployment claims, expect 0.01-0.02% uptick over next 30 days, and modest negative pressure on S&P 500 retail component, 0.1-0.3% dip in index over next month.",
+      "existing_ids": [
+        "us_unemployment_claims",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a specific operational change at JCPenney—closure of a store location—without reference to earnings, policy, or macro data, fitting the definition of a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article reports a single retail store closure, which does not affect macro-level market handles or broader economic indicators, making it irrelevant to the graph’s macro focus."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific, imminent store closure for JCPenney, indicating a short‑term event affecting the company’s operations."
+    },
+    "article_node": {
+      "id": "P8AP425FM",
+      "title": "JCPenney is closing a 51-year-old store. See which location is closing its doors.",
+      "summary": "JCPenney is shutting its Westminster Mall location in Orange County, California, with the store remaining open to the public until Nov. 16 and closing on or about Nov. 21. The WARN notice filed on Aug. 18 cites the loss of the lease and inability to secure a new site, affecting 76 employees who may be offered positions elsewhere. The closure is part of a broader pattern of JCPenney store shutdowns following its bankruptcy and recent sale of 119 stores to Onyx Partners for $947 million.",
+      "source": "https://www.usatoday.com/story/money/shopping/2025/08/28/jcpenney-store-closing-orange-county-california/85864881007/",
+      "published_at": "2025-08-28T17:34:38+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "P8AP425FM"
+}

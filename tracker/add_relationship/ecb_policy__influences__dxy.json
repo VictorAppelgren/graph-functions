@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:20:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "dxy",
+    "selection_motivation": "ECB policy shifts directly alter euro strength versus the dollar, driving movements in the US Dollar Index (DXY).",
+    "candidate_motivation": "ECB Policy directly shapes euro‑area inflation, euro‑area yields, and the euro‑zone equity market, and it is a peer to other major central banks. It also indirectly influences global rates and the dollar through relative policy stances, so related US Treasury yields and the USD index are plausible correlates.",
+    "existing_links_count": "7",
+    "candidate_count": "7",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['fed_policy', 'euro_inflation', 'bund10y', 'sx5e', 'euribor', 'ust10y', 'dxy']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217710",
+    "rel_id": "ecb_policy__influences__dxy",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy shifts directly alter euro strength versus the dollar, driving movements in the US Dollar Index (DXY).",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__dxy"
+}

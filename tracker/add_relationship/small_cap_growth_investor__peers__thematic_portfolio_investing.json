@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:02:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "small_cap_growth_investor",
+    "target_id": "thematic_portfolio_investing",
+    "selection_motivation": "Small‑cap growth investors and thematic portfolio investors both pursue high‑growth, niche strategies that emphasize emerging sectors, making them direct peers in the investment landscape.",
+    "candidate_motivation": "These macroeconomic, policy, and technology spend topics are the most plausible direct influences or peers for a Small-Cap Growth Investor, given sensitivity to policy stance, inflation, rates, and tech spend cycles.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'core_monthly_cpi', 'us_10y', 'us_tariffs_semiconductors', 'smb_cloud_spend', 'thematic_portfolio_investing', 'macro_risks_technology']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'small_cap_growth_investor', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152927002164989590",
+    "rel_id": "small_cap_growth_investor__peers__thematic_portfolio_investing",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'small_cap_growth_investor', 'target': 'us_inflation'}, {'type': 'PEERS', 'source': 'small_cap_growth_investor', 'target': 'thematic_portfolio_investing'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Small‑cap growth investors and thematic portfolio investors both pursue high‑growth, niche strategies that emphasize emerging sectors, making them direct peers in the investment landscape.",
+      "type": "PEERS",
+      "source": "small_cap_growth_investor",
+      "target": "thematic_portfolio_investing"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "small_cap_growth_investor__peers__thematic_portfolio_investing"
+}

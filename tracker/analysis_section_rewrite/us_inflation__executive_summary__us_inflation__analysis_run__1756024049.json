@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:39:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756024049",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15044",
+    "output_chars": "1813",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is rich in sources and dialed into a plausible 5–7 year regime, but it reads as a compendium of observations rather than a tight, decision-ready house view; to reach world-class quality, compress to 4–6 executive sentences and rebuild around a single, explicit base-case thesis with clearly defined catalysts, risks, and watch‑items. Actionable edits: 1) convert to a crisp 1–2 sentence base-case (5–7 year horizon) anchored to the 21.2% cloud/AI CAGR (0G3A676BP) with a explicit causal chain (cloud capex and data moats -> durable earnings visibility -> higher multiples) and quantify how that translates into base-case margin/FCF dynamics using the MSFT/Shopify datapoints (18% revenue growth; Azure/AI ~39%; Shopify ~31%; base capex/EV growth should map to those numbers) and the labor channel (4LQD15CFU) without extraneous analogies; 2) prune non-core or duplicative anchors (e.g., Ford/Gran Torino-style analogies) and keep only sources that map to the labeled IDs; reconcile any conflicts (Just Capital 35.95% vs Russell 17.18% needs a concise interpretation and citation tie) so every assertion has a sourced anchor (0G3A676BP, 4LQD15CFU, TN66GHPAT, JVKCZAPVG, UPV3X2MQ6, ILYC1M41F, S7M6BJSRT, 8VMO3PFEO, FOM34PUWA, A7VLN74BK, C3ODMIQKZ, GX057ADL7, J99EM2TPZ, RHXDOHQQX, V7GV8YBQU); 3) sharpen the structure into a regime map: base-case + 1 bull/1 bear alt, each with 2–3 explicit drivers and one numerical threshold drawn from sources (e.g., cloud CAPEX above/below 21% for sustained periods as transition; 70% probability of a 50bp cut in September with related dollar/spread moves from C3ODMIQKZ/GX057ADL7); 4) make the near-term window actionable by listing 3–4 triggers and 2–3 invalidations with precise, sourced thresholds (e.g., cloud-capex momentum, MSFT/Shopify earnings durability, labor-governance signal from 4LQD15CFU); 5) ensure the “watch-items” are tightly quantified and limited to items with source-backed metrics (Range adoption, Pacaso/HeartSciences/UAS/Japan wage prints if you keep them, cite their IDs and avoid ad hoc numbers); 6) tighten voice and length to executive style—remove repetition, ensure each sentence advances a discrete point, and place all macro overlays (CPI, policy path, oil, tariffs) behind a single, sourced macro sentence rather than integrated into every paragraph; 7) include a concise, one-line decision frame at the top (the house view) and a final, 2–3 point verdict on risk-adjusted upside vs. downside, with a compact watch-list; 8) fix any numerical overreach (e.g., replace or footnote any unanchored figures like multi‑asset totals) and ensure every numeric claim ties to a source ID. Implementing these edits will align depth, grounding, and transmission logic with SECTION FOCUS, meet the 4–6 sentence/point limit, and deliver a decision-useful, tightly sourced house view.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756024049"
+}

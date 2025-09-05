@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T13:49:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust10y",
+    "target_id": "ust5y",
+    "selection_motivation": "The 10‑year Treasury yield is a key benchmark that shapes expectations for intermediate‑term rates; it directly influences the 5‑year yield through forward‑rate dynamics and risk‑premium transmission.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain. The US 10‑year Treasury yield is driven by Fed policy, inflation expectations, term‑structure dynamics, global yield peers, equity market sentiment, currency moves, commodity price shocks, and macro‑economic data releases, as well as risk‑event catalysts such as hurricane season risk.",
+    "existing_links_count": "22",
+    "candidate_count": "29",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "29",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'dxy', 'usdjpy', 'gbpusd', 'usdcny', 'us_services_pmi', 'us_unemployment_claims', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'wheat', 'spx', 'sx5e', 'sofr', 'euribor', 'euro_inflation', 'ecb_policy']",
+    "existing_links_before_len": "22",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:17",
+    "rel_id": "ust10y__influences__ust5y",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 10‑year Treasury yield is a key benchmark that shapes expectations for intermediate‑term rates; it directly influences the 5‑year yield through forward‑rate dynamics and risk‑premium transmission.",
+      "type": "INFLUENCES",
+      "source": "ust10y",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__influences__ust5y"
+}

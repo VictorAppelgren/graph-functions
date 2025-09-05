@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T21:45:29",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "K2JWRPXRV",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Nintendo Switch 2 sales boost US gaming hardware sector, lifting tech indices such as S&P 500 and Nasdaq.",
+      "existing_ids": [],
+      "new_names": [
+        "gaming_hardware_spending"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Nintendo’s Switch 2 sales performance and hardware spending, which is a company‑specific update rather than earnings, regulatory, or macro data."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Unable to assess impact without node context"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports recent sales figures for Nintendo Switch 2 in June‑July 2025, reflecting short‑term demand dynamics."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "K2JWRPXRV"
+}

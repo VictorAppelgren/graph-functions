@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:25:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "core_monthly_cpi",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "core_monthly_cpi__analysis_run__1756073668",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "13986",
+    "output_chars": "1417",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable upgrade: tighten the Movers & Scenarios into four exact lines (2 Up, 2 Down) with the prescribed form and anchor each line to a single regime and explicit, source-backed catalysts; remove non-core narrative (e.g., Perez Strip pricing) from the mover lines and map each Up/Down to Baseline, Tariff‑Stress, or Structural regime, using precise numeric drivers from the material (core CPI path 0.30–0.40% MoM; 0.25–0.30% MoM; >0.40% MoM; S&P responses 0.75–1.2% under 0.25–0.30% path; auto/margins context from 22PL3Q360; regime timing/readouts from SGB2PAZGK/RHFWI02JT/STBVARD8F); assign probabilities strictly from the evidence bands (e.g., Up Baseline ~35% with GB4W1L6J1; Up Tariff-Stress ~30% with GB4W1L6J1 and 22PL3Q360; Down >0.40% shock ~5% with GB4W1L6J1; Down Structural ~25% with SGB2PAZGK/RHFWI02JT/STBVARD8F) and ensure each line’s “What to watch” lists one or two crisp signals (CPI path, tariff signals; Libre uptake, EV margins; CPI >0.40%, Jackson Hole cues; BoP/terms-of-trade, Nvidia capex timing). For the Swing Trade, supply a complete ABT/ABBV/PFE plan: Long | 3–6 months | Entry near current levels | Stop 5% below | Target 8–12% | R/R 1.6–2.4 | Invalidation: break below established support | Trigger: positive quarterly disclosures and Libre uptake/pipeline milestones | Probability ~60% | Confidence ~65, citing WISLWAJ15 for fundamentals and 22PL3Q360 for micro‑drivers; ensure all numeric facts are cited (GB4W1L6J1 for CPI/tariff paths; 22PL3Q360 for auto margins; SGB2PAZGK/RHFWI02JT/STBVARD8F for regime dynamics). Finally, audit source coverage and reconcile conflicts across GB4W1L6J1, 22PL3Q360, WISLWAJ15, SGB2PAZGK, RHFWI02JT, STBVARD8F, 2QRLB974F, YVQU6QCY4, and others, while consistently formatting horizons (3–6 months) and tying every claim to a single, verifiable data point.",
+      "tokens": {}
+    }
+  },
+  "id": "core_monthly_cpi__swing_trade_or_outlook__core_monthly_cpi__analysis_run__1756073668"
+}

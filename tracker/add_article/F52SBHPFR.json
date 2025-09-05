@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T12:48:40",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "F52SBHPFR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; S&P 500 high valuation and concentration risk signal potential pullback, equal-weight ETF offers hedging.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market analysis of S&P 500 valuation and composition, discussing potential pullback and diversification via equal-weight ETF."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article discusses the S&P 500’s current valuation, sector concentration, and potential pullback, directly affecting the spx index’s outlook."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article discusses present market valuation levels and short‑term pullback signals rather than long‑term structural drivers."
+    },
+    "article_node": {
+      "id": "F52SBHPFR",
+      "title": "With the S&P 500 at Historically High Levels, This ETF Could Be the Best Way to Invest in the Index",
+      "summary": "The S&P 500 is trading at historically high levels, largely driven by the 'Magnificent Seven' tech giants that now make up over a third of the index. Its elevated Shiller CAPE ratio signals a potential pullback. An equal‑weight S&P 500 ETF, such as Invesco RSP, offers more diversified exposure that mitigates concentration risk. The article also explains how the P/E ratio works and why it matters for investors.",
+      "source": "https://finance.yahoo.com/news/p-500-historically-high-levels-093200612.html",
+      "published_at": "2025-08-31T09:32:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "F52SBHPFR"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T02:31:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdcny",
+    "target_id": "gbpusd",
+    "selection_motivation": "USD/CNY and GBP/USD are both dollar‑based cross rates that tend to move in tandem as global dollar strength shifts, so a correlation link captures this relationship.",
+    "candidate_motivation": "USD/CNY is driven by US monetary stance, dollar strength, and Chinese economic fundamentals. Cross‑currency peers (USD/JPY, GBP/USD, EURUSD) and the USD index set the dollar backdrop, while US Treasury yields, inflation, and labor data shape dollar supply/demand. Chinese exports, credit conditions, and energy imports directly influence the yuan. These topics are the most likely to have strong influence or correlation with USD/CNY.",
+    "existing_links_count": "16",
+    "candidate_count": "16",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['usdjpy', 'gbpusd', 'eurusd', 'dxy', 'fed_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'cn_russia_gas_pipeline'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161930902884844416",
+    "rel_id": "usdcny__correlates_with__gbpusd",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'cn_russia_gas_pipeline'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/CNY and GBP/USD are both dollar‑based cross rates that tend to move in tandem as global dollar strength shifts, so a correlation link captures this relationship.",
+      "type": "CORRELATES_WITH",
+      "source": "usdcny",
+      "target": "gbpusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdcny__correlates_with__gbpusd"
+}

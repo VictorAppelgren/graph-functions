@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:15:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756033631",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "14826",
+    "output_chars": "1236",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | Base-case policy easing and AI/tech re-rating | What to watch: CPI/payroll convergence and Jackson Hole guidance toward gradual easing with a Sept 25bp cut if data stay in line and the 10-year near 4.23% (GX057ADL7)(37UZC9X8I) | Probability 60%\nUp | 12–24 months | IPO-driven small-cap re-rating and ACMR product ramp | What to watch: IPO momentum (95 IPOs in 2025, $12.9B) and Russell 2000 discount narrowing that could lift ACMR toward $34.76 if backlog and margins stay intact (Q7VVGNSQE)(SK994CBWR) | Probability 55%\nDown | 0–3 weeks | Hawkish surprises or weaker data that disrupt rate-cut expectations and reprice risk | What to watch: Jackson Hole commentary (37UZC9X8I), near-term CPI/payroll prints (GX057ADL7), and semiconductor export-control signals (H7Q52FKDH) that could push risk premia higher and lift the dollar | Probability 35%\nDown | 12–24 months | Geopolitical/regulatory shocks that reallocate semiconductor capex and elevate risk premia | What to watch: Chips Act developments (Intel stake and 15% revenue cap) (H7Q52FKDH) and Nvidia/AMD licensing dynamics that could dampen AI buildouts if constraints persist (H7Q52FKDH) | Probability 40%",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756033631"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T00:12:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DJWTWIAMJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US immigration policy shift may influence Fed policy outlook and economic growth.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a judicial decision blocking a federal immigration policy, constituting a regulatory change."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a court decision blocking a federal immigration policy, directly affecting the US immigration policy node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent court decision that immediately alters the enforcement of a specific immigration policy, affecting its current implementation."
+    },
+    "article_node": {
+      "id": "DJWTWIAMJ",
+      "title": "Trump’s ‘Startling’ Rapid Deportation Policy Paused By US Judge",
+      "summary": "A US judge blocked a Trump administration policy that for months has allowed federal agents to rapidly remove undocumented immigrants without due process from anywhere in the US if they can’t quickly prove they’ve been in the country for more than two years.\n\nThe decision Friday puts on hold a rule enacted in January that has become a key element of President Donald Trump ’s mass deportation effort. The rule expanded a policy known as “expedited removal,” which had long been used only for immigr...",
+      "source": "https://www.bloomberg.com/news/articles/2025-08-30/trump-s-startling-rapid-deportation-policy-paused-by-us-judge",
+      "published_at": "2025-08-30T21:06:38.894000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "DJWTWIAMJ"
+}

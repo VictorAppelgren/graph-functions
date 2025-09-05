@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T14:41:28",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756641070",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6901",
+    "output_chars": "732",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the 4‑line “Up/Down” format, but the swing‑trade line needs tightening: remove the citation from the probability field (probability must be a plain %), keep the confidence as a plain 0‑100 number, and consider merging the two invalidations into a single clause (“Fed rate hike (OGK8WLL69) or Tesla verdict upheld (LJZYDXVL3)”) to avoid ambiguity. Also ensure the swing‑trade line explicitly references the SPX (or SPX futures) in the entry/stop/target fields (the citations already imply this, but a brief “SPX” label would reinforce the asset). Finally, double‑check that all driver/trigger citations are valid IDs and that no extra text drifts outside the required fields.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756641070"
+}

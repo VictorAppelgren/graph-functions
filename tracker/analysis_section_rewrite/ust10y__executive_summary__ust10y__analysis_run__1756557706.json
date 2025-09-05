@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T15:20:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756557706",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5450",
+    "output_chars": "1344",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is overly verbose and drifts into ancillary assets (e.g., DXY, Cook lawsuit) without a clear causal tie to ust10y. Condense to 4–6 sentences or bullets, each ending with an inline citation that explicitly links the claim to ust10y (e.g., “ust10y” or “fed_policy”). Remove any mention of DXY unless you state “a 57‑bp steepening of the 2‑yr/10‑yr spread (fed_policy → term premium → ust10y)” with a citation. Replace generic “Fed policy” with the canonical driver “fed_policy” and “core PCE” with “us_core_cpi”. Keep catalyst windows dated (e.g., “September 12 PCE, September 16‑17 FOMC, mid‑October tariff announcement”) and quantify shifts (10–20 bps, 5–10 bps). Trim redundant citations and any narrative that does not directly influence ust10y. End with a concise risk statement (“Fed reversal, inflation spike, debt‑sustainability shock”) and a watch list (“fed_policy decision, 2‑yr/10‑yr spread, September 5 payrolls, Cook lawsuit verdict”) each with a citation. This will align the brief with the 4–6 sentence rule, maintain causal clarity, and satisfy the asset‑centric focus.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__executive_summary__ust10y__analysis_run__1756557706"
+}

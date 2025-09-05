@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:02:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust5y",
+    "target_id": "gilt10y",
+    "selection_motivation": "US 5Y Treasury yield is a key benchmark for global risk sentiment and directly correlates with UK 10Y gilt yield through global yield curve dynamics and risk appetite.",
+    "candidate_motivation": "US 5Y Treasury Yield is driven by Fed policy, inflation expectations, and the term‑structure of rates; it also moves in tandem with other US Treasury maturities, global sovereign yields, and currency indices that reflect risk sentiment.",
+    "existing_links_count": "20",
+    "candidate_count": "19",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sofr', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'ecb_policy', 'euro_inflation', 'euribor']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1209218698972235151",
+    "rel_id": "ust5y__correlates_with__gilt10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5Y Treasury yield is a key benchmark for global risk sentiment and directly correlates with UK 10Y gilt yield through global yield curve dynamics and risk appetite.",
+      "type": "CORRELATES_WITH",
+      "source": "ust5y",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__correlates_with__gilt10y"
+}

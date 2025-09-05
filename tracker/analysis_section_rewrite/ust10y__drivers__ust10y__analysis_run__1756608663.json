@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T05:00:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756608663",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1821",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target for the DXY but several sentences lack explicit citations or over‑generalize the causal chain. Add inline IDs to the paragraph that explains the dip‑to‑rally reconciliation (e.g., cite (Z7O1DCHS7)(LF0UUL917)), the sensitivity to the 2‑yr/10‑yr spread (cite (7XH2DKEKV)), and the risk list (cite (7XH2DKEKV) for CPI/PCE, (LF0UUL917) for Fed stance). Remove the vague “conflict” sentence and replace it with a concise, citation‑backed explanation that the short‑term dip is a correction before the 0.5–1 % medium‑term upside. Tighten the risk paragraph by quantifying each risk (e.g., a Fed hike >25 bp would dampen DXY by ~30 bp) and cite the source. Add citations to the watch‑list sentence (e.g., (B1KYJ1GPU)(XTQIQRP5K) for CPI, (7XH2DKEKV) for NFP). Finally, delete the last confidence sentence and replace it with a brief, evidence‑based assessment (e.g., “Given the 86 % probability of the September cut and the 57 bp steepening, the 0.5–1 % upside is supported by the data; a 25 bp hike would reverse it”). This will satisfy the requirement for explicit handle mapping, catalyst windows, and source density.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756608663"
+}

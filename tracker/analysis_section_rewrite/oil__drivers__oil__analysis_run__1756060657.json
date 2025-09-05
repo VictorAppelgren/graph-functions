@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T20:42:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "oil",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "oil__analysis_run__1756060657",
+    "drivers_count": "1",
+    "material_chars": "427",
+    "output_chars": "4024",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft sketches a plausible base-case but its reasoning lacks a tight first-principles causal chain, a formal three-scenario structure, precise quantification, and a fully integrated cross-topic synthesis (macro, policy, flows/positioning, and valuations); to upgrade to world-class quality, implement: (1) a concise, explicit causal chain from AI productivity uplift to higher potential output, then to labor-supply reallocation via retraining/safety nets, to durable-demand growth and higher cash-flow durability for AI/cloud beneficiaries, clearly labeling the frictions (displacement, wage spillovers) and why policy credibility matters; (2) a formal scenario framework (base, upside, downside) with defined parameters, probabilities, and the way policy credibility shifts the path and the duration of demand support; (3) rigorous quantification: replace qualitative statements with explicit parameter ranges or point estimates anchored to the source (e.g., uplift to potential output, share of demand shifting to healthcare/durables, implied multiples for durable-tech beneficiaries) and a sensitivity articulation; (4) richer cross-topic synthesis: map the macro impulse, policy transmission, flows/positioning (funding, capex, household balance sheets), and valuation implications into a single integrated narrative, ending with a diagrammatic or bullet‑proof mechanism summary; (5) a trigger-based watch-list with 6–8 decisive signals (policy announcements/funding milestones; inflation and wage prints; durable-goods orders; healthcare capex; AI-adoption indicators; central-bank guidance) plus explicit invalidation criteria (e.g., retraining funding delayed beyond a threshold for two consecutive data points; a sustained inflation surprise that compresses risk premia); (6) formatting discipline: consolidate repetitive lines, cite NL5YYTLF2 only once per claim or in a compact cluster, and present the base-case versus risk-case conclusions and primary drivers in a single cohesive paragraph with a short, explicit watch-list; (7) acknowledge sole reliance on NL5YYTLF2 and, if possible, triangulate with at least one corroborating source to avoid mono-source bias and reconcile any implied conflicts, while clearly flagging any gaps that require additional data.",
+      "tokens": {}
+    }
+  },
+  "id": "oil__drivers__oil__analysis_run__1756060657"
+}

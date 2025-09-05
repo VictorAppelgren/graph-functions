@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T12:33:45",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "APOB9BVLB",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; UK 30‑year gilt yields surged to 5.7% on 02/09/25, tightening the UK‑US spread and weakening sterling.",
+      "existing_ids": [
+        "gbpusd",
+        "dxy"
+      ],
+      "new_names": [
+        "uk_30y_gilt_yield"
+      ]
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports a significant fiscal shortfall and high inflation, constituting a major macroeconomic event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "Article reports a significant rise in UK 30‑year gilt yields, directly affecting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on an immediate cabinet reshuffle and its short‑term impact on UK 30‑year gilt yields, the pound, and equity markets, reflecting a current market reaction."
+    },
+    "article_node": {
+      "id": "APOB9BVLB",
+      "title": "Fears UK heading for 'oblivion' as government borrowing costs soar",
+      "summary": "UK 30‑year gilt yields surged to just below 5.7%, the highest level since 1998, after a cabinet reshuffle that sidelined Chancellor Rachel Reeves.  Investors now fear a £50 billion fiscal shortfall and potential tax hikes, pushing the pound lower and the FTSE 100 into a fifth straight red day.  Inflation remains at an 18‑month high and is expected to climb toward 4%, further eroding confidence in the government’s fiscal credibility.",
+      "source": "https://www.dailymail.co.uk/news/article-15057297/UK-economic-oblivion-government-borrowing-costs-soar-Starmer-reshuffle-Reeves.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "published_at": "2025-09-02T10:16:18+01:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 2
+    }
+  },
+  "id": "APOB9BVLB"
+}

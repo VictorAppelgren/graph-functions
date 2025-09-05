@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T18:37:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "smb_cloud_spend",
+    "target_id": "first_trust_cloud_computing_etf",
+    "selection_motivation": "SMB Cloud Spend is a key driver of the cloud computing sector, directly influencing the performance of companies tracked by the First Trust Cloud Computing ETF.",
+    "candidate_motivation": "SMB Cloud Spend is directly tied to the adoption of cloud services by small and medium businesses, making cloud storage providers and cloud‑computing investment vehicles natural peers or influences.",
+    "existing_links_count": "0",
+    "candidate_count": "2",
+    "all_nodes_count": "1023",
+    "candidate_ids_len": "2",
+    "candidate_ids_preview": "['internxt_cloud_storage', 'first_trust_cloud_computing_etf']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118474904",
+    "rel_id": "smb_cloud_spend__influences__first_trust_cloud_computing_etf",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'smb_cloud_spend', 'target': 'first_trust_cloud_computing_etf'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "SMB Cloud Spend is a key driver of the cloud computing sector, directly influencing the performance of companies tracked by the First Trust Cloud Computing ETF.",
+      "type": "INFLUENCES",
+      "source": "smb_cloud_spend",
+      "target": "first_trust_cloud_computing_etf"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "smb_cloud_spend__influences__first_trust_cloud_computing_etf"
+}

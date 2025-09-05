@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T02:50:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_crude_inventory",
+    "target_id": "dxy",
+    "selection_motivation": "US crude inventories damp oil prices, which via the commodity‑currency channel weaken the USD; thus inventories directly influence the DXY.",
+    "candidate_motivation": "US Crude Inventories directly influence oil price dynamics and spill over to related commodity and currency markets; they also feed into inflation expectations and risk‑premium flows, making the following topics strong peers or correlates.",
+    "existing_links_count": "5",
+    "candidate_count": "6",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'brent', 'dxy', 'us_inflation', 'us_core_pce']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586536",
+    "rel_id": "us_crude_inventory__influences__dxy",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US crude inventories damp oil prices, which via the commodity‑currency channel weaken the USD; thus inventories directly influence the DXY.",
+      "type": "INFLUENCES",
+      "source": "us_crude_inventory",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_crude_inventory__influences__dxy"
+}

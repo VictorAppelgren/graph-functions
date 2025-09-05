@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T12:44:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "56DSYR7J6",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; S&P 500 at historic highs and heavy concentration in the Magnificent Seven raises downside risk for the index.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis and opinion on the composition of the S&P 500, the risks of concentration, and suggests hedging strategies and AI exposure, which is a market commentary."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses concentration risk in the S&P 500 and proposes an equal‑weight hedge, directly affecting the spx index’s risk profile and the AI sector’s exposure, thereby influencing equity market dynamics."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on the present concentration of the S&P 500 and immediate hedging strategies, addressing current market structure."
+    },
+    "article_node": {
+      "id": "56DSYR7J6",
+      "title": "With the S&P 500 at Historically High Levels, This ETF Could Be the Best Way to Invest in the Index",
+      "summary": "The piece highlights the S&P 500’s historic highs and its inflated Shiller P/E ratio, noting that the index’s performance is heavily driven by the Magnificent Seven tech giants, which now account for over a third of the index’s value. It cautions that such concentration makes the market vulnerable to sharp pullbacks and proposes the Invesco S&P 500 Equal‑Weight ETF (RSP) as a hedge that reduces exposure to those mega‑caps. The article also lists a current top‑10 stock pick list and underscores the growing influence of AI and related sectors, suggesting that diversified AI ETFs can provide broader exposure to this trend.",
+      "source": "https://www.nasdaq.com/articles/sp-500-historically-high-levels-etf-could-be-best-way-invest-index",
+      "published_at": "2025-08-31T09:32:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "56DSYR7J6"
+}

@@ -1,0 +1,41 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T18:59:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "A9314KL13",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities and risk; Brent, WTI, gold, and US Treasury yields expected to tighten due to supply disruptions and heightened geopolitical risk.",
+      "existing_ids": [
+        "wti",
+        "brent",
+        "gold",
+        "ust10y",
+        "ust2y",
+        "dxy",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article describes ongoing conflict between Ukraine and Russia, including drone attacks, a nuclear plant fire, a fuel terminal blaze, and Russian intercepts, which constitutes a geopolitical event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to assess impact against."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on immediate, event-driven developments—drone attacks, a nuclear plant fire, new tariffs, and policy actions—directly impacting the node."
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "A9314KL13"
+}

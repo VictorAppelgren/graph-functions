@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:39:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_program",
+    "target_id": "nuclear_security_technology",
+    "selection_motivation": "The Iran Nuclear Program directly drives demand for nuclear security technology both domestically and globally, influencing the market for protective and monitoring systems.",
+    "candidate_motivation": "These topics are the strongest influences or peers due to direct sanctions linkage and regional security dynamics around Iran's nuclear program. They also cover the oil market and Middle East investment landscape that are sensitive to tensions and policy changes.",
+    "existing_links_count": "6",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['iran_nuclear_sanctions', 'oil', 'nuclear_security_technology', 'middle_east_investment', 'middle_east_sovereign_funds', 'israeli_palestinian_policy']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_nuclear_capacity'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082767",
+    "rel_id": "iran_nuclear_program__influences__nuclear_security_technology",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_nuclear_capacity'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'nuclear_security_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Iran Nuclear Program directly drives demand for nuclear security technology both domestically and globally, influencing the market for protective and monitoring systems.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_program",
+      "target": "nuclear_security_technology"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_program__influences__nuclear_security_technology"
+}

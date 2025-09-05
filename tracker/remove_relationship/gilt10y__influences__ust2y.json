@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-02T20:03:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "ust2y",
+    "selection_motivation": "The gilt10y→ust2y influence is the weakest due to limited evidence of a direct causal link and low correlation in recent data.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The gilt10y→ust2y influence is the weakest due to limited evidence of a direct causal link and low correlation in recent data.",
+    "existing_links_before_len": "18",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958276",
+    "rel_id": "gilt10y__influences__ust2y",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "ust2y"
+    },
+    "prioritized_link": {
+      "motivation": "UK 10Y gilt yields are a leading indicator of global long‑term risk sentiment; movements in gilt10y often precede shifts in the US 30Y Treasury yield, making gilt10y a driver of ust30y.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "ust30y"
+    },
+    "llm_raw_response": {
+      "motivation": "The gilt10y→ust2y influence is the weakest due to limited evidence of a direct causal link and low correlation in recent data.",
+      "remove_link": "ust2y"
+    },
+    "removal_decision": {
+      "motivation": "The gilt10y→ust2y influence is the weakest due to limited evidence of a direct causal link and low correlation in recent data.",
+      "remove_link": "ust2y"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(UK 10Y Gilt OR UK 10-year Gilt OR UK 10-year gilt OR UK 10Y gilt OR UK 10-year gilt yield OR UK 10Y gilt yield OR UK gilt yield OR UK gilt yields OR UK 10-year yield OR UK 10Y yield OR UK 10-year OR UK 10Y OR UK 10 year OR 10Y UK OR 10-year UK OR 10 year UK OR 10Y OR 10-year OR 10 year) OR (Gilt OR Gilt yield OR Gilt yields OR UK Treasury OR UK Treasury yield OR UK Treasury yields OR UK government bond OR UK government bond yield OR UK sovereign debt OR UK sovereign bond OR UK sovereign bond yield) OR (yield OR yield rate OR yield curve OR bond yield OR government bond yield OR sovereign yield) OR (news OR analysis OR report OR update OR market OR trend OR outlook OR forecast OR movement OR volatility OR change OR shift OR impact)",
+      "name": "UK 10Y Gilt Yield",
+      "id": "gilt10y",
+      "last_queried": "2025-09-01T13:46:35.317000000+00:00",
+      "queries": 4
+    }
+  },
+  "id": "gilt10y__influences__ust2y"
+}

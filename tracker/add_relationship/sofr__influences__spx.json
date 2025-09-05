@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T19:57:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sofr",
+    "target_id": "spx",
+    "selection_motivation": "Sofr is a key short‑term borrowing cost that directly affects equity valuations via discount rates, making it a primary driver of the S&P 500.",
+    "candidate_motivation": "SOFR is a U.S. overnight secured financing rate that is directly set by Fed policy and closely tracks short‑term Treasury yields, inflation expectations, and U.S. monetary conditions; it also feeds into dollar and equity market dynamics, making the following topics the most plausible direct or competitive influences or peers.",
+    "existing_links_count": "7",
+    "candidate_count": "18",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['fed_policy', 'ust2y', 'ust5y', 'ust10y', 'ust30y', 'us_inflation', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'spx', 'sx5e', 'bund10y', 'gilt10y', 'jgb10y']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441643616",
+    "rel_id": "sofr__influences__spx",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Sofr is a key short‑term borrowing cost that directly affects equity valuations via discount rates, making it a primary driver of the S&P 500.",
+      "type": "INFLUENCES",
+      "source": "sofr",
+      "target": "spx"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sofr__influences__spx"
+}

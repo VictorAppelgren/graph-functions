@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T01:34:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "COMPONENT_OF",
+    "source_id": "wheat",
+    "target_id": "us_inflation",
+    "selection_motivation": "Wheat price is a core component of US CPI, directly feeding into US inflation measurements.",
+    "candidate_motivation": "Wheat prices are highly sensitive to macro‑financial conditions—currency strength, interest rates, inflation, and global supply/demand dynamics—as well as energy costs and key export markets. These factors directly influence wheat demand, input costs, and price transmission.",
+    "existing_links_count": "1",
+    "candidate_count": "17",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['dxy', 'us_inflation', 'fed_policy', 'ecb_policy', 'china_exports', 'china_credit_impulse', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'wti', 'brent', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'india_industrial_output']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152924803141732348",
+    "rel_id": "wheat__component_of__us_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Wheat price is a core component of US CPI, directly feeding into US inflation measurements.",
+      "type": "COMPONENT_OF",
+      "source": "wheat",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wheat__component_of__us_inflation"
+}

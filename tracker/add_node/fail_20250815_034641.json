@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:46:28",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MHSH4XA83",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the implications of data sharing between Medicaid and deportation officials, highlighting a significant intersection of health policy and immigration enforcement that could impact vulnerable populations and healthcare access, warranting a new node for analysis.",
+      "id": "medicaid_data_sharing",
+      "name": "Medicaid Data Sharing with Deportation Officials",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy issue involving data sharing between Medicaid and immigration enforcement agencies."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific policy on Medicaid data sharing is an industry‑level issue, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

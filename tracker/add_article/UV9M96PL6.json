@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:09:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UV9M96PL6",
+    "topic_discovery_motivation": "Article discusses NVIDIA's AI chip production halt due to geopolitical tensions and its implications for market sentiment, relevant to existing nodes on US-China relations and semiconductor policies.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 2,
+      "existing_ids": [
+        "us_china_chip_negotiations",
+        "us_chip_trade_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports NVIDIA instructing suppliers to halt production of its H20 AI chip due to security concerns, which is a company‑specific operational update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major operational disruption for NVIDIA, halting production of its H20 AI chip due to security concerns, directly affecting its supply chain, market sentiment, and potentially its financial performance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on immediate events affecting the node, such as production halt and market sentiment."
+    },
+    "article_node": {
+      "id": "UV9M96PL6",
+      "title": "Horizons Middle East & Africa 8/22/2025",
+      "summary": "NVIDIA has reportedly instructed suppliers, including Samsung, to halt production of its H20 AI chip due to security concerns raised by Beijing, impacting market sentiment ahead of Jerome Powell's speech at Jackson Hole. Meanwhile, Israeli Prime Minister Benjamin Netanyahu is weighing military plans for Gaza City while negotiating for the release of hostages. In the financial markets, caution prevails as traders adjust their expectations for potential Fed rate cuts, with U.S. equity futures remaining flat.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-22/horizons-middle-east-africa-8-22-2025-video?srnd=phx-technology",
+      "published_at": "2025-08-22T06:58:43.966000+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "UV9M96PL6"
+}

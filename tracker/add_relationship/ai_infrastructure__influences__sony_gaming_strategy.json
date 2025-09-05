@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:42:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_infrastructure",
+    "target_id": "sony_gaming_strategy",
+    "selection_motivation": "Advancements in AI infrastructure directly enable Sony’s shift toward AI‑driven gaming, making AI infrastructure a primary driver of the strategy change.",
+    "candidate_motivation": "These topics are the most plausible direct or competitive influences on Sony's gaming strategy, spanning hardware supply (GPUs/semiconductors), AI-assisted content creation, and major entertainment content/pipeline dynamics. They capture both the external tech/supply chain risks and the upstream content ecosystem that could shape PlayStation hardware choices, game development, and platform partnerships.",
+    "existing_links_count": "1",
+    "candidate_count": "17",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['nvidia_amd_chip_revenue_agreement', 'nvidia_low_power_gpus', 'nvidia_ai_infrastructure', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_semiconductor_policy', 'us_chip_export_controls', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'us_china_ai_chip_exports', 'geopolitics_corporate_strategy', 'disney_streaming_consolidation', 'paramount_skydance_merger', 'generative_ai_film', 'ai_in_entertainment', 'ai_infrastructure', 'ai_app_store_rivalry']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sony_gaming_strategy', 'target': 'macro_risks_technology'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395225",
+    "rel_id": "ai_infrastructure__influences__sony_gaming_strategy",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_amd_chip_revenue_agreement'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'sony_gaming_strategy'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'southeast_asia_data_centres'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'PEERS', 'source': 'ai_infrastructure', 'target': 'nebius_ai_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Advancements in AI infrastructure directly enable Sony’s shift toward AI‑driven gaming, making AI infrastructure a primary driver of the strategy change.",
+      "type": "INFLUENCES",
+      "source": "ai_infrastructure",
+      "target": "sony_gaming_strategy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_infrastructure__influences__sony_gaming_strategy"
+}

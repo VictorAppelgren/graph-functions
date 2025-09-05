@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:07:30",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_china_trade_talks",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_china_trade_talks__analysis_run__1756076367",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20843",
+    "output_chars": "1305",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable feedback to elevate to world-class quality: 1) Rework Movers & Scenarios to exact format and cadence: produce exactly four lines, two Up and two Down, each in the strict form Up|Time window|Driver/Mechanism|What to watch|Probability% (anchor every assertion to a material fact with an in-text ID); use time windows that map cleanly to the material (e.g., 0–3 weeks, 3–6 months) and place them in a single, consistent block without extraneous narrative. 2) Tighten the causal chain into a single, testable regime map: start from CHIPS Act funding converting to a 10% non‑voting Intel stake (3ITAKK6XJ) and governance constraints (no vote, no board seat) to a market signal (paper gain, $1.9B on day one; 433.3M shares at $20.47) and then to policy/risk premia shifts (export controls, 15% levy on AI chip channels; references to Secure Enclave, etc.). 3) Strengthen scenario structure with explicit base/alternative paths and triggers: define a Base, Alt1 (governance concessions or tighter export controls), Alt2 (slow-walk/fragmented package), with concrete triggers (e.g., new CHIPS terms, Nvidia licensing developments, export-control tweaks, LA deployment dynamics) and clear invalidations. 4) Anchor all probabilities and “watch” items to numbers in the material, and present crisp, single-point or narrow-range estimates that sum to 100% across scenarios (e.g., Base 50%, Alt1 30%, Alt2 20%), avoiding wide ranges that undermine decision usefulness; explicitly quote IRR-like or payoff anchors (e.g., ~17% first-step return implied by $1.9B on an $11.1B footprint) with IDs. 5) Elevate quantification and numbers discipline: convert qualitative observations into precise figures (CHIPS grants $11.1B; total pledged $7.8B; funded to date $2.2B; Secure Enclave ~$3.2B; 15% levy, etc.) and attach IDs to every numeric claim; where conflicts exist across inputs (e.g., macro vs policy timelines), reconcile in a dedicated “sources reconciled” note within the constraints. 6) Audit citation density and coverage: ensure every factual statement or numeric assertion derives from IDs in the SOURCE MATERIAL (3ITAKK6XJ, IPV6H0CMO, 04M4L5BHA, PSRZJ6OCU, YVP1ZG37H, 0BHR62KGO, RHXDOHQQX, NOTMRPS8C, CGLLF2OES, 65UUBU0OR, OATKNJQ0E, etc.) and remove any non‑ID claims; explicitly resolve any internal contradictions (e.g., governance rights vs. no board seat) within the same regime frame. 7) Ensure the 1–2 line Trade/Outlook Plan is actionable for a tradable asset: if Intel equity through the CHIPS structure is treated as tradable, convert to a Swing Trade line with 10 fields (Direction|Horizon|Entry|Stop|Target|R/R|Invalidation|Trigger|Probability%|Confidence%), or if not, deliver a concise Outlook line with the required fields; keep it strictly aligned to the four-macto Movers framework and the core numbers above. 8) Finally, prune filler and non‑essential macro narrative, preserve a tight, decision-ready narrative, and deliver a coherent, forward-looking view that remains anchored to the four-layer regime map and the explicit data anchors cited in 3ITAKK6XJ and related IDs.",
+      "tokens": {}
+    }
+  },
+  "id": "us_china_trade_talks__swing_trade_or_outlook__us_china_trade_talks__analysis_run__1756076367"
+}

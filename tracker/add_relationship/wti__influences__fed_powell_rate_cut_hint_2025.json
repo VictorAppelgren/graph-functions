@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T23:28:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "WTI price movements shape inflation expectations, which feed into Fed officials’ rate‑cut signals; thus WTI directly influences the Powell rate‑cut hint for September 2025.",
+    "candidate_motivation": "WTI Crude Oil is directly influenced by supply/demand fundamentals, geopolitical events, and macro‑financial sentiment.  Topics that track oil prices, inventories, sanctions, currency strength, and monetary policy are the most likely strong peers or influences.",
+    "existing_links_count": "15",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['brent', 'oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust30y', 'ust5y']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1301541391821703241",
+    "rel_id": "wti__influences__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "WTI price movements shape inflation expectations, which feed into Fed officials’ rate‑cut signals; thus WTI directly influences the Powell rate‑cut hint for September 2025.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__fed_powell_rate_cut_hint_2025"
+}

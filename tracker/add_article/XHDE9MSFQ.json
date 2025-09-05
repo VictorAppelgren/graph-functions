@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T00:43:39",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XHDE9MSFQ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed dovish remarks at Jackson Hole signal potential September rate cuts, boosting equity indices and softening the US dollar.",
+      "existing_ids": [
+        "fed_policy",
+        "dxy",
+        "spx",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "Article discusses Fed Chair Powell’s dovish remarks at Jackson Hole, indicating a central bank decision and potential policy shift, fitting a central_bank_action category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Node not specified, cannot determine relevance to the article's content."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to Powell’s dovish remarks and related policy speculation, highlighting short‑term sentiment shifts across Asia‑Pacific markets."
+    },
+    "article_node": {
+      "id": "XHDE9MSFQ",
+      "title": "Markets Rally As Powell Hints At Sept Rate Cut",
+      "summary": "Bloomberg’s live coverage highlighted Fed Chair Jay Powell’s dovish remarks at Jackson Hole, sparking speculation of rate cuts and raising concerns over Fed independence amid political pressure. Asian markets reacted positively, with Chinese stocks rallying despite deflationary worries and India’s gaming sector facing a new ban on real‑money online gambling, prompting a strategic pivot for firms like Nazara Technologies. Analysts debated the timing of U.S. rate cuts, the Bank of Japan’s potential tightening, and the broader impact of U.S. tariffs on China and India’s economies, while crypto markets briefly rallied following Powell’s comments. Overall, the segment underscored the interconnectedness of monetary policy, geopolitical tensions, and market sentiment across the Asia‑Pacific region.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-25/insight-with-haslinda-amin-8-25-2025-video?srnd=phx-technology",
+      "published_at": "2025-08-25T05:19:43.101000+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "XHDE9MSFQ"
+}

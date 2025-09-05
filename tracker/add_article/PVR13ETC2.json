@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T19:10:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PVR13ETC2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Labor Day tech deals may lift S&P 500 by +0.1-0.3% over 1-2 days following the sales period (Sep 1‑10 2024).",
+      "existing_ids": [
+        "spx",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses nothing relevant to this node."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses consumer discount events for consumer electronics, which has no direct or significant impact on macroeconomic or market handles such as rates, indices, or commodities. It is a local micro‑level promotion with no scalable macro path."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a short-term consumer sales event with no lasting macro impact."
+    },
+    "article_node": {
+      "id": "PVR13ETC2",
+      "title": "Transform your tech setup with the best Labor Day tech deals on Apple, Samsung, HP and more",
+      "summary": "The article lists a wide range of Labor Day tech discounts, highlighting deals on Apple and Samsung devices, including watches, phones, tablets, and accessories, as well as audio gear from Bose and other brands. Key offers include up to 50% off on select headphones, 30% off on Apple AirPods, and significant markdowns on Apple Watch Series 10 and Samsung Galaxy Z Fold7. It also covers smart home gadgets, smart TVs, and other electronics, emphasizing savings across multiple categories. The focus is on providing readers with budget-friendly options for upgrading their tech during the holiday sales period.",
+      "source": "https://www.foxnews.com/deals/best-tech-deals",
+      "published_at": "2025-08-29T11:44:49-04:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "PVR13ETC2"
+}

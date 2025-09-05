@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:27:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "COMPONENT_OF",
+    "source_id": "euribor",
+    "target_id": "bund10y",
+    "selection_motivation": "Euribor is the core short‑term reference rate that underpins the 10‑year Bund yield; linking it clarifies how long‑term eurozone rates are constructed.",
+    "candidate_motivation": "Euribor is a eurozone interbank rate, directly driven by ECB policy and euro‑area inflation, and closely correlated with euro sovereign yields and global benchmark rates such as US Treasuries. These topics are the most likely strong peers or influences.",
+    "existing_links_count": "0",
+    "candidate_count": "8",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152924803141732392",
+    "rel_id": "euribor__component_of__bund10y",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euribor is the core short‑term reference rate that underpins the 10‑year Bund yield; linking it clarifies how long‑term eurozone rates are constructed.",
+      "type": "COMPONENT_OF",
+      "source": "euribor",
+      "target": "bund10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euribor__component_of__bund10y"
+}

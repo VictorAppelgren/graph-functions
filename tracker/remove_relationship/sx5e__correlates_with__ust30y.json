@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T10:01:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "ust30y",
+    "selection_motivation": "UST30Y correlation with Euro Stoxx 50 is weaker and less frequently referenced in recent macro commentary, making it the least valuable link for portfolio analytics.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "UST30Y correlation with Euro Stoxx 50 is weaker and less frequently referenced in recent macro commentary, making it the least valuable link for portfolio analytics.",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202463299531179558",
+    "rel_id": "sx5e__correlates_with__ust30y",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "ust30y"
+    },
+    "prioritized_link": {
+      "motivation": "Euro Stoxx 50 and Gold exhibit strong co‑movement driven by global risk sentiment, providing a valuable cross‑asset link for portfolio construction and risk analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "gold"
+    },
+    "llm_raw_response": {
+      "motivation": "UST30Y correlation with Euro Stoxx 50 is weaker and less frequently referenced in recent macro commentary, making it the least valuable link for portfolio analytics.",
+      "remove_link": "ust30y"
+    },
+    "removal_decision": {
+      "motivation": "UST30Y correlation with Euro Stoxx 50 is weaker and less frequently referenced in recent macro commentary, making it the least valuable link for portfolio analytics.",
+      "remove_link": "ust30y"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(Euro Stoxx 50 OR Euro Stoxx 50 Index OR EuroStoxx50 OR EuroStoxx50 Index OR ^SX5E OR .SX5E OR SX5E) AND (news OR update OR report OR analysis OR trend OR performance OR rally OR decline OR drop OR rise OR gain OR loss OR volatility OR movement OR change OR shift OR impact OR market OR index OR returns OR price OR trading)",
+      "name": "Euro Stoxx 50",
+      "id": "sx5e",
+      "last_queried": "2025-09-04T22:43:13.521000000+00:00",
+      "queries": 7
+    }
+  },
+  "id": "sx5e__correlates_with__ust30y"
+}

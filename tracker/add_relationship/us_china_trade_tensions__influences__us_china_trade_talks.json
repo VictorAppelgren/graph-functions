@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:52:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_tensions",
+    "target_id": "us_china_trade_talks",
+    "selection_motivation": "U.S.-China trade tensions are a primary catalyst for diplomatic and trade negotiations, making trade talks a direct and immediate response mechanism.",
+    "candidate_motivation": "These topics are the most direct drivers and peers of US-China trade tensions, centered on tariffs, trade talks/negotiations, and semiconductor/AI tech export controls that shape the bilateral relationship.",
+    "existing_links_count": "4",
+    "candidate_count": "15",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'us_china_tariff_truce', 'china_us_tariff_truce', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_export_policy_ai_chips', 'us_china_ai_chip_exports', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_chip_competition', 'us_chip_export_tax']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_supply_chain_risks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217520",
+    "rel_id": "us_china_trade_tensions__influences__us_china_trade_talks",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_tensions', 'target': 'us_china_supply_chain_risks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "U.S.-China trade tensions are a primary catalyst for diplomatic and trade negotiations, making trade talks a direct and immediate response mechanism.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_tensions",
+      "target": "us_china_trade_talks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_tensions__influences__us_china_trade_talks"
+}

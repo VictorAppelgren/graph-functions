@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T23:50:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WYA9PTPTD",
+    "status": "success",
+    "topic_id": "us_russia_relations"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the geopolitical implications of the Trump-Putin summit, which directly relates to the existing node on U.S.-Russia relations and could impact investment strategies in the region.",
+      "existing_node_ids": "us_russia_relations",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the state of relations between the US and Russia, which is a significant geopolitical event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the current state of US-Russia relations, which directly affects geopolitical dynamics and economic policies."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing geopolitical tensions and their implications for future relations, indicating a longer-term perspective."
+    },
+    "article_node": {
+      "id": "WYA9PTPTD",
+      "title": "Ukraine Prepares to Watch as U.S., Russia Discuss Its Fate",
+      "summary": "Ahead of a meeting between Donald Trump and Vladimir Putin, world leaders expressed optimism about a potential resolution to the ongoing war in Ukraine. However, Ukrainian President Volodymyr Zelensky remains skeptical, asserting that Putin seeks complete occupation rather than peace. Reports suggest Trump may propose economic incentives to Russia, including access to natural resources off Alaska, while discussions about the return of Ukrainian children abducted by Russia have been sidelined in the peace talks. The summit is seen as a diplomatic gamble, with uncertain outcomes for Ukraine's future.",
+      "source": "https://time.com/7309750/trump-putin-alaska-expectations/",
+      "published_at": "2025-08-14T20:48:49+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "WYA9PTPTD"
+}

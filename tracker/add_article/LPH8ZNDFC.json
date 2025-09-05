@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T18:10:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LPH8ZNDFC",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; European tourism-related consumer discretionary exposure may face headwinds from Naples' safety warnings and volcanic risk, potentially weighing on European travel/food-service equities and broader risk sentiment.",
+      "existing_ids": [
+        "us_urban_crime",
+        "gaza_journalist_safety"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses tourism, crime reduction, and local culture in Naples, which does not fit any of the specified categories such as macroeconomic events, earnings, regulation, policy statements, central bank actions, economic data releases, geopolitical events, company updates, or market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The node is not specified, so I cannot determine relevance with certainty. The article discusses Naples, but without knowing the node, I assume minimal impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article highlights recent government actions that reduced crime and boosted tourism, along with a 48‑hour travel experience, focusing on immediate developments in Naples."
+    },
+    "article_node": {
+      "id": "LPH8ZNDFC",
+      "title": "I flew 1,500 miles to European city people warned me not to visit",
+      "summary": "Naples is a vibrant, chaotic city steeped in history, known for its lively streets, iconic pizza, and pastry delicacies, yet it has a reputation for petty crime linked to the Camorra and the looming threat of Mount Vesuvius. Recent government efforts have reduced crime and improved the city’s image, encouraging tourists to explore beyond the Amalfi Coast. The author’s 48‑hour trip highlighted the energetic atmosphere of local pizzerias like Sorbillo, the authenticity of AVPN‑approved ingredients, and the rich pastry culture exemplified by Sfogliatelle. Despite warnings, the experience showcased Naples as a dynamic gem worth visiting, blending culinary excellence with cultural vibrancy.",
+      "source": "https://www.express.co.uk/travel/europe/2099508/best-cities-in-europe-to-visit-naples",
+      "published_at": "2025-08-24T15:20:00+01:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "LPH8ZNDFC"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T00:34:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gold",
+    "target_id": "ecb_policy",
+    "selection_motivation": "Gold price movements are a leading indicator of Eurozone inflation expectations, which directly influence ECB policy decisions.",
+    "candidate_motivation": "Gold is a risk‑aversion asset that moves strongly with dollar strength, inflation expectations, monetary policy, and long‑term Treasury yields. The listed topics are canonical handles that directly influence or correlate with gold’s price dynamics.",
+    "existing_links_count": "17",
+    "candidate_count": "9",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['dxy', 'us_inflation', 'us_core_pce', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1193455000764811310",
+    "rel_id": "gold__influences__ecb_policy",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold price movements are a leading indicator of Eurozone inflation expectations, which directly influence ECB policy decisions.",
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "ecb_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__influences__ecb_policy"
+}

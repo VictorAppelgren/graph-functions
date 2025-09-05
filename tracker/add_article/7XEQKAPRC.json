@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:36:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7XEQKAPRC",
+    "topic_discovery_motivation": "Article discusses a legal case involving a nurse and a minor, which may relate to broader issues of crime and legal implications not currently represented in the graph.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 2,
+      "existing_ids": [],
+      "new_names": [
+        "legal_case_nurse_minor",
+        "crime_and_law_implications"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article describes a criminal plea agreement involving a nurse and her stepson, which is a legal case and does not fit any of the predefined categories such as macroeconomic events, earnings, regulation, policy statements, central bank actions, economic data, geopolitical events, company updates, or market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a single, specific case of sexual abuse of a minor, which is a relatively minor event for a node covering broader topics such as sexual abuse or the legal system."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent legal outcome affecting a specific individual, describing the plea deal and sentencing that occurred in the present time."
+    },
+    "article_node": {
+      "id": "7XEQKAPRC",
+      "title": "Florida nurse Alexis Von Yates takes plea deal after husband caught her allegedly having sex with 15-year-old stepson",
+      "summary": "Alexis Von Yates, a 35-year-old Florida nurse, has taken a plea deal for sexually abusing her 15-year-old stepson, which significantly reduces her prison sentence. Initially charged with unlawful sexual activity with a minor, she pleaded no contest to lewd and lascivious battery, resulting in a two-year prison sentence, followed by community control and probation. The plea agreement was supported by the victim's family to spare him from reliving the trauma during a trial.",
+      "source": "https://nypost.com/2025/08/22/us-news/florida-nurse-alexis-von-yates-accused-of-raping-stepson-15-takes-plea-deal/",
+      "published_at": "2025-08-22T06:30:55+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "7XEQKAPRC"
+}

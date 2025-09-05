@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:19:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_russia_relations",
+    "target_id": "russian_cyber_threats",
+    "selection_motivation": "US‑Russia relations directly shape Russia’s cyber threat posture; heightened geopolitical tensions drive Russia to increase cyber operations against the United States.",
+    "candidate_motivation": "These topics represent the geopolitical, sanction, and cyber dimensions most likely to shape U.S.-Russia relations, particularly via Ukraine-related risk and policy responses. They are direct influences, correlates, or peers to the source.",
+    "existing_links_count": "10",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_russia_relations', 'us_russia_ukraine_diplomacy', 'ukraine_peace_negotiations', 'ukraine_conflict', 'ukraine_sovereignty', 'russia_economic_crisis', 'russian_cyber_threats', 'us_russia_cybersecurity_incident']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'trump_putin_summit'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitics'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_cybersecurity_incident'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082582",
+    "rel_id": "us_russia_relations__influences__russian_cyber_threats",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'trump_putin_summit'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitics'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_cyber_threats'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US‑Russia relations directly shape Russia’s cyber threat posture; heightened geopolitical tensions drive Russia to increase cyber operations against the United States.",
+      "type": "INFLUENCES",
+      "source": "us_russia_relations",
+      "target": "russian_cyber_threats"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_russia_relations__influences__russian_cyber_threats"
+}

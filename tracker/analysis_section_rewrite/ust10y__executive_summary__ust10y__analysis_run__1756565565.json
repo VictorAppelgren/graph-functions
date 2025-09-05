@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:16:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756565565",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7843",
+    "output_chars": "804",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is solid but still drifts from the strict “DXY‑only” focus, over‑cites non‑canonical handles, and leaves key quantitative links implicit. Tighten the causal chain by anchoring every claim to a canonical handle (e.g., ust2y, ust10y, dxy) and a single, dated catalyst (e.g., Sep FOMC, Aug PCE, 29‑31 Aug tariff). Replace generic “high‑probability” language with explicit probability ranges (e.g., 89 % chance of a 25‑bp cut, 57‑bp spread steepening). Quantify the translation from yield moves to DXY moves (e.g., 10 bp drop in ust2y ≈ 0.3 % DXY depreciation) and cite the source IDs. Remove the “political pressure” paragraph unless you can link it to a measurable handle (e.g., dxy‑vs‑us‑debt‑spread) and provide a catalyst window. Consolidate watch signals into a concise list: (1) 2‑yr/10‑yr spread (Z7O1DCHS7), (2) Trump‑Fed lawsuit status (Z7O1DCHS7), (3) tariff announcement (29‑31 Aug, FAN5RYW6T), (4) Fed meeting (Sep FOMC, FAN5RYW6T). Ensure each bullet ends with a single inline citation. Finally, trim the confidence paragraph to a single sentence that states a 70 % confidence level with the caveat that a core‑PCE > 3 % or a Fed tightening would invalidate the view. This will bring the brief to 4–6 crisp sentences, fully aligned with the SECTION FOCUS and the 1‑sentence‑per‑bullet rule.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__executive_summary__ust10y__analysis_run__1756565565"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:38:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756618259",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "58713",
+    "output_chars": "2195",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Citations & Evidence**  \n   - Add inline citations for every factual claim.  \n     *Example:* “July core PCE rose 0.3 % to 2.6 % YoY (ID 97MD1FHW8) … 10‑year yield at 4.23 % (ID 97MD1FHW8).”  \n   - Cite the tariff regime (mid‑Oct) with ID 1DEM6P1Y2, the Fed cut probability (89 %) with ID U21K4ALYQ, and the 2‑year yield (3.637 %) with ID 97MD1FHW8.  \n   - Include the 10‑year auction schedule (30 Aug) with a reference to the Reuters source (ID 97MD1FHW8).\n\n2. **Quantify Ranges & Magnitudes**  \n   - State the expected yield band explicitly: “4.25 %–4.35 % over the next 0–3 weeks.”  \n   - Quantify catalyst impacts:  \n     * Fed cut → 10–20 bps drop.  \n     * Tariff easing → 5–15 bps drop.  \n     * Surprise PCE drop → 5–10 bps drop.  \n     * Auction supply shock → 5–10 bps rise.  \n   - Mention the term premium (10‑yr minus 2‑yr ≈ 0.6 %) and risk premium (≈ 0.4 %) to explain the current yield level.\n\n3. **Causal Chain & Market Transmission**  \n   - Explicitly link inflation → Fed policy → term premium → 10‑yr yield.  \n   - Link tariffs → import‑price inflation → risk premium → yield.  \n   - Link equity index moves (S&P 500 down 0.7 %) to risk‑aversion and yield pressure.  \n   - Show how the dollar index (98.06) feeds into the yield via carry trade flows.\n\n4. **Invalidation & Monitoring**  \n   - State: “Yield will invalidate (fall below 4.15 %) if the Fed cuts early or August PCE falls below 2.5 %.”  \n   - “Yield could rise above 4.45 % if the Fed signals hawkishness or inflation spikes.”  \n   - Monitoring signals: Fed speeches, August PCE release (mid‑week), tariff announcements, 10‑yr auction results, Fed funds futures (89 % cut probability).\n\n5. **Remove Drift**  \n   - Delete any mention of unrelated topics (e.g., Porsche CEO search, Google Gmail breach).  \n   - Keep focus strictly on UST 10‑yr, inflation, Fed policy, tariffs, and associated catalysts.\n\n6. **Structure & Clarity**  \n   - Begin with a concise thesis: “The UST 10‑yr is poised to trade 4.25–4.35 % in the next 0–3 weeks.”  \n   - Follow with a bullet‑style causal chain, then catalyst list with ranges, then invalidation conditions, and finish with monitoring checklist.\n\nImplement these edits to meet the Argos standards: clear causal links, quantified ranges, explicit citations, and strict focus on the UST 10‑yr within the 0–3 week horizon.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756618259"
+}

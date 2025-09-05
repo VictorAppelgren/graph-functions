@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T03:46:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756517731",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6628",
+    "output_chars": "1081",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the 4‑scenario rule but needs tightening to satisfy the strict format and evidence‑driven standards.  \n**Action items**  \n\n1. **Remove the duplicate “Stable regulatory environment” Up scenario** – keep only one Up and one Down per window.  \n2. **Add inline citations to every probability** (e.g., Up 60 % (HHKTQ3JYH)).  \n3. **Clarify driver/mechanism and watch items**: each line should read “Driver: … | Watch: …”.  \n4. **Adjust the trade lines**:  \n   - Use realistic R/R (e.g., 1:2).  \n   - Specify entry/stop/target as relative percentages or price levels; keep “Entry at current level” but add a numeric reference if possible.  \n   - Keep the same horizon (Q4 2025–Q2 2026).  \n   - Add citations to the trade lines (HHKTQ3JYH).  \n5. **Ensure all lines map to the canonical handle “spx” (S&P 500)** and that the catalyst window is explicit.  \n6. **Re‑order the trade lines** so that the Down trade appears first (Down | Horizon | …) followed by the Up trade, matching the required 1–2 line total.  \n\nAfter these edits, the output will be a concise, evidence‑backed swing‑trade plan focused solely on the S&P 500.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756517731"
+}

@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T23:21:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9LAJTEDMT",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; WTI and Brent prices rise on trade‑talk optimism and US‑Japan/EU deal momentum, while OPEC+ output dynamics, sanctions, and inventory trends shape supply‑demand balance. US inflation and core PCE underpin rate expectations that influence energy demand.",
+      "existing_ids": [
+        "wti",
+        "brent",
+        "us_crude_inventory",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses several major macroeconomic events such as trade talks, PMI, OPEC+ output decisions, sanctions, and commodity price movements, which are relevant to macro_event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events affecting crude oil prices—trade talks, PMI data, OPEC+ output decisions, sanctions, and Kurdish export prospects—without discussing long‑term structural drivers."
+    },
+    "article_node": {
+      "id": "9LAJTEDMT",
+      "title": "Crude Prices Rise as Progress in Trade Talks Supports Energy Demand",
+      "summary": "Crude oil prices rose on Thursday, buoyed by progress in US‑Japan and US‑EU trade talks that signal stronger economic growth and energy demand, and a record‑high S&P 500 rally that boosts confidence in the economy.  The rally was tempered by a weaker US manufacturing PMI and a decline in the crack spread, which dampens refinery demand.  Meanwhile, OPEC+ has increased output, but is considering pausing further hikes amid concerns of a supply glut, while Russian oil sanctions and a potential resumption of Kurdish exports add further supply dynamics to the market.",
+      "source": "https://www.nasdaq.com/articles/crude-prices-rise-progress-trade-talks-supports-energy-demand",
+      "published_at": "2025-07-24T20:50:31+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "9LAJTEDMT"
+}

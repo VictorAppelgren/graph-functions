@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T03:55:22",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "VGH321B6A",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: volatility; implied volatility and ATR reflect market volatility, which is driven by US inflation expectations and Fed policy.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers market analysis and commentary on day trading practices and risk management, fitting the market_commentary category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact because the target node was not provided, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on short-term trading behavior and risk management for Gen Z day traders, reflecting current market participation trends."
+    },
+    "article_node": {
+      "id": "VGH321B6A",
+      "title": "Thinking about trying your hand at day-trading? Investing experts share everything you need to know before diving in.",
+      "summary": "The article discusses the rise of day trading among Gen Z, driven by social media FOMO and a surge in active investing accounts. It highlights the risks of market volatility and emphasizes the importance of risk management tools such as ATR, implied volatility, and strict loss limits. Experts recommend starting with virtual trading, using demo accounts, and gradually scaling positions while maintaining emotional discipline and clear entry/exit plans. The piece underscores that day trading should not be seen as a get‑rich‑quick scheme but as a high‑risk strategy requiring careful preparation and risk tolerance assessment.",
+      "source": "https://www.businessinsider.com/how-to-start-day-trading-retail-investors-beginning-investing-tips-2025-8",
+      "published_at": "2025-08-30T22:55:02+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "VGH321B6A"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T01:40:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756510816",
+    "article_ids": "['HHKTQ3JYH', 'H86O3XRUJ', 'ZV3QI3K19', 'HHKTQ3JYH', 'H86O3XRUJ']",
+    "selected_articles_count": "5",
+    "material_chars": "100100",
+    "output_chars": "1592",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft fails the acceptance gate because it does **not** map to any canonical market handle (e.g., ust10y, spx, dxy, gold, etc.) and therefore cannot satisfy the “≥1 canonical handle with explicit sign and magnitude” requirement.  Every sentence must be tied to a handle via a causal chain and a dated catalyst window.  In its current form the analysis is a generic company‑level narrative that drifts from the macro‑pillars and lacks the required quantitative anchors (e.g., real‑rate differential, term‑premium, CPI).  **Actionable edits:** 1) Rewrite the view to focus on a macro pillar (e.g., “us_core_cpi” or “ust10y”) and explicitly state the sign (e.g., ↑ or ↓) and magnitude range (e.g., +10 bp to +30 bp). 2) Provide a clear catalyst window (e.g., “2025‑Q3 to 2026‑Q2”) and a causal transmission path (e.g., CPI → real‑rate → term‑premium → ust10y). 3) Remove all company‑specific discussion (Mastercard, EPAM) unless it is used purely as an illustrative example that feeds into the chosen handle.  4) Include at least one quantitative source (e.g., Fed’s policy rate, CPI data) and cite it inline.  5) Ensure the final paragraph is concise, decisive, and fits the multi‑year structural horizon.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__fundamental__spx__analysis_run__1756510816"
+}

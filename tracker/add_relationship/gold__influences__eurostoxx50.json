@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T10:49:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gold",
+    "target_id": "eurostoxx50",
+    "selection_motivation": "Gold price movements are a key risk sentiment indicator that directly influence equity markets, including the Eurostoxx 50, similar to its established influence on the S&P 500.",
+    "candidate_motivation": "Gold’s price is heavily driven by macro‑economic conditions—especially inflation, monetary policy, and currency strength—as well as by commodity and equity market sentiment. Topics that directly influence these drivers or are commonly correlated with gold are the most likely strong influences, correlates, or peers.",
+    "existing_links_count": "8",
+    "candidate_count": "13",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_inflation_expectations', 'us_inflation_impact_on_bitcoin', 'fed_policy', 'ecb_policy', 'us_10y', 'usd', 'eur', 'oil', 'sp500', 'eurostoxx50', 'china_macro']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182196001696382987",
+    "rel_id": "gold__influences__eurostoxx50",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold price movements are a key risk sentiment indicator that directly influence equity markets, including the Eurostoxx 50, similar to its established influence on the S&P 500.",
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "eurostoxx50"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__influences__eurostoxx50"
+}

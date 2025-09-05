@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T16:25:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756563217",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5643",
+    "output_chars": "531",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Add explicit canonical handle “dxy” to every line and separate the driver from the mechanism (e.g., “PCE > 3.0 % (inflation expectations)”). Cite the effect on dxy with the source that gives the 70–100 bp lift (7XH2DKEKV) and the 50–70 bp lift for NFP (7XH2DKEV). Replace the arbitrary 10 % probabilities for PCE and NFP with either a market‑derived estimate (e.g., 25 % based on current expectations) or drop the probability field if unsupported. Correct the tariff escalation line: the source indicates it supports dxy short‑term but is offset by the Fed cut, so change “Down” to “Neutral” or “Up” and provide a probability (≈20 %) citing Z7O1DCHS7. Ensure each time window is tight around the release (e.g., 2025‑08‑30 – 2025‑08‑30 for PCE, 2025‑08‑31 – 2025‑08‑31 for NFP, 2025‑09‑18 – 2025‑09‑22 for Fed cut, 2025‑08‑29 – 2025‑08‑31 for tariff). Add the Fed cut probability citation (97MD1FHW8) and the 89 % figure. Finally, format each line as a single sentence: “Up | 2025‑08‑30 – 2025‑08‑30 | PCE > 3.0 % (inflation expectations) | dxy reaction to August 30 PCE release | 25 %.” This will satisfy the handle‑mapping, catalyst window, causal chain, and probability requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756563217"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:07:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756565565",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7843",
+    "output_chars": "600",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "1. Explicitly link each driver to DXY in the causal chain (e.g., “Fed 25‑bp cut → 10‑yr yield rise → DXY down”) and cite FAN5RYW6T/Z7O1DCHS7. 2. Re‑weight probabilities to match source evidence: 89 % for the September cut (97MD1FHW8), 20 % for core‑PCE >3 % inflation spike (FAN5RYW6T), 30 % for tariff‑driven drag (FAN5RYW6T), and 20 % for 2‑yr/10‑yr spread narrowing (Z7O1DCHS7). 3. Replace the generic “Weekly” window with a concrete period (e.g., 1‑7 Sep). 4. Add magnitude ranges where possible (e.g., “DXY down 0.8–1.5 %”). 5. Ensure every line contains the canonical handle DXY in either the driver or watch field. 6. Cite sources inline after each factual claim (e.g., (FAN5RYW6T)(Z7O1DCHS7)). 7. Keep each line to a single, concise sentence, removing any filler or non‑canonical references. 8. Verify that each line satisfies the acceptance gate: ≥1 handle mapping, ≥1 dated catalyst, and a clear causal path.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__movers_scenarios__ust10y__analysis_run__1756565565"
+}

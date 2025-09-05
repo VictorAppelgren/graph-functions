@@ -1,0 +1,29 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-30T23:56:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YLMOTQA9J",
+    "suggested_names": "['core_pce']",
+    "topic_category": "macro_driver",
+    "topic_category_motivation": "Core PCE is a primary inflation gauge that drives Fed policy expectations and market pricing.",
+    "should_add": "True",
+    "motivation_for_relevance": "US core PCE is the Fed’s preferred inflation gauge; July 2024 data at a 5‑month high signals persistent inflationary pressure, directly influencing Fed policy expectations, UST yields, and equity valuations.",
+    "importance_classification": "1",
+    "importance_classification_rationale": "US Core PCE is the Fed’s preferred inflation gauge and a key driver of monetary policy expectations. It has high centrality, directly influences bond yields, equity valuations, and currency markets, and is closely monitored for intraday trading decisions around its release. Hence it merits the highest importance rating.",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article reports July 2024 core PCE inflation rising to a 5‑month high, a key US macro data point not yet represented in the graph.",
+      "id": "us_core_pce",
+      "name": "US Core PCE",
+      "type": "macro"
+    },
+    "generated_query": {
+      "motivation": "This query targets the intersection of stock market weakness, tech sector slump, and persistent inflation pressures, linking key economic indicators (UMich expectations, core PCE, PMI), Fed policy signals, tariff developments, and major tech earnings, to capture all relevant market‑moving news.",
+      "query": "(stock market decline OR stock market retreat OR equity market decline OR equity market slump OR index decline OR index slump OR spx OR spy OR dowi OR dia OR iuXX OR qqq OR esu25 OR nqu25) AND (tech stocks OR technology stocks OR semiconductor stocks OR chipmakers OR marvell OR mrvl OR dell OR dell technologies OR amd OR nvidia OR nvda OR broadcom OR avgo OR lam research OR lrcx OR applied materials OR amat OR asml OR arm OR mu OR hpe OR cat OR ulta OR ionq OR dg OR adsq OR amba OR afrM OR s OR celh OR smci) AND (inflation OR inflation expectations OR inflation pressures OR core pce OR pce OR personal consumption expenditures OR pce price index OR us core pce OR us core pce price index OR umich OR university of michigan OR umich inflation expectations OR umich consumer sentiment OR mni chicago pmi OR pmi OR fed OR fed governor waller OR fed rate cut OR fed policy OR tariff OR tariffs OR tariff threat OR tariff increase OR tariff on tech OR tariff on semiconductors OR tariff on steel OR tariff on aluminum OR tariff on imports OR tariff on india OR tariff on china OR tariff on russia) AND (news OR analysis OR report OR update OR trend OR market OR market reaction OR market sentiment OR market decline OR market drop OR market fall OR market slump OR market news OR market analysis OR market outlook OR market movement OR market volatility OR market forecast)"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:2218"
+}

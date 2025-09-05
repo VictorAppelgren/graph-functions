@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T03:12:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TWZT19N43",
+    "status": "success",
+    "topic_id": "us_inflation"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the financial struggles of Social Security beneficiaries, which is relevant to the existing node on US Inflation, as it directly relates to the impact of inflation on seniors' living costs. This mapping can enhance understanding of the relationship between inflation and social welfare policies.",
+      "existing_node_ids": "us_inflation",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses a major inflation print, which is a macroeconomic event relevant to this node."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses economic conditions that are likely to influence inflation rates in the US, making it highly relevant to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and factors influencing inflation in the U.S., which suggests a longer-term perspective."
+    },
+    "article_node": {
+      "id": "TWZT19N43",
+      "title": "Senior Advocacy Group Pushes $1,400 'Catch-Up' Payment For Social Security Beneficiaries Amid Inflation",
+      "summary": "The Senior Citizens League is advocating for a one-time $1,400 catch-up payment for Social Security beneficiaries to help them cope with rising living costs, which many seniors feel are not adequately reflected in the current cost-of-living adjustments (COLA). A recent survey indicated that nearly 80% of seniors believe inflation was higher than reported, and many struggle with essential expenses, particularly healthcare. The proposal aims to provide immediate financial relief, especially for the 7.3 million seniors living on less than $1,000 a month, while also calling for a reevaluation of how COLA is calculated to better reflect seniors' spending patterns.",
+      "source": "https://finance.yahoo.com/news/senior-advocacy-group-pushes-1-000122126.html?_guc_consent_skip=1755216509",
+      "published_at": "2025-08-15T00:01:22+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "TWZT19N43"
+}

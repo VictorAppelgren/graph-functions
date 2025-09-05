@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T05:17:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M1FQSEOT6",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; S&P 500 gains reflect broader equity market sentiment, driven by strong earnings from tech and consumer companies.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Q3 earnings beat for Broadcom and Q2 earnings beat for DocuSign, directly describing company earnings results."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant moves in the Nasdaq Composite and S&P 500, directly affecting the index node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article is focused on immediate events affecting this node."
+    },
+    "article_node": {
+      "id": "M1FQSEOT6",
+      "title": "AVGO, LULU, OPEN, DOCU, NEON: 5 Trending Stocks Today - Broadcom (NASDAQ:AVGO), Docusign (NASDAQ:DOCU)",
+      "summary": "U.S. equities rose on Thursday, with the Nasdaq Composite gaining over 200 points and the S&P 500 up 0.8%, driven by strong earnings from Broadcom and DocuSign. Broadcom shares climbed 1.23% after reporting Q3 revenue and earnings that beat expectations, while DocuSign gained 0.45% on a solid Q2 earnings beat. Lululemon surged 3.81% on the day but fell 16% after-hours after the company cut its 2025 outlook, and Opendoor jumped 16% following a large CEO share sale that helped the stock avoid delisting. Neonode’s shares collapsed 71% after news of a pending patent‑lawsuit settlement, underscoring the volatility of tech stocks amid earnings and regulatory catalysts.",
+      "source": "https://www.benzinga.com/markets/equities/25/09/47513963/broadcom-lululemon-opendoor-docusign-and-neonode-why-these-5-stocks-are-on-investors-radars-toda",
+      "published_at": "2025-09-04T21:55:51-04:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "M1FQSEOT6"
+}

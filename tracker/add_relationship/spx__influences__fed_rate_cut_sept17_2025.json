@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T00:18:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "spx",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "S&P 500 performance is a primary gauge of financial market sentiment that the Fed monitors when deciding on rate cuts; a strong rally or sell‑off can prompt the September 17 2025 cut.",
+    "candidate_motivation": "These topics directly influence or are strongly correlated with the S&P 500 through macro drivers, monetary policy, key U.S. and global rates, commodity prices, and component stocks.",
+    "existing_links_count": "21",
+    "candidate_count": "32",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "32",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'sx5e', 'gilt10y', 'bund10y', 'uk_30yr_gilt_yield', 'jgb10y', 'ecb_policy', 'euro_inflation', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'dxy', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'china_exports', 'ba']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7162976306844402413",
+    "rel_id": "spx__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "S&P 500 performance is a primary gauge of financial market sentiment that the Fed monitors when deciding on rate cuts; a strong rally or sell‑off can prompt the September 17 2025 cut.",
+      "type": "INFLUENCES",
+      "source": "spx",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__influences__fed_rate_cut_sept17_2025"
+}

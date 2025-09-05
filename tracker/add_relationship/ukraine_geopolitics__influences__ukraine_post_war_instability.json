@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:37:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_geopolitics",
+    "target_id": "ukraine_post_war_instability",
+    "selection_motivation": "Ukraine Geopolitics directly shapes the post‑war environment, making it a primary driver of instability in Ukraine after the conflict.",
+    "candidate_motivation": "These topics represent direct geopolitical dynamics, policy vectors, and security considerations that shape Ukraine geopolitics (Russia actions, Western responses, and regional stability). They are the strongest candidates for influences, correlations, or peers to Ukraine Geopolitics.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ukraine_conflict', 'donbas_region', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_diplomacy', 'ukraine_sovereignty', 'eu_geopolitics_ukraine', 'eu_us_relations_ukraine', 'russian_sanctions', 'russia_economic_crisis', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_conflict'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847190",
+    "rel_id": "ukraine_geopolitics__influences__ukraine_post_war_instability",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_conflict'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Geopolitics directly shapes the post‑war environment, making it a primary driver of instability in Ukraine after the conflict.",
+      "type": "INFLUENCES",
+      "source": "ukraine_geopolitics",
+      "target": "ukraine_post_war_instability"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_geopolitics__influences__ukraine_post_war_instability"
+}

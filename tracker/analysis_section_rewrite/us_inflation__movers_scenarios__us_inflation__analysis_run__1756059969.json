@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T20:33:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756059969",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "12985",
+    "output_chars": "1438",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 months | Strengthen the explicit first-principles causal chain from automation exposure (roughly 25% of US jobs; ~36 million roles) to occupational identity erosion to health/labor-margin costs and demand/investment dynamics, anchored by NL5YYTLF2, 11, and 22PL3Q360 | What to watch: explicit numeric sensitivities linking automation exposure to earnings/consumption and alignment with regime-driven risk premia and durable cash-flow valuation | 75% (NL5YYTLF2)(11)(22PL3Q360)\n\nUp | 3–6 months | Tighten regime-based scenario structure by explicitly tying Regime A credibility around retraining/social supports to labor supply responsiveness and by quantifying probabilities across Regime A vs Regime B/C | What to watch: track credible retraining budgets, uptake metrics, and how these shift risk premia and durable vs cyclical equity valuations (NL5YYTLF2)(IGP1Q4ZEJ)(11) | 65% \n\nDown | 0–3 weeks | De-bias the analysis away from tariff pass-through as a sole driver and add explicit invalidation triggers (tariffs enacted/rolled back) with embedded consumer credit risk signals (CDBMWIUTB) and auto pricing dynamics (S15934PBQ) | What to watch: tariff actions and their pricing/margin effects, loan-rate trends, and depreciation risk for EVs/luxury models | 55% (S15934PBQ)(CDBMWIUTB)\n\nDown | 3–6 months | Inject macro-shock sensitivity (oil-supply J99EM2TPZ; debt-driven rate moves RHXDOHQQX) to test regime persistence and potential dollar strength that could delay EV profitability and push Regime B risk higher | What to watch: big‑bill trajectory, oil-price surprises, EV milestones, currency/financing channels | 40% (J99EM2TPZ)(RHXDOHQQX)",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756059969"
+}

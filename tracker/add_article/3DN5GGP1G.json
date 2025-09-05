@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T06:33:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3DN5GGP1G",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; US tariffs and Apple price hikes may lift US inflation by 0.1‑0.3% in Q3 2025.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Apple’s product launch event and new product details, which is a company update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a major Apple product launch that can influence Apple’s equity, the broader smartphone market, and related supply‑chain dynamics, warranting a moderate impact assessment."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an upcoming Apple event with immediate market implications for consumer electronics and supply chains."
+    },
+    "article_node": {
+      "id": "3DN5GGP1G",
+      "title": "iPhone 17 rumors, prices, new features and everything else you need to know before the September 9 Apple event",
+      "summary": "Apple has confirmed its iPhone 17 event will take place on Tuesday, September 9, with the lineup expected to include a new ultra‑thin iPhone 17 Air, a standard iPhone 17, and Pro and Pro Max models featuring an all‑aluminum chassis, a larger camera island, and a vapor‑chamber cooling system. Rumors suggest the Air will use a titanium frame, a single‑lens camera, and a 2,800 mAh battery, while the Pro models will have 12 GB of RAM and a 48 MP rear camera. Pricing is expected to rise by about $50 across the board, potentially offset by higher storage options and new color releases such as orange and light blue. The event will also likely showcase new Apple Watch models, AirPods Pro 3, and iOS 26 with its “Liquid Glass” design and AI‑powered features. The announcement is poised to impact U.S. and global smartphone markets, with implications for supply‑chain tariffs and consumer pricing.",
+      "source": "https://www.engadget.com/mobile/smartphones/iphone-17-rumors-prices-new-features-and-everything-else-you-need-to-know-before-the-september-9-apple-event-153024206.html",
+      "published_at": "2025-08-30T12:45:36+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "3DN5GGP1G"
+}

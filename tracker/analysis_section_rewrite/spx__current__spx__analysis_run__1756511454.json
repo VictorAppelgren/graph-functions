@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T02:01:36",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "current",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756511454",
+    "article_ids": "['LJZYDXVL3', 'MEZ3P47LC', '5GZPY1XUE', '2SW2RSVRM', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "78960",
+    "output_chars": "1343",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Remove non‑Tesla references** – The draft’s discussion of Porsche (ID 1G54B8R46) and Marvell (ID 5GZPY1XUE) is irrelevant to the Tesla equity view and dilutes focus. Delete those paragraphs entirely.\n\n2. **Anchor every claim to a canonical handle with sign/magnitude** –  \n   * Add a line: “TSLA shares are expected to fall 5–10 % (‑5 bp to ‑10 bp in implied volatility) if the court upholds the $243 M award (LJZYDXVL3).”  \n   * Add: “Support level at $330.00 (≈ −3 % from current $346) is a key resistance; a break below would trigger a 10–15 % decline.”  \n   * Add: “10‑year UST yield rose 2 bp to 4.227 % (UST10Y) (MEZ3P47LC), tightening the risk‑free benchmark and compressing Tesla’s cost of capital.”  \n   * Add: “Fed’s 87 % probability of a 25 bp cut in September (FedWatch) is priced in; a surprise tightening would further weigh on TSLA.”  \n   * Add: “Nasdaq fell 1.2 % (NDX) and S&P 500 slipped 0.6 % (SPX) (MEZ3P47LC), indicating sector‑wide profit‑taking that could amplify Tesla’s volatility.”\n\n3. **Specify catalyst window** –  \n   * “Court’s decision on the appeal is expected within the next 5–7 days (LJZYDXVL3).”  \n   * “U.S. jobs report due 2025‑09‑07 and Fed policy meeting 2025‑09‑12 are the next key catalysts.”  \n\n4. **State direction, magnitude, horizon, catalysts, invalidation** –  \n   * “If the appeal is denied → TSLA down 10–15 % over 0–3 weeks; if overturned → TSLA up 5–10 %.”  \n   * “Yield rise > 5 bp or Fed signals no cut → further 5–10 % downside.”  \n   * “Invalidation: a favorable ruling or muted regulatory response would support a rebound; a harsher outcome or Fed tightening would reinforce bearish bias.”\n\n5. **Keep the paragraph concise** – After removing extraneous content, the revised paragraph should be ~3–4 sentences, each with an inline citation.\n\n**Revised Paragraph (example)**  \n“Tesla’s equity (TSLA) is poised for a 5–10 % decline if the Miami court upholds the $243 M verdict (LJZYDXVL3), pushing the stock below its $330 support level. The 2 bp rise in the 10‑year UST yield to 4.227 % (UST10Y) (MEZ3P47LC) tightens the risk‑free benchmark, compressing Tesla’s cost of capital and amplifying downside risk. The court’s decision is expected within 5–7 days (LJZYDXVL3); a favorable ruling would lift TSLA by 5–10 %, while a denial would trigger a 10–15 % fall. Upcoming catalysts include the U.S. jobs report (2025‑09‑07) and the Fed policy meeting (2025‑09‑12), whose outcomes will further shape risk sentiment and yield dynamics.”",
+      "tokens": {}
+    }
+  },
+  "id": "spx__current__spx__analysis_run__1756511454"
+}

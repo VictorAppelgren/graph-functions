@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T06:16:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "dxy",
+    "selection_motivation": "Euro Stoxx 50 exhibits a strong inverse relationship with the US dollar index—when the dollar strengthens (higher DXY), European equities tend to lag, making this a critical cross‑asset link for risk and portfolio construction.",
+    "candidate_motivation": "Euro Stoxx 50 is a European equity benchmark whose performance is driven by European macro‑economic conditions, monetary policy, sovereign yields, currency dynamics, commodity price swings, and global equity market sentiment. The listed topics capture these key drivers and closely related markets that can strongly influence or correlate with the index.",
+    "existing_links_count": "5",
+    "candidate_count": "19",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['spx', 'euro_inflation', 'ecb_policy', 'fed_policy', 'ust10y', 'bund10y', 'dxy', 'eurusd', 'wti', 'brent', 'gold', 'copper', 'wheat', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159679103071159846",
+    "rel_id": "sx5e__correlates_with__dxy",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 exhibits a strong inverse relationship with the US dollar index—when the dollar strengthens (higher DXY), European equities tend to lag, making this a critical cross‑asset link for risk and portfolio construction.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__correlates_with__dxy"
+}

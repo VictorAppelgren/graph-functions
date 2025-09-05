@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T22:07:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ukraine_conflict",
+    "new_article_id": "0AQ4JK5N2",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['NBX9RA9WX', '07T878D0A', 'TEBHEI80M', '80JS9CHBY', 'NQTOA95K4', '9SQ5JOJKU']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no existing article content to supersede; current articles are placeholders with no detail to replace or outrank."
+    }
+  },
+  "id": "ukraine_conflict__0AQ4JK5N2__current"
+}

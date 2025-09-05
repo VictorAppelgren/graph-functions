@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T02:12:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ai_productivity",
+    "new_article_id": "G1OEP69ET",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['9VIEI1IRU', 'K2L2LV7DQ', 'M7E4HMWVA', 'BP3W1EATS']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "Current article set contains no Coinbase AI adoption entry to supersede. The new Coinbase AI mandate article does not clearly supersede any existing item, so no action is required."
+    }
+  },
+  "id": "ai_productivity__G1OEP69ET__current"
+}

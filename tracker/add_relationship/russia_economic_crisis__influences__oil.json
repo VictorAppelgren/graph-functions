@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:45:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "russia_economic_crisis",
+    "target_id": "oil",
+    "selection_motivation": "Russia’s economic crisis reduces its oil output and disrupts global supply chains, directly driving oil price movements.",
+    "candidate_motivation": "These topics map the strongest direct or spillover connections to a Russia-centered economic crisis, including geopolitics, sanctions, and commodity and currency channels. They are likely to co-move with, or shape, Russia's macro conditions.",
+    "existing_links_count": "2",
+    "candidate_count": "15",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['russian_sanctions', 'ukraine_geopolitical_security', 'ukraine_conflict', 'ukraine_peace_negotiations', 'ukraine_diplomacy', 'oil', 'gold', 'copper', 'wheat', 'euro_inflation', 'eur', 'usd', 'us_inflation', 'ukraine_post_war_instability', 'ukraine_sovereignty']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'russia_economic_crisis', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'russia_economic_crisis', 'target': 'russian_sanctions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216177",
+    "rel_id": "russia_economic_crisis__influences__oil",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'russia_economic_crisis', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'russia_economic_crisis', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'russia_economic_crisis', 'target': 'russian_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Russia’s economic crisis reduces its oil output and disrupts global supply chains, directly driving oil price movements.",
+      "type": "INFLUENCES",
+      "source": "russia_economic_crisis",
+      "target": "oil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "russia_economic_crisis__influences__oil"
+}

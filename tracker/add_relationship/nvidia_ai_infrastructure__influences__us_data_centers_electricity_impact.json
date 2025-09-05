@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T01:15:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nvidia_ai_infrastructure",
+    "target_id": "us_data_centers_electricity_impact",
+    "selection_motivation": "Nvidia AI infrastructure drives high‑power AI workloads, directly increasing electricity demand in US data centers, a key macro‑economic driver.",
+    "candidate_motivation": "These topics represent the strongest direct influences, correlates, or peers to Nvidia AI Infrastructure, including key GPU/AI hardware peers, geopolitics affecting supply chains, and primary demand drivers for AI compute.",
+    "existing_links_count": "7",
+    "candidate_count": "13",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['amd_data_center_growth', 'intel_ceo_tan', 'nvidia_amd_chip_revenue_agreement', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_nvidia_h20_chips', 'us_chip_export_controls', 'us_chip_exports_china', 'us_export_policy_ai_chips', 'us_tariffs_semiconductors', 'us_data_centers_electricity_impact', 'openai_gpt5_competition', 'nvidia_low_power_gpus']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'nvidia_amd_chip_revenue_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'PEERS', 'source': 'nvidia_ai_infrastructure', 'target': 'openai_gpt5_competition'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000589347",
+    "rel_id": "nvidia_ai_infrastructure__influences__us_data_centers_electricity_impact",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'nvidia_amd_chip_revenue_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_data_centers_electricity_impact'}, {'type': 'PEERS', 'source': 'nvidia_ai_infrastructure', 'target': 'openai_gpt5_competition'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Nvidia AI infrastructure drives high‑power AI workloads, directly increasing electricity demand in US data centers, a key macro‑economic driver.",
+      "type": "INFLUENCES",
+      "source": "nvidia_ai_infrastructure",
+      "target": "us_data_centers_electricity_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nvidia_ai_infrastructure__influences__us_data_centers_electricity_impact"
+}

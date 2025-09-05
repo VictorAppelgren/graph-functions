@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T19:45:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AQDK820T1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Tesla's FSD adoption and pricing changes influence S&P 500 exposure.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Tesla's increased adoption of its Full‑Self Driving feature and recent pricing changes, which is a company‑specific operational update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a significant rise in Tesla’s FSD adoption and pricing changes, which can materially affect investor sentiment and the company’s valuation, thereby impacting its equity price."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports recent changes in FSD adoption rates and pricing, indicating a medium‑term shift in consumer behavior and product strategy."
+    },
+    "article_node": {
+      "id": "AQDK820T1",
+      "title": "Tesla says more than 50% of Model S and X drivers pay for FSD — and the percentage is up for other models too",
+      "summary": "Tesla reports that more than half of Model S and Model X owners now use Full‑Self Driving (FSD), up from single‑digit rates across the fleet to the teens. The company’s FSD beta, launched in 2020, offers navigation, lane changes and turns but still requires driver supervision and has faced NHTSA scrutiny over accidents. Tesla has adjusted FSD pricing over the years, most recently cutting the subscription from $12,000 to $8,000 in 2024 and offering a $99/month plan. The increased adoption signals growing confidence in the technology, though safety concerns remain.",
+      "source": "https://www.businessinsider.com/tesla-fsd-take-rate-model-s-x-vehicles-2025-9",
+      "published_at": "2025-09-03T16:37:43+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "AQDK820T1"
+}

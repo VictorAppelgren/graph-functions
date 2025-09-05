@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T13:45:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_urban_crime",
+    "new_article_id": "5JMZIAIGO",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['C9L5KZZJZ', 'Q14XEM7PB', 'VBLNR89G5', 'GUTGNG4IC', 'UK8ESTOZL', '1L38JDK4D', 'C2XYVSI19', 'LPT34HH4U', '6ZILMI8BI']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "6ZILMI8BI",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article provides fresh coverage of a public figure’s reaction to a recent violent event, adding unique content not present in the current graph."
+    }
+  },
+  "id": "us_urban_crime__5JMZIAIGO__current"
+}

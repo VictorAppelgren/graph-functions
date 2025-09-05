@@ -1,0 +1,63 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-24T23:12:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_talks",
+    "target_id": "us_china_chip_negotiations",
+    "selection_motivation": "The link to US-China Chip Negotiations is the most specific and least directly tied to tariff policy, making it the weakest connection relative to the new tariff-focused link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to US-China Chip Negotiations is the most specific and least directly tied to tariff policy, making it the weakest connection relative to the new tariff-focused link.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'china_semiconductor_policy'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_ai_chip_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627957483",
+    "rel_id": "us_china_trade_talks__influences__us_china_chip_negotiations",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'china_semiconductor_policy'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_talks', 'target': 'us_china_ai_chip_exports'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_china_trade_talks",
+      "target": "us_china_chip_negotiations"
+    },
+    "prioritized_link": {
+      "motivation": "US-China Trade Talks directly shape the tariff regime between the two countries, making a link to US-China Tariffs essential for capturing policy outcomes.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_talks",
+      "target": "us_china_tariffs"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to US-China Chip Negotiations is the most specific and least directly tied to tariff policy, making it the weakest connection relative to the new tariff-focused link.",
+      "remove_link": "us_china_chip_negotiations"
+    },
+    "removal_decision": {
+      "motivation": "The link to US-China Chip Negotiations is the most specific and least directly tied to tariff policy, making it the weakest connection relative to the new tariff-focused link.",
+      "remove_link": "us_china_chip_negotiations"
+    },
+    "source_node": {
+      "last_updated": "2023-10-06",
+      "implications": "",
+      "level": "main",
+      "current_analysis": "",
+      "importance": 1,
+      "query": "(US OR United States OR America OR China OR Chinese OR Beijing OR trade OR tariff OR tariffs OR negotiation OR negotiations OR talks OR agreement OR agreements OR truce OR extension OR export OR exports OR control OR controls OR tech OR technology OR technologies OR Apple OR AAPL OR iPhone OR semiconductor OR semiconductors OR rare earth OR rare earths OR Huawei OR competition OR market OR markets OR economic OR economy OR consumer OR sales OR revenue OR earnings OR analysis OR report OR news OR update OR trend OR trends OR impact OR implications OR relationship OR relations OR geopolitical OR risk OR risks OR investment OR investments OR financial OR finance OR analyst OR analysts OR forecast OR outlook OR strategy OR strategies)",
+      "motivation": "The article highlights the ongoing US-China trade talks and their implications for technology and economic relations, warranting a dedicated node to analyze the impact of these negotiations on the tech ecosystem.",
+      "last_queried_at": "2025-08-13T15:15:10+00:00",
+      "importance_rationale": "US-China trade talks are a macro-level policy event with immediate and significant impact on currency, commodity, and equity markets. They are directly traded and time-sensitive, fitting the 1-level criteria.",
+      "type": "macro",
+      "fundamental_analysis": "",
+      "queries": 4,
+      "parent_id": "UTMNLT",
+      "name": "US-China Trade Talks",
+      "id": "us_china_trade_talks",
+      "last_queried": "2025-08-21T19:23:35.759000000+00:00",
+      "medium_analysis": "",
+      "status": "active"
+    }
+  },
+  "id": "us_china_trade_talks__influences__us_china_chip_negotiations"
+}

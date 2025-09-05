@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T01:30:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "texas_redistricting",
+    "target_id": "dc_federal_takeover",
+    "selection_motivation": "Linking Texas Redistricting to Federal Takeover of Washington D.C. highlights the interplay between state-level political maneuvers and federal authority, providing insights into how local policies may influence national governance structures.",
+    "candidate_motivation": "The selected topics are closely related to political and legislative dynamics, which can influence or correlate with Texas Redistricting, particularly in the context of policy changes, electoral strategies, and demographic shifts.",
+    "existing_links_count": "6",
+    "candidate_count": "10",
+    "all_nodes_count": "1613",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['gerrymandering', 'texas_cannabis_legalization', 'texas_flood_relief_legislation', 'political_manipulation_doj', 'dc_federal_takeover', 'dc_federal_intervention', 'trump_dc_public_safety', 'dc_police_federalization', 'dc_crime_trends', 'us_russia_relations']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_flood_relief_legislation'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_cannabis_legalization'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'gerrymandering'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'federal_intervention_urban_crime'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586833",
+    "rel_id": "texas_redistricting__influences__dc_federal_takeover",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_flood_relief_legislation'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_cannabis_legalization'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'dc_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'gerrymandering'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'federal_intervention_urban_crime'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Texas Redistricting to Federal Takeover of Washington D.C. highlights the interplay between state-level political maneuvers and federal authority, providing insights into how local policies may influence national governance structures.",
+      "type": "INFLUENCES",
+      "source": "texas_redistricting",
+      "target": "dc_federal_takeover"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "texas_redistricting__influences__dc_federal_takeover"
+}

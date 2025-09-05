@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T01:58:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "china_macro",
+    "new_article_id": "75187DPQA",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['KXX61B8AG', 'N5CNJJE9J', '40M82JY72', 'UY1QCADVY', 'Z1NZ7CBC7', 'UKZRQFI1D', 'N26K1HXBH', 'OLND309B9']",
+    "mode": "CAN_REPLACE",
+    "target_id": "KXX61B8AG",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "KXX61B8AG",
+      "motivation": "The new undervalued-Asian-stocks article provides substantive, actionable content that clearly supersedes the placeholder article with ID KXX61B8AG; removing the placeholder consolidates canonical coverage and enhances graph analytics with actual data signals."
+    }
+  },
+  "id": "china_macro__75187DPQA__fundamental"
+}

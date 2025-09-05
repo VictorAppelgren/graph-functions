@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T15:37:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756644975",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7036",
+    "output_chars": "841",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is too verbose and strays from the 4‑6‑sentence, asset‑centric brief required.  \n1. **Trim length**: Collapse the 3‑paragraph narrative into 4‑6 bullets or sentences, each ending with a single, clear claim and a citation.  \n2. **Focus on spx**: Remove any standalone discussion of DXY, 2‑yr/10‑yr steepening, or 30‑yr yields unless they are explicitly tied to spx risk‑premium dynamics.  \n3. **Causal links**: Every sentence must state the transmission path (e.g., Fed cut → lower ust10y → reduced risk‑premium → spx move) and include a citation.  \n4. **Magnitude & horizon**: Keep the 2‑5 % correction range, the 0.5‑1 % upside if Fed cuts early, and the 1‑3 % drag from a Tesla ruling, all with citations.  \n5. **Catalysts & watch‑items**: Consolidate the watch list into a single sentence: “Watch Fed policy, CPI/PCE, September payrolls, Tesla ruling, Marvell earnings, and tariff announcements.”  \n6. **Remove redundant or weakly supported statements**: The paragraph about 30‑yr yields compressing the dollar’s real‑yield advantage is irrelevant to spx and should be omitted.  \n7. **Citation density**: Ensure each claim has at least one inline ID; replace generic “historical sensitivity” with a specific source (e.g., B1KYJ1GPU).  \n\nRe‑write the brief as:  \n- “Spx is likely to correct 2‑5 % over 3‑6 mo as the 40 % concentration of the top ten constituents amplifies downside risk (CG8ZKHFI2, FAN5RYW6T).  \n- A 25‑bp Fed cut on 19 Sep 2025 could lift spx 0.5‑1 % if core PCE stays ≥2.9 % and the cut is not delayed (B1KYJ1GPU).  \n- An earlier cut or core PCE <2.5 % would invalidate the correction thesis and could push spx higher (B1KYJ1GPU).  \n- Tesla litigation and Marvell earnings are additional drag catalysts (LJZYDXVL3, 5GZPY1XUE); tariff escalations could add 1‑2 % downside (3YAQ8JUPL, B1KYJ1GPU).  \n- Watch Fed statements, CPI/PCE, September payrolls, Tesla ruling, Marvell earnings, and tariff news; a PCE >3 % or strong payrolls would support a rally (B1KYJ1GPU, XTQIQRP5K, NIT6JFIQF).”",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756644975"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T20:18:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "saudi_vision_2030",
+    "target_id": "middle_east_sovereign_funds",
+    "selection_motivation": "Saudi Vision 2030’s diversification and investment strategy directly shape the allocation decisions of Middle East sovereign funds, making the Vision a primary driver of their investment policies.",
+    "candidate_motivation": "Saudi Vision 2030 is a national development plan focused on economic diversification, energy, and regional investment. Topics that directly relate to Saudi Arabia’s oil sector, sovereign wealth strategies, and Middle‑East investment dynamics are therefore the most likely strong influences, correlates, or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "3",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "3",
+    "candidate_ids_preview": "['oil', 'middle_east_investment', 'middle_east_sovereign_funds']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'oil'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163857",
+    "rel_id": "saudi_vision_2030__influences__middle_east_sovereign_funds",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'middle_east_sovereign_funds'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Saudi Vision 2030’s diversification and investment strategy directly shape the allocation decisions of Middle East sovereign funds, making the Vision a primary driver of their investment policies.",
+      "type": "INFLUENCES",
+      "source": "saudi_vision_2030",
+      "target": "middle_east_sovereign_funds"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "saudi_vision_2030__influences__middle_east_sovereign_funds"
+}

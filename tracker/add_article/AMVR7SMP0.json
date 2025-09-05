@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T01:46:41",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AMVR7SMP0",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy, inflation, and labor market dynamics signal a potential September rate cut, influencing UST yields and market expectations.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "ust10y",
+        "fed_rate_cut_sept17_2025",
+        "fed_powell_rate_cut_hint_2025",
+        "us_unemployment_claims"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "Fed officials are issuing a forward‑looking statement on core inflation and potential rate cuts, which constitutes a policy statement from the central bank’s officials."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses Fed policy signals—sticky core inflation, potential September rate cuts, and political pressure—that directly influence U.S. monetary policy and market expectations, making it highly relevant to the fed_policy node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on imminent Fed policy decisions and near‑term political risks that could affect rates and markets."
+    },
+    "article_node": {
+      "id": "AMVR7SMP0",
+      "title": "Fed's Preferred Inflation Gauge Remains Sticky",
+      "summary": "Fed officials warn that core inflation remains sticky, especially in non‑housing services, and that the Fed may need to cut rates in September as a precautionary move.  Despite a low unemployment rate, inflation could rise to around 3%, limiting the room for aggressive cuts.  Political pressure on the Fed, exemplified by Governor Cook’s lawsuit against President Trump, is viewed as a real but currently muted risk that could destabilize markets if it leads to ultra‑low rates and higher inflation.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-29/fed-s-preferred-inflation-gauge-remains-sticky-video?srnd=phx-technology",
+      "published_at": "2025-08-29T19:32:55.844000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "AMVR7SMP0"
+}

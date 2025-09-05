@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T18:16:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756570619",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "2174",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but it fails the acceptance gate because mortgage rates are not a canonical handle in the list (e.g., ust10y, dxy, spx, etc.). Add an explicit mapping: “30‑year mortgage rate ≈ 6.5‑7.0% → 10‑year UST yield ≈ 4.5‑5.0%” (cite LF0UUL917). Tighten the causal chain: Fed policy → 10‑yr Treasury yield → mortgage rate; include magnitude ranges (e.g., a 25‑bp Fed hike → +0.25‑0.5 bp to mortgage rates). Add dated catalysts with ranges: • Fed FOMC 16‑17 Sep 2025 (hike → +25‑50 bp, cut → –25‑50 bp) – cite Fed minutes; • Oct 2025 PCE core (0.2 % rise → +15‑30 bp, drop → –15‑30 bp) – cite BEA; • Nov 2025 Treasury debt‑ceiling auction (↑ debt → +10‑20 bp) – cite Treasury; • Dec 2025 MBS demand (5 % rise → –10‑15 bp) – cite MBS data. Replace any generic “could” statements with quantified ranges. Ensure every substantive claim is backed by a source ID (currently only LF0UUL917). Conclude with a concise base‑case: mortgage rates 6.5‑7.0 % through 2026, risks (Fed hike, 2 % inflation surprise, debt issuance), watch list (Fed announcements, PCE, Treasury auctions, MBS demand), confidence level (moderate‑high). Remove any drifted sentences that do not tie back to mortgage rates or the causal chain. This will satisfy the handle‑mapping and catalyst‑window requirements and produce a defensible, actionable view.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756570619"
+}

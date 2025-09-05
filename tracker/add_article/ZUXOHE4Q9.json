@@ -1,0 +1,38 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T12:13:22",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZUXOHE4Q9",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed’s cooler PCE and September rate‑cut expectations compress US Treasury yields, lift equity indices, and shift inflation expectations.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "spx",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports the Fed’s core PCE gauge release, a key inflation print that constitutes a major macroeconomic event, and discusses its implications for policy expectations."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports core PCE data and Fed Chair Powell’s remarks signaling a likely rate cut, directly affecting the Fed policy node and its downstream rate expectations."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on expectations for a September Fed rate cut, indicating a medium‑term outlook rather than immediate daily moves or long‑term fundamentals."
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 1
+    }
+  },
+  "id": "ZUXOHE4Q9"
+}

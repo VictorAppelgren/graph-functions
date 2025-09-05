@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T19:47:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LF0UUL917",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US mortgage rates are driven by Fed policy, inflation expectations, national debt, and loan demand, with recent 30‑year rates near 7% reflecting Fed balance‑sheet contraction.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy",
+        "sofr"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports the average 30‑year fixed‑rate mortgage rate, which is a specific economic data release."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports the current 30‑year U.S. mortgage rate, its recent movements, and the key drivers (Fed policy, inflation expectations, balance‑sheet contraction) that influence it, directly affecting the U.S. housing market and credit conditions."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers of U.S. mortgage rates—Fed policy, inflation expectations, debt levels, and balance‑sheet contraction—that shape rates over multi‑year horizons."
+    },
+    "article_node": {
+      "id": "LF0UUL917",
+      "title": "Current mortgage rates report for Aug. 29, 2025: Rates flicker slightly up after dip",
+      "summary": "The average 30‑year fixed‑rate mortgage in the U.S. is 6.548% as of Aug. 27 2025, up 2 bp from the prior day and down 8 bp from a week earlier, and has hovered near 7% since the Fed began cutting rates in September 2024.  Fed policy, inflation expectations, national debt, and loan demand are the main drivers keeping rates elevated, while the Fed’s balance‑sheet contraction is also contributing to upward pressure.  Homebuyers can still negotiate buydowns or shop multiple lenders to mitigate costs, but refinancing is only worthwhile if a rate drop of at least 1 % can be secured.",
+      "source": "https://finance.yahoo.com/news/current-mortgage-rates-report-aug-070100828.html",
+      "published_at": "2025-08-29T07:01:00+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "LF0UUL917"
+}

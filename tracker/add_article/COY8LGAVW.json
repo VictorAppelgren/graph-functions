@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:24:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "COY8LGAVW",
+    "topic_discovery_motivation": "Article discusses Vicore Pharma's advancements in drug development for idiopathic pulmonary fibrosis, which may relate to healthcare investment trends and pharmaceutical innovation.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 5,
+      "existing_ids": [],
+      "new_names": [
+        "Vicore Pharma",
+        "idiopathic_pulmonary_fibrosis",
+        "buloxibutid",
+        "Phase 2b ASPIRE trial",
+        "fibrotic_diseases"
+      ]
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Vicore Pharma Holding AB’s interim financial results for Q2 2025, detailing operating losses, cash balance, and progress on a clinical trial, which is a company earnings announcement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant progress and financial status of Vicore Pharma, directly impacting its node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports on the progress of a Phase 2b clinical trial, which is an ongoing development expected to conclude in the next couple of years."
+    },
+    "article_node": {
+      "id": "COY8LGAVW",
+      "title": "Interim Report April - June 2025",
+      "summary": "Vicore Pharma Holding AB reported its interim results for Q2 2025, highlighting the progress of its Phase 2b ASPIRE trial for buloxibutid in idiopathic pulmonary fibrosis (IPF), which is on track to complete enrollment by mid-2026. The company showcased its unique drug mechanism at the American Thoracic Society International Conference and maintained a strong financial position with SEK 937 million in cash. Despite increased operating losses, Vicore remains focused on developing transformative therapies for fibrotic diseases.",
+      "source": "https://finance.yahoo.com/news/interim-report-april-june-2025-062000887.html",
+      "published_at": "2025-08-22T06:20:00+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "COY8LGAVW"
+}

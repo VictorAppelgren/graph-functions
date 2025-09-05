@@ -1,0 +1,56 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T00:44:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WYXLXM92C",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US Treasury yields, Fed policy, commodities, equities.",
+      "existing_ids": [
+        "ust10y",
+        "ust2y",
+        "ust30y",
+        "ust5y",
+        "gold",
+        "wti",
+        "brent",
+        "spx",
+        "ndx",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a U.S. judge ruling that Google need not sell its Chrome browser in an antitrust case, which is a regulatory/legal development."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to evaluate the article against, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article contains medium‑term projections of Fed rate cuts through December 2026 and bond yield expectations, indicating a focus on the medium‑horizon outlook for U.S. monetary policy and fixed‑income markets."
+    },
+    "article_node": {
+      "id": "WYXLXM92C",
+      "title": "Global Bond Selloff; Google Avoids Chrome Sale in Antitrust Case",
+      "summary": "Global bond markets saw a selloff with U.S. 30‑year yields nearing 5%, while a U.S. judge ruled that Google need not sell its Chrome browser in an antitrust case, lifting pressure on the company and boosting its shares. Equity futures rebounded, and analysts noted that bond contagion is unlikely, with HSBC’s Max Kettner citing idiosyncratic factors. Clear Harbor’s Aaron Kettner projected five to six Fed rate cuts between now and December 2026. Petrobras CEO Magda Chambriard highlighted Asia’s role in offsetting U.S. trade war impacts. Overall, markets remain volatile amid policy and corporate developments.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-03/bloomberg-brief-9-3-2025-video?srnd=phx-technology",
+      "published_at": "2025-09-03T11:27:04.654000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 10,
+      "successful": 10
+    }
+  },
+  "id": "WYXLXM92C"
+}

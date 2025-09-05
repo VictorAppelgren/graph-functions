@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:13:23",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_in_entertainment",
+    "target_id": "generative_ai_film",
+    "selection_motivation": "AI in Entertainment is a primary driver of generative AI applications in film production, enabling new creative workflows.",
+    "candidate_motivation": "These topics are the strongest direct influences and peers to AI in Entertainment, reflecting core AI capabilities, platform dynamics, and governance that shape how AI is used in media production and distribution. They include generative media, AI hardware, content optimization, and safety/regulatory considerations.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['generative_ai_film', 'openai_gpt5_competition', 'nvidia_ai_infrastructure', 'ai_governance', 'deepfake_ai_medical', 'ai_generated_misinformation', 'netflix_tvos_redesign']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_in_entertainment', 'target': 'ai_generated_content_seo'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162400",
+    "rel_id": "ai_in_entertainment__influences__generative_ai_film",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_in_entertainment', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_in_entertainment', 'target': 'generative_ai_film'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI in Entertainment is a primary driver of generative AI applications in film production, enabling new creative workflows.",
+      "type": "INFLUENCES",
+      "source": "ai_in_entertainment",
+      "target": "generative_ai_film"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_in_entertainment__influences__generative_ai_film"
+}

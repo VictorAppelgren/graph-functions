@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T16:10:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_border_security",
+    "new_article_id": "TO2X2W4B3",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['96G2S9DQ8', 'SPFMRVV3Q', 'CXGM0ZKFR', 'GUBBEMNJM']",
+    "mode": "CAN_REPLACE",
+    "target_id": "96G2S9DQ8",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "96G2S9DQ8",
+      "motivation": "The new article provides a significant update on the failures of AI implementations in the banking sector, which is more relevant than the existing articles that lack this specific context."
+    }
+  },
+  "id": "us_border_security__TO2X2W4B3__current"
+}

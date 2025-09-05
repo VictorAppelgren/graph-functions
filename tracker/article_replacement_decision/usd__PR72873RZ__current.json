@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T10:37:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "usd",
+    "new_article_id": "PR72873RZ",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['QC6H7S274', 'CGSVV1ML9', 'V0BEQ94VR', 'U7EUJKGRB', 'RHRO98UVW', '7YQN9WX3K', '8DSBDPAZ5', 'EJA9EHSWW']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article covers this topic, so no replacement needed."
+    }
+  },
+  "id": "usd__PR72873RZ__current"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T13:53:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "COMPONENT_OF",
+    "source_id": "eurusd",
+    "target_id": "dxy",
+    "selection_motivation": "EURUSD is a constituent currency pair that directly feeds into the US Dollar Index, making it a component of DXY.",
+    "candidate_motivation": "The EURUSD pair is driven by monetary policy, inflation expectations, sovereign yield curves, and cross‑currency dynamics, so topics that capture these factors are the most likely strong peers or influences.",
+    "existing_links_count": "0",
+    "candidate_count": "20",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['usdcny', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'bund10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'euribor', 'usdjpy', 'gbpusd', 'dxy', 'gold', 'wti', 'brent', 'spx', 'sx5e']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152924803141734195",
+    "rel_id": "eurusd__component_of__dxy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD is a constituent currency pair that directly feeds into the US Dollar Index, making it a component of DXY.",
+      "type": "COMPONENT_OF",
+      "source": "eurusd",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__component_of__dxy"
+}

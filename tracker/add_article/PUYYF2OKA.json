@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T06:36:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PUYYF2OKA",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation and bond yields are spiking, Fed policy tightening and ECB rate hold are feeding higher yields, while gold record highs and shipping cost declines add to market volatility. These dynamics feed the S&P 500, Nasdaq, gold, and Treasury yields.",
+      "existing_ids": [
+        "spx",
+        "ndx",
+        "gold",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "bund10y",
+        "gilt10y",
+        "uk_30yr_gilt_yield",
+        "dxy",
+        "usdjpy",
+        "usdcny",
+        "gbpusd",
+        "us_inflation",
+        "euro_inflation",
+        "fed_policy",
+        "ecb_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers a market analysis of recent U.S. stock movements, bond yields, commodity prices, tariff disputes, and expectations around ECB policy, making it a market commentary."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified; cannot assess impact"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions and short‑term policy expectations, such as the day‑to‑day stock and bond movements and next‑week ECB rate decisions."
+    },
+    "multi_topic_results": {
+      "total_topics": 19,
+      "successful": 8
+    }
+  },
+  "id": "PUYYF2OKA"
+}

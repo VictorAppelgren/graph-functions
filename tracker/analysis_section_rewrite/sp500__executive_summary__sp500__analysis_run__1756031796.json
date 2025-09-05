@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:48:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756031796",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18968",
+    "output_chars": "1331",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The analysis has strong regime scaffolding and solid anchor numbers (cloud spend growth, 0G3A676BP; MSFT Azure 39%; Shopify 31%/FCF $422m; energy yield signals), but the causal chain from AI/cloud to durable cash flow and multiple-valuation implications is underdeveloped and too narrative-driven; reshape into a 4–6 sentence executive brief that delivers a single house view, 2–3 catalysts, 2–3 risks, and 3–4 watch-items. Build a tight 3-scenario framework (Regime A base: durable cash flow/moat with modest multiple support; Regime B re-rating if cash conversion improves or rates surprise to the downside; Regime C growth slowdown with energy ballast) with explicit triggers tied to source data (e.g., Azure growth, megacloud FCF margins, and the 2.4T cloud spend by 2030) instead of diffuse language; anchor all claims to the IDs in the SOURCE MATERIAL and remove or relocate peripheral items (BigBear.ai, Petco) to a separate risk/watchlist to avoid dilution. Require explicit, first-principles framing: show the stepwise logic from cloud/AI productivity to operating leverage, to free cash flow, to capital returns and moat reinforcement, and translate that into the targeted a) base-case multiple range and b) upside/downside thresholds using only the source-provided numbers (e.g., 21.2% cloud spend growth, 33.6% payout, 0.7% yield, MSFT/Shopify signals) with citations after each numeric claim. Deliver a crisp 3–4 data-point watchlist (Azure milestones, Shopify operating metrics, Intel vesting status, USMCA carve-out progress, policy-path signals) with explicit invalidation rules (e.g., if Azure growth decelerates meaningfully below mid- to high-20s% or if policy path unexpectedly tightens), and compress the 0–3 week and 2–8 week windows into a single, action-oriented paragraph that preserves horizon consistency and avoids repetition. Finally, ensure the write is concise, executive in tone, and free of unsupported abstractions by enforcing source-only claims and a clean, consistent citation pattern throughout.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756031796"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:05:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756068965",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17355",
+    "output_chars": "1454",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Strengthen the near-term causal chain from tariff announcements to relative prices and domestic capex with explicit triggers (25% auto tariff pass-through; chip/AI infra capex milestones) and link to ROIC and discount-rate dynamics | Watch tariff timetables and the pace/profitability of chip/EV investments as regime-progression signals | 60% (QGXA2WQJ3)(WTNT85IPR)(SGB2PAZGK)\nUp | 3–6 months | AI/EV leadership regime—Nvidia centrality to compute demand expands leadership in AI infra, with the AI-30 list broadening to CrowdStrike, Roblox, GE Vernova, and Nebius | Watch Nvidia demand signals, AI infra capex cadence, and the AI-30 reshuffle as regime tilt indicators | 25–35% (WTNT85IPR)(STBVARD8F)(4661GWFP7)\nDown | 3–6 months | Tariff-escalation regime—potential 25% auto-import tariff could lift inflation pass-through and compress cyclicals, triggering risk-off re-pricing and tighter equity multiples | Watch tariff timetables, pass-through dynamics, and KO/PG/SBUX cash-flow sensitivity to auto capex | 20–30% (WTNT85IPR)(SGB2PAZGK)\nDown | 3–6 months | Ally realignment/constructive thaw regime—major ally tariff reconfigurations and inflation persistence could push up discount rates and shift capital toward defensive assets | Watch ally tariff shifts and inflation persistence signals, plus policy cues from Jackson Hole and semiconductor capex cadence as near-term tests | 10–20% (SGB2PAZGK)(NL5YYTLF2)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756068965"
+}

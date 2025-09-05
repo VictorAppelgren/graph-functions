@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:42:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GX057ADL7",
+    "status": "success",
+    "topic_id": "fed_policy"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses significant interest rate cuts proposed by the Treasury Secretary, which directly relates to the existing Fed Policy node, indicating potential impacts on macroeconomic conditions.",
+      "existing_node_ids": "fed_policy",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The node pertains to Fed policy, which is related to central bank decisions and interventions."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of recent Federal Reserve policy changes, which directly influence monetary conditions and economic activity."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses the implications of the Federal Reserve's policy decisions, which can have long-lasting effects on the economy."
+    },
+    "article_node": {
+      "id": "GX057ADL7",
+      "title": "Horizons Middle East & Africa 8/14/2025",
+      "summary": "Scott Bessent, the Treasury Secretary, advocates for significant interest rate cuts from the Federal Reserve, suggesting a reduction of 50 basis points next month. President Trump warns Russian President Putin of severe consequences if he does not agree to a cease-fire regarding Ukraine. Meanwhile, Tencent's shares rise after the company reports strong earnings, despite a contraction in credit data from the People's Bank of China, indicating cautious consumer sentiment.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-14/horizons-middle-east-africa-8-14-2025-video",
+      "published_at": "2025-08-14T08:19:26.867000+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "GX057ADL7"
+}

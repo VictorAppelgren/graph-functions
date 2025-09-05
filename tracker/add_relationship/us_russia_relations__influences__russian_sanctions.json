@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:38:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_russia_relations",
+    "target_id": "russian_sanctions",
+    "selection_motivation": "US‑Russia relations directly shape the U.S. sanctions regime against Russia, making this a primary driver of the Russian sanctions node.",
+    "candidate_motivation": "Geopolitical tensions between the U.S. and Russia are most strongly influenced by Ukraine-related dynamics, sanctions, and direct security concerns such as cyber threats and high-level diplomacy; these topics are the most plausible peers or correlates to U.S.-Russia relations.",
+    "existing_links_count": "9",
+    "candidate_count": "9",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['ukraine_geopolitics', 'ukraine_sovereignty', 'ukraine_conflict', 'ukraine_peace_negotiations', 'russian_sanctions', 'russia_economic_crisis', 'us_russia_cybersecurity_incident', 'trump_putin_summit', 'trump_putin_meeting']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_land_deal'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082013",
+    "rel_id": "us_russia_relations__influences__russian_sanctions",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_land_deal'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US‑Russia relations directly shape the U.S. sanctions regime against Russia, making this a primary driver of the Russian sanctions node.",
+      "type": "INFLUENCES",
+      "source": "us_russia_relations",
+      "target": "russian_sanctions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_russia_relations__influences__russian_sanctions"
+}

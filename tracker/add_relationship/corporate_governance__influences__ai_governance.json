@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:37:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "corporate_governance",
+    "target_id": "ai_governance",
+    "selection_motivation": "Corporate governance frameworks directly shape AI governance and model transparency, making governance a primary driver of AI governance practices.",
+    "candidate_motivation": "These topics are the strongest peers and external influences on how firms govern, supervise, and align strategy with governance norms. They include direct governance themes and adjacent areas like ESG, culture, and AI governance that typically interact with corporate governance decisions.",
+    "existing_links_count": "3",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['corporate_culture_performance', 'intel_ceo_pressure', 'geopolitics_corporate_strategy', 'ai_governance', 'esg_defense_investment']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'sustainability_leadership'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559534322",
+    "rel_id": "corporate_governance__influences__ai_governance",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'sustainability_leadership'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'ai_governance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Corporate governance frameworks directly shape AI governance and model transparency, making governance a primary driver of AI governance practices.",
+      "type": "INFLUENCES",
+      "source": "corporate_governance",
+      "target": "ai_governance"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "corporate_governance__influences__ai_governance"
+}

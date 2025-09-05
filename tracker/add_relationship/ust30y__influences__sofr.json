@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:58:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust30y",
+    "target_id": "sofr",
+    "selection_motivation": "The 30‑year Treasury yield reflects market expectations of future short‑term Fed policy and thus directly influences the SOFR benchmark, a key overnight rate used for derivatives and corporate borrowing.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain, as they directly affect or are affected by long‑term U.S. Treasury yields.",
+    "existing_links_count": "11",
+    "candidate_count": "8",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['ust10y', 'ust5y', 'ust2y', 'fed_policy', 'us_inflation', 'us_unemployment_claims', 'sofr', 'dxy']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814272834",
+    "rel_id": "ust30y__influences__sofr",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 30‑year Treasury yield reflects market expectations of future short‑term Fed policy and thus directly influences the SOFR benchmark, a key overnight rate used for derivatives and corporate borrowing.",
+      "type": "INFLUENCES",
+      "source": "ust30y",
+      "target": "sofr"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__influences__sofr"
+}

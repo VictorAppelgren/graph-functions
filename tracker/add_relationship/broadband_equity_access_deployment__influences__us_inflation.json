@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T23:40:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "broadband_equity_access_deployment",
+    "target_id": "us_inflation",
+    "selection_motivation": "Linking the Broadband Equity, Access, and Deployment Program to US Inflation will highlight the program's potential impact on inflationary pressures through increased broadband access and economic activity.",
+    "candidate_motivation": "The selected topics are closely related to broadband equity and access, influencing economic conditions, technology infrastructure, and regulatory frameworks that affect deployment programs.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_tariffs_on_technology', 'us_chip_export_controls', 'us_china_trade_relations', 'us_inflation', 'ev_infrastructure_funding', 'us_trade_policy_inflation', 'us_chip_trade_policy', 'us_china_ai_chip_agreement', 'us_inflation_impact_on_stocks', 'us_tariffs_semiconductors']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'broadband_equity_access_deployment', 'target': 'us_trade_policy_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163886",
+    "rel_id": "broadband_equity_access_deployment__influences__us_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'broadband_equity_access_deployment', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'broadband_equity_access_deployment', 'target': 'us_trade_policy_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking the Broadband Equity, Access, and Deployment Program to US Inflation will highlight the program's potential impact on inflationary pressures through increased broadband access and economic activity.",
+      "type": "INFLUENCES",
+      "source": "broadband_equity_access_deployment",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "broadband_equity_access_deployment__influences__us_inflation"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:59:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "dxy",
+    "target_id": "oil_price_decline",
+    "selection_motivation": "Oil price decline is a major macro event that typically weakens the USD; linking DXY to oil_price_decline captures this causal relationship for event‑driven analysis.",
+    "candidate_motivation": "The DXY is primarily driven by U.S. monetary policy, inflation expectations, Treasury yields, and global risk sentiment, so topics that influence or correlate with these factors—such as Fed actions, U.S. inflation data, U.S. Treasury yields, and major FX and commodity benchmarks—are strong peers or influences.",
+    "existing_links_count": "19",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'bund10y', 'gilt10y', 'jgb10y', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1254254695245940894",
+    "rel_id": "dxy__correlates_with__oil_price_decline",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline is a major macro event that typically weakens the USD; linking DXY to oil_price_decline captures this causal relationship for event‑driven analysis.",
+      "type": "CORRELATES_WITH",
+      "source": "dxy",
+      "target": "oil_price_decline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__correlates_with__oil_price_decline"
+}

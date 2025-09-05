@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:12:34",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_geopolitical_security",
+    "target_id": "donbas_region",
+    "selection_motivation": "Ukraine Geopolitical Security directly shapes the stability and conflict dynamics in the Donbas region, making it a primary driver of local security outcomes.",
+    "candidate_motivation": "These topics represent direct geopolitical and security dynamics surrounding Ukraine, including the ongoing conflict, sovereignty, and diplomacy, as well as core actions by the US, EU, and Russia that shape Ukraine's security landscape. The listed items are plausible strong influences, correlates_with, or peers given their close relevance to Ukraine geopolitics.",
+    "existing_links_count": "10",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ukraine_conflict', 'ukraine_sovereignty', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'donbas_region', 'russia_economic_crisis', 'russian_sanctions', 'eu_geopolitics_ukraine', 'eu_us_relations_ukraine', 'ukraine_diplomacy', 'ukraine_geopolitics']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_geopolitics'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082395",
+    "rel_id": "ukraine_geopolitical_security__influences__donbas_region",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_geopolitics'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'donbas_region'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Geopolitical Security directly shapes the stability and conflict dynamics in the Donbas region, making it a primary driver of local security outcomes.",
+      "type": "INFLUENCES",
+      "source": "ukraine_geopolitical_security",
+      "target": "donbas_region"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_geopolitical_security__influences__donbas_region"
+}

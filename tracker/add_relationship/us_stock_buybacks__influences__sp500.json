@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T02:28:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_stock_buybacks",
+    "target_id": "sp500",
+    "selection_motivation": "Linking US Stock Buybacks to S&P 500 highlights the direct impact of buyback activities on stock market performance, providing critical insights for analysts assessing market trends.",
+    "candidate_motivation": "The selected topics are closely related to US Stock Buybacks, as they influence or are influenced by corporate financial strategies, market performance, and economic conditions that affect stock buyback activities.",
+    "existing_links_count": "2",
+    "candidate_count": "10",
+    "all_nodes_count": "1615",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['sp500', 'us_inflation', 'fed_policy', 'us_10y', 'us_tariffs_on_technology', 'us_chip_revenue_policy', 'us_china_trade_talks', 'political_influence_on_stocks', 'us_tariff_policies', 'us_china_tariff_truce']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216590",
+    "rel_id": "us_stock_buybacks__influences__sp500",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking US Stock Buybacks to S&P 500 highlights the direct impact of buyback activities on stock market performance, providing critical insights for analysts assessing market trends.",
+      "type": "INFLUENCES",
+      "source": "us_stock_buybacks",
+      "target": "sp500"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_stock_buybacks__influences__sp500"
+}

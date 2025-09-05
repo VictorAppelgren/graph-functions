@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T10:47:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "fed_policy",
+    "selection_motivation": "UK gilt yields influence Fed policy through global risk sentiment and carry trade flows, signaling tightening expectations.",
+    "candidate_motivation": "These topics are likely to influence or correlate with UK 10Y Gilt Yield because they share the same interest‑rate environment, policy actions, and yield‑curve dynamics.",
+    "existing_links_count": "20",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['uk_30yr_gilt_yield', 'fed_rate_cut_sept17_2025', 'fed_policy', 'bund10y', 'ust10y', 'ust5y', 'ust30y', 'ust2y', 'jgb10y', 'us_inflation', 'euro_inflation', 'us_core_pce', 'gbpusd', 'dxy', 'ecb_policy', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1193455000764810756",
+    "rel_id": "gilt10y__influences__fed_policy",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt yields influence Fed policy through global risk sentiment and carry trade flows, signaling tightening expectations.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__influences__fed_policy"
+}

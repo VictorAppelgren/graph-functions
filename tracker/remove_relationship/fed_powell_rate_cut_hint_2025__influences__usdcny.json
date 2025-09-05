@@ -1,0 +1,54 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-04T13:45:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_powell_rate_cut_hint_2025",
+    "target_id": "usdcny",
+    "selection_motivation": "The USDCNH link is the least central among the existing FX connections, and its removal preserves coverage of the primary USD index (DXY) while freeing capacity for the new, more specific policy link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The USDCNH link is the least central among the existing FX connections, and its removal preserves coverage of the primary USD index (DXY) while freeing capacity for the new, more specific policy link.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1276771593871167167",
+    "rel_id": "fed_powell_rate_cut_hint_2025__influences__usdcny",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "usdcny"
+    },
+    "prioritized_link": {
+      "motivation": "The hint signals market expectations for the Fed’s September 17 2025 rate cut, making it a direct driver of that policy decision.",
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "llm_raw_response": {
+      "motivation": "The USDCNH link is the least central among the existing FX connections, and its removal preserves coverage of the primary USD index (DXY) while freeing capacity for the new, more specific policy link.",
+      "remove_link": "usdcny"
+    },
+    "removal_decision": {
+      "motivation": "The USDCNH link is the least central among the existing FX connections, and its removal preserves coverage of the primary USD index (DXY) while freeing capacity for the new, more specific policy link.",
+      "remove_link": "usdcny"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "((ETH OR Ether OR Ethereum OR ETHEREUM OR ETH) OR (BTC OR Bitcoin OR BTCORBIT) OR (crypto OR cryptocurrency OR cryptocurrencies OR crypto market OR crypto assets) OR (Fed OR Federal Reserve OR Powell OR Jackson Hole OR rate cuts OR interest rate cuts OR rate cut) OR (risk-on OR risk-off OR market rally OR market movement OR market reaction) OR (ETF OR exchange-traded fund OR exchange traded fund OR ETFs OR crypto ETF OR bitcoin ETF OR ether ETF OR ETF inflows OR ETF demand OR ETF flows) OR (stablecoin OR stablecoins) OR (regulatory tailwinds OR regulatory environment OR regulatory changes OR GENIUS Act OR Project Crypto) OR (retirement plans OR 401k OR retirement accounts OR executive order OR Trump OR President) OR (Bitmine Immersion OR SharpLink Gaming OR DeFi Development OR Coinbase OR Galaxy Digital OR Iren) OR (price OR all-time high OR record OR price surge OR price drop OR price decline OR price erases gains) OR (news OR analysis OR report OR update OR latest OR breaking OR today OR recent OR trend OR movement OR volatility OR change OR shift OR impact OR reaction))",
+      "motivation": "Powell’s dovish hint at Jackson Hole (Aug 22 2025) triggered a crypto rally, providing a clear catalyst for market moves.",
+      "name": "Fed Powell Rate Cut Hint (Jackson Hole 2025)",
+      "id": "fed_powell_rate_cut_hint_2025",
+      "last_queried": "2025-09-03T17:38:01.071000000+00:00",
+      "importance_rationale": "Fed Powell’s hint at rate cuts is a high‑centrality policy signal that can move rates, yields, equity and commodity markets within hours to days. It is a central‑bank guidance outside a formal meeting, thus fitting the \"high\" cadence (every 3600s) and multi‑asset relevance.",
+      "type": "policy",
+      "queries": 3
+    }
+  },
+  "id": "fed_powell_rate_cut_hint_2025__influences__usdcny"
+}

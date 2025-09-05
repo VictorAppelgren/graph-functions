@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-23T21:20:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "Q7VVGNSQE",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['A2H79OCU1', '2YP1X9B4T', '4661GWFP7', 'J0D96V7MS', 'CFRPMXPC2', 'AEUJA4Z3X', 'N99HRTU76', 'AI0X5SVCA']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "Existing articles contain no content, so the new article does not supersede any current entry."
+    }
+  },
+  "id": "sp500__Q7VVGNSQE__medium"
+}

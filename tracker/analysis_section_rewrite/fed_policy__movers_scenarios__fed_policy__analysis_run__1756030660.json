@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:25:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756030660",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16776",
+    "output_chars": "1160",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft has solid breadth but needs a tighter, testable causal map and clearly anchored probabilities; actionable edits: reframe into exactly four one-sentence Up/Down items, each strictly in the format Up/Down | Time window | Driver/Mechanism | What to watch | Probability %, with the horizon split (0–3 vs 3–6 months) and a single, coherent regime narrative tied to the sources (GX057ADL7, H7Q52FKDH, 37UZC9X8I, SK994CBWR, K0WFSW29E, TXVQ5ZQ0N, H9WSBYP3D, YB758UDBU, etc); build the causal chain from policy stance (real rate differentials) to dollar/yields moves to risk appetite and AI/tech exposure, explicitly mapping each line to a trigger (e.g., Sep 50bp cut; market pricing of a Sep cut; ~150bp total; export-control relief; Jackson Hole/BoJ signals; DRC sanctions/Chips Act dynamics) and an invalidation rule (e.g., no Sep cut, or export controls worsen) with citations after the factual claim; quantify the effect in each line using concrete numbers from the material (50bp/150bp, 21.2% cloud spend CAGR, 39% Azure, Q4/MSFT metrics where relevant) and assign probabilities anchored to market/implied odds (e.g., Up1 ~60–70% given 50bp start and Sep pricing; Up2 ~40–50% given ~150bp total and relief; Down1 ~20–30% for a hawkish tilt; Down2 ~15–25% for EM/commodity shocks) to avoid vague hedges; ensure every factual assertion carries an in-text (ID) citation and resolve potential conflicts by maintaining a single regime narrative that integrates cross‑border dynamics (EM decoupling vs US policy), commodity/sanctions frictions, and the Chips Act signals; prune extraneous background and align strictly with the 0–3 and 3–6 month horizons, so the four lines are precise, high-signal, and forward-looking.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756030660"
+}

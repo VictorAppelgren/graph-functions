@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:00:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust10y",
+    "target_id": "euro_inflation",
+    "selection_motivation": "Higher UST10Y yields strengthen the USD, lowering euro‑area import prices and dampening euro inflation.",
+    "candidate_motivation": "US 10Y Treasury Yield is driven by Fed policy, inflation expectations, term‑premium dynamics, and global risk sentiment, and it is closely correlated with other sovereign yields, the dollar index, and commodity prices. Therefore, topics that influence or are correlated with these factors are strong candidates.",
+    "existing_links_count": "24",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'dxy', 'usdjpy', 'usdcny', 'eurusd', 'gold', 'wti', 'brent', 'copper', 'oil_price_decline', 'us_services_pmi', 'us_unemployment_claims', 'sofr', 'euro_inflation', 'euribor']",
+    "existing_links_before_len": "24",
+    "existing_links_before_preview": "[{'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6973825122494842912",
+    "rel_id": "ust10y__influences__euro_inflation",
+    "existing_links_after_len": "24",
+    "existing_links_after_preview": "[{'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Higher UST10Y yields strengthen the USD, lowering euro‑area import prices and dampening euro inflation.",
+      "type": "INFLUENCES",
+      "source": "ust10y",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__influences__euro_inflation"
+}

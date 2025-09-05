@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T19:03:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "AN34DFX8C",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['FMCSOJ6T0', 'DR5PMXH2G', 'CR3STT98T', 'U21K4ALYQ', '97MD1FHW8', '1DEM6P1Y2', '3YAQ8JUPL', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article is a political gossip piece with no macro‑market relevance or handle mapping, so it does not add value to the knowledge graph."
+    }
+  },
+  "id": "ust10y__AN34DFX8C__current"
+}

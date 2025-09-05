@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T18:53:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756053778",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15103",
+    "output_chars": "1296",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft currently fails the required Movers format by packing more than four lines and including a non‑Ford, big‑picture market narrative; fix by delivering exactly four Movers: 2 Up and 2 Down, each in the form Up|Time window|Driver/Mechanism|What to watch|Probability% with in‑text IDs only after facts; drop the extraneous “Long” line and all non‑Ford market chatter (AI, Costa, IPOs) from the Movers, and anchor every driver to Ford’s regime framework (Regime A with EV losses, Regime B on durable EV margins/ROIC convergence, Regime C on macro/tariff shocks). Tie the Up lines to plausible, evidence‑based catalysts (EV EBIT margin inflection and ROIC approaching or exceeding WACC; policy/tariff relief) and the Down lines to downside catalysts (Middle East risk transmission, macro/tariff deterioration); assign calibrated probabilities derived from the material (e.g., near‑term risk event ~30–40%, regime‑switch odds ~40–50% when EV profitability shows durability), and include explicit invalidations (Regime C if ROIC stays below WACC for two straight quarters, EV margins remain negative). For the Swing Trade section, replace the single “Long” line with 1–2 tradable‑asset lines starting from the exact format: Direction|Horizon|Entry|Stop|Target|R/R|Invalidation|Trigger|Probability|Confidence, anchoring triggers to durable EV margin improvement and ROIC convergence (cite 22PL3Q360, W2622L6WW, NL5YYTLF2); ensure numeric targets are plausible (e.g., 12–18% upside, 2–3x R/R) and that probabilities and confidence are grounded in the cited regime framework rather than ad‑hoc estimates; finally, ensure all statements about fundamentals carry IDs and that the piece remains strictly focused on Ford with concise, first‑principles causal chaining.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756053778"
+}

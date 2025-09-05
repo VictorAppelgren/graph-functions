@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T19:00:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9X7XOLXMH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; oil sector; shareholder yield.",
+      "existing_ids": [
+        "oil",
+        "sp500"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market analysis and commentary on Validea’s Shareholder Yield Investor model rating of Schlumberger, discussing its fundamentals, valuation, and dividend/buy‑back policy."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article provides a new valuation rating and analysis for SLB, directly affecting its perceived value and investment outlook."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers and fundamental valuation of SLB, focusing on its dividend, buy‑back, and debt‑paydown policy rather than immediate events."
+    },
+    "article_node": {
+      "id": "9X7XOLXMH",
+      "title": "SLB Quantitative Stock Analysis",
+      "summary": "Validea’s Shareholder Yield Investor model rates Schlumberger NV (SLB) at 65%, reflecting solid fundamentals and a valuation that supports its dividend, buy‑back and debt‑paydown policy. The report positions SLB as a large‑cap growth stock in the oil‑well services sector and compares it to 22 guru‑based strategies, noting that a score above 80% signals strong interest. Validea explains Meb Faber’s shareholder‑yield philosophy, outlines its own research methodology, and provides performance tables for its factor‑based portfolios and ETFs. The article also includes extensive performance and risk disclosures, as well as links to related Validea content on other guru strategies and market commentary.",
+      "source": "https://www.nasdaq.com/articles/slb-quantitative-stock-analysis-7",
+      "published_at": "2025-08-23T15:35:27+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "9X7XOLXMH"
+}

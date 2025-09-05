@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:12:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756029498",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17886",
+    "output_chars": "2033",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft shows solid long‑run logic and credible source anchors, but it reads as a sprawling compendium rather than a tight, decision‑useful brief; to reach world‑class quality, compress into 4–6 crisp sentences that deliver a single, numbers‑driven house view and a focused watch list. Actionable edits: (1) replace the broad multi‑page narrative with a base/bull/bear house view that links three concrete mechanisms—AI/digital infrastructure lifting productivity, cloud/moat driving revenue visibility and operating leverage, and disciplined labor allocation sustaining margins—with explicit, source‑anchored numbers (e.g., 2.4T cloud spend by 2030; Azure +39% YoY; Pacaso expands to 10 destinations with a $1.8T addressable market; HeartSciences near $32B ECG market by 2034; 1,400 UAS jobs at $105,912; 12–18% wage premium; 1.8%–2.2% dividend yield); (2) define a numerical base case (e.g., 1–1.5% AI productivity uplift) and tight trigger ranges for bull (>1.8–2.5%), bear (<0.5–1.0%) to sharpen invalidation; (3) replace or quarantine non‑essential analogies (Starsky/Hutch, Gran Torino, etc.) unless you can tie them to sourced risk or a proven investment analog; (4) reorganize horizons so 0–3 weeks and 3–6 months feed a single coherent narrative, with 4–6 near‑term catalysts and 2–3 explicit invalidation signals (e.g., tariff extension status, oil balance revisions, FDA/Medicare milestones) tied to the cited IDs; (5) tighten sourcing discipline so every factual claim has an ID and remove any assertion that isn’t supported by the IDs in the material; (6) reduce repetition and ensure the macro frame (oil, tariffs, discount rates, wage premia) feeds a transparent valuation channel (multiples, FCF growth, cash generation) rather than a generic macro backdrop; (7) ensure the 0–3 week section maps directly to risk channels with concrete thresholds (Fernand track intensity, sanctuary injunction status, loan‑market signals) and keep the hardware signals (BeeStation, Solix) tightly tied to near‑term demand drivers; and (8) present a concise 2–3 line closing that states the actionable takeaways for a professional investor (house view, catalysts, risks, and watch items) with the exact IDs attached to each data point.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756029498"
+}

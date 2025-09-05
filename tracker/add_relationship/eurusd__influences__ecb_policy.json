@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T11:14:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eurusd",
+    "target_id": "ecb_policy",
+    "selection_motivation": "ECB policy decisions directly shape the EUR/USD exchange rate through interest rate differentials and monetary stance, making it a primary driver.",
+    "candidate_motivation": "EURUSD is primarily driven by monetary policy, inflation expectations, relative yield spreads, and cross‑currency dynamics. The topics listed are the most direct peers or influences that shape the EURUSD exchange rate through these channels.",
+    "existing_links_count": "17",
+    "candidate_count": "28",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "28",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'dxy', 'ust10y', 'bund10y', 'gilt10y', 'jgb10y', 'ust2y', 'ust30y', 'ust5y', 'us_core_pce', 'usdcny', 'usdjpy', 'gbpusd', 'us_unemployment_claims', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'wti', 'brent', 'gold', 'copper', 'wheat', 'spx', 'sx5e', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627960627",
+    "rel_id": "eurusd__influences__ecb_policy",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy decisions directly shape the EUR/USD exchange rate through interest rate differentials and monetary stance, making it a primary driver.",
+      "type": "INFLUENCES",
+      "source": "eurusd",
+      "target": "ecb_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influences__ecb_policy"
+}

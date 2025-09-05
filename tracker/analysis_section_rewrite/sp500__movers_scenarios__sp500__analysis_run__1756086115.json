@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:50:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756086115",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17349",
+    "output_chars": "1131",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edits: refocus the analysis on Ford with a clean three-state regime (Base/Upside/Downside) and detach or clearly shelve non‑Ford material (e.g., NFLX/AI/crypto) unless you tie it to Ford-specific risk factors; build a tight causal chain where policy/tariffs and domestic capex efficiency directly alter EV economics and ROIC vs WACC, with explicit triggers (EV margin advances to breakeven; ROIC sustains above WACC for two consecutive quarters) and clear invalidation points (tariff shocks intensify or ROIC remains below WACC for a multi‑quarter horizon); quantify all core numbers to anchor the model (EV losses ~$1.3B; Q2 margin ~4.3%; ROIC ~10%; dividend yield ~5%; forward P/E ~10x) and attach each figure to the source IDs (65UUBU0OR)(22PL3Q360) while using SGB2PAZGK to frame regime shifts; calibrate Upside/Downside probabilities to the regime weights and Ford triggers (e.g., Upside ~35–40%, Downside ~20–30% conditional on policy and EV profitability) and state them with explicit gating events; tighten watchpoints around quarterly EV profitability, capex intensity, tariff developments, and ROIC/WACC gaps, ensuring every numeric claim is cited and any contextual anecdotes (O4ZEED2EB) are clearly labeled as peripheral; harmonize horizons to 0–3/3–6 months with a single, testable path from Base to Upside/Downside and date thresholds to avoid drift between regimes.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756086115"
+}

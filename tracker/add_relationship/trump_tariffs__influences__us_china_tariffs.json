@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T12:13:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "us_china_tariffs",
+    "selection_motivation": "Trump’s tariff policy was the primary catalyst for the U.S. tariffs imposed on China, making the two directly causally linked.",
+    "candidate_motivation": "These topics represent direct tariff policies, trade tensions, and inflation repercussions that would plausibly influence or be influenced by Trump Tariffs, including bilateral US-China actions and key country-specific tariff regimes.",
+    "existing_links_count": "2",
+    "candidate_count": "12",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['us_china_tariffs', 'china_us_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'tariff_driven_inflation', 'us_trade_policy_inflation', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_india_tariffs', 'us_tariffs_brazil', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531239",
+    "rel_id": "trump_tariffs__influences__us_china_tariffs",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump’s tariff policy was the primary catalyst for the U.S. tariffs imposed on China, making the two directly causally linked.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_china_tariffs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_tariffs__influences__us_china_tariffs"
+}

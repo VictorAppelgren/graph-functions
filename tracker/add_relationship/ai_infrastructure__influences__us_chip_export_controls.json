@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:09:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_infrastructure",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "AI infrastructure expansion drives geopolitical policy, prompting export controls on advanced chips that are essential for AI workloads, making this link critical for supply‑chain modeling.",
+    "candidate_motivation": "These topics are plausible strong influences, correlates, or peers for AI Infrastructure due to direct ties to AI compute hardware, GPU/datacenter demand, and semiconductor policy/geopolitics that shape AI compute supply.",
+    "existing_links_count": "11",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['nebius_ai_infrastructure', 'nvidia_ai_infrastructure', 'amd_data_center_growth', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'us_china_ai_chip_exports', 'us_chip_export_controls', 'us_tariffs_semiconductors']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'southeast_asia_data_centres'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_data_centers_electricity_impact'}, {'type': 'PEERS', 'source': 'ai_infrastructure', 'target': 'nebius_ai_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587594",
+    "rel_id": "ai_infrastructure__influences__us_chip_export_controls",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'southeast_asia_data_centres'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'PEERS', 'source': 'ai_infrastructure', 'target': 'nebius_ai_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI infrastructure expansion drives geopolitical policy, prompting export controls on advanced chips that are essential for AI workloads, making this link critical for supply‑chain modeling.",
+      "type": "INFLUENCES",
+      "source": "ai_infrastructure",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_infrastructure__influences__us_chip_export_controls"
+}

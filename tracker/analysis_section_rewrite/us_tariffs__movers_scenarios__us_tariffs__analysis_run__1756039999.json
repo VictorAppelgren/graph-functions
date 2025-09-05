@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:01:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_tariffs__analysis_run__1756039999",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19838",
+    "output_chars": "874",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Tighten near-term triggers to concrete dates (EU auto-relief timetable; India Aug 27 tariff trigger; Aug 28 de minimis expiry) | Watch EU legislative progress, confirm Aug 27 tariff action and Aug 28 de minimis outcomes, and drop hedged equity-stake speculation | 70% (DGG6HXUFZ)(VCZKKPORO)\nDown | 0–3 weeks | If EU relief slips or India timing pushes out, pass-through risks re-emerge and margins compress | Watch EU relief delays, India tariff timing, and de minimis expiry outcomes | 55% (DGG6HXUFZ)(VCZKKPORO)\nUp | 3–6 months | Elevate 90-day tariff truce extension as primary hinge; align with policy-uncertainty contours | Watch extension status, renewal terms, and tariff-rate changes shaping import volumes and retailer dynamics | 60% (RHXDOHQQX)\nDown | 3–6 months | Lapse or renewal on harsher terms reintroducing 30%/10% tariffs and re-pricing cross-border flows | Watch extension lapse, renewal terms, and resulting shifts in import volumes and pricing | 40% (RHXDOHQQX)",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs__movers_scenarios__us_tariffs__analysis_run__1756039999"
+}

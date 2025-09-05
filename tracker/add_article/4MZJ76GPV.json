@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T03:20:10",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4MZJ76GPV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity and FX; Nvidia concentration risk and geopolitical pressure may drag S&P 500 and Nasdaq, while US sanctions and Chinese restrictions could weaken USD/CNY and DXY; Fed and PBoC policy may adjust to mitigate volatility.",
+      "existing_ids": [
+        "spx",
+        "ndx",
+        "dxy",
+        "usdcny",
+        "fed_policy",
+        "pboc_policy",
+        "china_exports"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article focuses on Nvidia’s revenue concentration risk and potential impact from U.S. export restrictions and China’s clamp‑down, which is a company‑specific operational concern rather than an earnings release, policy statement, or macro event."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reveals a concentration risk in Nvidia’s data‑center revenue and potential export‑restriction impacts that could materially affect its earnings and valuation."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article highlights long‑term structural risks to Nvidia’s AI‑GPU revenue, including client concentration and geopolitical export restrictions, which are fundamental drivers affecting the company’s future cash flow."
+    },
+    "article_node": {
+      "id": "4MZJ76GPV",
+      "title": "The world’s biggest AI chip supplier faces massive risk as mystery trio control half of Nvidia’s record data center revenue",
+      "summary": "Nvidia’s Q2 2026 data‑center revenue of $21.9 billion is heavily concentrated, with roughly 53% coming from three unnamed clients—likely Elon Musk’s xAI, an OpenAI/Oracle partnership, and Meta—raising concerns about a structural vulnerability. The company’s dominance in AI GPUs is under pressure from geopolitical risks, including U.S. export restrictions on its H20 chips and China’s recent clamp‑down on purchases, which could erode a significant portion of its cash flow. This concentration risk, coupled with potential shifts to in‑house or competitor chips, could trigger a sudden revenue shortfall for Nvidia if any of the key clients pivot or face operational disruptions.",
+      "source": "https://www.techradar.com/pro/who-are-the-mystery-trio-over-half-of-nvidias-data-center-revenue-comes-from-three-unnamed-customers",
+      "published_at": "2025-09-04T22:15:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "4MZJ76GPV"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T14:13:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "ecb_policy",
+    "selection_motivation": "Bund yields are a primary gauge of euro‑area monetary conditions and are used by the ECB to set policy rates; thus bund10y directly informs ecb_policy decisions.",
+    "candidate_motivation": "German 10Y Bund Yield is a sovereign benchmark that moves with Euro‑area macro fundamentals, ECB policy, and relative yield spreads to the US Treasury curve. It is also closely linked to euro‑zone inflation expectations, the Euro Stoxx 50 index, and the USD‑index (DXY) through carry and risk‑on/risk‑off flows. Therefore the most plausible influences, correlates, or peers are the US Treasury yields, Euro‑area inflation, ECB policy, Euro Stoxx 50, and the DXY.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['ust10y', 'ust30y', 'ust5y', 'ust2y', 'us_inflation', 'euro_inflation', 'ecb_policy', 'sx5e', 'dxy']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161249",
+    "rel_id": "bund10y__influences__ecb_policy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields are a primary gauge of euro‑area monetary conditions and are used by the ECB to set policy rates; thus bund10y directly informs ecb_policy decisions.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "ecb_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__ecb_policy"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:31:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sports_broadcasting_act",
+    "target_id": "ufc_media_rights",
+    "selection_motivation": "The Sports Broadcasting Act directly governs the licensing of sports content, making it a primary driver of the UFC media rights agreement with Paramount.",
+    "candidate_motivation": "Topics in this cluster directly touch sports rights, broadcasting deals, and streaming strategies that shape the regulatory and competitive environment the Sports Broadcasting Act governs.",
+    "existing_links_count": "2",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['espn_fox_bundle', 'ufc_media_rights', 'premier_league_2025_26', 'disney_streaming_consolidation', 'paramount_skydance_merger']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'espn_fox_bundle'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'premier_league_2025_26'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845698",
+    "rel_id": "sports_broadcasting_act__influences__ufc_media_rights",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'espn_fox_bundle'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'ufc_media_rights'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'premier_league_2025_26'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Sports Broadcasting Act directly governs the licensing of sports content, making it a primary driver of the UFC media rights agreement with Paramount.",
+      "type": "INFLUENCES",
+      "source": "sports_broadcasting_act",
+      "target": "ufc_media_rights"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sports_broadcasting_act__influences__ufc_media_rights"
+}

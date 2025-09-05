@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T21:04:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "spx",
+    "target_id": "eurusd",
+    "selection_motivation": "S&P 500 movements strongly influence risk sentiment, which directly drives the EUR/USD pair through capital flows and currency carry trades.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain, covering macro drivers, interest rates, commodity prices, and peer equity indices that directly affect S&P 500 performance.",
+    "existing_links_count": "22",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'sx5e', 'euro_inflation', 'wti', 'brent', 'oil_price_decline', 'gold', 'copper', 'wheat', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "22",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6982832321749585715",
+    "rel_id": "spx__influences__eurusd",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "S&P 500 movements strongly influence risk sentiment, which directly drives the EUR/USD pair through capital flows and currency carry trades.",
+      "type": "INFLUENCES",
+      "source": "spx",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__influences__eurusd"
+}

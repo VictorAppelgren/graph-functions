@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-03T06:34:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GCJWUJB3P",
+    "suggested_names": "['TSLA']",
+    "topic_category": "company",
+    "topic_category_motivation": "The topic centers on Tesla’s corporate claim that its future value will be largely driven by its Optimus robot, a company‑specific statement.",
+    "should_add": "False",
+    "motivation_for_relevance": "Tesla is a single company equity, not a macro driver, policy regime, or canonical tradable asset; it lacks a direct macro transmission path to broader markets.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Tesla’s claim that 80 % of its future value will derive from the Optimus humanoid robot represents a clear bullish catalyst for the company’s equity, justifying a dedicated node.",
+      "id": "tsla",
+      "name": "Tesla",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

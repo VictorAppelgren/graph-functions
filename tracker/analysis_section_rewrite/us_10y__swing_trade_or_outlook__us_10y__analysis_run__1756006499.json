@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T05:47:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756006499",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9656",
+    "output_chars": "724",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "- **R/R**: recalc to (35‑30.53)/(30.53‑28) ≈ 1.77, not 1.25.  \n- **Probability**: weight the 60 % chance of a Q3 earnings beat and the 55 % chance of Q4 guidance above $950 M; a 58 % probability is more defensible than the 55 % used.  \n- **Confidence**: lower to 70 (from 80) to reflect the export‑control risk that could wipe out upside.  \n- **Citations**: keep only after numeric facts—entry $30.53 (current price, no citation), stop $28.00 (SK994CBWR), target $35.00 (SK994CBWR), probability 58 % (SK994CBWR), confidence 70 (SK994CBWR). Remove redundant citations after every field.  \n- **Format**: ensure the trade line reads  \n  `Long | Q3 2025 | $30.53 | $28.00 | $35.00 | 1.77 | Export‑control tightening | Fed rate hike | 58% | 70`  \n  (no parentheses, no extra IDs).  \n- **Movers & Scenarios**: keep the four lines as written; they already follow the required structure and cite the correct IDs.  \n- **Overall**: the revised trade line now satisfies the exact order, corrects the math, aligns probabilities with evidence, and eliminates unnecessary citations, yielding a concise, actionable swing‑trade plan.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__swing_trade_or_outlook__us_10y__analysis_run__1756006499"
+}

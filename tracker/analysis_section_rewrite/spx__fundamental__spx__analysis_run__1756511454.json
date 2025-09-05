@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T01:50:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756511454",
+    "article_ids": "['HHKTQ3JYH', 'H86O3XRUJ', 'ZV3QI3K19', 'HHKTQ3JYH', 'H86O3XRUJ']",
+    "selected_articles_count": "5",
+    "material_chars": "100100",
+    "output_chars": "2423",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is a single‑company play‑book that fails every Argos filter:\n\n1. **No macro mapping** – it talks only about Mastercard’s revenue and valuation, with no link to a canonical handle (e.g., spx, ndx, ust10y, dxy, gold, brent).  \n2. **No structural, multi‑year view** – the analysis is framed as a 12‑18‑month earnings play, not a 3‑5‑year macro scenario.  \n3. **Missing causal chain** – the only “catalyst” is an assumed regulatory announcement, but it is not tied to a concrete macro event (Fed policy, ECB stance, global inflation, or a term‑premium shift).  \n4. **No quantitative anchors** – growth rates are guessed, valuation upside is vague, and there is no reference to macro data (e.g., real‑rate differential, CPI, GDP growth).  \n5. **No risk‑validation or invalidation** – the draft lists risks but does not show how they would materialise in market prices or how they could be invalidated by macro data.  \n\n**Actionable edits**\n\n- Re‑frame the piece as a **macro‑theme** (e.g., “US payment‑network exposure in a tightening regulatory environment” or “AI‑driven services in the IT sector”).  \n- Map the theme to at least one canonical handle: e.g., **spx** (0.3 % weight), **ndx** (0.4 % weight), **ust10y** (interest‑rate sensitivity), **dxy** (currency exposure), **gold** (hedge).  \n- Build a **causal chain**:  \n  1. Fed policy tightening → higher real rates → reduced consumer spending → lower transaction volume.  \n  2. Regulatory scrutiny (FTC/DOJ) → higher compliance costs → margin compression.  \n  3. Crypto‑payment adoption → shift in transaction mix → revenue dilution.  \n- Provide a **catalyst window** tied to real events: e.g., Fed’s Q4 2025 policy meeting, DOJ’s antitrust filing (if any) in Q1 2026, or a global crypto‑payment adoption report in Q2 2026.  \n- Quantify the impact: e.g., a 0.5 % real‑rate hike → 1–2 % drop in transaction volume; a 10 % regulatory fine → 0.5 % margin compression.  \n- Include **first‑principles anchors** (real‑rate differential, term‑premium, BoP) and **scenario structure** (base, upside, downside).  \n- Cite sources explicitly (e.g., Fed minutes, DOJ press releases, CPI data).  \n\nOnce these changes are made, the topic will satisfy the acceptance gate (handle mapping + catalyst window) and align with the macro‑pillars and interest areas.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__fundamental__spx__analysis_run__1756511454"
+}

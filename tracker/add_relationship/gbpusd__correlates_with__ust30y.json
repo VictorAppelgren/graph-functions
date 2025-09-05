@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T11:58:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gbpusd",
+    "target_id": "ust30y",
+    "selection_motivation": "GBP/USD is heavily driven by the shape of the U.S. Treasury curve, especially the long‑term 30‑year yield, which influences carry‑trade flows and risk‑on sentiment.",
+    "candidate_motivation": "GBP/USD is driven by relative monetary policy, interest rates, inflation expectations, and dollar strength, as well as by other currency pairs and the US dollar index. These topics directly influence the cross or are closely correlated.",
+    "existing_links_count": "5",
+    "candidate_count": "26",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['gilt10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'spx', 'sx5e', 'gold', 'wti', 'brent', 'copper', 'wheat', 'fed_powell_rate_cut_hint_2025', 'sofr', 'euribor', 'bund10y', 'jgb10y']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166434502512215548",
+    "rel_id": "gbpusd__correlates_with__ust30y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "GBP/USD is heavily driven by the shape of the U.S. Treasury curve, especially the long‑term 30‑year yield, which influences carry‑trade flows and risk‑on sentiment.",
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gbpusd__correlates_with__ust30y"
+}

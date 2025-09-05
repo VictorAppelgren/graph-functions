@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T15:16:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eur",
+    "target_id": "us_inflation",
+    "selection_motivation": "A stronger euro raises import costs for the US, directly feeding into US inflation dynamics.",
+    "candidate_motivation": "Euro is a currency, so its most relevant relationships are with monetary policy, inflation, and other currencies or financial benchmarks that directly affect its value or are closely correlated with it.",
+    "existing_links_count": "3",
+    "candidate_count": "5",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'us_inflation', 'usd', 'euribor']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845263",
+    "rel_id": "eur__influences__us_inflation",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A stronger euro raises import costs for the US, directly feeding into US inflation dynamics.",
+      "type": "INFLUENCES",
+      "source": "eur",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eur__influences__us_inflation"
+}

@@ -1,0 +1,45 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T21:06:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9SQ5JOJKU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates, commodities, equities; Ukraine conflict escalation raises risk premium, tightening US yields, pushing gold higher, and pressuring oil and copper prices; spx and dxy react to geopolitical risk.",
+      "existing_ids": [
+        "gold",
+        "wti",
+        "brent",
+        "copper",
+        "spx",
+        "dxy",
+        "eurusd",
+        "us_inflation",
+        "ust10y",
+        "bund10y",
+        "euro_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports on military actions, territorial changes, and prisoner exchanges between Ukraine and Russia, constituting a geopolitical event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No relevant node mapping provided to assess impact on a canonical handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate military actions and diplomatic developments in the Ukraine‑Russia conflict."
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "9SQ5JOJKU"
+}

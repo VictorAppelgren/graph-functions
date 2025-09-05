@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:02:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "australia_economic_outlook",
+    "target_id": "australia_rare_earths",
+    "selection_motivation": "Australia's economic outlook is strongly driven by the rare earths sector, which constitutes a significant share of its export revenue and is highly sensitive to global demand fluctuations, especially from China.",
+    "candidate_motivation": "Australia's economic outlook is heavily shaped by external demand (notably China), global commodity prices, and currency dynamics. The shortlisted topics represent the most plausible direct-influence and closely correlated factors.",
+    "existing_links_count": "2",
+    "candidate_count": "15",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['china_macro', 'usd', 'oil', 'copper', 'gold', 'wheat', 'australia_productivity_growth', 'australia_fttp', 'australia_rare_earths', 'aus_superannuation_property_investment', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_tariff_truce', 'china_us_tariff_truce', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'australia_productivity_growth'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846778",
+    "rel_id": "australia_economic_outlook__influences__australia_rare_earths",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'australia_productivity_growth'}, {'type': 'INFLUENCES', 'source': 'australia_economic_outlook', 'target': 'australia_rare_earths'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Australia's economic outlook is strongly driven by the rare earths sector, which constitutes a significant share of its export revenue and is highly sensitive to global demand fluctuations, especially from China.",
+      "type": "INFLUENCES",
+      "source": "australia_economic_outlook",
+      "target": "australia_rare_earths"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "australia_economic_outlook__influences__australia_rare_earths"
+}

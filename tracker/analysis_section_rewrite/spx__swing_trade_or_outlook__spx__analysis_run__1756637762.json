@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T13:22:18",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756637762",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8983",
+    "output_chars": "1753",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The Up/Down section is fine – it lists four clear scenarios with drivers, watch‑list signals, and evidence‑based probabilities (OGK8WLL69).  The trade/outlook line, however, violates the required format: it mixes price levels, uses “4800” as a field, and ends with an ambiguous “70”.  Rewrite it as a single, properly‑punctuated swing‑trade line: **Long | 1‑3 months | 4600 | 4400 | 5200 | 2:1 | Fed rate hike or regulatory tightening | Fed cuts or ETF launch | 60% | 70**.  Keep the driver, trigger, and invalidation citations (OGK8WLL69) inline if desired, but do not add any extra text or fields.  No other changes are needed.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756637762"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T00:18:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "CVWPSWXJJ",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant $7.7 billion deal for UFC rights, which is a major macro-level event impacting media and sports sectors, warranting a dedicated node for analysis.",
+      "id": "ufc_rights_paramount",
+      "name": "UFC Rights Acquisition by Paramount",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "UFC rights acquisition is an asset transaction involving a major media company, fitting the asset category."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "The UFC rights acquisition is a specific industry vertical transaction (sports entertainment) rather than a macro driver or tradable asset, so it does not meet the macro relevance criteria.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T01:36:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8W8SLN30W",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy uncertainty from Cook hearing may pressure UST yields and influence equity and commodity markets.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "spx",
+        "gold",
+        "wti",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports on a legal proceeding that could set a precedent affecting the Federal Reserve’s independence, constituting a regulatory/legal development rather than a policy statement or central bank action."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a potential removal of a Fed governor, raising concerns about Fed independence and signaling possible future policy shifts, which directly impacts the Fed policy node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a current court hearing that could influence future Fed policy and central bank autonomy."
+    },
+    "article_node": {
+      "id": "8W8SLN30W",
+      "title": "Arguments Made in Cook's Emergency Hearing",
+      "summary": "The emergency court hearing on Lisa Cook’s potential removal by President Trump ended without a ruling, leaving the case to be decided later. The proceedings highlighted concerns over the Federal Reserve’s independence and the legal precedent of a president removing a governor. Market reactions were muted, with equities falling and bond yields holding steady, while gold and commodities saw modest gains. The outcome of the case could influence future Fed policy and the broader perception of central bank autonomy.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-29/balance-of-power-early-edition-8-29-2025-video",
+      "published_at": "2025-08-29T20:01:47.485000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "8W8SLN30W"
+}

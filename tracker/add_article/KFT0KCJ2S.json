@@ -1,0 +1,67 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T01:50:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "KFT0KCJ2S",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Climate policy shift toward fossil fuel expansion could raise inflation, lift short‑term Treasury yields, and boost oil prices, while climate‑risk premium may lift long‑term Treasury yields.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "wti",
+        "brent",
+        "us_crude_inventory",
+        "gold",
+        "dxy",
+        "usd_cny",
+        "usd_jpy",
+        "gbpusd",
+        "spx",
+        "sx5e",
+        "euro_inflation",
+        "hurricane_risk_ust10y",
+        "eurusd",
+        "usdcny"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article discusses an official policy statement—the Trump administration climate report—and its implications for potential regulatory changes."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to map the article to a canonical market handle; therefore the relevance cannot be assessed."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a recent policy action and its immediate scientific rebuttal, making it a short‑term event."
+    },
+    "article_node": {
+      "id": "KFT0KCJ2S",
+      "title": "Scientists Denounce Trump Administration’s Climate Report",
+      "summary": "Scientists, including 85 American and international experts, have publicly denounced a Trump administration climate report that downplays climate change, citing errors, misrepresentations, and cherry‑picked data. The report, produced by handpicked Energy Department scientists, was used to justify repealing greenhouse‑gas limits and supports the administration’s push to expand fossil‑fuel use. The scientific rebuttal, a 439‑page peer review, challenges the report’s claims on carbon dioxide, health impacts, and climate risks, and highlights the potential policy influence of the flawed analysis. The backlash underscores the tension between political agendas and established climate science.",
+      "source": "https://www.bostonglobe.com/2025/09/02/nation/scientists-denounce-trump-climate-report/",
+      "published_at": "2025-09-02T19:13:38.598000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 21,
+      "successful": 21
+    }
+  },
+  "id": "KFT0KCJ2S"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T11:47:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euro_inflation",
+    "target_id": "eur",
+    "selection_motivation": "Euro area inflation directly influences the value of the euro, as higher inflation erodes purchasing power and pressures monetary policy, making the currency a natural downstream effect of inflation dynamics.",
+    "candidate_motivation": "Euro Area Inflation is directly influenced by monetary policy, currency movements, commodity prices, and broader macroeconomic trends. Topics that are strong peers or influences include the ECB’s policy stance, euro and eurozone economic indicators, US inflation dynamics, and key commodity and financial market benchmarks that affect inflation expectations.",
+    "existing_links_count": "5",
+    "candidate_count": "14",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['ecb_policy', 'eur', 'euro_inflation', 'us_inflation', 'us_inflation_expectations', 'us_10y', 'euribor', 'eurostoxx50', 'sp500', 'oil', 'gold', 'copper', 'wheat', 'usd']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'PEERS', 'source': 'euro_inflation', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882697730",
+    "rel_id": "euro_inflation__influences__eur",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eur'}, {'type': 'PEERS', 'source': 'euro_inflation', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro area inflation directly influences the value of the euro, as higher inflation erodes purchasing power and pressures monetary policy, making the currency a natural downstream effect of inflation dynamics.",
+      "type": "INFLUENCES",
+      "source": "euro_inflation",
+      "target": "eur"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__influences__eur"
+}

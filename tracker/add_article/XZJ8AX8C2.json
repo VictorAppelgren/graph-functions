@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T01:34:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XZJ8AX8C2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Apple’s September 2025 launch is expected to lift US consumer spending and modestly raise inflation expectations, tightening the 10‑year Treasury curve and strengthening the DXY through higher demand for US dollar assets. Catalyst window: September 9‑19 2025. Causal path: Apple launch → higher retail sales & pricing → inflation expectations → Fed‑tightening signal → 10‑year yield rise and DXY appreciation.",
+      "existing_ids": [
+        "ust10y",
+        "dxy",
+        "us_inflation",
+        "eurusd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Apple’s upcoming iPhone 17 Pro launch and potential price adjustment, which is a company‑specific product update, not an earnings report or policy change."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article does not provide any information relevant to the node in question, so it cannot be evaluated for impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on the imminent September launch and pricing strategy of the iPhone 17 Pro, an event that will affect Apple’s near‑term sales and supply chain dynamics."
+    },
+    "article_node": {
+      "id": "XZJ8AX8C2",
+      "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
+      "summary": "Apple is set to unveil the iPhone 17 Pro at its September event, featuring a new aluminum‑and‑glass rear, a redesigned rectangular camera bump, and a 48‑MP telephoto lens. The device will run the A19 Pro chip on a 3‑nm process, include 12 GB RAM, a larger battery (up to 5,000 mAh), and support 25 W Qi 2.2 wireless charging. Apple may raise the Pro’s price by about $50 to offset rising component costs and tariffs. The launch is slated for September 9, with pre‑orders following on September 12 and a retail release on September 19.",
+      "source": "https://www.macrumors.com/guide/iphone-17-pro-rumors/",
+      "published_at": "2025-08-29T15:11:02-07:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "XZJ8AX8C2"
+}

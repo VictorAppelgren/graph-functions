@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:50:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_tariffs__analysis_run__1756028621",
+    "prior_sections": "['fundamental', 'medium', 'current']",
+    "material_chars": "11753",
+    "output_chars": "1011",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The critique should focus on four concrete improvements: (1) tighten the causal chain by mapping every driver to a single market channel with a measurable signal (tariffs to import-cost pass-through/margins; CHIPS subsidies and potential Intel equity to onshore capex risk premia and supplier realignment; deregulation to project-timeline certainty; chip tariffs to onshoring incentives), and specify a precise metric to watch (e.g., margin shifts, capex announcements, or delay counts) with source-backed anchors; (2) ground all claims in first-principles and inject quantified ranges rather than point estimates, converting policy levers into base-case/upside/downside ranges for costs, risk premia, and capital flows, anchored to named catalysts (EU exemptions/steel quotas; CHIPS disbursement timing; Intel equity talk; India 50% tariff; UK DCTS rollout; Druzhba energy moves) [RHFWI02JT; 5M9M1KACF; 9W8ZUIBDY; DGG6HXUFZ; WLXM1819K; CWVWSACA7]; (3) increase citation density and ensure every numeric assertion carries a source ID, while explicitly flagging speculative/conflicting claims (e.g., government equity stake in Intel or “up to 300% tariffs”) as conditional pending corroboration; (4) enforce the exact four-item Up/Down | Time window | Driver/Mechanism | What to watch | Probability format in the final draft, with each line containing concrete triggers and probabilities (base-case, upside, downside) tied to the cited catalysts (e.g., July 31 ruling, CHIPS disbursement size, Intel announcements, India late-Aug tariff start, UK DCTS timing, Sri Lankan apparel exports), and define invalidation signals (legal reversals, tariff escalations) to resolve conflicts and keep the horizon tight.",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs__movers_scenarios__us_tariffs__analysis_run__1756028621"
+}

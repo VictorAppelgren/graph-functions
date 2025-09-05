@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:27:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_macro",
+    "target_id": "us_inflation",
+    "selection_motivation": "China’s macroeconomic conditions directly influence global commodity prices and supply chain dynamics, which are primary drivers of US inflation.",
+    "candidate_motivation": "These topics are macroeconomic, policy, and commodity variables closely linked to China’s growth, trade dynamics, and commodity demand, reflecting direct or strong indirect influences on the China macro environment.",
+    "existing_links_count": "10",
+    "candidate_count": "21",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'us_10y', 'usd', 'eurusd', 'oil', 'copper', 'gold', 'sp500', 'eurostoxx50', 'us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_relations', 'us_chip_export_controls', 'us_chip_exports_china', 'china_nvidia_policy', 'china_ai_semiconductors', 'china_chip_competition', 'us_inflation_data', 'core_monthly_cpi', 'stagflation']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_semiconductor_policy'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_ai_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137438729",
+    "rel_id": "china_macro__influences__us_inflation",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_semiconductor_policy'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_ai_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s macroeconomic conditions directly influence global commodity prices and supply chain dynamics, which are primary drivers of US inflation.",
+      "type": "INFLUENCES",
+      "source": "china_macro",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_macro__influences__us_inflation"
+}

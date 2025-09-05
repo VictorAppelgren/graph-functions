@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T02:33:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "ust2y",
+    "selection_motivation": "JGB yield movements are a key barometer of global risk sentiment; when the JGB curve steepens or flattens, it signals shifts that quickly translate into US short‑term rates, making JGB10Y a significant driver of UST2Y.",
+    "candidate_motivation": "Japan 10Y JGB Yield is tightly linked to global sovereign yields, dollar dynamics, and monetary policy. Therefore comparable sovereign yields (US, German, UK), dollar‑related measures, Fed/ECB policy signals, inflation data, and rate‑cut hints are strong peers or correlates.",
+    "existing_links_count": "4",
+    "candidate_count": "14",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['ust10y', 'bund10y', 'gilt10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdjpy', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'fed_powell_rate_cut_hint_2025', 'us_core_pce']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217653",
+    "rel_id": "jgb10y__influences__ust2y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "JGB yield movements are a key barometer of global risk sentiment; when the JGB curve steepens or flattens, it signals shifts that quickly translate into US short‑term rates, making JGB10Y a significant driver of UST2Y.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jgb10y__influences__ust2y"
+}

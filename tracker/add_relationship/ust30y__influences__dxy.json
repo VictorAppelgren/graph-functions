@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T13:52:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust30y",
+    "target_id": "dxy",
+    "selection_motivation": "US 30‑year Treasury yields directly influence the US Dollar Index; higher yields attract foreign capital, strengthening the dollar and pushing DXY higher.",
+    "candidate_motivation": "These topics are likely to influence or correlate with the US 30Y Treasury Yield because they affect long‑term rates, monetary policy, inflation expectations, global risk sentiment, and cross‑asset pricing dynamics.",
+    "existing_links_count": "20",
+    "candidate_count": "27",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['fed_rate_cut_sept17_2025', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'ust10y', 'ust5y', 'ust2y', 'dxy', 'usdcny', 'gbpusd', 'eurusd', 'euro_inflation', 'ecb_policy', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'spx', 'sx5e', 'gold', 'copper', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory', 'us_services_pmi']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:20",
+    "rel_id": "ust30y__influences__dxy",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 30‑year Treasury yields directly influence the US Dollar Index; higher yields attract foreign capital, strengthening the dollar and pushing DXY higher.",
+      "type": "INFLUENCES",
+      "source": "ust30y",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__influences__dxy"
+}

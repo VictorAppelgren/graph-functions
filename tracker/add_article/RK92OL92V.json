@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T10:32:28",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "RK92OL92V",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; natural gas trucking reduces oil demand, supporting oil price decline and easing inflationary pressure.",
+      "existing_ids": [
+        "oil_price_decline",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports new orders and product deployment by Hexagon Agility, indicating a company‑specific operational update rather than earnings, policy, or macro data."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a new $4.2 million order for Hexagon Agility’s CNG/RNG fuel systems, which would be relevant if the node is Hexagon Agility or its parent Hexagon Composites. The order is modest relative to the company’s overall scale, so the impact is likely medium."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports new orders that signal a medium‑term shift toward natural‑gas heavy‑haul fleets, but the orders themselves are immediate events."
+    },
+    "article_node": {
+      "id": "RK92OL92V",
+      "title": "Hexagon Agility receives new wave of orders for natural gas fuel systems for North American heavy-duty trucks",
+      "summary": "Hexagon Agility, a Hexagon Composites subsidiary, secured $4.2 million in new orders for CNG/RNG fuel systems for Cummins X15N natural‑gas engines in North American heavy‑haul fleets. The orders span over 10 Class 8 fleets across logistics, food & beverage, oil & gas, and construction, reflecting a growing diesel‑to‑natural‑gas transition. The X15N engine expands the addressable market by adding 200,000 trucks to the 300,000 heavy‑haul trucks sold annually in North America. The move offers diesel‑like performance, up to 1,200‑mile range, and fuel‑cost savings, supported by a network of more than 1,600 CNG/RNG stations.",
+      "source": "https://finance.yahoo.com/news/hexagon-agility-receives-wave-orders-072100881.html?.tsrc=rss",
+      "published_at": "2025-09-02T07:21:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "RK92OL92V"
+}

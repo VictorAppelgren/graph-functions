@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T20:21:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gilt10y",
+    "target_id": "jgb10y",
+    "selection_motivation": "UK 10Y gilt yields are strongly correlated with Japanese 10Y JGB yields due to global risk‑on/risk‑off flows, providing a cross‑currency yield link.",
+    "candidate_motivation": "UK 10Y Gilt Yield is strongly linked to other sovereign benchmark yields, US Treasury yields, central‑bank policy, currency dynamics, and macro fundamentals that drive term‑structure expectations.",
+    "existing_links_count": "20",
+    "candidate_count": "18",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['uk_30yr_gilt_yield', 'bund10y', 'ust10y', 'ust5y', 'ust30y', 'ust2y', 'jgb10y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'dxy', 'gbpusd', 'euro_inflation', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179945301394327044",
+    "rel_id": "gilt10y__correlates_with__jgb10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 10Y gilt yields are strongly correlated with Japanese 10Y JGB yields due to global risk‑on/risk‑off flows, providing a cross‑currency yield link.",
+      "type": "CORRELATES_WITH",
+      "source": "gilt10y",
+      "target": "jgb10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__correlates_with__jgb10y"
+}

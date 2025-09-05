@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T14:04:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2VOK0RKGA",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; Chinese high‑growth tech stocks lift China equity market and credit demand.",
+      "existing_ids": [
+        "china_credit_impulse"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of Asian tech stocks and index performance, highlighting investor interest and projected earnings, which is market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article references multiple entities (Ninestar, POCO, CSI 300) but no specific node is provided; assuming the node is a company‑level entity, the impact is modest as it is a screener highlight rather than a major event."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses medium‑term growth prospects, investor sentiment, and regional economic trends rather than immediate events or long‑term structural fundamentals."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "2VOK0RKGA"
+}

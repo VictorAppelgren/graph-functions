@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T14:11:12",
+  "processed": false,
+  "inputs": {
+    "topic_id": "usd",
+    "new_article_id": "9TW4DHMEN",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['U7EUJKGRB', '0R5LB61YY', 'RHRO98UVW', '7YQN9WX3K', '8DSBDPAZ5', 'EJA9EHSWW']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no existing article that the new item clearly supersedes; the summary largely overlaps with routine Pulse coverage and does not present a higher-signal update warranting a change."
+    }
+  },
+  "id": "usd__9TW4DHMEN__current"
+}

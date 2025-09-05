@@ -1,0 +1,43 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-15T01:05:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_control",
+    "target_id": "dc_crime_policy",
+    "selection_motivation": "The link to 'dc_crime_policy' is the weakest as it overlaps significantly with other existing links related to crime trends and federal intervention, providing limited additional insights.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to 'dc_crime_policy' is the weakest as it overlaps significantly with other existing links related to crime trends and federal intervention, providing limited additional insights.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'trump_dc_public_safety'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_governance'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_violent_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_policing'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531888",
+    "rel_id": "dc_federal_control__influences__dc_crime_policy",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'trump_dc_public_safety'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_governance'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_violent_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_policing'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'federal_intervention_urban_crime'}]",
+    "status": "error",
+    "error": "Object of type DateTime is not JSON serializable"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "dc_federal_control",
+      "target": "dc_crime_policy"
+    },
+    "prioritized_link": {
+      "motivation": "Linking D.C. Federal Control of Police to D.C. National Guard Deployment highlights the potential impact of federal oversight on local law enforcement capabilities, which is crucial for understanding the dynamics of public safety in D.C.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_control",
+      "target": "dc_national_guard_deployment"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to 'dc_crime_policy' is the weakest as it overlaps significantly with other existing links related to crime trends and federal intervention, providing limited additional insights.",
+      "remove_link": "dc_crime_policy"
+    },
+    "removal_decision": {
+      "motivation": "The link to 'dc_crime_policy' is the weakest as it overlaps significantly with other existing links related to crime trends and federal intervention, providing limited additional insights.",
+      "remove_link": "dc_crime_policy"
+    },
+    "source_node": {
+      "last_updated": 

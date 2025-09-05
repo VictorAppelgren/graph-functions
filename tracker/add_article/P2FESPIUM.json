@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T04:17:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "P2FESPIUM",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; WTI and gasoline fall due to tariff fears, weaker US data, and OPEC+ pause, pressuring oil prices, US 10Y yields, inventory levels, and inflation expectations.",
+      "existing_ids": [
+        "oil_price_decline",
+        "us_crude_inventory",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "Article discusses President Trump's new tariff regime, a regulatory change affecting trade."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess the article's impact on, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent data releases, tariff announcements, and OPEC+ policy considerations that are affecting WTI prices in the short term."
+    },
+    "article_node": {
+      "id": "P2FESPIUM",
+      "title": "Crude Prices Sink on Global Energy Demand Fears",
+      "summary": "WTI crude and gasoline futures fell sharply as market participants weighed the impact of President Trump’s new tariff regime and weaker-than‑expected U.S. payroll and ISM manufacturing data, which dampened expectations for global energy demand. The slump was compounded by a 2‑week low in the S&P 500, further eroding confidence in economic growth. Meanwhile, OPEC+ is considering pausing production hikes amid concerns of a supply glut, while Russian sanctions and potential supply disruptions add additional uncertainty to the oil market.",
+      "source": "https://www.nasdaq.com/articles/crude-prices-sink-global-energy-demand-fears",
+      "published_at": "2025-08-01T17:07:40+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "P2FESPIUM"
+}

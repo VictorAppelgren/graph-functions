@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T14:38:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DGCWB7LJP",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Article discusses the formation of a significant real estate team and its implications for the real estate market, which relates to existing nodes on real estate operations and market dynamics.",
+      "existing_ids": [],
+      "new_names": [
+        "Benson Crew",
+        "Real Brokerage Inc."
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports the launch of a new real estate team by Real Brokerage Inc., which is a company-specific development not related to earnings, regulation, or macro events."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The relevance of the article to the node is unclear."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent event (launch of a new real estate team) affecting the node."
+    },
+    "article_node": {
+      "id": "DGCWB7LJP",
+      "title": "Three Powerhouse Real Teams Unite to Form Benson Crew",
+      "summary": "The Real Brokerage Inc. has launched Benson Crew, the largest real estate team in Canada, formed by merging three top-producing teams in Ontario. With 60 professionals and $6 billion in lifetime sales, Benson Crew aims to redefine high-performance real estate through collaboration and innovative strategies. The team emphasizes a culture of support and empowerment for agents, focusing on exceptional client service and plans to expand while mentoring future agents.",
+      "source": "https://www.morningstar.com/news/business-wire/20250822087443/three-powerhouse-real-teams-unite-to-form-benson-crew",
+      "published_at": "2025-08-22T06:30:00-05:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "DGCWB7LJP"
+}

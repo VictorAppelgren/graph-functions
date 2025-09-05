@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T15:19:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TOQMEXODG",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; The approval of Zhongchao Inc.'s 2025 Equity Incentive Plan, which allows for significant share issuance, could influence investor sentiment and stock performance.",
+      "existing_ids": [
+        "us_stock_buybacks"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on a corporate action regarding Zhongchao Inc.'s equity incentive plan, which is a company update."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a corporate equity incentive plan for Zhongchao Inc., which is a relatively small event with limited macroeconomic significance."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a future equity incentive plan that will take effect in 2025 and influence the company’s capital structure over the medium term."
+    },
+    "article_node": {
+      "id": "TOQMEXODG",
+      "title": "Zhongchao Inc. board approves 2025 equity incentive plan with share limits By Investing",
+      "summary": "Zhongchao Inc. announced the approval of its 2025 Equity Incentive Plan, effective August 4, which allows for the issuance of various equity awards to employees and directors, with an initial authorization of 10 million shares. The plan includes an automatic annual increase of 2% of the company's total shares starting January 2026, capped at 50 million shares. As a foreign private issuer, Zhongchao is exempt from certain NASDAQ rules regarding shareholder approval for equity issuances.",
+      "source": "https://www.investing.com/news/sec-filings/zhongchao-inc-board-approves-2025-equity-incentive-plan-with-share-limits-93CH-4206770",
+      "published_at": "2025-08-22T12:15:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "TOQMEXODG"
+}

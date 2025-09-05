@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:34:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "copper",
+    "target_id": "ust10y",
+    "selection_motivation": "Copper price is a leading indicator of US economic activity and is strongly inversely correlated with US 10Y Treasury yields, reflecting risk sentiment.",
+    "candidate_motivation": "Copper is a globally traded commodity whose price is driven by macro‑financial variables, monetary policy, currency strength, and demand from major economies. Key influences include US Treasury yields and Fed policy, European policy and inflation, the US Dollar Index, energy prices, equity markets, and China’s export/credit conditions.",
+    "existing_links_count": "2",
+    "candidate_count": "21",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_unemployment_claims', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'wti', 'brent', 'gold', 'spx', 'sx5e', 'china_exports', 'china_credit_impulse']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257474438",
+    "rel_id": "copper__correlates_with__ust10y",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price is a leading indicator of US economic activity and is strongly inversely correlated with US 10Y Treasury yields, reflecting risk sentiment.",
+      "type": "CORRELATES_WITH",
+      "source": "copper",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__correlates_with__ust10y"
+}

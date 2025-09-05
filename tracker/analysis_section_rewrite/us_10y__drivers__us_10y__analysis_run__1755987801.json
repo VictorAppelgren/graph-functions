@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T00:37:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755987801",
+    "drivers_count": "4",
+    "material_chars": "1695",
+    "output_chars": "1882",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft captures the headline drivers but falls short on depth, precision, and source‑anchored nuance. Tighten the causal chain by explicitly linking CPI/producer‑price spikes to Fed rate‑path expectations (cite LZG5YWQMC for CPI, V7GV8YBQU for S&P reaction) and then to sector‑specific valuation shifts (e.g., growth vs. value). Replace vague “moderate pullback” with a quantified range for forward earnings yields (e.g., 12‑14% vs. 10‑11% pre‑inflation) and illustrate how this compresses growth‑heavy P/E multiples (use V7GV8YBQU). For oil, quantify the supply‑demand gap: OPEC+ +2.5 m bpd vs. IEA demand growth of +0.3 m bpd (J99EM2TPZ) to justify a $65‑$75 price floor, and show how a $70‑$80 price swing would alter commodity‑heavy sector returns (include a brief sensitivity table). ACMR’s narrative needs a first‑principles view: explain how N2 bubbling technology improves fab utilization rates (e.g., 5‑10% lift) and link that to projected revenue growth (use SK994CBWR for Q2 guidance). Replace generic “risk premium” language with concrete risk‑adjusted discount‑rate scenarios (e.g., 25‑bps Fed hike → 1‑2% P/E compression). Add a concise watch‑list: (1) CPI revision <2.5% (LZG5YWQMC), (2) Fed pause or rate cut (LZG5YWQMC), (3) oil price <$70 (J99EM2TPZ), (4) ACMR Q3 earnings beat (SK994CBWR). Finally, ensure every claim is backed by a source ID, reconcile any conflicting data (e.g., if LZG5YWQMC shows CPI 2.7% but V7GV8YBQU indicates a 0.5% market reaction, explain the discrepancy). This will elevate the analysis to a world‑class, data‑driven, actionable insight.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__drivers__us_10y__analysis_run__1755987801"
+}

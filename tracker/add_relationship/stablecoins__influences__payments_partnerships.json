@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:07:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "stablecoins",
+    "target_id": "payments_partnerships",
+    "selection_motivation": "Stablecoins are a primary driver for the expansion of payment partnerships, enabling faster, cheaper cross‑border settlements and fueling the growth of fintech collaborations.",
+    "candidate_motivation": "These topics are the strongest direct or peer-like connections to Stablecoins, encompassing crypto infrastructure, fiat-pegged assets, asset tokenization, and payments/regulatory dynamics.",
+    "existing_links_count": "2",
+    "candidate_count": "13",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['bakkt_crypto_infrastructure', 'bitmine_eth_investment', 'bitmine_eth_acquisition', 'chainlink_integration', 'chainlink_ice_partnership', 'tokenization_regulation', 'tokenized_real_world_assets', 'crypto_security_threats', 'crypto_equity_ipos', 'usdc_circulation', 'usdc_stablecoin', 'digital_wallet_growth', 'payments_partnerships']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'stablecoins', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'stablecoins', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847462",
+    "rel_id": "stablecoins__influences__payments_partnerships",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'stablecoins', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'stablecoins', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'stablecoins', 'target': 'payments_partnerships'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Stablecoins are a primary driver for the expansion of payment partnerships, enabling faster, cheaper cross‑border settlements and fueling the growth of fintech collaborations.",
+      "type": "INFLUENCES",
+      "source": "stablecoins",
+      "target": "payments_partnerships"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "stablecoins__influences__payments_partnerships"
+}

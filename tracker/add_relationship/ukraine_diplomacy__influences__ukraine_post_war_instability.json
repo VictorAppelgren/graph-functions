@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:16:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_diplomacy",
+    "target_id": "ukraine_post_war_instability",
+    "selection_motivation": "Ukraine Diplomacy directly shapes post‑war governance, reconstruction, and security arrangements, making it a primary driver of Ukraine Post‑War Instability.",
+    "candidate_motivation": "These topics are direct extensions of Ukraine diplomacy, reflecting negotiations, geopolitical dynamics, and key regional actors that would influence or correlate with Ukraine-focused diplomacy.",
+    "existing_links_count": "5",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_geopolitics', 'eu_us_relations_ukraine', 'ukraine_sovereignty', 'donbas_region', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814273357",
+    "rel_id": "ukraine_diplomacy__influences__ukraine_post_war_instability",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Diplomacy directly shapes post‑war governance, reconstruction, and security arrangements, making it a primary driver of Ukraine Post‑War Instability.",
+      "type": "INFLUENCES",
+      "source": "ukraine_diplomacy",
+      "target": "ukraine_post_war_instability"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_diplomacy__influences__ukraine_post_war_instability"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:26:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nfl_player_injuries",
+    "target_id": "astros_injury_josh_hader",
+    "selection_motivation": "Linking NFL Player Injuries to Josh Hader's injury provides insights into the broader impact of player injuries across sports, enhancing the understanding of injury dynamics and their implications on player performance and market movements.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with NFL Player Injuries, as they pertain to sports, health, and economic factors that can affect player performance and team dynamics.",
+    "existing_links_count": "7",
+    "candidate_count": "9",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['nfl_player_movements', 'cameron_heyward_contract_dispute', 'zack_wheeler_injury', '49ers_player_injuries', 'tyrod_taylor_injury', 'astros_injury_josh_hader', 'caitlin_clark_injury', 'wnba_player_injuries', 'nfl_quarterback_rankings_2025']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'zack_wheeler_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'cameron_heyward_contract_dispute'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': '49ers_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_player_movements'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'wnba_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'tyrod_taylor_injury'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397946",
+    "rel_id": "nfl_player_injuries__influences__astros_injury_josh_hader",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'zack_wheeler_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'cameron_heyward_contract_dispute'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': '49ers_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_player_movements'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'wnba_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'tyrod_taylor_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'astros_injury_josh_hader'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking NFL Player Injuries to Josh Hader's injury provides insights into the broader impact of player injuries across sports, enhancing the understanding of injury dynamics and their implications on player performance and market movements.",
+      "type": "INFLUENCES",
+      "source": "nfl_player_injuries",
+      "target": "astros_injury_josh_hader"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nfl_player_injuries__influences__astros_injury_josh_hader"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:17:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "tariff_driven_inflation",
+    "target_id": "cpi_impact_on_treasuries",
+    "selection_motivation": "Tariff‑driven inflation directly raises CPI, which in turn drives changes in treasury yields; linking to CPI Impact on Treasuries enables analysts to trace tariff effects through inflation to bond markets.",
+    "candidate_motivation": "Tariff-driven inflation is most directly influenced by tariff policy actions and resulting price pressures. The following topics are direct policy levers or inflation indicators that would plausibly influence or correlate with tariff-driven inflation.",
+    "existing_links_count": "7",
+    "candidate_count": "15",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs', 'us_china_tariffs', 'us_china_trade_war_2025', 'us_china_trade_talks', 'us_china_trade_relations', 'us_tariff_policies', 'us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'cpi_impact_on_treasuries', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958262",
+    "rel_id": "tariff_driven_inflation__influences__cpi_impact_on_treasuries",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'cpi_impact_on_treasuries'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Tariff‑driven inflation directly raises CPI, which in turn drives changes in treasury yields; linking to CPI Impact on Treasuries enables analysts to trace tariff effects through inflation to bond markets.",
+      "type": "INFLUENCES",
+      "source": "tariff_driven_inflation",
+      "target": "cpi_impact_on_treasuries"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "tariff_driven_inflation__influences__cpi_impact_on_treasuries"
+}

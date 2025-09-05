@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T21:57:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "63LMMGZQV",
+    "status": "success",
+    "topic_id": "eurusd"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the EURUSD node.",
+      "existing_node_ids": "eurusd",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No article summary provided, cannot determine relevant category for EUR/USD."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to missing article summary."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess due to lack of article summary."
+    },
+    "article_node": {
+      "id": "63LMMGZQV",
+      "title": "Current Policy Rate Still Modestly Restrictive: JPM's Berro",
+      "summary": "The Fed’s policy rate of 4.25‑4.5% is viewed as modestly restrictive, but the neutral rate remains uncertain, prompting debate over whether a 25‑basis‑point cut in September is warranted. Market expectations for a cut hinge on the upcoming payrolls report, with a stronger slowdown in employment potentially triggering the move. Fed officials, including Powell, are likely to signal a cautious stance—keeping the door open for cuts while emphasizing the need to monitor inflation expectations and the full impact of tariff and fiscal policies. Overall, the consensus is that any rate cuts will be modest and data‑driven rather than a wholesale policy shift.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-15/current-policy-rate-modestly-restrictive-jpm-s-berro-video",
+      "published_at": "2025-08-15T18:52:20.783000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "63LMMGZQV"
+}

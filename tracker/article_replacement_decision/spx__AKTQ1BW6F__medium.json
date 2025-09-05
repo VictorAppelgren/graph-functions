@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T12:00:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "AKTQ1BW6F",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['N9CTD4I2N', 'KNWKYIQ1W', 'FAN5RYW6T', 'STBVARD8F', 'W6527HNAA', 'O6LHRBLFM', 'A88B7V8PY', '61SVFUKBY']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article does not map to any canonical market handle (e.g., indices, rates, FX, commodities, credit, or systemic risk) and lacks a clear catalyst window tied to a macro‑level causal path, so it fails the acceptance gate."
+    }
+  },
+  "id": "spx__AKTQ1BW6F__medium"
+}

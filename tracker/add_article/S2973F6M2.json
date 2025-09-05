@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T21:53:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "S2973F6M2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; airline bankruptcy may widen credit spreads, pressuring US Treasury yields and the S&P 500.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Spirit Airlines filed for bankruptcy and announced a restructuring plan, which is a company-specific update unrelated to earnings reports."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article concerns a single airline's bankruptcy, lacking a broader macro or cross‑asset impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate bankruptcy filing and restructuring plan for Spirit Airlines, directly affecting the airline's operations and financial position."
+    },
+    "article_node": {
+      "id": "S2973F6M2",
+      "title": "Spirit Airlines Files for Bankruptcy: What It Means for Travelers",
+      "summary": "Spirit Airlines has filed for bankruptcy for the second time in a year, citing a fragile financial position. The airline plans to restructure its fleet and routes, focusing on stronger markets while scaling back less profitable ones. Operations will continue normally, and passengers can still book and travel. The move follows a prior restructuring that reduced debt and raised equity.",
+      "source": "https://finance.yahoo.com/news/spirit-airlines-files-bankruptcy-means-183645847.html",
+      "published_at": "2025-09-02T18:36:45+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "S2973F6M2"
+}

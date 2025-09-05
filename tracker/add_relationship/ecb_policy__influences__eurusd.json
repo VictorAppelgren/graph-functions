@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T14:11:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "eurusd",
+    "selection_motivation": "ECB policy decisions directly set euro interest rates and influence the euro's value relative to the dollar, making it a primary driver of EURUSD movements.",
+    "candidate_motivation": "EURUSD is directly driven by monetary policy, inflation expectations, and relative yield differentials between the US and Eurozone, as well as by broader USD strength and cross‑currency dynamics. Therefore, topics that influence or correlate with these fundamentals—central bank policy, inflation data, sovereign yields, and other major currency pairs—are the most plausible strong influences or peers.",
+    "existing_links_count": "2",
+    "candidate_count": "16",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'ust10y', 'bund10y', 'gilt10y', 'ust2y', 'ust5y', 'ust30y', 'sofr', 'euribor', 'dxy', 'usdjpy', 'usdcny', 'gbpusd']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161966",
+    "rel_id": "ecb_policy__influences__eurusd",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy decisions directly set euro interest rates and influence the euro's value relative to the dollar, making it a primary driver of EURUSD movements.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__eurusd"
+}

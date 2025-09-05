@@ -1,0 +1,38 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T00:08:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FP1RX9J2V",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Burry's contrarian long positions in UnitedHealth and Lululemon may signal undervaluation and could influence sector rotation within the S&P 500 and Nasdaq.",
+      "existing_ids": [
+        "spx",
+        "ndx"
+      ],
+      "new_names": [
+        "UnitedHealth"
+      ]
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article reports on high‑profile investors buying specific stocks, which constitutes market commentary on equity positions."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant institutional buying of UnitedHealth Group, indicating a bullish view and potential price support, directly affecting the stock's market dynamics."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on short‑term price declines and opportunistic buying by investors, while also noting long‑term resilience, indicating a medium‑term perspective."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 2
+    }
+  },
+  "id": "FP1RX9J2V"
+}

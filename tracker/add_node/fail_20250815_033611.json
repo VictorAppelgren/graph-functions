@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:35:45",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GGF7H4LVJ",
+    "status": "rejected",
+    "reject_category": "ambiguous",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the implications of Isaiah Bond's legal situation and subsequent signing with the Cleveland Browns, which could impact NFL player valuations and team dynamics, warranting a new node for analysis.",
+      "id": "isaiah_bond",
+      "name": "Isaiah Bond",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "ambiguous",
+      "motivation": "The subject is a person (an NFL player), not a macro driver, asset, policy, geography, company, or industry vertical."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Individual athlete is a micro-level entity, not a macro driver or tradable asset; irrelevant for trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

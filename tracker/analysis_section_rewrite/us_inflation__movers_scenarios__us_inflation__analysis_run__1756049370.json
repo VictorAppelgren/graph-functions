@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:38:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756049370",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21960",
+    "output_chars": "1708",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | Policy impulse from the big bill and disciplined debt outlook that could lift risk appetite by feeding capex and durable demand (EPJYXB7DX)(UPV3X2MQ6) | Watch legislative progression of the bill and evolving debt trajectory; a credible bill path with contained debt dynamics would support higher equity valuations (EPJYXB7DX) | 65%\nUp | 0–12 weeks | Private-market productivity signals (Pacaso expansion to 10 destinations, Range AI-enabled planning, and HeartSciences milestones) boosting capex and productivity (FOM34PUWA)(UPV3X2MQ6)(ILYC1M41F) | Watch Pacaso expansion, Range AI adoption, and HeartSciences milestones as early productivity readouts; if these signals broaden capital flows and adoption, risk appetite should improve (FOM34PUWA)(UPV3X2MQ6)(ILYC1M41F) | 60%\nDown | 0–3 weeks | Tariff/policy signals create pass-through price risks for autos and rate-sensitive names; unresolved stance risks policy uncertainty and near-term earnings headwinds (S15934PBQ) | Watch for policy confirmation or reversal; a clear reversal or stabilizing signal would ease inflationary pass-through and support risk-on in discretionary equities (S15934PBQ) | 40%\nDown | 3–6 months | Policy risk and energy dynamics raise risk premia and compress multiples if debt expansion or tariff outcomes disappoint; oil-supply shocks could reaccelerate inflation and tighten policy (EPJYXB7DX)(J99EM2TPZ)(RHXDOHQQX) | Watch FOMC guidance, 10-year yield moves toward 4.6–4.8% and debt/tariff trajectories; a persistent rise in yields with a softer growth backdrop would worsen equity valuations (GX057ADL7)(J99EM2TPZ)(RHXDOHQQX) | 45%",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756049370"
+}

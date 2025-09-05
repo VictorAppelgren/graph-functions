@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:01:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756615535",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "4356",
+    "output_chars": "1207",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target for DXY but drifts when it mentions mortgage rates, which is outside the asset focus and introduces a non‑canonical handle. Remove the “1‑2 % rise in the 30‑yr Treasury would lift mortgage rates by 20–30 bp” sentence or reframe it to explain the credit tightening effect on DXY only. Condense the text to 4–6 bullet points, each with a single clear claim, a magnitude range, a catalyst window, and an inline citation. Explicitly map the handle “dxy” and include the 3‑6‑month range (+0.5 %–+1.5 %) with the base case (+0.8 %) and two alternatives (+1.2 %/+1.5 %). Add a short‑term dip to 95.8 on 31 Aug with 86 % probability, and the upside (+50–100 bp) if Aug 30 PCE >3 % or Aug 31 NFP beats expectations. In the risk bullet, state that a Fed rate hike, a 1–2 % rise in the 30‑yr Treasury (ust30y), persistent high inflation, or tariff escalation could flatten the curve, erode the real‑yield advantage, and lower DXY. In the watch signals bullet, list July CPI (≈2025‑09‑10), September Fed meeting (2025‑09‑16‑17), tariff announcements, EUR/USD movements (eurusd), the 2‑yr/10‑yr spread (ust2y/ust10y), and the 30‑yr Treasury yield (ust30y). End with a confidence rating (moderate) and keep all claims tied to a citation ID. This will satisfy the 4–6 sentence limit, maintain causal clarity, and ensure every claim maps to a canonical handle with a catalyst window.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756615535"
+}

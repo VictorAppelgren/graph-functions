@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T18:09:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LLN6N4H3Z",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; Rising regulatory costs for residential air conditioning add to US inflationary pressures.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses new EPA regulations on residential central air conditioners, which is a regulatory change."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess impact against, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on recent regulatory changes that will influence AC costs over the next few years, indicating a medium-term impact."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "LLN6N4H3Z"
+}

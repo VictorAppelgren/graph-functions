@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T03:26:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756603614",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "3054",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a good first pass but it fails the mandatory handle‑mapping rule and could be tightened for clarity. 1) **Add a canonical handle** – explicitly link mortgage rates to the UST 10‑year yield (ust10y) as the benchmark that drives the term‑premium and liquidity premia, and optionally to cdx ig for the credit‑risk component. 2) **Insert the current 30‑year rate** (6.548 % from LF0UUL917) and the 10–20 bp sensitivity to Fed moves to give concrete numbers. 3) **Trim verbosity** – each sentence should convey one idea; remove redundant phrases (“the Fed’s policy stance, inflation expectations, national debt, and loan demand are the main drivers…”) and keep the causal chain tight. 4) **Specify a catalyst window** – e.g., Fed meeting Sept 16‑17 2025, CPI release Oct 2025, Treasury issuance Q4 2025 – and cite (LF0UUL917) for each claim. 5) **Keep citations** – every substantive claim must reference (LF0UUL917). 6) **End with a concise base case, risk list, watch list, and confidence rating**.  Implementing these edits will satisfy the acceptance gate, improve precision, and align the piece with the “multi‑year structural” focus.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756603614"
+}

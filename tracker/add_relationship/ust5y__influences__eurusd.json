@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:57:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust5y",
+    "target_id": "eurusd",
+    "selection_motivation": "US 5‑year Treasury yields directly influence USD strength; higher yields tend to lift the dollar, pushing EUR/USD higher. This link captures the core carry‑trade transmission to the major FX cross.",
+    "candidate_motivation": "US 5Y Treasury Yield is a core fixed‑income benchmark driven by Fed policy, inflation expectations, and term‑premium dynamics, and it moves in tandem with other US Treasury maturities, the dollar, equity indices, and global rates. The listed topics are the most direct or highly correlated drivers or peers.",
+    "existing_links_count": "11",
+    "candidate_count": "21",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust30y', 'us_inflation', 'us_unemployment_claims', 'sofr', 'dxy', 'spx', 'sx5e', 'euro_inflation', 'ecb_policy', 'bund10y', 'gilt10y', 'jgb10y', 'usdcny', 'usdjpy', 'eurusd', 'gold', 'wti', 'brent']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186699601323754895",
+    "rel_id": "ust5y__influences__eurusd",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5‑year Treasury yields directly influence USD strength; higher yields tend to lift the dollar, pushing EUR/USD higher. This link captures the core carry‑trade transmission to the major FX cross.",
+      "type": "INFLUENCES",
+      "source": "ust5y",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__influences__eurusd"
+}

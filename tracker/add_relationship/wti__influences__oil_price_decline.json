@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:44:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "oil_price_decline",
+    "selection_motivation": "WTI price movements are a primary driver of overall oil price decline, as WTI is the benchmark for US crude and heavily influences global pricing dynamics.",
+    "candidate_motivation": "WTI Crude Oil is a core energy commodity; its price is driven by supply/demand fundamentals, macro‑policy, and currency dynamics. Topics that directly affect oil inventories, sanctions, or global supply, as well as those that influence the USD or interest rates (which in turn affect demand and hedging), are strong peers or influencers.",
+    "existing_links_count": "15",
+    "candidate_count": "14",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'brent', 'dxy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1382606185114372169",
+    "rel_id": "wti__influences__oil_price_decline",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "WTI price movements are a primary driver of overall oil price decline, as WTI is the benchmark for US crude and heavily influences global pricing dynamics.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "oil_price_decline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__oil_price_decline"
+}

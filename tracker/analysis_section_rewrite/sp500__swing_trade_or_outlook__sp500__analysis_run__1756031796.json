@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:45:39",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756031796",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18968",
+    "output_chars": "1921",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is on the right track (4 Movers with data anchors and a capital‑structure/AI/cloud thesis), but it needs sharper causal rigor, tighter formatting to the required Swing/Outlook templates, better probability calibration tied to the evidence, and cleaner reconciliation of conflicting signals. Actionable edits: 1) Rebuild the 4 Movers into strictly 2 Up and 2 Down lines with a single, explicit causal thread per line (driver → market transmission → watchlist triggers) and keep What to Watch to 2–4 concise bullets that map directly to the line’s driver; for example, Up lines should tie to durable cloud/AI cash generation (Azure growth, FCF, payouts) and/or policy risk-on catalysts (Intel vesting, NA policy stance), while Down lines anchor to policy/hype risks and levered software/energy ballast. 2) Strengthen first‑principles and the market‑transmission chain: state briefly why cloud/AI productivity raises durable free cash flow, why that supports reinvestment and moats, and how that feeds equity multiples given the Given regime (cite 0G3A676BP with Azure growth and Shopify metrics) and reconcile with dispersion from levered peers (cite DBFSBGOEX, 9X7XOLXMH). 3) Calibrate probabilities to the evidence and keep them defensible; instead of ad hoc 42/28/28/30, adopt a clearly justified band (e.g., Up 1 40–45%; Up 2 25–30%; Down 1 15–25%; Down 2 10–15%) with brief rationale tied to the cited data points (Azure +39% YoY, 21.2% cloud CAGR to 2030, 0.7% forward yield, etc.). Explicitly attach in‑text IDs after each numeric assertion and ensure the total does not imply false certainty. 4) Replace the separate Outlook block with the mandated Swing Trade plan since the assets are tradable; provide 1–2 asset‑specific lines (Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100) drawn from the same drivers (MSFT/Shopify exposure to cloud/AI, Intel/NA policy, XPeng/NIO momentum) and keep it tight (1 line preferred; 2 max); if you must keep an Outlook, keep it within 1 line as a high‑level cross‑asset docket rather than a full swing plan. 5) Improve consistency and avoid internal conflicts: ensure all bullish lines rest on observable data (Azure/Shopify growth, cloud spend path) and all bears hinge on credible, near‑term catalysts (policy timing, vesting timelines, AI hype regression), with explicit invalidation triggers (e.g., policy surprise, vesting delay >2 weeks, AI adoption lag). 6) Tighten formatting and citations: place in‑line IDs immediately after the supporting fact/number, reduce redundancy, and ensure no ambiguity about which source supports which claim; remove the separate, long “analysis draft” boilerplate if you’re delivering to a reader constrained by the 4 movers + 1–2 swing plan format. 7) Consider trimming or consolidating the most speculative lines (AI hype/BigBear.ai, energy ballast) into a single Down line with a clear trigger, rather than two; this strengthens the coherence of the transmission framework and keeps focus on the core regime and its near‑term risks. 8) Finally, keep the 0–3 week horizon for Movers as the constraint dictates, and ensure the 1–2 swing‑plan lines (or 1 Outlook line if you interpret the assets as non‑tradable) comply with the exact 10‑field, comma‑free structure the prompt requires.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756031796"
+}

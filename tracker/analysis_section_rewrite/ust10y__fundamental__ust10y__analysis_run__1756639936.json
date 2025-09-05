@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T13:32:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756639936",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "3319",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Canonical Handle Mapping**  \n   - The draft discusses 30‑year mortgage rates but never links the view to a liquid market handle.  \n   - **Action:** Add an explicit mapping to **ust10y** (U.S. Treasury 10‑year yield) as the proxy for long‑term rates that feed mortgage pricing.  \n   - Example: “Mortgage rates are a function of the 10‑year Treasury yield (ust10y) plus a spread that reflects MBS market conditions.”  \n   - Cite the source ID (LF0UUL917) each time you reference Fed policy, balance‑sheet stance, or inflation expectations.\n\n2. **Catalyst Window & Causal Chain**  \n   - The draft mentions Fed policy minutes, CPI/PCE releases, Treasury auctions, and loan‑volume but does not tie them to a specific time window.  \n   - **Action:** Define a clear catalyst window (e.g., “From the September 2024 Fed meeting through the next 12 months, the key catalysts are the Fed’s policy statements, CPI/PCE data releases, Treasury auction sizes, and monthly mortgage‑originating volume.”)  \n   - Explicitly state the causal path: Fed policy → short‑term rate → term premium (ust10y‑short‑term) → mortgage spread → 30‑year rate.\n\n3. **Quantification & Ranges**  \n   - The draft gives a range (6.5–7.0 %) but lacks evidence for the 10–20 bp decline or 7.2 % upside.  \n   - **Action:** Provide historical term‑premium data or Fed‑balance‑sheet metrics to justify the ranges.  \n   - Example: “Historical term‑premium spikes of 30 bp during the 2022‑23 Fed hikes support the 7.2 % upside scenario.”  \n   - Cite relevant data (e.g., Fed’s MBS repo rates, Treasury yield curve).\n\n4. **First‑Principles Anchors**  \n   - The draft mentions “real‑rate differential” but does not quantify it.  \n   - **Action:** State the current real‑rate differential (e.g., “Real‑rate differential ≈ 2.5 % (ust10y – inflation expectations)”) and show how it anchors mortgage rates.  \n   - Link to the Fed’s inflation‑targeting framework and market expectations of future policy.\n\n5. **Structure & Conciseness**  \n   - The draft is verbose and repeats the same points.  \n   - **Action:** Trim redundant sentences, keep only the core argument, and format as bullet points for clarity.  \n   - Example:  \n     ```\n     • Base case: 30‑yr mortgage ≈ 6.5–7.0 % (ust10y + 200–250 bp spread).  \n     • Catalyst window: Sep 2024 – Sep 2025 Fed meetings, CPI/PCE releases, Treasury auctions, loan volume.  \n     • Upside: Fed hike or inflation spike → term premium ↑ → rate > 7.2 %.  \n     • Downside: Fed easing or large Treasury issuance → term premium ↓ → rate 6.5 %.  \n     ```\n\n6. **Citation Density & Correctness**  \n   - The draft cites only one source ID.  \n   - **Action:** Add inline citations for each factual claim: Fed policy, balance‑sheet contraction, inflation expectations, national debt, loan demand.  \n   - Use the format `(LF0UUL917)` after each claim.\n\n7. **Alignment with SECTION FOCUS**  \n   - The draft is multi‑year structural, but it should explicitly state the horizon and regime transition conditions.  \n   - **Action:** Add a sentence: “The regime will persist until the Fed signals a reversal or inflation expectations shift sharply; the transition window is the next Fed meeting cycle (Oct 2025 onward).”\n\n8. **Remove Non‑Essential Content**  \n   - Any mention of “mortgage‑backed securities” or “MBS” without a direct link to the handle can be shortened.  \n   - **Action:** Replace long explanatory paragraphs with concise causal statements.\n\n**Revised Skeleton (for reference)**\n\n```\nBase case (Sep 2024–Sep 2025): 30‑yr mortgage ≈ 6.5–7.0 % (ust10y + 200–250 bp spread) (LF0UUL917).  \nCatalyst window: Fed policy minutes, CPI/PCE releases, Treasury auction sizes, monthly mortgage‑originating volume (LF0UUL917).  \nCausal chain: Fed policy ↓ short‑term rate → term premium (ust10y‑short‑term) ↑/↓ → mortgage spread → 30‑yr rate.  \nUpside: Fed hike or inflation spike → term premium ↑ → rate > 7.2 % (LF0UUL917).  \nDownside: Fed easing or large Treasury issuance → term premium ↓ → rate 6.5 % (LF0UUL917).  \nTransition condition: Fed signals reversal or inflation expectations shift sharply (next Fed meeting cycle).  \nConfidence: Moderate‑high, sensitive to abrupt inflation or debt dynamics (LF0UUL917).  \n```\n\nApply these edits to meet the acceptance gate: ≥1 canonical handle (ust10y), explicit sign/magnitude, catalyst window, and concise, defensible language.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756639936"
+}

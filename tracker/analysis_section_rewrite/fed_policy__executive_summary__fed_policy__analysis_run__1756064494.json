@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:54:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756064494",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15808",
+    "output_chars": "1453",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is too long and sprawling for a 4–6 sentence executive brief; to upgrade, collapse to a tight house view that is clearly anchored in a three‑state regime map and a single, probability‑weighted transmission channel from macro regime to asset pricing. Present Regime A/B/C in one sentence each with explicit triggers and the market transmission (Regime A: easingBias, decelerating payroll/inflation; Regime B: persistent inflation, higher real rates; Regime C: pivot signals or two data surprises), then translate that into a concise earnings/valuation implication for one core long idea (e.g., ACMR or a high‑conviction AI/auto proxy) with base‑case numbers and a brief alt path; replace the dispersed company anecdotes (Ford, Donegal, ACMR) with 1–2 anchor examples and keep the rest as sources for the regime signals only. Rebuild the piece around a first‑principles chain: policy regime → path of real/discount rates → earnings power and credit capacity → multiples/risk premia, and supply a quantitative sensitivity (e.g., what a Sep rate cut of 50bp would imply for discount rates and target multiples, versus a No‑cut or extended higher‑for‑longer path) using only cited IDs; ensure all factual claims cite source IDs (e.g., 37UZC9X8I for regime logic, NL5YYTLF2/T1QE6JPIX/SGB2PAZGK for regime probabilities, 0J41Q7KTX/S15934PBQ/RHFWI02JT for tariff/policy signals, 22PL3Q360 for Ford, SK994CBWR/C22MKA9VY for ACMR); reconcile any conflicting data by selecting a single credible anchor per claim and noting a sensitivity range when sources disagree. Finally, restructure into 4–6 bullets or sentences: Base Case/Regime A, Key Catalysts, Key Risks/Invalidations, Watch‑list (4–5 items with IDs), and a one‑line Verdict, eliminating extraneous horizon sections and non‑sourced narrative to meet the concise, executive standard.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756064494"
+}

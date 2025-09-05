@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T21:07:11",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_china_tariffs",
+    "new_article_id": "SGB2PAZGK",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['FQRTZWV85', 'B1YUIY8QF', 'RHXDOHQQX', 'XR5ATKIK6']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article among the tracked IDs clearly supersedes the new Trump-China trade article; therefore no action is required."
+    }
+  },
+  "id": "us_china_tariffs__SGB2PAZGK__fundamental"
+}

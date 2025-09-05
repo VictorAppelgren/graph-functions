@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T03:03:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "new_article_id": "DR5PMXH2G",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['VBLNR89G5', 'QIEGXN543', 'GUTGNG4IC', 'UEMV4BE8U', '7XH2DKEKV']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not provide a new handle mapping or catalyst window beyond what is already covered by the empty existing entries, so it does not supersede any current topic."
+    }
+  },
+  "id": "dxy__DR5PMXH2G__current"
+}

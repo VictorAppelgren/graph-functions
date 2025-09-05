@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T05:24:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756091523",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16478",
+    "output_chars": "1579",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft is ambitious and richly sourced but deteriorates into a sprawling, multi-horizon catalog rather than a crisp, decision-ready house view. To reach world-class quality, compress to 4–6 sentences or a tight 4–6 bullet structure that delivers a single, coherent house view, then clearly separate catalysts, risks, and watch items with explicit horizons and triggers. Actionable edits: (1) present a single, first-principles house view anchored in y*, g*, r*, and π* = 2% with FAA targeting, then spell out why AI/tfp lifts y* and why policy credibility lowers real rates and risk premia; cut nonessential analogies (e.g., MH370) and keep only macro/financial transmission that directly informs asset prices. (2) Replace the current tiered narrative with a clean 5-part executive brief: base-case multi-year path; key near-term catalysts (0–3 weeks) with probabilistic triggers; medium-term (3–6 months) regime dynamics and thresholds; near-term invalidation/alternative paths; and a 1–2 sentence implication for equities/crypto with explicit numbers. (3) Make horizons explicit and quantitative: for 0–3 weeks, cite the 85% odds of a 25bp cut and Nvidia‑driven AI demand signals; for 3–6 months, lock in OBBA’s $2.4–4.0 trillion debt/fiscal impulse and Range’s 1–1.5% productivity uplift (potentially higher or lower as data evolve); for multi-year, specify regime weights (A/B/C) with consistent probability anchors (e.g., A ~50%, B ~30%, C ~20%) and regime‑dependent discount-rate implications. (4) Turn the watch-list into 4–6 explicit thresholds with actionable triggers (e.g., a sustained core CPI MoM above 0.4% or wage momentum surprise; OBBA passage timing; ETH/BTC liquidity/Sovereign demand signals; private-credit funding shifts) and define what would constitute an invalidation. (5) Tighten the causal chain and ensure all factual claims map to the supplied IDs; reduce cross-source duplications and ensure every assertion cites one or more of OGK8WLL69, NL5YYTLF2, BS3876D03, UPV3X2MQ6, EPJYXB7DX, YQOMV2HAJ, ILYC1M41F, S1OY7ISLY, MW3AO9NFK, 218AGGUXB, LLN6N4H3Z, T1QE6JPIX, R3WNA7L7A, Y6SQOEK69, JPAIHPA4N, SGB2PAZGK, 22PL3Q360, 17F49LURJ (avoid extra or conflicting sources). (6) Sharpen the closing framing to a decision-useful stance for a professional investor: state a concise convexity‑adjusted range for asset prices under base-case vs. upside/downside, and specify the one or two hard risks that would force a recalibration of position sizing. After these edits, the piece will satisfy the SECTION FOCUS by delivering a crisp, horizon‑appropriate house view with explicit catalysts, risks, and watch items; it will also improve first-principles grounding, sharpen scenario structure, and enhance numerical discipline and citation hygiene.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756091523"
+}

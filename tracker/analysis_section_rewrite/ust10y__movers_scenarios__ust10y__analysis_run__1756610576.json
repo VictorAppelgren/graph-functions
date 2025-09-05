@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T05:36:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756610576",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5772",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "movers_scenarios",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Add magnitude ranges for each asset (spx +3‑5 %, dxy –2‑4 %, ust10y –20‑30 bp) in the “What to watch” field, tie each driver to a specific catalyst window (Sep 20 FOMC, Sep core‑PCE revision, Sep tariff announcement), and cite the source IDs for every fact (FAN5RYW6T, 97MD1FHW8 U21K4ALYQ, 1DEM6P1Y2). Replace the generic “Fed minutes show 25 bp cut” with the precise catalyst “Fed minutes (Sep 20 FOMC) show 25 bp cut (FAN5RYW6T)”. Ensure the probability percentages match the cited odds (70 % for the cut, 65 % for PCE < 3 %, 60 % for PCE > 3 %, 55 % for tariff rise). Remove any mention of mortgage rates or other non‑canonical assets, keep each line strictly in the format “Up/Down | Sep 2025 | Driver | spx +3‑5 %, dxy –2‑4 %, ust10y –20‑30 bp; catalyst (ID) | probability % (ID)”, and verify that all handles (spx, dxy, ust10y) are present.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__movers_scenarios__ust10y__analysis_run__1756610576"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T16:08:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "WUWLQ9S4N",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['JRW8XK0QX', 'YC32T5DKL', 'C4QPV9DTR', 'MA68N67N8']",
+    "mode": "CAN_REPLACE",
+    "target_id": "JRW8XK0QX",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "JRW8XK0QX",
+      "motivation": "The new article provides timely insights into Powell's upcoming speech and its implications for interest rates, which are not covered in existing articles. Therefore, it should replace one of the current articles."
+    }
+  },
+  "id": "fed_policy__WUWLQ9S4N__current"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T13:41:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "china_exports",
+    "new_article_id": "8JSRSJYOU",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['DRW2E1P5J', 'BY233O0QM', 'UHOSZMCP8', 'SBPF21UF7', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not provide a clear quantitative view on a canonical market handle and lacks a specific catalyst window, so it does not add value over existing coverage."
+    }
+  },
+  "id": "china_exports__8JSRSJYOU__current"
+}

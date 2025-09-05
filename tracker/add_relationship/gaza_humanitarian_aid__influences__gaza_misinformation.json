@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:41:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_humanitarian_aid",
+    "target_id": "gaza_misinformation",
+    "selection_motivation": "Humanitarian aid distribution is frequently targeted by misinformation campaigns that can disrupt logistics, erode public trust, and reduce aid effectiveness in Gaza.",
+    "candidate_motivation": "These topics are the strongest direct or closely linked influences and peers for Gaza humanitarian aid, encompassing on-the-ground crisis dynamics, humanitarian access, media safety, and the broader Israel–Palestine policy context.",
+    "existing_links_count": "2",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['gaza_humanitarian_crisis', 'gaza_humanitarian_aid', 'gaza_journalist_safety', 'gaza_journalist_killings', 'journalist_assassinations_gaza', 'gaza_misinformation', 'disinformation_campaigns']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'gaza_humanitarian_crisis'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'journalist_safety_gaza'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847543",
+    "rel_id": "gaza_humanitarian_aid__influences__gaza_misinformation",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'gaza_humanitarian_crisis'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'journalist_safety_gaza'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'gaza_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Humanitarian aid distribution is frequently targeted by misinformation campaigns that can disrupt logistics, erode public trust, and reduce aid effectiveness in Gaza.",
+      "type": "INFLUENCES",
+      "source": "gaza_humanitarian_aid",
+      "target": "gaza_misinformation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gaza_humanitarian_aid__influences__gaza_misinformation"
+}

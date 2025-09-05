@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:29:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "cartel_terrorism",
+    "target_id": "us_mexico_cartel_terrorism",
+    "selection_motivation": "Cartel terrorism directly drives cross-border cartel activities, making US‑Mexico cartel terrorism a natural downstream consequence.",
+    "candidate_motivation": "These topics are the most plausible strong influences or peers to Cartel Terrorism due to direct ties to illicit drug distribution, cross-border smuggling dynamics, and policy shifts affecting cartel revenue and enforcement.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['us_mexico_cartel_terrorism', 'mexico_cartel_extraditions', 'us_border_security', 'marijuana_reclassification', 'cannabis_reclassification', 'cannabis_policy_reclassification', 'us_immigration_conditions']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'cartel_terrorism', 'target': 'mexico_cartel_extraditions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163304",
+    "rel_id": "cartel_terrorism__influences__us_mexico_cartel_terrorism",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'cartel_terrorism', 'target': 'mexico_cartel_extraditions'}, {'type': 'INFLUENCES', 'source': 'cartel_terrorism', 'target': 'us_mexico_cartel_terrorism'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Cartel terrorism directly drives cross-border cartel activities, making US‑Mexico cartel terrorism a natural downstream consequence.",
+      "type": "INFLUENCES",
+      "source": "cartel_terrorism",
+      "target": "us_mexico_cartel_terrorism"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cartel_terrorism__influences__us_mexico_cartel_terrorism"
+}

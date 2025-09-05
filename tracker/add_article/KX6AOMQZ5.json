@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T16:12:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "KX6AOMQZ5",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Rising SOFR and Treasury yields from Fed tightening push ARM payments up, squeezing consumer spending and increasing credit usage.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "sofr",
+        "us_inflation",
+        "ust5y",
+        "ust2y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of how rising ARM rates affect consumer spending and the dollar, which is a market commentary."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article shows rising ARM rates pushing U.S. homeowners into a liquidity squeeze, likely dampening consumer demand and exerting downward pressure on the U.S. dollar, a notable near‑term macro catalyst."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on the near‑term consumption softness triggered by rising ARM rates, indicating a medium‑term impact rather than immediate events or long‑term fundamentals."
+    },
+    "article_node": {
+      "id": "KX6AOMQZ5",
+      "title": "ARM’d and Dangerous: How Adjustable Rate Mortgages Are Bleeding Millions of Americans Dry",
+      "summary": "Adjustable‑rate mortgages that surged during the Fed’s 2022‑23 rate hikes are now pushing many U.S. homeowners into a paycheck‑to‑paycheck cycle. As SOFR‑linked ARM rates climb to 4.39% from 2.91%, monthly payments on a $400k loan jump from $1,667 to $2,001, and 42% of ARM holders have cut discretionary spending versus 31% of fixed‑rate holders. Nearly half are using credit cards for essentials, and 46% of ARM owners report increased credit usage, signaling a liquidity squeeze that could dampen consumer demand and pressure the U.S. dollar. The Fed’s continued pause or potential rate cuts could moderate the impact, but the lagged effect of rising mortgage costs remains a key catalyst for near‑term consumption softness.",
+      "source": "https://www.pymnts.com/real-estate/2025/armd-and-dangerous-how-adjustable-rate-mortgages-are-bleeding-millions-of-americans-dry/",
+      "published_at": "2025-08-05T08:00:55+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "KX6AOMQZ5"
+}

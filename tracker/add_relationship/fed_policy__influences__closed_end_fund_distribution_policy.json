@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T19:32:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "closed_end_fund_distribution_policy",
+    "selection_motivation": "Fed policy directly sets the federal funds rate and monetary stance, which drives the cost of capital and risk premium for closed‑end funds, thereby shaping their distribution policy.",
+    "candidate_motivation": "Closed‑end fund distribution policy is driven by macro‑financial conditions, regulatory policy, and market performance. Therefore, key influences are central bank policy, bond yields, inflation, and equity indices, while peers are other market‑wide indicators that affect fund flows.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1024",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_10y', 'us_inflation', 'euro_inflation', 'sp500', 'eurostoxx50']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'closed_end_fund_distribution_policy', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395264",
+    "rel_id": "fed_policy__influences__closed_end_fund_distribution_policy",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'closed_end_fund_distribution_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly sets the federal funds rate and monetary stance, which drives the cost of capital and risk premium for closed‑end funds, thereby shaping their distribution policy.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "closed_end_fund_distribution_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__closed_end_fund_distribution_policy"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T13:48:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "medium",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755949185",
+    "article_ids": "['9JYRMPXB0', 'W3CN6QOQR', '4693XL4AP', 'N9A7MEOD2', '1443EJVX4']",
+    "selected_articles_count": "5",
+    "material_chars": "190566",
+    "output_chars": "2045",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit instructions (compact paragraph)**  \n1. **Re‑structure** the draft into the required 3–6‑month scenario map: start with a *Base‑Case* narrative, then outline 1–2 *Alternative* paths (e.g., “Fed cuts in September” vs. “Fed holds rates”), and finish with a *Risk/Watch‑List* section.  \n2. **Add explicit causal chains**: e.g., “Trump’s redistricting → GOP House majority → reduced congressional oversight → higher executive‑policy volatility → equity market swings.” Use arrows or numbered steps and cite the relevant source IDs (e.g., 1443EJVX4 for Texas redistricting, 9JYRMPXB0 for executive actions).  \n3. **Quantify every claim**: replace vague “moderate growth” with “GDP growth projected at 2.3 % (source 1443EJVX4, July jobs report)”; “inflation easing to 2.5–3 %” with “CPI‑core fell to 3.1 % in July (source 1443EJVX4)”; “tariff shock” with “average tariff rate rose from 3 % to 15–20 % (source N9A7MEOD2).”  \n4. **Insert precise timing windows**: e.g., “Jobs report due 1 Sept 2025; Fed meeting 15 Sept 2025; Texas redistricting court ruling 30 Sept 2025.”  \n5. **Use first‑principles for fundamentals**: explain how higher tariffs increase import costs → higher CPI → Fed rate‑setting logic; how federal workforce cuts reduce public‑sector productivity → lower aggregate demand.  \n6. **Cite sources consistently**: every factual statement must reference an ID (e.g., 9JYRMPXB0, W3CN6QOQR, 4693XL4AP, N9A7MEOD2, 1443EJVX4). Avoid generic platitudes; instead, quote exact figures or quotes from the articles.  \n7. **Clarify watch signals**: list concrete indicators (Fed’s “rate‑cut” language, Texas redistricting court decisions, Hegseth’s statements on Greenland/Panama).  \n8. **Add a confidence rating** (e.g., “Moderate (70 %)”) and justify it with the convergence of political, labor, and trade data.  \n9. **Remove redundant or off‑topic content** (e.g., the long Trump interview monologue) and focus on the 3–6‑month horizon.  \n10. **Ensure coherence**: each paragraph should flow logically, with clear transitions and a single causal thread per section. Use bullet points for triggers/invalidations to improve readability.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__medium__eurusd__analysis_run__1755949185"
+}

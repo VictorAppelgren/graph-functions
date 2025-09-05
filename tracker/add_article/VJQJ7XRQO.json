@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T22:13:13",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "VJQJ7XRQO",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; political interference risk in Fed policy will likely tighten short‑term rates, shift the yield curve, raise inflation expectations, and weaken the DXY.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "ust10y",
+        "ust5y",
+        "ust2y",
+        "ust30y",
+        "dxy",
+        "us_unemployment_claims"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a Supreme Court case that could reinforce Fed independence, a legal development affecting Fed policy, fitting the regulation category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses a Supreme Court case that could alter Fed independence, potentially leading to short‑term rate cuts but higher long‑term rates and inflation, thereby affecting borrowing costs and the U.S. safe‑harbor premium—directly relevant to Fed policy and market expectations."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on potential medium‑term shifts in Fed policy and the resulting impacts on long‑term rates and inflation."
+    },
+    "article_node": {
+      "id": "VJQJ7XRQO",
+      "title": "Cook Hearing Ends Without Ruling on Fed Governor's Status",
+      "summary": "The article discusses the risk of political interference in the Federal Reserve, citing past politicized periods that led to stagflation. It highlights a Supreme Court case that could reinforce the Fed’s independence by limiting executive removal of its governors. The piece warns that a Trump‑friendly Fed could trigger short‑term rate cuts but ultimately drive higher long‑term rates and inflation, undermining the U.S. safe‑harbor premium. Maintaining Fed credibility is portrayed as essential for stable borrowing costs and business investment.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-29/cook-hearing-ends-without-ruling-video",
+      "published_at": "2025-08-29T19:25:32.301000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "VJQJ7XRQO"
+}

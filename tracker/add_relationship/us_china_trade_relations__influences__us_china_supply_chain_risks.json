@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T14:25:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_relations",
+    "target_id": "us_china_supply_chain_risks",
+    "selection_motivation": "US-China trade relations directly shape supply chain risk dynamics for multinational firms, making it a primary driver of supply chain disruptions.",
+    "candidate_motivation": "The selected topics are closely related to US-China Trade Relations, either through direct trade impacts, economic policies, or geopolitical dynamics that influence trade between the two nations.",
+    "existing_links_count": "9",
+    "candidate_count": "8",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_china_trade_talks', 'us_china_chip_negotiations', 'us_china_agriculture_trade', 'us_china_trade_war_2025', 'us_china_ai_chip_agreement', 'us_china_export_controls', 'us_china_supply_chain_risks', 'us_china_tariff_truce']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082566",
+    "rel_id": "us_china_trade_relations__influences__us_china_supply_chain_risks",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_supply_chain_risks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China trade relations directly shape supply chain risk dynamics for multinational firms, making it a primary driver of supply chain disruptions.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_relations",
+      "target": "us_china_supply_chain_risks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_relations__influences__us_china_supply_chain_risks"
+}

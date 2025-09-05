@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T00:30:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EPJYXB7DX",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and GOP leadership shift may alter market expectations for US Treasury yields and equity indices.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article reports a political leadership change within the Republican National Committee, which does not fit any of the predefined categories (macro_event, earnings, regulation, policy_statement, central_bank_action, economic_data, geopolitical, company_update, market_commentary)."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Uncertain relevance to the node; the article reports a US political leadership change that could indirectly affect markets but no explicit handle mapping is provided for this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a current political leadership change that will shape the GOP’s strategy for the 2026 midterm elections, a medium‑term event."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "EPJYXB7DX"
+}

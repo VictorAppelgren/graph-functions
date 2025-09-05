@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T17:46:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust2y",
+    "target_id": "gilt10y",
+    "selection_motivation": "US 2‑year Treasury yields are a primary indicator of short‑term funding costs and risk‑premium expectations that drive global term‑premium dynamics, directly influencing long‑term sovereign yields such as the German 10‑year Bund.",
+    "candidate_motivation": "The US 2‑year Treasury yield is a core short‑term rate benchmark, so its dynamics are tightly linked to Fed policy signals, other U.S. Treasury maturities, and broader macro indicators that influence or are influenced by short‑term rates. Strong peers and correlates include Fed policy announcements, other U.S. Treasury yields, key inflation and employment metrics, and major currency/interest‑rate benchmarks that move in tandem with short‑term rates.",
+    "existing_links_count": "20",
+    "candidate_count": "17",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sofr', 'ust10y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'usdcny', 'usdjpy', 'dxy', 'eurusd']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6969321522867471876",
+    "rel_id": "ust2y__influences__gilt10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 2‑year Treasury yields are a primary indicator of short‑term funding costs and risk‑premium expectations that drive global term‑premium dynamics, directly influencing long‑term sovereign yields such as the German 10‑year Bund.",
+      "type": "INFLUENCES",
+      "source": "ust2y",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__influences__gilt10y"
+}

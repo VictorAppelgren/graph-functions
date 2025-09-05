@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T20:53:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ba",
+    "target_id": "ust5y",
+    "selection_motivation": "Boeing’s long‑term debt and credit spreads are highly sensitive to the 5‑year Treasury benchmark, which serves as the key risk‑free rate for its capital structure and refinancing decisions.",
+    "candidate_motivation": "Boeing’s earnings and valuation are driven by macro‑factors that affect airline demand, capital costs, and commodity prices. Key influences include U.S. monetary policy, Treasury yields, inflation, core PCE, employment data, oil prices, and equity market sentiment.",
+    "existing_links_count": "13",
+    "candidate_count": "21",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'wti', 'brent', 'oil_price_decline', 'copper', 'gold', 'wheat', 'spx', 'sx5e', 'usdcny', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327386",
+    "rel_id": "ba__influences__ust5y",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing’s long‑term debt and credit spreads are highly sensitive to the 5‑year Treasury benchmark, which serves as the key risk‑free rate for its capital structure and refinancing decisions.",
+      "type": "INFLUENCES",
+      "source": "ba",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__influences__ust5y"
+}

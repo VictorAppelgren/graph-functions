@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T02:18:18",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1756080299",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18740",
+    "output_chars": "1464",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has a solid long-horizon thesis (AI-enabled devices, seven-year software/update cycles, and memory/imaging CAPEX from premium phones) but it overfits a broad, multi-regime macro narrative and drifts into non‑source specifics; to reach world-class, compress to 4–6 executive bullets that state 1 clear house view, then 2–3 catalysts, 1–2 risks, and 1 concise invalidation path, all anchored to the cited IDs. Edits: (1) collapse into a single, crisp causal chain that starts with AI feature cadence and seven-year updates (drawn from 5S9GJV2O3, HWGNUP2XG, UVEQ2SJ0W) driving durable CAPEX in memory/imaging silicon and a predictable upgrade cadence (cite concrete device specs where useful: Pixel 9 Pro XL 50MP/48MP sensors, 16GB RAM, up to 1TB, 37W wired, 21W wireless; Pixel Fold 4,650mAh; OnePlus 13 6,000mAh and 50W wireless); (2) quantify base-case numerics from sources (tariff baseline 10% with escalation toward 40%; labor data 4.2% unemployment, 73k payrolls; Nvidia/AI momentum via STBVARD8F; 12–24 month revenue/GM anchors such as 2025 revenue near $900m and gross margin ~4% from 22PL3Q360) and wire them directly to the 12–24 month house view; (3) replace all non-source claims (e.g., ECB/Lagarde frames, extraneous “65W”/gaming configs) with sourced equivalents from 9JYRMPXB0, 1443EJVX4, W3CN6QOQR, 4693XL4AP, N9A7MEOD2, HG440LJN4, I2SJU04DF, OGK8WLL69, STBVARD8F, and 22PL3Q360; (4) recast the near-term catalyst window into 1–2 explicit, auditable triggers (e.g., tariff announcements and pass-through signals per 9JYRMPXB0; Fed cue per 1443EJVX4; cross‑border/policy signals per W3CN6QOQR and 4693XL4AP); (5) present a coherent three-regime framework with explicit invalidation triggers (e.g., wage/inflation persistence pushing core inflation beyond forecast, tariff shocks exceeding baseline, AI cadence materially slowing) tied to the cited IDs; (6) prune peripheral macro chatter (ECB/Lagarde, crypto anecdotes) unless there is a direct, sourced link to the regime framework, and ensure every claim maps to an ID in SOURCE MATERIAL. This reframing will yield a tight 4–6 sentence/bullet house view with a clean, auditable source map and concrete, source-grounded catalysts, risks, and watch items.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__executive_summary__eurusd__analysis_run__1756080299"
+}

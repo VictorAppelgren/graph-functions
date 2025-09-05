@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T02:23:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "85J85TT0K",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates and inflation; tariffs dampen growth, raise inflation, and push Fed policy and Treasury yields higher, while commodity prices like gold and copper adjust.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "gold",
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a regulatory change (tariffs) that impacts macroeconomic growth, inflation, and monetary policy considerations."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses a large-scale US tariff policy that directly influences US growth, inflation, Fed policy, Treasury yields, and fiscal dynamics, all of which are core macro drivers in the knowledge graph."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article outlines the medium‑term economic effects of Trump’s tariffs—impact on growth, inflation, Fed policy, and Treasury yields—projecting a rebound by 2026, indicating a medium‑horizon focus."
+    },
+    "article_node": {
+      "id": "85J85TT0K",
+      "title": "Trump’s tariffs won’t push the economy over a cliff",
+      "summary": "Trump’s broad reciprocal tariffs have raised import duties to about 18%, generating roughly $3 trillion in revenue over a decade but also dampening growth to around 1.5% this year. The tariffs are expected to keep inflation above 3% this fall, prompting a cautious Fed that may lower rates but faces limits from rising Treasury yields and a high deficit. Businesses face supply‑chain disruptions and higher costs, but the economy is projected to rebound to 2% growth by 2026 without a recession. Overall, the tariffs create a one‑time adjustment period as the U.S. adapts to protectionist trade policy.",
+      "source": "https://www.washingtontimes.com/news/2025/aug/26/trumps-tariffs-wont-push-economy-cliff/",
+      "published_at": "2025-08-26T20:34:56+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "85J85TT0K"
+}

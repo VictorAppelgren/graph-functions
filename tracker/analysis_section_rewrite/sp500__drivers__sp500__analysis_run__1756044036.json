@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T16:06:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756044036",
+    "drivers_count": "3",
+    "material_chars": "1291",
+    "output_chars": "2661",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has a solid skeleton and uses a first-principles logic linking cloud/AI cash flows to moat-driven revenue and valuation, but it understates causality, overrelies on Shopify’s Q2’25 read as a macro proxy, and lacks explicit numerical sensitivity, coherent regime definitions, and a crisp, publishable watchlist; several claims are under-cited or not anchored to the specific source IDs, and a closing line (IntelOrbis Graph) and some phrasing dilute readability and horizon-consistency. Actionable edits: formalize Regime A with explicit numeric assumptions (Azure growth, cloud CAGR ~21.2% to 2030, FCF strength, margin bands) and lay out a clean, asset-specific causal chain for Microsoft and Shopify rather than a generic “forever stock” view; attach every assertion to a source ID (0G3A676BP, IGP1Q4ZEJ for cloud/moat mechanics; UVEQ2SJ0W for Shopify metrics; HWGNUP2XG where margin/consumer dynamics matter; 5S9GJV2O3 for AI-capex linkage) and reconcile any conflicts between them; replace single-data-point anchoring with a mini-model that shows how GMV/revenue/margins translate to equity value under different discount-rate assumptions; define a four-regime EURUSD spine with explicit regime definitions, triggers, and how each affects tech capex, valuations, and exit premia (cite 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG); replace vague “watch next” language with quantified signals (e.g., inflation surprise bands, Shopify GMV/revenue/margin thresholds, 10Y yield moves, EURUSD regime-change cues) and provide explicit thresholds and probabilistic sensitivities; expand the cross-topic synthesis to show how macro, policy, flows/positioning, and valuation/technicals interact, with a short, top-line thesis followed by a compact, 4–6 signal watchlist and an explicit invalidation rule; ensure horizon alignment (multi-quarter to multi-year) and remove non-sourced assertions and stray references (e.g., eliminate the unnamed closing line); finally, perform a concise consistency pass to ensure every claim has a cited source and, if a claim appears conflicting, present a brief reconciliation note.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756044036"
+}

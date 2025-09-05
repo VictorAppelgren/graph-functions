@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T01:58:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756597790",
+    "article_ids": "['NIT6JFIQF', 'FAN5RYW6T', 'XQMF22EFB', 'F7K7Y35U5', 'XTQIQRP5K']",
+    "selected_articles_count": "5",
+    "material_chars": "90602",
+    "output_chars": "2529",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is solid in scope, mapping to the canonical DXY handle, providing a 3‑6‑month horizon, a clear catalyst window (CPI release, Fed meetings, tariff announcements), and a coherent risk‑reward narrative. However, the quantitative projections (DXY +0.4 % over 3‑6 mo, ±0.3 % / mo volatility, and a –0.2 % alternative) are not sourced in the article and therefore violate the “truth > verbosity” rule. **Action:** either (a) remove the specific numbers and replace them with a qualitative statement (“DXY likely to remain in a modest upside bias”), or (b) flag them as assumptions and cite a relevant data source (e.g., recent DXY trend or Fed policy outlook). Ensure every claim—especially the magnitude ranges—has an inline citation or explicit assumption. All other sentences are on‑target and well‑cited.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1756597790"
+}

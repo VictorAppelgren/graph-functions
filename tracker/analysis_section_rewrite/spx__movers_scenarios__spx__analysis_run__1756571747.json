@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T18:56:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756571747",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7368",
+    "output_chars": "945",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft mixes ETH‑specific dynamics with generic crypto‑market language, diluting the causal chain to the asset in focus (ETH). Remove the “Stable‑coin fee share rise” line – it lacks a clear handle mapping to ETH price and no catalyst window is specified. The “Fed hawkish policy + equity rally reversal” line is too vague; replace it with a concrete path: Fed hawkish stance → higher yields (us10y) → reduced risk‑on equity (ndx) → lower ETH demand (OGK8WLL69). Add a catalyst window: Fed September meeting (2025‑09‑16‑20) and the release of the Fed minutes (2025‑09‑17). For the “Stalled corporate treasury inflows + regulatory setbacks” line, specify the corporate treasury flow data (e.g., Bitmine Immersion’s $45 m purchase) and the regulatory announcement window (Project Crypto and retirement‑plan order updates). Ensure each line maps to at least one canonical handle (e.g., ust10y, ndx, dxy, spx) with a sign and magnitude, and cite the source ID in parentheses. Finally, tighten probabilities: use 70% for the dovish upside, 55% for the hawkish downside, and 45% for the stalled inflows scenario, reflecting the moderate‑high confidence stated in OGK8WLL69.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756571747"
+}

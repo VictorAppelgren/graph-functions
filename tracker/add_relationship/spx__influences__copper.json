@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T10:25:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "spx",
+    "target_id": "copper",
+    "selection_motivation": "Copper price swings materially affect earnings of S&P 500 mining and industrial constituents, making copper a key driver of the index.",
+    "candidate_motivation": "S&P 500 is a broad equity benchmark whose performance is driven by macro fundamentals, monetary policy, and commodity prices that also influence other indices and asset classes. Therefore, topics that capture US/Euro growth, inflation, Fed policy, Treasury yields, commodity prices, and peer equity indices are the most likely strong influences or correlates.",
+    "existing_links_count": "21",
+    "candidate_count": "19",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'sx5e', 'dxy', 'gold', 'copper', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7007602119700120966",
+    "rel_id": "spx__influences__copper",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price swings materially affect earnings of S&P 500 mining and industrial constituents, making copper a key driver of the index.",
+      "type": "INFLUENCES",
+      "source": "spx",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__influences__copper"
+}

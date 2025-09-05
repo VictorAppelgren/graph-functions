@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T06:46:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gbpusd",
+    "target_id": "ust2y",
+    "selection_motivation": "GBP/USD historically tracks US short‑term Treasury yields as a key carry‑trade indicator, so adding a correlation link to ust2y enhances cross‑asset analytics.",
+    "candidate_motivation": "GBP/USD is primarily driven by relative interest‑rate differentials, inflation expectations, and global risk sentiment. Therefore, topics that capture UK and US yields, Fed/ECB policy, US inflation and core PCE, US labor and services data, the US dollar index, and major commodity prices are likely strong influences or correlates.",
+    "existing_links_count": "13",
+    "candidate_count": "26",
+    "all_nodes_count": "42",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['uk_30yr_gilt_yield', 'gilt10y', 'ust10y', 'ust30y', 'ust2y', 'ust5y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'sx5e', 'euro_inflation', 'dxy', 'usdjpy', 'usdcny', 'eurusd', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'us_crude_inventory', 'wti', 'brent', 'gold', 'copper', 'oil_price_decline']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1191204300462753276",
+    "rel_id": "gbpusd__correlates_with__ust2y",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "GBP/USD historically tracks US short‑term Treasury yields as a key carry‑trade indicator, so adding a correlation link to ust2y enhances cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gbpusd__correlates_with__ust2y"
+}

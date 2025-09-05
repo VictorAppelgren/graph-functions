@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T15:13:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GBZF2IAID",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Russian gas pipeline expansion to China will shift gas supply dynamics, tightening European gas markets and potentially raising gas prices, with downstream effects on energy costs and inflation.",
+      "existing_ids": [
+        "cn_russia_gas_pipeline"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a new gas pipeline agreement between China and Russia that alters energy supply routes and deepens geopolitical ties, directly impacting international relations and energy security."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant new gas pipeline agreement between China and Russia that redirects Russian gas from Europe to China, directly affecting energy supply dynamics, geopolitical alignments, and market pricing for gas and related commodities."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a new pipeline agreement that will gradually shift gas flows from Europe to China, indicating a medium‑term structural change rather than an immediate price shock."
+    },
+    "article_node": {
+      "id": "GBZF2IAID",
+      "title": "Russia Signals Pipeline Deal as Xi, Putin Deepen Ties",
+      "summary": "China and Russia signed a new gas pipeline deal that will redirect a portion of Russian gas sales from Europe to China, allowing Gazprom to recoup about 30% of diverted pipeline capacity. The agreement, long debated, comes amid U.S. tariff threats against China for buying Russian oil and India’s commitment to purchase Russian oil as long as it remains economical. The deal signals deepening ties between Xi, Putin, and Modi, potentially undermining U.S. efforts to curb Russian energy influence.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-02/russia-signals-pipeline-deal-as-xi-putin-deepen-ties-video?srnd=all",
+      "published_at": "2025-09-02T11:16:48.296000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "GBZF2IAID"
+}

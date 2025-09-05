@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T15:56:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "65UUBU0OR",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['ZV3QI3K19', 'HHKTQ3JYH', 'O4ZEED2EB', 'H86O3XRUJ', 'OBQMETU6O', 'OGK8WLL69', 'PA57YBYVQ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article does not map to any canonical market handle and lacks a catalyst window, so it fails the acceptance gate."
+    }
+  },
+  "id": "spx__65UUBU0OR__fundamental"
+}

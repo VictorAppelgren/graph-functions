@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T22:52:22",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "08EIPMJ89",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Immigration policy changes may influence labor market and inflation expectations, affecting Treasury yields.",
+      "existing_ids": [
+        "us_10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a dispute over immigration policy and licensing standards, which constitutes a regulatory change or legal development."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article highlights a specific incident that underscores licensing standard issues for commercial drivers, potentially influencing policy discussions and enforcement practices."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent vehicular homicide incident and the immediate policy dispute between DHS and the California governor, focusing on current events and their immediate implications."
+    },
+    "article_node": {
+      "id": "08EIPMJ89",
+      "title": "Illegal immigrant truck driver accused of killing 3 in Florida crash denied bond",
+      "summary": "Harjinder Singh, an Indian national who entered the U.S. illegally in 2018, was charged with three counts of vehicular homicide after making a rogue U‑turn on a Florida highway that killed three people. He was denied bond and is being held in St. Lucie County Jail while ICE holds a detainer. The incident sparked a dispute between the U.S. Department of Homeland Security and California Governor Gavin Newsom over Singh’s work permit and commercial driver’s license, which he received under the Biden administration after being denied during the Trump era. Singh also failed English and road‑sign proficiency tests, raising questions about how he obtained licenses in California and Washington, both sanctuary states. The case highlights tensions over immigration policy, licensing standards, and the safety of commercial truck drivers on U.S. roads.",
+      "source": "https://nypost.com/2025/08/23/us-news/illegal-immigrant-truck-driver-accused-of-killing-3-in-florida-crash-denied-bond/",
+      "published_at": "2025-08-23T18:43:17+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "08EIPMJ89"
+}

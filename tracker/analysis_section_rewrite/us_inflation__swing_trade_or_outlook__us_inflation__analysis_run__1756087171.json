@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:09:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756087171",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17875",
+    "output_chars": "1803",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft shows solid regime framing and concrete crypto/ policy anchors, but it fails the SECTION FOCUS by not delivering exactly 4 Movers lines and by cluttering with non‑conforming “Long” content, which muddies the causal chain and weakens the actionable plan. Actionable edits: restructure to exactly four Movers & Scenarios lines, two Up and two Down, each in the mandated format (Up/Down | Time window | Driver/Mechanism | What to watch | Probability %), and base probabilities strictly on the cited evidence (e.g., 85% from 17F49LURJ for near‑term cut odds; 15% from 218AGGUXB; 60% from OGK8WLL69; 40% from EPJYXB7DX), with in‑text IDs after the facts that rely on them. Remove all “Long” lines and keep time windows aligned (0–3 weeks and 3–6 months). Ground every numerical claim in the sources and tie ETH/BTC levels to a single regime anchor (e.g., OGK8WLL69 or NL5YYTLF2) to avoid cross‑source contradiction; clearly state a single base regime (Regime I: Tight/High Real Rates moving toward data‑dependent easing) with explicit triggers and invalidation points for regime shifts (inflation near target, easing misstep, or regulatory/institutional shocks). For the Trade/Outlook Plan, if the asset is tradable, deliver 1–2 Swing Trade lines using the required fields (Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence); otherwise present a concise Outlook line with explicit levels and signals, ensuring it references only material from the provided IDs. Tighten the “What to watch” to concrete, observable triggers (policy tone at Jackson Hole, ETF/treasury flows, regulator milestones, crypto inflows, price anchors around 4,955/124,496) and reconcile any conflicting source signals by citing the base case and listing notable divergences with their probabilities. Finally, prune speculative macro prose, compress the narrative into a precise, first‑principles cascade (policy → discount rates → crypto valuation → liquidity) and ensure each critical source is covered and reconciled.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756087171"
+}

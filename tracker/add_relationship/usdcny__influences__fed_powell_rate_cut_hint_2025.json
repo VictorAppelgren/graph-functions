@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T17:34:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usdcny",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "US dollar strength against the CNY signals US economic conditions that Fed Powell uses to assess the timing of a rate cut, making a direct influence link to the 2025 rate cut hint valuable.",
+    "candidate_motivation": "USD/CNY is driven by US monetary policy, dollar strength, and China’s trade and credit conditions. The listed topics directly affect either side of the pair or the relative risk‑premium that feeds the cross‑rate.",
+    "existing_links_count": "17",
+    "candidate_count": "19",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdjpy', 'gbpusd', 'eurusd', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1249749996106941312",
+    "rel_id": "usdcny__influences__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US dollar strength against the CNY signals US economic conditions that Fed Powell uses to assess the timing of a rate cut, making a direct influence link to the 2025 rate cut hint valuable.",
+      "type": "INFLUENCES",
+      "source": "usdcny",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdcny__influences__fed_powell_rate_cut_hint_2025"
+}

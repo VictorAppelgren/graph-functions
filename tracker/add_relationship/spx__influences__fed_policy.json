@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T05:18:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "spx",
+    "target_id": "fed_policy",
+    "selection_motivation": "Fed policy decisions directly shape corporate earnings, risk appetite, and equity valuations, making it a primary driver of the S&P 500.",
+    "candidate_motivation": "S&P 500 is a core equity index, so its performance is driven by macro‑financial variables, other major indices, and commodity prices that influence corporate earnings. Topics that directly affect risk appetite, corporate valuation, or sector weighting are the most likely influences, correlates, or peers.",
+    "existing_links_count": "21",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_services_pmi', 'us_unemployment_claims', 'sx5e', 'euro_inflation', 'ecb_policy', 'gold', 'copper', 'wti', 'brent', 'oil_price_decline', 'dxy']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:15",
+    "rel_id": "spx__influences__fed_policy",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy decisions directly shape corporate earnings, risk appetite, and equity valuations, making it a primary driver of the S&P 500.",
+      "type": "INFLUENCES",
+      "source": "spx",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__influences__fed_policy"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T22:37:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "brent",
+    "target_id": "spx",
+    "selection_motivation": "Brent crude price movements materially affect equity valuations through energy costs, corporate earnings, and risk sentiment, making it a primary driver of the S&P 500.",
+    "candidate_motivation": "Brent Crude Oil is a global commodity whose price is shaped by supply‑demand fundamentals, currency movements, macro‑economic indicators, and interest‑rate dynamics. Therefore topics that directly influence oil prices, are correlated commodities, or reflect key macro drivers are plausible influences, correlates, or peers.",
+    "existing_links_count": "12",
+    "candidate_count": "25",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['wti', 'dxy', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'sofr', 'gold', 'copper', 'wheat', 'usdcny', 'eurusd', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'us_unemployment_claims', 'spx', 'sx5e']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1191203200951126172",
+    "rel_id": "brent__influences__spx",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Brent crude price movements materially affect equity valuations through energy costs, corporate earnings, and risk sentiment, making it a primary driver of the S&P 500.",
+      "type": "INFLUENCES",
+      "source": "brent",
+      "target": "spx"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__influences__spx"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T05:01:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "usdjpy",
+    "selection_motivation": "ECB policy shifts directly affect the USD/JPY pair through relative monetary stance and carry trade flows, making it a primary driver of the pair.",
+    "candidate_motivation": "USD/JPY is a cross‑currency pair that is highly sensitive to the relative strength of the USD versus the JPY.  Therefore any factor that moves the USD (Fed policy, US macro fundamentals, US Treasury yields, the USD index) or the JPY (Japanese yields or BOJ policy) will strongly influence the pair, making those topics the most relevant peers or influences.",
+    "existing_links_count": "13",
+    "candidate_count": "17",
+    "all_nodes_count": "41",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_unemployment_claims', 'us_services_pmi', 'usdcny', 'gbpusd', 'euro_inflation', 'ecb_policy', 'jgb10y', 'dxy']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882699694",
+    "rel_id": "ecb_policy__influences__usdjpy",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy shifts directly affect the USD/JPY pair through relative monetary stance and carry trade flows, making it a primary driver of the pair.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "usdjpy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__usdjpy"
+}

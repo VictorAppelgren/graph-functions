@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T05:18:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "bund10y",
+    "target_id": "gilt10y",
+    "selection_motivation": "Bund10y and gilt10y are highly correlated sovereign yields that move together in response to global risk appetite and liquidity conditions; linking them captures cross‑market co‑movement.",
+    "candidate_motivation": "German 10Y Bund Yield is tightly linked to ECB policy, Euro‑area inflation, and German economic fundamentals, while it moves in tandem with other sovereign yields (US, UK, Japan) and global risk sentiment reflected in US Treasury yields, the US dollar index, and equity indices. These topics are the most likely strong peers or influences.",
+    "existing_links_count": "7",
+    "candidate_count": "16",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'gilt10y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'us_inflation', 'us_core_pce', 'dxy', 'eurusd', 'sx5e', 'fed_powell_rate_cut_hint_2025', 'gold']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257474273",
+    "rel_id": "bund10y__correlates_with__gilt10y",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund10y and gilt10y are highly correlated sovereign yields that move together in response to global risk appetite and liquidity conditions; linking them captures cross‑market co‑movement.",
+      "type": "CORRELATES_WITH",
+      "source": "bund10y",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__correlates_with__gilt10y"
+}

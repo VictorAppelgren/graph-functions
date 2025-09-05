@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T06:30:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "QHRRLCRDE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and a 25‑basis‑point rate cut hint in September influence US Treasury yields and market expectations.",
+      "existing_ids": [
+        "fed_policy",
+        "fed_powell_rate_cut_hint_2025"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The article discusses political pressure on the Federal Reserve and mentions a potential 25‑basis‑point rate cut, which is a central bank action."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided, so the impact on any specific market handle cannot be assessed."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on immediate legal disputes involving a Fed board member and the Fed’s near‑term policy stance, directly affecting current market sentiment."
+    },
+    "article_node": {
+      "id": "QHRRLCRDE",
+      "title": "Fed Governor Lisa Cook 'did not ever commit mortgage fraud,' attorneys say",
+      "summary": "Lisa Cook's attorneys deny mortgage fraud allegations and argue that President Trump lacks the authority to remove her from the Federal Reserve. They claim Cook was denied due process and that the alleged inconsistencies were disclosed during her confirmation. Trump has been pressuring the Fed to lower rates, but the Fed remains steady, with Fed Chair Jerome Powell hinting at a potential 25‑basis‑point cut in September.",
+      "source": "https://www.businessinsider.com/lisa-cook-fed-governor-mortgage-fraud-allegations-attorneys-response-2025-9",
+      "published_at": "2025-09-03T02:48:52+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "QHRRLCRDE"
+}

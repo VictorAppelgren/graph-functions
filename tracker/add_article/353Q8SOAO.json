@@ -1,0 +1,37 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T00:10:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "353Q8SOAO",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Burry’s contrarian bets on UnitedHealth and Lululemon signal potential upside for large-cap healthcare and apparel stocks amid inflationary pressures.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": [
+        "UnitedHealth Group"
+      ]
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article discusses UnitedHealth Group and Lululemon’s earnings outlook and quarterly results, which is an earnings event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers relevant to the company, focusing on fundamentals and a long‑term upside outlook."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 1
+    }
+  },
+  "id": "353Q8SOAO"
+}

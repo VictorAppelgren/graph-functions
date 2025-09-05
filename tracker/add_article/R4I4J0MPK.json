@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T04:19:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "R4I4J0MPK",
+    "status": "success",
+    "topic_id": "us_urban_crime"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights a local incident involving police intervention and community concerns, which aligns with existing discussions on urban crime dynamics.",
+      "existing_node_ids": "us_urban_crime",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses urban crime trends and their implications, which do not fit into the specified categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses urban crime trends and their implications on public safety and policy, which directly relates to the node on US urban crime."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and factors influencing urban crime rates, suggesting a longer-term perspective."
+    },
+    "article_node": {
+      "id": "R4I4J0MPK",
+      "title": "A man blaring a train alarm torments L.A. neighborhood. Then he was arrested",
+      "summary": "In Van Nuys, Los Angeles, police arrested Gary Boyadzhayan, a man who had been disturbing his neighborhood with loud train horns attached to a tree in his backyard. Neighbors expressed concern for his well-being, describing the situation as a 'cry for help' amid ongoing complaints about the noise. Boyadzhayan was taken into custody for disturbing the peace and interfering with a peace officer, but was released shortly after. The LAPD is working to address the noise issue while also seeking to provide assistance to Boyadzhayan.",
+      "source": "https://www.latimes.com/california/story/2025-08-14/relentless-train-horn-torments-l-a-neighborhood-man-behind-it-says-its-a-cry-for-help",
+      "published_at": "2025-08-15T01:16:08.171000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "R4I4J0MPK"
+}

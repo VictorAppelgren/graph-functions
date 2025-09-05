@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:30:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "core_monthly_cpi",
+    "target_id": "cpi_impact_on_treasuries",
+    "selection_motivation": "Core Monthly CPI directly drives the CPI Impact on Treasuries node, which aggregates how inflation readings translate into Treasury yield movements, a critical input for fixed‑income valuation and risk modeling.",
+    "candidate_motivation": "These topics are the most likely strong influences or peers of Core Monthly CPI, given their direct linkage to inflation dynamics, monetary policy, and macro indicators that drive price changes.",
+    "existing_links_count": "3",
+    "candidate_count": "15",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'core_cpi', 'us_inflation_data', 'us_inflation_expectations', 'fed_policy', 'ecb_policy', 'us_10y', 'us_tariffs_semiconductors', 'tariff_driven_inflation', 'us_tariffs_on_technology', 'us_inflation_stock_impact', 'usd', 'eur', 'cpi_impact_on_treasuries']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082151",
+    "rel_id": "core_monthly_cpi__influences__cpi_impact_on_treasuries",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Core Monthly CPI directly drives the CPI Impact on Treasuries node, which aggregates how inflation readings translate into Treasury yield movements, a critical input for fixed‑income valuation and risk modeling.",
+      "type": "INFLUENCES",
+      "source": "core_monthly_cpi",
+      "target": "cpi_impact_on_treasuries"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "core_monthly_cpi__influences__cpi_impact_on_treasuries"
+}

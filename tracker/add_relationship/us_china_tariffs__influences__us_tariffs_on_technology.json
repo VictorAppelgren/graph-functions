@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T14:25:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_tariffs",
+    "target_id": "us_tariffs_on_technology",
+    "selection_motivation": "US-China tariffs directly target technology imports and exports, making them a primary driver of US tariffs on technology.",
+    "candidate_motivation": "The selected topics are closely related to trade policies and economic impacts, making them strong influences or correlates to the US-China Tariffs. They reflect the broader implications of tariffs on inflation, trade relations, and specific sectors affected by such policies.",
+    "existing_links_count": "8",
+    "candidate_count": "10",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'us_trade_policy_inflation', 'us_china_trade_relations', 'us_china_trade_talks', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_war_2025', 'us_china_tariff_truce', 'us_tariff_hikes_indian_diamonds', 'us_tariff_inflation']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_india_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627957156",
+    "rel_id": "us_china_tariffs__influences__us_tariffs_on_technology",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_india_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China tariffs directly target technology imports and exports, making them a primary driver of US tariffs on technology.",
+      "type": "INFLUENCES",
+      "source": "us_china_tariffs",
+      "target": "us_tariffs_on_technology"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_tariffs__influences__us_tariffs_on_technology"
+}

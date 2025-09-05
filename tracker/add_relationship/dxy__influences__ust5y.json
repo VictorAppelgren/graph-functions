@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T15:58:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dxy",
+    "target_id": "ust5y",
+    "selection_motivation": "The US dollar index exerts a systematic influence on the shape of the US Treasury yield curve; a stronger dollar compresses yields, especially around the 5‑year tenor, making DXY a key driver of ust5y movements.",
+    "candidate_motivation": "The US Dollar Index is driven by US monetary policy, Treasury yields, inflation and core PCE data, employment indicators, cross‑currency rates, commodity prices, and global risk sentiment. Therefore the most plausible influences, correlates, or peers are topics that directly affect any of these drivers.",
+    "existing_links_count": "20",
+    "candidate_count": "32",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "32",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'euro_inflation', 'ecb_policy', 'wti', 'brent', 'gold', 'copper', 'oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'spx', 'sx5e', 'sofr', 'euribor']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:10",
+    "rel_id": "dxy__influences__ust5y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The US dollar index exerts a systematic influence on the shape of the US Treasury yield curve; a stronger dollar compresses yields, especially around the 5‑year tenor, making DXY a key driver of ust5y movements.",
+      "type": "INFLUENCES",
+      "source": "dxy",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__influences__ust5y"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:50:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AV46XGQK2",
+    "status": "success",
+    "topic_id": "us_urban_crime"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses a police shooting incident, which relates to urban crime dynamics and law enforcement issues, making it relevant to the existing U.S. Urban Crime Dynamics node.",
+      "existing_node_ids": "us_urban_crime",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses urban crime trends and their implications on the economy, which can be considered a macroeconomic event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses trends in urban crime rates, which directly relates to the node on US urban crime."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and patterns in urban crime, suggesting a longer-term perspective on the factors influencing crime rates."
+    },
+    "article_node": {
+      "id": "AV46XGQK2",
+      "title": "Centralia police shoot, injure man police say fired at officers",
+      "summary": "A Centralia police officer shot and injured a man who allegedly pointed a gun at a train crew and fired at officers during a confrontation in Chehalis. The incident began when police attempted to contact the suspect, who fled and shot at officers before being apprehended. Despite attempts to use less-lethal measures, the situation escalated, leading to the officer's use of a firearm. The suspect was taken to a hospital for treatment, and an investigation into the shooting is being conducted by the Washington State Patrol.",
+      "source": "https://www.seattletimes.com/seattle-news/law-justice/centralia-police-shoot-injure-man-police-say-fired-at-officers/",
+      "published_at": "2025-08-14T16:49:22-07:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "AV46XGQK2"
+}

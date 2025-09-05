@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-04T14:20:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "gbpusd",
+    "selection_motivation": "The influence of UK 10‑year gilt yield on GBPUSD is indirect and less robust compared to its impact on other yields and Fed policy, making it the weakest link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The influence of UK 10‑year gilt yield on GBPUSD is indirect and less robust compared to its impact on other yields and Fed policy, making it the weakest link.",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118476292",
+    "rel_id": "gilt10y__influences__gbpusd",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "gbpusd"
+    },
+    "prioritized_link": {
+      "motivation": "UK 10‑year gilt yield is a key benchmark for global rates; its level and slope shape market expectations of future Fed rate cuts, directly influencing the probability of a Fed rate cut on 17 Sept 2025.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "llm_raw_response": {
+      "motivation": "The influence of UK 10‑year gilt yield on GBPUSD is indirect and less robust compared to its impact on other yields and Fed policy, making it the weakest link.",
+      "remove_link": "gbpusd"
+    },
+    "removal_decision": {
+      "motivation": "The influence of UK 10‑year gilt yield on GBPUSD is indirect and less robust compared to its impact on other yields and Fed policy, making it the weakest link.",
+      "remove_link": "gbpusd"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(UK 10Y Gilt OR UK 10-year Gilt OR UK 10-year gilt OR UK 10Y gilt OR UK 10-year gilt yield OR UK 10Y gilt yield OR UK gilt yield OR UK gilt yields OR UK 10-year yield OR UK 10Y yield OR UK 10-year OR UK 10Y OR UK 10 year OR 10Y UK OR 10-year UK OR 10 year UK OR 10Y OR 10-year OR 10 year) OR (Gilt OR Gilt yield OR Gilt yields OR UK Treasury OR UK Treasury yield OR UK Treasury yields OR UK government bond OR UK government bond yield OR UK sovereign debt OR UK sovereign bond OR UK sovereign bond yield) OR (yield OR yield rate OR yield curve OR bond yield OR government bond yield OR sovereign yield) OR (news OR analysis OR report OR update OR market OR trend OR outlook OR forecast OR movement OR volatility OR change OR shift OR impact)",
+      "name": "UK 10Y Gilt Yield",
+      "id": "gilt10y",
+      "last_queried": "2025-09-03T15:31:50.299000000+00:00",
+      "queries": 6
+    }
+  },
+  "id": "gilt10y__influences__gbpusd"
+}

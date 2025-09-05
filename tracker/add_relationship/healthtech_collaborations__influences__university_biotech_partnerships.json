@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:31:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "healthtech_collaborations",
+    "target_id": "university_biotech_partnerships",
+    "selection_motivation": "Healthtech collaborations often serve as catalysts for university–biotech partnerships, accelerating joint R&D and commercialization pipelines.",
+    "candidate_motivation": "These topics are the most plausible direct influences or peers to Healthtech Collaborations, spanning digital health market dynamics, medical device technologies, AI-enabled healthcare, and academic/biotech partnerships that commonly underpin collaboration efforts.",
+    "existing_links_count": "3",
+    "candidate_count": "7",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['digital_health_market', 'medical_digital_twins', 'university_biotech_partnerships', 'ai_healthcare_advice', 'neuropace_epilepsy', 'pulse_biosciences_nsPFA', 'utilities_healthcare_performance']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'medical_digital_twins'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'ai_healthcare_advice'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'digital_health_market'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559532735",
+    "rel_id": "healthtech_collaborations__influences__university_biotech_partnerships",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'medical_digital_twins'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'ai_healthcare_advice'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'university_biotech_partnerships'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'digital_health_market'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Healthtech collaborations often serve as catalysts for university–biotech partnerships, accelerating joint R&D and commercialization pipelines.",
+      "type": "INFLUENCES",
+      "source": "healthtech_collaborations",
+      "target": "university_biotech_partnerships"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "healthtech_collaborations__influences__university_biotech_partnerships"
+}

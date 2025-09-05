@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T17:49:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "8E5QMHLIH",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['HE99QDK4J', '261HLL6EA', 'YX2X8JAIX', 'XQWTVR71K', '19NO2GMNF', 'QGXA2WQJ3', 'NBX9RA9WX', 'XB5ZRN1VP', '6U8VYS7BA']",
+    "mode": "MUST_REPLACE",
+    "target_id": "6U8VYS7BA",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "6U8VYS7BA",
+      "motivation": "The new Skiathos article overlaps with existing travel content and the competing timeframe bucket is at capacity, so removing an older, lower-signal item will free capacity for higher-value analytics."
+    }
+  },
+  "id": "sp500__8E5QMHLIH__current"
+}

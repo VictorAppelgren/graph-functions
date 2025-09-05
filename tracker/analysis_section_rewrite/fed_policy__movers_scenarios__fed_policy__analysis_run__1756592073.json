@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:28:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756592073",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5896",
+    "output_chars": "719",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly identifies key catalysts (July CPI, Fed meeting) and links them to DXY and SPX moves, but it suffers from vague probability framing, missing quantitative ranges for the equity discount effect, and insufficient causal depth for the tariff‑related risk premium. Tighten the DXY items by specifying the exact yield‑to‑dollar transmission (e.g., “Fed holds rates if CPI < 2.5% → 10‑yr yield stays > 4.20% → DXY up 0.2‑0.4%” with (us_core_cpi)(fed_policy)(XTQIQRP5K)(3YAQ8JUPL)). For the Fed‑cut scenario, replace the generic “compress equity discount” with the 30‑bp equity‑discount lift and 3‑5% SPX upside, citing (Z7O1DCHS7)(B1KYJ1GPU)(97MD1FHW8). Add the 2‑yr/10‑yr spread threshold (57 bp) as a trigger, and include the 200‑bp DXY drop range. For the sticky‑inflation case, quantify the 5‑10% SPX decline and 5‑10 bps yield rise, citing (FAN5RYW6T)(Z7O1DCHS7). Finally, adjust probabilities to reflect the asymmetric evidence: assign 60% to the Fed‑cut upside (given the 25‑bp cut signal) and 40% to the sticky‑inflation downside, and include a 30‑bp spread‑widening trigger for the upside. Ensure each line contains a single causal chain, a clear magnitude range, a catalyst window, and a probability, all backed by IDs.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756592073"
+}

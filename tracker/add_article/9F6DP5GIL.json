@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T17:46:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9F6DP5GIL",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates, FX, equities; US inflation, tariff risk and Apple event influence yields, currency, and tech indices.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "dxy",
+        "spx",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Apple confirming its iPhone 17 launch event and product details, which constitutes a company update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article announces a major upcoming product launch for Apple, which can materially affect Apple’s valuation and related tech equity indices, but the impact is not yet realized, so it is a moderate influence."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an imminent Apple launch event scheduled for September 9, 2025, which is expected to influence UST yields, the DXY, and tech equity indices in the coming weeks."
+    },
+    "article_node": {
+      "id": "9F6DP5GIL",
+      "title": "iPhone 17 rumors, prices, new features and everything else you need to know before the September 9 Apple event",
+      "summary": "Apple has confirmed its iPhone 17 launch event for September 9, 2025, with rumors pointing to a new ultra‑thin iPhone 17 Air, a titanium‑framed model, and a 48‑MP camera on the Pro line. Speculation includes a $50 price hike across the lineup, a shift to 256 GB base storage, and a single‑camera Air variant with a 2,800 mAh battery. The event is expected to unveil iOS 26, featuring a Liquid Glass design, live translation, and Visual Intelligence, while Apple may also reveal new Apple Watch and AirPods models. These developments are likely to influence UST yields, the DXY, and tech equity indices in the coming weeks as investors weigh pricing and supply‑chain shifts amid U.S. tariff concerns.",
+      "source": "https://www.engadget.com/mobile/smartphones/iphone-17-rumors-prices-new-features-and-everything-else-you-need-to-know-before-the-september-9-apple-event-153024206.html",
+      "published_at": "2025-08-30T12:45:36+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "9F6DP5GIL"
+}

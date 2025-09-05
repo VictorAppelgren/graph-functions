@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T11:48:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "spx",
+    "target_id": "ust5y",
+    "selection_motivation": "S&P 500 and short‑term Treasury yields move together, reflecting shared risk‑appetite dynamics; the 5‑year tenor is a key indicator of short‑term funding conditions.",
+    "candidate_motivation": "The S&P 500 is a broad equity index whose performance is strongly driven by macro‑financial conditions, monetary policy, and commodity prices. Topics that directly influence investor sentiment, risk appetite, or valuation multiples—such as U.S. Treasury yields, Fed policy signals, inflation and employment data, major commodity prices, and key international equity indices—are therefore the most plausible peers or influencers.",
+    "existing_links_count": "21",
+    "candidate_count": "25",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'sx5e', 'euro_inflation', 'ecb_policy', 'dxy', 'usdjpy', 'gbpusd', 'eurusd', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1391614483880740873",
+    "rel_id": "spx__correlates_with__ust5y",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "S&P 500 and short‑term Treasury yields move together, reflecting shared risk‑appetite dynamics; the 5‑year tenor is a key indicator of short‑term funding conditions.",
+      "type": "CORRELATES_WITH",
+      "source": "spx",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__correlates_with__ust5y"
+}

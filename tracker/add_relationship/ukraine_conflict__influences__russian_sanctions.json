@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:38:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_conflict",
+    "target_id": "russian_sanctions",
+    "selection_motivation": "The Ukraine Conflict directly triggered the imposition of Russian sanctions, making it a primary driver of that policy response.",
+    "candidate_motivation": "These Ukraine-focused geopolitical, diplomatic, and sanctions topics are the most plausible direct influences, correlates, or peers of the Ukraine Conflict due to their immediate relevance to regional security and international policy responses. They capture the broader spillover effects on energy, markets, and global risk sentiment.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ukraine_post_war_instability', 'ukraine_sovereignty', 'ukraine_diplomacy', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'eu_us_relations_ukraine', 'donbas_region', 'russian_sanctions', 'russia_economic_crisis']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216939",
+    "rel_id": "ukraine_conflict__influences__russian_sanctions",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ukraine Conflict directly triggered the imposition of Russian sanctions, making it a primary driver of that policy response.",
+      "type": "INFLUENCES",
+      "source": "ukraine_conflict",
+      "target": "russian_sanctions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_conflict__influences__russian_sanctions"
+}

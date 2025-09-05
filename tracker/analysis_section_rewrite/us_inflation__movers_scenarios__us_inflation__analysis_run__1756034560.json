@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:30:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756034560",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18396",
+    "output_chars": "1917",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 months | Cloud/AI capex sustaining durable platform moats and cash-flow, anchored by Azure growth (~39% YoY) and Microsoft contracted revenue (~$368B); Shopify H1 2025 metrics illustrate AI-enabled platform economics | Watch for continued earnings momentum in Shopify and Microsoft, margin expansion from operating leverage, and potential multiple expansion if moat durability holds and AI productivity gains broaden ecosystem monetization | 62% (0G3A676BP)(QFDWCTAYB)\nUp | 3–6 months | Bull case hinges on persistent cloud/AI adoption and monetization of ecosystems, anchored by Shopify’s platform economics (GMV growth and margin recovery) and Microsoft cloud trajectory, with governance signals from Just Capital showing Workers Leaders well above Russell 1000 | Watch for sustained GMV growth, margin improvement, and stronger cash generation as private-market capital remains supportive and policy easing reduces discount rates, potentially lifting multiples | 68% (QFDWCTAYB)(0G3A676BP)(4LQD15CFU)\nDown | 0–3 months | Bear case centers on a multi‑quarter GMV slowdown or margin pressure that would compress valuations, with SFN drag risk resurfacing and macro conditions keeping risk premia elevated | Watch for meaningful, sustained GMV deceleration or margin compression and tighter private-market liquidity that could slow deal activity, with a slower private-credit backdrop reinforcing the downside | 40% (QFDWCTAYB)(TN66GHPAT)\nDown | 3–6 months | Bear scenario intensifies if policy easing is delayed, oil prices spike, or tariff tensions reprice risk, compressing long-duration tech cash flows and private-market valuations; cross-border frictions threaten supply chains | Watch for rate surprises around the 4% yield zone, sustained IEA oil-paths around 2.5 mbpd supply growth, and tariff-truce dynamics that could reprice growth and financing conditions, with IBM productivity proxies (4LQD15CFU) offering a gauge on long-term output | 35% (GX057ADL7)(J99EM2TPZ)(RHXDOHQQX)(4LQD15CFU)",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756034560"
+}

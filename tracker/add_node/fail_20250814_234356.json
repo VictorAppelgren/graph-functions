@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T23:43:28",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3HAA2OQIE",
+    "status": "rejected",
+    "reject_category": "macro_health",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the conflict between state and federal cannabis laws, particularly in Minnesota, which is crucial for understanding the regulatory landscape affecting cannabis investments and market dynamics.",
+      "id": "mn_cannabis_regulation",
+      "name": "Minnesota Cannabis Regulation",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_health",
+      "motivation": "Local incident, death of 80-year-old woman."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "State-level cannabis regulation is an industry-specific policy, not a macro driver or broad regulatory regime affecting markets.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

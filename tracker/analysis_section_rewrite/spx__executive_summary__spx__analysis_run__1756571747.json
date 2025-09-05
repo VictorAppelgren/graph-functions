@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T19:04:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756571747",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7368",
+    "output_chars": "718",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is entirely focused on Tesla, a non‑canonical ticker, so it violates the “no handle mapping” rule and the macro‑scale requirement.  Remove all Tesla‑specific language and re‑frame the brief around a canonical handle (e.g., spx, ndx, dxy, ust10y).  For each claim, attach a clear sign (+/-), a quantitative range (bp or %), a catalyst window (e.g., Sept 5 payrolls, Fed meeting 16‑17 Sept), and a causal path to the chosen handle.  Ensure every sentence ends with an inline citation ID that matches the source material.  The final brief should be 4–6 concise bullet points, each linking a catalyst to a directional move in the chosen handle.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756571747"
+}

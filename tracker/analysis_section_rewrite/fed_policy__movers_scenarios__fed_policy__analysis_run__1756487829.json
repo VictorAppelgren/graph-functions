@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T19:27:41",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756487829",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5884",
+    "output_chars": "813",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft misses a key legal‑risk driver (ICJ opinion → ust10y ↑ → spx ↓, dxy ↑, gold ↑) and the COP30 catalyst window; add a Down item for spx with a 1‑2 % range and 35 % probability tied to COP30 outcomes. Tighten the Fed‑cut Up item to 0.5‑1 % (≈ +30‑60 pts) with a 90 % probability for the Sept 16‑17 FOMC (D0R3LX8F7)(XHDE9MSFQ). Merge the “Fed hawkish stance or tariff” Down item into a single 1‑2 % downside with 50 % probability, citing tariff announcement (VDO8D9T7M) and Fed policy (D0R3LX8F7). For tokenization, state a 0.3‑1 % upside with 60 % probability, linking to tokenized trade volume growth (XQMF22EFB). For stablecoin fragmentation, specify a –0.2 to –0.4 % downside with 40 % probability, citing stablecoin fee spikes (XQMF22EFB). Ensure each line maps to a canonical handle (spx, ust10y, dxy, gold) and includes a clear causal chain and catalyst window. Add inline IDs for every factual claim, avoid generic wording, and keep each line to one sentence.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756487829"
+}

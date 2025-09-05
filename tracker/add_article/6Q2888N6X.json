@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T22:41:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6Q2888N6X",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Florida's repeal of vaccine mandates under Dr. Ladapo signals a shift in state public health policy, potentially easing regulatory constraints on private businesses and influencing broader U.S. discussions on mandates and public health compliance.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a policy decision by Florida's surgeon general to eliminate vaccine mandates, which is a policy statement."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article concerns a local policy change in Florida with no macro or canonical handle mapping, so it is not relevant to the node's scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate policy change in Florida regarding vaccine mandates, which is a current event affecting public health and disease incidence."
+    },
+    "article_node": {
+      "id": "6Q2888N6X",
+      "title": "Who is Dr. Joseph Ladapo? Florida's surgeon general ending state vaccine requirements",
+      "summary": "Florida’s surgeon general, Dr. Joseph Ladapo, announced the state’s decision to eliminate all vaccine mandates, including those for school attendance, sparking strong opposition from major medical groups who warn of rising preventable disease outbreaks. The move follows a decline in Florida’s vaccination rates and a surge in illnesses such as whooping cough and measles. Ladapo’s stance aligns with Governor Ron DeSantis’s broader anti‑mandate agenda, but has drawn criticism for undermining public health progress and potentially increasing community risk.",
+      "source": "https://www.usatoday.com/story/news/politics/2025/09/04/who-is-joseph-ladapo-florida-ending-vaccine-requirements/85978109007/",
+      "published_at": "2025-09-04T19:34:00+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "6Q2888N6X"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T15:22:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZZKMI48VA",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Napco Security Technologies' earnings report and analyst revisions influence stock performance and investor sentiment.",
+      "existing_ids": [
+        "us_stock_buybacks"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports on Napco Security Technologies' upcoming fourth-quarter earnings release, which is a company earnings event."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports upcoming financial results, CEO award, and stock movement for Napco, directly affecting the company's node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on the upcoming quarterly earnings release and immediate market reactions, which are short-term events affecting the company."
+    },
+    "article_node": {
+      "id": "ZZKMI48VA",
+      "title": "Napco Security Technologies Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call - NAPCO Security Techs (NASDAQ:NSSC)",
+      "summary": "Napco Security Technologies, Inc. is set to release its fourth-quarter financial results on August 25, with analysts predicting earnings of 26 cents per share and revenue of $44.45 million, both lower than the previous year. CEO Richard Soloway has been recognized as a 2025 Security Innovator by Security Business magazine. Recently, Napco's stock rose by 0.7% to close at $30.39, with various analysts maintaining buy ratings while adjusting price targets.",
+      "source": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/47279472/napco-security-technologies-earnings-are-imminent-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call",
+      "published_at": "2025-08-22T08:20:13-04:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "ZZKMI48VA"
+}

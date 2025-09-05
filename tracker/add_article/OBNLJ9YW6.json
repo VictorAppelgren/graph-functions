@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:25:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OBNLJ9YW6",
+    "topic_discovery_motivation": "Article discusses the public scrutiny of Prince Harry and Meghan Markle's privacy claims, which relates to broader themes of media influence and public perception, but lacks direct connections to existing nodes.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "media_influence",
+        "public_perception",
+        "royal_family_privacy_claims"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses nothing relevant to the defined categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "I'm not certain which node this article refers to, but if it concerns the Royal Family or Prince Harry/Meghan Markle, it has high impact on that node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent events (the Oprah interview and privacy claims) that directly affect the Royal Family's public profile."
+    },
+    "article_node": {
+      "id": "OBNLJ9YW6",
+      "title": "Inside Meghan's desire for 'world fame' and 'privacy' - royal author",
+      "summary": "Prince Harry and Meghan Markle's claims for privacy after stepping down as working royals have been scrutinized, particularly following their high-profile interview with Oprah Winfrey where they made serious allegations against the Royal Family. Critics, including former royal editor Tim Ewart, argue that in today's world, where everyone has a smartphone, the couple cannot realistically expect privacy. Ewart emphasized that the couple's desire for privacy contradicts their public engagements and the scrutiny that comes with royal status.",
+      "source": "https://www.dailymail.co.uk/news/royals/article-15003781/Meghan-Markle-world-fame-privacy-desires-massively-backfired-royal-author.html",
+      "published_at": "2025-08-22T07:19:28+01:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "OBNLJ9YW6"
+}

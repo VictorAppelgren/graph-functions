@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:34:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "healthtech_collaborations",
+    "target_id": "neuroglee_mayo_partnership",
+    "selection_motivation": "Healthtech collaborations directly drive the formation of high‑profile partnerships such as Neuroglee and Mayo Clinic, making this link critical for understanding collaboration dynamics and partnership outcomes.",
+    "candidate_motivation": "These topics represent adjacent healthtech ecosystems—markets, AI-enabled care, and active collaborations—that are most likely to influence or mirror Healthtech Collaborations through partnerships, adoption, and innovative medical technologies.",
+    "existing_links_count": "5",
+    "candidate_count": "6",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['digital_health_market', 'ai_healthcare_advice', 'neuropace_epilepsy', 'neuroglee_mayo_partnership', 'medical_digital_twins', 'university_biotech_partnerships']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'medical_digital_twins'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'ai_healthcare_advice'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'university_biotech_partnerships'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'digital_health_market'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966398449",
+    "rel_id": "healthtech_collaborations__influences__neuroglee_mayo_partnership",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'medical_digital_twins'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'ai_healthcare_advice'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'university_biotech_partnerships'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'digital_health_market'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'neuroglee_mayo_partnership'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Healthtech collaborations directly drive the formation of high‑profile partnerships such as Neuroglee and Mayo Clinic, making this link critical for understanding collaboration dynamics and partnership outcomes.",
+      "type": "INFLUENCES",
+      "source": "healthtech_collaborations",
+      "target": "neuroglee_mayo_partnership"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "healthtech_collaborations__influences__neuroglee_mayo_partnership"
+}

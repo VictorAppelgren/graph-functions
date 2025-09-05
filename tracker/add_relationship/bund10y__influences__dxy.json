@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T14:57:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "dxy",
+    "selection_motivation": "Bund yields drive the USD carry trade and risk‑sentiment flows, making the German 10Y Bund a key driver of the US Dollar Index (DXY).",
+    "candidate_motivation": "The German 10Y Bund Yield is a sovereign benchmark that moves in tandem with other long‑term yields, central‑bank policy, and euro‑area macro fundamentals. Therefore, topics that directly influence or are closely correlated with Bund rates—such as other sovereign yields, ECB policy, euro‑area inflation, and the euro equity market—are the most plausible peers or influences.",
+    "existing_links_count": "2",
+    "candidate_count": "13",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ust10y', 'gilt10y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'sx5e', 'us_inflation', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'fed_policy', 'sofr']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531745",
+    "rel_id": "bund10y__influences__dxy",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields drive the USD carry trade and risk‑sentiment flows, making the German 10Y Bund a key driver of the US Dollar Index (DXY).",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__dxy"
+}

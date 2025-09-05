@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T22:40:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "us_tariffs_brazil",
+    "selection_motivation": "Linking oil to US Tariffs on Brazil highlights the impact of oil prices on trade policies, which can significantly influence market dynamics and investment strategies.",
+    "candidate_motivation": "The selected topics are closely related to oil, either as commodities that are influenced by oil prices, economic indicators that correlate with oil market dynamics, or sectors that are directly impacted by oil supply and demand.",
+    "existing_links_count": "9",
+    "candidate_count": "19",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_inflation', 'gold', 'copper', 'wheat', 'usd', 'us_10y', 'stagflation', 'us_tariffs_brazil', 'us_china_tariffs', 'us_china_trade_relations', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_semiconductors', 'us_chip_export_controls', 'us_chip_sales_to_china', 'us_chip_trade_policy', 'us_china_chip_negotiations', 'us_china_trade_talks', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation_data'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586250",
+    "rel_id": "oil__influences__us_tariffs_brazil",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation_data'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking oil to US Tariffs on Brazil highlights the impact of oil prices on trade policies, which can significantly influence market dynamics and investment strategies.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "us_tariffs_brazil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__us_tariffs_brazil"
+}

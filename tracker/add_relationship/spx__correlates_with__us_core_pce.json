@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T00:03:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "spx",
+    "target_id": "us_core_pce",
+    "selection_motivation": "S&P 500 moves closely with US core PCE inflation expectations, providing a key macro driver link.",
+    "candidate_motivation": "S&P 500 is a U.S. equity index whose performance is driven by U.S. macro fundamentals, monetary policy, Treasury yields, the dollar, global equity peers, commodity prices, and major currency pairs that affect corporate earnings and investor sentiment. The listed topics are those that directly influence or correlate strongly with the index, or represent comparable benchmarks.",
+    "existing_links_count": "19",
+    "candidate_count": "29",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "29",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'dxy', 'sx5e', 'euro_inflation', 'ecb_policy', 'bund10y', 'gilt10y', 'jgb10y', 'wti', 'brent', 'gold', 'copper', 'wheat', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'fed_powell_rate_cut_hint_2025', 'china_exports', 'china_credit_impulse', 'india_industrial_output']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917531226664339626",
+    "rel_id": "spx__correlates_with__us_core_pce",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "S&P 500 moves closely with US core PCE inflation expectations, providing a key macro driver link.",
+      "type": "CORRELATES_WITH",
+      "source": "spx",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__correlates_with__us_core_pce"
+}

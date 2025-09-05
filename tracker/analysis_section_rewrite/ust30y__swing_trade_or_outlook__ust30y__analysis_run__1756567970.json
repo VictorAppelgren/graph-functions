@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:53:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust30y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust30y__analysis_run__1756567970",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "3372",
+    "output_chars": "802",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the 4‑line Up/Down format but lacks explicit canonical‑handle mapping, magnitude ranges, and evidence‑based probability justification. 1) For each Up/Down line, attach the driver to a canonical handle with a sign and a realistic range (e.g., “Tech earnings hold → spx +2 % to +5 %”). 2) Cite the evidence that drives the probability (e.g., 89 % chance of a 25‑bp Fed cut → 55 % down‑case probability). 3) Re‑frame the “Tariff easing” line to map to the tariff‑policy handle (us_tariff_policy) and give a 10 % probability based on the August 29‑31 tariff announcement. 4) The “Fed hike unexpectedly” line should map to fed_policy and give a 25 % probability tied to the 7XH2DKEKV scenario. 5) In the trade line, the Invalidation field must be the opposite of the trigger (Fed holds rates, tech earnings hold, inflation eases) and the Trigger must be the negative scenario (Q3 earnings weak, Fed cuts, CPI > 2.7 %). 6) Add a probability column (55 %) and confidence (70 %) derived from the 89 % Fed‑cut probability and the 55 % down‑case weight. 7) Ensure all IDs are inline (e.g., (FAN5RYW6T)(Z7O1DCHS7)) and that the entry/stop/target numbers are realistic for the 3‑6 mo horizon (Entry 4,200–4,250, Stop 4,250–4,300, Target 3,800–3,850). 8) Finally, remove any sentences that drift from the canonical handles or lack a causal link back to the asset.",
+      "tokens": {}
+    }
+  },
+  "id": "ust30y__swing_trade_or_outlook__ust30y__analysis_run__1756567970"
+}

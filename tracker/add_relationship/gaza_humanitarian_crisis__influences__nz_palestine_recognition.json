@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:41:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_humanitarian_crisis",
+    "target_id": "nz_palestine_recognition",
+    "selection_motivation": "The Gaza humanitarian crisis has directly pressured international actors, including New Zealand, to recognize Palestine, making the crisis a key driver of that diplomatic action.",
+    "candidate_motivation": "These topics are the strongest direct influencers or peers to the Gaza humanitarian crisis, spanning policy dynamics, journalist safety events, and information/misinformation influences around the conflict.",
+    "existing_links_count": "7",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['gaza_humanitarian_aid', 'gaza_journalist_killings', 'journalist_safety_gaza', 'journalist_assassinations_gaza', 'gaza_misinformation', 'disinformation_campaigns', 'nz_palestine_recognition']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_journalist_killings'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'disinformation_campaigns'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'journalist_safety_gaza'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_humanitarian_aid'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_misinformation'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'israeli_palestinian_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780081849",
+    "rel_id": "gaza_humanitarian_crisis__influences__nz_palestine_recognition",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_journalist_killings'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'disinformation_campaigns'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'nz_palestine_recognition'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'journalist_safety_gaza'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_humanitarian_aid'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_misinformation'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'israeli_palestinian_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Gaza humanitarian crisis has directly pressured international actors, including New Zealand, to recognize Palestine, making the crisis a key driver of that diplomatic action.",
+      "type": "INFLUENCES",
+      "source": "gaza_humanitarian_crisis",
+      "target": "nz_palestine_recognition"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gaza_humanitarian_crisis__influences__nz_palestine_recognition"
+}

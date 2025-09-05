@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T01:11:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dei_policy_changes",
+    "target_id": "intel_ceo_pressure",
+    "selection_motivation": "Linking DEI policies to political pressure on corporate leadership highlights the influence of social governance on corporate decision-making, which is crucial for understanding market dynamics.",
+    "candidate_motivation": "Changes in DEI Policies are likely to influence or correlate with topics related to corporate governance, social issues, and economic policies, particularly those that address diversity and inclusion in the workplace and society.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1612",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['corporate_culture_performance', 'political_influence_on_business', 'sustainability_reframing', 'federal_cannabis_policy', 'us_tariffs_pharmaceuticals_semiconductors', 'us_inflation_impact_on_stocks', 'us_tariff_policies', 'trans_equity', 'vaccine_misinformation_impact', 'intel_ceo_pressure']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dei_policy_changes', 'target': 'sustainability_reframing'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160206",
+    "rel_id": "dei_policy_changes__influences__intel_ceo_pressure",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dei_policy_changes', 'target': 'sustainability_reframing'}, {'type': 'INFLUENCES', 'source': 'dei_policy_changes', 'target': 'intel_ceo_pressure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking DEI policies to political pressure on corporate leadership highlights the influence of social governance on corporate decision-making, which is crucial for understanding market dynamics.",
+      "type": "INFLUENCES",
+      "source": "dei_policy_changes",
+      "target": "intel_ceo_pressure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dei_policy_changes__influences__intel_ceo_pressure"
+}

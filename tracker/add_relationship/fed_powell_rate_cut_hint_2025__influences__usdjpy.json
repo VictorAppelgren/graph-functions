@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T22:18:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_powell_rate_cut_hint_2025",
+    "target_id": "usdjpy",
+    "selection_motivation": "Fed rate cut hint signals a weaker USD, which is expected to push USD/JPY higher as investors seek the safe‑haven yen.",
+    "candidate_motivation": "The Fed Powell Rate Cut Hint directly signals expectations for U.S. monetary policy, so the most relevant peers or influences are topics that capture policy stance, inflation metrics, the U.S. yield curve, currency indices, and major equity indices.",
+    "existing_links_count": "6",
+    "candidate_count": "15",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'euro_inflation', 'ecb_policy']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627960511",
+    "rel_id": "fed_powell_rate_cut_hint_2025__influences__usdjpy",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed rate cut hint signals a weaker USD, which is expected to push USD/JPY higher as investors seek the safe‑haven yen.",
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "usdjpy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_powell_rate_cut_hint_2025__influences__usdjpy"
+}

@@ -1,0 +1,56 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T07:06:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "128BENV6R",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation and rates; Apple’s $50 price hike and tariff pressures are likely to lift US CPI by 0.5‑1.0% and push Fed policy toward tightening, boosting the DXY and UST10Y while weighing on the S&P 500.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy",
+        "dxy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "spx",
+        "sx5e",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Apple unveiling its iPhone 17 lineup, a company product launch, which fits the company_update category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a routine Apple iPhone launch with modest price increases, unlikely to materially influence macro market handles or key drivers; thus low impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific upcoming product launch scheduled for September 2025, which is an immediate event affecting Apple’s market position."
+    },
+    "article_node": {
+      "id": "128BENV6R",
+      "title": "The iPhone 17 event is likely in September: What to expect from Apple's upcoming launch",
+      "summary": "Apple is set to unveil its iPhone 17 lineup on September 9, 2025, with rumors of a new ultra‑thin iPhone 17 Air, an orange‑colored Pro and Pro Max, and a 50‑dollar price hike across the range. Leaks suggest the Air will feature a titanium frame, a single 48‑MP camera, and a 2,800 mAh battery, while the Pro models may switch to aluminum and include a larger camera island. The event is expected to coincide with the launch of new Apple Watch models, AirPods Pro 3, and an updated Apple TV, all slated for release in the fall. Apple’s pricing strategy may offset rising component costs and tariff pressures, potentially passing higher costs to consumers. The rumored color palette includes light blue, orange, and dark blue, with new Liquid Silicone cases also in development.",
+      "source": "https://www.engadget.com/mobile/smartphones/the-iphone-17-event-is-likely-in-september-what-to-expect-from-apples-upcoming-launch-153024626.html",
+      "published_at": "2025-08-25T21:15:32+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 10,
+      "successful": 10
+    }
+  },
+  "id": "128BENV6R"
+}

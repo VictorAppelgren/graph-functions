@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:55:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "02U9C0SVY",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant increase in electric scooter injuries, which is a critical macro driver affecting public health and safety regulations, warranting a dedicated node for analysis.",
+      "id": "e_scooter_injuries",
+      "name": "Electric Scooter Injuries",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Significant rise in electric scooter injuries influencing public health and safety policy"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Electric scooter injuries is a product‑specific operational issue, not a macro driver or policy regime that directly informs trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:28:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756088130",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18969",
+    "output_chars": "1373",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft is rich but too sprawling for a 4–6 sentence executive brief; compress into a single Regime A/B/C house view with a crisp causal chain (tariffs/policy credibility → capex localization → external balance → asset pricing) and explicit regime probabilities. Anchor the view with 2–3 numeric, source-backed levers (e.g., Ford EV margin/ROIC, Netflix FCF guidance, capex budgets, dividend yields) and clearly state baseline ranges (and tariff bands such as the 10% baseline with China-specific measures up to 125–145%) with IDs; recast Netflix/Ford as regime illustrations tied to the regime outcome rather than standalone case notes. Remove the dispersed 0–3 week and 3–6 month digressions in favor of a concise base-case narrative plus a 3–5 item watchlist with 2–3 catalysts and 2–3 explicit invalidation triggers, all mapped to Regime A/B/C and tied to the cited catalysts (tariff cadence, capex announcements, inflation surprises) and the Ford/Netflix signals. Tighten the prose to executive style, drop repetition, and ensure every factual claim cites a source ID and reconciles conflicts (e.g., differing forward P/E readings) across primary sources; ensure the final 4–6 sentences cover the horizon, catalysts, risks, and watch-items with complete core coverage of SGB2PAZGK, OGK8WLL69, Y6SQOEK69, 61SVFUKBY, A88B7V8PY, 65UUBU0OR, 22PL3Q360, S23W0Q0AW, RAV2UWRTT, Y4QWID79M, 4LDHF4T77, Z5IA1CYUF, T1QE6JPIX, J99EM2TPZ, STBVARD8F, and U3ZK13ZQI.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756088130"
+}

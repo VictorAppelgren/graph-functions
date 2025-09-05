@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T17:26:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust30y",
+    "target_id": "jgb10y",
+    "selection_motivation": "US 30Y Treasury yield is a global long‑term benchmark; its movements shape carry‑trade flows and risk sentiment, directly influencing Japanese 10Y JGB yields.",
+    "candidate_motivation": "US 30‑year Treasury yields are driven by monetary policy, inflation expectations, term‑structure dynamics, and cross‑asset carry. Topics that directly influence or correlate with the 30‑year yield include Fed policy signals, inflation data, other U.S. Treasury maturities, global benchmark yields, and major FX and commodity benchmarks that affect carry and risk‑off flows.",
+    "existing_links_count": "19",
+    "candidate_count": "22",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "22",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust2y', 'ust5y', 'dxy', 'usdcny', 'gbpusd', 'usdjpy', 'eurusd', 'euro_inflation', 'ecb_policy', 'bund10y', 'uk_30yr_gilt_yield', 'gilt10y', 'jgb10y', 'eur_at1_issuance']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6953558924171675509",
+    "rel_id": "ust30y__influences__jgb10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 30Y Treasury yield is a global long‑term benchmark; its movements shape carry‑trade flows and risk sentiment, directly influencing Japanese 10Y JGB yields.",
+      "type": "INFLUENCES",
+      "source": "ust30y",
+      "target": "jgb10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__influences__jgb10y"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T16:10:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "Q4G7EPJJ6",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['0R5LB61YY', 'U1KRCQOYR', 'S7M6BJSRT', '8J67I6RWY', '8VMO3PFEO', '4B5JK15SY', '85Q95ZIZH', 'S15934PBQ', 'XB5ZRN1VP']",
+    "mode": "MUST_REPLACE",
+    "target_id": "0R5LB61YY",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "0R5LB61YY",
+      "motivation": "The competing timeframe bucket is at capacity, so one competing article must be removed to preserve signal quality for analytics."
+    }
+  },
+  "id": "us_inflation__Q4G7EPJJ6__current"
+}

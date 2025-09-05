@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:01:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756072478",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15983",
+    "output_chars": "1636",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–2 months | Nvidia-led AI momentum fuels higher-quality AI/infra exposure as AI-30 revisions expand leadership across AI hardware, software, and cybersecurity, reinforcing the Nvidia backbone and data-center capex trajectory | Watch AI-30 revisions and Nvidia-backed capex momentum, with attention to any shift in data-center power demand and chip supply constraints that could extend the upside | 62% (STBVARD8F)(4661GWFP7)\nDown | 2–4 months | Tariff escalations and slower auto-capex pacing compress auto pricing and margins as the EV-cycle re-pricing widens the gap between fixed-cost drag and capacity expansion, a dynamic illustrated by Ford’s EV margin drag and ROIC trends in 22PL3Q360 | Watch tariff trajectories, auto-capex pacing, and Ford-like margin trajectories in OEMs and suppliers | 40% (SGB2PAZGK)(22PL3Q360)(65UUBU0OR)\nUp | 4–6 months | Costa Coffee sale progress toward ~£2B and Disney’s pricing/engagement shifts (Lightning Lane per-stay) could reallocate capital toward durable cash flows and AI exposures, supported by Coca-Cola's dividend ballast and GM’s domestic-capex commitments that anchor earnings power despite cyclic sectors | Watch Costa sale progress toward £2B, Disney park-metrics, and GM's manufacturing capex cadence; check for a re-rating of AI/infra exposures | 25% (STBVARD8F)(U3ZK13ZQI)\nDown | 0–2 months | Geopolitical shocks including Middle East flare-ups and Moscow risk events feed risk-off, lifting discount rates and risk premia and pressuring cyclic equities in the near term | Watch Red Sea shipping advisories and Brent/WTI moves to gauge risk premia | 38% (I2SJU04DF)(NBX9RA9WX)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756072478"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T10:26:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "gilt10y",
+    "selection_motivation": "Japanese 10‑year yields are a key global long‑term rate benchmark; shifts in jgb10y materially affect UK 10‑year gilt yields through global risk‑aversion and liquidity transmission.",
+    "candidate_motivation": "Strong influences on the Japan 10Y JGB Yield arise from global policy decisions, comparable sovereign yields, currency dynamics, and macro‑driven risk sentiment. These topics are directly linked to JGB through rate transmission, currency exposure, and cross‑country yield comparisons.",
+    "existing_links_count": "9",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'usdjpy', 'us_inflation', 'us_core_pce', 'euro_inflation', 'euribor', 'sx5e', 'spx', 'gold']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069014389",
+    "rel_id": "jgb10y__influences__gilt10y",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Japanese 10‑year yields are a key global long‑term rate benchmark; shifts in jgb10y materially affect UK 10‑year gilt yields through global risk‑aversion and liquidity transmission.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jgb10y__influences__gilt10y"
+}

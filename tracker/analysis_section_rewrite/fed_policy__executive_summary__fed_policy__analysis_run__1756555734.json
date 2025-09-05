@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:30:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756555734",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6211",
+    "output_chars": "1142",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is factually sound but exceeds the 4–6‑sentence limit, mixes explanatory detail with the core view, and never explicitly ties the mortgage rate to a canonical handle (UST 10‑year).  Condense it to 5 concise sentences that: 1) state the current 30‑yr rate and its derivation from the UST 10‑year yield + ~0.5 % spread (LF0UUL917); 2) give a clear range for the rate under a September Fed cut (6.45–6.50 %) versus no cut or a dollar slide (6.60–6.70 %) with citations (Z7O1DCHS7, 97MD1FHW8); 3) note that sticky inflation (CPI 2.7 %, PCE 2.9 %) keeps the cut contingent on labor‑market signals, with a PCE < 2.5 % or weak NFP triggering a cut, otherwise inflation > 2.5 % supports the high‑rate stance (FAN5RYW6T, XTQIQRP5K); 4) highlight Treasury debt‑issuance and loan‑originating demand as catalysts that could widen the spread (LF0UUL917); 5) list watch items (Fed decision 16‑17 Sep, PCE 15 Sep, NFP 30 Sep, debt‑issuance announcements) and state a 60–70 % confidence that a September cut will materialize conditional on inflation > 2.5 % (XTQIQRP5K, FAN5RYW6T).  Ensure each claim carries an inline citation and that the text remains strictly about the mortgage rate, mapping it to the UST 10‑year handle.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756555734"
+}

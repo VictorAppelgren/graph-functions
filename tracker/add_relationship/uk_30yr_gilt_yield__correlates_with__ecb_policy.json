@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T03:45:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "ecb_policy",
+    "selection_motivation": "UK 30‑yr gilt yields are highly correlated with ECB policy moves because euro‑area inflation expectations and monetary stance directly influence UK inflation expectations and the GBP/USD pair.",
+    "candidate_motivation": "UK 30‑year gilt yields move with other sovereign long‑term yields, domestic monetary and fiscal policy, and global risk sentiment. Key peers and influencers are other UK gilt maturities, major Euro‑zone and US long‑term yields, central‑bank policy signals, and currency/interest‑rate dynamics that affect the pound and the gilt market.",
+    "existing_links_count": "17",
+    "candidate_count": "12",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['gilt10y', 'bund10y', 'ust30y', 'ust10y', 'ust2y', 'ust5y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'gbpusd', 'dxy']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'euro_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175441701766955525",
+    "rel_id": "uk_30yr_gilt_yield__correlates_with__ecb_policy",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'euro_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 30‑yr gilt yields are highly correlated with ECB policy moves because euro‑area inflation expectations and monetary stance directly influence UK inflation expectations and the GBP/USD pair.",
+      "type": "CORRELATES_WITH",
+      "source": "uk_30yr_gilt_yield",
+      "target": "ecb_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_30yr_gilt_yield__correlates_with__ecb_policy"
+}

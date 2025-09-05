@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:09:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "equity_market_vs_economy",
+    "target_id": "us_inflation_stock_impact",
+    "selection_motivation": "This link captures the direct effect of US inflation on equity market performance, a critical macro relationship missing from the current graph.",
+    "candidate_motivation": "These topics are the strongest plausible influences, correlates, or peers to Equity Market vs Economy, spanning macro drivers (rates, FX, inflation), global trade tensions, and key asset classes that typically move with economic activity.",
+    "existing_links_count": "7",
+    "candidate_count": "23",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['sp500', 'eurostoxx50', 'eurusd', 'us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'usd', 'eur', 'core_monthly_cpi', 'oil', 'gold', 'copper', 'wheat', 'china_macro', 'macro_risks_technology', 'us_china_trade_talks', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_inflation_stock_impact', 'stagflation']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627959977",
+    "rel_id": "equity_market_vs_economy__influences__us_inflation_stock_impact",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation_stock_impact'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "This link captures the direct effect of US inflation on equity market performance, a critical macro relationship missing from the current graph.",
+      "type": "INFLUENCES",
+      "source": "equity_market_vs_economy",
+      "target": "us_inflation_stock_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "equity_market_vs_economy__influences__us_inflation_stock_impact"
+}

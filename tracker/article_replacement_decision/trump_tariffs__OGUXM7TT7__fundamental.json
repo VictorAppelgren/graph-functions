@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T23:48:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "trump_tariffs",
+    "new_article_id": "OGUXM7TT7",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['CGLLF2OES', 'IGP1Q4ZEJ', '65UUBU0OR', 'W2622L6WW']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not clearly supersede any existing record in the graph, so no action is warranted."
+    }
+  },
+  "id": "trump_tariffs__OGUXM7TT7__fundamental"
+}

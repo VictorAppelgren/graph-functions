@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T22:33:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6WRONTAG1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; A government 10% stake in Intel paired with Powell's hints on rate cuts signals a risk-on repricing in equities (notably tech) and a shift in front-end yields.",
+      "existing_ids": [
+        "intel_stock_trump_influence",
+        "fed_policy",
+        "sp500",
+        "us_10y",
+        "us_inflation",
+        "political_influence_on_stocks",
+        "us_treasury_yields",
+        "intel_ceo_political_influence"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article includes Fed Chair Jerome Powell’s hint at possible rate cuts and discussions of U.S. policy on the Ukraine war, which are official statements from policymakers."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to determine node relevance due to missing node information; assuming minimal impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate political and economic events affecting the node."
+    },
+    "article_node": {
+      "id": "6WRONTAG1",
+      "title": "US Govt. Makes $8.9B Investment in Intel Stock",
+      "summary": "Bloomberg’s \"Balance of Power\" covered a wide range of political and economic issues, including Fed Chair Jerome Powell’s hint at possible rate cuts amid labor market concerns, President Trump’s controversial 10% equity stake in Intel and his ongoing pressure on the Federal Reserve, and Canada’s tariff relief under Prime Minister Mark Carney. The show also discussed U.S. policy on the Ukraine war, AI regulation, a federal judge’s order to dismantle a Florida detention camp, and an FBI raid on former national security adviser John Bolton. Analysts debated the implications of Trump’s industrial policy, the independence of the Fed, and the broader geopolitical tensions involving China and Russia.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-22/balance-of-power-late-edition-8-22-2025-video",
+      "published_at": "2025-08-22T23:35:29.034000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "6WRONTAG1"
+}

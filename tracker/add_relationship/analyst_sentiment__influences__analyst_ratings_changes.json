@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T15:42:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "analyst_sentiment",
+    "target_id": "analyst_ratings_changes",
+    "selection_motivation": "Analyst sentiment directly drives changes in analyst ratings, as shifts in sentiment lead to systematic revisions in ratings.",
+    "candidate_motivation": "Analyst rating changes are driven by market sentiment, macro‑economic data, and company fundamentals, so topics that capture these dynamics are likely to influence or correlate with rating changes.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1021",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['analyst_sentiment', 'fed_policy', 'us_inflation', 'us_10y', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'us_inflation_impact_on_bitcoin']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'analyst_ratings_changes', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163802",
+    "rel_id": "analyst_sentiment__influences__analyst_ratings_changes",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'analyst_sentiment', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'analyst_sentiment', 'target': 'analyst_ratings_changes'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Analyst sentiment directly drives changes in analyst ratings, as shifts in sentiment lead to systematic revisions in ratings.",
+      "type": "INFLUENCES",
+      "source": "analyst_sentiment",
+      "target": "analyst_ratings_changes"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "analyst_sentiment__influences__analyst_ratings_changes"
+}

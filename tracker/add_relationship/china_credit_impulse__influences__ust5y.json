@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T14:07:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_credit_impulse",
+    "target_id": "ust5y",
+    "selection_motivation": "China Credit Impulse signals shifts in Chinese credit conditions that transmit through global risk sentiment and the US Treasury yield curve, particularly the 5‑year tenor that balances short‑term Fed policy and long‑term credit conditions.",
+    "candidate_motivation": "China Credit Impulse is a proxy for Chinese credit growth and lending activity, which is tightly linked to export performance, FX dynamics, global commodity prices, and global risk sentiment. It is also influenced by and influences US and Eurozone monetary policy, bond markets, and macroeconomic indicators.",
+    "existing_links_count": "5",
+    "candidate_count": "22",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "22",
+    "candidate_ids_preview": "['china_exports', 'usdcny', 'dxy', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'euro_inflation', 'us_unemployment_claims', 'copper', 'gold', 'wti', 'brent', 'wheat', 'spx', 'sx5e', 'usdjpy', 'eurusd', 'gbpusd']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587554",
+    "rel_id": "china_credit_impulse__influences__ust5y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China Credit Impulse signals shifts in Chinese credit conditions that transmit through global risk sentiment and the US Treasury yield curve, particularly the 5‑year tenor that balances short‑term Fed policy and long‑term credit conditions.",
+      "type": "INFLUENCES",
+      "source": "china_credit_impulse",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_credit_impulse__influences__ust5y"
+}

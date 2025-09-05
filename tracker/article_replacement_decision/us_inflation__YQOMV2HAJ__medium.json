@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T01:25:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "YQOMV2HAJ",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['G81O1C410', 'WISLWAJ15', 'FOM34PUWA', 'A7VLN74BK', 'ILYC1M41F', 'UPV3X2MQ6', 'V8TEZOR8R', 'EPJYXB7DX', 'WTNT85IPR']",
+    "mode": "MUST_REPLACE",
+    "target_id": "WTNT85IPR",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "WTNT85IPR",
+      "motivation": "WTNT85IPR currently occupies the same timeframe bucket with limited, non-differentiating content for this topic. Removing it frees capacity and sharpens signal for the more specific bread/private-label supply chain narrative around Walmart."
+    }
+  },
+  "id": "us_inflation__YQOMV2HAJ__medium"
+}

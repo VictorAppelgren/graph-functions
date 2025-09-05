@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T16:54:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "core_cpi",
+    "target_id": "us_inflation_impact_on_stocks",
+    "selection_motivation": "Core CPI is a primary measure of inflation that shapes expectations and thus directly influences the impact of inflation on the stock market.",
+    "candidate_motivation": "These topics represent the strongest direct or closely linked influences on core inflation dynamics, monetary policy, and inflation-sensitive assets that interact with Core CPI. They include explicit inflation measures, policy signals, and inflation-hedging assets like TIPS.",
+    "existing_links_count": "6",
+    "candidate_count": "13",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_inflation', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks', 'cpi_impact_on_treasuries', '30yr_tips_auction', 'tariff_driven_inflation', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'oil', 'fed_policy', 'fed_chair_replacement', 'us_inflation_expectations']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441642715",
+    "rel_id": "core_cpi__influences__us_inflation_impact_on_stocks",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Core CPI is a primary measure of inflation that shapes expectations and thus directly influences the impact of inflation on the stock market.",
+      "type": "INFLUENCES",
+      "source": "core_cpi",
+      "target": "us_inflation_impact_on_stocks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "core_cpi__influences__us_inflation_impact_on_stocks"
+}

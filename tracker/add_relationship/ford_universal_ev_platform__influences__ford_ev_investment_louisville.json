@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T16:33:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ford_universal_ev_platform",
+    "target_id": "ford_ev_investment_louisville",
+    "selection_motivation": "The Ford Universal EV Platform directly drives Ford’s investment decisions in specific manufacturing facilities, making the Louisville investment a key causal link.",
+    "candidate_motivation": "These topics are the strongest direct or near-peer connections to Ford's Universal EV Platform, spanning Ford's own EV initiatives, production approaches, charging networks, and the broader EV semiconductor and autonomy tech ecosystem.",
+    "existing_links_count": "4",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ford_ev_investment', 'ford_ev_pickup', 'ford_ev_investment_louisville', 'ford_electric_vehicle_strategy', 'ford_universal_ev_production_system', 'ev_infrastructure_funding', 'revel_ev_charging', 'lam_research', 'niu_technologies', 'iveco_ev_towing_record', 'nvidia_ai_infrastructure']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_ev_investment'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_ev_pickup'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_universal_ev_production_system'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_electric_vehicle_strategy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901753",
+    "rel_id": "ford_universal_ev_platform__influences__ford_ev_investment_louisville",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_ev_investment'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_ev_pickup'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_universal_ev_production_system'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_electric_vehicle_strategy'}, {'type': 'INFLUENCES', 'source': 'ford_universal_ev_platform', 'target': 'ford_ev_investment_louisville'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ford Universal EV Platform directly drives Ford’s investment decisions in specific manufacturing facilities, making the Louisville investment a key causal link.",
+      "type": "INFLUENCES",
+      "source": "ford_universal_ev_platform",
+      "target": "ford_ev_investment_louisville"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ford_universal_ev_platform__influences__ford_ev_investment_louisville"
+}

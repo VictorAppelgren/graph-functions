@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T01:35:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Q9GTB6TN1",
+    "status": "success",
+    "topic_id": "us_inflation"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the impact of producer price inflation on market expectations, which is relevant to the existing US Inflation node, while also indicating a potential new trend in cryptocurrency adoption that could warrant a new node.",
+      "existing_node_ids": "us_inflation",
+      "new_node_dicts": "cryptocurrency_institutional_adoption"
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses a major inflation print, which is a macroeconomic event relevant to this node."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses economic conditions that influence inflation rates, making it relevant to the topic of US inflation."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and factors influencing inflation in the U.S., which suggests a longer-term perspective."
+    },
+    "article_node": {
+      "id": "Q9GTB6TN1",
+      "title": "Wall Street ends flat, but S&P 500 hits another closing high",
+      "summary": "Wall Street's main indexes closed flat, with the S&P 500 reaching a record high, despite a significant rise in producer price inflation that dampened expectations for future interest rate cuts by the Federal Reserve. Companies like Deere and Tapestry saw their stocks drop sharply due to lower profit forecasts linked to tariffs. Meanwhile, the cryptocurrency market experienced a downturn following the inflation report, although there remains optimism for institutional adoption in the sector.",
+      "source": "https://finance.yahoo.com/video/wall-street-ends-flat-p-223226626.html",
+      "published_at": "2025-08-14T22:32:26+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "Q9GTB6TN1"
+}

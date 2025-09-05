@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T02:44:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756513853",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "3726",
+    "output_chars": "535",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft lacks explicit canonical‑handle mapping, precise magnitude ranges, and clear catalyst windows; revise each line to include the handle (e.g., spx, ndx), the expected bp or % move, the exact date or period (e.g., July 2025 Q3 earnings, 2025‑08‑29 verdict), and attach the relevant ID (KNWKYIQ1W, LJZYDXVL3, H86O3XRUJ). For CrowdStrike, state “CrowdStrike Q3 earnings surprise (KNWKYIQ1W) – July 2025 – lift spx 2–3 bp, ndx 5–10 bp – watch earnings release – 60 %”. For the Fed shift, specify “Fed Q4 2025 policy shift (KNWKYIQ1W) – lift spx 1–2 bp, ndx 3–5 bp – watch Fed minutes – 55 %”. For Tesla, map to spx only, quantify “Tesla verdict 2025‑08‑29 (LJZYDXVL3) – depress spx 3–5 bp – watch court ruling – 45 %”. For EPAM, include the upside lift to spx 0.1–0.2 % (H86O3XRUJ) and the risk of a miss; add the Q2 earnings date 2025‑05‑15 and probability 35 %. Ensure each line is a single sentence, no filler, and that every claim is backed by an ID.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756513853"
+}

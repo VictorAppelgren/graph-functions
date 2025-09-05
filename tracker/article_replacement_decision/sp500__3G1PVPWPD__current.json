@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T18:13:41",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "3G1PVPWPD",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['HE99QDK4J', '261HLL6EA', 'YX2X8JAIX', 'XQWTVR71K', '19NO2GMNF', 'QGXA2WQJ3', 'NBX9RA9WX', 'XB5ZRN1VP', '8E5QMHLIH']",
+    "mode": "MUST_REPLACE",
+    "target_id": "HE99QDK4J",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "HE99QDK4J",
+      "motivation": "The new YouTube Music fandom features article is time-sensitive and higher-signal relative to the placeholder entry currently occupying the bucket; removing the least informative existing article (HE99QDK4J) preserves capacity for the newer, richer item and improves downstream analytics."
+    }
+  },
+  "id": "sp500__3G1PVPWPD__current"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:22:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ELKLXAQW6",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the fiscal budget of Cumberland County, highlighting significant salary increases and capital projects, which are relevant for understanding local government fiscal policies and their macroeconomic implications.",
+      "id": "cumberland_county_budget_2025_26",
+      "name": "Cumberland County Budget 2025-26",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Local government fiscal policy detailing budget allocations and tax rates."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Local county budget is too granular and does not provide macro-level fiscal insight relevant to trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

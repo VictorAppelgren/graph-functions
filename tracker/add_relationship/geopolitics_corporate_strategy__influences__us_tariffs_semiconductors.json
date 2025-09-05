@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:36:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "geopolitics_corporate_strategy",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "This link captures how geopolitical tensions and corporate strategy decisions drive the imposition of semiconductor tariffs, a key policy affecting supply chains and market dynamics.",
+    "candidate_motivation": "These topics represent direct geopolitics, trade policy, and cross-border risk dynamics that would plausibly influence geopolitics and corporate strategy.",
+    "existing_links_count": "2",
+    "candidate_count": "20",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['us_china_trade_relations', 'us_china_trade_talks', 'china_us_tariff_truce', 'us_china_tariff_truce', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs', 'south_china_sea_tensions', 'ukraine_diplomacy', 'ukraine_peace_negotiations', 'ukraine_geopolitics', 'ukraine_sovereignty', 'ukraine_conflict', 'russia_economic_crisis', 'us_russia_ukraine_diplomacy', 'iran_nuclear_sanctions', 'iran_nuclear_program', 'north_korea_military_drills', 'eu_geopolitics_ukraine']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846831",
+    "rel_id": "geopolitics_corporate_strategy__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "This link captures how geopolitical tensions and corporate strategy decisions drive the imposition of semiconductor tariffs, a key policy affecting supply chains and market dynamics.",
+      "type": "INFLUENCES",
+      "source": "geopolitics_corporate_strategy",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "geopolitics_corporate_strategy__influences__us_tariffs_semiconductors"
+}

@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:13:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "RAX1C61NL",
+    "topic_discovery_motivation": "Article discusses the impacts of Hurricane Erin, which relates to existing nodes on climate and natural disasters, though specific existing nodes are not identified.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "Hurricane Erin",
+        "East Coast Coastal Impacts",
+        "Natural Disasters"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses a hurricane, which is a natural disaster not covered by the predefined categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant hurricane event that directly impacts the node by describing coastal damage, flooding, and beach closures in the region."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article describes immediate weather events and their short-term impacts on coastal communities, focusing on the present and near-future effects of Hurricane Erin."
+    },
+    "article_node": {
+      "id": "RAX1C61NL",
+      "title": "Strong winds and waves batter Nantucket, Martha’s Vineyard as Hurricane Erin moves out to sea",
+      "summary": "Hurricane Erin has caused significant coastal impacts along the East Coast, particularly in North Carolina's Outer Banks, where strong winds and waves have led to flooding and beach closures. The storm, categorized as a Category 2 hurricane, is noted for its large size, stretching over 500 miles, and is expected to bring dangerous rip currents and potential flooding through the weekend. While some areas have experienced damage, many communities have avoided widespread destruction, and the storm is forecasted to weaken as it moves further out to sea.",
+      "source": "https://nypost.com/2025/08/22/us-news/hurricane-erins-strong-winds-and-waves-batter-nantucket-marthas-vineyard-as-storm-moves-out-to-the-sea/",
+      "published_at": "2025-08-22T07:00:26+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "RAX1C61NL"
+}

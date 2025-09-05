@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:48:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XXSQNRJGQ",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights significant concerns regarding Meta's AI guidelines that could impact regulatory scrutiny and public sentiment, necessitating a new node to track the implications of AI policy on market dynamics.",
+      "id": "meta_ai_guidelines",
+      "name": "Meta AI Guidelines",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "The subject is a policy document issued by Meta outlining AI guidelines, making it a clear policy topic."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Meta AI Guidelines is a corporate policy, not a macro policy regime or macro driver; it does not directly support trading decisions at the macro level.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

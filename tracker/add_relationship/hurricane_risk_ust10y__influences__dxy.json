@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T19:46:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hurricane_risk_ust10y",
+    "target_id": "dxy",
+    "selection_motivation": "Atlantic hurricane season risk elevates global risk aversion, driving safe‑haven flows into the US dollar and strengthening the DXY.",
+    "candidate_motivation": "The source topic concerns how hurricane season risk can shift the UST‑10y yield curve, so the most relevant influences are US Treasury yields across maturities, US macro fundamentals that drive those yields, Fed policy that sets the backdrop, the dollar index that captures risk‑off sentiment, and commodity prices (oil, gold, copper) that are directly affected by hurricanes and feed into inflation expectations.",
+    "existing_links_count": "3",
+    "candidate_count": "15",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'dxy', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530910",
+    "rel_id": "hurricane_risk_ust10y__influences__dxy",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Atlantic hurricane season risk elevates global risk aversion, driving safe‑haven flows into the US dollar and strengthening the DXY.",
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "hurricane_risk_ust10y__influences__dxy"
+}

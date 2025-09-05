@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:46:07",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756593967",
+    "article_ids": "['1ZRJSOWD9', 'LF0UUL917', '4PRAW7Z7Y', 'ZV3QI3K19', 'PA57YBYVQ']",
+    "selected_articles_count": "5",
+    "material_chars": "201926",
+    "output_chars": "2515",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is conceptually sound but fails the acceptance gate because it never links the mortgage‑rate narrative to a canonical handle and it does not specify a concrete catalyst window. 1) **Add a handle mapping** – re‑frame the opening sentence to state that the 30‑year fixed‑rate mortgage is “tied to the UST 10 y yield (ust10y)”, citing the article’s data (ID LF0UUL917). 2) **Insert a catalyst window** – after the discussion of Fed policy, add a sentence such as “The next key catalyst is the Fed’s policy meeting on 2025‑10‑15 and the CPI release on 2025‑09‑01; a rate hike or a CPI rise above 3.5 % would lift the term‑premium and push mortgage rates up by 10–20 bp.” 3) **Trim extraneous detail** – remove the long paragraph on “real‑rate differentials, term‑premium expectations, and liquidity constraints” that is not directly tied to the handle; keep only the concise causal chain. 4) **Ensure every claim has a citation** – add inline citations (ID LF0UUL917) to the Fed policy, CPI, and Treasury issuance statements. 5) **Maintain focus** – eliminate any mention of “inflation expectations add a term‑premium” that is not directly linked to ust10y. After these edits, the piece will satisfy the mapping and catalyst requirements and remain concise and actionable.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1756593967"
+}

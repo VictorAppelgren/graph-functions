@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T07:16:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756011138",
+    "prior_sections": "['fundamental', 'current', 'drivers']",
+    "material_chars": "6195",
+    "output_chars": "622",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft mixes a “movers & scenarios” list with a swing‑trade line, but it fails the required format: you need exactly four scenario lines (2 up, 2 down) and a separate, concise trade/outlook line. Replace the first four lines with a clean 1‑3 mo window, driver, watch signal, and probability that reflects the evidence (e.g., 70 % for a Fed cut, 60 % for Azure growth, 20 % for a labor shock, 15 % for higher loan rates). Remove the stray “Up | 1‑3 mo | 1% above current …” line and instead produce a single swing‑trade line: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100. Use only IDs for facts (e.g., (C3ODMIQKZ) for Fed cut probability, (0G3A676BP) for Azure growth). Ensure every probability is grounded in a cited source, avoid generic “moderate‑high” confidence, and provide a numeric confidence (e.g., 75). Keep the trade line to one sentence, e.g., “Long Microsoft | 1‑3 mo | 280 USD | 270 USD | 310 USD | 1:2 | Fed cut fails | Fed meeting | 70% | 80”. Finally, double‑check that all critical sources (Fed policy, Azure revenue, labor‑market shock, loan rates) are cited and that no extraneous text or formatting remains.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756011138"
+}

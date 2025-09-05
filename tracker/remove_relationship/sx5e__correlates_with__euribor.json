@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-02T14:59:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "euribor",
+    "selection_motivation": "The Euro Stoxx 50’s sensitivity to short‑term euro money market rates (EURIBOR) is marginal compared to its exposure to longer‑term rates, inflation, and FX, making this link the weakest and least actionable.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The Euro Stoxx 50’s sensitivity to short‑term euro money market rates (EURIBOR) is marginal compared to its exposure to longer‑term rates, inflation, and FX, making this link the weakest and least actionable.",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euribor'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161930902884845094",
+    "rel_id": "sx5e__correlates_with__euribor",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "euribor"
+    },
+    "prioritized_link": {
+      "motivation": "Euro Stoxx 50 is heavily weighted in energy and industrial sectors that are highly sensitive to Brent crude price movements, making Brent a key driver of index performance.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "brent"
+    },
+    "llm_raw_response": {
+      "motivation": "The Euro Stoxx 50’s sensitivity to short‑term euro money market rates (EURIBOR) is marginal compared to its exposure to longer‑term rates, inflation, and FX, making this link the weakest and least actionable.",
+      "remove_link": "euribor"
+    },
+    "removal_decision": {
+      "motivation": "The Euro Stoxx 50’s sensitivity to short‑term euro money market rates (EURIBOR) is marginal compared to its exposure to longer‑term rates, inflation, and FX, making this link the weakest and least actionable.",
+      "remove_link": "euribor"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(Euro Stoxx 50 OR Euro Stoxx 50 Index OR EuroStoxx50 OR EuroStoxx50 Index OR ^SX5E OR .SX5E OR SX5E) AND (news OR update OR report OR analysis OR trend OR performance OR rally OR decline OR drop OR rise OR gain OR loss OR volatility OR movement OR change OR shift OR impact OR market OR index OR returns OR price OR trading)",
+      "name": "Euro Stoxx 50",
+      "id": "sx5e",
+      "last_queried": "2025-09-01T14:32:48.396000000+00:00",
+      "queries": 4
+    }
+  },
+  "id": "sx5e__correlates_with__euribor"
+}

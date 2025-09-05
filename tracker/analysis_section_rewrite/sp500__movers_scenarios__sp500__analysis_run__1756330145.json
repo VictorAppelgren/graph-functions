@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-27T23:44:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756330145",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "10221",
+    "output_chars": "683",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft captures key catalysts but lacks depth, causal linkage, and precise probability justification; tighten the causal chain by linking each driver to a specific market transmission mechanism (e.g., how Nvidia’s earnings affect AI‑related equity risk‑premium), expand the time window to reflect realistic lag (e.g., 1‑2 months for M&A impact), and embed first‑principles logic (e.g., EV profitability tied to unit economics and capital‑intensity cycle); replace generic “70%” with a range derived from the cited probability of a 25‑bp cut (85% → 70% after adjusting for Fed’s stance) and reconcile conflicting sources (e.g., Fed hike risk vs. cut probability); quantify the impact of Japanese banks’ overseas M&A on global AUM growth using the 5‑10 % target and its 8‑12 % earnings lift, then calculate a realistic probability (e.g., 55‑65%) based on current M&A pipeline data; for Ford’s EV risk, integrate the EV loss magnitude from W2622L6WW with the broader auto capex cycle to estimate a 35‑45% chance of sustained low profitability; ensure each line contains a single sentence, cites only IDs, and uses concrete triggers (e.g., “Nvidia Q2 earnings beat >$20 B net income”) and watch signals (e.g., “Fed Jackson Hole remarks on Friday”); finally, adjust the format to exactly four lines, each strictly following the “Up/Down | Time window | Driver/Mechanism | What to watch | Probability %” template.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756330145"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:04:00",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756029367",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16475",
+    "output_chars": "1242",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–6 months | Cloud/AI capex momentum and backlog visibility; 21.2% cloud CAGR 2024–2030 (0G3A676BP), MSFT Azure/AI 39% growth (0G3A676BP), and $368B backlog (0G3A676BP), plus Shopify 31% revenue growth with strong FCF (0G3A676BP) | What to watch: Azure/AI growth trajectory, backlog progression, and cross‑platform moat signals to sustain higher multiples (0G3A676BP) | 50%\nUp | 6–24 months | AI productivity acceleration reinforcing platform moats and cash-flow expansion; Azure/AI demand acceleration and scale of contracted revenue backlog underpin higher multiples (0G3A676BP) | What to watch: continued Azure/AI momentum, backlog depth, and platform moat signals | 52%\nDown | 6–24 months | Automation-driven labor displacement and/or slower cloud capex; IBM pausing back-office hiring and Salesforce avoiding large layoffs illustrate labor resilience as a risk channel (4LQD15CFU)(TN66GHPAT) | What to watch: pace of AI-driven automation, labor-hiring plans, governance signals as inputs to resilience and margin stability | 22%\nDown | 0–3 months | Sanctuary injunction and fiscal risk dynamics that widen risk premia; a narrowed injunction could reprice risk higher (U1KRCQOYR) | What to watch: policy/fiscal risk moves, sanctuary governance developments, and related risk premia signals (U1KRCQOYR)(4LQD15CFU) | 12%",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756029367"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-09-01T13:24:35",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "7EBQ4OS9Q",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['BSV8LPNDM', '4PRAW7Z7Y', 'JUFS3BECF', 'LF0UUL917', '353Q8SOAO', 'SGB2PAZGK', 'H86O3XRUJ', 'OGK8WLL69', 'PA57YBYVQ']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "BSV8LPNDM",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article does not map to any canonical market handle with an explicit sign/magnitude or a dated catalyst window, violating the acceptance gate."
+    }
+  },
+  "id": "us_inflation__7EBQ4OS9Q__fundamental"
+}

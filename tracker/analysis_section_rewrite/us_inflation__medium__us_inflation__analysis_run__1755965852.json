@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T18:22:11",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "medium",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1755965852",
+    "article_ids": "['FOM34PUWA', 'U0I2AFHOV', 'WISLWAJ15', 'GUJQZY4UO', 'H8880U45S']",
+    "selected_articles_count": "5",
+    "material_chars": "208093",
+    "output_chars": "4396",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable Edit Instructions (compact paragraph)**  \nYour draft is a solid first pass but needs tightening, deeper causal logic, and tighter source‑linking to meet the 3–6‑month horizon and scenario‑map requirements. 1) **Structure**: Break the piece into clear sections—Macro backdrop, UAS labor market, Dividend play, Inghams, Toyota RAV4, Scenario map, Base case, Alt scenarios, Risks, Watch list, Confidence. 2) **Causal chain**: Explicitly show how Fed policy → discount rates → dividend valuations; supply‑chain easing → Toyota hybrid margin → RAV4 sales; UAS job data release → sector valuation anchor. 3) **Quantify**: Add numbers for each trigger (e.g., Fed rate 5.25% → 0.5% drop in YTM; semiconductor cost index 15% → Toyota margin +$0.5k per unit; UAS jobs 1,400 × $105k ≈ $147M payroll). 4) **Citations**: Insert inline IDs after every numeric claim: e.g., “$105,912 avg salary (FOM34PUWA)”, “1.8% yield (WISLWAJ15)”, “111,526 hybrids (H8880U45S)”, “60% sales concentration (GUJQZY4UO)”. 5) **Scenario map**: Provide a concise table or diagram with triggers (Fed pause, supply‑chain resolution, UAS data release), invalidations (Fed hike, tariff spike, supply‑chain resurgence), timing windows (Q3‑Q4 2025, Q1‑Q2 2026), and path‑dependency (Toyota 2026 hybrid‑only). 6) **Alt scenarios**: Base case (Fed pause, supply‑chain easing, UAS data confirms growth); Alt 1 (Fed hike → dividend yield compression, Toyota margin squeeze); Alt 2 (Tariff escalation → Toyota cost pressure, Inghams customer concentration risk). 7) **Watch list**: Fed minutes, CPI, automotive sales data, UAS employment survey release, tariff announcements. 8) **Confidence**: State a rating (e.g., “Confidence: Moderate‑High”) and justify with the strength of fundamentals and data anchors. 9) **Reconcile conflicts**: If any source contradicts (e.g., UAS job growth vs. proprietary data gaps), note the uncertainty and its impact on valuation. 10) **Avoid generic platitudes**: Replace vague phrases (“strong fundamentals”) with specific metrics (e.g., “AbbVie’s payout ratio >100% with $18.2 B trailing FCF (WISLWAJ15)”). Implement these edits to elevate the analysis to world‑class quality.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__medium__us_inflation__analysis_run__1755965852"
+}

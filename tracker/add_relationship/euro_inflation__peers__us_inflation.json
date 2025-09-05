@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:24:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "euro_inflation",
+    "target_id": "us_inflation",
+    "selection_motivation": "Euro Area Inflation and US Inflation are analogous macro indicators for their respective regions, enabling comparative analysis and cross‑market insights.",
+    "candidate_motivation": "The selected topics are closely related to Euro Area Inflation, either as direct influences on inflation metrics, peers in economic analysis, or correlated economic indicators.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['us_inflation', 'core_monthly_cpi', 'us_tariffs_inflation', 'us_inflation_data', 'us_inflation_impact_on_stocks', 'us_inflation_expectations', 'us_wholesale_inflation']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurostoxx50'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152927002164985858",
+    "rel_id": "euro_inflation__peers__us_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurostoxx50'}, {'type': 'PEERS', 'source': 'euro_inflation', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Area Inflation and US Inflation are analogous macro indicators for their respective regions, enabling comparative analysis and cross‑market insights.",
+      "type": "PEERS",
+      "source": "euro_inflation",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__peers__us_inflation"
+}

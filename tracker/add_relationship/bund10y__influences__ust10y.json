@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:17:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "ust10y",
+    "selection_motivation": "Bund10y movements alter global risk‑premium dynamics and relative attractiveness of Eurozone versus US sovereign debt, thereby influencing US 10Y Treasury yields.",
+    "candidate_motivation": "The German 10Y Bund Yield is driven by ECB policy, euro‑area inflation, and global sovereign yield dynamics. It also correlates with other sovereign yields (US, UK, Japan), the US dollar and euro currency pairs, major equity indices, and US monetary policy indicators such as SOFR and Fed policy.",
+    "existing_links_count": "4",
+    "candidate_count": "15",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'gilt10y', 'jgb10y', 'us_inflation', 'dxy', 'eurusd', 'sx5e', 'spx', 'fed_policy', 'sofr']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902241",
+    "rel_id": "bund10y__influences__ust10y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund10y movements alter global risk‑premium dynamics and relative attractiveness of Eurozone versus US sovereign debt, thereby influencing US 10Y Treasury yields.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__ust10y"
+}

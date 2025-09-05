@@ -1,0 +1,53 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-02T13:45:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "ust30y",
+    "selection_motivation": "The oil price decline link to UST30Y has the weakest direct causal transmission and limited impact on core assets, making it the least valuable for the graph.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The oil price decline link to UST30Y has the weakest direct causal transmission and limited impact on core assets, making it the least valuable for the graph.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441641996",
+    "rel_id": "oil_price_decline__influences__ust30y",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "ust30y"
+    },
+    "prioritized_link": {
+      "motivation": "Oil price decline dampens inflation expectations, prompting the Fed to consider easing policy.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "fed_policy"
+    },
+    "llm_raw_response": {
+      "motivation": "The oil price decline link to UST30Y has the weakest direct causal transmission and limited impact on core assets, making it the least valuable for the graph.",
+      "remove_link": "ust30y"
+    },
+    "removal_decision": {
+      "motivation": "The oil price decline link to UST30Y has the weakest direct causal transmission and limited impact on core assets, making it the least valuable for the graph.",
+      "remove_link": "ust30y"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "(small-cap OR \"small cap\" OR \"small capitalization\" OR \"small cap stocks\" OR \"small cap opportunities\" OR \"small cap growth\" OR \"small cap value\") AND (undiscovered OR \"undiscovered gems\" OR \"hidden gems\" OR \"hidden gem\" OR \"undiscovered gem\") AND (\"Middle East\" OR \"Middle East stocks\" OR \"Middle East small caps\" OR \"Gulf stocks\" OR \"Gulf region\" OR \"Gulf markets\" OR \"Gulf indices\" OR GCC OR UAE OR \"Saudi Arabia\" OR Qatar OR Bahrain OR Oman OR Egypt OR Morocco OR Tunisia OR Algeria) AND (\"oil price decline\" OR \"oil price drop\" OR \"oil price slump\" OR \"oil price fall\") AND (insurance OR reinsurance OR bottling OR beverage OR \"soft drinks\" OR \"mineral water\") AND (investment OR \"investment company\" OR \"investment firm\") AND (ADX:EIC OR ERC OR EIC OR \"ADX:ERC\" OR \"ticker: ADX:EIC\" OR \"ticker: ERC\" OR \"ticker: EIC\") AND (September 2025 OR 2025) AND (news OR analysis OR report OR update OR latest OR recent OR breaking OR today OR market OR \"market news\" OR \"market analysis\" OR \"market trends\")",
+      "motivation": "The article identifies a decline in oil prices as the catalyst behind Gulf equity weakness, creating a new macro driver node.",
+      "name": "Oil Price Decline",
+      "id": "oil_price_decline",
+      "last_queried": "2025-09-01T09:50:23+00:00",
+      "importance_rationale": "Oil price decline is a major commodity shock that directly impacts Gulf indices, small‑cap stocks, and regional economic activity. It maps cleanly to canonical commodity handles (Brent, WTI) with a negative sign and is expected to unfold in the near term (catalyst window around September 2025). The event has high cross‑asset transmission and intraday relevance, warranting the highest importance rating.",
+      "type": "macro"
+    }
+  },
+  "id": "oil_price_decline__influences__ust30y"
+}

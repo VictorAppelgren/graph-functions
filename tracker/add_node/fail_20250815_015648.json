@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:56:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NNHTRMPZ3",
+    "status": "rejected",
+    "reject_category": "clinical_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the impact of clear aligners on periodontal health, indicating a need for a specific node to analyze the relationship between orthodontic treatments and oral health outcomes.",
+      "id": "clear_aligners_periodontal_health",
+      "name": "Clear Aligners and Periodontal Health",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "clinical_driver",
+      "motivation": "Assess how orthodontic treatment influences periodontal health and plaque accumulation, aiming to improve oral hygiene outcomes and reduce disease risk."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Clear aligners are a specific dental product category, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:17:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "thematic_portfolio_investing",
+    "target_id": "creator_economy_investment",
+    "selection_motivation": "Thematic portfolio investing actively channels capital into high‑growth creator economy segments, making it a primary driver of investment flows in that theme.",
+    "candidate_motivation": "Thematic Portfolio Investing focuses on allocating capital to broad market themes such as technology, sustainability, geopolitics, and emerging sectors. Topics that represent investment themes, market drivers, corporate strategies, or regulatory impacts are therefore the most likely to influence, correlate with, or be peers of this source node.",
+    "existing_links_count": "1",
+    "candidate_count": "20",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['creator_economy_investment', 'sustainability_leadership', 'nature_based_solutions', 'gen_z_private_investment_access', 'small_credit_unions_tech_adoption', 'rule_of_40', 'asx_penny_stocks', 'us_china_trade_policy', 'climate_loss_damage_funding', 'middle_east_investment', 'openai_valuation', 'apple_antitrust_ai', 'nasa_artemis_program', 'openai_gpt5_competition', 'pony_ai', 'us_federal_court_cybersecurity', 'nuclear_security_technology', 'medical_digital_twins', '5g_infrastructure', 'ccus_hubs_asia']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'thematic_portfolio_investing', 'target': 'sustainability_leadership'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531101",
+    "rel_id": "thematic_portfolio_investing__influences__creator_economy_investment",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'thematic_portfolio_investing', 'target': 'creator_economy_investment'}, {'type': 'INFLUENCES', 'source': 'thematic_portfolio_investing', 'target': 'sustainability_leadership'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Thematic portfolio investing actively channels capital into high‑growth creator economy segments, making it a primary driver of investment flows in that theme.",
+      "type": "INFLUENCES",
+      "source": "thematic_portfolio_investing",
+      "target": "creator_economy_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "thematic_portfolio_investing__influences__creator_economy_investment"
+}

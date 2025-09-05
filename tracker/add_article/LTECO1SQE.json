@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T07:04:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LTECO1SQE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; India GST cuts will boost domestic demand, supporting industrial output growth of 7.8% and potentially easing inflation.",
+      "existing_ids": [
+        "india_industrial_output"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article describes a change to India's GST structure, a regulatory change affecting tax rates and revenue, fitting the regulation category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports the largest GST cuts in India, directly affecting fiscal policy and domestic consumption."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a near‑term policy decision (GST cuts) that will immediately influence domestic consumption and fiscal dynamics in India."
+    },
+    "article_node": {
+      "id": "LTECO1SQE",
+      "title": "Indian ministers set to meet on landmark consumer tax overhaul",
+      "summary": "Indian state and federal ministers will convene for two days to decide on the largest Goods and Services Tax cuts in eight years, aiming to boost domestic consumption amid U.S. tariff pressures. The plan would lower the GST on over 400 items to a two‑rate structure of 5% and 18%, with higher rates for luxury goods, and is expected to cost about $21 billion in revenue. The cuts are intended to support sectors such as FMCG, consumer electronics, and automakers, while states face potential revenue shortfalls that may spark debate on compensation mechanisms.",
+      "source": "https://finance.yahoo.com/news/indian-ministers-set-meet-landmark-034533368.html?_guc_consent_skip=1756871503",
+      "published_at": "2025-09-03T03:45:33+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "LTECO1SQE"
+}

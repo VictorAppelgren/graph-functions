@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T04:45:34",
+  "processed": false,
+  "inputs": {
+    "topic_id": "oil",
+    "new_article_id": "X5EBF1B7G",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['9X7XOLXMH', 'DK0H5TM4G', 'B9H6KQ54C', 'T1QE6JPIX', 'DWHK73K29', 'J99EM2TPZ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new IPCFF article does not clearly supersede any existing article; none of the current entries cover IPCFF specifically, so there is no action required."
+    }
+  },
+  "id": "oil__X5EBF1B7G__fundamental"
+}

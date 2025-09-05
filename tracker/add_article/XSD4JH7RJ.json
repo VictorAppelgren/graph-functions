@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:09:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XSD4JH7RJ",
+    "topic_discovery_motivation": "Article discusses the impact of rising bear populations in Romania, which may relate to broader environmental and wildlife management issues not currently represented in the graph.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "Romania Brown Bear Population",
+        "Human-Bear Conflicts",
+        "Wildlife Management in Romania"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses human-bear conflicts in Romania, which does not fit any of the specified categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant ecological and societal issue affecting Romania, highlighting rising bear populations, human conflicts, and fatalities, which directly impacts the country's environmental and public safety context."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "XSD4JH7RJ",
+      "title": "For a Reporter, Writing About Bear Attacks in Romania Was a Homecoming of Sorts",
+      "summary": "Romania is home to the largest population of brown bears in Europe outside Russia, with estimates between 10,000 and 13,000. However, a hunting moratorium since 2016 has led to rising bear populations and increased human-bear conflicts, resulting in 20 fatalities since then. Rukmini Callimachi, a reporter for The New York Times, explores this complex relationship in her recent article, highlighting the cultural significance of bears in Romania and the challenges posed by their growing numbers.",
+      "source": "https://www.nytimes.com/2025/08/22/insider/romania-bears-real-estate.html",
+      "published_at": "2025-08-22T07:00:24.903000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "XSD4JH7RJ"
+}

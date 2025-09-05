@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T19:43:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdjpy",
+    "target_id": "ust30y",
+    "selection_motivation": "USD/JPY is highly sensitive to long‑term U.S. yield expectations; a rise in the 30‑year Treasury yield typically strengthens the dollar versus the yen, making the pair strongly correlated.",
+    "candidate_motivation": "USD/JPY is driven by US dollar strength, US monetary policy, and US yield curves, and it correlates with other USD cross‑pairs. Therefore topics that influence the USD, US rates, or other USD pairs are the most relevant peers or influences.",
+    "existing_links_count": "7",
+    "candidate_count": "14",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'usdcny', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170938102139586777",
+    "rel_id": "usdjpy__correlates_with__ust30y",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/JPY is highly sensitive to long‑term U.S. yield expectations; a rise in the 30‑year Treasury yield typically strengthens the dollar versus the yen, making the pair strongly correlated.",
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__correlates_with__ust30y"
+}

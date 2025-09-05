@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:12:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "macro_risks_technology",
+    "target_id": "us_tariffs_on_technology",
+    "selection_motivation": "Macro risks in technology, such as supply chain disruptions and geopolitical tensions, directly drive U.S. tariff policy on technology imports.",
+    "candidate_motivation": "These topics are the strongest macroeconomic, policy, currency, and trade channels likely to influence technology investment risk and performance.",
+    "existing_links_count": "2",
+    "candidate_count": "25",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'core_monthly_cpi', 'us_inflation_data', 'oil', 'gold', 'copper', 'sp500', 'eurostoxx50', 'usd', 'eur', 'us_10y', 'us_treasury_yields', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_chip_exports_china', 'china_macro', 'china_nvidia_policy', 'nvidia_china_geopolitics', 'china_ai_semiconductors', 'china_us_tariff_truce', 'us_china_trade_talks', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845406",
+    "rel_id": "macro_risks_technology__influences__us_tariffs_on_technology",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_china_trade_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Macro risks in technology, such as supply chain disruptions and geopolitical tensions, directly drive U.S. tariff policy on technology imports.",
+      "type": "INFLUENCES",
+      "source": "macro_risks_technology",
+      "target": "us_tariffs_on_technology"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "macro_risks_technology__influences__us_tariffs_on_technology"
+}

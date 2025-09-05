@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T12:32:57",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LMDWEGA1E",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Vault Minerals earnings release on 30 Jun 2025 signals a slowdown in Australian metals & mining growth, likely dampening demand for gold and copper and tightening spreads.",
+      "existing_ids": [
+        "gold",
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Vault Minerals Limited’s 2024 revenue and earnings per share, along with forward guidance and market reaction, which constitutes a company earnings announcement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports key financial results, share price movement, and forward guidance for Vault Minerals Limited, directly affecting the company's valuation and investor perception."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article provides revenue and earnings projections for 2026 and discusses medium‑term growth rates, indicating a medium‑term outlook for the company."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "LMDWEGA1E"
+}

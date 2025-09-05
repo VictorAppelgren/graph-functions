@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:33:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_data_centers_electricity_impact",
+    "target_id": "pjm_data_center_power_supply",
+    "selection_motivation": "The rising electricity consumption of US data centers directly increases demand on the PJM transmission system, influencing its power supply planning and reliability metrics.",
+    "candidate_motivation": "These topics are the most plausible direct or adjacent influences on US Data Centers Electricity Impact, covering regional data center ecosystems, power supply dynamics, and core hardware/energy infrastructure players. They reflect both demand-side (cloud spend, data center growth) and supply-side (power infrastructure, sustainable energy) dimensions that shape electricity impact.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['tecogen_data_center_strategy', 'pjm_data_center_power_supply', 'southeast_asia_data_centres', 'nvidia_ai_infrastructure', 'amd_data_center_growth', 'smb_cloud_spend', 'sustainable_power_infrastructure_split_corp']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_data_centers_electricity_impact', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163881",
+    "rel_id": "us_data_centers_electricity_impact__influences__pjm_data_center_power_supply",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_data_centers_electricity_impact', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_data_centers_electricity_impact', 'target': 'pjm_data_center_power_supply'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The rising electricity consumption of US data centers directly increases demand on the PJM transmission system, influencing its power supply planning and reliability metrics.",
+      "type": "INFLUENCES",
+      "source": "us_data_centers_electricity_impact",
+      "target": "pjm_data_center_power_supply"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_data_centers_electricity_impact__influences__pjm_data_center_power_supply"
+}

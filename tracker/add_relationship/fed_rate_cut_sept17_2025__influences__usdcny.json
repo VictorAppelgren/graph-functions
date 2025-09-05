@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T13:18:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_rate_cut_sept17_2025",
+    "target_id": "usdcny",
+    "selection_motivation": "A scheduled Fed rate cut on Sept 17 2025 will directly weaken the USD, tightening the USD/CNY pair.",
+    "candidate_motivation": "USD/CNY is driven by US dollar strength, US monetary policy and yields, and China’s trade and credit conditions. The listed topics are the most direct peers or influences that shape the pair’s dynamics.",
+    "existing_links_count": "21",
+    "candidate_count": "21",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'usdjpy', 'gbpusd', 'eurusd', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1470426377848095469",
+    "rel_id": "fed_rate_cut_sept17_2025__influences__usdcny",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A scheduled Fed rate cut on Sept 17 2025 will directly weaken the USD, tightening the USD/CNY pair.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "usdcny"
+    }
+  },
+  "id": "fed_rate_cut_sept17_2025__influences__usdcny"
+}

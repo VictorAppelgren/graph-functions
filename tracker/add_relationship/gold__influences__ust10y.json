@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T12:36:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gold",
+    "target_id": "ust10y",
+    "selection_motivation": "Gold price movements serve as a leading indicator of risk sentiment and inflation expectations, which directly influence the US 10‑year Treasury yield. Adding this causal link improves the graph’s ability to model yield dynamics from commodity‑based risk signals.",
+    "candidate_motivation": "Gold is highly sensitive to macro‑financial drivers—inflation, U.S. and European monetary policy, U.S. Treasury yields, and the U.S. dollar—as well as to commodity price swings and equity market sentiment. These topics provide the most direct or competitive influence on gold’s price path.",
+    "existing_links_count": "12",
+    "candidate_count": "19",
+    "all_nodes_count": "34",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'ecb_policy', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'euro_inflation', 'wti', 'brent', 'copper', 'oil_price_decline', 'spx', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559532590",
+    "rel_id": "gold__influences__ust10y",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold price movements serve as a leading indicator of risk sentiment and inflation expectations, which directly influence the US 10‑year Treasury yield. Adding this causal link improves the graph’s ability to model yield dynamics from commodity‑based risk signals.",
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__influences__ust10y"
+}

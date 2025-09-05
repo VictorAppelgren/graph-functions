@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:49:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756035555",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "22124",
+    "output_chars": "1540",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edits: rewrite as a tight 4–6 sentence house view built on a first‑principles causal chain (platform breadth → GMV → revenue → operating margin → cash flow → valuation) and attach explicit sensitivities to scale; anchor every claim to concrete source IDs (e.g., QFDWCTAYB for Shopify’s Q2’25 metrics: GMV +27% to $163B, revenue +29% to $5.0B, op income +51%), the 2025 guide ($850–$950m) and the longer‑run path to $1.4B (SK994CBWR), while treating contested items with caveats (S5GX78VMT, 4LQD15CFU, TN66GHPAT). Structure the core into Baseline, Bull, and Bear with explicit catalysts (monetization of AI/tools/fulfillment layers; multi‑quarter GMV acceleration) and concrete invalidation triggers (e.g., GMV deceleration beyond a defined threshold for two consecutive quarters; AI/fulfillment monetization undershoots; a cut to 2025 guidance). Tighten the watch‑list to 4–6 signals, each tied to a source ID and with a clear trigger window, and purge redundancies and nonessential macro digressions unless they directly drive Shopify’s moat or risk premia. Ensure every assertion rests on approved IDs, reconcile conflicts explicitly, and maintain a concise executive tone that flows in 4–6 sentences with a crisp, decision‑useful conclusion.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__executive_summary__us_10y__analysis_run__1756035555"
+}

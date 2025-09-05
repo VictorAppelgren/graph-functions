@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T11:35:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust5y",
+    "target_id": "usdjpy",
+    "selection_motivation": "US 5Y Treasury yield is a primary benchmark for US dollar strength; higher yields attract capital flows, strengthening USD against JPY, directly influencing the USD/JPY rate.",
+    "candidate_motivation": "US 5‑year Treasury yields are driven by short‑term monetary policy, inflation expectations, and broader market sentiment; they also move in tandem with other U.S. Treasury maturities and the dollar’s strength. The listed topics are those that directly influence or closely correlate with the 5‑year yield, or are peers in the same yield curve, and thus are plausible strong influences or correlates.",
+    "existing_links_count": "18",
+    "candidate_count": "13",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'fed_policy', 'sofr', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdcny', 'usdjpy', 'eurusd']",
+    "existing_links_before_len": "18",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1209217599460607375",
+    "rel_id": "ust5y__influences__usdjpy",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5Y Treasury yield is a primary benchmark for US dollar strength; higher yields attract capital flows, strengthening USD against JPY, directly influencing the USD/JPY rate.",
+      "type": "INFLUENCES",
+      "source": "ust5y",
+      "target": "usdjpy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__influences__usdjpy"
+}

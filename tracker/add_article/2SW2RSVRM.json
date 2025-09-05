@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T14:51:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2SW2RSVRM",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; S&P 500 expected to decline 1-3% in the week following the August 4, 2025 Jaguar rebranding backlash.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Jaguar’s rebranding campaign, the political backlash it triggered, and the CEO’s resignation—company‑wide operational and leadership changes that are not earnings related."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a brand rebranding event for Jaguar, affecting its reputation but not macro markets or key financial handles."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events—Jaguar’s ad release, backlash, CEO resignation, and political commentary—that directly impact the brand and its market perception."
+    },
+    "article_node": {
+      "id": "2SW2RSVRM",
+      "title": "Why Every Rebrand Needs A Plan For Critics",
+      "summary": "Jaguar’s 2024 \"Copy Nothing\" ad, featuring models in bright, androgynous attire and no vehicles, sparked widespread backlash and prompted President Donald Trump to denounce the campaign as \"woke\" and criticize the company’s leadership, coinciding with CEO Adrian Mardell’s announced resignation. Jaguar defended the rebrand as a bold, imaginative reinvention aimed at positioning the brand for future growth, while the article contextualizes the controversy within a broader discussion of rebranding risks, citing examples such as BP’s green slogan, Twitter’s shift to X, and Weight Watchers’ name change. It also highlights the role of specialized firms like Rebranding Experts in navigating reputational, stakeholder, and communication challenges inherent in high‑profile brand transformations. The piece underscores that rebranding is not merely a marketing exercise but a strategic, enterprise‑wide initiative requiring careful risk assessment and stakeholder alignment.",
+      "source": "https://www.forbes.com/councils/forbesagencycouncil/2025/08/29/why-every-rebrand-needs-a-plan-for-critics/",
+      "published_at": "2025-08-29T11:45:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "2SW2RSVRM"
+}

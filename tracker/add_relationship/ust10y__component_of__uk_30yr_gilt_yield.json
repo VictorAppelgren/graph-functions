@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T11:15:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "COMPONENT_OF",
+    "source_id": "ust10y",
+    "target_id": "uk_30yr_gilt_yield",
+    "selection_motivation": "The U.S. 10‑year Treasury yield is a key component of the 30‑year UK gilt yield, reflecting the term‑structure relationship across sovereign markets; linking them captures cross‑country yield dynamics.",
+    "candidate_motivation": "US 10Y Treasury Yield is directly driven by monetary policy, term‑structure dynamics, and macro fundamentals; topics that influence or are correlated with it include Fed policy actions, other US Treasury maturities, inflation and employment data, currency indices, and global benchmark yields.",
+    "existing_links_count": "21",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'sofr', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'sx5e', 'spx', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152924803141731572",
+    "rel_id": "ust10y__component_of__uk_30yr_gilt_yield",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The U.S. 10‑year Treasury yield is a key component of the 30‑year UK gilt yield, reflecting the term‑structure relationship across sovereign markets; linking them captures cross‑country yield dynamics.",
+      "type": "COMPONENT_OF",
+      "source": "ust10y",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__component_of__uk_30yr_gilt_yield"
+}

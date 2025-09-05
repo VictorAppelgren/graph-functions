@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T09:08:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "eurostoxx50",
+    "selection_motivation": "USD is a major global currency that drives capital flows and exchange rates, making it a key driver of Eurostoxx 50 returns.",
+    "candidate_motivation": "The US Dollar is a global currency whose value is driven by macroeconomic fundamentals, monetary policy, and commodity prices. Topics that directly influence or correlate with the dollar include other currencies, interest rates, inflation, and key financial markets, as well as commodities that serve as safe‑haven or inflation hedges.",
+    "existing_links_count": "12",
+    "candidate_count": "16",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'sp500', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'eur', 'us_inflation_expectations']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'usd', 'target': 'eur'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1204713999833235470",
+    "rel_id": "usd__influences__eurostoxx50",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation_expectations'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'usd', 'target': 'eur'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD is a major global currency that drives capital flows and exchange rates, making it a key driver of Eurostoxx 50 returns.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "eurostoxx50"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__eurostoxx50"
+}

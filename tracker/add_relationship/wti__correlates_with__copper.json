@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T12:11:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "wti",
+    "target_id": "copper",
+    "selection_motivation": "Oil price movements strongly correlate with copper price due to shared exposure to global demand and production costs, yet no explicit link exists in the graph.",
+    "candidate_motivation": "WTI Crude Oil is driven by supply/demand fundamentals, currency moves, interest rates, and geopolitical events. The following topics capture those key drivers and are likely to be strong influences, correlates, or peers.",
+    "existing_links_count": "13",
+    "candidate_count": "33",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "33",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'brent', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'us_sanctions_iranshipping', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'gold', 'copper', 'wheat', 'spx', 'sx5e', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'euro_inflation', 'euribor']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159679103071160393",
+    "rel_id": "wti__correlates_with__copper",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements strongly correlate with copper price due to shared exposure to global demand and production costs, yet no explicit link exists in the graph.",
+      "type": "CORRELATES_WITH",
+      "source": "wti",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__correlates_with__copper"
+}

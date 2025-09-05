@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:21:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_urban_crime",
+    "target_id": "private_prison_growth",
+    "selection_motivation": "US urban crime dynamics drive higher incarceration rates, creating a direct demand for private prison expansion, making the link to private prison growth a key causal relationship.",
+    "candidate_motivation": "These topics are direct policy levers, enforcement actions, and social conditions historically linked to urban crime dynamics in the U.S., offering strong causal or correlational relevance to the source. They represent peers or influences that could meaningfully shape or reflect U.S. urban crime trends.",
+    "existing_links_count": "10",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'dc_federal_policing_initiative', 'dc_police_takeover', 'dc_federal_law_enforcement_takeover', 'national_guard_dc_deployment', 'homelessness_initiatives', 'california_homelessness_policy', 'private_prison_growth', 'private_prison_industry_growth', 'racialized_narratives_urban_crime']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'california_homelessness_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_in_black_cities'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'racialized_narratives_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_crime_rates_2024'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082935",
+    "rel_id": "us_urban_crime__influences__private_prison_growth",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'california_homelessness_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_in_black_cities'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'racialized_narratives_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_crime_rates_2024'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'private_prison_growth'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US urban crime dynamics drive higher incarceration rates, creating a direct demand for private prison expansion, making the link to private prison growth a key causal relationship.",
+      "type": "INFLUENCES",
+      "source": "us_urban_crime",
+      "target": "private_prison_growth"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_urban_crime__influences__private_prison_growth"
+}

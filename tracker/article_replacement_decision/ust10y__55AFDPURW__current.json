@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-09-01T09:46:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "55AFDPURW",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['HIW0OHZQQ', 'FMCSOJ6T0', 'ZUXOHE4Q9', 'CR3STT98T', 'U21K4ALYQ', '97MD1FHW8', '1DEM6P1Y2', '3YAQ8JUPL', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not provide a macro‑level handle or catalyst and is a single‑company earnings note, so it adds no new value to the graph."
+    }
+  },
+  "id": "ust10y__55AFDPURW__current"
+}

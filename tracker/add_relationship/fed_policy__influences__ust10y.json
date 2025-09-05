@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T09:43:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "ust10y",
+    "selection_motivation": "Fed policy decisions are the primary drivers of the 10‑year Treasury yield; adding this link captures the causal influence and enables accurate propagation of policy changes through the yield curve.",
+    "candidate_motivation": "US 10Y Treasury Yield is driven by monetary policy, inflation expectations, term‑premium dynamics, and global benchmark yields; the following topics capture those core influences and closely related peers.",
+    "existing_links_count": "21",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'dxy', 'euro_inflation']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118475895",
+    "rel_id": "fed_policy__influences__ust10y",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy decisions are the primary drivers of the 10‑year Treasury yield; adding this link captures the causal influence and enables accurate propagation of policy changes through the yield curve.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "ust10y"
+    }
+  },
+  "id": "fed_policy__influences__ust10y"
+}

@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T11:33:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6EPGGK142",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; US midstream policy changes in early 2025 could shift WTI and Brent prices.",
+      "existing_ids": [
+        "wti",
+        "brent"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Energy Action Limited’s net profit margin, EPS, and revenue figures for FY2024, which is a company earnings release."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Article reports quarterly earnings and margin improvement for Energy Action Limited, directly affecting its valuation and investor perception."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent earnings results and current U.S. policy actions that directly impact the company’s short‑term performance."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "6EPGGK142"
+}

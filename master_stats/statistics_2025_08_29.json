@@ -1,0 +1,86 @@
+{
+  "today": {
+    "queries": 20,
+    "articles": 94,
+    "articles_added": 140,
+    "articles_removed": 1,
+    "added_node": 1,
+    "removes_node": 5,
+    "about_links_added": 186,
+    "about_links_removed": 0,
+    "relationships_added": 179,
+    "relationships_removed": 26,
+    "rewrites_saved": 24,
+    "rewrites_skipped_0_articles": 0,
+    "duplicates_skipped": 15,
+    "errors": 9,
+    "qa_reports_generated": 0,
+    "should_rewrite_true": 0,
+    "should_rewrite_false": 0,
+    "topic_replacements_decided": 0,
+    "llm_simple_calls": 76,
+    "llm_medium_calls": 864,
+    "llm_complex_calls": 43,
+    "llm_simple_long_context_calls": 305
+  },
+  "graph_state": {
+    "topics": 28,
+    "topics_with_full_analysis": 2,
+    "articles": 2866,
+    "connections": 348,
+    "about_links": 195,
+    "inter_topic_links": 153,
+    "unique_relationship_types": [
+      "ABOUT",
+      "COMPONENT_OF",
+      "CORRELATES_WITH",
+      "INFLUENCES",
+      "PEERS"
+    ],
+    "orphans": {
+      "topics": 0,
+      "articles": 2821
+    },
+    "last_updated": "2025-08-29T18:11:57+00:00"
+  },
+  "problems": {
+    "zero_result_queries": 59,
+    "topics_zero_results": [
+      "usdcny",
+      "fed_policy",
+      "ust10y",
+      "bund10y",
+      "china_exports",
+      "us_unemployment_claims",
+      "ust30y",
+      "copper",
+      "ust5y",
+      "GBP/USD",
+      "gbpusd",
+      "gilt10y",
+      "Euro Stoxx 50",
+      "sx5e",
+      "sofr",
+      "ecb_policy",
+      "USD/JPY",
+      "usdjpy",
+      "EURUSD",
+      "eurusd",
+      "brent"
+    ],
+    "topic_rejections": 5,
+    "rewrites_skipped_0_articles": 2,
+    "rewrite_skips": [
+      {
+        "timestamp": "2025-08-29T15:34:43+00:00",
+        "topic_id": "us_inflation",
+        "section": "medium"
+      },
+      {
+        "timestamp": "2025-08-29T16:01:26+00:00",
+        "topic_id": "fed_policy",
+        "section": "fundamental"
+      }
+    ]
+  }
+}

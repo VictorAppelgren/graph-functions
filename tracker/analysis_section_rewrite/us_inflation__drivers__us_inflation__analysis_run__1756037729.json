@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:22:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756037729",
+    "drivers_count": "7",
+    "material_chars": "3003",
+    "output_chars": "3814",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft captures a credible base-case Regime A but to reach world-class quality you should: (1) replace broad narrative with a formal, first-principles transmission chain tied to explicit data (Platform breadth → GMV growth → revenue → operating margins → cash flow → multiples), anchoring every link to the exact source metrics (Azure contracted revenue ≈ $368B and growth ≈ 39% from 48JXC9VDP/0G3A676BP; Shopify GMV ≈ $163B with revenue ≈ +29% and operating income ≈ +51% in H1’25 as per 0G3A676BP/QF/48JXC9VDP), and resolve any inconsistency (Shopify GMV +27% vs +29% revenue) by harmonizing time frame; (2) reframe as a multi-scenario framework (Base: Regime A persists; Upside: policy easing accelerates; Downside: tighter policy/tariffs/tight liquidity) with clearly defined triggers and explicit invalidation criteria; (3) quantify sensitivities with ranges rather than absolutes, e.g., retain the Azure 39% growth and Shopify 27–29% GMV/revenue path, and specify how a deviation would alter multiples and cash flow; (4) tighten the watch-list to 4 decisive signals and attach each to a source (Fed guidance and rate-path from RHXDOHQQX; cross-border AI spend and macro impulse from 0G3A676BP/GX057ADL7; oil-supply dynamics from J99EM2TPZ; tariff developments from RHXDOHQQX/0G3A676BP); (5) fix the oil block (complete the forecast if used, or omit to avoid misinformation); (6) strengthen cross-topic linkage by detailing how policy, macro dynamics, and flows feed cloud/AI capex and valuation (e.g., rate cuts reduce discounting, dollar softness lifts offshore earnings, cross-border AI spend amplifies cloud demand); (7) enforce citation discipline: attach the precise IDs to every data point, and reconcile any conflicts in a short data appendix; (8) deliver a concise horizon-focused narrative with a stand-alone, four-line watch-list and an explicit path to an invalidation signal within the next quarter.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__drivers__us_inflation__analysis_run__1756037729"
+}

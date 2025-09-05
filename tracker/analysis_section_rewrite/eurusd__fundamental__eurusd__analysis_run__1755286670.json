@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-15T21:37:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755286670",
+    "article_ids": "['V429JZ8JT', 'LF7R852FA', 'HWGNUP2XG', 'J8D0E7VC2', 'XPGIRT4RH']",
+    "selected_articles_count": "5",
+    "material_chars": "104662",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "fundamental_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-oss",
+      "feedback": "The article is clear and engaging, but tighten the copy for brevity and consistency: trim the long introductory paragraph to a single sentence that hooks the reader (“Why Toyo’s winter tires contain walnut shells”), then merge the duplicated “Title” and “Content” sections into one cohesive body. Remove the redundant “Description” line and the repeated “Argos Summary” to avoid confusion. In the “FullText” section, replace the informal “good reaosn” typo with “good reason” and standardise the heading style (e.g., use “Winter Tires vs. All‑Season Tires” as the main heading). Finally, delete the duplicated “Winter Vs. All‑Season Tires” link in the scraped source list and ensure the article’s categories and taxonomies are aligned (Weather → Shopping/Consumer Resources/Product Reviews & Price Comparisons).",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__fundamental__eurusd__analysis_run__1755286670"
+}

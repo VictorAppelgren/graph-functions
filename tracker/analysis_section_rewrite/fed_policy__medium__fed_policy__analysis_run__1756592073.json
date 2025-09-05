@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:18:00",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756592073",
+    "article_ids": "['FAN5RYW6T', 'XQMF22EFB', 'F7K7Y35U5', 'XTQIQRP5K', 'KX6AOMQZ5']",
+    "selected_articles_count": "5",
+    "material_chars": "166946",
+    "output_chars": "1993",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Key gaps & edit actions**\n\n| Issue | What to fix | How to fix |\n|-------|-------------|------------|\n| **Missing inline citations** | Every claim must reference a source ID. | Add `(ID)` after each factual statement (e.g., “DXY rose 0.36 % to a one‑week high (​XTQIQRP5K)”). |\n| **Unspecified dates for catalysts** | The analysis must tie each trigger to a concrete window. | Insert exact release dates: CPI July 2025 (released Aug 1 2025), Fed September 2025 meeting (Sep 16‑17 2025), tariff announcements (Aug 28 2025). |\n| **Lack of quantitative ranges** | Provide precise magnitude ranges for each scenario. | State: “Base case: DXY +0.2 – +0.5 % (Aug 1 – Sep 30 2025). Alt 1 (CPI > 2.7 %): DXY –0.1 – –0.2 %. Alt 2 (CPI < 2.5 %): DXY +0.2 – +0.4 %.” |\n| **Missing driver mapping** | Each claim should map to a canonical handle. | Use driver names: `us_core_cpi`, `fed_policy`, `tariff_policy`, `copper_price`. Example: “Fed dovish stance (fed_policy) → DXY.” |\n| **Unclear transmission path** | Explain how each catalyst moves to the handle. | Add short causal links: “CPI ↑ → Fed cuts → lower yields → DXY ↓.” |\n| **Fluff & verbosity** | Trim narrative language. | Keep sentences tight: “DXY is at 101.5 (XTQIQRP5K).” |\n| **Watch‑list signals** | Explicitly list signals with dates. | “Watch: CPI (Aug 1), Fed minutes (Sep 16‑17), Treasury 10‑yr yield (daily), DXY 20‑day MA, copper flat‑wire price (daily).” |\n| **Confidence level** | State confidence with a qualifier. | “Confidence: moderate (± 0.1 pp).” |\n| **Scenario structure** | Present base case, 1–2 alternatives, risks, watch signals, confidence in a bullet format. | Re‑format into a concise table or bullet list. |\n| **Currency of data** | Ensure all numbers are current (2025). | Verify CPI 2.7 % YoY, copper flat‑wire price $X/mt (F7K7Y35U5). |\n| **Avoid FX‑centric bias** | Balance with other pillars. | Mention commodity (copper), rates (Fed policy), credit (ARM‑related consumption). |\n\n**Re‑write sample (compact, actionable)**\n\n```\n• Base case (Aug 1 – Sep 30 2025): DXY +0.2 – +0.5 % (101.5 → 102.0) driven by short‑covering (XTQIQRP5K), Fed dovish stance (fed_policy), tariff‑induced risk premium (tariff_policy), and copper price support (copper_price).  \n• Alt 1 (CPI > 2.7 % on Aug 1): Fed cuts → lower yields → DXY –0.1 – –0.2 %.  \n• Alt 2 (CPI < 2.5 % on Aug 1): Fed holds → higher yields → DXY +0.2 – +0.4 %.  \n• Risks: delayed Fed cut, CPI > 3 %, tariff rollback (Aug 28).  \n• Watch signals: CPI (Aug 1), Fed minutes (Sep 16‑17), 10‑yr yield, DXY 20‑day MA, copper flat‑wire price.  \n• Confidence: moderate (± 0.1 pp).  \n```\n\nAdd inline citations after each numeric or factual claim (e.g., `(XTQIQRP5K)`, `(FAN5RYW6T)`, `(F7K7Y35U5)`). Ensure all drivers map to canonical handles (`us_core_cpi`, `fed_policy`, `tariff_policy`, `copper_price`). This will satisfy the truth‑>verbosity rule, provide a clear causal chain, and meet the 3–6 month horizon requirement.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1756592073"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T07:06:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_industrial_output",
+    "target_id": "china_exports",
+    "selection_motivation": "India’s industrial output is a primary driver of demand for Chinese manufactured goods, directly influencing China exports.",
+    "candidate_motivation": "India Industrial Output is influenced by domestic demand, global commodity prices, trade flows, currency exposure and the broader interest‑rate environment. Topics that directly affect or correlate with these drivers are therefore likely strong influences or peers.",
+    "existing_links_count": "7",
+    "candidate_count": "25",
+    "all_nodes_count": "42",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'brent', 'copper', 'gold', 'wheat', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586272",
+    "rel_id": "india_industrial_output__influences__china_exports",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India’s industrial output is a primary driver of demand for Chinese manufactured goods, directly influencing China exports.",
+      "type": "INFLUENCES",
+      "source": "india_industrial_output",
+      "target": "china_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__influences__china_exports"
+}

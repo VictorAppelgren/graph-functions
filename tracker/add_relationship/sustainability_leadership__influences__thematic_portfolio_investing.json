@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T12:50:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sustainability_leadership",
+    "target_id": "thematic_portfolio_investing",
+    "selection_motivation": "Sustainability leadership sets industry standards and expectations that directly drive the adoption of thematic portfolio investing strategies.",
+    "candidate_motivation": "Sustainability Leadership is closely tied to environmental finance, green technologies, and ESG-driven investment strategies, so topics that address climate funding, nature-based insurance, carbon capture hubs, and thematic ESG investing are natural influences or peers. Trade policy also indirectly shapes sustainability initiatives by affecting global supply chains and regulatory frameworks.",
+    "existing_links_count": "0",
+    "candidate_count": "5",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['climate_loss_damage_funding', 'nature_based_solutions', 'ccus_hubs_asia', 'thematic_portfolio_investing', 'us_china_trade_policy']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902825",
+    "rel_id": "sustainability_leadership__influences__thematic_portfolio_investing",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sustainability_leadership', 'target': 'thematic_portfolio_investing'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Sustainability leadership sets industry standards and expectations that directly drive the adoption of thematic portfolio investing strategies.",
+      "type": "INFLUENCES",
+      "source": "sustainability_leadership",
+      "target": "thematic_portfolio_investing"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sustainability_leadership__influences__thematic_portfolio_investing"
+}

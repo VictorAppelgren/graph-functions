@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T10:09:34",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756366586",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9082",
+    "output_chars": "702",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft captures the key catalysts but lacks depth, causal nuance, and precise probability calibration; tighten the causal chain by linking Fed signals to real‑rate differentials, dollar weakness, and crypto valuations (OGK8WLL69), and quantify the magnitude of the dollar’s expected depreciation (e.g., 10‑15 bps) to support the 70 % probability, not just a generic “hint”; for Switch 2, embed the 21 % jump in hardware spending and its 1‑2 % equity lift (K2JWRPXRV) to justify the 60 % probability, and add a trigger for a 1‑5 % decline if sales fall below 1.8 million units; remove redundant “Fed minutes confirm cut” line and instead use “Fed minutes signal rate cut” as the trigger; for the downside, replace the generic “Fed minutes no cut” with “Fed minutes signal no rate cut or tightening” and quantify the expected 5‑10 bps rise in real rates, compressing valuations by ~4 % (OGK8WLL69) to support the 30 % probability; similarly, for Switch 2 downside, explicitly link a 1.8 million unit drop to a >15 % decline in hardware spending and a 0.5‑1 % equity drag (K2JWRPXRV) to justify the 40 % probability; ensure each line cites only the specific source ID when asserting a number or event, avoid repeating the same ID in trigger and watch columns, and keep each sentence strictly one line with no filler.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756366586"
+}

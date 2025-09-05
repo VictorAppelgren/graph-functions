@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:35:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "X7GNNSDLK",
+    "topic_discovery_motivation": "Article discusses advancements in AI-powered editing tools which may impact technology and consumer behavior, relevant to existing nodes on AI applications and technology trends.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "AI-Powered Editing Tools",
+        "Pixel Studio App",
+        "Screenshot Editing Innovations"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a new product feature from Google, which is a company update."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article announces a minor feature update for Pixel Studio, which is unlikely to have significant macroeconomic impact on the broader economy or the node’s core value proposition."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a new feature launch in the current Android beta, indicating an immediate update to Pixel phones."
+    },
+    "article_node": {
+      "id": "X7GNNSDLK",
+      "title": "Google is supercharging screenshot editing on your Pixel with Android 16 QPR2 Beta 1",
+      "summary": "Google has introduced an enhanced screenshot editing feature for Pixel phones with the Android 16 QPR2 Beta 1, allowing users to edit screenshots directly in the Pixel Studio app. This new app offers advanced editing tools, including AI-powered options that enable users to describe changes they want to make, although initial tests showed some limitations. Additionally, Pixel Studio provides various editing functionalities such as cropping, highlighting, and adding captions.",
+      "source": "https://www.androidauthority.com/pixel-screenshot-editing-android-16-qpr2-beta-1-3590223/",
+      "published_at": "2025-08-22T05:30:17+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "X7GNNSDLK"
+}

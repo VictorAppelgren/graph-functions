@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:03:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "smb_cloud_spend",
+    "target_id": "ai_infrastructure",
+    "selection_motivation": "SMB Cloud Spend directly drives demand for AI infrastructure services as small and medium businesses adopt AI workloads, making it a major influence on AI infrastructure growth.",
+    "candidate_motivation": "SMB Cloud Spend is influenced by cloud infrastructure demand, data center capacity, and macroeconomic conditions affecting SMB IT budgets; the shortlisted topics represent direct cloud infrastructure players, data-center expansion, and relevant inflation/macroeconomic signals.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['first_trust_cloud_computing_etf', 'ai_infrastructure', 'nvidia_ai_infrastructure', 'amd_data_center_growth', 'southeast_asia_data_centres', 'us_data_centers_electricity_impact', 'internxt_cloud_storage', 'core_monthly_cpi', 'us_inflation_data', 'macro_risks_technology']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'smb_cloud_spend', 'target': 'first_trust_cloud_computing_etf'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160152",
+    "rel_id": "smb_cloud_spend__influences__ai_infrastructure",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'smb_cloud_spend', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'smb_cloud_spend', 'target': 'first_trust_cloud_computing_etf'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "SMB Cloud Spend directly drives demand for AI infrastructure services as small and medium businesses adopt AI workloads, making it a major influence on AI infrastructure growth.",
+      "type": "INFLUENCES",
+      "source": "smb_cloud_spend",
+      "target": "ai_infrastructure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "smb_cloud_spend__influences__ai_infrastructure"
+}

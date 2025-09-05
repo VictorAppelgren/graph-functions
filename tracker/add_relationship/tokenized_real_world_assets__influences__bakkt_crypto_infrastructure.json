@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:08:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "tokenized_real_world_assets",
+    "target_id": "bakkt_crypto_infrastructure",
+    "selection_motivation": "Tokenized real‑world assets require robust crypto infrastructure for issuance, custody, and settlement; Bakkt provides a leading platform for such services, making TRWA a key driver of Bakkt’s infrastructure adoption.",
+    "candidate_motivation": "These topics are the most plausible influences, correlates, or peers to Tokenized Real-World Assets due to shared technology (on-chain tokenization), regulatory considerations, and liquidity rails that enable asset tokenization.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['tokenization_regulation', 'stablecoins', 'stablecoin_impact_on_banking', 'usdc_stablecoin', 'usdc_circulation', 'chainlink_integration', 'chainlink_ice_partnership', 'digital_wallet_growth', 'bakkt_crypto_infrastructure']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'tokenized_real_world_assets', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163053",
+    "rel_id": "tokenized_real_world_assets__influences__bakkt_crypto_infrastructure",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'tokenized_real_world_assets', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tokenized_real_world_assets', 'target': 'bakkt_crypto_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Tokenized real‑world assets require robust crypto infrastructure for issuance, custody, and settlement; Bakkt provides a leading platform for such services, making TRWA a key driver of Bakkt’s infrastructure adoption.",
+      "type": "INFLUENCES",
+      "source": "tokenized_real_world_assets",
+      "target": "bakkt_crypto_infrastructure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "tokenized_real_world_assets__influences__bakkt_crypto_infrastructure"
+}

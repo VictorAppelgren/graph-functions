@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T05:46:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756006499",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9656",
+    "output_chars": "730",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft lacks a coherent causal chain and over‑reliance on generic Fed‑rate language; tighten the narrative by linking each driver to a specific sector impact (e.g., AI‑driven margin lift for ACMR, real‑rate compression for insurers) and anchor probabilities to source‑based evidence (e.g., 70 % cut probability from C3ODMIQKZ, 30 % tightening risk from TN66GHPAT). Replace vague “Fed 50‑basis‑point cut” with the concrete trigger “Fed’s September 50‑bp cut” and specify the resulting 300–350 bp spread narrowing (GX057ADL7) and 2–3 % dollar depreciation (GX057ADL7). For the ACMR upside, cite the earnings‑beat threshold (>5 %) and guidance revision from SK994CBWR, but add a 5 % margin expansion trigger from AI adoption (4LQD15CFU) to strengthen the causal link. Downside items should separate insurance compression (TN66GHPAT) and export‑control tightening (SK994CBWR) with distinct time windows (Q4 2025 vs Q3 2025) and probabilities grounded in source data (e.g., 30 % from TN66GHPAT, 25 % from SK994CBWR). Ensure each line follows the required format, uses only in‑text citations for specific facts, and removes filler; e.g., “Down | Q4 2025 | Export‑control tightening curtails ACMR fab access, erodes earnings (SK994CBWR) | U.S. export‑control announcements | 25 %.” Finally, add a brief note on the oil‑price scenario (J99EM2TPZ) as a secondary catalyst for energy‑heavy sectors, and adjust probabilities accordingly.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__movers_scenarios__us_10y__analysis_run__1756006499"
+}

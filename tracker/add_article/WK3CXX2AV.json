@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T17:19:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WK3CXX2AV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy shift to BEAD program and hybrid fiber deployment may lift US Treasury yields across the curve, with a 5‑10 bp uptick on the 10‑year by Q4 2025.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust5y",
+        "ust2y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Actelis Networks unveiling a new hybrid‑fiber product, which is a company‑specific product launch update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article focuses on a niche telecom infrastructure product with no direct mapping to the defined canonical market handles (indices, rates, FX, commodities, credit/vol)."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a new hybrid‑fiber solution that could reshape in‑building connectivity over the medium term."
+    },
+    "article_node": {
+      "id": "WK3CXX2AV",
+      "title": "Actelis Networks Announces Launch of GigaLine 9000 Solution for Large-Scale Building Connectivity Applications",
+      "summary": "Actelis Networks has unveiled its GigaLine 9000 hybrid‑fiber solution, enabling gigabit connectivity in large buildings by upgrading existing copper and coax infrastructure. The system targets the multi‑billion‑dollar in‑building connectivity market and aims to make U.S. Federal BEAD Program funding more efficient by reducing the need for costly fiber buildouts. With rapid, low‑capital deployment and scalable architecture, Actelis positions the GL9000 for U.S. and European markets, offering a cost‑effective alternative to traditional fiber installations.",
+      "source": "https://finance.yahoo.com/news/actelis-networks-announces-launch-gigaline-130000626.html",
+      "published_at": "2025-09-04T13:00:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "WK3CXX2AV"
+}

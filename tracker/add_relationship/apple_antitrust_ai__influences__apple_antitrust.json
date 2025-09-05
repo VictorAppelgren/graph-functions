@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:05:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_antitrust_ai",
+    "target_id": "apple_antitrust",
+    "selection_motivation": "Apple Antitrust Allegations in AI are a specific subset of Apple’s broader antitrust issues; linking them clarifies the causal hierarchy and improves downstream analytics on regulatory risk.",
+    "candidate_motivation": "Directly related to Apple's antitrust landscape in AI and adjacent regulatory scrutiny; these topics cover other Apple antitrust statements and allegations in AI, plus broader Apple-related antitrust themes.",
+    "existing_links_count": "7",
+    "candidate_count": "3",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "3",
+    "candidate_ids_preview": "['apple_openai_antitrust', 'apple_antitrust_claims', 'apple_antitrust']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'ai_in_education'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_trademark_litigation'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_trademark_disputes'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_antitrust_claims'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958118",
+    "rel_id": "apple_antitrust_ai__influences__apple_antitrust",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'ai_in_education'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_trademark_litigation'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_trademark_disputes'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_antitrust_claims'}, {'type': 'INFLUENCES', 'source': 'apple_antitrust_ai', 'target': 'apple_antitrust'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Apple Antitrust Allegations in AI are a specific subset of Apple’s broader antitrust issues; linking them clarifies the causal hierarchy and improves downstream analytics on regulatory risk.",
+      "type": "INFLUENCES",
+      "source": "apple_antitrust_ai",
+      "target": "apple_antitrust"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_antitrust_ai__influences__apple_antitrust"
+}

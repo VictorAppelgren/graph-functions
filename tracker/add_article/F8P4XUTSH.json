@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T16:55:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "F8P4XUTSH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; expansion of gold and copper land holdings in Newfoundland may modestly support commodity supply outlook and influence Canadian mining sector sentiment.",
+      "existing_ids": [
+        "gold",
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a corporate acquisition and expansion of land holdings by Sokoman Minerals Corp., which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The node to which the impact should be assessed was not provided, so I cannot determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a corporate acquisition of mineral claims that expands the company’s asset base and initiates immediate exploration activities, setting the stage for future production—a medium‑term development."
+    },
+    "article_node": {
+      "id": "F8P4XUTSH",
+      "title": "Sokoman Minerals Corp. Expands Land Position at Crippleback Lake",
+      "summary": "Sokoman Minerals Corp. has secured two property purchase agreements to expand its land holdings at Crippleback Lake, adding 105 mineral claims from United Gold Inc. and 74 claims from David Evans. The deals involve cash and share payments, with a 1% net‑shale‑rights royalty on the Evans property. The company now controls over 13,000 hectares at Crippleback Lake and plans immediate geophysical surveys and mapping to advance a copper‑gold play.",
+      "source": "https://finance.yahoo.com/news/sokoman-minerals-corp-expands-land-133800957.html",
+      "published_at": "2025-09-02T13:38:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "F8P4XUTSH"
+}

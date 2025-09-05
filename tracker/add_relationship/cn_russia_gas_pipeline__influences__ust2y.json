@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T09:38:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "cn_russia_gas_pipeline",
+    "target_id": "ust2y",
+    "selection_motivation": "China’s higher gas imports via the pipeline lift short‑term inflation expectations, tightening Fed policy and pushing UST 2‑year yields higher.",
+    "candidate_motivation": "The source topic concerns China’s gas imports via the Power of Siberia 2 pipeline, so topics that touch on energy supply/demand, pricing, currency, and macro policy that influence or are influenced by that flow are relevant.",
+    "existing_links_count": "11",
+    "candidate_count": "23",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['china_pos2_pipeline', 'usdcny', 'dxy', 'oil_price_decline', 'wti', 'brent', 'us_crude_inventory', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'gold', 'copper', 'wheat', 'spx', 'sx5e', 'eurusd', 'usdjpy', 'gbpusd']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186699601323753903",
+    "rel_id": "cn_russia_gas_pipeline__influences__ust2y",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s higher gas imports via the pipeline lift short‑term inflation expectations, tightening Fed policy and pushing UST 2‑year yields higher.",
+      "type": "INFLUENCES",
+      "source": "cn_russia_gas_pipeline",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cn_russia_gas_pipeline__influences__ust2y"
+}

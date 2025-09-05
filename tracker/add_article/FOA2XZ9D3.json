@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T22:48:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FOA2XZ9D3",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; political scandal may influence US Treasury yields.",
+      "existing_ids": [
+        "us_10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses legal developments and regulatory actions, including the Justice Department’s handling of Epstein records, Maxwell’s conviction and prison relocation, and immigration enforcement actions such as the T‑visa challenges and forced return of a Mexican family, which fall under regulatory/legal developments."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports the Trump administration releasing transcripts that deny knowledge of Epstein involvement, highlighting a major political controversy and impacting the administration’s credibility."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent releases, ongoing controversies, and immediate policy actions, all of which are current events affecting the node."
+    },
+    "article_node": {
+      "id": "FOA2XZ9D3",
+      "title": "Epstein's former girlfriend told Justice Department she did not see Trump act in 'inappropriate way'",
+      "summary": "Transcripts of Ghislaine Maxwell’s interview with Deputy Attorney General Todd Blanche were released by the Trump administration, showing her denying any knowledge of Donald Trump’s involvement in Epstein’s sex‑trafficking scheme, a move aimed at deflecting criticism as the administration struggled to disclose evidence from the case. The release comes amid ongoing controversy over the Justice Department’s handling of Epstein records, Maxwell’s 20‑year conviction and sentencing, and her recent prison relocation, while victims and advocates continue to demand transparency. Separate stories in the article cover a truck driver denied bond after a fatal crash, the rise and challenges of the T‑visa for trafficking survivors, and the forced return of a Mexican family from a California cannabis farm raid, highlighting broader immigration enforcement tensions. Together, the pieces illustrate the Trump administration’s attempts to manage fallout from the Epstein scandal, its immigration policy controversies, and the human impact of enforcement actions.",
+      "source": "https://www.latimes.com/world-nation/story/2025-08-23/epsteins-former-girlfriend-told-justice-department-she-did-not-see-trump-act-in-inappropriate-way",
+      "published_at": "2025-08-23T18:45:23.098000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "FOA2XZ9D3"
+}

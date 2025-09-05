@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:37:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SIJGI8YB1",
+    "topic_discovery_motivation": "Article discusses advancements in cruise ship internet technology and passenger advice, which relates to broader trends in technology and consumer behavior.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "cruise_ship_internet",
+        "starlink_cruise_technology",
+        "passenger_cruise_advice"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses cruise lines' policy on internet usage and penalties for personal satellite devices, which is a company news update not related to earnings."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "I'm not sure which node this refers to; if it concerns cruise ship internet or satellite connectivity, the article has moderate relevance, but uncertainty leads to a low score."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent developments in cruise ship internet connectivity and immediate passenger guidance."
+    },
+    "article_node": {
+      "id": "SIJGI8YB1",
+      "title": "The Truth About Cruise Ship Internet And How To Get It Cheaper",
+      "summary": "Cruise ship internet has improved significantly with the introduction of technologies like Starlink, yet prices remain high and connectivity is often treated as a premium add-on. Passengers are cautioned against using personal satellite devices like Starlink due to strict bans by cruise lines, which enforce penalties for violations. Additionally, first-time cruisers are advised to avoid common mistakes such as overpacking, relying solely on cruise line excursions, and neglecting to monitor onboard spending, to enhance their overall experience.",
+      "source": "https://www.forbes.com/sites/davidnikel/2025/08/22/the-truth-about-cruise-ship-internet-and-how-to-get-it-cheaper/",
+      "published_at": "2025-08-22T06:13:29+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "SIJGI8YB1"
+}

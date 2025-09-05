@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T07:05:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "JFD3MAPVD",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['Z7K8PC4G5', 'U21K4ALYQ', 'P9A57NAU9', '97MD1FHW8', '3952FOSRQ', '3YAQ8JUPL', 'D0R3LX8F7']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not map to any canonical market handle and offers no new macro‑level insight beyond existing coverage."
+    }
+  },
+  "id": "fed_policy__JFD3MAPVD__current"
+}

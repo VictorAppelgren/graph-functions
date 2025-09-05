@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T18:36:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "iran_nuclear_sanctions",
+    "new_article_id": "QOTVY47UC",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['9X601KXT0', 'R61VKRW87', '9HAPNGUHH', 'EUWPOUVU2']",
+    "mode": "CAN_REPLACE",
+    "target_id": "9X601KXT0",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "9X601KXT0",
+      "motivation": "The new article provides substantive, up-to-date coverage on the Israel-Houthis context, superseding the placeholder article 9X601KXT0. Removing the older entry improves graph signal quality and reduces redundancy."
+    }
+  },
+  "id": "iran_nuclear_sanctions__QOTVY47UC__current"
+}

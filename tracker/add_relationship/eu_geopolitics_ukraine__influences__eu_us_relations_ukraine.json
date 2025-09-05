@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:17:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eu_geopolitics_ukraine",
+    "target_id": "eu_us_relations_ukraine",
+    "selection_motivation": "The EU’s geopolitical position in the Ukraine conflict directly shapes its coordination and policy alignment with the United States, thereby influencing EU‑U.S. relations on Ukraine.",
+    "candidate_motivation": "These topics have direct, high-signal relevance to EU geopolitics in Ukraine conflict, including Russia-Ukraine dynamics, sanctions, diplomacy, and energy-security spillovers.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ukraine_conflict', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_sovereignty', 'ukraine_post_war_instability', 'donbas_region', 'russia_economic_crisis', 'russian_sanctions', 'us_russia_ukraine_diplomacy', 'eu_us_relations_ukraine', 'ukraine_diplomacy']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_conflict'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082105",
+    "rel_id": "eu_geopolitics_ukraine__influences__eu_us_relations_ukraine",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'eu_us_relations_ukraine'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The EU’s geopolitical position in the Ukraine conflict directly shapes its coordination and policy alignment with the United States, thereby influencing EU‑U.S. relations on Ukraine.",
+      "type": "INFLUENCES",
+      "source": "eu_geopolitics_ukraine",
+      "target": "eu_us_relations_ukraine"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eu_geopolitics_ukraine__influences__eu_us_relations_ukraine"
+}

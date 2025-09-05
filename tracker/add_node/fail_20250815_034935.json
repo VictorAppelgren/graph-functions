@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:49:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "X4XH75UOJ",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the shift towards dynamic B2B payment terms and the integration of technology in payment processes, necessitating a new node to capture this evolving landscape.",
+      "id": "b2b_payment_terms",
+      "name": "B2B Payment Terms",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Tariff policy uncertainty and geopolitical shocks driving cost pressures, supply chain disruptions, and strategic hesitation in enterprise operations."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "B2B payment terms are an operational detail of business transactions, not a macroeconomic driver or tradable asset; it does not fit the macro focus of the graph.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

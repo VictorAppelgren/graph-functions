@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:37:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "US tariffs directly target semiconductor imports, making this a primary driver of the semiconductor tariff node and essential for analyzing supply‑chain disruptions and trade‑policy impacts.",
+    "candidate_motivation": "Tariffs are direct policy levers with wide ripple effects on inflation, trade flows, and sector pricing; the shortlisted topics either implement tariffs, address tariff disputes, or reflect macro spillovers that tariffs typically drive.",
+    "existing_links_count": "10",
+    "candidate_count": "14",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_semiconductors', 'china_us_tariff_truce', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'us_india_tariffs', 'us_tariffs_inflation', 'tariff_driven_inflation', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_healthcare_stocks', 'us_chip_trade_china']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'tariff_driven_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1209217599460607400",
+    "rel_id": "us_tariffs__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US tariffs directly target semiconductor imports, making this a primary driver of the semiconductor tariff node and essential for analyzing supply‑chain disruptions and trade‑policy impacts.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs__influences__us_tariffs_semiconductors"
+}

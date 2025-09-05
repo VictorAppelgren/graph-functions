@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T01:21:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "copper",
+    "target_id": "ust10y",
+    "selection_motivation": "Copper price movements are a leading indicator of inflation expectations that directly influence long‑term U.S. Treasury yields; adding a direct influence link to ust10y improves causal modeling of rate dynamics.",
+    "candidate_motivation": "Copper is a global industrial metal whose price is driven by macro‑financial conditions, currency strength, commodity demand, and energy prices.  The listed topics are major economic indicators, monetary policy signals, yield curves, currency pairs, and energy/commodity benchmarks that historically exhibit strong correlations or causal links to copper.",
+    "existing_links_count": "20",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'gold', 'wti', 'brent', 'oil_price_decline', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'india_industrial_output', 'china_exports', 'china_credit_impulse', 'sx5e', 'spx']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1283526993312220550",
+    "rel_id": "copper__influences__ust10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price movements are a leading indicator of inflation expectations that directly influence long‑term U.S. Treasury yields; adding a direct influence link to ust10y improves causal modeling of rate dynamics.",
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__influences__ust10y"
+}

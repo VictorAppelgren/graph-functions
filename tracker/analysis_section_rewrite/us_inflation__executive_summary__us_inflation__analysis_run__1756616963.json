@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:23:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756616963",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "5694",
+    "output_chars": "950",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit summary (≤ 6 bullets, each with a single claim, canonical handle ust10y, explicit sign/magnitude, catalyst window, risk, watch‑items, confidence, and a citation):**\n\n1. **Base case** – 30‑yr mortgage rates will hover at **6.55 %** through Q4 2025, reflecting a **+10–15 bp** term‑premium lift from the Fed’s 4.25‑4.50 % policy rate and paused asset‑sale taper (LF0UUL917).  \n2. **Catalyst** – If the Fed cuts the fed‑funds rate by **25 bp** at the **Sept 16‑17 2025 FOMC**, mortgage rates should **fall 5–10 bp** over the next 3–6 months (LF0UUL917).  \n3. **Alternative catalyst** – A dovish Fed stance coupled with a **10–15 bp** term‑premium decline (via slowed balance‑sheet contraction) would push rates **down 10–20 bp** (LF0UUL917).  \n4. **Risk** – A Fed hike or a pause in the balance‑sheet taper adds **5–10 bp** to the term premium, potentially raising rates **above 7 %** (LF0UUL917).  \n5. **Watch items** – Monitor Fed policy statements, the **Oct 2025 CPI** release, and Treasury liquidity (2‑yr/10‑yr spread) as the primary invalidation signals (LF0UUL917).  \n6. **Confidence** – High, given the clear Fed‑policy → term‑premium → mortgage‑rate transmission and the 6.55 % base‑case anchor (LF0UUL917).  \n\n**Key edits:**  \n- Replace the long paragraph with the six bullets above.  \n- Explicitly map mortgage rates to the canonical handle **ust10y** in the first bullet.  \n- Ensure every bullet ends with a single citation (LF0UUL917).  \n- Remove any extraneous text, keep the focus strictly on mortgage rates, and avoid repeating the same driver multiple times.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756616963"
+}

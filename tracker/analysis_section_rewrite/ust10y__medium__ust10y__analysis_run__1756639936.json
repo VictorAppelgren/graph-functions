@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T13:41:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756639936",
+    "article_ids": "['7BLWI6OTC', 'FAN5RYW6T', 'XQMF22EFB', 'F7K7Y35U5', 'O6LHRBLFM']",
+    "selected_articles_count": "5",
+    "material_chars": "59872",
+    "output_chars": "814",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target for the 3–6‑month S&P 500 focus but needs tightening to meet Argos standards. 1) **Canonical mapping** – replace every reference to “S&P 500” with the canonical handle **spx**; add **fed_policy** for Fed actions, **us_cpi** and **us_pce** for inflation, and **ust10y** for the rate backdrop. 2) **Citations** – every factual claim (e.g., 40 % concentration, 2.7 % CPI, 2.9 % PCE, September payrolls, Fed’s September cut) must carry an inline (ID) citation; use FAN5RYW6T for concentration, the latest BLS releases for CPI/PCE, and the Fed’s September policy statement ID. 3) **Causal chain** – explicitly link the concentration shock → index multiplier effect → 5‑10 % move; link sticky inflation → Fed delay → higher term premium → valuation drag; link Q3 earnings → Fed policy → rate cut timing. 4) **Scenario structure** – state a **base case** (Fed cuts in September, CPI/PCE hold near 2.7/2.9 → spx +5 %); an **alt** (inflation decelerates → earlier cuts → spx +10 %); a **risk** (inflation >3 % → Fed holds → spx –5 % to –10 %). 5) **Magnitude & direction** – keep the 5‑10 % ranges but specify “up” or “down” and the 3–6‑month horizon. 6) **Catalysts & invalidations** – list watch signals: Q3 earnings of top‑10 constituents (spx), August CPI/PCE releases (us_cpi/us_pce), Fed September policy (fed_policy). 7) **Confidence** – add a brief confidence rating (e.g., “moderate”) and explain that the probability of a 5‑10 % pullback remains significant until the Fed’s stance and earnings clarity resolve. 8) **Remove any drift** – any mention of “Fed’s projected September rate cuts” without a citation or “sticky inflation” without data should be replaced or cited. Apply these edits to produce a concise, evidence‑based, action‑oriented scenario.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__medium__ust10y__analysis_run__1756639936"
+}

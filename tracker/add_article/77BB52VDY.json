@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T23:28:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "77BB52VDY",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy changes affect UST yields and currency markets.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a U.S. military action in the Caribbean, raising concerns about extraterritorial force use, legality, and regional security—an event that falls under geopolitical developments."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article describes a specific foreign‑policy event that does not provide a clear, quantifiable impact on any canonical market handle such as indices, rates, FX, or commodities, and therefore does not meet the mapping requirement."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific airstrike event and its immediate implications for U.S. foreign policy and Caribbean security, focusing on the present situation rather than long‑term structural drivers."
+    },
+    "article_node": {
+      "id": "77BB52VDY",
+      "title": "America’s War on Terror Comes to the Caribbean",
+      "summary": "The Trump administration conducted an airstrike on a drug‑laden boat in the south Caribbean, killing 11 suspected Tren de Aragua gang members. Officials offered little detail on the legal authority or intelligence, citing broad post‑9/11 counterterrorism authorizations. The strike raises questions about U.S. extraterritorial use of force, the legality of targeting drug traffickers in international waters, and the broader implications for Caribbean security and U.S. foreign policy.",
+      "source": "https://www.nytimes.com/2025/09/04/opinion/trump-cartel-boat-destroyed-venezuela-drugs.html",
+      "published_at": "2025-09-04T20:17:54.941000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "77BB52VDY"
+}

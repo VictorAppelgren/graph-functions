@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T17:14:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "us_inflation",
+    "selection_motivation": "Gold prices exhibit a strong, historically consistent correlation with US inflation expectations, making it a key hedge indicator for inflation risk; linking gold to US inflation enhances cross‑asset analytics and risk attribution.",
+    "candidate_motivation": "Gold’s price is most directly influenced by dollar strength, inflation expectations and monetary policy, and it is closely coupled to Treasury and sovereign yields. These topics provide the strongest direct or competitive relationships to Gold.",
+    "existing_links_count": "2",
+    "candidate_count": "12",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['dxy', 'us_inflation', 'fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'euro_inflation', 'ecb_policy']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257475118",
+    "rel_id": "gold__correlates_with__us_inflation",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold prices exhibit a strong, historically consistent correlation with US inflation expectations, making it a key hedge indicator for inflation risk; linking gold to US inflation enhances cross‑asset analytics and risk attribution.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__us_inflation"
+}

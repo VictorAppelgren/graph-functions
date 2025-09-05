@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T14:42:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "brent",
+    "selection_motivation": "Gold and Brent both serve as risk‑sentiment barometers and tend to move in tandem during periods of market stress, making a direct correlation link valuable for cross‑commodity analytics.",
+    "candidate_motivation": "Gold is highly sensitive to macro‑financial fundamentals—inflation, monetary policy, U.S. Treasury yields, and the U.S. dollar—while also tracking commodity peers. The listed topics directly influence or are strongly correlated with these drivers, making them likely peers or influences.",
+    "existing_links_count": "14",
+    "candidate_count": "19",
+    "all_nodes_count": "36",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'euro_inflation', 'ecb_policy', 'wti', 'brent', 'copper', 'wheat', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202463299531180078",
+    "rel_id": "gold__correlates_with__brent",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold and Brent both serve as risk‑sentiment barometers and tend to move in tandem during periods of market stress, making a direct correlation link valuable for cross‑commodity analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "brent"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__brent"
+}

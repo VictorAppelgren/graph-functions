@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T23:55:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "sx5e",
+    "selection_motivation": "Bund yields are a core benchmark for German and Eurozone sovereign debt; higher bund yields compress equity valuations and increase risk premium, directly influencing Euro Stoxx 50 performance.",
+    "candidate_motivation": "German 10Y Bund Yield is a sovereign benchmark that moves in tandem with other Euro‑area yields, ECB policy, and broader inflation dynamics, while also being influenced by global risk sentiment reflected in the US Treasury curve, DXY, and major equity indices. Therefore, topics that directly affect or correlate with these variables are strong peers or influences.",
+    "existing_links_count": "15",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ust10y', 'gilt10y', 'jgb10y', 'fed_policy', 'ecb_policy', 'euro_inflation', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'sx5e']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1222728398342718689",
+    "rel_id": "bund10y__influences__sx5e",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields are a core benchmark for German and Eurozone sovereign debt; higher bund yields compress equity valuations and increase risk premium, directly influencing Euro Stoxx 50 performance.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__sx5e"
+}

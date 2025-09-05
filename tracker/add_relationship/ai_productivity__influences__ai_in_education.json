@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:12:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_productivity",
+    "target_id": "ai_in_education",
+    "selection_motivation": "AI productivity directly drives the adoption and scaling of AI solutions in education, leading to improved learning outcomes and cost efficiencies, making it a primary macro driver for AI in education.",
+    "candidate_motivation": "AI Productivity is driven by advances in hardware, AI infrastructure, and leading AI platforms, as well as governance and workforce readiness that shape adoption and efficiency. The following topics represent direct peers, suppliers, or competitive forces that could strongly influence AI productivity or reflect its industry dynamics.",
+    "existing_links_count": "7",
+    "candidate_count": "21",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['nvidia_ai_infrastructure', 'nvidia_low_power_gpus', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'intel_ceo_tan', 'alphabet_ai_gemini', 'openai_gpt5_competition', 'gpt_5', 'ai_infrastructure', 'ai_governance', 'ai_evaluation_monitoring', 'ai_generated_content_seo', 'ai_app_store_rivalry', 'adobe_ai_platform_lockin', 'generative_ai_film', 'agentic_ai_solutions', 'continua_ai_agents', 'ai_in_education', 'ai_in_k12_education', 'k12_ai_integration', 'ai_human_skills_gap']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_human_skills_gap'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814271989",
+    "rel_id": "ai_productivity__influences__ai_in_education",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_human_skills_gap'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_in_education'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI productivity directly drives the adoption and scaling of AI solutions in education, leading to improved learning outcomes and cost efficiencies, making it a primary macro driver for AI in education.",
+      "type": "INFLUENCES",
+      "source": "ai_productivity",
+      "target": "ai_in_education"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_productivity__influences__ai_in_education"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T18:04:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "new_article_id": "FTJM4YGTU",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['CGSVV1ML9', 'DR5PMXH2G', 'GUTGNG4IC', 'UEMV4BE8U', '7XH2DKEKV']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article introduces unique, up‑to‑date analysis on Fed policy amid tariff‑driven inflation risks, which is not covered by any existing article."
+    }
+  },
+  "id": "dxy__FTJM4YGTU__current"
+}

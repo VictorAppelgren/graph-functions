@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:33:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "brent",
+    "target_id": "sx5e",
+    "selection_motivation": "Brent oil price movements have historically driven European equity performance, especially the Euro Stoxx 50, through inflation and risk‑sentiment channels.",
+    "candidate_motivation": "Brent Crude Oil is a global commodity whose price is shaped by supply/demand fundamentals, geopolitical events, and macro‑financial factors. The selected topics capture direct supply signals (inventories, sanctions, price decline), peer commodity (WTI), currency and risk‑appetite drivers (DXY, Treasury yields), inflation expectations (Fed policy, inflation data), and broader market sentiment (equities, metals).",
+    "existing_links_count": "12",
+    "candidate_count": "21",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'wti', 'dxy', 'gold', 'copper', 'wheat', 'spx', 'sx5e', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'euro_inflation', 'ecb_policy']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1324059389958555804",
+    "rel_id": "brent__influences__sx5e",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Brent oil price movements have historically driven European equity performance, especially the Euro Stoxx 50, through inflation and risk‑sentiment channels.",
+      "type": "INFLUENCES",
+      "source": "brent",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__influences__sx5e"
+}

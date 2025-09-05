@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:17:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756033631",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "14826",
+    "output_chars": "1340",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong scaffold and macro scope, but to reach world-class, enforce exact formatting and tighten the logic, sources, and numbers. Actionable edits: 1) Make the movers strictly 4 lines with the exact fields: Up/Down | Time window | Driver/Mechanism | What to watch | Probability %. Remove any extraneous narrative or multi-line phrasing; ensure each line maps to a single, crisp driver. 2) Ground each line in a crisp first-principles causal chain (policy regime -> real-rate/dollar path -> asset pricing/flows) and translate that into the “Driver/Mechanism” field; e.g., Up lines should cite how easing and a softer dollar lift risk assets, Down lines how hawkish surprises or Chips-act frictions lift real yields and pressure risk assets. 3) Quantify with source-bound probabilities only from ranges already in the material (Base-case 50–60% → 55%; Alt-1 25–35% → 30%; Alt-2 10–15% → 15%; Near-term down 0–3 weeks 40%; ensure consistency across lines). 4) Tighten “What to watch” to 1–2 precise triggers (CPI/payroll, Jackson Hole guidance, IPO momentum, export-control developments) and remove redundancy. 5) Reconcile any conflicts by adding explicit invalidation triggers per line (e.g., if Sep cuts fail to materialize, or IPO momentum reverses, or export controls tighten) and note them as the line’s invalidation condition. 6) Cite only necessary IDs after factual claims (e.g., 10-year yield around 4.23% (GX057ADL7); IPO cadence 95 in 2025 (Q7VVGNSQE); ACMRs figures (SK994CBWR); Chips/Chips Act logic (H7Q52FKDH) and keep citations tightly scoped to facts. 7) For the Swing Trade line, preserve the required fields precisely: Direction Up | Horizon 3–6 months | Entry 30.53 | Stop 28.50 | Target 34.76 | R/R ~2.1:1 | Invalidation backlog/margin momentum fails to converge or deteriorates | Trigger price move to 34.76 on high volume | Probability 60% | Confidence 75%; ensure no extraneous notes or extra IDs in the line. 8) Remove any nonessential cross-references or unrelated assets (e.g., Opendoor/Lucid) from the movers unless you reframe them as explicit macro channels rather than stock-specific cases. 9) Ensure the 4 movers are exactly 2 Up and 2 Down, with nonoverlapping time horizons where appropriate, and that all time windows reflect the horizon/style constraints. 10) Deliver a clean, single-sourced, format-faithful version next; this will markedly improve coherence, testability, and actionable utility.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756033631"
+}

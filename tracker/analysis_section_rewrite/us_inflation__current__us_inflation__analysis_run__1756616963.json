@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:14:34",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "current",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756616963",
+    "article_ids": "['3DN5GGP1G', '3952FOSRQ', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "227874",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "current_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable feedback for a world‑class, 0–3‑week macro view on the Apple event, tariff ruling, and inflation data**  \n1. **Map every substantive claim to a canonical handle** (e.g., US 10‑yr yield → ust10y, S&P 500 → spx, core PCE → us_pce, US tariff → us_tariff). 2. **State the direction and magnitude**: e.g., “US 10‑yr yield up 2.3 bp to 4.23 % (ust10y +2.3 bp), spx down 0.7 % (spx –0.7 %)” and “core PCE 2.9 % y/y (us_pce +0.1 %)”. 3. **Link each view to a catalyst window**: tariff ruling (2025‑08‑29), PCE data release (2025‑08‑29), Fed’s dovish tone (2025‑08‑28). 4. **Quantify upside/downside ranges**: e.g., “Fed likely cuts rates by 25 bp in September (probability 85 %) → spx +1–2 %”, “tariff lift could raise import costs by 5–10 % → spx –0.5 %”. 5. **Avoid generic statements**; replace “market optimism” with “stock futures up 1.4 % (spx futures +1.4 %)”. 6. **C",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__current__us_inflation__analysis_run__1756616963"
+}

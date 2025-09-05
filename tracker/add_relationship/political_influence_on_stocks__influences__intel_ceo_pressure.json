@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:03:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "political_influence_on_stocks",
+    "target_id": "intel_ceo_pressure",
+    "selection_motivation": "Political influence on stocks exerts pressure on corporate leadership to align strategies with political objectives, directly impacting executive decisions and governance.",
+    "candidate_motivation": "These topics represent direct policy, regulatory, and geopolitical levers that historically drive equity valuations and market risk, aligning with the concept of political influence on stocks. They cover tariffs, trade tensions, AI/chip export controls, and geopolitical conflicts that are strong predictors of stock movement.",
+    "existing_links_count": "2",
+    "candidate_count": "12",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_war_2025', 'china_us_tariff_truce', 'us_chip_export_controls', 'us_export_policy_ai_chips', 'geopolitics_corporate_strategy', 'ukraine_geopolitics', 'intel_ceo_pressure']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531356",
+    "rel_id": "political_influence_on_stocks__influences__intel_ceo_pressure",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Political influence on stocks exerts pressure on corporate leadership to align strategies with political objectives, directly impacting executive decisions and governance.",
+      "type": "INFLUENCES",
+      "source": "political_influence_on_stocks",
+      "target": "intel_ceo_pressure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "political_influence_on_stocks__influences__intel_ceo_pressure"
+}

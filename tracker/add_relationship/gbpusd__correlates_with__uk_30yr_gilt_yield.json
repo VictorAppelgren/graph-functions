@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T01:15:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gbpusd",
+    "target_id": "uk_30yr_gilt_yield",
+    "selection_motivation": "GBP/USD movements are closely tied to UK long‑term interest rates; the 30‑year gilt yield captures the long‑term yield curve, so the pair and the yield move together.",
+    "candidate_motivation": "GBP/USD is a major currency pair whose value is driven by the relative strength of the US dollar, UK macro fundamentals, monetary policy, and key commodity flows. Therefore, topics that directly influence the US dollar, UK yields, US monetary policy, inflation, and major commodity prices are likely strong influences or correlates.",
+    "existing_links_count": "13",
+    "candidate_count": "22",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "22",
+    "candidate_ids_preview": "['dxy', 'usdjpy', 'usdcny', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'uk_30yr_gilt_yield', 'gilt10y', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_services_pmi', 'us_unemployment_claims', 'us_crude_inventory', 'us_sanctions_iranshipping', 'oil_price_decline', 'brent', 'wti']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164182702698530300",
+    "rel_id": "gbpusd__correlates_with__uk_30yr_gilt_yield",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "GBP/USD movements are closely tied to UK long‑term interest rates; the 30‑year gilt yield captures the long‑term yield curve, so the pair and the yield move together.",
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gbpusd__correlates_with__uk_30yr_gilt_yield"
+}

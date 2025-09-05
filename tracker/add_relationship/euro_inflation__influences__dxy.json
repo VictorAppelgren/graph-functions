@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T11:58:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euro_inflation",
+    "target_id": "dxy",
+    "selection_motivation": "Euro area inflation directly influences the relative strength of the euro versus the dollar; higher euro inflation weakens the euro, pushing the US Dollar Index higher.",
+    "candidate_motivation": "Euro Area Inflation is closely tied to ECB policy and euro‑zone rates, is influenced by global commodity prices, and is correlated with US inflation and interest‑rate dynamics as well as currency flows that affect import prices. The listed topics are the most direct or strongly correlated drivers or peers of Euro Area Inflation.",
+    "existing_links_count": "10",
+    "candidate_count": "21",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['ecb_policy', 'bund10y', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'sx5e', 'gold', 'wti', 'brent', 'wheat', 'copper', 'oil_price_decline']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'gold'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255329312",
+    "rel_id": "euro_inflation__influences__dxy",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'gold'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro area inflation directly influences the relative strength of the euro versus the dollar; higher euro inflation weakens the euro, pushing the US Dollar Index higher.",
+      "type": "INFLUENCES",
+      "source": "euro_inflation",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__influences__dxy"
+}

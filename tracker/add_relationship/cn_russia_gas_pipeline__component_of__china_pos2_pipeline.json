@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T16:00:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "COMPONENT_OF",
+    "source_id": "cn_russia_gas_pipeline",
+    "target_id": "china_pos2_pipeline",
+    "selection_motivation": "The import event is a direct component of the China Power of Siberia 2 pipeline, establishing a structural relationship that enhances graph connectivity.",
+    "candidate_motivation": "The source topic concerns a major energy supply corridor for China, so its most relevant peers and influences are other energy‑price and trade‑flow topics, China‑specific macro drivers, and currency/price indicators that are likely to move in tandem with gas import volumes. These topics provide the strongest causal or correlated links to the gas import theme.",
+    "existing_links_count": "6",
+    "candidate_count": "11",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['china_pos2_pipeline', 'china_exports', 'china_credit_impulse', 'oil_price_decline', 'brent', 'wti', 'usdcny', 'dxy', 'us_inflation', 'us_core_pce', 'euro_inflation']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919784125989651272",
+    "rel_id": "cn_russia_gas_pipeline__component_of__china_pos2_pipeline",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The import event is a direct component of the China Power of Siberia 2 pipeline, establishing a structural relationship that enhances graph connectivity.",
+      "type": "COMPONENT_OF",
+      "source": "cn_russia_gas_pipeline",
+      "target": "china_pos2_pipeline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cn_russia_gas_pipeline__component_of__china_pos2_pipeline"
+}

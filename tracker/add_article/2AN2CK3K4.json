@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T15:09:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2AN2CK3K4",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; China gas imports via Power of Siberia 2 pipeline may shift global gas supply dynamics, influencing energy prices and related equity sectors.",
+      "existing_ids": [
+        "cn_russia_gas_pipeline"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a new pipeline agreement between Russia and China that shifts gas flows, affecting geopolitics and trade, and mentions India’s oil purchases, which is a geopolitical event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major event—Gazprom signing a legally binding agreement to build the Power of Siberia 2 pipeline to China—which directly impacts Gazprom’s operations, revenue streams, and strategic positioning, warranting a high relevance score."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article describes a long‑term structural shift in gas supply flows and geopolitical dynamics that will shape the market over years."
+    },
+    "article_node": {
+      "id": "2AN2CK3K4",
+      "title": "Russia Signals Gas Pipeline Deal as Xi, Putin Deepen Ties",
+      "summary": "Gazprom signed a legally binding agreement to build the Power of Siberia 2 pipeline to China, diverting gas sales from Europe. The deal, signed amid talks between Xi and Putin, could help China secure 30% of diverted gas and may counter U.S. tariff threats. India’s Modi also signals continued Russian oil purchases, challenging U.S. tariff policy.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-02/russia-signals-pipeline-deal-as-xi-putin-deepen-ties-video",
+      "published_at": "2025-09-02T11:16:48.296000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "2AN2CK3K4"
+}

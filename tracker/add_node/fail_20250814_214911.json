@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T21:48:40",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "11E3O2EFP",
+    "status": "rejected",
+    "reject_category": "constitutional_law",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the implications of the Florida Book Ban Law and its recent judicial ruling, highlighting its impact on free speech and educational access, warranting a new node to analyze the broader effects of censorship on educational policies and market sentiment.",
+      "id": "florida_book_ban_law",
+      "name": "Florida Book Ban Law",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "constitutional_law",
+      "motivation": "Constitutional challenge to overbroad book removal law."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Florida Book Ban Law is a state-level policy affecting a specific industry (publishing) rather than a macroeconomic driver or tradable asset; it does not provide actionable macro insight for trading.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

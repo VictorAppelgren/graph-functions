@@ -1,0 +1,43 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T11:27:39",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HYJA10SKI",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy cuts have broken the long‑standing positive correlation with Treasury yields and mortgage rates, implying a structural shift in the transmission mechanism and potential upward pressure on long‑term rates. Catalyst: September 2024 Fed cuts, subsequent QT, and market expectations for a September 2025 cut.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "bund10y",
+        "gilt10y",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The article analyzes the impact of the Federal Reserve’s Fed Funds rate cuts on Treasury yields, mortgage rates, and corporate bonds, which is a discussion of a central bank action and its transmission mechanism."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "Article reports a significant shift in Fed policy transmission, directly impacting the Fed policy node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article highlights a structural shift in the Fed’s policy transmission mechanism, implying a long‑term change in how Fed funds cuts affect long‑term rates."
+    },
+    "multi_topic_results": {
+      "total_topics": 10,
+      "successful": 3
+    }
+  },
+  "id": "HYJA10SKI"
+}

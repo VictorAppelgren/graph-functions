@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:13:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7WOX0E5UG",
+    "topic_discovery_motivation": "Article discusses the impact of human encroachment on wildlife, which may relate to broader environmental and economic themes not currently represented in the graph.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "human_encroachment_brown_bears",
+        "wildlife_human_conflict",
+        "environmental_impact_on_economics"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses wildlife incidents in Romania, not related to macroeconomic events, earnings, regulation, policy statements, central bank actions, economic data, geopolitical events, company updates, or market commentary."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant rise in bear attacks and policy changes that directly affect Romania’s wildlife conservation and human safety, indicating a major event for the country’s environmental and public safety context."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent bear attacks and ongoing human encroachment, focusing on current incidents and their immediate impact."
+    },
+    "article_node": {
+      "id": "7WOX0E5UG",
+      "title": "For a Reporter, Writing About Bear Attacks in Romania Was a Homecoming of Sorts",
+      "summary": "Romania is home to the largest population of brown bears in Europe, but rising bear attacks due to human encroachment and a hunting moratorium have disrupted the balance between humans and bears. Since 2016, bear-related incidents have resulted in 20 fatalities. Rukmini Callimachi, a reporter with Romanian roots, highlights this complex relationship in her recent story for The New York Times.",
+      "source": "https://www.nytimes.com/2025/08/22/insider/romania-bears-real-estate.html",
+      "published_at": "2025-08-22T07:00:24.903000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "7WOX0E5UG"
+}

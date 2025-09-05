@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T09:10:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "cn_russia_gas_pipeline",
+    "target_id": "us_core_pce",
+    "selection_motivation": "The pipeline’s reduction of Russian gas supply to China raises global energy prices, directly feeding into US core PCE inflation expectations.",
+    "candidate_motivation": "The source topic centers on a major energy supply pipeline that directly affects China’s gas import volumes. Key influences therefore involve other pipeline projects, China’s overall energy demand and credit conditions, currency dynamics that alter import costs, and macro‑policy environments that shape energy demand and supply. Correlates also include US inflation and core PCE as drivers of domestic demand, and Fed/ECB policy that influence currency and energy prices.",
+    "existing_links_count": "11",
+    "candidate_count": "12",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['china_pos2_pipeline', 'china_exports', 'china_credit_impulse', 'usdcny', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069012911",
+    "rel_id": "cn_russia_gas_pipeline__influences__us_core_pce",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The pipeline’s reduction of Russian gas supply to China raises global energy prices, directly feeding into US core PCE inflation expectations.",
+      "type": "INFLUENCES",
+      "source": "cn_russia_gas_pipeline",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cn_russia_gas_pipeline__influences__us_core_pce"
+}

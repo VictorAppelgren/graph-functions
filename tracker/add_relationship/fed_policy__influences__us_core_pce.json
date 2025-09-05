@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T15:44:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_core_pce",
+    "selection_motivation": "Fed policy directly shapes core PCE through its impact on inflation expectations and spending, making it a primary driver of the core PCE indicator.",
+    "candidate_motivation": "Fed Policy directly drives U.S. interest rates, yields, and the dollar, and is closely watched by other central banks and market participants. Therefore topics that are rate announcements, yield curves, inflation data, dollar indices, and peer policy statements are the most plausible influences or correlates.",
+    "existing_links_count": "15",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'sofr', 'us_unemployment_claims', 'us_services_pmi', 'usdjpy', 'gbpusd', 'eurusd', 'ecb_policy', 'bund10y', 'gilt10y', 'jgb10y', 'euro_inflation']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_services_pmi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:12",
+    "rel_id": "fed_policy__influences__us_core_pce",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly shapes core PCE through its impact on inflation expectations and spending, making it a primary driver of the core PCE indicator.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__us_core_pce"
+}

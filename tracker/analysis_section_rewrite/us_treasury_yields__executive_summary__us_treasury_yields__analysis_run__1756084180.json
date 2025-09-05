@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:20:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_treasury_yields",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_treasury_yields__analysis_run__1756084180",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18668",
+    "output_chars": "1416",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the piece is broad and informative but fails the 4–6-sentence/bullet brief required by the SECTION FOCUS; to reach world-class quality, compress into a 4–6 item house view that presents a crisp base/upside/downside with explicit catalysts, triggers, and invalidation, anchored in first-principles mechanics (discount-rate/capital-allocation logic) and a clean macro–asset–crypto transmission map. Actionable edits: (1) reframe as a three-prong, first-principles house view (macro regime driven by CPI/Fed path; RWA/custodial/regulated securitization; crypto treasury/ETF flow) with a single causal chain: CPI/Fed pivot timing → yield curve → risk premia → asset pricing, and explicitly state how tariff/BoP dynamics feed inflation and capital flows (JPAIHPA4N; SGB2PAZGK). (2) Replace the current long-form base-case paragraphs with a compact base-case, an explicit upside, and an explicit downside, each with 2–3 triggers and a single invalidation point; ensure quantified anchors are cited once and tied to sources: RWA ~16T by 2030; US Treas tokenization ~$4.2B in 2025; ETH ~4–5k; BTC ~110–125k (Y474W9FO9; OGK8WLL69; SRC_PRICE_ANCHOR). (3) Condense the Moscow incident content to a one-line risk note or remove it entirely from the core brief unless you tie it to market risk; otherwise you risk non-core noise. (4) Tighten wording to avoid repetition and ensure every factual claim has a source tag (all claims must map to JPAIHPA4N, SGB2PAZGK, Y474W9FO9, OGK8WLL69, SRC_PRICE_ANCHOR, NBX9RA9WX, NF3DXQ549, SRC_WATCH, SRC_INVALID, SRC_TRANS, SRC_REGIME, SRC_BASE_PRICE, SRC_CROSS, SRC_VAL). (5) Explicitly assign probabilities/weights to the base/upside/downside paths where possible and spell out the primary invalidation triggers (e.g., CPI surprise > a threshold, custodial progress stalls, or a tariff path that meaningfully raises inflation); (6) present the watch list as 3–4 concrete items with one-sentence implications for portfolio positioning. The result should be a concise, executive 4–6 sentence/bullet house view that delivers a decision-ready stance, with a clear, externally sourced, testable regime map and no included content beyond the provided IDs.",
+      "tokens": {}
+    }
+  },
+  "id": "us_treasury_yields__executive_summary__us_treasury_yields__analysis_run__1756084180"
+}

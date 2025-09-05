@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T10:59:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "middle_east_investment",
+    "target_id": "oil",
+    "selection_motivation": "Middle East Investment is a key driver of oil production capacity in the region, directly influencing global oil supply and prices.",
+    "candidate_motivation": "Middle East Investment is driven by geopolitical, commodity, and macro‑financial factors. Topics that directly influence regional risk, commodity exposure, or global capital flows—such as oil prices, sanctions, regional conflicts, and macro‑policy—are the most plausible influences or peers.",
+    "existing_links_count": "0",
+    "candidate_count": "12",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'us_10y', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_inflation_expectations', 'gaza_journalist_safety']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845618",
+    "rel_id": "middle_east_investment__influences__oil",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'middle_east_investment', 'target': 'oil'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Middle East Investment is a key driver of oil production capacity in the region, directly influencing global oil supply and prices.",
+      "type": "INFLUENCES",
+      "source": "middle_east_investment",
+      "target": "oil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "middle_east_investment__influences__oil"
+}

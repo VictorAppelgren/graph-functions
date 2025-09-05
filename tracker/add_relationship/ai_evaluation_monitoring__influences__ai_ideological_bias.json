@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:40:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_evaluation_monitoring",
+    "target_id": "ai_ideological_bias",
+    "selection_motivation": "AI Evaluation and Monitoring directly assesses model outputs for ideological bias, making it a primary driver of bias mitigation initiatives.",
+    "candidate_motivation": "These topics are the closest adjacent AI governance, risk, and application domains that would plausibly influence how AI Evaluation and Monitoring is conducted, including governance, bias, misinformation, and the competitive AI tech landscape.",
+    "existing_links_count": "2",
+    "candidate_count": "16",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['ai_governance', 'grok_ai_bias', 'ai_ideological_bias', 'deepfake_ai_medical', 'generative_ai_film', 'gen_ai_accounting', 'ai_in_education', 'k12_ai_integration', 'openai_gpt5_competition', 'ai_infrastructure', 'nvidia_ai_infrastructure', 'ai_app_store_rivalry', 'ai_supply_chain_optimization', 'agentic_ai_solutions', 'ai_productivity', 'ai_generated_content_seo']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'ai_governance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765556",
+    "rel_id": "ai_evaluation_monitoring__influences__ai_ideological_bias",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'ai_governance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI Evaluation and Monitoring directly assesses model outputs for ideological bias, making it a primary driver of bias mitigation initiatives.",
+      "type": "INFLUENCES",
+      "source": "ai_evaluation_monitoring",
+      "target": "ai_ideological_bias"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_evaluation_monitoring__influences__ai_ideological_bias"
+}

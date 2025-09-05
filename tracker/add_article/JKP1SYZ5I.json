@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T21:09:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JKP1SYZ5I",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; American Eagle's stock rally lifts its S&P 500 component, likely boosting the index by 0.2–0.5% in the short term (Aug 27–29 2025).",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Article describes a new product launch and partnership by American Eagle Outfitters, which is a company update, not earnings, policy, or macro event."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a marketing initiative and a modest stock price reaction for American Eagle Outfitters, indicating a medium impact on the company's valuation and investor sentiment."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article describes a short‑term marketing event and immediate stock price reaction for American Eagle Outfitters."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "JKP1SYZ5I"
+}

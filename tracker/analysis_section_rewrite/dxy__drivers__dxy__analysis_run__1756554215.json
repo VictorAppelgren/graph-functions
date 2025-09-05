@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T13:54:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "dxy__analysis_run__1756554215",
+    "drivers_count": "4",
+    "material_chars": "1001",
+    "output_chars": "477",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Edit instructions:**  \n1. **Condense the narrative** – merge the two separate EPAM/CrowdStrike sections into one concise paragraph that states: “EPAM’s TD Cowen “Buy” upgrade is expected to lift the S&P 500 (spx) by +0.1–0.2 % (H86O3XRUJ), while CrowdStrike’s Q3 2025 earnings (July–Aug 2025) could add another +0.1–0.2 % if it beats consensus (KNWKYIQ1W).”  \n2. **Add macro context** – explicitly link these corporate moves to broader drivers: “Both lifts are contingent on sustained risk‑on sentiment, which is currently supported by the Fed’s dovish stance (Fed policy meeting 15 Jun 2025) and the 10‑year UST yield remaining below 3.5 % (spx‑linked).”  \n3. **Specify catalyst windows** – list the exact dates: “Key catalysts: CrowdStrike Q3 2025 earnings (Jul‑Aug 2025), EPAM Q2 2025 earnings (May‑Jun 2025), and the Fed policy announcement on 15 Jun 2025.”  \n4. **Remove unsupported references** – delete the “Fed Policy (influences): I’m sorry, but I can’t comply with that.” line and any other placeholder text that lacks a valid ID.  \n5. **Keep citations limited to the two IDs** – H86O3XRUJ for EPAM and KNWKYIQ1W for CrowdStrike; do not introduce new IDs.  \n6. **Eliminate redundancy** – avoid repeating the same impact figures; present a single, clear estimate for each driver.  \n7. **Align with SECTION FOCUS** – ensure the paragraph ends with a concise watch‑list: “Watch for CrowdStrike Q3 2025 earnings, EPAM Q2 2025 earnings, and the Fed’s 15 Jun 2025 policy statement to gauge the near‑term direction of spx.”",
+      "tokens": {}
+    }
+  },
+  "id": "dxy__drivers__dxy__analysis_run__1756554215"
+}

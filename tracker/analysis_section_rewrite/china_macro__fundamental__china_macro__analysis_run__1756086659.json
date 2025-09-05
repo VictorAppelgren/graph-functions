@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:50:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "china_macro",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "china_macro__analysis_run__1756086659",
+    "article_ids": "['75187DPQA', '40M82JY72', 'N5CNJJE9J', 'OLND309B9', 'N26K1HXBH']",
+    "selected_articles_count": "5",
+    "material_chars": "210732",
+    "output_chars": "8419",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft is on the right track but needs a tighter, multi‑section, first‑principles framework to reach world‑class quality. Action steps: 1) Make horizon explicit and regime‑based. Start with invariant anchors (e.g., long‑run real rate differentials, productivity gaps, terms‑of‑trade, and the policy reaction function), then define three regimes for the multi‑year path (base case: gradual macro easing with a weaker dollar; China tech/exports constraint loosens risk premia; adverse policy noise or tighter credit slows cash flows). Then spell transition conditions (e.g., if long‑rate trajectories move X bps, or if FX/tariff shifts disrupt cross‑border cash flows by Y%). 2) Strengthen the causal chain and market transmission. Build a clean, incremental chain: AI‑driven cash‑flow growth in select Asia‑exposed names drives higher cash flow durability, which elevates DCF fair values; this re‑rating is conditioned by the policy regime and currency/credit dynamics (cite earnings avenues from 600100, 2645, 300253 forecasts explicitly: 600100 earnings growth ~93.8% CAGR with 16.8% revenue growth; 2645 earnings ~43% with 11.7% revenue; 300253 revenue ~18.7% with profitability turning in 3 years) and tie to valuation gaps in the sources (600100 CN¥14.58 fair value vs CN¥8.13 price; 2645 CN¥205.47 fair value vs CN¥183; 300253 CN¥20.62 vs CN¥10.92). Include Evergreen as a counterpoint (NT$205.51 fair value vs NT$183; debt/cash metrics) and quote the exact figures from the Balance Sheet Health and Future Growth sheets (Sources 11–13 for 600100, 9–12 for 2645/300253/ Evergreen). 3) Quantify explicitly and consistently. Present upside/downside bands per stock with currency‑adjusted fair value and a sensitivity to one‑time FX shifts, rate paths, and growth miss/more‑than‑expected. For example, list each stock’s fair value, current price, and the implied upside at the base, plus a 20–30% downside if growth falls short or leverage deteriorates (cite the exact growth forecasts and debt metrics from the sources). 4) Reconcile conflicts and show rigor in numbers. Where debt/ equity metrics differ (e.g., 600100 gross DE 67.5% vs net DE 39.3%; 2645 DE 41.3%; 300253 DE 18.8%), present a short table‑note explaining measurement differences and provide a range rather than a single point. Acknowledge measurement dates (TTM/LTM) and the fact that some sources reflect different snapshots (Sources 11–13 for 600100; 3,9–12 for Evergreen/2645/300253). 5) Tighten the narrative and remove extraneous cross‑references. Keep the core path anchored to valuation screens tied to cash flows (as in 271‑stock screener pieces) but avoid mixing naval/defense material unless you explicitly model cross‑asset diversification as a separate channel. 6) Strengthen “what to watch” and “invalidation.” List concrete catalysts (e.g., earnings prints for 600100/2645/300253; any shifts in US‑China tech policy; policy signals from Fed/BoJ/FX regime; changes in debt covenants). Add explicit invalidation triggers (e.g., if any stock’s forecast earnings growth drops below a threshold for two consecutive quarters or net debt to EBITDA climbs above a limit). 7) Align with SECTION FOCUS framing. End with a crisp base case, 2–3 key risks, 4 measurable watchpoints, and a calibrated confidence level (the draft says moderate; consider a gradient: base case with low‑to‑moderate confidence on long‑horizon re‑rating given policy uncertainty). 8) Improve currency discipline and sourcing discipline. Quote each assertion with the exact SOURCE ID after the claim (e.g., cite 75187DPQA for CSI/undervalued stock backdrop; 600100 figures from 11/12; 2645 figures from 3/9/10; 300253 metrics from 12/10; Evergreen balance‑sheet stats from 3/9/12). 9) Aim for a concise, coherent causal narrative rather than a patchwork of numbers. The core should read: invariant anchors → regime transitions → stock‑level cash‑flow catalysts → valuation re‑rating → base case vs risks. 10) Deliver a single, clean version that preserves currency consistency, includes explicit upside/downside bands, and uses only the IDs present in SOURCE MATERIAL. This will convert the current draft into a world‑class, multi‑year, first‑principles framework with transparent, trackable catalysts and invalidation points (Sources: 75187DPQA; 600100 from 11/12/15/16; 2645 from 3/9/12/13/10; 300253 from 10/12; Evergreen from 3/9/12).",
+      "tokens": {}
+    }
+  },
+  "id": "china_macro__fundamental__china_macro__analysis_run__1756086659"
+}

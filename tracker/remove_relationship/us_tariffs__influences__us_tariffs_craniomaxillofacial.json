@@ -1,0 +1,43 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-15T04:08:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "us_tariffs_craniomaxillofacial",
+    "selection_motivation": "The link to US Tariffs on Craniomaxillofacial is the weakest due to its niche focus and limited broader economic implications compared to other links, making it less critical for overall analysis.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to US Tariffs on Craniomaxillofacial is the weakest due to its niche focus and limited broader economic implications compared to other links, making it less critical for overall analysis.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_craniomaxillofacial'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966398580",
+    "rel_id": "us_tariffs__influences__us_tariffs_craniomaxillofacial",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}]",
+    "status": "error",
+    "error": "Object of type DateTime is not JSON serializable"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariffs_craniomaxillofacial"
+    },
+    "prioritized_link": {
+      "motivation": "Linking US Tariffs to US Semiconductor Tariffs highlights the specific impact of broader tariff policies on the semiconductor sector, which is critical for understanding supply chain dynamics and inflationary pressures in technology.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_semiconductor_tariffs"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to US Tariffs on Craniomaxillofacial is the weakest due to its niche focus and limited broader economic implications compared to other links, making it less critical for overall analysis.",
+      "remove_link": "us_tariffs_craniomaxillofacial"
+    },
+    "removal_decision": {
+      "motivation": "The link to US Tariffs on Craniomaxillofacial is the weakest due to its niche focus and limited broader economic implications compared to other links, making it less critical for overall analysis.",
+      "remove_link": "us_tariffs_craniomaxillofacial"
+    },
+    "source_node": {
+      "last_updated": 

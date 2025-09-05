@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:32:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_inflation_impact_on_stocks",
+    "selection_motivation": "Fed policy directly shapes the inflation environment, which in turn drives stock market performance; linking to US Inflation Impact on Stocks captures this critical downstream effect.",
+    "candidate_motivation": "Fed Policy interacts most directly with inflation metrics, interest rates, and the dollar; the topics below represent the core macro channels and policy-shift catalysts that would plausibly influence or align with Fed policy.",
+    "existing_links_count": "10",
+    "candidate_count": "11",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['us_inflation', 'core_monthly_cpi', 'core_cpi', 'us_inflation_data', 'us_inflation_expectations', 'us_treasury_yields', 'lower_interest_rates', 'usd', 'fed_chair_replacement', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'lower_interest_rates'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1256505395547996165",
+    "rel_id": "fed_policy__influences__us_inflation_impact_on_stocks",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly shapes the inflation environment, which in turn drives stock market performance; linking to US Inflation Impact on Stocks captures this critical downstream effect.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_inflation_impact_on_stocks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__us_inflation_impact_on_stocks"
+}

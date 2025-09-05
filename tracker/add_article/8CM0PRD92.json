@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T02:56:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8CM0PRD92",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Alphabet's stock rally lifts S&P 500 by ~3% in extended trading.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a court order imposing antitrust restrictions on Google, constituting a regulatory/legal development."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a U.S. antitrust ruling that directly affects Alphabet’s market position and could influence tech equity sentiment, but the impact is modest and limited to the company’s stock and regulatory environment."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a regulatory decision affecting Google’s competitive position and market behavior, an event with immediate market impact."
+    },
+    "article_node": {
+      "id": "8CM0PRD92",
+      "title": "Judge orders search shakeup in Google monopoly case, but keeps hands off Chrome and default deals",
+      "summary": "A U.S. judge ordered Google to curb its monopoly power by restricting contracts that lock its search engine as the default on devices, while allowing the multi‑billion‑dollar default deals to continue. The ruling also requires Google to share some of its search data with rivals but rejects a divestiture of Chrome. Investors viewed the decision as a mild blow, with Alphabet’s stock rising about 3% after the ruling. The judge’s order balances antitrust concerns with the potential harm of breaking up Google’s ecosystem, leaving further remedies to be decided later.",
+      "source": "https://www.ajc.com/news/2025/09/judge-orders-search-shakeup-in-google-monopoly-case-but-keeps-hands-off-chrome-and-default-deals/",
+      "published_at": "2025-09-02T23:52:50.739000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "8CM0PRD92"
+}

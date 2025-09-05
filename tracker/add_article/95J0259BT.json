@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T09:27:29",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "95J0259BT",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: FX; EU digital sovereignty push in April 2024 may lift the euro against the dollar via ECB policy shifts and reduced reliance on US tech.",
+      "existing_ids": [
+        "ecb_policy",
+        "eurusd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article describes the EU’s policy decision to phase out U.S. cloud services and promote domestic providers, including certification and funding initiatives—an official policy statement from a governing institution."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses EU cloud sovereignty and the shift away from U.S. hyperscalers, which could affect EU tech sector or cloud providers, but without a specific node reference the relevance is uncertain."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses both immediate actions (phasing out U.S. cloud services) and a medium‑term policy shift toward EU digital sovereignty, indicating a medium‑term horizon for its impact."
+    },
+    "article_node": {
+      "id": "95J0259BT",
+      "title": "Reclaiming the stack: Europe’s bid for digital sovereignty",
+      "summary": "Europe is accelerating a digital sovereignty agenda, driven by concerns over U.S. tech dominance and the CLOUD Act’s data‑access implications. France, Germany, and Denmark are phasing out Microsoft, AWS, and Google services in favor of domestic providers like OVHcloud, and the EU is pursuing SecNumCloud certification and sovereign cloud funding. The move aims to reduce vendor lock‑in, enhance data privacy, and strengthen geopolitical resilience, while also positioning European cloud firms to compete with U.S. hyperscalers amid rising trade tensions.",
+      "source": "https://thenextweb.com/news/digital-sovereignty-europe",
+      "published_at": "2025-09-05T06:10:21+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "95J0259BT"
+}

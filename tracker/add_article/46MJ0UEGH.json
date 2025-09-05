@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T23:54:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "46MJ0UEGH",
+    "status": "success",
+    "topic_id": "nfl_player_injuries"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the competitive dynamics and player performance in the NFL, which aligns with the existing node on NFL Player Injuries, as injuries significantly impact team performance and player development.",
+      "existing_node_ids": "nfl_player_injuries",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses NFL player injuries, which do not relate to macroeconomic events, earnings, or other financial categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of player injuries in the NFL, which directly relates to the node on nfl_player_injuries."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses the impact of player injuries on team performance and league dynamics, which can have lasting effects on the sport."
+    },
+    "article_node": {
+      "id": "46MJ0UEGH",
+      "title": "Kenny Pickett on his hamstring, returning to Philadelphia, Shedeur Sanders, and more: Transcript",
+      "summary": "Browns quarterback Kenny Pickett discussed his recovery from a hamstring injury and his experiences during joint practices with the Eagles, emphasizing the importance of competition and camaraderie. He praised teammates Quinyon Mitchell and Tanner McKee for their development and reflected on the challenges of managing injuries within a competitive quarterback landscape. Additionally, the article highlights the intense practice sessions between the Browns and Eagles, focusing on the performance of standout players like Myles Garrett, who continues to impress with his skills and work ethic.",
+      "source": "https://www.cleveland.com/browns/2025/08/kenny-pickett-on-his-hamstring-returning-to-philadelphia-shedeur-sanders-and-more-transcript.html",
+      "published_at": "2025-08-14T20:48:31.778000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "46MJ0UEGH"
+}

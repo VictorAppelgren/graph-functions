@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T11:02:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756371726",
+    "article_ids": "['BS3876D03', 'PA57YBYVQ', 'O4ZEED2EB', 'W2622L6WW', '22PL3Q360']",
+    "selected_articles_count": "5",
+    "material_chars": "114511",
+    "output_chars": "2134",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is ambitious but needs tighter focus and stronger source alignment. First, the radar article (ID BS3876D03) is about aviation technology, yet you use it to justify macro‑risk‑premium logic—replace that with a real‑rate or trade‑balance source (e.g., a recent Fed report or IMF data). Second, the equity‑risk‑premium discussion should be anchored with explicit numbers (e.g., U.S. real yield ≈ 0.6 % above euro, trade surplus ≈ $70 bn) and a clear causal chain: higher real yields → higher discount rates → lower valuations for dividend stocks like Ford. Third, the Japanese bank expansion (ID PA57YBYVQ) is correctly cited, but you should quantify the expected capital outflow (e.g., $200 bn of overseas M&A by 2028) and link it to potential upward pressure on U.S. asset‑management yields. Fourth, the CEO‑pay section (ID O4ZEED2EB) needs a concrete trigger: a 10 % earnings miss could force a 5 % stock price correction; cite the 7.7 % pay rise and median $19 m figure. Fifth, the Ford analysis (IDs W2622L6WW & 22PL3Q360) should explicitly state the 5.18 % yield, forward P/E 10.3, ROIC 10.1 %, and EV loss $1.3 bn, and explain how a 2 % GDP slowdown could cut sales by 5 % and compress margins. Finally, the aviation safety paragraph is peripheral; either remove it or tie it to a broader “risk‑premium shock” mechanism with a concrete example (e.g., a 3 % jump in airline spreads after a high‑profile incident). Re‑structure the analysis into three logical blocks—macro regime, corporate drivers, and sector‑specific risks—each with a clear causal chain, quantitative anchors, and a single, correctly cited source. This will improve depth, coherence, and citation integrity.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__fundamental__sp500__analysis_run__1756371726"
+}

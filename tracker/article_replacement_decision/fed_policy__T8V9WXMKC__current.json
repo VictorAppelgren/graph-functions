@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T13:06:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "T8V9WXMKC",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['TXVQ5ZQ0N', 'H9WSBYP3D', '5JQEA5Z1T', 'K0WFSW29E', 'YB758UDBU', 'S7M6BJSRT', 'XQWTVR71K', 'ZBVVXT0W4', 'ECJTP759G']",
+    "mode": "MUST_REPLACE",
+    "target_id": "TXVQ5ZQ0N",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "TXVQ5ZQ0N",
+      "motivation": "The Jackson Hole/Fed trajectory beat is at capacity in the competing timeframe bucket, and article TXVQ5ZQ0N overlaps this narrative; removing it frees capacity for the freshest coverage and reduces redundancy in the graph."
+    }
+  },
+  "id": "fed_policy__T8V9WXMKC__current"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:39:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_ceo_lip_bu_tan",
+    "target_id": "us_export_policy_ai_chips",
+    "selection_motivation": "Intel CEO Lip‑Bu Tan is a primary driver of U.S. export policy on AI chips, directly influencing Intel’s strategic positioning and compliance landscape.",
+    "candidate_motivation": "Lip-Bu Tan leads Intel in a capital-intensive, geopolitically sensitive semiconductor landscape; the strongest influences are major peers/competitors and policy dynamics that directly affect supply, demand, and profitability for leading chipmakers.",
+    "existing_links_count": "3",
+    "candidate_count": "16",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['nvidia_amd_chip_revenue_agreement', 'nvidia_ai_infrastructure', 'amd_data_center_growth', 'china_nvidia_policy', 'china_ai_semiconductors', 'us_chip_export_controls', 'us_chip_exports_china', 'us_export_policy_ai_chips', 'us_tariffs_semiconductors', 'us_china_trade_talks', 'us_china_tariffs', 'intel_customer_investment', 'intel_stock_trump_influence', 'geopolitics_corporate_strategy', 'china_chip_competition', 'china_semiconductor_policy']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_china_chip_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531969",
+    "rel_id": "intel_ceo_lip_bu_tan__influences__us_export_policy_ai_chips",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_lip_bu_tan', 'target': 'us_export_policy_ai_chips'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Intel CEO Lip‑Bu Tan is a primary driver of U.S. export policy on AI chips, directly influencing Intel’s strategic positioning and compliance landscape.",
+      "type": "INFLUENCES",
+      "source": "intel_ceo_lip_bu_tan",
+      "target": "us_export_policy_ai_chips"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_ceo_lip_bu_tan__influences__us_export_policy_ai_chips"
+}

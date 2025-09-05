@@ -1,0 +1,110 @@
+{
+  "url": "https://techxplore.com/news/2025-08-smarter-ai-robots-stay-track.html",
+  "authorsByline": "Zhejiang University",
+  "articleId": "6dd4a03978644cb1bd5303ca55ce46e9",
+  "source": {
+    "domain": "techxplore.com",
+    "location": null
+  },
+  "imageUrl": "https://scx2.b-cdn.net/gfx/news/hires/2025/smarter-navigation-ai-1.jpg",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-27T14:50:01-04:00",
+  "addDate": "2025-08-27T19:08:53.343027+00:00",
+  "refreshDate": "2025-08-27T19:08:53.343031+00:00",
+  "score": 1.0,
+  "title": "Smarter navigation: AI helps robots stay on track without a map",
+  "description": "Navigating without a map is a difficult task for robots, especially when they can't reliably determine where they are. A new AI-powered solution helps robots overcome this challenge by training them to make movement decisions that also protect their ability to localize. Instead of blindly heading toward a target, the robot evaluates the visual richness of its surroundings and favors routes where it's less likely to get \"lost.\"",
+  "content": "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:\n\nNavigating without a map is a difficult task for robots, especially when they can't reliably determine where they are. A new AI-powered solution helps robots overcome this challenge by training them to make movement decisions that also protect their ability to localize. Instead of blindly heading toward a target, the robot evaluates the visual richness of its surroundings and favors routes where it's less likely to get \"lost.\"\n\nBy combining deep reinforcement learning (DRL) with real-time feedback on pose estimation, this approach enables robots to avoid both collisions and localization failures. The result: more intelligent navigation, better performance in tricky environments, and a major step toward autonomous systems that truly understand their limitations.\n\nTraditional robot navigation methods either require detailed maps or assume accurate localization is always available\u2014assumptions that break down in indoor or unfamiliar environments. Visual simultaneous localization and mapping (SLAM) systems, often used as a fallback, can easily fail in scenes lacking distinct textures or during abrupt movements, leading to severe navigational errors.\n\nMany previous AI models focused only on finding collision-free paths, ignoring whether the robot could stay properly localized along the way. Even those that consider localization often rely on rigid penalty thresholds, unable to adapt to changing conditions. Due to these challenges, a more flexible and awareness-driven navigation strategy is urgently needed for robots to perform reliably across diverse, real-world scenarios.\n\nA research team from Cardiff University and Hohai University has developed a new deep reinforcement learning (DRL) model that helps robots plan smarter, safer paths in complex indoor environments. Their study, published in IET Cyber-Systems and Robotics in July 2025, introduces a localization-aware navigation policy trained with RGB-D camera input and real-time feedback from ORB-SLAM2.\n\nRather than relying on pre-set thresholds or fixed maps, the robot learns to adapt dynamically to visual conditions in its environment\u2014boosting its ability to maintain localization and significantly improving navigation success rates in simulated tests.\n\nThe core innovation lies in integrating localization quality into every navigation decision. The robot is trained using a compact state representation that reflects the spatial distribution of visual map points, partitioned into 24 angular regions around its body. This design helps the robot identify which directions are visually \"safer\" to travel through\u2014meaning areas are more likely to provide reliable localization data.\n\nIn addition, the researchers introduced a new reward function based on Relative Pose Error (RPE), offering instant feedback on whether a particular movement action improves or worsens the robot's understanding of its position. Unlike previous models that used static thresholds, this system employs a dynamic threshold that adjusts in real time, depending on environmental conditions.\n\nTo evaluate the approach, the team conducted extensive training using the iGibson simulation environment and tested their model against four baseline methods. In challenging indoor scenarios, the new model outperformed others by a wide margin, achieving a 49% success rate compared to just 33% for conventional SLAM-based navigation.\n\nIt also showed significantly lower localization error and better adaptability in new environments. Notably, the model consistently chose longer, but safer routes\u2014demonstrating the value of prioritizing localization robustness over shortest-path efficiency.\n\n\"Our aim wasn't just to teach the robot to move\u2014it was to teach it to think about how well it knows where it is,\" said Dr. Ze Ji, the study's senior author. \"Navigation isn't only about avoiding walls; it's about maintaining confidence in your position every step of the way. By integrating perception and planning, our model enables smarter, safer movement in uncertain spaces. This could pave the way for more autonomous robots that can handle the complexities of the real world without constant human oversight.\"\n\nThe implications of this work extend across indoor robotics\u2014from service robots in hospitals and homes to warehouse automation systems. In environments where GPS doesn't work and visual conditions vary, being able to assess and respond to localization reliability is crucial. This method equips robots with the awareness to adjust their strategies based on how well they can see and understand their surroundings.\n\nLooking forward, the team plans to test their model on real robots and in dynamic scenes with pedestrians. With further development, the approach could become a key building block for trustworthy, mapless navigation in real-world human environments.",
+  "medium": "Article",
+  "links": [
+    "https://techxplore.com/tags/deep+reinforcement+learning/",
+    "https://techxplore.com/tags/localization/",
+    "https://dx.doi.org/10.1049/csy2.70018",
+    "https://techxplore.com/tags/robot/",
+    "https://techxplore.com/tags/navigation/",
+    "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/csy2.70018"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "real robots",
+      "weight": 0.10018441
+    },
+    {
+      "name": "Traditional robot navigation methods",
+      "weight": 0.0927189
+    },
+    {
+      "name": "robots",
+      "weight": 0.08918049
+    },
+    {
+      "name": "service robots",
+      "weight": 0.087590106
+    },
+    {
+      "name": "localization robustness",
+      "weight": 0.07500168
+    },
+    {
+      "name": "localization",
+      "weight": 0.074961536
+    },
+    {
+      "name": "accurate localization",
+      "weight": 0.07481095
+    },
+    {
+      "name": "localization quality",
+      "weight": 0.07427851
+    },
+    {
+      "name": "localization reliability",
+      "weight": 0.0739873
+    },
+    {
+      "name": "localization failures",
+      "weight": 0.07302464
+    }
+  ],
+  "topics": [
+    {
+      "name": "AI"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+      "score": 0.93603515625
+    },
+    {
+      "name": "/News/Technology News",
+      "score": 0.92822265625
+    }
+  ],
+  "sentiment": {
+    "positive": 0.46579498,
+    "negative": 0.09060763,
+    "neutral": 0.4435974
+  },
+  "summary": "A research team from Cardiff University and Hohai University has developed a new deep reinforcement learning (DRL) model that helps robots plan smarter, safer paths in complex indoor environments. The new AI-powered solution involves training robots to make movement decisions that protect their ability to localize. Instead of blindly heading toward a target, the robot scans its surroundings and chooses routes where it is less likely to get \"lost\". This approach combines deep learning with real-time feedback on pose estimation. The result is more intelligent navigation, better performance in tricky environments, and a step towards autonomous systems that truly understand their limitations. The implications of this work extend across indoor robotics, from service robots in hospitals and homes to warehouse automation systems.",
+  "shortSummary": "A new AI-based model integrates deep reinforcement learning and real-time feedback into robot navigation, improving safety and effectiveness in complex indoor environments by integrating localization into navigation decisions.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": true,
+  "reprintGroupId": "6f626f97c3704687a783af607e9df14d",
+  "places": [],
+  "scraped_sources": [],
+  "argos_summary": "Researchers from Cardiff and Hohai Universities have developed a deep reinforcement learning model that teaches robots to choose paths based on real\u2011time localization quality, using RGB\u2011D input and ORB\u2011SLAM2 feedback. The system incorporates a dynamic reward based on Relative Pose Error, allowing the robot to adapt to visual conditions and avoid both collisions and localization failures. In simulation, it outperformed traditional SLAM\u2011based methods, achieving a 49% success rate versus 33% for baselines, and consistently opted for longer but safer routes. The approach promises more reliable, mapless navigation for indoor robots in hospitals, homes, and warehouses, and the team plans to test it on real robots and dynamic scenes.",
+  "argos_id": "NPWBYWRRF"
+}

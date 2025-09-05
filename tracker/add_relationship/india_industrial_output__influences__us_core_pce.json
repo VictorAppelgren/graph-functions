@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T12:52:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_industrial_output",
+    "target_id": "us_core_pce",
+    "selection_motivation": "India industrial output is a leading indicator of global commodity demand; higher output signals stronger demand for energy and metals, which feeds into US core PCE via the commodity price channel.",
+    "candidate_motivation": "India Industrial Output is driven by global commodity prices, cross‑border trade flows, and monetary policy conditions. The listed topics capture key drivers—oil, copper, China credit and export dynamics, US and EU policy and yields—that have a direct or indirect causal link to India’s industrial production.",
+    "existing_links_count": "9",
+    "candidate_count": "30",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "30",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'brent', 'copper', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'us_crude_inventory', 'us_services_pmi', 'us_unemployment_claims', 'euro_inflation', 'sx5e', 'spx', 'bund10y', 'uk_30yr_gilt_yield', 'gilt10y']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627956768",
+    "rel_id": "india_industrial_output__influences__us_core_pce",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India industrial output is a leading indicator of global commodity demand; higher output signals stronger demand for energy and metals, which feeds into US core PCE via the commodity price channel.",
+      "type": "INFLUENCES",
+      "source": "india_industrial_output",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__influences__us_core_pce"
+}

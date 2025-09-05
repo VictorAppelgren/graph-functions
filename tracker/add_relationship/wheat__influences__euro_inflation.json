@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T12:13:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wheat",
+    "target_id": "euro_inflation",
+    "selection_motivation": "Wheat is a core component of euro area inflation, so price movements directly influence euro inflation expectations.",
+    "candidate_motivation": "Wheat prices are driven by macro‑level factors that affect commodity inflation, the USD, and overall risk sentiment.  Thus topics that influence inflation, monetary policy, the dollar, and commodity price trends are the most likely peers or influences for wheat.",
+    "existing_links_count": "3",
+    "candidate_count": "12",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['dxy', 'us_inflation', 'us_core_pce', 'euro_inflation', 'fed_policy', 'ecb_policy', 'ust10y', 'ust30y', 'ust2y', 'ust5y', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wheat', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162044",
+    "rel_id": "wheat__influences__euro_inflation",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wheat', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wheat', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Wheat is a core component of euro area inflation, so price movements directly influence euro inflation expectations.",
+      "type": "INFLUENCES",
+      "source": "wheat",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wheat__influences__euro_inflation"
+}

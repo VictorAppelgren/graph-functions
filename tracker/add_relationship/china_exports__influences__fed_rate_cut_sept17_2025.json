@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T18:30:35",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "China export growth signals a global demand slowdown that typically prompts the Fed to cut rates to support growth.",
+    "candidate_motivation": "China Exports are driven by macro‑fundamental factors that influence global trade flows, currency strength, and risk appetite. The listed topics capture the key levers—US dollar dynamics, monetary policy signals, domestic Chinese credit conditions, and global yield curves—that directly or indirectly shape export volumes.",
+    "existing_links_count": "10",
+    "candidate_count": "12",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'china_credit_impulse', 'ust10y', 'ust2y', 'ust30y', 'ust5y']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202462200019551518",
+    "rel_id": "china_exports__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China export growth signals a global demand slowdown that typically prompts the Fed to cut rates to support growth.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__fed_rate_cut_sept17_2025"
+}

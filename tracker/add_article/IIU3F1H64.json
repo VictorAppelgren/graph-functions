@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T22:56:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IIU3F1H64",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Federal vaccine mandate policy shift under RFK Jr. and state-level rollbacks are expected to reduce vaccine coverage by 10‑20%, negatively impacting health insurance and pharma markets.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a federal policy change—Florida eliminating vaccine mandates and the HHS Secretary cutting CDC funding and firing officials—constituting an official policy statement affecting public health policy."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess impact on any specific market handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a policy shift that will affect disease dynamics and public trust over the medium term, rather than a long‑term structural change or an immediate market shock."
+    },
+    "article_node": {
+      "id": "IIU3F1H64",
+      "title": "Florida looks to ban vaccine mandates. Do you agree? Are shots safe? Tell us.",
+      "summary": "Florida announced it will eliminate all vaccine mandates for children, sparking criticism from public health experts and prompting a patchwork of state and regional vaccine guidelines. The move follows a broader shift under Health and Human Services Secretary Robert F. Kennedy Jr., who has fired CDC officials and cut mRNA vaccine funding, fueling a national debate over vaccine policy and federal authority. State alliances in California, Oregon, Washington, and New England are forming independent guidelines in response to perceived federal overreach. The controversy highlights growing polarization over public health mandates and the potential impact on disease outbreaks and public trust.",
+      "source": "https://www.usatoday.com/story/opinion/columnist/2025/09/04/kennedy-vaccines-florida-vaccine-mandate-shots-kids/85973405007/",
+      "published_at": "2025-09-04T19:30:25+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "IIU3F1H64"
+}

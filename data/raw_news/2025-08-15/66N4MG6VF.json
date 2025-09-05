@@ -1,0 +1,112 @@
+{
+  "url": "https://www.howtogeek.com/thunderbird-mail-is-getting-closer-to-full-exchange-support/",
+  "authorsByline": "Jorge A. Aguilar",
+  "articleId": "8d1a6745b43a411e869ad41e89b65297",
+  "source": {
+    "domain": "howtogeek.com",
+    "location": {
+      "country": "us",
+      "state": "VA",
+      "county": "Fairfax County",
+      "city": "McNair",
+      "coordinates": {
+        "lat": 38.9695316,
+        "lon": -77.3859479
+      }
+    }
+  },
+  "imageUrl": "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2025/04/thunderbird-mail-logo-over-white-background.jpg",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-15T14:51:20+00:00",
+  "addDate": "2025-08-15T14:59:35.989470+00:00",
+  "refreshDate": "2025-08-15T14:59:35.989471+00:00",
+  "score": 1.0,
+  "title": "Thunderbird Mail Is Getting Closer to Full Exchange Support",
+  "description": "The Thunderbird team has worked hard lately.",
+  "content": "The Thunderbird development team is pushing forward with a lot of new features and fixes. The team has a lot of progress to show for it with Exchange support and handling user feedback on the Account Hub. Most importantly, the team is laying the groundwork for a major overhaul of the message database.\n\nAccording to the Thunderbird Monthly Development Digest, the team is close to completing its Exchange integration project. The testing process helped the developers find and fix many issues and edge cases in the current code, which should mean better and more reliable performance. The team has also added many features from the July roadmap, including automated test coverage, message filtering, marking messages as Junk or Not Junk, displaying and blocking remote content, modernizing and simplifying callbacks, handling certificate and connection errors, archiving, saving drafts, and managing back-off situations.\n\nThanks to all the progress the development team made, there are even more features from the project backlog being prioritized. This means even more features are likely coming in the next update. These include user experience improvements like undo and redo options for moving, copying, and deleting messages, as well as better status bar notifications to give users clearer and more helpful feedback.\n\nThe team is also working through the existing bug backlog to make a smoother transition when Exchange support is released to more users. Besides Exchange support, the team is also working on the recently introduced Account Hub feature. The team is working on the bugs that have been reported, but also on the feature itself.\n\nThe current focus is on fixing user-reported problems while also finalizing the Account Hub for Address Book items, particularly the often complicated setup of LDAP directories. The team plans to add telemetry to the Account Hub to see how users interact with it and find areas for improvement.\n\nThe Global Message Database (Panorama) project, which should change how Thunderbird manages and organizes email, is still a top priority. However, it sounds like recent work has mostly centered on Exchange support and larger code refactoring. The team is preparing for a dedicated work week focused on \"Conversation View.\" The upgrades to Conversation View should improve email threading and make performance with large conversations better.\n\nWhile August has been set aside as a maintenance-focused month, half the team is still working on \"inglorious yet important items\" from the development roadmap. Not every change can be groundbreaking\u2014those under-the-hood fixes are important, too.\n\nBesides all the planned maintenance work to get ready for big updates, Thunderbird has made a lot of important fixes. That includes various fixes for newsgroup functionality, and port bugs to make sure Thunderbird stays compatible with updates to core libraries and operating system components. The team also worked on using standard colors throughout the application for a more consistent and visually appealing interface.\n\nThe next updates will be Thunderbird 142 and Thunderbird 140.2 ESR, which should arrive next week on August 19, 2025, according to the team's release calendar.",
+  "medium": "Article",
+  "links": [
+    "https://blog.thunderbird.net/2025/08/thunderbird-monthly-development-digest-july-2025/",
+    "https://developer.thunderbird.net/releases/cadence#thunderbird-milestones-calendar"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "Exchange support",
+      "weight": 0.082050495
+    },
+    {
+      "name": "Full Exchange Support",
+      "weight": 0.07953172
+    },
+    {
+      "name": "more users",
+      "weight": 0.075397365
+    },
+    {
+      "name": "user experience improvements",
+      "weight": 0.07219222
+    },
+    {
+      "name": "user feedback",
+      "weight": 0.07112923
+    },
+    {
+      "name": "many features",
+      "weight": 0.07035214
+    },
+    {
+      "name": "Account Hub",
+      "weight": 0.069937445
+    },
+    {
+      "name": "Thunderbird Mail",
+      "weight": 0.06963339
+    },
+    {
+      "name": "Thunderbird",
+      "weight": 0.06869076
+    },
+    {
+      "name": "users",
+      "weight": 0.06624334
+    }
+  ],
+  "topics": [],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/News/Technology News",
+      "score": 0.491455078125
+    }
+  ],
+  "sentiment": {
+    "positive": 0.34089297,
+    "negative": 0.17948455,
+    "neutral": 0.47962248
+  },
+  "summary": "The Thunderbird development team is working towards completing its Exchange integration project and implementing new features and improvements to the message database. The team has also added many features from the July roadmap, including automated test coverage, message filtering, marking messages as Junk or Not Junk, displaying remote content, modernizing callbacks, handling certificate and connection errors, archiving, saving drafts, and managing back-off situations. The Global Message Database (Panorama) project is still a top priority. While August is a maintenance-focused month, half the team is still working on \"inglorious yet important items\" from the development roadmap. The next updates will be Thunderbird 142 and Thunderbird 140.2 ESR, which should arrive on August 19, 2025.",
+  "shortSummary": "The Thunderbird development team is nearing completion with Exchange support and Account Hub features, aiming for better performance and user feedback.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": false,
+  "reprintGroupId": "b1b4115dac2848aba66882233e857446",
+  "places": [],
+  "scraped_sources": [
+    {
+      "url": "https://developer.thunderbird.net/releases/cadence#thunderbird-milestones-calendar",
+      "text": "Release Cadence\nThunderbird Release Train Model\nThunderbird follows a release train model to ensure timely and predictable releases. This approach allows for regular feature rollouts, stability improvements, and bug fixes.\nGeneral Release Cadence\nThe general release cadence consists of 4-week cycles, with each branch corresponding to a specific release channel. Each branch, starting from comm-central, is based on the previous branch.\nRelease Channels\nThunderbird Daily\nRelease Timeline: A new major version of Thunderbird Daily begins every 4 weeks.\nReleases: Thunderbird Daily is automatically released on a daily basis from comm-central.\nThunderbird Beta\nRelease Timeline:\nA new major version of Thunderbird Beta begins every 4 weeks.\n4 weeks after Daily starts for a new version, comm-central is merged into comm-beta.\nReleases: Thunderbird Beta for this version is released weekly for the next 3 weeks.\nBeta 1: Includes the merged code.\nBeta 2 and above: Include any new uplifts.\nThunderbird Release\nRelease Timeline:\nA new major version of Thunderbird Release begins every 4 weeks.\n3 weeks after Beta starts for a new version, comm-beta is merged into comm-release.\n1 week after this merge, the monthly Thunderbird Release is published.\nReleases: Thunderbird Release is released every 4 weeks, with point releases as needed every 2 weeks.\nThunderbird ESR (Extended Support Release)\nRelease Timeline: The code from comm-release is merged into comm-esr<version> once a year.\nReleases: Thunderbird ESR is released every year, typically in July, with point releases as needed every 2 weeks.\nStabilization Milestones\nDaily Soft Code Freeze\nA 1-week soft code freeze occurs for comm-central prior to merging into comm-beta.\nDuring this time:\nRisky code should not land in comm-central.\nFeatures controlled by a feature flag that were disabled in Daily should not be enabled.\nPre-Merge Reviews\nPrior to both merges, reviews are conducted for all changes included in the merge.\nCode may be backed out if:\nIt is deemed too risky.\nIt introduces new crashes or high-severity bugs.\nIt reduces the overall quality of Thunderbird.\nIt introduces a bug and a follow-up fix cannot be provided in a reasonable timeframe.\nSample Release Timeline for Thunderbird 136\nThunderbird 136.0a1 starts\nJan 6\nThunderbird 136.0a1 soft code freeze\nJan 27\u2013Feb 3\nThunderbird 136.0a1 pre-merge review\nJan 30\nThunderbird merge 136.0a1 central \u2192 beta\nFeb 3\nThunderbird 136.0b1\nFeb 5\nThunderbird 136.0b2\nFeb 12\nThunderbird 136.0b3\nFeb 19\nThunderbird 136.0b4\nFeb 24\nThunderbird 136.0b4 pre-merge review\nFeb 24\nThunderbird merge 136.0b4 beta \u2192 release\nFeb 25\nThunderbird 136.0\nMar 4\nThunderbird 136.0.1\nMar 18\nThunderbird Milestones Calendar\nYou can view Thunderbird release milestones on the Thunderbird Release Calendar.\nLast updated\nWas this helpful?"
+    }
+  ],
+  "argos_summary": "Thunderbird\u2019s development team is advancing Exchange integration, refining the Account Hub, and preparing a major overhaul of the message database while adding features from the July roadmap such as automated testing, message filtering, and improved remote content handling. The team is also prioritizing user\u2011experience improvements like undo/redo for message actions, better status notifications, and telemetry for the Account Hub. Ongoing work includes fixing bugs, updating newsgroup functionality, and ensuring compatibility with core libraries, all while maintaining a 4\u2011week release cycle that culminates in the upcoming Thunderbird 142 and 140.2 ESR releases on August 19, 2025. The release train model details daily, beta, release, and ESR channels, with scheduled code freezes and reviews to maintain stability and quality.",
+  "argos_id": "66N4MG6VF"
+}

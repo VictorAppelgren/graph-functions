@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T12:55:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "spx",
+    "selection_motivation": "UK 10‑year gilt yields serve as a global risk‑free benchmark; shifts in gilt10y alter equity discount rates and risk appetite, directly influencing the S&P 500.",
+    "candidate_motivation": "UK 10Y Gilt Yield is a sovereign bond yield whose level and slope are tightly linked to other sovereign yields, US Treasury yields, central‑bank policy, inflation expectations, and currency dynamics. Therefore topics that represent these factors are strong influences or peers.",
+    "existing_links_count": "4",
+    "candidate_count": "14",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['bund10y', 'ust10y', 'ust5y', 'ust30y', 'ust2y', 'jgb10y', 'fed_policy', 'ecb_policy', 'euro_inflation', 'us_inflation', 'dxy', 'gbpusd', 'sx5e', 'spx']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217284",
+    "rel_id": "gilt10y__influences__spx",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 10‑year gilt yields serve as a global risk‑free benchmark; shifts in gilt10y alter equity discount rates and risk appetite, directly influencing the S&P 500.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "spx"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__influences__spx"
+}

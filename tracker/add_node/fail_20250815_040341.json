@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:03:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "QDK9NKECG",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significant growth in the special occasion and bridesmaids categories for Lulus Fashion Lounge Holdings Inc, indicating a specific consumer trend that could impact trading decisions and market analysis.",
+      "id": "lvlu_special_occasion_growth",
+      "name": "Lulus Special Occasion Growth",
+      "type": "company",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company-level performance in special occasion category."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company‑specific category growth is an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

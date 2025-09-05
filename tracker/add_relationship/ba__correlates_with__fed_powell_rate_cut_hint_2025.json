@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T17:48:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ba",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "Boeing’s stock price moves with expectations of Fed rate cuts, so it correlates with Fed Powell rate cut hints.",
+    "candidate_motivation": "Boeing’s performance is driven by defense procurement, capital‑cost sensitivity, and macro‑financial conditions. Therefore topics that directly influence U.S. defense spending, Treasury yields, Fed policy, and inflation are the most plausible peers or influences.",
+    "existing_links_count": "17",
+    "candidate_count": "10",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['eu_defense_spending', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'us_core_pce']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'sx5e'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'eu_defense_spending'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166434502512214170",
+    "rel_id": "ba__correlates_with__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'eu_defense_spending'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing’s stock price moves with expectations of Fed rate cuts, so it correlates with Fed Powell rate cut hints.",
+      "type": "CORRELATES_WITH",
+      "source": "ba",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__correlates_with__fed_powell_rate_cut_hint_2025"
+}

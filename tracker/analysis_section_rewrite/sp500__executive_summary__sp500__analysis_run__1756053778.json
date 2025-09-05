@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T18:55:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756053778",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15103",
+    "output_chars": "1296",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft correctly uses a regime-based framework but needs a tighter, Ford-centric logic and a stricter, first-principles threading of drivers to outcomes; prune off-topic market-color (AI IPOs, Costa Coffee sale, broad tech macro notes) and replace with explicit ROIC vs. WACC and EV-margin trajectories that anchor Regime A/B/C to Ford’s cash flow and capex cadence. Actionably: 1) rewrite as a crisp 4–6 sentence house view with Regime A (EV losses persistent, ROIC below WACC, cadence of capex/FDI on EV remains the key pricing lever), Regime B (durable EV profitability and ROIC convergence unlock multiple-expansion), and Regime C (macro/shock tail risk re-pricing earnings); tie each regime to first-principles metrics (NOPAT/ invested capital for ROIC, EV EBIT margin, and FCF yield) and to explicit, data-backed bands drawn from 22PL3Q360, W2622L6WW, and 65UUBU0OR; 2) fix numeric inconsistencies by replacing implausible 2025 revenue midpoints and 2014–2024 CAGR claims with Ford-specific figures (EV capex up to $50B through 2026 with up to $12B paused, Q2 EV loss ≈$1.3B, ROIC ≈10%), citing the exact sources next to each number; 3) tighten catalysts and invalidations with concrete thresholds (e.g., EV EBIT margins turning positive and ROIC reaching or exceeding WACC within a defined window; a sustained macro/tariff shift that lifts or erodes margins; obvious regime-change triggers in 2–4 quarters) and remove ambiguity about “durable” profits lacking a time frame; 4) streamline horizons to Ford-relevant risks and signals (supply-chain/capex pacing, tariff/regulatory trajectory, Delta-hedging FX) and collapse the multi-asset market-color sections into a single, coherent risk/watch list with two-to-three actionable triggers and defined invalidation points; 5) deliver a single-source‑of-truth citation map (only the IDs in SOURCE MATERIAL) with explicit reconciliations for any conflicts between sources, and explicitly note any unresolved discrepancies rather than burying them in prose.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756053778"
+}

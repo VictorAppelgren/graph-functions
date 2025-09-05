@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T10:18:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_10y",
+    "target_id": "lower_interest_rates",
+    "selection_motivation": "The 10‑year Treasury yield is the benchmark for long‑term rates; a decline in the yield directly drives lower long‑term interest rates, influencing borrowing costs, corporate investment, and consumer spending.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "8",
+    "candidate_count": "15",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_inflation_expectations', 'eur', 'usd', 'euribor', 'sp500', 'eurostoxx50', '30yr_tips_auction', 'lower_interest_rates', 'oil', 'gold', 'copper', 'wheat', 'us_inflation_impact_on_bitcoin']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1249749996106940423",
+    "rel_id": "us_10y__influences__lower_interest_rates",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'lower_interest_rates'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 10‑year Treasury yield is the benchmark for long‑term rates; a decline in the yield directly drives lower long‑term interest rates, influencing borrowing costs, corporate investment, and consumer spending.",
+      "type": "INFLUENCES",
+      "source": "us_10y",
+      "target": "lower_interest_rates"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_10y__influences__lower_interest_rates"
+}

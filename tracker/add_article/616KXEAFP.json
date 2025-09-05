@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T13:59:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "616KXEAFP",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Nigeria's revised GDP may lift oil demand expectations, supporting WTI prices.",
+      "existing_ids": [
+        "oil"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses a major GDP revision in Nigeria, which qualifies as a macroeconomic event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant revision of Nigeria’s GDP, directly affecting the node’s value and interpretation."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article highlights recent data corrections and announcements (within weeks and a month), focusing on immediate events affecting economic figures."
+    },
+    "article_node": {
+      "id": "616KXEAFP",
+      "title": "How Nigeria’s Do-It-Yourself Economy Got a Lot Bigger",
+      "summary": "Assembling economic data is a continuous process, dependent on information that’s sometimes incomplete or late in arriving, which can lead to dramatic corrections as happened in the US a few weeks ago. Another such shift happened in Nigeria last month when it was announced that the nation’s gross domestic product was suddenly more than 30% bigger.\n\nGathering figures for an emerging or frontier market isn’t straightforward — particularly given how much activity occurs outside the formal part of t...",
+      "source": "https://www.bloomberg.com/news/newsletters/2025-08-23/how-nigeria-s-do-it-yourself-economy-got-a-lot-bigger-new-economy",
+      "published_at": "2025-08-23T10:45:19.496000+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "616KXEAFP"
+}

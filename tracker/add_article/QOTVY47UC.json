@@ -1,0 +1,44 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T03:35:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "QOTVY47UC",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities and risk; Red Sea shipping disruptions lift Brent/WTI, raise gold and US Treasury yields, and strengthen DXY.",
+      "existing_ids": [
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "wti",
+        "brent",
+        "gold",
+        "dxy",
+        "spx",
+        "sx5e"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a geopolitical event involving military strikes in Yemen that could affect regional security and shipping routes."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article describes a specific event in Yemen that may affect shipping and commodity markets, but without node context it's unclear how directly it impacts the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent Israeli airstrike on Yemen’s capital, a direct and immediate event impacting the Houthi campaign and Red Sea shipping disruptions."
+    },
+    "multi_topic_results": {
+      "total_topics": 10,
+      "successful": 10
+    }
+  },
+  "id": "QOTVY47UC"
+}

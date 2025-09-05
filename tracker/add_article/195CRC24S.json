@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T16:50:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "195CRC24S",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; tariffs and AI‑driven tech spending are raising US cost pressures, feeding into core PCE and broader inflation expectations, which in turn shape Fed policy and yield curves.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article discusses robust earnings for major tech companies, which is a company earnings event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The node is not specified, so I cannot determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights medium‑term structural drivers—AI growth, GPU and cloud capex, and tariff impacts—that shape earnings momentum and sector dynamics."
+    },
+    "article_node": {
+      "id": "195CRC24S",
+      "title": "3 Standout Themes That Emerged From Earnings Season",
+      "summary": "The article highlights that AI remains a key growth engine for big‑tech firms, with continued capital expenditure on GPUs and cloud infrastructure driving robust earnings for companies like Microsoft, Alphabet, Nvidia, and AMD. It notes a shift in the restaurant sector, where casual dining is gaining share from fast‑casual chains amid value‑driven consumer behavior. Tariffs are increasingly impacting a broad range of industries—from auto and consumer staples to technology—potentially tightening margins and influencing trade flows. The piece also underscores the importance of GPU technology for AI workloads and the accelerating cloud‑computing boom, while outlining how earnings season can reveal momentum and valuation gaps across sectors.",
+      "source": "https://www.nasdaq.com/articles/3-standout-themes-emerged-earnings-season",
+      "published_at": "2025-08-31T12:20:00+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "195CRC24S"
+}

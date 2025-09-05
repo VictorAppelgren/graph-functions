@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:34:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_governance",
+    "target_id": "ai_evaluation_monitoring",
+    "selection_motivation": "AI governance frameworks establish the standards, oversight mechanisms, and accountability requirements that directly shape systematic evaluation and monitoring practices for AI systems.",
+    "candidate_motivation": "The selected topics are closely related to AI governance and model transparency, as they involve regulatory frameworks, technological advancements, and ethical considerations in AI, making them strong influences or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "23",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['ai_ideological_bias', 'ai_evaluation_monitoring', 'ai_governance', 'ai_in_education', 'ai_human_skills', 'ai_supply_chain_optimization', 'ai_application_companies', 'ai_dynamic_pricing_airlines', 'ai_in_k12_education', 'ai_healthcare_advice', 'ai_stock_comparison_figma_palantir', 'ai_impact_on_software_industry', 'ai_narrative_attacks', 'ai_stock_performance', 'ai_unicorn_valuations', 'ai_water_impact', 'ai_coding_tools', 'ai_generated_misinformation', 'ai_generated_content_seo', 'ai_productivity', 'ai_app_store_rivalry', 'ai_human_skills_gap', 'ai_infrastructure']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373218043",
+    "rel_id": "ai_governance__influences__ai_evaluation_monitoring",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI governance frameworks establish the standards, oversight mechanisms, and accountability requirements that directly shape systematic evaluation and monitoring practices for AI systems.",
+      "type": "INFLUENCES",
+      "source": "ai_governance",
+      "target": "ai_evaluation_monitoring"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_governance__influences__ai_evaluation_monitoring"
+}

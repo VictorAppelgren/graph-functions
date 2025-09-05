@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T02:03:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756510816",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5482",
+    "output_chars": "949",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft mixes a high‑level scenario list with a poorly formatted swing‑trade template that lacks concrete price levels, entry/stop/target figures, and a clear causal chain to the spx handle.  \n**Actionable edits**  \n1. **Map every line to the canonical handle `spx`** – add “spx” after the driver in each mover line.  \n2. **Replace generic “0.5% above/below current level” with actual price levels** (e.g., “Entry 4,000, Stop 3,960, Target 4,120”).  \n3. **Re‑format the trade lines to the required schema**:  \n   `Up | 3‑6 mo | 4,000 | 3,960 | 4,120 | 4:1 | Regulatory tightening or climate litigation (HHKTQ3JYH)(ZV3QI3K19) | EPAM Q3 earnings beat (H86O3XRUJ) | 70% | 80`.  \n   Do the same for the down trade.  \n4. **Add explicit catalysts with dates** – e.g., “EPAM Q3 earnings release (Oct 2025)” and “CrowdStrike Q3 earnings release (Oct 2025)”.  \n5. **Quantify probabilities from evidence** – use the 70%/65% base‑case probabilities for the up moves, and 30%/20% for the down moves, citing the IDs.  \n6. **Remove duplicated or ambiguous lines** – keep only one up and one down trade; the two scenario lines can be merged into the trade description.  \n7. **Ensure each mover line ends with a single probability and ID**; avoid mixing multiple IDs in one line.  \n8. **Add a short outlook line if the trade is not executed** – e.g., “Outlook | 3‑6 mo | spx to trade 4,000‑4,120 | EPAM Q3 earnings beat | Regulatory tightening | 70% | 80”.  \n\nImplement these changes to meet the format, provide actionable price targets, and maintain a clear causal link to the spx handle.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756510816"
+}

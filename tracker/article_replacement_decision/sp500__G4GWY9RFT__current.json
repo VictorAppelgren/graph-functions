@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T03:41:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "G4GWY9RFT",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['3G1PVPWPD', 'I2SJU04DF', 'M5SPVKG33', 'I35H3FBSN', '4VN4UTWX1', 'E9CG0NWAH', 'Z5IA1CYUF', '4LDHF4T77', 'Y4QWID79M']",
+    "mode": "MUST_REPLACE",
+    "target_id": "3G1PVPWPD",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "3G1PVPWPD",
+      "motivation": "The PubMatic class action article is a high-signal, time-bound update that competes directly with an existing item in the same bucket. To avoid redundancy and preserve capacity for unique, high-clarity coverage, remove the competing entry with ID 3G1PVPWPD."
+    }
+  },
+  "id": "sp500__G4GWY9RFT__current"
+}

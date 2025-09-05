@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T08:45:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756621564",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7463",
+    "output_chars": "848",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Remove the fifth “Up” line and replace it with a single, correctly‑formatted trade plan.  \nRe‑write the four Up/Down lines so each follows the exact template:  \n\n**Up | 2025‑09‑15 to 2025‑10‑29 | Fed dovish cuts + tariff risk‑off | Fed meeting 2025‑09‑16‑17, July CPI 2025‑09‑10, tariff announcement 2025‑09‑01 | 88%**  \n**Up | 2025‑09‑15 to 2025‑10‑29 | Fed dovish cuts + moderate inflation | July CPI 2025‑09‑10, tariff announcement 2025‑09‑01 | 10%**  \n**Down | 2025‑09‑15 to 2025‑10‑29 | Fed surprise rate hike >25 bp + inflation surprise | Fed meeting 2025‑09‑16‑17, July CPI 2025‑09‑10 | 6%**  \n**Down | 2025‑09‑15 to 2025‑10‑29 | Tariff rollback + Ukraine de‑escalation | Tariff announcement 2025‑09‑01, Ukraine conflict update 2025‑09‑15 | 6%**  \n\nAll drivers must explicitly reference the canonical handle **dxy** and the catalysts must be dated events from the source material.  \nAdd a separate trade line:  \n\n**Up | 3‑6 mo | 1.00 dxy | 0.99 | 1.05 | 1:1 | Fed hike >25 bp or CPI >2.5 % | Fed meeting 2025‑09‑16‑17 or CPI 2025‑09‑10 | 88% | 80**  \n\nEnsure no extraneous text or unsupported citations remain. Each line should end with a single probability value, and all percentages should be whole numbers. This will satisfy the format, mapping, and catalyst requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756621564"
+}

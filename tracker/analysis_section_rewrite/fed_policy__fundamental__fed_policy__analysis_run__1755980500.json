@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T22:21:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755980500",
+    "article_ids": "['37UZC9X8I', 'H7Q52FKDH', 'GX057ADL7', 'S1H7IUGGE', '37UZC9X8I']",
+    "selected_articles_count": "5",
+    "material_chars": "61161",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "fundamental_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (to elevate the draft to world‑class quality)**  \n\n| # | Issue | Suggested Fix | Source ID(s) to cite |\n|---|-------|---------------|----------------------|\n| 1 | **Lack of first‑principles anchors** | Explicitly state the invariant drivers: real‑rate differential (nominal Fed rate – inflation expectations), terms‑of‑trade, productivity, BoP, net external position, and policy reaction functions. Quantify each (e.g., Fed policy rate 5.25 %, 12‑month CPI 3.9 %, real‑rate ≈ 1.3 % negative). | 37UZC9X8I, GX057ADL7 |\n| 2 | **Missing causal chain clarity** | Re‑write the paragraph that links “Fed policy → real‑rate differential → inflation expectations → risk‑premium → equity valuations” into a concise, numbered chain. | 37UZC9X8I |\n| 3 | **Insufficient quantification** | Add ranges for expected equity upside (e.g., S&P 500 +5 % to +10 % if a 50 bp cut occurs), real‑rate differential widening to +0.5 % if cuts, 10‑year yield falling to 3.5 %–4.0 %. | 37UZC9X8I, GX057ADL7 |\n| 4 | **Sparse citation density** | Insert inline citations after every factual claim (e.g., “Fed’s 50 bp cut call” → [GX057ADL7]). Aim for ≥ 1 citation per paragraph. | 37UZC9X8I, GX057ADL7, H7Q52FKDH, S1H7IUGGE |\n| 5 | **Scenario structure missing** | Add a clear “Upside” and “Downside” scenario section, each with distinct assumptions, catalysts, and outcomes. | 37UZC9X8I, H7Q52FKDH |\n| 6 | **Catalyst specificity** | For Jackson Hole, specify the exact date (Aug 24‑25) and the key policy language to watch (“hawkish vs dovish”). For September jobs, give the expected range (e.g., 250k‑300k jobs, 3.7 % unemployment). | 37UZC9X8I |\n| 7 | **Geopolitical risk framing** | Quantify the potential impact of a Putin‑cease‑fire or Trump‑lawsuit on risk‑premium (e.g., a 10‑bp spike in 10‑year yield). | S1H7IUGGE, GX057ADL7 |\n| 8 | **Alignment with multi‑year horizon** | Add a paragraph on long‑term structural drivers (AI productivity, demographic shifts, global supply‑chain realignment) that will shape the regime beyond 2026. | 37UZC9X8I, GX057ADL7 |\n| 9 | **Confidence rating justification** | Provide a short rationale for the “moderate‑to‑high” confidence (e.g., “strong data on inflation, clear Fed policy path, but political volatility introduces uncertainty”). | 37UZC9X8I, S1H7IUGGE |\n|10| **Formatting consistency** | Ensure all bullet points, numbers, and dates are in the same style; remove redundant duplicate paragraphs (e.g., the repeated ID 37UZC9X8I). | – |\n\n**Revised paragraph skeleton (to be inserted into the analysis)**  \n\n> **Invariant anchors**: The U.S. real‑rate differential is currently ≈ –1.3 % (Fed policy rate 5.25 % – 12‑month CPI 3.9 %)【37UZC9X8I】. A 50 bp Fed cut (to 4.75 %) would widen the differential to –0.8 % and push the 10‑year yield toward 3.5 %–4.0 %【GX057ADL7】.  \n> **Causal chain**: Fed policy → real‑rate differential → inflation expectations → equity risk‑premium → market pricing.  \n> **Base case**: Fed remains hawkish until Q1 2026; a 50 bp cut in September (if CPI < 3.5 % and jobs < 260k) expands real rates, lifts the S&P 500 by 5 %–10 % over 12 months, with AI/tech leading.  \n> **Upside scenario**: Unexpected dovish Jackson Hole (Aug 24‑25) or a softer September jobs report triggers an early cut, widening real rates to –0.5 % and a 12‑month equity rally of 12 %–15 %.  \n> **Downside scenario**: Inflation remains sticky, Trump’s lawsuit forces a policy shift to a more dovish stance, but geopolitical escalation (Ukraine cease‑fire talks collapse) spikes risk‑premia, causing a 10‑bp yield spike and a 6 % equity pullback.  \n> **Key risks**: (1) Sticky inflation; (2) Political pressure from Trump; (3) Geopolitical escalation.  \n> **Watch points**: Powell’s Jackson Hole remarks (Aug 24‑25), September jobs data (first week of Sept), Treasury Secretary’s Fed‑cut comments (daily).  \n> **Confidence**: Moderate‑to‑high, given clear policy‑data linkages but tempered by political volatility【S1H7IUGGE】【37UZC9X8I】.  \n\nFollow the above skeleton, insert the cited IDs, and ensure every claim is backed by a source. This will satisfy the depth, clarity, and first‑principles requirements while keeping the analysis within the prescribed length.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1755980500"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T23:19:02",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust5y",
+    "new_article_id": "HYJA10SKI",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['LF0UUL917', 'OGK8WLL69', 'Y474W9FO9', 'PA57YBYVQ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article to replace; the new article provides unique coverage."
+    }
+  },
+  "id": "ust5y__HYJA10SKI__fundamental"
+}

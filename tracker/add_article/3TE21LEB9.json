@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T15:18:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3TE21LEB9",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Nasdaq and S&P 500 gains driven by Alphabet antitrust ruling and Fed rate‑cut expectations.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "gold",
+        "wti",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article summarizes overall market performance across indices, sectors, and commodities, typical of market commentary."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess impact"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports daily market moves and short‑term reactions to news, focusing on immediate events affecting equities, rates, and commodities."
+    },
+    "article_node": {
+      "id": "3TE21LEB9",
+      "title": "U.S. Stocks Move Mostly Higher As Alphabet Surges On Antitrust Ruling",
+      "summary": "U.S. stocks closed higher with the Nasdaq up 1.0% and the S&P 500 up 0.5%, while the Dow slipped 0.1%. Alphabet surged 9.1% after a federal judge ruled it would not be forced to divest key assets, and Apple gained 3.8% as the ruling allows it to preload Google Search on iPhones. A drop in U.S. job openings to a ten‑month low bolstered expectations of a Fed rate cut, and gold stocks rose 1.8% as the metal hit a new record high. Energy stocks fell as crude prices dropped, Asia‑Pacific markets were mostly lower, European indices gained, and the U.S. 10‑year Treasury yield fell 6.6 basis points to 4.211%.",
+      "source": "https://www.nasdaq.com/articles/us-stocks-move-mostly-higher-alphabet-surges-antitrust-ruling",
+      "published_at": "2025-09-03T20:11:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "3TE21LEB9"
+}

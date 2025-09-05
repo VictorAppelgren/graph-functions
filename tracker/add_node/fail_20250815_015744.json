@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:57:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0OGBOZ5DQ",
+    "status": "rejected",
+    "reject_category": "sector_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Dell's advancements in AI infrastructure, specifically its AI Data Platform and collaboration with NVIDIA, which are critical for understanding the evolving landscape of enterprise AI solutions and their market impact.",
+      "id": "dell_ai_data_platform",
+      "name": "Dell AI Data Platform",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "sector_driver",
+      "motivation": "AI adoption drives demand for memory, chips, servers, and energy"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Dell AI Data Platform is a product offering, not a macro driver, tradable asset, or macro policy/regime; it falls under industry vertical/product category.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

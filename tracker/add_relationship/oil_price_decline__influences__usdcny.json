@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T00:41:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "usdcny",
+    "selection_motivation": "Oil price decline reduces China’s USD demand for imports, directly weakening USD/CNY.",
+    "candidate_motivation": "USD/CNY is heavily influenced by US dollar strength, US monetary policy, US yield curve, US inflation and economic data, global commodity prices, and Chinese economic fundamentals. It also correlates with other FX pairs and major indices, making the following topics strong peers or influences.",
+    "existing_links_count": "17",
+    "candidate_count": "33",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "33",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'us_crude_inventory', 'oil_price_decline', 'wti', 'brent', 'copper', 'gold', 'wheat', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'usdjpy', 'eurusd', 'gbpusd', 'euro_inflation', 'ecb_policy', 'bund10y', 'jgb10y', 'sx5e', 'spx', 'sofr']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1236239197224828940",
+    "rel_id": "oil_price_decline__influences__usdcny",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_crude_inventory'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline reduces China’s USD demand for imports, directly weakening USD/CNY.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "usdcny"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil_price_decline__influences__usdcny"
+}

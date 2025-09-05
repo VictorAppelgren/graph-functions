@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:29:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6ERZ4AK74",
+    "topic_discovery_motivation": "Article discusses the need for training in identifying child abuse, which relates to broader themes of education policy and child welfare not currently represented in the graph.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "child_abuse_training",
+        "mandatory_reporting_policy",
+        "education_policy"
+      ]
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a new regulatory requirement for teachers to report suspected child abuse, which is a regulation change."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a new mandatory reporting policy for teachers in Hong Kong, directly affecting education and child protection practices."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a new policy that will take effect next year, directly impacting teachers' responsibilities and reporting obligations, making it an immediate change to the education system."
+    },
+    "article_node": {
+      "id": "6ERZ4AK74",
+      "title": "Hong Kong lawmakers urge more teacher training to spot serious child abuse cases",
+      "summary": "Hong Kong lawmakers and educators are advocating for increased training for teachers to better identify serious child abuse cases, following updated guidelines that require mandatory reporting of suspected incidents starting January next year. The new policy, outlined in an Education Bureau circular, mandates that educators and related professionals report any suspicions of serious harm to children, with failure to do so resulting in criminal charges. Concerns have been raised about the challenges school staff face in assessing abuse severity, highlighting the need for proper training.",
+      "source": "https://www.scmp.com/news/hong-kong/education/article/3322770/hong-kong-lawmakers-urge-more-teacher-training-spot-serious-child-abuse-cases",
+      "published_at": "2025-08-22T14:23:14+08:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "6ERZ4AK74"
+}

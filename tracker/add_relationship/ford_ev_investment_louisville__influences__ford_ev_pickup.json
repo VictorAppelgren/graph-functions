@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:55:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ford_ev_investment_louisville",
+    "target_id": "ford_ev_pickup",
+    "selection_motivation": "The Louisville investment is a major capital allocation for Ford’s EV manufacturing, directly enabling the production of the Ford Electric Pickup. This causal link captures how the investment drives the introduction and scale of that vehicle model.",
+    "candidate_motivation": "These topics capture Ford's strategic direction (EV strategy, platform, and product lines) and the surrounding infrastructure and cost environment (infrastructure funding and charging costs) that would influence the Louisville investment.",
+    "existing_links_count": "2",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['ford_electric_vehicle_strategy', 'ford_universal_ev_platform', 'ford_ev_pickup', 'ev_infrastructure_funding', 'ev_charging_costs', 'revel_ev_charging']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ev_infrastructure_funding'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_electric_vehicle_strategy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217954",
+    "rel_id": "ford_ev_investment_louisville__influences__ford_ev_pickup",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ev_infrastructure_funding'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_ev_pickup'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_electric_vehicle_strategy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Louisville investment is a major capital allocation for Ford’s EV manufacturing, directly enabling the production of the Ford Electric Pickup. This causal link captures how the investment drives the introduction and scale of that vehicle model.",
+      "type": "INFLUENCES",
+      "source": "ford_ev_investment_louisville",
+      "target": "ford_ev_pickup"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ford_ev_investment_louisville__influences__ford_ev_pickup"
+}

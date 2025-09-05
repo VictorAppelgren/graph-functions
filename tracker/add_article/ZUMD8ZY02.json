@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T23:25:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZUMD8ZY02",
+    "status": "success",
+    "topic_id": "eurusd"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the EURUSD node.",
+      "existing_node_ids": "eurusd",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Insufficient information to determine relevant category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Article summary not provided, so I cannot determine how the article affects the EUR/USD exchange rate node. Based on the lack of information, I assign a low impact score."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess the time frame due to lack of article content; defaulting to fundamental."
+    },
+    "article_node": {
+      "id": "ZUMD8ZY02",
+      "title": "Moses Itauma Vs. Dillian Whyte: Odds, Records, Prediction",
+      "summary": "Dillian Whyte, 37, is set to headline a Saudi bout against 20‑year‑old prospect Moses Itauma, who boasts a 12‑0 record with 10 knockouts and is heavily favored to stop the veteran in the early rounds.  Whyte’s career has been marked by losses to top heavyweights such as Tyson Fury, Anthony Joshua and Alexander Povetkin, and he is hoping the win will restore his title‑contending status.  Betting lines and pundits predict a quick stoppage for Itauma, while Whyte’s trainer stresses the challenge of facing a powerful, youthful opponent.  The article also references Whyte’s upcoming rematch with Povetkin and a potential fight with champion Tyson Fury, framing the Whyte‑Itauma bout as a pivotal moment in his comeback trajectory.",
+      "source": "https://www.forbes.com/sites/joshkatzowitz/2025/08/15/moses-itauma-vs-dillian-whyte-odds-records-prediction/",
+      "published_at": "2025-08-15T20:02:12+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "ZUMD8ZY02"
+}

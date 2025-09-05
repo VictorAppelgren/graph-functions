@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T01:37:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NIT6JFIQF",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; US midstream policy boosts oil demand, supporting WTI and Brent prices, while Fed policy under Trump influences the broader energy environment.",
+      "existing_ids": [
+        "fed_policy",
+        "wti",
+        "brent"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Energy Action Limited’s earnings results, including net profit margin, EPS, revenue decline, and ROE, which is a company earnings announcement."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Article reports Energy Action Limited's financial results and a macro catalyst (US policy) that could increase demand for its services, indicating a moderate impact on the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports current earnings and highlights a medium‑term policy shift expected to boost demand for Energy Action’s services as pipeline and storage projects accelerate."
+    },
+    "article_node": {
+      "id": "NIT6JFIQF",
+      "title": "Energy Action Full Year 2025 Earnings: EPS: AU$0.052 (vs AU$0.019 in FY 2024)",
+      "summary": "Energy Action Limited (ASX:EAX) reported a 16% net profit margin and EPS of AU$0.052, up from 5.4% margin and AU$0.019 EPS in FY 2024, driven by higher revenue and strong earnings growth (55% annualized). The company’s ROE stands at 45%, but revenue has declined 10.8% annually. Meanwhile, U.S. policy under President Trump is expected to benefit midstream oil and gas firms, potentially increasing demand for Energy Action’s services as pipeline and storage projects accelerate.",
+      "source": "https://finance.yahoo.com/news/energy-action-full-2025-earnings-222112625.html",
+      "published_at": "2025-08-30T22:21:12+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "NIT6JFIQF"
+}

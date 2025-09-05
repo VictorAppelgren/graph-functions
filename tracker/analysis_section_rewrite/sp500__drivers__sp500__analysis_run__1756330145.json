@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-27T23:42:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756330145",
+    "drivers_count": "5",
+    "material_chars": "2136",
+    "output_chars": "3067",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a solid starting point but still feels like a high‑level synopsis rather than a world‑class, data‑driven thesis. Tighten the causal chain by explicitly linking each macro lever to a concrete market outcome (e.g., “a 25‑bp Fed cut is priced into the 10‑yr yield curve at 3.10 % vs 3.45 % pre‑cut” – cite 17F49LURJ). Replace vague phrases (“potentially curbing discretionary spending”) with quantified estimates (e.g., “AI displacement could shave 1.2 % from retail sales CAGR” – cite 1GVYF2V8O). For the oil section, embed the supply/demand numbers in a simple table and show the implied price range (e.g., “2025 supply +2.5 mbpd, demand +0.70 mbpd → Brent 62–66 USD” – cite J99EM2TPZ). In the currency part, quantify the “steady EURUSD trajectory” by projecting a 0.3 % annual drift over 3 yrs, anchored to the 7‑year update cadence (cite 5S9GJV2O3). Add a scenario matrix: Regime A (85 % prob) vs Regime B (30 % prob) with explicit yield, equity, and commodity outcomes. Ensure every claim pulls a source ID; if a source is missing (e.g., the 85 % cut probability), add a citation. Finally, sharpen the watch‑list into a bullet‑style “decisive signals” section with dates and expected impact magnitude. This will elevate the analysis from a narrative to a rigorous, evidence‑backed forecast.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756330145"
+}

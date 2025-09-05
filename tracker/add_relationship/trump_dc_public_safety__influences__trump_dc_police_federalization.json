@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T22:57:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_dc_public_safety",
+    "target_id": "trump_dc_police_federalization",
+    "selection_motivation": "Linking Trump's Federal Control of DC Police to Trump's Federalization of D.C. Police highlights the direct impact of federal policies on local law enforcement, providing insights into governance and crime response dynamics.",
+    "candidate_motivation": "The selected topics are closely related to law enforcement, political influence, and governance in Washington D.C., making them strong candidates for influence or correlation with Trump's Federal Control of DC Police.",
+    "existing_links_count": "5",
+    "candidate_count": "10",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['dc_federal_control', 'dc_police_federal_takeover', 'federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'dc_crime_trends', 'trump_dc_police_federalization', 'dc_governance', 'political_influence_on_business', 'trump_emergency_powers', 'trump_dc_crime_response']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'trump_dc_crime_response'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'dc_federal_policing_initiative'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6928789126221138262",
+    "rel_id": "trump_dc_public_safety__influences__trump_dc_police_federalization",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'trump_dc_crime_response'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'dc_federal_policing_initiative'}, {'type': 'INFLUENCES', 'source': 'trump_dc_public_safety', 'target': 'trump_dc_police_federalization'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Trump's Federal Control of DC Police to Trump's Federalization of D.C. Police highlights the direct impact of federal policies on local law enforcement, providing insights into governance and crime response dynamics.",
+      "type": "INFLUENCES",
+      "source": "trump_dc_public_safety",
+      "target": "trump_dc_police_federalization"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_dc_public_safety__influences__trump_dc_police_federalization"
+}

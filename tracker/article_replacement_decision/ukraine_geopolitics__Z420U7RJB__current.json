@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T00:33:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ukraine_geopolitics",
+    "new_article_id": "Z420U7RJB",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['TEBHEI80M', 'NQTOA95K4', 'NOIF1MJWF', '0AQ4JK5N2', 'I35H3FBSN', 'SKQ6Q0AGU', 'VL8L978A3']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no existing article in the current corpus that this new piece clearly supersedes, so no action is taken."
+    }
+  },
+  "id": "ukraine_geopolitics__Z420U7RJB__current"
+}

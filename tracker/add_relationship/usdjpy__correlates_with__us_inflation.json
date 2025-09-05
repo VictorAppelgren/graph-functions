@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T11:30:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdjpy",
+    "target_id": "us_inflation",
+    "selection_motivation": "US inflation expectations are a primary driver of USD/JPY, with strong historical correlation.",
+    "candidate_motivation": "USD/JPY is a major currency pair whose value is driven by U.S. monetary conditions, U.S. and Japanese bond markets, and global risk sentiment.  The listed topics are the most direct or strongly correlated drivers of the USD/JPY exchange rate.",
+    "existing_links_count": "4",
+    "candidate_count": "14",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'euribor', 'usdcny', 'dxy', 'us_unemployment_claims']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159679103071160537",
+    "rel_id": "usdjpy__correlates_with__us_inflation",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US inflation expectations are a primary driver of USD/JPY, with strong historical correlation.",
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__correlates_with__us_inflation"
+}

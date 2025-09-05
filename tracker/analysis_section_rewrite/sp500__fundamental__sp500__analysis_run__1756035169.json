@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:32:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756035169",
+    "article_ids": "['QFDWCTAYB', 'IGP1Q4ZEJ', '48JXC9VDP', '0G3A676BP', '9X7XOLXMH']",
+    "selected_articles_count": "5",
+    "material_chars": "183560",
+    "output_chars": "6314",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong start with a plausible multi-name, long-horizon thesis, but the piece would reach world-class quality with a tighter, regime‑based framework that ties first‑principles to market pricing. Actionable edits: replace the casual “IntelOrbis Graph” label with a formal, first‑principles spine (structural growth from cloud/AI moats, platform switching costs, and durable cash flows) and lay out explicit regimes and transition conditions (e.g., Regime A: sustained cloud/AI demand with contracted/repeat revenue; Regime B: cyclical/competitive squeeze and margin normalization; Regime C: policy/regulatory headwinds). Then articulate a transparent causal chain: cloud/AI capex and productivity gains drive higher revenue visibility (e.g., MSFT Azure growth ~39% and $368B of contracted revenue on the books) → margin expansion and free cash flow growth → re‑rating on multiple basis points and buyback/exceptional returns (cite 48JXC9VDP and 0G3A676BP). Quantify the base case with concrete numbers for each name (MSFT’s contracted revenue, SHOP’s H1 2025 GMV of about $163B and 29% revenue growth, +51% operating income; UNH’s long‑term moats and >9% free‑cash‑flow yield; LULU’s cash/no debt and 13.5x forward earnings). Map catalysts and invalidation: Burry’s Q2 contrarian buys (UNH and LULU) as a signal of capital‑allocation regime shift; DOJ/tariff/regulatory risks at UnitedHealth; Shopify’s margin/GMV trajectory and SFN sale implications; SLB’s shareholder‑yield signals as a different cash‑flow regime; and cloud/AI cycle inflection risks if Azure growth decelerates. Strengthen “what to watch” with regime‑specific triggers (Azure growth above/below a threshold, Shopify GMV growth stabilization, SLB free‑cash‑flow yield trajectory) and attach sources to every factual claim (QFDWCTAYB, 48JXC9VDP, 0G3A676BP, IGP1Q4ZEJ, 9X7XOLXMH). Reconcile conflicts (SFN sale vs. moat; UNH regulatory headwinds vs. Berkshire’s stake) by presenting net cash/FCF impact and alternative multipliers under each regime. Finally, deliver a clean base/base+bear/bull scenario with probability weights and a concise “confidence” tag, ensuring the multi‑year horizon, explicit catalysts, and a disciplined causal chain are front and center.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__fundamental__sp500__analysis_run__1756035169"
+}

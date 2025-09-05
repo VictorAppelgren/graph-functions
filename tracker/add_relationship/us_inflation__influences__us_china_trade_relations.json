@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T01:35:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation",
+    "target_id": "us_china_trade_relations",
+    "selection_motivation": "Linking US Inflation to US-China Trade Relations will enhance the understanding of how international trade dynamics influence domestic inflationary pressures, providing critical insights for investment strategies.",
+    "candidate_motivation": "The selected topics are closely related to US Inflation, either as direct influences on inflation rates, correlated economic indicators, or as peers in the broader economic landscape. These relationships suggest a significant interaction with the source topic.",
+    "existing_links_count": "9",
+    "candidate_count": "10",
+    "all_nodes_count": "1613",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['core_monthly_cpi', 'us_tariffs', 'us_inflation_data', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'us_tariff_policies', 'us_trade_policy_inflation', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_relations']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6935544525662192628",
+    "rel_id": "us_inflation__influences__us_china_trade_relations",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_inflation', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking US Inflation to US-China Trade Relations will enhance the understanding of how international trade dynamics influence domestic inflationary pressures, providing critical insights for investment strategies.",
+      "type": "INFLUENCES",
+      "source": "us_inflation",
+      "target": "us_china_trade_relations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation__influences__us_china_trade_relations"
+}

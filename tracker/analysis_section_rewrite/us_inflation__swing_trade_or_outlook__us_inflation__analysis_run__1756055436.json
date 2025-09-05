@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T19:20:02",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756055436",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16568",
+    "output_chars": "1225",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft shows solid ambition and a clear regime-frame, but it currently fails the exact Swing Trade format, dilutes first‑principles clarity, and mixes many sources without tight, evidence-based probabilities. Actionable edits: (1) re‑format to exactly four Movers & Scenarios lines, two Up and two Down, each as: Up/Down | Time window | Driver/Mechanism | What to watch | Probability %; fix time windows to standard 0–3, 3–6, 6–12 months (or clearly assign two lines to 0–3 and 6–12) and ensure two Up and two Down. (2) condense Driver/Mechanism per line into a single, traceable causal thread rooted in first principles (AI productivity uplift expanding moats and margins vs. labor displacement dampening consumption and prompting retraining/UBI), with citations immediately after factual claims (e.g., NL5YYTLF2 for automation exposure anchors; 22PL3Q360 for Ford EV/capex context). (3) ground probabilities in material evidence, presenting explicit numeric anchors (e.g., “65–75% based on X, Y, Z” with IDs) rather than standalone figures, and reconcile conflicts across sources (e.g., UNH/LULU durability vs Ford EV headwinds) rather than mixing disparate narratives. (4) tighten “What to watch” into 1–2 concise items per line; avoid extraneous alts unless kept clearly separate from the core four lines. (5) fix the Outlook section to 1 line if tradable (Direction | Horizon | Entry/Stop/Target/Reward/Risk/Trigger/Probability/Confidence) or 1 line if not tradable (Direction | Horizon | Path/levels | Signals | Invalidation | Trigger | Probability | Confidence), and ensure there is no trailing multi‑line or mixed formatting; remove stray numbers like a second 75 and align with 0–100. (6) ensure full coverage of critical sources by tying each line to at least two core IDs (NL5YYTLF2, IGP1Q4ZEJ, 22PL3Q360, J99EM2TPZ, RHXDOHQQX, S15934PBQ, U6HXAJR4J, EPJYXB7DX, UPV3X2MQ6, ILYC1M41F) where relevant, and only use IDs that exist in SOURCE MATERIAL. (7) aim for a tighter narrative arc: base-case anchor in Regime A with two positive catalysts (AI adoption, durable moats) and two negative triggers (policy missteps, automation unemployment), ensuring each line maps to a coherent, testable trigger/invalidation set; (8) deliver the final in the exact mandated format with no extra text or references.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756055436"
+}

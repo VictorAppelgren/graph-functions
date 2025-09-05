@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:23:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756088130",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18969",
+    "output_chars": "1350",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edits: 1) add a clean, first-principles causal map (tariffs → domestic capex → supply-chain localization → asset pricing) and anchor each line to regime triggers with explicit milestones (durable tariff uptick and capex announcements for Regime A; tariff stabilization with capex pacing for Regime B; regime shift with policy pivot for Regime C) drawing on SGB2PAZGK and the regime-weights framework (A 50%, B 30%, C 20%); 2) convert the line-level probabilities to regime-informed odds and keep them tied to best-supported facts (e.g., SGB2PAZGK, OGK8WLL69, Y6SQOEK69) rather than ad hoc numbers; 3) specify invalidation logic and numeric thresholds for each line (e.g., Up 3–6m invalid if capex timing misses targets by more than 1–2 quarters or if tariffs fail to move toward Regime A; Down 0–3w invalidation should hinge on a material reversal of rate-cut timing or dividend-flow signals) with explicit sources; 4) enhance citation discipline and reconcile conflicts by tagging every factual claim with IDs and producing a synthesized base-case that harmonizes Ford and Netflix narratives under the regime framework rather than presenting parallel strands; and 5) strictly enforce the 4-item format (two Up, two Down; one sentence per line; concrete triggers; and one-sentence, audit-friendly framing).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756088130"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:27:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_takeover",
+    "target_id": "national_guard_dc_deployment",
+    "selection_motivation": "A federal takeover of Washington D.C. usually necessitates the deployment of the National Guard to enforce federal authority and maintain order, making the causal link direct and actionable.",
+    "candidate_motivation": "The source topic centers on federal takeover and control of Washington, D.C., so topics describing direct federal interventions, policing actions, or deployment of federal forces in D.C. are the most plausible peers, influencers, or correlates.",
+    "existing_links_count": "4",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['dc_federal_intervention', 'dc_federal_policing_initiative', 'dc_federal_control', 'dc_police_federal_takeover', 'national_guard_dc_deployment', 'trump_national_guard_dc', 'federal_intervention_urban_crime', 'federal_intervention_in_black_cities']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_policing_initiative'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_control'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593766431",
+    "rel_id": "dc_federal_takeover__influences__national_guard_dc_deployment",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_policing_initiative'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'national_guard_dc_deployment'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_control'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A federal takeover of Washington D.C. usually necessitates the deployment of the National Guard to enforce federal authority and maintain order, making the causal link direct and actionable.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_takeover",
+      "target": "national_guard_dc_deployment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dc_federal_takeover__influences__national_guard_dc_deployment"
+}

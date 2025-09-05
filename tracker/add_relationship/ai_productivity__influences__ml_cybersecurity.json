@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:44:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_productivity",
+    "target_id": "ml_cybersecurity",
+    "selection_motivation": "AI productivity drives the adoption of machine learning in cybersecurity, enhancing threat detection and operational efficiency.",
+    "candidate_motivation": "These topics are the strongest plausible influences, correlates, or peers to AI Productivity due to direct links to AI capability expansion, hardware supply, regulation, and AI-enabled use cases.",
+    "existing_links_count": "5",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'nvidia_ai_infrastructure', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'ai_infrastructure', 'ai_governance', 'ai_supply_chain_optimization', 'ai_generated_content_seo', 'k12_ai_integration', 'generative_ai_film', 'ml_cybersecurity']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586741",
+    "rel_id": "ai_productivity__influences__ml_cybersecurity",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI productivity drives the adoption of machine learning in cybersecurity, enhancing threat detection and operational efficiency.",
+      "type": "INFLUENCES",
+      "source": "ai_productivity",
+      "target": "ml_cybersecurity"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_productivity__influences__ml_cybersecurity"
+}

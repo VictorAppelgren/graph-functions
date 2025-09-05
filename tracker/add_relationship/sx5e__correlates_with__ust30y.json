@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:50:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "ust30y",
+    "selection_motivation": "Euro Stoxx 50 and US 30‑year Treasury yield move in tandem via global risk sentiment and long‑term yield expectations, making a correlation link valuable for cross‑asset analytics.",
+    "candidate_motivation": "Euro Stoxx 50 is a major European equity index; its performance is strongly driven by European macro fundamentals, ECB policy, Eurozone inflation, and global risk sentiment reflected in US Treasury yields, US inflation, and US equity markets. These topics are the most likely peers or influences based on the source topic's domain.",
+    "existing_links_count": "16",
+    "candidate_count": "17",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['spx', 'euro_inflation', 'ecb_policy', 'us_inflation', 'ust10y', 'bund10y', 'gilt10y', 'dxy', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_services_pmi', 'us_core_pce', 'us_unemployment_claims']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1206966899158550054",
+    "rel_id": "sx5e__correlates_with__ust30y",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 and US 30‑year Treasury yield move in tandem via global risk sentiment and long‑term yield expectations, making a correlation link valuable for cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__correlates_with__ust30y"
+}

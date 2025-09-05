@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T16:05:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_war_2025",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "The 2025 US‑China trade war directly precipitated the US government’s decision to impose stricter chip export controls on China, making it a primary policy response to the conflict.",
+    "candidate_motivation": "These topics have direct policy, tariff, and supply-chain linkages with US-China trade dynamics, making them plausible strong influences, correlates, or peers to the US-China Trade War 2025.",
+    "existing_links_count": "2",
+    "candidate_count": "14",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['us_china_trade_talks', 'us_china_trade_relations', 'china_us_tariff_truce', 'us_china_ai_chip_exports', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'china_semiconductor_policy', 'nvidia_china_geopolitics', 'south_china_sea_tensions', 'tariff_driven_inflation', 'us_inflation_data', 'us_inflation_stock_impact']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_war_2025', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_war_2025', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958062",
+    "rel_id": "us_china_trade_war_2025__influences__us_chip_export_controls",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_war_2025', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_war_2025', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_war_2025', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 2025 US‑China trade war directly precipitated the US government’s decision to impose stricter chip export controls on China, making it a primary policy response to the conflict.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_war_2025",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_war_2025__influences__us_chip_export_controls"
+}

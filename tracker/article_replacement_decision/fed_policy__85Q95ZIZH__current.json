@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T14:16:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "85Q95ZIZH",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['H9WSBYP3D', '5JQEA5Z1T', 'K0WFSW29E', 'YB758UDBU', 'S7M6BJSRT', 'XQWTVR71K', 'ZBVVXT0W4', 'ECJTP759G', '9TW4DHMEN']",
+    "mode": "MUST_REPLACE",
+    "target_id": "9TW4DHMEN",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "9TW4DHMEN",
+      "motivation": "The competing timeframe bucket is at capacity. The new Trump/Fed-board article overlaps with existing coverage in Fed policy and political risk (ID 9TW4DHMEN), so removing that article avoids redundancy and preserves capacity for the latest insight."
+    }
+  },
+  "id": "fed_policy__85Q95ZIZH__current"
+}

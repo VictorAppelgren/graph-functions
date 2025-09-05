@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:05:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ford_electric_vehicle_strategy",
+    "target_id": "ford_universal_ev_platform",
+    "selection_motivation": "Ford’s electric vehicle strategy directly drives the development of its unified electric platform, which underpins all future EV models.",
+    "candidate_motivation": "These topics are the most plausible strong influences or peers to Ford Electric Vehicle Strategy, spanning platform architecture, Ford's investments, charging infrastructure, and competitive dynamics.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['ford_universal_ev_platform', 'ford_ev_investment_louisville', 'ford_ev_pickup', 'ev_infrastructure_funding', 'revel_ev_charging', 'tesla_autopilot_litigation', 'niu_technologies', 'iveco_ev_towing_record']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ford_electric_vehicle_strategy', 'target': 'ford_ev_investment'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080889",
+    "rel_id": "ford_electric_vehicle_strategy__influences__ford_universal_ev_platform",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ford_electric_vehicle_strategy', 'target': 'ford_ev_investment'}, {'type': 'INFLUENCES', 'source': 'ford_electric_vehicle_strategy', 'target': 'ford_universal_ev_platform'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ford’s electric vehicle strategy directly drives the development of its unified electric platform, which underpins all future EV models.",
+      "type": "INFLUENCES",
+      "source": "ford_electric_vehicle_strategy",
+      "target": "ford_universal_ev_platform"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ford_electric_vehicle_strategy__influences__ford_universal_ev_platform"
+}

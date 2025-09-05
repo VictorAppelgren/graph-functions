@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-09-01T13:17:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "BSV8LPNDM",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "11",
+    "candidate_ids": "['JUFS3BECF', 'HYJA10SKI', 'LF0UUL917', 'N5CNJJE9J', 'SGB2PAZGK', 'H86O3XRUJ', 'OBQMETU6O', 'OGK8WLL69', 'Y474W9FO9', 'PA57YBYVQ']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "N5CNJJE9J",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article to replace or update; new article adds fresh content."
+    }
+  },
+  "id": "ust10y__BSV8LPNDM__fundamental"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:19:23",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756555734",
+    "drivers_count": "4",
+    "material_chars": "1734",
+    "output_chars": "1032",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target for the S&P 500 but needs tighter causal framing, explicit magnitude ranges, and fuller citation coverage. 1) Quantify each driver’s spx impact: EPAM upgrade ≈ +0.1–0.2 % (H86O3XRUJ); CrowdStrike upside ≈ +0.3–0.5 % of the index if Q3 earnings beat (KNWKYIQ1W); DXY decline ≈ +0.1–0.2 % (Z7O1DCHS7). 2) Add a citation for the generic “weaker dollar supports equities” link (e.g., a recent equity‑vs‑dollar study). 3) Explicitly spell the causal chain: Fed‑cut probability → 2‑yr/10‑yr steepening → DXY fall → spx lift. 4) Tighten the watch‑list: Q3 2025 earnings (Jul‑Aug 2025), Aug 30 PCE, Aug 31 NFP, Fed September policy decision. 5) State clear invalidation points: Fed rate hike or reversal, PCE/NFP surprise > 3 %/expected, CrowdStrike earnings miss. 6) Remove any generic statements lacking a citation and keep the narrative strictly within the July‑Aug 2025 horizon. 7) Ensure every sentence ends with an inline (ID) citation or is removed if unsupported. This will elevate the analysis to a concise, actionable, and fully traceable view suitable for top‑tier macro PMs.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__drivers__fed_policy__analysis_run__1756555734"
+}

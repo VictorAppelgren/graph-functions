@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:47:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XK584ATQM",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the legal and financial implications of the CFPB's open banking rule, necessitating a dedicated node to analyze its impact on banks and compliance costs, which are critical for macroeconomic assessments.",
+      "id": "cfpb_open_banking_rule",
+      "name": "CFPB Open Banking Rule",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Regulatory rule issued by the CFPB that governs banking data sharing and fees."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "CFPB open banking rule is a macro regulatory regime affecting banking sector costs and credit conditions, directly relevant to market analysis.",
+      "confidence": 0.95,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "This query is constructed to comprehensively capture all relevant discussions surrounding the CFPB's open banking rule, including legal challenges, compliance costs, data sharing, and the implications for banks and third parties. By including synonyms, abbreviations, and related financial terms, the query ensures a robust retrieval of articles pertinent to the ongoing regulatory debate and its financial ramifications.",
+      "query": "(CFPB OR \"Consumer Financial Protection Bureau\" OR \"open banking rule\" OR \"open banking regulations\" OR \"open banking compliance\" OR \"data sharing\" OR \"data access\" OR \"data privacy\" OR \"data protection\" OR \"data fees\" OR \"account access fees\" OR \"financial harm\" OR \"compliance costs\" OR \"compliance deadlines\" OR \"court intervention\" OR \"legal challenge\" OR \"lawsuit\" OR \"regulatory risk\" OR \"regulatory clarity\" OR \"regulatory overhaul\" OR \"regulatory framework\" OR \"financial institutions\" OR banks OR \"U.S. banks\" OR \"commercial third parties\" OR \"consumer data\" OR \"consumer rights\" OR \"financial technology\" OR FinTech OR \"Bank Policy Institute\" OR \"American Bankers Association\" OR \"Consumer Bankers Association\") OR (lawsuit OR litigation OR motion OR complaint OR filing OR court OR judge OR ruling OR decision OR injunction OR stay OR enforcement OR prohibition OR statutory authority OR arbitrary OR capricious) OR (cost OR costs OR expense OR expenses OR financial OR expenditure OR investment OR unrecoverable OR compliance OR preparation OR mandate OR requirement OR obligation) OR (news OR analysis OR report OR update OR trend OR development OR insight OR overview OR impact OR implications)"
+    },
+    "importance_classification": {
+      "importance": 4,
+      "rationale": "The CFPB Open Banking Rule is a regulatory policy affecting banks’ compliance costs and operational risk. While it can influence bank valuations and sector dynamics, it is not an immediate intraday driver. According to the type guidance, policy topics are typically assigned level 4 (low, slower‑moving)."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:2734"
+}

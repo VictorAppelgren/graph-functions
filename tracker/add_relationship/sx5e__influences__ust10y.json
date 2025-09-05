@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T01:24:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sx5e",
+    "target_id": "ust10y",
+    "selection_motivation": "Euro Stoxx 50 rallies signal heightened risk appetite, historically preceding declines in the US 10‑year Treasury yield, making the index a leading indicator for US yield movements.",
+    "candidate_motivation": "Euro Stoxx 50 is a flagship European equity index whose performance is closely tied to European macro fundamentals, ECB policy, euro‑area inflation, and global equity and rate dynamics. These topics represent the most direct or strongly correlated drivers and peers for the index.",
+    "existing_links_count": "16",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'us_inflation', 'spx', 'ust10y', 'ust2y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'dxy', 'usdjpy', 'eurusd', 'gbpusd', 'ust30y', 'ust5y', 'bund10y', 'gilt10y', 'eur_at1_issuance', 'oil_price_decline', 'wti', 'brent', 'gold', 'copper', 'wheat', 'us_services_pmi', 'us_unemployment_claims', 'us_core_pce']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1211469399274292774",
+    "rel_id": "sx5e__influences__ust10y",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 rallies signal heightened risk appetite, historically preceding declines in the US 10‑year Treasury yield, making the index a leading indicator for US yield movements.",
+      "type": "INFLUENCES",
+      "source": "sx5e",
+      "target": "ust10y"
+    }
+  },
+  "id": "sx5e__influences__ust10y"
+}

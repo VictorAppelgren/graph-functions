@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T12:16:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eurusd",
+    "target_id": "gold",
+    "selection_motivation": "EURUSD movements directly drive gold prices through the USD’s inverse relationship, a well‑documented causal link that is critical for cross‑asset risk assessment.",
+    "candidate_motivation": "EURUSD is primarily influenced by US and Eurozone macro fundamentals, monetary policy, and global commodity and equity markets. The topics listed are key data releases, policy signals, and correlated asset classes that directly affect or co‑move with the EURUSD pair.",
+    "existing_links_count": "20",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['usdcny', 'gbpusd', 'usdjpy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'euro_inflation', 'dxy', 'wti', 'brent', 'gold', 'copper', 'us_services_pmi', 'us_unemployment_claims', 'bund10y', 'gilt10y', 'jgb10y', 'sx5e', 'spx']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1209217599460609843",
+    "rel_id": "eurusd__influences__gold",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD movements directly drive gold prices through the USD’s inverse relationship, a well‑documented causal link that is critical for cross‑asset risk assessment.",
+      "type": "INFLUENCES",
+      "source": "eurusd",
+      "target": "gold"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influences__gold"
+}

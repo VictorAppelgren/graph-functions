@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:33:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_export_tax",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "Linking US Chip Export Revenue Sharing to US Chip Export Controls highlights the regulatory framework impacting revenue, providing insights into how export policies directly affect financial outcomes in the semiconductor sector.",
+    "candidate_motivation": "The selected topics are closely related to the semiconductor industry and trade policies, which are directly influenced by US chip export revenue sharing. These topics represent potential influences, correlates, or peers in the context of chip exports and their economic implications.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_chip_export_controls', 'us_china_chip_negotiations', 'us_tariffs_semiconductors', 'us_chip_sales_agreement', 'us_china_ai_chip_agreement', 'intel_ceo_political_influence', 'us_china_trade_relations', 'us_chip_trade_china', 'us_semiconductor_tariffs', 'us_tariffs_on_technology']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_tax', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160522",
+    "rel_id": "us_chip_export_tax__influences__us_chip_export_controls",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_tax', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_tax', 'target': 'us_china_trade_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking US Chip Export Revenue Sharing to US Chip Export Controls highlights the regulatory framework impacting revenue, providing insights into how export policies directly affect financial outcomes in the semiconductor sector.",
+      "type": "INFLUENCES",
+      "source": "us_chip_export_tax",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_chip_export_tax__influences__us_chip_export_controls"
+}

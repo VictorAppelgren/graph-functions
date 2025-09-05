@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:39:59",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_governance",
+    "target_id": "ai_generated_misinformation",
+    "selection_motivation": "AI governance directly addresses the risk of misinformation by establishing standards, oversight, and accountability for AI-generated content, making it a primary driver of efforts to curb AI-generated misinformation.",
+    "candidate_motivation": "These topics are directly tied to AI governance, transparency, risk management, and policy dynamics, representing plausible influences or peers to AI Governance and Model Transparency.",
+    "existing_links_count": "2",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'ai_ideological_bias', 'ai_generated_content_seo', 'ai_evaluation_monitoring', 'ml_cybersecurity', 'deepfake_ai_medical', 'ai_infrastructure', 'us_export_policy_ai_chips', 'ai_generated_misinformation']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814273787",
+    "rel_id": "ai_governance__influences__ai_generated_misinformation",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_generated_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI governance directly addresses the risk of misinformation by establishing standards, oversight, and accountability for AI-generated content, making it a primary driver of efforts to curb AI-generated misinformation.",
+      "type": "INFLUENCES",
+      "source": "ai_governance",
+      "target": "ai_generated_misinformation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_governance__influences__ai_generated_misinformation"
+}

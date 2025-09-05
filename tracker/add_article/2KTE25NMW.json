@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-25T00:51:44",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2KTE25NMW",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Geopolitical risk in the Middle East and disruption to Red Sea shipping could tighten oil supply, pushing oil higher and widening energy/commodity risk premia.",
+      "existing_ids": [
+        "oil",
+        "israeli_palestinian_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article describes a military strike in Yemen by Israel in response to Huthi missile attacks, which is a geopolitical event."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a localized military strike in Yemen with limited direct impact on global economic activity, affecting only local infrastructure and not major global supply chains."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent military strike and immediate retaliation, focusing on the present conflict dynamics."
+    },
+    "article_node": {
+      "id": "2KTE25NMW",
+      "title": "Israeli Strikes In Yemen's Capital Kill Four, Huthis Say",
+      "summary": "Israeli forces struck Yemen’s capital Sanaa, killing at least four people and damaging the presidential palace, a power plant and fuel depot, in retaliation for Huthi missile attacks. The Huthis, who have fired missiles and drones at Israel in support of the Gaza war, claimed the raid hit a central building and an oil facility. Israel said the strikes targeted military sites and were a response to repeated Huthi aggression, while the Huthis vowed to keep fighting until the Gaza blockade ends.",
+      "source": "https://www.ibtimes.com/israeli-strikes-yemens-capital-kill-four-huthis-say-3781570",
+      "published_at": "2025-08-24T16:15:19-04:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "2KTE25NMW"
+}

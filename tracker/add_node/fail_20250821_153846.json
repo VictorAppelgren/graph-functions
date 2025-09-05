@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T15:38:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PH08K3CFU",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports new reforms to the UK asylum system, a policy change that can influence fiscal burden and political risk, warranting a dedicated node for macro analysis.",
+      "id": "uk_asylum_policy_reform",
+      "name": "UK Asylum Policy Reform",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy change affecting migration and fiscal burden"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Asylum policy reform is a specific social policy, not a macro driver or macro regulatory regime that directly influences markets or tradable assets.",
+      "confidence": 0.92,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

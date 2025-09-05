@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T20:39:29",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6ARUC6UYH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Boeing's operational turnaround and defense profitability are likely to lift its stock and the broader industrials sector, potentially supporting the S&P 500.",
+      "existing_ids": [
+        "ba"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Boeing’s operational performance improvements—production ramp‑up and profitability of its defense arm—without referencing earnings releases, regulatory changes, or policy actions, fitting the company‑update category."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports operational recovery and profitability for Boeing, directly affecting its stock and corporate outlook."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights operational recovery and production targets that influence Boeing’s near‑to‑medium‑term performance, rather than long‑term structural drivers."
+    },
+    "article_node": {
+      "id": "6ARUC6UYH",
+      "title": "1 Green Flag for Boeing Stock Right Now",
+      "summary": "Boeing’s commercial airplane business is recovering, with 737 MAX production reaching 38 units per month and plans to increase to 42 under CEO Kelly Ortberg. The defense arm, Boeing Defense, Space & Security, has returned to profitability after a leadership change, stabilizing costs and generating positive cash flow. Despite these operational gains, the Motley Fool’s top 10 stock picks do not include Boeing, suggesting investors may still view the stock as less attractive compared to other opportunities.",
+      "source": "https://finance.yahoo.com/news/1-green-flag-boeing-stock-114600405.html",
+      "published_at": "2025-08-24T11:46:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "6ARUC6UYH"
+}

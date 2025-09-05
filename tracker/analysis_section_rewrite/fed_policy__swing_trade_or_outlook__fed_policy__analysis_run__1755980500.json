@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T22:42:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755980500",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "8809",
+    "output_chars": "839",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft’s “Movers & Scenarios” section is fine in length but the probabilities are arbitrary and lack evidence; replace them with ranges that reflect the relative weight of each driver (e.g., Fed‑cut probability 60 % vs. no‑cut 30 % based on the 150 bp cut call). The “Long” line is incorrectly formatted for a tradable equity; delete it and replace with a single swing‑trade line that follows the required template:  \n\n**Long | Q3 2025 | $32.50 | $31.00 | $34.50 | 1:1.5 | Fed‑cut delay or export‑control curtailment | Q3 earnings beat | 60 % | 70**  \n\nUse the current price (≈$32.50) from the latest market data (cite the source if available). Cite the $34.50 target with (SK994CBWR). The stop at $31.00 is 3 % below entry, a reasonable risk‑reward. The invalidation trigger is the Fed‑cut delay or export‑control curtailment, both cited in the material (C22MKA9VY, SK994CBWR). The trigger for entry is the Q3 earnings beat (SK994CBWR). Ensure every numeric claim has a citation. Remove the “Long” line and any extraneous text; keep the four scenario lines concise, each with a single driver, a clear watch signal, and a probability that reflects the evidence hierarchy. This will align the output with the required format, improve clarity, and provide actionable, evidence‑based guidance.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1755980500"
+}

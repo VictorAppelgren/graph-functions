@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T15:30:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "oil",
+    "selection_motivation": "USD influences oil because oil is priced in USD and fluctuations in USD strength directly affect oil prices globally.",
+    "candidate_motivation": "The US Dollar is a global currency whose value is directly affected by monetary policy, inflation, treasury yields, and commodity prices, as well as by trade relations and tariffs with major partners such as China and the Eurozone. These topics therefore represent strong influences, correlates, or peers to the US Dollar.",
+    "existing_links_count": "2",
+    "candidate_count": "17",
+    "all_nodes_count": "1019",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'eur', 'us_china_trade_talks', 'us_china_trade_truce', 'us_china_trade_relations', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530510",
+    "rel_id": "usd__influences__oil",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD influences oil because oil is priced in USD and fluctuations in USD strength directly affect oil prices globally.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "oil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__oil"
+}

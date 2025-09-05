@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:48:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_semiconductor_policy",
+    "target_id": "us_china_chip_negotiations",
+    "selection_motivation": "China’s semiconductor policy directly shapes the terms and scope of US‑China chip negotiations, influencing both parties’ strategic positions.",
+    "candidate_motivation": "These topics are tightly tied to cross-border semiconductor policy, supply-chain dynamics, and technology competition with China. They represent direct influences, correlates, or peers to China Semiconductor Policy.",
+    "existing_links_count": "4",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['china_nvidia_policy', 'china_ai_semiconductors', 'nvidia_china_geopolitics', 'us_chip_export_controls', 'us_china_ai_chip_exports', 'us_china_chip_negotiations', 'us_tariffs_semiconductors', 'us_china_trade_talks', 'china_chip_competition', 'us_chip_sales_agreement', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'china_nvidia_policy'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_chip_sales'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'china_ai_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902699",
+    "rel_id": "china_semiconductor_policy__influences__us_china_chip_negotiations",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'china_nvidia_policy'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'us_china_chip_sales'}, {'type': 'INFLUENCES', 'source': 'china_semiconductor_policy', 'target': 'china_ai_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s semiconductor policy directly shapes the terms and scope of US‑China chip negotiations, influencing both parties’ strategic positions.",
+      "type": "INFLUENCES",
+      "source": "china_semiconductor_policy",
+      "target": "us_china_chip_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_semiconductor_policy__influences__us_china_chip_negotiations"
+}

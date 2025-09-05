@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:14:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_infrastructure",
+    "target_id": "nvidia_amd_chip_revenue_agreement",
+    "selection_motivation": "AI infrastructure demand is the primary driver behind the recent Nvidia‑AMD chip revenue agreement, as both firms are expanding GPU supply to meet AI workloads.",
+    "candidate_motivation": "These topics are the strongest direct or competitive links to AI Infrastructure, reflecting GPU/AI compute supply, data-center demand, and policy/regulatory dynamics that shape the AI hardware ecosystem.",
+    "existing_links_count": "11",
+    "candidate_count": "9",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'nvidia_china_geopolitics', 'us_china_ai_chip_exports', 'us_chip_export_controls', 'china_nvidia_policy', 'us_china_chip_negotiations', 'nebius_ai_infrastructure', 'intel_ceo_tan']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'southeast_asia_data_centres'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'PEERS', 'source': 'ai_infrastructure', 'target': 'nebius_ai_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958090",
+    "rel_id": "ai_infrastructure__influences__nvidia_amd_chip_revenue_agreement",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_amd_chip_revenue_agreement'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_application_companies'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'ai_human_skills'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'southeast_asia_data_centres'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'nvidia_ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'PEERS', 'source': 'ai_infrastructure', 'target': 'nebius_ai_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI infrastructure demand is the primary driver behind the recent Nvidia‑AMD chip revenue agreement, as both firms are expanding GPU supply to meet AI workloads.",
+      "type": "INFLUENCES",
+      "source": "ai_infrastructure",
+      "target": "nvidia_amd_chip_revenue_agreement"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_infrastructure__influences__nvidia_amd_chip_revenue_agreement"
+}

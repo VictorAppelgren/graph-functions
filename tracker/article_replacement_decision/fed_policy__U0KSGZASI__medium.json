@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-09-01T13:10:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "U0KSGZASI",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['KCKB73IZT', 'XTQIQRP5K', 'B50S2PG8O', 'GKC24ERTI', 'VJQJ7XRQO', 'EPJYXB7DX', 'NIT6JFIQF', 'GK86UUQPN', 'F7K7Y35U5']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "B50S2PG8O",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "Article does not provide an explicit magnitude or sign for any canonical handle, so it fails the evidence requirement."
+    }
+  },
+  "id": "fed_policy__U0KSGZASI__medium"
+}

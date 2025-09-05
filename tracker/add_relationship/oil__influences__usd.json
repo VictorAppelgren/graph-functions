@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T04:31:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "usd",
+    "selection_motivation": "Oil price movements directly affect the US dollar’s value through commodity pricing and trade balances, making USD a primary driver of oil’s macro impact.",
+    "candidate_motivation": "Oil is a core commodity whose price movements influence and are influenced by macro‑economic indicators, currency rates, equity indices, and geopolitical events. Topics that directly affect supply/demand, inflation expectations, monetary policy, or are commonly correlated with oil prices are therefore strong influences, peers, or correlates.",
+    "existing_links_count": "10",
+    "candidate_count": "32",
+    "all_nodes_count": "1032",
+    "candidate_ids_len": "32",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'sp500', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'gold', 'copper', 'usd', 'eur', 'core_monthly_cpi', 'ukraine_geopolitical_security', '30yr_tips_auction', 'macro_risks_technology', 'excelerate_energy_acquisition_impact', 'stagflation', 'stephen_miran_fed_appointment', 'synthetic_aviation_fuel', 'middle_east_sovereign_funds', 'middle_east_investment', 'us_trade_policy_inflation', 'us_india_tariffs', 'us_tariff_policies', 'thematic_portfolio_investing', 'david_nierenberg_investment_strategy', 'creator_economy_investment', 'new_coffee_tariffs', 'atha_energy_private_placement']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069012490",
+    "rel_id": "oil__influences__usd",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements directly affect the US dollar’s value through commodity pricing and trade balances, making USD a primary driver of oil’s macro impact.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__usd"
+}

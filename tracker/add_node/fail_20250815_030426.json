@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:04:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0LY87TKDW",
+    "status": "rejected",
+    "reject_category": "software_update",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights significant issues with the August 2025 Windows 11 security update that could impact enterprise users, necessitating a new node to track the implications of these updates on market stability and technology adoption.",
+      "id": "windows_11_update_issues",
+      "name": "Windows 11 Update Issues",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "software_update",
+      "motivation": "To fix installation errors and mitigate security risks for enterprise users."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Product‑specific OS update issue; not a macro driver, policy, or tradable asset",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T14:42:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust10y",
+    "target_id": "gold",
+    "selection_motivation": "Gold prices move inversely with US 10Y yields, reflecting risk‑premium dynamics that are critical for cross‑asset risk models.",
+    "candidate_motivation": "These topics are likely to influence or correlate with the US 10‑year Treasury yield through monetary policy, inflation expectations, term‑structure dynamics, global benchmark yields, and market risk sentiment.",
+    "existing_links_count": "22",
+    "candidate_count": "15",
+    "all_nodes_count": "36",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'sofr', 'dxy', 'spx', 'gold', 'fed_powell_rate_cut_hint_2025', 'us_unemployment_claims']",
+    "existing_links_before_len": "22",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1224981297668031732",
+    "rel_id": "ust10y__correlates_with__gold",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold prices move inversely with US 10Y yields, reflecting risk‑premium dynamics that are critical for cross‑asset risk models.",
+      "type": "CORRELATES_WITH",
+      "source": "ust10y",
+      "target": "gold"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__correlates_with__gold"
+}

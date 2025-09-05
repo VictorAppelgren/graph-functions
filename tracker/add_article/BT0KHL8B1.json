@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T01:02:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BT0KHL8B1",
+    "status": "success",
+    "topic_id": "intel_ceo_management"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the potential U.S. government intervention in Intel Corp., which aligns with existing concerns about the semiconductor industry and its geopolitical implications, making it relevant for investment analysis.",
+      "existing_node_ids": "intel_ceo_management",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The node pertains to Intel's management and operations, which may involve company updates or strategic decisions."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the management strategies of Intel's CEO, which directly relates to the node on CEO management."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses ongoing management strategies and leadership decisions that will influence the company's direction over time."
+    },
+    "article_node": {
+      "id": "BT0KHL8B1",
+      "title": "The U.S. government may take a stake in Intel",
+      "summary": "The U.S. government is considering taking a stake in Intel Corp. to assist the struggling chipmaker amid financial difficulties, although discussions are still in early stages with no decisions made. Intel has faced significant challenges, including layoffs and project cancellations, prompting calls for a bailout from former executives. President Trump has publicly criticized Intel's CEO Lip-Bu Tan, citing concerns over his ties to Chinese companies, while also suggesting that U.S. customers should invest in Intel to ensure a stable semiconductor supply.",
+      "source": "https://www.pcworld.com/article/2879012/the-u-s-government-may-take-a-stake-in-intel.html",
+      "published_at": "2025-08-14T21:31:17+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "BT0KHL8B1"
+}

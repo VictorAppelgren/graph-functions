@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:16:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1DV1QW4CV",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significant maturing debt obligations of Accord Financial Corp., which is a critical macro driver affecting the company's financial stability and growth potential, warranting a dedicated node for analysis.",
+      "id": "accord_debt_obligations",
+      "name": "Accord Financial Corp. Debt Obligations",
+      "type": "company",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company-level debt obligations, a key financial metric."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company-level debt obligations are not a macro driver or tradable asset; they do not provide macro-level market insight.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

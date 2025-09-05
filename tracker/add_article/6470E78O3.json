@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T04:41:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6470E78O3",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; the tariff ruling and potential refunds push 10‑yr and 30‑yr yields higher, weighing on equities. Fed policy and inflation expectations also feed the transmission.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust30y",
+        "spx",
+        "us_inflation",
+        "us_core_pce",
+        "ust2y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a federal appeals court ruling that declares most of Trump's tariffs illegal, constituting a regulatory/legal development affecting U.S. fiscal policy and market sentiment."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major policy event—the court ruling on Trump tariffs—that directly influences US fiscal policy expectations, drives Treasury yields higher, and depresses equity indices, impacting key macro and market nodes."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent court ruling and immediate market reactions to tariff policy, focusing on short‑term equity and yield movements."
+    },
+    "article_node": {
+      "id": "6470E78O3",
+      "title": "CNBC Daily Open: Trump says stocks \"want the tariffs\" — but it might be Treasurys instead",
+      "summary": "President Trump claimed that stocks need tariffs, but the market reaction has been largely negative, with equity indices falling and Treasury yields spiking as investors worry about the fiscal impact of potential tariff refunds. A federal appeals court ruled most of Trump's tariffs illegal, prompting Trump to seek a Supreme Court appeal. The ruling has heightened uncertainty for U.S. fiscal policy, driving bond yields higher and weighing on equity sentiment.",
+      "source": "https://www.cnbc.com/2025/09/03/cnbc-daily-open-trump-says-stocks-want-tariffs-but-it-might-be-treasurys.html",
+      "published_at": "2025-09-03T01:13:08+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "6470E78O3"
+}

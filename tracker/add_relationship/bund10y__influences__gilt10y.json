@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T14:17:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "gilt10y",
+    "selection_motivation": "Bund yields are the primary benchmark for European sovereign rates; the German 10Y Bund is the key reference for UK 10Y gilt pricing, so bund10y strongly influences gilt10y.",
+    "candidate_motivation": "German 10Y Bund Yield is a core sovereign benchmark that moves with European and global fixed‑income dynamics, monetary policy, inflation expectations, and currency flows. Therefore, its strongest influences and peers are other sovereign yields, major policy signals, inflation measures, and the USD/DXY axis, which jointly shape the Bund’s level and term structure.",
+    "existing_links_count": "15",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'sx5e', 'euro_inflation', 'ecb_policy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1220476598529033441",
+    "rel_id": "bund10y__influences__gilt10y",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields are the primary benchmark for European sovereign rates; the German 10Y Bund is the key reference for UK 10Y gilt pricing, so bund10y strongly influences gilt10y.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__gilt10y"
+}

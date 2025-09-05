@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T04:20:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "copper",
+    "selection_motivation": "Oil price shocks alter industrial activity and construction demand, which are primary drivers of copper demand; thus WTI is a key upstream influence on copper prices.",
+    "candidate_motivation": "WTI Crude Oil is a key commodity price that is driven by global economic activity, interest rates, currency movements, and correlated commodity markets. Consequently, nearly every macro and market indicator in the list can plausibly influence or correlate with it.",
+    "existing_links_count": "11",
+    "candidate_count": "30",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "30",
+    "candidate_ids_preview": "['india_industrial_output', 'usdcny', 'us_unemployment_claims', 'fed_policy', 'bund10y', 'ust10y', 'ust2y', 'china_exports', 'china_credit_impulse', 'ust30y', 'copper', 'ust5y', 'gbpusd', 'gilt10y', 'sx5e', 'sofr', 'us_inflation', 'jgb10y', 'ecb_policy', 'wheat', 'spx', 'euro_inflation', 'euribor', 'gold', 'brent', 'dxy', 'us_core_pce', 'usdjpy', 'fed_powell_rate_cut_hint_2025', 'eurusd']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882699849",
+    "rel_id": "wti__influences__copper",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price shocks alter industrial activity and construction demand, which are primary drivers of copper demand; thus WTI is a key upstream influence on copper prices.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__copper"
+}

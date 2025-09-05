@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:19:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4649OHKFP",
+    "status": "success",
+    "topic_id": "trump_ceo_political_influence"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses a political figure's potential impact on the gubernatorial race, which aligns with the existing node on Trump's influence in politics, making it relevant for analysis of political dynamics.",
+      "existing_node_ids": "trump_ceo_political_influence",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses the influence of a political figure on corporate leadership, which relates to company news and political dynamics."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the influence of CEOs in politics, which directly relates to the political influence of figures like Trump."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article explores the ongoing influence of political dynamics on corporate leadership, which suggests a longer-term impact rather than immediate events."
+    },
+    "article_node": {
+      "id": "4649OHKFP",
+      "title": "Clear GOP Frontrunner Emerges For Wide Open Governor Race",
+      "summary": "Republican Rep. Tom Tiffany is leading in polls for the Wisconsin gubernatorial race, with 40% support among likely Republican primary voters, significantly ahead of his opponents. An endorsement from former President Trump could further solidify his position, potentially increasing his support to 60%. Tiffany's campaign is expected to focus on conservative issues, including education and transgender rights, as he prepares to announce his decision to run by the end of September.",
+      "source": "https://dailycaller.com/2025/08/14/tom-tiffany-wisconsin-governor-race-poll/",
+      "published_at": "2025-08-14T23:16:36+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "4649OHKFP"
+}

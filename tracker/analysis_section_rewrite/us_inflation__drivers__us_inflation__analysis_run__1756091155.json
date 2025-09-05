@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T05:11:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756091155",
+    "drivers_count": "8",
+    "material_chars": "3462",
+    "output_chars": "6234",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft has a solid three‑regime macro frame and a credible cross‑asset transmission, but to reach world‑class quality you should (1) harmonize nomenclature and horizon across lenses (rename Core CPI framing to Regime A and use a single Regime A/B/C throughout oil, CPI, Euro area, policy, and yields to avoid Regime I confusion); (2) replace the narrative with a formal scenario tree: base/upside/downside with explicit regime probabilities (e.g., A 50%, B 30%, C 20%), clearly defined triggers (wage‑growth momentum, inflation persistence, Jackson Hole cues, semiconductor capex cadence) and invalidation points, and a concise causal chain: macro shock → policy reaction function → discount rates and risk premia → asset valuations; (3) deliver a unified transmission map that ties macro/policy/flows/positioning to valuations for equities, credit, oil, crypto, and euro‑area assets, and present all quantitative claims as ranges anchored to source IDs rather than standalone numbers; (4) anchor every numeric claim to its source IDs (e.g., oil paths T1QE6JPIX/J99EM2TPZ; Ford EV metrics 22PL3Q360; ACMR 2025 revenue; RWA 16T; tokenization 4.2B; Ether 4,000–5,000; BTC 110,000–125,000; etc.), and consistently present uncertainty bands; (5) add a crisp watchlist of 5–7 decisive signals with explicit thresholds and clear invalidation points (Jackson Hole wage/inflation path, semiconductor capex cadence, oil supply surprises, crypto/AI‑financing flows, RWA/tokenization trajectory), plus a short reconciliation protocol for conflicting signals (state a preferred band and sensitivity to outliers); (6) tighten prose to eliminate repetition, ensure cross‑asset coherence, and deliver a one‑page, reader‑friendly map with all claims tagged to IDs (OGK8WLL69, Y6SQOEK69, 15, 9, R3WNA7L7A, NL5YYTLF2, SGB2PAZGK, JPAIHPA4N, 22PL3Q360, T1QE6JPIX, J99EM2TPZ).",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__drivers__us_inflation__analysis_run__1756091155"
+}

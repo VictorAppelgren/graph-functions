@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-09-05T10:46:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "movers_scenarios",
+    "test": "True",
+    "run_id": "eurusd__analysis_run__1757060785",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5850",
+    "output_chars": "503",
+    "saved": "False",
+    "saved_field": "movers_scenarios",
+    "status": "generated_no_save"
+  },
+  "details": {
+    "llm": {
+      "model": "bound=ChatOpenAI(client=<openai.resources.chat.completions.completions.Completions object at 0x10a50c890>, async_client=<openai.resources.chat.completions.completions.AsyncCompletions object at 0x10adf4690>, root_client=<openai.OpenAI object at 0x10a50c150>, root_async_client=<openai.AsyncOpenAI object at 0x10adf4210>, model_name='openai/gpt-oss-20b', temperature=0.3, model_kwargs={}, openai_api_key=SecretStr('**********'), openai_api_base='http://gate04.cfa.handels.gu.se:8787/v1', request_timeout=900.0, max_retries=0) kwargs={} config={} config_factories=[]",
+      "feedback": "1. Change the first line’s sign from “Up” to “Down” (or label it “Flat” but must use Up/Down) because the alt‑1 scenario predicts DXY ≈ 0 % (5)(4); add a 30 % probability and cite (5)(4). 2. Add inline citations to every claim: base‑case DXY ↓ 1‑2 % (4)(5)(2)(1), alt‑1 flat (5)(4), alt‑2 ↓ 0‑1 % (2), Fed cut ↑ DXY 50‑100 bp (5)(Z7O1DCHS7). 3. Tighten driver phrasing to a single catalyst phrase, e.g., “Fed remains independent & tariffs rolled back” or “Trump tariff order + Fed threat + China‑Russia trade surge.” 4. Align watch points directly with the catalysts: Fed minutes & tariff enforcement pace; EU cloud spending, Fed minutes, China‑Russia oil volumes; China‑Russia oil volumes & CNY‑USD; Fed minutes & CPI 2025‑08‑15. 5. Re‑balance probabilities to reflect likelihood: base‑case 70 % DXY ↓ 1‑2 %; alt‑1 30 % flat; alt‑2 10 % DXY ↓ 0‑1 %; Fed cut 10 % DXY ↑. 6. Keep each line a single, concise sentence, no filler, and ensure each maps to the canonical DXY handle.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__movers_scenarios__eurusd__analysis_run__1757060785"
+}

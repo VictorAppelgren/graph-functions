@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:51:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_export_agreement",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "The U.S. Chip Export Agreement establishes the regulatory framework governing chip exports, directly shaping the U.S. Chip Export Controls.",
+    "candidate_motivation": "These topics represent the main policy, trade, and geopolitics levers shaping semiconductor exports and chip supply chains, creating direct influence or correlation with a US chip export framework.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_chip_export_controls', 'us_chip_exports_china', 'us_china_ai_chip_exports', 'us_china_chip_negotiations', 'us_china_trade_talks', 'us_tariffs_semiconductors', 'china_semiconductor_policy', 'nvidia_china_geopolitics', 'china_nvidia_policy']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_agreement', 'target': 'macro_risks_technology'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160231",
+    "rel_id": "us_chip_export_agreement__influences__us_chip_export_controls",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_agreement', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_agreement', 'target': 'us_chip_export_controls'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The U.S. Chip Export Agreement establishes the regulatory framework governing chip exports, directly shaping the U.S. Chip Export Controls.",
+      "type": "INFLUENCES",
+      "source": "us_chip_export_agreement",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_chip_export_agreement__influences__us_chip_export_controls"
+}

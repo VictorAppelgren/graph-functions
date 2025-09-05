@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T23:33:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755983765",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8368",
+    "output_chars": "747",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but needs tightening to meet the “world‑class” standard. 1) **Separate driver/mechanism from what to watch** – the current lines repeat the same items; instead list a concise causal driver (e.g., “ACMR’s N2‑bubbling ramp‑up”) and then a distinct, concrete trigger (e.g., “Q3 earnings release on 15 Aug”). 2) **Add specific, source‑backed numbers** – cite 4LQD15CFU for the 20 %/84 % AI‑talent adoption, SK994CBWR for ACMR’s $850‑$950 m guidance and 49.4 % margin, 08EIPMJ89 for LCID’s $928.99 m revenue and 53.2 % debt‑equity, 7YQN9WX3 for Ukraine escalation, U1KRCQOYR for sanctuary‑funding, V7GV8YBQU for Fed rate range, LZG5YWQMC for CPI, and J99EM2TPZ for oil supply/demand. 3) **Adjust probabilities to reflect risk** – ACMR’s upside is high only if export controls stay stable; give it ~55 % rather than 70 %. 4) **Keep each line a single sentence** – trim clauses so the format reads: “Up | Q3 2025–mid‑2026 | ACMR’s N2‑bubbling ramp‑up | Q3 earnings release on 15 Aug, product launch schedule, Fed minutes | 55 %.” 5) **Avoid generic phrasing** – replace “AI‑talent development in high‑worker‑quality firms drives productivity premium” with “AI‑talent adoption by 84 % of JUST 100 firms boosts productivity, as shown by 4LQD15CFU.” 6) **Ensure all critical sources are cited** – each factual claim or number must have an ID; do not leave any unsupported. 7) **Reconcile conflicting signals** – if Fed cuts are a driver for ACMR, note that a Fed hike would be a downside; separate these into distinct Up/Down items. 8) **Use precise time windows** – e.g., “0–3 weeks” for LCID reverse‑split, “3–6 months” for Fed tightening. 9) **Keep probability percentages realistic** – base them on the strength of evidence (e.g., 40 % for LCID reverse‑split delay, 30 % for Fed tightening). 10) **Remove filler** – each line should convey only the essential causal chain, trigger, and probability. Implement these edits and your analysis will meet the required precision, depth, and citation rigor.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__movers_scenarios__us_10y__analysis_run__1755983765"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T23:06:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "D7V00F7LV",
+    "status": "rejected",
+    "reject_category": "business_decision",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the end of the partnership between Ulta Beauty and Target, which significantly impacts both companies' market strategies and consumer engagement in the beauty retail sector, warranting a new node to analyze the implications on stock performance and market dynamics.",
+      "id": "ulta_target_partnership",
+      "name": "Ulta Beauty and Target Partnership",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "business_decision",
+      "motivation": "Target’s declining foot traffic, operational challenges, and Ulta’s focus on its own stores and brand strategy"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Topic is an industry‑specific partnership, not a macro driver or tradable asset; it falls under industry verticals, which are disallowed.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:10:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "third_party_cybersecurity_risks",
+    "target_id": "interlock_cyberattack",
+    "selection_motivation": "Third‑party cybersecurity risks expose interconnected systems to shared vulnerabilities, thereby increasing the likelihood of interlock cyberattacks.",
+    "candidate_motivation": "These topics are the most plausible direct or closely linked influences, correlates, or peers to Third-Party Cybersecurity Risks, spanning vendor risk, cyber threat dynamics, and geopolitics that shape third-party exposure.",
+    "existing_links_count": "2",
+    "candidate_count": "5",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['third_party_vendor_risk', 'ml_cybersecurity', 'interlock_cyberattack', 'intrusion_dod_contract', 'us_cybersecurity_incidents']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780081087",
+    "rel_id": "third_party_cybersecurity_risks__influences__interlock_cyberattack",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Third‑party cybersecurity risks expose interconnected systems to shared vulnerabilities, thereby increasing the likelihood of interlock cyberattacks.",
+      "type": "INFLUENCES",
+      "source": "third_party_cybersecurity_risks",
+      "target": "interlock_cyberattack"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "third_party_cybersecurity_risks__influences__interlock_cyberattack"
+}

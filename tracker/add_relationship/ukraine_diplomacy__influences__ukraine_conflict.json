@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:05:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_diplomacy",
+    "target_id": "ukraine_conflict",
+    "selection_motivation": "Ukraine diplomacy directly shapes the trajectory and resolution of the Ukraine conflict through negotiations, sanctions, and diplomatic pressure.",
+    "candidate_motivation": "These topics are the strongest geopolitical and diplomatic touchpoints that directly influence Ukraine diplomacy, including major power dynamics with Russia and EU involvement, as well as key peace negotiations milestones.",
+    "existing_links_count": "4",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['ukraine_geopolitical_security', 'ukraine_post_war_instability', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_sovereignty', 'ukraine_conflict', 'eu_geopolitics_ukraine', 'us_russia_ukraine_diplomacy', 'trump_putin_summit']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000588109",
+    "rel_id": "ukraine_diplomacy__influences__ukraine_conflict",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine diplomacy directly shapes the trajectory and resolution of the Ukraine conflict through negotiations, sanctions, and diplomatic pressure.",
+      "type": "INFLUENCES",
+      "source": "ukraine_diplomacy",
+      "target": "ukraine_conflict"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_diplomacy__influences__ukraine_conflict"
+}

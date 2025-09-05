@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T14:07:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "63QR1B81C",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article introduces a specific high‑net‑worth strategy—using Social Security benefits to fund an irrevocable life insurance trust—to convert a future benefit stream into a tax‑free estate asset, a concept not yet represented in the graph.",
+      "id": "ss_liability_trust_strategy",
+      "name": "Social Security to Life Insurance Trust Strategy",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Specific high‑net‑worth strategy using Social Security to fund an irrevocable life insurance trust, a tax‑efficient estate planning tool."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific wealth‑management strategy, not a macro driver, policy, or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

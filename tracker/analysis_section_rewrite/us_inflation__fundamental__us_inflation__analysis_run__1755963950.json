@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T17:45:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1755963950",
+    "article_ids": "['BAAVVG964', 'YTHAU3SIB', 'QZXKE5CBL', 'NL61WXQQ7', 'LZG5YWQMC']",
+    "selected_articles_count": "5",
+    "material_chars": "181139",
+    "output_chars": "5946",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (≤ 200 words)**  \n1. **Add source IDs** after every factual claim (e.g., “Amazon’s AWS revenue grew 18% YoY in 2024 (BAAVVG964)”).  \n2. **Quantify key metrics**: AWS 2024 revenue $200 bn, margin 30%; Amazon e‑commerce margin 2% → 4% by 2026; Shopify 2024 revenue $4.5 bn, 16% margin, 27% FCF growth (BAAVVG964).  \n3. **Embed first‑principles anchors**: real‑rate differential (Fed 5.5% – inflation 3.5% ≈ 2%); BoP surplus 2.5 trn; policy reaction function (FedWatch 92.6% chance of 25 bp cut (NL61WXQQ7)).  \n4. **State regimes & transition**: high‑inflation, high‑rate → lower‑rate once PPI falls 1% YoY and Fed cuts; trigger: sustained PPI decline + Fed policy shift.  \n5. **Causal chain to pricing**: tariff → PPI ↑ → CPI ↑ → Fed holds/raises rates → real rates ↑ → discount rates ↑ → growth‑stock multiples compress; dividend‑stable firms less sensitive.  \n6. **Reconcile conflicts**: Amazon’s underperformance vs article’s AI claim—note market mispricing and potential upside.  \n7. **Risk & watch list**: prolonged high rates, tariff renegotiation delays, geopolitical shocks; watch Fed meeting, US‑Russia talks, tariff roll‑back.  \n8. **Confidence rating**: moderate (70%) with explicit justification.  \n9. **Citation density**: at least one ID per paragraph; cover all critical sources (BAAVVG964, YTHAU3SIB, QZXKE5CBL, NL61WXQQ7, LZG5YWQMC).  \n10. **Trim fluff**: keep sentences tight, focus on causal logic and quantitative anchors.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1755963950"
+}

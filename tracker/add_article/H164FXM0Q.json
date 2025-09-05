@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T10:16:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "H164FXM0Q",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Oil futures, WTI and Brent prices are driven by Ukraine war disruptions and falling U.S. inventories, fueling a broader oil price decline.",
+      "existing_ids": [
+        "oil_price_decline",
+        "wti",
+        "brent"
+      ],
+      "new_names": [
+        "oil_futures"
+      ]
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "Article discusses President Trump’s support for Ukraine attacks, affecting regional energy flows – a geopolitical event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to map the article to, so relevance cannot be assessed."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate geopolitical and corporate events that directly influence energy markets and corporate valuations, indicating short‑term impacts rather than long‑term structural changes."
+    },
+    "article_node": {
+      "id": "H164FXM0Q",
+      "title": "Dow Jones Top Energy Headlines at 12 AM ET: Europe's Fragile Energy Lifeline Exposed by Ukraine's Strikes in Russia",
+      "summary": "The piece highlights how President Trump’s support for Ukraine’s attacks has disrupted regional energy flows and drawn criticism. It also covers major corporate moves, including Cenovus’s proposed buyout of MEG Energy, NorthWestern Energy Group’s merger with Black Hills, and Woodside’s partial sale of its Louisiana LNG project. Oil markets are buoyant, with futures rising amid stalled Russia‑Ukraine negotiations and U.S. crude inventories falling more than expected, while Sinopec reports weaker profits from falling crude prices. Renewable energy gains momentum as U.S. guidelines boost wind and solar tax credits, and National Grid sells its LNG terminal to a Centrica consortium.",
+      "source": "https://www.morningstar.com/news/dow-jones/2025082581/dow-jones-top-energy-headlines-at-12-am-et-europes-fragile-energy-lifeline-exposed-by-ukraines-strikes-in-russia-cenovus",
+      "published_at": "2025-08-24T23:15:00-05:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "H164FXM0Q"
+}

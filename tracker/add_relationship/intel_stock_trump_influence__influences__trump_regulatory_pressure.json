@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:01:59",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_stock_trump_influence",
+    "target_id": "trump_regulatory_pressure",
+    "selection_motivation": "Trump’s influence on Intel’s stock reflects the broader regulatory pressure he exerts on the company, making a direct influence link to Trump Regulatory Pressure logical.",
+    "candidate_motivation": "These topics capture the strongest direct or competitive links to Intel stock and Trump's influence, including tariff and export-control policies affecting semiconductors, US–China tech diplomacy, and leadership signals tied to Intel and Trump.",
+    "existing_links_count": "5",
+    "candidate_count": "14",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['trump_tariffs', 'trump_regulatory_pressure', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_war_2025', 'china_us_tariff_truce', 'us_chip_export_controls', 'us_export_policy_ai_chips', 'intel_ceo_tan', 'intel_ceo_trump_meeting', 'nvidia_china_geopolitics', 'amd_data_center_growth', 'geopolitics_corporate_strategy']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'intel_ceo_trump_meeting'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'trump_tariffs'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407451739",
+    "rel_id": "intel_stock_trump_influence__influences__trump_regulatory_pressure",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'intel_ceo_trump_meeting'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'trump_tariffs'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'trump_regulatory_pressure'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump’s influence on Intel’s stock reflects the broader regulatory pressure he exerts on the company, making a direct influence link to Trump Regulatory Pressure logical.",
+      "type": "INFLUENCES",
+      "source": "intel_stock_trump_influence",
+      "target": "trump_regulatory_pressure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_stock_trump_influence__influences__trump_regulatory_pressure"
+}

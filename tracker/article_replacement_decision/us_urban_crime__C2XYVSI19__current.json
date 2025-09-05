@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T20:57:41",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_urban_crime",
+    "new_article_id": "C2XYVSI19",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['C9L5KZZJZ', 'SPFMRVV3Q', 'UK8ESTOZL', 'LPH8ZNDFC', '1L38JDK4D', '42PBUGIKP']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "None of the existing articles clearly supersede the new Worboys Blackpool probe entry, and there is no suitable target to apply remove/hide/lower_priority."
+    }
+  },
+  "id": "us_urban_crime__C2XYVSI19__current"
+}

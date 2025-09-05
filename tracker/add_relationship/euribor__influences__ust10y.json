@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T21:26:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euribor",
+    "target_id": "ust10y",
+    "selection_motivation": "Euribor influences the US 10‑year Treasury yield through its effect on the DXY, a key driver of US long‑term rates.",
+    "candidate_motivation": "Euribor is a euro‑zone interbank rate, so its level is driven by ECB policy, euro‑area inflation, and euro‑zone bond yields. It also co‑moved with euro‑zone equity markets and global short‑ and long‑term Treasury benchmarks, and is indirectly influenced by the dollar index.",
+    "existing_links_count": "3",
+    "candidate_count": "8",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'bund10y', 'sx5e', 'ust10y', 'ust2y', 'ust5y', 'dxy']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euribor', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217832",
+    "rel_id": "euribor__influences__ust10y",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euribor', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euribor influences the US 10‑year Treasury yield through its effect on the DXY, a key driver of US long‑term rates.",
+      "type": "INFLUENCES",
+      "source": "euribor",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euribor__influences__ust10y"
+}

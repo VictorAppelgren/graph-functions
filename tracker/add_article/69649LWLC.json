@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T20:04:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "69649LWLC",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; rising 10‑year UST yields and Fed policy weigh on equities, with inflation and gold safe‑haven demand.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "gold",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports a rise in the 10‑year UST yield to 4.27% and mentions upcoming jobs data and Fed policy, which are major macroeconomic events."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to evaluate the article’s impact on a specific market handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to short‑term catalysts such as rising Treasury yields, tariff policy, and earnings news, which directly influence current market conditions."
+    },
+    "article_node": {
+      "id": "69649LWLC",
+      "title": "Wall Street tumbles as US stocks fall toward their worst day in a month",
+      "summary": "Wall Street fell sharply as Nvidia and other tech names slid, dragging the S&P 500 lower amid rising Treasury yields and uncertainty over Trump’s tariff policy and potential Fed independence attacks. The 10‑year UST yield rose to 4.27%, adding pressure on equities, while a court ruling upheld the legality of Trump’s tariffs, leaving the policy in place. Gold rallied 2% to a record, reflecting safe‑haven demand, and market participants eye upcoming jobs data and Fed policy for possible rate cuts. The day also saw corporate earnings news, with Constellation Brands and Kraft Heinz cutting forecasts, and PepsiCo gaining after activist pressure.",
+      "source": "https://www.ajc.com/news/2025/09/wall-street-tumbles-as-us-stocks-fall-toward-their-worst-day-in-a-month/",
+      "published_at": "2025-09-02T16:52:57.099000+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "69649LWLC"
+}

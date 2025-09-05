@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:02:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "KQAL1U7PW",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Reviva Pharmaceuticals' lead drug candidate, brilaroxazine, which is pivotal for its future revenue potential and regulatory strategy, warranting a dedicated node for investment analysis.",
+      "id": "brilaroxazine",
+      "name": "Brilaroxazine",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "Drug candidate is a financial asset for Reviva Pharmaceuticals."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Brilaroxazine is a clinical‑stage drug candidate, a product category, not a macro driver or tradable asset; it does not provide macro‑level market insight.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T04:01:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756604602",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1215",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly links Fed cuts to a 0.5‑1 % DXY rally via term‑premium compression, but it over‑emphasizes the 200 bp dip without quantifying the probability of the dip versus the rally. Tighten the causal chain: state that the 86 % probability of a 25 bp cut in September, combined with the 57 bp steepening of the 2‑yr/10‑yr spread, is expected to reduce the DXY by ~200 bp (cite Z7O1DCHS7 & 7XH2DKEKV) and that the subsequent 25 bp cut will lift the dollar by 0.5‑1 % (cite B1KYJ1GPU & XTQIQRP5K). Remove the generic “higher dollar yield” phrase; instead, explain that the cut lowers short‑term rates, compresses the spread, and reduces the dollar’s relative yield advantage, which weakens the DXY until the market re‑prices the new yield curve. Add a quantitative risk‑adjusted range: if the Fed hikes instead, DXY could fall 50‑100 bp (cite B1KYJ1GPU). Explicitly map the view to the canonical handle **dxy** and the catalyst window **Sept Fed meeting + early‑Aug CPI**. Condense the paragraph to 3‑4 sentences, each with a single clear causal link and inline citation. This will satisfy the truth‑over‑verbosity rule, provide a defensible magnitude, and keep the focus tightly on the DXY.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756604602"
+}

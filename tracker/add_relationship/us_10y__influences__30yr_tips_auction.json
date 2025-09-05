@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T11:54:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_10y",
+    "target_id": "30yr_tips_auction",
+    "selection_motivation": "US 10‑Year Treasury yields set the benchmark for nominal rates, directly influencing the pricing and demand of 30‑Year TIPS auctions; a higher nominal yield typically pushes TIPS yields up, making the auction outcome a key indicator of real‑rate expectations.",
+    "candidate_motivation": "These topics are directly tied to the US 10Y Treasury Yield through monetary policy, inflation dynamics, currency movements, and market sentiment, making them strong influences or correlates.",
+    "existing_links_count": "9",
+    "candidate_count": "14",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_inflation_expectations', 'usd', 'eur', 'euribor', '30yr_tips_auction', 'sp500', 'eurostoxx50', 'oil', 'gold', 'copper', 'wheat', 'lower_interest_rates']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'lower_interest_rates'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1254253595734310919",
+    "rel_id": "us_10y__influences__30yr_tips_auction",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'lower_interest_rates'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑Year Treasury yields set the benchmark for nominal rates, directly influencing the pricing and demand of 30‑Year TIPS auctions; a higher nominal yield typically pushes TIPS yields up, making the auction outcome a key indicator of real‑rate expectations.",
+      "type": "INFLUENCES",
+      "source": "us_10y",
+      "target": "30yr_tips_auction"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_10y__influences__30yr_tips_auction"
+}

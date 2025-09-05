@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T02:38:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "4YEPDLBLI",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['9X7XOLXMH', '48JXC9VDP', '65UUBU0OR', 'W2622L6WW', '22PL3Q360', 'O4ZEED2EB', 'V7GV8YBQU', 'SGB2PAZGK']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There's no existing article in this topic set that the new summary clearly supersedes; acting would risk redundancy. Therefore, no action is taken."
+    }
+  },
+  "id": "sp500__4YEPDLBLI__fundamental"
+}

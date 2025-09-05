@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:06:59",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "technology_communications_sector",
+    "target_id": "ai_infrastructure",
+    "selection_motivation": "The technology & communications sector is a primary driver of AI infrastructure development, supplying the hardware, cloud services, and network capabilities that enable AI workloads.",
+    "candidate_motivation": "These topics are the strongest direct influences, correlates, or peers to the Technology & Communications Sector based on AI, semiconductors, policy, and major tech platforms driving sector dynamics.",
+    "existing_links_count": "3",
+    "candidate_count": "34",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "34",
+    "candidate_ids_preview": "['nvidia_amd_chip_revenue_agreement', 'nvidia_ai_infrastructure', 'nvidia_low_power_gpus', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_nvidia_h20_chips', 'us_china_ai_chip_exports', 'us_export_policy_ai_chips', 'us_tariffs_semiconductors', 'us_china_trade_talks', 'us_china_trade_truce', 'intel_ceo_tan', 'intel_ceo_trump_meeting', 'intel_stock_trump_influence', 'amd_data_center_growth', 'alphabet_ai_gemini', 'openai_gpt5_competition', 'openai_valuation', '5g_infrastructure', 'apple_us_manufacturing', 'adobe_ai_platform_lockin', 'ai_governance', 'ai_in_k12_education', 'ai_app_store_rivalry', 'grok_ai_bias', 'grok_chatbot', 'grok_4', 'ai_infrastructure', 'agentic_ai_solutions', 'generative_ai_film', 'gen_ai_accounting', 'ai_unicorn_valuations', 'ai_generated_content_seo', 'ai_productivity']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': '5g_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186903406",
+    "rel_id": "technology_communications_sector__influences__ai_infrastructure",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': '5g_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The technology & communications sector is a primary driver of AI infrastructure development, supplying the hardware, cloud services, and network capabilities that enable AI workloads.",
+      "type": "INFLUENCES",
+      "source": "technology_communications_sector",
+      "target": "ai_infrastructure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "technology_communications_sector__influences__ai_infrastructure"
+}

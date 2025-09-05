@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T10:18:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "new_article_id": "V0BEQ94VR",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['QC6H7S274', 'XQF4R2JQJ', 'FOA2XZ9D3', '7YQN9WX3K', 'I35H3FBSN', 'T7HLAX8QN']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article offers unique coverage of Trump’s Fed move and defense sector implications, which is not present in any existing article."
+    }
+  },
+  "id": "us_10y__V0BEQ94VR__current"
+}

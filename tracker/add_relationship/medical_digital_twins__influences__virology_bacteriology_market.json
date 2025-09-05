@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T12:50:23",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "medical_digital_twins",
+    "target_id": "virology_bacteriology_market",
+    "selection_motivation": "Medical Digital Twins enable high-fidelity simulation of patient physiology, accelerating drug discovery and personalized treatment in virology and bacteriology, thereby driving market growth and innovation.",
+    "candidate_motivation": "Medical Digital Twins sit at the crossroads of healthcare, AI, and digital modeling, so topics that involve AI infrastructure, digital twin technology, disease modeling, or vaccine-related public health concerns are likely to be strong influences, correlates, or peers.",
+    "existing_links_count": "0",
+    "candidate_count": "13",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['plaqueiq_technology', 'virology_bacteriology_market', 'covid_variant_xfg', 'vaccine_misinformation', 'anti_vaccine_movement', 'mental_health_gun_violence_covid_vaccine', 'mental_health_violence', 'empathic_ai_agents', 'openai_gpt5_competition', 'nebius_ai_infrastructure', 'openai_valuation', 'apple_antitrust_ai', 'adobe_ai_platform_lockin']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161898",
+    "rel_id": "medical_digital_twins__influences__virology_bacteriology_market",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'medical_digital_twins', 'target': 'virology_bacteriology_market'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Medical Digital Twins enable high-fidelity simulation of patient physiology, accelerating drug discovery and personalized treatment in virology and bacteriology, thereby driving market growth and innovation.",
+      "type": "INFLUENCES",
+      "source": "medical_digital_twins",
+      "target": "virology_bacteriology_market"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "medical_digital_twins__influences__virology_bacteriology_market"
+}

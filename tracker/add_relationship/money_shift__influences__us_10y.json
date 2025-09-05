@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:26:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "money_shift",
+    "target_id": "us_10y",
+    "selection_motivation": "A shift in the money supply directly alters market liquidity, compressing yields on long‑term debt; thus money_shift strongly influences the US 10Y Treasury Yield.",
+    "candidate_motivation": "These topics are the main macro drivers and asset classes most likely to influence or correlate with money shifting flows, currency moves, and policy signals.",
+    "existing_links_count": "1",
+    "candidate_count": "17",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'usd', 'eur', 'core_monthly_cpi', 'oil', 'gold', 'sp500', 'eurostoxx50', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_bitcoin']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'money_shift', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160490",
+    "rel_id": "money_shift__influences__us_10y",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'money_shift', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'money_shift', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A shift in the money supply directly alters market liquidity, compressing yields on long‑term debt; thus money_shift strongly influences the US 10Y Treasury Yield.",
+      "type": "INFLUENCES",
+      "source": "money_shift",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "money_shift__influences__us_10y"
+}

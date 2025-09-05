@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:31:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756027682",
+    "article_ids": "['S7M6BJSRT', 'YB758UDBU', 'K0WFSW29E', 'TXVQ5ZQ0N', 'H9WSBYP3D']",
+    "selected_articles_count": "5",
+    "material_chars": "210502",
+    "output_chars": "5146",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft is a strong start but to reach world-class you need a tighter, 0–3 week, first-principles narrative with explicit catalysts, watchpoints, and quantified thresholds anchored to the cited sources. Actionable edits: (1) Reframe the macro core as a compact causal chain driven by Jackson Hole wage-signals from K0WFSW29E (wage growth broadening and potential for another BOJ move) and the associated shift in global rate expectations, plus episodic policy risk from YB758UDBU (Trump’s actions) that could spike risk-off flows. Do not treat these as interchangeable; clearly separate macro-rate impulse vs. political risk impulse and show how each would move yields, FX, and risk appetite. (2) Formalize a three‑scenario horizon (base/bull/bear) with explicit catalysts and invalidation triggers over 0–3 weeks: base if Ueda’s wage-upside stays incremental and BOJ tone stays cautious; bull if a convincing dovish/policy-pivot signal emerges in major central-banking rhetoric; bear if wage gains falter or policy risks escalate meaningfully (tie to Jackson Hole messaging and any new policy actions). (3) State key levels and invalidation points for the core names, using concrete numbers from the sources: for JOBY, current around 14.95 with a 14.2x price‑to‑book and a target near 10.83; upside momentum above roughly 15–16 could sustain risk-on tone, while a break below the mid-to-high‑12s would invalidate the bullish tilt (TXVQ5ZQ0N). For OPEN, price near 5.01 with a target around 1.39 in the article’s rhetoric (and visuals showing a 1Y return of ~122.7%); the premium to consensus targets indicates sensitivity to housing/macroe data—watch a break above ~6 as a bullish cue or a sustained move back toward the consensus sub-$2 area as invalidation (H9WSBYP3D). (4) Deepen the first-principles linkage to fundamentals and quantify near-term monetization: JOBY’s near-term growth narrative is 66.5% revenue CAGR with persistent losses (revenue ~$5.18b? per the dataset, but earnings -$305m; check exact TTMs per TXVQ5ZQ0N) and a high 14.2x PB, implying a fragile balance between narrative catalysts and fundamentals (TXVQ5ZQ0N). Open the door to a parallel but separate valuation note on OPEN’s unprofitable trajectory with a 344.8% debt/equity and ~8% gross margins, reinforcing why the stock remains highly bifurcated (H9WSBYP3D). (5) Tighten the sourcing logic: when you cite Joby/Open door stats, attach the exact figures (price, PB, target, returns, profitability) from the respective Simply Wall St pages or Yahoo excerpts and resolve any conflicting valuations (TXVQ5ZQ0N; H9WSBYP3D). (6) Remove or trim secondary finance‑product S7M6BJSRT material unless you explicitly tie personal-loan dynamics to near-term consumer credit conditions that could feed into risk sentiment; otherwise it dilutes the 0–3 week focus. (7) Reconcile conflicts by noting where sources disagree on targets or growth vs. profitability trajectories, and present a structured note like: “JOBY: growth-led upside but uncertain margin path; OPEN: housing cycle risk premium; both are high-beta plays prone to gap risk if macro/policy surprises occur” with citations after each claim (K0WFSW29E; YB758UDBU; TXVQ5ZQ0N; H9WSBYP3D; S7M6BJSRT as optional context). This will yield a compact, citation‑dense, scenario-driven blurb that crisply maps immediate drivers, catalysts, watchpoints, and invalidation thresholds for the 0–3 week horizon.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1756027682"
+}

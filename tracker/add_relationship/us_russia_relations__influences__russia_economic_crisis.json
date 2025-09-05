@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T03:21:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_russia_relations",
+    "target_id": "russia_economic_crisis",
+    "selection_motivation": "Establishing this link highlights the direct impact of U.S.-Russia relations on the economic stability of Russia, which is crucial for understanding geopolitical dynamics.",
+    "candidate_motivation": "Given the geopolitical context of U.S.-Russia relations, topics related to trade, tariffs, and international economic policies are likely to have strong influences or correlations. Additionally, topics concerning Ukraine and broader geopolitical security issues are relevant as they directly relate to the dynamics of U.S.-Russia interactions.",
+    "existing_links_count": "9",
+    "candidate_count": "10",
+    "all_nodes_count": "1616",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_china_tariffs', 'ukraine_geopolitical_security', 'us_china_trade_talks', 'russia_economic_crisis', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_relations', 'us_russia_ukraine_diplomacy', 'us_tariffs_semiconductors', 'ukraine_sovereignty']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160757",
+    "rel_id": "us_russia_relations__influences__russia_economic_crisis",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Establishing this link highlights the direct impact of U.S.-Russia relations on the economic stability of Russia, which is crucial for understanding geopolitical dynamics.",
+      "type": "INFLUENCES",
+      "source": "us_russia_relations",
+      "target": "russia_economic_crisis"
+    }
+  },
+  "id": "us_russia_relations__influences__russia_economic_crisis"
+}

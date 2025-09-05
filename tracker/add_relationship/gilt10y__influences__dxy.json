@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T17:28:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "dxy",
+    "selection_motivation": "UK gilt yields are a key driver of the USD index (DXY) through their impact on GBP/USD and relative yield differentials, making gilt10y a primary influence on the DXY.",
+    "candidate_motivation": "UK 10‑year gilt yields move in tandem with other sovereign yields, central‑bank policy, inflation expectations, and currency dynamics; therefore US, German, and Japanese yields, Fed and ECB policy, inflation data, and major FX pairs are the most likely direct or competitive influences or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "14",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['ust10y', 'bund10y', 'jgb10y', 'ecb_policy', 'fed_policy', 'us_inflation', 'euro_inflation', 'gbpusd', 'ust2y', 'ust5y', 'ust30y', 'sofr', 'dxy', 'eurusd']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161540",
+    "rel_id": "gilt10y__influences__dxy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt yields are a key driver of the USD index (DXY) through their impact on GBP/USD and relative yield differentials, making gilt10y a primary influence on the DXY.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__influences__dxy"
+}

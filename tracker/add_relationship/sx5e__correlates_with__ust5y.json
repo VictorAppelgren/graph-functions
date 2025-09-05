@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T13:17:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "ust5y",
+    "selection_motivation": "US 5‑year Treasury yield is a global risk‑appetite benchmark that moves in tandem with European equity valuations, so Euro Stoxx 50 correlates strongly with it.",
+    "candidate_motivation": "Euro Stoxx 50 is a core European equity index whose performance is tightly linked to Euro‑area inflation, ECB policy, German Bund yields, and global rate dynamics (US Treasury yields). Currency movements via the DXY also impact it, and it is a peer to the S&P 500.",
+    "existing_links_count": "16",
+    "candidate_count": "11",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['euro_inflation', 'ecb_policy', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'fed_policy', 'spx', 'dxy']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1209218698972235302",
+    "rel_id": "sx5e__correlates_with__ust5y",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5‑year Treasury yield is a global risk‑appetite benchmark that moves in tandem with European equity valuations, so Euro Stoxx 50 correlates strongly with it.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__correlates_with__ust5y"
+}

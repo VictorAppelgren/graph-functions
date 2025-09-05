@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:20:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_cybersecurity_incidents",
+    "target_id": "us_federal_judiciary_cybersecurity",
+    "selection_motivation": "US cybersecurity incidents precipitate legal scrutiny and litigation, directly influencing the US Federal Judiciary’s cybersecurity posture and regulatory actions.",
+    "candidate_motivation": "These topics capture the primary drivers of cybersecurity incidents: threat actors, governance, and known vulnerabilities. They are likely to be strong influences, correlates, or peers to the US Cybersecurity Incidents topic.",
+    "existing_links_count": "4",
+    "candidate_count": "7",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['ml_cybersecurity', 'third_party_cybersecurity_risks', 'third_party_vendor_risk', 'us_federal_court_cybersecurity', 'us_federal_judiciary_cybersecurity', 'intrusion_dod_contract', 'windows_kerberos_zero_day']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_cybersecurity_risks'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_court_cybersecurity'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397871",
+    "rel_id": "us_cybersecurity_incidents__influences__us_federal_judiciary_cybersecurity",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_cybersecurity_risks'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_court_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_judiciary_cybersecurity'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US cybersecurity incidents precipitate legal scrutiny and litigation, directly influencing the US Federal Judiciary’s cybersecurity posture and regulatory actions.",
+      "type": "INFLUENCES",
+      "source": "us_cybersecurity_incidents",
+      "target": "us_federal_judiciary_cybersecurity"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_cybersecurity_incidents__influences__us_federal_judiciary_cybersecurity"
+}

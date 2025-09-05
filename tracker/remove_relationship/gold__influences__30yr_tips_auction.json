@@ -1,0 +1,64 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-25T02:41:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gold",
+    "target_id": "30yr_tips_auction",
+    "selection_motivation": "This link is the weakest correlation and least supported by recent data.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link is the weakest correlation and least supported by recent data.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327243",
+    "rel_id": "gold__influences__30yr_tips_auction",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation_expectations'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "30yr_tips_auction"
+    },
+    "prioritized_link": {
+      "motivation": "Gold price movements influence USD strength, which directly drives the EURUSD pair, making gold a key driver of EURUSD movements.",
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "eurusd"
+    },
+    "llm_raw_response": {
+      "motivation": "This link is the weakest correlation and least supported by recent data.",
+      "remove_link": "30yr_tips_auction"
+    },
+    "removal_decision": {
+      "motivation": "This link is the weakest correlation and least supported by recent data.",
+      "remove_link": "30yr_tips_auction"
+    },
+    "source_node": {
+      "last_updated": "2025-08-08T05:59:59.740925",
+      "notes": "Links to USD, inflation, risk sentiment.",
+      "implications": "Links to USD, inflation, risk sentiment.",
+      "level": "anchor",
+      "current_analysis": "",
+      "importance": 1,
+      "query": "(gold OR Gold OR XAU OR XAUUSD OR \"gold futures\" OR \"gold ETFs\" OR \"gold prices\" OR \"gold market\" OR \"gold demand\" OR \"gold supply\") OR (inflation OR inflat* OR \"inflation hedge\" OR \"real yields\" OR \"interest rates\" OR \"monetary policy\" OR \"central bank demand\") OR (risk OR \"risk sentiment\" OR \"market sentiment\" OR \"market trends\" OR \"economic indicators\") OR (investment OR investments OR \"investment strategy\" OR \"portfolio allocation\" OR \"hedging strategy\") OR (news OR update OR report OR analysis OR trend OR outlook OR forecast OR volatility OR fluctuation OR change OR shift)",
+      "last_queried_at": "2025-08-13T15:15:10+00:00",
+      "importance_rationale": "Gold is a major, directly traded commodity with immediate market impact and high intraday relevance, fitting the 1‑importance category.",
+      "type": "commodity",
+      "fundamental_analysis": "Gold is a global store of value, inflation hedge, and risk sentiment indicator.",
+      "queries": 6,
+      "name": "Gold",
+      "id": "gold",
+      "last_queried": "2025-08-21T22:04:34.104000000+00:00",
+      "strategy": "Track spot/futures, ETF flows, central bank demand, and real yields.",
+      "intuition": "Gold is a global store of value, inflation hedge, and risk sentiment indicator.",
+      "medium_analysis": "Track spot/futures, ETF flows, central bank demand, and real yields.",
+      "status": "anchor"
+    }
+  },
+  "id": "gold__influences__30yr_tips_auction"
+}

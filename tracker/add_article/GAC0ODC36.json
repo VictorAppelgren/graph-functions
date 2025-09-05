@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T09:59:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GAC0ODC36",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US labor market contraction from immigration enforcement pressures employment, inflation, and yields.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports a statistical change in U.S. labor force participation, specifically the decline in immigrant workers, which constitutes an economic data release rather than a policy statement, earnings, or other event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant decline in U.S. immigrant labor, affecting key sectors and indicating potential labor shortages that could influence U.S. growth, inflation, and employment dynamics."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent decline in immigrant labor over the first half of 2025, reflecting an immediate labor market shift. It focuses on the short-term impact of ICE enforcement and demographic changes."
+    },
+    "article_node": {
+      "id": "GAC0ODC36",
+      "title": "Immigrants, women, and Black people are exiting the workforce",
+      "summary": "The U.S. has seen a sharp decline in immigrant labor, with 1.2 million immigrants leaving the workforce from January to June 2025, driven by aggressive ICE enforcement and Trump‑era deportation policies. The loss disproportionately affects sectors reliant on immigrant workers—restaurants, construction, farming—while also coinciding with higher unemployment among Black Americans and a net exit of 338,000 women from the labor force. Meanwhile, men have entered the workforce in net gains. These shifts signal potential labor shortages and broader economic impacts as the U.S. grapples with a shrinking immigrant population and changing demographic participation.",
+      "source": "https://www.fastcompany.com/91397573/immigrants-women-and-black-people-are-leaving-the-workforce",
+      "published_at": "2025-09-04T06:00:00+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "GAC0ODC36"
+}

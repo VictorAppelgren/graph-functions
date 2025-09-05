@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:04:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "core_cpi",
+    "target_id": "sp500",
+    "selection_motivation": "Core CPI is a primary driver of US equity valuations; linking it to the S&P 500 enables direct analysis of inflation’s impact on the equity market.",
+    "candidate_motivation": "These topics represent the macroeconomic and financial market variables most tightly linked to movements in consumer prices, inflation expectations, and policy transmission that influence the Core CPI.",
+    "existing_links_count": "11",
+    "candidate_count": "21",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'core_monthly_cpi', 'core_cpi', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'usd', 'eur', 'eurusd', 'oil', 'gold', 'copper', 'wheat', 'sp500', 'eurostoxx50', 'us_inflation_data', 'us_inflation_expectations', 'tariff_driven_inflation', 'stagflation']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_impact_on_bitcoin'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186699601323754203",
+    "rel_id": "core_cpi__influences__sp500",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_impact_on_bitcoin'}, {'type': 'INFLUENCES', 'source': 'core_cpi', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Core CPI is a primary driver of US equity valuations; linking it to the S&P 500 enables direct analysis of inflation’s impact on the equity market.",
+      "type": "INFLUENCES",
+      "source": "core_cpi",
+      "target": "sp500"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "core_cpi__influences__sp500"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:31:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_us_tariff_truce",
+    "target_id": "us_china_tariffs",
+    "selection_motivation": "The China‑U.S. tariff truce directly alters the tariff regime between the two countries, making it a primary driver of the US‑China tariff schedule.",
+    "candidate_motivation": "These topics are the most plausible direct or competitive complements to a China-U.S. tariff truce, including negotiation channels, bilateral trade relations, and tariff-specific sectors likely to be affected and their inflation/market spillovers.",
+    "existing_links_count": "2",
+    "candidate_count": "12",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs', 'us_tariffs_inflation', 'tariff_driven_inflation', 'us_china_tariffs', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217607",
+    "rel_id": "china_us_tariff_truce__influences__us_china_tariffs",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The China‑U.S. tariff truce directly alters the tariff regime between the two countries, making it a primary driver of the US‑China tariff schedule.",
+      "type": "INFLUENCES",
+      "source": "china_us_tariff_truce",
+      "target": "us_china_tariffs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_us_tariff_truce__influences__us_china_tariffs"
+}

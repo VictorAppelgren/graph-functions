@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T23:32:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755983576",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8696",
+    "output_chars": "581",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft captures the key themes but needs tighter causal logic, sharper quantification, and stricter citation discipline. 1) **ACMR upside**: replace “Fed rate cut lift risk premium” with the concrete trigger “Q3 earnings beat estimates and a Fed rate cut in the next meeting” and add a 0.5‑0.7 % upside range for the share price; cite (SK994CBWR) only for the earnings beat and (LZG5YWQMC) for the CPI‑driven rate‑cut probability. 2) **Workforce‑outperformance**: quantify the 15‑20 % outperformance as a 17 % median and attach a 0.3‑0.5 % annualized alpha; cite (4LQD15CFU) for the 17.3 % index premium and (4LQD15CFU) for the 15‑20 % range. 3) **Fed‑rate‑hike downside**: replace the vague “tightens risk premium” with “Fed hike raises 10‑year yield above 4 % and pushes S&P 500 below its 200‑day MA”; add a 0.4‑0.6 % downside to the index and cite (LZG5YWQMC) for CPI and (V7GV8YBQU) for the yield‑risk‑premium link. 4) **Russian seizure**: tighten the trigger to “Russian troops reach Kostiantynivka” and quantify a 2 % defense‑ETF sell‑off; cite (7YQN9WX3) for the 2 % figure and add a 0.5 % rally if a summit occurs. 5) **Formatting**: ensure each line is a single sentence, no filler, and probabilities reflect the most recent evidence (e.g., 70 % for ACMR, 65 % for workforce, 60 % for Fed hike, 55 % for Russian move). 6) **Citation density**: add a citation for the 0.3‑0.5 % alpha in the workforce line and for the 0.4‑0.6 % S&P downside. 7) **Conflict reconciliation**: note that the July CPI 2.7 % is already priced into the Fed’s hawkish stance; adjust the probability of a rate hike to 55 % instead of 60 % to avoid double‑counting. 8) **First‑principles grounding**: explicitly link real‑rate rise to labor‑cost premium and margin compression in the Fed‑hike line. 9) **Scenario structure**: for ACMR, add a bullish scenario trigger (export‑control easing) and bearish trigger (Fed hike) with corresponding price ranges. 10) **Length**: keep each line under 20 words; trim “high‑quality earnings trajectory” to “solid earnings trajectory”. Implement these edits to elevate the analysis to world‑class rigor.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__movers_scenarios__us_10y__analysis_run__1755983576"
+}

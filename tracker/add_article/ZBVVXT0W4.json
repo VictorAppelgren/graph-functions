@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T11:04:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZBVVXT0W4",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Chinese macro strength and policy actions (PBOC liquidity and potential Fed rate cuts) amid Nvidia H20 security-risk geopolitics driving a semiconductor-led rally in Mainland China and related tech equities.",
+      "existing_ids": [
+        "china_macro",
+        "fed_policy",
+        "nvidia_china_geopolitics",
+        "china_nvidia_policy",
+        "china_nvidia_h20_chips"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The article reports that China’s central bank continued liquidity injections, indicating a central bank action."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The node to assess was not specified, so I cannot determine its exact relevance; assuming a generic node, the article's impact is likely minimal."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent earnings releases, liquidity injections, and upcoming index rebalancing that directly influence short‑term market sentiment."
+    },
+    "article_node": {
+      "id": "ZBVVXT0W4",
+      "title": "China Market Update: Grab The Guacamole As Chips Fly, Week In Review",
+      "summary": "Asian equities were mixed this week, with Mainland China’s STAR Board and Shenzhen markets outperforming while Taiwan and Korea lagged. The Shanghai and Shenzhen market cap surpassed RMB 100 trillion for the first time, and a strong semiconductor rally was driven by concerns over Nvidia’s H20 chips and the launch of DeepSeek’s V3.1 AI model. Q2 earnings from Baidu, Bilibili, Kuaishou, Xiaomi and Xpeng largely beat estimates, sparking varied market reactions, and several Chinese tech names surged after strong results or strategic moves such as XPeng’s share buy‑back. Meanwhile, China’s central bank continued liquidity injections, and upcoming MSCI index rebalancing and Q2 earnings reports are expected to influence investor sentiment further.",
+      "source": "https://www.forbes.com/sites/brendanahern/2025/08/22/china-market-update-grab-the-guacamole-as-chips-fly-week-in-review/",
+      "published_at": "2025-08-22T15:03:06+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "ZBVVXT0W4"
+}

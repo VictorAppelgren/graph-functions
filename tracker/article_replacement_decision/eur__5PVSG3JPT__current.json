@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T11:41:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eur",
+    "new_article_id": "5PVSG3JPT",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['52EQBV548', 'WZOY9QGZI', 'G6J734UIP', '1LVKPIKAQ', '7YQN9WX3K']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not supersede any existing article, as none cover the Samsung Galaxy S25 Ultra with AI features."
+    }
+  },
+  "id": "eur__5PVSG3JPT__current"
+}

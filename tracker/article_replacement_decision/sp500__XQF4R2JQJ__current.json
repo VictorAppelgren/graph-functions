@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T09:19:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "XQF4R2JQJ",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "11",
+    "candidate_ids": "['MSPXAOHU8', 'E9KQQQ0FK', 'I35H3FBSN', '4VN4UTWX1', 'E9CG0NWAH', 'Z5IA1CYUF', '4LDHF4T77', 'Y4QWID79M', 'RAV2UWRTT', 'T7HLAX8QN']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "E9CG0NWAH",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article conflicts; the new article provides unique coverage on European penny stocks."
+    }
+  },
+  "id": "sp500__XQF4R2JQJ__current"
+}

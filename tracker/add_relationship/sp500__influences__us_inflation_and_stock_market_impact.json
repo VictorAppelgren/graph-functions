@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T01:53:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sp500",
+    "target_id": "us_inflation_and_stock_market_impact",
+    "selection_motivation": "The S&P 500 is a primary barometer of the US equity market; its performance directly shapes the dynamics between US inflation and overall stock market movements, making it a key driver of the 'US Inflation and Stock Market Impact' concept.",
+    "candidate_motivation": "The S&P 500 is a leading U.S. equity index whose performance is tightly linked to macro‑economic indicators, monetary policy, currency movements, commodity prices, and other major indices. These topics directly influence or correlate with the index’s valuation and volatility.",
+    "existing_links_count": "12",
+    "candidate_count": "20",
+    "all_nodes_count": "1032",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'core_monthly_cpi', 'stagflation', 'us_inflation_impact_on_stocks', 'us_inflation_stock_impact', 'us_inflation_impact_on_healthcare_stocks']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_treasury_yields'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sp500', 'target': 'eurostoxx50'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': \"The S&P 500 is a primary barometer of the US equity market; its performance directly shapes the dynamics between US inflation and overall stock market movements, making it a key driver of the 'US Inflation and Stock Market Impact' concept.\", 'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_and_stock_market_impact'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The S&P 500 is a primary barometer of the US equity market; its performance directly shapes the dynamics between US inflation and overall stock market movements, making it a key driver of the 'US Inflation and Stock Market Impact' concept.",
+      "type": "INFLUENCES",
+      "source": "sp500",
+      "target": "us_inflation_and_stock_market_impact"
+    }
+  },
+  "id": "sp500__influences__us_inflation_and_stock_market_impact"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:02:34",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756032855",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21659",
+    "output_chars": "1316",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | AI-driven cloud/Platform economics uplift with Range delivering a 1–1.5% productivity signal and durable UAS defense demand | Range prints sustaining 1–1.5% uplift, inflation moderating toward target, and UAS/job data remaining durable | 60% (UPV3X2MQ6)(FOM34PUWA)\nUp | 3–6 months | AI adoption accelerates, lifting corporate earnings and private-market demand via Pacaso, Mogul, and Gameflip liquidity | Quarterly inflation prints undershooting expectations; Pacaso/Mogul/Gameflip liquidity holding above historical baselines; Gameflip’s user base and revenue growth remaining on a multi‑year uptrend | 55% (ILYC1M41F)(FOM34PUWA)(UPV3X2MQ6)\nDown | 3–6 months | AI productivity disappointment with inflation reaccelerating amid wage pressures and alt-asset signals deteriorating | Range readings fail to sustain uplift (<0.5% uplift for two consecutive reads); inflation prints higher or through target bands for two consecutive quarters; alt-asset liquidity deteriorates | 40% (UPV3X2MQ6)(A7VLN74BK)(FOM34PUWA)(ILYC1M41F)\nDown | 3–6 months | Macro/Policy regime tighten with cloud spend deceleration and unsettled tariffs/oil; triggers: cloud spend momentum decelerates toward mid-teens; tariff extension stalls; oil supply surprise | Watch: policy-risk premia widen and discount rates move higher; marginal multiples compress for cash-flow heavy names | 40% (0G3A)(RHXDOHQQX)(J99EM2TPZ)\n\nActionable edit notes: tighten horizon alignment to 3–6 months across lines and anchor each line to a compact, testable causal chain (AI-driven productivity → cloud/AI platform economics → durable FCF/valuation) with at least two concrete data points from the sources (e.g., Shopify/H1 2025 metrics via QFDWCTAYB; Azure growth via 0G3A676BP; Just Capital/4LQD15CFU) to strengthen first-principles grounding; increase density of IDs by pairing facts with IDs so every claim has traceable sources, and explicitly separate base-case vs. upside/downside with defined invalidations and measurable triggers (e.g., uplift thresholds, liquidity levels, inflation prints) rather than overlapping narratives; convert watch-list items into operational, numeric triggers with clear lead times (e.g., Range uplift <0.5% for two reads, Pacaso/Mogul/Gameflip liquidity above baselines, tariff-extension timing) and map each to likely price/FCF outcomes; maintain the 4-line constraint with single-sentence items, and avoid non-credible macro anecdotes—focus on translating the material into a clean, scenario-driven, numbers-backed transmission to valuation.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756032855"
+}

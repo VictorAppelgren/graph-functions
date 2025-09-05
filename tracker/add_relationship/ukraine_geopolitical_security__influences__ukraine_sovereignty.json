@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:13:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_geopolitical_security",
+    "target_id": "ukraine_sovereignty",
+    "selection_motivation": "Ukraine Geopolitical Security directly impacts Ukraine's sovereignty, as heightened security threats can erode territorial integrity and political autonomy.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with Ukraine Geopolitical Security due to their relevance in economic, military, and geopolitical contexts, particularly in relation to energy, trade, and international relations.",
+    "existing_links_count": "7",
+    "candidate_count": "10",
+    "all_nodes_count": "1026",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_trade_relations', 'us_russia_ukraine_diplomacy', 'ukraine_conflict', 'ukraine_sovereignty', 'us_russia_relations', 'ukraine_post_war_instability', 'eu_geopolitics_ukraine', 'russia_economic_crisis', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080921",
+    "rel_id": "ukraine_geopolitical_security__influences__ukraine_sovereignty",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Geopolitical Security directly impacts Ukraine's sovereignty, as heightened security threats can erode territorial integrity and political autonomy.",
+      "type": "INFLUENCES",
+      "source": "ukraine_geopolitical_security",
+      "target": "ukraine_sovereignty"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_geopolitical_security__influences__ukraine_sovereignty"
+}

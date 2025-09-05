@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:02:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756068965",
+    "drivers_count": "5",
+    "material_chars": "2136",
+    "output_chars": "4755",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft shows a plausible base-case but its causal chain is underdeveloped and its cross-asset transmission is under-specified; to elevate to world-class, rebuild as a tight, testable thesis with explicit, source-backed mechanics: (1) articulate a single, explicit causal chain from AI productivity (NL5YYTLF2) through firm-level capex and displacement dynamics to inflation dynamics, policy space, discount rates and currency, then to risk premia and commodity/FX/credit cross‑assets, anchoring each link with precise citations (every factual claim should carry a source); (2) formalize a three- to four-regime macro framework (A/B/C, with a complete Regime C) tied to wage-growth momentum and inflation persistence, specify probability weights and transition rules (e.g., Jackson Hole signals, semiconductor capex cadence) and align them with the Fed/Policy discourse rather than leaving transitions implied; do not leave Regime C partially undefined or truncated; (3) tighten numbers and market transmission: for oil, fix the regime probabilities (A ~50%, B ~30%, C remaining), include the 2025 supply/demand deltas and refinery runs (85.6 mbpd; 83.6–84.0 mbpd) with precise citations (J99EM2TPZ; T1QE6JPIX) and map how those feed Brent/WTI to a credible band; for ACMR, state 2025 revenue midpoint and gross margin with exact reference (22PL3Q360); (4) sharpen the EURUSD framework by presenting a clean, four-regime mapping with explicit drivers (AI capex, governance frictions, consumer-margin dynamics, policy shocks) and ensure all lines trace back to the same source IDs (5S9GJV2O3; UVEQ2SJ0W; HWGNUP2XG); (5) connect cross-asset channels in a single synthesis: for each asset class (rates, FX, equities, oil, credit), state the primary driver, the sign of the impulse, and the fragility/invalidations; (6) replace vagueness with numeric thresholds and concrete events as triggers (e.g., wage-growth prints crossing X%, Jackson Hole commentary Y, oil inventories Z); (7) tighten watch-list to 5 decisive signals with date anchors and clear invalidation criteria; (8) fix formatting and drafting issues (remove truncations like \"und,\" ensure all claims have citations, ensure consistent probability weights across sections). This will deliver a coherent, first-principles-grounded, scenario-driven, quantitatively anchored piece that clearly shows cross-asset transmission, credible catalysts, and a concise watch-list; ensure every assertion is tied to one or more of NL5YYTLF2, J99EM2TPZ, T1QE6JPIX, 22PL3Q360, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG, and that the final write-up remains within a tight, publishable page count.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756068965"
+}

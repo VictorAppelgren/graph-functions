@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T23:37:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755983765",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8368",
+    "output_chars": "841",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit plan (to meet the 4‑6‑sentence, executive‑style brief):**  \n1. **Re‑structure** the draft into a single, 5‑bullet list that follows the logical flow: (a) high‑worker‑quality premium (4LQD15CFU, JUST 100 data), (b) ACMR upside (SK994CBWR: 36% Q2 rally, 49.4% gross margin, 850‑950 m revenue guidance), (c) Lucid downside (08EIPMJ89: $928.99 m revenue, $3.06 bn loss, 53.2% debt‑equity, reverse split catalyst), (d) macro backdrop (LZG5YWQMC, V7GV8YBQU, J99EM2TPZ: CPI 2.7%, Fed 5.25‑5.50%, oil $70‑80/bbl, scenario ranges), (e) watch signals (CPI July, Fed minutes, EIA inventory, ACMR Q3 ramp, Lucid reverse split completion, U.S.–China export‑control updates).  \n2. **Condense language**: remove redundant sentences, keep only key numbers and citations per bullet. Each bullet should start with a headline phrase (e.g., “Worker‑quality premium”), followed by a concise causal chain (real‑rate differential → productivity → valuation), then the quantitative evidence (17.3% outperformance, 35.95% vs 17.18% index scores).  \n3. **Add first‑principles grounding**: explicitly state that higher worker quality raises productivity, lowers cost of capital, and drives higher multiples (cite 4LQD15CFU).  \n4. **Specify catalysts, triggers, and invalidation points**: e.g., “Q3 2025 N2‑bubbling ramp” (SK994CBWR), “Fed rate‑cut in Q3‑Q4 2025” (SK994CBWR), “export‑control tightening” (SK994CBWR) for ACMR; “reverse split execution” (08EIPMJ89) for Lucid; “CPI > 3%” (LZG5YWQMC) and “oil < $60/bbl” (J99EM2TPZ) for macro risk.  \n5. **Quantify scenarios**: present a concise base‑case (ACMR 2025 revenue $900 m, EPS +30% YoY, price $35‑36), upside (upper guidance, Fed cut, price $36‑38), and downside (lower guidance, export‑control, price $32‑34).  \n6. **Ensure citation density**: each bullet must include at least one source ID; avoid repeating the same ID unnecessarily. Verify that all critical IDs (4LQD15CFU, JVKCZAPVG, SK994CBWR, 08EIPMJ89, LZG5YWQMC, V7GV8YBQU, J99EM2TPZ) appear at least once.  \n7. **Eliminate generic platitudes**: replace phrases like “strong financial foundation” with specific metrics (e.g., “net margin 13.75% and debt‑to‑equity 23.3%”).  \n8. **Maintain executive tone**: use active voice, avoid filler, and keep each sentence under 20 words.  \n9. **Final check**: confirm the brief is 4–6 sentences or bullets, fully aligned with the section focus, and free of internal contradictions.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__executive_summary__us_10y__analysis_run__1755983765"
+}

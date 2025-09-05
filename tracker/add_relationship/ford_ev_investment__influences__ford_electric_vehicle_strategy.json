@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:04:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ford_ev_investment",
+    "target_id": "ford_electric_vehicle_strategy",
+    "selection_motivation": "Ford’s capital allocation decisions directly shape its internal product roadmap and corporate strategy, making the investment a primary driver of the company’s electric vehicle strategy.",
+    "candidate_motivation": "These topics are closely tied to Ford's EV investment ecosystem, including direct Ford initiatives, competing EV programs, and the charging/infrastructure context that shapes electrification strategy. They are likely to serve as influences, correlates, or peers in evaluating Ford's capital deployment and competitive positioning.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['ford_ev_investment_louisville', 'ford_universal_ev_platform', 'ford_electric_vehicle_strategy', 'ev_infrastructure_funding', 'revel_ev_charging', 'iveco_ev_towing_record', 'niu_technologies']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ford_ev_investment', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966396013",
+    "rel_id": "ford_ev_investment__influences__ford_electric_vehicle_strategy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ford_ev_investment', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment', 'target': 'ford_electric_vehicle_strategy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ford’s capital allocation decisions directly shape its internal product roadmap and corporate strategy, making the investment a primary driver of the company’s electric vehicle strategy.",
+      "type": "INFLUENCES",
+      "source": "ford_ev_investment",
+      "target": "ford_electric_vehicle_strategy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ford_ev_investment__influences__ford_electric_vehicle_strategy"
+}

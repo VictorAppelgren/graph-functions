@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:30:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_impact_on_stocks",
+    "target_id": "us_inflation_stock_impact",
+    "selection_motivation": "The analysis of how inflation impacts stocks directly informs the broader narrative of inflation and stock market dynamics, enabling richer aggregation and inference across related research nodes.",
+    "candidate_motivation": "These topics capture the primary inflation signals, policy responses, and yield channels that commonly drive US stock performance, plus sector-specific inflation effects and broad inflation expectations as strong correlates.",
+    "existing_links_count": "4",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation_data', 'core_monthly_cpi', 'us_inflation_expectations', 'us_10y', '30yr_tips_auction', 'fed_policy', 'us_inflation_impact_on_stocks', 'us_inflation_stock_impact', 'us_inflation_impact_on_healthcare_stocks', 'stagflation']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_impact_on_healthcare_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1191203200951126288",
+    "rel_id": "us_inflation_impact_on_stocks__influences__us_inflation_stock_impact",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_stock_impact'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The analysis of how inflation impacts stocks directly informs the broader narrative of inflation and stock market dynamics, enabling richer aggregation and inference across related research nodes.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_impact_on_stocks",
+      "target": "us_inflation_stock_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_impact_on_stocks__influences__us_inflation_stock_impact"
+}

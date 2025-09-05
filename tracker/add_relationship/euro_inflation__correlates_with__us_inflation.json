@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T01:22:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "euro_inflation",
+    "target_id": "us_inflation",
+    "selection_motivation": "Euro area inflation and US inflation move together due to shared commodity price shocks and global monetary policy transmission, making a correlation link valuable for cross‑market analytics.",
+    "candidate_motivation": "Euro Area Inflation is a core macro indicator that directly drives ECB policy, European bond yields, and equity markets, while also influencing global currency and US Treasury yields through spill‑over effects. The listed topics are the most likely strong peers or influences based on these causal links.",
+    "existing_links_count": "4",
+    "candidate_count": "11",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ecb_policy', 'bund10y', 'sx5e', 'us_inflation', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'eurusd', 'euribor']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152923703630104608",
+    "rel_id": "euro_inflation__correlates_with__us_inflation",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro area inflation and US inflation move together due to shared commodity price shocks and global monetary policy transmission, making a correlation link valuable for cross‑market analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "euro_inflation",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__correlates_with__us_inflation"
+}

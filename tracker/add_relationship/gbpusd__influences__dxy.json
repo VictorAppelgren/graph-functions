@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T19:44:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gbpusd",
+    "target_id": "dxy",
+    "selection_motivation": "GBP/USD is a key component of the DXY and its movements directly drive the index, warranting a causal INFLUENCES link.",
+    "candidate_motivation": "GBP/USD is largely driven by relative strength of the USD versus the GBP, which is influenced by US and UK macro fundamentals, monetary policy, and global risk sentiment. Topics that directly affect USD strength, UK yields, US inflation, Fed/ECB policy, and key global risk indicators are therefore strong influences or peers.",
+    "existing_links_count": "12",
+    "candidate_count": "21",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'uk_30yr_gilt_yield', 'gilt10y', 'euro_inflation', 'sx5e', 'usdcny', 'wti', 'brent', 'oil_price_decline', 'gold', 'copper']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902524",
+    "rel_id": "gbpusd__influences__dxy",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "GBP/USD is a key component of the DXY and its movements directly drive the index, warranting a causal INFLUENCES link.",
+      "type": "INFLUENCES",
+      "source": "gbpusd",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gbpusd__influences__dxy"
+}

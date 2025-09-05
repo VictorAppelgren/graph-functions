@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T16:20:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sofr",
+    "target_id": "dxy",
+    "selection_motivation": "SOFR, as the overnight risk‑free benchmark, directly drives short‑term funding costs that are a key input to the USD’s relative attractiveness; higher Sofr tends to strengthen the dollar and lift the DXY.",
+    "candidate_motivation": "SOFR is a core U.S. overnight repo rate directly driven by Fed policy and short‑term Treasury yields, and it is closely watched as a proxy for U.S. liquidity and monetary stance. Therefore, topics that influence or are tightly correlated with U.S. monetary policy, short‑term rates, and the dollar are the most plausible peers or influences.",
+    "existing_links_count": "4",
+    "candidate_count": "9",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['fed_policy', 'ust2y', 'ust5y', 'ust10y', 'ust30y', 'dxy', 'us_inflation', 'fed_powell_rate_cut_hint_2025', 'us_unemployment_claims']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902624",
+    "rel_id": "sofr__influences__dxy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "SOFR, as the overnight risk‑free benchmark, directly drives short‑term funding costs that are a key input to the USD’s relative attractiveness; higher Sofr tends to strengthen the dollar and lift the DXY.",
+      "type": "INFLUENCES",
+      "source": "sofr",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sofr__influences__dxy"
+}

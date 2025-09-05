@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:17:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust30y",
+    "target_id": "ust5y",
+    "selection_motivation": "The 30‑year Treasury yield is a key indicator of long‑term expectations and typically moves in tandem with the 5‑year Treasury yield, which represents the mid‑term segment of the curve; adding this correlation captures the intra‑curve dynamics.",
+    "candidate_motivation": "US 30‑year Treasury yields are driven by Fed policy, inflation expectations, the term‑structure of U.S. debt, and global bond markets; they also influence and are influenced by currency dynamics, equity markets, and commodity prices.",
+    "existing_links_count": "5",
+    "candidate_count": "25",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'fed_policy', 'sofr', 'us_inflation', 'euro_inflation', 'bund10y', 'gilt10y', 'jgb10y', 'ecb_policy', 'dxy', 'eurusd', 'usdjpy', 'gbpusd', 'usdcny', 'spx', 'gold', 'wti', 'brent', 'copper', 'wheat', 'china_exports', 'china_credit_impulse', 'us_unemployment_claims']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166434502512215362",
+    "rel_id": "ust30y__correlates_with__ust5y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 30‑year Treasury yield is a key indicator of long‑term expectations and typically moves in tandem with the 5‑year Treasury yield, which represents the mid‑term segment of the curve; adding this correlation captures the intra‑curve dynamics.",
+      "type": "CORRELATES_WITH",
+      "source": "ust30y",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__correlates_with__ust5y"
+}

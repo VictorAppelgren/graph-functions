@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:48:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756086115",
+    "drivers_count": "8",
+    "material_chars": "3456",
+    "output_chars": "3380",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft correctly centers inflation/policy as the primary macro driver and threads a three‑regime Fed path through discount rates, risk premia, and currency dynamics, and it anchors crypto prices with explicit bands (ETH 4,000–5,000; BTC ~110k–125k) while citing the core source IDs; however, to reach world‑class quality it needs a tighter, first‑principles causal chain, explicit scenario weights or clearly labeled scenarios, stronger quantification, tighter source discipline, and a sharper cross‑topic watchlist. Actionable edits: (1) re‑structure into a transparent three‑layer model—1) macro/inflation path and policy reaction function (cite the relevant base‑case IDs), 2) market transmission to asset classes (discount rates, risk premia, currency), 3) crypto/AI/flows pricing with explicit price targets; for each layer, show explicit mechanism and a sensitivity scaffold rather than broad statements. (2) Make regime weights explicit or clearly labeled as scenario paths (e.g., A/B/C with probabilities or qualitative likelihoods), and reconcile any partial probabilities (the current 50%/30% figures and any missing weight for Regime C) using only sourced numbers; if Regime C probabilities aren’t in the sources, present as scenario outcomes instead of a probability. (3) Quantify links with numbers from sources: show how a shift in the regime (e.g., Regime A to B) would move ETH/BTC bands, and quantify equity/credit re-pricing using the 2025 ACMR numbers (revenue ≈ $900m; gross margin ≈ 4%), plus how RWA to 16T by 2030 and crypto inflows alter risk premia per SGB2PAZGK/JPAIHPA4N. (4) Tighten oil/fundamental links: keep the stated supply/demand numbers (e.g., 2025 supply +2.5 mbpd, 2026 +1.9; refinery runs ~85.6 mbpd in 2025; Brent/WTI price bands) and ensure every claim is directly traceable to T1QE6JPIX; remove any semantically weak or extraneous claims about FX or AI links unless a source explicitly supports them (the EURUSD/AI CAPEX line should be either sourced or dropped). (5) Strengthen the cross‑topic transmission: explicitly map how policy stance and financial conditions feed crypto and AI infrastructure valuations, not just “reprice risk assets,” and cite the precise sources for each link (no uncited inference). (6) Elevate the watchlist to 4–5 decisive, signal‑level triggers with thresholds (e.g., Jackson Hole policy commentary tone, semiconductor capex cadence metrics, oil‑supply/shocks, crypto inflows flows) and specify what price or regime shift each trigger would imply. (7) Eliminate redundancies and ensure all claims map to IDs in SOURCE MATERIAL, and harmonize any overlapping numbers (e.g., 2025/26 oil and refinery figures) so there is no internal inconsistency. (8) Improve conciseness without sacrificing content by trimming duplicative lines and consolidating the core rationale so the piece remains within a compact paragraph while preserving the cited IDs (JPAIHPA4N; SGB2PAZGK; OGK8WLL69; T1QE6JPIX; 22PL3Q360; 5S9GJV2O3; HWGNUP2XG; UVEQ2SJ0W; OGK8WLL69).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756086115"
+}

@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T22:08:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OKY6H8MBK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; WTI and Brent fell as tariff fears, weak US payrolls and ISM, and OPEC+ production plans dampened demand expectations, while US inflation data and Fed policy signals weigh on yields. US crude inventories and credit conditions also influence the price trajectory.",
+      "existing_ids": [
+        "oil_price_decline",
+        "us_crude_inventory",
+        "us_inflation",
+        "fed_policy",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "us_core_pce",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "President Trump’s announcement of 10% global minimum and 15%+ tariffs on surplus‑trade countries is an official policy statement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major event that directly influences WTI crude and gasoline prices through tariffs, OPEC+ production plans, sanctions, and inventory dynamics, making it highly relevant to commodity market nodes."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to Trump’s tariff announcement, weak U.S. data, and OPEC+ supply plans, all of which directly influence short‑term WTI and gasoline prices."
+    },
+    "article_node": {
+      "id": "OKY6H8MBK",
+      "title": "Crude Prices Plunge on US Economic Concerns",
+      "summary": "WTI crude and gasoline prices fell sharply, with WTI down 2.79% and gasoline down 2.54%, as investors reacted to President Trump’s announcement of 10% global minimum and 15%+ tariffs on surplus‑trade countries, effective August 7. The decline was compounded by weaker‑than‑expected U.S. economic data—July payrolls and ISM manufacturing—and a 2‑week low in the S&P 500, dampening confidence in energy demand. Meanwhile, OPEC+ is planning a production hike of 548,000 bpd in September, while sanctions on Russian oil and inventory build‑ups add supply‑side pressure, creating a complex backdrop for future price movements.",
+      "source": "https://finance.yahoo.com/news/crude-prices-plunge-us-economic-192359247.html",
+      "published_at": "2025-08-01T19:23:59+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "OKY6H8MBK"
+}

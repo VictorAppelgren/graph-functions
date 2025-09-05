@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T12:31:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "copper",
+    "target_id": "china_exports",
+    "selection_motivation": "Copper price movements directly affect the revenue of China's copper export sector, making copper a key driver of China exports.",
+    "candidate_motivation": "These topics are likely strong influences or peers to copper because they affect industrial demand, macro rates, currency strength, and commodity price dynamics that drive copper prices.",
+    "existing_links_count": "7",
+    "candidate_count": "17",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['india_industrial_output', 'china_exports', 'china_credit_impulse', 'us_inflation', 'fed_policy', 'ecb_policy', 'ust10y', 'ust5y', 'ust30y', 'usdcny', 'usdjpy', 'eurusd', 'dxy', 'wti', 'brent', 'spx', 'sx5e']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846662",
+    "rel_id": "copper__influences__china_exports",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price movements directly affect the revenue of China's copper export sector, making copper a key driver of China exports.",
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "china_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__influences__china_exports"
+}

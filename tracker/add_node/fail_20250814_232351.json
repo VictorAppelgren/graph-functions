@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T23:23:41",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "32SWOM9CV",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significant impact of ultra-processed foods on health outcomes, particularly their link to rising colon cancer rates, necessitating a new atomic node to analyze dietary influences on macro health trends.",
+      "id": "ultra_processed_foods",
+      "name": "Ultra-Processed Foods",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Macro-level dietary factor influencing health outcomes and disease incidence"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Ultra-Processed Foods is an industry vertical/product category, not a macro driver or tradable asset; it does not directly inform trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

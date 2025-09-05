@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:25:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756088130",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18969",
+    "output_chars": "2052",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Your draft has strong macro anchoring, but it fails to meet the required 4-line Movers & Scenarios with precise, tradable-asset swing-trade framing and clean, citeable grounding. Actionable edits: (1) pick a tradable asset (Ford F or another liquid name) and replace the generic “Tariffs/Regime” framing with two Up lines and two Down lines that map to explicit horizons (e.g., Up 3–6 months; Up 6–12 months; Down 0–3 months; Down 6–12 months). Each line must state a crisp driver, what to watch, and a probability anchored to evidence (e.g., regime weights 50/30/20% with citations (OGK8WLL69)(SGB2PAZGK)); (2) remove or convert the separate Outlook block into two Swing Trade lines, including concrete entry/stop/target (R/R, Invalidation, Trigger, Probability %, Confidence) for a tradable asset; if you keep an Outlook, ensure it is clearly non-tradable and separate, with its own 1-line format; (3) embed first-principles causal chains and concrete catalysts/invalidation per line: tie Tariff cadence to capex/locally sourced inputs, then to asset pricing, and specify explicit invalidation triggers (e.g., inflation surprise exceeding regime threshold, tariff-pivot, or a breakdown in capex momentum) with citations (e.g., Y6SQOEK69; OGK8WLL69); (4) quantify and align numbers: for Ford pull forward numbers from sources (forward P/E ~10.0–10.3; dividend ~5%; YTD ≈+17%), citing (65UUBU0OR) and (22PL3Q360) where used; present any valuation ranges clearly (e.g., P/E 8–10 or 10–10.3) with citations; (5) tighten consistency and avoid over-extended narratives. Ensure the 4 lines read strictly as Up/Down | Time window | Driver/Mechanism | What to watch | Probability % with inline IDs after any fact/number; reconcile conflicts by presenting a tight, sourced band and explicitly flagting any material source conflicts (e.g., Ford’s long-horizon fair value vs near-term EV-margin risk) in the watch/list items. This will yield a world-class Swing Trade frame with auditable triggers, clean formatting, and defensible probability anchors.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756088130"
+}

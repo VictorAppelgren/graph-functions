@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:36:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "J7JVMTAZ5",
+    "status": "success",
+    "topic_id": "nfl_player_injuries"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses a legal situation involving an NFL player, which may impact his marketability and the team's performance, relevant to the existing node on NFL Player Injuries.",
+      "existing_node_ids": "nfl_player_injuries",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses NFL player injuries, which do not relate to macroeconomic events, company earnings, or other specified categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of player injuries in the NFL, which directly relates to the node on nfl_player_injuries."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses the impact of player injuries on team performance and league dynamics, which are ongoing issues that can influence future outcomes."
+    },
+    "article_node": {
+      "id": "J7JVMTAZ5",
+      "title": "Browns' Quinshon Judkins won't be charged, per Broward State Attorney's Office",
+      "summary": "The Broward County State Attorney's Office has decided not to pursue misdemeanor battery charges against Cleveland Browns rookie running back Quinshon Judkins, citing a lack of video evidence, independent witnesses, and a delayed report from the victim. Judkins was arrested on July 12 for allegedly striking a woman during an incident on July 7, but the Assistant State Attorney concluded there was no reasonable likelihood of conviction. As a result, Judkins remains unsigned and unable to participate in training camp while the NFL continues to review the situation.",
+      "source": "https://www.usatoday.com/story/sports/nfl/2025/08/14/quinshon-judkins-battery-charges-browns/85665412007/",
+      "published_at": "2025-08-14T21:31:38+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "J7JVMTAZ5"
+}

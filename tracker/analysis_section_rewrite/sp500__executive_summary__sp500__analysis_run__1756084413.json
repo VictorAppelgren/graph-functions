@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:26:02",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756084413",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "14065",
+    "output_chars": "1967",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit plan to upgrade to world-class quality: (1) Condense the piece into 4–6 executive lines that deliver one integrated house view—a domestic‑first, tariff‑driven reshoring cycle anchored by energy abundance and AI/data‑center buildout, with a 10% tariff baseline that can rise to 145% on strategic goods and upside from faster productivity/capex; (2) Replace the sprawling Netflix section with a tight three‑scenario map for 3–6 months, anchored by explicit monetization milestones (ad‑tier take‑up, international ARPU, live‑events), defined thresholds, and a clear invalidation path; (3) Ground the reasoning in first principles (real‑rate differentials, terms of trade, productivity dynamics, policy reaction functions) and quantify catalysts with concrete numbers drawn from the sources (tariff path 10%→145%; Ford 5% dividend yield, 8–10x forward P/E, ~10% ROIC; 945 TWh data‑center demand; Netflix forward multiple ~51.7x) to avoid vague claims; (4) Correct factual inaccuracies (change Starbucks CEO reference to Laxman Narasimhan and anchor Bezos’ compensation to equity ownership rather than routine stock grants) and attach the corresponding source IDs after each assertion to ensure traceability (SGB2PAZGK; O4ZEED2EB; 65UUBU0OR; 22PL3Q360, etc.); (5) Tighten the narrative to drop non‑core cross‑asset signals unless they illuminate Netflix dynamics or the regime, and add a concise watch‑list: tariff signaling, chip/EV capex milestones, data‑center energy costs, ad‑take‑up/ARPU milestones, and live‑events economics, with minimal repetition; (6) State explicit invalidation paths and the downstream earnings/valuation transmission to help portfolio decisions, ensuring each claim is tightly sourced and free of filler.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756084413"
+}

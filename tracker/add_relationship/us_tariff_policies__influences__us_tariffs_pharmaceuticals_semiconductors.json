@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:09:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariff_policies",
+    "target_id": "us_tariffs_pharmaceuticals_semiconductors",
+    "selection_motivation": "US Tariff Policies establish the overarching framework that directly determines the specific tariff rates applied to pharmaceuticals and semiconductors, a critical sector for US industry and trade.",
+    "candidate_motivation": "Tariff policies shape prices, trade tensions, and sector-specific investment, so topics tied to tariffs, trade negotiations, inflation, and policy responses are the most plausible peers or influences to US Tariff Policies.",
+    "existing_links_count": "6",
+    "candidate_count": "19",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['tariff_driven_inflation', 'us_tariff_inflation', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_craniomaxillofacial', 'us_india_tariffs', 'us_china_tariffs', 'china_us_tariff_truce', 'us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_trade_policy_inflation', 'us_tariffs_inflation', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'us_tariffs_brazil']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069012983",
+    "rel_id": "us_tariff_policies__influences__us_tariffs_pharmaceuticals_semiconductors",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariff_policies', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Tariff Policies establish the overarching framework that directly determines the specific tariff rates applied to pharmaceuticals and semiconductors, a critical sector for US industry and trade.",
+      "type": "INFLUENCES",
+      "source": "us_tariff_policies",
+      "target": "us_tariffs_pharmaceuticals_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariff_policies__influences__us_tariffs_pharmaceuticals_semiconductors"
+}

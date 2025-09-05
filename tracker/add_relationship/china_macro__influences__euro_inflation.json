@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T09:06:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_macro",
+    "target_id": "euro_inflation",
+    "selection_motivation": "China’s macroeconomic conditions shape global commodity prices and supply‑chain dynamics that feed directly into Euro‑area inflation, making it a key upstream driver not yet represented in the graph.",
+    "candidate_motivation": "China Macro is a macroeconomic indicator that directly influences global trade, commodity demand, currency valuations, and financial market sentiment, making the listed topics strong peers, correlates, or influences.",
+    "existing_links_count": "5",
+    "candidate_count": "15",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'sp500', 'eurostoxx50', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202462200019550217",
+    "rel_id": "china_macro__influences__euro_inflation",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s macroeconomic conditions shape global commodity prices and supply‑chain dynamics that feed directly into Euro‑area inflation, making it a key upstream driver not yet represented in the graph.",
+      "type": "INFLUENCES",
+      "source": "china_macro",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_macro__influences__euro_inflation"
+}

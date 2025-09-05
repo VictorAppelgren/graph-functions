@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T20:44:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "oil",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "oil__analysis_run__1756060657",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20329",
+    "output_chars": "1302",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft covers the core regime logic but could be world-class with a tighter, source-grounded 4-line Up/Down map, a sharper causal chain from balance signals to price to capex/BoP to equity outcomes, and explicit triggers/invalidation; remove or relocate the GQG narrative so the main frame stays focused on oil-market mechanics and regime transitions, and ensure every assertion is anchored to the stated sources (J99EM2TPZ, T1QE6JPIX, 85.6 mbpd/83.6–84.0 mbpd, +2.5/+1.9 mbpd, 0.68–0.70 mbpd) with price anchors like Brent mid-60s and near-term ~$66 Brent/$63 WTI; define precise regime-migration triggers (e.g., 12–24m balance deviation >0.3 mbpd or refinery runs near a defined threshold with sanctions momentum) and an explicit invalidation rule (credible de-escalation or six consecutive weeks of base-like balance), and replace fixed point probabilities with ranges (for example Up 30–50%, Down 20–40%, Base 25–45%) tied to the cited scenarios; ensure the final four lines are formatted exactly as Up/Down | Time window | Driver/Mechanism | What to watch | Probability % with each line containing a single-sentence claim and a parenthetical citation after the factual element, e.g., (J99EM2TPZ)(T1QE6JPIX); add a concise, testable note on how the balance-utility-cash-flow channel translates into SLB-like valuations only when the regime remains intact, and vice versa, so the causal chain is explicit and falsifiable; finally, tighten the watch list to end-markers (balance revisions, refinery utilization, sanctions shifts, inventory paths) and drop extraneous policy anecdotes to keep a compact, forward-looking, four-line output.",
+      "tokens": {}
+    }
+  },
+  "id": "oil__movers_scenarios__oil__analysis_run__1756060657"
+}

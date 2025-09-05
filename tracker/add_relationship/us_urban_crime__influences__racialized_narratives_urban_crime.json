@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:23:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_urban_crime",
+    "target_id": "racialized_narratives_urban_crime",
+    "selection_motivation": "Urban crime dynamics directly shape racialized narratives that influence public perception, policing practices, and policy responses, making this link critical for understanding socio-legal feedback loops.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with U.S. Urban Crime Dynamics due to their relevance to economic conditions, social policies, and law enforcement strategies that can impact urban crime rates.",
+    "existing_links_count": "6",
+    "candidate_count": "10",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'racialized_narratives_urban_crime', 'dc_crime_crisis', 'us_crime_rates_2024', 'california_homelessness_policy', 'us_immigration_conditions', 'mental_health_gun_violence', 'vaccine_misinformation_impact', 'us_border_security_policy']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'california_homelessness_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966396345",
+    "rel_id": "us_urban_crime__influences__racialized_narratives_urban_crime",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'california_homelessness_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'racialized_narratives_urban_crime'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Urban crime dynamics directly shape racialized narratives that influence public perception, policing practices, and policy responses, making this link critical for understanding socio-legal feedback loops.",
+      "type": "INFLUENCES",
+      "source": "us_urban_crime",
+      "target": "racialized_narratives_urban_crime"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_urban_crime__influences__racialized_narratives_urban_crime"
+}

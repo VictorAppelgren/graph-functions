@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T05:30:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "airpods_live_translation",
+    "target_id": "apple_antitrust_ai",
+    "selection_motivation": "AirPods Live Translation is a flagship AI‑driven feature that could heighten antitrust scrutiny of Apple’s AI practices, making it a primary driver of Apple Antitrust Allegations in AI.",
+    "candidate_motivation": "AirPods Live Translation sits at the intersection of wearable hardware, real-time translation AI, and the Apple ecosystem. Plausible strong influences or peers include related Apple devices, AI translation platforms, and Apple's broader policy and product trajectory.",
+    "existing_links_count": "5",
+    "candidate_count": "7",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['voice_ai_market', 'apple_siri_overhaul', 'iphone_17', 'iphone_innovation_stagnation', 'apple_antitrust_ai', 'apple_antitrust_claims', 'apple_us_investment']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'voice_ai_market'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': '5g_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901544",
+    "rel_id": "airpods_live_translation__influences__apple_antitrust_ai",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'voice_ai_market'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'apple_antitrust_ai'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': '5g_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AirPods Live Translation is a flagship AI‑driven feature that could heighten antitrust scrutiny of Apple’s AI practices, making it a primary driver of Apple Antitrust Allegations in AI.",
+      "type": "INFLUENCES",
+      "source": "airpods_live_translation",
+      "target": "apple_antitrust_ai"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "airpods_live_translation__influences__apple_antitrust_ai"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T16:00:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "wti",
+    "selection_motivation": "China’s export growth is a leading gauge of global manufacturing activity; a slowdown signals weaker industrial demand, which in turn reduces oil consumption and pushes WTI prices lower.",
+    "candidate_motivation": "China Exports directly affects global trade flows, the US dollar, commodity demand, and macro indicators that drive interest rates and equity markets. Topics that capture these linkages—currency pairs, Treasury yields, inflation measures, policy signals, and commodity prices—are the most plausible influences or peers.",
+    "existing_links_count": "10",
+    "candidate_count": "19",
+    "all_nodes_count": "34",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'ust10y', 'ust30y', 'ust5y', 'ust2y', 'us_inflation', 'us_core_pce', 'fed_policy', 'china_credit_impulse', 'india_industrial_output', 'oil_price_decline', 'wti', 'brent', 'copper', 'gold', 'wheat', 'spx', 'sx5e']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510069534",
+    "rel_id": "china_exports__influences__wti",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s export growth is a leading gauge of global manufacturing activity; a slowdown signals weaker industrial demand, which in turn reduces oil consumption and pushes WTI prices lower.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "wti"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__wti"
+}

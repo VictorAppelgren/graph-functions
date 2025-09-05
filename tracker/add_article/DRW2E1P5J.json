@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-28T12:43:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DRW2E1P5J",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; Nvidia shares are sensitive to US-China trade policy uncertainty.",
+      "existing_ids": [],
+      "new_names": [
+        "US-China Trade Policy"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Nvidia’s guidance, share repurchase program, and share price movement, which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant events affecting Nvidia’s financial outlook, revenue guidance, and share price, directly impacting the company’s market position and investor perception."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article discusses immediate market reaction and short‑term earnings guidance for Nvidia, focusing on the current quarter’s outlook and share price movement."
+    },
+    "article_node": {
+      "id": "DRW2E1P5J",
+      "title": "Nvidia continua crescendo, mas incerteza na China atrapalha perspectivas",
+      "summary": "Nvidia shares fell 3.2% as uncertainty over China sales weighed on the company’s outlook. CEO Jensen Huang hopes to resume chip sales to China after a deal with President Trump, but U.S. and Chinese regulators have yet to formalize rules, so Nvidia excluded potential China revenue from its Q3 guidance. The company still expects about $54 billion in Q3 revenue, slightly above analysts’ $53.1 billion estimate, and could add $2–5 billion if China sales resume. Nvidia also announced a $60 billion share‑repurchase program.",
+      "source": "https://www.reuters.com/pt/negocio/Y4MBPX6KNZNOFJYRFDV6WLQVHQ-2025-08-28/",
+      "published_at": "2025-08-28T09:41:09.527000+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "DRW2E1P5J"
+}

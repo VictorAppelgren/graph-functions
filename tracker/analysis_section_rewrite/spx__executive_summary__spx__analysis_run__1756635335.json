@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T12:35:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756635335",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6699",
+    "output_chars": "1299",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but needs tightening to meet the 4–6‑sentence, handle‑mapped, catalyst‑driven brief.  Add an explicit mapping to the canonical rate handle **ust10y** (e.g., “real‑rate differential to ust10y widens by ~0.5 bp”), include a concrete catalyst window (“Fed September 18 meeting” and “SEC Project Crypto review Q3 2025”), and spell out the causal chain (Fed cut → 10‑yr yield rise → real‑rate differential ↑ → ETH price ↑).  Condense the text to 5–6 sentences, drop any extraneous IDs (e.g., FAN5RYW6T) that don’t add evidence, and keep the confidence line at the end.  Ensure every claim carries a sign/magnitude and a citation (OGK8WLL69, B1KYJ1GPU, etc.).  The revised brief should read:  \n\n1. ETH’s valuation is now anchored by a widening real‑rate differential to the UST 10‑year (ust10y) and a steepening crypto term‑premium, both reinforced by recent Fed dovish signals and crypto‑specific regulatory clarity (OGK8WLL69).  \n2. The Fed’s anticipated September 18 cut (B1KYJ1GPU) is expected to widen the 10‑year yield, increase the real‑rate differential by ~0.5 bp, and lift ETH’s price by 10–12 % to $4,500–$5,000 over the next 12–18 months (OGK8WLL69).  \n3. Regulatory tailwinds from the SEC’s Project Crypto and the GENIUS Act have removed key friction points, enabling institutional ETF inflows and stablecoin adoption that further tighten the supply‑demand balance and support the price target (OGK8WLL69).  \n4. A Fed rate hike, a regulatory clampdown, or a macro shock would compress the real‑rate differential, widen the risk‑premium, and trigger a rapid price correction, potentially pulling ETH below $4,500 (FAN5RYW6T)(OGK8WLL69).  \n5. Key watch items are the Fed’s September 18 meeting, the SEC’s Project Crypto review in Q3 2025, and the trajectory of institutional ETF inflows, all of which will confirm or invalidate the current risk‑on regime (B1KYJ1GPU)(OGK8WLL69).  \nConfidence is moderate (70 %) given the strong structural drivers but tempered by the fragility of the risk‑on regime (OGK8WLL69).",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756635335"
+}

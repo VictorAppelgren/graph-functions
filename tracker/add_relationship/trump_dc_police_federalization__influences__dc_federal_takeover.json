@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:42:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_dc_police_federalization",
+    "target_id": "dc_federal_takeover",
+    "selection_motivation": "Trump's federalization of D.C. Police is a primary catalyst for the federal takeover of Washington, D.C., as it directly establishes federal control over local policing, a core component of the takeover.",
+    "candidate_motivation": "These topics are the closest policy and political dynamics that would influence or mirror a federalization move in DC policing, including related federal interventions, deployments, and presidential actions.",
+    "existing_links_count": "5",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['dc_federal_intervention', 'dc_federal_control', 'dc_police_federal_takeover', 'dc_federal_takeover', 'dc_federal_policing_initiative', 'trump_national_guard_dc', 'dc_national_guard_deployment', 'trump_federal_control_dc']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_policing_initiative'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_control'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'trump_federal_control_dc'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627959126",
+    "rel_id": "trump_dc_police_federalization__influences__dc_federal_takeover",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_policing_initiative'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'dc_federal_control'}, {'type': 'INFLUENCES', 'source': 'trump_dc_police_federalization', 'target': 'trump_federal_control_dc'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump's federalization of D.C. Police is a primary catalyst for the federal takeover of Washington, D.C., as it directly establishes federal control over local policing, a core component of the takeover.",
+      "type": "INFLUENCES",
+      "source": "trump_dc_police_federalization",
+      "target": "dc_federal_takeover"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_dc_police_federalization__influences__dc_federal_takeover"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T09:49:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MKQ9P0HAE",
+    "status": "rejected",
+    "reject_category": "Earth Observation",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the challenges faced by the European space industry in commercializing Earth observation data, necessitating a new node to capture this critical macro driver affecting investment decisions in the sector.",
+      "id": "eu_earth_observation_data",
+      "name": "European Earth Observation Data",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "Earth Observation",
+      "motivation": "Provide high-resolution thermal infrared data for agriculture, drought detection, and environmental monitoring"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "European Earth Observation Data is a product category, not a macro driver or tradable asset; it falls under industry verticals, which are disallowed.",
+      "confidence": 0.9,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

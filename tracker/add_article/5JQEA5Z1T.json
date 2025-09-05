@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T21:07:02",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5JQEA5Z1T",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; corporate governance changes and a potential reverse stock split influence investor sentiment and valuation of Lucid Group, while Fed policy and expectations of rate cuts shape broader market sentiment.",
+      "existing_ids": [
+        "fed_policy",
+        "us_10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Lucid Group’s corporate governance change and potential reverse stock split, which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant corporate action (amending the Certificate of Incorporation for a potential reverse stock split) and highlights financial performance and market reaction, directly affecting the Lucid Group node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a recent corporate action and immediate market reaction, indicating a short‑term event."
+    },
+    "article_node": {
+      "id": "5JQEA5Z1T",
+      "title": "Lucid Group (LCID) Board Gains Approval for Reverse Stock Split Proposal",
+      "summary": "Lucid Group held a special meeting to amend its Certificate of Incorporation, enabling a potential reverse stock split that may signal a strategic shift. The announcement coincided with a 6.88% drop in the stock, a decline that contrasts with broader market gains and reflects investor unease over governance changes. Despite a forecasted 41% annual revenue growth, Lucid remains unprofitable, with a $3.06 billion loss and a market cap of $6.42 billion, and has underperformed both the U.S. auto industry and the overall market over the past year.",
+      "source": "https://finance.yahoo.com/news/lucid-group-lcid-board-gains-172424726.html?_guc_consent_skip=1755971575",
+      "published_at": "2025-08-23T17:24:24+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "5JQEA5Z1T"
+}

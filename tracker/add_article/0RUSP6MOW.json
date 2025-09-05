@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T09:23:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0RUSP6MOW",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: FX, equities, rates; Japan trade deal and tariff adjustments lift US stocks, strengthen USD, and influence yield curves.",
+      "existing_ids": [
+        "eurusd",
+        "spx",
+        "dxy",
+        "us_inflation",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "President Trump announced a trade deal with Japan, an official policy statement by the U.S. President."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was specified, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate trade policy announcement affecting tariffs and market reactions."
+    },
+    "article_node": {
+      "id": "0RUSP6MOW",
+      "title": "Big Business This Week: Stocks reach new highs on Japan trade deal",
+      "summary": "President Trump announced a trade deal with Japan that imposes 15% tariffs on most Japanese imports while Japan cuts tariffs on U.S. cars and allows U.S. rice imports. The announcement lifted U.S. stocks to record highs, with Toyota surging 35% and Alphabet rising 3%, as investors saw the deal as a sign that future tariffs may be more manageable. However, auto makers like GM and Stellantis still faced significant profit hits from existing tariffs, and GM warned of larger losses next quarter. The deal also boosted confidence that Trump could use a similar framework in negotiations with China and the EU, potentially reshaping global trade dynamics.",
+      "source": "https://www.cheddar.com/media/big-business-this-week-stocks-reach-new-highs-on-japan-trade-deal/",
+      "published_at": "2025-07-25T11:00:00+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "0RUSP6MOW"
+}

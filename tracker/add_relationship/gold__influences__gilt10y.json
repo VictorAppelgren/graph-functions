@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T11:44:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gold",
+    "target_id": "gilt10y",
+    "selection_motivation": "Gold is a safe‑haven asset; risk‑off flows into gilt yields, so gold price movements strongly influence gilt10y yields.",
+    "candidate_motivation": "Gold is a macro‑hedge that reacts strongly to inflation expectations, real‑rate dynamics, currency moves, and global commodity sentiment. The topics listed cover core inflation, core PCE, dollar strength, Fed policy and rate‑cut signals, Treasury and European bond yields, major equity indices, and key commodity price drivers that historically correlate with gold’s price movements.",
+    "existing_links_count": "19",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'bund10y', 'uk_30yr_gilt_yield', 'gilt10y', 'sx5e', 'spx', 'euro_inflation', 'ecb_policy', 'copper', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1256505395547998254",
+    "rel_id": "gold__influences__gilt10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold is a safe‑haven asset; risk‑off flows into gilt yields, so gold price movements strongly influence gilt10y yields.",
+      "type": "INFLUENCES",
+      "source": "gold",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__influences__gilt10y"
+}

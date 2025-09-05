@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-23T23:45:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eur",
+    "new_article_id": "7YQN9WX3K",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['52EQBV548', 'WZOY9QGZI', 'G6J734UIP', '1LVKPIKAQ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article provides comparable or more recent coverage of the same events, so the new article does not supersede any current entry."
+    }
+  },
+  "id": "eur__7YQN9WX3K__current"
+}

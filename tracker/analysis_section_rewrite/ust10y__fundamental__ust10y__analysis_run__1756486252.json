@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T18:50:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756486252",
+    "article_ids": "['H86O3XRUJ', 'ZV3QI3K19', 'H86O3XRUJ', 'ZV3QI3K19', 'H86O3XRUJ']",
+    "selected_articles_count": "5",
+    "material_chars": "155370",
+    "output_chars": "2330",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a solid company‑level narrative but it does not satisfy Argos’ core criteria: it does not map to any canonical handle (e.g., spx, ndx, ust10y) and it lacks a dated catalyst window, so it will be rejected under the acceptance gate. To upgrade it to a world‑class macro view, re‑frame the story around the US tech sector’s growth regime and the Fed policy cycle, explicitly linking EPAM’s AI‑driven revenue to the broader US IT index (spx/ndx) and the term‑premium on the 10‑yr UST. Quantify the impact: a 1‑point Fed rate hike could compress the tech sector’s term premium by ~10 bp, cutting EPAM’s valuation by ~5 %. Add a catalyst window (e.g., Q3‑2026 earnings release and the 2026 Q1 Fed policy meeting). Anchor the analysis in first‑principles: real GDP growth 2.5‑3 %, inflation 2‑3 %, real rate differential +0.5 %, Fed reaction function (Δreal rate ≈ 0.5 × Δinflation). Build a causal chain: Fed tightening → higher real rates → lower tech demand → margin pressure; AI adoption → higher margin → offset. Conclude with a base case (8.8 % CAGR, 8.9 % margin, fair value $212.7 (+20 %)), key risks (wage inflation >3 % in key delivery centers, low‑code adoption, geopolitical risk in Eastern Europe), watch list (US CPI, Fed minutes, EU tech policy), and confidence (moderate‑high). Remove any unrelated content (e.g., the 193‑company list) and ensure every claim is cited with an ID from the source material.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756486252"
+}

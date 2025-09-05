@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T15:31:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756644975",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7036",
+    "output_chars": "711",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the 4‑line “Movers & Scenarios” format, but the first line lacks an explicit causal link to the S&P 500. Rewrite it as:  \n**Up | 3‑6 months | Fed cut on Sep 16‑17 lowering 10‑yr yields, lifting spx 0.5‑1% | Watch Fed meeting & core PCE | 35%(B1KYJ1GPU)**  \nThis ties the liquidity injection to the equity move and cites the source.  \nFor the trade plan, drop the asset name from the direction field and remove the handle in the target/stop clauses:  \n**Short | 3‑6 months | Entry: current | Stop: 2% above | Target: 4% below | R/R: 2:1 | Invalidation: Fed cut earlier or core PCE < 2.5%(B1KYJ1GPU) | Trigger: Fed cut on Sep 16‑17(B1KYJ1GPU) | Probability: 40%(B1KYJ1GPU) | Confidence: 70%(OGK8WLL69)**  \nThis aligns with the required syntax, keeps the plan concise, and retains all necessary citations. No other sections drift from the asset or causal chain.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756644975"
+}

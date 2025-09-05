@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:06:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756061626",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17046",
+    "output_chars": "1102",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft largely follows the 4-line Up/Up/Down/Down Swing-Trade scaffold and uses Regime A/B framing with concrete anchors, but it suffers from formatting incongruities, inconsistent probability weights, and a weak, first-principles causal chain; several numbers are quoted without clean,唯一 supporting citations, and the Outlook section drifts from the required 1–2-field plan format. Actionable edits: (1) Fix format so exactly 4 Swing lines appear in the order Up/Time/Driver/Watch/Prob, and replace any extraneous alt-scenario lines with a single, coherent probability surface (e.g., anchor Regime A at 65% and Regime B at 35% per NL5YYTLF2 and 37UZC9X8I, and assign each line a probability that aligns with that base split). Remove or relegate the separate “Alt A/Alt B” prose so it does not duplicate risk weights. (2) Enforce a true first-principles causal chain: for each line, state the mechanism (p, u, r) in one crisp clause, then a single, observable market imprint (e.g., ROIC-driven capex reallocation, tariff pass-through, or policy retraining push) and a watchlist tied to a specific catalyst. (3) Tighten the watch items and explicitly map them to sources; cite only IDs that prove the fact or number, and place citations immediately after the fact rather than after the whole line; ensure high-signal anchors (e.g., 25% of US employment automation exposure NL5YYTLF2; GM Cadillac/Elevation Velocity trajectory WTNT85IPR; tariff-passage read S15934PBQ; Ford EV-loss and ROIC data from 22PL3Q360/65UUBU0OR) are consistently used. (4) Reconcile potential conflicts and standardize the numeric narrative: if you keep the two Up lines plus two Down lines, ensure their probabilities reflect the same macro-base (65/35) and avoid mixing 45%/30% values that contradict the base-case framing; otherwise consolidate to a single, clear base-case line and a single downside line. (5) Reform the Trade/Outlook Plan into the required single-line or two-line format, and avoid trading-agnostic prose; if GM is tradable, supply a Swing Trade line with Entry/Stop/Target/R/R/Invalidation/Trigger, or if you prefer an Outlook, deliver Direction/Horizon/Path/Signals/Invalidation/Trigger/Probability/Confidence as a one-liner. (6) If price-based levels are unavailable in the sources, flag that explicitly and base the plan on qualitative triggers (e.g., tariff outcomes, EV-capex cadence) until price anchors are provided. (7) Produce a concise, one-line or two-line Outlook that complements the Swing lines and ties to the 4–8 quarter horizon; ensure it references a coherent path (Regime A dominates, inflation converges toward target, productivity-led capex remains the engine) and includes a concrete invalidation trigger tied to the macro-cycle. (8) Deliver a clean, self-contained rewritten set (4 Swing lines + 1 Trade/Outlook line) with clearly labeled, source-backed facts, and a tight narrative that can be checked against NL5YYTLF2, 37UZC9X8I, WTNT85IPR, GM, 65UUBU0OR, 22PL3Q360, S15934PBQ, and similar IDs. A compact template you can reuse: Up | 4–8 quarters | Regime A-driven productivity/policy impulse | What to watch: [unemployment claims, EV capex pace, tariff pass-through] | 65% (NL5YYTLF2)(37UZC9X8I); Down | 4–8 quarters | Regime B-displacement risk or tariff shock | What to watch: [inflation trajectory, EV-capex delays, tariff outcomes] | 35% (NL5YYTLF2)(37UZC9X8I); Trade/Outlook: [Direction | Horizon | Entry/Stop/Target/R/R | Invalidation/Trigger/Probability/Confidence]. This will elevate the piece to world-class quality by clarifying causality, sharpening the numbers, and ensuring strict conformance to the format.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756061626"
+}

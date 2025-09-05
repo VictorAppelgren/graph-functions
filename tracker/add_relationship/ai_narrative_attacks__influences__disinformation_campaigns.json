@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:41:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_narrative_attacks",
+    "target_id": "disinformation_campaigns",
+    "selection_motivation": "AI Narrative Attacks are a primary driver of disinformation campaigns in geopolitical conflicts, yet this causal link is absent from the graph.",
+    "candidate_motivation": "These topics are the most plausible direct peers or influences for AI Narrative Attacks, focusing on AI-generated misinformation, narrative manipulation, and the governance/bias of AI systems.",
+    "existing_links_count": "8",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['disinformation_campaigns', 'ai_generated_content_seo', 'ai_governance', 'grok_ai_bias', 'ai_ideological_bias', 'deepfake_ai_medical']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'deepfake_ai_medical'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_generated_misinformation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958008",
+    "rel_id": "ai_narrative_attacks__influences__disinformation_campaigns",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'deepfake_ai_medical'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'disinformation_campaigns'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI Narrative Attacks are a primary driver of disinformation campaigns in geopolitical conflicts, yet this causal link is absent from the graph.",
+      "type": "INFLUENCES",
+      "source": "ai_narrative_attacks",
+      "target": "disinformation_campaigns"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_narrative_attacks__influences__disinformation_campaigns"
+}

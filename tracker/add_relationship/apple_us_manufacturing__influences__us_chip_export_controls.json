@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T05:30:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_us_manufacturing",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "Apple’s U.S. manufacturing commitment signals a strategic shift toward domestic chip production, prompting U.S. policymakers to tighten export controls on semiconductor technology to China.",
+    "candidate_motivation": "These topics represent direct policy and trade dynamics that could materially influence Apple's U.S. manufacturing commitments, including tariff regimes, export controls, and supply-chain exposure to China.",
+    "existing_links_count": "5",
+    "candidate_count": "6",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['apple_us_investment', 'us_tariffs_semiconductors', 'us_chip_export_controls', 'us_chip_exports_china', 'us_china_trade_talks', 'us_chip_revenue_sharing']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'apple_us_investment'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186904439",
+    "rel_id": "apple_us_manufacturing__influences__us_chip_export_controls",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'apple_us_investment'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Apple’s U.S. manufacturing commitment signals a strategic shift toward domestic chip production, prompting U.S. policymakers to tighten export controls on semiconductor technology to China.",
+      "type": "INFLUENCES",
+      "source": "apple_us_manufacturing",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_us_manufacturing__influences__us_chip_export_controls"
+}

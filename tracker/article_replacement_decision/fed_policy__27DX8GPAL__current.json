@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T00:27:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "27DX8GPAL",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['Z7K8PC4G5', 'XHDE9MSFQ', 'U21K4ALYQ', '97MD1FHW8', 'EIGII8HNM', 'QJEVQZHQR', 'VDO8D9T7M', 'B1JE9YGKN', 'D0R3LX8F7']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "B1JE9YGKN",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article is a niche biotech earnings release with no macro or canonical handle mapping, failing acceptance criteria."
+    }
+  },
+  "id": "fed_policy__27DX8GPAL__current"
+}

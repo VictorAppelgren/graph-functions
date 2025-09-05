@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T01:29:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "texas_redistricting",
+    "target_id": "gerrymandering",
+    "selection_motivation": "Linking Texas Redistricting to Gerrymandering highlights the direct impact of redistricting on electoral outcomes, which is crucial for understanding political dynamics and their influence on policy decisions.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with Texas Redistricting due to their connections to political dynamics, economic policies, and social issues that can affect electoral outcomes and legislative processes.",
+    "existing_links_count": "6",
+    "candidate_count": "9",
+    "all_nodes_count": "1612",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['gerrymandering', 'political_manipulation_doj', 'texas_cannabis_legalization', 'texas_flood_relief_legislation', 'us_urban_crime', 'dc_federal_intervention', 'trump_dc_public_safety', 'california_homelessness_policy', 'us_russia_relations']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_flood_relief_legislation'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_cannabis_legalization'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'gerrymandering'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'federal_intervention_urban_crime'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160593",
+    "rel_id": "texas_redistricting__influences__gerrymandering",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_flood_relief_legislation'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_cannabis_legalization'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'gerrymandering'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'federal_intervention_urban_crime'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Texas Redistricting to Gerrymandering highlights the direct impact of redistricting on electoral outcomes, which is crucial for understanding political dynamics and their influence on policy decisions.",
+      "type": "INFLUENCES",
+      "source": "texas_redistricting",
+      "target": "gerrymandering"
+    }
+  },
+  "id": "texas_redistricting__influences__gerrymandering"
+}

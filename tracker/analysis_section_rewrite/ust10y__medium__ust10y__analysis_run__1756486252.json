@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T18:54:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756486252",
+    "article_ids": "['XQMF22EFB', 'XQMF22EFB', 'XQMF22EFB']",
+    "selected_articles_count": "3",
+    "material_chars": "93466",
+    "output_chars": "1409",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is essentially a placeholder that fails to meet the Argos standards. It neither maps the story to a canonical handle nor builds a causal transmission path, and it offers no quantitative guidance or catalyst window. To upgrade it:\n\n1. **Map to Handles** – Anchor the narrative to at least one canonical handle:  \n   - **GDP** (us_gdp) – 3.3 % growth announced for July 2025.  \n   - **USD Strength** (dxy) – verifiability boost → potential +5–10 pts.  \n   - **US Treasury Yields** (ust10y) – higher confidence → +5–10 bp.  \n   - **Stablecoin Fragmentation** (stablecoin_plumbing) – risk factor.  \n\n2. **Add a Catalyst Window** – July 2025 GDP release (first data point) is the key trigger; add a 1–3 month post‑release window to capture market reaction.\n\n3. **Build a Causal Chain** –  \n   - *Trigger*: Commerce Dept publishes GDP on 9 blockchains → signals institutional trust in data integrity.  \n   - *Transmission*: Market perceives reduced data‑misinformation risk → USD demand rises, Treasury yields tighten.  \n   - *Amplifier*: Tokenization momentum (JP Morgan, Kraken, Robinhood) and Google Cloud’s GCUL create a “blockchain‑enabled finance” narrative → further USD support.  \n   - *Risk*: Stablecoin plumbing issues or regulatory backlash could reverse sentiment → USD weakness, yield easing.\n\n4. **Quantify Direction & Magnitude** –  \n   - **DXY**: +5–10 pts (≈ +5–10 bp) over 3–6 months.  \n   - **UST10Y**: +5–10 bp.  \n   - **US GDP**: confirm +3.3 % growth; if data beats expectations, add +2–4 bp to yields.  \n\n5. **Provide Alternatives & Risks** –  \n   - *Base Case*: USD +7 pts, UST10Y +7 bp.  \n   - *Alt 1*: If tokenization stalls, USD +3 pts, UST10Y +3 bp.  \n   - *Alt 2*: If stablecoin fragmentation causes regulatory clamp‑down, USD –5 pts, UST10Y –5 bp.  \n\n6. **Watch‑list Signals** –  \n   - Upcoming GDP release dates.  \n   - Fed policy statements on crypto‑related data integrity.  \n   - Regulatory filings on tokenized securities.  \n   - Stablecoin cross‑chain liquidity metrics.  \n\n7. **Cite Sources** – Use the article ID (XQMF22EFB) for all claims; reference tokenization news (JP Morgan, Kraken, Robinhood) and GCUL (Google Cloud) for amplification.  \n\n8. **Structure** – Begin with a concise thesis, then the causal chain, quantitative outlook, alternatives, risk factors, and watch‑list. Avoid generic statements; keep each claim evidence‑based and linked to a handle.  \n\nImplementing these edits will transform the placeholder into a defensible, actionable macro view that satisfies the Argos criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__medium__ust10y__analysis_run__1756486252"
+}

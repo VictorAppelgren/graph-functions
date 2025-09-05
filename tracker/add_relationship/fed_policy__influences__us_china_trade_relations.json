@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T02:43:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_china_trade_relations",
+    "selection_motivation": "Linking Fed Policy to US-China Trade Relations is crucial as changes in monetary policy can significantly influence trade dynamics and tariffs, impacting economic growth and inflation.",
+    "candidate_motivation": "The selected topics are closely related to Fed Policy, influencing or being influenced by monetary policy decisions, inflation rates, and overall economic conditions.",
+    "existing_links_count": "8",
+    "candidate_count": "10",
+    "all_nodes_count": "1616",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'core_monthly_cpi', 'us_10y', 'sp500', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_relations', 'us_china_tariff_truce', 'us_inflation_data', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627956741",
+    "rel_id": "fed_policy__influences__us_china_trade_relations",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Fed Policy to US-China Trade Relations is crucial as changes in monetary policy can significantly influence trade dynamics and tariffs, impacting economic growth and inflation.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_china_trade_relations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__us_china_trade_relations"
+}

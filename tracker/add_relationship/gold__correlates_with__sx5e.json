@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T17:28:02",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "sx5e",
+    "selection_motivation": "Gold and Euro Stoxx 50 exhibit correlated movements during global risk sentiment shifts, warranting a correlation link.",
+    "candidate_motivation": "Gold is a safe‑haven asset whose price is driven by macro‑financial variables such as inflation, interest rates, the U.S. dollar, and risk sentiment.  Therefore topics that directly influence or are strongly correlated with these drivers—U.S. inflation measures, Fed policy and rate cuts, Treasury yields, the dollar index and major currency pairs, equity indices, and key commodities—are the most plausible influences or peers.",
+    "existing_links_count": "19",
+    "candidate_count": "22",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "22",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'dxy', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'us_unemployment_claims', 'us_services_pmi']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1240743896363829294",
+    "rel_id": "gold__correlates_with__sx5e",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold and Euro Stoxx 50 exhibit correlated movements during global risk sentiment shifts, warranting a correlation link.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__sx5e"
+}

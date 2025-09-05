@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:59:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "cvd_aerospace_defense",
+    "target_id": "kratos_defense_security_solutions",
+    "selection_motivation": "CVD Aerospace and Defense and Kratos Defense & Security Solutions are both major defense contractors with overlapping product lines in missile defense and aerospace systems, positioning them as direct competitors.",
+    "candidate_motivation": "These topics are the strongest direct or policy-driven connections to aerospace and defense, including major defense primes, space programs, and export controls that would influence demand, budgets, and supply chains for CVD Aerospace and Defense.",
+    "existing_links_count": "1",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['northrop_grumman', 'kratos_defense_security_solutions', 'theon_defense_innovations', 'theon_defense_investments', 'artemis_program', 'nasa_artemis_program', 'ast_space_mobile', 'armata_ap_sa02', 'us_chip_export_controls', 'us_china_ai_chip_exports', 'us_export_policy_ai_chips']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'PEERS', 'source': 'cvd_aerospace_defense', 'target': 'northrop_grumman'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917534525199221380",
+    "rel_id": "cvd_aerospace_defense__peers__kratos_defense_security_solutions",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'PEERS', 'source': 'cvd_aerospace_defense', 'target': 'kratos_defense_security_solutions'}, {'type': 'PEERS', 'source': 'cvd_aerospace_defense', 'target': 'northrop_grumman'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "CVD Aerospace and Defense and Kratos Defense & Security Solutions are both major defense contractors with overlapping product lines in missile defense and aerospace systems, positioning them as direct competitors.",
+      "type": "PEERS",
+      "source": "cvd_aerospace_defense",
+      "target": "kratos_defense_security_solutions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cvd_aerospace_defense__peers__kratos_defense_security_solutions"
+}

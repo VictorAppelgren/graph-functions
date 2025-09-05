@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:10:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "equity_market_vs_economy",
+    "target_id": "sp500",
+    "selection_motivation": "This link connects the macro-economic comparison node to the primary equity benchmark, enabling analysis of how macro drivers translate into index performance.",
+    "candidate_motivation": "These topics capture the macroeconomic drivers (inflation, policy, yields) and important asset classes that typically determine how equity markets move relative to the economy. They are the most plausible strong influences, correlates, or peers to 'Equity Market vs Economy'.",
+    "existing_links_count": "5",
+    "candidate_count": "16",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['sp500', 'eurostoxx50', 'us_inflation', 'core_monthly_cpi', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks', 'fed_policy', 'ecb_policy', 'us_10y', 'oil', 'gold', 'usd', 'eur', 'china_macro', 'stagflation']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000589481",
+    "rel_id": "equity_market_vs_economy__influences__sp500",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "This link connects the macro-economic comparison node to the primary equity benchmark, enabling analysis of how macro drivers translate into index performance.",
+      "type": "INFLUENCES",
+      "source": "equity_market_vs_economy",
+      "target": "sp500"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "equity_market_vs_economy__influences__sp500"
+}

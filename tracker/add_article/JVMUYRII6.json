@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-21T15:38:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JVMUYRII6",
+    "status": "success",
+    "topic_id": "us_tariffs"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses revenue decline due to U.S. tariffs, matching the US Tariffs node.",
+      "existing_node_ids": "us_tariffs",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No article summary provided, cannot determine category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Article summary not provided, so cannot assess impact on US tariffs node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess the time frame due to lack of article summary."
+    },
+    "article_node": {
+      "id": "JVMUYRII6",
+      "title": "Yangaroo Announces Q2'2025 Financial Results",
+      "summary": "Yangaroo Inc. reported its second‑quarter 2025 results, showing a 15% revenue decline to $1.65 million largely due to a drop in advertising revenue amid geopolitical tensions and U.S. tariffs. The company posted an operating loss of $18.8 k but maintained a positive Normalized EBITDA of $220.9 k, marking its twelfth consecutive quarter of positive EBITDA. Cost‑control measures, including headcount and marketing cuts, helped mitigate the impact of lower sales. The quarter also included settlements of $60 k and $150 k related to a 2021 acquisition lawsuit, and the company issued shares to CEO Grant Schuetrumpf under a related‑party shares‑for‑services arrangement.",
+      "source": "https://finance.yahoo.com/news/yangaroo-announces-q22025-financial-results-120000456.html",
+      "published_at": "2025-08-21T12:00:00+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "JVMUYRII6"
+}

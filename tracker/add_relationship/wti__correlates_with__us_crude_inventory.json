@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T23:57:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "wti",
+    "target_id": "us_crude_inventory",
+    "selection_motivation": "WTI price movements are tightly linked to US crude inventory levels, which drive supply pressure and thus price swings.",
+    "candidate_motivation": "WTI Crude Oil is a USD‑denominated commodity whose price is driven by global supply/demand, inventory levels, and peer oil benchmarks. Its valuation is also strongly influenced by the strength of the US dollar, monetary policy, Treasury yields, and inflation measures. Therefore, topics that capture oil price trends, inventory data, Brent as a benchmark, USD strength, Fed policy, Treasury yields, and inflation are the most plausible direct influences or peers.",
+    "existing_links_count": "11",
+    "candidate_count": "11",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'brent', 'dxy', 'fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257475145",
+    "rel_id": "wti__correlates_with__us_crude_inventory",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "WTI price movements are tightly linked to US crude inventory levels, which drive supply pressure and thus price swings.",
+      "type": "CORRELATES_WITH",
+      "source": "wti",
+      "target": "us_crude_inventory"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__correlates_with__us_crude_inventory"
+}

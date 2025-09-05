@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T06:35:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756614075",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1381",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑track for the DXY focus but drifts into mortgage rates and the S&P 500, diluting the asset‑centric narrative. Tighten the piece by: 1) removing any mention of us_mortgage_rates, ust10y, or spx that isn’t directly tied to DXY transmission; 2) re‑framing those references as “DXY moves are the primary driver of downstream equity volatility” with a single citation (Z7O1DCHS7). 3) Structure the view into three concise scenarios—base (Fed cut, 0.5–1 % DXY rise, 3–6 mo), upside (PCE > 3 % or NFP above expectations, DXY +50–100 bp), downside (Fed hike, steepening reversal, DXY down 200 bp to 95.8 by Aug 31). 4) For each scenario, list the catalyst window (Sept Fed meeting, early‑Aug CPI, Aug 30 PCE/NFP, Jackson Hole) and attach the appropriate IDs: (B1KYJ1GPU)(XTQIQRP5K)(NIT6JFIQF)(FAN5RYW6T)(LF0UUL917)(7XH2DKEKV)(Z7O1DCHS7). 5) Quantify the term‑premium effect explicitly: Fed cut → 2‑yr ↓, 10‑yr ↑ (steepening ~30 bp), real yield diff ↑ → DXY +0.5–1 %. 6) Replace generic “moderate confidence” with a risk‑adjusted probability: 86 % chance of cut, 14 % chance of hike, and note that a 57 bp steepening is required for the 200‑bp downside. 7) Add a watch‑list table at the end: (1) Sept Fed meeting (Fed policy), (2) early‑Aug CPI (2.5 % July CPI), (3) Aug 30 PCE/NFP, (4) Jackson Hole remarks. 8) Ensure every claim has an inline citation; remove any sentence lacking one. 9) Keep the tone concise, decisive, and evidence‑driven—no extra commentary on equity indices beyond their dependence on DXY. This will satisfy the “action over prose” rule and keep the analysis within the 100‑topic capacity while maximizing cross‑asset relevance.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756614075"
+}

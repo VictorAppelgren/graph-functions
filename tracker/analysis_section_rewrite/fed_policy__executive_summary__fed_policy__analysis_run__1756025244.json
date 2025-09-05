@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:59:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756025244",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16492",
+    "output_chars": "1372",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit notes: tighten the piece into 4–6 crisp sentences or bullets with explicit Regime A/B/C headings, concrete probability weights (e.g., A 50–60%, B 25–35%, C 15–25%) and clearly defined transition triggers (two–three CPI/wage/unemployment prints plus Jackson Hole tilt) and then show how data momentum would reprice assets; sharpen the first‑principles chain to a single causal path: policy path/real‑rate differentials → discount rates → the dollar, with a parallel FX/channel transmission (yen/dollar) clearly named, so the cross‑asset narrative is coherent; center critical, source‑anchored numbers (e.g., Regime A easing ~150–175bp; 10‑year around 4.20–4.25%; Tencent AI spend ~150% in Q2; yen near 146.5/$) and tag every assertion to its IDs (GX057ADL7, 37UZC9X8I, V7GV8YBQU, TN66GHPAT, J99EM2TPZ, 4LQD15CFU, K0WFSW29E, YB758UDBU, S7M6BJSRT, etc.), removing any unanchored statements; fix the OQ transcript misprint by replacing it with a credible figure or dropping the item, and introduce a single data‑quality check; recast the watch list into 3–4 concrete catalysts (cooling CPI/PCE and payroll prints; unequivocal Jackson Hole signaling; a Sept 50bp cut with a path to ~150–175bp; IPO/ACMR milestones) plus 1–2 invalidation signals (inflation overshoot/wage acceleration; a hawkish Powell shift; export‑control/revenue tail risks) with explicit thresholds; ensure horizon alignment across 0–3 week, base, and regime sections and remove non‑essential political chatter unless it feeds regime dynamics; finally, ensure every claim has a cited ID, reconcile any cross‑source conflicts by presenting a consolidated, bounds‑based scenario, and preserve an executive, data‑driven tone.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756025244"
+}

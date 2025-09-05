@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T20:04:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "ust30y",
+    "selection_motivation": "UK long‑term sovereign yields move in tandem with global risk sentiment; the UK 30‑yr gilt yield is strongly correlated with the US 30‑yr Treasury yield.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "2",
+    "candidate_count": "25",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['gilt10y', 'bund10y', 'ust10y', 'ust30y', 'jgb10y', 'fed_policy', 'ecb_policy', 'dxy', 'gbpusd', 'sx5e', 'spx', 'ust2y', 'ust5y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'oil_price_decline', 'wti', 'brent', 'us_crude_inventory', 'cn_russia_gas_pipeline', 'china_exports', 'china_credit_impulse']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443788293",
+    "rel_id": "uk_30yr_gilt_yield__correlates_with__ust30y",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK long‑term sovereign yields move in tandem with global risk sentiment; the UK 30‑yr gilt yield is strongly correlated with the US 30‑yr Treasury yield.",
+      "type": "CORRELATES_WITH",
+      "source": "uk_30yr_gilt_yield",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_30yr_gilt_yield__correlates_with__ust30y"
+}

@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T12:44:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XSFLRE8ZT",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; IndiGo share sale may influence Indian airline sector sentiment.",
+      "existing_ids": [],
+      "new_names": [
+        "indian_airlines"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a share sale by a major shareholder in IndiGo, which is a company update."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a share sale in IndiGo, but without knowing the specific node, the impact is uncertain; likely minimal."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent share sale by a billionaire, an immediate corporate event affecting IndiGo’s ownership structure."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "XSFLRE8ZT"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T02:12:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1756080299",
+    "drivers_count": "5",
+    "material_chars": "2153",
+    "output_chars": "4091",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft has a strong Regime A backbone and cross‑topic scope, but it needs a tighter causal chain, a defined horizon, complete numeric anchors, explicit catalysts/invalidation, and tighter sourcing; otherwise the argument risks being descriptive rather than decision‑ready. Actionable edits: 1) Rebuild into a single, explicit causal chain: Policy regime (Powell/Jackson Hole) drives discount rates and risk premia, which drives crypto/equity valuations; show each link with a concise sentence and tie crypto/ETH/BTC, Nvidia AI momentum, and AI/data‑center capex to the same regime channel. 2) Fix horizon and scenario structure: state a clear base case (12–24 months) and add a parallel medium/current scenario with defined triggers and an explicit invalidation path (e.g., wage growth persistence/ inflation persistence forces Regime B/C; tariff shocks exceed X). 3) Complete and standardize numeric anchors: fix the truncated “gross margin ≈ 4%” and complete the 2025 ACMR/long‑horizon figures; keep units consistent (e.g., 2025 revenue ≈ $900m; Ether ≈ 4,955; BTC 110k–125k; 10Y yield sensitivities in basis points if used). 4) Quantify sensitivities and transmission: provide a simple first‑principles PV/DCF sensitivity to discount‑rate moves (e.g., illustrate impact of a 25–50bp change) and link to observed flows (ETF crypto inflows, corporate treasury demand). 5) Explicit catalysts and invalidation triggers: Jackson Hole wage/inflation data; semiconductor/AI capex cadence; Nvidia momentum readings; ETF inflows/outflows; tariff news; and define clear invalidation thresholds. 6) Strengthen attribution and reconciliation: attach every factual claim to the specific source ID; if Euro regime weights (50/30/20) conflict with US regime timing, present a range and discuss divergence rather than fuse them. 7) Tighten style and avoid repetition: remove redundant sentences, fix truncations (e.g., complete “gross margin ≈ 4%” and ensure consistency of “Regime A lifts valuations via lower discount rates” phrases), and align terms (Regime A vs Regime B/C) across sections. 8) Watchlist condensation: boil to 6–8 decisive signals with explicit thresholds (e.g., Jackson Hole wage print > X triggers Regime shift; Nvidia AI capex cadence ≥ Y per quarter; ETH/BTC ETF inflows A/B/C change). 9) Ensure all critical sources are covered and no conflicts remain unresolved; consider a short annex mapping each regulator/driver to the corresponding source IDs so readers can audit provenance quickly. 10) Clarify language around “long horizon anchor” versus “base case” to avoid ambiguity about when each regime dominates and how transitions unfold.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__drivers__eurusd__analysis_run__1756080299"
+}

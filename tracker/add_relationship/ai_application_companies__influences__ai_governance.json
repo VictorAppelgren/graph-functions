@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:57:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_application_companies",
+    "target_id": "ai_governance",
+    "selection_motivation": "AI application companies are the primary drivers shaping AI governance and model transparency frameworks, influencing regulatory standards and industry best practices.",
+    "candidate_motivation": "These topics reflect the core ecosystem—major AI platforms, hardware policy enablers, and high-impact use-case trends—that strongly influence AI application companies.",
+    "existing_links_count": "4",
+    "candidate_count": "14",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'alphabet_ai_gemini', 'nvidia_ai_infrastructure', 'nvidia_low_power_gpus', 'nvidia_china_geopolitics', 'us_ai_chip_export_policy', 'ai_governance', 'ai_evaluation_monitoring', 'ai_generated_content_seo', 'generative_ai_film', 'palantir_aip', 'grok_ai_bias', 'agentic_ai_solutions', 'ai_productivity']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_stock_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587110",
+    "rel_id": "ai_application_companies__influences__ai_governance",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_governance'}, {'type': 'INFLUENCES', 'source': 'ai_application_companies', 'target': 'ai_stock_performance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI application companies are the primary drivers shaping AI governance and model transparency frameworks, influencing regulatory standards and industry best practices.",
+      "type": "INFLUENCES",
+      "source": "ai_application_companies",
+      "target": "ai_governance"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_application_companies__influences__ai_governance"
+}

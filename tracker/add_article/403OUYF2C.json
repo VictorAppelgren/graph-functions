@@ -1,0 +1,69 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T01:02:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "403OUYF2C",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy, inflation, core PCE, and labor market data influence US Treasury yields, DXY, and equity indices. Tech earnings and Nvidia AI server slowdown add equity volatility. Potential Fed independence risk adds currency and credit risk.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy",
+        "eurusd",
+        "gold",
+        "wti",
+        "brent",
+        "copper",
+        "spx",
+        "sx5e",
+        "usdjpy",
+        "usdcny",
+        "sofr",
+        "fed_rate_cut_sept17_2025",
+        "fed_powell_rate_cut_hint_2025",
+        "us_crude_inventory"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports Lisa Cook filing a lawsuit against President Trump, a legal development affecting Fed independence."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to evaluate the article’s impact on a specific market handle or macro theme."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events—Trump’s lawsuit and Nvidia’s earnings—directly influencing market sentiment and Fed independence concerns."
+    },
+    "article_node": {
+      "id": "403OUYF2C",
+      "title": "Cook Files Lawsuit, Nvidia's Earnings Letdown",
+      "summary": "Lisa Cook has filed a lawsuit against President Trump after his attempt to remove her from the Federal Reserve, raising concerns about Fed independence and potential market volatility. The episode also covers Nvidia’s disappointing earnings, with weaker AI server sales prompting a sharp stock decline, and touches on other corporate developments such as Kraft Heinz restructuring plans. Market sentiment remains negative, with tech shares falling and broader indices in the red amid ongoing uncertainty over monetary policy and political interference.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-29/bloomberg-businessweek-daily-8-29-2025-video",
+      "published_at": "2025-08-29T20:42:29.947000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 23,
+      "successful": 23
+    }
+  },
+  "id": "403OUYF2C"
+}

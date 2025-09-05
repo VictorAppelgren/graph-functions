@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T10:10:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DOOKTOQI1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; S&P 500 tech concentration, soft labor market, sticky inflation, and Fed rate cuts could trigger a broad sell‑off.",
+      "existing_ids": [
+        "spx",
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers analysis of market concentration and potential sell‑off due to earnings and macro factors, which is market commentary."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article discusses concentration in the S&P 500 and potential sell‑off risks that directly affect US equities and Fed policy, making it relevant to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights medium-term risks from earnings, labor market, inflation, tariffs, and Fed policy that could impact the S&P 500, making it a medium-term assessment."
+    },
+    "article_node": {
+      "id": "DOOKTOQI1",
+      "title": "Morningstar details 2 forces that could derail a stock market that's historically dependent on Big Tech",
+      "summary": "The U.S. stock market is now more concentrated than ever, with the top 10 S&P 500 stocks accounting for about 40% of the index, largely dominated by tech firms. Morningstar’s Dominic Pappalardo warns that a weak earnings report from one or two of these tech names could trigger a broad sell‑off, potentially pulling the index lower. He cites a softening labor market, sticky inflation, and lingering tariff‑driven price pressures as catalysts that could force the Fed to keep rates high, dampening growth and increasing downside risk. To mitigate exposure, he recommends diversifying into international, small‑cap, and healthcare equities, which offer lower valuations and stronger earnings prospects.",
+      "source": "https://www.businessinsider.com/stock-market-crash-more-concentrated-than-ever-ai-tech-morningstar-2025-8",
+      "published_at": "2025-09-02T15:09:20+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "DOOKTOQI1"
+}

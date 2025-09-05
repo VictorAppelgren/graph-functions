@@ -1,0 +1,1614 @@
+{
+  "today": {
+    "topics_total_today": 34,
+    "all_topics_queried": false,
+    "full_analysis_new_today": 0,
+    "enrichment_attempts": 63,
+    "enrichment_articles_added": 32,
+    "queries": 64,
+    "articles": 284,
+    "articles_added": 291,
+    "articles_removed": 0,
+    "added_node": 6,
+    "removes_node": 0,
+    "about_links_added": 401,
+    "about_links_removed": 0,
+    "relationships_added": 333,
+    "relationships_removed": 255,
+    "rewrites_saved": 0,
+    "rewrites_skipped_0_articles": 0,
+    "duplicates_skipped": 17,
+    "errors": 9,
+    "qa_reports_generated": 0,
+    "should_rewrite_true": 0,
+    "should_rewrite_false": 0,
+    "topic_replacements_decided": 0,
+    "llm_simple_calls": 463,
+    "llm_medium_calls": 1368,
+    "llm_complex_calls": 0,
+    "llm_simple_long_context_calls": 663
+  },
+  "graph_state": {
+    "topics": 39,
+    "topics_with_full_analysis": 4,
+    "topics_with_full_analysis_examples": [
+      "Fed Policy",
+      "US 10Y Treasury Yield",
+      "US Inflation",
+      "S&P 500"
+    ],
+    "articles": 3067,
+    "connections": 1521,
+    "about_links": 1052,
+    "inter_topic_links": 469,
+    "unique_relationship_types": [
+      "ABOUT",
+      "COMPONENT_OF",
+      "CORRELATES_WITH",
+      "INFLUENCES",
+      "PEERS"
+    ],
+    "orphans": {
+      "topics": 0,
+      "articles": 2718
+    },
+    "last_updated": "2025-09-02T21:59:38+00:00"
+  },
+  "problems": {
+    "zero_result_queries": 40,
+    "topics_zero_results": [
+      "oil_price_decline",
+      "brent",
+      "USD/JPY",
+      "wheat",
+      "EURUSD",
+      "eurusd",
+      "Oil Price Decline",
+      "GBP/USD",
+      "gbpusd",
+      "euro_inflation",
+      "india_industrial_output",
+      "euribor",
+      "gilt10y",
+      "usdcny",
+      "gold",
+      "sx5e",
+      "china_exports",
+      "wti",
+      "us_unemployment_claims",
+      "bund10y",
+      "china_credit_impulse",
+      "hurricane_risk_ust10y",
+      "Euro Stoxx 50"
+    ],
+    "topic_rejections": 25,
+    "no_replacement_candidates": 305,
+    "no_replacement_events": [
+      {
+        "timestamp": "2025-09-02T08:15:30+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T08:27:05+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T08:29:03+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T08:30:39+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T08:32:28+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T08:36:58+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T08:39:13+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T08:44:28+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T08:54:10+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:04:23+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T09:06:32+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:10:23+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:15:06+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T09:16:07+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:17:30+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T09:18:10+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:18:42+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T09:19:13+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:20:27+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:23:36+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:24:26+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T09:25:57+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T09:30:55+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:32:57+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T09:33:18+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:34:41+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:40:18+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:40:32+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:41:23+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T09:43:27+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T09:43:59+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:00:28+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:03:34+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:06:46+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:09:33+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:11:56+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:12:03+00:00",
+        "topic_id": "gold",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T10:16:08+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T10:22:12+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:23:23+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:24:25+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:25:57+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:26:29+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:28:49+00:00",
+        "topic_id": "dxy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:30:37+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T10:33:19+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T10:37:44+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T11:11:50+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T11:13:35+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T11:46:23+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T11:47:38+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T11:50:28+00:00",
+        "topic_id": "dxy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T12:02:16+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:03:11+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:05:30+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:06:03+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:10:07+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:23:46+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:27:09+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:28:02+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:32:24+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:33:17+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:42:29+00:00",
+        "topic_id": "gold",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:42:56+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:44:44+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:47:49+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:49:08+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T12:51:40+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:54:31+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:57:30+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:57:39+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T12:57:41+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:02:52+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T13:09:11+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T13:09:37+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T13:11:56+00:00",
+        "topic_id": "brent",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:46:25+00:00",
+        "topic_id": "gbpusd",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:50:30+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:52:28+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:52:51+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:55:27+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T13:56:27+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:00:08+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:05:18+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:10:30+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:11:04+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:11:59+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:13:16+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:14:22+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:15:09+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:16:01+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:17:20+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T14:20:50+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T14:23:28+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:24:20+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:25:00+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:25:31+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:44:03+00:00",
+        "topic_id": "gilt10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:46:37+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:47:14+00:00",
+        "topic_id": "gbpusd",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T14:56:47+00:00",
+        "topic_id": "gold",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T15:00:32+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T15:40:43+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T15:45:56+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T15:53:25+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T15:55:01+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T15:55:16+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T15:57:26+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T15:57:47+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:01:07+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:01:16+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:04:22+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:05:38+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:06:52+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:07:15+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:08:10+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:09:13+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:12:00+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:15:32+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:17:39+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:20:19+00:00",
+        "topic_id": "dxy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:20:30+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:34:31+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:34:41+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:35:50+00:00",
+        "topic_id": "brent",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:36:00+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:38:56+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:42:28+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:43:53+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:47:37+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T16:47:44+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:48:55+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:49:33+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:50:24+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:50:48+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:52:47+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:54:02+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:54:54+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T16:59:49+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:00:59+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T17:01:42+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:03:27+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:04:44+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:05:03+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:12:59+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:14:47+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:15:42+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T17:15:58+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:18:14+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:21:26+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:27:00+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:27:10+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:28:57+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:31:47+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:34:07+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:37:09+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T17:41:39+00:00",
+        "topic_id": "eurusd",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:42:52+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:44:53+00:00",
+        "topic_id": "gbpusd",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:46:18+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:48:33+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T17:48:54+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:03:33+00:00",
+        "topic_id": "gilt10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:07:49+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:08:39+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:10:06+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:11:03+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:12:07+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:14:55+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:43:46+00:00",
+        "topic_id": "ba",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T18:45:26+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T18:48:22+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:49:58+00:00",
+        "topic_id": "ba",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T18:51:07+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T18:55:47+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T18:58:50+00:00",
+        "topic_id": "ba",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:06:27+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T19:11:33+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:12:42+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:17:07+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:17:33+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:18:12+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:19:06+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:20:23+00:00",
+        "topic_id": "dxy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:22:58+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T19:34:13+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:36:09+00:00",
+        "topic_id": "copper",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:37:32+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:43:35+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T19:44:17+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T19:45:26+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T19:49:23+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:50:37+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:51:20+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:52:14+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:53:07+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T19:55:37+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:06:56+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:07:32+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:08:39+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:09:44+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:13:19+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:27:11+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:28:14+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:28:35+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:29:22+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:30:08+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:31:25+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:33:08+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:33:55+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:39:04+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:40:26+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:41:24+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:44:38+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T20:46:16+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T20:48:01+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T20:50:04+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T20:51:13+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T20:53:32+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T20:55:35+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T20:56:56+00:00",
+        "topic_id": "gold",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:01:50+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:03:31+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:05:23+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:06:14+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:28:50+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:31:06+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:31:14+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:31:54+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:40:45+00:00",
+        "topic_id": "sx5e",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T21:50:05+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T21:50:57+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:52:10+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T21:54:39+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T21:55:20+00:00",
+        "topic_id": "gold",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T21:57:30+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T21:59:38+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:01:55+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:03:21+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:05:06+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:06:47+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:06:58+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:08:46+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:15:56+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:16:22+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:16:53+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:18:22+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:19:24+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:27:36+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:28:45+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:29:37+00:00",
+        "topic_id": "spx",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T22:32:38+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:36:41+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:36:46+00:00",
+        "topic_id": "dxy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T22:38:10+00:00",
+        "topic_id": "brent",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:40:58+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:41:11+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T22:42:54+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T22:44:58+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T22:45:43+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:47:07+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T22:48:26+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:52:17+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T22:53:17+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T22:53:21+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T22:55:25+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T22:56:20+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T22:58:21+00:00",
+        "topic_id": "dxy",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T23:03:20+00:00",
+        "topic_id": "gold",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T23:06:41+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:08:29+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:08:38+00:00",
+        "topic_id": "spx",
+        "timeframe": "medium"
+      },
+      {
+        "timestamp": "2025-09-02T23:09:58+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:12:06+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:13:38+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:15:50+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:15:58+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:17:36+00:00",
+        "topic_id": "eurusd",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:19:32+00:00",
+        "topic_id": "usdjpy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:21:49+00:00",
+        "topic_id": "gbpusd",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:22:02+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:24:11+00:00",
+        "topic_id": "wti",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:24:19+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:26:02+00:00",
+        "topic_id": "brent",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:27:58+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:30:06+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:30:17+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:31:46+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:31:52+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:32:46+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:35:11+00:00",
+        "topic_id": "dxy",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:36:32+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:39:13+00:00",
+        "topic_id": "us_unemployment_claims",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:43:21+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:45:40+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:46:32+00:00",
+        "topic_id": "us_core_pce",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:48:26+00:00",
+        "topic_id": "spx",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:49:54+00:00",
+        "topic_id": "dxy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:50:15+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "fundamental"
+      },
+      {
+        "timestamp": "2025-09-02T23:52:50+00:00",
+        "topic_id": "ust10y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:54:59+00:00",
+        "topic_id": "ust2y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:55:21+00:00",
+        "topic_id": "fed_policy",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:55:36+00:00",
+        "topic_id": "ust5y",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:57:37+00:00",
+        "topic_id": "us_inflation",
+        "timeframe": "current"
+      },
+      {
+        "timestamp": "2025-09-02T23:57:53+00:00",
+        "topic_id": "ust30y",
+        "timeframe": "current"
+      }
+    ]
+  }
+}

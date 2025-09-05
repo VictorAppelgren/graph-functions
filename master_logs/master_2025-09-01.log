@@ -1,0 +1,820 @@
+2025-09-01T00:01:50 | Saved analysis | fed_policy | field "fundamental_analysis" len=824
+2025-09-01T00:01:51 | Rewrite complete | fed_policy | total_chars=824
+2025-09-01T00:01:51 | Added article | SGB2PAZGK | to existing topic fed_policy
+2025-09-01T00:02:33 | Node relationship removed | dxy->sx5e | type=INFLUENCES
+2025-09-01T00:02:33 | Node relationship created | dxy->usdcny | type=INFLUENCES
+2025-09-01T00:02:37 | No replacement of article | dxy | new_article=SGB2PAZGK
+2025-09-01T00:02:37 | Added article | SGB2PAZGK | to existing topic dxy
+2025-09-01T00:03:23 | Node relationship removed | ust10y->sx5e | type=INFLUENCES
+2025-09-01T00:03:23 | Node relationship created | ust10y->usdcny | type=INFLUENCES
+2025-09-01T00:03:32 | Article replaced | ust10y | old=22PL3Q360 new=SGB2PAZGK
+2025-09-01T00:03:44 | Will rewrite section fundamental because response was: True | topic=ust10y | article=SGB2PAZGK
+2025-09-01T00:07:05 | Saved analysis | ust10y | field "fundamental_analysis" len=2960
+2025-09-01T00:07:05 | Rewrite complete | ust10y | total_chars=2960
+2025-09-01T00:07:05 | Added article | SGB2PAZGK | to existing topic ust10y
+2025-09-01T00:07:45 | Error | - | Backfill link_orphan_articles failed for SGB2PAZGK Error: argument of type 'NoneType' is not iterable
+2025-09-01T00:08:26 | Topic rejected | name=Vietnam plans mass evacuation, China's Sanya shuts as Typhoon Kajiki intensifies | category=None | failure=proposal_null
+2025-09-01T00:08:26 | Failed to create new topic for article | 9380U9VP0 | to new topic None
+2025-09-01T00:08:26 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for 9380U9VP0
+2025-09-01T00:10:15 | Node relationship created | spx->ust5y | type=INFLUENCES
+2025-09-01T00:10:23 | Article replaced | spx | old=4VN4UTWX1 new=FP1RX9J2V
+2025-09-01T00:10:28 | No rewrite of section current because response was: False | topic=spx | article=FP1RX9J2V
+2025-09-01T00:10:28 | Added article | FP1RX9J2V | to existing topic spx
+2025-09-01T00:10:29 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-01T00:10:29 | Replacement of article skipped | ndx | tf=current cnt=0 < 5
+2025-09-01T00:10:29 | Added article | FP1RX9J2V | to existing topic ndx
+2025-09-01T00:10:59 | Topic rejected | name=UnitedHealth | category=company | failure=relevance_gate_reject
+2025-09-01T00:10:59 | Failed to create new topic for article | FP1RX9J2V | to new topic None
+2025-09-01T00:12:33 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T00:12:33 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-01T00:12:36 | No replacement of article | us_inflation | new_article=353Q8SOAO
+2025-09-01T00:12:36 | Added article | 353Q8SOAO | to existing topic us_inflation
+2025-09-01T00:12:46 | Topic rejected | name=After Nearly Dumping His Entire Portfolio, "The Big Short's" Michael Burry Just Bought 2 Abandoned Stocks Down at Least 40% This Year | category=None | failure=proposal_null
+2025-09-01T00:12:46 | Failed to create new topic for article | 353Q8SOAO | to new topic None
+2025-09-01T00:13:15 | Topic rejected | name=Ethereum's next upgrade: What you need to know | category=None | failure=proposal_null
+2025-09-01T00:13:15 | Failed to create new topic for article | W15PI61FN | to new topic None
+2025-09-01T00:13:16 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for W15PI61FN
+2025-09-01T00:14:10 | Topic rejected | name=1 Thing Every Investor Should Know About Dogecoin (DOGE) | category=None | failure=proposal_null
+2025-09-01T00:14:10 | Failed to create new topic for article | BGRF6R1WM | to new topic None
+2025-09-01T00:14:11 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for BGRF6R1WM
+2025-09-01T00:16:01 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-09-01T00:16:01 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T00:16:09 | Article replaced | us_inflation | old=S1OY7ISLY new=6SO2E2KXW
+2025-09-01T00:16:14 | No rewrite of section current because response was: False | topic=us_inflation | article=6SO2E2KXW
+2025-09-01T00:16:14 | Added article | 6SO2E2KXW | to existing topic us_inflation
+2025-09-01T00:17:47 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-09-01T00:17:47 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T00:17:55 | Article replaced | fed_policy | old=4YU6VHFIB new=0J41Q7KTX
+2025-09-01T00:18:08 | No rewrite of section current because response was: False | topic=fed_policy | article=0J41Q7KTX
+2025-09-01T00:18:08 | Added article | 0J41Q7KTX | to existing topic fed_policy
+2025-09-01T00:19:47 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T00:19:47 | Node relationship created | us_inflation->usdjpy | type=INFLUENCES
+2025-09-01T00:19:51 | No replacement of article | us_inflation | new_article=0J41Q7KTX
+2025-09-01T00:19:51 | Added article | 0J41Q7KTX | to existing topic us_inflation
+2025-09-01T00:21:15 | Node relationship created | us_core_pce->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T00:21:15 | Replacement of article skipped | us_core_pce | tf=current cnt=3 < 5
+2025-09-01T00:21:15 | Added article | 0J41Q7KTX | to existing topic us_core_pce
+2025-09-01T00:22:16 | Node relationship removed | us_unemployment_claims->usdjpy | type=INFLUENCES
+2025-09-01T00:22:16 | Node relationship created | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T00:22:17 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=1 < 5
+2025-09-01T00:22:17 | Added article | 0J41Q7KTX | to existing topic us_unemployment_claims
+2025-09-01T00:23:22 | Node relationship removed | ust10y->ust30y | type=INFLUENCES
+2025-09-01T00:23:22 | Node relationship created | ust10y->sx5e | type=INFLUENCES
+2025-09-01T00:23:28 | Article replaced | ust10y | old=ZQ5S8SBKK new=0J41Q7KTX
+2025-09-01T00:23:33 | Will rewrite section current because response was: True | topic=ust10y | article=0J41Q7KTX
+2025-09-01T00:26:31 | Saved analysis | ust10y | field "current_analysis" len=1400
+2025-09-01T00:26:31 | Rewrite complete | ust10y | total_chars=1400
+2025-09-01T00:26:31 | Added article | 0J41Q7KTX | to existing topic ust10y
+2025-09-01T00:27:06 | Node relationship removed | ust2y->us_core_pce | type=INFLUENCES
+2025-09-01T00:27:06 | Node relationship created | ust2y->usdcny | type=INFLUENCES
+2025-09-01T00:27:13 | No replacement of article | ust2y | new_article=0J41Q7KTX
+2025-09-01T00:27:13 | Added article | 0J41Q7KTX | to existing topic ust2y
+2025-09-01T00:27:40 | Node relationship created | ust5y->bund10y | type=CORRELATES_WITH
+2025-09-01T00:27:41 | Replacement of article skipped | ust5y | tf=current cnt=2 < 5
+2025-09-01T00:27:41 | Added article | 0J41Q7KTX | to existing topic ust5y
+2025-09-01T00:28:24 | Node relationship removed | ust30y->copper | type=INFLUENCES
+2025-09-01T00:28:25 | Node relationship created | ust30y->us_inflation | type=INFLUENCES
+2025-09-01T00:28:25 | Replacement of article skipped | ust30y | tf=current cnt=2 < 5
+2025-09-01T00:28:25 | Added article | 0J41Q7KTX | to existing topic ust30y
+2025-09-01T00:29:49 | Node relationship removed | dxy->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T00:29:49 | Node relationship created | dxy->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-01T00:29:53 | No replacement of article | dxy | new_article=0J41Q7KTX
+2025-09-01T00:29:53 | Added article | 0J41Q7KTX | to existing topic dxy
+2025-09-01T00:29:59 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for BP3W1EATS
+2025-09-01T00:30:12 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 3V387NR39
+2025-09-01T00:30:27 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XBAGBCCCL
+2025-09-01T00:31:43 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T00:31:43 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-09-01T00:31:56 | Article replaced | fed_policy | old=EANB5TFMB new=EPJYXB7DX
+2025-09-01T00:32:05 | No rewrite of section medium because response was: False | topic=fed_policy | article=EPJYXB7DX
+2025-09-01T00:32:05 | Added article | EPJYXB7DX | to existing topic fed_policy
+2025-09-01T00:32:05 | Backfill orphan links completed | processed=19 | failures=81
+2025-09-01T09:35:19 | Retrieved articles | US Core PCE | Retrieved 10 from API
+2025-09-01T09:35:20 | Retrieved articles | US Core PCE | Retrieved 10 from API
+2025-09-01T09:35:22 | Retrieved articles | US Inflation | Retrieved 10 from API
+2025-09-01T09:36:18 | Retrieved articles | Japan 10Y JGB Yield | Retrieved 10 from API
+2025-09-01T09:36:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for FO6DHUAHL
+2025-09-01T09:36:33 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 32PCNMY5D
+2025-09-01T09:36:50 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WBOK790XG
+2025-09-01T09:37:27 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XSFLRE8ZT
+2025-09-01T09:37:49 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Y978UO2HQ
+2025-09-01T09:38:47 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for EAJLYR9K4
+2025-09-01T09:38:59 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for X88WYL7LW
+2025-09-01T09:39:21 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for HSV2K5S6B
+2025-09-01T09:39:31 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5PVSG3JPT
+2025-09-01T09:41:02 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-09-01T09:41:03 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-09-01T09:42:15 | Article replaced | fed_policy | old=0J41Q7KTX new=HIW0OHZQQ
+2025-09-01T09:42:52 | No rewrite of section current because response was: False | topic=fed_policy | article=HIW0OHZQQ
+2025-09-01T09:42:53 | Added article | HIW0OHZQQ | to existing topic fed_policy
+2025-09-01T09:44:40 | Node relationship created | india_industrial_output->wti | type=INFLUENCES
+2025-09-01T09:44:40 | Replacement of article skipped | india_industrial_output | tf=current cnt=3 < 5
+2025-09-01T09:44:40 | Added article | 5I34ZHDX8 | to existing topic india_industrial_output
+2025-09-01T09:45:09 | Node relationship created | ecb_policy->ust2y | type=INFLUENCES
+2025-09-01T09:45:09 | Replacement of article skipped | ecb_policy | tf=current cnt=1 < 5
+2025-09-01T09:45:09 | Added article | HIW0OHZQQ | to existing topic ecb_policy
+2025-09-01T09:45:28 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5JMZIAIGO
+2025-09-01T09:46:34 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 4Q1P4ZWED
+2025-09-01T09:46:47 | Node relationship removed | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T09:46:47 | Node relationship created | ust10y->euro_inflation | type=CORRELATES_WITH
+2025-09-01T09:47:23 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for QC6H7S274
+2025-09-01T09:47:29 | No replacement of article | ust10y | new_article=55AFDPURW
+2025-09-01T09:47:29 | Added article | 55AFDPURW | to existing topic ust10y
+2025-09-01T09:47:35 | Node relationship removed | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T09:47:35 | Node relationship created | ust10y->wti | type=CORRELATES_WITH
+2025-09-01T09:48:05 | No replacement of article | ust10y | new_article=HIW0OHZQQ
+2025-09-01T09:48:05 | Added article | HIW0OHZQQ | to existing topic ust10y
+2025-09-01T09:49:41 | Node relationship removed | fed_policy->usdjpy | type=INFLUENCES
+2025-09-01T09:49:41 | Node relationship created | fed_policy->gold | type=INFLUENCES
+2025-09-01T09:50:07 | Node relationship created | usdcny->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T09:50:07 | Replacement of article skipped | usdcny | tf=current cnt=2 < 5
+2025-09-01T09:50:08 | Added article | 8R6304V0A | to existing topic usdcny
+2025-09-01T09:50:19 | Article replaced | fed_policy | old=HIW0OHZQQ new=55AFDPURW
+2025-09-01T09:50:37 | Topic rejected | name=Indonesian Markets Tumble Amid Protests, Looting | category=None | failure=proposal_null
+2025-09-01T09:50:37 | Failed to create new topic for article | 8R6304V0A | to new topic None
+2025-09-01T09:51:19 | Enrichment check | us_inflation | section=fundamental
+2025-09-01T09:51:19 | Enrichment check | us_inflation | section=medium
+2025-09-01T09:51:19 | Enrichment check | us_inflation | section=current
+2025-09-01T09:51:19 | Pipeline complete | pipeline | run complete
+2025-09-01T09:51:21 | Retrieved articles | Wheat | Retrieved 10 from API
+2025-09-01T09:52:13 | No rewrite of section current because response was: False | topic=fed_policy | article=55AFDPURW
+2025-09-01T09:52:14 | Added article | 55AFDPURW | to existing topic fed_policy
+2025-09-01T09:52:40 | Node relationship removed | spx->gold | type=CORRELATES_WITH
+2025-09-01T09:52:40 | Node relationship created | spx->china_exports | type=CORRELATES_WITH
+2025-09-01T09:53:23 | Article replaced | spx | old=FP1RX9J2V new=K2JWRPXRV
+2025-09-01T09:54:44 | No rewrite of section current because response was: False | topic=spx | article=K2JWRPXRV
+2025-09-01T09:54:44 | Added article | K2JWRPXRV | to existing topic spx
+2025-09-01T09:54:44 | Error | - | find_influences_and_correlates skipped: Topic missing | topic_id=ndx Error: Failed to fetch node from Neo4j: Node with id 'ndx' not found.
+2025-09-01T09:54:45 | Replacement of article skipped | ndx | tf=current cnt=0 < 5
+2025-09-01T09:54:45 | Added article | K2JWRPXRV | to existing topic ndx
+2025-09-01T11:10:11 | Retrieved articles | EURUSD | Retrieved 0 from API
+2025-09-01T11:10:11 | Retrieved articles | EURUSD | Retrieved 0 from API
+2025-09-01T11:10:11 | Enrichment check | eurusd | section=fundamental
+2025-09-01T11:10:11 | Enrichment check | eurusd | section=fundamental
+2025-09-01T11:11:06 | Enrichment check | eurusd | section=medium
+2025-09-01T11:12:17 | Enrichment check | eurusd | section=medium
+2025-09-01T11:13:56 | Topic rejected | name=Australian government signs deal to deport former detainees to the tiny island country of Nauru | category=None | failure=proposal_null
+2025-09-01T11:13:56 | Failed to create new topic for article | FO6DHUAHL | to new topic None
+2025-09-01T11:13:56 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for FO6DHUAHL
+2025-09-01T11:14:14 | Node relationship created | eurusd->ecb_policy | type=INFLUENCES
+2025-09-01T11:14:14 | Replacement of article skipped | eurusd | tf=medium cnt=2 < 5
+2025-09-01T11:14:14 | Added article | KCKB73IZT | to intended topic eurusd
+2025-09-01T11:14:22 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 32PCNMY5D
+2025-09-01T11:15:20 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WBOK790XG
+2025-09-01T11:15:43 | Node relationship created | eurusd->sofr | type=CORRELATES_WITH
+2025-09-01T11:15:43 | Replacement of article skipped | eurusd | tf=current cnt=1 < 5
+2025-09-01T11:15:43 | Added article | ZUXOHE4Q9 | to intended topic eurusd
+2025-09-01T11:15:44 | Backfill added | ZUXOHE4Q9 -> eurusd | section=medium
+2025-09-01T11:15:44 | Enrichment check | eurusd | section=current
+2025-09-01T11:15:58 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XSFLRE8ZT
+2025-09-01T11:16:08 | Node relationship removed | fed_policy->sofr | type=INFLUENCES
+2025-09-01T11:16:08 | Node relationship created | fed_policy->usdjpy | type=INFLUENCES
+2025-09-01T11:16:18 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Y978UO2HQ
+2025-09-01T11:16:32 | Article replaced | fed_policy | old=7GU5QDMM4 new=KCKB73IZT
+2025-09-01T11:16:35 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for EAJLYR9K4
+2025-09-01T11:16:48 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for X88WYL7LW
+2025-09-01T11:16:59 | No rewrite of section medium because response was: False | topic=fed_policy | article=KCKB73IZT
+2025-09-01T11:17:00 | Added article | KCKB73IZT | to existing topic fed_policy
+2025-09-01T11:17:01 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for HSV2K5S6B
+2025-09-01T11:17:13 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5PVSG3JPT
+2025-09-01T11:17:37 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5JMZIAIGO
+2025-09-01T11:18:25 | Node relationship removed | us_inflation->usdjpy | type=INFLUENCES
+2025-09-01T11:18:25 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T11:18:26 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 4Q1P4ZWED
+2025-09-01T11:18:59 | No replacement of article | us_inflation | new_article=KCKB73IZT
+2025-09-01T11:18:59 | Added article | KCKB73IZT | to existing topic us_inflation
+2025-09-01T11:18:59 | Backfill added | KCKB73IZT -> eurusd | section=medium
+2025-09-01T11:18:59 | Enrichment check | eurusd | section=current
+2025-09-01T11:18:59 | Pipeline complete | pipeline | run complete
+2025-09-01T11:19:03 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for QC6H7S274
+2025-09-01T11:19:15 | Enrichment check | ust10y | section=fundamental
+2025-09-01T11:19:15 | Enrichment check | ust10y | section=medium
+2025-09-01T11:19:15 | Enrichment check | ust10y | section=current
+2025-09-01T11:19:15 | Pipeline complete | pipeline | run complete
+2025-09-01T11:19:15 | Node relationship removed | eurusd->usdcny | type=CORRELATES_WITH
+2025-09-01T11:19:15 | Node relationship created | eurusd->copper | type=CORRELATES_WITH
+2025-09-01T11:19:15 | Replacement of article skipped | eurusd | tf=current cnt=2 < 5
+2025-09-01T11:19:15 | Added article | ZWNYHHFG0 | to intended topic eurusd
+2025-09-01T11:19:16 | Retrieved articles | US 2Y Treasury Yield | Retrieved 10 from API
+2025-09-01T11:19:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for M64W6AH5E
+2025-09-01T11:19:57 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for E9KQQQ0FK
+2025-09-01T11:20:20 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7YX5NQ7C1
+2025-09-01T11:20:30 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5YY7MOXZK
+2025-09-01T11:20:32 | No replacement of article | fed_policy | new_article=ZWNYHHFG0
+2025-09-01T11:20:32 | Added article | ZWNYHHFG0 | to existing topic fed_policy
+2025-09-01T11:20:37 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for W7K0HLJA8
+2025-09-01T11:20:59 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for MH7HSROTH
+2025-09-01T11:21:38 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for VYZDR44HA
+2025-09-01T11:22:05 | Node relationship removed | ust10y->bund10y | type=INFLUENCES
+2025-09-01T11:22:05 | Node relationship created | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-01T11:22:11 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RAYF4212E
+2025-09-01T11:22:20 | No replacement of article | ust10y | new_article=ZWNYHHFG0
+2025-09-01T11:22:20 | Added article | ZWNYHHFG0 | to existing topic ust10y
+2025-09-01T11:22:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XZE0194FG
+2025-09-01T11:22:48 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for F3NQHE5LD
+2025-09-01T11:23:28 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for IY7V4C50X
+2025-09-01T11:23:47 | Node relationship removed | spx->usdjpy | type=INFLUENCES
+2025-09-01T11:23:47 | Node relationship created | spx->usdcny | type=INFLUENCES
+2025-09-01T11:23:51 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 9Q7DQ170A
+2025-09-01T11:23:59 | Article replaced | spx | old=K2JWRPXRV new=ZWNYHHFG0
+2025-09-01T11:24:04 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RM401QPOM
+2025-09-01T11:24:11 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for IM265UCQY
+2025-09-01T11:24:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5Z0H3Q3TD
+2025-09-01T11:25:20 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TAJ7B50DF
+2025-09-01T11:25:28 | Will rewrite section current because response was: True | topic=spx | article=ZWNYHHFG0
+2025-09-01T11:25:49 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 8ORA7QA8E
+2025-09-01T11:26:34 | Node relationship removed | eurusd->copper | type=CORRELATES_WITH
+2025-09-01T11:26:34 | Node relationship created | eurusd->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T11:26:34 | Replacement of article skipped | eurusd | tf=current cnt=3 < 5
+2025-09-01T11:26:34 | Added article | QK6D2L4SD | to existing topic eurusd
+2025-09-01T11:26:35 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for B9XELD9XC
+2025-09-01T11:28:07 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for F0PXPUFBG
+2025-09-01T11:29:57 | Node relationship created | sx5e->ust5y | type=CORRELATES_WITH
+2025-09-01T11:29:57 | Replacement of article skipped | sx5e | tf=current cnt=1 < 5
+2025-09-01T11:29:58 | Added article | QK6D2L4SD | to existing topic sx5e
+2025-09-01T11:30:09 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 83TII8YMF
+2025-09-01T11:30:38 | Saved analysis | spx | field "current_analysis" len=1614
+2025-09-01T11:30:38 | Rewrite complete | spx | total_chars=1614
+2025-09-01T11:30:38 | Added article | ZWNYHHFG0 | to existing topic spx
+2025-09-01T11:31:06 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RAV2UWRTT
+2025-09-01T11:32:30 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 1GVYF2V8O
+2025-09-01T11:32:57 | Node relationship removed | bund10y->sx5e | type=INFLUENCES
+2025-09-01T11:32:57 | Node relationship created | bund10y->fed_policy | type=INFLUENCES
+2025-09-01T11:32:57 | Replacement of article skipped | bund10y | tf=current cnt=1 < 5
+2025-09-01T11:32:57 | Added article | QK6D2L4SD | to existing topic bund10y
+2025-09-01T11:33:05 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WNIGHHTSJ
+2025-09-01T11:33:14 | Node relationship removed | dxy->gold | type=CORRELATES_WITH
+2025-09-01T11:33:14 | Node relationship created | dxy->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T11:33:45 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Y4QWID79M
+2025-09-01T11:33:51 | No replacement of article | dxy | new_article=ZWNYHHFG0
+2025-09-01T11:33:51 | Added article | ZWNYHHFG0 | to existing topic dxy
+2025-09-01T11:33:51 | Backfill added | ZWNYHHFG0 -> eurusd | section=current
+2025-09-01T11:33:51 | Pipeline complete | pipeline | run complete
+2025-09-01T11:33:52 | Retrieved articles | S&P 500 | Retrieved 10 from API
+2025-09-01T11:34:01 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for GEDYPA35Y
+2025-09-01T11:34:15 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7UPGPTVMX
+2025-09-01T11:34:29 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for C2XYVSI19
+2025-09-01T11:34:51 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7EBQ4OS9Q
+2025-09-01T11:34:58 | Node relationship created | ecb_policy->ust30y | type=INFLUENCES
+2025-09-01T11:34:58 | Replacement of article skipped | ecb_policy | tf=current cnt=1 < 5
+2025-09-01T11:34:58 | Added article | WEL38OSL1 | to existing topic ecb_policy
+2025-09-01T11:35:22 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for EZW6HAEGF
+2025-09-01T11:35:53 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 0KVSV0XJY
+2025-09-01T11:36:26 | Node relationship created | eurusd->gold | type=INFLUENCES
+2025-09-01T11:36:27 | Replacement of article skipped | eurusd | tf=current cnt=4 < 5
+2025-09-01T11:36:27 | Added article | WEL38OSL1 | to existing topic eurusd
+2025-09-01T11:36:36 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for QUR2WFGWL
+2025-09-01T11:36:59 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Z5IA1CYUF
+2025-09-01T11:37:20 | Node relationship created | sx5e->copper | type=CORRELATES_WITH
+2025-09-01T11:37:21 | Replacement of article skipped | sx5e | tf=current cnt=2 < 5
+2025-09-01T11:37:21 | Added article | WEL38OSL1 | to existing topic sx5e
+2025-09-01T11:37:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 1ZRZJJ622
+2025-09-01T11:38:23 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TGYFX66U6
+2025-09-01T11:38:53 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7BYPYAOAV
+2025-09-01T11:40:36 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for A85HNI04L
+2025-09-01T11:41:14 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for P7V2EDKV5
+2025-09-01T11:41:22 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TWG5HVP4E
+2025-09-01T11:41:59 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 6UQ882NC5
+2025-09-01T11:42:29 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 81NW62JXC
+2025-09-01T11:42:43 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 1L38JDK4D
+2025-09-01T11:43:16 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for PJPSBNMQZ
+2025-09-01T11:43:22 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T11:43:22 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-01T11:43:37 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TWPJY62Z2
+2025-09-01T11:43:55 | No replacement of article | us_inflation | new_article=6WIWN13HI
+2025-09-01T11:43:55 | Added article | 6WIWN13HI | to existing topic us_inflation
+2025-09-01T11:44:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for G56AMXE86
+2025-09-01T11:45:10 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5PO9GWXVE
+2025-09-01T11:45:26 | Node relationship removed | wti->gold | type=INFLUENCES
+2025-09-01T11:45:26 | Node relationship created | wti->ust2y | type=INFLUENCES
+2025-09-01T11:45:26 | Replacement of article skipped | wti | tf=current cnt=2 < 5
+2025-09-01T11:45:26 | Added article | C5IXFUB52 | to existing topic wti
+2025-09-01T11:45:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5GZ91IMUE
+2025-09-01T11:45:42 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T11:45:42 | Node relationship created | us_core_pce->us_unemployment_claims | type=INFLUENCES
+2025-09-01T11:45:43 | Replacement of article skipped | us_core_pce | tf=current cnt=2 < 5
+2025-09-01T11:45:43 | Added article | 6WIWN13HI | to existing topic us_core_pce
+2025-09-01T11:45:56 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RX8KKVM1D
+2025-09-01T11:46:29 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 858O1R5YA
+2025-09-01T11:46:50 | Node relationship removed | brent->eurusd | type=INFLUENCES
+2025-09-01T11:46:50 | Node relationship created | brent->ust30y | type=INFLUENCES
+2025-09-01T11:46:51 | Replacement of article skipped | brent | tf=current cnt=1 < 5
+2025-09-01T11:46:51 | Added article | C5IXFUB52 | to existing topic brent
+2025-09-01T11:46:54 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for BBWOWYGLT
+2025-09-01T11:47:02 | Node relationship removed | fed_policy->gold | type=INFLUENCES
+2025-09-01T11:47:02 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-09-01T11:47:36 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for LPT34HH4U
+2025-09-01T11:47:43 | No replacement of article | fed_policy | new_article=6WIWN13HI
+2025-09-01T11:47:44 | Added article | 6WIWN13HI | to existing topic fed_policy
+2025-09-01T11:47:55 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 19Y00MQT5
+2025-09-01T11:50:19 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Z1S0Q4FRN
+2025-09-01T11:50:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for U3ZK13ZQI
+2025-09-01T11:50:37 | Topic added | name=Oil Price Decline | category=macro_driver | importance=1
+2025-09-01T11:51:18 | Node relationship created | oil_price_decline->dxy | type=INFLUENCES
+2025-09-01T11:51:18 | Replacement of article skipped | oil_price_decline | tf=current cnt=0 < 5
+2025-09-01T11:51:18 | Added article | C5IXFUB52 | to new topic oil_price_decline
+2025-09-01T11:51:57 | Node relationship created | hurricane_risk_ust10y->us_inflation | type=INFLUENCES
+2025-09-01T11:51:57 | Replacement of article skipped | hurricane_risk_ust10y | tf=fundamental cnt=0 < 5
+2025-09-01T11:51:57 | Added article | DSZJIKJH9 | to existing topic hurricane_risk_ust10y
+2025-09-01T11:53:18 | Node relationship removed | fed_policy->sofr | type=INFLUENCES
+2025-09-01T11:53:18 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T11:53:24 | Node relationship removed | fed_policy->us_inflation | type=INFLUENCES
+2025-09-01T11:53:24 | Relationship duplicate | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T11:53:49 | No replacement of article | fed_policy | new_article=DSZJIKJH9
+2025-09-01T11:53:49 | Added article | DSZJIKJH9 | to existing topic fed_policy
+2025-09-01T11:53:54 | Article replaced | fed_policy | old=ZWNYHHFG0 new=TEBHEI80M
+2025-09-01T11:54:22 | Node relationship removed | spx->china_exports | type=CORRELATES_WITH
+2025-09-01T11:54:22 | Node relationship created | spx->gold | type=CORRELATES_WITH
+2025-09-01T11:54:39 | Article replaced | spx | old=4CF61Y1AX new=BA4UOOM4E
+2025-09-01T11:54:46 | No rewrite of section medium because response was: False | topic=spx | article=BA4UOOM4E
+2025-09-01T11:54:47 | Added article | BA4UOOM4E | to existing topic spx
+2025-09-01T11:55:03 | Error | - | Backfill link_orphan_articles failed for TEBHEI80M Error: LLM init probe failed: probe exit code 1 with no message
+2025-09-01T11:55:49 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for T72EM6NOI
+2025-09-01T11:56:21 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5I2DV3NG1
+2025-09-01T11:56:41 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for V4NMP981T
+2025-09-01T11:56:51 | Node relationship removed | china_exports->copper | type=INFLUENCES
+2025-09-01T11:56:51 | Node relationship created | china_exports->us_core_pce | type=INFLUENCES
+2025-09-01T11:56:51 | Replacement of article skipped | china_exports | tf=fundamental cnt=3 < 5
+2025-09-01T11:56:51 | Added article | FGNLQG1VY | to existing topic china_exports
+2025-09-01T11:58:34 | Node relationship created | sx5e->brent | type=CORRELATES_WITH
+2025-09-01T11:58:34 | Replacement of article skipped | sx5e | tf=current cnt=3 < 5
+2025-09-01T11:58:34 | Added article | GZN8CHUJH | to existing topic sx5e
+2025-09-01T11:58:42 | Node relationship created | china_credit_impulse->us_inflation | type=INFLUENCES
+2025-09-01T11:58:42 | Replacement of article skipped | china_credit_impulse | tf=fundamental cnt=1 < 5
+2025-09-01T11:58:42 | Added article | FGNLQG1VY | to existing topic china_credit_impulse
+2025-09-01T11:58:42 | Enrichment check | ust2y | section=fundamental
+2025-09-01T11:58:42 | Enrichment check | ust2y | section=medium
+2025-09-01T11:58:43 | Enrichment check | ust2y | section=current
+2025-09-01T11:58:43 | Pipeline complete | pipeline | run complete
+2025-09-01T11:58:44 | Retrieved articles | Euro Area Inflation | Retrieved 10 from API
+2025-09-01T12:00:51 | Node relationship removed | china_exports->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:00:51 | Node relationship created | china_exports->china_credit_impulse | type=INFLUENCES
+2025-09-01T12:00:51 | Replacement of article skipped | china_exports | tf=current cnt=4 < 5
+2025-09-01T12:00:51 | Added article | 9380U9VP0 | to existing topic china_exports
+2025-09-01T12:01:25 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-01T12:01:25 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T12:01:52 | No replacement of article | us_inflation | new_article=EA9SBW2T3
+2025-09-01T12:01:52 | Added article | EA9SBW2T3 | to existing topic us_inflation
+2025-09-01T12:02:05 | Topic rejected | name=Ethereum's next upgrade: What you need to know | category=None | failure=proposal_null
+2025-09-01T12:02:05 | Failed to create new topic for article | W15PI61FN | to new topic None
+2025-09-01T12:02:05 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for W15PI61FN
+2025-09-01T12:02:36 | Node relationship removed | us_core_pce->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:02:36 | Node relationship created | us_core_pce->usdcny | type=INFLUENCES
+2025-09-01T12:02:36 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=2 < 5
+2025-09-01T12:02:37 | Added article | EA9SBW2T3 | to existing topic us_core_pce
+2025-09-01T12:03:42 | Node relationship removed | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-01T12:03:42 | Node relationship created | fed_policy->us_inflation | type=INFLUENCES
+2025-09-01T12:04:02 | No replacement of article | fed_policy | new_article=EA9SBW2T3
+2025-09-01T12:04:02 | Added article | EA9SBW2T3 | to existing topic fed_policy
+2025-09-01T12:05:01 | Error | - | Backfill link_orphan_articles failed for BGRF6R1WM Error: LLM init probe failed: probe exit code 1 with no message
+2025-09-01T12:05:10 | Node relationship removed | ust10y->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:05:10 | Node relationship created | ust10y->euribor | type=INFLUENCES
+2025-09-01T12:05:16 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for BP3W1EATS
+2025-09-01T12:05:20 | No replacement of article | ust10y | new_article=EA9SBW2T3
+2025-09-01T12:05:21 | Added article | EA9SBW2T3 | to existing topic ust10y
+2025-09-01T12:08:37 | Node relationship removed | ust10y->wti | type=CORRELATES_WITH
+2025-09-01T12:08:37 | Node relationship created | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T12:08:59 | No replacement of article | ust10y | new_article=3V387NR39
+2025-09-01T12:09:00 | Added article | 3V387NR39 | to existing topic ust10y
+2025-09-01T12:09:11 | Node relationship removed | fed_policy->usdjpy | type=INFLUENCES
+2025-09-01T12:09:11 | Node relationship created | fed_policy->us_core_pce | type=INFLUENCES
+2025-09-01T12:09:49 | No replacement of article | fed_policy | new_article=I05V0RSO5
+2025-09-01T12:09:50 | Added article | I05V0RSO5 | to existing topic fed_policy
+2025-09-01T12:10:47 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T12:10:47 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-01T12:12:07 | No replacement of article | us_inflation | new_article=I05V0RSO5
+2025-09-01T12:12:07 | Added article | I05V0RSO5 | to existing topic us_inflation
+2025-09-01T12:12:41 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:12:42 | Node relationship created | fed_policy->usdcny | type=INFLUENCES
+2025-09-01T12:12:49 | Node relationship removed | spx->usdcny | type=INFLUENCES
+2025-09-01T12:12:50 | Node relationship created | oil_price_decline->spx | type=INFLUENCES
+2025-09-01T12:13:10 | Article replaced | fed_policy | old=TEBHEI80M new=XBAGBCCCL
+2025-09-01T12:13:17 | No replacement of article | spx | new_article=B9PC6AYD2
+2025-09-01T12:13:17 | Added article | B9PC6AYD2 | to existing topic spx
+2025-09-01T12:13:26 | Node relationship removed | us_core_pce->usdcny | type=INFLUENCES
+2025-09-01T12:13:27 | Node relationship created | us_core_pce->eurusd | type=INFLUENCES
+2025-09-01T12:13:27 | Replacement of article skipped | us_core_pce | tf=medium cnt=1 < 5
+2025-09-01T12:13:27 | Added article | I05V0RSO5 | to existing topic us_core_pce
+2025-09-01T12:14:04 | Enrichment check | spx | section=fundamental
+2025-09-01T12:14:04 | Enrichment check | spx | section=medium
+2025-09-01T12:14:04 | Enrichment check | spx | section=current
+2025-09-01T12:14:04 | Pipeline complete | pipeline | run complete
+2025-09-01T12:14:06 | Retrieved articles | Euribor | Retrieved 10 from API
+2025-09-01T12:14:19 | Error | - | Backfill link_orphan_articles failed for XBAGBCCCL Error: LLM init probe failed: probe exit code 1 with no message
+2025-09-01T12:14:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WPSPHH80B
+2025-09-01T12:15:16 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XIPIXR1LB
+2025-09-01T12:15:29 | Node relationship removed | spx->wti | type=CORRELATES_WITH
+2025-09-01T12:15:29 | Node relationship created | spx->copper | type=CORRELATES_WITH
+2025-09-01T12:15:41 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 6289R5SVT
+2025-09-01T12:15:49 | No replacement of article | spx | new_article=WJALFS33Q
+2025-09-01T12:15:49 | Added article | WJALFS33Q | to existing topic spx
+2025-09-01T12:16:39 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-01T12:16:39 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:16:45 | No replacement of article | us_inflation | new_article=WJALFS33Q
+2025-09-01T12:16:45 | Added article | WJALFS33Q | to existing topic us_inflation
+2025-09-01T12:17:39 | Enrichment check | euro_inflation | section=fundamental
+2025-09-01T12:17:46 | Node relationship removed | ust10y->gilt10y | type=INFLUENCES
+2025-09-01T12:17:47 | Node relationship created | ust10y->wti | type=INFLUENCES
+2025-09-01T12:17:57 | Article replaced | ust10y | old=FMCSOJ6T0 new=CYDX0LJP4
+2025-09-01T12:18:34 | Enrichment check | euro_inflation | section=medium
+2025-09-01T12:19:01 | Error | - | Backfill link_orphan_articles failed for CYDX0LJP4 Error: LLM init probe failed: probe exit code 1 with no message
+2025-09-01T12:19:17 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 25L9XAP5S
+2025-09-01T12:19:19 | Enrichment check | euro_inflation | section=current
+2025-09-01T12:19:22 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for YNN78GJF7
+2025-09-01T12:19:26 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 4IQSPBOSZ
+2025-09-01T12:19:44 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for DRNTYX1R0
+2025-09-01T12:21:05 | Pipeline complete | pipeline | run complete
+2025-09-01T12:21:07 | Retrieved articles | Gold | Retrieved 10 from API
+2025-09-01T12:22:20 | Relationship duplicate | spx->ust10y | type=INFLUENCES
+2025-09-01T12:22:35 | Article replaced | spx | old=B9PC6AYD2 new=WFSRL9G0C
+2025-09-01T12:23:43 | Error | - | Backfill link_orphan_articles failed for WFSRL9G0C Error: LLM init probe failed: probe exit code 1 with no message
+2025-09-01T12:23:58 | Retrieved articles | USD/CNY | Retrieved 10 from API
+2025-09-01T12:24:14 | Retrieved articles | German 10Y Bund Yield | Retrieved 10 from API
+2025-09-01T12:26:09 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:26:10 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-01T12:26:25 | No replacement of article | us_inflation | new_article=72L3EAB7H
+2025-09-01T12:26:25 | Added article | 72L3EAB7H | to existing topic us_inflation
+2025-09-01T12:26:43 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RC63FBU3S
+2025-09-01T12:27:05 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for V8TEZOR8R
+2025-09-01T12:30:00 | Error | - | Backfill link_orphan_articles failed for N5CNJJE9J Error: argument of type 'NoneType' is not iterable
+2025-09-01T12:30:37 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 40M82JY72
+2025-09-01T12:30:54 | Node relationship removed | ust10y->jgb10y | type=INFLUENCES
+2025-09-01T12:30:55 | Node relationship created | ust10y->fed_policy | type=INFLUENCES
+2025-09-01T12:31:07 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RX8RQQ9J4
+2025-09-01T12:31:21 | No replacement of article | ust10y | new_article=NEQ9FD5FN
+2025-09-01T12:31:21 | Added article | NEQ9FD5FN | to existing topic ust10y
+2025-09-01T12:31:34 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for R9VY14MO2
+2025-09-01T12:32:10 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7GZKAASFW
+2025-09-01T12:32:41 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WTSKQBOKI
+2025-09-01T12:32:56 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for GTN7U06KW
+2025-09-01T12:33:50 | Topic rejected | name=Ford, Dodge, Lincoln among more than 1 million vehicles recalled: Check car recalls | category=None | failure=proposal_null
+2025-09-01T12:33:50 | Failed to create new topic for article | 9947T6YZ3 | to new topic None
+2025-09-01T12:34:57 | Node relationship created | dxy->sx5e | type=INFLUENCES
+2025-09-01T12:34:57 | Replacement of article skipped | sx5e | tf=current cnt=4 < 5
+2025-09-01T12:34:57 | Added article | U370BUNTU | to existing topic sx5e
+2025-09-01T12:36:55 | Node relationship created | gold->ust10y | type=INFLUENCES
+2025-09-01T12:36:55 | Replacement of article skipped | gold | tf=medium cnt=4 < 5
+2025-09-01T12:36:55 | Added article | LMDWEGA1E | to existing topic gold
+2025-09-01T12:37:05 | Node relationship removed | bund10y->fed_policy | type=INFLUENCES
+2025-09-01T12:37:05 | Node relationship created | bund10y->sx5e | type=INFLUENCES
+2025-09-01T12:37:05 | Replacement of article skipped | bund10y | tf=current cnt=2 < 5
+2025-09-01T12:37:05 | Added article | U370BUNTU | to existing topic bund10y
+2025-09-01T12:38:58 | Node relationship created | copper->ecb_policy | type=INFLUENCES
+2025-09-01T12:38:58 | Replacement of article skipped | copper | tf=medium cnt=2 < 5
+2025-09-01T12:38:58 | Added article | LMDWEGA1E | to existing topic copper
+2025-09-01T12:41:21 | Node relationship removed | ust10y->wti | type=INFLUENCES
+2025-09-01T12:41:21 | Node relationship created | ust10y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T12:41:31 | Article replaced | ust10y | old=CYDX0LJP4 new=U370BUNTU
+2025-09-01T12:41:37 | Node relationship removed | fed_policy->usdcny | type=INFLUENCES
+2025-09-01T12:41:38 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T12:41:42 | No rewrite of section current because response was: False | topic=ust10y | article=U370BUNTU
+2025-09-01T12:41:42 | Added article | U370BUNTU | to existing topic ust10y
+2025-09-01T12:41:44 | Article replaced | fed_policy | old=XBAGBCCCL new=VFWZRSTZO
+2025-09-01T12:42:07 | No rewrite of section current because response was: False | topic=fed_policy | article=VFWZRSTZO
+2025-09-01T12:42:08 | Added article | VFWZRSTZO | to existing topic fed_policy
+2025-09-01T12:42:12 | Retrieved articles | GBP/USD | Retrieved 0 from API
+2025-09-01T12:42:12 | Enrichment check | gbpusd | section=fundamental
+2025-09-01T12:42:15 | Retrieved articles | India Industrial Output | Retrieved 10 from API
+2025-09-01T12:42:17 | Retrieved articles | China Exports | Retrieved 10 from API
+2025-09-01T12:44:22 | Enrichment check | gbpusd | section=medium
+2025-09-01T12:44:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for FO6DHUAHL
+2025-09-01T12:44:43 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 32PCNMY5D
+2025-09-01T12:44:48 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WBOK790XG
+2025-09-01T12:46:01 | Topic rejected | name=Billionaire Gangwal Raises $501 Million in Downsized IndiGo Sale | category=None | failure=proposal_null
+2025-09-01T12:46:01 | Failed to create new topic for article | XSFLRE8ZT | to new topic None
+2025-09-01T12:46:01 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for XSFLRE8ZT
+2025-09-01T12:47:57 | Enrichment check | gbpusd | section=current
+2025-09-01T12:47:58 | Pipeline complete | pipeline | run complete
+2025-09-01T12:48:00 | Retrieved articles | US Unemployment Claims | Retrieved 10 from API
+2025-09-01T12:48:10 | Node relationship removed | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T12:48:10 | Node relationship created | ust10y->gilt10y | type=CORRELATES_WITH
+2025-09-01T12:48:39 | No replacement of article | ust10y | new_article=Y978UO2HQ
+2025-09-01T12:48:39 | Added article | Y978UO2HQ | to existing topic ust10y
+2025-09-01T12:49:02 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for EAJLYR9K4
+2025-09-01T12:49:19 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for X88WYL7LW
+2025-09-01T12:50:01 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for HSV2K5S6B
+2025-09-01T12:50:41 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5PVSG3JPT
+2025-09-01T12:51:10 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5JMZIAIGO
+2025-09-01T12:51:21 | Node relationship removed | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T12:51:21 | Node relationship created | us_unemployment_claims->ust30y | type=INFLUENCES
+2025-09-01T12:51:21 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=0 < 5
+2025-09-01T12:51:21 | Added article | QH2DA7YYD | to existing topic us_unemployment_claims
+2025-09-01T12:51:45 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 4Q1P4ZWED
+2025-09-01T12:52:28 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for QC6H7S274
+2025-09-01T12:53:10 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for M64W6AH5E
+2025-09-01T12:53:24 | Node relationship removed | ust10y->fed_policy | type=INFLUENCES
+2025-09-01T12:53:24 | Node relationship created | ust10y->jgb10y | type=INFLUENCES
+2025-09-01T12:53:33 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for E9KQQQ0FK
+2025-09-01T12:54:31 | No replacement of article | ust10y | new_article=QH2DA7YYD
+2025-09-01T12:54:31 | Added article | QH2DA7YYD | to existing topic ust10y
+2025-09-01T12:55:02 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7YX5NQ7C1
+2025-09-01T12:56:22 | Node relationship removed | us_inflation->gold | type=INFLUENCES
+2025-09-01T12:56:22 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-09-01T12:56:39 | Article replaced | us_inflation | old=KLK2Z03BO new=BSV8LPNDM
+2025-09-01T12:56:58 | Will rewrite section fundamental because response was: True | topic=us_inflation | article=BSV8LPNDM
+2025-09-01T13:01:22 | Topic rejected | name=AirPods Max in 2025? Same drawbacks, now ready for pros, and one killer feature | category=None | failure=proposal_null
+2025-09-01T13:01:22 | Failed to create new topic for article | 5YY7MOXZK | to new topic None
+2025-09-01T13:01:22 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for 5YY7MOXZK
+2025-09-01T13:02:02 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for MH7HSROTH
+2025-09-01T13:02:28 | Node relationship created | copper->ust30y | type=INFLUENCES
+2025-09-01T13:02:28 | Replacement of article skipped | copper | tf=medium cnt=3 < 5
+2025-09-01T13:02:29 | Added article | U0KSGZASI | to existing topic copper
+2025-09-01T13:03:04 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for W7K0HLJA8
+2025-09-01T13:03:49 | Saved analysis | us_inflation | field "fundamental_analysis" len=1393
+2025-09-01T13:03:49 | Rewrite complete | us_inflation | total_chars=1393
+2025-09-01T13:03:50 | Added article | BSV8LPNDM | to existing topic us_inflation
+2025-09-01T13:03:56 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RAYF4212E
+2025-09-01T13:04:42 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for VYZDR44HA
+2025-09-01T13:05:37 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-09-01T13:05:37 | Node relationship created | us_inflation->usdjpy | type=INFLUENCES
+2025-09-01T13:05:58 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XZE0194FG
+2025-09-01T13:06:09 | No replacement of article | us_inflation | new_article=U0KSGZASI
+2025-09-01T13:06:09 | Added article | U0KSGZASI | to existing topic us_inflation
+2025-09-01T13:06:15 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T13:06:15 | Node relationship created | fed_policy->sofr | type=INFLUENCES
+2025-09-01T13:06:26 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for F3NQHE5LD
+2025-09-01T13:06:48 | Article replaced | fed_policy | old=C3ODMIQKZ new=BSV8LPNDM
+2025-09-01T13:06:58 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for IY7V4C50X
+2025-09-01T13:07:19 | Will rewrite section fundamental because response was: True | topic=fed_policy | article=BSV8LPNDM
+2025-09-01T13:07:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 9Q7DQ170A
+2025-09-01T13:08:05 | Node relationship removed | us_core_pce->ust2y | type=INFLUENCES
+2025-09-01T13:08:05 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:08:05 | Replacement of article skipped | us_core_pce | tf=medium cnt=2 < 5
+2025-09-01T13:08:05 | Added article | U0KSGZASI | to existing topic us_core_pce
+2025-09-01T13:08:34 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RM401QPOM
+2025-09-01T13:09:18 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for IM265UCQY
+2025-09-01T13:09:26 | Node relationship removed | fed_policy->us_inflation | type=INFLUENCES
+2025-09-01T13:09:26 | Node relationship created | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T13:10:16 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5Z0H3Q3TD
+2025-09-01T13:10:32 | Article replaced | fed_policy | old=VFWZRSTZO new=19EGBBWWB
+2025-09-01T13:10:42 | Node relationship removed | fed_policy->ust5y | type=INFLUENCES
+2025-09-01T13:10:42 | Relationship duplicate | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T13:10:53 | Saved analysis | fed_policy | field "fundamental_analysis" len=2160
+2025-09-01T13:10:53 | Rewrite complete | fed_policy | total_chars=2160
+2025-09-01T13:10:53 | Added article | BSV8LPNDM | to existing topic fed_policy
+2025-09-01T13:11:01 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TAJ7B50DF
+2025-09-01T13:11:07 | Will rewrite section current because response was: True | topic=fed_policy | article=19EGBBWWB
+2025-09-01T13:11:18 | Article replaced | fed_policy | old=B50S2PG8O new=U0KSGZASI
+2025-09-01T13:11:54 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 8ORA7QA8E
+2025-09-01T13:12:16 | No rewrite of section medium because response was: False | topic=fed_policy | article=U0KSGZASI
+2025-09-01T13:12:16 | Added article | U0KSGZASI | to existing topic fed_policy
+2025-09-01T13:12:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for B9XELD9XC
+2025-09-01T13:12:59 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:12:59 | Node relationship created | us_core_pce->ust2y | type=INFLUENCES
+2025-09-01T13:12:59 | Replacement of article skipped | us_core_pce | tf=fundamental cnt=2 < 5
+2025-09-01T13:12:59 | Added article | BSV8LPNDM | to existing topic us_core_pce
+2025-09-01T13:13:04 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for F0PXPUFBG
+2025-09-01T13:14:31 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 83TII8YMF
+2025-09-01T13:14:56 | Saved analysis | fed_policy | field "current_analysis" len=1778
+2025-09-01T13:14:56 | Rewrite complete | fed_policy | total_chars=1778
+2025-09-01T13:14:56 | Added article | 19EGBBWWB | to existing topic fed_policy
+2025-09-01T13:15:15 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RAV2UWRTT
+2025-09-01T13:15:39 | Node relationship removed | us_unemployment_claims->fed_policy | type=INFLUENCES
+2025-09-01T13:15:39 | Node relationship created | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:15:39 | Replacement of article skipped | us_unemployment_claims | tf=fundamental cnt=2 < 5
+2025-09-01T13:15:39 | Added article | BSV8LPNDM | to existing topic us_unemployment_claims
+2025-09-01T13:15:50 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 1GVYF2V8O
+2025-09-01T13:16:38 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WNIGHHTSJ
+2025-09-01T13:16:47 | Node relationship removed | us_inflation->usdjpy | type=INFLUENCES
+2025-09-01T13:16:47 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:16:56 | Node relationship created | oil_price_decline->ust10y | type=INFLUENCES
+2025-09-01T13:16:56 | Replacement of article skipped | oil_price_decline | tf=medium cnt=0 < 5
+2025-09-01T13:16:56 | Added article | 3G9F6IF2R | to existing topic oil_price_decline
+2025-09-01T13:17:17 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Y4QWID79M
+2025-09-01T13:17:19 | No replacement of article | us_inflation | new_article=19EGBBWWB
+2025-09-01T13:17:19 | Added article | 19EGBBWWB | to existing topic us_inflation
+2025-09-01T13:17:39 | Node relationship removed | ust10y->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-01T13:17:40 | Node relationship created | ust10y->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T13:17:47 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for GEDYPA35Y
+2025-09-01T13:18:06 | Article replaced | ust10y | old=N5CNJJE9J new=BSV8LPNDM
+2025-09-01T13:18:11 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7UPGPTVMX
+2025-09-01T13:18:26 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:18:26 | Node relationship created | us_inflation->gold | type=INFLUENCES
+2025-09-01T13:18:35 | No rewrite of section fundamental because response was: False | topic=ust10y | article=BSV8LPNDM
+2025-09-01T13:18:35 | Added article | BSV8LPNDM | to existing topic ust10y
+2025-09-01T13:18:37 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for C2XYVSI19
+2025-09-01T13:18:51 | Node relationship removed | us_core_pce->usdjpy | type=INFLUENCES
+2025-09-01T13:18:51 | Node relationship created | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:18:51 | Replacement of article skipped | us_core_pce | tf=current cnt=3 < 5
+2025-09-01T13:18:51 | Added article | 19EGBBWWB | to existing topic us_core_pce
+2025-09-01T13:18:53 | No replacement of article | us_inflation | new_article=3G9F6IF2R
+2025-09-01T13:18:54 | Added article | 3G9F6IF2R | to existing topic us_inflation
+2025-09-01T13:22:07 | Node relationship removed | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:22:07 | Node relationship created | us_unemployment_claims->fed_policy | type=INFLUENCES
+2025-09-01T13:22:07 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=1 < 5
+2025-09-01T13:22:07 | Added article | 19EGBBWWB | to existing topic us_unemployment_claims
+2025-09-01T13:22:11 | Node relationship removed | us_core_pce->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:22:11 | Node relationship created | us_core_pce->us_unemployment_claims | type=INFLUENCES
+2025-09-01T13:22:12 | Replacement of article skipped | us_core_pce | tf=medium cnt=2 < 5
+2025-09-01T13:22:12 | Added article | 3G9F6IF2R | to existing topic us_core_pce
+2025-09-01T13:24:17 | Node relationship removed | ust10y->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T13:24:18 | Node relationship created | ust10y->ust2y | type=INFLUENCES
+2025-09-01T13:24:32 | Error | - | Fatal provider error | news_api | rate limit 429 Retry-After=None
+2025-09-01T13:24:35 | Retrieved articles | China Credit Impulse | Retrieved 10 from API
+2025-09-01T13:24:35 | Retrieved articles | China Credit Impulse | Retrieved 10 from API
+2025-09-01T13:24:35 | Node relationship removed | us_inflation->ust30y | type=INFLUENCES
+2025-09-01T13:24:35 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T13:24:38 | Article replaced | us_inflation | old=BSV8LPNDM new=7EBQ4OS9Q
+2025-09-01T13:24:42 | No rewrite of section fundamental because response was: False | topic=us_inflation | article=7EBQ4OS9Q
+2025-09-01T13:24:42 | Added article | 7EBQ4OS9Q | to existing topic us_inflation
+2025-09-01T13:25:31 | Node relationship created | ecb_policy->gold | type=INFLUENCES
+2025-09-01T13:25:32 | Replacement of article skipped | ecb_policy | tf=fundamental cnt=2 < 5
+2025-09-01T13:25:32 | Added article | 7EBQ4OS9Q | to existing topic ecb_policy
+2025-09-01T13:25:49 | Topic rejected | name=Wind farms could make shellfish too dangerous to eat, study warns | category=None | failure=proposal_null
+2025-09-01T13:25:49 | Failed to create new topic for article | 7EBQ4OS9Q | to new topic None
+2025-09-01T13:26:01 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for EZW6HAEGF
+2025-09-01T13:26:14 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for QUR2WFGWL
+2025-09-01T13:26:35 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 0KVSV0XJY
+2025-09-01T13:26:56 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Z5IA1CYUF
+2025-09-01T13:27:12 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 1ZRZJJ622
+2025-09-01T13:27:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TGYFX66U6
+2025-09-01T13:27:52 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 7BYPYAOAV
+2025-09-01T13:28:16 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for A85HNI04L
+2025-09-01T13:28:33 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for P7V2EDKV5
+2025-09-01T13:28:45 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TWG5HVP4E
+2025-09-01T13:29:20 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 6UQ882NC5
+2025-09-01T13:30:27 | Node relationship created | bund10y->spx | type=INFLUENCES
+2025-09-01T13:30:32 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 81NW62JXC
+2025-09-01T13:30:43 | Node relationship removed | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T13:30:43 | Node relationship created | spx->wti | type=CORRELATES_WITH
+2025-09-01T13:31:05 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 1L38JDK4D
+2025-09-01T13:31:35 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for PJPSBNMQZ
+2025-09-01T13:32:00 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for TWPJY62Z2
+2025-09-01T13:32:08 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for G56AMXE86
+2025-09-01T13:32:47 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5PO9GWXVE
+2025-09-01T13:33:30 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5GZ91IMUE
+2025-09-01T13:33:51 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-09-01T13:34:00 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RX8KKVM1D
+2025-09-01T13:34:43 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 858O1R5YA
+2025-09-01T13:34:56 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for BBWOWYGLT
+2025-09-01T13:36:15 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-09-01T13:36:34 | Relationship duplicate | us_unemployment_claims->spx | type=INFLUENCES
+2025-09-01T13:38:40 | Article replaced | ust10y | old=U370BUNTU new=LPT34HH4U
+2025-09-01T13:39:09 | No rewrite of section current because response was: False | topic=ust10y | article=LPT34HH4U
+2025-09-01T13:39:09 | Added article | LPT34HH4U | to existing topic ust10y
+2025-09-01T13:39:26 | Node relationship created | oil_price_decline->us_inflation | type=INFLUENCES
+2025-09-01T13:39:26 | Replacement of article skipped | oil_price_decline | tf=fundamental cnt=1 < 5
+2025-09-01T13:39:26 | Added article | Q6K5EABMY | to existing topic oil_price_decline
+2025-09-01T13:39:34 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 19Y00MQT5
+2025-09-01T13:39:42 | Relationship duplicate | oil_price_decline->us_inflation | type=INFLUENCES
+2025-09-01T13:39:42 | Replacement of article skipped | oil_price_decline | tf=current cnt=1 < 5
+2025-09-01T13:39:42 | Added article | W8D6FSV6I | to existing topic oil_price_decline
+2025-09-01T13:40:24 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for Z1S0Q4FRN
+2025-09-01T13:41:01 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for U3ZK13ZQI
+2025-09-01T13:41:24 | Node relationship removed | ust10y->gilt10y | type=CORRELATES_WITH
+2025-09-01T13:41:24 | Node relationship created | ust10y->fed_powell_rate_cut_hint_2025 | type=CORRELATES_WITH
+2025-09-01T13:41:34 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for T72EM6NOI
+2025-09-01T13:41:47 | Node relationship removed | wti->ust30y | type=INFLUENCES
+2025-09-01T13:41:47 | Node relationship created | wti->ust5y | type=INFLUENCES
+2025-09-01T13:41:47 | Replacement of article skipped | wti | tf=current cnt=3 < 5
+2025-09-01T13:41:47 | Added article | W8D6FSV6I | to existing topic wti
+2025-09-01T13:42:09 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 5I2DV3NG1
+2025-09-01T13:42:59 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for V4NMP981T
+2025-09-01T13:43:33 | Node relationship removed | brent->ust30y | type=INFLUENCES
+2025-09-01T13:43:34 | Node relationship created | brent->fed_policy | type=INFLUENCES
+2025-09-01T13:43:34 | Replacement of article skipped | brent | tf=current cnt=2 < 5
+2025-09-01T13:43:34 | Added article | W8D6FSV6I | to existing topic brent
+2025-09-01T13:44:38 | Node relationship removed | spx->ust5y | type=CORRELATES_WITH
+2025-09-01T13:44:38 | Node relationship created | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T13:44:46 | Node relationship created | oil_price_decline->copper | type=INFLUENCES
+2025-09-01T13:44:46 | Replacement of article skipped | oil_price_decline | tf=fundamental cnt=1 < 5
+2025-09-01T13:44:46 | Added article | MBKJ00UDT | to existing topic oil_price_decline
+2025-09-01T13:44:46 | Enrichment check | china_credit_impulse | section=fundamental
+2025-09-01T13:44:50 | Topic rejected | name=Ethereum's next upgrade: What you need to know | category=None | failure=proposal_null
+2025-09-01T13:44:50 | Failed to create new topic for article | W15PI61FN | to new topic None
+2025-09-01T13:44:50 | Error | - | Backfill link_orphan_articles: add_article returned status=failed for W15PI61FN
+2025-09-01T13:45:08 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for BGRF6R1WM
+2025-09-01T13:45:22 | Enrichment check | china_credit_impulse | section=fundamental
+2025-09-01T13:51:12 | Enrichment check | china_credit_impulse | section=medium
+2025-09-01T13:51:58 | Enrichment check | china_credit_impulse | section=current
+2025-09-01T13:52:30 | Pipeline complete | pipeline | run complete
+2025-09-01T13:52:32 | Retrieved articles | Boeing | Retrieved 6 from API
+2025-09-01T13:54:59 | Node relationship created | ba->ust30y | type=INFLUENCES
+2025-09-01T13:54:59 | Replacement of article skipped | ba | tf=current cnt=2 < 5
+2025-09-01T13:55:00 | Added article | XRPK9XG7S | to existing topic ba
+2025-09-01T13:56:17 | Relationship duplicate | spx->ust5y | type=INFLUENCES
+2025-09-01T13:57:22 | Node relationship created | ba->ust5y | type=CORRELATES_WITH
+2025-09-01T13:57:22 | Replacement of article skipped | ba | tf=medium cnt=1 < 5
+2025-09-01T13:57:22 | Added article | 0CWD97X2P | to existing topic ba
+2025-09-01T13:58:07 | Node relationship created | ba->fed_policy | type=INFLUENCES
+2025-09-01T13:58:07 | Replacement of article skipped | ba | tf=medium cnt=2 < 5
+2025-09-01T13:58:08 | Added article | SCZD6AZOU | to existing topic ba
+2025-09-01T14:00:05 | Node relationship created | spx->bund10y | type=INFLUENCES
+2025-09-01T14:00:30 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for BP3W1EATS
+2025-09-01T14:00:48 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WPSPHH80B
+2025-09-01T14:01:00 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for XIPIXR1LB
+2025-09-01T14:01:33 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 6289R5SVT
+2025-09-01T14:02:48 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 25L9XAP5S
+2025-09-01T14:02:54 | Node relationship created | ba->us_inflation | type=INFLUENCES
+2025-09-01T14:02:54 | Replacement of article skipped | ba | tf=medium cnt=3 < 5
+2025-09-01T14:02:54 | Added article | 8XBTGK7WP | to existing topic ba
+2025-09-01T14:02:59 | Enrichment check | china_credit_impulse | section=medium
+2025-09-01T14:03:04 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 4IQSPBOSZ
+2025-09-01T14:03:19 | Enrichment check | china_credit_impulse | section=current
+2025-09-01T14:03:27 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for YNN78GJF7
+2025-09-01T14:04:12 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for DRNTYX1R0
+2025-09-01T14:04:17 | Node relationship removed | spx->wti | type=CORRELATES_WITH
+2025-09-01T14:04:17 | Node relationship created | spx->oil_price_decline | type=CORRELATES_WITH
+2025-09-01T14:04:19 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for RC63FBU3S
+2025-09-01T14:04:33 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for V8TEZOR8R
+2025-09-01T14:05:25 | Pipeline complete | pipeline | run complete
+2025-09-01T14:05:27 | Retrieved articles | ECB Policy | Retrieved 4 from API
+2025-09-01T14:06:23 | Node relationship created | ba->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T14:06:23 | Enrichment check | ba | section=fundamental
+2025-09-01T14:06:23 | Enrichment check | ba | section=medium
+2025-09-01T14:06:23 | Enrichment check | ba | section=current
+2025-09-01T14:06:24 | Pipeline complete | pipeline | run complete
+2025-09-01T14:06:25 | Retrieved articles | US 30Y Treasury Yield | Retrieved 10 from API
+2025-09-01T14:07:44 | Node relationship removed | ust10y->sx5e | type=INFLUENCES
+2025-09-01T14:07:45 | Node relationship created | ust10y->gilt10y | type=INFLUENCES
+2025-09-01T14:07:58 | Article replaced | ust10y | old=SGB2PAZGK new=40M82JY72
+2025-09-01T14:08:43 | No rewrite of section fundamental because response was: False | topic=ust10y | article=40M82JY72
+2025-09-01T14:08:43 | Added article | 40M82JY72 | to existing topic ust10y
+2025-09-01T15:46:33 | Retrieved articles | Copper | Retrieved 10 from API
+2025-09-01T15:46:35 | Retrieved articles | US 5Y Treasury Yield | Retrieved 10 from API
+2025-09-01T15:46:36 | Retrieved articles | UK 10Y Gilt Yield | Retrieved 10 from API
+2025-09-01T15:46:47 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for FO6DHUAHL
+2025-09-01T15:47:06 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for 32PCNMY5D
+2025-09-01T15:47:21 | Error | - | Backfill link_orphan_articles: add_article returned status=skipped for WBOK790XG
+2025-09-01T15:48:20 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T15:54:00 | Node relationship created | fed_policy->ust5y | type=INFLUENCES
+2025-09-01T15:54:38 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T15:54:38 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-09-01T15:56:55 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-09-01T15:56:55 | Node relationship created | us_inflation->ust30y | type=INFLUENCES
+2025-09-01T15:59:16 | Node relationship created | usdcny->china_exports | type=INFLUENCES
+2025-09-01T15:59:17 | Replacement of article skipped | usdcny | tf=medium cnt=1 < 5
+2025-09-01T15:59:17 | Added article | DVWHUFW2R | to existing topic usdcny
+2025-09-01T16:00:13 | Node relationship removed | china_exports->ust30y | type=INFLUENCES
+2025-09-01T16:00:13 | Node relationship created | china_exports->wti | type=INFLUENCES
+2025-09-01T16:00:13 | Replacement of article skipped | china_exports | tf=medium cnt=1 < 5
+2025-09-01T16:00:13 | Added article | DVWHUFW2R | to existing topic china_exports
+2025-09-01T16:03:55 | Node relationship created | copper->ust10y | type=INFLUENCES
+2025-09-01T16:03:55 | Replacement of article skipped | copper | tf=fundamental cnt=2 < 5
+2025-09-01T16:03:55 | Added article | 8547O47CB | to existing topic copper
+2025-09-01T16:04:05 | Node relationship removed | us_inflation->sofr | type=INFLUENCES
+2025-09-01T16:04:06 | Node relationship created | us_inflation->usdcny | type=INFLUENCES
+2025-09-01T16:07:25 | Node relationship removed | spx->bund10y | type=INFLUENCES
+2025-09-01T16:07:25 | Node relationship created | spx->usdcny | type=INFLUENCES
+2025-09-01T16:07:31 | Node relationship removed | us_inflation->usdcny | type=INFLUENCES
+2025-09-01T16:07:31 | Node relationship created | us_inflation->wti | type=INFLUENCES
+2025-09-01T16:08:06 | Enrichment check | ust5y | section=fundamental
+2025-09-01T16:08:06 | Enrichment check | ust5y | section=medium
+2025-09-01T16:08:06 | Enrichment check | ust5y | section=current
+2025-09-01T16:08:24 | Enrichment check | copper | section=fundamental
+2025-09-01T16:08:24 | Enrichment check | copper | section=medium
+2025-09-01T16:08:24 | Enrichment check | copper | section=current
+2025-09-01T16:08:25 | Pipeline complete | pipeline | run complete
+2025-09-01T16:08:26 | Retrieved articles | Atlantic Hurricane Season Risk on UST 10y | Retrieved 10 from API
+2025-09-01T16:13:48 | Node relationship removed | us_inflation->wti | type=INFLUENCES
+2025-09-01T16:13:48 | Node relationship created | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T16:14:00 | Node relationship removed | fed_policy->us_unemployment_claims | type=INFLUENCES
+2025-09-01T16:14:00 | Node relationship created | fed_policy->us_inflation | type=INFLUENCES
+2025-09-01T16:15:10 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:15:34 | Node relationship removed | us_inflation->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T16:15:34 | Node relationship created | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T16:17:52 | Node relationship created | euro_inflation->ust30y | type=INFLUENCES
+2025-09-01T16:17:52 | Replacement of article skipped | euro_inflation | tf=medium cnt=1 < 5
+2025-09-01T16:17:52 | Added article | UI8KGOLC6 | to existing topic euro_inflation
+2025-09-01T16:19:26 | Node relationship removed | us_inflation->us_unemployment_claims | type=INFLUENCES
+2025-09-01T16:19:26 | Node relationship created | us_inflation->us_inflation | type=INFLUENCES
+2025-09-01T16:20:19 | Enrichment check | gilt10y | section=fundamental
+2025-09-01T16:21:17 | Node relationship removed | spx->oil_price_decline | type=CORRELATES_WITH
+2025-09-01T16:21:17 | Node relationship created | spx->china_exports | type=CORRELATES_WITH
+2025-09-01T16:23:40 | Node relationship created | gilt10y->sofr | type=CORRELATES_WITH
+2025-09-01T16:23:40 | Replacement of article skipped | gilt10y | tf=current cnt=4 < 5
+2025-09-01T16:23:40 | Added article | 16VZ7BLV6 | to intended topic gilt10y
+2025-09-01T16:24:05 | Node relationship removed | us_unemployment_claims->sofr | type=INFLUENCES
+2025-09-01T16:24:05 | Node relationship created | us_unemployment_claims->fed_powell_rate_cut_hint_2025 | type=INFLUENCES
+2025-09-01T16:24:06 | Replacement of article skipped | us_unemployment_claims | tf=current cnt=2 < 5
+2025-09-01T16:24:06 | Added article | 80SJ07ZAE | to existing topic us_unemployment_claims
+2025-09-01T16:24:57 | Node relationship removed | ust10y->usdcny | type=INFLUENCES
+2025-09-01T16:24:57 | Node relationship created | ust10y->us_inflation | type=INFLUENCES
+2025-09-01T16:27:50 | Node relationship removed | spx->usdcny | type=INFLUENCES
+2025-09-01T16:27:50 | Relationship duplicate | oil_price_decline->spx | type=INFLUENCES
+2025-09-01T16:30:01 | Node relationship removed | spx->us_unemployment_claims | type=CORRELATES_WITH
+2025-09-01T16:30:01 | Node relationship created | spx->bund10y | type=CORRELATES_WITH
+2025-09-01T16:30:18 | Enrichment check | hurricane_risk_ust10y | section=fundamental
+2025-09-01T16:31:05 | Enrichment check | hurricane_risk_ust10y | section=medium
+2025-09-01T16:31:39 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:31:45 | Enrichment check | hurricane_risk_ust10y | section=current
+2025-09-01T16:32:18 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:32:48 | Pipeline complete | pipeline | run complete
+2025-09-01T16:32:48 | Retrieved articles | Euro Stoxx 50 | Retrieved 0 from API
+2025-09-01T16:32:48 | Enrichment check | sx5e | section=fundamental
+2025-09-01T16:34:08 | Enrichment check | sx5e | section=medium
+2025-09-01T16:35:30 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:36:05 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:46:06 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:46:41 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T16:48:42 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T18:02:09 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T18:14:54 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T18:18:51 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T19:50:07 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T19:51:30 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T19:54:38 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T19:55:10 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T19:59:24 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T20:03:23 | Enrichment check | oil_price_decline | section=fundamental
+2025-09-01T20:04:46 | Enrichment check | oil_price_decline | section=medium

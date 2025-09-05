@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T21:59:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ba",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "Boeing’s hiring and layoff cycles directly drive changes in US unemployment claims, making it a primary source of labor market fluctuations.",
+    "candidate_motivation": "Boeing’s performance is tightly linked to macro‑factors that influence demand, cost of capital, and currency exposure—interest rates, inflation, commodity prices, and trade flows with the US and China. The listed topics capture those drivers and their potential impact on Boeing’s earnings and valuation.",
+    "existing_links_count": "2",
+    "candidate_count": "24",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['ust10y', 'ust30y', 'ust5y', 'ust2y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'dxy', 'china_exports', 'china_credit_impulse', 'wheat', 'gold', 'copper', 'wti', 'brent', 'spx', 'sx5e', 'euro_inflation']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160154",
+    "rel_id": "ba__influences__us_unemployment_claims",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing’s hiring and layoff cycles directly drive changes in US unemployment claims, making it a primary source of labor market fluctuations.",
+      "type": "INFLUENCES",
+      "source": "ba",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__influences__us_unemployment_claims"
+}

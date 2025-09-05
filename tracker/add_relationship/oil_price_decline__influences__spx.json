@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:55:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "spx",
+    "selection_motivation": "Oil price decline is a leading driver of S&P 500 performance, especially through energy and industrial sectors, and historically precedes equity downturns.",
+    "candidate_motivation": "The S&P 500 is driven by macro‑financial fundamentals, monetary policy, and commodity prices; the listed topics are core indicators or peers that directly influence or correlate with the index’s performance.",
+    "existing_links_count": "21",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'sx5e', 'euro_inflation', 'ecb_policy', 'dxy', 'usdjpy', 'usdcny', 'gbpusd', 'eurusd', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160012",
+    "rel_id": "oil_price_decline__influences__spx",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_crude_inventory'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline is a leading driver of S&P 500 performance, especially through energy and industrial sectors, and historically precedes equity downturns.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "spx"
+    }
+  },
+  "id": "oil_price_decline__influences__spx"
+}

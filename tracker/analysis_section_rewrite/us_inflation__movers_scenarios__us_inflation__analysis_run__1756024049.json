@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:35:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756024049",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15044",
+    "output_chars": "1295",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 5–7 years | Strengthen the causal map by codifying explicit regime-transition thresholds around cloud CAPEX and labor productivity, calibrated to MSFT/Shopify earnings power using the 21.2% cloud CAGR and Just Capital signals | What to watch: regime-transition thresholds tied to cloud CAPEX and labor governance with data anchors (0G3A676BP)(4LQD15CFU) | 70%\nUp | 0–3 months | Embed a quantified near-term trigger schedule for Pacaso expansion, HeartSciences FDA progress, UAS jobs growth, and Japanese wage momentum | What to watch: cadence of Pacaso rollout, FDA/regulatory milestones, UAS data cadence, and wage prints with IDs (ILYC1M41F)(FOM34PUWA)(A7VLN74BK) | 60%\nDown | 5–7 years | Define explicit labor-cost shock scenarios and margin compression risks for moat-driven platforms, tying to wage/benefit signals and cloud productivity (4LQD15CFU)(0G3A676BP) | What to watch: wage-growth thresholds and governance indicators that would compress margins and invalidate the base-case | 40%\nDown | 0–6 months | Bear-case: Pacaso international rollout stalls, HeartSciences delays, Range underperformance, UAS growth slows, and Japanese inflation risk rises; watch regulatory cadence and wage data (ILYC1M41F)(FOM34PUWA)(A7VLN74BK) | What to watch: regulatory cadence, cross-border rollout, and wage prints | 35%",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756024049"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:26:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756567611",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "2080",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft fails the acceptance gate because it does not map to any canonical handle (mortgage‑rate is not in the list) and it lacks a dated catalyst window, quantitative ranges, and inline citations. Remove the current text and rewrite the view around a canonical handle such as **ust10y** or **dxy** (e.g., “Fed balance‑sheet contraction is pushing UST10Y yields higher, feeding into mortgage rates”), include a clear catalyst window (e.g., “next FOMC meeting 16‑17 Sept 2025”), provide explicit magnitude ranges (e.g., “UST10Y likely to rise 10‑15 bp”), and add inline citations (e.g., “(LF0UUL917)”). This will satisfy the mapping, catalyst, and evidence requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756567611"
+}

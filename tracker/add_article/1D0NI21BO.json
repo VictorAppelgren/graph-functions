@@ -1,0 +1,37 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T02:48:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1D0NI21BO",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; WTI price decline driven by OPEC+ production increase and US inventory data, affecting oil futures.",
+      "existing_ids": [
+        "oil_price_decline",
+        "us_crude_inventory",
+        "wti"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the Trump‑Putin summit, a geopolitical event that influences oil markets, fitting the geopolitical category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major policy announcement (tariff threat) and supply outlook changes that directly influence WTI crude prices, a key commodity handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to the Trump‑Putin summit, tariff threats, and short‑term supply changes that directly influence September WTI futures prices."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 1
+    }
+  },
+  "id": "1D0NI21BO"
+}

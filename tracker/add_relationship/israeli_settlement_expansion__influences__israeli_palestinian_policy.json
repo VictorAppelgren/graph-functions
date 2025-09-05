@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T02:37:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "israeli_settlement_expansion",
+    "target_id": "israeli_palestinian_policy",
+    "selection_motivation": "Linking Israeli Settlement Expansion to Israeli-Palestinian Policy is essential as settlement activities directly influence the dynamics of the Israeli-Palestinian conflict, impacting policy decisions and regional stability.",
+    "candidate_motivation": "The selected topics are closely related to geopolitical and economic factors that can influence or correlate with Israeli settlement expansion, particularly in the context of U.S. foreign policy, trade relations, and regional stability.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "1616",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_trade_relations', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_inflation_impact_on_stocks', 'us_inflation_data', 'us_trade_policy_inflation', 'ukraine_geopolitical_security', 'us_russia_ukraine_diplomacy', 'israeli_palestinian_policy', 'us_immigration_conditions']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118478676",
+    "rel_id": "israeli_settlement_expansion__influences__israeli_palestinian_policy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'israeli_settlement_expansion', 'target': 'israeli_palestinian_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Israeli Settlement Expansion to Israeli-Palestinian Policy is essential as settlement activities directly influence the dynamics of the Israeli-Palestinian conflict, impacting policy decisions and regional stability.",
+      "type": "INFLUENCES",
+      "source": "israeli_settlement_expansion",
+      "target": "israeli_palestinian_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "israeli_settlement_expansion__influences__israeli_palestinian_policy"
+}

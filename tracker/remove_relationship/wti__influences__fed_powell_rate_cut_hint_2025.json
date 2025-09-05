@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T23:38:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "The fed_powell_rate_cut_hint_2025 link is less certain and largely redundant with the scheduled Fed rate cut event, offering minimal incremental value for macro modeling.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The fed_powell_rate_cut_hint_2025 link is less certain and largely redundant with the scheduled Fed rate cut event, offering minimal incremental value for macro modeling.",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1301541391821703241",
+    "rel_id": "wti__influences__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "prioritized_link": {
+      "motivation": "WTI price movements are the primary driver of the macro‑level event labeled ‘oil_price_decline’, which subsequently influences energy markets, inflation expectations, and equity valuations.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "oil_price_decline"
+    },
+    "llm_raw_response": {
+      "motivation": "The fed_powell_rate_cut_hint_2025 link is less certain and largely redundant with the scheduled Fed rate cut event, offering minimal incremental value for macro modeling.",
+      "remove_link": "fed_powell_rate_cut_hint_2025"
+    },
+    "removal_decision": {
+      "motivation": "The fed_powell_rate_cut_hint_2025 link is less certain and largely redundant with the scheduled Fed rate cut event, offering minimal incremental value for macro modeling.",
+      "remove_link": "fed_powell_rate_cut_hint_2025"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "(WTI OR WTI_crude OR WTI_crude_oil OR WTI_oil OR WTI) OR (crude oil OR oil OR petroleum) OR (CL OR CL=) OR (Brent OR Brent_crude OR Brent_oil) OR (OPEC OR OPEC+) OR (US crude inventory OR US crude stock OR US crude inventory data OR US crude inventory report) OR (oil supply OR oil demand OR crude supply OR crude demand OR oil production OR crude production OR oil consumption OR crude consumption OR oil rigs OR rig count OR rig drilling) OR (oil price OR oil prices OR oil price movement OR oil price forecast OR oil price outlook OR oil price trend OR oil price volatility OR oil price analysis OR oil price news OR oil price update OR oil price report OR oil price data OR oil price chart OR oil price graph) OR (news OR analysis OR report OR update OR trend OR market OR price OR movement OR volatility OR forecast OR outlook OR data OR chart OR graph)",
+      "name": "WTI Crude Oil",
+      "id": "wti",
+      "last_queried": "2025-09-03T16:06:06.553000000+00:00",
+      "queries": 5
+    }
+  },
+  "id": "wti__influences__fed_powell_rate_cut_hint_2025"
+}

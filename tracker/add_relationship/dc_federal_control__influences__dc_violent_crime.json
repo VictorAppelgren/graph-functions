@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:01:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_control",
+    "target_id": "dc_violent_crime",
+    "selection_motivation": "Linking D.C. Federal Control of Police to Washington D.C. Violent Crime Trends will provide insights into how federal oversight impacts local crime rates, enhancing the understanding of law enforcement effectiveness.",
+    "candidate_motivation": "The selected topics are closely related to law enforcement, crime dynamics, and federal control, making them strong influences or peers to the source topic of D.C. Federal Control of Police.",
+    "existing_links_count": "9",
+    "candidate_count": "10",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['dc_federal_policing', 'dc_police_control', 'dc_crime_trends', 'federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'political_manipulation_doj', 'us_urban_crime', 'dc_violent_crime', 'trump_dc_public_safety', 'dc_federal_law_enforcement_takeover']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'trump_dc_public_safety'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_governance'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_policing'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958128",
+    "rel_id": "dc_federal_control__influences__dc_violent_crime",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'trump_dc_public_safety'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_governance'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_violent_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_federal_policing'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'federal_intervention_urban_crime'}, {'type': 'INFLUENCES', 'source': 'dc_federal_control', 'target': 'dc_crime_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking D.C. Federal Control of Police to Washington D.C. Violent Crime Trends will provide insights into how federal oversight impacts local crime rates, enhancing the understanding of law enforcement effectiveness.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_control",
+      "target": "dc_violent_crime"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dc_federal_control__influences__dc_violent_crime"
+}

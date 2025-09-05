@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:41:59",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "mexico_cartel_extraditions",
+    "target_id": "us_mexico_cartel_terrorism",
+    "selection_motivation": "Mexico Cartel Extraditions directly reduce cartel operational capacity, thereby lowering cross‑border cartel‑related terrorism, a key risk factor for US‑Mexico security.",
+    "candidate_motivation": "These topics are the most plausible strong influences or peers given cross-border crime dynamics, extradition policy, and drug-trafficking logistics between the U.S. and Mexico; border security and immigration policy are direct levers shaping cartel activity and extradition decisions.",
+    "existing_links_count": "2",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['us_border_security', 'us_border_security_policy', 'us_mexico_cartel_terrorism', 'immigration_detention_conditions', 'federal_cannabis_policy', 'us_marijuana_policy_shift', 'mexico_migrant_activism']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'mexico_cartel_extraditions', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'mexico_cartel_extraditions', 'target': 'us_mexico_prisoner_transfer'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745848357",
+    "rel_id": "mexico_cartel_extraditions__influences__us_mexico_cartel_terrorism",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'mexico_cartel_extraditions', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'mexico_cartel_extraditions', 'target': 'us_mexico_prisoner_transfer'}, {'type': 'INFLUENCES', 'source': 'mexico_cartel_extraditions', 'target': 'us_mexico_cartel_terrorism'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Mexico Cartel Extraditions directly reduce cartel operational capacity, thereby lowering cross‑border cartel‑related terrorism, a key risk factor for US‑Mexico security.",
+      "type": "INFLUENCES",
+      "source": "mexico_cartel_extraditions",
+      "target": "us_mexico_cartel_terrorism"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "mexico_cartel_extraditions__influences__us_mexico_cartel_terrorism"
+}

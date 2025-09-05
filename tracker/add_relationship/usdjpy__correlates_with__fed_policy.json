@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T11:36:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdjpy",
+    "target_id": "fed_policy",
+    "selection_motivation": "USD/JPY moves closely with Fed policy announcements as the USD’s strength drives the pair; the correlation is strong enough to warrant a dedicated link.",
+    "candidate_motivation": "USD/JPY is driven by USD and JPY fundamentals; thus US dollar strength (DXY), Fed policy, US inflation and core PCE, US Treasury yields, and Japanese JGB yields are direct influences, while the Fed rate‑cut hint is a key catalyst.",
+    "existing_links_count": "5",
+    "candidate_count": "10",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'jgb10y', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161930902884845785",
+    "rel_id": "usdjpy__correlates_with__fed_policy",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/JPY moves closely with Fed policy announcements as the USD’s strength drives the pair; the correlation is strong enough to warrant a dedicated link.",
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__correlates_with__fed_policy"
+}

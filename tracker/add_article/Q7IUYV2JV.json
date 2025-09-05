@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T01:10:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Q7IUYV2JV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; The EPA’s legal win and the Trump administration’s rollbacks on renewables signal a tightening fiscal stance that could lift US Treasury yields in the near term (Sept 2025–Oct 2025).",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a court ruling that changes federal climate policy enforcement, a regulatory change."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided for assessment, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent court decision affecting federal climate finance flows, an immediate event."
+    },
+    "article_node": {
+      "id": "Q7IUYV2JV",
+      "title": "Daily on Energy: ‘Gold bars’ legal update, DOI accelerates coal leasing, and a sage grouse rollback",
+      "summary": "An appeals court ruled 2‑1 in favor of the Trump‑era EPA, allowing it to claw back billions in Greenhouse Gas Reduction Fund grants that were earmarked for climate groups, a decision that could dampen federal climate‑finance flows. The ruling follows a broader backlash against a DOE climate‑risk report that critics say misrepresents science and supports the administration’s push to roll back the 2009 Endangerment Finding. The court’s decision, coupled with the DOE report controversy, signals a tightening of federal climate‑policy enforcement and a potential shift in funding toward fossil‑fuel and energy‑security projects such as coal leasing and nuclear SMR developments.",
+      "source": "https://www.washingtonexaminer.com/daily-on-energy/3790097/daily-on-energy-gold-bars-legal-update-doi-accelerates-coal-leasing-sage-grouse/",
+      "published_at": "2025-09-02T19:24:22+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "Q7IUYV2JV"
+}

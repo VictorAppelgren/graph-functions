@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T04:51:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TP924EKCH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Circle's stablecoin interest income is tied to Treasury yields and Fed policy, affecting earnings and valuation.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Circle Internet Group’s first public earnings release, detailing net loss, revenue growth, and the impact on the stock price."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Not enough context to determine relevance to the node; the article concerns Circle Internet Group’s earnings and stock decline, which would only affect a node directly tied to Circle or the broader crypto market, not a generic macro or asset node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a short-term stock price decline following earnings, reflecting immediate market reaction."
+    },
+    "article_node": {
+      "id": "TP924EKCH",
+      "title": "Why Circle Internet (CRCL) Stock Fell 28.1% Last Month",
+      "summary": "Circle Internet Group’s stock dropped 28.1% in August after its first public earnings report, which showed a $482 million net loss largely due to IPO‑related costs. The company’s revenue rose 53% YoY to $658 million, driven by interest on its USDC stablecoin reserves, but the loss eroded investor confidence. The decline began before the earnings release, reflecting the typical boom‑and‑bust pattern of high‑profile IPOs such as CoreWeave and Figma.",
+      "source": "https://www.nasdaq.com/articles/why-circle-internet-crcl-stock-fell-281-last-month",
+      "published_at": "2025-09-03T01:11:00+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "TP924EKCH"
+}

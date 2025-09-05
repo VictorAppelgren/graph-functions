@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T14:09:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "us_inflation",
+    "selection_motivation": "WTI price shocks directly feed into US inflation through energy cost transmission, making it a primary driver of inflation expectations and subsequent monetary policy decisions.",
+    "candidate_motivation": "WTI Crude Oil is a key energy commodity whose price is strongly affected by global supply/demand dynamics, currency movements, monetary policy, and macroeconomic conditions. Therefore, peers such as Brent Crude Oil, currency indices like the US Dollar Index, policy nodes like Fed Policy, macro variables such as US Inflation, and Treasury yields are likely to be strong influences or correlates.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['brent', 'dxy', 'fed_policy', 'ust10y', 'ust30y', 'ust2y', 'ust5y', 'us_inflation', 'gold', 'euro_inflation']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118476873",
+    "rel_id": "wti__influences__us_inflation",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "WTI price shocks directly feed into US inflation through energy cost transmission, making it a primary driver of inflation expectations and subsequent monetary policy decisions.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__us_inflation"
+}

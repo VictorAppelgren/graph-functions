@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T08:37:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756621564",
+    "drivers_count": "6",
+    "material_chars": "2615",
+    "output_chars": "1112",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly identifies the Fed‑cut catalyst and the 2‑yr/10‑yr steepening as the core transmission to DXY, but it drifts into mortgage‑rate detail (us_mortgage_rates) and S&P 500 implications that are not part of the SECTION FOCUS. Remove the paragraph on us_mortgage_rates and the S&P 500 link; keep only the DXY‑specific logic. Tighten the causal chain: Fed cut → 2‑yr yield ↓ → 10‑yr yield ↑ (steepening) → real‑yield differential ↑ → DXY ↑. Quantify the steepening explicitly (e.g., 57 bp expected) and the DXY lift (0.5–1 % or 200 bp) with source IDs. Replace generic “real‑yield differential” with “dollar‑denominated real yield differential” and cite (Z7O1DCHS7)(LF0UUL917). Add a clear risk statement: a Fed hike or CPI > 2.5 % would flatten the curve and reduce DXY by ~50 bp; a 2‑yr/10‑yr spread < 30 bp would also dampen gains. Condense the watch‑list to: September Fed meeting, early‑August CPI, August 30 PCE, August 31 NFP, and the 2‑yr/10‑yr spread. Ensure every sentence ends with an inline citation; remove any that lack one. Finally, summarize the view in a single concise paragraph: “Fed’s 25‑bp cut on 25 Sept is expected to lift DXY by 200 bp over 3–6 mo, driven by a 57 bp steepening of the 2‑yr/10‑yr curve; the key catalysts are the Fed meeting, early‑Aug CPI, and the 2‑yr/10‑yr spread, with risks of a Fed hike or CPI > 2.5 % flattening the curve and reversing the rally.”",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__drivers__us_inflation__analysis_run__1756621564"
+}

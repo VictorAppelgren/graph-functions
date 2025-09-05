@@ -1,0 +1,69 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T23:20:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YW9G21RXM",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy, US inflation, and Chinese market moves influence yields and currency, while commodity prices and equity indices reflect broader risk sentiment.",
+      "existing_ids": [
+        "eurusd",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "ust10y",
+        "ust30y",
+        "ust2y",
+        "ust5y",
+        "dxy",
+        "gold",
+        "brent",
+        "wti",
+        "copper",
+        "spx",
+        "sx5e",
+        "bund10y",
+        "gilt10y",
+        "uk_30yr_gilt_yield",
+        "usdcny",
+        "china_exports",
+        "china_credit_impulse"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "China's new crackdown on stock speculation is a regulatory change affecting markets."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Unable to determine relevance without node context"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events affecting markets such as policy updates and market moves."
+    },
+    "article_node": {
+      "id": "YW9G21RXM",
+      "title": "China Eyes Curbs on Stock Speculation & Apple AI Search Plans",
+      "summary": "Bloomberg Daybreak Europe highlights a mix of global market moves and policy updates: China’s new crackdown on stock speculation has sparked a sell‑off, while Apple’s announcement of an AI‑powered web search tool has lifted its shares to the highest gain of the month. Markets broadly rallied on weaker‑than‑expected U.S. jobs data that bolstered expectations of Fed rate cuts, but the Chinese sell‑off tempered gains in Asia and weighed on the MSCI Asia Pacific index. Additional stories cover European political developments—France’s fiscal uncertainty, the U.K.’s inflation‑driven bond rally, and the ongoing debate over U.S. tariffs—underscoring a backdrop of high interest rates and cautious investor sentiment.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-04/daybreak-europe-9-4-2025-video",
+      "published_at": "2025-09-04T08:20:48.752000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 23,
+      "successful": 23
+    }
+  },
+  "id": "YW9G21RXM"
+}

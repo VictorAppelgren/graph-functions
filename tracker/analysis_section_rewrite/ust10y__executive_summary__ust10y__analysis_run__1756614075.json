@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T06:43:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756614075",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6558",
+    "output_chars": "1228",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit plan (condense to 5 sentences, keep only ust10y‑centric logic, add missing citations, tighten language):**\n\n1. **Keep** sentence 1 (UST10y 1–2 % rise, Fed balance‑sheet contraction, mortgage‑rate link, citation LF0UUL917).  \n2. **Merge** sentence 2 and 3 into a single line: “The higher risk‑free rate lifts the DXY by ~0.5–1 % (B1KYJ1GPU, XTQIQRP5K) and raises mortgage rates by 20–30 bp, tightening credit and dampening housing‑related spending.” (Add citation B1KYJ1GPU for DXY impact).  \n3. **Keep** sentence 4 (Fed Sept 16‑17 2025 as catalyst, citation LF0UUL917).  \n4. **Combine** sentences 5–8 into one: “Core PCE at 2.6 % and Waller’s dovish 25‑bp cut hint price the 10‑year at ~4.23 % (97MD1FHW8, 3YAQ8JUPL), while the tariff regime (50 % duty on Indian imports, new steel/aluminum duties) keeps the 10‑year near 4.0–4.3 % (1DEM6P1Y2). A 50–100 bp rise in copper futures from the tariff‑induced supply shock could lift inflation expectations and push the 10‑year above 4.3 % (F7K7Y35U5), whereas a Treasury rollback in early 2026 could flatten copper by 2–4 % and pull the 10‑year back toward 4.0 % (F7K7Y35U5).”  \n5. **Keep** sentence 9 (Fed’s 25‑bp cut expected to steepen the 10‑year but term‑premium compression may keep it near 4.23 % unless a stronger stimulus follows, citations B1KYJ1GPU, XTQIQRP5K, NIT6JFIQF, FAN5RYW6T).  \n6. **Condense** sentence 10 into risk bullet: “Risks: unexpected Fed hikes, inflation resurgence lifting the 10‑year above 4.3 %, or debt‑pressure‑driven term‑premium widening (LF0UUL917).”  \n7. **Condense** sentence 11 into watch‑list: “Watch signals: Fed Sept 16‑17 meeting, core PCE, tariff announcements, 2‑yr/10‑yr spread; a sharp move will invalidate the 1–2 % term‑premium projection (97MD1FHW8, LF0UUL917).”  \n8. **Omit** sentence 13 (confidence discussion) to stay within 5‑sentence limit and avoid filler.  \n\nResulting brief (5 sentences, all with citations, explicit magnitude ranges, and a clear catalyst window).",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__executive_summary__ust10y__analysis_run__1756614075"
+}

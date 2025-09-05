@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T19:52:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "F8GF45MEU",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['S7M6BJSRT', '8J67I6RWY', '8VMO3PFEO', '4B5JK15SY', '85Q95ZIZH', 'S15934PBQ', 'XB5ZRN1VP', '6OOEK8TUR', 'U6HXAJR4J']",
+    "mode": "MUST_REPLACE",
+    "target_id": "XB5ZRN1VP",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "XB5ZRN1VP",
+      "motivation": "The competing timeframe bucket is at capacity; replace a lower-signal, older article to free space for the new Bethel housing item and preserve topical relevance for local housing-policy risk analysis."
+    }
+  },
+  "id": "us_inflation__F8GF45MEU__current"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T15:46:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "gbpusd",
+    "selection_motivation": "Oil price decline weakens USD, lifting GBP/USD; this causal link is missing.",
+    "candidate_motivation": "GBP/USD is a major currency pair whose value is driven by interest‑rate differentials, global risk sentiment, and commodity exposure. Therefore, topics that influence UK or US yields, Fed/ECB policy, inflation data, major equity indices, and key commodities are the most likely strong influences, correlates, or peers.",
+    "existing_links_count": "11",
+    "candidate_count": "28",
+    "all_nodes_count": "37",
+    "candidate_ids_len": "28",
+    "candidate_ids_preview": "['gilt10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'fed_policy', 'ecb_policy', 'euro_inflation', 'sx5e', 'spx', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'us_crude_inventory', 'wti', 'brent', 'gold', 'copper', 'oil_price_decline', 'usdcny', 'usdjpy', 'eurusd', 'bund10y', 'jgb10y', 'sofr', 'euribor']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510068236",
+    "rel_id": "oil_price_decline__influences__gbpusd",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline weakens USD, lifting GBP/USD; this causal link is missing.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "gbpusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil_price_decline__influences__gbpusd"
+}

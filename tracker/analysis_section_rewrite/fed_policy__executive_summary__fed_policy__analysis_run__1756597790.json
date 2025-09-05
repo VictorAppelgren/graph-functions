@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T02:24:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756597790",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "4366",
+    "output_chars": "829",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Add the current DXY level (≈96.5) and note that if it exceeds 96.5 the trade‑risk premium collapses (Z7O1DCHS7). Tighten the causal chain by linking CPI > 2.6 % to a 30 % probability of a Fed cut and a 0.5‑1.0 % upside for DXY (3YAQ8JUPL). Include numeric ranges for risk scenarios: Fed cut → DXY ↓ 0.5‑1.0 % (U21K4ALYQ), tech earnings rebound → DXY ↓ 0.3‑0.6 % (FAN5RYW6T), Ukraine war resolution → DXY ↓ 0.4‑0.7 % (XTQIQRP5K), tariff expansion → DXY ↑ 0.2‑0.5 % (F7K7Y35U5), tariff rollback → DXY ↓ 0.2‑0.4 % (F7K7Y35U5). Remove the redundant “risk‑premium collapse” phrasing and consolidate each sentence to a single causal link with inline citation. Keep the view in 5 concise sentences, each containing the handle mapping (DXY), a catalyst window (Aug 12 CPI, Sept Fed meeting, late‑Aug tariffs, Q3 earnings), and the explicit magnitude range.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756597790"
+}

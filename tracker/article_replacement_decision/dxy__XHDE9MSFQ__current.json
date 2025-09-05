@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T01:04:04",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "new_article_id": "XHDE9MSFQ",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['CGSVV1ML9', 'DR5PMXH2G', 'GUTGNG4IC', 'UEMV4BE8U', '7XH2DKEKV']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article covers the same comprehensive Fed‑dovish commentary, Asian market reactions, and policy implications; the new article adds unique, up‑to‑date content."
+    }
+  },
+  "id": "dxy__XHDE9MSFQ__current"
+}

@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T12:22:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "spx",
+    "target_id": "ust10y",
+    "selection_motivation": "The S&P 500’s performance is a leading indicator of future U.S. 10‑year Treasury yields through its impact on risk sentiment and equity‑bond cross‑overs, so a direct influence link captures a key transmission channel for portfolio risk modeling.",
+    "candidate_motivation": "These topics are likely to influence or correlate strongly with the S&P 500 through their impact on corporate earnings, macroeconomic conditions, and market sentiment, making them plausible peers, influences, or correlates.",
+    "existing_links_count": "21",
+    "candidate_count": "26",
+    "all_nodes_count": "34",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'dxy', 'sx5e', 'oil_price_decline', 'copper', 'gold', 'wti', 'brent', 'wheat', 'euro_inflation', 'ecb_policy', 'usdcny', 'usdjpy', 'gbpusd', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'ba']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882699785",
+    "rel_id": "spx__influences__ust10y",
+    "existing_links_after_len": "21",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The S&P 500’s performance is a leading indicator of future U.S. 10‑year Treasury yields through its impact on risk sentiment and equity‑bond cross‑overs, so a direct influence link captures a key transmission channel for portfolio risk modeling.",
+      "type": "INFLUENCES",
+      "source": "spx",
+      "target": "ust10y"
+    }
+  },
+  "id": "spx__influences__ust10y"
+}

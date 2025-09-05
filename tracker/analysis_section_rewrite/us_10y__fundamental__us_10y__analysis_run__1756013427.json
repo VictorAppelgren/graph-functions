@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T07:30:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756013427",
+    "article_ids": "['TN66GHPAT', '4LQD15CFU', 'JVKCZAPVG', 'TN66GHPAT', '4LQD15CFU']",
+    "selected_articles_count": "5",
+    "material_chars": "148421",
+    "output_chars": "2997",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable Edit Instructions (compact paragraph)**  \n1. **Anchor the macro‑fundamentals**: Explicitly state the real‑rate differential (e.g., Fed funds 5.5% vs. 3.5% yield gap → 2.0% real differential) and tie it to the discount‑rate effect on DGICB’s valuation (cite *TN66GHPAT*). Add a brief terms‑of‑trade/BoP note that insurance is largely domestic, so the real‑rate differential dominates.  \n2. **Quantify AI productivity**: Use the IBM pause data (26,000 roles, 30% → ~7,800 jobs) from *4LQD15CFU* to estimate a 1–2% earnings lift for firms that invest in AI training. Show the marginal‑product‑of‑capital shift graphically or numerically.  \n3. **Causal chain to pricing**: Break it into three linked equations: (a) higher real rates → higher required return → lower P/E; (b) AI productivity → higher EPS → partial offset; (c) JUST Capital index outperformance (17.3% vs. 0%) → “justness” premium → price premium for high‑quality labor firms. Cite *4LQD15CFU* for all three.  \n4. **Regime definition & transition**: Define the current “high‑rate, high‑cost” regime and the “low‑rate, high‑productivity” regime. Specify the transition condition as AI talent‑development metrics (e.g., internal training hours per employee) reaching the sector median.  \n5. **Scenario structure**: Add a concise table: Base (real‑rate 2.0%, AI adoption 10%, justness premium 5%), Upside (rate 1.5%, AI 20%, premium 7%), Downside (rate 2.5%, AI 5%, premium 3%).  \n6. **Catalysts & risks**: List specific triggers (Fed rate cuts, AI talent‑development releases, labor‑cost data) and risks (Fed hike, AI regulatory clampdown, labor unrest). Quantify risk impact (e.g., a 0.5% rate hike → 1.5% P/E compression).  \n7. **Coverage & citations**: Ensure every claim references an ID: *TN66GHPAT* for dividend yield decline, *4LQD15CFU* for IBM pause, JUST index, and AI adoption. Add a footnote for the 17.3% outperformance figure.  \n8. **Avoid generic platitudes**: Replace “smart decision” with “value‑additive strategy” and “high‑quality labor” with “justness‑premium‑bearing firms.”  \n9. **Confidence & watch list**: State confidence as “moderate” and list next‑watch items: Fed policy statements, AI talent‑development metrics from insurers, BLS labor‑cost data.  \n10. **Reconcile conflicts**: Explicitly link the dividend yield decline (from *TN66GHPAT*) to the higher real‑rate environment and tighter capital requirements, showing how the two are consistent.  \n\nImplement these edits to elevate the analysis to world‑class, multi‑year, first‑principles quality.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__fundamental__us_10y__analysis_run__1756013427"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T12:14:02",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "new_article_id": "4CJPTXOL0",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['3T8AGCL7T', 'VCZKKPORO', 'DGG6HXUFZ', 'DNG58CC09', 'CWVWSACA7', 'HCF3S2P84', 'HJGPE9XVS', 'BD3F8WX8B', 'WC37STSUD']",
+    "mode": "MUST_REPLACE",
+    "target_id": "WC37STSUD",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "WC37STSUD",
+      "motivation": "The competing timeframe bucket is at capacity; WC37STSUD currently adds no substantive value (summary 'None'), so replacing it with the new article ensures we capture time-sensitive cross-asset risks (tariffs, Air India crash, Netflix plans) while maintaining analytic coverage."
+    }
+  },
+  "id": "us_tariffs__4CJPTXOL0__current"
+}

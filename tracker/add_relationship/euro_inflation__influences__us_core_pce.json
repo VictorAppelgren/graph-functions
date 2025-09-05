@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T11:05:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euro_inflation",
+    "target_id": "us_core_pce",
+    "selection_motivation": "Euro‑area inflation feeds global commodity price and inflation expectations, which in turn raise US core PCE, a key Fed inflation gauge.",
+    "candidate_motivation": "Euro Area inflation is directly driven by ECB policy, domestic inflation data, and European bond yields, while it also correlates with US inflation expectations and US Treasury yields that influence the euro’s relative value. Key catalysts include upcoming ECB policy decisions, Fed rate moves, and US inflation releases that shape cross‑currency and bond market dynamics.",
+    "existing_links_count": "13",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'sx5e', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'gold'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1193455000764811296",
+    "rel_id": "euro_inflation__influences__us_core_pce",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'gold'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro‑area inflation feeds global commodity price and inflation expectations, which in turn raise US core PCE, a key Fed inflation gauge.",
+      "type": "INFLUENCES",
+      "source": "euro_inflation",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__influences__us_core_pce"
+}

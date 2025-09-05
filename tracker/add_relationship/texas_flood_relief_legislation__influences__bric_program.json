@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T21:13:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "texas_flood_relief_legislation",
+    "target_id": "bric_program",
+    "selection_motivation": "Texas Flood Relief Legislation directly shapes federal initiatives to build resilient infrastructure, making it a key driver of the BRIC program.",
+    "candidate_motivation": "Disaster relief policy in Texas would be shaped by federal resilience funding and climate-risk dynamics. Topics tied to disaster funding and flood risk are the strongest peers.",
+    "existing_links_count": "1",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['bric_program', 'us_flooding_events', 'climate_loss_damage_funding', 'rising_sea_levels', 'glacier_outburst_flooding']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160186",
+    "rel_id": "texas_flood_relief_legislation__influences__bric_program",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'texas_flood_relief_legislation', 'target': 'bric_program'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Texas Flood Relief Legislation directly shapes federal initiatives to build resilient infrastructure, making it a key driver of the BRIC program.",
+      "type": "INFLUENCES",
+      "source": "texas_flood_relief_legislation",
+      "target": "bric_program"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "texas_flood_relief_legislation__influences__bric_program"
+}

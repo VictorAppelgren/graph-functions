@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-21T19:24:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GR7MFW97K",
+    "status": "success",
+    "topic_id": "texas_flood_relief_legislation"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses a Texas flood event and a proposed safety bill, matching the existing Texas Flood Relief Legislation node.",
+      "existing_node_ids": "texas_flood_relief_legislation",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses Texas flood relief legislation, which constitutes a regulatory change or legal development."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to missing article summary; defaulting to low relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to determine the time frame due to lack of article content."
+    },
+    "article_node": {
+      "id": "GR7MFW97K",
+      "title": "Parents of kids swept away in Texas floods beg lawmakers to protect future campers",
+      "summary": "A July 4 flood in the Texas Hill Country swept away 27 children and several counselors at Camp Mystic, prompting parents like Michael McCown to demand a new safety bill that would keep cabins out of flood plains, require emergency plans, and mandate weather radios. The camp’s buildings were in a 100‑year flood plain, but FEMA had removed 15 from the hazard map in 2013, and the camp’s head may have missed an emergency alert. One child, Linnie, was found dead, while another, Cile Steward, remains missing. Texas lawmakers are considering the “Heaven’s 27 Camp Safety Act” to prevent future tragedies and honor the victims.",
+      "source": "https://www.washingtontimes.com/news/2025/aug/20/parents-texas-flood-victims-beg-lawmakers-protect-future-campers/",
+      "published_at": "2025-08-21T16:19:09+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "GR7MFW97K"
+}

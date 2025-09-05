@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T08:43:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "medium",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756017527",
+    "article_ids": "['ILYC1M41F', 'UPV3X2MQ6', 'FOM34PUWA', 'A7VLN74BK', 'Q7VVGNSQE']",
+    "selected_articles_count": "5",
+    "material_chars": "125507",
+    "output_chars": "3257",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a good start but still feels like a surface‑level summary. To reach world‑class quality, tighten the narrative into a clear, 3–6‑month scenario map that explicitly links macro drivers (e.g., BOJ wage‑tightness, U.S. small‑cap valuation gap, UAS job growth) to the Barista‑FIRE trend and the highlighted investment themes (Pacaso, mogul, AI‑wealth platforms). Use first‑principles reasoning: quantify the “life‑changing” $300k threshold with a simple cash‑flow model (e.g., $300k × 4% = $12k/yr, enough to cover 30% of a $40k household expense), and show how that aligns with the 97% UAS job growth and the 21% YoY Pacaso revenue expansion. Build a causal chain: BOJ’s tight labor market → higher wages → increased disposable income → more FIRE‑savvy retirees → demand for low‑stress part‑time gigs → growth in niche employment platforms. Include specific catalysts (e.g., BOJ’s June 2025 policy statement, Pacaso’s 2024 Q4 earnings, the 2025 IPO rebound) and invalidations (e.g., a sudden US recession, a shift to remote work reducing local UAS demand). Quantify ranges from sources: Pacaso’s $110M gross profit, 10% appreciation, 21% YoY volume; mogul’s 18.8% IRR; UAS jobs rising from 712 to 1,400 (97% increase). Cite each figure with the source ID (e.g., ILYC1M41F, FOM34PUWA, A7VLN74BK, Q7VVGNSQE). Ensure every critical source is referenced; reconcile conflicting data (e.g., AUVSI’s defunct projections vs. EDC’s 97% rise). Finally, end with a concise base case, two plausible alternatives, key risks, and a watch‑list of signals (e.g., BOJ policy shift, UAS contract volume, small‑cap IPO activity). This will give your analysis the depth, specificity, and rigor expected at the top tier.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__medium__us_inflation__analysis_run__1756017527"
+}

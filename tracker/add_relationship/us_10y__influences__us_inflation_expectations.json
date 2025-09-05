@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T17:05:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_10y",
+    "target_id": "us_inflation_expectations",
+    "selection_motivation": "US 10‑year Treasury yields are a leading indicator of inflation expectations; a rise in yields signals market expectations of higher inflation, making this link critical for macro‑financial modeling.",
+    "candidate_motivation": "US 10Y Treasury Yield is heavily influenced by monetary policy, inflation expectations, and risk sentiment, so topics that directly affect or correlate with it include Fed Policy, various measures of US inflation, and related market impact studies, as well as the 30‑Year TIPS auction.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_inflation_data', 'us_inflation_expectations', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'us_inflation_stock_impact', '30yr_tips_auction']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441641991",
+    "rel_id": "us_10y__influences__us_inflation_expectations",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑year Treasury yields are a leading indicator of inflation expectations; a rise in yields signals market expectations of higher inflation, making this link critical for macro‑financial modeling.",
+      "type": "INFLUENCES",
+      "source": "us_10y",
+      "target": "us_inflation_expectations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_10y__influences__us_inflation_expectations"
+}

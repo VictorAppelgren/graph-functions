@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:46:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust30y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust30y__analysis_run__1756567970",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "3372",
+    "output_chars": "705",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft mixes mortgage‑rate and DXY views, violating the focus on us_mortgage_rates; remove the DXY lines, keep only mortgage‑rate items, and map each to ust10y (LF0UUL917) with a clear causal path; replace the “Fed policy unchanged + sticky inflation” line with a single‑sentence view that mortgage rates will stay in the 6.8‑7.2 % band through 2026 unless the September 16‑17 2025 Fed meeting cuts rates, and attach the catalyst window (9/16‑17 2025) and the 10‑yr yield change; drop the 2‑yr/10‑yr spread line because it is a rate‑level driver, not a mortgage‑rate driver, and instead add a line that a 25‑bp Fed cut on 9/20 2025 will lower mortgage rates by ~10 bp, citing LF0UUL917; adjust probabilities to reflect the 89 % chance of a 25‑bp cut (Z7O1DCHS7) and the 70 % chance of rate persistence (Z7O1DCHS7), and ensure each line ends with a single sentence, no filler, and includes the appropriate ID citations.",
+      "tokens": {}
+    }
+  },
+  "id": "ust30y__movers_scenarios__ust30y__analysis_run__1756567970"
+}

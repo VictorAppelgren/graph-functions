@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:42:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9HAPNGUHH",
+    "topic_discovery_motivation": "Article discusses Iran's nuclear program and its geopolitical implications, relevant to existing nodes on U.S.-Iran relations and sanctions.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [
+        "iran_nuclear_program"
+      ],
+      "new_names": [
+        "iran_nuclear_sanctions",
+        "us_iran_relations"
+      ]
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses potential reimposition of UN sanctions and rising tensions between Iran, Israel, and the U.S., which is a geopolitical event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major event affecting Iran's nuclear program and the potential reimposition of UN sanctions, directly impacting the node's scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate diplomatic and military developments affecting Iran's nuclear program and sanctions."
+    },
+    "article_node": {
+      "id": "9HAPNGUHH",
+      "title": "Iran to hold call with European nations over nuclear program as sanctions deadline draws closer",
+      "summary": "Iran's Foreign Minister is set to hold a conference call with European counterparts to discuss the potential reimposition of UN sanctions over its nuclear program, amid rising tensions following recent military actions by Israel and the U.S. The situation is complicated by Iran's cessation of cooperation with the International Atomic Energy Agency and threats against its director-general. Meanwhile, U.S. President Trump is actively seeking a ceasefire in the ongoing conflict between Israel and Hamas, while also addressing concerns about Iran's nuclear capabilities and the implications of recent U.S. airstrikes on Iranian sites.",
+      "source": "https://apnews.com/article/iran-european-nations-nuclear-program-iaea-snapback-d35e9753e24c0ddeabbb032b156b42d0",
+      "published_at": "2025-08-22T06:37:47+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "9HAPNGUHH"
+}

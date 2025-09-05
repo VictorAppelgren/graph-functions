@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T23:17:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust2y",
+    "target_id": "us_core_pce",
+    "selection_motivation": "The 2‑year Treasury yield is tightly tied to core PCE inflation expectations, moving in tandem as inflation data influence short‑term rates and market sentiment.",
+    "candidate_motivation": "US 2‑year Treasury yields are driven by Fed policy expectations, short‑term inflation/price‑level data, and the relative stance of the 10‑year and 5‑year curves. They also move with overall risk sentiment reflected in the dollar index and the SOFR proxy, and are sensitive to forward guidance such as Powell’s rate‑cut hints.",
+    "existing_links_count": "18",
+    "candidate_count": "9",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust5y', 'ust30y', 'sofr', 'fed_powell_rate_cut_hint_2025', 'dxy']",
+    "existing_links_before_len": "18",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177693501580641564",
+    "rel_id": "ust2y__correlates_with__us_core_pce",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust2y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust2y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 2‑year Treasury yield is tightly tied to core PCE inflation expectations, moving in tandem as inflation data influence short‑term rates and market sentiment.",
+      "type": "CORRELATES_WITH",
+      "source": "ust2y",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust2y__correlates_with__us_core_pce"
+}

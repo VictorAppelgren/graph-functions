@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T04:12:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_relations",
+    "target_id": "us_china_ai_chip_agreement",
+    "selection_motivation": "Establishing this link will highlight the impact of US-China trade relations on the evolving landscape of AI chip agreements, which is crucial for understanding technological competition and economic strategies.",
+    "candidate_motivation": "The selected topics are closely related to trade dynamics and economic interactions between the US and China, making them strong influences or correlates to US-China Trade Relations.",
+    "existing_links_count": "8",
+    "candidate_count": "10",
+    "all_nodes_count": "1617",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_china_chip_negotiations', 'us_china_agriculture_trade', 'us_china_ai_chip_agreement', 'us_china_supply_chain_risks', 'us_china_export_controls', 'us_china_trade_truce']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082060",
+    "rel_id": "us_china_trade_relations__influences__us_china_ai_chip_agreement",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Establishing this link will highlight the impact of US-China trade relations on the evolving landscape of AI chip agreements, which is crucial for understanding technological competition and economic strategies.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_relations",
+      "target": "us_china_ai_chip_agreement"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_relations__influences__us_china_ai_chip_agreement"
+}

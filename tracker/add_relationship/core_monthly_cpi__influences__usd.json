@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:50:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "core_monthly_cpi",
+    "target_id": "usd",
+    "selection_motivation": "Core CPI is a primary indicator of domestic inflation, directly influencing monetary policy and the USD’s purchasing power, making it a key driver of the US dollar’s value.",
+    "candidate_motivation": "Core Monthly CPI is influenced by macro policy, commodity prices, and currency movements that drive inflation expectations. The following topics are the strongest direct correlates or peers likely to shape or track CPI dynamics.",
+    "existing_links_count": "6",
+    "candidate_count": "18",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'core_cpi', 'us_inflation_data', 'us_inflation_expectations', 'tariff_driven_inflation', 'us_tariffs_semiconductors', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'eurusd', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137438850",
+    "rel_id": "core_monthly_cpi__influences__usd",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Core CPI is a primary indicator of domestic inflation, directly influencing monetary policy and the USD’s purchasing power, making it a key driver of the US dollar’s value.",
+      "type": "INFLUENCES",
+      "source": "core_monthly_cpi",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "core_monthly_cpi__influences__usd"
+}

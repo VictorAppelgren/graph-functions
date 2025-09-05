@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T09:33:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NSNAO4SQ9",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; AI hype has lifted the S&P 500, but the lack of earnings impact could temper future upside.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of AI's impact on S&P 500 earnings and stock performance, which is a market commentary."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a potential $1 trillion sales cut and a 15–20% erosion of S&P 500 value, directly impacting the equity index handle (spx)."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses a forecast that AI spending could cut 2026 sales forecasts by $1 trillion, indicating a medium‑term outlook for the S&P 500’s valuation."
+    },
+    "article_node": {
+      "id": "NSNAO4SQ9",
+      "title": "Everybody's talking about AI, but Goldman Sachs says it's still not showing up in companies' bottom lines",
+      "summary": "Goldman Sachs notes that while 58% of S&P 500 companies mention AI in earnings calls, only a small fraction quantify its impact on earnings, echoing a McKinsey survey that 80% see no meaningful bottom‑line effect. Despite this, AI‑exposed stocks have surged 17% this year, driven by Nvidia and hyperscalers’ capital spending, but the next phases—AI‑enabled product revenue and broad productivity gains—remain uncertain. The firm warns that if AI spending reverts to 2022 levels, it could cut 2026 sales forecasts by $1 trillion and erode 15–20% of the S&P 500’s value.\"}",
+      "source": "https://www.businessinsider.com/ai-company-earnings-calls-corporate-profits-bottom-line-goldman-sachs-2025-9",
+      "published_at": "2025-09-05T06:01:27+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "NSNAO4SQ9"
+}

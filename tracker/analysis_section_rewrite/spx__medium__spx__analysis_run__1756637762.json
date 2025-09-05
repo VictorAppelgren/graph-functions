@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T13:01:04",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "medium",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756637762",
+    "article_ids": "['FAN5RYW6T', 'KNWKYIQ1W', 'AKTQ1BW6F', 'A88B7V8PY', '61SVFUKBY']",
+    "selected_articles_count": "5",
+    "material_chars": "120894",
+    "output_chars": "1878",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Add explicit canonical‑handle mapping** – each claim about the S&P 500 must reference the handle `spx`.  When you discuss Fed cuts, also link to `ust10y` (10‑yr Treasury yield), `dxy` (US dollar index), and `gold` (gold price) to satisfy the “truth > verbosity” rule.  Example: “A 25 bp Fed cut in September would likely lift `ust10y` by 10–20 bp, weaken `dxy` by 0.5–1 % and lift `gold` by 2–4 % (base case).”\n\n2. **Insert inline citations** – every substantive claim must cite the source ID.  For instance:  \n   - “Top‑10 stocks now account for 40 % of `spx` (FAN5RYW6T).”  \n   - “Top‑8 are tech‑related firms (FAN5RYW6T).”  \n   - “Sticky inflation at 2.7 % (FAN5RYW6T).”  \n   - “Fed may cut rates in September if labor market holds up (FAN5RYW6T).”  \n   - “CrowdStrike’s Q2 revenue grew YoY but swung to a net loss (KNWKYIQ1W).”  \n   - “Netflix’s high P/E of 51.7 signals earnings moderation (61SVFUKBY).”\n\n3. **Quantify magnitude ranges** – replace vague “2–5 %” with a precise range and attach a source.  Example: “If tech earnings disappoint, `spx` could fall 2.0–5.0 % over the next 3–6 months (base case).”  For alt scenarios, give ranges: “Fed cuts in September could limit the decline to 0–2 % (alt 1); persistent inflation could push `spx` down 5–8 % (alt 2).”\n\n4. **Clarify causal transmission paths** – explicitly state how each catalyst propagates to the index.  Example: “Weak tech earnings → sell‑off of top‑10 names → 40 % concentration loss → `spx` decline.”  Do the same for Fed cuts, inflation, and tariff escalation.\n\n5. **Add watch‑list signals with dates** – list concrete, dated catalysts:  \n   - “September 5 payrolls report (labor market).”  \n   - “Fed policy statement (Sept 12).”  \n   - “July CPI release (Aug 1).”  \n   - “Q2 earnings of Apple, Microsoft, CrowdStrike, Netflix (Aug 27–30).”\n\n6. **Include a confidence rating** – state a numeric confidence (e.g., 60 %) and justify it with the strength of the concentration risk and the uncertainty around Fed policy.\n\n7. **Remove any drift** – the draft is focused on `spx` and macro drivers; ensure no mention of unrelated assets (e.g., energy, metals) or local news.  If any sentence references a non‑canonical handle, either add the handle mapping or delete the sentence.\n\n8. **Formatting** – keep the output concise, bullet‑pointed, and aligned with the “elite bar” style:  \n   - **Base case**: `spx` –2.0 % to –5.0 % (3–6 mo).  \n   - **Alt 1**: Fed cuts → `spx` –0.0 % to –2.0 %.  \n   - **Alt 2**: Inflation persists → `spx` –5.0 % to –8.0 %.  \n   - **Risks**: labor slowdown, tariff escalation, earnings slump.  \n   - **Watch‑list**: payrolls, Fed minutes, CPI, tech earnings.  \n   - **Confidence**: 60 %.\n\nImplement these edits to meet the acceptance gate: ≥1 canonical handle with sign/magnitude, ≥1 dated catalyst, and a coherent causal chain.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__medium__spx__analysis_run__1756637762"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T23:37:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ba",
+    "target_id": "us_core_pce",
+    "selection_motivation": "Boeing’s order pipeline and production levels are a leading indicator of US economic activity, which feeds directly into core PCE inflation.",
+    "candidate_motivation": "Boeing’s performance is tightly linked to U.S. macro‑environmental factors that shape demand for air travel and defense spending, as well as its financing costs. Key drivers are U.S. monetary policy, Treasury yields, the dollar, and core U.S. economic indicators that influence both revenue and capital structure.",
+    "existing_links_count": "4",
+    "candidate_count": "10",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust5y', 'ust2y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530650",
+    "rel_id": "ba__influences__us_core_pce",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing’s order pipeline and production levels are a leading indicator of US economic activity, which feeds directly into core PCE inflation.",
+      "type": "INFLUENCES",
+      "source": "ba",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__influences__us_core_pce"
+}

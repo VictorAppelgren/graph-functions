@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T20:00:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756057425",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "13472",
+    "output_chars": "875",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft showcases a solid regime-based, first-principles lens, but to reach world-class quality it should be condensed into a 4–6 sentence executive house view that ties Ford’s equity to a tight causal chain (auto cycle drives capex intensity; EV unit economics set margins and cash flow; ROIC around 10% supports a valuation anchored by cash generation rather than growth multiples) with explicit, sourced figures (EV loss ~$1.3B, EBIT ~4.3%, ROIC ~10.1%, yield ~5.2%, forward P/E ~10.3 from 22PL3Q360 and 65UUBU0OR). Edit 1: collapse the narrative into a single base-case statement plus bull/bear catalysts, clearly labeling probabilities and moving parts, and quote precise numbers from the cited IDs. Edit 2: formalize a three-way, 3–6 month scenario structure (base, bull, bear) with explicit catalysts and invalidation points; e.g., bull: EV platforms generate EBITDA positive and ROIC clearly above WACC; bear: persistent EV losses erode ROIC and compress multiples; invalidations include tariff clarity by Nov 2025 or Costa Coffee sale talks failing to progress. Edit 3: remove or relegates the 0–3 week Yemen/Moscow risk content to a separate risk overlay unless you can tie it meaningfully to Ford’s discount-rate or equity risk premia; otherwise it dilutes the Ford-centric thesis. Edit 4: purge platitudes, tighten to numbers and ranges (e.g., EV loss, EBIT margin, ROIC, yield, forward multiple) with direct citations, and ensure every quantitative claim cites an ID from the source set. Edit 5: harmonize and annotate sources so critical inputs are represented (22PL3Q360, 65UUBU0OR, O4ZEED2EB, IGP1Q4ZEJ, STBVARD8F, WTNT85IPR, U3ZK13ZQI, NBX9RA9WX, NL5YYTLF2, 37UZC9X8I, J99EM2TPZ, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG, I2SJU04DF) and reconcile any conflicts between EV economics, governance signals, and macro inputs. Edit 6: reframe the near-term watchlist around Ford-specific signal points (Q2 EV profitability/EBIT/ROIC trajectory, cash-flow inflection/dividend sustainability, tariff/policy developments) rather than broad cross-asset narratives, ensuring the section remains executive, concise, and aligned to the horizon/style constraints.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756057425"
+}

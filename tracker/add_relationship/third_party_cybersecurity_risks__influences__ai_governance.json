@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:20:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "third_party_cybersecurity_risks",
+    "target_id": "ai_governance",
+    "selection_motivation": "Third‑party cybersecurity risks directly drive the need for AI governance and model transparency, as compromised vendor AI components expose organizations to data breaches and regulatory scrutiny.",
+    "candidate_motivation": "These topics are the most plausible direct influences, correlates, or peers to Third-Party Cybersecurity Risks due to shared focus on external risk exposure, governance, and supply chain dynamics.",
+    "existing_links_count": "8",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['third_party_vendor_risk', 'intrusion_dod_contract', 'us_cybersecurity_incidents', 'us_china_supply_chain_risks', 'ml_cybersecurity', 'ai_governance', 'us_chip_export_controls']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_china_supply_chain_risks'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'russian_cyber_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901500",
+    "rel_id": "third_party_cybersecurity_risks__influences__ai_governance",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ai_governance'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_china_supply_chain_risks'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'russian_cyber_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Third‑party cybersecurity risks directly drive the need for AI governance and model transparency, as compromised vendor AI components expose organizations to data breaches and regulatory scrutiny.",
+      "type": "INFLUENCES",
+      "source": "third_party_cybersecurity_risks",
+      "target": "ai_governance"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "third_party_cybersecurity_risks__influences__ai_governance"
+}

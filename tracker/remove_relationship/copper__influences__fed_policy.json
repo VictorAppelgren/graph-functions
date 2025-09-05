@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T02:40:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "copper",
+    "target_id": "fed_policy",
+    "selection_motivation": "The copper–fed_policy link is the most indirect and least supported by recent data, providing minimal incremental value compared to other direct market influences.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The copper–fed_policy link is the most indirect and least supported by recent data, providing minimal incremental value compared to other direct market influences.",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1267764394616423814",
+    "rel_id": "copper__influences__fed_policy",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "fed_policy"
+    },
+    "prioritized_link": {
+      "motivation": "Copper price movements directly affect European industrial demand and thus the Euro Stoxx 50 index, making a causal influence link valuable for cross-asset analytics.",
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "sx5e"
+    },
+    "llm_raw_response": {
+      "motivation": "The copper–fed_policy link is the most indirect and least supported by recent data, providing minimal incremental value compared to other direct market influences.",
+      "remove_link": "fed_policy"
+    },
+    "removal_decision": {
+      "motivation": "The copper–fed_policy link is the most indirect and least supported by recent data, providing minimal incremental value compared to other direct market influences.",
+      "remove_link": "fed_policy"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(copper OR cu OR \"copper metal\" OR \"copper commodity\" OR \"copper price\" OR \"copper futures\" OR \"copper market\" OR \"copper supply\" OR \"copper demand\" OR \"copper mining\" OR \"copper smelting\" OR \"copper price forecast\" OR \"copper price trend\" OR \"copper price analysis\" OR \"copper price news\" OR \"copper price update\" OR \"copper price volatility\" OR \"copper price movement\" OR \"copper price drivers\" OR \"copper price catalysts\" OR \"copper price speculation\" OR \"copper price risk\" OR \"copper price outlook\" OR HG OR HG1 OR HG2 OR COP OR COP1 OR COP2) AND (news OR analysis OR report OR update OR trend OR market OR price OR forecast OR outlook OR volatility OR movement OR drivers OR catalysts OR risk OR speculation)",
+      "name": "Copper",
+      "id": "copper",
+      "last_queried": "2025-09-04T14:57:11.244000000+00:00",
+      "queries": 7
+    }
+  },
+  "id": "copper__influences__fed_policy"
+}

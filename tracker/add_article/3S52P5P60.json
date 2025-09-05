@@ -1,0 +1,61 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T12:18:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3S52P5P60",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US jobs data and Fed policy expectations influence Treasury yields and currency, while Trump tariff claim may affect trade flows and USD strength.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy",
+        "eurusd",
+        "gold",
+        "wti",
+        "brent",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article highlights a busy jobs‑data week, which is a release of economic data that markets reacted to."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to recent jobs data and tariff negotiations, affecting equity futures, Treasury yields, and Fed policy expectations."
+    },
+    "article_node": {
+      "id": "3S52P5P60",
+      "title": "Inflation Risks; Trump Says India Offered to Cut its Tariffs to 'Nothing'",
+      "summary": "U.S. equity futures and Treasury yields fell as markets reacted to a busy jobs‑data week and President Trump’s claim that India offered to eliminate its 50% tariffs on U.S. goods. The statement follows Trump’s imposition of tariffs in response to India’s Russian oil purchases. Market participants are weighing the potential impact on trade relations, U.S. economic resilience, and the Fed’s policy outlook.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-02/bloomberg-brief-9-2-2025-video?srnd=phx-technology",
+      "published_at": "2025-09-02T10:44:01.657000+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 15,
+      "successful": 15
+    }
+  },
+  "id": "3S52P5P60"
+}

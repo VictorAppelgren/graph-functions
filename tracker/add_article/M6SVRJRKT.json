@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T08:14:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M6SVRJRKT",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; S&P 500 concentration, Fed policy, inflation, and labor market dynamics shape index valuation and risk appetite.",
+      "existing_ids": [
+        "spx",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article is a market analysis warning about concentration risk and potential Fed policy reactions, fitting a market commentary category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article directly impacts the S&P 500 index by highlighting concentration risk and potential market sell‑off, which is highly relevant to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights near‑term catalysts—earnings releases, labor market shifts, Fed policy moves—that could trigger a market sell‑off, indicating a medium‑term outlook rather than a long‑term structural view."
+    },
+    "article_node": {
+      "id": "M6SVRJRKT",
+      "title": "Morningstar details 2 forces that could derail a stock market that's historically dependent on Big Tech",
+      "summary": "Morningstar warns that the S&P 500’s record concentration in the top ten tech stocks heightens downside risk, as a weak earnings report from a few of those firms could trigger a broad market sell‑off.  The firm also flags a potential pullback if the labor market softens further, prompting the Fed to cut rates, or if inflation remains sticky—especially with tariff‑driven price pressures—forcing the Fed to keep rates high.  Diversifying into international, small‑cap, and healthcare stocks is advised to mitigate the tech‑heavy exposure.",
+      "source": "https://www.businessinsider.com/stock-market-crash-more-concentrated-than-ever-ai-tech-morningstar-2025-8",
+      "published_at": "2025-08-30T09:35:02+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "M6SVRJRKT"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T06:43:37",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "JFD3MAPVD",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['U21K4ALYQ', '97MD1FHW8', '3952FOSRQ', 'VGH321B6A', '3DN5GGP1G', '3YAQ8JUPL', 'LLN6N4H3Z', '1G54B8R46', 'S1OY7ISLY']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "invalid_llm_selection",
+    "target_id": "VGH321B6A",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": null,
+      "motivation": "Article lacks mapping to canonical handles and catalysts, so it does not add value."
+    }
+  },
+  "id": "us_inflation__JFD3MAPVD__current"
+}

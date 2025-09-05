@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:16:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eu_geopolitics_ukraine",
+    "target_id": "russian_sanctions",
+    "selection_motivation": "EU Geopolitics in Ukraine Conflict directly drives the EU’s sanction policy against Russia, making sanctions a primary consequence of the geopolitical stance.",
+    "candidate_motivation": "These topics are the strongest geopolitical peers and potential drivers of EU policy and stability in the Ukraine conflict, covering Ukraine-centric dynamics, Russia, sanctions, and transatlantic relations.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ukraine_conflict', 'ukraine_geopolitics', 'ukraine_diplomacy', 'ukraine_peace_negotiations', 'ukraine_post_war_instability', 'ukraine_sovereignty', 'donbas_region', 'russian_sanctions', 'russia_economic_crisis', 'eu_us_relations_ukraine']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'eu_us_relations_ukraine'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217412",
+    "rel_id": "eu_geopolitics_ukraine__influences__russian_sanctions",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'eu_geopolitics_ukraine', 'target': 'eu_us_relations_ukraine'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EU Geopolitics in Ukraine Conflict directly drives the EU’s sanction policy against Russia, making sanctions a primary consequence of the geopolitical stance.",
+      "type": "INFLUENCES",
+      "source": "eu_geopolitics_ukraine",
+      "target": "russian_sanctions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eu_geopolitics_ukraine__influences__russian_sanctions"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:03:44",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LE8FUUMVQ",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the anticipated margin improvement due to price increases in a renewed contract, which is a significant macro driver for revenue expectations and overall company performance, warranting a dedicated node.",
+      "id": "inlx_margin_improvement",
+      "name": "Intellinetics Inc Margin Improvement",
+      "type": "company",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company-specific margin improvement, not a macro driver"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company-level margin improvement is an operational detail, not a macro driver, tradable asset, or macro policy; it does not support trading decisions in a macro knowledge graph.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

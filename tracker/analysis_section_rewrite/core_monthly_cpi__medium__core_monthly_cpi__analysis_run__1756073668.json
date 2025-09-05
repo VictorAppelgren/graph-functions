@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:16:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "core_monthly_cpi",
+    "section": "medium",
+    "test": "False",
+    "run_id": "core_monthly_cpi__analysis_run__1756073668",
+    "article_ids": "['WISLWAJ15', 'WISLWAJ15', 'WISLWAJ15']",
+    "selected_articles_count": "3",
+    "material_chars": "112471",
+    "output_chars": "3319",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable upgrade plan (3–6 month horizon): rewrite the analysis as a tight scenario map anchored on ABT, ABBV, and PFE with a clear causal chain: Libre-driven diversification boosts Abbott’s cash flow and supports durable dividend visibility; AbbVie’s free cash flow and robust payout history underpin sustainable growth in its 3.2% yield, while Pfizer’s ultra‑high forward yield (~6.7%) sits with a large pipeline (108 programs) and a low forward P/E (~8.3) that could reprice if cash generation remains resilient or deteriorates with LOEs. Quantify every node using the source data: ABT 1.8% yield; ABBV 3.2% yield and ~53-year/dividend-king streak with trailing FCF of about $18.2B; PFE 6.7% yield and 108 programs with P/E ~8.3; ABBV’s organic growth around 8% in H1 and FCF drivers; LOEs for Eliquis, Ibrance, Xeljanz; Libre growth as the key growth driver; and the patent cliff timelines. Build concrete triggers by quarter/quarterly results: (1) Abbott Libre adoption metrics and device clearances; (2) AbbVie immunology/neuroscience growth and its effect on FCF; (3) Pfizer LOEs cadence and pipeline milestones; and a validated invalidation set: sustained FCF shortfall or dividend-policy revision, accelerated LOEs without offsetting cash flow, or weak pipeline signals. Specify timing windows (next 2–4 quarters and notable patent/LOE milestones) and present a base case plus 1–2 alt scenarios (bullish Libre/pipeline upside; bear case of LOE pressure or payout risk) with explicit watch-list signals (Libre uptake, immunology revenue growth, LOE progress, dividend announcements) and a concise confidence rating. Ground the narrative in first-principles (FCF‑driven sustainability vs yield traps) and explicitly flag potential bias from Motley Fool disclosures; annotate every quantitative claim with (WISLWAJ15). This structure satisfies the SECTION FOCUS and integrates macro/flows/valuation by rooting scenarios in stated cash-generation and payout dynamics.",
+      "tokens": {}
+    }
+  },
+  "id": "core_monthly_cpi__medium__core_monthly_cpi__analysis_run__1756073668"
+}

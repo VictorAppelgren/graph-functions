@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:34:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756077930",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18193",
+    "output_chars": "923",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | AI capex momentum and policy signals | What to watch: tariff moves (218AGGUXB), Intel CHIPS governance signal (218AGGUXB), and AI capex momentum (EPJYXB7DX) | Probability 55% (cite EPJYXB7DX; 218AGGUXB)\nUp | 3–6 months | AI-driven productivity uplift and tariff resilience | What to watch: Nvidia momentum (STBVARD8F), core inflation path (Y6SQOEK69), and policy stability (NL5YYTLF2) | Probability 50% (cite STBVARD8F; Y6SQOEK69; NL5YYTLF2)\nDown | 0–3 weeks | Policy/regime risk around Intel governance and tariff dynamics weigh on risk assets | What to watch: Intel CHIPS governance signal (218AGGUXB) and tariff/inflation dynamics (218AGGUXB) | Probability 40% (cite 218AGGUXB)\nDown | 3–6 months | Auto-cycle risk with EV ramp and capex strain lowering durable-goods demand | What to watch: Ford EV profitability trajectory (22PL3Q360)(W2622L6WW), macro-cycle sensitivities (NL5YYTLF2) | Probability 25% (cite 22PL3Q360; W2622L6WW; NL5YYTLF2)",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756077930"
+}

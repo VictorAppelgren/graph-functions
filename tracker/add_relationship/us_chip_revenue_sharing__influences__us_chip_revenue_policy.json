@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:06:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_revenue_sharing",
+    "target_id": "us_chip_revenue_policy",
+    "selection_motivation": "US Chip Revenue Sharing directly informs the US chip revenue policy, guiding regulatory decisions and fiscal allocations.",
+    "candidate_motivation": "These topics are the most likely direct influencers, peers, or correlates of US Chip Revenue Sharing due to policy, geopolitics, and competitive dynamics in semiconductors.",
+    "existing_links_count": "1",
+    "candidate_count": "14",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['intel_ceo_tan', 'intel_customer_investment', 'intel_stock_trump_influence', 'intel_ceo_management', 'us_chip_export_controls', 'us_chip_export_tax', 'us_chip_revenue_policy', 'us_tariffs_semiconductors', 'us_china_ai_chip_exports', 'us_chip_sales_agreement', 'china_semiconductor_policy', 'nvidia_china_geopolitics', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_revenue_sharing', 'target': 'us_chip_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846086",
+    "rel_id": "us_chip_revenue_sharing__influences__us_chip_revenue_policy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_revenue_sharing', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_chip_revenue_sharing', 'target': 'us_chip_revenue_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Chip Revenue Sharing directly informs the US chip revenue policy, guiding regulatory decisions and fiscal allocations.",
+      "type": "INFLUENCES",
+      "source": "us_chip_revenue_sharing",
+      "target": "us_chip_revenue_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_chip_revenue_sharing__influences__us_chip_revenue_policy"
+}

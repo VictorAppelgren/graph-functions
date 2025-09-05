@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T02:36:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "RB8DL3WLL",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; H-2B visa pause could tighten trucking labor supply, modestly raising freight costs and US inflation expectations by 0.1‑0.3% over the next 12 months.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a policy statement by Secretary of State Marco Rubio announcing a pause on issuing H‑2B visas for commercial truck drivers, which is a direct policy action by a government official."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Node not provided, cannot assess relevance; assuming minimal impact"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a short-term policy pause affecting truck driver supply, an immediate event."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "RB8DL3WLL"
+}

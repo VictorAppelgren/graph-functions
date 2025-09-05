@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T23:36:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HZXRYV72F",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the impact of payment processor policies on the availability of NSFW games on platforms like Steam, indicating a significant macro-level trend in gaming censorship that could influence market dynamics and investment decisions.",
+      "id": "gaming_censorship",
+      "name": "Gaming Censorship",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Macro-level trend in gaming censorship affecting platform policies and market dynamics"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Gaming censorship is an industry‑specific issue, not a macro driver, tradable asset, policy regime, or geographic anchor.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

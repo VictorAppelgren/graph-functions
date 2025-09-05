@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T21:55:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust10y",
+    "target_id": "ba",
+    "selection_motivation": "US 10Y Treasury yields directly influence Boeing’s financing costs and capital structure, making them a primary driver of the company’s earnings and stock performance.",
+    "candidate_motivation": "Boeing’s earnings and capital costs are highly sensitive to macro‑financial conditions, commodity prices, defense and commercial airline demand, and currency exposure. The following topics capture key interest‑rate, inflation, equity, commodity, and FX drivers that can influence its performance.",
+    "existing_links_count": "2",
+    "candidate_count": "26",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'spx', 'wti', 'brent', 'copper', 'china_exports', 'china_credit_impulse', 'bund10y', 'gilt10y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'sx5e']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917530127152709786",
+    "rel_id": "ust10y__influences__ba",
+    "existing_links_after_len": "22",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10Y Treasury yields directly influence Boeing’s financing costs and capital structure, making them a primary driver of the company’s earnings and stock performance.",
+      "type": "INFLUENCES",
+      "source": "ust10y",
+      "target": "ba"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust10y__influences__ba"
+}

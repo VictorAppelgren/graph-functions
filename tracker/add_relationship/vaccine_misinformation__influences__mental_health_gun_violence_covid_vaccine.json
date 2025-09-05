@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:05:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "vaccine_misinformation",
+    "target_id": "mental_health_gun_violence_covid_vaccine",
+    "selection_motivation": "Vaccine misinformation is a primary driver of COVID‑19 vaccine skepticism, which in turn is linked to mental health and gun violence; linking the misinformation node to the specific phenomenon clarifies causal pathways.",
+    "candidate_motivation": "These topics are the strongest potential influences or correlates because they directly relate to vaccine misinformation, mental health impacts, and gun-violence dynamics that can accompany COVID-19 vaccine skepticism, with U.S. urban crime providing a related peer context.",
+    "existing_links_count": "0",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['vaccine_misinformation', 'vaccine_misinformation_impact', 'vaccine_misinformation_violence', 'mental_health_gun_violence', 'mental_health_violence', 'us_urban_crime']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917530127152712508",
+    "rel_id": "vaccine_misinformation__influences__mental_health_gun_violence_covid_vaccine",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'vaccine_misinformation', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'vaccine_misinformation', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'vaccine_misinformation', 'target': 'mental_health_gun_violence_covid_vaccine'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Vaccine misinformation is a primary driver of COVID‑19 vaccine skepticism, which in turn is linked to mental health and gun violence; linking the misinformation node to the specific phenomenon clarifies causal pathways.",
+      "type": "INFLUENCES",
+      "source": "vaccine_misinformation",
+      "target": "mental_health_gun_violence_covid_vaccine"
+    }
+  },
+  "id": "vaccine_misinformation__influences__mental_health_gun_violence_covid_vaccine"
+}

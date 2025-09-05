@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T17:07:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_sanctions_iranshipping",
+    "target_id": "ust30y",
+    "selection_motivation": "US sanctions on Iranian oil shipping raise geopolitical risk, which directly pushes up long‑term US Treasury yields.",
+    "candidate_motivation": "US sanctions on Iranian oil shipping directly constrain global oil supply, driving commodity prices, USD strength, and Treasury yields, while also affecting risk sentiment and equity markets; these topics are therefore strong peers or influences.",
+    "existing_links_count": "4",
+    "candidate_count": "21",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'wti', 'brent', 'dxy', 'usdcny', 'usdjpy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'spx', 'sx5e', 'gold', 'copper', 'wheat']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216509",
+    "rel_id": "us_sanctions_iranshipping__influences__ust30y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US sanctions on Iranian oil shipping raise geopolitical risk, which directly pushes up long‑term US Treasury yields.",
+      "type": "INFLUENCES",
+      "source": "us_sanctions_iranshipping",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_sanctions_iranshipping__influences__ust30y"
+}

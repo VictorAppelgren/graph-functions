@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T23:27:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "ust2y",
+    "selection_motivation": "Bund10y shifts reflect European risk sentiment and global rate expectations, which feed into US short‑term rates; thus bund10y directly influences the US 2Y Treasury yield.",
+    "candidate_motivation": "Bund yields are heavily influenced by ECB policy stance and euro‑area inflation expectations, and they move in tandem with other major sovereign yields (U.S., U.K., J.P.) and global risk‑sentiment indicators such as the U.S. dollar index and key currency pairs.  These topics therefore represent strong peers, influences, or correlates to the German 10Y Bund Yield.",
+    "existing_links_count": "10",
+    "candidate_count": "17",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'gilt10y', 'jgb10y', 'ecb_policy', 'fed_policy', 'euro_inflation', 'us_inflation', 'us_core_pce', 'dxy', 'eurusd', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255328481",
+    "rel_id": "bund10y__influences__ust2y",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund10y shifts reflect European risk sentiment and global rate expectations, which feed into US short‑term rates; thus bund10y directly influences the US 2Y Treasury yield.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__ust2y"
+}

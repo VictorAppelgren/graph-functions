@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T00:52:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GL74JJFQW",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy, inflation, growth, tariffs and AI‑driven productivity shifts shape UST yields and Fed stance.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article features commentary from a former Fed official on potential Fed policy moves and macro drivers, which fits a market commentary."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Kaplan’s comments signal a cautious Fed stance and potential September rate cut, influencing UST yields and inflation expectations, but lack new data or decisive policy change, so impact is moderate."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on the Fed’s near‑term policy outlook, including a possible September rate cut and the May leadership transition, which are medium‑term events."
+    },
+    "article_node": {
+      "id": "GL74JJFQW",
+      "title": "Goldman’s Kaplan on Fed Independence and Policy",
+      "summary": "Rob Kaplan, former Dallas Fed president and Goldman Sachs vice‑chairman, stresses that the Fed must remain independent from political pressure as it navigates a complex mix of high inflation, sluggish growth and tariff uncertainty. He signals that the Fed may cut rates in September but will take a cautious, data‑dependent approach rather than launching a full cycle. Kaplan highlights structural drivers such as the AI data‑center power boom that could ease inflation, while noting that labor‑force constraints and overcapacity in goods markets will keep growth muted. The upcoming leadership transition in May could shape policy tone, but Kaplan urges the new chair to focus on consensus and evidence‑based decisions.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-03/goldman-s-kaplan-on-fed-independence-and-policy-video",
+      "published_at": "2025-09-03T03:42:47.172000+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "GL74JJFQW"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T23:37:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "broadband_equity_access_deployment",
+    "target_id": "us_trade_policy_inflation",
+    "selection_motivation": "Linking the Broadband Equity, Access, and Deployment Program to US Trade Policy and Inflation highlights the potential impact of broadband access on economic conditions and inflationary pressures, which is crucial for understanding the broader economic landscape.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with the Broadband Equity, Access, and Deployment Program, as they relate to economic policies, technology infrastructure, and market dynamics that impact broadband access and deployment.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_tariffs_on_technology', 'us_inflation', 'us_chip_export_controls', 'us_china_trade_relations', 'ev_infrastructure_funding', 'us_trade_policy_inflation', 'us_chip_revenue_policy', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_chip_negotiations', 'us_china_trade_talks']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118478638",
+    "rel_id": "broadband_equity_access_deployment__influences__us_trade_policy_inflation",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'broadband_equity_access_deployment', 'target': 'us_trade_policy_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking the Broadband Equity, Access, and Deployment Program to US Trade Policy and Inflation highlights the potential impact of broadband access on economic conditions and inflationary pressures, which is crucial for understanding the broader economic landscape.",
+      "type": "INFLUENCES",
+      "source": "broadband_equity_access_deployment",
+      "target": "us_trade_policy_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "broadband_equity_access_deployment__influences__us_trade_policy_inflation"
+}

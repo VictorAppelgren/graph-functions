@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T12:27:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_tariffs",
+    "target_id": "us_tariffs",
+    "selection_motivation": "US-China Tariffs constitute a specific subset of overall US Tariffs, making the former a primary driver of the latter’s policy and economic impact.",
+    "candidate_motivation": "These topics represent the strongest direct or near-direct policy and macro spillovers tied to US-China tariffs, including tariff actions, trade negotiations, and resulting inflation and market impacts.",
+    "existing_links_count": "9",
+    "candidate_count": "18",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['us_china_tariffs', 'china_us_tariff_truce', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs', 'tariff_driven_inflation', 'us_tariffs_inflation', 'us_trade_policy_inflation', 'us_chip_export_controls', 'us_chip_exports_china', 'us_export_policy_ai_chips', 'us_inflation_data', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_india_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441642404",
+    "rel_id": "us_china_tariffs__influences__us_tariffs",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_india_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China Tariffs constitute a specific subset of overall US Tariffs, making the former a primary driver of the latter’s policy and economic impact.",
+      "type": "INFLUENCES",
+      "source": "us_china_tariffs",
+      "target": "us_tariffs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_tariffs__influences__us_tariffs"
+}

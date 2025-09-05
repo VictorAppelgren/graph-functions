@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T19:47:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1756660857",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "4024",
+    "output_chars": "807",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is fact‑rich but drifts from a tight, handle‑centric view and repeats generic language. Tighten the causal chain by explicitly linking each catalyst to a canonical handle (e.g., us_inflation → ust10y → dxy) and quantify the impact (e.g., a 2.5 % CPI → +10 bp ust10y → +80 bp dxy). Remove the Japanese M&A paragraph or reframe it as a “minor upside” (≤ 0.5 % dxy lift) to avoid over‑weighting a weak signal. Condense the watch list into a single bullet: “Watch Aug 15 CPI, Sep 17 Fed policy, Sep 11 ECB policy, tariff announcements (Aug 15‑Sep 30) – each can move dxy 50–100 bp.” Replace “persistent war‑risk premium” with a concrete metric (e.g., short‑covering volume or VIX spike) and cite the source. Finally, trim the text to 4–6 concise sentences, each ending with a single inline citation, to meet the executive‑brief style.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__executive_summary__eurusd__analysis_run__1756660857"
+}

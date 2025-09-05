@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T19:09:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756573338",
+    "article_ids": "['FAN5RYW6T', 'XQMF22EFB', 'Z7O1DCHS7', 'F7K7Y35U5', 'XTQIQRP5K']",
+    "selected_articles_count": "5",
+    "material_chars": "75869",
+    "output_chars": "1339",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (no extra prose)**  \n\n1. **Correct August forecast** – replace the “1‑2 % rise in August” with “≈ ‑2 % decline in dxy in August” and cite (Z7O1DCHS7).  \n2. **Trim unsupported September/October/November gains** – keep only the Fed‑rate‑cut catalyst (16‑17 Sep) and the CPI‑report catalyst (12 Sep) with a realistic magnitude of **+0.5‑1 % dxy**; drop the “1‑2 % rise” and “0.5‑1 % rise” statements that lack direct evidence.  \n3. **Add explicit catalyst windows** – list:  \n   * Fed rate cut (16‑17 Sep, fed_policy) → +0.5‑1 % dxy.  \n   * US CPI report (12 Sep, us_cpi) → +0.5‑1 % dxy if inflation sticky; dampening if lower.  \n   * Cook lawsuit status (15 Sep, fed_policy) → higher political risk → potential dxy dampening.  \n   * Tariff escalation (29 Aug, tariff_policy) → euro/yen weakness → +0.5‑1 % dxy.  \n   * Yield‑curve steepening (29 Aug, ust10y_ust2y_spread) → +0.5‑1 % dxy.  \n4. **Use canonical handles** – replace all asset references with lowercase: dxy, ust10y, ust2y, us_cpi, fed_policy, tariff_policy, ust10y_ust2y_spread, eurusd, usd/yen.  \n5. **Quantify all claims** – e.g., “dxy will fall ≈ ‑2 % in August (Z7O1DCHS7) and rise +0.5‑1 % in September (Z7O1DCHS7, XTQIQRP5K).”  \n6. **Add watch‑list signals** – Fed minutes, CPI release, Cook lawsuit status, ust10y_ust2y_spread, eurusd, usd/yen.  \n7. **State invalidations** – lower‑than‑expected CPI, Cook lawsuit resolved, tariff rollback.  \n8. **Maintain focus** – remove any mention of euro/yen/commodity moves unless they directly transmit to dxy; keep all sentences tied to dxy with inline citations.  \n9. **Confidence** – keep “moderate‑high” but back it with the cited evidence.  \n\nApply these edits to produce a concise, evidence‑anchored scenario that meets the 3‑6 month horizon and the 1‑2 % magnitude range requirement.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1756573338"
+}

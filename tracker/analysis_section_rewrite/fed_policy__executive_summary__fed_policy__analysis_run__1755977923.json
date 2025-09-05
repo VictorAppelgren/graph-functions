@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T21:58:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755977923",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7085",
+    "output_chars": "1318",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is too long, repeats the ACM story, and contains a factual mismatch (the Treasury Secretary’s call is for a 150‑bp cut, not 50‑bp). Tighten it to 4–6 concise sentences, start with the macro anchor (10‑yr yield 4.23 % and the 150‑bp call (GX057ADL7)(C22MKA9VY)), then layer the medium‑term AI risk‑premium sensitivity (37UZC9X8I) and the small‑cap mean‑reversion (Russell 2000 P/E 12× vs 20× (Q7VVGNSQE)). Add the political risk (Trump lawsuit threat (S1H7IUGGE)) and BOJ tightening outlook (yen 150‑155, risk‑premia compression (K0WFSW29E)). For ACM, keep the revenue guidance $850–$950 m, Q2 $215 m, 49 % margin, 23 % debt‑to‑equity (SK994CBWR) but frame it as the “direct beneficiary” of the Fed cut, not the sole focus. List catalysts (Powell’s Jackson Hole remarks, Fed cut, valuation narrowing), risks (rate‑cut delay, U.S.–China trade tensions, BOJ tightening, inflation persistence), and watch signals (Fed minutes, CPI, Russell P/E, ACM Q3 earnings). Ensure every claim has a source ID, reconcile the 150‑bp vs 50‑bp issue, and remove any filler or repetition. This will produce a crisp, decision‑useful brief that meets the 4–6 sentence limit.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1755977923"
+}

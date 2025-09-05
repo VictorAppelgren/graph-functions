@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T11:50:13",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "P8XHQ06O7",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy expectations and falling UST 10‑yr yields are repricing equity and FX markets, while the dollar weakens against yen and euro gains. Commodity prices are mildly pressured by a slight oil decline.",
+      "existing_ids": [
+        "ust10y",
+        "fed_policy",
+        "dxy",
+        "usdjpy",
+        "eurusd",
+        "oil_price_decline"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of market movements and expectations, not a specific event such as earnings or a policy statement, so it best fits a market commentary category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to determine relevance without node context; article mentions Fed cuts, yields, currency moves, so could affect related nodes but unclear"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a short‑term market reaction to Fed rate‑cut expectations and immediate changes in yields, oil, and currency that are affecting the Asian equity indices."
+    },
+    "article_node": {
+      "id": "P8XHQ06O7",
+      "title": "Asian shares climb after another Wall Street record and hopes for cuts to U.S. interest rates",
+      "summary": "Asian shares rose on Friday, led by gains in the Nikkei, Hang Seng, and other regional indices, following a record‑setting rally in U.S. stocks. The rally was fueled by expectations that weaker U.S. job data could prompt the Fed to cut rates, easing bond‑market pressure and lifting equity prices. Meanwhile, U.S. Treasury yields fell, oil prices slipped, the dollar weakened against the yen, and the euro edged higher.",
+      "source": "https://www.seattletimes.com/business/asian-shares-climb-after-another-wall-street-record-and-hopes-for-cuts-to-u-s-interest-rates/",
+      "published_at": "2025-09-04T21:51:05-07:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "P8XHQ06O7"
+}

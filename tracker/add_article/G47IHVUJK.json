@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T21:05:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "G47IHVUJK",
+    "status": "success",
+    "topic_id": "usd"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the USD node.",
+      "existing_node_ids": "usd",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No relevant content provided in the article summary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact because the article summary is missing from the prompt."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article summary is not provided, so I cannot determine the appropriate time frame. Defaulting to fundamental."
+    },
+    "article_node": {
+      "id": "G47IHVUJK",
+      "title": "Trump’s meeting with Putin could determine the trajectory of the Russia-Ukraine war",
+      "summary": "U.S. President Donald Trump is meeting Russian President Vladimir Putin in Alaska for a high‑stakes summit aimed at ending the Ukraine war and reshaping European security. Trump seeks to position himself as a dealmaker and global peacemaker, while Putin hopes to secure Russia’s gains and block Ukraine’s NATO aspirations. The talks risk legitimizing Putin and sidelining Ukrainian President Volodymyr Zelenskyy, raising concerns about a deal that may not align with Ukraine’s interests. Both leaders face significant domestic and international scrutiny, and the summit’s success remains uncertain as their demands diverge sharply.",
+      "source": "https://www.washingtontimes.com/news/2025/aug/15/donald-trumps-meeting-putin-could-determine-trajectory-russia-ukraine/",
+      "published_at": "2025-08-15T16:53:41+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "G47IHVUJK"
+}

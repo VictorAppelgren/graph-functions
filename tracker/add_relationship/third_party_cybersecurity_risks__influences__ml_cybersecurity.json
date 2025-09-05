@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:21:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "third_party_cybersecurity_risks",
+    "target_id": "ml_cybersecurity",
+    "selection_motivation": "Third‑party cybersecurity risks drive the adoption and development of machine‑learning‑based security solutions, making ML in cybersecurity a direct response to these risks.",
+    "candidate_motivation": "These topics intersect with external risk exposure, vendor risk management, and geopolitical/technological threats that shape third-party cybersecurity risk dynamics. They include direct risk channels (vendor risk, cyber incidents) and broader supply-chain and policy factors that influence how third-party cybersecurity risks manifest across industries.",
+    "existing_links_count": "5",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['third_party_vendor_risk', 'us_china_supply_chain_risks', 'russian_cyber_threats', 'ml_cybersecurity', 'intrusion_dod_contract', 'us_cybersecurity_incidents', 'ai_governance', 'ai_supply_chain_optimization']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080420",
+    "rel_id": "third_party_cybersecurity_risks__influences__ml_cybersecurity",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Third‑party cybersecurity risks drive the adoption and development of machine‑learning‑based security solutions, making ML in cybersecurity a direct response to these risks.",
+      "type": "INFLUENCES",
+      "source": "third_party_cybersecurity_risks",
+      "target": "ml_cybersecurity"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "third_party_cybersecurity_risks__influences__ml_cybersecurity"
+}

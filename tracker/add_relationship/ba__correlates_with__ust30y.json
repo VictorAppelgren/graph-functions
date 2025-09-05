@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T16:31:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ba",
+    "target_id": "ust30y",
+    "selection_motivation": "Boeing’s capital‑expenditure cycle and debt‑servicing costs are highly sensitive to long‑term Treasury yields, creating a strong statistical correlation between its equity performance and the 30‑year yield.",
+    "candidate_motivation": "Boeing’s performance is driven by defense spending, capital‑cost dynamics, and macro‑financial conditions. Key influences include US defense budgets (orders), Treasury yields (cost of capital and equity valuation), and broader US macro data that affect demand for aircraft and maintenance. These handles directly map to canonical market assets and have clear causal paths to Boeing’s earnings and stock.",
+    "existing_links_count": "16",
+    "candidate_count": "4",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'sx5e'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'eu_defense_spending'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164182702698528922",
+    "rel_id": "ba__correlates_with__ust30y",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ba', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ba', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ba', 'target': 'sx5e'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'eu_defense_spending'}, {'type': 'COMPONENT_OF', 'source': 'ba', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Boeing’s capital‑expenditure cycle and debt‑servicing costs are highly sensitive to long‑term Treasury yields, creating a strong statistical correlation between its equity performance and the 30‑year yield.",
+      "type": "CORRELATES_WITH",
+      "source": "ba",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ba__correlates_with__ust30y"
+}

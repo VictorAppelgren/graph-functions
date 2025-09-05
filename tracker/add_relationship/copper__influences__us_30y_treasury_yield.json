@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T13:21:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "copper",
+    "target_id": "us_30y_treasury_yield",
+    "selection_motivation": "Copper price surges signal stronger global industrial activity, boosting risk appetite and compressing long‑term Treasury yields; thus copper directly influences the US 30‑year yield.",
+    "candidate_motivation": "Copper is a key industrial metal whose price is driven by global demand, currency strength, monetary policy, and commodity supply. The listed topics are major drivers or correlated indicators that influence copper through demand, cost, or risk sentiment.",
+    "existing_links_count": "20",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['dxy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'euro_inflation', 'us_inflation', 'us_core_pce', 'gold', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory', 'us_services_pmi', 'india_industrial_output', 'china_exports']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'Copper price surges signal stronger global industrial activity, boosting risk appetite and compressing long‑term Treasury yields; thus copper directly influences the US 30‑year yield.', 'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_30y_treasury_yield'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price surges signal stronger global industrial activity, boosting risk appetite and compressing long‑term Treasury yields; thus copper directly influences the US 30‑year yield.",
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "us_30y_treasury_yield"
+    }
+  },
+  "id": "copper__influences__us_30y_treasury_yield"
+}

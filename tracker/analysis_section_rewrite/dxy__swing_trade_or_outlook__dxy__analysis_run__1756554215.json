@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:00:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "dxy__analysis_run__1756554215",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "3491",
+    "output_chars": "705",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly follows the 4‑line Up/Down format and the trade template, but the probabilities are inconsistent with the source evidence and the field ordering is slightly off. 1) Tighten the probability ranges to reflect the evidence: set the 1‑2‑week “Fed dovish pivot” down probability to ~70 % (86 % Fed‑cut odds) and the 3‑4‑week “Trump‑Fed pressure” down probability to ~60 % (persistent political pressure). 2) Reduce the up probabilities to match the conditional nature of the catalysts: 1‑2‑week “PCE > 3 % or NFP > expectations” to ~30 % and 3‑4‑week “spread < 30 bp” to ~20 %. 3) In the trade line, ensure the field order is exactly Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0‑100. 4) Remove the redundant parentheses around IDs and keep citations only on the specific facts (e.g., “PCE > 3 %” and “spread < 30 bp” should cite 7XH2DKEKV). 5) Adjust the trade probability to match the down scenario (≈70 %) and set confidence to 80 % to reflect the strong dovish bias. 6) Verify that each line contains exactly the required number of fields and that no extraneous text (e.g., “(7XH2DKEKV)”) appears outside the citation brackets. Applying these edits will produce a concise, evidence‑driven swing‑trade outlook that meets the Argos standards.",
+      "tokens": {}
+    }
+  },
+  "id": "dxy__swing_trade_or_outlook__dxy__analysis_run__1756554215"
+}

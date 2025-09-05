@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T19:32:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "F8GF45MEU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; policy-driven housing supply constraints in affluent towns (CT 8-30g) alter development risk, litigation costs, and municipal financing, with spillovers to mortgage credit, local tax bases, and real estate credit pricing.",
+      "existing_ids": [
+        "fed_policy",
+        "ecb_policy",
+        "core_monthly_cpi",
+        "core_cpi",
+        "us_inflation",
+        "us_inflation_data",
+        "us_inflation_expectations"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on a developer’s proposed housing project and the local community’s opposition, which is a company‑related news event not tied to earnings or financial results."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant local development dispute that directly affects Bethel’s housing market, community character, and regulatory environment."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a specific, immediate dispute over a proposed housing project in Bethel, CT, and the legal and community reactions to it."
+    },
+    "article_node": {
+      "id": "F8GF45MEU",
+      "title": "Wealthy Connecticut town fights against project that would build 75 affordable housing units: ‘Insult to Bethel’",
+      "summary": "In Bethel, Connecticut, residents are opposing a 75‑unit affordable‑housing complex proposed by Manhattan developer Vessel Technologies, which the town’s planning commission has warned could face costly litigation under the state’s 8‑30g law that eases affordable‑housing approvals. Vessel’s attorney threatened that rejecting the project could trigger expensive court battles, while locals argue the steel‑and‑glass, multi‑story building would clash with Bethel’s low‑rise, single‑family character and worsen traffic, parking, and environmental concerns. The town, which has a median home price of about $583,000 and a median household income of $115,000, has little legal room to refuse the project unless serious health or safety risks can be proven. The article also touches on broader regional issues, including Vessel’s history of suing communities, the 8‑30g statute’s impact on affordable‑housing stock, and contextual data about Bethel’s housing market and demographic profile.",
+      "source": "https://nypost.com/2025/08/24/us-news/bethel-tiny-town-in-ct-fights-against-housing-project/",
+      "published_at": "2025-08-24T16:30:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "F8GF45MEU"
+}

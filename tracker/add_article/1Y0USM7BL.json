@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T23:34:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1Y0USM7BL",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; EU defense spending surge may pressure EU sovereign yields and fiscal stance.",
+      "existing_ids": [],
+      "new_names": [
+        "eu_defense_spending"
+      ]
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports EU defense spending data for 2024, a macroeconomic data release."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant 19% rise in EU defense spending, directly impacting defense sector equities, credit spreads, and broader geopolitical risk assessments."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "1Y0USM7BL",
+      "title": "EU military spending jumped last year, expected to increase further in 2025",
+      "summary": "The European Union spent more than $400 billion on defense in 2024, a 19% year‑over‑year rise, with 25 of 27 member states increasing real‑term budgets. 2025 is expected to see further growth as the bloc pushes toward the NATO target of 3.5 % of GDP, driven largely by record weapons procurement and research and development investment.  The report highlights fragmentation and interoperability challenges that keep EU spending below U.S. levels, while the U.S. remains the world’s largest defense spender.  EU leaders emphasize that defense is now a fundamental priority, not a discretionary expense, and aim to strengthen collective security amid the evolving security environment.",
+      "source": "https://www.washingtontimes.com/news/2025/sep/2/eu-military-spending-jumped-last-year-expected-increase-2025/",
+      "published_at": "2025-09-02T20:30:56+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "1Y0USM7BL"
+}

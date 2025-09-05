@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T23:42:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "eurusd",
+    "selection_motivation": "USD directly drives the value of the EURUSD exchange rate, making it a primary influencer of the pair.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "8",
+    "candidate_count": "17",
+    "all_nodes_count": "1032",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'eur', 'oil', 'gold', 'copper', 'wheat', 'us_tariffs_brazil', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_china_tariffs']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eur'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882697742",
+    "rel_id": "usd__influences__eurusd",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'eur'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD directly drives the value of the EURUSD exchange rate, making it a primary influencer of the pair.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__eurusd"
+}

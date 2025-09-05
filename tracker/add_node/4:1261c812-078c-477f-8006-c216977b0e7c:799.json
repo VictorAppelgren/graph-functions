@@ -1,0 +1,30 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T14:03:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Y72CEVQ9Z",
+    "suggested_names": "['DOG Coin', 'C2 Blockchain', 'Bitcoin-native assets', 'digital asset treasury']",
+    "topic_category": "asset",
+    "topic_category_motivation": "DOG Coin is a digital asset central to the article’s focus on holdings and investment strategy.",
+    "should_add": "True",
+    "motivation_for_relevance": "DOG Coin is a tradable digital asset whose price and market dynamics directly influence crypto market sentiment and can be used for trading strategies.",
+    "importance_classification": "4",
+    "importance_classification_rationale": "DOG Coin is a meme‑token with limited market centrality and slow, indirect impact. The article reflects a company’s treasury move rather than a macro‑driving event, making it a supporting signal that warrants periodic monitoring but not high‑frequency trading relevance.",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the strategic importance of DOG Coin as a Bitcoin-native asset, which is crucial for understanding its impact on digital asset markets and investment strategies, warranting a dedicated node.",
+      "id": "dog_coin",
+      "name": "DOG Coin",
+      "type": "asset",
+      "level": "main"
+    },
+    "generated_query": {
+      "motivation": "This query is constructed to comprehensively capture all relevant articles related to C2 Blockchain's strategic expansion of its DOG Coin treasury, ensuring that it includes various synonyms, abbreviations, and related financial terms. This specificity will facilitate targeted graph analytics and enhance LLM reasoning for investment research.",
+      "query": "(C2 Blockchain Inc. OR C2 Blockchain OR CBLO OR \"C2 Blockchain Inc.\" OR \"C2DOG.com\") OR (DOG Coin OR DOG OR \"DOG Coin treasury\" OR \"DOG treasury holdings\" OR \"DOG token\" OR \"meme token\" OR \"Bitcoin-native assets\") OR (investment OR acquisitions OR strategy OR strategies OR \"asset acquisition\" OR \"digital assets\" OR \"blockchain company\" OR \"blockchain infrastructure\") OR (Bitcoin OR \"Bitcoin network\" OR \"Bitcoin mining\" OR \"Bitcoin-native utility\" OR \"Bitcoin's Runes protocol\") OR (shareholder value OR \"long-term value\" OR \"balance sheet\" OR \"financial strategy\") OR (news OR update OR announcement OR report OR analysis OR trend OR trends OR market OR markets OR financial OR economic)"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:799"
+}

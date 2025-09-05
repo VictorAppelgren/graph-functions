@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T01:50:35",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_rate_cut_sept17_2025",
+    "target_id": "oil_price_decline",
+    "selection_motivation": "Fed rate cuts reduce borrowing costs and dampen demand for energy, which typically leads to lower oil prices; linking the cut to oil price decline captures a key commodity channel.",
+    "candidate_motivation": "The Fed rate cut directly drives U.S. Treasury yields, the dollar and its cross rates, U.S. inflation and core metrics, and broadly influences equity indices and commodity prices. Therefore, topics that are policy peers, yield benchmarks, currency pairs, major indices, inflation/consumption data, and key commodities are strong correlates or influences.",
+    "existing_links_count": "13",
+    "candidate_count": "23",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'euro_inflation', 'wti', 'brent', 'gold', 'copper', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1416383182319649517",
+    "rel_id": "fed_rate_cut_sept17_2025__influences__oil_price_decline",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed rate cuts reduce borrowing costs and dampen demand for energy, which typically leads to lower oil prices; linking the cut to oil price decline captures a key commodity channel.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "oil_price_decline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_rate_cut_sept17_2025__influences__oil_price_decline"
+}

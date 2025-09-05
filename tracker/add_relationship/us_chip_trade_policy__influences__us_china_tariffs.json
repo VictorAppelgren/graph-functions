@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T16:13:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_trade_policy",
+    "target_id": "us_china_tariffs",
+    "selection_motivation": "US Chip Trade Policy directly sets tariff rates on Chinese semiconductor imports, making it a primary driver of US-China Tariffs.",
+    "candidate_motivation": "The selected topics are closely related to the US Chip Trade Policy, as they involve trade dynamics, tariffs, and semiconductor industry influences that could impact or be impacted by such policies.",
+    "existing_links_count": "6",
+    "candidate_count": "10",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_tariffs', 'us_tariffs_semiconductors', 'us_chip_export_controls', 'us_chip_trade_china', 'us_china_chip_negotiations', 'us_tariffs_on_technology', 'us_china_trade_relations', 'us_chip_sales_to_china', 'us_chip_revenue_policy', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_chip_sales_to_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186903514",
+    "rel_id": "us_chip_trade_policy__influences__us_china_tariffs",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_chip_sales_to_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_trade_policy', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Chip Trade Policy directly sets tariff rates on Chinese semiconductor imports, making it a primary driver of US-China Tariffs.",
+      "type": "INFLUENCES",
+      "source": "us_chip_trade_policy",
+      "target": "us_china_tariffs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_chip_trade_policy__influences__us_china_tariffs"
+}

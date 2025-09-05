@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:40:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_russia_relations",
+    "target_id": "ukraine_peace_negotiations",
+    "selection_motivation": "US‑Russia relations set the diplomatic context for ending the Ukraine conflict; the US’s stance toward Russia is a primary driver of any peace negotiations.",
+    "candidate_motivation": "These topics represent the most direct geopolitical, economic, and diplomatic dynamics that influence or correlate with U.S.-Russia relations, especially surrounding Ukraine-related events and high-level diplomacy.",
+    "existing_links_count": "10",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['russia_economic_crisis', 'ukraine_geopolitics', 'ukraine_diplomacy', 'ukraine_peace_negotiations', 'ukraine_conflict', 'ukraine_sovereignty', 'donbas_region', 'eu_geopolitics_ukraine', 'trump_putin_summit', 'trump_putin_meeting', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'trump_putin_summit'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_land_deal'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327989",
+    "rel_id": "us_russia_relations__influences__ukraine_peace_negotiations",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'trump_putin_summit'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_land_deal'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_russia_relations', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US‑Russia relations set the diplomatic context for ending the Ukraine conflict; the US’s stance toward Russia is a primary driver of any peace negotiations.",
+      "type": "INFLUENCES",
+      "source": "us_russia_relations",
+      "target": "ukraine_peace_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_russia_relations__influences__ukraine_peace_negotiations"
+}

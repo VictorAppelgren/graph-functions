@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:02:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_peace_negotiations",
+    "target_id": "ukraine_post_war_instability",
+    "selection_motivation": "The outcome of Ukraine Peace Negotiations directly determines the post‑war stability landscape, making the negotiations a primary driver of Ukraine Post‑War Instability.",
+    "candidate_motivation": "These topics are the strongest geopolitical and diplomatic peers/influences around Ukraine peace negotiations, capturing both the actors (Ukraine, Russia) and the international policy environment (EU/US) that shape outcomes.",
+    "existing_links_count": "3",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ukraine_diplomacy', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'zelensky_peace_negotiations', 'donbas_region', 'russia_economic_crisis', 'russian_sanctions', 'ukraine_post_war_instability', 'eu_us_relations_ukraine', 'ukraine_conflict', 'ukraine_sovereignty']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000588147",
+    "rel_id": "ukraine_peace_negotiations__influences__ukraine_post_war_instability",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The outcome of Ukraine Peace Negotiations directly determines the post‑war stability landscape, making the negotiations a primary driver of Ukraine Post‑War Instability.",
+      "type": "INFLUENCES",
+      "source": "ukraine_peace_negotiations",
+      "target": "ukraine_post_war_instability"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_peace_negotiations__influences__ukraine_post_war_instability"
+}

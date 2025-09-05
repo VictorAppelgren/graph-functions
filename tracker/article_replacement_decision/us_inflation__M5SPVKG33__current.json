@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T20:53:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "M5SPVKG33",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['8J67I6RWY', '8VMO3PFEO', '4B5JK15SY', '85Q95ZIZH', 'S15934PBQ', '6OOEK8TUR', 'U6HXAJR4J', 'F8GF45MEU', 'CDBMWIUTB']",
+    "mode": "MUST_REPLACE",
+    "target_id": "8J67I6RWY",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "8J67I6RWY",
+      "motivation": "The competing timeframe bucket for hurricane-season coverage is at capacity; removing article 8J67I6RWY frees space for the new, time-sensitive analysis and maintains graph signal quality."
+    }
+  },
+  "id": "us_inflation__M5SPVKG33__current"
+}

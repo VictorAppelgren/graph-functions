@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:53:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_ideological_bias",
+    "target_id": "ai_governance",
+    "selection_motivation": "Linking AI Ideological Bias to AI Governance and Model Transparency highlights the critical relationship between biases in AI systems and the need for transparent governance frameworks, which is essential for mitigating risks in AI deployment.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with 'AI Ideological Bias' due to their relevance in technology, economics, and social issues related to AI and its impact on society.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1611",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ai_in_education', 'ai_governance', 'ai_human_skills', 'ai_generated_misinformation', 'ai_chatbot_memory', 'ai_supply_chain_optimization', 'ai_evaluation_tools', 'ai_dynamic_pricing_airlines', 'ai_stock_performance', 'ai_application_companies']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_ideological_bias', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'ai_ideological_bias', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_ideological_bias', 'target': 'ai_governance'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397179",
+    "rel_id": "ai_ideological_bias__influences__ai_governance",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_ideological_bias', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'ai_ideological_bias', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_ideological_bias', 'target': 'ai_governance'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking AI Ideological Bias to AI Governance and Model Transparency highlights the critical relationship between biases in AI systems and the need for transparent governance frameworks, which is essential for mitigating risks in AI deployment.",
+      "type": "INFLUENCES",
+      "source": "ai_ideological_bias",
+      "target": "ai_governance"
+    }
+  },
+  "id": "ai_ideological_bias__influences__ai_governance"
+}

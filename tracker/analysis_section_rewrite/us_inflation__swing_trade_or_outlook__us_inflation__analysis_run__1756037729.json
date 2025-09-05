@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:25:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756037729",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17314",
+    "output_chars": "1527",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong foundation and ambitious scope, but the draft fails the strict Swing Trade format and drifts into narrative clutter. Actionable edits to lift to world-class:\n\n- Enforce the exact four-line Mover & Scenarios format: only two Up and two Down, each line: Up|Time window|Driver/Mechanism|What to watch|Probability% (with in-text IDs only after the facts/numbers). Currently you have two Up and two Down but the windows are nonstandard and the lines blend base-case, alt-paths, and longer prose. Choose crisp, non-overlapping windows (e.g., Up | 0–6 months; Up | 6–12 months; Down | 0–6 months; Down | 6–12 months) and keep each line to the four fields only.\n- Tighten drivers to first-principles and clear catalysts: Up lines should hinge on (i) Regime A’s tech/moat earnings transmission and cloud/AI momentum; (ii) Alt-path 2’s accelerated AI adoption and policy breakthroughs; Down lines on (i) Regime B/C inflation/policy headwinds; (ii) Regime-shift risk signals (tariffs, regulatory probes). Distill to 1–2 concise bullets per line, not paragraphs.\n- Anchor probabilities to concrete material evidence and cite only IDs after each numeric or claim: e.g., “Azure growth ~39%” (0G3A676BP)(48JXC9VDP); “GMV around $163B; GMV growth ~27%; revenue ~29%” (QF)(0G3A676BP); “tariff-driven inflation pressures” (IGP1Q4ZEJ)(YVQU6QCY4). Avoid multi-source rambling in a single line; place citations only after facts, not after every clause.\n- Prune and standardize “What to watch”: compress to 1–2 precise watch-items per line (e.g., catalyst/trigger + primary risk or invalidation signal). If you cite FDA/Medicare milestones, tie them to a clear timeframe (e.g., “HeartSciences FDA decision by 2026” if supported).\n- Clarify and separate the Swing Trade plan from the Mover lines: the Swing Trade section must be a single MSFT tradable line with the required fields (Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence). If MSFT is the chosen tradable, specify concrete levels or rules (e.g., Entry near current price, Stop at X% below 50-day MA; Target Y%; R/R; Invalidation by a break below the 50- or 200-day MA; Trigger: breakout above a multi-week high). Ensure you present only one clean Swing Trade line (or two, but within the 1–2-line limit) and keep the rest as the 4-line Mover/Outlook content.\n- Reconcile conflicts and remove nonessential anchors: the draft drifts between private-market components, private-liquidity narratives, and public-earnings mechanics. Pick a single coherent base-case (Regime A) and one distinct alt-path (Alt path 2) with quantified catalysts; keep the rest as conditional watch signals rather than separate lines.\n- Improve scenario structure and invalidation tests: add explicit, testable inflection points (e.g., if AI-adoption tempo fails to accelerate by a stated delta by a date, shift from Regime A to Regime B; if tariff announcements lift CPI beyond a threshold, reprice discount rates) with concrete thresholds drawn from the material where possible (e.g., tariff/price pressure channel; DOJ/regulatory risk signals on UNH/LULU).\n- Clean up numerics and avoid implausible or unsupported figures: only keep numbers that have a clear source in the material; remove or reframe any “implausible” figures (e.g., avoid asserting absolute contracted revenue figures unless they’re sourced) and annotate what is relied upon.\n- Citations discipline: ensure every numeric or assertion that relies on the material carries an ID; keep IDs only after the fact, not sprinkled through prose; no trailing or separate references section in the feedback block (the output requires IDs only where facts are asserted).\n- If you keep Range/Range-like private-market references, bound them to one line (Alt path) and ensure they don’t leak into the core Up/Down lines; otherwise rephrase as macro-risk/watch signals tied to the regime framework.\n\nIn short, convert to a clean 4-line Swing Trader Mover block with two Up and two Down, each line tightly focused on a single mechanism and a single, evidence-backed probability; replace the longer synthesis with a single crisp tradable-outlook line (MSFT) that adheres to the requested fields; ground every claim in the IDs after numbers; and fix formatting to ensure strict compliance with the instruction set.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756037729"
+}

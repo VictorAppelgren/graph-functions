@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T16:06:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euribor",
+    "target_id": "sx5e",
+    "selection_motivation": "Euribor, as the eurozone interbank rate, drives euro equity valuations through cost of capital, so it strongly influences the Euro Stoxx 50.",
+    "candidate_motivation": "Euribor is a euro‑zone short‑term interbank rate, so its level is driven by ECB policy, euro‑area inflation, and the euro‑zone liquidity environment, and it is closely correlated with global short‑term rates and the euro‑dollar cross.  Consequently, ECB policy, euro‑area inflation, US Treasury yields (short‑, mid‑, and long‑term), US core PCE and inflation, the US dollar index, the Euro Stoxx 50, and Fed policy are the most likely strong influences, correlates, or peers.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "37",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_core_pce', 'us_inflation', 'dxy', 'sx5e', 'fed_policy']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euribor', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559532584",
+    "rel_id": "euribor__influences__sx5e",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euribor', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euribor, as the eurozone interbank rate, drives euro equity valuations through cost of capital, so it strongly influences the Euro Stoxx 50.",
+      "type": "INFLUENCES",
+      "source": "euribor",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euribor__influences__sx5e"
+}

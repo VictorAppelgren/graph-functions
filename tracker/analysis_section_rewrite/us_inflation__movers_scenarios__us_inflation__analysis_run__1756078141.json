@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:38:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756078141",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21873",
+    "output_chars": "1025",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft has strong thematic coverage but needs a tighter, testable causal chain, tighter quantification, and explicit alignment to the 4-line Up/Down format; focus on converting the narrative into two Up and two Down lines with clear triggers, invalidation rules, and probabilities rooted in the cited sources. First, rebuild the core causal map: define Regimes A–D with first-principles links to discount rates and risk premia, then show how crypto channels (ETH treasuries/treasury demand, staking yields, ETH ETFs, GENIUS Act/Project Crypto) translate into price signals, citing OGK8WLL69 and the crypto-specific notes in Scraped Source 6; ensure every numeric or factoid has an in-text (ID) citation. Second, restructure to the required four-line format, selecting two verifiable Up windows (e.g., 3–6 months and 12–24 months) and two Down windows (e.g., 0–3 weeks and 3–6 months), each with a concrete trigger (e.g., ETH ETF inflows crossing a threshold, tariff baseline escalation to 145%, Nvidia capex momentum persistence, or a sudden regime one-step shift) and an explicit invalidation condition drawn from the sources (SGB2PAZGK, 218AGGUXB, STBVARD8F, NL5YYTLF2, OGK8WLL69); avoid rhetoric and keep to one sentence per line. Third, replace ad hoc probabilities with sourced-based ranges or clearly stated bands, and tie price anchors (ETH near 4,955; BTC 110k–125k) to OGK8WLL69 while grounding all probability statements in plausible regime-weights; refrain from introducing external numbers. Fourth, improve coverage and reconciliation: explicitly flag and reconcile conflicts between NL5YYTLF2 (AI/displacement framing) and the regime map, and ensure all policy/tariff and AI-capex claims are backed by the exact IDs (e.g., SGB2PAZGK, 218AGGUXB, EPJYXB7DX); finally, enforce the horizon/style constraint by keeping the tone forward-looking, compact, and outcome-focused, with consistent formatting and no filler.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756078141"
+}

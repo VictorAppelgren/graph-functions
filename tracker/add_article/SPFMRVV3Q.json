@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:12:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SPFMRVV3Q",
+    "topic_discovery_motivation": "Article discusses the impact of immigration raids on warehouse operations and labor dynamics, relevant to U.S. labor market conditions.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 2,
+      "existing_ids": [
+        "us_urban_crime",
+        "us_border_security"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports immigration raids at warehouses, which is a regulatory/legal enforcement action affecting the workforce and operations of companies like Amazon, FedEx, and UPS."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The relevance of this article to the specified node is unclear because the node was not provided."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent immigration raids affecting warehouse operations, an immediate event."
+    },
+    "article_node": {
+      "id": "SPFMRVV3Q",
+      "title": "Pair of Immigration Raids Disrupt a New Jersey Shipping Hub",
+      "summary": "A maze of warehouses wind through this New Jersey suburb, where highways assure easy access to New York City and beyond.\n\nIn Edison, thousands of immigrant workers toil in hundreds of warehouses, sorting millions of boxes arriving from nearby ports before being sent by trucks across the United States. But this summer has delivered something else.\n\nImmigration raids a few weeks apart at two warehouses have unsettled the daily rhythms of this busy corridor, where Amazon, FedEx and UPS have a large...",
+      "source": "https://www.nytimes.com/2025/08/22/nyregion/immigration-raids-edison-new-jersey.html",
+      "published_at": "2025-08-22T07:00:32.143000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "SPFMRVV3Q"
+}

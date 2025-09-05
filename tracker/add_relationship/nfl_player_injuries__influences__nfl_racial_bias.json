@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T02:30:35",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nfl_player_injuries",
+    "target_id": "nfl_racial_bias",
+    "selection_motivation": "Linking NFL player injuries to the NFL racial bias in draft decisions highlights how injuries can impact player evaluations and opportunities, providing a critical perspective on systemic issues in player selection.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with NFL Player Injuries due to their relevance in sports, health, and economic factors affecting the NFL and its players.",
+    "existing_links_count": "9",
+    "candidate_count": "9",
+    "all_nodes_count": "1615",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['nfl_racial_bias', 'zack_wheeler_injury', 'dolphins_running_back_situation', '49ers_player_injuries', 'cameron_heyward_contract_dispute', 'tyrod_taylor_injury', 'wnba_player_injuries', 'astros_injury_josh_hader', 'fantasy_football_wr_tiers_2025']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'zack_wheeler_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'cameron_heyward_contract_dispute'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': '49ers_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'caitlin_clark_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_player_movements'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'wnba_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_quarterback_rankings_2025'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'tyrod_taylor_injury'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080445",
+    "rel_id": "nfl_player_injuries__influences__nfl_racial_bias",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'zack_wheeler_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'dolphins_running_back_situation'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_racial_bias'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'cameron_heyward_contract_dispute'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': '49ers_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'caitlin_clark_injury'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_player_movements'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'wnba_player_injuries'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'nfl_quarterback_rankings_2025'}, {'type': 'INFLUENCES', 'source': 'nfl_player_injuries', 'target': 'tyrod_taylor_injury'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking NFL player injuries to the NFL racial bias in draft decisions highlights how injuries can impact player evaluations and opportunities, providing a critical perspective on systemic issues in player selection.",
+      "type": "INFLUENCES",
+      "source": "nfl_player_injuries",
+      "target": "nfl_racial_bias"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nfl_player_injuries__influences__nfl_racial_bias"
+}

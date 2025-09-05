@@ -1,0 +1,62 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T11:58:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UUM1FR4P1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and trade uncertainty push yields higher, currency volatility, and commodity prices.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "gold",
+        "wti",
+        "brent",
+        "spx",
+        "dxy",
+        "eurusd",
+        "usdcny"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "Court ruling declaring many Trump-era tariffs illegal constitutes a regulatory change affecting trade policy."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified, cannot assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article discusses immediate policy events—court rulings, tariff disputes, and a looming shutdown—and their short‑term market impacts."
+    },
+    "article_node": {
+      "id": "UUM1FR4P1",
+      "title": "US, India Keep Door Open to Trade Talks",
+      "summary": "Bloomberg’s \"Balance of Power\" highlights the U.S. administration’s ongoing tariff disputes, a recent court ruling declaring many Trump-era tariffs illegal, and the potential for a government shutdown as lawmakers confront a fiscal impasse. The show also covers the President’s attempts to re‑authorise trade restrictions and the strategic implications of China, India, and Russia’s diplomatic engagements. Market reactions include a dip in U.S. equities, rising Treasury yields, and a record high in gold, reflecting heightened uncertainty over policy and fiscal stability.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-02/balance-of-power-early-edition-9-02-2025-video",
+      "published_at": "2025-09-02T19:49:44.002000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 16,
+      "successful": 16
+    }
+  },
+  "id": "UUM1FR4P1"
+}

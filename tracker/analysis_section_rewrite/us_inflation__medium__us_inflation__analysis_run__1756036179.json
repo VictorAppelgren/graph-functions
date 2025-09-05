@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:51:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "medium",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756036179",
+    "article_ids": "['V8TEZOR8R', 'ILYC1M41F', 'UPV3X2MQ6', 'FOM34PUWA', 'A7VLN74BK']",
+    "selected_articles_count": "5",
+    "material_chars": "138760",
+    "output_chars": "4776",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable upgrade plan (compact, source‑taced): convert the draft into a clean 3–6 month scenario map anchored to the cited sources, with a clear causal chain from macro to sector to private markets and explicit timing windows; replace broad assertions with quantified links drawn directly from the IDs (e.g., AI productivity upside from Range with Range’s $6B+ assets under management and 2,000+ members, and 21% annual growth in Pacaso’s co‑ownership in the US; 1.8T vacation‑home TAM; 40% of Americans want a vacation home; HeartSciences’ Medicare reimbursement starting 2025 and expected FDA/ commercialization by 2026; UAS jobs up 97% over the last decade per FOM34PUWA; 32B ECG market by 2034 per UPV3X2MQ6; Mogul’s 18.8% average annualized returns and 12% bear‑case hurdle; Gameflip/startup‑ecosystem dynamics; Barista FIRE narratives). Build a tight causal chain: productivity gains (Range) reduce inflationary pressure and widen risk‑taking in private markets; this supports more capital flowing into private assets (Pacaso, Mogul, Gameflip) and healthcare/biotech AI (HeartSciences), which in turn buoy equity/venture valuations and consumer‑tech spend; explicitly tie each channel to a timing window (e.g., HeartSciences milestones in 2025–2026; Pacaso expansion and revenue signals in 2025; UAS data through 2025; AI productivity effects contingent on sustained disinflation). Add a formal base vs 1–2 alt scenarios with triggers and invalidations: Base case (bullish but non‑spectacular) if Pacaso‑expansion hits 10 destinations on schedule, HeartSciences clears FDA/receives reimbursement momentum by 2026, and Range AI improves KPI workﬂows; Alt 1 (bullish) if 100bps+ pricing power from AI tools materializes and Mogul/Gameflip metrics beat (e.g., 20%+ cash‑on‑cash or >25% YoY growth in co‑owned assets), Alt 2 (bearish) if debt‑policy shocks spike rates or wage inflation accelerates beyond BoJ/Ueda implied trajectory (A7VLN74BK; ILYC1M41F) and private‑market liquidity tightens; specify invalidations: Pacaso fails to roll out 10 destinations or revenue stalls; HeartSciences FDA/Medicare milestones slip beyond 2026; UAS data remains flat or data revisions downgrade employment/salary signals (FOM34PUWA); and AI productivity remains below break‑even in a disinflationary regime (UPV3X2MQ6, ILYC1M41F). Quantify at the channel level with explicit numbers from sources (Pacaso TAM $1.8T; 21% annual growth; 40% of Americans wanting a vacation home; Mogul 18.8% IRR with 12% hurdle; HeartSciences $32B ECG market by 2034; Medicare reimbursement starting 2025; 1.4k UAS jobs in 2025 with $105,912 average salary; 32B ECG market by 2034; 1.4k UAS jobs growth surge per FOM34PUWA); attach post‑claim citations after each line. Reconcile conflicts by clearly labeling areas of uncertainty (AUVSI’s defunct 2014 forecast vs current EDC data; BoJ wage‑growth cadence vs U.S. inflation signals) and ensure every assertion ties to IDs. Improve structure to separate macro (A7VLN74BK; ILYC1M41F; FOM34PUWA) from sector signals (V8TEZOR8R for consumer durability signals, though deprioritized in macro mapping) and private markets (UPV3X2MQ6; ILYC1M41F; FOM34PUWA). Add watch‑list signals with concrete thresholds: Pacaso expansion completion by Q4 2025; HeartSciences FDA filing/approval milestones and Medicare coding updates in 2025–26; UAS employment data re‑baseline in 2025; Range AI engine metrics showing material productivity uplift; and any turn in BoJ/U.S. inflation cross‑currents. Deliver a crisp base case plus 1–2 explicit alts, enumerate key risks with probability shading, and end with a short confidence rating (e.g., Base: moderate–high if catalysts validate; Alt bullish/bearish sensitivity; overall confidence: moderate). Finally, prune tangents (e.g., prolonged tire warranties or unrelated FIRE anecdotes) unless you can tie them directly to demand/lending/valuation signals; ensure every sentence includes a source ID.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__medium__us_inflation__analysis_run__1756036179"
+}

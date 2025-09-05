@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:22:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "trump_tariffs",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "trump_tariffs__analysis_run__1756066470",
+    "prior_sections": "['fundamental', 'medium', 'current']",
+    "material_chars": "18011",
+    "output_chars": "1538",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit plan to lift to world-class quality: 1) distill the analysis into a crisp house view on Ford under Regime A (tariff-driven inflation) with a tight 4–6 sentence/bullet structure that states the core thesis, the base/bull/bear paths, and the near-term catalysts; 2) sharpen the causal chain: Regime A inflates discount rates and risk premia, which taxes cyclical equities and caps autos margin upside; explicitly connect that to Ford’s EV drag (cite ~$1.3B Q2 loss), 4.3% operating margin, ~10% ROIC, and ~5% dividend, then explain why that yields an income‑quality bias rather than growth; 3) quantify the regime’s macro levers and Ford’s sensitivities with precise numbers (e.g., Tariff revenue anchor $152B through July and potential >$2T over the next decade; Ford forward P/E 8–10x; dividend ~5%); provide a structured sensitivity e.g., EV-margin improvement of 2–3pp would meaningfully lift ROIC/margin; 4) fix the scenario structure: define Regime A/B/C transition rules, explicit invalidation triggers (tariff rollback, inflation surprise, or a regime shift), and what would constitute a material rethink of Ford’s base/bull/bear; 5) strengthen catalysts/watch items with measurable milestones (tariff outcome on July 9, Jackson Hole guidance, 30-year auction, Nvidia/Netflix AI signals) and tie each to specific Ford implications; 6) tighten citation discipline and reconciliation: attach every factual datum to a listed source ID (CGLLF2OES, 65UUBU0OR, W2622L6WW, IGP1Q4ZEJ, WTNT85IPR, 0J41Q7KTX, WC68LCU9R, 4CJPTXOL0, 9, 78BX9FDFE), reconcile any numeric conflicts (e.g., P/E and EV profitability ranges) by presenting a clear base/bull/bear band with explicit source citations and a short reconciliation note; 7) prune tangential cross‑sector references (e.g., Scion/UHN/LULU moves) to maintain Ford as the anchor and reserve external names for a separate, tightly scoped appendix, while ensuring Ford’s EV economics and tariff-driven pricing/risk are the core focus.",
+      "tokens": {}
+    }
+  },
+  "id": "trump_tariffs__executive_summary__trump_tariffs__analysis_run__1756066470"
+}

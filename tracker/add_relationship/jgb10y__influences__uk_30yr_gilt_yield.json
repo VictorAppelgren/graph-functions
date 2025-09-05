@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T10:15:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "uk_30yr_gilt_yield",
+    "selection_motivation": "JGB 10‑year yields are a key benchmark for global long‑term rates; shifts in JGB yields transmit through the term‑structure and risk‑premium channels to other sovereign long‑term yields, notably the UK 30‑year gilt.",
+    "candidate_motivation": "Japan’s 10‑year JGB yield is a sovereign bond benchmark whose level and slope are tightly linked to global yield curves, central‑bank policy, inflation expectations, and currency flows. Consequently, other major sovereign yields, U.S. Treasury yields, German Bund and U.K. Gilt yields, monetary‑policy signals from the Fed and ECB, U.S. inflation measures, and currency indices that influence JGB pricing are the most direct peers or influencers.",
+    "existing_links_count": "8",
+    "candidate_count": "17",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['ust10y', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'us_inflation', 'us_core_pce', 'euro_inflation', 'usdjpy', 'usdcny', 'dxy']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255329141",
+    "rel_id": "jgb10y__influences__uk_30yr_gilt_yield",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "JGB 10‑year yields are a key benchmark for global long‑term rates; shifts in JGB yields transmit through the term‑structure and risk‑premium channels to other sovereign long‑term yields, notably the UK 30‑year gilt.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jgb10y__influences__uk_30yr_gilt_yield"
+}

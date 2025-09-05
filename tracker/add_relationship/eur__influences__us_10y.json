@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T09:16:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eur",
+    "target_id": "us_10y",
+    "selection_motivation": "Euro area monetary policy and economic conditions shape global risk sentiment, which in turn drives US Treasury yields; linking eur to us_10y captures this cross‑border rate transmission.",
+    "candidate_motivation": "The Euro’s value is directly affected by monetary policy, inflation, and interest rate differentials, as well as its exchange rate with the US dollar. Therefore, topics that influence or correlate with these factors—ECB policy, Euro Area inflation, US inflation, US inflation expectations, US 10‑year Treasury yields, Euribor, US dollar, and the EURUSD pair—are the most plausible strong influences or peers.",
+    "existing_links_count": "8",
+    "candidate_count": "8",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'us_inflation', 'us_inflation_expectations', 'us_10y', 'euribor', 'usd', 'eurusd']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euribor'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901007",
+    "rel_id": "eur__influences__us_10y",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'eur', 'target': 'euribor'}, {'type': 'COMPONENT_OF', 'source': 'eur', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eur', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro area monetary policy and economic conditions shape global risk sentiment, which in turn drives US Treasury yields; linking eur to us_10y captures this cross‑border rate transmission.",
+      "type": "INFLUENCES",
+      "source": "eur",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eur__influences__us_10y"
+}

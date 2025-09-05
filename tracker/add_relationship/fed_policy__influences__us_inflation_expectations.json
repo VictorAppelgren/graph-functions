@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T15:27:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_inflation_expectations",
+    "selection_motivation": "Fed policy directly shapes market expectations of future inflation, which in turn influence monetary policy decisions and asset pricing.",
+    "candidate_motivation": "Fed Policy directly influences U.S. monetary conditions, affecting inflation expectations, Treasury yields, the dollar, and broader market indices. Topics that track these variables or are policy peers (ECB Policy) are the most relevant for strong influence or correlation.",
+    "existing_links_count": "9",
+    "candidate_count": "11",
+    "all_nodes_count": "1019",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['us_inflation', 'us_10y', 'us_treasury_yields', 'ecb_policy', 'usd', 'us_inflation_data', 'us_inflation_expectations', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'us_inflation_impact_on_bitcoin', 'core_monthly_cpi']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917530127152713579",
+    "rel_id": "fed_policy__influences__us_inflation_expectations",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly shapes market expectations of future inflation, which in turn influence monetary policy decisions and asset pricing.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_inflation_expectations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__us_inflation_expectations"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T20:56:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_10y",
+    "target_id": "us_inflation_and_stock_market_impact",
+    "selection_motivation": "US 10Y Treasury Yield is a forward‑looking indicator that shapes market expectations of inflation, which in turn drives the inflation‑and‑stock‑market impact node.",
+    "candidate_motivation": "The US 10‑Year Treasury Yield is a core benchmark for U.S. borrowing costs and is directly driven by monetary policy, inflation expectations, and the supply‑demand dynamics of Treasury securities. Therefore, topics that influence or closely track these factors—such as Fed policy decisions, inflation data and expectations, and Treasury auction activity—are the most plausible strong influences or peers.",
+    "existing_links_count": "9",
+    "candidate_count": "7",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_inflation_data', 'us_inflation_expectations', 'us_inflation_impact_on_stocks', 'us_inflation_impact_on_healthcare_stocks', 'us_inflation_stock_impact']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_bitcoin'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'US 10Y Treasury Yield is a forward‑looking indicator that shapes market expectations of inflation, which in turn drives the inflation‑and‑stock‑market impact node.', 'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_and_stock_market_impact'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10Y Treasury Yield is a forward‑looking indicator that shapes market expectations of inflation, which in turn drives the inflation‑and‑stock‑market impact node.",
+      "type": "INFLUENCES",
+      "source": "us_10y",
+      "target": "us_inflation_and_stock_market_impact"
+    }
+  },
+  "id": "us_10y__influences__us_inflation_and_stock_market_impact"
+}

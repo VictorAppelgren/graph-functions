@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:52:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756049983",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15633",
+    "output_chars": "1445",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft’s core strength is anchoring Ford to concrete, Ford-specific fundamentals (EV losses ≈ $1.3B; adjusted EBIT ≈ 4.3%; ROIC ≈ 10.1%; revenue CAGR ≈ 2.5% 2014–2024; forward P/E ≈ 10x; dividend yield ≈ 5%), and recognizing F-Series as a cash-flow anchor; however, it drifts into broad macro/stock-rotation chatter (AI leadership, IPO momentum, Disney promo) that obscures the causal chain from regime dynamics to Ford’s volumes and margins. To reach world-class quality, reframe into a tight 4–6 sentence Ford-centric house view with a clear base/bull/bear framework and explicit catalysts, triggers, and invalidation: (i) catalysts: durable EV profitability inflection tied to scale and persistent cost reductions; disciplined capex pacing within the roughly $50B envelope through 2026; ROIC crossing above cost of capital; and policy clarity (tariffs/subsidies) shaping volumes; (ii) invalidation: EV losses fail to narrow and/or ROIC does not exceed WACC within a defined 6–12 quarter horizon, or policy space does not materialize as expected; (iii) watch items: Q2 EV/cycle cash and EBIT progression, F-Series cash-flow trajectory, dividend coverage, and capex progress; quantifying each against sourced numbers (22PL3Q360; 65UUBU0OR; W2622L6WW); and (iv) minimize or tightly tie any cross-asset arguments (IPO momentum, general ETF-factor theses, or non-Ford risks) to Ford’s risk exposures (tariffs, EV cost curve, macro demand). Ensure every assertion relies on the Ford numbers from the sources, reconcile any apparent conflicts (e.g., multiple quotes for margins or yields) within those IDs, and present the horizon as 3–6 months for the current view with a three-horizon lens anchored in the base case (and clearly labeled upside/downside).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756049983"
+}

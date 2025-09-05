@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T16:26:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_expectations",
+    "target_id": "fed_policy",
+    "selection_motivation": "US Inflation Expectations are a primary driver of Fed policy decisions, as the Fed adjusts policy to anchor expectations and maintain inflation targets.",
+    "candidate_motivation": "These topics are the most direct macro signals that can influence or reflect US inflation expectations, including monetary policy, actual inflation data, and policy-driven price pressures (tariffs). They also cover related market variables (yields and stocks) that interact with and help shape inflation expectations.",
+    "existing_links_count": "0",
+    "candidate_count": "12",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'core_monthly_cpi', 'core_cpi', 'us_inflation_data', 'us_treasury_yields', 'tariff_driven_inflation', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_semiconductors', 'us_china_tariffs', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814275435",
+    "rel_id": "us_inflation_expectations__influences__fed_policy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Inflation Expectations are a primary driver of Fed policy decisions, as the Fed adjusts policy to anchor expectations and maintain inflation targets.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_expectations",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_expectations__influences__fed_policy"
+}

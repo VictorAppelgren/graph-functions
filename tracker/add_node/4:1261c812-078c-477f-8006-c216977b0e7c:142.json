@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T15:34:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M7S40CVJD",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article introduces the 30-Year TIPS Auction, a key macro policy event that influences long‑term rates and is essential for trading decisions.",
+      "id": "30yr_tips_auction",
+      "name": "30-Year TIPS Auction",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Rates policy anchor, impacts asset pricing."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "30‑Year TIPS Auction is a macro policy event that directly affects long‑term interest rates, a key driver for bond and equity markets, making it relevant for trading decisions.",
+      "confidence": 0.95,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "Designed to retrieve all articles that discuss technical analysis, support/resistance, and trading outlooks for the SPY ETF, QQQ ETF, and major tech stocks (Apple, Microsoft, Nvidia, Alphabet, Meta, Tesla) by including ticker symbols, company names, and common synonyms, while filtering for trading, market, and analysis context terms.",
+      "query": "(SPY OR \"SPY ETF\" OR \"S&P 500 ETF\" OR QQQ OR \"QQQ ETF\" OR \"NASDAQ 100 ETF\" OR \"NASDAQ 100\" OR AAPL OR Apple OR \"Apple Inc.\" OR MSFT OR Microsoft OR \"Microsoft Corp.\" OR NVDA OR Nvidia OR \"Nvidia Corp.\" OR GOOGL OR Alphabet OR \"Alphabet Inc.\" OR META OR Meta OR \"Meta Platforms\" OR TSLA OR Tesla OR \"Tesla Inc.\") AND (technical OR \"technical analysis\" OR \"chart analysis\" OR \"price action\" OR \"technical indicators\" OR \"moving averages\" OR RSI OR MACD OR \"Bollinger Bands\" OR support OR resistance OR \"price target\" OR \"entry point\" OR \"exit point\" OR \"stop loss\" OR \"risk management\" OR trend OR bullish OR bearish OR volume OR \"market volatility\" OR \"economic calendar\" OR \"jobless claims\" OR \"manufacturing PMI\" OR \"TIPS auction\" OR news OR analysis OR trading OR \"trading strategy\" OR \"day trading\" OR intraday OR \"short-term\" OR \"long-term\")"
+    },
+    "importance_classification": {
+      "importance": 4,
+      "rationale": "A 30‑Year TIPS auction is a Treasury policy event that signals demand for inflation‑protected debt, influencing long‑term rates and inflation expectations. Its impact is moderate, with a short‑to‑medium horizon and limited cross‑asset spillovers, fitting the policy/supporting category typically assigned level 4."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:142"
+}

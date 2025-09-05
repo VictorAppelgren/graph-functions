@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T12:37:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euro_inflation",
+    "target_id": "spx",
+    "selection_motivation": "Euro inflation shapes global inflation expectations, commodity prices, and risk sentiment, which directly influence S&P 500 valuations.",
+    "candidate_motivation": "The S&P 500 is heavily driven by U.S. macro‑economic data, monetary policy, and Treasury yields, and it is closely correlated with other major equity indices and the dollar. Therefore, topics that directly influence U.S. growth, inflation, or policy, as well as those that track Treasury yields or the dollar, are the most plausible influences or peers.",
+    "existing_links_count": "21",
+    "candidate_count": "14",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'sx5e', 'euro_inflation', 'dxy']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1195706800578496544",
+    "rel_id": "euro_inflation__influences__spx",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'gold'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro inflation shapes global inflation expectations, commodity prices, and risk sentiment, which directly influence S&P 500 valuations.",
+      "type": "INFLUENCES",
+      "source": "euro_inflation",
+      "target": "spx"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__influences__spx"
+}

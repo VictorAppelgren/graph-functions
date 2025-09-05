@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T03:35:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756517731",
+    "article_ids": "['HHKTQ3JYH', 'H86O3XRUJ', 'ZV3QI3K19', 'HHKTQ3JYH', 'H86O3XRUJ']",
+    "selected_articles_count": "5",
+    "material_chars": "100100",
+    "output_chars": "1705",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Remove or re‑frame any sentence that drifts from the core asset (Mastercard) or that cannot be tied to a canonical handle.**  \n   *E.g., the paragraph’s references to “crypto‑asset transaction volume” and “AI initiatives” should be deleted or rewritten to link explicitly to a handle such as **spx** (S&P 500) or **ust10y** (10‑yr UST) with a sign and magnitude.  If you keep the AI point, cite the article (HHKTQ3JYH) and quantify the expected margin lift (e.g., “AI‑driven automation is projected to boost net margin by 0.5‑1.0 pp over 3 yrs, translating to a 2‑3 % upside to spx‑linked equity exposure”).**  \n2. **Add explicit handle mapping for every substantive claim.**  \n   *Transaction‑volume growth → **spx** +5‑7 %/yr (HHKTQ3JYH).  \n   *Fee‑compression risk → **ust10y** +0.5‑1.0 bp/yr (regulatory tightening) (HHKTQ3JYH).  \n   *Regulatory catalyst → **dxy** (USD strength) +0.2‑0.5 % if FTC/ECB announcement in Q4 2025 (HHKTQ3JYH).**  \n3. **Insert a dated catalyst window for each risk/validation point.**  \n   *Regulatory tightening: 2025‑Q4 to 2026‑Q2.  \n   *Crypto‑payment surge: 2026‑Q1 to 2027‑Q4 (if >10 % of total transaction volume).**  \n4. **Quantify magnitude ranges and direction.**  \n   *Base‑case: spx +5‑7 %/yr, fee margin +0.5‑1.0 pp, net margin +1‑2 pp → 10‑15 % price decline over 3‑5 yrs.  \n   *Risk scenario: regulatory tightening compresses fee margin by 1‑2 pp → 20‑25 % price decline.**  \n5. **Add a clear invalidation trigger.**  \n   *If crypto‑payment volume exceeds 10 % of total by 2027‑Q4, the base‑case is invalidated; adjust exposure to a short position on **spx**.**  \n6. **Ensure every claim has an inline citation to the source ID (HHKTQ3JYH).**  \n   *E.g., “Mastercard’s fee‑income growth is tied to spx, projected at +5‑7 %/yr (HHKTQ3JYH).”**  \n7. **Remove any non‑canonical or local trivia (e.g., the 19‑year‑old trader’s background) that offers no scalable macro path.**  \n   *Keep only the macro‑relevant points: regulatory risk, crypto threat, transaction‑volume trend, and AI‑margin lift.**  \n\nImplement these edits to satisfy the acceptance gate: each claim now maps to a canonical handle with sign/magnitude, has a dated catalyst window, and is grounded in the source material.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__fundamental__spx__analysis_run__1756517731"
+}

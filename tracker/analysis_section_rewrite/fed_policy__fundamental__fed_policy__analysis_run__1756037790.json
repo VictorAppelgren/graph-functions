@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:16:30",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756037790",
+    "article_ids": "['C3ODMIQKZ', 'TN66GHPAT', '37UZC9X8I', 'H7Q52FKDH', 'GX057ADL7']",
+    "selected_articles_count": "5",
+    "material_chars": "114524",
+    "output_chars": "6860",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong start, but to reach world-class multi-year rigor you should (1) replace the ad-hoc narrative with a formal horizon map: state-of-the-world invariants (first-principles anchors like real-rate differentials, policy reaction functions, and inflation path) and then define explicit regimes (easing-driven growth, hawkish restraint, and external-shock/geo-political risk) with clear transition conditions and probabilities; (2) lay out a coherent causal chain from policy expectations to asset pricing and cross-asset flows, with a step-by-step transmission logic (rates expectations → discount rates → valuations → flows → risk appetite) and tie each link to the cited sources (GX057ADL7; 37UZC9X8I); (3) stop relying on near-term anecdotes alone and quantify: use the explicit numbers in sources (e.g., potential Sept cuts of 25–50bp, up to 150bp per year in the Bessent narrative; 10-year yield around 4.2–4.3%; dollar path; Tencent growth; IEA oversupply signal) and present them as ranges with scenario-based sensitivities; (4) expand the transmission channels to include FX, rates, equities (notably AI/tech cycles), and commodities, and connect Tencent/credit-cycle nuances and the energy-supply backdrop (IEA) to regime outcomes; (5) confront conflicts explicitly: explain how a dovish Jackson Hole read could contrast with a hawkish inflation signal, and why these imply a probabilistic, regime-weighted base case rather than a single narrative; (6) fix factual/mechanical inconsistencies (remove the implausible “IntelOrbis channels” framing and ensure all claims map to the listed sources); (7) attach citations to every substantive claim and ensure complete coverage of the critical sources (GX057ADL7 and 37UZC9X8I, with cross-checks against related material where relevant); (8) tighten structure for a world-class piece: one-page executive frame, a three-regime scenario (base, upside, downside) with explicit catalysts and invalidation points, a concise watchlist, and a clear, multi-year conclusion; (9) present a concise base-case alongside two alternate paths with explicit trigger thresholds and risk boundaries to avoid overconfidence; (10) improve readability and discipline: consistent terminology, shorter sentences, and a compact multi-section layout while preserving the horizon emphasis. Citations: GX057ADL7 and 37UZC9X8I.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1756037790"
+}

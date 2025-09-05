@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T08:54:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_credit_impulse",
+    "target_id": "cn_russia_gas_pipeline",
+    "selection_motivation": "China credit expansion boosts demand for imported gas via the Power of Siberia 2 pipeline, directly influencing pipeline utilization.",
+    "candidate_motivation": "China Credit Impulse is a macro‑credit indicator that is driven by China’s domestic economic activity, global commodity prices, and global financial conditions. Therefore, topics that influence China’s credit environment—China’s export performance, energy imports, the USD/CNY exchange rate, global Treasury yields, Fed and ECB policy, and key US macro data—are the most plausible peers or influences.",
+    "existing_links_count": "10",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['china_exports', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'usdcny', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'dxy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186699601323754786",
+    "rel_id": "china_credit_impulse__influences__cn_russia_gas_pipeline",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'cn_russia_gas_pipeline'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China credit expansion boosts demand for imported gas via the Power of Siberia 2 pipeline, directly influencing pipeline utilization.",
+      "type": "INFLUENCES",
+      "source": "china_credit_impulse",
+      "target": "cn_russia_gas_pipeline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_credit_impulse__influences__cn_russia_gas_pipeline"
+}

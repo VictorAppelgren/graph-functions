@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T18:31:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7BHOKCUNR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; OPEC output increase and potential surplus pressure oil prices, contributing to a 9% YTD decline in Brent and modest downward pressure on WTI.",
+      "existing_ids": [
+        "oil_price_decline",
+        "brent",
+        "wti"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports OPEC’s decision to increase oil output, a policy action by a major oil-producing organization that influences commodity prices and macroeconomic conditions."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided, so the impact cannot be assessed."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a recent OPEC output lift in August and its immediate impact on Brent prices, while also warning of a potential surplus in the coming months, indicating medium‑term relevance."
+    },
+    "article_node": {
+      "id": "7BHOKCUNR",
+      "title": "OPEC Oil Output Rose In August Amid Supply Revival, Survey Shows",
+      "summary": "OPEC lifted output by 400,000 barrels per day in August to 28.55 mbpd, largely driven by Saudi Arabia's 230,000‑bpd increase. The boost has only modestly eased price pressure on Brent, which is trading near $68 a barrel after a 9% YTD decline. The IEA warns that the surge could trigger a major surplus in coming months, while Saudi faces a budget deficit and U.S. shale producers feel the pain.",
+      "source": "https://financialpost.com/pmn/business-pmn/opec-oil-output-rose-in-august-amid-supply-revival-survey-shows",
+      "published_at": "2025-09-03T12:56:58+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "7BHOKCUNR"
+}

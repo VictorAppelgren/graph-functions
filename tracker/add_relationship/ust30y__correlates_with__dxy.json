@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T17:27:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust30y",
+    "target_id": "dxy",
+    "selection_motivation": "Long‑term Treasury yields and the dollar index move in tandem as higher yields attract dollar‑denominated capital, so linking ust30y to dxy captures a key cross‑asset relationship for risk analytics.",
+    "candidate_motivation": "These topics are likely to influence or correlate strongly with the US 30Y Treasury Yield due to shared macro drivers, term‑structure dynamics, and market sentiment.",
+    "existing_links_count": "2",
+    "candidate_count": "14",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'us_inflation', 'us_unemployment_claims', 'sofr', 'dxy', 'bund10y', 'jgb10y', 'sx5e', 'spx', 'euro_inflation', 'ecb_policy']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257474370",
+    "rel_id": "ust30y__correlates_with__dxy",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Long‑term Treasury yields and the dollar index move in tandem as higher yields attract dollar‑denominated capital, so linking ust30y to dxy captures a key cross‑asset relationship for risk analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "ust30y",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__correlates_with__dxy"
+}

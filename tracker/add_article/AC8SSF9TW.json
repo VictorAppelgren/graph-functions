@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T19:45:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AC8SSF9TW",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; CEO retirement at Berkshire Hathaway and other aging billionaires introduces corporate governance uncertainty that could affect S&P 500 valuations.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports the retirement of Warren Buffett as Berkshire CEO and other leadership changes, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess impact against, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "AC8SSF9TW",
+      "title": "Why 20% Of U.S. Billionaires Are Enjoying Higher Life Expectancy",
+      "summary": "The article highlights that the U.S. billionaire cohort is aging, with 36 over 90 and 150 in their 80s, yet many remain active—Warren Buffett announced his retirement as Berkshire CEO, while George Joseph continues to chair Mercury General at 103, and Rupert Murdoch has stepped down as executive chairman of News Corp. It notes that wealthier individuals often enjoy longer lifespans due to superior healthcare, diet, and exercise, citing examples like David Murdock's plant‑based regimen and Charles Koch's daily workouts. The piece also touches on the broader trend of older billionaires engaging in philanthropy and succession planning, underscoring the demographic shift that may influence market dynamics and corporate governance.",
+      "source": "https://www.forbes.com/sites/martinadilicosa/2025/08/30/happy-birthday-warren-buffett-hes-95-and-one-of-36-american-billionaires-over-90/",
+      "published_at": "2025-08-30T04:15:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "AC8SSF9TW"
+}

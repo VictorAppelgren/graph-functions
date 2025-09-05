@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-28T09:09:57",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XQF4R2JQJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US borrowing cost expectations drive Fed policy and US 10Y yields, which influence EUR/USD and European equity indices.",
+      "existing_ids": [
+        "eurusd",
+        "fed_policy",
+        "us_10y",
+        "eur",
+        "usd",
+        "sp500",
+        "eurostoxx50"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market commentary on the STOXX 600 rise and anticipation of lower U.S. borrowing costs, highlighting penny stocks."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Uncertain because the target node is not specified in the prompt."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market sentiment, short-term opportunities, and current financial metrics of specific penny stocks, indicating a near-term outlook."
+    },
+    "article_node": {
+      "id": "XQF4R2JQJ",
+      "title": "European Penny Stocks: Tractial And 2 More Under-The-Radar Opportunities",
+      "summary": "The pan‑European STOXX 600 rose 1.40% as investors anticipate lower U.S. borrowing costs, setting a positive backdrop for European penny stocks. The article highlights three under‑the‑radar companies: Tractial, a €12.97 m payment‑solutions firm that is unprofitable but has a seven‑month cash runway; Uniphar, a €1.06 bn diversified healthcare services group with strong recent earnings growth and manageable debt; and Exasol, a €90 m data‑warehousing specialist that is debt‑free, recently turned profitable, and shows robust earnings expansion. A broader screener of 343 penny stocks is also referenced, underscoring the potential upside of low‑priced, high‑growth opportunities in Europe.",
+      "source": "https://finance.yahoo.com/news/european-penny-stocks-tractial-2-060649862.html",
+      "published_at": "2025-08-28T06:06:49+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "XQF4R2JQJ"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:18:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "adobe_ai_platform_lockin",
+    "target_id": "creator_economy_investment",
+    "selection_motivation": "Adobe's AI platform lock-in directly influences creators' tool choices, driving investment flows in the creator economy.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain, focusing on AI platform competition, antitrust concerns, AI infrastructure providers, emerging AI startups, and broader AI ecosystem dynamics that could affect or be affected by Adobe's AI platform lock‑in.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'apple_antitrust_ai', 'nebius_ai_infrastructure', 'lyno_ai_presale', 'pony_ai', 'grok_chatbot', 'openai_valuation', 'ai_ideological_bias', 'empathic_ai_agents', 'creator_economy_investment']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162641",
+    "rel_id": "adobe_ai_platform_lockin__influences__creator_economy_investment",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'adobe_ai_platform_lockin', 'target': 'creator_economy_investment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Adobe's AI platform lock-in directly influences creators' tool choices, driving investment flows in the creator economy.",
+      "type": "INFLUENCES",
+      "source": "adobe_ai_platform_lockin",
+      "target": "creator_economy_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "adobe_ai_platform_lockin__influences__creator_economy_investment"
+}

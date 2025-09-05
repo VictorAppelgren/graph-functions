@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T21:40:19",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1755978019",
+    "article_ids": "['4LQD15CFU', 'JVKCZAPVG', 'P0K0UEOHU', '3GW34ISLC', 'BAAVVG964']",
+    "selected_articles_count": "5",
+    "material_chars": "184702",
+    "output_chars": "2394",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Add source‑ID citations** – replace generic “source” references with inline citations (e.g., 4LQD15CFU, JVKCZAPVG, P0K0UEOHU, 3GW34ISLC, BAAVVG964).  \n2. **Anchor on first‑principles** – explicitly state real‑rate differentials, terms‑of‑trade, productivity, BoP, net external position, and policy reaction functions for each regime (labour‑AI, automotive electrification, EV tax‑credit phase‑out, inflation‑hedge).  \n3. **Define regimes & transition conditions** – e.g., (i) pre‑pandemic labour‑intensive growth → (ii) AI‑driven automation regime; (iii) legacy auto platform → compact/e‑cigarette platform; (iv) EV credit phase‑out → margin compression; (v) high‑inflation → alternative‑asset shift.  \n4. **Quantify catalysts** – IBM layoffs: 26 k roles, 7.8 k potential cuts; JUST Index outperformance: 17.3 % vs Russell 1000; Tesla gross margin 17.9 % (2024), deliveries 1.8 M (2024); Rivian R2 launch 2026, EBITDA breakeven 2027; Amazon AWS revenue 2024 growth 114 % to $130.5 B; Amazon AI‑automation potential margin lift 2–4 pp; Shopify revenue +31 %, operating income +21 %; Gold IRA IRR 17.6–21.5 % (1‑yr hold); Masterworks IRR 17.6–21.5 %.  \n5. **Causal chain to pricing** – map each catalyst → cost structure shift → earnings impact → equity risk premium adjustment (e.g., AI cuts → lower labor cost → higher ROE → higher equity valuation).  \n6. **Policy reaction functions** – include Fed rate path (current 5.25 % → projected 5.5 % in Q4 2025), CPI trend (current 3.5 % → 3.0 % expected), EV credit phase‑out dates (2025–2026).  \n7. **Risk & watch signals** – list specific triggers: AI regulatory pushback (e.g., EU AI Act), sudden CPI spike, Fed rate hikes >0.25 pp, Tesla robotaxi safety incidents, Rivian supply‑chain bottlenecks, Amazon AI‑automation slowdown.  \n8. **Confidence rating** – quantify (e.g., 70 % confidence) and justify with data density and consistency across sources.  \n9. **Formatting** – keep each section under 3–4 sentences, use bullet points for regimes, and ensure every claim is backed by a source ID.  \n10. **Remove repetitive AI‑automation wording** – streamline the Amazon section to avoid redundancy.  \n\nImplementing these edits will elevate the draft to a world‑class, multi‑year structural analysis with clear causal chains, quantified catalysts, and rigorous source backing.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1755978019"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T15:44:48",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "JBFA3Y28N",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['I0750KYRP', 'U21K4ALYQ', '97MD1FHW8', '3952FOSRQ', 'BCJG43FSJ', '3YAQ8JUPL', 'LLN6N4H3Z', '1G54B8R46', 'S1OY7ISLY']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "BCJG43FSJ",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not provide a macro‑level view or link to any canonical market handle, so it fails the acceptance criteria and should not be added."
+    }
+  },
+  "id": "us_inflation__JBFA3Y28N__current"
+}

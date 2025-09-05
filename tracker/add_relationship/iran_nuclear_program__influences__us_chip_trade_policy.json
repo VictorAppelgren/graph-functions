@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:42:10",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_program",
+    "target_id": "us_chip_trade_policy",
+    "selection_motivation": "Iran’s nuclear program is a primary driver of U.S. semiconductor export restrictions to Iran, directly shaping US chip trade policy.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with the Iran Nuclear Program due to geopolitical implications, energy markets, and international relations.",
+    "existing_links_count": "3",
+    "candidate_count": "9",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['oil', 'us_china_trade_relations', 'us_tariffs_on_technology', 'ukraine_geopolitics', 'iran_nuclear_sanctions', 'middle_east_investment', 'us_russia_ukraine_land_deal', 'us_china_tariff_truce', 'us_chip_trade_policy']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397402",
+    "rel_id": "iran_nuclear_program__influences__us_chip_trade_policy",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Iran’s nuclear program is a primary driver of U.S. semiconductor export restrictions to Iran, directly shaping US chip trade policy.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_program",
+      "target": "us_chip_trade_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_program__influences__us_chip_trade_policy"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T06:40:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756614075",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6558",
+    "output_chars": "957",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft drifts from the required 4‑line format and mixes an outlook with a swing‑trade plan. Remove the last “Up | 3‑6 months | 98.0 …” line (it’s not a driver/mechanism and contains extraneous numbers). Keep only 2 Up and 2 Down lines, each strictly: Up/Down | Time window | Driver/Mechanism | What to watch | Probability %. For the Up lines, use the Fed cut and balance‑sheet contraction drivers; for the Down lines, use the Fed hike and tariff rollback drivers. Ensure each line’s “What to watch” lists the catalyst window (e.g., Sept FOMC, early‑Aug CPI, tariff announcements) and that every claim is cited with the appropriate ID (e.g., LF0UUL917, B1KYJ1GPU). After the 4‑line scenario block, add a separate Swing Trade line: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100. For example: “Up | 3‑6 months | 98.0 | 97.5 | 99.0 | 1:2 | 97.5 | Fed 25‑bp cut | 86% | 80”. Keep the trade plan concise (max 2 lines) and ensure all numbers come from the source IDs. This will satisfy the 4‑line scenario requirement, provide a clear swing‑trade plan, and eliminate drift.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756614075"
+}

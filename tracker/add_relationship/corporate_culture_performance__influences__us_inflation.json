@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T22:29:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "corporate_culture_performance",
+    "target_id": "us_inflation",
+    "selection_motivation": "Linking corporate culture and performance to US inflation highlights how organizational practices can impact economic conditions, providing insights into the broader implications of corporate behavior on inflationary pressures.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with Corporate Culture and Performance, as they relate to economic conditions, corporate governance, and market dynamics that can affect organizational behavior and effectiveness.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'corporate_governance', 'us_tariffs_on_technology', 'political_influence_on_business', 'sustainability_leadership', 'investment_analysis_techniques', 'macro_risks_technology', 'dei_policy_changes', 'ai_in_education', 'workplace_stress']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_culture_performance', 'target': 'dei_policy_changes'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845835",
+    "rel_id": "corporate_culture_performance__influences__us_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_culture_performance', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'corporate_culture_performance', 'target': 'dei_policy_changes'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking corporate culture and performance to US inflation highlights how organizational practices can impact economic conditions, providing insights into the broader implications of corporate behavior on inflationary pressures.",
+      "type": "INFLUENCES",
+      "source": "corporate_culture_performance",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "corporate_culture_performance__influences__us_inflation"
+}

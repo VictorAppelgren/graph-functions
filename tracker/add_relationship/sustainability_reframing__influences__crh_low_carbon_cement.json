@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:25:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sustainability_reframing",
+    "target_id": "crh_low_carbon_cement",
+    "selection_motivation": "Sustainability reframing in business directly drives corporate product innovation toward low‑carbon materials, making it a primary driver of CRH’s low‑carbon cement strategy.",
+    "candidate_motivation": "Topics that likely influence or correlate with sustainability reframing in business include ESG-focused investment themes, climate policy, and sustainable technology adoption that steer corporate strategy and risk management.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['sustainability_leadership', 'esg_defense_investment', 'nature_based_solutions', 'climate_loss_damage_funding', 'sustainable_power_infrastructure_split_corp', 'tecogen_clean_energy', 'gevo_cdr_credits', 'crh_low_carbon_cement', 'global_plastics_treaty', 'climate_judiciary_project']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'esg_defense_investment'}, {'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'sustainability_leadership'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966398294",
+    "rel_id": "sustainability_reframing__influences__crh_low_carbon_cement",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'esg_defense_investment'}, {'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'sustainability_leadership'}, {'type': 'INFLUENCES', 'source': 'sustainability_reframing', 'target': 'crh_low_carbon_cement'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Sustainability reframing in business directly drives corporate product innovation toward low‑carbon materials, making it a primary driver of CRH’s low‑carbon cement strategy.",
+      "type": "INFLUENCES",
+      "source": "sustainability_reframing",
+      "target": "crh_low_carbon_cement"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sustainability_reframing__influences__crh_low_carbon_cement"
+}

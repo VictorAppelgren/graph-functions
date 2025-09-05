@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-31T02:28:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IY7V4C50X",
+    "suggested_names": "['APE']",
+    "topic_category": "company",
+    "topic_category_motivation": "Eagers Automotive Limited is a corporate entity, qualifying as a company.",
+    "should_add": "False",
+    "motivation_for_relevance": "Eagers Automotive is a single company; it does not map to a canonical macro handle or macro driver and is not a macro‑level anchor, so it does not meet the relevance criteria for a trading‑focused macro knowledge graph.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article provides updated ownership and insider activity data for Eagers Automotive, warranting a company node.",
+      "id": "ape",
+      "name": "Eagers Automotive Limited",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

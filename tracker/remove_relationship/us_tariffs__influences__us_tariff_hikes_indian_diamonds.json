@@ -1,0 +1,43 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-22T09:12:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "us_tariff_hikes_indian_diamonds",
+    "selection_motivation": "This link concerns Indian diamond tariff hikes, a peripheral topic with minimal evidence in the source node, making it the weakest support for the new semiconductor tariff link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link concerns Indian diamond tariff hikes, a peripheral topic with minimal evidence in the source node, making it the weakest support for the new semiconductor tariff link.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_hikes_indian_diamonds'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082122",
+    "rel_id": "us_tariffs__influences__us_tariff_hikes_indian_diamonds",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}]",
+    "status": "error",
+    "error": "Object of type DateTime is not JSON serializable"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariff_hikes_indian_diamonds"
+    },
+    "prioritized_link": {
+      "motivation": "US Tariffs directly drive the imposition of tariffs on semiconductors, a key sector influencing global supply chains and corporate earnings.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariffs_on_semiconductors"
+    },
+    "llm_raw_response": {
+      "motivation": "This link concerns Indian diamond tariff hikes, a peripheral topic with minimal evidence in the source node, making it the weakest support for the new semiconductor tariff link.",
+      "remove_link": "us_tariff_hikes_indian_diamonds"
+    },
+    "removal_decision": {
+      "motivation": "This link concerns Indian diamond tariff hikes, a peripheral topic with minimal evidence in the source node, making it the weakest support for the new semiconductor tariff link.",
+      "remove_link": "us_tariff_hikes_indian_diamonds"
+    },
+    "source_node": {
+      "last_updated": 

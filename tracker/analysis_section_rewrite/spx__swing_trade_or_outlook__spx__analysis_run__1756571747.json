@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T18:59:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756571747",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7368",
+    "output_chars": "580",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft satisfies the 4‑line Up/Down requirement, but the swing‑trade line is mis‑formatted and still carries citations.  \n**Fixes**:  \n1. Delete the citation parentheses from the trade line and keep only the required fields.  \n2. Rewrite the trade line exactly as:  \n   `Down | 1–2 weeks | 350 | 360 | 330 | 2:1 | Fed rate cut at September FOMC | Fed minutes indicating cut | 55% | 70`  \n3. Ensure the trade line is the sole line in the “Trade/Outlook Plan” section, separate from the 4 Up/Down lines.  \n4. Keep the Up/Down lines unchanged (they already follow the required format and include citations).",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756571747"
+}

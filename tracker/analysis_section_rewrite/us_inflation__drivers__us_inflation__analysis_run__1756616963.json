@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:16:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756616963",
+    "drivers_count": "5",
+    "material_chars": "2179",
+    "output_chars": "665",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Causal Clarity & Quantification**  \n   - Replace the first sentence with a single, tightly‑linked claim: “Fed’s 25‑bp cut on 25 Sep 2025, following a 2.5 % July CPI, will lift DXY by +0.5 % to +1 % over 3–6 mo (B1KYJ1GPU)(XTQIQRP5K)(NIT6JFIQF)(FAN5RYW6T).”  \n   - Explicitly state the transmission chain in one sentence: “Fed cut → 2‑yr yield ↓ → 10‑yr yield ↑ (steepening) → real‑yield differential ↑ → DXY ↑ (Z7O1DCHS7)(LF0UUL917).”  \n   - Quantify the short‑term dip: “DXY will fall ~200 bp to 95.8 by 31 Aug 2025, driven by 86 % probability of the cut and a 57 bp steepening of the 2‑yr/10‑yr curve (Z7O1DCHS7)(7XH2DKEKV).”  \n\n2. **Catalyst & Horizon Mapping**  \n   - Consolidate catalysts into a watch‑list block:  \n     ```\n     • 25 Sep Fed meeting – policy announcement (B1KYJ1GPU)  \n     • Early Aug CPI release – confirms lower term premium (XTQIQRP5K)  \n     • Late Aug Jackson Hole – Powell remarks (Z7O1DCHS7)  \n     • 30–31 Aug PCE & NFP – potential upside 50–100 bp (7XH2DKEKV)  \n     • 2‑yr/10‑yr spread changes – key risk driver (LF0UUL917)\n     ```  \n   - Remove any mention of “confidence is moderate‑high”; replace with a risk‑adjusted view: “Base case: +0.5 % to +1 % DXY over 3–6 mo, upside contingent on Fed staying accommodative and spread staying ≥30 bp; upside risk: Fed hike or spread <30 bp.”  \n\n3. **Redundant/Non‑essential Sentences**  \n   - Delete “The broader macro backdrop of a 1–2 % rise in the UST 10‑yr over the next 12 months, driven by Fed balance‑sheet contraction and a 0.02 % widening of the UST 10‑yr/2‑yr spread, also supports a modest lift in the dollar through higher risk‑free rates (LF0UUL917).”  \n   - Delete “The risk to the downside case is a steeper 2‑yr/10‑yr curve than projected, which would further weaken the DXY (LF0UUL917).” (already implied in risk section).  \n\n4. **Citation Density & Accuracy**  \n   - Ensure every claim has an inline ID; e.g., add (B1KYJ1GPU) to the short‑term dip sentence.  \n   - Remove duplicate IDs in the same sentence unless they refer to distinct sources.  \n\n5. **Structure & Length**  \n   - Re‑order the paragraph into three logical blocks: (i) base case & transmission, (ii) catalysts & watch‑list, (iii) risks & invalidations.  \n   - Keep total length ≤ 150 words.  \n\n**Revised Paragraph (≈140 words)**  \n\nFed’s 25‑bp cut on 25 Sep 2025, following a 2.5 % July CPI, will lift DXY by +0.5 % to +1 % over 3–6 mo (B1KYJ1GPU)(XTQIQRP5K)(NIT6JFIQF)(FAN5RYW6T). Fed cut → 2‑yr yield ↓ → 10‑yr yield ↑ (steepening) → real‑yield differential ↑ → DXY ↑ (Z7O1DCHS7)(LF0UUL917). DXY will fall ~200 bp to 95.8 by 31 Aug 2025, driven by 86 % probability of the cut and a 57 bp steepening of the 2‑yr/10‑yr curve (Z7O1DCHS7)(7XH2DKEKV). Watch‑list: 25 Sep Fed meeting, early Aug CPI, late Aug Jackson Hole, 30–31 Aug PCE/NFP, 2‑yr/10‑yr spread changes. Base case: +0.5 %–+1 % DXY over 3–6 mo; upside risk: Fed hike or spread <30 bp (LF0UUL917).",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__drivers__us_inflation__analysis_run__1756616963"
+}

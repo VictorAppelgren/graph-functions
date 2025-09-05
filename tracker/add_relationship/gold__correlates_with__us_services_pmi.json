@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T17:34:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "us_services_pmi",
+    "selection_motivation": "Gold tends to move inversely to the US services PMI, reflecting risk‑off sentiment when PMI signals weakening activity.",
+    "candidate_motivation": "Gold is a safe‑haven commodity that reacts strongly to inflation expectations, monetary policy actions, USD strength, risk sentiment, and other commodity prices, so the following topics are the most likely direct influences, correlates, or peers.",
+    "existing_links_count": "19",
+    "candidate_count": "32",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "32",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_core_pce', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'uk_30yr_gilt_yield', 'gilt10y', 'jgb10y', 'bund10y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'us_services_pmi', 'us_unemployment_claims', 'spx', 'sx5e', 'sofr', 'euribor']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1242995696177514542",
+    "rel_id": "gold__correlates_with__us_services_pmi",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold tends to move inversely to the US services PMI, reflecting risk‑off sentiment when PMI signals weakening activity.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "us_services_pmi"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__us_services_pmi"
+}

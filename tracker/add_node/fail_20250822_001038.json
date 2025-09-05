@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T00:10:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EAZG9L2O8",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significant impact of resort fees on consumer behavior and hotel profitability, warranting a new node to analyze the macro implications of these fees on the hospitality sector and investment decisions.",
+      "id": "resort_fees",
+      "name": "Resort Fees",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Resort fees affect consumer spending and hotel profitability, influencing macro-level dynamics in the hospitality sector."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Resort fees are a specific fee structure within the hospitality industry, not a macro driver, policy, or tradable asset; thus it does not support macro-level trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

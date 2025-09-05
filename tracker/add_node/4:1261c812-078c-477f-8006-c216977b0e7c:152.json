@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T18:34:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3XCZM2DV6",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article cites a projected $578B SMB cloud spend over the next two years, establishing a new macro driver for cloud services investment analysis.",
+      "id": "smb_cloud_spend",
+      "name": "SMB Cloud Spend",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Projected SMB cloud spend is a macro-level driver for cloud services investment."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "Projected SMB cloud spend is a macro-level driver of demand for cloud services, influencing cloud provider valuations and related indices, thus relevant for trading decisions.",
+      "confidence": 0.95,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "The query combines key entities—Innovative Solutions, AWS, SMB, DarcyIQ, and strategic collaboration terms—using synonym groups to ensure coverage of all relevant articles while maintaining specificity for graph analytics and LLM reasoning.",
+      "query": "( (Innovative Solutions OR \\\"Innovative Solutions Inc\\\" OR \\\"Innovative Solutions, Inc.\\\" OR \\\"Innovative Solutions, Inc\\\" OR \\\"Innovative Solutions Inc.\\\") ) AND ( (AWS OR \\\"Amazon Web Services\\\" OR \\\"AWS Premier Tier Partner\\\" OR \\\"AWS Premier Tier\\\" OR \\\"AWS SMB Competency\\\" OR \\\"AWS SMB competency\\\") ) AND ( (SMB OR \\\"small business\\\" OR \\\"small businesses\\\" OR \\\"small and medium businesses\\\" OR \\\"SMBs\\\" OR \\\"SMB\\\") ) AND ( (DarcyIQ OR \\\"Darcy IQ\\\" OR \\\"DarcyIQ platform\\\" OR \\\"DarcyIQ AI\\\" OR \\\"DarcyIQ consulting platform\\\" OR \\\"DarcyIQ agentic AI consulting platform\\\") ) AND ( (\\\"Strategic Collaboration Agreement\\\" OR SCA OR \\\"Strategic Collaboration\\\" OR \\\"Strategic partnership\\\" OR \\\"collaboration agreement\\\" OR collaboration OR partnership OR \\\"co-invested\\\" OR \\\"go-to-market\\\" OR \\\"go to market\\\") ) AND ( (news OR analysis OR report OR release OR announcement OR update OR breaking OR latest OR recent OR today OR trend OR market) )"
+    },
+    "importance_classification": {
+      "importance": 3,
+      "rationale": "SMB cloud spend is a sector‑specific macro driver with a medium‑term horizon (forecasted over the next two years). It influences cloud‑service and technology equities and can indirectly affect broader market sentiment, but it does not have the immediacy or cross‑asset transmission of core macro indicators. Therefore it aligns best with a medium‑importance level."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:152"
+}

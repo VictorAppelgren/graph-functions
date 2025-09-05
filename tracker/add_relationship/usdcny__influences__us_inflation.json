@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T00:31:59",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usdcny",
+    "target_id": "us_inflation",
+    "selection_motivation": "USD/CNY fluctuations alter the cost of Chinese imports for the US, directly influencing US inflation expectations.",
+    "candidate_motivation": "USD/CNY is driven by US dollar strength, Chinese economic fundamentals, and policy actions in both economies. Therefore topics that influence the USD, the Chinese yuan, or cross‑border capital flows are the most relevant peers or influences.",
+    "existing_links_count": "19",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'dxy']",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1306044991449072512",
+    "rel_id": "usdcny__influences__us_inflation",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/CNY fluctuations alter the cost of Chinese imports for the US, directly influencing US inflation expectations.",
+      "type": "INFLUENCES",
+      "source": "usdcny",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdcny__influences__us_inflation"
+}

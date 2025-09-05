@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T04:59:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756608663",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "58713",
+    "output_chars": "1852",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Add explicit inline citations** – every substantive claim must reference the source ID.  \n   - Example: “Fed’s dovish stance … core PCE at 2.6 % in July (97MD1FHW8)” → add `[97MD1FHW8]`.  \n   - Do this for all mentions of Fed signals, tariff status, yield moves, oil prices, and equity data.\n\n2. **Trim non‑essential context** – keep only what directly informs ust10y.  \n   - Drop the paragraph on “tech earnings weakness” unless you tie it to safe‑haven demand with a citation.  \n   - Remove the discussion of the dollar index unless you explicitly link it to carry‑trade pressure on USTs (e.g., “higher DXY tightens carry, lifting yields (97MD1FHW8)”).\n\n3. **Quantify ranges and thresholds** – replace vague “support level around 4.0 %” with a precise range backed by data.  \n   - Cite historical 10‑year levels when Fed cuts were priced (e.g., “historically 4.0–4.1 % when September cuts were priced (97MD1FHW8)”).  \n   - For resistance, state “4.5 % is the current 2‑year/10‑year spread limit (97MD1FHW8)”.\n\n4. **Clarify causal chain** – each sentence should show how a catalyst drives the 10‑year.  \n   - Example: “Trump’s tariff plan remains in force until mid‑October (1DEM6P1Y2), sustaining higher inflation expectations and thus a higher term premium, which pushes the 10‑year up (97MD1FHW8).”\n\n5. **Condense the “invalidation” section** – list only the most material catalysts.  \n   - Remove “first quarter earnings of major tech firms” unless you can link it to safe‑haven flows with a citation.\n\n6. **Ensure compliance with “no generic platitudes”** – replace “market’s 89 % probability of a September rate cut” with the actual futures pricing figure (e.g., “Fed funds futures price 89 % probability of a 25‑bp cut (97MD1FHW8)”).  \n\n7. **Maintain 0–3‑week horizon** – all catalysts and expectations must be tied to events within the next 3 weeks.  \n   - Explicitly note the upcoming PCE release date (e.g., “July PCE release on 2025‑09‑02 (97MD1FHW8)”) and the Fed minutes release (e.g., “July minutes on 2025‑09‑05 (97MD1FHW8)”).  \n\n**Revised Structure (suggested)**  \n- **Current 10‑year**: 4.23 % (97MD1FHW8).  \n- **Immediate drivers**: Fed dovish tone (Waller, Powell) → 25‑bp cut bet (89 % probability) → higher term premium (97MD1FHW8).  \n- **Tariff risk**: Trump tariffs until mid‑Oct (1DEM6P1Y2) → sustained inflation expectations → term premium (97MD1FHW8).  \n- **Oil price**: $68.24 (97MD1FHW8) → modest downward pressure, but outweighed by other factors.  \n- **Key support/resistance**: 4.0–4.1 % (historical cut‑pricing) / 4.5 % (2‑yr/10‑yr spread).  \n- **Invalidation triggers**: surprise September cut, core PCE <2.5 % (97MD1FHW8), tariff easing (1DEM6P1Y2).  \n- **Next catalysts**: July PCE release (2025‑09‑02), Fed minutes (2025‑09‑05), upcoming Treasury auctions (dates).  \n\nImplement these edits to meet the strict evidence, mapping, and horizon requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756608663"
+}

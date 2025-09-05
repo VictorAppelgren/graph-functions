@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:38:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9X601KXT0",
+    "topic_discovery_motivation": "Article discusses Iran's nuclear program and potential sanctions, relevant to geopolitical and economic implications.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "Iran Nuclear Program",
+        "UN Sanctions on Iran",
+        "Iran-Israel Conflict"
+      ]
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the potential reimposition of UN sanctions over Iran’s nuclear program, a geopolitical event involving international relations and sanctions policy."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant diplomatic event that could trigger the reimposition of UN sanctions on Iran’s nuclear program, directly affecting the node’s status and international standing."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on an imminent deadline and potential sanctions reimposition, which are immediate events affecting the node."
+    },
+    "article_node": {
+      "id": "9X601KXT0",
+      "title": "Iran to hold call with European nations over nuclear program as sanctions deadline draws closer",
+      "summary": "Iran's Foreign Minister Abbas Araghchi is set to hold a conference call with his counterparts from France, Germany, and the UK to discuss the potential reimposition of UN sanctions over its nuclear program, ahead of a looming deadline. The European nations have expressed increasing concern over Iran's uranium enrichment activities, especially after Tehran ceased cooperation with the International Atomic Energy Agency (IAEA) following the recent Iran-Israel conflict. The deadline for reaching a satisfactory solution is August 31, and failure to do so could trigger the 'snapback' mechanism, allowing sanctions to be reinstated.",
+      "source": "https://thehill.com/homenews/ap/ap-international/ap-iran-to-hold-call-with-european-nations-over-nuclear-program-as-sanctions-deadline-draws-closer/",
+      "published_at": "2025-08-22T06:37:47+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "9X601KXT0"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T23:10:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "euro_inflation",
+    "selection_motivation": "Oil price decline reduces input costs for European producers, directly lowering headline inflation in the euro area.",
+    "candidate_motivation": "Oil price movements are driven by supply/demand fundamentals, currency strength, global economic activity, and monetary policy. The listed topics directly influence or correlate with oil prices through inventory levels, interest rates, inflation, currency indices, sanctions, and broader market sentiment.",
+    "existing_links_count": "13",
+    "candidate_count": "34",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "34",
+    "candidate_ids_preview": "['us_crude_inventory', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'gold', 'copper', 'wheat', 'us_sanctions_iranshipping', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'us_services_pmi', 'us_unemployment_claims', 'bund10y', 'jgb10y', 'ecb_policy', 'sofr', 'euribor', 'euro_inflation', 'wti', 'brent', 'dxy', 'eurusd']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1231735597597458444",
+    "rel_id": "oil_price_decline__influences__euro_inflation",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline reduces input costs for European producers, directly lowering headline inflation in the euro area.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil_price_decline__influences__euro_inflation"
+}

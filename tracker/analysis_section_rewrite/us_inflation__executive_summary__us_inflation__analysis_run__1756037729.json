@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:28:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756037729",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17314",
+    "output_chars": "1195",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft overfills breadth and horizon without delivering a crisp, decision-useful house view; the near-term hurricane/AL90-fern narrative is misaligned with a professional investor brief and should be excised or reframed as a single, clearly scoped risk watch, and every assertion should anchor to the source IDs. Actionable edits: compress to a 4–6 sentence/bullet executive brief that (1) states a base-case Regime A house view (cloud/AI moats with inflation contained) and the causal transmission from platform breadth to GMV to cash flow to multiple, anchored by first-principles (revenue scale, margins, discount-rate impact) and supported by YVQU6QCY4 and 0G3A676BP; (2) enumerate concise catalysts and their source-backed magnitudes (Azure growth ≈39% [0G3A676BP], Shopify GMV ≈$163B with GMV growth ≈27% [QF/0G3A676BP], Range/private assets dynamics [UPV3X2MQ6], HeartSciences FDA/Medicare milestones [UPV3X2MQ6], UAS capex momentum [FOM34PUWA]); (3) spell out the top risks and watch items with exact references (tariff/inflation shocks and healthcare cost risk from YVQU6QCY4/IGP1Q4ZEJ; regulatory risk on UNH/LULU from IGP1Q4ZEJ; BoJ wage dynamics from A7VLN74BK); (4) implement explicit invalidation tests grounded in the sources (e.g., Azure growth materially undershoots base-case, FDA/Medicare milestones miss, tariff shock materializes) and label them as scenario triggers rather than narrative shifts; (5) tighten formatting so each claim carries a source tag and avoid any implausible numbers (remove the implausible “$368B contracted revenue” claim); (6) drop the multi-horizon montage and the alt-path prose in favor of a single base-case with a short two-path scenario (base-case and one material risk/validate path) and a single 3–6 month horizon note; (7) ensure alignment with the SECTION FOCUS by foregrounding decision cues, watch items, and actionable thresholds for a professional investor, and (8) reconcile any conflicts by clearly segregating base-case vs. alt-science into labeled lines and treating each as a scenario with probabilities, not a blended narrative; finally, prune to the source IDs listed (YVQU6QCY4; 0G3A676BP; IGP1Q4ZEJ; UPV3X2MQ6; FOM34PUWA; A7VLN74BK; J99EM2TPZ; U1KRCQOYR; RHXDOHQQX; Range; QF; UNH; 0G3A676BP) and append citations after each assertion for density and traceability.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756037729"
+}

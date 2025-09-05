@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:48:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "us_inflation_data",
+    "selection_motivation": "Trump’s tariff policy directly contributed to the rise in U.S. inflation, which is captured in the US inflation data node, making this a key causal link for macro analysis.",
+    "candidate_motivation": "These topics are the clearest peers or influences to tariff policy and trade tensions, including bilateral US-China discussions and sector-specific tariffs, as well as inflation and market impact channels driven by tariff policies.",
+    "existing_links_count": "10",
+    "candidate_count": "15",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_craniomaxillofacial', 'us_china_tariffs', 'china_us_tariff_truce', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_china_trade_war_2025', 'tariff_driven_inflation', 'us_tariff_inflation', 'us_inflation_data', 'us_inflation_stock_impact', 'new_coffee_tariffs']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137439463",
+    "rel_id": "trump_tariffs__influences__us_inflation_data",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_data'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump’s tariff policy directly contributed to the rise in U.S. inflation, which is captured in the US inflation data node, making this a key causal link for macro analysis.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_inflation_data"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_tariffs__influences__us_inflation_data"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T09:30:31",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1PJCSBJWF",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Russia's new Power of Siberia 2 pipeline to China will increase gas supply to China, potentially easing European supply constraints and influencing global gas price dynamics, with a catalyst window around the 2024 signing and expected 2025-2027 start of deliveries.",
+      "existing_ids": [
+        "cn_russia_gas_pipeline"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Gazprom signed a binding agreement to build the Power of Siberia 2 pipeline to China, which is a company-level action (not earnings), fitting the company_update category."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node context missing, cannot assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article reports a binding agreement for a 30‑year gas pipeline that will alter long‑term supply dynamics between Russia and China, representing a structural, fundamental shift."
+    },
+    "article_node": {
+      "id": "1PJCSBJWF",
+      "title": "Russia and China Sign Major Deal for New Gas Pipeline",
+      "summary": "Russia’s Gazprom has signed a binding agreement to build the Power of Siberia 2 gas pipeline to China via Mongolia, potentially delivering up to 50 billion cubic metres a year for 30 years at a lower price than Europe. The deal is seen as a political win for Putin and a sign of deepening Russia‑China ties amid Western sanctions, but key details such as construction dates, pricing and flexible volume terms remain unclear.",
+      "source": "https://financialpost.com/pmn/business-pmn/russia-and-china-sign-major-deal-for-new-gas-pipeline",
+      "published_at": "2025-09-02T07:15:17+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "1PJCSBJWF"
+}

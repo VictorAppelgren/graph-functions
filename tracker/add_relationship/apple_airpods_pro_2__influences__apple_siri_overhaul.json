@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:24:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_airpods_pro_2",
+    "target_id": "apple_siri_overhaul",
+    "selection_motivation": "Apple AirPods Pro 2 introduced new hardware (e.g., improved microphones, spatial audio, and sensor suite) that directly enabled the recent Siri Overhaul, making the product a key driver of the software update.",
+    "candidate_motivation": "Apple AirPods Pro 2 operates within the broader Apple ecosystem and consumer electronics supply chain, so adjacent premium devices, regulatory actions, and competitive earbuds all plausibly influence its demand, pricing, and risk profile. The shortlist includes flagship device peers, feature/regulatory catalysts, and major Apple policy levers that could directly affect the AirPods' performance.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['iphone_17', 'airpods_live_translation', 'apple_siri_overhaul', 'sony_ult_field_5', 'apple_us_manufacturing', 'apple_antitrust_ai', 'apple_trademark_litigation', 'apple_cinemas_trademark_dispute']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'airpods_live_translation'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'iphone_17'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593768009",
+    "rel_id": "apple_airpods_pro_2__influences__apple_siri_overhaul",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'airpods_live_translation'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'iphone_17'}, {'type': 'INFLUENCES', 'source': 'apple_airpods_pro_2', 'target': 'apple_siri_overhaul'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Apple AirPods Pro 2 introduced new hardware (e.g., improved microphones, spatial audio, and sensor suite) that directly enabled the recent Siri Overhaul, making the product a key driver of the software update.",
+      "type": "INFLUENCES",
+      "source": "apple_airpods_pro_2",
+      "target": "apple_siri_overhaul"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_airpods_pro_2__influences__apple_siri_overhaul"
+}

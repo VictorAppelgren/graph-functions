@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T17:27:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "us_tariff_hikes_indian_diamonds",
+    "selection_motivation": "US Tariffs as a broad policy umbrella directly drive specific tariff hikes on Indian Diamonds, influencing trade flows and market dynamics.",
+    "candidate_motivation": "US Tariffs directly influence trade policy, import/export dynamics, and sectoral pricing; related topics include specific tariff actions, broader tariff policy discussions, and economic impacts such as inflation and sectoral trade flows.",
+    "existing_links_count": "9",
+    "candidate_count": "7",
+    "all_nodes_count": "1021",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_craniomaxillofacial', 'us_tariff_hikes_indian_diamonds', 'us_tariff_inflation', 'us_tariff_policies']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082122",
+    "rel_id": "us_tariffs__influences__us_tariff_hikes_indian_diamonds",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_hikes_indian_diamonds'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Tariffs as a broad policy umbrella directly drive specific tariff hikes on Indian Diamonds, influencing trade flows and market dynamics.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariff_hikes_indian_diamonds"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs__influences__us_tariff_hikes_indian_diamonds"
+}

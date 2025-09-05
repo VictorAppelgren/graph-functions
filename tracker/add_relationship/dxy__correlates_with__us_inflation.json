@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T18:04:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "dxy",
+    "target_id": "us_inflation",
+    "selection_motivation": "DXY and US inflation exhibit a strong inverse relationship, as dollar strength rises when inflation expectations fall and vice versa; linking them captures a key macro transmission channel.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain, as they directly affect US monetary policy, Treasury yields, currency pairs, and macroeconomic data that drive the DXY.",
+    "existing_links_count": "17",
+    "candidate_count": "13",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'us_unemployment_claims', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177693501580642462",
+    "rel_id": "dxy__correlates_with__us_inflation",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "DXY and US inflation exhibit a strong inverse relationship, as dollar strength rises when inflation expectations fall and vice versa; linking them captures a key macro transmission channel.",
+      "type": "CORRELATES_WITH",
+      "source": "dxy",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__correlates_with__us_inflation"
+}

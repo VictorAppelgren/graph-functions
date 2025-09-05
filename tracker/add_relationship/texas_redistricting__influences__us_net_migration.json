@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:02:34",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "texas_redistricting",
+    "target_id": "us_net_migration",
+    "selection_motivation": "Texas redistricting shapes demographic composition and economic incentives, thereby influencing net migration flows into and out of the state.",
+    "candidate_motivation": "Texas redistricting is driven by political map-drawing dynamics that respond to population shifts. Gerrymandering is the core technique shaping redistricting, while migration and immigration trends influence how districts are drawn to reflect changing demographics.",
+    "existing_links_count": "7",
+    "candidate_count": "3",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "3",
+    "candidate_ids_preview": "['gerrymandering', 'us_net_migration', 'us_immigration_conditions']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_flood_relief_legislation'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_cannabis_legalization'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'dc_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'gerrymandering'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'federal_intervention_urban_crime'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080808",
+    "rel_id": "texas_redistricting__influences__us_net_migration",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_flood_relief_legislation'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'texas_cannabis_legalization'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'dc_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'gerrymandering'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'texas_redistricting', 'target': 'federal_intervention_urban_crime'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Texas redistricting shapes demographic composition and economic incentives, thereby influencing net migration flows into and out of the state.",
+      "type": "INFLUENCES",
+      "source": "texas_redistricting",
+      "target": "us_net_migration"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "texas_redistricting__influences__us_net_migration"
+}

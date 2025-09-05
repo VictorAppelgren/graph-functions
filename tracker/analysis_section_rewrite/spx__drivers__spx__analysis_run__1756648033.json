@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T16:17:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756648033",
+    "drivers_count": "12",
+    "material_chars": "5231",
+    "output_chars": "1624",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly identifies the Fed cut and 2‑yr/10‑yr steepening as the core drivers of the DXY move, but it fails to meet the mandatory mapping and catalyst‑window criteria: (1) explicitly link the forecast to the canonical handle **dxy** with a signed magnitude (‑200 bp then +50–100 bp) and a clear 3‑month horizon; (2) attach each catalyst to a dated window (e.g., early‑August CPI on 2025‑08‑02, Fed meeting on 2025‑09‑25, 2‑yr/10‑yr curve data on 2025‑08‑15) and cite the IDs that support the dates; (3) quantify the term‑premium effect (e.g., a 57 bp steepening raises ust10y‑2yr by 57 bp, lifting ust10y by ~30 bp, which translates to ~0.3 % DXY lift) and include the source IDs; (4) add a risk‑adjusted range for the post‑cut rally (e.g., +0.5–1.0 % or +50–100 bp) with citations for the probability of a cut (86 % from Z7O1DCHS7) and the impact of a Fed hike (+0.2–0.4 % from LF0UUL917); (5) replace vague “PCE > 3 %” with the specific August 30 PCE reading (e.g., 3.1 % on 2025‑08‑30) and its projected DXY lift (+50 bp) citing the ID; (6) remove generic statements (“Fed’s policy stance”) unless tied to a specific handle (e.g., **fed_policy** → **dxy**). Finally, structure the watch list as a concise table: catalyst, date, expected impact, source ID, and include a brief “invalidation” column (e.g., Fed hike, curve flattening). This will satisfy the truth‑over‑verbosity rule, provide a defensible causal chain, and meet the acceptance gate.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__drivers__spx__analysis_run__1756648033"
+}

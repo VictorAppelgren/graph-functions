@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T10:09:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "W4N20AGZ7",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses Duolingo's strategic shift towards prioritizing artificial intelligence in its operations, which is a significant macro trend impacting the tech sector and labor market dynamics.",
+      "id": "duolingo_ai_strategy",
+      "name": "Duolingo AI Strategy",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company strategy shift to AI"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Duolingo AI strategy is an operational shift within a single company, not a macro driver, tradable asset, or macro policy regime.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

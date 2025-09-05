@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:50:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_china_trade_relations",
+    "section": "current",
+    "test": "False",
+    "run_id": "us_china_trade_relations__analysis_run__1756025259",
+    "article_ids": "['ZCBJZ55IT', 'WACQ58GJF', 'ZCBJZ55IT', 'WACQ58GJF', 'ZCBJZ55IT']",
+    "selected_articles_count": "5",
+    "material_chars": "118706",
+    "output_chars": "5635",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall assessment: the draft correctly identifies the near‑term tariff extension and China’s July data as immediate drivers, but it needs a tighter, unitary 0–3 week framework, a cleaner causal chain, explicit scenario structure, tighter quantification from the sources, and precise, source‑consistent citations to reach world‑class quality.\n\nActionable edits to upgrade:\n- Reframe to a crisp 0–3 week map: list immediate drivers (90‑day tariff extension; U.S. CPI path; RBI rate decision), near‑term catalysts (NVIDIA/CHINA export licenses; Fed chair/tightening expectations; China property/investment trends), and the expected reaction function (risk assets vs hedges) with defined monitor points and thresholds.\n- Sharpen the causal chain and transmission: spell out the mechanism from tariff extension to asset pricing (less near-term tariff risk, but ongoing export controls/LICENSING risk), from China data to commodity cycles and EM growth signals, and from U.S. CPI/Fed moves to dollar path and equity sector rotation (notably tech/AI stocks). Tie each link to a concrete data point from ZCBJZ55IT or WACQ58GJF.\n- Introduce a first‑principles/scenario framework: present a base case, a bull case, and a bear case with explicit triggers (e.g., CPI surprise ±Y bps, RBA cut path beyond today’s expected 25 bps, NVIDIA licensing news, or a renewed tariff flare). Define invalidation thresholds (e.g., “if US CPI beats consensus by >X bps, Fed easing is pushed out,” or “if RBA signals no follow‑on cuts, risk assets wobble”).\n- Quantify with precise numbers and ranges: replace qualitative statements with concrete anchors drawn from the sources: China July data (exports +7.2% YoY; industrial output +5.7%; retail +3.7%; property investments −12% Jan–Jul; new housing −1.1%), unemployment 5.2%, CPI/who CPI trends; US CPI around 2% YoY; RBA cut of 25 bps; AUD near 0.65; NVIDIA export/licensing tensions; potential Fed cut as early as Sept/Oct. Where ranges exist (e.g., “near‑term risk assets,” “policy path”), give plausible bands (e.g., S&P futures move ±1–2%, USD/JPY around 145–150 or 150–152 depending on data).\n- Tighten/source‑integration and citations: ensure every assertion ties to exactly ZCBJZ55IT or WACQ58GJF (and avoid duplicative IDs); note where one source implies a slightly different nuance (e.g., tariff extension certainty vs. security/export‑control risk) and reconcile in a single, transparent line.\n- Improve level‑setting and monitoring: specify key levels/thresholds to watch (e.g., CPI prints that would push the Fed path; RBI’s 25 bp cut outcome; AUD/USD level around 0.65; iron ore and lithium price anchors given China’s anti‑involution/overcapacity moves; NVIDIA licensing signals) and assign a clear watch list for “what next” updates.\n- Streamline prose for coherence: prune redundant clauses, reduce repetition about “policy signaling,” and unify the narrative into a single causal arc from policy news to market reaction, with a concise set of actionable forecast pins.\n\nIn short: tighten the 0–3 week layout, make the causal chain explicit and first‑principles driven, bolt on precise data anchors with correct source citations, introduce a formal base/bull/bear scenario with clear triggers, and present explicit levels and a tight monitor list to lift the piece to world‑class quality. (Sources: ZCBJZ55IT; WACQ58GJF)",
+      "tokens": {}
+    }
+  },
+  "id": "us_china_trade_relations__current__us_china_trade_relations__analysis_run__1756025259"
+}

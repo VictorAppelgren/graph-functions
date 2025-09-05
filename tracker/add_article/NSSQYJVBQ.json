@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T12:07:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NSSQYJVBQ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates & FX; UK unrest and potential spillover to US risk sentiment are likely to weaken GBP against USD and lift US 10Y yields modestly (5–10 bp) over the next 1–3 months.",
+      "existing_ids": [
+        "gbpusd",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article describes a violent incident involving a sovereign citizen extremist group in the UK, highlighting a domestic security risk that could have broader geopolitical implications."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses a domestic extremist incident in the UK, which does not directly impact macroeconomic indicators, market handles, or financial transmission paths relevant to the node’s scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent violent incident involving sovereign citizens in the UK, highlighting an immediate threat and short‑term escalation of the movement."
+    },
+    "article_node": {
+      "id": "NSSQYJVBQ",
+      "title": "Dark world of 'Sovereign Citizens' ready to KILL... with fears of UK carnage",
+      "summary": "The article reports a fatal shooting of two police officers in the UK by a self‑proclaimed sovereign citizen, highlighting growing concerns about the extremist movement’s spread in Britain. Experts note that sovereign citizens, originally a US phenomenon, now have tens of thousands of adherents in the UK and Australia, and their anti‑government ideology has been linked to violent incidents worldwide. The piece cites academic and law‑enforcement sources warning that the movement’s use of pseudolegal arguments and online propaganda could fuel further clashes, especially as generative AI amplifies recruitment. While the UK has not seen widespread violence yet, authorities are treating sovereign citizens as a serious threat, mirroring responses in Australia and the US.",
+      "source": "https://www.thesun.co.uk/news/36499874/sovereign-citizen-extremists-cops-shootout-australia/",
+      "published_at": "2025-08-30T10:00:14+01:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "NSSQYJVBQ"
+}

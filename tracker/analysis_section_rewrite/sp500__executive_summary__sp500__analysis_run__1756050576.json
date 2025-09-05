@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T18:04:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756050576",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18292",
+    "output_chars": "1782",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is too long and tangential for a 4–6 sentence/point executive brief, and it spirals into non‑Ford case studies and unrelated scenarios; focus, structure, and source-grounding should be tightened to deliver a decision-ready house view. Actionable edits: 1) cut all non‑Ford sections (Disney, Shopify, Malik Beasley, broader cross‑asset and macro-rotation bits) and collapse to 4–6 Ford‑centric bullets. 2) reframe around a single, crisp house view anchored to Ford’s three fundamentals, with a disciplined EV capex cadence and policy risk as the key swing factors; anchor every claim to the cited data: EV loss in Q2 (~$1.3B), EV capex up to $50B through 2026 with deferrals up to $12B, forward P/E ~10, dividend ~5%, Q2 margin ~4.3%, ROIC ~10% (22PL3Q360; 65UUBU0OR; W2622L6WW). 3) replace the sprawling regime-map prose with a compact two‑regime framework (Regime A: cyclical demand with cash‑flow‑neutral EV program; Regime B: EV‑margin inflection with capex relief) and define the trigger conditions and time horizon using the Ford anchors (EV profitability trajectory, capex cadence, tariff headwinds). 4) add explicit, falsifiable catalysts and invalidations tied to the sources (e.g., sustained positive EV margin for 2 consecutive quarters and a deceleration in EV capex intensity would validate Regime B; persistent EV losses and/or tariff headwinds that keep ROIC meaningfully below ~10% on a multi‑quarter basis would invalidate the bull path). 5) constrain watch-list signals to 3–4 items with explicit linkages to the IDs (e.g., Q2–Q4 EV profitability progression; pace of EV capex deferrals; policy/tariff developments) and ensure every line cites one of the source IDs. 6) deliver with a concise base-case and a tight upside/downside framing that makes the decision‑useful path clear for an investor check, removing extraneous horizon‑and‑asset‑mix content and tightening the factual cadence to the Ford anchors.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756050576"
+}

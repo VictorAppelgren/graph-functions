@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T07:46:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756013427",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "11124",
+    "output_chars": "585",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the 4‑line format but needs tighter alignment with the source, clearer causal language, and proper citation placement. 1) Add citations to every driver and watch clause (e.g., “ACMR revenue guidance confirmation (SK994CBWR)”) and ensure the watch field is a full sentence (“Watch Q3 earnings release for revenue confirmation (SK994CBWR)”). 2) Replace generic “confirmation” with the specific trigger (“revenue hits upper guidance”) and back the probability with the base‑case scenario, citing SK994CBWR for the 70 % probability of a price climb and 30 % for a miss. 3) For the AI‑adoption upside, cite both SK994CBWR and 4LQD15CFU, and phrase the watch as “Watch N2 adoption rate exceed 90 % in the product line (SK994CBWR, 4LQD15CFU)”. 4) For the insurance‑sector downside, cite TN66GHPAT for the dividend‑yield decline trend and 4LQD15CFU for AI lag, and phrase the watch as “Watch dividend yield decline trend (TN66GHPAT)”. 5) Ensure each probability is justified by a source (e.g., “70 % (SK994CBWR)”) and avoid unsubstantiated percentages. 6) Keep each line strictly one sentence, no filler, and use only IDs present in the source.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__movers_scenarios__us_10y__analysis_run__1756013427"
+}

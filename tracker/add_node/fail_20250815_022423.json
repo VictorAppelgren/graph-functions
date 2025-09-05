@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:24:13",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "CUCM6FJ5B",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the Kay Mine Project's first mineral resource estimate, which is significant for investment analysis in the mining sector, warranting a new atomic node for precise tracking of this asset's potential impact on market dynamics.",
+      "id": "kay_mine_project",
+      "name": "Kay Mine Project",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "Kay Mine Project is a specific mining asset with a newly released mineral resource estimate, directly relevant to investment and market analysis."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Kay Mine Project is a specific mining asset, an operational niche, not a macro driver, tradable instrument, or macro policy/regime; it does not support trading decisions in a macro context.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

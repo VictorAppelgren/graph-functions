@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T09:16:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1N8X6GTA2",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significance of Saudi Arabia's Vision 2030 as a transformative economic strategy, necessitating a dedicated node to analyze its impact on global investment flows and macroeconomic trends.",
+      "id": "saudi_vision_2030",
+      "name": "Saudi Vision 2030",
+      "type": "macro",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "National development plan, a policy initiative shaping macroeconomic trends."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "Macro policy regime (Vision 2030) that drives Saudi economic diversification and global investment flows, directly relevant to trading decisions.",
+      "confidence": 0.95,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "This query is constructed to comprehensively capture articles related to U.S. investment strategies in the Middle East, specifically focusing on Saudi Arabia and the UAE's economic transformation and sovereign wealth funds. By including a wide range of synonyms, abbreviations, and relevant financial terms, the query ensures robust retrieval of pertinent information for investment research and analysis.",
+      "query": "(Saudi Arabia OR KSA OR \"Kingdom of Saudi Arabia\" OR UAE OR \"United Arab Emirates\" OR \"Gulf Cooperation Council\" OR GCC) OR (sovereign wealth fund OR sovereign funds OR PIF OR \"Public Investment Fund\" OR ADIA OR \"Abu Dhabi Investment Authority\" OR Mubadala) OR (Vision 2030 OR \"Saudi Vision 2030\" OR NEOM OR \"economic diversification\" OR \"economic transformation\" OR \"national development plans\") OR (investment OR investments OR investor OR capital OR funding OR financing OR co-invest OR partnership OR joint venture OR strategy OR strategies) OR (U.S. investors OR American investors OR foreign investment OR foreign capital OR global investing OR capital-rich ecosystems) OR (demographics OR youth OR population OR stability OR political stability OR economic stability) OR (news OR analysis OR trend OR market OR markets OR report OR insight OR update OR overview OR forecast OR outlook) OR (culture OR local partner OR trust OR relationship OR engagement OR expertise OR technology OR networks)"
+    },
+    "importance_classification": {
+      "importance": 5,
+      "rationale": "Saudi Vision 2030 is a long‑term, foundational policy that will reshape the Kingdom’s economic structure, diversify away from oil, and drive sovereign wealth fund allocations and capital flows for decades. Its slow‑moving, structural nature makes it a core macro anchor with long‑run market implications, warranting the highest importance level."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:3857"
+}

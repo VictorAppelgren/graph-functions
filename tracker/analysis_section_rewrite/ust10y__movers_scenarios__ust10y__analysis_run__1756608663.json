@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T05:02:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756608663",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6241",
+    "output_chars": "693",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly links Fed cuts, CPI, and the 2‑yr/10‑yr spread to the DXY, but it mixes short‑term (30‑60 days) and medium‑term (3‑6 months) upside/downside cases without a clear hierarchy; collapse the two upside lines into one 30‑60 day case and the 3‑6 month case into a separate “Long‑term” line, each with a single driver (Fed cut + July CPI for long‑term, August PCE/NFP + spread flattening for short‑term). Remove the redundant “Fed cut steepening 2‑yr/10‑yr spread + lower term premium” down case, as it is essentially the inverse of the upside and lacks a distinct catalyst; instead, keep a single downside scenario driven by a Fed hike >25 bp or a flattening spread <30 bp, citing (7XH2DKEKV)(B1KYJ1GPU)(XTQIQRP5K). Tighten the probability language: replace “80%” with “≈80% probability” and ensure each probability is tied to a specific source (e.g., 97MD1FHW8 for the 80% cut probability). Clarify the catalyst window for the long‑term upside: “September Fed meeting and July CPI release” and for the short‑term upside: “August 31 NFP and August PCE release.” Ensure every sentence ends with a single inline citation and remove any extraneous IDs. Finally, rename the items to match the required format: “Up | 30‑60 days | Fed cut + July CPI + higher dollar yields | Watch Fed minutes, July CPI, August PCE, 2‑yr/10‑yr spread | ≈80% (97MD1FHW8)” and similarly for the other lines.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__movers_scenarios__ust10y__analysis_run__1756608663"
+}

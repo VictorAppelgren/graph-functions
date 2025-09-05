@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T20:09:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756057972",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20295",
+    "output_chars": "1464",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit notes: (a) Condense the piece into 4–6 crisp sentences or bullets that deliver a single, cohesive house view (Base Regime A as core; Regimes B and C as explicit, numerically anchored alternatives) and show how p (AI impulse) interacts with r, T, and π to drive demand, asset pricing, and risk premia. (b) Rebuild the causal chain from first principles: AI impulse p → potential output lift → labor-sentiment/displacement frictions → policy π (retraining, safety nets) → demand composition (durables, health care) → equity/credit pricing; tie each link to observable market transmission. (c) Fix catalysts/triggers with precise, source-backed thresholds and time horizons (e.g., automation exposure ≳25%; unemployment divergence; tariff pass-through ≈$3,800 per household per year; GM/U.S. capacity ≈2 million vehicles/year; Ford EV losses ≈$1.3B; Cadillac Elev Velocity cadence in 3–5 quarters) and flag invalidation conditions (tariff inflation shocks; delayed capex ramp; Cadillac milestone shortfall). (d) Move the sprawling sector narration into a tight asset-level outline: MSFT/Shopify AI/cloud pricing power; Ford EV-cycle re-pricing; UNH/LULU as defensives, with 1–2 watch items per regime and a concise near-term regime map. (e) Tighten quantification and ensure every factual claim cites a SOURCE MATERIAL ID; remove duplicative citations (e.g., repeated NL5YYTLF2) and reconcile conflicts (Finland’s UBI effects vs automation risk) by presenting a defensible base with explicit ranges. (f) Trim low-signal channels from the core brief (Bethel zoning, Las Vegas substitution signals) to the watch-list and ensure naming consistency (Cadillac Elev Velocity) and executive tone, so the final piece remains decision-oriented, cadence-aware, and within the 4–6 sentence limit.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756057972"
+}

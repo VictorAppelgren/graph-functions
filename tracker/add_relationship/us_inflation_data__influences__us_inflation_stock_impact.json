@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T01:44:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_data",
+    "target_id": "us_inflation_stock_impact",
+    "selection_motivation": "US inflation data is a primary driver of the broader stock market impact of inflation, and linking it to the dedicated ‘us_inflation_stock_impact’ node will enable analysts to trace how changes in inflation metrics propagate through equity valuations and sector performance.",
+    "candidate_motivation": "These topics are direct drivers, benchmarks, or transmission channels for US inflation data, representing the strongest potential influences, correlates, or peers to the source.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'core_monthly_cpi', 'core_cpi', 'us_inflation_expectations', 'us_10y', 'cpi_impact_on_treasuries', 'tariff_driven_inflation', 'us_inflation_stock_impact', 'us_inflation_impact_on_stocks', 'oil']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_inflation_impact_on_bitcoin'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1200210400205867278",
+    "rel_id": "us_inflation_data__influences__us_inflation_stock_impact",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'us_inflation_data', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US inflation data is a primary driver of the broader stock market impact of inflation, and linking it to the dedicated ‘us_inflation_stock_impact’ node will enable analysts to trace how changes in inflation metrics propagate through equity valuations and sector performance.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_data",
+      "target": "us_inflation_stock_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_data__influences__us_inflation_stock_impact"
+}

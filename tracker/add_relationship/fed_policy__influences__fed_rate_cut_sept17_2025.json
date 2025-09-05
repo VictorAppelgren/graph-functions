@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:36:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "Fed policy decisions directly determine the timing and magnitude of future rate cuts; linking the policy node to the specific September 2025 cut provides a clear causal path for event‑driven modeling.",
+    "candidate_motivation": "Fed Policy is the primary driver of U.S. Treasury yields, the dollar index, inflation expectations, and is a peer to ECB Policy. It also shapes market expectations for future rate cuts, reflected in Fed Rate Cut Sept 17 2025 and Fed Powell Rate Cut Hint. These topics are therefore strong influences or peers to Fed Policy.",
+    "existing_links_count": "16",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'sofr', 'ecb_policy']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_services_pmi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'fed_policy', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7241789300323386093",
+    "rel_id": "fed_policy__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'fed_policy', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy decisions directly determine the timing and magnitude of future rate cuts; linking the policy node to the specific September 2025 cut provides a clear causal path for event‑driven modeling.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__fed_rate_cut_sept17_2025"
+}

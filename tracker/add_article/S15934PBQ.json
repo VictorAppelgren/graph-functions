@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T14:55:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "S15934PBQ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Trump tariffs distort auto pricing in the US and elevate inflation expectations, with spillovers to auto equities and consumer price dynamics.",
+      "existing_ids": [
+        "trump_tariffs",
+        "us_tariffs",
+        "us_trade_policy_inflation",
+        "us_tariff_inflation",
+        "us_inflation",
+        "us_inflation_impact_on_stocks",
+        "us_inflation_stock_impact",
+        "us_china_tariffs"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses the U.S. lowering tariffs on Japanese cars from 27.5% to 15%, which is a regulatory change affecting the industry."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant shift in pricing strategy by Japanese automakers (Toyota, Honda, Nissan) in response to U.S. tariffs, directly affecting their cost structure and market dynamics in the U.S. market."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent tariff adjustments and immediate pricing strategies by Japanese automakers in the U.S., reflecting short‑term market dynamics."
+    },
+    "article_node": {
+      "id": "S15934PBQ",
+      "title": "Tariffs bring Japanese automakers to their breaking point",
+      "summary": "Japanese automakers such as Toyota, Honda and Nissan have begun to pass some of the cost of U.S. tariffs onto American buyers, a shift from their previous strategy of absorbing the impact.  Toyota’s North American operating income fell to a loss of $438 million, even as the company posted a $5.8 billion quarterly profit thanks to strong results in Japan and Asia.  Despite this, the automakers have denied that tariff‑related price increases are responsible for higher U.S. prices, citing seasonal factors instead.  The U.S. has recently lowered tariffs on Japanese cars from 27.5% to 15%, but the industry continues to feel the pain of higher costs and is investing billions to boost U.S. production.",
+      "source": "https://www.thestreet.com/automotive/tariffs-bring-japanese-automakers-to-their-breaking-point",
+      "published_at": "2025-08-24T11:37:00+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "S15934PBQ"
+}

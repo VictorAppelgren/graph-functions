@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T21:03:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756578057",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7015",
+    "output_chars": "2515",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "All sentences remain within the 30‑year mortgage focus and contain a causal link to mortgage rates with a citation. The only drift is in sentence 12 where “erode valuations” references equity valuations and is not directly tied to mortgage rates. Edit it to remove that phrase or replace it with a mortgage‑specific effect (e.g., “tighten the spread, raising the mortgage rate”). No other edits are required.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756578057"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:29:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "current",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756085078",
+    "article_ids": "['4LDHF4T77', 'Z5IA1CYUF', '4VN4UTWX1', 'E9CG0NWAH', 'I2SJU04DF']",
+    "selected_articles_count": "5",
+    "material_chars": "202570",
+    "output_chars": "4752",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft correctly flags near‑term legal and geopolitical risk, but to reach world‑class quality it needs a tighter, first‑principles transmission chain, a formal 0–3 week scenario, and explicit monitoring metrics tied to concrete deadlines. Actionable edits: 1) Reframe into a three‑scenario, 0–3 week horizon with explicit catalysts and invalidations (base, downside, upside) anchored to deadlines and filings rather than broad statements; assign qualitative likelihoods only if you can cite market history or disclosures, and show how each scenario would move risk assets. 2) Build a clean causal chain: news/data/policy → contingent liability/costs and liquidity risk for issuers → equity risk premia and name‑specific price paths; separately annotate Spirit’s going‑concern disclosure as a liquidity/credit risk channel and the Yemen strike as energy/shipping volatility, with explicit transmission channels. 3) Quantify what matters: list the concrete, date‑bound catalysts (PubMatic class action class period Feb 27–Aug 11, 2025; Oct 20, 2025 lead plaintiff deadline; Biohaven class period Mar 24, 2023–May 14, 2025; Sept 12, 2025 lead plaintiff deadline; Spirit drop of ~40.7% following the Aug 11 going‑concern disclosure) and show how those dates map to expected volatility or re‑pricing. 4) Specify “key levels/thresholds” as deadlines and potential court/settlement milestones, plus a crisis/false‑alarm filter (e.g., if a class is certified, if a settlement is announced, or if no filings occur around deadlines, which would invalidate the overhang). 5) Strengthen the “what to watch next” section with a concise monitoring checklist: docket activity, new filings, interim court orders, settlement talks, any guidance from Rosen/Schall, option/IV spikes around deadlines, and cross‑asset signals from energy/shipping markets. 6) Sharpen formatting and attribution: tie every assertion to the correct IDs (4LDHF4T77 and 4VN4UTWX1 for the PubMatic/Biohaven deadlines; Z5IA1CYUF for Spirit; I2SJU04DF for Yemen) and avoid conflating the cases or overstating settlements without evidence. 7) If possible, present a concise base‑case equation (Expected P/L ≈ Σ p_i × (recovery_i − litigation_cost_i)) to frame upside/downsides, even if only qualitatively, to show you’re grounding how litigation risk translates to price. 8) Finally, ensure the geopolitical note is clearly filed under a risk‑premia channel with a separate immediate‑reaction path (Red Sea/shipping volatility) and avoid implying a direct tie to PubMatic/Biohaven unless you can cite cross‑asset spillovers. With these edits, the piece will deliver a precise, data‑driven, and testable near‑term view.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__current__sp500__analysis_run__1756085078"
+}

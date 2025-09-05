@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T11:47:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1EQUYDETU",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; Icahn Enterprises’ $500 million senior secured note issuance improves liquidity and reduces debt, tightening corporate bond spreads.",
+      "existing_ids": [],
+      "new_names": [
+        "corporate_bond_issuance"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Icahn Enterprises L.P. issuing debt and redeeming notes, a company financial action beyond earnings, fitting the company_update category."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article concerns a single corporate debt transaction with no direct mapping to a canonical macro market handle or a broader catalyst window, thus it does not impact the macro model scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific corporate finance transaction (note issuance and partial redemption) that impacts Icahn Enterprises’ balance sheet in the short term, reflecting an immediate event rather than a long‑term structural change."
+    },
+    "article_node": {
+      "id": "1EQUYDETU",
+      "title": "Senior Notes Sale Bolsters Icahn Enterprises’ Liquidity, Reduces Near-Term Debt",
+      "summary": "Icahn Enterprises L.P. (IEP) strengthened its balance sheet by selling $500 million of senior secured notes, raising $493 million to partially redeem 6.250% senior notes due 2026. The sale, priced at 99.01% of face value, follows a first‑quarter earnings beat that lifted NAV by $252 million, largely driven by a 38% rise in CVI share price. IEP’s dividend yield sits at 23.20% with a share price of $8.62, positioning the company as a high‑yield, low‑price dividend play amid broader market volatility.",
+      "source": "https://finance.yahoo.com/news/senior-notes-sale-bolsters-icahn-084144904.html",
+      "published_at": "2025-09-02T08:41:44+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "1EQUYDETU"
+}

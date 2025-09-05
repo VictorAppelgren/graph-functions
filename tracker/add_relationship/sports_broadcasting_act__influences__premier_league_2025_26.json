@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T21:00:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sports_broadcasting_act",
+    "target_id": "premier_league_2025_26",
+    "selection_motivation": "The Sports Broadcasting Act directly regulates broadcasting rights for UK sports events, making it a primary driver for Premier League 2025/26 broadcasting agreements.",
+    "candidate_motivation": "These topics are the regulatory, distribution, and corporate-movement inputs most likely to shape Premier League broadcasting rights and streaming strategies. They reflect direct policy impacts and competitive dynamics among key media players.",
+    "existing_links_count": "2",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['sports_broadcasting_act', 'espn_fox_bundle', 'disney_streaming_consolidation', 'uk_online_safety_act', 'paramount_skydance_merger', 'paramount_skydance']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'premier_league_2025_26', 'target': 'espn_fox_bundle'}, {'type': 'INFLUENCES', 'source': 'premier_league_2025_26', 'target': 'premier_league_2025_2026'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160450",
+    "rel_id": "sports_broadcasting_act__influences__premier_league_2025_26",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'espn_fox_bundle'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'ufc_media_rights'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'premier_league_2025_26'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'disney_streaming_consolidation'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Sports Broadcasting Act directly regulates broadcasting rights for UK sports events, making it a primary driver for Premier League 2025/26 broadcasting agreements.",
+      "type": "INFLUENCES",
+      "source": "sports_broadcasting_act",
+      "target": "premier_league_2025_26"
+    }
+  },
+  "id": "sports_broadcasting_act__influences__premier_league_2025_26"
+}

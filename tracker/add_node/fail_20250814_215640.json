@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T21:56:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XYNLD8R3N",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The advancements in nuclear fusion research highlighted in the article indicate a significant macro-level shift towards sustainable energy sources, warranting a dedicated node for tracking its implications on energy markets and policies.",
+      "id": "nuclear_fusion",
+      "name": "Nuclear Fusion",
+      "type": "macro",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Emerging technology that could shift energy supply, affect macro variables such as energy prices, carbon emissions, and policy."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Nuclear fusion is a specific technology, not a macro driver or tradable asset; it falls under industry verticals and does not directly support trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

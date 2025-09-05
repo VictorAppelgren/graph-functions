@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T00:32:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "core_cpi",
+    "new_article_id": "1GVYF2V8O",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['Y6SQOEK69', 'JHGBQ4TQH', 'YVQU6QCY4', '22PL3Q360']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "New article topic does not clearly supersede any existing article in the current graph (no matching ID and no earlier version to update), so no action is warranted."
+    }
+  },
+  "id": "core_cpi__1GVYF2V8O__fundamental"
+}

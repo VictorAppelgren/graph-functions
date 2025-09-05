@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T11:15:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "eurusd",
+    "target_id": "sofr",
+    "selection_motivation": "EURUSD moves closely with US short‑term rates; adding a correlation link to SOFR captures the overnight repo rate influence on the currency cross.",
+    "candidate_motivation": "EURUSD is driven by U.S. and Eurozone monetary policy, inflation expectations, and relative sovereign yields, as well as cross‑currency dynamics with major peers. The listed topics capture these core drivers and the key currency counterparts that directly influence or correlate with EURUSD.",
+    "existing_links_count": "18",
+    "candidate_count": "18",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sofr', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "18",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173189901953273651",
+    "rel_id": "eurusd__correlates_with__sofr",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD moves closely with US short‑term rates; adding a correlation link to SOFR captures the overnight repo rate influence on the currency cross.",
+      "type": "CORRELATES_WITH",
+      "source": "eurusd",
+      "target": "sofr"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__correlates_with__sofr"
+}

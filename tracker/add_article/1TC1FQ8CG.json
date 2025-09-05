@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T11:25:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1TC1FQ8CG",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Brazil's new bond issuance increases global supply, likely modestly pushing UST 10Y yields higher and weakening the USD relative to other currencies.",
+      "existing_ids": [
+        "ust10y",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article reports a sovereign bond issuance, which does not fit the predefined categories such as macro_event, earnings, regulation, policy_statement, central_bank_action, economic_data, geopolitical, company_update, or market_commentary."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided, so relevance to any specific graph element cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific bond issuance event with a defined closing date, indicating an immediate market action."
+    },
+    "article_node": {
+      "id": "1TC1FQ8CG",
+      "title": "The Federative Republic of Brazil Announces Pricing of its New Bonds Offering",
+      "summary": "Brazil priced a new bond offering on September 2, 2025, issuing $750 million of 5.5% 2030 bonds and $2.5 billion of 7.25% 2056 bonds. The 2056 bonds will partly fund a tender of old bonds, which expired on September 2. The new bonds will be listed on the London Stock Exchange and are expected to close on September 11, 2025. The offering is limited to institutional investors and is not a public sale.",
+      "source": "https://finance.yahoo.com/news/federative-republic-brazil-announces-pricing-040100231.html?_guc_consent_skip=1756872572",
+      "published_at": "2025-09-03T04:01:00+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "1TC1FQ8CG"
+}

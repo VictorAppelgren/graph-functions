@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T12:53:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "ust30y",
+    "selection_motivation": "Bund10y is a leading global risk‑sentiment gauge; its movements often precede shifts in US long‑term yields, making bund10y a primary driver of the US 30Y Treasury curve.",
+    "candidate_motivation": "German 10Y Bund Yield is a core sovereign benchmark that moves in tandem with other sovereign and U.S. Treasury yields, is directly influenced by ECB policy and Eurozone inflation, and is closely linked to major equity indices and the dollar index. These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "5",
+    "candidate_count": "16",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'gilt10y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'sx5e', 'dxy', 'eurusd', 'gbpusd', 'usdjpy', 'sofr', 'us_inflation', 'euribor']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587489",
+    "rel_id": "bund10y__influences__ust30y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund10y is a leading global risk‑sentiment gauge; its movements often precede shifts in US long‑term yields, making bund10y a primary driver of the US 30Y Treasury curve.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__ust30y"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T21:57:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Z6RJ4NWZK",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Cohere's focus on enterprise AI solutions and its significant funding round highlight its potential impact on the AI market, warranting a dedicated node for analysis of its influence on macro trends in technology and investment.",
+      "id": "cohere_ai",
+      "name": "Cohere AI",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Cohere AI is a company"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Cohere AI is a specific AI startup, not a macro driver, tradable asset, policy regime, or geography; it falls under an industry vertical, which is disallowed.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

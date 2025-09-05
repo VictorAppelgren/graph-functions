@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T10:08:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8W9XJIHSG",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant demographic shift in the U.S. immigration landscape, which can impact labor markets and economic conditions, warranting a new node for analysis.",
+      "id": "us_net_migration",
+      "name": "US Net Migration",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Net migration is a key demographic driver that influences labor supply, consumption, and overall economic growth."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "US net migration is a macro driver that influences labor supply, consumption, fiscal pressures, and overall economic growth—factors directly relevant to trading decisions.",
+      "confidence": 0.9,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "This query is constructed to comprehensively capture articles related to the decline of the immigrant population in the U.S., focusing on various aspects such as migration trends, government policies, and economic implications, ensuring that all relevant synonyms and related terms are included for thorough analysis.",
+      "query": "(immigrant OR immigration OR emigrant OR emigration OR migration OR migrant* OR foreign-born OR foreign national* OR visa OR visas OR residency OR resident* OR deportation OR legal status OR undocumented OR illegal immigrant* OR net exit OR outflow OR outmigration) OR (Trump OR Donald Trump OR administration OR government OR officials OR policy OR policies OR strategy OR hardline OR crackdown OR enforcement OR border OR immigration reform) OR (Pew Research OR census OR data OR study OR analysis OR report OR findings OR statistics OR demographic OR population OR trends OR trend) OR (economic impact OR labor market OR job market OR government services OR public services OR pressure OR strain OR recovery OR economy OR economic OR fiscal) OR (news OR update OR breaking OR recent OR latest OR today OR report OR analysis OR forecast OR outlook OR trend OR movement)"
+    },
+    "importance_classification": {
+      "importance": 4,
+      "rationale": "US net migration is a macro‑demographic trend that influences labor markets, fiscal pressures, and consumption over a medium‑to‑long horizon. It does not generate immediate intraday price moves but serves as a supporting signal for regime shifts and structural analysis. Therefore it fits the 4‑level category of slow‑impact, supporting macro information."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:680"
+}

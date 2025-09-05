@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T10:57:21",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UTPGUXLKU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; the UK’s expanded plastic packaging tax, effective September 3 2025, is expected to push UK gilt yields higher and weaken GBP against USD, with a catalyst window beginning on the policy announcement date.",
+      "existing_ids": [
+        "gbpusd",
+        "uk_30yr_gilt_yield",
+        "uk_10y_gilt_yield"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a new £22 million order secured by Niutech, indicating a company‑specific development that is not an earnings release, but a significant business update."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a single UK order for a pyrolysis line, which has limited direct influence on major market handles and lacks a clear catalyst window for macro variables."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a specific £22 million order, indicating a near‑to‑mid‑term event, while also referencing UK circular‑economy policies that signal a longer‑term structural shift in waste‑plastic recycling."
+    },
+    "article_node": {
+      "id": "UTPGUXLKU",
+      "title": "Niutech Secures £22 Million UK Order: Next-Generation Pyrolysis Line Drives Global Chemical Recycling of Waste Plastics",
+      "summary": "Niutech has secured a £22 million UK order for a 60,000‑tonne‑per‑year continuous waste‑plastic pyrolysis line, bolstering its position in the high‑end European circular‑economy market. The deal comes amid the UK’s intensified plastic‑packaging tax and broader circular‑economy policies that drive demand for efficient chemical recycling, with Niutech’s technology promising 30 % higher production efficiency and significant CO₂ reductions. The contract signals growing confidence in industrial‑scale pyrolysis and supports the UK’s carbon‑reduction and waste‑management targets.",
+      "source": "https://www.benzinga.com/pressreleases/25/09/n47491524/niutech-secures-22-million-uk-order-next-generation-pyrolysis-line-drives-global-chemical-recyclin",
+      "published_at": "2025-09-04T02:33:00-04:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "UTPGUXLKU"
+}

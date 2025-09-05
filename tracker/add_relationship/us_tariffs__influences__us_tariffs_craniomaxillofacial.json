@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T01:58:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "us_tariffs_craniomaxillofacial",
+    "selection_motivation": "Linking US Tariffs on Craniomaxillofacial Devices to US Tariffs strengthens the understanding of how specific tariff policies impact niche markets, which is crucial for targeted investment strategies.",
+    "candidate_motivation": "The selected topics are closely related to US Tariffs, either as direct influences on trade policies, economic indicators affected by tariffs, or as sectors that may be impacted by tariff changes.",
+    "existing_links_count": "9",
+    "candidate_count": "9",
+    "all_nodes_count": "1614",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_china_tariffs', 'us_tariff_policies', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_craniomaxillofacial', 'us_inflation', 'us_china_trade_relations', 'us_trade_policy_inflation']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966398580",
+    "rel_id": "us_tariffs__influences__us_tariffs_craniomaxillofacial",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_craniomaxillofacial'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking US Tariffs on Craniomaxillofacial Devices to US Tariffs strengthens the understanding of how specific tariff policies impact niche markets, which is crucial for targeted investment strategies.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "us_tariffs_craniomaxillofacial"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs__influences__us_tariffs_craniomaxillofacial"
+}

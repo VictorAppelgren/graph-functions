@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T00:23:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755987801",
+    "article_ids": "['4LQD15CFU', 'JVKCZAPVG', '4LQD15CFU', 'JVKCZAPVG', '4LQD15CFU']",
+    "selected_articles_count": "5",
+    "material_chars": "220337",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "fundamental_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable Edit Instructions (compact paragraph)**  \n1. **Ground the causal chain in first‑principles**: Replace vague “regulatory or technological shocks” with explicit mechanisms—e.g., oil‑price shocks → real‑rate differentials → productivity regressions → terms‑of‑trade shifts. Cite the 1973 oil crisis data (e.g., U.S. oil imports fell 15% in 1974) and the 2025 AI‑automation estimate (30% of 26,000 roles → 7,800 jobs) from sources 4LQD15CFU and JVKCZAPVG.  \n2. **Quantify performance differentials**: Use the JUST Capital index figures (Workers Leaders 35.95% vs Russell 17.18% as of 08‑22‑2025) and the 17.3% outperformance figure (source 4LQD15CFU). Add a 2× profitable‑growth multiplier from the Harvard Business Review study (source 4LQD15CFU) and compare to a baseline of 1× for firms that cut headcount.  \n3. **Clarify regime transitions**: Distinguish between the 1970s “malaise” regime (high oil prices, emissions mandates) and the current “AI‑automation” regime (automation potential, workforce continuity). Show how each regime shifts the real‑rate differential and BoP via changes in oil demand and labor cost volatility.  \n4. **Integrate policy reaction functions**: Mention U.S. federal stimulus (e.g., 2025 CARES‑style relief) and state‑level COVID‑19 mandates (e.g., Washington’s 2025 public‑health orders) as exogenous shocks that alter labor market dynamics.  \n5. **Reconcile conflicting sources**: The Ford article cites a 154‑hp 351‑V8 as “under‑powered”; cross‑check with the 1976 Torino sales decline data (253,096 units vs 459,057 in 1973) to substantiate the claim.  \n6. **Add a clear risk matrix**: List key risks (AI deployment lag, regulatory backlash, oil‑price volatility) with trigger thresholds (e.g., AI talent gap > 20% of workforce, oil price > $80/barrel) and monitoring metrics (Wages Leaders index, AI talent development rate).  \n7. **Improve coherence and conciseness**: Trim redundant sentences (e.g., repeated mention of IBM’s pause) and tighten the narrative to a single, logically flowing paragraph that links macro fundamentals to firm‑level outcomes.  \n8. **Ensure citation density**: Every quantitative claim must be followed by a source ID (e.g., 4LQD15CFU, JVKCZAPVG). Avoid generic statements without citations.  \n9. **Align with SECTION FOCUS**: Explicitly state the multi‑year horizon, identify invariant anchors (real‑rate differential, terms‑of‑trade, productivity, BoP, net external position, policy reaction functions), and articulate the causal chain to market pricing.  \n10. **Add a confidence rating**: Conclude with a brief confidence assessment (e.g., “Moderate‑high confidence given robust empirical link between worker quality and returns; uncertainty from evolving AI landscape”) and a watch list of key indicators.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__fundamental__us_10y__analysis_run__1755987801"
+}

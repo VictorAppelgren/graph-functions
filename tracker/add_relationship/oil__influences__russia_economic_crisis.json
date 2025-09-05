@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:47:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "russia_economic_crisis",
+    "selection_motivation": "Oil price shocks directly affect Russia's export revenue and fiscal balance, making oil a key driver of the Russia Economic Crisis.",
+    "candidate_motivation": "Oil prices are driven by supply disruptions, demand shifts, and macro policy in key energy regions; the shortlisted topics have direct or closely linked influence on oil markets.",
+    "existing_links_count": "10",
+    "candidate_count": "9",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['iran_nuclear_sanctions', 'russia_economic_crisis', 'ukraine_geopolitics', 'south_china_sea_tensions', 'saudi_vision_2030', 'cheniere_energy', 'lng_projects_2026', 'middle_east_sovereign_funds', 'us_inflation']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'middle_east_sovereign_funds'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1188951401137438730",
+    "rel_id": "oil__influences__russia_economic_crisis",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'middle_east_sovereign_funds'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'russia_economic_crisis'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price shocks directly affect Russia's export revenue and fiscal balance, making oil a key driver of the Russia Economic Crisis.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "russia_economic_crisis"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__russia_economic_crisis"
+}

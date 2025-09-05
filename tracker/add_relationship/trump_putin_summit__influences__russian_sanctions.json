@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:39:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_putin_summit",
+    "target_id": "russian_sanctions",
+    "selection_motivation": "The Trump-Putin Summit directly informs U.S. policy decisions, including the imposition of sanctions on Russia, making it a primary driver of Russian sanctions.",
+    "candidate_motivation": "These topics capture direct US-Russia dynamics and the surrounding geopolitical hot spots (Ukraine diplomacy, sanctions, and conflict), which are highly likely to be influenced or correlated with a Trump-Putin summit.",
+    "existing_links_count": "1",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['trump_putin_meeting', 'ukraine_diplomacy', 'ukraine_peace_negotiations', 'ukraine_geopolitics', 'ukraine_conflict', 'russian_sanctions']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160805",
+    "rel_id": "trump_putin_summit__influences__russian_sanctions",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'russian_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Trump-Putin Summit directly informs U.S. policy decisions, including the imposition of sanctions on Russia, making it a primary driver of Russian sanctions.",
+      "type": "INFLUENCES",
+      "source": "trump_putin_summit",
+      "target": "russian_sanctions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_putin_summit__influences__russian_sanctions"
+}

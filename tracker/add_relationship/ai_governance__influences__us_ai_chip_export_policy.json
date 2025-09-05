@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:13:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_governance",
+    "target_id": "us_ai_chip_export_policy",
+    "selection_motivation": "AI governance directly shapes the regulatory framework governing the export of AI chips, making it a primary driver of US AI chip export policy.",
+    "candidate_motivation": "These topics are the most plausible direct influences, correlates, or peers to AI Governance and Model Transparency, given their focus on AI policy, safety, and the competitive landscape of AI technologies.",
+    "existing_links_count": "4",
+    "candidate_count": "12",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'ai_ideological_bias', 'grok_ai_bias', 'ai_generated_misinformation', 'deepfake_ai_medical', 'generative_ai_film', 'gen_ai_accounting', 'ai_in_k12_education', 'us_ai_chip_export_policy', 'us_chip_export_controls', 'us_china_ai_chip_exports', 'china_ai_semiconductors']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'openai_gpt5_competition'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_generated_misinformation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593767147",
+    "rel_id": "ai_governance__influences__us_ai_chip_export_policy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'openai_gpt5_competition'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_evaluation_monitoring'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'ai_generated_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_governance', 'target': 'us_ai_chip_export_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI governance directly shapes the regulatory framework governing the export of AI chips, making it a primary driver of US AI chip export policy.",
+      "type": "INFLUENCES",
+      "source": "ai_governance",
+      "target": "us_ai_chip_export_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_governance__influences__us_ai_chip_export_policy"
+}

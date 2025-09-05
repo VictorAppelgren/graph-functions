@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T13:37:35",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_urban_crime",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_urban_crime__analysis_run__1756381055",
+    "article_ids": "['R4I4J0MPK', 'DX83AY2UA', 'MV8EDA73J', 'LUJ8ZLAFB', 'YATNAIHDT']",
+    "selected_articles_count": "5",
+    "material_chars": "122635",
+    "output_chars": "2939",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (≈200 words)**  \n1. **Cite every claim** – insert source IDs (e.g., MV8EDA73J for ICE spending, YATNAIHDT for NYPD shooting, R4I4J0MPK for local noise) and any macro data (Treasury deficit, Fed policy statements).  \n2. **Quantify the fiscal impact** – estimate the ICE‑related outlay (≈$2 bn FY 2025) and its effect on the deficit (e.g., deficit rises 0.5 pp).  \n3. **Anchor the real‑rate differential** – state U.S. productivity growth (≈2.5 %/yr), terms‑of‑trade (stable), and current account surplus (~$200 bn). Show how the deficit expansion pushes real rates up 0.25–0.5 pp over 2 yrs.  \n4. **Specify the policy reaction function** – outline the Fed’s likely rate path (25 bp hike Q4 2025, 50 bp in 2026) and its lagged effect on risk premia.  \n5. **Define regimes & transition conditions** – present a “high‑enforcement” regime and a “policy‑rollback” regime; list catalysts (midterm elections, Supreme Court rulings) and invalidators (recession, Fed rate cuts).  \n6. **Detail the causal chain** – enforcement → higher outlays → larger deficit → higher real rates → higher risk premia → lower equity valuations (≈5–10 % drop).  \n7. **Add watch signals** – Treasury issuance schedule, Fed FOMC minutes, CPI, employment data, court decisions on immigration.  \n8. **State confidence** – moderate‑high, citing consistency of enforcement trends and clear macro linkages (MV8EDA73J, YATNAIHDT).  \n9. **Eliminate generic platitudes** – replace vague terms (“increased risk premia”) with specific numbers and source‑backed projections.",
+      "tokens": {}
+    }
+  },
+  "id": "us_urban_crime__fundamental__us_urban_crime__analysis_run__1756381055"
+}

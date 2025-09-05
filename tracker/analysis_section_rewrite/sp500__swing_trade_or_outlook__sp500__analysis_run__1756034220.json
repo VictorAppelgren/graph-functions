@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:25:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756034220",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17835",
+    "output_chars": "1321",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft has a strong, coherent first-principles spine (platform moats, operating leverage, cloud/AI tailwinds) and credible data points (GMV ~$163B, revenue ~$5B, Azure ~39%, Shopify ~12% US e‑commerce GMV share, 21.2% CAGR to 2030), but it currently fails the SECTION FOCUS by not delivering the required Movers & Scenarios block (exactly 4 lines, 2 Up and 2 Down, 3–6 month horizon) and by mixing near‑term, non‑scorable items (Intel governance prompts, near‑term rate‑cut odds) into the scenario frame. Actionable edits: 1) reconstitute Movers & Scenarios into exactly four lines, each line as Up/Down | 3–6 months | Driver/Mechanism | What to watch | Probability %, with each line anchored to a single, testable driver (e.g., Up: AI tooling adoption or Shopify monetization; Down: AI/meme leadership persistence or cloud demand deceleration). Tie each line to a source ID after any factual claim (e.g., 0G3A676BP for cloud/AI CAGR, QFDWCTAYB for Shopify/GMV/margin, 0G3A676BP for Azure growth). 2) Isolate near‑term dynamism (Intel governance, rate‑cut odds, cross‑border signals) in the Trade/Outlook plan only, not in Movers; if you keep a Swing Trade, make the horizon explicit (prefer 0–6 weeks) and specify Entry/Stop/Target/Trigger and a clear invalidation using material‑driven thresholds (e.g., XQWTVR71K governance signals; GX057ADL7 rate‑cut odds). 3) Tighten the causal chain line‑by‑line: spell out the base-case causal flow (cloud/AI tailwinds lift revenue visibility and contracted bases; moats lift pricing power and operating leverage; cash flow supports higher multiples) and attach explicit triggers/invalidation points to each scenario. 4) Elevate numerical rigor: quote exact figures where used, present ranges where the source provides them, and marshal all numeric claims to the IDs in the material; avoid generic statements without a numeric anchor. 5) Fix citation discipline and conflict resolution: ensure every assertion with a numeric or pivotal claim cites an ID, reconcile any conflicts between base/upside/downside readings (e.g., growth vs multiple pressure) within the same scenario, and ensure all critical sources (0G3A676BP, QFDWCTAYB, GX057ADL7, SK994CBWR, J0D96V7MS, 4661GWFP7, 2YP1X9B4T, YX2J8NHZ1, etc.) are consistently represented. 6) Present the final output strictly in the required format (4 Movers lines; 1–2 Swing/Outlook lines), with no extraneous sections, and ensure the lines are compact, forward‑looking, and actionable.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756034220"
+}

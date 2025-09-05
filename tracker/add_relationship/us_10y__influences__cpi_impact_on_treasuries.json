@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:49:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_10y",
+    "target_id": "cpi_impact_on_treasuries",
+    "selection_motivation": "The 10‑year Treasury yield is the primary gauge of Treasury market expectations and directly informs the magnitude of CPI‑driven adjustments in Treasury pricing, thereby influencing the CPI Impact on Treasuries node.",
+    "candidate_motivation": "The US 10Y yield is highly sensitive to inflation expectations and monetary policy outlook; the strongest direct influences are inflation metrics and Fed policy indicators, with cross-market signals from USD and EURUSD.",
+    "existing_links_count": "11",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'core_monthly_cpi', 'core_cpi', 'us_inflation_data', 'us_inflation_expectations', 'cpi_impact_on_treasuries', 'us_treasury_yields', 'usd', 'eurusd']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1209217599460605959",
+    "rel_id": "us_10y__influences__cpi_impact_on_treasuries",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_10y', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The 10‑year Treasury yield is the primary gauge of Treasury market expectations and directly informs the magnitude of CPI‑driven adjustments in Treasury pricing, thereby influencing the CPI Impact on Treasuries node.",
+      "type": "INFLUENCES",
+      "source": "us_10y",
+      "target": "cpi_impact_on_treasuries"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_10y__influences__cpi_impact_on_treasuries"
+}

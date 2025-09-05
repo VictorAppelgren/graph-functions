@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T12:22:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "medium",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756635335",
+    "article_ids": "['FAN5RYW6T', 'KNWKYIQ1W', 'AKTQ1BW6F', 'A88B7V8PY', '61SVFUKBY']",
+    "selected_articles_count": "5",
+    "material_chars": "120894",
+    "output_chars": "1788",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist for the draft:**\n\n1. **Canonical handle mapping** – explicitly tag every claim with a handle: spx (S&P 500), ust10y (10‑yr UST), dxy (DXY), us_core_cpi (US core CPI), us_pce (US PCE), fed_policy (Fed policy). For example, “Fed cuts in September (fed_policy) will widen the term premium on ust10y, compressing spx.”  \n2. **Causal chain clarity** – break the narrative into a step‑by‑step chain: Fed cuts → term‑premium widening → higher ust10y → equity valuation compression → concentration‑driven pullback in spx. Cite FAN5RYW6T for each link.  \n3. **Magnitude ranges** – state explicit ranges: base case 5–10 % decline in spx by Dec 2025; alternative 2–5 % gain. Use bp/% notation where appropriate.  \n4. **Catalyst window** – list dated triggers: Sep 5 payrolls (us_jobs), Sep Fed minutes (fed_policy), next CPI release (us_core_cpi), Q3 tech earnings (e.g., crwd, nflx).  \n5. **Invalidation scenarios** – add clear “if‑then” risks: Fed hikes → tighter credit → larger spx drop; stronger labor market → Fed raises → spx rally; inflation surprise → Fed holds → spx volatility.  \n6. **Watch‑list signals** – bullet the same catalysts as monitoring points.  \n7. **Confidence rating** – end with a concise confidence level (e.g., “moderate confidence”) and justify with evidence density.  \n8. **Trim generic phrasing** – remove vague statements (“could trigger a sharp pullback”) and replace with quantified, source‑backed claims.  \n9. **Inline citations** – use (ID) after each factual claim (e.g., “Fed cuts in September (FAN5RYW6T)”).  \n10. **Format** – adopt Argos style: concise, action‑oriented sentences, each ending with a clear implication for trading or risk management.  \n\nImplementing these edits will align the draft with the 3–6 month horizon, ensure every claim maps to a canonical handle, and provide a defensible, data‑driven scenario map.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__medium__spx__analysis_run__1756635335"
+}

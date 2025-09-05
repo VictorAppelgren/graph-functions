@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T14:33:55",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MQJWCGC3R",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Article discusses a specific restaurant experience and food item, which does not align with existing investment or economic nodes.",
+      "existing_ids": [],
+      "new_names": [
+        "Rodeo Goat",
+        "Ozzmosis Burger",
+        "Battle of the Burgers"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses a personal food review with no relevant macroeconomic or market content."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Not enough context to determine relevance to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article recounts a recent personal experience at a restaurant, describing an event that occurred last week, focusing on immediate, short-term details."
+    },
+    "article_node": {
+      "id": "MQJWCGC3R",
+      "title": "Budget Bites: Rodeo Goat's Ozzmosis",
+      "summary": "👋 Jay here! I wanted to share my experience trying the Ozzmosis burger at Rodeo Goat last week.\n\nDig in: The masterpiece, if I may say so, is going head-to-head with another specialty burger during the restaurant's Battle of the Burgers showdown.\n\nWhat to order: The Ozzmosis ($15) is made with a beef  and breakfast sausage patty, fried hash brown cake, bacon, a fried egg, American cheese, hollandaise, chives and raspberry jam.\n\nMy experience: From the first bite, I was floating. The crunch of th...",
+      "source": "https://www.axios.com/local/houston/2025/08/22/budget-bites-rodeo-goat-s-ozzmosis",
+      "published_at": "2025-08-22T11:29:01.048320+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "MQJWCGC3R"
+}

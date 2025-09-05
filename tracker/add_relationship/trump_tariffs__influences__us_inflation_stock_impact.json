@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:48:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "us_inflation_stock_impact",
+    "selection_motivation": "Trump tariffs directly raised US inflation expectations, which in turn pressured equity valuations, making a causal link to the US Inflation and Stock Market Impact node highly relevant for risk modeling.",
+    "candidate_motivation": "These topics directly relate to tariff policy, cross-border trade dynamics, and macroeconomic effects that would be influenced by or influence Trump's tariff agenda. They represent strong peers, correlates, or influences in the tariff policy space through bilateral talks, implementation scope, and resulting inflation/market impacts.",
+    "existing_links_count": "10",
+    "candidate_count": "12",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['us_tariffs', 'us_tariffs_on_technology', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_craniomaxillofacial', 'us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_war_2025', 'tariff_driven_inflation', 'us_inflation_stock_impact', 'us_tariffs_brazil', 'us_tariff_policies']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_data'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1195706800578495207",
+    "rel_id": "trump_tariffs__influences__us_inflation_stock_impact",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_stock_impact'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump tariffs directly raised US inflation expectations, which in turn pressured equity valuations, making a causal link to the US Inflation and Stock Market Impact node highly relevant for risk modeling.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_inflation_stock_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_tariffs__influences__us_inflation_stock_impact"
+}

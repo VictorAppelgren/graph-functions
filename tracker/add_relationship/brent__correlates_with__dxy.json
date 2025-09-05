@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T14:10:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "brent",
+    "target_id": "dxy",
+    "selection_motivation": "Brent Crude Oil price movements are strongly correlated with the US Dollar Index, as oil is priced in USD and changes in oil affect USD demand and inflation expectations.",
+    "candidate_motivation": "Brent Crude Oil is driven by global supply/demand, currency strength, and macro‑financial conditions; therefore topics that directly influence oil prices, the USD, or global economic activity are likely strong influences or peers.",
+    "existing_links_count": "0",
+    "candidate_count": "24",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['wti', 'dxy', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'china_exports', 'china_credit_impulse', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'spx', 'sx5e', 'bund10y', 'gilt10y', 'jgb10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'sofr', 'euribor', 'gold']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152923703630104732",
+    "rel_id": "brent__correlates_with__dxy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Brent Crude Oil price movements are strongly correlated with the US Dollar Index, as oil is priced in USD and changes in oil affect USD demand and inflation expectations.",
+      "type": "CORRELATES_WITH",
+      "source": "brent",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__correlates_with__dxy"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:02:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "dxy__analysis_run__1756554215",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "3491",
+    "output_chars": "759",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target but still too verbose and lacks the crisp, evidence‑anchored structure required for a top‑macro brief. Tighten it to 4–6 bullets, each with a single causal link, a clear sign/magnitude, a catalyst window, and a watch‑list. For example: (1) “DXY will decline 2 % (≈‑200 bp) to 95.8 by Aug 31, driven by an 86 % probability of a September Fed cut and a 57 bp steepening of the 2‑yr/10‑yr curve (Z7O1DCHS7, 7XH2DKEKV).” (2) “Short‑term upside hinges on the Aug 30 PCE and Aug 31 NFP; PCE > 3 % or payrolls > expected will lift DXY 50–100 bp, while a flattening of the spread below 30 bp will have a similar effect (7XH2DKEKV).” (3) “Primary risk: Fed policy reversal or Cook lawsuit resolution restoring Fed independence, which could lift DXY and invalidate the 200 bp target (Z7O1DCHS7, XTQIQRP5K).” (4) “Watch signals: Fed policy statements, Cook lawsuit developments, July CPI, PCE, NFP, and the 2‑yr/10‑yr spread. A breach of 95.8 or 50 bp triggers a position review.” Remove any generic “political pressure” phrasing that isn’t directly tied to a handle, consolidate duplicate citations, and ensure every claim has an inline ID. This will meet the truth‑over‑verbosity rule, map to canonical handle dxy with explicit sign/magnitude, and provide a clear, actionable catalyst window.",
+      "tokens": {}
+    }
+  },
+  "id": "dxy__executive_summary__dxy__analysis_run__1756554215"
+}

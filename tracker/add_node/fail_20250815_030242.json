@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:02:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5L8QXJJP4",
+    "status": "rejected",
+    "reject_category": "ambiguous",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the launch of the FIS Investor Service Suite, which addresses critical operational efficiencies and regulatory compliance for financial institutions, warranting a dedicated node for analysis of its impact on investor servicing and automation in the financial sector.",
+      "id": "fis_investor_service_suite",
+      "name": "FIS Investor Service Suite",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "ambiguous",
+      "motivation": "Product launch, not a macro driver, asset, policy, geography, or company."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Product/service offering, not a macro driver or tradable asset",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

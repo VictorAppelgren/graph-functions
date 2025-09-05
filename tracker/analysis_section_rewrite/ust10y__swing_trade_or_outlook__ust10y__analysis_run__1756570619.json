@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T18:42:41",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756570619",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6919",
+    "output_chars": "868",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Remove the “Main‑focus check:” heading and any other non‑line text. Keep the four Up/Down lines exactly as they are – they already follow the required format and include citations. For the swing‑trade line, confirm the order is **Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100**. Your line currently satisfies this, but add the asset name for clarity (e.g., “UST10y”) at the start of the line. Verify the R/R calculation: (4.23‑4.18)/(4.30‑4.23)=0.71, so keep “0.71”. Ensure the probability (70 %) and confidence (80) are justified by the cited sources (U21K4ALY, 97MD1FHW8, 3YAQ8JUPL). No other edits are needed.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756570619"
+}

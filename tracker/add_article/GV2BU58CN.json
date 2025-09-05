@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T22:59:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GV2BU58CN",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US job openings and Fed policy push 10y yields lower, gold and silver safe‑haven flows, Brent price influenced by OPEC‑Plus meeting.",
+      "existing_ids": [
+        "ust10y",
+        "gold",
+        "brent",
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports US job openings data and Middle East PMI data releases, which are economic data releases."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to assess impact against; therefore the relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article centers on short‑term market‑moving events—Fed rate‑cut speculation, OPEC‑Plus supply decisions, and geopolitical tensions—that influence near‑term pricing and sentiment."
+    },
+    "article_node": {
+      "id": "GV2BU58CN",
+      "title": "Horizons Middle East & Africa 9/4/2025",
+      "summary": "US job openings data weaker than expected fuels bets for a Fed rate cut this month, while Chinese regulators weigh curbing a $1.2 trillion rally. Global fixed‑income markets rallied, with UST 10‑yr yields easing to 4.22 % and gold and silver reaching record highs amid safe‑haven flows. Brent fell to $67.4 a barrel ahead of an OPEC‑Plus virtual meeting that could see supply cuts, while Middle‑East PMI data show mixed growth: UAE strong, Saudi and Egypt mixed, and Saudi’s 56.4 PMI signals resilient private‑sector activity. Trump’s request for the Supreme Court to uphold tariffs adds uncertainty to trade policy, and the UAE’s warning on Israeli annexation of the West Bank signals geopolitical tensions that could affect regional markets.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-04/horizons-middle-east-africa-9-4-2025-video",
+      "published_at": "2025-09-04T11:45:31.320000+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "GV2BU58CN"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T23:50:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8I40VPCE9",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the development and regulatory pathway of VYD2311, a monoclonal antibody candidate aimed at COVID-19 prevention, which is crucial for understanding macro-level health impacts and investment opportunities in biopharmaceuticals.",
+      "id": "vyd2311",
+      "name": "VYD2311",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "VYD2311 is a specific monoclonal antibody candidate, making it an asset."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "VYD2311 is a specific monoclonal antibody product, a micro-level biopharma asset, not a macro driver or tradable instrument; it falls under industry verticals, which are disallowed.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T11:14:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "new_article_id": "HCF3S2P84",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['3T8AGCL7T', 'VCZKKPORO', 'DGG6HXUFZ', 'DNG58CC09', 'JIOBLQSJP', '9BA7355CV', 'CWVWSACA7']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not clearly supersede any existing article in the current topic set, so no action is warranted."
+    }
+  },
+  "id": "us_tariffs__HCF3S2P84__current"
+}

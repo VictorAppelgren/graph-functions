@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:41:02",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "saudi_vision_2030",
+    "target_id": "sustainability_leadership",
+    "selection_motivation": "Saudi Vision 2030 is a national strategy that positions Saudi Arabia as a leader in sustainability, directly influencing sustainability leadership initiatives.",
+    "candidate_motivation": "Saudi Vision 2030 is a comprehensive national transformation plan focused on diversification, private investment, and sustainable development; therefore, topics tied to energy markets, regional sovereign funds, and Middle East investment activity are the strongest potential influences or peers.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['oil', 'middle_east_sovereign_funds', 'middle_east_investment', 'middle_east_investment_strategies', 'ftai_infrastructure', 'tecogen_clean_energy', 'sustainability_leadership', 'sustainability_reframing']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'middle_east_sovereign_funds'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407452457",
+    "rel_id": "saudi_vision_2030__influences__sustainability_leadership",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'middle_east_sovereign_funds'}, {'type': 'INFLUENCES', 'source': 'saudi_vision_2030', 'target': 'sustainability_leadership'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Saudi Vision 2030 is a national strategy that positions Saudi Arabia as a leader in sustainability, directly influencing sustainability leadership initiatives.",
+      "type": "INFLUENCES",
+      "source": "saudi_vision_2030",
+      "target": "sustainability_leadership"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "saudi_vision_2030__influences__sustainability_leadership"
+}

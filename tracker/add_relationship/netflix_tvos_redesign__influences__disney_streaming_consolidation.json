@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:19:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "netflix_tvos_redesign",
+    "target_id": "disney_streaming_consolidation",
+    "selection_motivation": "Netflix's tvOS redesign sets a new standard for user experience that pressures competitors to consolidate and streamline their streaming platforms, prompting Disney to accelerate its consolidation strategy.",
+    "candidate_motivation": "These topics reflect direct competitive and strategic movements in streaming that could drive Netflix tvOS redesign decisions, including bundling strategies and cross-platform content integration. Both pertain to major content/platform shifts that influence how Netflix optimizes navigation, search, and app integration on tvOS.",
+    "existing_links_count": "1",
+    "candidate_count": "2",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "2",
+    "candidate_ids_preview": "['disney_streaming_consolidation', 'paramount_skydance_merger']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'netflix_tvos_redesign', 'target': 'ai_in_entertainment'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163751",
+    "rel_id": "netflix_tvos_redesign__influences__disney_streaming_consolidation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'netflix_tvos_redesign', 'target': 'disney_streaming_consolidation'}, {'type': 'INFLUENCES', 'source': 'netflix_tvos_redesign', 'target': 'ai_in_entertainment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Netflix's tvOS redesign sets a new standard for user experience that pressures competitors to consolidate and streamline their streaming platforms, prompting Disney to accelerate its consolidation strategy.",
+      "type": "INFLUENCES",
+      "source": "netflix_tvos_redesign",
+      "target": "disney_streaming_consolidation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "netflix_tvos_redesign__influences__disney_streaming_consolidation"
+}

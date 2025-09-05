@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T16:17:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_student_loan_repayment",
+    "target_id": "us_inflation_data",
+    "selection_motivation": "US student loan repayment is a significant component of consumer spending, which directly feeds into the CPI calculation; thus it is a primary driver of the underlying inflation data series.",
+    "candidate_motivation": "The selected topics are closely related to the economic and financial implications of US student loan repayment, influencing consumer behavior, inflation, and overall economic conditions.",
+    "existing_links_count": "6",
+    "candidate_count": "8",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'core_monthly_cpi', 'us_tariffs_pharmaceuticals_semiconductors', 'employer_student_loan_assistance', 'us_food_stamp_policy', 'us_inflation_data', 'us_inflation_expectations']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'employer_student_loan_assistance'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_fiscal_outlook'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6928789126221138190",
+    "rel_id": "us_student_loan_repayment__influences__us_inflation_data",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'employer_student_loan_assistance'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_fiscal_outlook'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'us_student_loan_repayment', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US student loan repayment is a significant component of consumer spending, which directly feeds into the CPI calculation; thus it is a primary driver of the underlying inflation data series.",
+      "type": "INFLUENCES",
+      "source": "us_student_loan_repayment",
+      "target": "us_inflation_data"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_student_loan_repayment__influences__us_inflation_data"
+}

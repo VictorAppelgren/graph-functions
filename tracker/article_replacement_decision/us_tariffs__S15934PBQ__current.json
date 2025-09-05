@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T14:57:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "new_article_id": "S15934PBQ",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['VCZKKPORO', 'DGG6HXUFZ', 'DNG58CC09', 'CWVWSACA7', 'HCF3S2P84', 'HJGPE9XVS', 'BD3F8WX8B', '4CJPTXOL0', 'ZEO2LC4W9']",
+    "mode": "MUST_REPLACE",
+    "target_id": "ZEO2LC4W9",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "ZEO2LC4W9",
+      "motivation": "The competing timeframe bucket is at capacity, and the new tariffs piece overlaps with existing coverage in the same macro theme. Removing a lower-signal, older item frees space for the updated analysis."
+    }
+  },
+  "id": "us_tariffs__S15934PBQ__current"
+}

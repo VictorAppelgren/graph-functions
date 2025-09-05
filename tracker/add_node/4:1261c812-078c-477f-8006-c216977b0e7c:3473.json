@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T15:29:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JNE61LG9C",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the Jackson Hole Symposium as a key event that signals Fed policy direction, making it a critical macro driver for rates, stocks, and the dollar.",
+      "id": "jackson_hole_symposium",
+      "name": "Jackson Hole Symposium",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Jackson Hole Symposium signals Fed policy direction, affecting rates, stocks, and the dollar."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "Jackson Hole Symposium is a key Fed policy event that signals future monetary policy, directly influencing interest rates, equity markets, and currency movements, making it a valid macro driver.",
+      "confidence": 0.95,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "The query aggregates all key company identifiers, event descriptors, and market context terms to capture comprehensive coverage of J&J manufacturing expansion, WH Smith accounting scandal, and Disney ESPN+ launch, ensuring retrieval of all related news, analysis, and market commentary.",
+      "query": "( (JNJ OR J&J OR Johnson AND Johnson OR Johnson&Johnson OR Johnson Johnson OR Johnson&Johnson Inc OR Johnson&Johnson Inc. OR Johnson&Johnson Corp OR Johnson&Johnson Corporation) OR (WH Smith OR WH Smith plc OR WH Smith UK OR WH Smith group OR WH Smith stores OR WH Smith travel OR WH Smith retail OR 21Q.F) OR (DIS OR Disney OR Disney Inc OR Disney company OR Disney Entertainment OR Disney Media OR Disney+ OR ESPN OR ESPN+ OR ESPN* OR ESPN+ launch OR ESPN+ service OR ESPN digital) OR (manufacturing expansion OR US manufacturing OR US domestic manufacturing OR new facility OR new plant OR new factory OR facility OR plant OR factory OR expansion OR investment OR commitment OR commitment to OR investment in OR investment in US OR investment in manufacturing OR manufacturing facility OR manufacturing plant) OR (accounting error OR accounting mistake OR accounting issue OR accounting scandal OR profit overstatement OR profit misstatement OR profit error) OR (news OR update OR report OR release OR announcement OR breaking OR latest OR today OR recent OR trending OR market OR stocks OR shares OR equities OR ticker OR tickers OR ticker symbol OR ticker symbols OR trending tickers OR trending stocks OR trending shares OR trending equities OR market movers) )"
+    },
+    "importance_classification": {
+      "importance": 4,
+      "rationale": "Jackson Hole Symposium is a major policy event, typically classified as a policy signal with limited centrality and slower impact, fitting the 4‑importance level. The provided context about retail stocks is unrelated, but the topic itself remains a policy event."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:3473"
+}

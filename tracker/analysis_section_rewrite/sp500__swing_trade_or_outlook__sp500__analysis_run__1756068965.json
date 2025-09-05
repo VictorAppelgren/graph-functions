@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:08:11",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756068965",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17355",
+    "output_chars": "1082",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit guidance to lift the piece to world-class quality: tighten the Movers & Scenarios into exactly four 3–6 month lines with 2 Up and 2 Down, each line anchored to a single, testable driver from the material (e.g., Base-case macro drift from SGB2PAZGK/NL5YYTLF2; AI/EV leadership from STBVARD8F/22PL3Q360; Tariff-escalation risk from WTNT85IPR/SGB2PAZGK; Inflation/ally realignment from NL5YYTLF2/SGB2PAZGK), and replace the vague “watch” phrasing with explicit data thresholds; attach probabilities using the named-scenario weights (base 45–55%; tariff-escalation 20–30%; AI/EV-led 25–35%; inflation/ally 20–30%) with in-text citations after the numeric claims (e.g., the 45–55% base weight cited to WTNT85IPR/STBVARD8F/YX2J8NHZ1/4661GWFP7, the 25–35% AI weight to STBVARD8F/WTNT85IPR/22PL3Q360, etc.); ensure each line forms a coherent, testable causal chain: tariffs/reshoring drive relative prices → domestic capex (semis/AI infra) → ROIC uplift and equity re-rating, with higher policy risk feeding through as higher discount rates; explicitly note an invalidation condition (e.g., tariff escalation persists beyond a defined timetable or a constructive thaw occurs) and cite the sources that support the trigger. For quantification, convert qualitative watchpoints into numeric milestones (tariff timetable within 1–2 quarters; GMV/capex cadence thresholds; Nvidia AI compute demand signal thresholds; Ford margin trajectory) and append the exact IDs after the facts that rely on them (WTNT85IPR; SGB2PAZGK; NL5YYTLF2; STBVARD8F; 22PL3Q360; 65UUBU0OR; I2SJU04DF; QGXA2WQJ3). Rework the Outlook/Trade section to target a single tradable asset (KO/IUSV as a clean candidate) and present 1–2 lines only: if tradable, provide a Swing Trade line with Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence % (grounded in the same regime-probability framing and linked to tariff/GMV/AI-capex signals); if you keep Shopify, switch to a tight 1-line Outlook anchored to the same triggers rather than a multi-asset, multi-view narrative. Finally, prune non-core tangents (e.g., Disney/Costa Coffee) to preserve a tight, decision-ready causal chain, ensuring every assertion ties to a source ID and that all critical sources are reconciled if any conflicts arise.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756068965"
+}

@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T13:30:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IGP1Q4ZEJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Nvidia as AI exposure and Michael Burry's contrarian dip-buys in beaten-down stocks occur within a policy/tariff-driven market backdrop, with the S&P 500 acting as the broad risk proxy.",
+      "existing_ids": [
+        "sp500",
+        "nvidia_amd_chip_revenue_agreement",
+        "trump_tariffs",
+        "tariff_driven_inflation",
+        "us_tariffs_semiconductors",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers commentary on Michael Burry’s portfolio moves and their impact on UnitedHealth Group and Lululemon Athletica, which is a market analysis/opinion piece."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Michael Burry’s recent purchase of shares and call options in UnitedHealth Group signals a contrarian investment stance that could influence investor sentiment and short‑term volatility for the company."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article focuses on long‑term upside potential and structural factors such as balance sheets and dividend yields, indicating a fundamental time frame."
+    },
+    "article_node": {
+      "id": "IGP1Q4ZEJ",
+      "title": "After Nearly Dumping His Entire Portfolio, \"The Big Short's\" Michael Burry Just Bought 2 Abandoned Stocks Down at Least 40% This Year",
+      "summary": "Michael Burry’s Scion Asset Management sold almost its entire portfolio in Q1, buying put options on tech stocks that helped it avoid the April market crash, and has now shifted to a contrarian stance, buying shares and call options in UnitedHealth Group and Lululemon Athletica. UnitedHealth, down about 42% YTD, faces higher medical costs, a DOJ probe, and a revised earnings outlook, yet maintains a strong balance sheet and dividend yield that Burry and other investors view as a long‑term upside. Lululemon, also down nearly 47%, has a solid cash position and positive earnings but has cut guidance amid rising competition and a post‑COVID slowdown, prompting Burry’s cautious buy. Both stocks are seen as undervalued opportunities for investors willing to weather short‑term volatility for potential long‑term gains.",
+      "source": "https://www.nasdaq.com/articles/after-nearly-dumping-his-entire-portfolio-big-shorts-michael-burry-just-bought-2-abandoned",
+      "published_at": "2025-08-24T09:24:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "IGP1Q4ZEJ"
+}

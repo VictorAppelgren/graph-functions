@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T22:17:34",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "VJQJ7XRQO",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['XTQIQRP5K', 'B50S2PG8O', 'GKC24ERTI', '7GU5QDMM4', '7BLWI6OTC', 'NIT6JFIQF', 'GK86UUQPN', 'F7K7Y35U5', 'KX6AOMQZ5']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "7BLWI6OTC",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article offers a timely, policy‑relevant view on Fed independence with a clear catalyst (Cook confirmation hearing next week) and maps to key handles (UST rates, inflation, USD), adding value to the graph."
+    }
+  },
+  "id": "fed_policy__VJQJ7XRQO__medium"
+}

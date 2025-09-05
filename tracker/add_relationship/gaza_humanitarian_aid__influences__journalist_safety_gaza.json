@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:29:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_humanitarian_aid",
+    "target_id": "journalist_safety_gaza",
+    "selection_motivation": "Humanitarian aid directly improves conditions for journalists, reducing risk and enhancing safety in Gaza.",
+    "candidate_motivation": "These topics are closely tied to the Gaza conflict and would influence aid access, funding, and safety dynamics around humanitarian relief. They also reflect policy, risk, and information environments that shape humanitarian operations.",
+    "existing_links_count": "1",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['gaza_humanitarian_crisis', 'israeli_palestinian_policy', 'gaza_journalist_killings', 'journalist_safety_gaza', 'journalist_assassinations_gaza']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'gaza_humanitarian_crisis'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162295",
+    "rel_id": "gaza_humanitarian_aid__influences__journalist_safety_gaza",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'gaza_humanitarian_crisis'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_aid', 'target': 'journalist_safety_gaza'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Humanitarian aid directly improves conditions for journalists, reducing risk and enhancing safety in Gaza.",
+      "type": "INFLUENCES",
+      "source": "gaza_humanitarian_aid",
+      "target": "journalist_safety_gaza"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gaza_humanitarian_aid__influences__journalist_safety_gaza"
+}

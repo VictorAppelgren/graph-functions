@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:31:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756041424",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16529",
+    "output_chars": "1641",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is data-dense but fails to deliver a crisp, 4–6 sentence executive brief with a single, testable house view; it sprawls across horizons (base-case, regime shifts, 0–3 week playbook) and repeats items, which dilutes decision usefulness. Actionable edits: 1) condense to a 4–6 sentence house view for the 3–6 month horizon, starting with a tight, first-principles thesis (e.g., AI/cloud-driven moats plus durable cash flows vs near-term tariff/inflation headwinds) and anchor each claim to a cited data point from the sources (UNH, LULU, MSFT, SHOP) with IDs after the sentence. 2) structure as a compact causal chain: Demographics/LTC pressure → pricing power in healthcare/consumer services → durable cash flows and moats valued higher; then state the core anchors (UNH FCF yield >9% and ~3% dividend; MSFT Azure/AI growth 39% YoY and $368B contracted revenue; SHOP Q2’25 revenue +31% to $2.7B with $422M FCF; LULU earnings trajectory) with precise IDs. 3) replace broad prose with discrete catalysts, risks, and watch items: near-term catalysts (tariff pass-through around $3,800 per household; 25–50 bp Sept rate cut; Intel governance signal ~10% stake), key risks (tariff persistence, UNH/LULU regulatory/earnings revisions, debt-service deterioration), and watchpoints (AI adoption cadence, private-market liquidity signals, oil/FX as regime inputs). 4) add a dedicated 0–3 week playbook line with observable price/margins signals in autos or tariff updates (S15934PBQ, S7M6BJSRT) and invalidate the base-case only if a clear, observable reversal in tariff pass-through or a material, sustained miss in AI-driven disinflation occurs. 5) tighten formatting so each sentence carries one clear idea, attach sources immediately after the claim, and remove nonessential items (e.g., overly granular governance notes without a direct market-implication link). 6) ensure consistency of numbers and avoid any mismatched figures (verify GMV/revenue levels and the exact source IDs for UNH, MSFT, SHOP, and LULU; remove or reconcile any conflicts between regimes and base-case numbers). 7) conclude with a single calibrated stance (moderate, with reweighting triggers) and explicit invalidation rules tied to the defined thresholds (tariff path, AI productivity, debt dynamics), so the brief remains decision-ready.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756041424"
+}

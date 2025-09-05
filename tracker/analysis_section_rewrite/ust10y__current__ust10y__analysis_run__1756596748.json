@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T01:41:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756596748",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "58713",
+    "output_chars": "1107",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on‑target for the 0–3‑week horizon and correctly maps to the canonical handle **ust10y** (positive sign, 5–10 bp rise).  It also cites a clear catalyst window (September FOMC).  Minor tightening is needed:\n\n1. **Add inline citations** for every factual claim.  \n   - UST 10‑year at 4.23 % → (ID:97MD1FHW8).  \n   - 2‑year fell 32 bps → (ID:97MD1FHW8).  \n   - Fed rate‑cut odds 89 % → (ID:97MD1FHW8).  \n   - Fed rate‑cut odds 85 % → (ID:U21K4ALYQ).  \n   - Waller’s 25‑bp cut hint → (ID:3YAQ8JUPL).  \n\n2. **State the magnitude explicitly**: “UST 10‑year is currently at 4.23 % and is expected to rise 5–10 bp over the next 1–2 weeks.”  \n\n3. **Keep the focus tight**: remove any extraneous discussion of the 2‑year curve or global risk sentiment unless it directly informs the 10‑year move.  \n\n4. **Clarify the causal chain** in one sentence: inflation data → Fed dovish signal → market pricing of a September cut → 10‑year yield adjustment.  \n\n5. **Mention the key risk** that would invalidate the view: an unexpectedly lower core PCE or an early Fed cut would compress the 10‑year; a higher‑than‑expected PCE or fiscal tightening would push it higher.  \n\nWith these edits, the analysis will satisfy the acceptance gate and remain concise, actionable, and fully sourced.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756596748"
+}

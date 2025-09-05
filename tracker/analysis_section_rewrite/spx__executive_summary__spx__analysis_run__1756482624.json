@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T18:05:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756482624",
+    "prior_sections": "['fundamental', 'medium', 'current']",
+    "material_chars": "4772",
+    "output_chars": "622",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is too verbose, mixes unrelated corporate detail, and lacks the 4–6‑sentence, handle‑mapped, catalyst‑anchored format required.  Condense to a single paragraph of 4–6 sentences that focuses exclusively on **spx** (S&P 500) and its drivers.  Replace every “S&P 500” mention with the canonical handle **spx** and attach a citation (e.g., VDO8D9T7M).  Provide explicit magnitude ranges: e.g., “spx will trade 4,200–4,300 over the next 60 days” and “EPAM’s 19–20 % upside lifts spx by 0.1–0.2 % (H86O3XRUJ); CrowdStrike’s Q3 earnings could add +5 bp (KNWKYIQ1W).”  Add a clear causal chain: GDP revision +3.3 % → spx 4,200–4,300; Fed rates steady (fed_policy, ust10y) → no cut risk; tariff escalation >15 % or dovish Fed cut → risk‑off, spx <4,200.  List catalysts with dates: tariff announcement 13 Aug 2025, Fed meeting 16–17 Sep 2025, CrowdStrike Q3 earnings 15 Oct 2025.  Remove peripheral items (Porsche, Dollar General, Jaguar) and any non‑canonical references.  Ensure every claim has an inline citation and a handle mapping; e.g., “margin deterioration at CrowdStrike invalidates the +5 bp upside (KNWKYIQ1W).”  The revised brief should read: *spx will trade 4,200–4,300 through the next 60 days, supported by a +3.3 % Q2 GDP revision (VDO8D9T7M) and incremental upside from EPAM (+0.1–0.2 %) and CrowdStrike (+5 bp) (H86O3XRUJ, KNWKYIQ1W).  Key catalysts are the tariff announcement 13 Aug 2025, the Fed meeting 16–17 Sep 2025, and CrowdStrike’s Q3 earnings 15 Oct 2025.  Risks include a tariff escalation >15 % or a dovish Fed cut, a GDP downgrade below 3 % or initial claims >5,000, and margin deterioration at CrowdStrike (VDO8D9T7M, KNWKYIQ1W).* This meets the 4–6‑sentence, handle‑mapped, catalyst‑anchored criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756482624"
+}

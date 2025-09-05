@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:39:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_program",
+    "target_id": "iran_nuclear_sanctions",
+    "selection_motivation": "The Iran nuclear program is the primary driver behind the imposition of Iran nuclear sanctions, making the link a direct cause‑effect relationship essential for policy and risk analysis.",
+    "candidate_motivation": "The selected topics are closely related to geopolitical dynamics and economic factors that could influence or be influenced by the Iran Nuclear Program, particularly in terms of energy markets and international relations.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['oil', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'us_russia_relations', 'ukraine_geopolitics', 'us_chip_export_controls', 'iran_nuclear_sanctions', 'middle_east_investment', 'us_inflation', 'usd']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845784",
+    "rel_id": "iran_nuclear_program__influences__iran_nuclear_sanctions",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Iran nuclear program is the primary driver behind the imposition of Iran nuclear sanctions, making the link a direct cause‑effect relationship essential for policy and risk analysis.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_program",
+      "target": "iran_nuclear_sanctions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_program__influences__iran_nuclear_sanctions"
+}

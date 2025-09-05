@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:48:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LUJ8ZLAFB",
+    "status": "success",
+    "topic_id": "us_urban_crime"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights issues related to immigration enforcement and crime, which could be linked to existing discussions on U.S. urban crime dynamics.",
+      "existing_node_ids": "us_urban_crime",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses urban crime trends, which can impact economic conditions and public policy, but does not fit neatly into the specified categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses urban crime trends, which directly relates to the node on US urban crime."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and patterns in urban crime, suggesting a longer-term perspective on the factors influencing crime rates."
+    },
+    "article_node": {
+      "id": "LUJ8ZLAFB",
+      "title": "ICE hauls in illegal immigrants convicted of child crimes in nationwide Wednesday sweep: 'clear message'",
+      "summary": "ICE agents recently arrested multiple illegal immigrants convicted of serious crimes, including sexual offenses against children, as part of a federal initiative to target violent offenders. Homeland Security Assistant Secretary Tricia McLaughlin emphasized that the agency is prioritizing the removal of individuals who prey on children, with a significant percentage of arrests focusing on those with criminal convictions. The recent operations have resulted in the detention of numerous individuals from various countries, including Mexico, Ecuador, and Honduras, all with histories of heinous crimes.",
+      "source": "https://www.foxnews.com/us/ice-hauls-illegal-immigrants-convicted-child-crimes-nationwide-wednesday-sweep-clear-message",
+      "published_at": "2025-08-14T15:41:20-04:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "LUJ8ZLAFB"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:08:54",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756555734",
+    "article_ids": "['1ZRJSOWD9', 'LF0UUL917', '4PRAW7Z7Y', 'ZV3QI3K19', 'PA57YBYVQ']",
+    "selected_articles_count": "5",
+    "material_chars": "201926",
+    "output_chars": "1950",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is technically sound and follows the structural‑horizon logic you asked for, but it fails the *Acceptance Gate* because it does **not map to any canonical market handle** (e.g., UST 10y, UST 2y, DXY, etc.). Mortgage rates are a derivative of the UST yield curve, so you must explicitly tie the analysis to a canonical handle—e.g., “UST 10y” or “UST 30y” (if you add a new handle).  \n\n**Actionable edits**\n\n1. **Add a canonical handle mapping**  \n   - Insert a sentence such as: “The 30‑year mortgage rate tracks the UST 10y yield plus a spread that reflects term‑premium and liquidity conditions.”  \n   - Cite the source: (LF0UUL917).  \n\n2. **Ensure every claim has a citation**  \n   - The draft already cites (LF0UUL917) throughout; double‑check that each paragraph ends with a citation.  \n\n3. **Remove any drift**  \n   - The draft is focused on mortgage rates; no drift detected.  \n\n4. **Add a brief note on the spread**  \n   - Mention that the spread between 30‑year mortgage rates and UST 10y yields is currently ~0.5 % and is a key transmission channel.  \n\nOnce the handle mapping is added, the analysis will satisfy the acceptance criteria and be ready for inclusion.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1756555734"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:26:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EWYYUAM7Y",
+    "status": "success",
+    "topic_id": "nfl_player_injuries"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses Stefon Diggs' injury status and potential impact on the Patriots' season, which is relevant to the NFL Player Injuries node.",
+      "existing_node_ids": "nfl_player_injuries",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses injuries to NFL players, which does not relate to macroeconomic events, earnings, or other financial categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of player injuries in the NFL, which directly relates to the node on NFL player injuries."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article addresses ongoing trends and impacts related to player injuries in the NFL, which can influence team performance and league dynamics over time."
+    },
+    "article_node": {
+      "id": "EWYYUAM7Y",
+      "title": "Stefon Diggs noncommittal on Patriots debut as he recovers from injury: 'Taking it day by day'",
+      "summary": "Stefon Diggs is making progress in his recovery from a torn ACL but remains uncertain about his availability for the New England Patriots' season opener against the Las Vegas Raiders. Despite passing a physical and practicing on a limited basis, Diggs expressed that both he and the coaching staff are cautious about his readiness for Week 1. He signed a three-year deal with the Patriots after a challenging season with the Houston Texans, where he recorded under 500 receiving yards.",
+      "source": "https://www.foxnews.com/sports/stefon-diggs-noncommittal-patriots-debut-amid-injury-recovery-taking-day-day",
+      "published_at": "2025-08-14T17:19:27-04:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "EWYYUAM7Y"
+}

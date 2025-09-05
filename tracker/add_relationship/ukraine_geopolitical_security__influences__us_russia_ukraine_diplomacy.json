@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:13:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_geopolitical_security",
+    "target_id": "us_russia_ukraine_diplomacy",
+    "selection_motivation": "Linking Ukraine Geopolitical Security to US-Russia Diplomatic Relations on Ukraine is crucial as diplomatic actions directly influence the geopolitical landscape, impacting both regional stability and economic conditions.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with Ukraine Geopolitical Security due to their relevance in global economic conditions, trade policies, and geopolitical dynamics, particularly in relation to Russia and the broader region.",
+    "existing_links_count": "5",
+    "candidate_count": "9",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_china_trade_talks', 'ukraine_conflict', 'ukraine_sovereignty', 'russia_economic_crisis', 'ukraine_geopolitics', 'us_tariffs_semiconductors', 'us_chip_trade_policy', 'us_russia_ukraine_diplomacy', 'us_russia_ukraine_land_deal']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082048",
+    "rel_id": "ukraine_geopolitical_security__influences__us_russia_ukraine_diplomacy",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'wheat'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitical_security', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Ukraine Geopolitical Security to US-Russia Diplomatic Relations on Ukraine is crucial as diplomatic actions directly influence the geopolitical landscape, impacting both regional stability and economic conditions.",
+      "type": "INFLUENCES",
+      "source": "ukraine_geopolitical_security",
+      "target": "us_russia_ukraine_diplomacy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_geopolitical_security__influences__us_russia_ukraine_diplomacy"
+}

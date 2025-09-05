@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T04:49:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sx5e",
+    "target_id": "ecb_policy",
+    "selection_motivation": "ECB policy decisions directly shape euro‑area corporate earnings, risk appetite, and capital flows, making the Euro Stoxx 50 a primary channel for policy transmission.",
+    "candidate_motivation": "Euro Stoxx 50 is a core European equity index whose performance is driven by European policy, inflation, and sovereign yields, while also being sensitive to global risk appetite, US monetary policy, currency exposure, and peer equity indices. The listed topics are those that directly influence or strongly correlate with the index’s valuation and risk profile.",
+    "existing_links_count": "4",
+    "candidate_count": "16",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'bund10y', 'ust10y', 'ust30y', 'ust5y', 'ust2y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdjpy', 'eurusd', 'gbpusd', 'spx', 'us_inflation', 'us_core_pce']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161574",
+    "rel_id": "sx5e__influences__ecb_policy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy decisions directly shape euro‑area corporate earnings, risk appetite, and capital flows, making the Euro Stoxx 50 a primary channel for policy transmission.",
+      "type": "INFLUENCES",
+      "source": "sx5e",
+      "target": "ecb_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__influences__ecb_policy"
+}

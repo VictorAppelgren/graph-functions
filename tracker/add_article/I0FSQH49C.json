@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:03:31",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "I0FSQH49C",
+    "topic_discovery_motivation": "Article highlights SpaceX's advancements in space technology and its implications for defense and commercial space operations, relevant to current trends in aerospace investment.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 4,
+      "existing_ids": [],
+      "new_names": [
+        "SpaceX USSF-36 Mission",
+        "Falcon 9 Rocket Launch",
+        "SpaceX Starship Rocket",
+        "International Space Station Resupply Mission"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on SpaceX’s launch activities and upcoming missions, which is a company news event not related to earnings."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major SpaceX launch and related missions, which would be highly relevant if the node in question is SpaceX, Falcon 9, or related space‑flight entities, but the specific node is not specified."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent launches and operational demonstrations, reflecting immediate actions affecting the spaceflight sector."
+    },
+    "article_node": {
+      "id": "I0FSQH49C",
+      "title": "Watch this awesome boost-back burn on a returning SpaceX rocket",
+      "summary": "SpaceX successfully launched an unmanned robotic spaceplane for the U.S. Space Force in the USSF-36 mission using a Falcon 9 rocket from Kennedy Space Center. The launch showcased the rocket's boost-back burn, allowing for the first-stage booster to return safely to Cape Canaveral. Additionally, SpaceX is preparing for two significant launches on Sunday, including the 10th flight of its Starship rocket and a resupply mission to the International Space Station, which will deliver over 5,000 pounds of supplies and conduct a reboost demonstration.",
+      "source": "https://www.digitaltrends.com/space/watch-this-awesome-boost-back-burn-on-a-returning-spacex-rocket/",
+      "published_at": "2025-08-21T22:50:00-07:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "I0FSQH49C"
+}

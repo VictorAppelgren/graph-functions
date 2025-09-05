@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:40:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdcny",
+    "target_id": "ust2y",
+    "selection_motivation": "USD/CNY is highly sensitive to short‑term US rate expectations, so it strongly correlates with the US 2‑year Treasury yield, a key short‑term benchmark.",
+    "candidate_motivation": "USD/CNY is heavily influenced by US monetary policy, US Treasury yields, the overall strength of the US dollar, and Chinese economic fundamentals; therefore topics that directly affect or correlate with these variables are the most likely strong influences or peers.",
+    "existing_links_count": "4",
+    "candidate_count": "15",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'dxy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'us_inflation', 'us_unemployment_claims', 'china_exports', 'china_credit_impulse', 'usdjpy', 'gbpusd', 'eurusd']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443788672",
+    "rel_id": "usdcny__correlates_with__ust2y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/CNY is highly sensitive to short‑term US rate expectations, so it strongly correlates with the US 2‑year Treasury yield, a key short‑term benchmark.",
+      "type": "CORRELATES_WITH",
+      "source": "usdcny",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdcny__correlates_with__ust2y"
+}

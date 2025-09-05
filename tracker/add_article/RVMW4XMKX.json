@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:12:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "RVMW4XMKX",
+    "status": "success",
+    "topic_id": "household_balance_sheet"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the critical role of financial literacy and household balance sheets, which is not currently represented in the graph, making it essential to propose a new node for actionable insights in investment research.",
+      "existing_node_ids": null,
+      "new_node_dicts": "financial_literacy_and_household_balance_sheets"
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article discusses the state of household balance sheets, which relates to economic data on financial health."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article discusses economic factors that influence household financial stability, which directly relates to household balance sheets."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses the overall health and trends in household balance sheets, which are influenced by long-term economic factors."
+    },
+    "article_node": {
+      "id": "RVMW4XMKX",
+      "title": "How AI Can Help Boost Financial Literacy For Fintech Users",
+      "summary": "The article discusses the importance of financial literacy and household balance sheets, highlighting how skills learned in home economics can impact financial management. It notes that the median net worth of U.S. households is around $190,000, but significant disparities exist, particularly among lower income quintiles. With less than a third of U.S. students required to take personal finance courses, fintech firms are leveraging AI to provide tools that help consumers improve their financial decision-making and resilience. The piece emphasizes that while digital literacy is important, financial literacy is crucial for enhancing household financial security.",
+      "source": "https://www.forbes.com/sites/sarahbiller/2025/08/14/how-ai-can-help-boost-financial-literacy-for-fintech-users/",
+      "published_at": "2025-08-14T19:06:46+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    }
+  },
+  "id": "RVMW4XMKX"
+}

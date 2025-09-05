@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T01:15:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "alphabet_ai_gemini",
+    "target_id": "ai_productivity",
+    "selection_motivation": "Alphabet AI Gemini is a flagship generative AI platform that drives broader AI productivity gains across industries, making it a key driver of AI productivity.",
+    "candidate_motivation": "These topics are direct competitors, enabling technologies, and governance or application areas that would meaningfully influence Alphabet's Gemini AI platform in terms of competition, supply chain, policy, and user impact.",
+    "existing_links_count": "4",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'nvidia_ai_infrastructure', 'nvidia_china_geopolitics', 'ai_governance', 'ai_infrastructure', 'ai_generated_content_seo', 'ai_in_education', 'ai_productivity']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'alphabet_ai_gemini', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'alphabet_ai_gemini', 'target': 'ai_governance'}, {'type': 'PEERS', 'source': 'alphabet_ai_gemini', 'target': 'openai_gpt5_competition'}, {'type': 'PEERS', 'source': 'alphabet_ai_gemini', 'target': 'gpt_5'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846911",
+    "rel_id": "alphabet_ai_gemini__influences__ai_productivity",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'alphabet_ai_gemini', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'alphabet_ai_gemini', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'alphabet_ai_gemini', 'target': 'ai_governance'}, {'type': 'PEERS', 'source': 'alphabet_ai_gemini', 'target': 'openai_gpt5_competition'}, {'type': 'PEERS', 'source': 'alphabet_ai_gemini', 'target': 'gpt_5'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Alphabet AI Gemini is a flagship generative AI platform that drives broader AI productivity gains across industries, making it a key driver of AI productivity.",
+      "type": "INFLUENCES",
+      "source": "alphabet_ai_gemini",
+      "target": "ai_productivity"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "alphabet_ai_gemini__influences__ai_productivity"
+}

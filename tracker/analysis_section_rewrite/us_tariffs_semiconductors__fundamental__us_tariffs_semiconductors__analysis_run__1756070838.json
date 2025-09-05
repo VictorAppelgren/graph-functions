@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:27:18",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs_semiconductors",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_tariffs_semiconductors__analysis_run__1756070838",
+    "article_ids": "['SGB2PAZGK', 'IGP1Q4ZEJ', '3ITAKK6XJ', 'W8CG5RUGS', '9LCPZY06C']",
+    "selected_articles_count": "5",
+    "material_chars": "162354",
+    "output_chars": "5526",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "High-signal feedback and actionable edits in one paragraph:\n\nYour multi-year framing is solid, but to reach world-class quality you must (a) codify explicit regime anchors and regime‑transition triggers, (b) build a formal first‑principles chain that ties policy levers to market pricing, (c) sharpen scenario structure with catalysts, invalidation, and clear base/upside/downside cases, and (d) quote precise numbers from the sources and reconcile conflicts across them. Concretely, deliver a regime map: (i) structural regime where US policy strives for domestic semiconductor/AI leadership via sharper tariffs and resumed, diversified supply chains (SGB2PAZGK; 3ITAKK6XJ), (ii) external‑balance regime with global demand shifts for AI infrastructure (W8CG5RUGS), and (iii) macro‑financial regime contingent on Fed signaling and disinflationary progress (9LCPZY06C). State invariant anchors such as policy reaction functions (tariffs as leverage and industrial policy instrument), real rate path expectations (Fed easing odds per 9LCPZY06C), and the net external position risk/reward of a more self‑reliant tech economy; then specify transition conditions: e.g., if tariff cadences persist and allies realign, shift to higher domestic capex multipliers and faster supply-chain diversification; if China counters with currency/credit or if allied trust erodes, switch to a higher risk premium on tech equity and more cautious investment; and invalidate by observable breaches of the regime (e.g., material easings in tariffs without reciprocal concessions, or a collapse in private sector investment due to public stake distortions). In the narrative, replace broad assertions with quantified links: use the Intel CHIPS Act 10% government stake (3ITAKK6XJ) as a concrete trigger for public‑private risk sharing; include the Taiwan export surge data (W8CG5RUGS: 42% YoY in July 2025; US share 32.9%) as evidence of structural AI/semiconductor demand, and anchor the near‑term price dynamics to the Nasdaq/semis read (9LCPZY06C). Strengthen the causal chain by detailing how: (tariff stance) raises domestic capex in foundries and re‑shoring (SGB2PAZGK; W8CG5RUGS); (policy‑market transmission) tilts capital pricing and risk premia in semis and AI equities (9LCPZY06C); (supply chain geography) reshapes supplier geography and risk (SGB2PAZGK; 3ITAKK6XJ). Build a clean base case with explicit numbers (e.g., baseline 10% tariff, China 34%/125% reciprocal ceilings in SGB2PAZGK; 42% Taiwan export growth and 32.9% US share in W8CG5RUGS; 100% or 80% tariff talk in 12) and lay out upside/downside catalysts: e.g., Nvidia/AMD revenue‑sharing shifts easing restrictions (9LCPZY06C), allied tariff realignments, or a breakthrough on chip supply deals; include invalidation markers such as a credible, sustained tariff de‑escalation without concessions or a material drop in private capex. Improve calibration by separating market pricing and policy stance into discrete equations or bullet points, and attach every assertion to its source ID (SGB2PAZGK for regime/tariffs, 3ITAKK6XJ for Intel stake, W8CG5RUGS for Taiwan exports, 9LCPZY06C for market/rates, IGP1Q4ZEJ for Burry’s moves) to satisfy coverage and reconciliation needs. Finally, deliver a concise base case, key risks, watch items (tariff cadences, ally responses, Intel/NVDA policy moves, Taiwan export dynamics, Fed signaling), and a confidence rating, all in multi‑year, first‑principles language rather than hedged generalities.",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs_semiconductors__fundamental__us_tariffs_semiconductors__analysis_run__1756070838"
+}

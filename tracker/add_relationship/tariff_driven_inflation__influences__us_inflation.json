@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:15:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "tariff_driven_inflation",
+    "target_id": "us_inflation",
+    "selection_motivation": "Tariff-driven inflation directly raises domestic price levels, making it a primary driver of overall US inflation expectations and data releases.",
+    "candidate_motivation": "Tariff-Driven Inflation is shaped by tariff policy and related macro indicators; the shortlisted topics are those with direct tariff actions, trade negotiations, or inflation/macro channels that plausibly drive or reflect tariff-induced price pressures.",
+    "existing_links_count": "1",
+    "candidate_count": "15",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_tariffs', 'us_china_tariffs', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_india_tariffs', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_inflation', 'us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'fed_policy', 'usd', 'oil']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161526",
+    "rel_id": "tariff_driven_inflation__influences__us_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Tariff-driven inflation directly raises domestic price levels, making it a primary driver of overall US inflation expectations and data releases.",
+      "type": "INFLUENCES",
+      "source": "tariff_driven_inflation",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "tariff_driven_inflation__influences__us_inflation"
+}

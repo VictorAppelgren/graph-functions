@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T00:36:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "spx",
+    "selection_motivation": "Oil price movements materially affect corporate earnings and risk sentiment, driving equity valuations; thus WTI Crude Oil is a key driver of the S&P 500 index.",
+    "candidate_motivation": "WTI Crude Oil is a benchmark commodity whose price is driven by supply/demand fundamentals, macroeconomic indicators, and currency movements. The listed topics capture key peers (Brent), supply metrics (US Crude Inventories), macro drivers (Fed Policy, US Inflation, US Dollar Index), and correlated assets (Gold, Copper, Wheat) as well as broader market sentiment (S&P 500, Euro Stoxx 50).",
+    "existing_links_count": "12",
+    "candidate_count": "34",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "34",
+    "candidate_ids_preview": "['brent', 'us_crude_inventory', 'oil_price_decline', 'fed_policy', 'dxy', 'us_inflation', 'gold', 'copper', 'wheat', 'spx', 'sx5e', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_powell_rate_cut_hint_2025', 'usdcny', 'eurusd', 'gbpusd', 'usdjpy', 'euro_inflation', 'us_core_pce', 'sofr', 'ecb_policy', 'bund10y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'india_industrial_output', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1245246396479572041",
+    "rel_id": "wti__influences__spx",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'us_crude_inventory'}, {'type': 'CORRELATES_WITH', 'source': 'wti', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements materially affect corporate earnings and risk sentiment, driving equity valuations; thus WTI Crude Oil is a key driver of the S&P 500 index.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "spx"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__spx"
+}

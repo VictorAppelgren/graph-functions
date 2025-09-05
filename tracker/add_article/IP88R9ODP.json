@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T19:33:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IP88R9ODP",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US export controls on Nvidia GPUs and ensuing legal friction may tighten US Treasury yields and USD/CNY, with Fed policy adjustments likely. FX; the smuggling narrative could pressure the USD/CNY pair.",
+      "existing_ids": [
+        "fed_policy",
+        "usdcny",
+        "ust10y",
+        "ust2y",
+        "ust30y",
+        "china_exports",
+        "china_credit_impulse"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses the U.S. export‑control regime limiting high‑performance AI chips to China, a regulatory change affecting the GPU supply chain."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Unable to determine node relevance due to missing node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a recent incident involving a documentary, a copyright strike, and the U.S. export‑control regime affecting Nvidia GPUs, which are immediate events impacting the GPU supply chain and AI chip policy."
+    },
+    "article_node": {
+      "id": "IP88R9ODP",
+      "title": "Gamers Nexus Takes On Tech’s Biggest Player, Gets Hit With Copyright Strike",
+      "summary": "Gamers Nexus, a popular tech‑review channel, released a documentary exposing illegal sales of Nvidia GPUs to China, which led Bloomberg to file a copyright strike over a Trump press‑conference clip. The strike temporarily removed the video, sparking a debate over fair use, corporate influence, and the broader U.S. export‑control regime that limits high‑performance AI chips to China. The incident highlights tensions between content creators, media conglomerates, and national‑security policy, while underscoring the strategic importance of GPU supply chains for AI development.",
+      "source": "https://www.forbes.com/sites/robsalkowitz/2025/08/29/gamers-nexus-takes-on-techs-biggest-player-gets-hit-with-copyright-strike/",
+      "published_at": "2025-08-29T15:40:58+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "IP88R9ODP"
+}

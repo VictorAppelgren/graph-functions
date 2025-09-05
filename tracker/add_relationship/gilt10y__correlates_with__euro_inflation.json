@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T05:18:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gilt10y",
+    "target_id": "euro_inflation",
+    "selection_motivation": "UK 10Y gilt yields are strongly correlated with Euro area inflation expectations due to the common global rate environment and cross‑border inflation transmission, making a correlation link valuable for risk analytics.",
+    "candidate_motivation": "UK 10Y Gilt Yield is a sovereign bond benchmark that moves in tandem with other major government yields, central‑bank policy signals, inflation expectations, and currency dynamics. Therefore the most relevant peers or influencers are other sovereign yields, Fed/ECB policy, inflation data, and currency indices that directly affect or are affected by gilt yields.",
+    "existing_links_count": "9",
+    "candidate_count": "12",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['ust10y', 'bund10y', 'jgb10y', 'ecb_policy', 'fed_policy', 'us_inflation', 'euro_inflation', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'gbpusd']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159679103071159812",
+    "rel_id": "gilt10y__correlates_with__euro_inflation",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 10Y gilt yields are strongly correlated with Euro area inflation expectations due to the common global rate environment and cross‑border inflation transmission, making a correlation link valuable for risk analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "gilt10y",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__correlates_with__euro_inflation"
+}

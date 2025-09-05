@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-22T16:32:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755872954",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "12314",
+    "output_chars": "1001",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-4o-mini",
+      "feedback": "The analysis draft demonstrates a solid understanding of current market dynamics but could benefit from enhanced specificity and clarity. **Up** items should include more concrete metrics or ranges for expected engagement increases and stock volatility, rather than general trends. For example, specify the anticipated percentage increase in sales for tech firms following the Google Password Manager launch. **Down** items need to clarify the causal mechanisms behind rising unemployment and inflation, potentially by quantifying expected declines in consumer spending. Additionally, ensure that all citations are correctly attributed and that conflicts among sources are reconciled, particularly regarding unemployment impacts. Finally, consider refining the probability assessments to reflect a more nuanced understanding of the underlying data, possibly by incorporating historical precedents or expert forecasts.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__movers_scenarios__eurusd__analysis_run__1755872954"
+}

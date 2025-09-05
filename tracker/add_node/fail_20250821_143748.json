@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T14:37:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Z98JBXWYK",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports a new corruption investigation involving NYC Mayor Eric Adams, a specific policy event that can affect local market sentiment and investor confidence, warranting a dedicated node for analysis.",
+      "id": "nyc_corruption_probe",
+      "name": "NYC Mayor Corruption Investigation",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Political scandal affecting local governance and investor sentiment."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Local mayor corruption investigation is not a macro policy/regulation regime affecting national or global markets; it lacks macro relevance for trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

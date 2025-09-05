@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T06:13:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "euribor",
+    "selection_motivation": "Bund yields serve as the benchmark for European sovereign debt and directly influence interbank rates; a higher Bund yield typically pushes Euribor upward as market participants price risk and liquidity.",
+    "candidate_motivation": "German 10Y Bund Yield is a core Eurozone sovereign benchmark that moves with ECB policy, Euro‑area inflation, and cross‑currency dynamics such as the DXY and EURUSD. It also correlates strongly with other sovereign yields (UK Gilt, Japan JGB), the US Treasury curve, and equity indices like the Euro Stoxx 50.",
+    "existing_links_count": "8",
+    "candidate_count": "14",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'gilt10y', 'jgb10y', 'dxy', 'euribor', 'sx5e', 'us_inflation', 'us_core_pce', 'fed_policy']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627957985",
+    "rel_id": "bund10y__influences__euribor",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields serve as the benchmark for European sovereign debt and directly influence interbank rates; a higher Bund yield typically pushes Euribor upward as market participants price risk and liquidity.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "euribor"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__euribor"
+}

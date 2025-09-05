@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:34:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "lower_interest_rates",
+    "target_id": "liability_insurance_costs",
+    "selection_motivation": "Lower interest rates reduce insurers’ investment income, driving up liability insurance costs—a direct macro relationship not yet captured.",
+    "candidate_motivation": "Liability insurance costs are highly sensitive to macroeconomic conditions, inflation, interest rates, catastrophe risk, and evolving cyber exposures. The shortlisted topics represent direct or close correlates that could influence pricing, reserves, and coverage dynamics.",
+    "existing_links_count": "2",
+    "candidate_count": "12",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['homeowners_insurance_premiums', 'us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'fed_policy', 'us_treasury_yields', 'lower_interest_rates', 'third_party_cybersecurity_risks', 'us_cybersecurity_incidents', 'nature_based_solutions', 'climate_loss_damage_funding', 'us_flooding_events']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'liability_insurance_costs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'liability_insurance_costs', 'target': 'us_inflation_data'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082375",
+    "rel_id": "lower_interest_rates__influences__liability_insurance_costs",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'lower_interest_rates', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'lower_interest_rates', 'target': 'liability_insurance_costs'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Lower interest rates reduce insurers’ investment income, driving up liability insurance costs—a direct macro relationship not yet captured.",
+      "type": "INFLUENCES",
+      "source": "lower_interest_rates",
+      "target": "liability_insurance_costs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "lower_interest_rates__influences__liability_insurance_costs"
+}

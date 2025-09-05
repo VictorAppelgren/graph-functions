@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T16:52:39",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756564764",
+    "drivers_count": "7",
+    "material_chars": "3021",
+    "output_chars": "1832",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft should tighten the causal chain, explicitly state sign/magnitude for each catalyst, add missing citations, quantify risk thresholds, and remove any ambiguous or generic phrasing. 1) Replace “the dollar index will decline roughly 200 bp to 95.8 by the end of August” with “DXY is expected to fall 200 bp to 95.8 by Aug 31, driven by an 89 % probability of a 25‑bp Fed cut and a 57‑bp steepening of the 2‑yr/10‑yr spread (Z7O1DCHS7)”. 2) Add the tariff‑announcement effect: “the August 29–31 tariff announcement will temporarily push DXY down 200 bp, but the anticipated Fed easing offsets this support (Z7O1DCHS7)”. 3) Explicitly cite the PCE/NFP catalysts: “a PCE >3.0 % on 2025‑08‑30 would lift DXY by ~70 bp, and an NFP >200 k on 2025‑08‑31 would add ~50 bp (7XH2DKEKV)”. 4) Clarify the spread risk: “a flattening of the 2‑yr/10‑yr spread below 30 bp would lift DXY by ~50 bp (7XH2DKEKV)”. 5) Remove generic statements such as “the market already prices in” and replace with concrete data or citations. 6) Add a concise watch‑list sentence: “Key signals over the next two weeks: Fed September meeting, tariff announcement, PCE 2025‑08‑30, NFP 2025‑08‑31, and daily 2‑yr/10‑yr spread evolution.” 7) Ensure every claim has an inline citation (IDs: Z7O1DCHS7, FAN5RYW6T, XTQIQRP5K, 97MD1FHW8, LF0UUL917, 7XH2DKEKV) and that the draft remains focused solely on DXY with explicit sign, magnitude, horizon, and catalyst.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756564764"
+}

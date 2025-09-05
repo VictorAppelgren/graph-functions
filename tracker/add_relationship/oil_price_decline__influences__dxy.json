@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:54:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "dxy",
+    "selection_motivation": "Oil price decline is a key driver of USD weakness; linking it to DXY captures the causal impact of commodity price shocks on the dollar index.",
+    "candidate_motivation": "The US Dollar Index is driven by U.S. monetary policy, treasury yields, inflation data, and relative currency strength, while also reacting to commodity price swings and global risk sentiment. These topics directly influence or correlate with DXY through the same channels.",
+    "existing_links_count": "20",
+    "candidate_count": "19",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'gold', 'wti', 'brent', 'copper', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118474764",
+    "rel_id": "oil_price_decline__influences__dxy",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline is a key driver of USD weakness; linking it to DXY captures the causal impact of commodity price shocks on the dollar index.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "dxy"
+    }
+  },
+  "id": "oil_price_decline__influences__dxy"
+}

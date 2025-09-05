@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:08:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "south_china_sea_tensions",
+    "target_id": "us_china_supply_chain_risks",
+    "selection_motivation": "South China Sea tensions heighten uncertainty and risk in cross-border logistics, directly increasing US-China supply chain risk.",
+    "candidate_motivation": "These topics reflect the geopolitical and economic forces that directly influence Beijing's strategic calculations and regional security dynamics, shaping risk and policy around the South China Sea.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_china_trade_relations', 'us_china_trade_talks', 'us_china_trade_war_2025', 'china_nvidia_policy', 'nvidia_china_geopolitics', 'china_ai_semiconductors', 'us_china_supply_chain_risks', 'us_chip_exports_china']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'south_china_sea_tensions', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161348",
+    "rel_id": "south_china_sea_tensions__influences__us_china_supply_chain_risks",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'south_china_sea_tensions', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'south_china_sea_tensions', 'target': 'us_china_supply_chain_risks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "South China Sea tensions heighten uncertainty and risk in cross-border logistics, directly increasing US-China supply chain risk.",
+      "type": "INFLUENCES",
+      "source": "south_china_sea_tensions",
+      "target": "us_china_supply_chain_risks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "south_china_sea_tensions__influences__us_china_supply_chain_risks"
+}

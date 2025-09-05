@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T18:38:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "copper",
+    "target_id": "dxy",
+    "selection_motivation": "Copper price movements are a key driver of USD strength, with higher copper prices typically weakening the dollar; adding a directional influence link to the DXY enhances the graph's causal structure.",
+    "candidate_motivation": "Copper is a key industrial metal whose price is driven by global economic activity, currency strength, and risk‑sentiment. Therefore, topics that influence growth, inflation, credit, and the dollar, as well as other commodities and equity indices, are the most plausible peers or influences.",
+    "existing_links_count": "17",
+    "candidate_count": "23",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'wti', 'brent', 'gold', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'euro_inflation']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1182196001696384390",
+    "rel_id": "copper__influences__dxy",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Copper price movements are a key driver of USD strength, with higher copper prices typically weakening the dollar; adding a directional influence link to the DXY enhances the graph's causal structure.",
+      "type": "INFLUENCES",
+      "source": "copper",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__influences__dxy"
+}

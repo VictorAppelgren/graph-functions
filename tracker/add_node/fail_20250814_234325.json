@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T23:43:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ISLVFFTWB",
+    "status": "rejected",
+    "reject_category": "political",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant legal action involving Melania Trump and Hunter Biden, which could impact public perception and market sentiment regarding political figures and their associated reputations, warranting a new node for analysis.",
+      "id": "melania_trump_hunter_biden_lawsuit",
+      "name": "Melania Trump vs. Hunter Biden Lawsuit",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "political",
+      "motivation": "Defamation, reputation protection, political retaliation"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Not a macro driver, policy, or tradable asset; political lawsuit lacks direct market impact.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

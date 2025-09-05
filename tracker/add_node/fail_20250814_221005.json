@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:09:44",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TZ5DRD5TK",
+    "status": "rejected",
+    "reject_category": "consumer_choice",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the potential impact of tariffs on the pricing of the upcoming iPhone 17, which is a significant macroeconomic factor that could influence consumer behavior and market dynamics, warranting a new node.",
+      "id": "iphone_17_tariffs",
+      "name": "iPhone 17 Tariffs",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "consumer_choice",
+      "motivation": "Consumer decision on upgrading smartphone, weighing cost vs. feature benefits."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Tariffs on a specific product (iPhone 17) are a micro-level, industry‑specific issue, not a macro driver or tradable asset, so it does not fit the macro focus of the graph.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

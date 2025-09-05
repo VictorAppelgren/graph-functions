@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T09:27:31",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2JSP9U6SJ",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the impact of Hurricane Erin on the U.S. East Coast, which can influence macroeconomic factors such as insurance claims, infrastructure damage, and regional economic activity, warranting a new atomic node for analysis.",
+      "id": "hurricane_erin",
+      "name": "Hurricane Erin",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Hurricane Erin is a weather event that can influence macroeconomic factors such as insurance claims, infrastructure damage, and regional economic activity."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Hurricane Erin is a specific natural disaster event, not a macro driver, tradable asset, policy regime, or macro geography, so it does not fit the allowed topic types.",
+      "confidence": 0.92,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T23:59:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dxy",
+    "target_id": "gbpusd",
+    "selection_motivation": "DXY is a composite measure of USD strength against major currencies, and GBP/USD is directly driven by USD movements; thus DXY influences GBP/USD.",
+    "candidate_motivation": "These topics are likely to influence or correlate strongly with the US Dollar Index because they directly affect monetary policy, inflation expectations, Treasury yields, currency pair dynamics, commodity pricing, and macroeconomic indicators that shape dollar strength.",
+    "existing_links_count": "20",
+    "candidate_count": "31",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "31",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'sx5e', 'spx', 'gold', 'wti', 'brent', 'copper', 'wheat', 'us_services_pmi', 'us_unemployment_claims', 'us_crude_inventory', 'oil_price_decline', 'fed_powell_rate_cut_hint_2025', 'euro_inflation', 'bund10y', 'uk_30yr_gilt_yield', 'gilt10y', 'jgb10y', 'euribor']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6931040926034822652",
+    "rel_id": "dxy__influences__gbpusd",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "DXY is a composite measure of USD strength against major currencies, and GBP/USD is directly driven by USD movements; thus DXY influences GBP/USD.",
+      "type": "INFLUENCES",
+      "source": "dxy",
+      "target": "gbpusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__influences__gbpusd"
+}

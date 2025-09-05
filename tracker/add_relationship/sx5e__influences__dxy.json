@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T18:44:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sx5e",
+    "target_id": "dxy",
+    "selection_motivation": "Euro Stoxx 50 performance directly drives capital flows that influence the US dollar, making it a primary driver of the DXY.",
+    "candidate_motivation": "These topics are likely strong influences or correlates of Euro Stoxx 50 because they directly affect European equity fundamentals, market sentiment, and risk‑premium dynamics through macro data, monetary policy, sovereign yields, and global commodity and equity linkages.",
+    "existing_links_count": "13",
+    "candidate_count": "27",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['euro_inflation', 'ecb_policy', 'bund10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdcny', 'gbpusd', 'usdjpy', 'spx', 'wti', 'brent', 'oil_price_decline', 'copper', 'gold', 'wheat', 'eur_at1_issuance', 'uk_30yr_gilt_yield', 'gilt10y']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814273062",
+    "rel_id": "sx5e__influences__dxy",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 performance directly drives capital flows that influence the US dollar, making it a primary driver of the DXY.",
+      "type": "INFLUENCES",
+      "source": "sx5e",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__influences__dxy"
+}

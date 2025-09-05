@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T17:30:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DC3HXRWQD",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Core Silver Corp.'s 2025 drilling results for high‑grade copper and silver may support upward pressure on copper and silver prices over the next 12–18 months.",
+      "existing_ids": [
+        "copper",
+        "gold"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports new exploration results for Core Silver Corp., which is a company news item not related to earnings."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Article reports a mining development that could modestly affect copper supply, but impact on market is limited."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article reports exploration results and a 2025 drilling program, indicating long‑term asset development prospects for Core Silver Corp."
+    },
+    "article_node": {
+      "id": "DC3HXRWQD",
+      "title": "Core Silver Samples 316 g/t Silver & 0.62% Copper at the Valley Zone as Drilling Continues",
+      "summary": "Core Silver Corp. reports high‑grade copper‑silver mineralisation confirmed over 4 km at its Laverdiere Copper Project, with 2025 drilling targeting the Valley Zone and Silver Lime Polymetallic Project to expand district‑scale polymetallic systems. Preliminary 2024 surface assays show 0.63 % Cu, 17 g/t Ag and 355 ppm Mo, while a 20 cm quartz vein at Valley Zone yielded 0.83 % Cu, 47 g/t Ag and 0.44 g/t Au. The company’s 2025 program aims to demonstrate significant scale and grade, positioning the Blue Property as a long‑term value‑creating asset for investors.",
+      "source": "https://finance.yahoo.com/news/core-silver-samples-316-g-124500503.html?.tsrc=rss",
+      "published_at": "2025-09-04T12:45:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "DC3HXRWQD"
+}

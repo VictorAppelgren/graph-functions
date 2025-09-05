@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T16:08:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756044036",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16016",
+    "output_chars": "993",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft needs a tighter, world‑class rebuild: collapse the narrative into crisp, first‑principles causal chains for Regimes A/B/C, explicitly linking MSFT/SHOP cloud AI growth to durable FCF/ROIC and to equity multiples, while showing how Ford’s income‑oriented profile anchors a downside ballast; prune tangential micro cases (Beasley cap space, the Disney monetization example) unless they clearly illustrate regime mechanics. Strengthen the scenario design by replacing broad statements with four explicit, sourced triggers and invalidations (tariff evolution/W2622L6WW, EV infra progress; IPO cadence Q7VVGNSQE threshold of 95 deals; broader risk‑off or growth leadership shifts) and assign explicit, source‑anchored probability ranges (e.g., 65% tariff‑relief path, 60% IPO acceleration) with clear rationale. Ground all numbers to the cited IDs (0G3A676BP, W2622L6WW, Q7VVGNSQE, IG P1Q4ZEJ, 4, NBX9RA9WX, 19NO2GMNF, etc.) and reconcile any conflicts (e.g., growth vs. moat durability vs. policy risk) in a short appendix. Build a compact, 4‑scenario map only if needed, with 0–4/4–8/8–12/12–24 week windows, explicit invalidations, and a concise verdict on where the base case shifts as policy momentum, infra spend, or profitability trajectories move. Finally, attach a tight monitoring checklist (policy signals, IPO cadence, healthcare/low‑vol leadership, and EV‑infra progress) to enable real‑time reweighting without ad hoc narrative.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756044036"
+}

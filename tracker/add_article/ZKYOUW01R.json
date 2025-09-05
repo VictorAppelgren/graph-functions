@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T23:54:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZKYOUW01R",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Harvey Norman Holdings earnings beat expectations, lifting its share price and signalling strength in the Australian retail sector.",
+      "existing_ids": [],
+      "new_names": [
+        "harvey_norman_holdings"
+      ]
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Harvey Norman Holdings' 2025 full‑year profit margin, EPS, revenue, and share price performance, which is company earnings data."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a significant earnings beat and margin improvement for Harvey Norman Holdings, likely influencing its share price and valuation, but it is a company‑specific event with limited broader market impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article provides a 2025 profit margin and a 12% annual revenue forecast over the next three years, indicating a medium‑term outlook for the company."
+    },
+    "article_node": {
+      "id": "ZKYOUW01R",
+      "title": "Harvey Norman Holdings Full Year 2025 Earnings: Beats Expectations",
+      "summary": "Harvey Norman Holdings reported a 2025 full‑year profit margin of 18%, up from 13% in FY24, driven by higher revenue, especially from its New Zealand retail segment. EPS rose to AU$0.42 from AU$0.28, beating analyst estimates for both revenue and earnings. The company’s shares gained 21% in the past week, and revenue is forecast to grow 12% annually over the next three years, outpacing the Australian multiline retail industry’s 4.5% growth rate.",
+      "source": "https://finance.yahoo.com/news/harvey-norman-holdings-full-2025-203303424.html?.tsrc=rss",
+      "published_at": "2025-09-02T20:33:03+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "ZKYOUW01R"
+}

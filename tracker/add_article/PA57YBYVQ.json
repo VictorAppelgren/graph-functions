@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T12:48:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PA57YBYVQ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; Japanese banks' overseas expansion could lift global credit demand and influence JGB and US Treasury yields, as well as currency pairs like USD/JPY and EURUSD.",
+      "existing_ids": [
+        "jgb10y",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "sx5e",
+        "spx",
+        "dxy",
+        "usdjpy",
+        "eurusd",
+        "fed_policy",
+        "ecb_policy",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on corporate actions by Mizuho and MUFG to acquire or partner with overseas money managers, which constitutes a company‑level strategic update rather than earnings, policy, or market commentary."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major strategic expansion by Mizuho and MUFG into overseas asset management, directly affecting their global footprint and competitive positioning."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article describes a strategic corporate expansion by Japanese banks into overseas markets, indicating a medium‑term development rather than an immediate event or a purely long‑term structural shift."
+    },
+    "multi_topic_results": {
+      "total_topics": 13,
+      "successful": 13
+    }
+  },
+  "id": "PA57YBYVQ"
+}

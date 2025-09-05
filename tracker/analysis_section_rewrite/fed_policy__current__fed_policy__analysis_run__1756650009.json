@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T16:36:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756650009",
+    "article_ids": "['3952FOSRQ', 'Z7K8PC4G5', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "107096",
+    "output_chars": "1163",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback for the 10‑year yield analysis**\n\n1. **Keep it razor‑tight** – strip out any mention of oil, equities, or other assets that do not directly influence the 10‑year. The draft’s reference to Brent and stock indices is extraneous and dilutes focus.\n\n2. **Explicit catalyst window** – state the exact dates:  \n   * Fed policy statement: 16–17 Sep 2025 (Fed’s September FOMC).  \n   * Core PCE release: 29 Sep 2025.  \n   * Tariff ruling: 29 Aug 2025 (appeals‑court decision).  \n   This satisfies the “dated catalyst window” requirement.\n\n3. **Clear mapping & magnitude** – use the canonical handle **ust10y** and give a concise range:  \n   * Likely 4.20 %–4.25 % if the September cut materialises.  \n   * 4.30 %+ if inflation or tariff‑related shocks push expectations higher.  \n   * 4.15 %–4.20 % if the Fed cuts, yielding a 30‑40 bp drop.\n\n4. **Action‑oriented language** – rewrite as bullet points (or a short paragraph) that state:  \n   * **Position**: Hold current 10‑year exposure; be ready to tighten if yields fall to 4.15‑4.20 %.  \n   * **Catalysts**: Fed’s September policy, core PCE (29 Sep), tariff ruling (29 Aug).  \n   * **Key levels**: 4.20 % support, 4.25 % resistance, 4.30 % breakout.  \n   * **Invalidation**: Fed cuts → yields drop; inflation cools → yields fall; tariff spike → yields rise.\n\n5. **Citation density** – keep inline citations after each factual claim: (97MD1FHW8), (3YAQ8JUPL), (3952FOSRQ). No other sources are needed.\n\n6. **Eliminate fluff** – remove narrative sentences that do not add actionable insight (e.g., “Oil prices were lower but set for a weekly gain”). Focus solely on the 10‑year’s dynamics.\n\n7. **Format** – present the final view in a single, concise paragraph or a 4–5 line bullet list, following the “Action over prose” style.\n\nImplementing these edits will produce a world‑class, Argos‑style view that meets all acceptance gates and delivers high‑signal, 0–3‑week guidance for the 10‑year Treasury.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1756650009"
+}

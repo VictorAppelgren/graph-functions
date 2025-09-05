@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T04:30:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "ECB policy shifts alter the global short‑term rate environment, directly influencing the Fed’s decision‑making and the timing of its September 2025 rate cut.",
+    "candidate_motivation": "ECB Policy directly shapes euro‑area inflation, yields, equity indices and the euro’s value, while central‑bank peers like the Fed influence similar variables. These topics are the most plausible strong influences, correlates, or peers.",
+    "existing_links_count": "11",
+    "candidate_count": "7",
+    "all_nodes_count": "41",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['euro_inflation', 'bund10y', 'sx5e', 'dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441643950",
+    "rel_id": "ecb_policy__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy shifts alter the global short‑term rate environment, directly influencing the Fed’s decision‑making and the timing of its September 2025 rate cut.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__fed_rate_cut_sept17_2025"
+}

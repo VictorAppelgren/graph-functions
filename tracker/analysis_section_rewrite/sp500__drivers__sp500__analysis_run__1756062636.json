@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:16:36",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756062636",
+    "drivers_count": "4",
+    "material_chars": "1710",
+    "output_chars": "3567",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft coherently signals a Regime A, but to reach world‑class quality it needs a sharper, fully explicit causal chain, tighter scenario structure, and disciplined quantification; fix the weak link between macro drivers (p, u, r) and market pricing by defining p (AI productivity), u (labor frictions), and r (policy reaction function) with explicit channels to ROIC, capex intensity, and inflation dynamics, and tie Brookings’ ~25% automation exposure (NL5YYTLF2) to a measurable regime outcome; construct Regime A/B/C as testable states with one‑sentence descriptions, trigger conditions, invalidation criteria, and probabilities that sum to 1 (e.g., Regime A constructive inflation-growth with productivity-led capex, Regime B dislocated on policy/risk premia, Regime C stabilization via targeted policy), and place concrete triggers (inflation composition shift, policy pivot, oil balance surprise) sourced from NL5YYTLF2 and the oil/FX strands; replace repetitive prose with a compact cross‑topic map showing macro (inflation path, policy stance), flows/positioning (AI capex, EV unit economics, oil balance), and valuations/technicals (risk premia, exit terms, EURUSD) with explicit mechanism arrows and timing; quantify every numeric claim and align all figures to sources (Ford Q2 EV losses ~1.3B, adj. EBIT ~4.3%, ROIC ~10.1%, revenue CAGR ~2.5% 2014–2024 from 22PL3Q360; ACMR 2025 revenue midpoint ~$900m, GM ~4% from 22PL3Q360; oil regime balances around +2.5 mbpd 2025, +1.9 2026 with Brent ~mid-60s, WTI low‑60s, per J99EM2TPZ and T1QE6JPIX), and articulate clean ranges instead of single point estimates; fix obvious copy/typography (remove stray ウ, consolidate Regime A/B/C narrative, ensure consistent abbreviations); strengthen citation discipline by appending the IDs after each factual claim and reconciling any tensions between sources (e.g., oil balance vs refinery runs and regime probabilities); deliver a compact watch-list of decisive signals (inflation‑composition shift; policy reaction pivots; oil-supply/demand inflection; AI capex/valuation regime reweighting and EURUSD regime shifts) with thresholds and monitoring dates; finally, ensure the output adheres to the horizon/style implied by Section Focus (cross‑topic synthesis with a clear, testable path and a 3–5 signal watch-list) and that every critical source (Brookings NL5YYTLF2, Ford/22PL3Q360, ACMR/22PL3Q360, J99EM2TPZ, T1QE6JPIX, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG) is properly used and reconciled.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756062636"
+}

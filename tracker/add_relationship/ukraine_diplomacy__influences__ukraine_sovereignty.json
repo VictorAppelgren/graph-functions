@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:17:53",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_diplomacy",
+    "target_id": "ukraine_sovereignty",
+    "selection_motivation": "Ukraine Diplomacy is a primary driver of Ukraine's sovereignty status, shaping international recognition and legal standing.",
+    "candidate_motivation": "These topics closely intersect Ukraine diplomacy through peace talks, sovereignty questions, and large geopolitical dynamics with Russia, the EU, and the US, representing the strongest potential influences or peers. They collectively capture the diplomatic, security, and geopolitical backdrop shaping Ukraine's negotiations.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['zelensky_peace_negotiations', 'ukraine_peace_negotiations', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'eu_us_relations_ukraine', 'us_russia_ukraine_diplomacy', 'russia_economic_crisis', 'donbas_region', 'ukraine_conflict', 'ukraine_sovereignty', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_peace_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902861",
+    "rel_id": "ukraine_diplomacy__influences__ukraine_sovereignty",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_diplomacy', 'target': 'ukraine_peace_negotiations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Diplomacy is a primary driver of Ukraine's sovereignty status, shaping international recognition and legal standing.",
+      "type": "INFLUENCES",
+      "source": "ukraine_diplomacy",
+      "target": "ukraine_sovereignty"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_diplomacy__influences__ukraine_sovereignty"
+}

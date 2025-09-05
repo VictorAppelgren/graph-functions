@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T22:37:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hurricane_risk_ust10y",
+    "target_id": "ust30y",
+    "selection_motivation": "Atlantic hurricane risk elevates long‑term risk premium, directly pushing up 30‑year Treasury yields.",
+    "candidate_motivation": "The source concerns how hurricane season risk influences UST 10‑year yields, so the most relevant relationships are with other UST maturities, Fed policy, and macro variables that drive the yield curve and risk appetite. These topics directly affect or are correlated with the 10‑year Treasury, making them strong influences, peers, or correlates.",
+    "existing_links_count": "4",
+    "candidate_count": "11",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ust10y', 'ust30y', 'ust2y', 'ust5y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'dxy']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216158",
+    "rel_id": "hurricane_risk_ust10y__influences__ust30y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Atlantic hurricane risk elevates long‑term risk premium, directly pushing up 30‑year Treasury yields.",
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "hurricane_risk_ust10y__influences__ust30y"
+}

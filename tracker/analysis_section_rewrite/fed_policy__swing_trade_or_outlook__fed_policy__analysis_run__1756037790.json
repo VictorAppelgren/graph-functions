@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:26:23",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756037790",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20360",
+    "output_chars": "2711",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft largely follows a regime-based narrative but fails the SECTION FOCUS in two critical ways: the Movers section shows more than four lines and the 4-line format (Up/Down | Time window | Driver/Mechanism | What to watch | Probability %) is not consistently used; several lines lack explicit probabilities and several assertions lack direct IDs, reducing testability and citational rigor. Actionable edits: (1) Rebuild Movers into exactly four lines (2 Up, 2 Down), each strictly formatted as Up|Time window|Driver/Mechanism|What to watch|Probability% with a source ID attached to every factual element (e.g., GX057ADL7, 37UZC9X8I) and no extraneous content; remove all nonconforming lines. (2) Derive and present explicit Probability %s from the material’s regime map and data triggers (e.g., base, upside, downside) and label them as Pbase, Pup, Pdown with corresponding citations; avoid implied probabilities. (3) Clarify the Swing Trade/Outlook plan: if ACMR or another asset is treated as tradable, present a single Swing Trade line (Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence) or, if not tradable, a concise Outlook line; ensure all numeric anchors reference IDs (no ad-hoc figures). (4) Add a compact first-principles spine before Movers: a 2–3 sentence causal chain (policy expectations -> discount rates -> asset prices -> risk premia) anchored to the same IDs, so the causal logic is testable and reproducible. (5) Tighten numeric anchors: where you cite IPO pace, rate-paths, or earnings/FX levels, ensure each number has a source ID, and convert any vague phrasing into precise, sourced ranges. (6) Reconcile regime conflicts by labeling Regime 1/2/3 explicitly, then present explicit invalidation points tied to sources; this should also feed the probability allocation. (7) Expand the watchlist to 5–6 concrete deltas with thresholds and IDs; (8) Clean formatting and punctuation (remove stray parentheses, ensure consistent separators) so the four Movers pass automated parsing. Implement these changes end-to-end to achieve a world-class, testable, source-grounded Swing Trade/Outlook compliant with the prompt.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756037790"
+}

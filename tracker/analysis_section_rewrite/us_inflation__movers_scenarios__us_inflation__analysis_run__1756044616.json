@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T16:17:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756044616",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18885",
+    "output_chars": "1257",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft is broad but not yet world-class: tighten the causal chain, anchor every factual claim to an ID, and convert the four items into four crisp Up/Down lines with explicit triggers, thresholds, and invalidation rules; ensure every numeric claim (LTC costs, 401(k) caps, SWR, tariff levels, AI productivity uplifts, MSFT/Shopify metrics, etc.) has a direct (ID) citation and avoid introducing non-sourced or tangential examples (Pacaso, BeeStation) unless you can tie them to a concrete trigger; compress the horizon into four tightly monitored windows (0–2, 2–4, 4–6 months) with a single, coherent base/bull/bear framework (Regime A/B/C) and a clear mapping from aging-costs and LTC tail risks to retirement cash-flow resilience, cloud/AI-driven earnings power to moats, and policy/tariff shifts to discount-rate adjustments, using explicit invalidation criteria (e.g., core CPI surprise, tariff escalations beyond 90 days, 10-year yield breaching mid-4% sustainedly) to bound the scenario; insist on concrete, data-backed probabilities (e.g., 65–70% for an inflation-path relief and promo-driven demand in 0–2 months citing S15934PBQ, Q4G7EPJJ6, 8VMO3PFEO) and tie watchlist items to observable releases (core CPI, Labor Day retail metrics, AI-capex prints, Medicare/Medicaid milestones) with IDs (S15934PBQ, Q4G7EPJJ6, UPV3X2MQ6,  IlYC1M41F, RHXDOHQQX, J99EM2TPZ, GX057ADL7) so the reader can audit every claim; reduce ambiguity around the 3.7% SWR and retirement inputs by citing (11) and (6) directly, and ensure the four lines, when rebuilt, read as: Up/Down | Time window | Driver/Mechanism | What to watch | Probability % with sources next to each factual claim.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756044616"
+}

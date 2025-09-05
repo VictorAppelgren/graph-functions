@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T07:15:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_credit_impulse",
+    "target_id": "copper",
+    "selection_motivation": "The copper link is the weakest due to its indirect influence and limited recent evidence linking China credit impulse to copper price movements, making it the least impactful on core macro handles.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The copper link is the weakest due to its indirect influence and limited recent evidence linking China credit impulse to copper price movements, making it the least impactful on core macro handles.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958050",
+    "rel_id": "china_credit_impulse__influences__copper",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "china_credit_impulse",
+      "target": "copper"
+    },
+    "prioritized_link": {
+      "motivation": "China credit impulse expands domestic demand and investment, boosting export volumes and revenues, directly influencing China exports.",
+      "type": "INFLUENCES",
+      "source": "china_credit_impulse",
+      "target": "china_exports"
+    },
+    "llm_raw_response": {
+      "motivation": "The copper link is the weakest due to its indirect influence and limited recent evidence linking China credit impulse to copper price movements, making it the least impactful on core macro handles.",
+      "remove_link": "copper"
+    },
+    "removal_decision": {
+      "motivation": "The copper link is the weakest due to its indirect influence and limited recent evidence linking China credit impulse to copper price movements, making it the least impactful on core macro handles.",
+      "remove_link": "copper"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (credit impulse OR 'credit growth impulse' OR 'credit growth' OR 'credit expansion' OR 'credit contraction' OR 'credit tightening')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (credit market OR 'credit market conditions' OR 'credit market liquidity' OR 'credit market stress' OR 'credit market risk' OR 'credit market volatility' OR 'credit market shock' OR 'credit market crisis' OR 'credit market outlook' OR 'credit market trends' OR 'credit market updates' OR 'credit market forecast' OR 'credit market analysis' OR 'credit market development' OR 'credit market stress test')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (debt OR 'China debt' OR 'Chinese debt' OR 'China debt levels' OR 'China debt risk' OR 'China debt crisis' OR 'China debt default' OR 'China debt restructuring')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (LGFV OR 'LGFV debt' OR 'LGFV default' OR 'LGFV crisis' OR 'LGFV financing' OR 'LGFV financing vehicles')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (shadow banking OR 'shadow banking system' OR 'shadow banking risk' OR 'shadow banking crisis' OR 'shadow banking regulation' OR 'shadow banking crackdown')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (PBOC OR 'People's Bank of China' OR 'China central bank' OR 'China monetary policy' OR 'China policy rate' OR 'China interest rates' OR 'China policy tightening' OR 'China policy easing')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (credit rating OR 'credit rating agencies' OR 'credit rating downgrades' OR 'credit rating' OR 'credit spreads' OR 'credit spread' OR CDS OR 'credit default swap' OR 'credit default swaps')) OR ((China OR PRC OR 'People's Republic of China' OR 'Mainland China') AND (news OR update OR breaking OR recent OR latest OR today OR report OR analysis OR forecast OR outlook OR trend OR movement OR volatility OR fluctuation OR change OR shift OR impact))",
+      "name": "China Credit Impulse",
+      "id": "china_credit_impulse",
+      "last_queried": "2025-09-02T17:19:43.498000000+00:00",
+      "queries": 3
+    }
+  },
+  "id": "china_credit_impulse__influences__copper"
+}

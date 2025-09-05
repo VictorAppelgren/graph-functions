@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:21:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_post_war_instability",
+    "target_id": "ukraine_peace_negotiations",
+    "selection_motivation": "Ukraine’s post‑war instability directly drives the urgency and content of peace negotiations, making the instability a key catalyst for negotiation dynamics.",
+    "candidate_motivation": "These topics are the most plausible external drivers and correlates of Ukraine post-war instability, spanning Russia dynamics, sanctions, diplomacy, and European/US responses. They represent direct or competitive relationships that could influence or track Ukraine's stability.",
+    "existing_links_count": "1",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['zelensky_peace_negotiations', 'ukraine_peace_negotiations', 'ukraine_diplomacy', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'ukraine_conflict', 'donbas_region', 'russia_economic_crisis', 'russian_sanctions', 'us_russia_ukraine_diplomacy', 'ukraine_sovereignty']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_post_war_instability', 'target': 'ukraine_geopolitical_security'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373215973",
+    "rel_id": "ukraine_post_war_instability__influences__ukraine_peace_negotiations",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_post_war_instability', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_post_war_instability', 'target': 'ukraine_peace_negotiations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine’s post‑war instability directly drives the urgency and content of peace negotiations, making the instability a key catalyst for negotiation dynamics.",
+      "type": "INFLUENCES",
+      "source": "ukraine_post_war_instability",
+      "target": "ukraine_peace_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_post_war_instability__influences__ukraine_peace_negotiations"
+}

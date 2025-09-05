@@ -1,0 +1,29 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T13:56:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3SHOQHFS4",
+    "suggested_names": "['china_energy_imports']",
+    "topic_category": "macro_driver",
+    "topic_category_motivation": "Infrastructure expansion altering gas supply and pricing dynamics",
+    "should_add": "True",
+    "motivation_for_relevance": "New Power of Siberia 2 pipeline will boost China’s gas imports, lowering transport costs and expected natgas prices; catalyst window 2024‑2025; maps to natgas commodity handle with negative price impact.",
+    "importance_classification": "2",
+    "importance_classification_rationale": "The Power of Siberia 2 pipeline represents a significant supply‑chain shift for natural gas, directly affecting the NatGas handle with a likely negative price impact in Europe and a positive impact in China. The announcement provides a clear catalyst window (immediate announcement to mid‑2025 construction start) and offers actionable signals for traders in energy, equity (energy companies), and FX (China‑Russia trade flows). While not an intraday shock, the pipeline’s 30‑year contract and 50 bcm/y capacity will influence NatGas pricing and related equity indices over the next 6–12 months, warranting a high‑centrality, short‑to‑medium‑term importance rating of 2.",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The new Power of Siberia 2 pipeline will increase China’s gas imports from Russia by 6 billion cubic metres per year, directly impacting natgas supply and pricing dynamics.",
+      "id": "cn_russia_gas_pipeline",
+      "name": "China gas imports from Russia via Power of Siberia 2",
+      "type": "macro"
+    },
+    "generated_query": {
+      "motivation": "This query captures the Russia–China gas pipeline expansion by targeting all key entities, pipeline terminology, gas logistics, and news context, ensuring comprehensive coverage for graph analytics and LLM reasoning.",
+      "query": "((Russia OR Russian OR RUSSIA) AND (China OR Chinese OR CHINA) AND (Gazprom OR 'Gazprom pipeline' OR 'Gazprom pipeline project' OR 'Gazprom pipeline construction' OR 'Gazprom pipeline development' OR 'Alexei Miller' OR Miller OR 'Gazprom chief' OR 'Gazprom CEO') AND (CNPC OR 'China National Petroleum Corporation' OR 'China National Petroleum Corp') AND (Mongolia OR Mongolian) AND (PoS OR 'Power of Siberia' OR 'Power of Siberia 2' OR PoS2 OR 'PoS 2' OR 'PoS2 pipeline') AND (pipeline OR 'gas pipeline' OR 'natural gas pipeline' OR 'pipeline project' OR 'pipeline construction' OR 'pipeline development' OR 'pipeline Russia China' OR 'pipeline Russia Mongolia China') AND (gas OR 'natural gas' OR 'gas export' OR 'gas exports' OR 'gas delivery' OR 'gas deliveries' OR 'gas supply' OR 'gas price' OR 'gas transport cost' OR 'transport cost') AND (news OR analysis OR report OR update OR breaking OR latest OR trend OR market OR markets OR price OR 'price movement' OR 'price trend' OR 'price change' OR 'price shift'))"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:431"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:29:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "airpods_live_translation",
+    "target_id": "voice_ai_market",
+    "selection_motivation": "AirPods Live Translation expands the use cases for voice AI, directly driving demand and growth in the voice AI market.",
+    "candidate_motivation": "AirPods Live Translation sits at the intersection of consumer audio hardware, AI-powered language translation, and the broader Apple ecosystem; plausible influences and peers include related Apple hardware/AI developments and the growing Voice AI market.",
+    "existing_links_count": "3",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['apple_siri_overhaul', 'voice_ai_market', 'apple_a20_chip', 'apple_antitrust_ai', 'apple_trademark_litigation']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_supply_chain_optimization'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216296",
+    "rel_id": "airpods_live_translation__influences__voice_ai_market",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_productivity'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'airpods_live_translation', 'target': 'voice_ai_market'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AirPods Live Translation expands the use cases for voice AI, directly driving demand and growth in the voice AI market.",
+      "type": "INFLUENCES",
+      "source": "airpods_live_translation",
+      "target": "voice_ai_market"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "airpods_live_translation__influences__voice_ai_market"
+}

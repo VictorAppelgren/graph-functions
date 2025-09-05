@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T08:41:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "cn_russia_gas_pipeline",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "The Power of Siberia 2 pipeline’s supply constraints elevate energy‑price inflation expectations, which historically prompt the Fed to consider rate cuts to temper overheating; thus the pipeline directly influences the Fed’s September 17, 2025 rate‑cut decision.",
+    "candidate_motivation": "China gas imports via Power of Siberia 2 are driven by energy supply dynamics, currency costs, and global commodity pricing, so topics that influence or reflect those factors are the most relevant peers or influences.",
+    "existing_links_count": "9",
+    "candidate_count": "10",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['china_exports', 'china_credit_impulse', 'usdcny', 'dxy', 'oil_price_decline', 'wti', 'brent', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627957167",
+    "rel_id": "cn_russia_gas_pipeline__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'cn_russia_gas_pipeline', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'cn_russia_gas_pipeline', 'target': 'china_pos2_pipeline'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Power of Siberia 2 pipeline’s supply constraints elevate energy‑price inflation expectations, which historically prompt the Fed to consider rate cuts to temper overheating; thus the pipeline directly influences the Fed’s September 17, 2025 rate‑cut decision.",
+      "type": "INFLUENCES",
+      "source": "cn_russia_gas_pipeline",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "cn_russia_gas_pipeline__influences__fed_rate_cut_sept17_2025"
+}

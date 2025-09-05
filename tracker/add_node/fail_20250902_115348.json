@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T11:53:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "X234SZYRS",
+    "suggested_names": "['CWEN']",
+    "topic_category": "company",
+    "topic_category_motivation": "Clearway Energy Inc. is a corporate entity issuing equity.",
+    "should_add": "False",
+    "motivation_for_relevance": "Company‑level equity offering is a micro event with no direct macro‑level trading relevance; it does not map to a canonical asset, policy, or macro driver and lacks a broader market impact path.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "New at‑the‑market equity offering announced for Clearway Energy Inc., likely to affect its equity price and capital structure.",
+      "id": "cwen",
+      "name": "Clearway Energy Inc.",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:31:02",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "healthtech_collaborations",
+    "target_id": "medical_digital_twins",
+    "selection_motivation": "Healthtech collaborations are a primary driver for the development and adoption of medical digital twin technologies, which rely on joint R&D, data sharing, and regulatory alignment.",
+    "candidate_motivation": "Topics in adjacent healthtech and digital health ecosystems are the most likely to be strong influences or peers to Healthtech Collaborations due to shared trends in AI-enabled care, digital platforms, and payer/industry collaborations.",
+    "existing_links_count": "1",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['digital_health_market', 'medical_digital_twins', 'neuropace_epilepsy', 'pulse_biosciences_nsPFA', 'ai_healthcare_advice', 'elevance_health']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'ai_healthcare_advice'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162239",
+    "rel_id": "healthtech_collaborations__influences__medical_digital_twins",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'medical_digital_twins'}, {'type': 'INFLUENCES', 'source': 'healthtech_collaborations', 'target': 'ai_healthcare_advice'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Healthtech collaborations are a primary driver for the development and adoption of medical digital twin technologies, which rely on joint R&D, data sharing, and regulatory alignment.",
+      "type": "INFLUENCES",
+      "source": "healthtech_collaborations",
+      "target": "medical_digital_twins"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "healthtech_collaborations__influences__medical_digital_twins"
+}

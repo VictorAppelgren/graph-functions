@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T12:44:34",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gilt10y",
+    "target_id": "fed_policy",
+    "selection_motivation": "UK gilt yields are highly sensitive to global rate expectations; Fed policy changes transmit through global risk sentiment and affect UK sovereign spreads, making a correlation link between gilt10y and fed_policy a key macro transmission path.",
+    "candidate_motivation": "The UK 10Y Gilt Yield is a sovereign debt benchmark that moves with global yield curves, monetary policy, and currency dynamics. Therefore, other sovereign yields, Fed/ECB policy, US inflation, and currency pairs that influence the pound are the most likely peers or influences.",
+    "existing_links_count": "12",
+    "candidate_count": "18",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['bund10y', 'ust10y', 'jgb10y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'gbpusd', 'dxy', 'sofr', 'ust2y', 'ust5y', 'ust30y', 'sx5e', 'spx', 'us_core_pce', 'fed_powell_rate_cut_hint_2025', 'euribor']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164182702698530308",
+    "rel_id": "gilt10y__correlates_with__fed_policy",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt yields are highly sensitive to global rate expectations; Fed policy changes transmit through global risk sentiment and affect UK sovereign spreads, making a correlation link between gilt10y and fed_policy a key macro transmission path.",
+      "type": "CORRELATES_WITH",
+      "source": "gilt10y",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__correlates_with__fed_policy"
+}

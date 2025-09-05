@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:25:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "dxy",
+    "selection_motivation": "China’s export growth raises US dollar inflows, directly influencing the US dollar index (DXY) through supply‑demand dynamics.",
+    "candidate_motivation": "China Exports directly shape global trade balances, commodity demand, and currency valuations, which in turn influence major interest rates, inflation, equity indices, and commodity prices. Therefore, topics linked to exchange rates, US/EU inflation, Treasury yields, monetary policy, and key commodities are plausible influences or peers.",
+    "existing_links_count": "2",
+    "candidate_count": "27",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'us_inflation', 'ust10y', 'ust2y', 'fed_policy', 'ecb_policy', 'china_credit_impulse', 'us_unemployment_claims', 'ust30y', 'ust5y', 'euro_inflation', 'sx5e', 'spx', 'gold', 'wti', 'brent', 'wheat', 'copper', 'usdjpy', 'gbpusd', 'eurusd', 'bund10y', 'gilt10y', 'jgb10y', 'euribor', 'sofr']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846558",
+    "rel_id": "china_exports__influences__dxy",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s export growth raises US dollar inflows, directly influencing the US dollar index (DXY) through supply‑demand dynamics.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__dxy"
+}

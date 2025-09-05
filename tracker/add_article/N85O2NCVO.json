@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T07:56:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "N85O2NCVO",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation expectations and tariff‑driven cost pressures will lift 10‑yr yields by 10‑20 bp and strengthen the USD index by 0.5‑1 % around the September 9 event.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy",
+        "ust10y",
+        "dxy",
+        "eurusd",
+        "usdcny"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "Apple’s iPhone 17 launch is a company event that is expected to influence market yields and currency indices, fitting the company_update category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major Apple iPhone 17 launch expected to lift UST 10‑year yields by 10–20 bp and strengthen the USD index (DXY) by 0.5–1 % due to tariff and inflation expectations, directly impacting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a single upcoming event that could affect UST 10‑year yields and the USD index in the short term."
+    },
+    "article_node": {
+      "id": "N85O2NCVO",
+      "title": "iPhone 17 release date, iOS 26 features and everything else to know about Apple's upcoming lineup",
+      "summary": "Apple is set to unveil its iPhone 17 lineup on September 9, with rumors of a $50 price hike and a slimmer Air model. The event could push UST 10‑year yields up 10–20 bp and strengthen the USD index (DXY) by 0.5–1 % as tariffs and higher component costs raise inflation expectations. The price increase is contingent on tariff policy remaining unchanged; a reversal could dampen the impact. The launch is expected to be the main catalyst for these moves, with the event date as the key window.",
+      "source": "https://www.engadget.com/mobile/smartphones/iphone-17-release-date-ios-26-features-and-everything-else-to-know-about-apples-upcoming-lineup-153024576.html",
+      "published_at": "2025-08-22T15:52:58+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "N85O2NCVO"
+}

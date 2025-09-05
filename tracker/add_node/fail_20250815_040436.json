@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:04:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LD9CCP261",
+    "status": "rejected",
+    "reject_category": "content_moderation",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights significant issues related to Meta's AI moderation system and its impact on users, which could influence regulatory scrutiny and market perceptions of the company, warranting a new node.",
+      "id": "meta_ai_moderation_issues",
+      "name": "Meta AI Moderation Issues",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "content_moderation",
+      "motivation": "Enforce community standards and protect users from harmful content, especially child sexual exploitation."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific to Meta's internal moderation, not a macro driver or policy; irrelevant to trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,60 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T11:53:40",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AAS9CVN58",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Dutch pension reform will force large unwinding of long‑dated euro swaps, pushing German 10Y Bund yields higher, steepening the euro‑area curve, and making US Treasuries more attractive, which will shift the DXY and European equity indices.",
+      "existing_ids": [
+        "bund10y",
+        "euro_inflation",
+        "ecb_policy",
+        "ust10y",
+        "ust30y",
+        "ust2y",
+        "ust5y",
+        "dxy",
+        "us_core_pce",
+        "us_inflation",
+        "sx5e",
+        "spx",
+        "gold",
+        "wheat"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article describes a planned overhaul of the Dutch pension system, a regulatory change that will impact European bond markets."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The Dutch pension overhaul will shift €300bn of long‑dated hedges to shorter ones, tightening 30‑year euro swap liquidity, steepening the yield curve and likely pushing German and French 30‑year yields higher, directly impacting European bond markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article describes a scheduled overhaul of the Dutch pension system that will unfold over several years (2024‑2028), representing a medium‑term structural shift affecting euro‑area bond markets and yields."
+    },
+    "article_node": {
+      "id": "AAS9CVN58",
+      "title": "A €2 Trillion Dutch Pension Headache Is Coming for European Bonds",
+      "summary": "A planned overhaul of the Dutch pension system is poised to shake European bond markets, as the country’s pension funds—holding roughly €300 billion in EU debt—shift from long‑dated hedges to shorter‑dated ones. The transition, scheduled to begin on Jan. 1 and roll out in tranches until 2028, could create a liquidity crunch in the 30‑year euro swap market and steepen the yield curve, prompting asset managers to favor shorter maturities and US Treasuries. The move comes amid a political crisis in the Netherlands and fiscal tensions in France, adding uncertainty to euro‑area debt demand and potentially pushing German and French 30‑year yields higher.",
+      "source": "https://finance.yahoo.com/news/2-trillion-dutch-pension-headache-060334429.html?_guc_consent_skip=1756715037",
+      "published_at": "2025-09-01T06:03:34+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 14,
+      "successful": 14
+    }
+  },
+  "id": "AAS9CVN58"
+}

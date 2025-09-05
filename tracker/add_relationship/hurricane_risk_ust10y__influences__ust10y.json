@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T12:24:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hurricane_risk_ust10y",
+    "target_id": "ust10y",
+    "selection_motivation": "Hurricane season risk elevates risk‑premium expectations, pushing UST10Y yields higher; linking the risk indicator to the yield node captures this causal channel.",
+    "candidate_motivation": "These topics are likely to influence or correlate with the US 10Y Treasury Yield through monetary policy, inflation expectations, term‑structure dynamics, and global bond market interlinkages.",
+    "existing_links_count": "23",
+    "candidate_count": "14",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'sofr', 'fed_powell_rate_cut_hint_2025', 'hurricane_risk_ust10y', 'us_unemployment_claims', 'dxy']",
+    "existing_links_before_len": "23",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118475166",
+    "rel_id": "hurricane_risk_ust10y__influences__ust10y",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Hurricane season risk elevates risk‑premium expectations, pushing UST10Y yields higher; linking the risk indicator to the yield node captures this causal channel.",
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "ust10y"
+    }
+  },
+  "id": "hurricane_risk_ust10y__influences__ust10y"
+}

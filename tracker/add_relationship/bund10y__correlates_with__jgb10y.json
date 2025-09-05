@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T12:15:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "bund10y",
+    "target_id": "jgb10y",
+    "selection_motivation": "Bund yields and JGB yields are both sovereign debt instruments that move in tandem with global risk sentiment and global rate expectations, making a strong correlation link valuable for cross‑asset analytics.",
+    "candidate_motivation": "German 10Y Bund Yield is a sovereign benchmark that moves in tandem with other major 10‑year yields, monetary policy, and euro‑zone inflation dynamics, and it also influences the USD‑index and equity indices. Therefore the most plausible influences or peers are other sovereign yields, policy signals, and key euro‑zone economic indicators that drive cross‑asset correlations.",
+    "existing_links_count": "12",
+    "candidate_count": "13",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ust10y', 'gilt10y', 'jgb10y', 'ust30y', 'ust5y', 'ust2y', 'ecb_policy', 'fed_policy', 'euro_inflation', 'us_inflation', 'us_core_pce', 'sx5e', 'dxy']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159679103071159521",
+    "rel_id": "bund10y__correlates_with__jgb10y",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields and JGB yields are both sovereign debt instruments that move in tandem with global risk sentiment and global rate expectations, making a strong correlation link valuable for cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "bund10y",
+      "target": "jgb10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__correlates_with__jgb10y"
+}

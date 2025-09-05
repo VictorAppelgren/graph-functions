@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T10:42:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756369285",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "11515",
+    "output_chars": "619",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but falls short on several key fronts. First, the “Movers & Scenarios” section must contain **exactly four lines** in the strict format: *Up/Down | Time window | Driver/Mechanism | What to watch | Probability %*. Your current lines mix drivers and watch signals, and the probabilities (70 %, 60 %, 30 %, 25 %) are not grounded in the evidence you cite. Replace each line with a clear causal chain: e.g., “Up | 3‑6 mo | Fed pivot to cuts (T7HLAX8QN) | Nvidia Q2 earnings beat (MSPXAOHU8) | 65 %” – note the 65 % is derived from the 70 % base probability in OGK8WLL69, adjusted for the 5 % chance of a missed Nvidia revenue (MSPXAOHU8). Use the real‑rate differential data (e.g., 25 bps Fed hike in Q3 2025) to quantify the upside/downside impact on equity valuations and incorporate the earnings‑premia channel (O4ZEED2EB). Ensure each line cites the exact ID for the fact or number you mention; avoid generic statements like “Fed cuts” without a source.\n\nSecond, the swing‑trade line is malformed. It should read: *Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100*. For a tradable asset, choose the S&P 500 futures (ES) or Nvidia (NVDA) as the target. For example: “Long | 3‑6 mo | 4 200 | 3 950 | 4 600 | 3:1 | Nvidia misses revenue (MSPXAOHU8) | Fed cuts stall (OGK8WLL69) | 70 % | 80”. Here the entry (4 200) and stop (3 950) are based on the 1 % above‑current‑level logic you attempted, but now expressed in concrete price levels. The target (4 600) reflects the 12 % upside forecast for the S&P 500 (OGK8WLL69). The R/R ratio is 3:1, and the confidence is 80 % given the moderate‑high confidence stated in the source. Remove the extraneous “1% above current level” text and replace it with actual price levels.\n\nThird, integrate the three invariant anchors (real‑rate differentials, earnings‑premia, volatility of non‑financial shocks) into your causal chain. For instance, “Down | 3‑6 mo | Widening U.S.–Japan real‑rate differential (PA57YBYVQ) | Japanese banks’ overseas activity surge (PA57YBYVQ) | 35 %” – the 35 % comes from the 30 % probability of a sharp differential spike (OGK8WLL69) combined with the 5 % chance of a global slowdown (OGK8WLL69). Cite the specific IDs for each fact.\n\nFourth, ensure every numeric claim is sourced: the 25 bps Fed hike (OGK8WLL69), the 7.7 % CEO pay rise (O4ZEED2EB), Ford’s ROIC of 10 % (W2622L6WW), and the 4 000–4 500 $ Ether band (OGK8WLL69). Avoid generic “risk‑seeking sentiment” statements without a citation.\n\nFinally, tighten the prose: remove redundant “watch signals” and “trigger” columns that duplicate information. Keep each line concise, with a single driver, a clear watch point, and a probability that reflects the weighted evidence. Once you revise the four scenario lines and the swing‑trade line as outlined, the analysis will meet the section focus, first‑principles grounding, and citation requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756369285"
+}

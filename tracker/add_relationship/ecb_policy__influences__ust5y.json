@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:35:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "ust5y",
+    "selection_motivation": "ECB policy shifts influence global rate expectations and currency flows, directly impacting the US 5‑year Treasury yield, a core benchmark for US debt pricing.",
+    "candidate_motivation": "ECB Policy directly influences euro‑area inflation expectations, euro‑zone bond yields, and the euro‑denominated equity market, while also shaping global rates and currency dynamics. Peer central‑bank actions (Fed policy) and key rate/credit/FX/commodity handles that react to ECB moves are therefore the most plausible influences or correlates.",
+    "existing_links_count": "12",
+    "candidate_count": "18",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'euro_inflation', 'sx5e', 'bund10y', 'euribor', 'dxy', 'usdjpy', 'usdcny', 'gbpusd', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'spx']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1204713999833237422",
+    "rel_id": "ecb_policy__influences__ust5y",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'ecb_policy', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy shifts influence global rate expectations and currency flows, directly impacting the US 5‑year Treasury yield, a core benchmark for US debt pricing.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__ust5y"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T12:51:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "T8V9WXMKC",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['HE99QDK4J', '261HLL6EA', 'YX2X8JAIX', 'OB27SL8WU', 'XQWTVR71K', 'ECJTP759G', '19NO2GMNF', 'UU5VNHJ8B', 'PRXJA922H']",
+    "mode": "MUST_REPLACE",
+    "target_id": "PRXJA922H",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "PRXJA922H",
+      "motivation": "The competing timeframe bucket is at capacity; remove a placeholder article (PRXJA922H) to make room for the Jackson Hole–driven briefing and preserve signal quality for analytics."
+    }
+  },
+  "id": "sp500__T8V9WXMKC__current"
+}

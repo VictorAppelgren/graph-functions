@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:02:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_cybersecurity_incidents",
+    "target_id": "us_federal_court_cybersecurity",
+    "selection_motivation": "US cybersecurity incidents precipitate legal scrutiny and litigation, leading to increased federal court cybersecurity activity.",
+    "candidate_motivation": "These topics are the most plausible direct influences, correlates, or peers to US Cybersecurity Incidents, representing key threat vectors (state-sponsored and supply-chain) and concrete cybersecurity events across critical institutions.",
+    "existing_links_count": "1",
+    "candidate_count": "5",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['third_party_vendor_risk', 'us_russian_cyberattack', 'interlock_cyberattack', 'intrusion_dod_contract', 'us_federal_court_cybersecurity']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'ml_cybersecurity'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745848470",
+    "rel_id": "us_cybersecurity_incidents__influences__us_federal_court_cybersecurity",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_court_cybersecurity'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US cybersecurity incidents precipitate legal scrutiny and litigation, leading to increased federal court cybersecurity activity.",
+      "type": "INFLUENCES",
+      "source": "us_cybersecurity_incidents",
+      "target": "us_federal_court_cybersecurity"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_cybersecurity_incidents__influences__us_federal_court_cybersecurity"
+}

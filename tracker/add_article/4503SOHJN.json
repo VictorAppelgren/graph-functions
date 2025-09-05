@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:11:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4503SOHJN",
+    "status": "success",
+    "topic_id": "us_border_security"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the implications of Corey Lewandowski's role in Homeland Security and its connection to immigration policy, which aligns with the existing node on US Border Security.",
+      "existing_node_ids": "us_border_security",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses issues related to border security, which can impact economic conditions and policies, but does not fit neatly into the other categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses border security measures which are directly related to the US border security node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing issues and policies related to border security that have long-term implications."
+    },
+    "article_node": {
+      "id": "4503SOHJN",
+      "title": "Corey Lewandowski has only worked 69 days under Kristi Noem — with 61 still to go — DHS says after concerns over ‘special’ status",
+      "summary": "Corey Lewandowski, a special employee of Homeland Security Secretary Kristi Noem, has reportedly exceeded the 130-day limit for his position, leading to speculation about his status and alleged use of colleagues' badges. Noem and Lewandowski, both married, have faced allegations of an extramarital affair, which they deny, despite being seen together in compromising situations at public events. Meanwhile, Noem has been actively involved in deportation raids, emphasizing a crackdown on illegal immigration under the Trump administration, which has seen a significant drop in border crossings.",
+      "source": "https://nypost.com/2025/08/14/us-news/lewandowski-has-only-worked-69-days-under-noem-with-61-still-to-go-dhs-says-after-concerns-over-his-special-status/",
+      "published_at": "2025-08-14T19:08:45+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "4503SOHJN"
+}

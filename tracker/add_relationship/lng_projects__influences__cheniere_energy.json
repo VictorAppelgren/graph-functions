@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:49:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "lng_projects",
+    "target_id": "cheniere_energy",
+    "selection_motivation": "LNG projects are a primary driver of Cheniere Energy’s operational pipeline and revenue generation, directly influencing its business strategy.",
+    "candidate_motivation": "LNG Projects is closely tied to the LNG supply chain and energy market dynamics; the strongest influences, correlates, or peers are major LNG exporters and related energy commodities that shape demand, pricing, and investment in LNG infrastructure.",
+    "existing_links_count": "1",
+    "candidate_count": "4",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['cheniere_energy', 'lng_projects_2026', 'oil', 'conocophillips_dividend_policy']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'lng_projects', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162773",
+    "rel_id": "lng_projects__influences__cheniere_energy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'lng_projects', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'lng_projects', 'target': 'cheniere_energy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "LNG projects are a primary driver of Cheniere Energy’s operational pipeline and revenue generation, directly influencing its business strategy.",
+      "type": "INFLUENCES",
+      "source": "lng_projects",
+      "target": "cheniere_energy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "lng_projects__influences__cheniere_energy"
+}

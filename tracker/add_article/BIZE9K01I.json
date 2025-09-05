@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-16T01:10:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BIZE9K01I",
+    "status": "success",
+    "topic_id": "ai_product_reviews"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the ai_product_reviews node.",
+      "existing_node_ids": "ai_product_reviews",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No article content provided, cannot determine relevant category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Article summary is missing, so cannot determine impact on ai_product_reviews node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to determine time frame due to lack of article content."
+    },
+    "article_node": {
+      "id": "BIZE9K01I",
+      "title": "Air Canada risks 'pyrrhic victory' in sending flight attendants to the picket lines, says TD analyst",
+      "summary": "Air Canada and Air Canada Rouge flight attendants, represented by the Canadian Union of Public Employees, have issued a 72‑hour strike notice and are set to picket, prompting the airline to cancel flights in anticipation of a full grounding. The attendants demand pay for ground work before takeoff, a 50‑100% increase in boarding pay, and a one‑percentage‑point raise in annual wages. Management, led by Tom Fitzgerald, urges a conciliatory approach, warning that a three‑day strike could cost the airline $300 million in EBITDA and that investors are growing frustrated with the current strategy. Fitzgerald maintains that resolving the dispute will secure labor peace, improve public perception, and position the company well for future growth.",
+      "source": "https://financialpost.com/transportation/airlines/air-canada-risks-pyrrhic-victory-in-sending-flight-attendants-to-the-picket-lines-says-td-analyst?itm_source=airlines",
+      "published_at": "2025-08-15T22:07:09+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "BIZE9K01I"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T03:57:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_stock_buybacks",
+    "target_id": "us_inflation_and_stock_market_impact",
+    "selection_motivation": "US Stock Buybacks alter corporate earnings and share prices, thereby shaping the dynamic between inflation and equity markets; linking them captures this causal pathway for deeper macro‑financial analysis.",
+    "candidate_motivation": "Stock buybacks are highly sensitive to macro policy, financing costs, and equity market conditions. The listed topics reflect those direct influences and peers.",
+    "existing_links_count": "10",
+    "candidate_count": "8",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['sp500', 'us_inflation_data', 'us_inflation_stock_impact', 'fed_policy', 'us_treasury_yields', 'lower_interest_rates', 'corporate_governance', 'conocophillips_dividend_policy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'political_influence_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'equity_market_vs_economy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'corporate_governance'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'US Stock Buybacks alter corporate earnings and share prices, thereby shaping the dynamic between inflation and equity markets; linking them captures this causal pathway for deeper macro‑financial analysis.', 'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_and_stock_market_impact'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Stock Buybacks alter corporate earnings and share prices, thereby shaping the dynamic between inflation and equity markets; linking them captures this causal pathway for deeper macro‑financial analysis.",
+      "type": "INFLUENCES",
+      "source": "us_stock_buybacks",
+      "target": "us_inflation_and_stock_market_impact"
+    }
+  },
+  "id": "us_stock_buybacks__influences__us_inflation_and_stock_market_impact"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:26:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_us_tariff_truce",
+    "target_id": "us_tariffs_pharmaceuticals_semiconductors",
+    "selection_motivation": "The tariff truce directly lifts restrictions on pharmaceuticals and semiconductors, making it a primary driver of the US tariff policy in those sectors.",
+    "candidate_motivation": "These topics directly involve tariff policy, trade negotiations, and inflation dynamics that would be strongly influenced by, or closely related to, a China-US tariff truce.",
+    "existing_links_count": "3",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_china_tariff_truce', 'china_us_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'tariff_driven_inflation', 'us_tariffs_pharmaceuticals_semiconductors']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902855",
+    "rel_id": "china_us_tariff_truce__influences__us_tariffs_pharmaceuticals_semiconductors",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_us_tariff_truce', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The tariff truce directly lifts restrictions on pharmaceuticals and semiconductors, making it a primary driver of the US tariff policy in those sectors.",
+      "type": "INFLUENCES",
+      "source": "china_us_tariff_truce",
+      "target": "us_tariffs_pharmaceuticals_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_us_tariff_truce__influences__us_tariffs_pharmaceuticals_semiconductors"
+}

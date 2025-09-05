@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-04T09:02:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sofr",
+    "target_id": "fed_policy",
+    "selection_motivation": "The generic fed_policy link offers limited incremental insight beyond specific rate cut events and other macro drivers, making it the weakest link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The generic fed_policy link offers limited incremental insight beyond specific rate cut events and other macro drivers, making it the weakest link.",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'sofr', 'target': 'us_unemployment_claims'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587872",
+    "rel_id": "sofr__influences__fed_policy",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'sofr', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'sofr', 'target': 'us_unemployment_claims'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "sofr",
+      "target": "fed_policy"
+    },
+    "prioritized_link": {
+      "motivation": "SOFR determines overnight borrowing costs, which directly influence short‑term financing for the services sector, making it a primary driver of the US Services PMI.",
+      "type": "INFLUENCES",
+      "source": "sofr",
+      "target": "us_services_pmi"
+    },
+    "llm_raw_response": {
+      "motivation": "The generic fed_policy link offers limited incremental insight beyond specific rate cut events and other macro drivers, making it the weakest link.",
+      "remove_link": "fed_policy"
+    },
+    "removal_decision": {
+      "motivation": "The generic fed_policy link offers limited incremental insight beyond specific rate cut events and other macro drivers, making it the weakest link.",
+      "remove_link": "fed_policy"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "((SOFR OR \"Secured Overnight Financing Rate\" OR \"SOFR rate\" OR \"overnight repo\" OR \"overnight financing\" OR \"overnight rate\" OR \"overnight repo rate\" OR \"overnight financing rate\" OR \"Fed Funds\" OR \"Fed overnight\" OR \"Fed overnight rate\" OR \"Fed overnight repo\") AND (news OR analysis OR report OR update OR trend OR market OR trading OR finance OR financial))",
+      "name": "SOFR",
+      "id": "sofr",
+      "last_queried": "2025-09-03T16:39:16.387000000+00:00",
+      "queries": 4
+    }
+  },
+  "id": "sofr__influences__fed_policy"
+}

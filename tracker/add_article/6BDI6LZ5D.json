@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T01:20:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6BDI6LZ5D",
+    "status": "success",
+    "topic_id": "us_russia_relations"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the geopolitical implications of Russia's actions in Ukraine and Europe, which aligns with existing concerns about U.S.-Russia relations and Ukraine's geopolitical security.",
+      "existing_node_ids": "us_russia_relations",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the state of relations between the US and Russia, which is a significant geopolitical event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the current state of US-Russia relations, which is directly relevant to this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing geopolitical tensions and their implications, suggesting a longer-term perspective on US-Russia relations."
+    },
+    "article_node": {
+      "id": "6BDI6LZ5D",
+      "title": "War-weary Ukraine skeptical of summit as Russia advances on battlefield, spreads chaos in Europe",
+      "summary": "Russia's recent military advances in Ukraine and its ongoing sabotage efforts across Europe are raising concerns ahead of a summit between President Trump and President Putin. While Ukrainian leaders express cautious optimism about Trump's support for an international peace force, many Ukrainians remain skeptical about the potential for meaningful negotiations, with some resigned to territorial losses for the sake of peace. Concurrently, a report highlights a surge in Russian hybrid operations in Europe, indicating a shift in tactics as Moscow responds to Western military support for Ukraine.",
+      "source": "https://www.washingtontimes.com/news/2025/aug/14/war-weary-ukraine-skeptical-summit-russia-advances-battlefield/",
+      "published_at": "2025-08-14T22:00:57+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "6BDI6LZ5D"
+}

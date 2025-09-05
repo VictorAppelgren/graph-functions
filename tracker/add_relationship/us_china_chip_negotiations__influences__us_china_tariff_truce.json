@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T10:10:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_chip_negotiations",
+    "target_id": "us_china_tariff_truce",
+    "selection_motivation": "US-China Chip Negotiations directly drive the establishment of a tariff truce, a critical outcome that reshapes trade flows and market expectations.",
+    "candidate_motivation": "The selected topics are closely related to the US-China Chip Negotiations, either as direct influences on semiconductor policies, trade relations, or competitive dynamics in the technology sector.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1028",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_trade_relations', 'us_china_tariff_truce', 'us_chip_export_controls', 'us_tariffs_on_technology', 'china_semiconductor_policy', 'us_china_ai_chip_agreement', 'us_chip_sales_to_china', 'china_chip_competition', 'us_china_trade_talks', 'us_china_supply_chain_risks']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_chip_negotiations', 'target': 'us_chip_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407452188",
+    "rel_id": "us_china_chip_negotiations__influences__us_china_tariff_truce",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_chip_negotiations', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_chip_negotiations', 'target': 'us_china_tariff_truce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China Chip Negotiations directly drive the establishment of a tariff truce, a critical outcome that reshapes trade flows and market expectations.",
+      "type": "INFLUENCES",
+      "source": "us_china_chip_negotiations",
+      "target": "us_china_tariff_truce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_chip_negotiations__influences__us_china_tariff_truce"
+}

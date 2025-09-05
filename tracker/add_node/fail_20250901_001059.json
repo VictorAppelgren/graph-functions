@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-01T00:10:29",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FP1RX9J2V",
+    "suggested_names": "['UnitedHealth']",
+    "topic_category": "company",
+    "topic_category_motivation": "UnitedHealth is a company; the article discusses its stock and corporate events.",
+    "should_add": "False",
+    "motivation_for_relevance": "UnitedHealth is a single company; the topic does not map to a canonical macro handle (e.g., an index, rate, commodity, or FX pair) and offers no macro‑level driver or catalyst. The event is a micro‑level investment move, not a scalable macro theme.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article reports Burry's significant purchase of UnitedHealth, indicating a new contrarian investment event.",
+      "id": "UNH",
+      "name": "UnitedHealth",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

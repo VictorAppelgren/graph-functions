@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:41:36",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756042456",
+    "drivers_count": "4",
+    "material_chars": "1717",
+    "output_chars": "3530",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has a plausible base-case and credible anchors (3–6 months, Regime A easing, mid-4% 10Y, Shopify metrics) but it needs sharper integration across macro, policy, flows/positioning, and valuation, a formal four-regime EURUSD framing, a tighter causal chain from first principles to cash-flow outcomes, and concrete scenario-based risk signals; it also over-relies on repeated source IDs and lacks explicit quantification of sensitivities and invalidation points. Actionable edits: restructure into a single thesis plus a cross-topic map (macro/policy/flows/valuation) with explicit direction and mechanism for each driver, and cut repetitive phrasing; replace vague phrases like “aura of AI/cloud-driven moats” with concrete mechanisms (demographic-driven pricing power in healthcare, AI-enabled tools expanding GMV monetization and margin leverage) and tie each mechanism to one or more sources (YVQU6QCY4, IGP1Q4ZEJ, 0G3A676BP, TN66GHPAT, GX057ADL7). Introduce a formal three- or four-regime scenario with explicit signals: base-case (Sept 25–50 bp cut, mid-4% yields, softer dollar), bull (AI capex accelerates GMV/revenue beyond Shopify-like anchors), bear (policy missteps or a stronger dollar compressing multiples); specify trigger lines and invalidate conditions for each. Quantify sensitivity where possible (e.g., use Shopify GMV/revenue/margin-like anchors and state ranges), and attach a source to every factual claim; ensure coverage of all critical sources and reconcile conflicts (e.g., easing vs inflation proximity to target). Tighten the watchlist to: (i) confirmed Sept cut and FX/yield moves; (ii) AI-capex data showing platform breadth expansion; (iii) governance signals around mega-deals; and (iv) inflation surprises or tariff shifts. Finally, eliminate redundancy, sharpen the language, and keep the piece within a crisp 1–2 page limit.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756042456"
+}

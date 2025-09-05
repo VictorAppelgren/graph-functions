@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T12:48:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_industrial_output",
+    "target_id": "us_inflation",
+    "selection_motivation": "India industrial output is a leading indicator of global demand and commodity price swings, which directly feed into US inflation expectations; linking it to US inflation provides a clear causal path for macro risk modeling.",
+    "candidate_motivation": "India Industrial Output is a key macro indicator that reacts strongly to global demand, commodity prices, and monetary policy. Topics that influence or correlate with it include major US macro data, US Treasury yields, Fed policy signals, the USD/JPY and USD/CNY exchange rates, and global commodity benchmarks such as oil, copper, gold, and wheat.",
+    "existing_links_count": "8",
+    "candidate_count": "17",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['us_inflation', 'us_core_pce', 'us_services_pmi', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'dxy', 'usdcny', 'wti', 'brent', 'copper', 'gold', 'wheat']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814271520",
+    "rel_id": "india_industrial_output__influences__us_inflation",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India industrial output is a leading indicator of global demand and commodity price swings, which directly feed into US inflation expectations; linking it to US inflation provides a clear causal path for macro risk modeling.",
+      "type": "INFLUENCES",
+      "source": "india_industrial_output",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__influences__us_inflation"
+}

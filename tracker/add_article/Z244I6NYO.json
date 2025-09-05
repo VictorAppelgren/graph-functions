@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:29:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Z244I6NYO",
+    "status": "success",
+    "topic_id": "us_chip_export_controls"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses U.S. export controls on AI and semiconductors, which aligns with the existing node on US Chip Export Controls, highlighting the geopolitical implications of these policies.",
+      "existing_node_ids": "us_chip_export_controls",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses export controls on chips, which is a regulatory change affecting the semiconductor industry."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses recent developments in semiconductor export controls, which directly relate to US chip export policies."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing regulatory changes and their implications for the semiconductor industry, indicating a longer-term impact on market dynamics."
+    },
+    "article_node": {
+      "id": "Z244I6NYO",
+      "title": "Inside the Biden Administration's Gamble to Freeze China’s AI Future",
+      "summary": "Alan Estevez, appointed as the Biden administration's top export control official in 2022, has been pivotal in reshaping U.S. strategy to counter China's technological advancements, particularly in artificial intelligence and semiconductors. The administration's export controls, initiated in 2022, aimed to limit China's access to advanced chips and technology, citing national security concerns and the potential military applications of AI. As the U.S. tightens these restrictions further, it faces challenges in balancing national security interests with the economic implications for American tech companies and the broader geopolitical relationship with China.",
+      "source": "https://www.wired.com/story/chips-china-artificial-intelligence-controls/",
+      "published_at": "2025-08-14T15:13:18.126000-04:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "Z244I6NYO"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:21:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756084413",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "14065",
+    "output_chars": "1197",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft shows solid structure but needs sharper causal rigor, tighter horizon discipline, and tighter sourcing discipline to reach world-class quality. Edit 1: harden the causal chain by spelling out explicit stepwise links from tariff signals (SGB2PAZGK) to import compression, to domestic-capex reallocation (semiconductors, EVs, AI/data-center infra), and then to earnings/valuation re-pricing, anchoring each step with first-principles drivers (real-rate differentials, terms-of-trade shifts, productivity dynamics, policy-reaction functions) and the stated tariff path (10% baseline to 145%) with precise numbers cited. Edit 2: enforce a formal four-item format with 2 Up and 2 Down, and ensure each line is a single sentence: Up/Down | Time window | Driver/Mechanism | What to watch | Probability %, and tether every numeric claim to a source ID (e.g., 4VN4UTWX1, SGB2PAZGK, I2SJU04DF, Z5IA1CYUF, 22PL3Q360, O4ZEED2EB) to avoid soft assertions. Edit 3: adopt a coherent scenario framework: define base, upside, and downside with 2–3 explicit catalysts (tariff clarity, capex milestones, energy-cost stability, EV-margin inflection) and clear invalidation rules (durable tariff concessions, inflation surprise, or a meaningful EV profitability turn) so probabilities update mechanistically. Edit 4: replace vague watchpoints with quantitative thresholds and milestones (e.g., tariff signaling by Q3 2025; Ford EV loss magnitude and ROIC trajectory; Spirit BHVN settlement deadline; Yemen shipping-resilience signals) and tightly align them to the 0–3 week window while avoiding scope drift into longer Netflix/Megatrend threads unless retained with a separate horizon. Edit 5: fix factual misstatements and ensure complete source coverage: correct the Starbucks reference to Laxman Narasimhan and Bezos’ compensation attribution, reconcile any conflicts across SGB2PAZGK/O4ZEED2EB/65UUBU0OR/61SVFUKBY/STBVARD8F, and prune nonessential governance notes unless they function as a true watch signal; ensure all critical sources are represented in the final framing.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756084413"
+}

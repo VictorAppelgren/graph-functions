@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:36:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3YBQREKJ1",
+    "status": "success",
+    "topic_id": "israeli_settlement_expansion"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses Israeli-Palestinian relations and settlement expansion, which is a significant geopolitical issue impacting investment sentiment and market stability. This warrants the creation of a new node to capture the implications of Israeli-Palestinian policy on global markets.",
+      "existing_node_ids": null,
+      "new_node_dicts": "Israeli-Palestinian Policy"
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the expansion of Israeli settlements, which is a significant geopolitical event affecting regional stability and international relations."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the implications of Israeli settlement expansion on regional stability and international relations, making it highly relevant."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and policies regarding Israeli settlement expansion, which are likely to have long-term implications."
+    },
+    "article_node": {
+      "id": "3YBQREKJ1",
+      "title": "Plan for Israeli Settlements Advances and Will ‘Bury’ Palestinian Statehood, Minister Vows",
+      "summary": "Israeli Finance Minister Bezalel Smotrich announced the approval of a plan to expand a settlement near occupied East Jerusalem, which he claims will hinder the establishment of a Palestinian state. The plan includes the construction of approximately 3,400 new housing units, but final approval is still pending from the Supreme Planning Council. This announcement has drawn condemnation from various countries and organizations, with critics labeling it a violation of international law and an act of aggression against Palestinian rights.",
+      "source": "https://www.nytimes.com/2025/08/14/world/middleeast/israel-smotrich-settlements-palestinian-state.html",
+      "published_at": "2025-08-14T19:14:17+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "3YBQREKJ1"
+}

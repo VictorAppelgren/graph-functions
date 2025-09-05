@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:01:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "section": "current",
+    "test": "False",
+    "run_id": "us_tariffs__analysis_run__1756040254",
+    "article_ids": "['S15934PBQ', 'CWVWSACA7', 'DNG58CC09', 'DGG6HXUFZ', 'VCZKKPORO']",
+    "selected_articles_count": "5",
+    "material_chars": "150714",
+    "output_chars": "3052",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "High-signal upgrade guidance in one paragraph: convert the piece into a tight, date‑driven 0–3 week framework anchored to concrete policy moves and data releases, e.g., immediate drivers (Navarro’s 50% India tariff stepping in on Aug 27; EU framework with 15% MFN on most imports and potential auto relief once Brussels acts; Japan autos around 15% with ongoing pass‑through), then near‑term catalysts (EU‑US framework implementation timing and retroactive relief potential; the Aug 28 expiration of de minimis for low‑value imports; Korea’s early‑August export surge in semis and autos as context), and then explicit invalidation triggers (EU auto relief not implemented by date; India tariff delayed or scaled back; de minimis exemptions extended anew). Tie every assertion to a source ID (e.g., S15934PBQ for Japan auto tariffs and pass‑through signals; DGG6HXUFZ for Navarro’s India tariff stance; VCZKKPORO for de minimis changes; DNG58CC09 for India’s diversification into Russia/UK/EU/SK markets; the 15% EU MFN framework and retroactivity from the EU‑US framework article; 15 for Korea export data; 27 for rare‑earth magnets data; 26 for tariff‑driven consumer price signals). Introduce a three‑scenario logic (base, bull, bear) with trigger thresholds; in the base, assume tariff pass‑through remains gradual and subsets of goods show price hardening; in the bull, tariff actions hit broader baskets with sharper pass‑through and inventory repricing; in the bear, relief unfolds or escalation stalls and market volatility re-prices policy risk). Quantify where possible with sourced ranges: average tariff level ≈18.6% across regimes (cite the Yale/Budget Lab context via the material); pass‑through reportedly 60–70% of tariff costs to firms/consumers in some analyses; near‑term price moves shown in apparel (roughly 9% YoY in online prices during back‑to‑school) to illustrate lagged consumer effects (cite 26); explicit revenue signals such as July tariff receipts (~$21B) and the notion that tariff revenue can offset debt over a 3–4 year horizon (cite 19 and S&P commentary). Finally, add a crisp “watch list” with three monitors: (1) actual implementation dates and any carve‑outs in the EU framework or India policy (cite 9/8/15 sources as applicable); (2) real‑time trade data and routing shifts in high‑tariff goods versus tech/pharma channels (cite DNG58CC09; 15; 27); and (3) consumer price pass‑through for tariff‑sensitive categories (cite 26 and S15934PBQ). This will tighten causal reasoning, fix the horizon to the 0–3 week window, and provide auditable, source‑linked numbers rather than broad assertions.",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs__current__us_tariffs__analysis_run__1756040254"
+}

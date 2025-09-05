@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T19:07:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WTNT85IPR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; US auto tariffs and a major U.S. manufacturing investment cycle shaping auto/EV equities and broader US equity exposure.",
+      "existing_ids": [
+        "trump_tariffs",
+        "us_tariff_policies",
+        "us_inflation",
+        "us_inflation_impact_on_stocks",
+        "us_inflation_stock_impact",
+        "sp500",
+        "us_treasury_yields",
+        "us_10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses a new Cadillac concept and GM's investment, which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article announces a new electric vehicle concept and GM's investment in EV manufacturing, directly affecting the electric vehicle sector."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on a concept vehicle that previews future product offerings and highlights a significant investment in manufacturing, indicating a medium‑term outlook rather than an immediate event or long‑term structural shift."
+    },
+    "article_node": {
+      "id": "WTNT85IPR",
+      "title": "Cadillac’s Elevated Velocity electric crossover concept car maps out the future of luxury rides",
+      "summary": "Cadillac unveiled the Elevated Velocity, an all‑electric high‑performance crossover concept that blends V‑Series performance with off‑road capability. The 2+2 crossover features gull‑wing doors, 24‑inch wheels, selectable e‑Velocity and Terra modes, a Sand Vision system, and a luxury interior with AI‑driven user modes. Cadillac positions the concept as a preview of future luxury electric crossovers, while GM continues to invest $4 billion in U.S. manufacturing to support its expanding electric lineup.",
+      "source": "https://www.foxbusiness.com/lifestyle/cadillacs-elevated-velocity-electric-crossover-concept-car-maps-out-future-luxury-rides",
+      "published_at": "2025-08-24T12:00:56-04:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "WTNT85IPR"
+}

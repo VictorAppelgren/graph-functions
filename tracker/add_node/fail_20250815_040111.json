@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:01:02",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IV159SWBK",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant shift in Olympic revenue generation through corporate naming rights, which could impact future funding models for major sporting events, warranting a new node for analysis.",
+      "id": "la28_naming_rights",
+      "name": "LA28 Naming Rights",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Introduction of venue naming rights represents a new revenue driver for Olympic funding, shifting the financial model for large sporting events."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Not a macro driver, tradable asset, policy, or geography; it concerns a niche corporate sponsorship program.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

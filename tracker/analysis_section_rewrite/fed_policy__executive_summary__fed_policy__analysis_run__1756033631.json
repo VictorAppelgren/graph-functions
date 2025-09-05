@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:19:37",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756033631",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "14826",
+    "output_chars": "1365",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is thorough but too sprawling for a crisp, decision‑useful 4–6 sentence brief; it muddles the core house view with overlapping regime prose and long micro‑narratives. Actionable edits to elevate it: (1) deliver a single, tight base‑case house view for the 3–6 month window, specifying explicit macro inputs (Sept rate cut of 25bp; 10‑year around 4.23% with a soft dollar/yields dynamic) and an ACMR cash‑flow/market multiple path (revenue 850–950m in 2025; gross margin ~49%; debt/equity ~23%), all tied to a clean cross‑asset channel (GX057ADL7; 37UZC9X8I; SK994CBWR). (2) crystallize two or three explicit catalysts and two or three invalidation points, with concrete numeric triggers (e.g., CPI/payroll prints in line vs. surprising hawkishness; Sep‑cut materializing vs. being delayed; IPO momentum moving Russell 2000 toward/away from a small‑cap cash‑flow led re‑rating; export‑controls risk materializing) and cite them to Q7VVGNSQE, H7Q52FKDH, K0WFSW29E, etc. (3) tighten the first‑principles chain by: AI/no‑code TAM expansion → higher GMV/margins → stronger FCF and higher EV/FCF multiples, anchored by Shopify/Azure signals within the same cross‑asset frame (0G3A676BP; QFDWCTAYB). (4) replace breadth with precision in the near term: prune repetitive regime discussion and render a concise 3–4 line near‑term read, followed by 1–2 longer paragraphs on longer‑horizon drivers only if necessary, always linking to the ACMR micro story and the 2025 guidance (SK994CBWR). (5) ensure every factual claim anchors to the IDs present in SOURCE MATERIAL and reconcile any conflicts across regimes (GX057ADL7; 37UZC9X8I; H7Q52FKDH; QFDWCTAYB; 0G3A676BP; J99EM2TPZ; TN66GHPAT; 4LQD15CFU), removing any out‑of‑scope references (e.g., non‑source assertions) and aligning with the 3–6 month macro driver versus the 12–24 month horizon.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1756033631"
+}

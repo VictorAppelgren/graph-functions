@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T01:12:01",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "usdjpy",
+    "target_id": "ust10y",
+    "selection_motivation": "USD/JPY and US 10Y Treasury Yield move together due to carry‑trade flows; higher US yields attract capital, strengthening USD vs JPY.",
+    "candidate_motivation": "USD/JPY is a currency pair whose value is driven by US dollar strength, Japanese yen fundamentals, and global risk sentiment. Therefore, topics that influence US monetary policy, US Treasury yields, US inflation, the US dollar index, and Japanese bond yields are strong correlates or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "13",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'ecb_policy', 'euro_inflation', 'euribor', 'jgb10y', 'dxy', 'us_inflation', 'usdcny']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152923703630104793",
+    "rel_id": "usdjpy__correlates_with__ust10y",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/JPY and US 10Y Treasury Yield move together due to carry‑trade flows; higher US yields attract capital, strengthening USD vs JPY.",
+      "type": "CORRELATES_WITH",
+      "source": "usdjpy",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__correlates_with__ust10y"
+}

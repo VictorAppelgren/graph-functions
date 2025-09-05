@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:05:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_peace_negotiations",
+    "target_id": "ukraine_diplomacy",
+    "selection_motivation": "The peace negotiations directly shape Ukraine's diplomatic strategies and engagements, making this link essential for understanding how negotiation outcomes affect broader diplomatic actions.",
+    "candidate_motivation": "They capture core geopolitical dynamics, key players, and regional fragmentation surrounding Ukraine's peace process, making them the strongest influences, correlates, or peers to negotiations.",
+    "existing_links_count": "4",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['zelensky_peace_negotiations', 'ukraine_geopolitics', 'ukraine_conflict', 'us_russia_ukraine_diplomacy', 'eu_geopolitics_ukraine', 'eu_us_relations_ukraine', 'ukraine_diplomacy', 'ukraine_sovereignty', 'ukraine_post_war_instability', 'donbas_region']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6926537326407452493",
+    "rel_id": "ukraine_peace_negotiations__influences__ukraine_diplomacy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The peace negotiations directly shape Ukraine's diplomatic strategies and engagements, making this link essential for understanding how negotiation outcomes affect broader diplomatic actions.",
+      "type": "INFLUENCES",
+      "source": "ukraine_peace_negotiations",
+      "target": "ukraine_diplomacy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_peace_negotiations__influences__ukraine_diplomacy"
+}

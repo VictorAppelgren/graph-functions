@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T10:27:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IKJ6T0257",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US PCE inflation expectations and Fed policy signals will shift US yields and currency, with spillover to equity indices and commodities.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy",
+        "spx",
+        "wti",
+        "brent",
+        "dxy",
+        "eurusd",
+        "usdjpy",
+        "us_unemployment_claims",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "Article reports the upcoming U.S. PCE inflation data, a major inflation print."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified, cannot assess relevance"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to upcoming PCE data and short‑term Fed policy expectations, describing day‑to‑day price movements and near‑term catalysts."
+    },
+    "article_node": {
+      "id": "IKJ6T0257",
+      "title": "Global stocks are mostly down ahead of key U.S. inflation report",
+      "summary": "European shares fell on Friday as investors awaited the U.S. PCE inflation data, expected to show 2.6% year‑on‑year growth. The S&P 500 and Dow futures slipped 0.3%, while oil prices dropped. In Asia, the Nikkei fell 0.3% after weaker factory output and tariff concerns, and Chinese tech stocks saw mixed moves amid government chip support. The U.S. economy grew 3.3% in Q1‑Q2, but job market softness may prompt Fed rate cuts next month.",
+      "source": "https://www.fastcompany.com/91395490/global-stocks-mostly-down-ahead-key-u-s-inflation-report",
+      "published_at": "2025-08-29T13:00:06+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "IKJ6T0257"
+}

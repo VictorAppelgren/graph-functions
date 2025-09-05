@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:06:23",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_conflict",
+    "target_id": "donbas_region",
+    "selection_motivation": "The Ukraine Conflict directly shapes the security, economic, and demographic dynamics of the Donbas region, making it a primary driver of that subregion’s current state.",
+    "candidate_motivation": "The Ukraine Conflict is tightly linked to state-level geopolitics, diplomacy, and regional security dynamics; the shortlisted topics represent direct influences, correlations, or peers in that domain.",
+    "existing_links_count": "7",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ukraine_post_war_instability', 'donbas_region', 'ukraine_sovereignty', 'ukraine_peace_negotiations', 'ukraine_diplomacy', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'russian_sanctions', 'russia_economic_crisis', 'us_russia_ukraine_diplomacy']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397147",
+    "rel_id": "ukraine_conflict__influences__donbas_region",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'donbas_region'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ukraine Conflict directly shapes the security, economic, and demographic dynamics of the Donbas region, making it a primary driver of that subregion’s current state.",
+      "type": "INFLUENCES",
+      "source": "ukraine_conflict",
+      "target": "donbas_region"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_conflict__influences__donbas_region"
+}

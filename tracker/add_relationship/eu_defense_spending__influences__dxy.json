@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T11:30:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eu_defense_spending",
+    "target_id": "dxy",
+    "selection_motivation": "EU defense spending signals heightened geopolitical risk, which historically drives risk‑aversion flows into the USD, strengthening the DXY.",
+    "candidate_motivation": "EU Defense Spending is driven by fiscal capacity, geopolitical risk appetite, and defense industry dynamics. These topics capture monetary policy (ECB), inflationary pressures, sovereign bond yields, global risk sentiment (US Treasury yields, DXY), and key European equity exposure, all of which plausibly influence or correlate with EU defense budget decisions.",
+    "existing_links_count": "2",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'sx5e']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'euro_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846170",
+    "rel_id": "eu_defense_spending__influences__dxy",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EU defense spending signals heightened geopolitical risk, which historically drives risk‑aversion flows into the USD, strengthening the DXY.",
+      "type": "INFLUENCES",
+      "source": "eu_defense_spending",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eu_defense_spending__influences__dxy"
+}

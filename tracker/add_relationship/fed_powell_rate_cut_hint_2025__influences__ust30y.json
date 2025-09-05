@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T21:35:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_powell_rate_cut_hint_2025",
+    "target_id": "ust30y",
+    "selection_motivation": "Fed Powell’s rate‑cut hint is a direct policy signal that shapes long‑term yield expectations, so it should influence the 30‑year Treasury.",
+    "candidate_motivation": "US 30Y Treasury Yield is a long‑term benchmark that reacts strongly to Fed policy, inflation expectations, the U.S. term‑structure, global risk sentiment, and cross‑asset pricing dynamics.  Topics that capture these drivers or represent comparable long‑term yields are therefore the most relevant peers or influences.",
+    "existing_links_count": "20",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust5y', 'ust2y', 'dxy', 'usdcny', 'gbpusd', 'usdjpy', 'eurusd', 'bund10y', 'gilt10y', 'sx5e', 'spx', 'gold', 'wti', 'brent', 'copper', 'wheat', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'eurusd'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373219519",
+    "rel_id": "fed_powell_rate_cut_hint_2025__influences__ust30y",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'us_core_pce'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed Powell’s rate‑cut hint is a direct policy signal that shapes long‑term yield expectations, so it should influence the 30‑year Treasury.",
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "ust30y"
+    }
+  },
+  "id": "fed_powell_rate_cut_hint_2025__influences__ust30y"
+}

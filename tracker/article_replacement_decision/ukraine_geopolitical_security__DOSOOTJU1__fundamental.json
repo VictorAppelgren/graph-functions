@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T09:13:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ukraine_geopolitical_security",
+    "new_article_id": "DOSOOTJU1",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['NUGGFHR1S', 'Q7NI866C5', 'E44Y2BJ6C', 'JD2AW8V54', 'PIF7FLBKM']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article provides timely insights into China's diplomatic stance ahead of a significant summit, which is not covered in existing articles, warranting its inclusion."
+    }
+  },
+  "id": "ukraine_geopolitical_security__DOSOOTJU1__fundamental"
+}

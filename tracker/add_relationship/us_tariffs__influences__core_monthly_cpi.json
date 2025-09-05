@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:57:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "core_monthly_cpi",
+    "selection_motivation": "Tariffs on imported goods directly raise the cost of consumer goods, which feeds into the core monthly CPI, a primary gauge of inflationary pressure.",
+    "candidate_motivation": "Tariffs directly impact trade costs, inflation, and macro policy dynamics; the strongest related nodes are other tariff policies, trade tension themes, and inflation-sensitive indicators.",
+    "existing_links_count": "10",
+    "candidate_count": "19",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_tariffs', 'us_tariffs_brazil', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'tariff_driven_inflation', 'us_tariffs_inflation', 'us_inflation', 'core_monthly_cpi', 'us_10y', 'us_inflation_data', 'us_china_tariffs', 'china_us_tariff_truce', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'us_tariff_policies', 'us_india_tariffs', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'tariff_driven_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1195706800578495912",
+    "rel_id": "us_tariffs__influences__core_monthly_cpi",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'tariff_driven_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Tariffs on imported goods directly raise the cost of consumer goods, which feeds into the core monthly CPI, a primary gauge of inflationary pressure.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "core_monthly_cpi"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs__influences__core_monthly_cpi"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:17:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_inflation_data",
+    "selection_motivation": "Fed policy directly shapes the underlying inflation dynamics that are captured in US inflation data, enabling analysts to trace policy impact through to observed inflation metrics.",
+    "candidate_motivation": "These topics are the most plausible direct or indirect contemporaries of Fed Policy, reflecting inflation dynamics, interest-rate expectations, currency moves, and financial-market responses.",
+    "existing_links_count": "10",
+    "candidate_count": "16",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'us_inflation', 'core_monthly_cpi', 'us_inflation_data', 'us_inflation_expectations', 'us_10y', 'us_treasury_yields', 'euribor', 'sp500', 'eurostoxx50', 'usd', 'fed_chair_replacement', 'stephen_miran_fed_appointment', 'us_tariffs_on_technology', 'us_china_tariffs']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1215972998901661701",
+    "rel_id": "fed_policy__influences__us_inflation_data",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly shapes the underlying inflation dynamics that are captured in US inflation data, enabling analysts to trace policy impact through to observed inflation metrics.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_inflation_data"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__us_inflation_data"
+}

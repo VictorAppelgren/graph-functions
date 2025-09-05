@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T05:01:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756090582",
+    "drivers_count": "8",
+    "material_chars": "3456",
+    "output_chars": "4503",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong start with a coherent cross-asset frame (macro-inflation → policy reaction → discount rates/risk premia → equity/credit/crypto valuations) and plausible catalysts (ETH BTC bid via ETF/inflows, Bitmine Immersion’s ETH Allocation; Ford’s EV economics; oil supply dynamics; RWA/custody progress). Still, the draft needs a tighter, first-principles causal chain, sharper scenario discipline, stronger quantification, and a cleaner citation discipline. Edit to (1) crystallize a formal three-regime model with explicit state variables (inflation surprise, wage-growth momentum, policy rate path) and clear triggers/invalidation: e.g., Regime A transitions on CPI momentum abating or Jackson Hole signals; Regime B on inflation persistently above target; Regime C on growth slowdown; and tie these to a concrete discount-rate path and risk premium band rather than vague “disinflation” language, citing the base-case 2% inflation target and the implied real-rate trajectory (OGK8WLL69)(Y6SQOEK69)(15)(9). (2) Quantify and anchor every assertion with the numbers/ranges in sources: ETH price around 4,955 and BTC near highs; oil Brent in mid-60s and WTI in low-60s; ACMR 2025 revenue ~$900m with gross margin ~4%; Ford Q2 EV losses ~ $1.3B, ROIC ~10.1%, adj. EBIT ~4.3% (22PL3Q360)(J99EM2TPZ)(T1QE6JPIX)(Y6SQOEK69)(15)(9); RWA ~16T by 2030; Treasury tokenization ~$4.2B in 2025; Ether 4,000–5,000 and BTC 110,000–125,000 (JPAIHPA4N)(SGB2PAZGK)(OGK8WLL69). Use these as a framework for price-paths, not generic statements. (3) Build a concrete watch-list of decisive signals with thresholds and time-horizons: pace of semis capex (quarterly cadence), ETF/institutional crypto inflows and corporate ETH allocations (e.g., sustained flows vs. spikes), RWA/custody progress, and regime-shift markers (CPI/Wage data, Jackson Hole communications) plus oil-price surprise and 10Y yield moves; state how each would tilt the base-case toward Regime A/B/C or trigger an invalidation. (4) Tighten cross-topic linkage: map each driver to a distinct channel (inflation → discount rates; policy stance → financial conditions → crypto/AI infra re-rating; flows/positioning → crypto valuations; oil and autos → real-economy capex pricing) and avoid mixing in irrelevant items (e.g., consumer hardware specs); ensure EURUSD exposure is described as a macro-finance channel, not a product spec alveolus. (5) Reconcile potential conflicts among sources: e.g., disinflation vs sticky inflation paths, ETF inflows vs policy-tightening risks, oil-supply shocks vs crypto liquidity—stress-test these in base/bull/bear overlays with explicit probability weights. (6) Improve formatting and citation hygiene: attach the exact IDs to the specific claims in each sentence rather than a block at the end, remove stray text (the truncated “A l” and the Pixel‑spec insertion), and present a single cohesive narrative rather than repeated assertions; (7) deliver a tighter conclusion with a one-line bottom line and a 4–6 item mini watch-list for 2025–26.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756090582"
+}

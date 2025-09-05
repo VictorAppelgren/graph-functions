@@ -1,0 +1,125 @@
+{
+  "url": "https://techxplore.com/news/2025-08-year-gap-robots-lag-ai.html",
+  "authorsByline": "Kara Manke",
+  "articleId": "624d2798a0da4f05a0a49fc38e5c255f",
+  "source": {
+    "domain": "techxplore.com",
+    "location": null
+  },
+  "imageUrl": "https://scx2.b-cdn.net/gfx/news/hires/2025/why-robots-lag-behind.jpg",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-27T15:24:08-04:00",
+  "addDate": "2025-08-27T19:36:28.994377+00:00",
+  "refreshDate": "2025-08-27T19:36:28.994382+00:00",
+  "score": 1.0,
+  "title": "The '100,000-year data gap': Researcher explains why robots lag behind AI chatbots",
+  "description": "AI chatbots have advanced rapidly over the past few years, so much so that people are now using them as personal assistants, customer service representatives and even therapists.",
+  "content": "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:\n\nAI chatbots have advanced rapidly over the past few years, so much so that people are now using them as personal assistants, customer service representatives and even therapists.\n\nThe large language models (LLMs) that power these chatbots were created using machine learning algorithms trained on the vast troves of text data found on the internet. And their success has many tech leaders, including Elon Musk and NVIDIA CEO Jensen Huang, claiming that a similar approach will yield humanoid robots capable of performing surgery, replacing factory workers or serving as in-home butlers within a few short years.\n\nBut robotics experts disagree, says UC Berkeley roboticist Ken Goldberg. He is a professor of industrial engineering and operations research and William S. Floyd Jr. Distinguished Chair in Engineering at UC Berkeley\n\nIn two new papers published online today (Aug. 27) in the journal Science Robotics, Goldberg describes how what he calls the \"100,000-year data gap\" will prevent robots from gaining real-world skills as quickly as AI chatbots are gaining language fluency.\n\nIn the second article, leading roboticists from MIT, Georgia Tech and ETH-Zurich summarize the heated debate among roboticists over whether the future of the field lies in collecting more data to train humanoid robots or relying on \"good old-fashioned engineering\" to program robots to complete real-world tasks.\n\nBelow, UC Berkeley News spoke with Goldberg about the \"humanoid hype,\" the emerging paradigm shift in the robotics field and whether AI really is on the cusp of taking everyone's jobs.\n\nRecently, tech leaders like Elon Musk have made claims about the future of humanoid robots, such as that robots will outshine human surgeons within the next five years. Do you agree with these claims?\n\nNo; I agree that robots are advancing quickly but not that quickly. I think of it as hype because it's so far ahead of the robotic capabilities that researchers in the field are familiar with.\n\nWe're all very familiar with ChatGPT and all the amazing things it's doing for vision and language, but most researchers are very nervous about the analogy that most people have, which is that now that we've solved all these problems, we're ready to solve [humanoid robots], and it's going to happen next year.\n\nI'm not saying it's not going to happen, but I'm saying it's not going to happen in the next two years, or five years or even 10 years. We're just trying to reset expectations so that it doesn't create a bubble that could lead to a big backlash.\n\nWhat are the limitations that will prevent us from having humanoid robots performing surgery or serving as personal butlers in the near future? What do they still really struggle with?\n\nThe big one is dexterity, the ability to manipulate objects. Things like being able to pick up a wine glass or change a light bulb. No robot can do that.\n\nIt's a paradox\u2014we call it Moravec's paradox\u2014because humans do this effortlessly, and so we think that robots should be able to do it, too. AI systems can play complex games like chess and Go better than humans, so it's understandable that people think, \"Well, why can't they just pick up a glass?\" It seems much easier than playing Go. But the fact is that picking up a glass requires that you have a very good perception of where the glass is in space, move your fingertips to that exact location and close your fingertips appropriately around the object. It turns out that's still extremely difficult.\n\nIn your new paper, you discuss what you call the 100,000-year \"data gap.\" What is the data gap, and how does it contribute to this disparity between the language abilities of AI chatbots and the real-world dexterity of humanoid robots?\n\nTo calculate this data gap, I looked at how much text data exists on the internet and calculated how long it would take a human to sit down and read it all. I found it would take about 100,000 years. That's the amount of text used to train LLMs.\n\nWe don't have anywhere near that amount of data to train robots, and 100,000 years is just the amount of text that we have to train language models. We believe that training robots is much more complex, so we'll need much more data.\n\nSome people think we can get the data from videos of humans\u2014for instance, from YouTube\u2014but looking at pictures of humans doing things doesn't tell you the actual detailed motions that the humans are performing, and going from 2D to 3D is generally very hard. So that doesn't solve it.\n\nAnother approach is to create data by running simulations of robot motions, and that actually does work pretty well for robots running and performing acrobatics. You can generate lots of data by having robots in simulation do backflips, and in some cases that transfers into real robots.\n\nBut for dexterity\u2014where the robot is actually doing something useful, like the tasks of a construction worker, plumber, electrician, kitchen worker or someone in a factory doing things with their hands\u2014that has been very elusive, and simulation doesn't seem to work.\n\nCurrently people have been doing this thing called teleoperation, where humans operate a robot like a puppet so it can perform tasks. There are warehouses in China and the U.S. where humans are being paid to do this, but it's very tedious. And every eight hours of work gives you just eight more hours of data. It's going to take a long time to get to 100,000 years.\n\nDo roboticists believe it is possible to advance the field without first creating all this data?\n\nI believe that robotics is undergoing a paradigm shift, which is when science makes a big change\u2014like going from physics to quantum physics\u2014and the change is so massive that the field gets broken into two camps, and they battle it out for years. And we're in the midst of that kind of debate in robotics.\n\nMost roboticists still believe in what I call good old-fashioned engineering, which is pretty much everything that we teach in engineering school: physics, math and models of the environment.\n\nBut there is a new dogma that claims that robots don't need any of those old tools and methods. They say that data is all we need to get us to fully functional humanoid robots.\n\nThis new wave is very inspiring. There is a lot of money behind it and a lot of younger-generation students and faculty members are in this new camp. Most newspapers, Elon Musk, Jensen Huang and many investors are completely sold on the new wave, but in the research field there's a raging debate between the old and new approaches to building robots.\n\nWhat do you see as the way forward?\n\nI've been advocating that engineering, math and science are still important because they allow us to get these robots functional so that they can collect the data that we need.\n\nThis is a way to bootstrap the data collection process. For example, you could get a robot to perform a task well enough that people will buy it, and then collect data as it works.\n\nWaymo, Google's self-driving car company, is doing that. They're collecting data every day from real robot cars and their cars are getting better and better over time.\n\nThat's also the story behind Ambi Robotics, which makes robots that sort packages. As they work in real warehouses, they collect data and improve over time.\n\nIn the past, there was a lot of fear that robotic automation would steal blue-collar factory jobs, and we've seen that happen to some extent. But with the rise of chatbots, now the discussion has shifted to the possibility of LLMs taking over white-collar jobs and creative professions. How do you think AI and robots will impact what jobs are available in the future?\n\nTo my mind as a roboticist, the blue-collar jobs, the trades, are very safe. I don't think we're going to see robots doing those jobs for a long time.\n\nBut there are certain jobs\u2014those that involve routinely filling out forms, such as intake at a hospital\u2014that will be more automated.\n\nOne example that's very subtle is customer service. When you have a problem, like your flight got canceled, and you call the airline and a robot answers, you just get more frustrated. Many companies want to replace customer service jobs with robots, but the one thing a computer can't say to you is, \"I know how you feel.\"\n\nAnother example is radiologists. Some claim that AI can read X-rays better than human doctors. But do you want a robot to inform you that you have cancer?\n\nThe fear that robots will run amok and steal our jobs has been around for centuries, but I'm confident that humans have many good years ahead\u2014and most researchers agree.",
+  "medium": "Article",
+  "links": [
+    "https://techxplore.com/tags/humanoid+robots/",
+    "https://www.science.org/doi/10.1126/scirobotics.aea7390",
+    "https://techxplore.com/partners/university-of-california---berkeley/",
+    "http://robotics.sciencemag.org/",
+    "https://www.science.org/doi/10.1126/scirobotics.aea7897",
+    "https://dx.doi.org/10.1126/scirobotics.aea7390",
+    "https://www.youtube.com/watch?v=cUdl-Cp-LWw",
+    "https://www.ambirobotics.com/",
+    "https://techxplore.com/journals/science-robotics/",
+    "https://waymo.com/",
+    "https://dx.doi.org/10.1126/scirobotics.aea7897",
+    "http://www.berkeley.edu/"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "humanoid robots",
+      "weight": 0.09206008
+    },
+    {
+      "name": "real robots",
+      "weight": 0.09096567
+    },
+    {
+      "name": "real robot cars",
+      "weight": 0.088067144
+    },
+    {
+      "name": "robots",
+      "weight": 0.087963276
+    },
+    {
+      "name": "robot motions",
+      "weight": 0.08629161
+    },
+    {
+      "name": "many good years",
+      "weight": 0.06544896
+    },
+    {
+      "name": "text data",
+      "weight": 0.06270412
+    },
+    {
+      "name": "more data",
+      "weight": 0.06048251
+    },
+    {
+      "name": "next year",
+      "weight": 0.059045333
+    },
+    {
+      "name": "customer service jobs",
+      "weight": 0.058963064
+    }
+  ],
+  "topics": [
+    {
+      "name": "AI"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/News/Technology News",
+      "score": 0.955078125
+    },
+    {
+      "name": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+      "score": 0.95361328125
+    }
+  ],
+  "sentiment": {
+    "positive": 0.1638807,
+    "negative": 0.4620901,
+    "neutral": 0.37402925
+  },
+  "summary": "Roboticist Ken Goldberg, a professor of industrial engineering and operations research at UC Berkeley, has explained why robots are not gaining real-world skills as quickly as AI chatbots are gaining language fluency. He argues that the \"100,000-year data gap\" prevents robots from gaining more skills as rapidly as AI talkbots. This gap was identified in two new papers in the journal Science Robotics, with leading roboticists from MIT, Georgia Tech and ETH-Zurich suggesting that the future of the field lies in collecting more data to train humanoid robots or relying on \"good old-fashioned engineering\" to program robots for real-life tasks. Despite these advances, Goldberg believes that robots are advancing quickly but not quickly as quickly. He also discusses the \"humanoid hype\" in the robotics field and whether AI is on the cusp of taking everyone's jobs.",
+  "shortSummary": "Robotic experts argue that the \"100,000-year data gap\" between AI chatbots and humanoid robots, highlighted by Ken Goldberg's research, will hinder their real-world capabilities and potential jobs.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": false,
+  "reprintGroupId": "902350fb47254812b83f58200c2f281c",
+  "places": [],
+  "scraped_sources": [
+    {
+      "url": "https://waymo.com/",
+      "text": "The World\u2019s Most Experienced Driver\nWe\u2019re on a mission to be the world's most trusted driver. Making it safer, more accessible, and more sustainable to get around \u2014 without the need for anyone in the driver\u2019s seat.\nMeet Waymo\nThe world\u2019s first autonomous ride-hailing service\nThe world\u2019s first autonomous ride-hailing service\nOur service\nCurrent cities\nLos Angeles\nWelcoming all riders in the City of Stars! Ride from Santa Monica to Downtown today.\nPhoenix\nWaymo is open to all across 315 square miles of the Valley of the Sun.\nSan Francisco\nAnyone can download, request, and ride today in the City by the Bay and Daly City.\nAtlanta\nRide on Uber\nWe've partnered with Uber to bring the magic of Waymo to Atlanta, only on the Uber app.\nAustin\nRide on Uber\nWe've partnered with Uber to bring the magic of Waymo to Austin, only on the Uber app.\nComing soon\nMiami\nMiami, you're up next. Sign up for updates to get the latest on Waymo's progress in your city.\nWashington, D.C.\nWe're excited to bring autonomous rides to DC. Sign up for updates to get the latest.\nWhy they ride with Waymo\nLearn why Eva chooses WaymoEva, San FranciscoThe fact that Waymo provides convenience, prioritizes safety, and is committed to sustainability makes it by far my favorite mode of transportation.\nWaymo Driver\nMeet the technology behind it all\nWe're designing the Waymo Driver, our autonomous technology, to give people a new kind of freedom \u2014 to go where they want, when they want, while making the frustrations and concerns with driving a thing of the past.\nWhy we\u2019re here\n1.19 million\ndeaths worldwide due to vehicle crashes every year\n42,514\nroad deaths in the U.S. in 2022\n$836B\nin harm from loss of life and injury each year\nCompared to an average human driver over the same distance in our operating cities, the Waymo Driver had:\n88% Fewer serious injury or worse crashes (15 fewer)\n79% Fewer airbag deployment crashes (94 fewer)\n78% Fewer injury-causing crashes (223 fewer)\nOur commitment to safety\nAutonomous vehicles mean nothing without safe driving. Our priority is to ensure the Waymo Driver offers a safe road experience for those inside \u2014 and outside \u2014 our vehicles.\nOur mission: Be the world\u2019s most trusted driver\nAt Waymo, we believe the status quo is not acceptable. Our mission is to innovate beyond the impossible in order to save lives that are tragically lost to traffic crashes. We are driven to provide inclusive mobility that offers freedom of movement for all, working with our partners and communities to create an ecosystem that is sustainable, efficient, and audacious. We are passionate about improving the state of our planet to make it better than we found it."
+    },
+    {
+      "url": "https://www.ambirobotics.com/",
+      "text": "AI-powered\nrobotic solutions\nfor warehouse operations\nEnhance efficiency. Scale seamlessly.\nAmbistack\nStack-to-Anything\nAI-Powered multi-purpose robotic stacking\n- Inbound\n- Outbound\nAmbisort A-Series\nSort-to-Sack\nAI-powered robotic small parcel sorting to the last-mile\n- Bin-fed\n- Conveyor-fed\nAmbisort B-Series\nSort-to-Gaylord\nAI-powered modular parcel induction and sorting system\nHere for you\nWe go beyond the tech\n\u201cAmbi Robotics is a customer-centered company, and we feel that as a customer.\u201d\nMarc Lautenbach, CEO of Pitney Bowes\nHardware + Software, working together\nAdaptable AI meets robotic dexterity\n- Sim2Real AI\n- Robot dexterity\nSimulation that\u2019s real-world ready\nWith 10,000 times faster training, hardware-agnostic robots can pick millions of distinct items in the real world \u2014 right from day one.\nMove and place parcels more precisely with dexterous robots\nIntelligent gripper technology with advanced hardware enables precise pick-and-place capabilities for a variety of parcels.\nEXPERIENCE THE DIFFERENCE\nSolutions for the real world\nSpeed\nOptimize facility performance and productivity to achieve consistent and reliable throughput across shifts.\n-\n24/7High-speed sorting round-the-clock\n-\n400%Increase in associate throughput\nAccuracy\nCapitalize on a level of precision that maximizes sorting accuracy for last-mile deliveries and minimizes returns.\n-\n+99%Sort accuracy to correct output location\n-\n+6Quality control checkpoints per parcel sorted with neural network detection\nFlexibility\nOur solutions are as easy to deploy as they are powerful\u2014and integrate seamlessly with your existing workflows.\n-\n+99%Always on. Boost efficiency with reliable uptime\n-\n40%Reduction in sorting operation costs"
+    }
+  ],
+  "argos_summary": "AI chatbots have surged, fueling hype that humanoid robots will soon perform complex tasks, but UC Berkeley roboticist Ken Goldberg argues that a 100,000\u2011year data gap and dexterity challenges mean such robots are far from reality. He contrasts the data\u2011driven approach favored by some with traditional engineering methods, noting that simulation and teleoperation provide limited progress. Goldberg stresses that robots will still need physics\u2011based design to bootstrap data collection, citing Waymo and Ambi Robotics as examples. While blue\u2011collar jobs remain largely safe, routine white\u2011collar tasks may see increased automation, but human empathy and judgment will keep many roles intact.",
+  "argos_id": "M3NQX4D08"
+}

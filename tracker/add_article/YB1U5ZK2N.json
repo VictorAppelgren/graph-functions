@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T14:03:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YB1U5ZK2N",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US short‑term rates and Fed policy are expected to decline by 0.25% next month, pushing short‑term Treasury yields down 0.2‑0.4% over the next quarter, while inflation remains at 2.7%.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy",
+        "ust2y",
+        "ust5y",
+        "ust10y",
+        "sofr"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of consumer savings behavior and the impact of Fed funds rate expectations on savings yields, which is a market‑level commentary rather than an official data release or policy action."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports on consumer savings behavior and expected short‑term rate movements tied to the Fed funds rate, which offers only limited context for US savings rates and does not represent a significant macro‑policy or market‑moving event."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on short‑term interest rate expectations and current savings yields, which are immediate events affecting the node."
+    },
+    "article_node": {
+      "id": "YB1U5ZK2N",
+      "title": "A majority of Americans are making this simple money mistake: Vanguard",
+      "summary": "Vanguard’s survey shows that 57% of Americans earn less than 3% on cash savings, with many still holding money in low‑yield checking or physical cash. High‑yield savings, CDs, and money‑market funds can deliver over 4% as of August, yet 60% of savers feel they don’t understand the interest‑rate landscape. Younger generations, especially Gen Z, are particularly under‑earning, and inertia keeps many in outdated accounts. Short‑term rates, tied to the Fed funds rate, are expected to fall later this year, but current yields should stay above the 2.7% inflation rate for now.",
+      "source": "https://www.businessinsider.com/investing-advice-apy-interest-rates-high-yield-savings-vanguard-2025-8",
+      "published_at": "2025-08-14T09:30:03+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "YB1U5ZK2N"
+}

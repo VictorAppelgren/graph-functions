@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T14:04:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eu_defense_spending",
+    "target_id": "sx5e",
+    "selection_motivation": "EU defense spending boosts earnings of defense firms that are constituents of the Euro Stoxx 50, thereby lifting the index.",
+    "candidate_motivation": "EU Defense Spending is driven by fiscal policy, inflation, and broader EU financial conditions. Topics that directly influence or correlate with these drivers—such as ECB policy, Euro Area inflation, and EU financial market activity—are the most plausible influences or peers.",
+    "existing_links_count": "5",
+    "candidate_count": "4",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'eur_at1_issuance', 'sx5e']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'eur_at1_issuance'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216666",
+    "rel_id": "eu_defense_spending__influences__sx5e",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'eur_at1_issuance'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EU defense spending boosts earnings of defense firms that are constituents of the Euro Stoxx 50, thereby lifting the index.",
+      "type": "INFLUENCES",
+      "source": "eu_defense_spending",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eu_defense_spending__influences__sx5e"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:55:08",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0P3X1UBB1",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights potential securities fraud involving Groupon, which could impact investor sentiment and stock performance, warranting a new node for analysis of legal risks associated with corporate governance.",
+      "id": "groupon_securities_fraud",
+      "name": "Groupon Securities Fraud",
+      "type": "company",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Securities fraud involving Groupon, a specific company, affecting its stock and investor sentiment."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company‑specific securities fraud is not a macro driver or tradable asset; it falls outside the macro focus.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

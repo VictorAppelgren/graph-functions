@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-31T19:13:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8HP2SSE7G",
+    "suggested_names": "['american_eagle']",
+    "topic_category": "company",
+    "topic_category_motivation": "Article reports American Eagle Outfitters' new collaboration and stock price lift, warranting a company node.",
+    "should_add": "False",
+    "motivation_for_relevance": "No macro relevance; single company node with no tradable asset mapping or macro driver; violates relevance policy.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article reports American Eagle Outfitters' new collaboration and stock price lift, warranting a company node.",
+      "id": "american_eagle_outfitters",
+      "name": "American Eagle Outfitters",
+      "type": "company"
+    }
+  },
+  "id": "none"
+}

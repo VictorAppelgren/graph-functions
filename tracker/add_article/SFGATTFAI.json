@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T11:18:57",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SFGATTFAI",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and weaker job openings data raise expectations of Fed cuts, pushing UST yields higher and influencing currency markets.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "usdjpy",
+        "dxy",
+        "eurusd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article mentions dovish Fed remarks, which are official statements from a policymaker."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Uncertain about the node referenced; cannot assess impact accurately."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to recent Fed remarks, job data, and regulatory signals, indicating short‑term effects."
+    },
+    "article_node": {
+      "id": "SFGATTFAI",
+      "title": "Asia Markets Stabilise as Fed Comments, Jobs Data Point to Cuts",
+      "summary": "Asian stocks edged higher on early trading, buoyed by dovish Fed remarks and weaker U.S. job openings data that bolster expectations of rate cuts. Chinese shares fell for a third day amid reports of forthcoming cooling measures by regulators. While a bond selloff eased, long‑dated borrowing costs stayed near multi‑year highs and the dollar slipped modestly against the yen, with the DXY unchanged.",
+      "source": "https://money.usnews.com/investing/news/articles/2025-09-03/asia-markets-stabilise-as-fed-comments-jobs-data-point-to-cuts",
+      "published_at": "2025-09-03T21:47:00-04:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "SFGATTFAI"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:06:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756086924",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "24080",
+    "output_chars": "1557",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft has ambitious scope but fails the SECTION FOCUS in two key ways: the Movers & Scenarios section currently contains content beyond the required four lines and mixes Netflix with broad regime-era psychology and other names, which blunts clarity and transfer to a Swing Trade; tighten to exactly four lines (two Up, two Down) with the exact schema: Direction | Time window | Driver/Mechanism | What to watch | Probability %; anchor each probability to explicit material (e.g., 61SVFUKBY for Netflix momentum, STBVARD8F for the AI/data-center backdrop, A88B7V8PY/U3ZK13ZQI for cross-portfolio risk) and place in-text IDs only where you cite a specific fact or number; remove all non‑NFLX items from these four lines or relocate them to a separate section. Strengthen the reasoning by mapping a clean first-principles chain: tariff-driven regime A/B/C affects US capex, AI compute demand, and data-center margins, which feeds Netflix monetization (ad-tier uptake, international ARPU) and cash flow, which then drives equity price and the valuation narrative; cite source IDs for each step. For each Up/Down line, make the driver explicit (e.g., Up due to ad-tier monetization accelerating international ARPU; Down due to macro/regime risk or multiple compression) and include 1–2 tightly scoped triggers and a clear invalidation point with a numbers-backed threshold if available; ensure the “What to watch” items are quantitative where possible (subscriber growth, ARPU cadence, margin trajectory) and avoid generic platitudes. Reconcile numeric tensions by selecting a base-case near-term Netflix momentum (e.g., 15.9% YoY revenue growth and 86.9% FCF uplift cited in 61SVFUKBY) as the anchor and treating longer-horizon 13.1% 2024–2027 revenue CAGR (A88B7V8PY) as an alt-path caveat; present both as explicit paths with separate probabilities rather than a single blended view. For the Swing Trade Outlook, if Netflix remains tradable, deliver exactly one or two lines in the required format: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence % (e.g., Long NFLX | 0–6 weeks | Entry near current price | Stop 5% below | Target 12–15% | R/R ~2.5 | Invalidation: Q3 revenue growth misses or ad-tier momentum stalls | Trigger: sustained upside price action and ad-tier momentum | Probability 60% | Confidence 70); ensure the probability and confidence figures are grounded in the material and cited (61SVFUKBY/STBVARD8F). Finally, prune the long, multi-asset macro weave at the end and replace it with a concise, Netflix-centric base case plus 1–2 clear alt paths solely tied to the four lines, ensuring the full write‑up stays within the horizon/style boundaries and uses a consistent, disciplined citation approach (IDs after assertions; no extraneous references).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756086924"
+}

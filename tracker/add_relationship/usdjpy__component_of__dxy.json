@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T17:29:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "COMPONENT_OF",
+    "source_id": "usdjpy",
+    "target_id": "dxy",
+    "selection_motivation": "USD/JPY is a weighted component of the US Dollar Index (DXY) and directly contributes to its movements.",
+    "candidate_motivation": "USD/JPY is driven by U.S. and Japanese monetary conditions, the strength of the U.S. dollar, global risk sentiment, and cross‑currency dynamics. Therefore topics that capture U.S. rates, Fed policy, U.S. inflation, the dollar index, Japanese JGB yields, and other major FX peers, as well as broad macro drivers and commodity benchmarks that influence risk appetite, are plausible influences or correlates.",
+    "existing_links_count": "0",
+    "candidate_count": "27",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['usdcny', 'us_unemployment_claims', 'fed_policy', 'bund10y', 'ust10y', 'ust2y', 'china_exports', 'china_credit_impulse', 'ust30y', 'copper', 'ust5y', 'gbpusd', 'gilt10y', 'sx5e', 'sofr', 'us_inflation', 'jgb10y', 'ecb_policy', 'wheat', 'spx', 'euro_inflation', 'euribor', 'gold', 'wti', 'brent', 'dxy', 'eurusd']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152924803141732569",
+    "rel_id": "usdjpy__component_of__dxy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD/JPY is a weighted component of the US Dollar Index (DXY) and directly contributes to its movements.",
+      "type": "COMPONENT_OF",
+      "source": "usdjpy",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__component_of__dxy"
+}

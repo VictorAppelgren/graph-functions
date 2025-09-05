@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T10:09:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_border_security",
+    "target_id": "us_illegal_immigration_population_2023",
+    "selection_motivation": "US Border Security directly influences the size of the illegal immigration population, a critical metric for assessing policy impact and economic costs.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with US Border Security due to their relevance in economic, trade, and immigration contexts, which are directly impacted by border security policies.",
+    "existing_links_count": "5",
+    "candidate_count": "10",
+    "all_nodes_count": "1028",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_illegal_immigration_2023', 'us_border_security_policy', 'us_net_migration', 'us_china_trade_relations', 'us_trade_policy_inflation', 'us_tariffs_on_technology', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_immigration_conditions']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'US Border Security directly influences the size of the illegal immigration population, a critical metric for assessing policy impact and economic costs.', 'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_population_2023'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Border Security directly influences the size of the illegal immigration population, a critical metric for assessing policy impact and economic costs.",
+      "type": "INFLUENCES",
+      "source": "us_border_security",
+      "target": "us_illegal_immigration_population_2023"
+    }
+  },
+  "id": "us_border_security__influences__us_illegal_immigration_population_2023"
+}

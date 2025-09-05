@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:46:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "676C95TQZ",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the implications of the US Space Force's classification of Falcon 9 launches as federal activities, which affects regulatory oversight and could influence future military and commercial satellite operations, warranting a new node for analysis.",
+      "id": "falcon9_launches",
+      "name": "Falcon 9 Launches",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy: classification of Falcon 9 launches as federal activity influences regulatory oversight and future satellite operations."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Falcon 9 launches are a specific product/operational niche, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

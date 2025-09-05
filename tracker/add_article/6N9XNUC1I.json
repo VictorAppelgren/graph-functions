@@ -1,0 +1,59 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T09:06:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6N9XNUC1I",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation, Fed policy, and labor market data influence Treasury yields and dollar strength, while commodity and equity indices reflect broader market sentiment.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy",
+        "gold",
+        "wti",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports President Trump's announcement of India's offer to cut tariffs, which is an official trade policy statement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a US‑India tariff negotiation and its immediate market reaction, directly impacting US trade policy, equity futures, and Treasury yields, key nodes in the macro graph."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article discusses an unconfirmed tariff announcement and immediate market volatility, indicating a short‑term impact on trade and equity markets."
+    },
+    "article_node": {
+      "id": "6N9XNUC1I",
+      "title": "Inflation Risks; Trump Says India Offered to Cut its Tariffs to 'Nothing'",
+      "summary": "President Trump announced that India has offered to cut its 50% tariffs on U.S. goods to zero, a claim that has yet to be confirmed by Indian officials. The announcement comes amid a week of U.S. market volatility, with equity futures and Treasuries falling ahead of key jobs data. Analysts note that the U.S. economy may be more resilient than consensus, potentially dampening expectations for Fed rate cuts, while investors are reassessing the timing of a market “reckoning.”",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-02/bloomberg-brief-9-2-2025-video?srnd=phx-technology",
+      "published_at": "2025-09-02T10:44:01.657000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 13,
+      "successful": 13
+    }
+  },
+  "id": "6N9XNUC1I"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T16:00:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "W2622L6WW",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['DBFSBGOEX', '0VMWQTKHB', '9X7XOLXMH', '48JXC9VDP', '0G3A676BP', 'IGP1Q4ZEJ', '65UUBU0OR', 'YNN8UQC3G', 'V7GV8YBQU']",
+    "mode": "MUST_REPLACE",
+    "target_id": "YNN8UQC3G",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "YNN8UQC3G",
+      "motivation": "The new Ford-focused article duplicates already-covered Ford signals in the same timeframe bucket, contributing to capacity constraints. Removing the least signal existing item (YNN8UQC3G) frees space for the fresh analysis and preserves graph signal quality."
+    }
+  },
+  "id": "sp500__W2622L6WW__fundamental"
+}

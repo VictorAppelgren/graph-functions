@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:13:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust10y",
+    "target_id": "usdjpy",
+    "selection_motivation": "US 10‑year Treasury yields are a primary driver of USD strength and thus directly influence the USD/JPY pair.",
+    "candidate_motivation": "USD/JPY is driven by U.S. dollar strength, U.S. monetary policy, U.S. and Japanese yield curves, and inflation expectations. The listed topics directly influence these drivers or provide key catalysts for policy moves that affect the pair.",
+    "existing_links_count": "16",
+    "candidate_count": "11",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['dxy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'jgb10y']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdjpy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdjpy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6931040926034823385",
+    "rel_id": "ust10y__influences__usdjpy",
+    "existing_links_after_len": "24",
+    "existing_links_after_preview": "[{'type': 'COMPONENT_OF', 'source': 'ust10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'bund10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'gilt10y'}, {'type': 'PEERS', 'source': 'ust10y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'ust10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'ust10y', 'target': 'fed_powell_rate_cut_hint_2025'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 10‑year Treasury yields are a primary driver of USD strength and thus directly influence the USD/JPY pair.",
+      "type": "INFLUENCES",
+      "source": "ust10y",
+      "target": "usdjpy"
+    }
+  },
+  "id": "ust10y__influences__usdjpy"
+}

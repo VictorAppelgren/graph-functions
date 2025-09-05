@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:19:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0KX5HC3RV",
+    "status": "rejected",
+    "reject_category": "public_health",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the implications of the 'Make America Healthy Again' initiative, which focuses on childhood health and dietary issues, warranting a new node to capture the macro-level impact of this policy on public health and investment opportunities.",
+      "id": "make_america_healthy_again",
+      "name": "Make America Healthy Again",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "public_health",
+      "motivation": "Close research gaps and reduce industry influence to improve child health outcomes"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Policy focuses on child health and diet, impacting food and agriculture sector—an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

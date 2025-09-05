@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T22:29:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust5y",
+    "target_id": "sofr",
+    "selection_motivation": "5‑year Treasury yields historically move in tandem with short‑term repo rates (SOFR), offering a valuable cross‑asset correlation for risk and pricing models.",
+    "candidate_motivation": "US 5‑year Treasury yield is a core fixed‑income benchmark, so its peers are other maturity segments of the U.S. Treasury curve, and its key drivers are monetary policy, short‑term rates (SOFR), and macro fundamentals such as inflation and unemployment. Market sentiment and currency strength (DXY) also tend to move in tandem with the 5‑year yield, while equity indices like the S&P 500 often reflect expectations of future rates and economic growth.",
+    "existing_links_count": "13",
+    "candidate_count": "10",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'sofr', 'us_inflation', 'us_unemployment_claims', 'dxy', 'spx']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161930902884844943",
+    "rel_id": "ust5y__correlates_with__sofr",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "5‑year Treasury yields historically move in tandem with short‑term repo rates (SOFR), offering a valuable cross‑asset correlation for risk and pricing models.",
+      "type": "CORRELATES_WITH",
+      "source": "ust5y",
+      "target": "sofr"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__correlates_with__sofr"
+}

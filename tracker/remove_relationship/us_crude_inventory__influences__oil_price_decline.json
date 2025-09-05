@@ -1,0 +1,54 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T04:04:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_crude_inventory",
+    "target_id": "oil_price_decline",
+    "selection_motivation": "The link to oil_price_decline is the least direct and least supported by recent data, offering minimal incremental value compared to the new link to fed_policy.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to oil_price_decline is the least direct and least supported by recent data, offering minimal incremental value compared to the new link to fed_policy.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1206965799646921000",
+    "rel_id": "us_crude_inventory__influences__oil_price_decline",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_core_pce'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_crude_inventory",
+      "target": "oil_price_decline"
+    },
+    "prioritized_link": {
+      "motivation": "US crude inventories directly affect oil prices, which are a primary input into inflation expectations that Fed policy decisions hinge on.",
+      "type": "INFLUENCES",
+      "source": "us_crude_inventory",
+      "target": "fed_policy"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to oil_price_decline is the least direct and least supported by recent data, offering minimal incremental value compared to the new link to fed_policy.",
+      "remove_link": "oil_price_decline"
+    },
+    "removal_decision": {
+      "motivation": "The link to oil_price_decline is the least direct and least supported by recent data, offering minimal incremental value compared to the new link to fed_policy.",
+      "remove_link": "oil_price_decline"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "(oil OR crude OR petroleum OR gasoline OR distillate OR energy) AND (price OR prices OR price change OR price movement OR price trend) AND (Brent OR WTI OR Brent futures OR WTI futures OR crude futures OR oil futures) AND (US OR United States OR USA OR US crude OR US oil OR US inventory OR US stockpiles OR US crude stockpiles OR US inventory build OR US inventory decline OR US inventory rise OR US inventory increase OR US inventory drop OR US inventory fall OR inventory OR inventories OR stockpile OR stockpiles OR build OR build-up OR build up OR decline OR drop OR fall OR increase OR rise OR decrease) AND (API OR EIA OR OPEC OR OPEC report OR OPEC production OR OPEC forecast OR EIA report OR EIA production OR EIA forecast) AND (Russia OR Ukraine OR war OR ceasefire OR sanctions OR Putin OR Trump OR Russia-Ukraine conflict) AND (news OR analysis OR report OR update OR outlook OR forecast OR trend OR market OR market update OR market report OR market analysis)",
+      "motivation": "The article reports a rise in US crude inventories, a key macro driver for oil prices, and anticipates the upcoming EIA data release as a catalyst.",
+      "name": "US Crude Inventories",
+      "id": "us_crude_inventory",
+      "last_queried": "2025-09-04T20:35:06.553000000+00:00",
+      "importance_rationale": "US crude inventory data directly drives WTI and Brent futures, a core commodity handle. The upcoming EIA release is a clear catalyst window, providing actionable intraday and daily trading signals. This aligns with the highest centrality, short‑term impact category (importance 1).",
+      "type": "macro",
+      "queries": 3
+    }
+  },
+  "id": "us_crude_inventory__influences__oil_price_decline"
+}

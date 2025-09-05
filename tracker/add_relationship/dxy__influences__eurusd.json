@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T13:52:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dxy",
+    "target_id": "eurusd",
+    "selection_motivation": "The DXY is a composite index of USD strength that directly drives relative valuation of the EURUSD pair, making it a primary driver of EURUSD movements.",
+    "candidate_motivation": "The US Dollar Index (DXY) is driven by relative monetary policy, yield differentials, inflation expectations, and global risk sentiment. Therefore, topics that directly influence U.S. or foreign rates, inflation, or are key currency, commodity, or equity benchmarks that tend to move in tandem with the DXY are strong candidates for influence, correlation, or peer relationships.",
+    "existing_links_count": "0",
+    "candidate_count": "24",
+    "all_nodes_count": "27",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'bund10y', 'gilt10y', 'jgb10y', 'euribor', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'gold', 'spx', 'sx5e', 'wti', 'brent', 'copper', 'wheat']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118476958",
+    "rel_id": "dxy__influences__eurusd",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The DXY is a composite index of USD strength that directly drives relative valuation of the EURUSD pair, making it a primary driver of EURUSD movements.",
+      "type": "INFLUENCES",
+      "source": "dxy",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__influences__eurusd"
+}

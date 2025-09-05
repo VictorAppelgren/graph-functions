@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:53:18",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756028511",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15803",
+    "output_chars": "1859",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Condense the entire analysis into 4–6 executive bullets that deliver a single, crisp house view; tighten the causal chain so it flows from cloud/AI capex upcycle to durable MSFT/SHOP cash flows, moats, and higher multiples, with no duplicative threads. Anchor the core thesis to the 21.2% cloud-spend CAGR to 2030 and to Microsoft as the lead beneficiary (MSFT Q4 FY2025 revenue 76.4B; Azure growth 39% YoY) while using Shopify as a long‑duration proxy (Q2 revenue 2.7B, FCF ~$422M, GMV share >12%) to illustrate the moat dynamic (sources: 0G3A676BP, 48JXC9VDP). Explicitly lay out medium-term regime paths (A: upcycle/moats/FCF expansion; B: maturation/partial multiple compression; C: stress from tighter credit/AI regulation) with concrete triggers and invalidation points (e.g., sustained cloud spend strength, onshore-capex signals for Intel; governance terms for Intel) and quantify dispersion via levered peers (PRGS ROE 13% with D/E ~322%; BDX PEG ~54%; SLB 65% shareholder yield) (0G3A676BP, 0VMWQTKHB, 9X7XOLXMH, DBFSBGOEX). For Intel, separate clearly from the cloud thesis: flag the Bloomberg-stated stake (initial ~10% with vesting toward ~15%; headline $8.9B discrepancy) as a policy/terms risk and outline how terms, vesting cadence, and governance could alter CAPEX and supply-chain implications (XQWTVR71K). Ensure every assertion ties to the cited IDs, reconcile conflicts explicitly, and replace broad platitudes with explicit watchpoints, triggers, and a decision framework (watch Azure margin/CAPEX cadence; Shopify GMV monetization; AI-policy/macro shifts; inflation/policy signals; cross-asset regime readouts) (48JXC9VDP, 0G3A676BP, DBFSBGOEX, 9X7XOLXMH, XQWTVR71K, TN66GHPAT, 4LQD15CFU, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG). This aligns with SECTION FOCUS by delivering a concise, decision-ready house view with explicit catalysts, risks, watch-items, and regime-shift pathways.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756028511"
+}

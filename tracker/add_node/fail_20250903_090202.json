@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-03T09:01:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NU0D22T16",
+    "suggested_names": "['us_technology']",
+    "topic_category": "company",
+    "topic_category_motivation": "Microsoft’s AI and cloud expansion is a company‑specific growth driver.",
+    "should_add": "False",
+    "motivation_for_relevance": "Corporate growth of Microsoft is a micro-level event with no direct macro driver or tradable asset linkage; it does not meet the macro relevance criteria.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Microsoft’s AI and cloud expansion, highlighted by 34% Azure growth and $30B CapEx, presents a clear growth driver for MSFT.",
+      "id": "us_microsoft_ai_cloud_growth",
+      "name": "Microsoft AI & Cloud Growth",
+      "type": "macro"
+    }
+  },
+  "id": "none"
+}

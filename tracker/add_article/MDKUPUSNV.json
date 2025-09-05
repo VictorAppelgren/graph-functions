@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T14:07:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MDKUPUSNV",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US 10Y Treasury and German Bund yields, commodity price swings, and S&P 500 futures signal short‑term market sentiment.",
+      "existing_ids": [
+        "spx",
+        "bund10y",
+        "ust10y",
+        "brent",
+        "wti"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market commentary on futures, indices, commodities, and yields without reporting a specific event or data release."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node specified to assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on near‑term market futures and yield movements, reflecting immediate market sentiment rather than structural trends."
+    },
+    "article_node": {
+      "id": "MDKUPUSNV",
+      "title": "U.S. Futures, European Stocks Mixed",
+      "summary": "U.S. futures for the S&P 500 were up 0.1% and Dow futures were flat, while the Stoxx Europe 600 rose 0.1%. European stocks were mixed, with Embracer Group Series B up 4.5% and Sanofi down 8.8%. Commodities saw a 1% decline in Brent and WTI crude, and the German 10‑year Bund yield fell 2 basis points to 2.723%. The U.S. 10‑year Treasury yield slipped 1 basis point to 4.211%.",
+      "source": "https://www.marketwatch.com/story/u-s-futures-european-stocks-mixed-fa7fe610",
+      "published_at": "2025-09-04T07:32:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "MDKUPUSNV"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T20:21:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_cybersecurity_incidents",
+    "new_article_id": "1ZRZJJ622",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['6289R5SVT', 'R9VY14MO2', 'CYDX0LJP4', '25L9XAP5S']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article clearly supersedes the new Windows encryption piece in topic, depth, or timeliness; therefore no action is warranted."
+    }
+  },
+  "id": "us_cybersecurity_incidents__1ZRZJJ622__current"
+}

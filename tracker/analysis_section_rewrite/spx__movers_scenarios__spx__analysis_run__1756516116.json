@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T03:16:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756516116",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7727",
+    "output_chars": "909",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft misses key compliance checks: it never ties the views to Mastercard’s equity or to canonical handles, and the causal chains are too vague.  Replace each line with a single‑sentence view that (1) names Mastercard explicitly, (2) maps to at least one canonical handle (e.g., ust10y, spx) with a clear sign and magnitude, (3) links the driver to a specific catalyst window, and (4) cites the source.  For example, rewrite the first Up line as: “Up | Q4 2025‑Q2 2026 | Fed rate‑hike pause & FTC/CFPB clarity → higher real rates, increased merchant acquisition, 5‑7 % YoY revenue growth → +15‑20 % equity upside (HHKTQ3JYH)”; the crypto line should read: “Up | Q4 2025‑Q2 2026 | Crypto‑payment adoption remains low → 5‑7 % revenue growth, +15‑20 % equity upside (HHKTQ3JYH)”; the Down lines must explicitly state the 50‑100 bp rise in ust10y and steep term premium compressing revenue and driving a 10‑15 % equity drop, and the regulatory crackdown should map higher compliance costs to a 10‑15 % equity decline, each with (HHKTQ3JYH).  Ensure every line is one sentence, includes a canonical handle with sign/magnitude, a catalyst window, and a probability grounded in the cited evidence.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756516116"
+}

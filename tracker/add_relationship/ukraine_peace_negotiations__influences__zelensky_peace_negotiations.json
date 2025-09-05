@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:17:59",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_peace_negotiations",
+    "target_id": "zelensky_peace_negotiations",
+    "selection_motivation": "Ukraine Peace Negotiations directly shape President Zelensky’s role within the negotiation process, making the latter a key derivative outcome of the former.",
+    "candidate_motivation": "These topics represent the core geopolitical, diplomatic, and security factors most likely to influence or reflect Ukraine peace negotiations, including key actors (Zelensky), the broader Ukraine geopolitics, and potential stability outcomes.",
+    "existing_links_count": "5",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['zelensky_peace_negotiations', 'ukraine_diplomacy', 'ukraine_geopolitics', 'us_russia_ukraine_diplomacy', 'eu_geopolitics_ukraine', 'ukraine_conflict', 'ukraine_sovereignty', 'ukraine_post_war_instability', 'russia_economic_crisis']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395308",
+    "rel_id": "ukraine_peace_negotiations__influences__zelensky_peace_negotiations",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'zelensky_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_peace_negotiations', 'target': 'ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Peace Negotiations directly shape President Zelensky’s role within the negotiation process, making the latter a key derivative outcome of the former.",
+      "type": "INFLUENCES",
+      "source": "ukraine_peace_negotiations",
+      "target": "zelensky_peace_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_peace_negotiations__influences__zelensky_peace_negotiations"
+}

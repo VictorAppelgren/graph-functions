@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T04:23:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4WR2YCC7L",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; Tesla's declining China sales and partnership with Chinese AI firms signal a slowdown in China macro and could weigh on Tesla stock and US auto sector.",
+      "existing_ids": [
+        "china_macro"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Tesla’s declining sales in China and its strategic response, which is a company‑specific news item not related to earnings."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant decline in Tesla’s sales, market share, and revenue in China, along with strategic moves to counter the downturn, directly affecting Tesla’s performance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent sales decline and immediate actions Tesla is taking to address it."
+    },
+    "article_node": {
+      "id": "4WR2YCC7L",
+      "title": "Elon Musk drops shock U-turn on AI disruptor",
+      "summary": "Tesla’s sales momentum in China has slowed sharply, with deliveries falling 8.4% in July and retail volumes down about 12% YoY, while its market share dropped to 7.6% from a 15% peak in 2020. In the first half of 2025, China contributed $8.61 billion—down from $9.23 billion last year—making up 19% of quarterly revenue. To counter the decline, Elon Musk is partnering with Chinese AI firms DeepSeek and ByteDance’s Doubao to enhance in‑car tools, a move that follows his earlier criticism of DeepSeek. Tesla is also focusing on the new three‑row Model Y L, priced at $47,200, to regain market share and tap ride‑hailing opportunities later this year.",
+      "source": "https://finance.yahoo.com/news/elon-musk-drops-shock-u-230000807.html",
+      "published_at": "2025-08-23T23:00:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "4WR2YCC7L"
+}

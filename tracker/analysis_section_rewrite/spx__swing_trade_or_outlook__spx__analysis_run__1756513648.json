@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T02:42:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756513648",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "4782",
+    "output_chars": "864",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft fails the required format and evidence‑linking rules.  Each mover line must read “Up/Down | Time window | Driver/Mechanism | What to watch | Probability %” and include a citation for every fact or number.  Replace the four current lines with:  \n\n1. **Up | 1–3 mo | Q3 earnings beat expectations (KNWKYIQ1W) | Q3 revenue guidance, margin improvement, Falcon adoption metrics | 70 %**  \n2. **Up | 1–3 mo | Falcon Next‑Gen adoption drives margin lift (KNWKYIQ1W) | Falcon ARR % of total ARR, subscription bundling | 60 %**  \n3. **Down | 1–3 mo | Q3 revenue <5 % YoY triggers slow‑margin scenario (KNWKYIQ1W) | Q3 revenue guidance, margin trajectory | 20 %**  \n4. **Down | 1–3 mo | Falcon adoption fails to hit 10 % ARR (KNWKYIQ1W) | Falcon ARR % of total ARR, competitor launches | 10 %**  \n\nThe swing‑trade line must be a single “Up” entry in the exact format:  \n\n**Up | 1–3 mo | Entry $451.69 | Stop $440 | Target $480 | R/R 1:2 | Invalidation Q3 revenue <5 % YoY | Trigger Q3 earnings beat expectations | Probability 70 % | Confidence 80 | ( KNWKYIQ1W )**  \n\nUse “Up” instead of “Long”, include the current price ($451.69) as entry, $440 as stop, $480 as target, and cite (KNWKYIQ1W) after each figure.  Ensure all probabilities are grounded in the source’s stated confidence (70 % for base case, 20 % for slow‑margin, 10 % for strong‑adoption).  Remove the “Long” line and any extraneous text.  This will satisfy the 4‑line mover requirement, the single swing‑trade format, and the citation/clarity standards.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756513648"
+}

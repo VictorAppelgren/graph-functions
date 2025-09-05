@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T15:31:07",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_border_security",
+    "new_article_id": "GUBBEMNJM",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['3AL61B1XI', '96G2S9DQ8', 'SPFMRVV3Q', 'CXGM0ZKFR']",
+    "mode": "CAN_REPLACE",
+    "target_id": "3AL61B1XI",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "3AL61B1XI",
+      "motivation": "The new article provides a critical perspective on Gov. DeWine's deployment of the National Guard, highlighting its political implications and financial costs, which are not covered in existing articles."
+    }
+  },
+  "id": "us_border_security__GUBBEMNJM__current"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T09:18:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "78H77DVVK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; China gas imports via the new Power of Siberia 2 pipeline will lower transport costs and increase supply, potentially easing Chinese gas prices and influencing global gas pricing dynamics.",
+      "existing_ids": [
+        "cn_russia_gas_pipeline",
+        "china_pos2_pipeline"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article describes a cross‑border infrastructure agreement between Russia and China that has implications for energy supply security and geopolitical dynamics."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Impact unclear without knowing the specific node; the article relates to gas supply and pipeline developments which could affect energy markets and China gas imports, but node not specified."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "78H77DVVK",
+      "title": "New Russian pipeline to boost gas exports to China",
+      "summary": "Russia and China have signed a legally binding memorandum to build the 6,700‑km Power of Siberia 2 pipeline through Mongolia, with a 50 billion cubic metre per year capacity and a 30‑year contract. The new line will offer gas to China at lower transport costs than the European price, while existing deliveries on Power of Siberia will rise from 38 to 44 billion cubic metres annually. Negotiations on pricing remain unresolved and construction timelines are unclear, but the project is gaining traction amid heightened Chinese concerns over Middle East supply security following the Israel‑Iran conflict and U.S. attacks on Iran.",
+      "source": "https://finance.yahoo.com/news/russian-pipeline-boost-gas-exports-105323714.html",
+      "published_at": "2025-09-02T10:53:23+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "78H77DVVK"
+}

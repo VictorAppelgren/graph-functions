@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:18:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_treasury_yields",
+    "target_id": "usd",
+    "selection_motivation": "US Treasury Yields are a primary driver of the USD’s relative strength, as higher yields attract foreign capital and support a stronger dollar.",
+    "candidate_motivation": "US Treasury Yields are closely related to various economic indicators and financial instruments, making topics like US Inflation, Fed Policy, and US Dollar strong influences or correlates. Additionally, the US 10Y Treasury Yield is a direct peer as it represents a specific maturity of US Treasury securities.",
+    "existing_links_count": "1",
+    "candidate_count": "4",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'usd', 'us_10y']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161988",
+    "rel_id": "us_treasury_yields__influences__usd",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Treasury Yields are a primary driver of the USD’s relative strength, as higher yields attract foreign capital and support a stronger dollar.",
+      "type": "INFLUENCES",
+      "source": "us_treasury_yields",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_treasury_yields__influences__usd"
+}

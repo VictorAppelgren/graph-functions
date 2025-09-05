@@ -1,0 +1,29 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T16:46:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8UASSID1Y",
+    "suggested_names": "['European AT1 bonds']",
+    "topic_category": "asset",
+    "topic_category_motivation": "Specific bond issuance, a distinct financial instrument.",
+    "should_add": "True",
+    "motivation_for_relevance": "European AT1 bond issuance by ING and Credit Agricole introduces new high‑yield debt into the European market, directly impacting credit spreads, liquidity, and risk appetite in the European high‑yield bond market.",
+    "importance_classification": "2",
+    "importance_classification_rationale": "European AT1 bond issuances by ING and Credit Agricole are a concrete credit market event that will immediately influence European bank risk profiles and CDX HY/IG spreads. The issuance is a short‑term catalyst with multi‑asset relevance (credit, equity, and liquidity), but it is not a systemic policy shock or a broad market driver, so it merits a high‑but‑not‑core importance rating of 2.",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports new U.S. dollar AT1 bond issuances by European banks, a credit event that impacts the European high‑yield market and should be tracked as a distinct asset node.",
+      "id": "eur_at1_issuance",
+      "name": "European AT1 bond issuance",
+      "type": "asset"
+    },
+    "generated_query": {
+      "motivation": "Target European bank AT1 bond issuances in USD, capturing pricing, fair‑value, and regulatory context for fixed‑income analytics.",
+      "query": "(ING OR CREDIT AGRICOL* OR CREDIT AGRICOLA* OR CREDIT AGRICOL) AND (AT1 bond OR AT1 bonds OR AT1 debt OR AT1 issue OR AT1 issuance OR AT1 bond* OR AT1 bonds* OR AT1 debt* OR AT1 issue* OR AT1 issuance*) AND (U.S. dollar OR USD OR US$ OR US dollar) AND (price talk OR pricing OR yield OR coupon OR rate OR coupon rate) AND (fair value OR fairvalue) AND (regulatory capital OR capital requirements OR Basel III OR Basel IV) AND (news OR analysis OR report OR update OR announcement OR release OR market)"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:510"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:57:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756593967",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7090",
+    "output_chars": "761",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Revise the four items so each line is a single sentence, maps mortgage rates to the canonical `ust10y` handle with explicit magnitude, and cites the catalyst source. For each entry: 1) list the exact window (e.g., 2025‑10‑15 – 2026‑03‑31 for the Fed meeting); 2) in the driver/mechanism field write the causal chain and magnitude, e.g., “Fed rate hike (U21K4ALYQ) raises ust10y +10‑20bp, lifting mortgage rates”; 3) in the watch field name the specific catalyst (e.g., “Fed minutes for hike signal (U21K4ALYQ)”). 4) give a probability % and cite the source if available (Fed cut 70 % (U21K4ALYQ), Fed hike 30 % (U21K4ALYQ), CPI >3.5 % 25 % (3YAQ8JUPL), CPI <3.5 % 25 % (3YAQ8JUPL)). Ensure each line ends with the probability and no extra text. Remove the current draft lines that reference ust10y alone and replace them with the updated mortgage‑rate‑focused entries.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756593967"
+}

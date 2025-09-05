@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:40:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DK0H5TM4G",
+    "status": "success",
+    "topic_id": "oil"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the impact of the oil industry in West Texas, which aligns with the existing node on oil, but also suggests a new dynamic in the narrative that could warrant a new node for the show's exploration of corporate dynamics in the oil sector.",
+      "existing_node_ids": "oil",
+      "new_node_dicts": "Landman Season 2 Corporate Dynamics"
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses the impact of oil prices on the global economy, which is a significant macroeconomic event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses global economic trends that are closely tied to oil prices and production, indicating a significant impact on the oil market."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and factors influencing the oil market, suggesting a longer-term perspective."
+    },
+    "article_node": {
+      "id": "DK0H5TM4G",
+      "title": "Release date announced for 'Landman' Season 2",
+      "summary": "Season 2 of the Paramount+ series 'Landman,' co-created by Taylor Sheridan, is set to premiere on November 16, 2025. The show, which follows the oil industry's impact on West Texas, has gained significant popularity, attracting 35 million global viewers since its debut. The new season will explore the aftermath of a key character's death and introduce new dynamics within the M-Tex Oil company, featuring a mix of returning and new cast members.",
+      "source": "https://www.usatoday.com/story/entertainment/tv/2025/08/14/landman-season-2-release-date/85662890007/",
+      "published_at": "2025-08-14T19:38:51+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "DK0H5TM4G"
+}

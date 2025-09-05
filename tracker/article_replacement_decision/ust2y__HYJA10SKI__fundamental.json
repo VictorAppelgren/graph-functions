@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T23:17:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust2y",
+    "new_article_id": "HYJA10SKI",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['LF0UUL917', 'OGK8WLL69', 'Y474W9FO9', 'PA57YBYVQ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article introduces novel evidence on the Fed’s policy transmission breakdown that is not covered by any existing article, so no replacement is warranted."
+    }
+  },
+  "id": "ust2y__HYJA10SKI__fundamental"
+}

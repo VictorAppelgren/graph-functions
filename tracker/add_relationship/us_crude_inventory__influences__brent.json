@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T01:44:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_crude_inventory",
+    "target_id": "brent",
+    "selection_motivation": "US crude inventories are a primary supply indicator that directly drives Brent crude pricing, making a causal link to Brent essential for accurate market modeling.",
+    "candidate_motivation": "US Crude Inventories are driven by oil price movements, currency strength, monetary policy, and macro‑economic activity. The listed topics are key handles that directly influence inventory decisions or are closely correlated with inventory dynamics.",
+    "existing_links_count": "3",
+    "candidate_count": "13",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'brent', 'dxy', 'fed_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_unemployment_claims', 'us_services_pmi']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216040",
+    "rel_id": "us_crude_inventory__influences__brent",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US crude inventories are a primary supply indicator that directly drives Brent crude pricing, making a causal link to Brent essential for accurate market modeling.",
+      "type": "INFLUENCES",
+      "source": "us_crude_inventory",
+      "target": "brent"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_crude_inventory__influences__brent"
+}

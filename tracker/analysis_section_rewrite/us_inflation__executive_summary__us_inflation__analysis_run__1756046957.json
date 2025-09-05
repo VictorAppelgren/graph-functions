@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:02:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756046957",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15732",
+    "output_chars": "1389",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft benefits from Ford-specific metrics (forward P/E ~10.3x, yield ~5.2%, Q2 EV loss ≈ $1.3B, capex up to $50B through 2026) and a plausible tariff–inflation–discount-rate transmission, but it overreach the 4–6 sentence brief and drifts into noisy, non–Ford catalysts. Actionable edits: compress to 4–6 executive sentences that present a single, testable house view; force a clean causal chain (tariff pass-through → inflation expectations → policy rate/discount rate → multiples) and tie outcomes directly to Ford’s cash-flow/durables moat; crystallize a base case (low-single-digit earnings growth with ~5% yield) plus explicit upside/downside paths with concrete triggers (earlier/later EV profitability pivot timing, tariff relief magnitude, capex pacing milestones) and invalidation rules; replace broad macro detours with a tight 3–5 item watch-list containing explicit data anchors (tariff pass-through at or near 15%; EV profitability pivot timing; Ford F-Series moat durability; capex cadence milestones) and remove non–Ford signals unless they materially affect the thesis; ensure citations appear consistently and reconcile any conflicts across W2622L6WW, 22PL3Q360, IGP1Q4ZEJ, YVQU6QCY4, and S15934PBQ, trimming extraneous IDs; finally, maintain an executive, no-fluff tone that keeps Ford-specific catalysts (EV Model E, tariff outcomes, F-Series cash-flow durability) front and center versus broad macro narratives.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756046957"
+}

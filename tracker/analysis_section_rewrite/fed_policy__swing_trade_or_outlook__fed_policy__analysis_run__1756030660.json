@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:26:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756030660",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16776",
+    "output_chars": "1642",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Your draft has solid macro scaffolding and credible signal sources, but it doesn’t yet meet the 4-movers constraint, mixes the swing trade into the movers, and underdelivers on first-principles clarity and quantified, source-backed triggers. To lift to world-class: (1) reformat to exactly four Movers lines (2 Up, 2 Down) with the required fields, and move the ACMR swing-trade into a separate Trade/Outlook Plan line; (2) make each mover precise and testable: specify a first-principles driver (policy regime path, wage/price momentum, terms-of-trade, cross-border frictions), a tight “What to watch” trigger, and a probability anchored to explicit material evidence; (3) calibrate probabilities to the evidence rather than ad hoc, and attach citations only where facts/numbers are asserted; (4) ensure every factual assertion uses IDs from SOURCE MATERIAL and reconcile any conflicts (e.g., U.S. policy easing vs BoJ/EM signals) in the notes to avoid contradictions; (5) keep the Trade/Outlook Plan crisp and actionable, placing the ACMR line there if tradable, with precise entry/stop/target, risk-reward, invalidation, trigger, probability, and a concise confidence rating; (6) tighten wording to avoid hedges or vague statements like “bear risk” and instead name explicit regime channels (e.g., real policy-rate differentials, external balances, export controls). Concretely, rewrite the four movers as: Up 3–6m | Driver: policy easing path (50bp cut in Sep) with market pricing for a Sept cut; What to watch: Sep cut path, CPI/JOLTS; Probability: 60–70%; Up 3–6m | Driver: ACMR/small-cap re-rating from rate cuts and IPO cadence; What to watch: Sep cut confirmation, ACMR momentum, broader IPO activity; Probability: 50–60%; Down 3–6m | Driver: policy divergence risk with sticky inflation and export-control frictions; What to watch: inflation trajectory, policy signals, EM FX risk; Probability: 40–45%; Down 0–3w | Driver: Jackson Hole/BoJ cross-border jitters; What to watch: Jackson Hole signals, BoJ updates, JOBY/OPEN guidance; Probability: 40–50%. Then place the ACMR swing-trade in the Trade/Outlook Plan: Up | 3–6 months | Entry around 30.50; Stop 28.50; Target 34.76–36.00; R/R ≈2; Invalidation: policy tightening or export-control deterioration; Trigger: confirmed Sep rate-cut path; Probability: 60–70%; Confidence: 70–75%. Ensure every line’s claims map cleanly to IDs (GX057ADL7, 37UZC9X8I, H7Q52FKDH, K0WFSW29E, TXVQ5ZQ0N, H9WSBYP3D, SK994CBWR, Q7VVGNSQE, C22MKA9VY, 0G3A676BP, TN66GHPAT, 4LQD15CFU, J99EM2TPZ, YB758UDBU) and that the four movers collectively cover the principal regime, cross-border, and earnings-channel risks without overlap. This will deliver a tight, numbers-grounded, and decision-readySwing Trade/Outlook that aligns with your SECTION FOCUS.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756030660"
+}

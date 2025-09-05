@@ -1,0 +1,29 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-03T04:14:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YW3ZKWU0O",
+    "suggested_names": "['opec_plus_meeting']",
+    "topic_category": "policy",
+    "topic_category_motivation": "US sanctions on Iranian oil shipping are a policy action affecting oil markets.",
+    "should_add": "True",
+    "motivation_for_relevance": "US sanctions on Iranian oil shipping triggered a >1% jump in Brent and WTI, providing a clear, time‑bound policy shock that directly affects commodity prices.",
+    "importance_classification": "2",
+    "importance_classification_rationale": "US sanctions on Iranian oil shipping constitute a short‑term policy shock that can tighten supply and lift oil prices, directly affecting commodity markets and potentially the USD. The catalyst window is immediate upon announcement, and the causal path to oil prices is clear, making it a high‑centrality, short‑time‑to‑impact event.",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports new U.S. sanctions on Iranian oil shipping that drove a >1% rise in Brent and WTI, a clear, time‑bound policy shock.",
+      "id": "us_sanctions_iranshipping",
+      "name": "US Sanctions on Iranian Oil Shipping",
+      "type": "policy"
+    },
+    "generated_query": {
+      "motivation": "Target oil price movements influenced by U.S. sanctions on shipping and Iranian oil smuggling, incorporating OPEC+ meeting context, inventory, manufacturing, tariff data, and market sentiment to capture all relevant news and analysis.",
+      "query": "(oil OR crude OR Brent OR WTI OR \"West Texas Intermediate\" OR \"US WTI\" OR \"US crude\" OR \"US oil\" OR \"oil price\" OR \"oil prices\" OR \"oil price movement\" OR \"oil price trend\" OR \"oil price change\" OR \"oil price volatility\" OR \"oil price gains\") AND (sanctions OR \"US sanctions\" OR \"sanctions on shipping\" OR \"sanctions on vessels\" OR \"sanctions on shipping companies\" OR \"sanctions on shipping network\" OR \"sanctions on Iranian oil smuggling\" OR \"sanctions on Iranian oil\" OR \"sanctions-driven gains\") AND (OPEC+ OR \"OPEC+ meeting\" OR \"OPEC+ production cuts\" OR \"OPEC+ production\") AND (inventory OR \"crude inventories\" OR \"oil inventories\" OR \"oil stockpiles\" OR \"inventory data\" OR \"inventory levels\" OR \"inventory changes\") AND (manufacturing OR \"US manufacturing\" OR \"US manufacturing contraction\" OR \"manufacturing contraction\") AND (tariff OR \"US tariffs\" OR \"Trump tariffs\" OR \"US trade policy\" OR \"US trade\") AND (news OR analysis OR trend OR market OR price OR \"price movement\" OR \"price trend\" OR \"price change\" OR \"price volatility\" OR \"price gains\")"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:765"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T08:50:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "brent",
+    "selection_motivation": "China Exports growth signals rising domestic consumption and global oil demand, directly driving Brent Crude Oil prices.",
+    "candidate_motivation": "China Exports is a macro indicator driven by global demand, exchange rates, monetary policy, and commodity prices. The listed topics directly influence or correlate with export volumes through trade demand, currency strength, policy stance, and commodity price shocks.",
+    "existing_links_count": "10",
+    "candidate_count": "19",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'fed_policy', 'ecb_policy', 'china_credit_impulse', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'wti', 'brent', 'copper', 'gold', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'us_sanctions_iranshipping']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1206965799646922014",
+    "rel_id": "china_exports__influences__brent",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China Exports growth signals rising domestic consumption and global oil demand, directly driving Brent Crude Oil prices.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "brent"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__brent"
+}

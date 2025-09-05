@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T19:27:10",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3CPQSMVVI",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: labor; 22k+ tech layoffs in 2025 are expected to lift US unemployment claims by 5‑10% in Q1‑Q2, potentially prompting Fed to hold or slightly tighten rates.",
+      "existing_ids": [
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on workforce reductions by several tech companies, which is a company‑specific operational update rather than earnings, policy, or macro data."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Impact assessment uncertain due to missing node context; the article discusses tech layoffs which may or may not relate to the node in question."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports on a sustained wave of layoffs spanning the past year and continuing into 2025, indicating a medium-term trend rather than a purely immediate event."
+    },
+    "article_node": {
+      "id": "3CPQSMVVI",
+      "title": "A comprehensive list of 2025 tech layoffs",
+      "summary": "The tech sector is experiencing a sustained wave of layoffs, with over 150,000 cuts last year and more than 22,000 in 2025 to date, including a peak of 16,084 in February alone. Major companies such as Peloton, Kaltura, and various AI and startup firms are trimming staff to improve profitability and shift focus toward AI and new product lines. The layoffs span a wide range of roles—from engineering and product to marketing and support—across the U.S., Israel, and other regions, reflecting broader cost‑cutting and restructuring efforts in a tightening economic environment.",
+      "source": "https://techcrunch.com/2025/08/15/tech-layoffs-2025-list/",
+      "published_at": "2025-08-15T16:08:50+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "3CPQSMVVI"
+}

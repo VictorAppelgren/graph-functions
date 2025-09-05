@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:41:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "us_inflation",
+    "selection_motivation": "China exports drive US import volumes; higher exports raise import prices, contributing to US CPI inflation.",
+    "candidate_motivation": "China Exports are driven by global demand, exchange rates, domestic credit conditions, and commodity price movements; the selected topics capture these key drivers and their direct or strong correlational links.",
+    "existing_links_count": "9",
+    "candidate_count": "15",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['usdcny', 'ust10y', 'fed_policy', 'china_credit_impulse', 'us_inflation', 'dxy', 'us_unemployment_claims', 'sx5e', 'euro_inflation', 'ecb_policy', 'india_industrial_output', 'copper', 'wheat', 'wti', 'brent']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441643294",
+    "rel_id": "china_exports__influences__us_inflation",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China exports drive US import volumes; higher exports raise import prices, contributing to US CPI inflation.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__us_inflation"
+}

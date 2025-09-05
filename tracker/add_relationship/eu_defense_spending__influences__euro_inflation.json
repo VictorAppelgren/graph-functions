@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T10:39:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eu_defense_spending",
+    "target_id": "euro_inflation",
+    "selection_motivation": "EU defense spending expands fiscal outlays, raising aggregate demand and exerting upward pressure on euro‑area inflation.",
+    "candidate_motivation": "EU defense spending is driven by EU fiscal policy, inflation, and broader macro conditions, and it correlates with global risk appetite reflected in US Treasury yields, US inflation metrics, and currency dynamics. Commodity price swings, especially oil, affect defense budgets, and defense contractors or risk events such as hurricane season also influence spending.",
+    "existing_links_count": "1",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'eur_at1_issuance', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'dxy', 'eurusd', 'oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping', 'wti', 'brent', 'gold', 'copper', 'ba', 'bund10y', 'uk_30yr_gilt_yield', 'sx5e']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ba'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160922",
+    "rel_id": "eu_defense_spending__influences__euro_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'ba'}, {'type': 'INFLUENCES', 'source': 'eu_defense_spending', 'target': 'euro_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EU defense spending expands fiscal outlays, raising aggregate demand and exerting upward pressure on euro‑area inflation.",
+      "type": "INFLUENCES",
+      "source": "eu_defense_spending",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eu_defense_spending__influences__euro_inflation"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T08:45:31",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6IAJNLFK2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; European defense spending boosts industrial metals demand, especially copper and nickel, driving price expectations.",
+      "existing_ids": [
+        "copper"
+      ],
+      "new_names": [
+        "nickel"
+      ]
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports that European governments are increasing military budgets, which constitutes a policy decision affecting defense spending and industrial metal demand."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article outlines a medium‑term structural shift in defense spending that is expected to lift industrial metal demand and copper prices through 2027, representing a catalyst window rather than an immediate event or a long‑term fundamental change."
+    },
+    "article_node": {
+      "id": "6IAJNLFK2",
+      "title": "Defense stocks aren't the only winners of Europe's spending blitz",
+      "summary": "European governments are increasing military budgets, which is lifting demand for industrial metals—particularly copper, nickel, and steel—by up to 6% by 2027. Defense spending already accounts for about 3% of global industrial metals demand, and the boost is expected to raise global copper demand growth from 2% to 2.4% annually. The surge has propelled defense stocks, with the MSCI Europe Aerospace and Defense Index up 72% YTD, and could push copper prices toward $10,000–$10,750 per metric ton in 2026–2027, though high inventories may temper near‑term gains.",
+      "source": "https://www.businessinsider.com/defense-stocks-europe-rearmament-spending-metals-copper-demand-goldman-sachs-2025-8",
+      "published_at": "2025-08-25T05:27:27+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "6IAJNLFK2"
+}

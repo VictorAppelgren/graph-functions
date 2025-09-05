@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:05:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YPR5YE3V6",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Super League's strategic transition and financial transactions, indicating its potential impact on market dynamics and investor sentiment, warranting a dedicated node for analysis.",
+      "id": "super_league_enterprise",
+      "name": "Super League Enterprise, Inc.",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "The topic is a corporate entity with financial and operational details, fitting the company category."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Super League Enterprise, Inc. is a specific company, not a macro driver, policy regime, or tradable asset; it falls outside the allowed macro/market anchors.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

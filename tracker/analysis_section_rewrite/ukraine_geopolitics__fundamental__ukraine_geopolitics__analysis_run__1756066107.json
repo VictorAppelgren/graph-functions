@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:08:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ukraine_geopolitics",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ukraine_geopolitics__analysis_run__1756066107",
+    "article_ids": "['XNWVTO01Z', 'OA7AJRRGO', 'XNWVTO01Z', 'OA7AJRRGO', 'XNWVTO01Z']",
+    "selected_articles_count": "5",
+    "material_chars": "39391",
+    "output_chars": "3213",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong start tying multi-year macro- and market-risk dynamics to the Trump–Putin talks, but to reach world‑class quality you should (1) hard‑wire a first‑principles, invariant framework: articulate the horizon in terms of structural anchors (real rate differentials, terms of trade, productivity growth, BoP/net external position, and plausible policy‑reaction functions for major economies) so that regime states and transitions are not just narrative but grounded in these anchors; (2) convert the narrative into a clean regime map with explicit transition conditions: Regime 1 = inclusive, credible ceasefire framework with Ukraine at the table; Regime 2 = stalled/fragile process with Ukraine excluded or perceived concessions; Regime 3 = escalation risk if new offensives threaten credibility. For each regime, specify the exact catalysts and thresholds (e.g., invitation of Zelenskyy to Alaska; binding ceasefire language; European assurances on borders) and what constitutes a regime flip (OA7AJRRGO, XNWVTO01Z); (3) sharpen the causal chain to market pricing: show the transmission channels from regime state to asset prices (sovereign risk premia, energy and commodity volatility, FX and equity volatility, cross‑border sanction dynamics) with a stepwise, testable chain rather than a single paragraph claim; (4) make the base case, risks, and watchlist explicit with transition probabilities or qualitative bands (low/med/high) derived from the signal set (invitation status, ceasefire clarity, European commitments) and specify what would invalidate the base case (e.g., credible Ukraine‑led diplomacy or verifiable ceasefire) (XNWVTO01Z; OA7AJRRGO); (5) quantify the analysis where possible: even if sources lack numeric data, anchor claims with ranges or sensitivities (e.g., “risk premia would widen/narrow contingent on X vs Y” and “energy price volatility would respond to Z”) rather than generic statements; avoid asserting precise numbers absent from sources; (6) fix citation discipline: collapse duplicates (XNWVTO01Z and OA7AJRRGO appear to be the same CNBC piece) into a single source reference or treat them as one source with a note, and ensure every substantive claim ties to those IDs; remove redundant citations and reconcile any minor inconsistencies; (7) improve structure and style for a 1‑paragraph, connected piece: begin with the regime/first‑principles framing, present a concise regime map, lay out the market impact chain, give a tight multi‑year base case with clear risks and indicators to watch, and close with confidence level tied to concrete diplomatic milestones (XNWVTO01Z; OA7AJRRGO). These edits will elevate depth, accountability, and forward‑looking rigor while preserving the source fidelity.",
+      "tokens": {}
+    }
+  },
+  "id": "ukraine_geopolitics__fundamental__ukraine_geopolitics__analysis_run__1756066107"
+}

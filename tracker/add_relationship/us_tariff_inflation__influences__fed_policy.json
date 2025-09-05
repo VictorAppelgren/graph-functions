@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:16:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariff_inflation",
+    "target_id": "fed_policy",
+    "selection_motivation": "US Tariff Inflation raises domestic price pressures, compelling the Fed to adjust monetary policy to curb inflation.",
+    "candidate_motivation": "These topics directly relate to tariff-induced price changes and the policy responses that would influence or reflect US Tariff Inflation, forming strong influence, correlation, or peer relationships.",
+    "existing_links_count": "4",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['tariff_driven_inflation', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_inflation_data', 'us_inflation_stock_impact', 'fed_policy']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902312",
+    "rel_id": "us_tariff_inflation__influences__fed_policy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariff_inflation', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Tariff Inflation raises domestic price pressures, compelling the Fed to adjust monetary policy to curb inflation.",
+      "type": "INFLUENCES",
+      "source": "us_tariff_inflation",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariff_inflation__influences__fed_policy"
+}

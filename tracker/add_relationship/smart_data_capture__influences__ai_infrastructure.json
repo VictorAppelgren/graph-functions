@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:10:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "smart_data_capture",
+    "target_id": "ai_infrastructure",
+    "selection_motivation": "Smart Data Capture is a primary driver for AI Infrastructure development, as high-volume, high-quality data acquisition underpins AI model training and deployment.",
+    "candidate_motivation": "Smart Data Capture benefits from upstream data collection and processing capabilities; the following topics represent adjacent, high-signal areas in data infrastructure and AI analytics that would plausibly influence or align with Smart Data Capture.",
+    "existing_links_count": "2",
+    "candidate_count": "7",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['tecogen_data_center_strategy', 'us_data_centers_electricity_impact', 'southeast_asia_data_centres', 'amd_data_center_growth', 'ai_infrastructure', 'palantir_aip', 'ai_governance']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'smart_data_capture', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'smart_data_capture', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847089",
+    "rel_id": "smart_data_capture__influences__ai_infrastructure",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'smart_data_capture', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'smart_data_capture', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'smart_data_capture', 'target': 'ai_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Smart Data Capture is a primary driver for AI Infrastructure development, as high-volume, high-quality data acquisition underpins AI model training and deployment.",
+      "type": "INFLUENCES",
+      "source": "smart_data_capture",
+      "target": "ai_infrastructure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "smart_data_capture__influences__ai_infrastructure"
+}

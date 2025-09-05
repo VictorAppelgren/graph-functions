@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T02:39:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756513648",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "4782",
+    "output_chars": "740",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft omits Mastercard entirely—add a 2‑line entry for Mastercard with a 27‑Aug–30‑Aug 2025 window, mapping to the UST 10y (or CDX HY) handle and a 5‑10 % volume‑erosion catalyst; the current CRWD lines are redundant—split the “Up” and “Down” into distinct scenarios (e.g., Q3 revenue >5 % YoY & margin >–3 % vs. revenue <5 % YoY & margin <–3 %) and assign separate probabilities (e.g., 60 % vs. 40 %); for TSLA, replace the identical “Up”/“Down” lines with a single 2‑line view that links the court outcome to the Q3 earnings window (01‑15 Sep 2025), map to the NDX handle, and give a probability range (e.g., 55 %/45 %); ensure each line cites the relevant ID in parentheses, uses a single sentence, and includes a clear causal chain (e.g., “Favorable ruling → higher margin → NDX rally”); finally, add a brief macro note on the Fed’s 25‑bp cut signal to justify the equity risk‑premia tightening, mapping to the UST 2y handle, and give a 30‑50 % probability for a 25‑bp cut within the next FOMC.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756513648"
+}

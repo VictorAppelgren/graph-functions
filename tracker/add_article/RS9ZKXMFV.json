@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:39:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "RS9ZKXMFV",
+    "status": "success",
+    "topic_id": "intel_ceo_management"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses potential government involvement in Intel, which is relevant to the existing node on Intel CEO Management, highlighting the intersection of corporate governance and political influence.",
+      "existing_node_ids": "intel_ceo_management",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The node relates to Intel's management and operations, which may include company updates or strategic decisions."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the management strategies of Intel's CEO, which directly relates to the node on CEO management."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses strategic decisions and management practices that influence the long-term direction of the company."
+    },
+    "article_node": {
+      "id": "RS9ZKXMFV",
+      "title": "‘Devil’s in Details’ With Trump Intel Stake: PIMCO's Cantrill",
+      "summary": "The Trump administration is reportedly considering taking a stake in Intel, which raises questions about the government's future interactions with American companies, particularly regarding investments that may require Congressional approval. Additionally, the government plans to IPO Fannie Mae and Freddie Mac, though significant regulatory hurdles remain, suggesting that while these developments are noteworthy, the complexities involved may lead to more questions than answers. The potential nomination of a new Fed chair also highlights the intricate dynamics of monetary policy, where individual voices matter but decisions require a majority consensus.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-14/-devil-s-in-the-details-with-trump-intel-stake-pimco-video?srnd=all",
+      "published_at": "2025-08-14T21:29:08.605000+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "RS9ZKXMFV"
+}

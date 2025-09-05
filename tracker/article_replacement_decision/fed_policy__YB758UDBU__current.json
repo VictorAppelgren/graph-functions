@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-23T22:21:30",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "YB758UDBU",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "11",
+    "candidate_ids": "['WUWLQ9S4N', 'N31FUH3FF', 'HINLBDIDO', 'HNS20VRE3', 'TXVQ5ZQ0N', 'H9WSBYP3D', '5JQEA5Z1T', 'K0WFSW29E', '73G2X5JK2', 'MA68N67N8']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "MA68N67N8",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article provides unique, up-to-date coverage of Trump’s retributive actions with no overlap or redundancy with existing content, and the timeframe bucket is not at capacity."
+    }
+  },
+  "id": "fed_policy__YB758UDBU__current"
+}

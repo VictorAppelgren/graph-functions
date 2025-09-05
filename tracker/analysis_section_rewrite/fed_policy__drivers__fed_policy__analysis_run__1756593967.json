@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:54:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756593967",
+    "drivers_count": "6",
+    "material_chars": "2617",
+    "output_chars": "1299",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is coherent but over‑reliant on generic “if‑then” language and lacks explicit, quantitative mapping to canonical handles. Tighten the causal chain by anchoring every claim to a handle (e.g., us10y, dxy, spx) with a clear sign and magnitude: e.g., “Fed cut → 10‑yr yield ↓ 10–20 bp (ust10y) → equity discount ↓ 30 bp (spx) → spx +3–5 %.” Replace vague “if inflation remains sticky” with a concrete threshold (e.g., CPI > 3.5 % or PCE > 3.0 %) and cite the exact source ID. Explicitly state the catalyst windows with dates and the expected direction: “July CPI (B1KYJ1GPU) → Fed policy decision (7XH2DKEKV) → spx +3–5 %.” Remove any sentence that does not link back to a handle or that repeats the same idea (e.g., the second paragraph on dollar sensitivity). Add a concise watch‑list: July CPI/PCE, Aug 30 PCE, Aug 31 NFP, Sept 16‑17 Fed meeting, Aug tech earnings. Ensure each bullet has a sign, magnitude, and source ID. Finally, quantify the risk of a spread widening > 57 bp: “spread > 57 bp → spx –5 % (FAN5RYW6T)”. This will satisfy the acceptance gate and provide a defensible, actionable view.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__drivers__fed_policy__analysis_run__1756593967"
+}

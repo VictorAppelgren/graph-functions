@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T22:14:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "I35H3FBSN",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['XQWTVR71K', 'ZBVVXT0W4', '85Q95ZIZH', '8E5QMHLIH', 'U6HXAJR4J', 'F8GF45MEU', 'CDBMWIUTB', 'WC68LCU9R', '0J41Q7KTX']",
+    "mode": "MUST_REPLACE",
+    "target_id": "XQWTVR71K",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "XQWTVR71K",
+      "motivation": "The new article aggregates Ukraine peace, Intel stake, and Jackson Hole policy signals that overlap with existing entries in the competing set; removing a lower-signal article will reduce redundancy and preserve distinct graph signals for analytics."
+    }
+  },
+  "id": "fed_policy__I35H3FBSN__current"
+}

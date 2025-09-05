@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T21:57:02",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "M8K5Q1G4O",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the strategic importance of the M1 Abrams tank in the context of U.S. military support for Ukraine, warranting a new node to analyze its macro implications on defense spending and geopolitical dynamics.",
+      "id": "m1_abrams_tank",
+      "name": "M1 Abrams Tank",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "Specific military equipment asset, not a policy or macro driver"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "M1 Abrams Tank is a specific military equipment product, an operational niche, not a macro driver, tradable asset, or policy regime.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

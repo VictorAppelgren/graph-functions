@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:02:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YMQ0BT65T",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the legal implications of age-verification laws for social media, which are becoming a significant macro policy issue affecting digital rights and market dynamics in the tech sector, warranting a dedicated node.",
+      "id": "ms_age_verification_law",
+      "name": "Mississippi Age Verification Law",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Legislative measure affecting social media operations and user verification."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "State-level age‑verification law is a micro regulatory detail, not a macro policy driver or regime that directly informs trading decisions.",
+      "confidence": 0.9,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

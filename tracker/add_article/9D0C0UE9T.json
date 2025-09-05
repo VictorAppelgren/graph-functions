@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T00:22:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9D0C0UE9T",
+    "status": "success",
+    "topic_id": "trump_social_security_changes"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the Trump administration's handling of Social Security, which aligns with the existing node on Social Security changes under Trump, providing a specific context for investment analysis.",
+      "existing_node_ids": "trump_social_security_changes",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article discusses proposed changes to Social Security under Trump's administration, which relates to policy changes affecting the economy."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses potential changes to social security under Trump's administration, which directly relates to this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses potential changes to Social Security under Trump's policies, which could have long-lasting implications for the economy and social safety nets."
+    },
+    "article_node": {
+      "id": "9D0C0UE9T",
+      "title": "Social Security stronger under Trump, critics pushing ‘false’ narrative, commissioner says",
+      "summary": "Commissioner Frank Bisignano defended the Trump administration's handling of Social Security, claiming that criticisms from Democrats are politically motivated and misleading. He highlighted improvements in customer service, including reduced wait times and increased online transactions, arguing that the agency is more efficient now than in the past. Bisignano also dismissed concerns about staffing cuts, asserting that technological advancements have enhanced service delivery, while President Trump plans to honor the 90th anniversary of the Social Security Act by promoting the administration's achievements.",
+      "source": "https://www.foxnews.com/politics/social-security-stronger-under-trump-critics-pushing-false-narrative-commissioner-says",
+      "published_at": "2025-08-14T17:15:47-04:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "9D0C0UE9T"
+}

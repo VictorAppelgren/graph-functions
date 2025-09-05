@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T09:06:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "china_macro",
+    "new_article_id": "CGSVV1ML9",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['HK8PTVBIX', 'ZTZGAMKN1', '4WR2YCC7L', 'PSRZJ6OCU', '9380U9VP0', '1V91H60JJ', '04M4L5BHA', 'Y4QWID79M', 'F3NQHE5LD']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "04M4L5BHA",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article for the H1 2025 timeframe, so there is no conflict to resolve."
+    }
+  },
+  "id": "china_macro__CGSVV1ML9__current"
+}

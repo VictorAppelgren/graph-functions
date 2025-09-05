@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:34:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_tariffs",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "US-China Tariffs directly drive the imposition of tariffs on semiconductors, a key sector in the trade war, making this influence essential for modeling sector‑specific tariff dynamics.",
+    "candidate_motivation": "Tariff policy and US-China trade dynamics are tightly linked; related tariffs, tariff truces, and trade negotiations are the strongest peers and potential influencers of US-China Tariffs.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_tariffs', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'china_us_tariff_truce', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_tariffs_inflation', 'us_india_tariffs']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_india_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327652",
+    "rel_id": "us_china_tariffs__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China Tariffs directly drive the imposition of tariffs on semiconductors, a key sector in the trade war, making this influence essential for modeling sector‑specific tariff dynamics.",
+      "type": "INFLUENCES",
+      "source": "us_china_tariffs",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_tariffs__influences__us_tariffs_semiconductors"
+}

@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:48:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Y19YTLGVI",
+    "topic_discovery_motivation": "Article discusses the implications of extended support for Windows 10, highlighting risks associated with outdated systems and the need for modernization, which relates to broader technology and cybersecurity trends.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "Windows 10 Support Extension",
+        "Cybersecurity Risks of Outdated Systems",
+        "Technology Modernization Strategies"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses Microsoft's extension of security updates for Windows 10, which is a company news item unrelated to earnings or financial results."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major extension of security updates for Windows 10, directly affecting businesses’ migration timelines and security risk management, which is highly relevant to the Windows 10 node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on a policy change that extends support, giving businesses a medium-term window to plan migrations while warning about potential pitfalls."
+    },
+    "article_node": {
+      "id": "Y19YTLGVI",
+      "title": "Microsoft’s Windows 10 support extension - lifeline or stay of execution?",
+      "summary": "Microsoft's extension of security updates for Windows 10 provides businesses with additional time to plan migrations, reducing immediate risks associated with outdated systems. However, this delay may lead to complacency, loss of internal knowledge, and increased technical debt, complicating future transitions. Organizations are urged to view this extension as a final opportunity to modernize their systems and avoid the pitfalls of relying on unsupported software.",
+      "source": "https://www.techradar.com/pro/microsofts-windows-10-support-extension-lifeline-or-stay-of-execution",
+      "published_at": "2025-08-22T06:30:57+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "Y19YTLGVI"
+}

@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T17:53:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6WB892TNI",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "id": "us_visa_integrity_fee_2026",
+      "name": "US Visa Integrity Fee (2026)",
+      "type": "policy",
+      "level": "driver",
+      "motivation": "The article introduces a new U.S. visa fee policy that is expected to deter international visitors and reduce tourism revenue, requiring a dedicated node to model its macroeconomic impact."
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Policy that will influence macroeconomic activity by affecting tourism and related spending."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "US Visa Integrity Fee is a macro policy that can alter tourism flows, consumer spending, and GDP, thereby influencing FX, equity, and commodity markets.",
+      "confidence": 0.9,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "To capture all articles and reports discussing the $250 visa integrity fee, its impact on US tourism and international visitor spending, and related policy changes such as travel bans and Trump administration visa policies, using comprehensive synonyms and related terms.",
+      "query": "(visa integrity fee OR visa fee OR non-immigrant visa fee OR visa fee increase OR visa fee hike OR visa fee policy OR visa fee impact OR visa fee news OR visa fee analysis OR visa fee update OR visa fee trend OR visa fee change OR $250 fee OR $250 visa fee OR $250 visa integrity fee OR visa integrity fee impact OR visa fee impact on tourism OR visa fee impact on visitor spending) OR (US tourism OR international tourism OR international visitors OR international travel OR tourism industry OR tourism economics OR tourism spending OR tourism revenue OR tourism decline OR tourism loss OR tourism impact OR tourism policy OR tourism policy change OR tourism policy impact OR tourism economics study OR tourism economics analysis OR tourism economics forecast OR tourism economics report) OR (travel ban OR travel restrictions OR travel policy OR travel policy change OR travel policy impact OR travel ban expansion OR travel ban countries OR travel ban news OR travel ban analysis OR travel ban update) OR (Trump administration OR Trump OR Trump policies OR Trump travel ban OR Trump visa policy OR Trump visa fee OR Trump visa fee increase OR Trump visa fee hike) OR (Big Beautiful Bill OR BBB OR Big Beautiful Bill visa fee OR Big Beautiful Bill visa fee increase OR Big Beautiful Bill visa fee hike) OR (visitor spending OR visitor revenue OR visitor decline OR visitor deterrence OR visitor loss OR visitor numbers OR visitor impact) OR (tourism revenue loss OR tourism revenue decline OR tourism revenue impact) OR (tourism industry impact OR tourism industry decline OR tourism industry loss) OR (policy OR policy change OR policy impact OR policy analysis OR policy news OR policy update OR policy trend) OR (news OR recent OR latest OR breaking OR update OR report OR analysis OR forecast OR outlook OR trend))"
+    },
+    "importance_classification": {
+      "importance": 4,
+      "rationale": "The US Visa Integrity Fee is a policy measure that is expected to influence tourism flows and related economic activity over a medium‑to‑long horizon. While it may affect the performance of travel‑related stocks and broader consumer‑spending indicators, it is not a core, high‑frequency driver for intraday market moves. According to the type guidance, policies are typically assigned level 4, reflecting slower‑moving, supporting topics that are monitored for regime shifts rather than immediate trading signals."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:3943"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:12:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_trade_policy_inflation",
+    "target_id": "fed_policy",
+    "selection_motivation": "US trade policy and inflation are primary drivers of Fed policy decisions, shaping monetary stance and interest rate setting.",
+    "candidate_motivation": "These topics have direct or close relationships with US trade policy and inflation, including tariff instruments and trade talks. They also cover major trade partners, policy responses, and inflation indicators that would plausibly correlate with or influence the policy-inflation dynamic.",
+    "existing_links_count": "3",
+    "candidate_count": "15",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs', 'us_tariffs_on_technology', 'us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_relations', 'us_tariff_policies', 'us_chip_export_controls', 'us_chip_exports_china', 'us_inflation_data', 'us_inflation', 'core_monthly_cpi', 'fed_policy', 'usd']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_tariff_policies'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441642451",
+    "rel_id": "us_trade_policy_inflation__influences__fed_policy",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_trade_policy_inflation', 'target': 'us_tariff_policies'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US trade policy and inflation are primary drivers of Fed policy decisions, shaping monetary stance and interest rate setting.",
+      "type": "INFLUENCES",
+      "source": "us_trade_policy_inflation",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_trade_policy_inflation__influences__fed_policy"
+}

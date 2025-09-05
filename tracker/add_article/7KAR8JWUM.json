@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T00:43:13",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7KAR8JWUM",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; California rideshare unionization and insurance cost cuts could modestly dampen consumer spending and influence wage growth, feeding into US inflation expectations. The policy may also affect Uber/Lyft valuations, potentially impacting the broader S&P 500.",
+      "existing_ids": [
+        "us_inflation",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a policy change enacted by the California government that modifies rideshare regulations, qualifying as an official policy statement from a state policymaker."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article concerns a California state policy affecting rideshare drivers; it lacks a clear link to any canonical macro handle and offers limited scalable macro impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a pending policy agreement that will alter rideshare labor and insurance dynamics, affecting driver wages and fares over the next few months to a year."
+    },
+    "article_node": {
+      "id": "7KAR8JWUM",
+      "title": "California lawmakers reach deal with Uber, Lyft that would allow drivers to unionize",
+      "summary": "California Gov. Gavin Newsom and lawmakers have reached a deal with Uber and Lyft that lets rideshare drivers unionize while remaining independent contractors, and will cut insurance costs for underinsured drivers. The agreement includes a collective bargaining bill backed by SEIU and a measure that lowers insurance requirements from $1 million to $60,000 per individual and $300,000 per accident. The deal aims to improve driver wages and benefits, reduce rider fares, and address issues like deactivation and lack of benefits. The legislation must still pass the Senate and Assembly before becoming law.",
+      "source": "https://www.seattletimes.com/business/california-lawmakers-reach-deal-with-uber-lyft-that-would-allow-drivers-to-unionize/",
+      "published_at": "2025-08-29T14:37:09-07:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "7KAR8JWUM"
+}

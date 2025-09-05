@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:23:12",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_stock_buybacks",
+    "target_id": "political_influence_on_stocks",
+    "selection_motivation": "US stock buybacks alter corporate cash flows and can be used to fund lobbying activities, thereby influencing political decisions that affect stock market dynamics. Linking these nodes captures the pathway from corporate finance to political influence, enhancing risk assessment and policy impact analysis.",
+    "candidate_motivation": "The selected topics are closely related to US Stock Buybacks, either as direct influences on stock market dynamics, correlations with economic indicators, or as peers in the investment landscape.",
+    "existing_links_count": "8",
+    "candidate_count": "10",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['sp500', 'us_inflation', 'fed_policy', 'us_10y', 'us_tariffs_on_technology', 'us_chip_export_tax', 'us_chip_revenue_policy', 'us_tariffs_semiconductors', 'political_influence_on_stocks', 'us_china_trade_relations']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080988",
+    "rel_id": "us_stock_buybacks__influences__political_influence_on_stocks",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'political_influence_on_stocks'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_stock_buybacks', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US stock buybacks alter corporate cash flows and can be used to fund lobbying activities, thereby influencing political decisions that affect stock market dynamics. Linking these nodes captures the pathway from corporate finance to political influence, enhancing risk assessment and policy impact analysis.",
+      "type": "INFLUENCES",
+      "source": "us_stock_buybacks",
+      "target": "political_influence_on_stocks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_stock_buybacks__influences__political_influence_on_stocks"
+}

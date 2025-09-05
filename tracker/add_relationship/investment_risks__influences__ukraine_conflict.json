@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:01:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "investment_risks",
+    "target_id": "ukraine_conflict",
+    "selection_motivation": "The Ukraine conflict is a major geopolitical event that directly elevates investment risk across global markets, making it a primary driver of the investment_risks node.",
+    "candidate_motivation": "These topics are the most plausible direct influences, correlates, or peers of Investment Risks, given their roles in macro policy, inflation dynamics, and geopolitical/commodity shocks. They capture policy shifts (Fed/ECB), inflation signals, trade frictions, and major geopolitical events that drive risk across asset classes.",
+    "existing_links_count": "6",
+    "candidate_count": "23",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'core_monthly_cpi', 'us_inflation_data', 'us_inflation_stock_impact', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_tariff_truce', 'us_10y', '30yr_tips_auction', 'ukraine_conflict', 'ukraine_geopolitics', 'russia_economic_crisis', 'oil', 'gold', 'copper', 'stagflation', 'macro_risks_technology', 'china_macro', 'investment_risks']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'stagflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587570",
+    "rel_id": "investment_risks__influences__ukraine_conflict",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'investment_risks', 'target': 'ukraine_conflict'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ukraine conflict is a major geopolitical event that directly elevates investment risk across global markets, making it a primary driver of the investment_risks node.",
+      "type": "INFLUENCES",
+      "source": "investment_risks",
+      "target": "ukraine_conflict"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "investment_risks__influences__ukraine_conflict"
+}

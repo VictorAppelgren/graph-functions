@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:17:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "non_traditional_tech_roles",
+    "target_id": "creator_economy_investment",
+    "selection_motivation": "The rise of non-traditional tech roles—content creators, influencers, and digital entrepreneurs—directly fuels capital inflows into the creator economy, making this link essential for modeling investment dynamics.",
+    "candidate_motivation": "These topics directly relate to the evolving tech workforce, AI development, and industry trends that influence or are influenced by non‑traditional tech roles, making them strong potential peers or influences.",
+    "existing_links_count": "0",
+    "candidate_count": "12",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'openai_valuation', 'apple_antitrust_ai', 'nebius_ai_infrastructure', 'hybrid_ad_environments', 'empathic_ai_agents', 'generative_ai_film', 'grok_chatbot', 'small_credit_unions_tech_adoption', 'medical_digital_twins', 'creator_economy_investment', 'rule_of_40']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162166",
+    "rel_id": "non_traditional_tech_roles__influences__creator_economy_investment",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'non_traditional_tech_roles', 'target': 'creator_economy_investment'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The rise of non-traditional tech roles—content creators, influencers, and digital entrepreneurs—directly fuels capital inflows into the creator economy, making this link essential for modeling investment dynamics.",
+      "type": "INFLUENCES",
+      "source": "non_traditional_tech_roles",
+      "target": "creator_economy_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "non_traditional_tech_roles__influences__creator_economy_investment"
+}

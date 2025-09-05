@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:28:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SUNK4E191",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The merger of Vyome Therapeutics with ReShape Lifesciences introduces a new publicly traded entity that could impact investment strategies in the healthcare sector, warranting a dedicated node for analysis.",
+      "id": "vyome_holdings",
+      "name": "Vyome Holdings",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Vyome Holdings is a newly formed public company resulting from a merger, fitting the company category."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Vyome Holdings is a specific healthcare company, an industry vertical, not a macro driver, tradable asset, or macro policy/regime; it does not meet the criteria for inclusion.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

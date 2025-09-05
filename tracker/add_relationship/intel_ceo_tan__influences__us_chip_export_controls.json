@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:02:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_ceo_tan",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "Intel CEO Lip‑Bu Tan is a key stakeholder and lobbyist in shaping U.S. semiconductor export policy, directly influencing the US Chip Export Controls.",
+    "candidate_motivation": "These topics map to the semiconductor industry’s core dynamics—peer competition, AI-driven demand, and regulatory/policy factors—that would directly influence or align with the strategic interests of a chip-industry executive like Lip-Bu Tan.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'geopolitics_corporate_strategy', 'us_china_ai_chip_exports']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_tan', 'target': 'intel_ceo_political_influence'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_tan', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847030",
+    "rel_id": "intel_ceo_tan__influences__us_chip_export_controls",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_tan', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_tan', 'target': 'intel_ceo_political_influence'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_tan', 'target': 'us_china_trade_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Intel CEO Lip‑Bu Tan is a key stakeholder and lobbyist in shaping U.S. semiconductor export policy, directly influencing the US Chip Export Controls.",
+      "type": "INFLUENCES",
+      "source": "intel_ceo_tan",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_ceo_tan__influences__us_chip_export_controls"
+}

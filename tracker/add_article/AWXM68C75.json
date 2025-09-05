@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T03:35:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AWXM68C75",
+    "status": "success",
+    "topic_id": "corporate_culture_performance"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the complexities of organizational culture, which could be linked to the existing node on corporate culture and performance, but it also introduces the concept of 'Exile's Clarity' which is not currently represented in the graph.",
+      "existing_node_ids": "corporate_culture_performance",
+      "new_node_dicts": "exiles_clarity"
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses the impact of corporate culture on performance, which relates to company operations but does not fit into the specified categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the importance of corporate culture in enhancing performance, which directly relates to this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article explores the impact of corporate culture on performance, which involves long-term trends and structural factors."
+    },
+    "article_node": {
+      "id": "AWXM68C75",
+      "title": "Culture That Carries: Leadership Lessons From India’s Living Tapestry",
+      "summary": "Organizations often mistake performative alignment for genuine cultural unity, leading to superficial fixes rather than authentic engagement. True culture is messy and complex, resembling a tapestry woven from diverse experiences and contradictions. Leaders should embrace this complexity by inviting individuals to interpret shared values personally, fostering a culture that adapts and evolves rather than enforcing uniformity. The concept of 'Exile's Clarity' suggests that stepping back can provide valuable insights into organizational culture and purpose, allowing leaders to see beyond their assumptions and create a more inclusive environment.",
+      "source": "https://www.forbes.com/sites/vibhasratanjee/2025/08/14/culture-that-carries-leadership-lessons-from-indias-living-tapestry/",
+      "published_at": "2025-08-15T00:18:58+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "AWXM68C75"
+}

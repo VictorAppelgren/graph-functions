@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T11:19:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gbpusd",
+    "target_id": "usdjpy",
+    "selection_motivation": "GBP/USD and USDJPY are both cross-currency pairs that include the USD, and historically move in tandem due to USD strength, making them highly correlated.",
+    "candidate_motivation": "GBP/USD is largely driven by relative strength between the US dollar and the British pound, which is influenced by US and UK monetary policy, yield spreads, inflation expectations, and the overall USD index. Other USD‑cross pairs and global risk sentiment also tend to move in tandem with GBP/USD, making them strong correlates or peers.",
+    "existing_links_count": "13",
+    "candidate_count": "14",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['dxy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'uk_30yr_gilt_yield', 'gilt10y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'usdjpy', 'usdcny']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1195707900090123772",
+    "rel_id": "gbpusd__correlates_with__usdjpy",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "GBP/USD and USDJPY are both cross-currency pairs that include the USD, and historically move in tandem due to USD strength, making them highly correlated.",
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "usdjpy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gbpusd__correlates_with__usdjpy"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T12:37:45",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "APOB9BVLB",
+    "suggested_names": "['uk_30y_gilt_yield']",
+    "topic_category": "asset",
+    "topic_category_motivation": "Specific bond yield, a financial asset.",
+    "should_add": "False",
+    "motivation_for_relevance": "UK 30‑year gilt yield does not map to any canonical market handle (e.g., UST, Bund, BTP) and lacks a dated catalyst window tied to a causal transmission path; therefore it fails the acceptance gate.",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "UK 30‑year gilt yields spiking to 5.7% signals rising fiscal risk and sterling weakness, creating a new macro driver.",
+      "id": "uk_30y_gilt_yield",
+      "name": "UK 30-Year Gilt Yield",
+      "type": "macro"
+    }
+  },
+  "id": "none"
+}

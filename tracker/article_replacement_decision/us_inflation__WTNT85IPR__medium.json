@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T19:10:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "WTNT85IPR",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['M5N888WD1', 'G81O1C410', 'WISLWAJ15', 'FOM34PUWA', 'A7VLN74BK', 'ILYC1M41F', 'UPV3X2MQ6', 'V8TEZOR8R', 'EPJYXB7DX']",
+    "mode": "MUST_REPLACE",
+    "target_id": "M5N888WD1",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "M5N888WD1",
+      "motivation": "The Cadillac Elevated Velocity article overlaps with existing auto/EV coverage in the same timeframe, creating redundancy in the knowledge graph. Removing M5N888WD1 frees capacity for higher-signal pieces and reduces duplicate nodes around US EV manufacturing."
+    }
+  },
+  "id": "us_inflation__WTNT85IPR__medium"
+}

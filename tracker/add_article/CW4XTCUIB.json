@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T12:50:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "CW4XTCUIB",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equity; Indian consumer tax cut lifts Indian equities, boosting staples and auto stocks, while fiscal concerns may pressure bond yields and credit metrics.",
+      "existing_ids": [
+        "india_industrial_output",
+        "india_exports",
+        "india_credit_impulse",
+        "fed_policy",
+        "us_inflation",
+        "ust10y",
+        "ust2y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports a government policy announcement—a broad consumption tax cut—constituting a policy statement."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses India’s fiscal policy and its short‑term effect on Indian equities, but without knowing the specific node, the relevance is uncertain. I assign a low impact score."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on the immediate fiscal policy change and short‑term boost to consumption and equities, indicating a current‑time‑frame impact."
+    },
+    "article_node": {
+      "id": "CW4XTCUIB",
+      "title": "Trump's Tariffs Lead To Celebrations For Indian Consumers",
+      "summary": "India’s government announced a broad consumption tax cut to offset the impact of U.S. tariffs, boosting consumer spending and lifting Indian equities, especially staples and auto stocks. The cuts are expected to provide a net positive effect on consumption, though fiscal concerns remain about increased borrowing to cover revenue losses. Market participants see the reform as a short‑term boost, while long‑term effects on fiscal balance and credit ratings are still uncertain.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-04/insight-with-haslinda-amin-9-4-2025-video",
+      "published_at": "2025-09-04T05:41:29.171000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "CW4XTCUIB"
+}

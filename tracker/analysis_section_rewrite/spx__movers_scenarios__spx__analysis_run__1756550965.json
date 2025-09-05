@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T13:07:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756550965",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5642",
+    "output_chars": "382",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Adjust the probabilities to reflect the source’s signal strength: set 80 % for the verdict‑upheld case and 20 % for reversal; for the Fed, use 30 % for a September cut and 70 % for a hike or higher inflation. Tighten each line by making the driver/mechanism a single phrase and the watch a single key level: e.g., “Verdict reversal (LJZYDXVL3)” → “TSLA price above $360 resistance (LJZYDXVL3)”; “Fed rate cut (B1KYJ1GPU)” → “TSLA borrowing costs lower (B1KYJ1GPU)”; “Fed rate hike (B1KYJ1GPU)” → “TSLA cost structure worsens (B1KYJ1GPU)”. Remove the 30‑day MA references from the driver clauses (they belong in the watch clause if kept). Ensure each line remains a single sentence and that the probability is a numeric percent. This will sharpen the causal chain, align with the 2‑3‑week horizon, and keep the format strictly compliant.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756550965"
+}

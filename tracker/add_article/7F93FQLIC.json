@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T16:53:45",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7F93FQLIC",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; rising construction activity in India and China boosts demand for construction financing, tightening credit spreads for construction firms.",
+      "existing_ids": [],
+      "new_names": [
+        "asia_pacific_construction_market"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses an industry growth projection for the Asia‑Pacific Mivan construction market, which does not fit any of the defined categories (macro_event, earnings, regulation, policy_statement, central_bank_action, economic_data, geopolitical, company_update, or market_commentary)."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports projected growth and adoption drivers for the Asia‑Pacific Mivan construction market, directly affecting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "7F93FQLIC",
+      "title": "Asia-Pacific Mivan Construction Market Report 2025",
+      "summary": "The Asia‑Pacific Mivan construction market is projected to grow from USD 1.09 billion in 2024 to USD 2.18 billion by 2030, driven by rapid urbanisation, demand for efficient housing, and adoption of aluminium formwork technology. Mivan’s speed, quality and cost‑efficiency appeal to large‑scale projects in India, China and Southeast Asia, though high upfront costs limit uptake by smaller contractors. Government initiatives such as India’s Housing for All further boost adoption by cutting project timelines up to 30%.",
+      "source": "https://finance.yahoo.com/news/asia-pacific-mivan-construction-market-133600527.html",
+      "published_at": "2025-09-02T13:36:00+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "7F93FQLIC"
+}

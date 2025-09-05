@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:10:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_productivity",
+    "target_id": "ai_human_skills_gap",
+    "selection_motivation": "AI productivity accelerates demand for specialized AI skills, widening the AI human skills gap.",
+    "candidate_motivation": "These topics are direct upstream drivers, peers, or correlates of AI productivity, spanning hardware supply, AI infrastructure, policy constraints, and active AI innovation ecosystems. They cover semiconductors, exports, AI governance, and prominent AI platforms and use-cases that shape productivity.",
+    "existing_links_count": "6",
+    "candidate_count": "28",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "28",
+    "candidate_ids_preview": "['nvidia_amd_chip_revenue_agreement', 'nvidia_ai_infrastructure', 'ai_infrastructure', 'us_china_ai_chip_exports', 'us_export_policy_ai_chips', 'us_chip_export_controls', 'china_ai_semiconductors', 'openai_gpt5_competition', 'openai_valuation', 'palantir_aip', 'ai_governance', 'ai_generated_misinformation', 'deepfake_ai_medical', 'ai_in_education', 'k12_ai_integration', 'ai_startup_ideation', 'agentic_ai_solutions', 'continua_ai_agents', 'ai_supply_chain_optimization', 'ai_app_store_rivalry', 'grok_ai_bias', 'ai_human_skills_gap', 'ai_human_skills', 'generative_ai_film', 'gen_ai_accounting', 'ai_stock_performance', 'ai_unicorn_valuations', 'ai_stock_comparison_figma_palantir']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780081229",
+    "rel_id": "ai_productivity__influences__ai_human_skills_gap",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_generated_content_seo'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_human_skills_gap'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI productivity accelerates demand for specialized AI skills, widening the AI human skills gap.",
+      "type": "INFLUENCES",
+      "source": "ai_productivity",
+      "target": "ai_human_skills_gap"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_productivity__influences__ai_human_skills_gap"
+}

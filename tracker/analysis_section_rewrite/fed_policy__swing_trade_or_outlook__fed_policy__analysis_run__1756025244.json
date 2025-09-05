@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:56:40",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756025244",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16492",
+    "output_chars": "1504",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has strong regime framing and cross‑asset logic but currently fails the world‑class bar on deliverable structure, explicit causal triggers, and tight, data‑anchored risk management. Actionable edits: (1) reformat to exactly four Movers lines (2 Up, 2 Down) with the required schema: Direction | Time window | Driver/Mechanism | What to watch | Probability %, and attach citations only after numeric or fact claims (e.g., regime weights GX057ADL7; 10‑year yield ~4.23% GX057ADL7; Tencent AI spend ~150% GX057ADL7; yen ~146 per USD 37UZC9X8I). (2) Tie each line to a concrete regime and a single, specific catalyst: Up lines to Regime A easing (0–2 months) and Regime B neutral‑to‑mild tightening (2–4 months) with data prints or signaling as triggers; Down lines to Regime C hawkish surprise (0–3 weeks) and late tightening risk (4–6 months) with corresponding triggers (CPI/PCE, Jackson Hole tone, BoJ/policy rhetoric) and clear invalidation. (3) Quantify probabilities as regime‑informed ranges rather than ad hoc figures, e.g., A 50–60%, B 25–35%, C 15–25%, and cite the source for each range; ensure consistency across lines. (4) If ACMR or any asset is tradable, include a Swing Trade line (1–2 lines) with Direction, Horizon, Entry, Stop, Target, R/R, Invalidation, Trigger, Probability, Confidence; otherwise deliver a concise Outlook line per constraint. (5) prune the prose, collapse the long base/base‑case narrative into a single, first‑principles causal chain (policy path → real‑rate/dollar → equity multiples → AI earnings) and eliminate misprints or dubious figures (e.g., verify OQ figures, confirm Tencent/yen data, and align with IDs cited). (6) Ensure all numeric claims map to the embedded IDs and reconcile any conflicts across sources (GX057ADL7, 37UZC9X8I, K0WFSW29E, TXVQ5ZQ0N, SK994CBWR, C22MKA9VY, etc.) so the outputs are unambiguous and traceable.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756025244"
+}

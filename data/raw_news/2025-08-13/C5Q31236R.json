@@ -1,0 +1,144 @@
+{
+  "url": "https://www.forbes.com/sites/kateoflahertyuk/2025/08/13/google-issues-new-update-warning-to-35-billion-chrome-users/",
+  "authorsByline": "Kate O'Flaherty",
+  "articleId": "9aa7d8ab5fd242fcacc6f792eaf7e281",
+  "source": {
+    "domain": "forbes.com",
+    "paywall": true,
+    "location": {
+      "country": "us",
+      "state": "NJ",
+      "county": "Hudson County",
+      "city": "Jersey City",
+      "coordinates": {
+        "lat": 40.7215682,
+        "lon": -74.047455
+      }
+    }
+  },
+  "imageUrl": "https://imageio.forbes.com/specials-images/imageserve/689c8afcf0f5fb091a1a5b7c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-13T12:57:25+00:00",
+  "addDate": "2025-08-13T13:10:01.777710+00:00",
+  "refreshDate": "2025-08-13T13:10:01.777712+00:00",
+  "score": 1.0,
+  "title": "Google Issues New Update Warning To 3.5 Billion Chrome Users",
+  "description": "Google has issued a security update for its Chrome browser which you should apply right now. Here's what you need to know.",
+  "content": "Google has issued a security update for its Chrome browser which you should apply right now. That\u2019s because Google has fixed six issues in its widely-used browser, half of which are rated as having a high severity.\n\nThe Chrome Stable channel has been updated to 139.0.7258.127/.128 for Windows, Mac and 139.0.7258.127 for Linux, Google said in an advisory published on the Chrome blog. The Chrome update will roll out over the coming days and weeks, according to Google.\n\nThe latest Google Chrome security fixes come just one week after the browser maker issued an update for eight flaws and two weeks following an emergency patch for a high severity vulnerability. The Chrome update also comes after Apple released iOS 18.6, fixing a hefty list of 29 security flaws.\n\nGoogle doesn\u2019t give a lot of detail about what\u2019s fixed in Chrome 139.0.7258.127/.128. This is because it doesn\u2019t want adversaries to get hold of the specifics before as many Chrome users as possible have updated their browsers.\n\n\u201cAccess to bug details and links may be kept restricted until a majority of users are updated with a fix,\u201d Google wrote in its blog. \u201cWe will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven\u2019t yet fixed,\u201d Google explained\n\nCVE-2025-8879 is a heap buffer overflow flaw in libaom, which is rated as having a high impact. Meanwhile, CVE-2025-8880 is a race issue in V8 that Google has also rated as having a high severity.\n\nThe last high severity vulnerability is CVE-2025-8901, an out of bounds write issue in ANGLE, which allows a remote attacker to perform out of bounds memory access via a crafted HTML page.\n\nGoogle details two of the medium severity flaws, CVE-2025-8881, an inappropriate implementation issue in File Picker and CVE-2025-8882, a use after free vulnerability in Aura.\n\nNone of the flaws fixed in Google Chrome have been used in real-life attacks, but some of the issues are pretty serious \u2014 especially those that can be exploited by remote attackers.\n\nWhile Google says the Chrome update will be rolling out in the coming days and weeks, this, combined with the number of security flaws, makes it a good idea to update manually now.\n\nTo update Chrome to the latest version go to the Help|About Google Chrome option from your web browser settings menu and follow the prompts. Once you have upgraded Chrome, you need to ensure you relaunch your browser to activate the update.",
+  "medium": "Article",
+  "links": [
+    "https://chromereleases.googleblog.com/2025/08/stable-channel-update-for-desktop_12.html",
+    "https://www.forbes.com/sites/daveywinder/2025/07/30/urgent-google-chrome-update-confirmed---download-and-restart-now/",
+    "https://www.forbes.com/sites/daveywinder/2025/08/06/google-chrome-139---update-now-warning-issued-for-35-billion-users/",
+    "https://nvd.nist.gov/vuln/detail/CVE-2025-8901",
+    "https://www.forbes.com/sites/kateoflahertyuk/2025/07/30/ios-186-update-now-warning-issued-to-all-iphone-users/"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "Google Chrome",
+      "weight": 0.13931023
+    },
+    {
+      "name": "Google",
+      "weight": 0.106792055
+    },
+    {
+      "name": "Chrome",
+      "weight": 0.10212108
+    },
+    {
+      "name": "Chrome Stable",
+      "weight": 0.10118487
+    },
+    {
+      "name": "security flaws",
+      "weight": 0.09379198
+    },
+    {
+      "name": "The latest Google Chrome security fixes",
+      "weight": 0.08638988
+    },
+    {
+      "name": "New Update Warning",
+      "weight": 0.07860262
+    },
+    {
+      "name": "bug details",
+      "weight": 0.06698174
+    },
+    {
+      "name": "remote attackers",
+      "weight": 0.064741716
+    },
+    {
+      "name": "The Chrome update",
+      "weight": 0.06392378
+    }
+  ],
+  "topics": [],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/News/Technology News",
+      "score": 0.96044921875
+    },
+    {
+      "name": "/Computers & Electronics/Software/Operating Systems",
+      "score": 0.73681640625
+    },
+    {
+      "name": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+      "score": 0.42236328125
+    },
+    {
+      "name": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+      "score": 0.3994140625
+    }
+  ],
+  "sentiment": {
+    "positive": 0.059890583,
+    "negative": 0.62042826,
+    "neutral": 0.31968114
+  },
+  "summary": "Google has issued a security update for its Chrome browser, which users should apply as soon as possible. The Chrome Stable channel has been updated to 139.0.7258.127/.128 for Windows, Mac, and 139.07258..127 for Linux. The update will be released over the coming days and weeks. This comes after Google issued an update for eight flaws in its browser and an emergency patch for a high-severe vulnerability in its iOS 18.6 release. The latest security fixes come just one week after Apple released iOS18.",
+  "shortSummary": "Google has issued a security update for Chrome, addressing six vulnerabilities, including a high severity vulnerability, with immediate rollout expected.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": false,
+  "reprintGroupId": "cc04c0c2a65142d89aa352af603389ef",
+  "places": [],
+  "scraped_sources": [
+    {
+      "url": "https://chromereleases.googleblog.com/2025/08/stable-channel-update-for-desktop_12.html",
+      "text": "Security Fixes and Rewards\nNote: Access to bug details and links may be kept restricted until a majority of users are updated with a fix. We will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven\u2019t yet fixed\nThis update includes 6 security fixes. Below, we highlight fixes that were contributed by external researchers. Please see the Chrome Security Page for more information\nAs usual, our ongoing internal security work was responsible for a wide range of fixes:\n[TBD][432035817] High CVE-2025-8879: Heap buffer overflow in libaom. Reported by Anonymous on 2025-07-15\n[TBD][433533359] High CVE-2025-8880: Race in V8. Reported by Seunghyun Lee (@0x10n) on 2025-07-23\n[N/A][435139154] High CVE-2025-8901: Out of bounds write in ANGLE. Reported by Google Big Sleep on 2025-07-30\n[TBD][433800617] Medium CVE-2025-8881: Inappropriate implementation in File Picker. Reported by Alesandro Ortiz on 2025-07-23\n[TBD][435623339] Medium CVE-2025-8882: Use after free in Aura. Reported by Umar Farooq on 2025-08-01\nWe would also like to thank all security researchers that worked with us during the development cycle to prevent security bugs from ever reaching the stable channel.\nMany of our security bugs are detected using AddressSanitizer, MemorySanitizer, UndefinedBehaviorSanitizer, Control Flow Integrity, libFuzzer, or AFL."
+    },
+    {
+      "url": "https://www.forbes.com/sites/daveywinder/2025/07/30/urgent-google-chrome-update-confirmed---download-and-restart-now/",
+      "text": "A Google Chrome security update is, frankly, hardly breaking news these days. We see them announced week after week, but usually they address a bunch of vulnerabilities that external security researchers have disclosed, and occasionally even a zero-day that is already being exploited by attackers. Thankfully, the latter is not the case here, but it is unusual in that this emergency update addresses a single, high-severity vulnerability disclosed by an anonymous security researcher. If Google felt it was necessary to release an update under these circumstances, then it\u2019s imperative that you ensure your browser is updated and the security protections offered are activated as soon as possible. Here\u2019s what you need to know, and do.\nGoogle Chrome Security Update 138.0.7204.183 Confirmed\nIn a July 29 posting by Google Chrome\u2019s Srinivas Sista, the latest security update for the world\u2019s most popular web browser was confirmed. The highly unusual notification featured just one security vulnerability that an anonymous researcher had disclosed, and as such, I would suggest it requires your immediate attention.\nThe high-severity CVE-2025-8292 vulnerability is of the use-after-free variety and impacts Chrome\u2019s media stream component. The anonymous researcher involved was awarded a bounty of $8,000 for responsibly disclosing the security flaw to Google.\nAlthough Sista said that access to the vulnerability details \u201cmay be kept restricted until a majority of users are updated with a fix,\u201d which is good policy, we do know that such use-after-free memory corruption issues can enable remote attackers, using malicious web pages, to execute arbitrary code including malware, as well as the exfiltration of data.\nWhich is why it is recommended that you don\u2019t wait the days or weeks it could take for this urgent security update to reach your browser, but instead kickstart the process yourself by simply heading to the Help|About Google Chrome option from your browser settings menu.\nThis will take your browser to version 138.0.7204.183/.184 for Windows, Mac and 138.0.7204.183 for Linux. It is not, however, enough to protect you from the Chrome vulnerability that is being patched. To get that protection, you need to activate the update by restarting the browser. Your open tabs will be saved and reopened, so you don\u2019t need to worry about losing work."
+    },
+    {
+      "url": "https://www.forbes.com/sites/kateoflahertyuk/2025/07/30/ios-186-update-now-warning-issued-to-all-iphone-users/",
+      "text": "Update July 30: This article, originally published July 29, has been updated to include details of other upgrades issued alongside iOS 18.6, as well as bug fixes and additional expert advice.\nApple has released iOS 18.6, along with a warning to update your iPhone now. That\u2019s because iOS 18.6 comes with a hefty list of 29 security fixes, some of which plug serious holes in iOS.\nApple doesn\u2019t give much information about the bugs squashed in iOS 18.6, to give people as much time to update as possible before attackers can get hold of the details. However, iOS 18.6 fixes multiple flaws in WebKit, the engine that supports the Safari browser, according to the iPhone maker\u2019s support page.\nTracked as CVE-2025-4322, one of the issues patched in WebKit could see sensitive user information exposed, if a user processes maliciously crafted web content. Meanwhile, a trio of CVEs patched in iOS 18.6 could lead to memory corruption as a result of processing maliciously crafted web content.\nApple\u2019s iOS 18.6 also fixes a flaw in CoreMedia Playback that could enable an app to access user-sensitive data.\nThe Impact Of The Issues Fixed In iOS 18.6\nOf the issues patched in iOS 18.6, Daniel Card, an independent cybersecurity consultant, highlights a flaw which could see your passcode read out by VoiceOver. Meanwhile, another WebKit issue could see address bar spoofing, if you visit a malicious website, he says.\nMost of the issues patched in iOS 18.6 are specific to WebKit, \u201cwhich by its very nature are more likely to be exploited remotely,\u201d says Sean Wright, head of application security at Featurespace.\nFor the most part, the impact of the vulnerabilities fixed in iOS 18.6 is limited, Wright says. However, it is important to note that flaws including CVE-2025-43227 do have more of an impact and \u201cthus carry more risk,\u201d according to Wright.\nApply iOS 18.6 Quickly, Experts Advise\nGiven that the iOS 18.6 update is smaller and largely focused on security enhancements, users should \u201cupdate as quickly as possible,\u201d says Josh Stein, VP of strategy, security at Jamf.\nHe points out that \u201ca significant number of fixes are in WebKit, which is not unusual for an iOS security release.\u201d\nWebKit is the framework for presenting web-based content, and the vulnerabilities fixed could allow attackers to access sensitive user information or cause denial of service \u2014 which renders a service unusable by flooding it with traffic, says Stein.\nStein highlights a fix to CFNetwork, tracked as CVE-2025-43223, which addresses an issue where users without administrative rights could modify restricted network settings. \u201cApple\u2019s CFNetwork is the framework that handles network communication, including HTTP, HTTPS, and other protocols. Therefore, any vulnerability in the framework poses significant security risks,\u201d Stein warns.\nThe iOS 18.6 update also addresses several bugs in Apple\u2019s CoreAudio and CoreMedia frameworks. \u201cThese frameworks are commonly used to process audio and media, respectively, which means they support a broad set of apps and manage data queues in memory,\u201d warns Stein.\nOther Updates Issued Alongside iOS and iPadOS 18.6\nAlongside iOS 18.6, Apple has also released iPadOS 17.7.9 \u2014 a security only update for users of devices that can\u2019t update to iPadOS 18. The update is available for the iPad Pro 12.9-inch 2nd generation, iPad Pro 10.5-inch and iPad 6th generation.\nNote that there are no iPhones on this list. This is because Apple is not allowing users of older iPhones to stay on iOS 17, as all models are compatible with the newer version of the operating system.\nIf you do own an older iPad that can\u2019t update to iPadOS 18, iPadOS 17.7.9 is worth applying, as it includes a big list of fixes. Patches include several WebKit flaws and a patch for the Kernel at the heart of the iPadOS operating system that could allow a remote attacker to cause unexpected system termination. None of the flaws are being used in attacks, but it\u2019s still worth updating ASAP.\nAs well as iOS 18.6 and iPadOS 17.7.9 Apple has also released other updates for its devices. These include macOS Sequoia 15.6, macOS Sonoma 14.7.7 and macOS Ventura 13.7.7 for macs. Apple has issued watchOS 11.6 for the Apple Watch, tvOS 18.6 for Apple TV and visionOS for the Apple Vision Pro.\niOS 18.6 Fixes Annoying iPhone Bugs\nSince updating to iOS 18.5, some users have complained about bugs in the iPhone software. These include issues with the Mail app freezing, as well as the usual complaints about Wi-Fi connectivity and battery drain.\nThe only patched bug listed on Apple\u2019s update notes for iOS 18.6 is the Photos issue that could prevent memory movies from being shared. Quite a niche problem, to say the least.\nEven so, because iOS 18.6 is a small upgrade, it\u2019s worth applying in case it does fix other bugs. Hopefully iOS 18.6 will make your iPhone less buggy and more secure.\niOS 18.6 \u2014 The Last iPhone Update Before iOS 26\nNone of the flaws patched in iOS 18.6 have been used in real-life attacks, yet. But iOS 18.6 is the first update in well over two months \u2014 iOS 18.5 was issued in mid-May and Apple hasn\u2019t released any minor upgrades in the meantime.\nThe iOS 18.6 upgrade is also likely to be the last iPhone update before Apple releases iOS 26 this fall, unless a very urgent security fix is needed before then.\nThe fact that there\u2019s so long between updates \u2014 with another gap due until the iPhone 17 and iOS 26 arrive this fall \u2014 mean applying iOS 18.6 now is important.\nThis is especially key if you don\u2019t plan to upgrade to iOS 26 as soon as it\u2019s released, as it will ensure you are as secure as possible. Apple knows many users will wait to update to iOS 26 and will offer a new iOS 18 version \u2014 possibly iOS 18.7, or iOS 18.6.1 \u2014 this fall.\nWhy You Should Update To iOS 18.6\nExperts say you should update to iOS 18.6 as soon as you can. The positive news from Apple is that none of the vulnerabilities fixed in iOS 18.6 have been exploited in the wild, says Stein. \u201cHowever, this should not delay users from updating their devices to iOS 18.6. Keeping devices up to date with the latest patches is one of the most effective ways to safeguard against attackers.\u201d\n\u201cOverall, there is no reason to panic, but I would highly recommend that users update to iOS 18.6 as soon as possible to be on the safe side,\u201d says Wright.\nIt\u2019s also worth noting that automatic updates can take a while to reach your iPhone, so it is best to apply iOS 18.6 manually. Before doing this, Card points out the importance of ensuring you have space in iCloud. \u201cSome people have their iCloud full so not only do their device back ups not work, their updates fail.\u201d\n\"General housekeeping is always good for life and security optimisation,\" Card says.\nApple\u2019s iOS and iPadOS 18.6 are available for the iPhone XS and later, iPad Pro 13-inch, iPad Pro 12.9-inch 3rd generation and later, iPad Pro 11-inch 1st generation and later, iPad Air 3rd generation and later, iPad 7th generation and later and iPad mini 5th generation and later.\nTo upgrade your iPhone, go to your Settings > General > Software Update and download and install iOS 18.6 now."
+    },
+    {
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8901",
+      "text": "CVE-2025-8901 Detail\nReceived\nThis CVE record has recently been published to the CVE List and has been included within the NVD dataset. DescriptionOut of bounds write in ANGLE in Google Chrome prior to 139.0.7258.127 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High) Metrics\nNVD enrichment efforts reference publicly available information to associate\nvector strings. CVSS information contributed by other sources is also\ndisplayed.\nCVSS 4.0 Severity and Vector Strings:\nReferences to Advisories, Solutions, and ToolsBy selecting these links, you will be leaving NIST webspace. We have provided these links to other web sites because they may have information that would be of interest to you. No inferences should be drawn on account of other sites being referenced, or not, from this page. There may be other web sites that are more appropriate for your purpose. NIST does not necessarily endorse the views expressed, or concur with the facts presented on these sites. Further, NIST does not endorse any commercial products that may be mentioned on these sites. Please address comments about this page to [email protected].\nWeakness Enumeration\nQuick InfoCVE Dictionary Entry:CVE-2025-8901 NVD Published Date: 08/12/2025 NVD Last Modified: 08/12/2025 Source: Chrome |"
+    },
+    {
+      "url": "https://www.forbes.com/sites/daveywinder/2025/08/06/google-chrome-139---update-now-warning-issued-for-35-billion-users/",
+      "text": "Was it really only a week ago, on July 29, that Google released a Chrome web browser security update that fixed a solitary but high-severity vulnerability? Buckle up, folks, like London buses, here comes another one: Google has just released Chrome version 139, and all 3.5 billion users are urged to make the update as soon as possible in light of eight security vulnerabilities that Google has also confirmed. Here\u2019s what you need to know, and how to ensure your Chrome browser is secure from hack attacks as soon as possible.\nChrome 139 Released \u2014 8 Security Reasons To Update Right Now\nGoogle users are no strangers to security alerts, be they related to a massive surge in hack attacks against Google accounts, official warnings from Google of potential dangerous activity, or being urged to change Gmail passwords. But, I would argue, the most common Google security advisories are the ones that accompany Chrome web browser updates, with alarming regularity, and impact some 3.5 billion global users.\nSrinivas Sista, from Google\u2019s Chrome team, posted such an advisory on August 5, warning that a total of 12 security issues had been found that impacted the web browser, eight of which were disclosed by external security researchers and given official Common Vulnerabilities and Exposures categorisations.\nChrome 139 \u201cwill roll out over the coming days/weeks,\u201d Sista said, but given the sheer number of CVEs listed, users would be advised to ensure they force an update as soon as possible to be protected from potential attacks.\nThe CVEs are confirmed as follows:\n- CVE-2025-8576: Use after free in Extensions.\n- CVE-2025-8577: Inappropriate implementation in Picture In Picture.\n- CVE-2025-8578: Use after free in Cast.\n- CVE-2025-8579: Inappropriate implementation in Gemini Live in Chrome.\n- CVE-2025-8580: Inappropriate implementation in Filesystems. CVE-2025-8581:\n- Inappropriate implementation in Extensions.\n- CVE-2025-8582: Insufficient validation of untrusted input in DOM.\n- CVE-2025-8583: Inappropriate implementation in Permissions.\nYou should, therefore, go to the Help|About Google Chrome option from your Google Chrome web browser settings menu, which will kickstart the update process. Be sure, however, to relaunch the browser when directed, as the security update will not be activated until you do."
+    }
+  ],
+  "argos_summary": "Google has released a critical security update for its Chrome browser, addressing six vulnerabilities, including three rated as high severity. The update, version 139.0.7258.127/.128, is being rolled out over the coming days and weeks, and users are urged to update manually to ensure their browsers are secure. This update follows a recent patch for eight flaws and comes amid heightened security concerns, emphasizing the importance of keeping software up to date to protect against potential attacks.",
+  "argos_id": "C5Q31236R"
+}

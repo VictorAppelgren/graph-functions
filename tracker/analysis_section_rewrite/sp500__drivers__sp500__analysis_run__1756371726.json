@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T11:11:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756371726",
+    "drivers_count": "5",
+    "material_chars": "2136",
+    "output_chars": "3210",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit plan (≈ 150 words)**  \n1. **Macro‑policy depth** – Add a concise Regime‑A/B/C table (real‑rate ranges, risk‑premium %, dollar index levels) citing the Fed‑policy source ID. Quantify the expected 10‑Y yield swing (e.g., 3.5 %–4.0 %) and link it to the auto‑sector repricing (Ford Q2 EV loss $1.3 bn, 4.3 % EBIT, 10.1 % ROIC).  \n2. **Equity & crypto specifics** – Insert current S&P 500 P/E (~30×), Nasdaq (~35×), and Ether price ($4,000) with crypto‑inflow numbers, citing the crypto source ID. Mention Asian indices (2–3 % gains) and the dollar index drop (≈ 0.8 pts).  \n3. **Commodity & currency mechanisms** – Expand oil section with 2025/26 supply (+2.5/1.9 mbpd) vs demand (0.68–0.70 mbpd) and Brent/WTI ranges ($60–$65, $58–$62) citing J99EM2TPZ/T1QE6JPIX. Add EUR/USD at 1.07, explain AI‑device rollout impact, citing 5S9GJV2O3/HWGNUP2XG/UVEQ2SJ0W.  \n4. **Flows/positioning** – Add ETF inflow figures (e.g., $30 bn Q1) and institutional crypto inflows, citing the appropriate source ID.  \n5. **Watch‑list & fragility** – List concrete signals (Fed minutes, oil supply data, auto capex, AI launch, crypto inflows, dollar index, yield curve, inflation releases). Highlight fragility points (Fed reversal, demand shock, capex lag, regulatory clampdown).  \n6. **Citation density** – Ensure every paragraph ends with at least one ID; add the missing Fed‑policy ID. Remove generic statements and replace with quantified ranges.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756371726"
+}

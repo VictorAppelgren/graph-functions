@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:46:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "macro_risks_technology",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "Macro risks in technology directly drive tariff policy on semiconductor imports, a critical component of the technology supply chain.",
+    "candidate_motivation": "Topics spanning monetary policy, inflation metrics, currency movements, commodity prices, and key tech trade frictions are the primary macro drivers of risks for the technology sector, shaping costs, demand, and valuations.",
+    "existing_links_count": "6",
+    "candidate_count": "11",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'core_monthly_cpi', 'us_10y', 'usd', 'oil', 'gold', 'us_tariffs_semiconductors', 'us_china_trade_talks', 'china_macro']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'technology_communications_sector'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586398",
+    "rel_id": "macro_risks_technology__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'macro_risks_technology', 'target': 'technology_communications_sector'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Macro risks in technology directly drive tariff policy on semiconductor imports, a critical component of the technology supply chain.",
+      "type": "INFLUENCES",
+      "source": "macro_risks_technology",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "macro_risks_technology__influences__us_tariffs_semiconductors"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T07:04:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_industrial_output",
+    "target_id": "ust30y",
+    "selection_motivation": "India’s industrial output is a key indicator of global demand and inflation expectations, which directly affect long‑term US Treasury yields through risk‑premium and inflation‑sensitivity channels.",
+    "candidate_motivation": "India Industrial Output is highly sensitive to global commodity prices, exchange rates, and demand from major trading partners such as China and the US. Therefore topics that capture these drivers—commodity price movements, currency and dollar index dynamics, key policy signals, and major trade flows—are likely to influence or correlate with it.",
+    "existing_links_count": "6",
+    "candidate_count": "33",
+    "all_nodes_count": "42",
+    "candidate_ids_len": "33",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'china_exports', 'china_credit_impulse', 'copper', 'wheat', 'gold', 'wti', 'brent', 'usdcny', 'usdjpy', 'eurusd', 'dxy', 'us_inflation', 'us_core_pce', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'gilt10y', 'jgb10y', 'sofr', 'euro_inflation', 'euribor', 'spx', 'sx5e']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901024",
+    "rel_id": "india_industrial_output__influences__ust30y",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India’s industrial output is a key indicator of global demand and inflation expectations, which directly affect long‑term US Treasury yields through risk‑premium and inflation‑sensitivity channels.",
+      "type": "INFLUENCES",
+      "source": "india_industrial_output",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__influences__ust30y"
+}

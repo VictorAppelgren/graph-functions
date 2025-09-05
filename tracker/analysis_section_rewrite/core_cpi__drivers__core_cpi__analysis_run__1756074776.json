@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:39:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "core_cpi",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "core_cpi__analysis_run__1756074776",
+    "drivers_count": "4",
+    "material_chars": "1717",
+    "output_chars": "2694",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft nails a policy-led regime framing but needs a tighter, first-principles causal chain, explicit regime triggers and invalidation points, and concrete, source-grounded numbers to reach world-class quality. Actionable edits: 1) formalize a three-regime framework (Regime A: disinflation with easing; Regime B: sticky inflation; Regime C: growth slowdown) with explicit thresholds anchored to wage growth momentum, inflation persistence, and Jackson Hole signals, plus a one-page decision-tree showing which regime drives discount rates, risk premia, and currencies; 2) tighten the transmission mechanism from policy to assets: detail how tariffs (baseline ~10%, China reciprocity up to 34%, spikes to 145%) lift reshoring and data-center/semis capex, boost productivity, gradually compress inflation and real rates, and reprice risk premia, explicitly linking to SGB2PAZGK; 3) quantify the AI/capex channel using Nvidia momentum (STBVARD8F) as a reinforcing driver of capex intensity and semis demand, and tie to EV-capex dynamics by citing Ford Q2 EV losses (~$1.3B), adj. EBIT (~4.3%), ROIC (~10.1%), and 2.5% revenue CAGR 2014–2024 from 22PL3Q360; show how these molds longer-horizon inflation/real-rate paths; 4) structure a medium/current scenario around Ford’s margin trajectory and EV transition costs, but sharpen the link to risk premia via policy cadence and semis/AI cycles; 5) replace qualitative phrases with precise numbers and ranges drawn from sources; e.g., you can state “tariff regime” and “AI momentum” anchors (SGB2PAZGK)(STBVARD8F) and “Ford EV-cycle” (22PL3Q360) and then add a concise watch-list: tariff-move surprises, Nvidia AI momentum deceleration, OEM EV-capex cadence data/earnings; 6) address conflicts and coverage gaps: reconcile any tension between a Tariff-pegged Regime A narrative and potential policy reversals, and explicitly acknowledge data gaps (e.g., ACMR’s long-horizon revenue anchor) with a defined invalidation signal; 7) ensure citation discipline: keep only IDs SGB2PAZGK, STBVARD8F, 22PL3Q360, weave them consistently throughout rather than clustering in a single sentence, and explicitly reconcile any divergences between them. The result should present a crisp, testable chain: policy shock -> reshoring/capex -> AI-driven productivity -> inflation/real yields path -> risk premia and equity leadership, with a compact, numbers-grounded watch-list and clearly flagged deciders.",
+      "tokens": {}
+    }
+  },
+  "id": "core_cpi__drivers__core_cpi__analysis_run__1756074776"
+}

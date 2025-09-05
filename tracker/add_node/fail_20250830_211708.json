@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-30T21:15:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Y101ZKVLZ",
+    "suggested_names": "['high_yield_bond_spreads']",
+    "topic_category": "company",
+    "topic_category_motivation": "Corporate bond issuance by xAI, a company‑specific event.",
+    "should_add": "False",
+    "motivation_for_relevance": "Specific corporate bond issuance is a micro event, not a macro driver, policy, or broad tradable asset anchor; it lacks a scalable macro impact and therefore does not fit the graph’s focus.",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "xAI’s $5 billion high‑yield bond issuance at ~12% yield represents a widening spread over the ICE BofA HY index, directly affecting the high‑yield bond market and CDX HY index.",
+      "id": "xai_high_yield_bond_issuance",
+      "name": "xAI High Yield Bond Issuance",
+      "type": "macro"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T21:27:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755976463",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "6996",
+    "output_chars": "1079",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit plan (≤ 4–6 bullets, each ≤ 1 sentence):**  \n1. **Condense the macro narrative** into a single, causal chain: “Bessent’s 50‑bp September cut (GX057ADL7) is priced into a 4.13‑% 10‑yr yield, with Jackson Hole as the trigger; a Trump‑Powell lawsuit (S1H7IUGGE) or Putin warning (GX057ADL7) could widen risk premia.”  \n2. **Merge the AI/tech theme** with the macro: “Oppenheimer’s Stotzfus (37UZC9X8I) flags AI as a long‑term winner amid this easing, while Walmart/Target data (H7Q52FKDH) confirm consumer sensitivity to borrowing costs.”  \n3. **Reframe ACMR’s view** as a single house‑view sentence: “ACMR’s Q2 2025 results (SK994CBWR) and 2025 guidance ($850‑$950 m) support a $34.5–$35.5 target by Q4 2025, driven by a Fed‑initiated rate‑cut cycle (C22MKA9VY) that lowers fab financing costs and boosts advanced‑node demand.”  \n4. **Specify catalysts and watch signals** in one line: “Watch Fed minutes, CPI, Treasury yields, ACMR earnings guidance, and any Trump‑Powell lawsuit developments.”  \n5. **Quantify risks** with concrete thresholds: “Risk of a delayed or reversed Fed cut, inflation persisting above 2.5 %, or a lawsuit escalation could push ACMR below $30, while geopolitical tension could widen the S&P 500 risk‑premium by 10‑15 bps.”  \n6. **Remove filler and generic statements** (“in this environment,” “potentially”), tighten language, and ensure every claim is backed by a source ID (e.g., (GX057ADL7), (S1H7IUGGE), (SK994CBWR), (C22MKA9VY)).  \nApply these edits to produce a 4–6 sentence, bullet‑style brief that aligns with the professional‑investor focus, uses first‑principles logic, and cites all critical sources.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1755976463"
+}

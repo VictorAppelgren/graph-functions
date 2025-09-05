@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T10:25:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "medium",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756369285",
+    "article_ids": "['61SVFUKBY', 'A88B7V8PY', 'STBVARD8F', 'U3ZK13ZQI', 'YX2J8NHZ1']",
+    "selected_articles_count": "5",
+    "material_chars": "159289",
+    "output_chars": "2263",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph):**  \n- **Add concrete subscriber & revenue metrics**: cite 61SVFUKBY for 300 M households, 15.9% YoY revenue growth, and 13.1% CAGR to 2027; cite A88B7V8PY for 29.5% operating‑margin forecast and $18 B content spend.  \n- **Quantify ad‑tier impact**: include current ad‑tier revenue (≈$1.5 B, 10% of total) and projected lift (≥5% ad‑tier revenue growth) with a trigger that a 10% jump pushes share price 10–15% (cite 61SVFUKBY).  \n- **Detail password‑sharing crackdown effect**: state 5% churn reduction and its contribution to subscriber growth (cite 61SVFUKBY).  \n- **Insert macro anchors**: CPI 3.5% (2025), Fed rate 5.25% (2025), consumer discretionary index decline 2% (2025) to show demand transmission (cite 61SVFUKBY).  \n- **Specify international growth**: 6% YoY subscriber growth in Asia/Africa/LatAm; trigger 5% rise → 10–15% price bump (cite 61SVFUKBY).  \n- **Clarify valuation compression path**: project P/E falling from 51.7 to 45 by Q2 2026 if ad‑tier & international growth hit targets; if not, P/E stays >48 (cite 61SVFUKBY).  \n- **Define alt scenarios with ranges**: Alt 1 – ad‑tier 20% revenue growth, P/E 40, 20–25% upside; Alt 2 – content spend $22 B, margin 25%, P/E >50, 5–10% downside (cite 61SVFUKBY).  \n- **List watch signals**: Q3 2025 earnings, ad‑tier subscriber numbers, password‑crack metrics, quarterly P/E trend; each with source ID.  \n- **Add confidence rating**: moderate‑high, justified by cash flow, margin, but tempered by valuation and competitive risk.  \n- **Ensure causal chain coherence**: link content spend → margin → cash flow → valuation; link macro → discretionary spend → subscriber acquisition → revenue.  \n- **Cite every claim**: use 61SVFUKBY or A88B7V8PY for each numeric or qualitative statement; avoid uncited generic platitudes.  \n- **Align with 3–6‑month horizon**: time‑stamp catalysts (Q3 earnings, Q1 2026 subscriber data) and watch list signals within this window.  \n- **Maintain format constraints**: keep paragraph concise, use bullet‑style action verbs, and reference IDs inline.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__medium__sp500__analysis_run__1756369285"
+}

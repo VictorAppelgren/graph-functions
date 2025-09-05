@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T09:44:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "iran_nuclear_program",
+    "new_article_id": "IS30UA9YS",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['VV606LNB5', 'AZCFNQHGG', 'KLFK5AN7P', '9HAPNGUHH']",
+    "mode": "CAN_REPLACE",
+    "target_id": "VV606LNB5",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "VV606LNB5",
+      "motivation": "The new article provides timely updates on Iran's nuclear negotiations and the looming sanctions deadline, which are critical developments not covered in existing articles."
+    }
+  },
+  "id": "iran_nuclear_program__IS30UA9YS__current"
+}

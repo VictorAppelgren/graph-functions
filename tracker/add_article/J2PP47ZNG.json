@@ -1,0 +1,62 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T08:39:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "J2PP47ZNG",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; the new Power of Siberia 2 pipeline will increase gas supply to China, easing global LNG prices, supporting China’s energy imports, and potentially moderating US inflation expectations and USD/CNY.",
+      "existing_ids": [
+        "cn_russia_gas_pipeline",
+        "china_pos2_pipeline",
+        "usdcny",
+        "dxy",
+        "us_inflation",
+        "us_core_pce",
+        "china_exports",
+        "china_credit_impulse",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "sofr",
+        "fed_policy",
+        "us_services_pmi",
+        "us_unemployment_claims"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article describes a cross‑border energy infrastructure agreement between Russia and China, reflecting geopolitical strategy and sanctions context, which is a geopolitical event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major expansion of the Power of Siberia 2 pipeline, adding significant gas supply to China and signaling Russia’s pivot toward China amid sanctions, directly affecting energy trade nodes."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article describes a legally binding memorandum to expand the Power of Siberia 2 pipeline, a structural shift that will alter long‑term gas supply dynamics between Russia and China."
+    },
+    "article_node": {
+      "id": "J2PP47ZNG",
+      "title": "Russia, China sign deal to advance Power of Siberia 2 gas pipeline",
+      "summary": "Russia and China have signed a legally binding memorandum to advance the Power of Siberia 2 gas pipeline, which will add about 50 billion cubic metres of annual supply to China via Mongolia. The existing Power of Siberia line will see its flow rise from 38 bcm to 44 bcm, while pricing for the new pipeline remains under negotiation, with China seeking discounts. The deal underscores China’s continued energy trade with Russia despite Western sanctions and reflects Russia’s pivot toward China after losing a large share of its European gas market.",
+      "source": "https://finance.yahoo.com/news/russia-china-sign-deal-advance-145025424.html?_guc_consent_skip=1756911671",
+      "published_at": "2025-09-03T14:50:25+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 16,
+      "successful": 16
+    }
+  },
+  "id": "J2PP47ZNG"
+}

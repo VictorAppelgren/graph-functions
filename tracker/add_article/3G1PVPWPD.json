@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T18:11:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3G1PVPWPD",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; the rollout of new engagement features on YouTube Music may influence digital advertising revenue expectations and monetization potential for streaming platforms, impacting near-term sector valuations.",
+      "existing_ids": [
+        "sp500",
+        "usd",
+        "eurusd"
+      ],
+      "new_names": [
+        "advertising_revenue_dynamics"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on new product features and a beta launch by two companies, which is a company‑specific update rather than earnings, regulation, or macro data."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article does not specify which node it refers to, so relevance is unclear."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent feature rollouts and beta launches, which are immediate events affecting the platforms."
+    },
+    "article_node": {
+      "id": "3G1PVPWPD",
+      "title": "YouTube Music courts mega fans with new features",
+      "summary": "YouTube Music celebrated its tenth anniversary by adding community comments to albums and playlists, taste‑matching playlists that update daily, and new badge and notification features that tie in with artist milestones and merch. Spotify already offers similar fan‑engagement tools, such as Blend playlists and an integrated merch hub, but YouTube Music’s rollout marks its first foray into direct fan interaction on the platform. Separately, Pornhub announced a beta launch of “Shorties,” a vertical short‑video format modeled on TikTok Reels, designed to boost mobile engagement but raising concerns about increased addiction and the platform’s potential for “gooning” behavior.",
+      "source": "https://mashable.com/article/youtube-music-new-features-shared-playlists-comments",
+      "published_at": "2025-08-24T14:19:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 3
+    }
+  },
+  "id": "3G1PVPWPD"
+}

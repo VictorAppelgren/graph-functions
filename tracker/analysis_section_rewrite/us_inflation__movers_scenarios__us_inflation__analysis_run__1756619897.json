@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T08:11:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756619897",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "4316",
+    "output_chars": "896",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Add explicit magnitude ranges for each DXY move (e.g., +0.3‑0.5 % for the 2025‑09 → 12 up‑case, –200 bp to –100 bp for the 2025‑10 → 26 down‑case) and cite the source for the range (B1KYJ1GPU)(XTQIQRP5K); correct the 2025‑10 → 26 down line to “flattening of the 2‑yr/10‑yr spread erodes the real‑yield differential, pressuring DXY lower” and include the catalyst window (Sept 25 Fed meeting, early‑Aug CPI, flattening of spread <30 bp) with citations (7XH2DKEKV)(U21K4ALYQ)(97MD1FHW8); ensure every line contains a single sentence, maps to the canonical handle DXY with a clear sign, and lists a dated catalyst window; tighten the “What to watch” field to specific triggers (Fed minutes, tariff announcements, Ukrainian/Russian rhetoric for the 2025‑09 → 12 down case; flattening spread, Fed hike, CPI > 3 % for the 2025‑10 → 26 down case) with appropriate IDs; and provide a brief probability rationale tied to the cited catalysts (e.g., 70 % probability that the September 25 Fed cut and tariff truce persist).",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756619897"
+}

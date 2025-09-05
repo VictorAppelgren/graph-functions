@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T01:45:23",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756596748",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1561",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is solid on the Fed‑equity link but drifts on a few points and lacks concrete, handle‑mapped signals. 1) **Remove or re‑anchor the sentence “A stronger dollar would dampen equity valuations, whereas a weaker dollar would lift them.”** It introduces a FX driver without a handle or catalyst; replace with a concise statement that the DXY is expected to fall 200 bp to 95.8 by Aug 31 (Z7O1DCHS7) and that this dovish move supports the equity upside. 2) **Add explicit magnitude ranges for the 2‑yr/10‑yr spread**: state that a 57 bp steepening (7XH2DKEKV) is the catalyst for a 25‑bp Fed cut, while a flattening below 30 bp would reduce the cut probability. 3) **Quantify the S&P impact by handle**: “If the Fed cuts 25 bp in September, spx will rise 3–5 % (B1KYJ1GPU)(3YAQ8JUPL); if rates stay high, spx will fall 5–10 % (FAN5RYW6T).” 4) **Tie the payroll catalyst window explicitly**: “September 5 payrolls are the key trigger; a slowdown (60 % prob.) pushes the Fed to cut, otherwise the Fed holds.” 5) **Add a brief risk‑inversion note**: “If inflation remains sticky (prob. 40 %), the Fed may raise rates, pushing spx down 5–10 %.” 6) **Ensure all claims have inline IDs**: e.g., the 200 bp DXY move (Z7O1DCHS7), the 25‑bp cut (XTQIQRP5K), the 15–20 bp 10‑yr compression (3YAQ8JUPL). 7) **Trim redundant sentences**: the paragraph on mortgage rates can be condensed to a single sentence linking ust10y to us_mortgage_rates (97MD1FHW8). 8) **Add a watch‑list**: July CPI/PCE, September payrolls, 2‑yr/10‑yr spread, Fed minutes. 9) **Maintain focus on the asset**: keep all discussion tied to spx, ust10y, dxy, and the Fed policy handle. 10) **Remove any mention of “top‑ten tech names” unless you provide a handle (e.g., tech_sector) and a catalyst (earnings release).** After these edits, the view will meet the acceptance gate: it maps to spx, ust10y, dxy with explicit signs, ranges, and dated catalysts.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756596748"
+}

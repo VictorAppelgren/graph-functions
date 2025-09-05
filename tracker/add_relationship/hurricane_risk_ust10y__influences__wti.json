@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T22:43:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hurricane_risk_ust10y",
+    "target_id": "wti",
+    "selection_motivation": "Atlantic hurricane risk disrupts U.S. oil production and supply chains, driving WTI Crude Oil prices higher, which in turn influences UST 10‑year yields through inflationary pressures.",
+    "candidate_motivation": "The Atlantic hurricane season risk directly impacts UST yields through flight‑to‑safety flows, commodity supply shocks, and monetary‑policy expectations, so the most relevant peers and influencers are UST maturities, Fed policy signals, currency and commodity prices, and broader equity and credit markets.",
+    "existing_links_count": "5",
+    "candidate_count": "18",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'dxy', 'gold', 'spx', 'sx5e', 'wti', 'brent', 'oil_price_decline', 'us_crude_inventory', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901406",
+    "rel_id": "hurricane_risk_ust10y__influences__wti",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Atlantic hurricane risk disrupts U.S. oil production and supply chains, driving WTI Crude Oil prices higher, which in turn influences UST 10‑year yields through inflationary pressures.",
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "wti"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "hurricane_risk_ust10y__influences__wti"
+}

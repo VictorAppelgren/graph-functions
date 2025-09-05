@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T17:40:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wti",
+    "target_id": "dxy",
+    "selection_motivation": "Oil price shocks directly influence USD strength through inflation expectations and demand for USD‑denominated oil, making WTI a key driver of the US Dollar Index.",
+    "candidate_motivation": "WTI Crude Oil is a major energy commodity whose price is driven by global supply‑demand, macroeconomic conditions, and financial market sentiment. Therefore, peers (Brent), risk assets (Gold, Copper), currency dynamics (USD/CNY, USD/JPY, EURUSD, GBP/USD, DXY), monetary policy (Fed, ECB), inflation, interest rates, and equity indices (S&P 500, Euro Stoxx 50) are plausible strong influences or correlates.",
+    "existing_links_count": "1",
+    "candidate_count": "22",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "22",
+    "candidate_ids_preview": "['brent', 'gold', 'copper', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'fed_policy', 'ecb_policy', 'us_inflation', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'gilt10y', 'jgb10y', 'euribor', 'sofr', 'spx', 'sx5e']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162121",
+    "rel_id": "wti__influences__dxy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wti', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'wti', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price shocks directly influence USD strength through inflation expectations and demand for USD‑denominated oil, making WTI a key driver of the US Dollar Index.",
+      "type": "INFLUENCES",
+      "source": "wti",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wti__influences__dxy"
+}

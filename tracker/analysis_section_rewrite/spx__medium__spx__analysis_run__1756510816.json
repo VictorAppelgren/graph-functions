@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T01:44:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "medium",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756510816",
+    "article_ids": "['KNWKYIQ1W', 'KNWKYIQ1W', 'KNWKYIQ1W']",
+    "selected_articles_count": "3",
+    "material_chars": "72472",
+    "output_chars": "1817",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable Edit Checklist (compact paragraph)**  \n1. **Add explicit canonical‑handle mapping**:  \n   - *CRWD revenue growth* +22 % (2025‑2028) – cite KNWKYIQ1W.  \n   - *CRWD gross‑margin improvement* +12.3 % (2025‑2028) – cite KNWKYIQ1W.  \n   - *CRWD 2028 earnings run‑rate* $610 M → *CRWD price target* +5‑10 % (2025‑2026) – cite KNWKYIQ1W.  \n\n2. **Insert concrete catalyst windows with dates**:  \n   - Q3 2025 earnings release (≈ Aug 2025) – confirms 22 % YoY growth & margin trend.  \n   - Falcon Next‑Gen Identity adoption metrics (≈ Oct 2025) – signals ARR lift.  \n   - AI‑tool performance & partner‑ecosystem expansion (≈ Oct 2025) – validates cross‑sell.  \n   - Margin recovery milestone (≈ 2026) – tests 8 % target.  \n   - Competitive pressure (≈ 2025) – monitors rivals’ cloud‑security moves.  \n   - Regulatory risk (≈ 2025) – tracks data‑privacy/AI rules.  \n\n3. **Tie every claim to a macro pillar**:  \n   - Growth/innovation (tech sector) – drives revenue.  \n   - Credit risk (cybersecurity vendor) – affects margin and valuation.  \n   - Inflation/operational costs – influences margin recovery.  \n\n4. **Add watch‑list signals**: Q3 earnings surprise, Falcon adoption rate, AI‑tool uptake, partner‑channel velocity, margin trend, competitive moves, regulatory updates.  \n\n5. **Re‑frame confidence**: “Moderate‑high confidence” → “Confidence: 70 % (based on 22 % YoY growth, 8 % margin target, and strong partner channel) – cite KNWKYIQ1W.”  \n\n6. **Remove drift**: delete any sentence that references non‑CRWD assets or macro variables without a direct causal link to CRWD (e.g., “AI tool performance” without citation, “partner ecosystem expansion metrics” without citation).  \n\n7. **Ensure all statements are evidence‑based**: every quantitative claim must have an inline citation (KNWKYIQ1W).  \n\n8. **Maintain 3‑6 month horizon**: keep all catalysts and scenarios within this window; avoid long‑term speculation beyond 2026.  \n\nApply these edits to produce a concise, evidence‑driven, 3‑6 month scenario map that satisfies the Argos criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__medium__spx__analysis_run__1756510816"
+}

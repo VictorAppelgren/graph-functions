@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T12:22:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "copper",
+    "target_id": "india_industrial_output",
+    "selection_motivation": "India’s industrial output is a leading indicator of copper demand; linking them captures the demand‑supply dynamic that drives copper price movements.",
+    "candidate_motivation": "Copper is a key industrial metal whose price is driven by global manufacturing activity—especially in China and India—, is sensitive to USD strength, energy costs, and inflation expectations, and tends to move with other commodity prices and macro‑financial indicators.",
+    "existing_links_count": "5",
+    "candidate_count": "8",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['india_industrial_output', 'china_exports', 'china_credit_impulse', 'dxy', 'gold', 'wti', 'brent', 'us_inflation']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917531226664337440",
+    "rel_id": "copper__correlates_with__india_industrial_output",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India’s industrial output is a leading indicator of copper demand; linking them captures the demand‑supply dynamic that drives copper price movements.",
+      "type": "CORRELATES_WITH",
+      "source": "copper",
+      "target": "india_industrial_output"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "copper__correlates_with__india_industrial_output"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:14:09",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_narrative_attacks",
+    "target_id": "deepfake_ai_medical",
+    "selection_motivation": "AI Narrative Attacks directly drive the creation and spread of deepfake content in medical communications, making the link to Deepfake AI in Medical Communications a core causal relationship.",
+    "candidate_motivation": "Topics directly linked to AI-enabled misinformation and narrative manipulation, including AI-generated content and deepfake-based disinformation campaigns, are the strongest influencers and peers for 'AI Narrative Attacks'.",
+    "existing_links_count": "7",
+    "candidate_count": "4",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['ai_generated_misinformation', 'disinformation_campaigns', 'deepfake_ai_medical', 'deepfake_medical_advertising']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_generated_misinformation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395732",
+    "rel_id": "ai_narrative_attacks__influences__deepfake_ai_medical",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_ideological_bias'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'vaccine_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'deepfake_ai_medical'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'ai_narrative_attacks', 'target': 'ai_generated_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI Narrative Attacks directly drive the creation and spread of deepfake content in medical communications, making the link to Deepfake AI in Medical Communications a core causal relationship.",
+      "type": "INFLUENCES",
+      "source": "ai_narrative_attacks",
+      "target": "deepfake_ai_medical"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_narrative_attacks__influences__deepfake_ai_medical"
+}

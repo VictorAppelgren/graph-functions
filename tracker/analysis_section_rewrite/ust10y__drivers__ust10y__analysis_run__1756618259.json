@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:41:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756618259",
+    "drivers_count": "11",
+    "material_chars": "4766",
+    "output_chars": "1824",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but needs tightening to meet Argos’ standards. First, strip any mention of the S&P 500 unless you explicitly tie its movement to the DXY transmission path (e.g., “Fed cut → 2‑yr drop → 10‑yr rise → higher real yield differential → DXY +0.5–1 %” with a single citation). Second, map every driver to a canonical handle with a clear sign and magnitude: e.g., fed_policy → dxy +0.5–1 % (3–6 mo, B1KYJ1GPU, XTQIQRP5K); us_inflation → dxy +0.5–1 % (via term‑premium lift, NIT6JFIQF); ust2y → dxy +0.5–1 % (steepening, Z7O1DCHS7). Third, quantify risks with ranges: a Fed rate hike could reverse the steepening and pull DXY down 0.5–1 % (LF0UUL917); an inflation surprise (PCE > 3 % or NFP > expected) could lift DXY 50–100 bp (7XH2DKEKV). Fourth, consolidate the catalyst window into a concise watch list with dates: Sept 25 Fed meeting (cut), early‑Aug CPI (2.5 %), late‑Aug Jackson Hole, Aug 30 PCE, Aug 31 NFP. Fifth, ensure every claim carries an inline citation and avoid duplicate IDs; remove redundant citations (e.g., B1KYJ1GPU appears twice for the same point). Finally, end with a one‑sentence “Base case” and a “Key risks” bullet, each with magnitude and source, to satisfy the “action over prose” rule.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756618259"
+}

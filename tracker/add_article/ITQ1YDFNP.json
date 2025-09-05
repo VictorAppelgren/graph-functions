@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-16T00:01:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ITQ1YDFNP",
+    "status": "success",
+    "topic_id": "federal_reserve"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the federal_reserve node.",
+      "existing_node_ids": "federal_reserve",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Article summary not provided, unable to determine relevant category for the federal reserve node."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to missing article summary"
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess the time frame due to lack of article content; defaulting to fundamental."
+    },
+    "article_node": {
+      "id": "ITQ1YDFNP",
+      "title": "Death by incarceration is enough",
+      "summary": "The author, adopted after her birth mother Maurine Hunsaker was murdered by Ralph Menzies in 1986, recounts the long‑term trauma of losing her parents and the emotional journey of learning her identity and connecting with half‑siblings. She explains how the murder has shaped her sense of self, contributed to anxiety and depression, and left her with a lingering emptiness. Despite the severity of Menzies’ crime, she opposes the death penalty, arguing that execution would perpetuate violence, cause further suffering, and that clemency would better serve healing and compassion. She urges the Utah Board of Pardons and Parole to commute Menzies’ sentence to incarceration, emphasizing that true closure should focus on rehabilitation rather than retribution.",
+      "source": "https://www.yahoo.com/news/articles/opinion-death-incarceration-enough-205729054.html",
+      "published_at": "2025-08-15T20:57:29+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "ITQ1YDFNP"
+}

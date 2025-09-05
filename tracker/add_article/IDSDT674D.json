@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T13:31:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IDSDT674D",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: labor; widespread layoffs are expected to lift US unemployment claims and may prompt Fed policy adjustments.",
+      "existing_ids": [
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports workforce reductions across multiple firms, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article reports broad layoffs but does not specify a direct link to a particular market handle or catalyst window relevant to the node in question, so its impact cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on immediate layoffs across firms, reflecting current cost‑cutting actions amid economic uncertainty and technological change."
+    },
+    "article_node": {
+      "id": "IDSDT674D",
+      "title": "The list of major companies laying off staff this year includes Oracle, Kroger, Nike, Scale AI, and more",
+      "summary": "The article lists a broad wave of layoffs across major firms, including tech giants like Oracle, Scale AI, and Microsoft; retailers such as Kroger and Nike; financial services like Ally and BlackRock; and other sectors ranging from aerospace to media. Companies are trimming staff to cut costs, streamline operations, and adapt to AI-driven efficiencies, with reductions ranging from a few percent to over 20% of headcount. These cuts are part of a larger trend of cost‑cutting amid economic uncertainty and technological change, affecting both corporate and operational roles worldwide.",
+      "source": "https://finance.yahoo.com/news/full-list-major-us-companies-220813398.html",
+      "published_at": "2025-09-04T09:35:16+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "IDSDT674D"
+}

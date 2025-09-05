@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T05:28:30",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756610576",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "58713",
+    "output_chars": "914",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is already on the right track, but tighten it to meet Argos’ strict standards:\n\n1. **Canonical mapping** – Explicitly label the handle: “ust10y” (and, if you want to show cross‑asset spill, “dxy” for the dollar index).  \n2. **Evidence** – Every numeric claim must carry an inline source ID.  \n   * Current 10‑year: “4.23 % (97MD1FHW8)”.  \n   * 2‑year drop: “32 bps (97MD1FHW8)”.  \n   * Fed cut odds: “89 % (97MD1FHW8, U21K4ALYQ)”.  \n   * Tariff impact: “10‑15 bps upward pressure (1DEM6P1Y2, 3YAQ8JUPL)”.  \n3. **Magnitude & sign** – Keep the 20‑30 bps range for a post‑cut decline; state the 4.20 % support and 4.30 % resistance explicitly.  \n4. **Catalyst window** – Highlight the September 16‑17 FOMC meeting as the key trigger, and the mid‑October tariff expiry as a secondary catalyst.  \n5. **Invalidation** – Clearly state that a break above 4.30 % would invalidate the cut narrative.  \n6. **Next data points** – Mention the July core PCE revision on 29 Aug (3YAQ8JUPL) and the Fed’s policy statement as the next watchpoints.  \n7. **Avoid drift** – Remove any mention of unrelated topics (e.g., Porsche, AI data centers).  \n8. **Conciseness** – Trim any explanatory fluff; keep the prose to a few bullet‑style sentences with inline citations.\n\nApply these edits, and the analysis will satisfy the truth‑over‑verbosity, market‑mapped, and catalyst‑driven criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756610576"
+}

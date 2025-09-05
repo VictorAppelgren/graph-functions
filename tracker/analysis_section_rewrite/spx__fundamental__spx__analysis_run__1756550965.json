@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T12:49:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756550965",
+    "article_ids": "['HHKTQ3JYH', 'H86O3XRUJ', 'ZV3QI3K19', 'HHKTQ3JYH', 'H86O3XRUJ']",
+    "selected_articles_count": "5",
+    "material_chars": "100100",
+    "output_chars": "951",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\nYour draft is a solid, data‑rich narrative on EPAM, but it fails the *Acceptance Gate* because it does **not map to any canonical market handle** (e.g., spx, ndx, ust10y, dxy, gold, etc.) and thus cannot be treated as a macro‑theme view. To upgrade it to a world‑class, Argos‑style entry, you must:\n\n1. **Anchor to a canonical handle** – e.g. link EPAM’s performance to the **US IT‑heavy Nasdaq 100 (ndx)** or the **S&P 500 (spx)**. State the sign and magnitude: *“If EPAM’s AI‑driven margin expansion materializes, we expect ndx to rise 1–3 bp/month (≈ 3–10 bp/quarter) over 2025‑2028.”* Cite the source ID (H86O3XRUJ) for the revenue/margin assumptions.\n\n2. **Add a clear catalyst window** – e.g. *“Q2‑Q4 2025 earnings releases (Aug 2025 onward) will test margin recovery; a > 2 % YoY EPS lift signals the AI platform is monetizing.”* Provide the window in dates and tie it to the causal chain: AI adoption → higher client spend → margin lift → ndx lift.\n\n3. **Embed macro pillars** – frame the view within *Growth/Inflation/Labor cycles* (AI adoption as structural demand driver) and *Rates/Term premium/Liquidity* (wage inflation risk). Show how a Fed tightening (e.g., 25 bp hike in 2025) could compress margins, dampening the upside.\n\n4. **Quantify the upside/downside** – e.g., *“Base case: 8.8 % revenue CAGR, 8.9 % margin rise → ndx +3 bp/month; downside: low‑code shift + wage inflation → ndx −2 bp/month.”* Use the 20 % fair‑value upside as a reference point.\n\n5. **Include a risk/invalidator list** – e.g., *“If low‑code adoption outpaces EPAM’s platform, margin compression > 1 % → ndx falls 1 bp/month.”* Provide a short “what to watch” section.\n\n6. **Keep it concise** – trim the narrative to a single paragraph that follows the Argos template: *Driver → Catalyst → Handle → Magnitude → Horizon → Risks → Confidence.*\n\n**Revised Example (≈ 1 paragraph)**  \n> “EPAM’s post‑Ukraine restructuring and AI‑native platform rollout are expected to lift its gross margin from 7.9 % to 8.9 % and drive an 8.8 % revenue CAGR through 2028 (H86O3XRUJ). If realized, the incremental client spend will translate into a 1–3 bp/month lift in the Nasdaq 100 (ndx) over 2025‑2028, assuming a 25 bp Fed hike in 2025 does not erode wage‑inflation‑driven costs. The key catalyst window is Q2‑Q4 2025 earnings releases; a > 2 % YoY EPS lift would validate the AI monetization thesis, while a margin compression > 1 % would invalidate it. Risks include a rapid low‑code shift reducing custom‑service demand and geopolitical instability in Eastern Europe inflating delivery costs. Confidence is moderate‑high, contingent on EPAM’s ability to manage talent costs and execute its AI platform.”  \n\nImplement these edits to meet the canonical‑handle, catalyst‑window, and macro‑pillar requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__fundamental__spx__analysis_run__1756550965"
+}

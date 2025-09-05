@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T02:53:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "eurusd",
+    "target_id": "bund10y",
+    "selection_motivation": "EURUSD exhibits a strong, persistent co-movement with the Eurozone 10‑year Bund yield, reflecting carry‑trade flows and risk‑sentiment spill‑over; linking them captures a key cross‑asset correlation for risk analytics.",
+    "candidate_motivation": "EURUSD is directly driven by U.S. and Eurozone macro fundamentals, policy stance, and relative yield curves, while also reacting to global commodity prices and cross‑currency dynamics. Therefore the most plausible strong influences, correlates, or peers are other FX pairs, key interest‑rate and inflation indicators, major policy announcements, and leading commodity benchmarks that affect the currency market.",
+    "existing_links_count": "12",
+    "candidate_count": "19",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'ust10y', 'bund10y', 'gilt10y', 'ust2y', 'ust5y', 'ust30y', 'us_core_pce', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'fed_powell_rate_cut_hint_2025', 'gold', 'wti', 'brent']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170938102139588403",
+    "rel_id": "eurusd__correlates_with__bund10y",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD exhibits a strong, persistent co-movement with the Eurozone 10‑year Bund yield, reflecting carry‑trade flows and risk‑sentiment spill‑over; linking them captures a key cross‑asset correlation for risk analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "eurusd",
+      "target": "bund10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__correlates_with__bund10y"
+}

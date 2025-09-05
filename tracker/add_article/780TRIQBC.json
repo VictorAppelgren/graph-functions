@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T20:45:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "780TRIQBC",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Boeing’s turnaround lifts its stock and weight in the S&P 500, boosting corporate equity sentiment.",
+      "existing_ids": [
+        "ba",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Boeing’s CEO actions improving production and securing contracts, which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant corporate event (CEO change and performance turnaround) that directly affects Boeing's stock, debt, and defense contracts, with implications for US industrial and defense markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent operational changes and investor sentiment, indicating immediate impact on Boeing’s performance."
+    },
+    "article_node": {
+      "id": "780TRIQBC",
+      "title": "Analysis-CEO pulled Boeing out of nosedive, but new challenges approach",
+      "summary": "Boeing CEO Kelly Ortberg has halted the company’s decline after a year in charge, improving 737 production, securing major contracts, and restoring investor confidence. Despite a 39% stock gain, Boeing still faces losses, debt, and challenges in defense and space programs. Ortberg’s next priorities are ramping 737 MAX output, developing a successor, and turning the company into a profitable, competitive leader.",
+      "source": "https://finance.yahoo.com/news/analysis-ceo-pulled-boeing-nosedive-100933660.html?_guc_consent_skip=1754648131",
+      "published_at": "2025-08-08T10:09:33+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "780TRIQBC"
+}

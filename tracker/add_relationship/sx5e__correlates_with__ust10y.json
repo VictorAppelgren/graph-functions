@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T13:58:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "ust10y",
+    "selection_motivation": "Euro Stoxx 50 is strongly influenced by global risk sentiment reflected in US 10‑year Treasury yields, which serve as a benchmark for equity valuations, making ust10y a key explanatory variable for sx5e.",
+    "candidate_motivation": "Euro Stoxx 50 is a European equity index whose performance is driven by European macro fundamentals (inflation, ECB policy, German benchmark yields), global risk sentiment (US Treasury yields, Fed policy, US inflation), FX rates, and commodity prices that affect corporate earnings. The following topics directly influence or strongly correlate with these drivers and therefore are likely to be peers, influences, or correlates of Euro Stoxx 50.",
+    "existing_links_count": "15",
+    "candidate_count": "38",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "38",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'us_services_pmi', 'us_unemployment_claims', 'fed_rate_cut_sept17_2025', 'fed_policy', 'bund10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'us_inflation', 'us_core_pce', 'euro_inflation', 'ecb_policy', 'dxy', 'usdcny', 'eurusd', 'gbpusd', 'usdjpy', 'spx', 'gold', 'wti', 'brent', 'wheat', 'copper', 'eu_defense_spending', 'us_sanctions_iranshipping', 'eur_at1_issuance', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'india_industrial_output', 'ba', 'sofr', 'jgb10y', 'euribor']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1200211499717494310",
+    "rel_id": "sx5e__correlates_with__ust10y",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 is strongly influenced by global risk sentiment reflected in US 10‑year Treasury yields, which serve as a benchmark for equity valuations, making ust10y a key explanatory variable for sx5e.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__correlates_with__ust10y"
+}

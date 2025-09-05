@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-09-05T10:41:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "drivers",
+    "test": "True",
+    "run_id": "eurusd__analysis_run__1757060785",
+    "drivers_count": "11",
+    "material_chars": "4781",
+    "output_chars": "662",
+    "saved": "False",
+    "saved_field": "drivers",
+    "status": "generated_no_save"
+  },
+  "details": {
+    "llm": {
+      "model": "bound=ChatOpenAI(client=<openai.resources.chat.completions.completions.Completions object at 0x10a50c890>, async_client=<openai.resources.chat.completions.completions.AsyncCompletions object at 0x10adf4690>, root_client=<openai.OpenAI object at 0x10a50c150>, root_async_client=<openai.AsyncOpenAI object at 0x10adf4210>, model_name='openai/gpt-oss-20b', temperature=0.3, model_kwargs={}, openai_api_key=SecretStr('**********'), openai_api_base='http://gate04.cfa.handels.gu.se:8787/v1', request_timeout=900.0, max_retries=0) kwargs={} config={} config_factories=[]",
+      "feedback": "The draft is overly verbose, repeats the same causal chain, and drifts into generic commentary on “risk‑on” and “war‑risk sentiment” without explicit links to DXY. Remove any sentence that merely states “war‑risk sentiment keeps the risk‑on environment elevated” unless you can tie it to a specific handle (e.g., DXY ↑ + 30 bp if war‑risk index ↑ 10 pts) with a citation. Consolidate the Fed‑policy, CPI, and spread sections into a single, linear transmission path: Fed policy → ust10y → DXY, and CPI/PCE → Fed stance → ust10y → DXY. Quantify each leg: e.g., “CPI > forecast by 0.2 pp → Fed keeps policy rate 0.25 pp higher → ust10y rises 5–10 bp → DXY lifts 30–50 bp” and cite (Z7O1DCHS7). Replace the repeated “PCE > 3 % or payrolls > expected will lift DXY 50–100 bp” with a single, precise range and citation (7XH2DKEKV). Drop the paragraph on “30‑year Treasury yield” unless you can show a direct DXY link (e.g., “ust30y rise 5 bp → DXY + 15 bp” with source). Ensure every claim has a handle mapping and a dated catalyst window: CPI 2025‑08‑15, Fed 2025‑09‑17, PCE 2025‑08‑30/31, 2‑yr/10‑yr spread 2025‑08‑31. Tighten the watch‑list to the three catalysts, state the expected direction and magnitude, and list the key risk: a Fed surprise cut on 2025‑09‑17. Finally, trim the paragraph to 4–5 sentences, each with a single causal link and inline citation.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__drivers__eurusd__analysis_run__1757060785"
+}

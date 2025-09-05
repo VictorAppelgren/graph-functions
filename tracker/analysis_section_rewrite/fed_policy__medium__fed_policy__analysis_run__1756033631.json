@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:09:12",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756033631",
+    "article_ids": "['SK994CBWR', 'Q7VVGNSQE', 'C22MKA9VY', 'SK994CBWR', 'Q7VVGNSQE']",
+    "selected_articles_count": "5",
+    "material_chars": "98831",
+    "output_chars": "4622",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft nails a timely macro backdrop but needs a formal, testable 3–6 month scenario map with explicit catalysts, invalidations, and numeric targets tied to the sources. Actionable edits: (1) structure as a tight base-case plus 1–2 alternative paths with probability weights (e.g., base-case 50–60%, alt1 25–35%, alt2 10–15) and end-state price targets; (2) anchor catalysts and timing: a policy regime shift toward easier conditions with rate cuts starting around Sep (50 bp) and total ~150 bp possible per C22MKA9VY, plus a rise in IPO activity (95 IPOs in 2025 raising about $12.9B vs 2024) per Q7VVGNSQE; explain how each would drive WFE capex and ACMR demand; (3) embed ACMR-specific triggers: Q3 order intake/backlog progression, Ultra C Wb/N2 bubbling tool ramp milestones, and revenue/margin trajectory to support the 2025 guidance (850–950m revenue; ~49% gross margin, 23% debt/equity) from SK994CBWR; (4) add clear invalidation signals: no Sep cuts, sustained export controls, or a weaker IPO cycle that dims visibility; (5) quantify implications: current ACMR price 30.53 vs consensus target 34.76; outline a plausible base-case path to 34–35 or higher on margin expansion and orders, while noting the longer-term 1.4B 2028 revenue estimate to contextualize upside; (6) tighten the link between macro regime shifts and ACMR’s micro dynamics so path-dependency is explicit rather than implied; (7) watch-list signals with thresholds: rate-path by Sep, IPO momentum (count/size), Russell 2000 vs S&P 500 relative performance, and ACMR’s stock movement versus the implied fair-value band (~$34–$35) as edges for reweighting probabilities; (8) improve citation discipline by tying each factual claim to the exact IDs (SK994CBWR for ACMR metrics and targets; Q7VVGNSQE for IPO/ Russell small-cap regime context; C22MKA9VY for Fed-rate/cycle views) and avoid stacking many IDs on a single clause; (9) maintain concise, world-class language and ensure the write-up ends with base case, alts, risks, watch-list signals, and a confidence note within the horizon; (10) if possible, include a one-line sensitivity table showing downside/upside under +/- 1–2 rate-cut scenarios and +/- 1 standard deviation IPO-flow changes, derived from the cited sources.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1756033631"
+}

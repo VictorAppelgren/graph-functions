@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T05:29:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "new_article_id": "T7HLAX8QN",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['FOA2XZ9D3', '7YQN9WX3K', 'I35H3FBSN', 'MW3AO9NFK']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not clearly supersede any existing article in the index, as no matching ID exists to be replaced and the content provides incremental market flavor rather than a definitive update to prior coverage."
+    }
+  },
+  "id": "us_10y__T7HLAX8QN__current"
+}

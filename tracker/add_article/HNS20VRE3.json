@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T19:21:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HNS20VRE3",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Fed policy shifts influence immigration enforcement and legal outcomes.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article describes legal developments—Supreme Court and federal judge orders affecting immigration policy and deportation procedures—making it a regulatory or legal change event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a high‑profile case involving Trump administration immigration enforcement, sparking debate and potentially influencing policy decisions."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events affecting the node."
+    },
+    "article_node": {
+      "id": "HNS20VRE3",
+      "title": "US seeks to deport Kilmar Abrego Garcia to Uganda after he refused plea offer in his smuggling case",
+      "summary": "Kilmar Abrego Garcia, a Salvadoran construction worker, was mistakenly deported to a notorious El Salvador prison in March 2024 despite a 2019 immigration judge’s order protecting him from return to his home country. After a Supreme Court order and mounting pressure, the Trump administration brought him back to the U.S. in June, where he faces federal human‑smuggling charges stemming from a 2022 traffic stop. His attorneys argue the charges are a pretext to justify another deportation, while federal judges have ordered that he not be immediately taken into ICE custody if released and have granted him a 30‑day stay of release to allow time for legal review. The case has become a flashpoint in the debate over Trump’s immigration policies, with his wife suing the administration and the government citing alleged gang ties to justify potential deportation to a third country such as Mexico or South Sudan.",
+      "source": "https://www.ajc.com/news/2025/08/us-seeks-to-deport-kilmar-abrego-garcia-to-uganda-after-he-refused-plea-offer-in-his-smuggling-case/",
+      "published_at": "2025-08-23T15:53:17.857000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "HNS20VRE3"
+}

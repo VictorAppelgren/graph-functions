@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T21:31:08",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DNQRVPIRR",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Fed policy shifts on domestic law enforcement may ripple into market sentiment and risk premiums.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports official statements and directives from federal and local policymakers regarding deployment of the National Guard and law‑enforcement roles, fitting the policy_statement category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Impact uncertain due to lack of node context, but article relates to US federal authority over domestic law enforcement, which could influence US political risk and markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent political decision and its immediate implications for federal and local law enforcement."
+    },
+    "article_node": {
+      "id": "DNQRVPIRR",
+      "title": "Noem defends deployment of the National Guard in U.S. cities.",
+      "summary": "Kristi Noem defended President Trump’s deployment of the National Guard to quell protests in Los Angeles and is advocating similar moves in Chicago and other Democratic‑leaning cities. Trump has directed the Defense Department to take a larger role in domestic law enforcement, citing the LA deployment as a model. Chicago Mayor Brandon Johnson has issued an executive order rejecting federal troop deployment and demanding local police not assist, citing constitutional rights. The debate highlights tensions between federal authority and local autonomy over civil unrest.",
+      "source": "https://www.nytimes.com/live/2025/08/31/us/trump-news/noem-defends-deployment-of-the-national-guard-in-us-cities",
+      "published_at": "2025-08-31T12:54:39+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "DNQRVPIRR"
+}

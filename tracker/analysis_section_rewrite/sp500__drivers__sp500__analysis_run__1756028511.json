@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:48:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756028511",
+    "drivers_count": "4",
+    "material_chars": "1717",
+    "output_chars": "2627",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Overall, the draft is directionally solid in tying a cloud/AI growth regime to earnings visibility and higher platform multiples, but it flattens the causal chain, underdelivers on scenario structure, and includes some unsupported phrasing and weak linkage to the cited sources; it also misses a crisp watch-list and clear invalidation triggers. Actionable edits: (1) reconstitute a clean, explicit causal chain from the sources: 0G3A676BP anchors a 21.2% CAGR to 2030; cloud capex moats and data advantages drive durable earnings visibility, which justifies higher multiples for platform leaders, with long-run FCF supported by the labor-channel productivity signal (35.95% vs 17.18% for the Russell 1000 Equal) cited from 0G3A676BP and 4LQD15CFU; tie each step to a source ID. (2) formalize a multi-scenario framework (base/upside/downside) with explicit triggers and probabilities, e.g., base-case inflation contained with 50bp September cut and 150–175bp easing by year-end (0G3A676BP); upside if faster AI productivity raises capex data and labor momentum; downside if inflation surprises or policy stance shifts; quantify expected range impacts on risk premia and multiples where possible from the sources. (3) quantify every assertion drawn from sources and fix vague terms: replace “personnelists” language with a sourced descriptor and ensure all claims cite their IDs (e.g., 0G3A676BP for the macro base-case; TN66GHPAT for dividend yields; 12–18% JUST Premium from 4LQD15CFU). (4) strengthen the EURUSD section by a tight, four-regime mapping that explicitly links each regime (AI-driven capex, governance/friction, consumer-margin dynamics, policy shocks) to observed or implied moves in risk premia and valuations, citing 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG; avoid generic statements and show mechanism. (5) add a concise, decisive watch-list with 4–6 signals and explicit thresholds: inflation prints, central-bank guidance, AI capex data, labor-force momentum, cross-asset flows in EURUSD, and any regime-crossing shifts; attach trigger levels where the sources imply them. (6) resolve potential conflicts across sources by stating where estimates are robust vs where they hinge on policy luck or AI productivity pace, and present a single, explicit horizon (5–7 years) with clearly delineated formality for the base-case. (7) tighten prose to remove duplications and ensure every sentence contributes to a testable narrative, with minimal hedging and no extraneous claims; maintain a tight, source-backed linkage from macro to policy to flows to valuation/technicals.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756028511"
+}

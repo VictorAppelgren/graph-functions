@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T22:44:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LPTBBC012",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; AI growth fuels tech sector, lifting S&P 500.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": [
+        "AI Growth"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a significant funding round for Anthropic, detailing the capital raised and its intended use, which constitutes a company update rather than earnings, regulation, or macro data."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided, so relevance to the node cannot be assessed."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent funding round and immediate growth metrics for Anthropic, indicating a current event affecting the node."
+    },
+    "article_node": {
+      "id": "LPTBBC012",
+      "title": "Anthropic Valued at $183 Billion Amid ‘Exponential Growth in Demand’",
+      "summary": "Anthropic closed a $13 billion Series F round that values the AI startup at $183 billion, led by ICONIQ and co‑led by Fidelity and Lightspeed. The funding follows a dramatic run‑rate revenue jump from roughly $1 billion at the start of 2025 to over $5 billion in August, with Claude Code generating $500 million in run‑rate revenue. Anthropic plans to use the capital to expand compute capacity, deepen safety research and accelerate international expansion, while its enterprise customer base has grown to more than 300 000 accounts. The round underscores strong investor confidence in Anthropic’s rapid growth and its position as a leading enterprise AI platform.",
+      "source": "https://www.pymnts.com/artificial-intelligence-2/2025/anthropic-valued-at-183-billion-amid-exponential-growth-in-demand/",
+      "published_at": "2025-09-02T19:37:41+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 1
+    }
+  },
+  "id": "LPTBBC012"
+}

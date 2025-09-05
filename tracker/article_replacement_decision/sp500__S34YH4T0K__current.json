@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T00:56:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "S34YH4T0K",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['JIOBA1VPM', 'HE99QDK4J', '261HLL6EA', 'YX2X8JAIX', 'OB27SL8WU', '73G2X5JK2', 'UU5VNHJ8B', 'PRXJA922H']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article on Home Depot Pro Xtra loyalty program exists, so the new article adds unique content rather than superseding anything."
+    }
+  },
+  "id": "sp500__S34YH4T0K__current"
+}

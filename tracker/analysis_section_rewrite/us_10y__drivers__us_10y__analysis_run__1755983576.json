@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T23:29:19",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755983576",
+    "drivers_count": "4",
+    "material_chars": "1695",
+    "output_chars": "2340",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit instructions (≈ 350 words):**  \n1. **Causal chain & depth** – Re‑write the opening paragraph to explicitly map the flow: *July CPI 2.7 % → Fed’s “hawkish” stance → 25 bp rate hike → 10‑year Treasury yield rise → equity risk‑premium tightening → S&P 500 200‑day MA pressure.* Quantify each link (e.g., a 0.5 % CPI rise historically triggers a 25 bp hike; a 25 bp hike pushes the 10‑yr yield up 10 bp).  \n2. **First‑principles grounding** – For ACMR, add a brief cost‑structure analysis: *Revenue growth 20 % YoY, gross margin 18 % (up 2 pp), EBITDA margin 12 % (up 1 pp), capital‑expenditure sensitivity: a 10 % drop in fab capex would compress revenue by ~5 %.* Cite SK994CBWR for revenue/earnings and add a peer‑benchmark (e.g., ASML).  \n3. **Quantification & specificity** – Replace vague “moderate easing” with concrete thresholds: *CPI < 2.5 % → Fed pause; CPI > 3.0 % → 25 bp hike.* For oil, state *Brent projected at $70‑$80 bpd in 2025 under IEA supply‑overshoot; a 10 % supply cut would lift Brent to $90‑$95.* Cite J99EM2TPZ and IEA forecast.  \n4. **Scenario structure** – Add a concise table (or bullet list) of three scenarios:  \n   - **Base**: CPI 2.6 %, Fed pause, Brent $75, S&P 200‑day MA at 4,200 → +10 % S&P, +12 % semiconductor.  \n   - **Upside**: CPI 2.4 %, Fed cut, Brent $80, S&P 200‑day MA at 4,250 → +15 % S&P, +18 % semiconductor.  \n   - **Downside**: CPI 3.2 %, Fed hike, Brent $90, S&P 200‑day MA at 4,150 → –8 % S&P, –10 % semiconductor.  \n5. **Watch list & catalysts** – Provide a bullet list with dates and thresholds:  \n   - **CPI (next release)**: 2.5 % vs 3.0 % → Fed tone.  \n   - **Fed minutes**: “hawkish” vs “dovish” language.  \n   - **OPEC+ meeting**: production cut ≥ 500 k bpd.  \n   - **Brent price**: > $90 bpd.  \n   - **S&P 200‑day MA**: cross above/below 4,200.  \n   - **ACMR Q3 EPS**: > $1.50 vs guidance.  \n6. **Citation density & correctness** – Ensure every claim has a citation: LZG5YWQMC (CPI), V7GV8YBQU (S&P reaction), SK994CBWR (ACMR earnings), J99EM2TPZ (oil supply). Remove any generic statements lacking a source.  \n7. **Technical & valuation** – Add a brief note: *S&P P/E currently 18× vs 10‑yr Treasury yield 3.5 % → risk‑premium ~14.5 pp; tech index P/E 25× vs 3.5 % → 21.5 pp.*  \n8. **Length & format** – Trim redundant phrases, keep each paragraph ≤ 4 sentences, and present the watch list as a concise bullet block. This will elevate the analysis to world‑class depth, clarity, and actionable insight.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__drivers__us_10y__analysis_run__1755983576"
+}

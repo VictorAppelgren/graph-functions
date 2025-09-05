@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:21:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "core_monthly_cpi",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "core_monthly_cpi__analysis_run__1756073668",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "13986",
+    "output_chars": "1114",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Tighten the CPI-to-market transmission by mapping the Citi/JP Morgan 0.25–0.30%, 0.30–0.35%, 0.35–0.40%, and >0.40% MoM core CPI bands to distinct S&P moves and policy reactions (GB4W1L6J1); What to watch: implement a crisp four-band trigger anchored by GB4W1L6J1 and validate with 22PL3Q360 auto-margin sensitivities (22PL3Q360). Probability 72%.\n\nUp | 3–6 months | Make Tariff-Stress path explicit with quantified transitions around the MoM CPI bands and EV-margin headwinds (22PL3Q360, RHFWI02JT); What to watch: tie auto-cycle margins and valuation re-ratings to these sources (22PL3Q360)(RHFWI02JT). Probability 60%.\n\nDown | 0–3 weeks | Prune non-actionable Strip/Perez narrative and reframe toward regime-relevant value-based pricing signals; What to watch: ensure alignment with core CPI anchor and Jackson Hole signals (6OOEK8TUR). Probability 30%.\n\nDown | 3–6 months | Add explicit Regime III trigger and invalidation rules (e.g., sustained core CPI >0.40% MoM or lasting negative productivity shock) with clear linkages to SGB2PAZGK and RHFWI02JT; What to watch: recalibrate base-case probabilities and price ranges to reflect regime-transition risks (SGB2PAZGK)(RHFWI02JT). Probability 40%.",
+      "tokens": {}
+    }
+  },
+  "id": "core_monthly_cpi__movers_scenarios__core_monthly_cpi__analysis_run__1756073668"
+}

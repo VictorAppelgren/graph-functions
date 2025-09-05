@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:28:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_relations",
+    "target_id": "us_china_trade_war_2025",
+    "selection_motivation": "US-China Trade Relations directly shape the likelihood and intensity of a trade war in 2025. This link is critical for forecasting macro disruptions and sectoral impacts.",
+    "candidate_motivation": "These topics are the closest policy, negotiation, and technology focal points that shape the US-China trade relationship and could strongly influence or correlate with its dynamics. They include tariff instruments, export controls, AI/semiconductor policy, and ongoing negotiation status.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_trade_talks', 'us_china_trade_truce', 'china_us_tariff_truce', 'us_tariffs_semiconductors', 'us_chip_export_controls', 'us_export_policy_ai_chips', 'us_china_ai_chip_exports', 'us_china_supply_chain_risks', 'us_tariffs_on_technology', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_supply_chain_risks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255328244",
+    "rel_id": "us_china_trade_relations__influences__us_china_trade_war_2025",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_relations', 'target': 'us_china_supply_chain_risks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China Trade Relations directly shape the likelihood and intensity of a trade war in 2025. This link is critical for forecasting macro disruptions and sectoral impacts.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_relations",
+      "target": "us_china_trade_war_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_relations__influences__us_china_trade_war_2025"
+}

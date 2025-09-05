@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T09:33:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "LXG6S7K3Y",
+    "status": "rejected",
+    "reject_category": "micro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights OpenAI's strategic expansion into India, a key emerging market for AI, necessitating a new node to track developments in this significant geography for macro and investment analysis.",
+      "id": "india_ai_market",
+      "name": "India AI Market",
+      "type": "geography",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "micro_driver",
+      "motivation": "Expand market presence and access to talent in India"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Topic focuses on the AI industry in India, an industry vertical rather than a macro driver or tradable asset, so it does not meet the macro relevance criteria.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

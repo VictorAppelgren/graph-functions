@@ -1,0 +1,68 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T18:42:02",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XN3QOOGBD",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US and global bond yields, Fed policy outlook, and tech antitrust outcome influence rate expectations and equity sentiment.",
+      "existing_ids": [
+        "ust10y",
+        "ust30y",
+        "ust2y",
+        "jgb10y",
+        "fed_policy",
+        "gold",
+        "wti",
+        "brent",
+        "copper",
+        "spx",
+        "sx5e",
+        "dxy",
+        "eurusd",
+        "gbpusd",
+        "usdjpy",
+        "euribor",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "us_crude_inventory",
+        "ust5y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports a significant bond market selloff with yields approaching 5%, indicating a macroeconomic event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified, cannot assess relevance"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article discusses immediate market events—bond sell‑offs, a judge’s ruling, and equity jumps—alongside short‑term expectations for Fed cuts, focusing on current market dynamics rather than long‑term fundamentals."
+    },
+    "article_node": {
+      "id": "XN3QOOGBD",
+      "title": "Global Bond Selloff; Google Avoids Chrome Sale in Antitrust Case",
+      "summary": "Global bond markets continue to sell off, with 30‑year yields approaching 5% and the 10‑year rising 2.5 bp, but no clear relief. A U.S. judge ruled Google need not divest its Chrome browser, sparking a 5% jump in Alphabet shares and a lift in Apple. HSBC’s Max Kettner argues the bond move is not contagion, while Clear Harbor’s Aaron Kennon projects five to six Fed rate cuts by December 2026. Petrobras CEO Magda Chambriard says Asian demand could offset U.S. trade‑war pressures. Overall, markets are navigating bond volatility, tech antitrust outcomes, and macro‑policy expectations.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-03/bloomberg-brief-9-3-2025-video?srnd=phx-technology",
+      "published_at": "2025-09-03T11:27:04.654000+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 22,
+      "successful": 22
+    }
+  },
+  "id": "XN3QOOGBD"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T14:44:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JIA2HRVV2",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Article discusses Apple's redesign of the Camera Control button, which relates to technology trends and consumer electronics, but lacks direct connections to existing nodes.",
+      "existing_ids": [],
+      "new_names": [
+        "Apple Camera Control",
+        "iPhone 18",
+        "consumer electronics redesign"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses a redesign of Apple's Camera Control button, which is a product update from the company."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article reports a minor hardware design change for the iPhone 18, which is unlikely to have significant macro-economic impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a design change for a future iPhone model, indicating a medium-term product development update."
+    },
+    "article_node": {
+      "id": "JIA2HRVV2",
+      "title": "Camera Control is being redesigned for iPhone 18, not abandoned",
+      "summary": "Recent leaks suggest that Apple will retain a redesigned version of the Camera Control button in the iPhone 18, contrary to earlier claims of its removal. The new design aims to simplify the button by eliminating its capacitive functionality, making it solely pressure-sensitive to reduce manufacturing and servicing costs. While the button is reportedly underused, the revised version will still support touch, long press, and swipe gestures.",
+      "source": "https://appleinsider.com/articles/25/08/22/camera-control-is-being-redesigned-for-iphone-18-not-abandoned",
+      "published_at": "2025-08-22T11:33:41+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "JIA2HRVV2"
+}

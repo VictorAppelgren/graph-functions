@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T22:25:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TI4UI3LDQ",
+    "status": "success",
+    "topic_id": "imf"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the imf node.",
+      "existing_node_ids": "imf",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No article summary provided, unable to determine relevant category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to lack of article summary."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess the article's time frame due to lack of content."
+    },
+    "article_node": {
+      "id": "TI4UI3LDQ",
+      "title": "No, taxpayers will not receive new stimulus checks this summer",
+      "summary": "The article debunks a rumor that the IRS will issue new stimulus checks this summer, explaining that no legislation authorizes such payments and that the IRS has no plans to distribute them. It reviews the history of COVID‑19 stimulus payments, noting that all prior rounds were enacted by Congress and administered by the Treasury and IRS. The piece also details the Recovery Rebate Credit, a refundable credit for taxpayers who missed earlier payments, and explains how the IRS is automatically sending about $2.4 billion to eligible individuals who failed to claim it on their 2021 returns. Finally, it reminds taxpayers that to receive any remaining credit they must file a 2021 return by April 15 2025.",
+      "source": "https://www.inquirer.com/business/rumor-false-stimulus-checks-goverment-taxpayers-20250816.html",
+      "published_at": "2025-08-15T15:12:21-04:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "TI4UI3LDQ"
+}

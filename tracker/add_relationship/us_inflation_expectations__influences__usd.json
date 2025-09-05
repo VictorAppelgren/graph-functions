@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T10:18:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_expectations",
+    "target_id": "usd",
+    "selection_motivation": "US inflation expectations directly shape expectations of future monetary policy and economic growth, which are primary drivers of the US dollar’s value against other currencies.",
+    "candidate_motivation": "US Inflation Expectations is driven by and closely linked to monetary policy, bond markets, currency strength, commodity prices, equity indices, and actual inflation data, so topics that influence or correlate with these variables are the most plausible candidates.",
+    "existing_links_count": "6",
+    "candidate_count": "15",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_10y', '30yr_tips_auction', 'lower_interest_rates', 'usd', 'eur', 'oil', 'gold', 'wheat', 'sp500', 'eurostoxx50', 'us_inflation', 'euro_inflation', 'us_inflation_impact_on_bitcoin']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': '30yr_tips_auction'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255331179",
+    "rel_id": "us_inflation_expectations__influences__usd",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_expectations', 'target': '30yr_tips_auction'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US inflation expectations directly shape expectations of future monetary policy and economic growth, which are primary drivers of the US dollar’s value against other currencies.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_expectations",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_expectations__influences__usd"
+}

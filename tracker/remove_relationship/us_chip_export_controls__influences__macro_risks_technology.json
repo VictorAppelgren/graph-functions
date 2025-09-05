@@ -1,0 +1,63 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-24T22:50:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_export_controls",
+    "target_id": "macro_risks_technology",
+    "selection_motivation": "This link is the weakest because it is a generic macro risk node with no direct evidence linking US Chip Export Controls to broader technology risks, whereas the new tariff link has stronger, more specific evidence.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link is the weakest because it is a generic macro risk node with no direct evidence linking US Chip Export Controls to broader technology risks, whereas the new tariff link has stronger, more specific evidence.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_sales_to_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_ai_chip_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118475058",
+    "rel_id": "us_chip_export_controls__influences__macro_risks_technology",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_sales_to_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_ai_chip_exports'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_chip_export_controls",
+      "target": "macro_risks_technology"
+    },
+    "prioritized_link": {
+      "motivation": "US Chip Export Controls directly shape U.S. tariff policy on technology, which in turn affects global supply chains and market dynamics.",
+      "type": "INFLUENCES",
+      "source": "us_chip_export_controls",
+      "target": "us_tariffs_on_technology"
+    },
+    "llm_raw_response": {
+      "motivation": "This link is the weakest because it is a generic macro risk node with no direct evidence linking US Chip Export Controls to broader technology risks, whereas the new tariff link has stronger, more specific evidence.",
+      "remove_link": "macro_risks_technology"
+    },
+    "removal_decision": {
+      "motivation": "This link is the weakest because it is a generic macro risk node with no direct evidence linking US Chip Export Controls to broader technology risks, whereas the new tariff link has stronger, more specific evidence.",
+      "remove_link": "macro_risks_technology"
+    },
+    "source_node": {
+      "last_updated": "2025-08-24T18:14:40.254000000+00:00",
+      "implications": "",
+      "level": "main",
+      "current_analysis": "",
+      "importance": 1,
+      "query": "(Nvidia OR NVDA OR 'Nvidia Corporation' OR 'Nvidia chip' OR 'Nvidia sales' OR 'Nvidia revenue') OR (AMD OR 'Advanced Micro Devices' OR 'AMD chip' OR 'AMD sales' OR 'AMD revenue') OR (China OR 'Chinese market' OR 'China sales' OR 'China technology') OR (export OR exports OR 'export controls' OR 'export licenses' OR 'export tax' OR 'export revenue') OR (agreement OR deal OR arrangement OR negotiation OR 'U.S. government' OR Trump OR 'Trump administration') OR (national security OR 'security concerns' OR 'national interest') OR (artificial intelligence OR AI OR 'AI technology' OR 'AI development') OR (revenue OR 'sales revenue' OR '15% cut' OR 'tax revenue') OR (market OR markets OR 'market impact' OR 'market analysis' OR 'financial implications') OR (news OR update OR report OR analysis OR trend OR 'recent developments')",
+      "motivation": "The article discusses a significant agreement involving U.S. chip sales to China, which introduces a new macroeconomic dynamic regarding export controls and national security that warrants a dedicated node.",
+      "last_queried_at": "2025-08-13T15:15:10+00:00",
+      "importance_rationale": "US Chip Export Controls is a macro-level policy that directly influences the semiconductor supply chain and can trigger immediate market reactions in related equities, commodities, and currency pairs. Its impact is time-sensitive and high-priority for intraday monitoring.",
+      "type": "macro",
+      "fundamental_analysis": "The multi‑year regime governing IntelOrbis Graph’s macro view can be anchored in four invariant principles and a four‑pillar US‑led technology strategy. The invariants are (i) AI computing leadership hinges on access to premier silicon and able manufacturing via allied supply chains; (ii) the breadth of the AI infrastructure stack—chips, memory, interconnects, software, and deployed workloads—sets the pace and the scale of capability; (iii) sustained private‑capital incentives from large U.S. programs (e.g., CHIPS/IRA) are essential to scale and de‑risk deployment; and (iv) reciprocal alliance enforcement is required to sustain the leverage over time. These anchors map directly to the core policy architecture described in the public‑policy record: a four‑pillar program (invest in science/tech ecosystems, nurture top STEM talent, protect technology advantages, deepen alliances) backed by substantial public funding and tight alliance coordination, including long‑run export‑control discipline and cross‑border supply‑chain cooperation (Z244I6NYO). The combination of these anchors underpins a coherent, multi‑year framework that policymakers view as capable of sustaining a large lead in computing power and AI capabilities, not merely imposing incremental restrictions (Z244I6NYO).\n\nWithin this framework, the regime can be parsed into three states: Baseline, Escalation, and Breakpoint. In Baseline, allied cooperation remains robust, export controls stay in force, and China proceeds with its domestic upgrade at a slow burn while remaining tethered to U.S./allied access constraints; the transmission channels are export controls, allied manufacturing leverage (notably ASML and Tokyo Electron—Netherlands/Japan), and ramped private‑capital investment from CHIPS/IRA that funds AI infra. In Escalation, leakage through allied loopholes or a faster Chinese domestic capacity buildup prompts tighter controls and more aggressive enforcement, with countervailing mechanisms such as intensified control lists and security guardrails; this regime also sees China press back on instruments such as rare‑earth/magnet leverage, a dynamic covered in the policy discourse around magnets and critical minerals (e.g., rare earth controls) and China’s domestic fab push (5LXJQX4FN; 30BKAWRYF; Z244I6NYO). A Breakpoint would reflect a material shift in alliance participation or a breakthrough in China’s leading‑edge fabs that re‑spreads the pricing/availability calculus for high‑end silicon, potentially triggering abrupt re‑pricing of Nvidia/AMD exposure and a reconfiguration of global AI infrastructure—a scenario that would be signaled by legal/operational shifts in export licensing, alliance commitments, and new capital flows (ZCJ6L84JV; Z244I6NYO). The causal chain runs from policy to markets through three levers: export controls (the Oct‑2022 Nvidia/H100 wave and 2023–24 tightens to close loopholes; Z244I6NYO), allied manufacturing leverage (ASML/Tokyo Electron cooperation and related enforcement), and private‑capital mobilization (CHIPS Act/IRA scale) that funds AI infra—these channels collectively feed into Nvidia/AMD pricing dynamics, licensing considerations, and investor risk reassessment (Z244I6NYO)(ZCJ6L84JV). China’s adaptive response—urging local firms away from certain U.S. chips and accelerating domestic chip efforts—adds a parallel channel that reinforces the strategic logic of rare‑earth/magnet leverage in the bargaining set (5LXJQX4FN)(30BKAWRYF). The base case assumes durable allianceCoordination and continued private‑capital fulcrums, with China’s domestic upgrade advancing but not fully displacing U.S./ally lead; the principal risks include legal or political pushback to revenue‑sharing/licensing constructs, a faster‑than‑anticipated Chinese fab breakthrough, and a broader partner‑de risking by major allies if costs rise materially (ZCJ6L84JV)(Z244I6NYO)(5LXJQX4FN). Watch items include any new export controls or sign‑offs by allies (Japan/Netherlands/ASML), shifts in Nvidia/AMD licensing trajectories, and China’s rare‑earth/magnet policy dynamics that could alter the supply‑chain calculus for AI hardware (Z244I6NYO)(30BKAWRYF)(5LXJQX4FN). Overall, the structural anchors remain credible, but the timing and intensity of China’s countermeasures and U.S. policy adjustments will determine how quickly and how large the recalibration of AI hardware equity pricing and CAPEX cycles unfolds (Z244I6NYO)(ZCJ6L84JV)(5LXJQX4FN).",
+      "queries": 6,
+      "parent_id": "UKBOHZ",
+      "name": "US Chip Export Controls",
+      "id": "us_chip_export_controls",
+      "last_queried": "2025-08-24T14:01:18.824000000+00:00",
+      "medium_analysis": "",
+      "status": "active"
+    }
+  },
+  "id": "us_chip_export_controls__influences__macro_risks_technology"
+}

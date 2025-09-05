@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T23:11:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756674718",
+    "article_ids": "['LF0UUL917', 'HYJA10SKI', '4PRAW7Z7Y', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "149980",
+    "output_chars": "1326",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable feedback**\n\n1. **Canonical‑handle mapping** – Mortgage rates are not a listed canonical handle. Map the view to a proxy that is in the canonical list, e.g. **ust10y** (10‑yr U.S. Treasury yield) with a *positive* sign and a magnitude range of **+0.5 % to +1.0 %** relative to the 10‑yr yield. Add an inline citation: `(LF0UUL917)` after the sentence that links mortgage rates to the 10‑yr yield.  \n2. **Explicit catalyst window** – Insert a dated catalyst window:  \n   - **Sept 2024**: Fed cuts (three 25‑bp cuts) → QT → 10‑yr yield ↑ → mortgage rates ↑.  \n   - **Sept 16‑17 2025**: Next FOMC meeting → potential policy shift.  \n   Cite the source for the cuts and QT: `(HYJA10SKI)`.  \n3. **Causal chain clarity** – Re‑phrase the paragraph to state the transmission path explicitly: Fed cuts → balance‑sheet contraction → higher 10‑yr yields → higher mortgage spreads → mortgage rates. Use bullet or numbered steps if possible.  \n4. **Magnitude & horizon** – Provide a concise base‑case forecast: mortgage rates will **hover at ~7 %** through 2025–2026, with a **possible 0.5–1.0 % decline** in late 2026 if the Fed halts cuts and inflation eases. Cite `(LF0UUL917)` for the 7 % range and `(HYJA10SKI)` for the policy‑shift scenario.  \n5. **Risk & invalidation** – Add a short risk paragraph: a sudden Fed rate hike, a spike in inflation expectations, or accelerated Treasury issuance could widen the spread and push rates higher. Cite `(LF0UUL917)` for each risk.  \n6. **Remove drift** – The draft is focused on mortgage rates; ensure no extraneous references to other assets or topics.  \n7. **Citation density** – Add inline citations after every substantive claim (e.g., after “Fed cuts paradoxically pushed Treasury yields higher” use `(HYJA10SKI)`).  \n\nImplementing these edits will satisfy the acceptance gate (canonical handle + catalyst) and align the analysis with the required concise, actionable, and defensible style.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__fundamental__fed_policy__analysis_run__1756674718"
+}

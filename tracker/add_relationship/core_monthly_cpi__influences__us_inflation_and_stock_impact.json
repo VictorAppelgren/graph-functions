@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:20:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "core_monthly_cpi",
+    "target_id": "us_inflation_and_stock_impact",
+    "selection_motivation": "Core monthly CPI is a primary driver of overall inflation expectations, which directly shape the broader stock market reaction to inflation, making a direct influence link to the US Inflation and Stock Market Impact node essential for accurate market analytics.",
+    "candidate_motivation": "Core Monthly CPI is tightly linked to inflation readings and monetary policy signals; strong influences include US and Euro area inflation metrics, core CPI measures, and policy/yield indicators that steer price dynamics.",
+    "existing_links_count": "6",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'core_cpi', 'us_inflation_data', 'fed_policy', 'ecb_policy', 'us_10y', 'us_inflation_stock_impact', 'us_inflation_impact_on_healthcare_stocks', 'usd']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'cpi_impact_on_treasuries'}, {'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation_expectations'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'Core monthly CPI is a primary driver of overall inflation expectations, which directly shape the broader stock market reaction to inflation, making a direct influence link to the US Inflation and Stock Market Impact node essential for accurate market analytics.', 'type': 'INFLUENCES', 'source': 'core_monthly_cpi', 'target': 'us_inflation_and_stock_impact'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Core monthly CPI is a primary driver of overall inflation expectations, which directly shape the broader stock market reaction to inflation, making a direct influence link to the US Inflation and Stock Market Impact node essential for accurate market analytics.",
+      "type": "INFLUENCES",
+      "source": "core_monthly_cpi",
+      "target": "us_inflation_and_stock_impact"
+    }
+  },
+  "id": "core_monthly_cpi__influences__us_inflation_and_stock_impact"
+}

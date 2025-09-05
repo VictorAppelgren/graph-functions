@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-09-01T00:10:16",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "FP1RX9J2V",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['8HP2SSE7G', 'ZUXOHE4Q9', '56DSYR7J6', 'LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE', '3YAQ8JUPL', '4VN4UTWX1', '1G54B8R46']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "4VN4UTWX1",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article does not map to a canonical market handle (stocks are not in the canonical list) and therefore fails the mapping requirement, so it should not be added."
+    }
+  },
+  "id": "spx__FP1RX9J2V__current"
+}

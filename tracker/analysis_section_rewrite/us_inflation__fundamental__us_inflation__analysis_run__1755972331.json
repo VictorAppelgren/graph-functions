@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T20:05:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1755972331",
+    "article_ids": "['JVKCZAPVG', 'P0K0UEOHU', '3GW34ISLC', 'BAAVVG964', 'EETJ5BIEJ']",
+    "selected_articles_count": "5",
+    "material_chars": "171213",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "fundamental_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (keep within the 1‑page limit):**  \n\n1. **Quantify the Ford case** – add the 1973–1976 sales figures (459,057 vs 253,096 units) and the 13 MPG/19 MPG fuel‑economy data from JVKCZAPVG; cite the source ID.  \n2. **Anchor the structural shift** – explicitly state the real‑rate differential and terms‑of‑trade shock from the 1973 oil crisis, and link to the emissions‑regulation trigger (JVKCZAPVG).  \n3. **Rivian/Tesla comparison** – insert concrete numbers: Rivian’s $7.5 bn cash, $6.6 bn DOE loan, R2 price ~$45k, projected 2027 EBITDA breakeven; Tesla’s Q2 deliveries (drop 10‑15 %), gross margin 17.9 % (2024) and free cash flow $146 m (P0K0UEOHU). Cite IDs.  \n4. **Amazon/Shopify metrics** – add 2024 revenue ($107 bn for Amazon, $5.5 bn for Shopify), free‑cash‑flow growth (Amazon +12 %, Shopify +27 %) and AI‑driven margin lift (Amazon 17 % vs 10 % pre‑AI, Shopify 16 % margin) from BAAVVG964 & EETJ5BIEJ.  \n5. **Macro fundamentals** – include the 2025 safe‑withdrawal‑rate shift to 4.7 % (Morningstar) and the 3GW34ISLC discussion on real‑rate hikes, tariff escalation, and tax‑credit phase‑out.  \n6. **Causal chain diagram** – add a one‑sentence flow: “Oil‑crisis & emissions → consumer shift to compact, fuel‑efficient cars → Ford’s platform lock‑in → Torino discontinuation (JVKCZAPVG).”  \n7. **Risk & watch‑list table** – list: tariff escalation, AI adoption pace, supply‑chain bottlenecks, robotaxi regulatory approval; tick each with a brief trigger and source ID.  \n8. **Citation density** – ensure every key claim has an inline ID (e.g., “Rivian’s R2 launch is expected to hit 2027 EBITDA breakeven (P0K0UEOHU)”).  \n9. **Reconcile conflicts** – if any source gives divergent delivery numbers (e.g., Rivian 51,579 vs 46,000‑51,000 projected), note the range and explain the variance.  \n10. **Conclusion paragraph** – summarize the base case (Rivian > Tesla, Amazon/Shopify > peers) and confidence level, referencing the macro‑fundamental anchors.  \n\nImplement these edits to elevate depth, clarity, and first‑principles rigor while keeping the analysis concise and fully sourced.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1755972331"
+}

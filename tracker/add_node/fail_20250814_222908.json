@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:28:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2TRAKC7R4",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the end of the partnership between Target and Ulta Beauty, which is significant for understanding retail dynamics and consumer behavior in the beauty sector, warranting a new atomic node.",
+      "id": "target_ulta_partnership",
+      "name": "Target and Ulta Beauty Partnership",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "The topic concerns a corporate partnership between Target and Ulta Beauty, focusing on company-level strategic decisions and retail dynamics."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific retail partnership is an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

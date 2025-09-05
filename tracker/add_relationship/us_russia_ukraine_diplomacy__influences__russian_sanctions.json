@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:05:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_russia_ukraine_diplomacy",
+    "target_id": "russian_sanctions",
+    "selection_motivation": "US‑Russia diplomatic relations directly shape the intensity and scope of Russian sanctions, a key policy lever affecting Ukraine’s economic and security environment.",
+    "candidate_motivation": "These topics are the strongest geopolitical and policy-connected peers or influences on US-Russia diplomacy regarding Ukraine, spanning diplomacy, sanctions, regional stability, and peace negotiations.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ukraine_diplomacy', 'ukraine_geopolitics', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_conflict', 'donbas_region', 'russia_economic_crisis', 'russian_sanctions', 'eu_geopolitics_ukraine', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_ukraine_diplomacy', 'target': 'ukraine_conflict'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217664",
+    "rel_id": "us_russia_ukraine_diplomacy__influences__russian_sanctions",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_russia_ukraine_diplomacy', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'us_russia_ukraine_diplomacy', 'target': 'russian_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US‑Russia diplomatic relations directly shape the intensity and scope of Russian sanctions, a key policy lever affecting Ukraine’s economic and security environment.",
+      "type": "INFLUENCES",
+      "source": "us_russia_ukraine_diplomacy",
+      "target": "russian_sanctions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_russia_ukraine_diplomacy__influences__russian_sanctions"
+}

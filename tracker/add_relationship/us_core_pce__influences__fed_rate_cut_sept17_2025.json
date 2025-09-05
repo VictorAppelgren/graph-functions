@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T13:55:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_core_pce",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "US Core PCE is the key inflation gauge that drives Fed policy decisions; a scheduled rate cut on Sept 17 2025 is contingent on core PCE trends, making the influence link essential for policy‑impact modeling.",
+    "candidate_motivation": "US Core PCE is a core inflation gauge that directly influences Fed policy expectations, Treasury yields, the dollar, and broader macro sentiment. Topics that track inflation, monetary policy, yield curves, and related macro indicators are therefore strong peers or influencers.",
+    "existing_links_count": "14",
+    "candidate_count": "11",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'us_core_pce', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:7250796499578127085",
+    "rel_id": "us_core_pce__influences__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'us_core_pce', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Core PCE is the key inflation gauge that drives Fed policy decisions; a scheduled rate cut on Sept 17 2025 is contingent on core PCE trends, making the influence link essential for policy‑impact modeling.",
+      "type": "INFLUENCES",
+      "source": "us_core_pce",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_core_pce__influences__fed_rate_cut_sept17_2025"
+}

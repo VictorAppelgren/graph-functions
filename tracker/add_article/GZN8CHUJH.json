@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T11:54:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GZN8CHUJH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Italy's July job creation lifts Euro Stoxx 50 modestly, but weak growth tempers upside.",
+      "existing_ids": [
+        "sx5e"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports Italy’s July unemployment rate, a major macroeconomic data release (jobs report)."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a new unemployment figure for Italy, directly affecting the Italy unemployment node, indicating modest labor market improvement amid weak growth."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports recent labor market statistics for Italy, reflecting immediate changes in unemployment and employment."
+    },
+    "article_node": {
+      "id": "GZN8CHUJH",
+      "title": "Italy July jobless rate falls to 6.0%, with 13,000 jobs created",
+      "summary": "Italy’s July unemployment rate fell to 6.0% from 6.2% in June, with a net creation of 13,000 jobs and a drop in youth unemployment to 18.7%. Employment rose 0.2% over the three‑month period, adding 218,000 workers year‑on‑year, but the economy contracted 0.1% in Q2 and is projected to grow only 0.6% this year. The data suggest modest labor market gains amid weak economic growth and stagnant wages.",
+      "source": "https://www.reuters.com/markets/europe/italy-july-jobless-rate-falls-60-with-13000-jobs-created-2025-09-01/",
+      "published_at": "2025-09-01T08:32:54.854000+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "GZN8CHUJH"
+}

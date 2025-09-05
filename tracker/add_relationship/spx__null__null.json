@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T17:57:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "null",
+    "source_id": "spx",
+    "target_id": "null",
+    "selection_motivation": "No missing link meets the criteria of a strong, direct causal influence from the S&P 500 to any of the candidate nodes beyond those already linked.",
+    "candidate_motivation": "S&P 500 is a flagship U.S. equity index whose performance is tightly linked to macro‑financial conditions—U.S. Treasury yields, Fed policy, inflation, employment, and PMI—as well as global equity peers and key commodity and currency drivers that shape corporate earnings and investor sentiment.",
+    "existing_links_count": "21",
+    "candidate_count": "21",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['sx5e', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'us_services_pmi', 'euro_inflation', 'ecb_policy', 'dxy', 'gold', 'wti', 'brent', 'copper', 'oil_price_decline', 'us_crude_inventory']",
+    "existing_links_before_len": "21",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'No missing link meets the criteria of a strong, direct causal influence from the S&P\\u202f500 to any of the candidate nodes beyond those already linked.', 'type': 'null', 'source': 'spx', 'target': 'null'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "No missing link meets the criteria of a strong, direct causal influence from the S&P 500 to any of the candidate nodes beyond those already linked.",
+      "type": "null",
+      "source": "spx",
+      "target": "null"
+    }
+  },
+  "id": "spx__null__null"
+}

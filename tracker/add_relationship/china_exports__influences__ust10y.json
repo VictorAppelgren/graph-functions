@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T19:13:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "ust10y",
+    "selection_motivation": "China’s export growth alters the US trade balance, shifting dollar demand and risk sentiment, which in turn exerts a measurable influence on long‑term Treasury yields.",
+    "candidate_motivation": "China Exports are driven by currency competitiveness, global demand, and domestic credit conditions; therefore topics that capture exchange rates, US demand indicators, monetary policy, and credit dynamics are strong correlates or influences.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'fed_policy', 'us_inflation', 'china_credit_impulse', 'ust10y', 'ust30y', 'ust2y', 'ust5y', 'us_unemployment_claims']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531806",
+    "rel_id": "china_exports__influences__ust10y",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s export growth alters the US trade balance, shifting dollar demand and risk sentiment, which in turn exerts a measurable influence on long‑term Treasury yields.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__ust10y"
+}

@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T13:35:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GK86UUQPN",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US labor market slowdown and Fed policy expectations will pressure US Treasury yields.",
+      "existing_ids": [
+        "us_unemployment_claims",
+        "fed_policy",
+        "ust10y",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses a major macroeconomic event—the U.S. labor market slowdown and potential recession risk, which is a macro_event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article directly impacts the US labor market node by reporting a significant slowdown and potential recession, which is a major event for that node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on imminent labor market data releases and potential Fed policy adjustments that could influence the economy over the next 12 months."
+    },
+    "article_node": {
+      "id": "GK86UUQPN",
+      "title": "Beware 'stall speed' in the job market, which could start a vicious cycle of unemployment",
+      "summary": "Wall Street strategists warn that the U.S. labor market may hit a \"stall speed,\" a slowdown that could trigger a self‑reinforcing rise in unemployment to around 6% and potentially lead to a recession within 12 months.  Key data points include weaker-than‑expected July job gains, revised losses in May and June, and an anticipated August report that could further downgrade employment figures.  Fed officials, including Powell and Waller, have signaled that higher layoffs and rising unemployment risk may prompt earlier rate cuts, while JPMorgan, Goldman Sachs, and Barclays also flag recession probabilities of 33–60% over the next two years.  The narrative hinges on upcoming labor statistics and the Fed’s policy response to a deteriorating job market.",
+      "source": "https://www.businessinsider.com/job-market-outlook-layoffs-unemployment-job-cuts-stall-speed-recession-2025-8",
+      "published_at": "2025-08-31T09:40:02+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "GK86UUQPN"
+}

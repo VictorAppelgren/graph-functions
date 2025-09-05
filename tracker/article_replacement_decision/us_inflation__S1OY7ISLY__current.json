@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T02:05:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "new_article_id": "S1OY7ISLY",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['U21K4ALYQ', '97MD1FHW8', '3952FOSRQ', '3YAQ8JUPL', 'LLN6N4H3Z', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article covers Santos Ltd’s 2025 results; the new article adds unique content."
+    }
+  },
+  "id": "us_inflation__S1OY7ISLY__current"
+}

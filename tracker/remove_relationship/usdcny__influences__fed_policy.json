@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T03:25:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usdcny",
+    "target_id": "fed_policy",
+    "selection_motivation": "The generic Fed policy link is redundant given the specific Fed rate cut link and has weaker evidence; removing it reduces noise.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The generic Fed policy link is redundant given the specific Fed rate cut link and has weaker evidence; removing it reduces noise.",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160896",
+    "rel_id": "usdcny__influences__fed_policy",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'usdcny', 'target': 'usdjpy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "usdcny",
+      "target": "fed_policy"
+    },
+    "prioritized_link": {
+      "motivation": "The scheduled Fed rate cut on Sept 17 2025 will directly weaken the USD relative to the CNY, making it a primary driver of the USD/CNY pair.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "usdcny"
+    },
+    "llm_raw_response": {
+      "motivation": "The generic Fed policy link is redundant given the specific Fed rate cut link and has weaker evidence; removing it reduces noise.",
+      "remove_link": "fed_policy"
+    },
+    "removal_decision": {
+      "motivation": "The generic Fed policy link is redundant given the specific Fed rate cut link and has weaker evidence; removing it reduces noise.",
+      "remove_link": "fed_policy"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(USD/CNY OR USDCNY OR USD/CNH OR USDCNH OR US dollar / Chinese yuan OR US dollar / Renminbi OR USD / CNY OR USD / RMB OR CNY OR RMB OR Renminbi OR Chinese yuan OR CNH) OR (exchange rate OR forex OR FX OR currency OR currency pair) OR (news OR update OR report OR analysis OR trend OR market OR volatility OR movement OR shift OR impact) OR (policy OR monetary policy OR central bank OR PBOC OR interest rate OR rates OR rate) OR (trade OR tariff OR trade policy) OR (geopolitical OR political OR risk OR uncertainty) OR (economic OR growth OR GDP OR inflation) OR (US OR China)",
+      "name": "USD/CNY",
+      "id": "usdcny",
+      "last_queried": "2025-09-04T10:41:08.354000000+00:00",
+      "queries": 5
+    }
+  },
+  "id": "usdcny__influences__fed_policy"
+}

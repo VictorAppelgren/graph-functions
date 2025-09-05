@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:18:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_putin_summit",
+    "target_id": "ukraine_peace_negotiations",
+    "selection_motivation": "The Trump‑Putin summit directly shaped the diplomatic environment for Ukraine peace talks, making it a primary driver of negotiations.",
+    "candidate_motivation": "These topics are the strongest geopolitical and strategic connections to the Trump-Putin Summit, reflecting US-Russia relations, Ukraine dynamics, and potential economic impacts closely tied to such diplomacy.",
+    "existing_links_count": "3",
+    "candidate_count": "3",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "3",
+    "candidate_ids_preview": "['russia_economic_crisis', 'ukraine_geopolitical_security', 'ukraine_peace_negotiations']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216549",
+    "rel_id": "trump_putin_summit__influences__ukraine_peace_negotiations",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Trump‑Putin summit directly shaped the diplomatic environment for Ukraine peace talks, making it a primary driver of negotiations.",
+      "type": "INFLUENCES",
+      "source": "trump_putin_summit",
+      "target": "ukraine_peace_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_putin_summit__influences__ukraine_peace_negotiations"
+}

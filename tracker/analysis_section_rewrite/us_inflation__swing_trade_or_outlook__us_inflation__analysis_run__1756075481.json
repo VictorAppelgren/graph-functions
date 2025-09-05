@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:54:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756075481",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19679",
+    "output_chars": "1238",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edits to elevate world-class quality: (1) Enforce the Movers as exactly four lines, two Up and two Down, with strictly aligned horizons (0–3 months and 3–6 months) and no extra lines; rewrite each line to a tight, first-principles causal chain (e.g., Up 0–3m: AI productivity uplift -> higher capex and profits -> compressed risk premia -> durable-goods demand for high‑quality items) and attach one crisp, source-backed watchpoint (quantify where possible, e.g., productivity surprise vs wage/inflation data; cite the ID). (2) Tighten the Driver/Mechanism to a single clear mechanism per line and ensure the stated watchpoints are numerically anchored to IDs (e.g., Ford GM capex, EV/ICE mix, Range/Pacaso AUM metrics) rather than broad abstractions; replace vague phrases with concrete numbers from the sources. (3) For the Watch bullets, require quantifiable metrics where feasible and consistently tie them to IDs; e.g., GM capacity cadence and plant utilization, EV ramp metrics, Range/Pacaso growth figures, and specific AI capex pledges, each with its source ID. (4) Reframe the Swing Trade line into the required format exactly: Up | 2–6 weeks | Entry near current price | Stop 6% below | Target 12% above | R/R 2.0 | Invalidation: tariff pass-through accelerates inflation or Intel-stake uncertainty materializes | Trigger: AI capex momentum and policy signals align | Probability % | Confidence %; convert any “Long” phrasing to this template and ensure probabilities come from the underlying material (e.g., 60% with 70% confidence). (5) Remove extraneous narrative and consolidate the base-case into a single, explicit, first-principles frame; present a concise watchlist and explicit catalysts/triggers (tariffs, policy credibility, AI productivity, EV profitability) with direct IDs, and explicitly acknowledge and reconcile any conflicts (e.g., base-case 50–60% vs alt-path 20–25%) rather than implying a single, undifferentiated view. (6) Ensure all factual anchors that drive probabilities or catalysts are explicitly sourced by IDs and that the four movers cover the critical drivers without duplicative or conflicting statements; prune non-essential tangents (e.g., extraneous policy anecdotes) to preserve a crisp, decision-ready read.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756075481"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T16:26:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756648033",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6347",
+    "output_chars": "592",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft fails the two core criteria: (1) the second Up line lacks a magnitude range and is essentially a duplicate of the first, and (2) the Down lines do not provide explicit sign‑magnitude ranges for the yield compression. Replace the second Up with a distinct asset: “Up | Q4 2025 | Fed cut supports spx rally 2–5 % (56DSYR7J6) | Fed cut announcement, Marvell earnings, tariff updates (B1KYJ1GPU) | 65 %”. Add a magnitude to the Fed‑rate‑hike Down: “Down | Q4 2025 | Fed rate hike compresses 10‑year yield by 20–30 bp (OGK8WLL69) | Fed policy statements, rate hike announcements (OGK8WLL69) | 30 %”. Keep the regulatory‑crackdown Down unchanged but add a plausible magnitude: “Down | Q4 2025 | Regulatory crackdown compresses 10‑year yield by 10–20 bp (OGK8WLL69) | Regulatory announcements, crypto market volatility (OGK8WLL69) | 20 %”. Ensure each line is a single sentence, uses only the required IDs, and follows the strict “Up/Down | Time window | Driver/Mechanism | What to watch | Probability %” format.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756648033"
+}

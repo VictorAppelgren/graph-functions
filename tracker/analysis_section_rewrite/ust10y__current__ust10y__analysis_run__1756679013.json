@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-09-01T00:23:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756679013",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', 'ZUXOHE4Q9', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "70925",
+    "output_chars": "1400",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Add explicit source citations for every quantitative claim**  \n   - The statement “a 25‑bp cut would lift the policy rate to 5.00‑5.25 % and push the 10‑year down by roughly 10–15 bp” needs a citation. Add a reference to the Reuters article (97MD1FHW8) which documents the 89 % odds of a cut and the implied 25‑bp move.  \n   - The “10‑year to 4.10–4.15 %” range should also be footnoted with the same source.\n\n2. **Clarify the Fed minutes catalyst**  \n   - Specify the exact release date (e.g., “Fed minutes released 2025‑09‑12”) or at least note the scheduled release window. If no source ID exists, flag this as a “known schedule” but still mention it.\n\n3. **Re‑emphasize the canonical handle mapping**  \n   - Start the paragraph with a clear statement: “UST10Y (handle: ust10y) is currently at 4.23 %.” This satisfies the requirement of mapping to ≥1 canonical handle with sign and magnitude.\n\n4. **Remove any incidental drift**  \n   - The sentence about the 2‑year yield (32 bps fall) is acceptable as it informs the term‑structure context. No removal needed.\n\n5. **Ensure all catalysts have a dated window**  \n   - The tariff policy window is “mid‑October” (from 1DEM6P1Y2). Confirm the exact date if available; otherwise, keep the “mid‑October” phrasing.\n\n6. **Add a brief invalidation scenario**  \n   - The draft already includes a “surprise PCE reading above 3.0 % y/y” invalidation. Ensure it’s linked to the PCE source (97MD1FHW8) and note the impact on the 10‑year (rise to 4.3–4.4 %).\n\n**Revised Core Sentence (example)**  \n“UST10Y (handle: ust10y) is at 4.23 % today; a 25‑bp Fed cut (expected mid‑September, 89 % odds per 97MD1FHW8) would likely lower it 10–15 bp to 4.10–4.15 % by mid‑September, unless tariff policy (1DEM6P1Y2) persists or a PCE surprise (>3.0 % y/y) pushes yields up again.”\n\nApply similar inline citations and concise wording throughout the paragraph.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756679013"
+}

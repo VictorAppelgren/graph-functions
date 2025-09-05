@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T11:35:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "brent",
+    "target_id": "euro_inflation",
+    "selection_motivation": "Oil price shocks directly feed into euro‑area inflation through import‑price transmission, making Brent a primary driver of euro_inflation.",
+    "candidate_motivation": "Brent Crude Oil is directly influenced by other oil benchmarks, commodity prices, macro rates, currency movements, and broader economic indicators.",
+    "existing_links_count": "12",
+    "candidate_count": "29",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "29",
+    "candidate_ids_preview": "['wti', 'gold', 'copper', 'wheat', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'bund10y', 'gilt10y', 'jgb10y', 'sofr', 'us_inflation', 'us_core_pce', 'euro_inflation', 'us_unemployment_claims', 'fed_powell_rate_cut_hint_2025', 'china_exports', 'china_credit_impulse', 'india_industrial_output', 'spx', 'sx5e']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1186699601323755676",
+    "rel_id": "brent__influences__euro_inflation",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price shocks directly feed into euro‑area inflation through import‑price transmission, making Brent a primary driver of euro_inflation.",
+      "type": "INFLUENCES",
+      "source": "brent",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__influences__euro_inflation"
+}

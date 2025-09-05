@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:25:19",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "VIE92C4P1",
+    "status": "success",
+    "topic_id": "grain_prices"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights significant impacts on Deere & Co. and Tapestry due to external economic factors, suggesting a need for nodes related to agricultural and consumer goods market dynamics.",
+      "existing_node_ids": null,
+      "new_node_dicts": "Agricultural Market Dynamics"
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses fluctuations in grain prices, which are influenced by macroeconomic factors such as supply and demand, making it relevant to the macroeconomic context."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses factors affecting grain prices, which are directly related to market dynamics and supply chain issues."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and factors influencing grain prices, suggesting a longer-term perspective."
+    },
+    "article_node": {
+      "id": "VIE92C4P1",
+      "title": "Stock Movers: Deere, Tapestry, Bullish",
+      "summary": "Deere & Co. shares fell significantly as the company lowered its annual earnings outlook due to decreased grain prices affecting farmer spending, influenced by a larger-than-expected corn harvest and reduced demand for soybeans amid trade tensions. Tapestry's stock also dropped sharply, primarily due to tariff impacts and underperformance of its Kate Spade brand, leading to an $855 million write-down, despite its Coach brand performing well. In contrast, Bullish shares surged following a successful $1.1 billion IPO.",
+      "source": "https://www.bloomberg.com/news/audio/2025-08-14/stock-movers-deere-tapestry-bullish-podcast",
+      "published_at": "2025-08-14T19:22:26.977000+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "VIE92C4P1"
+}

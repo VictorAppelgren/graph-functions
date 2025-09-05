@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T05:05:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756608663",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6241",
+    "output_chars": "901",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft exceeds the 4‑line limit (5 lines) and includes a non‑driver “level” line that violates the required format. Remove the last “Up | 3‑6 mo | 98.06 …” line. Ensure every remaining line follows the exact template: **Up/Down | Time window | Driver/Mechanism | What to watch | Probability %**. Verify that each driver references a canonical handle (e.g., DXY, ust10y) with a clear causal link, and that the “What to watch” column lists a specific catalyst window (Fed minutes, CPI releases, tariff policy). Keep the probabilities tied to evidence (e.g., 86 % from 97MD1FHW8). After trimming, the four lines should read:\n\n1. **Up | 3‑6 mo | Fed September 25 bp cut + July CPI 2.5% → higher dollar yields & steepening term premium | Fed minutes, July CPI, 2‑yr/10‑yr spread | 86 %**  \n2. **Up | 3‑6 mo | Fed dovish stance + persistent inflation expectations → sustained higher yields & DXY support | Fed minutes, core PCE, tariff policy | 70 %**  \n3. **Down | 3‑6 mo | Fed hike >25 bp or flattening 2‑yr/10‑yr spread <30 bp + weaker CPI/PCE → lower dollar yields & term premium | Fed minutes, August PCE, 2‑yr/10‑yr spread | 14 %**  \n4. **Down | 3‑6 mo | Tariff easing + lower inflation expectations → reduced risk premium & dollar carry | Fed minutes, tariff policy, CPI | 14 %**  \n\nThis meets the 4‑line, 2 Up/2 Down, catalyst‑window, probability, and canonical‑handle requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756608663"
+}

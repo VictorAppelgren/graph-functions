@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T20:15:27",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1UJPXQDSD",
+    "suggested_names": "['uk_policy']",
+    "topic_category": "policy",
+    "topic_category_motivation": "Appointment signals potential shift in UK fiscal and growth policy, impacting macro variables.",
+    "should_add": "False",
+    "motivation_for_relevance": "No explicit mapping to a canonical market handle or catalyst window; appointment alone does not provide actionable trading signal.",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Appointment of Minouche Shafik as UK chief economic adviser signals a potential shift in UK fiscal and growth policy, impacting UK macro variables.",
+      "id": "uk_policy_shafik_adviser",
+      "name": "UK Shafik Adviser",
+      "type": "policy"
+    }
+  },
+  "id": "none"
+}

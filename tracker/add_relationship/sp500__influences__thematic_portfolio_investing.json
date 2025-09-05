@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-27T23:28:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sp500",
+    "target_id": "thematic_portfolio_investing",
+    "selection_motivation": "The S&P 500’s performance shapes investor sentiment and capital flows, directly driving the demand and returns of thematic portfolio strategies.",
+    "candidate_motivation": "The S&P 500 is a US equity index whose performance is strongly driven by macroeconomic conditions, monetary policy, currency movements, commodity prices, and comparable equity benchmarks, so topics that directly influence or correlate with these factors are the most relevant.",
+    "existing_links_count": "9",
+    "candidate_count": "13",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_inflation', 'us_inflation_expectations', 'fed_policy', 'us_10y', 'eurostoxx50', 'eurusd', 'usd', 'eur', 'oil', 'gold', 'copper', 'wheat', 'thematic_portfolio_investing']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_expectations'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sp500', 'target': 'eurostoxx50'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395485",
+    "rel_id": "sp500__influences__thematic_portfolio_investing",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'thematic_portfolio_investing'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_expectations'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sp500', 'target': 'eurostoxx50'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The S&P 500’s performance shapes investor sentiment and capital flows, directly driving the demand and returns of thematic portfolio strategies.",
+      "type": "INFLUENCES",
+      "source": "sp500",
+      "target": "thematic_portfolio_investing"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sp500__influences__thematic_portfolio_investing"
+}

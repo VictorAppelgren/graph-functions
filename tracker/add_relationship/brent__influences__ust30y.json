@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T12:11:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "brent",
+    "target_id": "ust30y",
+    "selection_motivation": "Brent oil price movements shape long‑term inflation expectations and risk‑premium dynamics, which in turn drive the 30‑year Treasury yield curve; linking brent to ust30y captures this causal path.",
+    "candidate_motivation": "Brent Crude Oil is a benchmark commodity whose price is driven by global supply/demand fundamentals, inventory levels, currency strength, and macro‑policy signals. Therefore, topics that directly influence oil supply, U.S. crude inventories, the U.S. dollar, and monetary policy are strong peers or influences.",
+    "existing_links_count": "12",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['oil_price_decline', 'us_crude_inventory', 'wti', 'dxy', 'usdcny', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'euro_inflation', 'ecb_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'gold', 'copper', 'wheat', 'spx', 'sx5e']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1330814789399611548",
+    "rel_id": "brent__influences__ust30y",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'brent', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'brent', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Brent oil price movements shape long‑term inflation expectations and risk‑premium dynamics, which in turn drive the 30‑year Treasury yield curve; linking brent to ust30y captures this causal path.",
+      "type": "INFLUENCES",
+      "source": "brent",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "brent__influences__ust30y"
+}

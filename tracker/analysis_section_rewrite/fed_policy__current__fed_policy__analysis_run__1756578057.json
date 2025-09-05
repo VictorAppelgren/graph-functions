@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T20:37:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756578057",
+    "article_ids": "['3952FOSRQ', 'Z7K8PC4G5', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "107096",
+    "output_chars": "1447",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist**\n\n1. **Canonical handle & sign/magnitude**  \n   - Replace every “10‑year” with **ust10y**.  \n   - State the direction explicitly: *“ust10y up 2.3 bps”* (cite 97MD1FHW8).  \n\n2. **Remove non‑canonical content**  \n   - Delete references to the 2‑year yield, stock indices, oil prices, and other non‑mapped assets.  \n   - Keep only the discussion that feeds directly into ust10y.\n\n3. **Catalyst windows**  \n   - Clearly list dates:  \n     * “Fed’s September 16‑17 meeting” (U21K4ALYQ)  \n     * “August CPI release” (97MD1FHW8)  \n     * “August employment report” (97MD1FHW8)  \n   - Ensure each catalyst is tied to a causal effect on ust10y.\n\n4. **Causal path for tariffs**  \n   - Add a sentence: *“The appellate ruling (3952FOSRQ) removes a potential inflationary drag, easing pressure on ust10y.”*  \n\n5. **Citation density**  \n   - Every substantive claim must end with the appropriate source ID in parentheses.  \n   - Example: *“ust10y up 2.3 bps (97MD1FHW8).”*\n\n6. **Trim extraneous commentary**  \n   - Omit any mention of “stock indices,” “oil prices,” or other markets not directly linked to ust10y.  \n   - Keep the focus tight on the 0–3‑week horizon for ust10y.  \n\nFollow these edits to meet the Argos criteria: canonical handle mapping, explicit sign/magnitude, dated catalysts, and a clear causal chain.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1756578057"
+}

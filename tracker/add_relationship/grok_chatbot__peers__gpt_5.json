@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:38:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "grok_chatbot",
+    "target_id": "gpt_5",
+    "selection_motivation": "Grok Chatbot and GPT-5 are direct competitors in the generative AI chatbot market, making a PEERS link essential for competitive analysis.",
+    "candidate_motivation": "These topics are the most plausible direct influences, peers, or competitive counterparts to Grok Chatbot in the conversational AI/LLM landscape, including its versions and governance considerations.",
+    "existing_links_count": "0",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'gpt_5', 'grok_4', 'grok_ai_bias', 'ai_governance']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152927002164989144",
+    "rel_id": "grok_chatbot__peers__gpt_5",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'PEERS', 'source': 'grok_chatbot', 'target': 'gpt_5'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Grok Chatbot and GPT-5 are direct competitors in the generative AI chatbot market, making a PEERS link essential for competitive analysis.",
+      "type": "PEERS",
+      "source": "grok_chatbot",
+      "target": "gpt_5"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "grok_chatbot__peers__gpt_5"
+}

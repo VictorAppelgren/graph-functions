@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T14:55:52",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "spx",
+    "target_id": "ust2y",
+    "selection_motivation": "S&P 500 movements are strongly driven by short‑term Treasury yields, which reflect Fed policy expectations; linking spx to ust2y captures this key transmission channel for macro‑equity analysis.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain.",
+    "existing_links_count": "1",
+    "candidate_count": "26",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'eurusd', 'sx5e', 'bund10y', 'gilt10y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'gold', 'wti', 'brent', 'copper', 'wheat', 'us_unemployment_claims', 'china_exports', 'china_credit_impulse']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443789833",
+    "rel_id": "spx__correlates_with__ust2y",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "S&P 500 movements are strongly driven by short‑term Treasury yields, which reflect Fed policy expectations; linking spx to ust2y captures this key transmission channel for macro‑equity analysis.",
+      "type": "CORRELATES_WITH",
+      "source": "spx",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__correlates_with__ust2y"
+}

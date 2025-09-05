@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T19:33:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "B50S2PG8O",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['2YGPIIJSK', '7BLWI6OTC', 'O6LHRBLFM', 'GK86UUQPN', 'F7K7Y35U5', 'KX6AOMQZ5']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article covers Trump tariffs, so the new article does not supersede anything."
+    }
+  },
+  "id": "ust10y__B50S2PG8O__medium"
+}

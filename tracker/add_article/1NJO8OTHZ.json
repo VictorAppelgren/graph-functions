@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:22:22",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1NJO8OTHZ",
+    "status": "success",
+    "topic_id": "pjm_data_center_power_supply"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the increasing power demands on the PJM Interconnection grid, which could impact energy costs and infrastructure, suggesting a need for a new node related to energy supply dynamics.",
+      "existing_node_ids": null,
+      "new_node_dicts": "PJM Interconnection Energy Supply Dynamics"
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The node relates to power supply for data centers, which may involve regulatory considerations regarding energy consumption and sustainability."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the power supply dynamics which are crucial for data centers, directly impacting the PJM data center power supply."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and developments in power supply for data centers, which suggests a longer-term perspective."
+    },
+    "article_node": {
+      "id": "1NJO8OTHZ",
+      "title": "Data Centers Need to Bring Own Power Supply, Grid Watchdog Says",
+      "summary": "Data centers seeking to connect to the PJM Interconnection grid must now provide their own power supply, according to a report from Monitoring Analytics LLC. This recommendation comes as the grid, which spans 13 states, faces a significant strain from the increasing power demands of data centers, leading to higher costs for consumers. The report warns that the current capacity is insufficient to meet future demands, and failure to address this could result in substantial costs for other customers.",
+      "source": "https://finance.yahoo.com/news/data-centers-bring-own-power-192108869.html",
+      "published_at": "2025-08-14T19:21:08+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "1NJO8OTHZ"
+}

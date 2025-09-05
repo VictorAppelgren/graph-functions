@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T21:53:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "us_tariff_policies",
+    "selection_motivation": "Trump Tariffs constitute a specific component of US Tariff Policies, directly shaping the broader tariff framework.",
+    "candidate_motivation": "Trump Tariffs are a core policy lever in US trade policy; the strongest direct influences or peers are tariff policy topics and tariff-related dynamics with China, as well as sector-specific tariffs and inflation implications.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs', 'tariff_driven_inflation', 'us_china_tariffs', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_tariff_policies', 'us_india_tariffs']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069013223",
+    "rel_id": "trump_tariffs__influences__us_tariff_policies",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump Tariffs constitute a specific component of US Tariff Policies, directly shaping the broader tariff framework.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_tariff_policies"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_tariffs__influences__us_tariff_policies"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T09:24:35",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZUZ7GFNM2",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses IRLAB Therapeutics' clinical developments and their impact on Parkinson's disease treatment, warranting a new atomic node for investment analysis in the biotech sector.",
+      "id": "irlab_therapeutics",
+      "name": "IRLAB Therapeutics",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "The topic refers to a specific corporate entity, IRLAB Therapeutics, a biotech company listed on Nasdaq Stockholm."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "IRLAB Therapeutics is a biotech company, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

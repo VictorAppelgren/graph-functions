@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T19:11:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NB1FHOB0G",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "ambiguous"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "id": "ny_state_autonomous_vehicle_human_driver_requirement",
+      "name": "New York State Autonomous Vehicle Human Driver Requirement",
+      "type": "policy",
+      "level": "driver",
+      "motivation": "The article introduces a new state regulation requiring a human driver in autonomous vehicles, a macro policy that could influence market entry and taxi industry dynamics, necessitating a dedicated node for analysis."
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Specific state regulation requiring a human driver in autonomous vehicles, a distinct policy affecting autonomous vehicle deployment."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "State-level autonomous vehicle driver requirement is too narrow and not a macro driver affecting tradable assets or broad market trends.",
+      "confidence": 0.92,
+      "failure_category": "ambiguous"
+    }
+  },
+  "id": "none"
+}

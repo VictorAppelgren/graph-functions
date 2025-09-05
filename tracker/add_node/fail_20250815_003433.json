@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T00:33:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IMF13PNE4",
+    "status": "rejected",
+    "reject_category": "macro_impact",
+    "reject_failure_cat": "ambiguous"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the implications of the Chrisleys' legal issues and their subsequent pardon, highlighting the broader themes of financial fraud and its impact on public perception and policy, warranting a new node for analysis.",
+      "id": "financial_fraud",
+      "name": "Financial Fraud",
+      "type": "macro",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_impact",
+      "motivation": "To show compassion and support for the Chrisleys."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Financial Fraud is a vague, non‑macro concept that does not directly serve as a macro driver, policy regime, or tradable asset anchor for trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "ambiguous"
+    }
+  },
+  "id": "none"
+}

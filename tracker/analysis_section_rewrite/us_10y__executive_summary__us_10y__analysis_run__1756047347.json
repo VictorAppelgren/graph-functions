@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:06:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756047347",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "12938",
+    "output_chars": "1726",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft covers the right themes but is far too long and scattered for a 4–6 sentence professional brief; restructure into a single integrated house view with 4–6 concise points (base case, catalysts, risks, watch items, invalidation rules, and confidence) and keep Lucid as near‑term watch rather than a standalone section. Ground the logic in a tight first‑principles chain: autos’ fixed costs/capex drive cyclical earnings; the EV transition reprices unit economics and free cash flow; governance and macro policy shift risk premia and discount rates; anchor every claim to the explicit numbers you have (Ford: Q2 EV losses ≈$1.3B; adj. EBIT margin ≈4.3%; ROIC ≈10.1%; ACMR: 2025 revenue midpoint $900m; GM 49.4%; net margin ≈13.8%); present a medium/current horizon base case with a clearly stated upside and downside and explicit triggers (e.g., EV gross margins turning positive and ROIC surpassing WACC by year‑end; ACMR order intake near/above $900m midpoint in Q3–Q4; rate cuts realized in 3Q–4Q 2025); add a crisp invalidation rule (if ACMR orders miss the midpoint by a material margin or rate cuts fail to materialize by late 2025, reassess risk/valuation); prune or fold the Lucid 0–3 weeks content into a 1–2 line near‑term risk/watch note within the watch list, and attach citations directly to the corresponding assertions (limit to the IDs you need like 22PL3Q360, S5GX78VMT, TN66GHPAT, 4LQD15CFU, GX057ADL7, W2622L6WW, J99EM2TPZ, 5JQEA5Z1T, 7YQN9WX3K, U1KRCQOYR, SK994CBWR, FOM34PUWA, 3JR35PMNT); ensure tone is executive and free of jargon, and that every claim is traceable to a cited source.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__executive_summary__us_10y__analysis_run__1756047347"
+}

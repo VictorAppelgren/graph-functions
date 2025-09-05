@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-31T01:37:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6EPGGK142",
+    "suggested_names": "['us_midstream_sector']",
+    "topic_category": "industry_vertical",
+    "topic_category_motivation": "Sector-level theme linking policy to midstream equity and commodity flows.",
+    "should_add": "False",
+    "motivation_for_relevance": "Sector-level midstream energy is a niche industry vertical with no direct canonical asset mapping or dated catalyst; it does not provide a macro driver or tradable handle for trading decisions.",
+    "status": "rejected",
+    "reject_category": "industry_vertical",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article identifies a policy-driven catalyst for US midstream operators, creating a new macro theme linking US energy policy to midstream equity and commodity flows.",
+      "id": "us_midstream_sector",
+      "name": "US Midstream Sector",
+      "type": "macro"
+    }
+  },
+  "id": "none"
+}

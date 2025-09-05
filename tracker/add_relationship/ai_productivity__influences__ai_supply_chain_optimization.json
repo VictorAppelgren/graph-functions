@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:28:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_productivity",
+    "target_id": "ai_supply_chain_optimization",
+    "selection_motivation": "AI productivity enhances automation and analytics capabilities, directly boosting supply chain optimization across industries.",
+    "candidate_motivation": "These topics represent direct hardware, platform, and application-level influences on AI productivity, including leading AI chipmakers, OpenAI-related units, and actionable AI-enabled domains (infrastructure, governance, education, pricing, content, and ideation).",
+    "existing_links_count": "3",
+    "candidate_count": "21",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['nvidia_ai_infrastructure', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'intel_ceo_tan', 'openai_gpt5_competition', 'openai_valuation', 'ai_infrastructure', 'ai_generated_content_seo', 'generative_ai_film', 'gen_ai_accounting', 'ai_governance', 'agentic_ai_solutions', 'ai_supply_chain_optimization', 'ai_in_education', 'ai_in_k12_education', 'ai_dynamic_pricing_airlines', 'ai_startup_ideation', 'grok_chatbot', 'grok_ai_bias', 'ai_app_store_rivalry', 'ai_human_skills_gap']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901493",
+    "rel_id": "ai_productivity__influences__ai_supply_chain_optimization",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_supply_chain_optimization'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI productivity enhances automation and analytics capabilities, directly boosting supply chain optimization across industries.",
+      "type": "INFLUENCES",
+      "source": "ai_productivity",
+      "target": "ai_supply_chain_optimization"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_productivity__influences__ai_supply_chain_optimization"
+}

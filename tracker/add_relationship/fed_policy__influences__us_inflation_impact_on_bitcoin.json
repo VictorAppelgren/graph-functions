@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T11:17:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_inflation_impact_on_bitcoin",
+    "selection_motivation": "Fed policy drives US inflation expectations, which are a primary factor in Bitcoin’s perceived inflation‑hedge value; linking them directly captures a key macro‑financial channel for portfolio and risk analysis.",
+    "candidate_motivation": "Fed Policy directly shapes monetary conditions—interest rates, inflation expectations, currency values, bond yields, and equity markets—so topics that are either policy peers, key economic indicators, or closely linked financial assets are likely to have strong influence, correlation, or peer relationships with it.",
+    "existing_links_count": "10",
+    "candidate_count": "12",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_10y', 'euribor', 'ecb_policy', 'usd', 'eurusd', 'sp500', 'eurostoxx50', 'us_inflation_expectations', 'us_inflation_impact_on_bitcoin', 'lower_interest_rates']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': '30yr_tips_auction'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'lower_interest_rates'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1270016194430107653",
+    "rel_id": "fed_policy__influences__us_inflation_impact_on_bitcoin",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'lower_interest_rates'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_bitcoin'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy drives US inflation expectations, which are a primary factor in Bitcoin’s perceived inflation‑hedge value; linking them directly captures a key macro‑financial channel for portfolio and risk analysis.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_inflation_impact_on_bitcoin"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__us_inflation_impact_on_bitcoin"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T06:21:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756614075",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "1917",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is a classic “company‑only” narrative and therefore fails the core acceptance criteria for a macro‑theme entry. It contains no canonical handle mapping (e.g., ust10y, dxy, gold, spx, ndx, ust2y) and no dated catalyst window tied to a causal transmission path. To bring it into compliance, rewrite the piece as a multi‑year macro view that uses the first‑principles anchors you outlined (real‑rate differentials, term‑premium, BoP, policy reaction functions). Replace the EPAM focus with a structured analysis of U.S. mortgage‑rate dynamics as a proxy for the Fed’s balance‑sheet contraction and its impact on the 10‑year Treasury curve (handle: ust10y, ust2y) and the DXY (handle: dxy). Quantify the 2‑bp uptick in 30‑year rates (source: LF0UUL917) as a 0.2 % rise in the 10‑year spread relative to the 2‑year, and project a 1–2 % widening of the term premium over the next 12 months if the Fed’s balance‑sheet contraction continues. Anchor the analysis to the Fed’s next FOMC meeting (Sept 16‑17 2025) as the catalyst window, and explain the causal chain: Fed balance‑sheet contraction → higher long‑term risk‑free rates → wider term premium → higher mortgage rates → dampened housing demand → slower GDP growth. Add a confidence rating (moderate‑high) and identify key risks (unexpected Fed rate hikes, inflation resurgence, geopolitical shocks). Ensure every substantive claim is supported by a source ID (e.g., LF0UUL917, H86O3XRUJ for inflation data) and that the narrative remains strictly macro, not company‑centric.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756614075"
+}

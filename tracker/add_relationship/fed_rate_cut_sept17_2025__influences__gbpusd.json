@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T04:14:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_rate_cut_sept17_2025",
+    "target_id": "gbpusd",
+    "selection_motivation": "Fed rate cuts weaken the USD, lifting the GBP/USD pair.",
+    "candidate_motivation": "Fed rate cuts directly influence short‑term and long‑term Treasury yields, the dollar and its major cross‑rates, equity indices, and inflation expectations; Fed policy and related hints are the primary drivers, while ECB policy is a peer central‑bank stance. These topics have clear, causal transmission paths to the source.",
+    "existing_links_count": "14",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdjpy', 'usdcny', 'gbpusd', 'spx', 'sx5e', 'us_inflation', 'us_core_pce', 'euro_inflation', 'ecb_policy']",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1447908379711242989",
+    "rel_id": "fed_rate_cut_sept17_2025__influences__gbpusd",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed rate cuts weaken the USD, lifting the GBP/USD pair.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "gbpusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_rate_cut_sept17_2025__influences__gbpusd"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T14:11:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "bund10y",
+    "target_id": "uk_30yr_gilt_yield",
+    "selection_motivation": "Bund yields set the European risk‑premium benchmark; a rise in bund10y pushes UK gilt yields higher through relative yield differentials and global risk sentiment.",
+    "candidate_motivation": "German 10Y Bund Yield is a sovereign bond yield, so its dynamics are driven by ECB policy, euro‑area inflation, and cross‑country sovereign peers (US, UK, Japan). It also correlates with the US dollar index, US Treasury yields, and broader macro indicators such as US inflation, labor data, and Fed policy moves that influence carry and risk‑on sentiment.",
+    "existing_links_count": "15",
+    "candidate_count": "18",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'ust10y', 'ust30y', 'ust2y', 'ust5y', 'gilt10y', 'uk_30yr_gilt_yield', 'jgb10y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'dxy', 'sx5e', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims']",
+    "existing_links_before_len": "15",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218224798715348193",
+    "rel_id": "bund10y__influences__uk_30yr_gilt_yield",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'bund10y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'bund10y', 'target': 'jgb10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Bund yields set the European risk‑premium benchmark; a rise in bund10y pushes UK gilt yields higher through relative yield differentials and global risk sentiment.",
+      "type": "INFLUENCES",
+      "source": "bund10y",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "bund10y__influences__uk_30yr_gilt_yield"
+}

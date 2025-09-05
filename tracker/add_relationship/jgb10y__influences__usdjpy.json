@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T18:18:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "usdjpy",
+    "selection_motivation": "Higher JGB yields attract carry‑trade inflows, strengthening the JPY and pushing USD/JPY lower, making JGB yield a direct driver of the USD/JPY pair.",
+    "candidate_motivation": "Japan 10Y JGB Yield is tightly coupled to global sovereign yields, central‑bank policy, and currency dynamics; the most direct influences and peers are other major 10Y yields, policy decisions, inflation measures, and the USD/JPY and DXY that reflect the currency link.",
+    "existing_links_count": "0",
+    "candidate_count": "10",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ust10y', 'bund10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'ecb_policy', 'euro_inflation', 'usdjpy', 'dxy']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118476661",
+    "rel_id": "jgb10y__influences__usdjpy",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Higher JGB yields attract carry‑trade inflows, strengthening the JPY and pushing USD/JPY lower, making JGB yield a direct driver of the USD/JPY pair.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "usdjpy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jgb10y__influences__usdjpy"
+}

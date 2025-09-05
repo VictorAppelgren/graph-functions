@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T18:32:48",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756570619",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1303",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly identifies the key drivers for DXY and links Fed policy to the 2‑yr/10‑yr spread, but it drifts into mortgage‑rate commentary and repeats the same citation blocks, diluting focus. Tighten the narrative to a single causal chain: Fed‑cut probability → 2‑yr/10‑yr steepening (57 bp) → dollar depreciation (≈200 bp). Replace the generic “Fed policy decisions (LF0UUL917)(7XH2DKEKV)” with the specific probability statement (Z7O1DCHS7) and remove redundant citations. Condense the tariff paragraph to a single sentence: “The August 29–31 tariff announcement will add ~200 bp to the DXY decline, but Fed easing offsets this short‑term support.” Eliminate the mortgage‑rate discussion; it is a peripheral handle. Explicitly state the catalyst window: “PCE > 3.0 % on 2025‑08‑30 or NFP > 200 k on 2025‑08‑31 could lift DXY by 70–50 bp, invalidating the base‑case.” End with a concise watch‑list: “Key signals – 2025‑08‑30 PCE, 2025‑08‑31 NFP, 2025‑09 Fed policy decision.” Ensure every claim has a single inline citation (e.g., (Z7O1DCHS7)(7XH2DKEKV)) and remove any extraneous text. This will satisfy the 1‑handle, 1‑catalyst requirement and keep the analysis razor‑sharp for top‑macro PMs.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756570619"
+}

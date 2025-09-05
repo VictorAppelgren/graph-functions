@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T18:34:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3H1D6U66Y",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article introduces the concept of CTE Centers as a new driver of workforce development, which is not yet represented in the graph.",
+      "id": "cte_centers",
+      "name": "CTE Centers",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "CTE Centers represent a new driver of workforce development, influencing labor market dynamics and educational policy, thus qualifying as a macro-level driver."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "CTE Centers are a specific education and workforce development initiative, an industry vertical rather than a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

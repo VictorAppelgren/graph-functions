@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T21:25:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755976463",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "6996",
+    "output_chars": "733",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist**\n\n1. **Move‑and‑Scenario section**  \n   - Keep exactly **four** lines: two “Up” and two “Down”.  \n   - Remove all IDs from the driver/mechanism and probability fields; place IDs only in the “What to watch” column.  \n   - Use the evidence‑based probabilities you already have (70 % for Fed cut, 60 % for tool traction, 55 % for Fed delay, 50 % for export controls).  \n   - Example format:  \n     ```\n     Up | 3–6 mo | Fed rate‑cut cycle triggers ACMR demand | Fed minutes, CPI, ACMR earnings | 70%\n     Up | 3–6 mo | ACMR Ultra C traction + China push | Semiconductor demand indices, ACMR guidance | 60%\n     Down | 3–6 mo | Fed delay/reversal + inflation stick | Fed minutes, CPI, trade tensions | 55%\n     Down | 3–6 mo | Export controls tighten + lower fab spending | U.S.–China trade data, ACMR revenue | 50%\n     ```\n\n2. **Swing‑Trade / Outlook line**  \n   - Delete the “Long” line as it is not in the required format.  \n   - Rewrite a single swing‑trade line (or two if you want a separate “Short” line) using the exact field order:  \n     ```\n     Long | 3–6 mo | 30.6 | 28.5 | 35.0 | 1.5:1 | Fed delay or reversal | Fed rate cut in September | 70% | 80\n     ```\n   - No IDs should appear in this line; the IDs belong in the “What to watch” column of the scenario section.\n\n3. **Clarity & depth**  \n   - Ensure each driver/mechanism is a concise causal chain (e.g., “Fed rate‑cut cycle → lower financing costs → higher ACMR demand”).  \n   - In the “What to watch” column, list the specific data releases or events that would confirm or invalidate the scenario.\n\n4. **Quantification & sourcing**  \n   - Keep the numbers you already have (e.g., 10‑year yield 4.23 %, ACMR guidance $850‑$950 m).  \n   - If you add any new figures, cite the corresponding ID immediately after the figure.\n\n5. **Formatting**  \n   - Use plain text, no bullet points or extra whitespace.  \n   - Each line must be a single line of text; no line breaks within a line.\n\nFollow this checklist and the output will meet the section focus, length, and citation constraints while delivering a clear, actionable swing‑trade outlook.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1755976463"
+}

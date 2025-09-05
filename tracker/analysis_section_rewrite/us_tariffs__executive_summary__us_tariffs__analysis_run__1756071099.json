@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T23:41:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_tariffs__analysis_run__1756071099",
+    "prior_sections": "['fundamental', 'medium', 'current']",
+    "material_chars": "13580",
+    "output_chars": "1658",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong foundation in regime-framing and explicit transmission channels, but to reach world-class, rewrite as a 4–6 item executive brief and tighten the causal chain, first-principles grounding, and sourcing. Actionable edits: (1) condense to 4–6 bullets or sentences that deliver a crisp base view, key catalysts, risks, and watch-items (base, alt1, alt2) with explicit probabilities; (2) tighten the causal chain: map Tariffs (15% MFN, autos relief pending) → pass-through and input costs by sector → margins and inflation pressure, then overlay how deregulation momentum or subsidy governance shifts capital allocation and investment incentives; tie each link to named sectors (autos, apparel, durable goods) and to concrete firms/events (Goodyear, Adyen) with numeric sensitivities; (3) strengthen first-principles grounding by stating the regime dynamics in terms of cost of capital, supplier re-pricing, and price formation, rather than descriptive labels alone; (4) sharpen the scenario structure with clear, verifiable catalysts/triggers and a single invalidation node for each alternative (e.g., court rulings on tariff authority; UK DCTS timing; Asia-cumulation milestones); (5) escalate quantification and consistency: anchor every major claim to a source ID, present numbers as ranges where appropriate (e.g., tariff pass-through by product mix, inflation impulse 1.8% with a 18.6% average tariff), and reconcile divergent figures (e.g., 1.8% vs 18.6% vs 15% MFN) by stating methodology and scope; (6) fix citation hygiene: replace any non-ID labels (Scraped Source 2/3) with the exact IDs from SOURCE MATERIAL and cite all critical inputs (e.g., RHFWI02JT, 9W8ZUIBDY, 2SJORBV6H, QRX2HD4X0, 5M9M1KACF, WLXM1819K, AJTHKYXQ3, OFY11YO0I, S15934PBQ, DGG6HXUFZ, VCZKKPORO, 12, 55GVT420Q3); (7) explicitly state an invalidation path and counterfactuals that would tilt the view (e.g., faster-than-expected tariff-detail settlements, a favorable court ruling, or a rapid CFO-driven deregulation reversal); (8) ensure 4–6 sentences or bullets total, with a concise house view at the top and tightly linked catalysts/risks/watch-items below; (9) embed a short sensitivity note on cross-border payments/embedded-finance as a non-tariff channel while avoiding overclaiming its linkage to policy shifts; and (10) ensure the outline aligns with a professional-investor brief by naming the actionable watch-list and binding the 3–6 month view to explicit, monitorable datapoints rather than narrative hedges.",
+      "tokens": {}
+    }
+  },
+  "id": "us_tariffs__executive_summary__us_tariffs__analysis_run__1756071099"
+}

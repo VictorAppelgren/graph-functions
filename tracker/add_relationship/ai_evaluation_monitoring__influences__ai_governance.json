@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T20:39:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_evaluation_monitoring",
+    "target_id": "ai_governance",
+    "selection_motivation": "AI evaluation and monitoring provides critical insights that shape governance frameworks and model transparency standards, directly influencing policy and compliance decisions.",
+    "candidate_motivation": "The source node focuses on assessing and overseeing AI systems, so its strongest relationships are with topics that directly influence or are influenced by AI governance, bias, skill gaps, infrastructure, and application domains. These topics provide the most direct, competitive, or peer-level connections to AI evaluation and monitoring.",
+    "existing_links_count": "1",
+    "candidate_count": "12",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['ai_governance', 'ai_ideological_bias', 'ai_human_skills_gap', 'ai_human_skills', 'ai_application_companies', 'ai_infrastructure', 'ai_supply_chain_optimization', 'ai_productivity', 'ai_in_education', 'ai_in_k12_education', 'ai_in_entertainment', 'ai_startup_ideation']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'us_chip_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846128",
+    "rel_id": "ai_evaluation_monitoring__influences__ai_governance",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'ai_evaluation_monitoring', 'target': 'ai_governance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI evaluation and monitoring provides critical insights that shape governance frameworks and model transparency standards, directly influencing policy and compliance decisions.",
+      "type": "INFLUENCES",
+      "source": "ai_evaluation_monitoring",
+      "target": "ai_governance"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_evaluation_monitoring__influences__ai_governance"
+}

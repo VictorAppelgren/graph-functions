@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:28:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "national_guard_dc_deployment",
+    "target_id": "dc_federal_control",
+    "selection_motivation": "The deployment directly precipitates federal control of the D.C. police, a key consequence not yet linked.",
+    "candidate_motivation": "These topics represent proximate policy levers and security events that would influence or correlate with National Guard deployment in Washington, D.C. They include federal interventions in urban crime and DC policing, as well as related political actions.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'dc_federal_intervention', 'dc_police_federal_takeover', 'dc_federal_control', 'trump_dc_militarization', 'trump_national_guard_dc', 'national_guard_domestic_deployment']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'national_guard_dc_deployment', 'target': 'dc_police_federal_takeover'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902047",
+    "rel_id": "national_guard_dc_deployment__influences__dc_federal_control",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'national_guard_dc_deployment', 'target': 'dc_police_federal_takeover'}, {'type': 'INFLUENCES', 'source': 'national_guard_dc_deployment', 'target': 'dc_federal_control'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The deployment directly precipitates federal control of the D.C. police, a key consequence not yet linked.",
+      "type": "INFLUENCES",
+      "source": "national_guard_dc_deployment",
+      "target": "dc_federal_control"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "national_guard_dc_deployment__influences__dc_federal_control"
+}

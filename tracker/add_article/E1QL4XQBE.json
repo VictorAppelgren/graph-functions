@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T00:13:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "E1QL4XQBE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Cook lawsuit threatens Fed credibility and could alter expectations for the September 17 rate cut, affecting Treasury yields, the dollar and equity indices.",
+      "existing_ids": [
+        "fed_policy",
+        "fed_rate_cut_sept17_2025",
+        "fed_powell_rate_cut_hint_2025",
+        "spx",
+        "dxy",
+        "ust10y",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses a legal dispute over the removal of a Fed governor, which constitutes a legal development affecting central bank governance."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a legal dispute that could affect Fed credibility and potentially influence the September 17 policy meeting, thereby impacting rates and markets."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on a specific legal dispute that could influence the Fed’s policy meeting in September and set a precedent for future executive actions, representing a near‑to‑mid‑term event rather than a long‑term structural change."
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 1
+    }
+  },
+  "id": "E1QL4XQBE"
+}

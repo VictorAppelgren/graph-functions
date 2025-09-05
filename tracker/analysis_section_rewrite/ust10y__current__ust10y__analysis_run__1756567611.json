@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:32:48",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756567611",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "58713",
+    "output_chars": "1933",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Canonical Mapping & Sign/Magnitude**  \n   - Explicitly map every claim to a handle: e.g., *spx* –0.7 % (3YAQ8JUPL), *ust10y* +2.3 bps (97MD1FHW8), *dxy* +0.06 % (97MD1FHW8).  \n   - Include magnitude ranges for catalysts: Fed cut 25 bp (U21K4ALYQ), tariff‑risk premium 15–20 bp (1DEM6P1Y2).  \n\n2. **Catalyst Window & Timing**  \n   - State the 0–3 week horizon explicitly: core PCE release on **Sep 10** (3YAQ8JUPL), Fed meeting **Sep 16‑17** (U21K4ALYQ), Supreme Court decision **mid‑Oct** (1DEM6P1Y2).  \n   - Link each catalyst to its transmission path: e.g., core PCE → Fed policy → *ust10y* → *spx*.  \n\n3. **Thresholds & Invalidation**  \n   - Add key levels: *spx* 6,400 (break → 200‑point sell‑off), *ust10y* 4.30 % (break → 100‑point *spx* drop), *dxy* 98.06 (break → 50‑point *spx* decline).  \n   - Specify invalidation conditions: core PCE > 2.9 % (cut probability falls), Supreme Court voids tariffs (risk premium disappears), tech earnings miss (additional *spx* drag).  \n\n4. **Action & Positioning**  \n   - Recommend positions: long *spx* (target 6,500), short *ust10y* (target 4.30 %), neutral *dxy*.  \n   - Quantify expected moves: 25‑bp Fed cut → *ust10y* down 25 bps, *spx* up 0.5–1 % (≈30–60 pts).  \n\n5. **Citations & Precision**  \n   - Attach inline citations to every numeric claim: e.g., “*spx* fell 0.7 % (97MD1FHW8)”.  \n   - Remove any generic statements (“higher inflation, potential rate cuts”) that lack source backing.  \n\n6. **Scope & Focus**  \n   - Keep the narrative strictly on *spx*, *ust10y*, *dxy* and their near‑term drivers.  \n   - Eliminate peripheral mentions (e.g., Porsche CEO search) that do not feed the causal chain.  \n\n**Resulting Structure (for the revised memo)**  \n- **Asset**: *spx* (S&P 500)  \n- **Current State**: –0.7 % (97MD1FHW8)  \n- **Drivers**: core PCE 2.6 % (3YAQ8JUPL) → Fed cut 25 bp (U21K4ALYQ) → *ust10y* +2.3 bps (97MD1FHW8) → *spx* +0.5–1 %  \n- **Catalyst Window**: Sep 10 core PCE, Sep 16‑17 Fed meeting, mid‑Oct Supreme Court tariff ruling (IDs above).  \n- **Thresholds**: *spx* 6,400; *ust10y* 4.30 %; *dxy* 98.06.  \n- **Invalidation**: core PCE > 2.9 %, Fed cuts delayed, tariff ruling void.  \n- **Action**: long *spx* to 6,500; short *ust10y* to 4.30 %; monitor dxy.  \n\nImplement these edits to meet the Argos standards: concise, evidence‑based, and fully mapped to canonical handles with clear catalysts and thresholds.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756567611"
+}

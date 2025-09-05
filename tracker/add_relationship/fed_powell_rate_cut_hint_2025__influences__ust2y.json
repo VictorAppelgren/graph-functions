@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T18:15:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_powell_rate_cut_hint_2025",
+    "target_id": "ust2y",
+    "selection_motivation": "A Fed rate‑cut hint directly drives expectations for short‑term Treasury yields; the 2‑year yield is the most sensitive proxy for Fed policy moves.",
+    "candidate_motivation": "The hint signals a potential Fed rate cut, which directly influences Fed policy stance, short‑term and long‑term Treasury yields, the SOFR proxy, inflation expectations, and the US dollar. These factors in turn affect major equity indices and cross‑currency pairs, making the listed topics the most plausible strong influences or peers.",
+    "existing_links_count": "2",
+    "candidate_count": "15",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'sofr', 'us_inflation', 'euro_inflation', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'spx', 'sx5e']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559534271",
+    "rel_id": "fed_powell_rate_cut_hint_2025__influences__ust2y",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A Fed rate‑cut hint directly drives expectations for short‑term Treasury yields; the 2‑year yield is the most sensitive proxy for Fed policy moves.",
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_powell_rate_cut_hint_2025__influences__ust2y"
+}

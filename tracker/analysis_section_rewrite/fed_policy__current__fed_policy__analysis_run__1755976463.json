@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T21:20:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "current",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755976463",
+    "article_ids": "['TXVQ5ZQ0N', 'H9WSBYP3D', '5JQEA5Z1T', 'HNS20VRE3', 'HINLBDIDO']",
+    "selected_articles_count": "5",
+    "material_chars": "208653",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "current_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edit Instructions**\n\n1. **Scope & Horizon Alignment**  \n   - *Issue*: The draft focuses almost exclusively on the Fed narrative, ignoring the 0‑3‑week catalysts for the three stocks in the source material (JOBY, OPEN, LCID).  \n   - *Fix*: Re‑frame the opening to state that the 0‑3‑week outlook is a *confluence* of macro‑policy (Fed dovishness) *and* company‑specific events (Joby’s FAA flight & partnerships, Opendoor’s interim president & Cash Plus launch, Lucid’s reverse‑split vote).  \n   - *Citation*: Use IDs TXVQ5ZQ0N (Joby), H9WSBYP3D (Open), HNS20VRE3 (Lucid) for each event.\n\n2. **Depth & Causal Chain**  \n   - *Issue*: The draft lists outcomes (VIX drop, BTC surge) without explaining *why* they matter to the stocks.  \n   - *Fix*: Add a short causal chain:  \n     1. Powell’s dovish tone → 90 % probability of September cut → lower discount rates → higher risk‑asset demand.  \n     2. Lower rates + lower VIX → increased liquidity → higher equity/crypto prices.  \n     3. Higher equity prices lift risk‑tolerant names (JOBY, OPEN) and boost crypto‑related sentiment (OPEN’s Cash Plus, JOBY’s partnership with L3Harris).  \n   - *Citation*: ID HINLBDIDO for Powell’s remarks, ID TXVQ5ZQ0N for Joby’s 125 % Q‑over‑Q, ID H9WSBYP3D for Open’s 636 % Q‑over‑Q.\n\n3. **Quantification & Numbers**  \n   - *Issue*: The draft mentions “new highs” but lacks concrete price levels or thresholds.  \n   - *Fix*:  \n     - BTC: $69,800 (ID HINLBDIDO).  \n     - ETH: $4,885 (ID HINLBDIDO).  \n     - JOBY: $14.95 (current) vs. consensus $10.83 (ID TXVQ5ZQ0N).  \n     - OPEN: $5.01 vs. consensus $1.39 (ID H9WSBYP3D).  \n     - LCID: $2.03 vs. consensus $2.50 (ID HNS20VRE3).  \n   - Include % moves: JOBY +125 % Q‑over‑Q, OPEN +636 % Q‑over‑Q, LCID –6.88 % after reverse‑split vote.\n\n4. **Key Levels & Invalidation**  \n   - *Issue*: No explicit support/resistance or risk thresholds.  \n   - *Fix*:  \n     - JOBY: 52‑week high $20.95 (ID TXVQ5ZQ0N) – potential upside; 52‑week low $4.70 – downside floor.  \n     - OPEN: 52‑week high $5.08 – near‑term ceiling; 52‑week low $0.51 – floor.  \n     - LCID: 52‑week high $4.43 – upside; 52‑week low $1.93 – floor.  \n     - Invalidation: If Fed signals tightening (e.g., 25 bps hike) or if any of the catalysts (Joby’s FAA certification, Open’s Cash Plus adoption, Lucid’s reverse‑split) fail to materialize, the rally could reverse.  \n   - *Citation*: Use IDs for each price level from the source tables.\n\n5. **First‑Principles & Scenario Structure**  \n   - *Issue*: The draft lacks a clear scenario framework.  \n   - *Fix*: Adopt a 3‑scenario structure:  \n     1. **Baseline** – Fed cuts in September, catalysts succeed → continued upside.  \n     2. **Adverse** – Fed hikes or no cut, catalysts stall → pullback to 52‑week lows.  \n     3. **Mixed** – Fed cuts but one catalyst fails (e.g., Joby’s FAA flight delayed) → partial retracement.  \n   - Quantify each scenario with % price targets and probability weights (e.g., 60 % baseline, 25 % adverse, 15 % mixed).\n\n6. **Monitoring & Next Steps**  \n   - *Issue*: No guidance on what to watch.  \n   - *Fix*:  \n     - Fed policy minutes (next FOMC meeting).  \n     - Joby’s FAA certification status (next FAA update).  \n     - Opendoor’s Cash Plus adoption metrics (Q2 earnings guidance).  \n     - Lucid’s reverse‑split implementation timeline (SEC filing).  \n   - Suggest daily VIX and crypto‑equity correlation checks.\n\n7. **Citation Density & Accuracy**  \n   - *Issue*: The draft cites no IDs.  \n   - *Fix*: Insert inline citations after each numeric claim, e.g., “BTC surged to $69,800 (ID HINLBDIDO)”.  \n   - Ensure every key figure is backed by a source ID.\n\n8. **Formatting & Length**  \n   - *Issue*: The draft is too brief for a world‑class analysis.  \n   - *Fix*: Expand to ~400 words, structured with subheadings (Macro Driver, Company Catalysts, Price Targets, Risk Factors, Monitoring).  \n   - Keep within the 0‑3‑week horizon focus.\n\n**Bottom‑Line Action Items**  \n- Re‑write the opening paragraph to integrate macro + company catalysts.  \n- Add explicit price levels, support/resistance, and invalidation thresholds with IDs.  \n- Build a 3‑scenario framework with quantified targets.  \n- Include a monitoring checklist with dates and sources.  \n- Insert inline citations for every numeric claim.  \n- Expand to ~400 words, using subheadings for clarity.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__current__fed_policy__analysis_run__1755976463"
+}

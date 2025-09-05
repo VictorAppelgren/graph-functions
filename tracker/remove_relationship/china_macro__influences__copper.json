@@ -1,0 +1,64 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-25T03:35:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_macro",
+    "target_id": "copper",
+    "selection_motivation": "The link to copper is the weakest, as China macro influences it only indirectly through global commodity demand, whereas other links capture more direct macro drivers such as inflation, policy, and trade relations.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to copper is the weakest, as China macro influences it only indirectly through global commodity demand, whereas other links capture more direct macro drivers such as inflation, policy, and trade relations.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_semiconductor_policy'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_ai_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845257",
+    "rel_id": "china_macro__influences__copper",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_semiconductor_policy'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'china_ai_semiconductors'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "china_macro",
+      "target": "copper"
+    },
+    "prioritized_link": {
+      "motivation": "China macro conditions such as growth, inflation, and industrial policy directly shape the U.S. decision to impose tariffs on Chinese goods, making this a key driver of US-China trade tensions.",
+      "type": "INFLUENCES",
+      "source": "china_macro",
+      "target": "us_china_tariffs"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to copper is the weakest, as China macro influences it only indirectly through global commodity demand, whereas other links capture more direct macro drivers such as inflation, policy, and trade relations.",
+      "remove_link": "copper"
+    },
+    "removal_decision": {
+      "motivation": "The link to copper is the weakest, as China macro influences it only indirectly through global commodity demand, whereas other links capture more direct macro drivers such as inflation, policy, and trade relations.",
+      "remove_link": "copper"
+    },
+    "source_node": {
+      "last_updated": "2025-08-25T00:02:13.734000000+00:00",
+      "notes": "Links to commodities, global equities, and FX.",
+      "implications": "Links to commodities, global equities, and FX.",
+      "level": "anchor",
+      "current_analysis": "",
+      "importance": 1,
+      "query": "(China OR Chinese OR PRC OR \"People's Republic of China\") OR (macro OR macroeconomic OR macroeconomics OR economic OR economy OR growth OR GDP OR \"gross domestic product\") OR (trade OR trading OR exports OR imports OR trade* OR \"trade balance\" OR \"trade policy\") OR (policy OR policies OR stimulus OR \"fiscal policy\" OR \"monetary policy\" OR \"economic policy\") OR (commodities OR commodity OR resource OR resources OR raw materials OR metals OR energy OR oil OR gas OR agriculture) OR (global OR worldwide OR international OR foreign OR markets OR market) OR (analysis OR analyses OR report OR reports OR news OR update OR trend OR trends OR outlook OR forecast OR insight OR development OR developments)",
+      "last_queried_at": "2025-08-13T15:15:10+00:00",
+      "importance_rationale": "China Macro is a core macroeconomic topic that directly influences global financial markets, currency movements, commodity demand, and equity valuations. It is time-sensitive and highly actionable for intraday trading decisions.",
+      "type": "macro_region",
+      "fundamental_analysis": "Across a multi‑year horizon, a regime framework anchored in first‑principles points to regime shifts in the U.S.–China dynamic that reprice risk premia and cash‑flow discounting in Asia, rather than relying on short‑term macro momentum alone. The regime map builds on invariant anchors: real‑rate differentials (discount rates that reflect inflation, growth, and monetary policy paths), terms‑of‑trade and BoP external balance signals, productivity dynamics, and policy reaction functions that determine how the Fed, the PBOC, and other key policymakers respond to evolving data. In practice, the base regime (Regime A) assumes a data‑dependent U.S. policy path that gradually eases into year‑end expectations, a softer dollar environment that supports EM inflows, and a China growth/credit impulse that keeps cash‑generating niches attractive in equities with durable cash flows; the transition conditions are a Fed path implied by inflation and labor data, a dollar trajectory consistent with that path, and AI‑chip/export signals that feed through to global capex and earnings quality (N26K1HXBH). The alternate regimes (Regime B: tactical tightening/dollar strength; Regime C: sustained U.S.–China tech/tariff pressures) arise when the above transition conditions fail to materialize or invert—e.g., firmer‑than‑priced inflation, a sharper dollar rally, or a sharp tilt in export controls or AI‑chip policy signals that alter the risk premia attached to tech‑intensive earnings (N26K1HXBH)(40M82JY72)(N5CNJJE9J).\n\nWithin this structure, the identified undervalued Asian cash‑flow stocks offer a concrete testing ground for regime‑driven revaluations: Tsinghua Tongfang 600100 trades around CN¥8.13 against a fair‑value input near CN¥14.58, with explicit forecasted earnings growth well in excess of market norms over the next three years, creating a cash‑flow‑driven valuation gap that could narrow if the regime remains in‑line with Regime A (ce106cd6-ffa6-420d-b083-2d569d2c7abb)(75187DPQA); Evergreen Aviation Technologies 2645 sits near a fair value around NT$205.47 versus the market price near NT$183, with forecasted earnings growth in the mid‑40s percent and revenue growth around the mid‑teens, implying upside if durable profitability is realized under Regime A (4f57c833-e649-4413-8c3f-c06db16e156f)(4f57c833-e649-4413-8c3f-c06db16e156f)(6b0f4dfd-8123-408b-8e12-2d3948a1b2b9); Winning Health Technology Group 300253 shows a deeper discount, with a fair value around CN¥20.62 versus CN¥10.92 today and projected earnings growth around 63% annually with revenue growth near 19%, suggesting a meaningful re‑rating path if Regime A remains intact and profitability improves (4f57c833-e649-4413-8c3f-c06db16e156f)(40M82JY72). The balance‑sheet backdrop is mixed across the trio: 600100 carries notable leverage (debt/equity historically high) with limited near‑term cash coverage, while 300253 carries more modest leverage and stronger balance‑sheet liquidity, and 2645 shows solid cash generation with more comfortable leverage—differences that will shape how each name can fund capex and dividends as cash flows compound in the regime‑driven pricing process (ce106cd6-ffa6-420d-b083-2d569d2c7abb)(ce106cd6-ffa6-420d-b083-2d569d2c7abb)(4f57c833-e649-4413-8c3f-c06db16e156f). Across the macro/geo backdrop, the regime transition signals—Fed policy path and the dollar trajectory (as discussed in the Haslinda interview), AI‑chip export policy signals, and U.S.–China tech/tariff posture—will determine whether the cash‑flow valuations reprice toward fair value in a 2–3 year horizon, with the undervalued screens offering roughly 10–40% upside if durable earnings growth and manageable leverage anchor cash flow generation (75187DPQA)(N26K1HXBH)(4f57c833-e649-4413-8c3f-c06db16e156f). The base case envisions re‑rating concentrated in the above names as regime A remains intact, while catalysts include Tencent’s earnings trajectory and AI‑chip policy signals, AUKUS/maintenance capacity developments, and ongoing monetary‑policy positioning that keeps the dollar from derailing EM inflows; the bears would be triggered by a sharper US rate path that strengthens the dollar, a sharper China property/consumption downturn, or a tech‑export shock that meaningfully compresses earnings certainty, each of which would push pricing back toward existing fundamentals and delay any meaningful valuation uplift (N26K1HXBH)(40M82JY72). In conclusion, the multi‑year, regime‑anchored path supports a base case of modest yet durable uplift in select undervalued cash‑flow names, with a framework that ties price to first‑principles anchors (real rates, BoP/terms of trade, productivity, policy reaction) and a disciplined watch list focused on earnings durability, balance‑sheet resilience, and policy signals; the implied probabilities assign a higher weight to Regime A over the next 2–3 years, with explicit catalysts and invalidation points laid out to recalibrate expectations as new data arrives (75187DPQA)(N26K1HXBH)(40M82JY72).",
+      "queries": 9,
+      "name": "China Macro",
+      "id": "china_macro",
+      "last_queried": "2025-08-24T06:51:04.755000000+00:00",
+      "strategy": "Track GDP, trade, and policy stimulus.",
+      "intuition": "Major driver of global growth and commodity demand.",
+      "medium_analysis": "Track GDP, trade, and policy stimulus.",
+      "status": "anchor"
+    }
+  },
+  "id": "china_macro__influences__copper"
+}

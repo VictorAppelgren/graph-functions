@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T14:15:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TJLV9FS97",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Boeing’s turnaround in commercial and defense operations signals a potential upside for its stock, which could lift the S&P 500 and influence U.S. industrial sector sentiment.",
+      "existing_ids": [],
+      "new_names": [
+        "Boeing"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Boeing’s leadership changes, production ramp, profitability, and board composition, which constitutes company news rather than earnings or other categories."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a significant operational turnaround and governance overhaul at Boeing, which can materially influence its valuation and investor sentiment, but the cautious stance of analysts tempers the immediate market impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights a CEO change, production ramp‑up, and governance overhaul at Boeing, indicating medium‑term operational improvements that could affect the company’s outlook over the next 6–12 months."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "TJLV9FS97"
+}

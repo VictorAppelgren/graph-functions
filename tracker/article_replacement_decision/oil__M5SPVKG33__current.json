@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T20:37:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "oil",
+    "new_article_id": "M5SPVKG33",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['L2MP67R7H', '616KXEAFP', 'G442YHGY3', 'CWVWSACA7', 'NBX9RA9WX', '07T878D0A', 'QOTVY47UC', 'I2SJU04DF', '9SQ5JOJKU']",
+    "mode": "MUST_REPLACE",
+    "target_id": "CWVWSACA7",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "CWVWSACA7",
+      "motivation": "The competing timeframe bucket is at capacity; the new hurricane-season weather-app article is more timely and narrowly focused on hurricane-prone usage, so removing CWVWSACA7 preserves analytical relevance and capacity."
+    }
+  },
+  "id": "oil__M5SPVKG33__current"
+}

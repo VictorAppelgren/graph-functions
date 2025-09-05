@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T14:41:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_industrial_output",
+    "target_id": "ust2y",
+    "selection_motivation": "India industrial output is a leading indicator of global manufacturing activity, which shapes global risk sentiment and expectations of Fed policy, thereby influencing short‑term U.S. Treasury yields.",
+    "candidate_motivation": "India Industrial Output is driven by global demand, commodity prices, exchange rates, and policy signals that affect the Indian economy. The listed topics are key macro drivers or correlates that can directly or indirectly influence Indian industrial activity.",
+    "existing_links_count": "4",
+    "candidate_count": "20",
+    "all_nodes_count": "36",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['china_exports', 'china_credit_impulse', 'oil_price_decline', 'wti', 'brent', 'copper', 'dxy', 'usdcny', 'fed_policy', 'ecb_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_unemployment_claims', 'us_crude_inventory', 'cn_russia_gas_pipeline']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530528",
+    "rel_id": "india_industrial_output__influences__ust2y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India industrial output is a leading indicator of global manufacturing activity, which shapes global risk sentiment and expectations of Fed policy, thereby influencing short‑term U.S. Treasury yields.",
+      "type": "INFLUENCES",
+      "source": "india_industrial_output",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__influences__ust2y"
+}

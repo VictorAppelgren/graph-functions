@@ -1,0 +1,140 @@
+{
+  "url": "https://9to5mac.com/2025/08/23/macs-ai-and-the-blind-spot-in-enterprise-security/",
+  "authorsByline": "Bradley C",
+  "articleId": "99f20099e3ce42b7839b71a80169e4ae",
+  "source": {
+    "domain": "9to5mac.com",
+    "paywall": false,
+    "location": null
+  },
+  "imageUrl": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2025/08/1Password.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+  "country": "us",
+  "language": "en",
+  "pubDate": "2025-08-23T14:00:00+00:00",
+  "addDate": "2025-08-23T14:06:06.014307+00:00",
+  "refreshDate": "2025-08-23T14:06:06.014312+00:00",
+  "score": 1.0,
+  "title": "Apple @ Work: Macs, AI, and the blind spot in enterprise security",
+  "description": "AI tools are spreading fast across your Mac fleet. Most IT teams can\u2019t see them, let alone secure them. Here\u2019s what needs to change right now.",
+  "content": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-ready with no effort and at an affordable cost. Request your EXTENDED TRIAL today and understand why Mosyle is everything you need to work with Apple.\n\nAs someone who had the only Mac in the company I worked for 20 years ago, it\u2019s been a fun journey to see Apple grow so much in the enterprise, particularly the Mac. Macs have quietly become the go-to device for a lot of modern knowledge work, and with that comes a growing reality as AI functionality becomes baked into everything. AI tools are everywhere. Some are built into apps employees already use. Others show up through the browser or get installed without any oversight. Frankly, AI usage is the biggest examples of Shadow IT I\u2019ve ever seen. Most of these tools are completely invisible to IT.\n\nAbout Apple @ Work: Bradley Chambers managed an enterprise IT network from 2009 to 2021. Through his experience deploying and managing firewalls, switches, a mobile device management system, enterprise grade Wi-Fi, 1000s of Macs, and 1000s of iPads, Bradley will highlight ways in which Apple IT managers deploy Apple devices, build networks to support them, train users, stories from the trenches of IT management, and ways Apple could improve its products for IT departments.\n\nNew research from 1Password highlights a problem for IT teams. Even with policies in place, enforcement is a struggle. AI is spreading faster than security can keep up, and the Mac sits right in the middle. It reminds me a little bit of when mobility and needing access to corporate resources, regardless of location, took hold in the early 2010s. When IT is on its heels and reactive, trouble can be lurking.\n\nThere is a good chance that many employees are already using AI tools on their Macs. Some might be part of a writing app. Others could be browser-based (even Google Gemini) or from the Mac App Store, which IT never approved. The problem is not that people are trying to bypass rules or securitiy. Some of this functionality is being built in from existing apps. The problem is that most organizations do not even know it is happening or where the data is going.\n\n1Password\u2019s research found that only 21% of security leaders say they have full visibility into what AI tools are being used. For Apple IT admins, that is a huge blind spot. When AI tools start pulling in sensitive company data, even unknowingly, the risk grows fast. That includes data being sent to tools that use public language models and could store or learn from what employees upload. Again, this feels VERY similiar when file sharing services moved to the cloud (Dropbox in the early 2010s, etc).\n\nThe fix starts with visibility. Mac admins need to work with security teams to determine what tools are being used. That might include adding reporting for network activity, telemetry data, tracking app installs, or using SaaS discovery tools. It is also worth conversing with teams about how they use AI in their workflows. You cannot block what you do not know about. Similar to how companies track vulnerabilities in their approved apps. You\u2019ll want to have a database of all your tools using AI and what\u2019s happening with that data.\n\nPolicy enforcement only works if you can see what is happening\n\nIt is one thing to write a security policy. It is another thing to make it stick. That is the challenge for a lot of IT teams right now. AI adoption is moving faster than enforcement. People are not trying to break the rules when they\u2019re using AI. They are just trying to do their jobs faster. If you use LinkedIn, you\u2019ll realize that everyone from marketing to engineers is being told \u201cyou must use AI and be an expert\u201d to stay relevant. But when those tools are not approved or monitored, you lose control of your data and open the door to real risk. There is a saying for security teams right now, hackers aren\u2019t breaking in, they\u2019re logging in.\n\nFor Mac admins, this creates a visibility and policy problem. Even with system extensions, configuration profiles, and network controls in place, most teams are not set up to flag unauthorized AI usage\u2014especially if it\u2019s baked into your approved tools. If you are not using any kind of SaaS discovery or endpoint telemetry, you are flying blind. That includes apps that are only used in a browser.\n\nThis is where coordination with legal and security teams matters. Figure out what is allowed and what is not. Define what enforcement looks like. Is it blocking? Is it just logging? Is it a conversation with the employee? Once those guardrails are in place, Mac admins can map technical enforcement to real-world behavior.\n\nIdentity and access models were not built for AI agents\n\nThis is the part that sneaks up on people. Employees are not just using AI tools; they are giving those tools access to systems and data. That includes pasting in passwords, hard-coding API keys, or connecting AI agents directly to company data. These agents are not people, but they are acting like users, and most identity platforms are not built to manage them.\n\nThis means the usual device trust model is not enough for Mac admins. If an AI agent is sitting on a Mac and talking to your backend systems, it must be treated like any other identity. That means controlling what it can access, tracking its behavior, and having a way to shut it down if something goes wrong.\n\nApple\u2019s work with Platform SSO and Managed Apple Accounts can help tie identities to devices. However, the next step is to figure out how to apply that same thinking to non-human agents. If you are not tracking what they can do, you are taking on risk without realizing it.\n\nThe role of Mac admins in securing the future of AI\n\nA few weeks ago, I wrote an article about how MDM (aka device management services) is no longer enough to succeed with Apple at work. This problem is a prime example of where you have to go further. Apple gives IT teams a solid foundation with tools, but securing AI in the workplace means going a step further. Mac admins need to treat AI tools and agents like any other part of the environment.\n\nFor Mac admins, the response shouldn\u2019t be to lock things down more. It should be about knowing what is happening, understanding the risks, and working with security and legal to implement smart policies. That includes visibility into tool usage, enforcement that matches real behavior, and identity models that account for people and machines.\n\nApple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-ready with no effort and at an affordable cost. Request your EXTENDED TRIAL today and understand why Mosyle is everything you need to work with Apple.",
+  "medium": "Article",
+  "links": [
+    "https://news.google.com/publications/CAAqBggKMLOFATDAGg?hl=en-US&gl=US&ceid=US:en",
+    "https://amzn.to/4f3AhAK",
+    "https://blog.1password.com/new-research-uncovers-four-security-challenges-caused-by-unmanaged-ai/",
+    "https://amzn.to/4f46J6c",
+    "https://mosyle.net/3RDn",
+    "https://amzn.to/3Yg7OAJ"
+  ],
+  "labels": [],
+  "claim": "",
+  "verdict": "",
+  "keywords": [
+    {
+      "name": "AI tools",
+      "weight": 0.08721075
+    },
+    {
+      "name": "Apple devices",
+      "weight": 0.086185545
+    },
+    {
+      "name": "Apple IT admins",
+      "weight": 0.08591871
+    },
+    {
+      "name": "AI agents",
+      "weight": 0.07606896
+    },
+    {
+      "name": "Apple IT managers",
+      "weight": 0.075723656
+    },
+    {
+      "name": "Mac admins",
+      "weight": 0.07519279
+    },
+    {
+      "name": "security teams",
+      "weight": 0.07340246
+    },
+    {
+      "name": "IT teams",
+      "weight": 0.07043067
+    },
+    {
+      "name": "AI usage",
+      "weight": 0.07009525
+    },
+    {
+      "name": "tool usage",
+      "weight": 0.06977143
+    }
+  ],
+  "topics": [
+    {
+      "name": "AI"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Tech"
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "/News/Technology News",
+      "score": 0.91943359375
+    },
+    {
+      "name": "/Computers & Electronics/Software/Operating Systems",
+      "score": 0.5634765625
+    },
+    {
+      "name": "/Computers & Electronics/Computer Security/Network Security",
+      "score": 0.5048828125
+    },
+    {
+      "name": "/Computers & Electronics/Software/Business & Productivity Software",
+      "score": 0.501953125
+    },
+    {
+      "name": "/News/Business News/Company News",
+      "score": 0.46337890625
+    },
+    {
+      "name": "/Computers & Electronics/Enterprise Technology/Other",
+      "score": 0.361083984375
+    },
+    {
+      "name": "/Internet & Telecom/Web Services/Cloud Storage",
+      "score": 0.33203125
+    }
+  ],
+  "sentiment": {
+    "positive": 0.08195894,
+    "negative": 0.6163386,
+    "neutral": 0.30170238
+  },
+  "summary": "Apple @ Work is sponsored by Mosyle, the only Apple Unified Platform. Mosyle provides a comprehensive solution to seamlessly and automatically deploy, manage, and protect Apple devices at work. The article discusses the growing use of AI functionality in the enterprise, with author Bradley Chambers highlighting how these tools are often invisible to IT. Research from 1Password found that only 21% of security leaders have full visibility into what AI tools are being used. The solution is to ensure that Mac admins work with security teams to identify tools being used and monitor the data being sent to public language models. The risk of unauthorized AI usage can grow fast when AI tools start pulling in sensitive company data, even unknowingly, according to the author.",
+  "shortSummary": "Apple @ Work highlights the challenges of AI and Shadow IT, where AI tools, including Macs, are rapidly becoming integral to enterprise security, requiring increased visibility and collaboration.",
+  "translation": "",
+  "translatedTitle": "",
+  "translatedDescription": "",
+  "translatedSummary": "",
+  "reprint": false,
+  "reprintGroupId": "388185d3432248afa7ae9c9250594bd1",
+  "places": [],
+  "scraped_sources": [
+    {
+      "url": "https://blog.1password.com/new-research-uncovers-four-security-challenges-caused-by-unmanaged-ai/",
+      "text": "At this point, it\u2019s almost clich\u00e9 to say \u201cAI is here, and it is changing everything.\u201d Whether it\u2019s accelerating productivity or reshaping employee workflows, AI is ushering in a new era of operational possibilities. But as we all know, beneath this transformation lies a complex and evolving security challenge.\nAs AI introduces new risks, we\u2019re taking stock of the state of mind of security leaders as they are tackling these new challenges to identify where tangible solutions are most needed. To do this, we commissioned a survey of 200 North American security leaders, which revealed a core tension stemming from AI and the lack of meaningful security controls.\nDave Lewis, Global Advisory CISO at 1Password, has been speaking with security leaders around the world and found that there is a shared concern over the deluge of AI tools entering their environments. Lewis said, \u201cMy favourite quote was from a CISO in the EU who said to me, \u2018We have closed the door to AI tools and projects, but they keep coming through the window!\u2019 Governance over AI is severely lacking in many corporate environments.\u201d\nThe survey highlights four critical challenges and what security leaders should consider to secure today\u2019s AI-augmented workforce.\nChallenge 1: Limited visibility into AI tool usage\nOnly 21% of security leaders say they have full visibility into AI tools used in their organization.\nLack of visibility into applications and usage is something that security teams have been tackling for years. This problem is exacerbated by employee adoption of AI tools, such as generative AI. Even when policies are in place, the lack of visibility into which AI apps are in use makes it extremely difficult to enforce those policies. These policies can be the difference between your corporate data being used to train public LLMs and maintaining control of it.\nThe adoption of unsanctioned AI tools by employees is a major contributor to the Access-Trust Gap. AI is widening this gap and making it more complicated for security leaders to ensure their organization\u2019s security. So, how do you estimate and reduce the risk when you can\u2019t see it?\nTo effectively mitigate the visibility challenges introduced by AI, security leaders should take action:\n- Document and understand how employees are using and plan to use AI in their daily workflows.\n- Use SaaS governance or device trust tools to help identify AI usage.\n- Evaluate where new or additional policies need to be enforced, such as blocking specific generative AI tools.\nChallenge 2: AI and security policy enforcement\n54% of security leaders say their AI governance enforcement is weak.\n32% believe up to half of employees continue to use unauthorized AI applications.\nImplementing and enforcing security policies has long been a cybersecurity challenge. When it comes to AI, governance is a priority. Policies have been written. Frameworks are being drafted. Yet in practice, AI tool usage often remains uncontrolled.\nWhen it comes to AI, one of the core issues is that adoption is outpacing our ability to secure it. Even the best security policies cannot be effective if they can\u2019t be enforced. Organization leaders need to discover AI tools in use and decide how strongly they want to enforce it, and in what forms: monitoring, blocking, or taking personnel actions. This is what enables the business to embrace the secure and responsible use of AI.\nTo establish effective AI governance, security leaders should take the following steps:\n- Embed security policy enforcement into your organization\u2019s overall AI adoption strategy.\n- Collaborate with business partners to proactively identify and assess the use of AI, discussing the business risk with stakeholders such as the legal department.\n- Evaluate and adopt tools that enable you to monitor and block unauthorized AI use.\nChallenge 3: Unintentional exposure via AI access\n63% of security leaders believe the biggest internal security threat is that their employees have unknowingly given AI access to sensitive data.\nEmployees are increasingly adopting AI and providing these tools with corporate data, often with minimal oversight. Given that AI depends on this data, the lack of oversight can put organizations at significant risk of losing control of their data.\nThe issue isn\u2019t malicious intent. Employees may unintentionally or unknowingly provide access to sensitive data to AI tools, creating a variety of risks and potential compliance violations. This is especially true if the data is being added to AI tools that incorporate it into their public LLMs by default.\nMitigating the risk of unintentional data exposure requires an organization-wide framework for secure data usage in AI environments. Security leaders should operationalize the following:\n- Define what constitutes acceptable data sharing with AI tools. Unless you are absolutely sure that the AI tool is keeping all data within your own infrastructure, assume that it\u2019s the same as posting it on social media.\n- Deploy and track training programs that help employees recognize the risks of uploading corporate data to AI tools.\n- Design user-friendly guardrails that will protect corporate data without slowing down work.\nChallenge 4: Unmanaged AI\nMore than half of security leaders (56%) estimate that between 26% and 50% of their AI tools and agents are unmanaged.\nAs employees adopt AI, many apps and AI agents may be interacting with business systems without going through formal identity or access governance. That means employees may be giving AI agents their credentials, hard-coding credentials during development, or even providing direct connections between AI tools and sensitive systems.\nTraditional identity and access management models were not designed with this in mind. The outcome is a risk and compliance nightmare, as without proper governance, it becomes extremely difficult to understand how access is being used or to keep audit trails for compliance.\nTo mitigate risks introduced by unmanaged AI tools and agents, organizations must evolve their access governance strategies. Security leaders should take the following actions:\n- Extend access management and governance to include AI agents.\n- Create clear guidelines for how AI agents and tools should be provisioned access and how it will be managed, including how it will be tracked, recertified, and revoked.\n- Ensure that you have the ability to audit the actions of AI tools and agents in order to meet compliance requirements.\nSecuring AI: The path forward\nThis research makes one thing clear: security leaders are aware of the risks posed by AI, and they are under-equipped to address them. As AI adoption accelerates, the absence of visibility, governance, and control over AI tools and agents leaves organizations exposed. The good news? There\u2019s a path forward. Securing AI doesn\u2019t mean slowing it down\u2014it means enabling it with confidence. At 1Password, we believe the future of work depends on extending trust-based security to every identity, human or machine. It\u2019s time to stop playing catch-up and start building security strategies that keep pace with AI. Learn more about how 1Password can help you secure the use of AI and AI agents, enabling employees to get the productivity benefits with minimal risk."
+    },
+    {
+      "url": "https://news.google.com/publications/CAAqBggKMLOFATDAGg?hl=en-US&gl=US&ceid=US:en",
+      "text": "- EnglishUnited States\n- Deutsch\n- English\n- Espa\u00f1ol\n- Fran\u00e7ais\n- Italiano\n- Svenska\n- All languages\n- Afrikaans\n- az\u0259rbaycan\n- bosanski\n- catal\u00e0\n- \u010ce\u0161tina\n- Cymraeg\n- Dansk\n- Deutsch\n- eesti\n- EnglishUnited Kingdom\n- Espa\u00f1olEspa\u00f1a\n- Espa\u00f1olLatinoam\u00e9rica\n- euskara\n- Filipino\n- Fran\u00e7aisCanada\n- Fran\u00e7aisFrance\n- Gaeilge\n- galego\n- Hrvatski\n- Indonesia\n- isiZulu\n- \u00edslenska\n- Italiano\n- Kiswahili\n- latvie\u0161u\n- lietuvi\u0173\n- magyar\n- Melayu\n- Nederlands\n- norsk\n- o\u2018zbek\n- polski\n- Portugu\u00easBrasil\n- Portugu\u00easPortugal\n- rom\u00e2n\u0103\n- shqip\n- Sloven\u010dina\n- sloven\u0161\u010dina\n- srpski (latinica)\n- Suomi\n- Svenska\n- Ti\u1ebfng Vi\u1ec7t\n- T\u00fcrk\u00e7e\n- \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac\n- \u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f\n- \u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438\n- \u043a\u044b\u0440\u0433\u044b\u0437\u0447\u0430\n- \u049b\u0430\u0437\u0430\u049b \u0442\u0456\u043b\u0456\n- \u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438\n- \u043c\u043e\u043d\u0433\u043e\u043b\n- \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n- \u0441\u0440\u043f\u0441\u043a\u0438\n- \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n- \u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8\n- \u0570\u0561\u0575\u0565\u0580\u0565\u0576\n- \u05e2\u05d1\u05e8\u05d9\u05ea\n- \u0627\u0631\u062f\u0648\n- \u0627\u0644\u0639\u0631\u0628\u064a\u0629\n- \u0641\u0627\u0631\u0633\u06cc\n- \u12a0\u121b\u122d\u129b\n- \u0928\u0947\u092a\u093e\u0932\u0940\n- \u092e\u0930\u093e\u0920\u0940\n- \u0939\u093f\u0928\u094d\u0926\u0940\n- \u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be\n- \u09ac\u09be\u0982\u09b2\u09be\n- \u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40\n- \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\n- \u0b13\u0b21\u0b3c\u0b3f\u0b06\n- \u0ba4\u0bae\u0bbf\u0bb4\u0bcd\n- \u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\n- \u0c95\u0ca8\u0ccd\u0ca8\u0ca1\n- \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02\n- \u0dc3\u0dd2\u0d82\u0dc4\u0dbd\n- \u0e44\u0e17\u0e22\n- \u0ea5\u0eb2\u0ea7\n- \u1019\u103c\u1014\u103a\u1019\u102c\n- \u1781\u17d2\u1798\u17c2\u179a\n- \ud55c\uad6d\uc5b4\n- \u65e5\u672c\u8a9e\n- \u7b80\u4f53\u4e2d\u6587\n- \u7e41\u9ad4\u4e2d\u6587\n- \u7e41\u9ad4\u4e2d\u6587\u9999\u6e2f\n- EnglishUnited States\n- Deutsch\n- English\n- Espa\u00f1ol\n- Fran\u00e7ais\n- Italiano\n- Svenska\n- All languages\n- Afrikaans\n- az\u0259rbaycan\n- bosanski\n- catal\u00e0\n- \u010ce\u0161tina\n- Cymraeg\n- Dansk\n- Deutsch\n- eesti\n- EnglishUnited Kingdom\n- Espa\u00f1olEspa\u00f1a\n- Espa\u00f1olLatinoam\u00e9rica\n- euskara\n- Filipino\n- Fran\u00e7aisCanada\n- Fran\u00e7aisFrance\n- Gaeilge\n- galego\n- Hrvatski\n- Indonesia\n- isiZulu\n- \u00edslenska\n- Italiano\n- Kiswahili\n- latvie\u0161u\n- lietuvi\u0173\n- magyar\n- Melayu\n- Nederlands\n- norsk\n- o\u2018zbek\n- polski\n- Portugu\u00easBrasil\n- Portugu\u00easPortugal\n- rom\u00e2n\u0103\n- shqip\n- Sloven\u010dina\n- sloven\u0161\u010dina\n- srpski (latinica)\n- Suomi\n- Svenska\n- Ti\u1ebfng Vi\u1ec7t\n- T\u00fcrk\u00e7e\n- \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac\n- \u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f\n- \u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438\n- \u043a\u044b\u0440\u0433\u044b\u0437\u0447\u0430\n- \u049b\u0430\u0437\u0430\u049b \u0442\u0456\u043b\u0456\n- \u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438\n- \u043c\u043e\u043d\u0433\u043e\u043b\n- \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n- \u0441\u0440\u043f\u0441\u043a\u0438\n- \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n- \u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8\n- \u0570\u0561\u0575\u0565\u0580\u0565\u0576\n- \u05e2\u05d1\u05e8\u05d9\u05ea\n- \u0627\u0631\u062f\u0648\n- \u0627\u0644\u0639\u0631\u0628\u064a\u0629\n- \u0641\u0627\u0631\u0633\u06cc\n- \u12a0\u121b\u122d\u129b\n- \u0928\u0947\u092a\u093e\u0932\u0940\n- \u092e\u0930\u093e\u0920\u0940\n- \u0939\u093f\u0928\u094d\u0926\u0940\n- \u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be\n- \u09ac\u09be\u0982\u09b2\u09be\n- \u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40\n- \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\n- \u0b13\u0b21\u0b3c\u0b3f\u0b06\n- \u0ba4\u0bae\u0bbf\u0bb4\u0bcd\n- \u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\n- \u0c95\u0ca8\u0ccd\u0ca8\u0ca1\n- \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02\n- \u0dc3\u0dd2\u0d82\u0dc4\u0dbd\n- \u0e44\u0e17\u0e22\n- \u0ea5\u0eb2\u0ea7\n- \u1019\u103c\u1014\u103a\u1019\u102c\n- \u1781\u17d2\u1798\u17c2\u179a\n- \ud55c\uad6d\uc5b4\n- \u65e5\u672c\u8a9e\n- \u7b80\u4f53\u4e2d\u6587\n- \u7e41\u9ad4\u4e2d\u6587\n- \u7e41\u9ad4\u4e2d\u6587\u9999\u6e2f\nBefore you continue to Google\nWe use cookies and data to\n- Deliver and maintain Google services\n- Track outages and protect against spam, fraud, and abuse\n- Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services\nIf you choose to \u201cAccept all,\u201d we will also use cookies and data to\n- Develop and improve new services\n- Deliver and measure the effectiveness of ads\n- Show personalized content, depending on your settings\n- Show personalized ads, depending on your settings\nIf you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes.\nNon-personalized content is influenced by things like the content you\u2019re currently viewing, activity in your active Search session, and your location. Non-personalized ads are influenced by the content you\u2019re currently viewing and your general location. Personalized content and ads can also include more relevant results, recommendations, and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant.\nSelect \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time."
+    }
+  ],
+  "argos_summary": "Apple @ Work highlights how Macs are becoming mainstream in enterprise and the growing risk of AI tools becoming shadow IT. 1Password research shows only 21% of security leaders have full visibility into AI usage, and 54% find enforcement weak, exposing sensitive data to unapproved AI agents. The article urges Mac admins to gain visibility through telemetry and SaaS discovery, align policies with legal and security teams, and extend identity and access models to treat AI agents like human users. Mosyle is promoted as a unified platform to deploy, manage, and protect Apple devices while addressing these AI\u2011related security gaps.",
+  "argos_id": "FRKJPT636"
+}

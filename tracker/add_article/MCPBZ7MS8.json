@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T13:20:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MCPBZ7MS8",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; Europe’s defense spending surge will lift industrial metals demand, especially copper, boosting copper prices and tightening supply‑demand fundamentals.",
+      "existing_ids": [
+        "eu_defense_spending",
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports a significant increase in EU defense spending, a major macroeconomic event that will influence industrial metal demand and commodity markets."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Uncertain relevance of the article to the node; the article discusses industrial metals demand, but the specific node is unknown."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights a medium‑term structural shift in industrial metal demand driven by EU defense spending projected to rise by 2027, indicating a medium‑horizon impact on copper and related metals."
+    },
+    "article_node": {
+      "id": "MCPBZ7MS8",
+      "title": "Defense stocks aren't the only winners of Europe's spending blitz",
+      "summary": "Defense stocks have surged this year as European governments raise military budgets, prompting analysts to predict a significant boost in industrial metals demand. Goldman Sachs estimates that EU defense spending could increase by 2.7% of GDP by 2027, adding roughly €167 billion, with about 40% directed toward metal‑heavy equipment. This rearmament is expected to raise Europe's overall industrial metal demand by 6%, adding 0.9% to copper, 1.3% to nickel, and 0.4% to steel consumption. Copper, integral to military systems and AI data centers, could see its global demand growth rise from 2% to 2.4% annually, potentially pushing prices toward $10,000–$10,750 per metric ton in 2026–2027.",
+      "source": "https://www.businessinsider.com/defense-stocks-europe-rearmament-spending-metals-copper-demand-goldman-sachs-2025-8",
+      "published_at": "2025-08-25T05:27:27+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "MCPBZ7MS8"
+}

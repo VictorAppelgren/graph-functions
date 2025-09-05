@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:24:46",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_nvidia_policy",
+    "target_id": "china_semiconductor_policy",
+    "selection_motivation": "China Nvidia Policy is a key component of China’s broader semiconductor regulatory framework, directly shaping the country’s semiconductor strategy and policy decisions.",
+    "candidate_motivation": "These topics directly relate to China-U.S. semiconductor policy and Nvidia's exposure to China, including China's stance on Nvidia, export controls, and trade/tariff dynamics, making them the strongest potential influences, correlates, or peers.",
+    "existing_links_count": "2",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['nvidia_china_geopolitics', 'china_nvidia_h20_chips', 'china_nvidia_h20', 'us_china_ai_chip_agreement', 'us_china_ai_chip_exports', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'china_semiconductor_policy', 'us_china_trade_talks', 'us_china_trade_war_2025', 'us_chip_exports_china']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_nvidia_policy', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'china_nvidia_policy', 'target': 'china_nvidia_h20_chips'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559532193",
+    "rel_id": "china_nvidia_policy__influences__china_semiconductor_policy",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_nvidia_policy', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'china_nvidia_policy', 'target': 'china_nvidia_h20_chips'}, {'type': 'INFLUENCES', 'source': 'china_nvidia_policy', 'target': 'china_semiconductor_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China Nvidia Policy is a key component of China’s broader semiconductor regulatory framework, directly shaping the country’s semiconductor strategy and policy decisions.",
+      "type": "INFLUENCES",
+      "source": "china_nvidia_policy",
+      "target": "china_semiconductor_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_nvidia_policy__influences__china_semiconductor_policy"
+}

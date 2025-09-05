@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T13:11:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FAN5RYW6T",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; S&P 500 concentration and weak tech earnings risk, amplified by labor market softness, inflation, tariffs, and potential Fed rate cuts.",
+      "existing_ids": [
+        "spx",
+        "us_inflation",
+        "fed_policy",
+        "us_unemployment_claims",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market analysis and commentary on S&P 500 concentration, potential earnings weakness, inflation, tariffs, and Fed rate cut expectations, without reporting a specific event or data release."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article signals heightened concentration risk in the S&P 500 and anticipates a Fed rate cut in September, both of which materially affect the spx index’s risk profile, warranting a moderate impact assessment."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on near‑term risk factors—potential September Fed rate cuts, weak earnings, and inflationary pressures—that could affect the S&P 500 in the coming months, rather than long‑term structural drivers."
+    },
+    "article_node": {
+      "id": "FAN5RYW6T",
+      "title": "Morningstar details 2 forces that could derail a stock market that's historically dependent on Big Tech",
+      "summary": "The S&P 500’s top ten stocks now account for 40% of the index, an all‑time high, raising concerns that a weak earnings cycle in tech could trigger a sharp market pullback.  Morningstar’s Dominic Pappalardo warns that the concentration of tech names amplifies downside risk, especially as the labor market shows weak growth and the Fed may cut rates in September.  Sticky inflation, tariff‑driven price pressures, and the possibility of sustained high rates add further headwinds, prompting a recommendation to diversify into international, small‑cap, and healthcare equities.",
+      "source": "https://www.businessinsider.com/stock-market-crash-more-concentrated-than-ever-ai-tech-morningstar-2025-8",
+      "published_at": "2025-08-30T09:35:02+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "FAN5RYW6T"
+}

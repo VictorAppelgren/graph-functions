@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T20:12:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gbpusd",
+    "target_id": "usdcny",
+    "selection_motivation": "This link is the weakest correlation and least supported by recent data.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link is the weakest correlation and least supported by recent data.",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1200211499717494268",
+    "rel_id": "gbpusd__correlates_with__usdcny",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'usdjpy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "usdcny"
+    },
+    "prioritized_link": {
+      "motivation": "GBP/USD is strongly correlated with UK 30‑year gilt yields because both reflect UK risk sentiment and funding flows, making a direct correlation link valuable for cross‑asset analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "gbpusd",
+      "target": "uk_30yr_gilt_yield"
+    },
+    "llm_raw_response": {
+      "motivation": "This link is the weakest correlation and least supported by recent data.",
+      "remove_link": "usdcny"
+    },
+    "removal_decision": {
+      "motivation": "This link is the weakest correlation and least supported by recent data.",
+      "remove_link": "usdcny"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "((GBPUSD OR GBP/USD OR GBPUSD* OR \"GBP/USD\" OR \"GBPUSD\" OR \"GBP USD\" OR \"British Pound\" OR \"Pound Sterling\" OR \"Sterling\" OR \"GBP\") AND (USD OR \"US Dollar\" OR \"Dollar\" OR \"US$\" OR \"USD$\")) AND (exchange rate OR currency OR forex OR FX OR \"foreign exchange\" OR \"currency pair\" OR \"FX pair\") AND (news OR analysis OR trend OR market OR volatility OR movement OR change OR shift OR impact OR report OR update OR outlook OR forecast) AND (inflation OR \"interest rate\" OR rates OR \"central bank\" OR \"Bank of England\" OR BoE OR \"BoE policy\" OR \"BoE rates\" OR \"BoE decision\" OR \"BoE meeting\" OR Fed OR ECB OR BoJ OR PBoC OR \"monetary policy\" OR \"fiscal policy\") AND (economic OR economy OR GDP OR growth OR recession OR recovery)",
+      "name": "GBP/USD",
+      "id": "gbpusd",
+      "last_queried": "2025-09-03T04:46:34.204000000+00:00",
+      "queries": 6
+    }
+  },
+  "id": "gbpusd__correlates_with__usdcny"
+}

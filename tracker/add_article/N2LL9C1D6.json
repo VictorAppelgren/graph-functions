@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T13:06:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "N2LL9C1D6",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Boeing’s turnaround signals a potential upside for the industrials sector, lifting the S&P 500 and related indices.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Boeing’s production targets, backlog growth, and profitability improvements, which are company‑specific operational updates rather than earnings, policy, or macro data."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Article reports operational turnaround for Boeing’s commercial and defense divisions, but the lack of a top‑pick recommendation limits upside, indicating a moderate market impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent operational metrics and profitability changes for Boeing, indicating immediate events affecting the company’s performance."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "N2LL9C1D6"
+}

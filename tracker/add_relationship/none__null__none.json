@@ -1,0 +1,28 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T02:18:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "null",
+    "source_id": "None",
+    "target_id": "None",
+    "selection_motivation": "None of the remaining candidate nodes are credible drivers or directly impacted by the S&P 500, and no missing link meets the criteria of a strong, actionable causal or correlational relationship.",
+    "candidate_motivation": "These topics are the most likely strong peers or influences based on the source topic's domain, covering US macro fundamentals, Treasury yields, monetary policy, key global equity peers, currency benchmarks, and major commodity drivers that historically move the S&P 500.",
+    "existing_links_count": "20",
+    "candidate_count": "25",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'ust5y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'sx5e', 'dxy', 'euro_inflation', 'ecb_policy', 'bund10y', 'gilt10y', 'jgb10y', 'gbpusd', 'usdjpy', 'eurusd', 'usdcny', 'gold', 'wti', 'brent', 'copper', 'wheat']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_core_pce'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "status": "error",
+    "error": "'source'"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "None of the remaining candidate nodes are credible drivers or directly impacted by the S&P 500, and no missing link meets the criteria of a strong, actionable causal or correlational relationship.",
+      "type": "null"
+    }
+  },
+  "id": "none__null__none"
+}

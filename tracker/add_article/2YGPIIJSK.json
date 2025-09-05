@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T15:31:10",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2YGPIIJSK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US 10Y Treasury yield drives terminal growth assumption and discount rate, influencing Amplitude’s valuation; beta relative to S&P 500 links equity risk to market performance.",
+      "existing_ids": [
+        "ust10y",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article discusses Amplitude Inc.'s valuation and investment outlook, which is a company update rather than earnings or other categories."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article provides a valuation assessment indicating significant undervaluation and upside potential for Amplitude Inc., directly affecting the company's perceived value."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on the medium‑term valuation outlook and expected price movement toward fair value over the next few years."
+    },
+    "article_node": {
+      "id": "2YGPIIJSK",
+      "title": "Are Investors Undervaluing Amplitude, Inc. (NASDAQ:AMPL) By 37%?",
+      "summary": "Amplitude Inc. (NASDAQ:AMPL) is currently trading at $11.43, well below its DCF‑derived fair value of $18.19, implying a 37% intrinsic discount and a >20% undervaluation relative to the 12‑month analyst target of $15.67. The valuation uses an 8.4% discount rate, a 3.1% terminal growth rate, and a 10‑year free‑cash‑flow projection, yielding a total equity value of $2.4 billion. Despite being unprofitable and projected to remain so for the next three years, the company has a cash runway of over three years and is considered a strong buy by analysts. The consensus view is that the stock offers significant upside, with the price expected to rise toward the fair value over the medium term.",
+      "source": "https://finance.yahoo.com/news/investors-undervaluing-amplitude-inc-nasdaq-122009681.html?.tsrc=rss",
+      "published_at": "2025-08-31T12:20:09+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "2YGPIIJSK"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:06:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "vaccine_misinformation_impact",
+    "target_id": "vaccine_misinformation_and_violence",
+    "selection_motivation": "The impact of vaccine misinformation directly drives vaccine‑related violence, making the impact node a key driver of the violence phenomenon.",
+    "candidate_motivation": "These topics are the most plausible peers or influences of Vaccine Misinformation Impact, focusing on direct vaccine misinformation variants, violence linked to misinformation, and broader misinformation channels (including AI-facilitated and geopolitically driven campaigns) that can amplify or correlate with vaccine misinformation.",
+    "existing_links_count": "2",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['vaccine_misinformation', 'vaccine_disinformation_violence', 'vaccine_misinformation_violence', 'disinformation_campaigns', 'ai_generated_misinformation', 'ai_narrative_attacks']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'vaccine_misinformation_impact', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'vaccine_misinformation_impact', 'target': 'mental_health_gun_violence_covid_vaccine'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'The impact of vaccine misinformation directly drives vaccine‑related violence, making the impact node a key driver of the violence phenomenon.', 'type': 'INFLUENCES', 'source': 'vaccine_misinformation_impact', 'target': 'vaccine_misinformation_and_violence'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The impact of vaccine misinformation directly drives vaccine‑related violence, making the impact node a key driver of the violence phenomenon.",
+      "type": "INFLUENCES",
+      "source": "vaccine_misinformation_impact",
+      "target": "vaccine_misinformation_and_violence"
+    }
+  },
+  "id": "vaccine_misinformation_impact__influences__vaccine_misinformation_and_violence"
+}

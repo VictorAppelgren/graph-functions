@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:10:48",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "QC9FODFAR",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses advancements in nuclear fusion technology, specifically the role of AI in enhancing the efficiency of fusion experiments, which is critical for the future of clean energy and has significant macroeconomic implications.",
+      "id": "nuclear_fusion",
+      "name": "Nuclear Fusion",
+      "type": "macro",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Potential shift in energy supply, climate policy, and macroeconomic growth."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Nuclear fusion is a technology, not a macro driver, tradable asset, or policy regime; it falls under disallowed industry/operational niche topics.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

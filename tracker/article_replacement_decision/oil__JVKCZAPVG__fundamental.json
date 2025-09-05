@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-23T20:04:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "oil",
+    "new_article_id": "JVKCZAPVG",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['9X7XOLXMH', 'DK0H5TM4G', 'B9H6KQ54C', 'T1QE6JPIX', 'DWHK73K29', 'J99EM2TPZ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article on this topic exists, so the new article does not supersede any current content."
+    }
+  },
+  "id": "oil__JVKCZAPVG__fundamental"
+}

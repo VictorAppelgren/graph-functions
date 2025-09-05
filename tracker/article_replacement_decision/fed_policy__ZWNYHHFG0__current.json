@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-09-01T11:20:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "ZWNYHHFG0",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['GXYXMKIG5', 'ZUXOHE4Q9', 'Z7K8PC4G5', 'U21K4ALYQ', '97MD1FHW8', '3952FOSRQ', '3YAQ8JUPL', 'D0R3LX8F7']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article to replace; new article is unique."
+    }
+  },
+  "id": "fed_policy__ZWNYHHFG0__current"
+}

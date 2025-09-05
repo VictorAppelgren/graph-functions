@@ -1,0 +1,54 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T22:15:23",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "gbpusd",
+    "selection_motivation": "This link has the weakest evidence and minimal cross‑asset impact among the current set, providing the least strategic value for the new copper link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link has the weakest evidence and minimal cross‑asset impact among the current set, providing the least strategic value for the new copper link.",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510068236",
+    "rel_id": "oil_price_decline__influences__gbpusd",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'eurusd'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "gbpusd"
+    },
+    "prioritized_link": {
+      "motivation": "Oil price decline reduces industrial energy costs and weakens demand for copper, directly compressing copper prices.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "copper"
+    },
+    "llm_raw_response": {
+      "motivation": "This link has the weakest evidence and minimal cross‑asset impact among the current set, providing the least strategic value for the new copper link.",
+      "remove_link": "gbpusd"
+    },
+    "removal_decision": {
+      "motivation": "This link has the weakest evidence and minimal cross‑asset impact among the current set, providing the least strategic value for the new copper link.",
+      "remove_link": "gbpusd"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "(small-cap OR \"small cap\" OR \"small capitalization\" OR \"small cap stocks\" OR \"small cap opportunities\" OR \"small cap growth\" OR \"small cap value\") AND (undiscovered OR \"undiscovered gems\" OR \"hidden gems\" OR \"hidden gem\" OR \"undiscovered gem\") AND (\"Middle East\" OR \"Middle East stocks\" OR \"Middle East small caps\" OR \"Gulf stocks\" OR \"Gulf region\" OR \"Gulf markets\" OR \"Gulf indices\" OR GCC OR UAE OR \"Saudi Arabia\" OR Qatar OR Bahrain OR Oman OR Egypt OR Morocco OR Tunisia OR Algeria) AND (\"oil price decline\" OR \"oil price drop\" OR \"oil price slump\" OR \"oil price fall\") AND (insurance OR reinsurance OR bottling OR beverage OR \"soft drinks\" OR \"mineral water\") AND (investment OR \"investment company\" OR \"investment firm\") AND (ADX:EIC OR ERC OR EIC OR \"ADX:ERC\" OR \"ticker: ADX:EIC\" OR \"ticker: ERC\" OR \"ticker: EIC\") AND (September 2025 OR 2025) AND (news OR analysis OR report OR update OR latest OR recent OR breaking OR today OR market OR \"market news\" OR \"market analysis\" OR \"market trends\")",
+      "motivation": "The article identifies a decline in oil prices as the catalyst behind Gulf equity weakness, creating a new macro driver node.",
+      "name": "Oil Price Decline",
+      "id": "oil_price_decline",
+      "last_queried": "2025-09-03T04:35:17.449000000+00:00",
+      "importance_rationale": "Oil price decline is a major commodity shock that directly impacts Gulf indices, small‑cap stocks, and regional economic activity. It maps cleanly to canonical commodity handles (Brent, WTI) with a negative sign and is expected to unfold in the near term (catalyst window around September 2025). The event has high cross‑asset transmission and intraday relevance, warranting the highest importance rating.",
+      "type": "macro",
+      "queries": 2
+    }
+  },
+  "id": "oil_price_decline__influences__gbpusd"
+}

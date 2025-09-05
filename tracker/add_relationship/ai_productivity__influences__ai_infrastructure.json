@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:25:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_productivity",
+    "target_id": "ai_infrastructure",
+    "selection_motivation": "AI productivity drives the need for more advanced AI infrastructure, directly influencing investments, development, and adoption of AI hardware and software platforms.",
+    "candidate_motivation": "The selected topics are closely related to AI productivity, either as influences on economic conditions, technological advancements, or competitive dynamics within the AI sector.",
+    "existing_links_count": "2",
+    "candidate_count": "18",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['ai_supply_chain_optimization', 'ai_in_education', 'ai_human_skills', 'ai_startup_ideation', 'ai_dynamic_pricing_airlines', 'ai_governance', 'ai_application_companies', 'ai_healthcare_advice', 'ai_stock_performance', 'ai_stock_underperformance', 'ai_narrative_attacks', 'ai_generated_misinformation', 'ai_generated_content_seo', 'ai_coding_tools', 'ai_infrastructure', 'ai_unicorn_valuations', 'ai_impact_on_software_industry', 'ai_productivity']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530997",
+    "rel_id": "ai_productivity__influences__ai_infrastructure",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'ai_productivity', 'target': 'ai_stock_performance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI productivity drives the need for more advanced AI infrastructure, directly influencing investments, development, and adoption of AI hardware and software platforms.",
+      "type": "INFLUENCES",
+      "source": "ai_productivity",
+      "target": "ai_infrastructure"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_productivity__influences__ai_infrastructure"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T17:59:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756482624",
+    "prior_sections": "['fundamental', 'medium', 'current']",
+    "material_chars": "4772",
+    "output_chars": "753",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Refine each line to a single, causal sentence: replace the vague “Fed holds rates steady” with “Fed meeting on 16‑17 Sep shows no dovish signal (VDO8D9T7M)” and link it directly to the spx handle; collapse the two Up items into one driver “Positive GDP revision (+3.3 % q/q, VDO8D9T7M) + robust jobless claims (VDO8D9T7M)” and specify the exact release dates (28‑08‑2025) as the catalyst; for Down 1, explicitly cite the tariff escalation threshold (>15 % on 13‑Aug, VDO8D9T7M) and the Fed cut probability (86 % for 25‑bp cut, VDO8D9T7M) as the invalidation triggers; for Down 2, separate Nvidia earnings (release 15‑Oct‑2025, KNWKYIQ1W) and Hormel earnings as distinct catalysts, and add the initial claims rise >5,000 (VDO8D9T7M) as a third trigger; ensure every line ends with a probability grounded in the cited numbers (e.g., 70 % for the GDP‑jobless combo, 60 % for the Fed‑tech lift, 55 % for tariff/Fed cut, 50 % for earnings miss/claims spike); add the canonical handle “spx” in each line; and remove any redundant “S&P 500 gains 0.1–0.2%” wording that does not add new causal insight.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756482624"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:04:10",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "13VAP0IVS",
+    "status": "rejected",
+    "reject_category": "tech",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the energy efficiency and cost-saving benefits of air fryers compared to traditional ovens, which is a significant macro driver for consumer behavior in kitchen appliance purchases.",
+      "id": "air_fryer_energy_efficiency",
+      "name": "Air Fryer Energy Efficiency",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "tech",
+      "motivation": "Prevent phone overheating, protect battery health, and ensure device safety."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Air fryer energy efficiency is a specific consumer appliance category, not a macroeconomic driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

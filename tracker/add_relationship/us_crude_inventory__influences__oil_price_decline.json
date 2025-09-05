@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T11:21:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_crude_inventory",
+    "target_id": "oil_price_decline",
+    "selection_motivation": "US crude inventories are a primary driver of oil price declines; higher inventories typically lead to downward pressure on WTI and Brent prices, making the inventory level a causal influencer of the oil_price_decline node.",
+    "candidate_motivation": "US Crude Inventories directly influence oil price dynamics and are closely watched by traders of WTI, Brent, and the broader oil market. Movements in inventories also affect the US Dollar Index through the oil‑price‑dollar relationship, making these topics natural peers or correlates.",
+    "existing_links_count": "11",
+    "candidate_count": "4",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'brent', 'dxy']",
+    "existing_links_before_len": "11",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1218224798715347240",
+    "rel_id": "us_crude_inventory__influences__oil_price_decline",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_crude_inventory', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'us_crude_inventory', 'target': 'oil_price_decline'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US crude inventories are a primary driver of oil price declines; higher inventories typically lead to downward pressure on WTI and Brent prices, making the inventory level a causal influencer of the oil_price_decline node.",
+      "type": "INFLUENCES",
+      "source": "us_crude_inventory",
+      "target": "oil_price_decline"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_crude_inventory__influences__oil_price_decline"
+}

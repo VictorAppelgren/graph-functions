@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T07:55:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "euribor",
+    "selection_motivation": "Euro Stoxx 50 exhibits a statistically significant correlation with Euribor, reflecting the sensitivity of European equities to short‑term funding conditions.",
+    "candidate_motivation": "Euro Stoxx 50 is a core European equity benchmark, so its performance is driven by euro‑area macro fundamentals, ECB policy, sovereign yields, global equity peers, and key commodity and currency exposures. The listed topics capture these primary drivers and close peers that can strongly influence or correlate with the index.",
+    "existing_links_count": "6",
+    "candidate_count": "23",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['euro_inflation', 'ecb_policy', 'bund10y', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'spx', 'us_inflation', 'us_core_pce', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'usdcny', 'eurusd', 'gbpusd', 'usdjpy', 'euribor', 'gold', 'copper', 'wheat', 'wti', 'brent', 'gilt10y']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161930902884845094",
+    "rel_id": "sx5e__correlates_with__euribor",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sx5e', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euribor'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 exhibits a statistically significant correlation with Euribor, reflecting the sensitivity of European equities to short‑term funding conditions.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "euribor"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__correlates_with__euribor"
+}

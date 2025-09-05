@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:43:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756042456",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17598",
+    "output_chars": "831",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit instructions: enforce exactly four lines in the precise Up/Down | Time window | Driver/Mechanism | What to watch | Probability % format, with each line a single sentence and no filler; structure each line around a single, testable causal chain (Regime A persistence → AI/cloud monetization → GMV/FCF → higher multiples) and attach in-text citations to every factual claim using only SOURCE IDs; replace any multi-driver prose with one-driver lines anchored to concrete numbers from the material (e.g., Azure/AI 39% YoY (0G3A676BP), cloud CAGR ~21% to 2030 (0G3A676BP), Shopify +31% revenue (0G3A676BP), UNH FCF yield >9% (IGP1Q4ZEJ)); set explicit probability bands (for example 55–70% for Up in 0–3 months, 60–75% for Up in 3–6 months, 25–40% for Down scenarios) and clearly map each to a triggering event (e.g., September rate cut 25–50bp and softer dollar per GX057ADL7; AI-capex acceleration per YVQU6QCY4/0G3A676BP; DOJ/regulatory risk per IGP1Q4ZEJ); include a concise invalidation point that would falsify the thesis (inflation surprise or tariff shocks that reprice discount rates per YVQU6QCY4/GX057ADL7); explicitly acknowledge and reconcile any conflicts (e.g., cloud momentum vs capital-return signals from SLB, per 9X7XOLXMH); ensure all critical sources are represented (0G3A676BP, IGP1Q4ZEJ, GX057ADL7, YVQU6QCY4, Q7VVGNSQE, 4661GWFP7, 2YP1X9B4T, OB27SL8WU, NBX9RA9WX, 9X7XOLXMH, U3ZK13ZQI) and prune duplicated citations, keeping the analysis forward-looking, compact, and fully source-backed.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756042456"
+}

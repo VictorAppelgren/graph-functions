@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T04:44:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "smb_sentiment",
+    "target_id": "small_business_technology_gap",
+    "selection_motivation": "Small business sentiment directly drives investment in technology, thereby influencing the technology gap.",
+    "candidate_motivation": "These topics are the macroeconomic, policy, and market dynamics most likely to shape small business sentiment directly or through correlated conditions, including inflation, monetary policy, energy costs, currency moves, and trade tensions.",
+    "existing_links_count": "2",
+    "candidate_count": "19",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_inflation', 'core_monthly_cpi', 'core_cpi', 'fed_policy', 'us_10y', 'oil', 'usd', 'sp500', 'euro_inflation', 'ecb_policy', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_china_tariffs', 'us_trade_policy_inflation', 'us_china_trade_talks', 'stagflation', 'small_business_technology_gap', 'smb_cloud_spend', 'eurostoxx50']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'smb_sentiment', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'smb_sentiment', 'target': 'smb_cloud_spend'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847383",
+    "rel_id": "smb_sentiment__influences__small_business_technology_gap",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'smb_sentiment', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'smb_sentiment', 'target': 'smb_cloud_spend'}, {'type': 'INFLUENCES', 'source': 'smb_sentiment', 'target': 'small_business_technology_gap'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Small business sentiment directly drives investment in technology, thereby influencing the technology gap.",
+      "type": "INFLUENCES",
+      "source": "smb_sentiment",
+      "target": "small_business_technology_gap"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "smb_sentiment__influences__small_business_technology_gap"
+}

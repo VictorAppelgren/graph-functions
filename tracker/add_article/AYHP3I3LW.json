@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-21T19:03:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AYHP3I3LW",
+    "status": "success",
+    "topic_id": "acp_end"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article reports a new securities class action lawsuit against Charter Communications, a specific corporate entity not represented in the graph.",
+      "existing_node_ids": null,
+      "new_node_dicts": "Charter Communications securities class action"
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Insufficient information to determine relevant category for the article and node."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Insufficient information to determine impact due to missing article content; defaulting to low impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to determine specific timeframe from article summary; defaulting to fundamental."
+    },
+    "article_node": {
+      "id": "AYHP3I3LW",
+      "title": "SHAREHOLDER ACTION REMINDER: Faruqi & Faruqi, LLP Investigates Claims on Behalf of Investors of Charter Communications",
+      "summary": "Faruqi & Faruqi LLP is pursuing a federal securities class action against Charter Communications, alleging the company misled investors about the impact of ending the Affordable Connectivity Program and the resulting decline in internet customers and revenue. The firm urges investors who suffered losses over $100,000 between July 26, 2024 and July 24, 2025 to contact partner Josh Wilson for legal options, noting a deadline of October 13, 2025 to become lead plaintiff. Charter’s Q2 2025 earnings revealed a significant drop in customers and a 18.5% fall in stock price, underscoring the alleged misstatements. The firm invites whistleblowers, former employees, and shareholders to provide information on the alleged misconduct.",
+      "source": "https://www.morningstar.com/news/pr-newswire/20250821ny54897/shareholder-action-reminder-faruqi-faruqi-llp-investigates-claims-on-behalf-of-investors-of-charter-communications",
+      "published_at": "2025-08-21T10:55:00-05:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "AYHP3I3LW"
+}

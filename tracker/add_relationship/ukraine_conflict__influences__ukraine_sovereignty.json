@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:01:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_conflict",
+    "target_id": "ukraine_sovereignty",
+    "selection_motivation": "The Ukraine Conflict directly undermines Ukraine's sovereignty, making it a primary driver of sovereignty concerns.",
+    "candidate_motivation": "These topics are the closest geopolitical and macro-linked themes that could influence or track the Ukraine Conflict, including sovereignty, diplomacy, sanctions, and regional stability.",
+    "existing_links_count": "6",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['zelensky_peace_negotiations', 'ukraine_peace_negotiations', 'ukraine_diplomacy', 'ukraine_sovereignty', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'us_russia_ukraine_diplomacy', 'russian_sanctions', 'russia_economic_crisis', 'ukraine_post_war_instability', 'donbas_region']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587435",
+    "rel_id": "ukraine_conflict__influences__ukraine_sovereignty",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ukraine Conflict directly undermines Ukraine's sovereignty, making it a primary driver of sovereignty concerns.",
+      "type": "INFLUENCES",
+      "source": "ukraine_conflict",
+      "target": "ukraine_sovereignty"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_conflict__influences__ukraine_sovereignty"
+}

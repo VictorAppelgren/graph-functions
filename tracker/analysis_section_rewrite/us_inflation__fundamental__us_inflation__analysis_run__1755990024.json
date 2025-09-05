@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T01:00:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1755990024",
+    "article_ids": "['TN66GHPAT', '4LQD15CFU', 'JVKCZAPVG', 'P0K0UEOHU', '3GW34ISLC']",
+    "selected_articles_count": "5",
+    "material_chars": "139591",
+    "output_chars": "1728",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Add explicit citations**: insert source IDs after every factual claim (e.g., “Donegal’s dividend yield fell from 5.2 % in 2020 to 3.1 % in 2024 [ID TN66GHPAT]”).  \n2. **Quantify key metrics**: replace vague “high/low” with concrete ranges (e.g., “Tesla’s gross margin slid from 17.9 % in Q1 2025 to 17.2 % in Q2 2025 [ID JVKCZAPVG]”; “Rivian’s R2 is priced at ~$45 k, targeting a 20‑30 % margin lift [ID JVKCZAPVG]”).  \n3. **Anchor to first‑principles**: state invariant drivers (real rate differentials, productivity, policy reaction functions). For example, “US real rates are ~4 % vs euro 2 % (policy reaction: Fed tightening → higher borrowing costs → corporate margin compression).”  \n4. **Define regimes & transition conditions**: clearly label the current “post‑pandemic cost‑tightening regime” and the “future workforce‑investment regime” with thresholds (e.g., “if layoffs exceed 5 % of workforce, morale drops 10 % → productivity loss [ID 4LQD15CFU]”).  \n5. **Causal chain to pricing**: diagram (textually) how policy → cost inputs → product mix → earnings → equity valuation (e.g., tariffs → higher component costs → lower margins → lower EV stock multiples).  \n6. **Include specific catalysts/triggers/invalidation**: list “tariff adjustments in Q3 2025”, “EV tax‑credit phase‑out by 2026”, “Fed rate hikes >0.25 %”, “labor‑market shock >3 % unemployment”.  \n7. **Reconcile conflicting data**: if Tesla’s gross margin is cited as 17.9 % in one source and 17.2 % in another, note the time‑frame difference and use the most recent figure.  \n8. **Avoid generic platitudes**: replace “companies that treat employees as partners outperform peers” with the quantified 17.3 % outperformance of the JUST Capital Workers Leaders Index vs Russell 1000 [ID 4LQD15CFU].  \n9. **Structure per Section Focus**: start with a multi‑year structural thesis, then first‑principles anchors, regimes, causal chain, base case, risks, watch list, confidence.  \n10. **Maintain length/format**: keep the revised paragraph under ~250 words, using bullet‑style sub‑headings if needed for clarity.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1755990024"
+}

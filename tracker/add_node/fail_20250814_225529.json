@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:55:21",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DYYDDYZOX",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant regulatory and consumer-driven shift in food production practices, specifically the removal of artificial dyes, which could impact market dynamics and consumer preferences in the food sector.",
+      "id": "kellogg_artificial_dyes_removal",
+      "name": "Kellogg Artificial Dyes Removal",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Regulatory and consumer-driven shift in food production practices affecting a company’s product formulation."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific corporate policy on product ingredients; not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

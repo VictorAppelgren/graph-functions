@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T18:12:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OEVU23U21",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Alphabet and Apple share rally lifts S&P 500.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a U.S. court ruling that imposes new restrictions on Google’s search and data practices, constituting a regulatory/legal development."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article is not relevant to this node's scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a regulatory decision that will affect Google’s operations over the next few years, indicating a medium‑term impact rather than an immediate market shock or a long‑term structural change."
+    },
+    "article_node": {
+      "id": "OEVU23U21",
+      "title": "Google Escapes Major Antitrust Penalties, Retains Control of Chrome and Android",
+      "summary": "A U.S. court ruled that Google will not be forced to divest Chrome or Android, but will face limits on exclusive search deals and data sharing with rivals, citing the rise of generative AI as a competitive force. The decision requires Google to open parts of its search index to competitors over six years while protecting advertising data. Alphabet shares jumped over 8% in after‑hours trading, and Apple rose about 3%, reflecting market optimism that the ruling preserves the Google‑Apple search partnership and opens the door for deeper AI collaboration. Google plans to appeal, and the case may ultimately reach the Supreme Court.",
+      "source": "https://www.techrepublic.com/article/news-google-antirust-ruling-chrome-android/",
+      "published_at": "2025-09-03T15:01:14+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "OEVU23U21"
+}

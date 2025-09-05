@@ -1,0 +1,49 @@
+{
+  "today": {
+    "queries": 81,
+    "articles": 450,
+    "articles_added": 81,
+    "articles_removed": 31,
+    "added_node": 10,
+    "removes_node": 0,
+    "about_links_added": 82,
+    "about_links_removed": 0,
+    "relationships_added": 104,
+    "relationships_removed": 32,
+    "rewrites_saved": 37,
+    "rewrites_skipped_0_articles": 0,
+    "duplicates_skipped": 1,
+    "errors": 20,
+    "qa_reports_generated": 0,
+    "should_rewrite_true": 0,
+    "should_rewrite_false": 0
+  },
+  "problems": {
+    "zero_result_queries": 1,
+    "topics_zero_results": [
+      "Eurostoxx 50"
+    ],
+    "topic_rejections": 85
+  },
+  "graph_state": {
+    "topics": 1030,
+    "topics_with_full_analysis": 3,
+    "articles": 2578,
+    "connections": 3185,
+    "about_links": 1671,
+    "inter_topic_links": 1514,
+    "unique_relationship_types": [
+      "ABOUT",
+      "COMPONENT_OF",
+      "CORRELATES_WITH",
+      "INFLUENCED_BY",
+      "INFLUENCES",
+      "PEERS"
+    ],
+    "orphans": {
+      "topics": 3,
+      "articles": 942
+    },
+    "last_updated": "2025-08-22T14:34:23+00:00"
+  }
+}

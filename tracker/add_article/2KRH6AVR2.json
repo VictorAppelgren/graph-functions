@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T19:09:21",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2KRH6AVR2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; oil price decline pressures Baker Hughes and oilfield services, potentially tightening US 10Y yields.",
+      "existing_ids": [
+        "oil_price_decline"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Baker Hughes’ 7% YoY rise in adjusted EBITDA and discusses its financial performance, qualifying it as a company earnings release."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a share price decline and order trends for Baker Hughes, indicating a moderate impact on the company node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article emphasizes long‑term structural drivers—AI‑driven energy demand, LNG, data‑center power, and new‑energy projects—that shape Baker Hughes’ future prospects, rather than short‑term price swings."
+    },
+    "article_node": {
+      "id": "2KRH6AVR2",
+      "title": "Baker Hughes Company (BKR) Fell on Downturn in Oil Prices",
+      "summary": "Baker Hughes shares fell amid concerns over lower oil prices, yet Carillon Eagle Mid Cap Growth Fund still highlighted BKR as a strong pick due to healthy order trends in its Industrial & Energy Technology segment and growing demand for power‑generation solutions. The company reported a 7% YoY rise in adjusted EBITDA to $1.21 billion, driven by cost actions and robust orders, including $550 million in data‑center power equipment. Despite the downturn, BKR’s diversified portfolio and focus on LNG, data‑center power, and new‑energy projects position it for upside, though hedge funds have reduced holdings. The fund’s letter underscores BKR’s resilience amid market volatility and its potential to benefit from the AI‑driven energy demand surge.",
+      "source": "https://finance.yahoo.com/news/baker-hughes-company-bkr-fell-112159104.html",
+      "published_at": "2025-09-03T11:21:59+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "2KRH6AVR2"
+}

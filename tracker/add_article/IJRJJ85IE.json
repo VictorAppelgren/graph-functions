@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T17:52:22",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "IJRJJ85IE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy, inflation and core PCE influence Treasury yields and dollar index.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Bill Bengen's revised retirement withdrawal rule is a financial rule change that does not fit the other predefined categories."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node context provided to assess relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers—retirement withdrawal rule revision and Social Security depletion—that shape the node’s fundamentals, rather than short‑term market noise."
+    },
+    "article_node": {
+      "id": "IJRJJ85IE",
+      "title": "The Daily Money: The 4% rule becomes the 4.7% rule",
+      "summary": "Bill Bengen has revised the 4% retirement withdrawal rule to 4.7% after expanding his portfolio to seven asset classes and benefiting from strong equity returns, moving from a 50/50 stock‑bond mix to 55% stocks, 40% bonds, and 5% cash. The change reflects a shift toward a more aggressive allocation and acknowledges that the original rule was conservative for modern investors. The article also covers other market news, including the launch of “Trump Accounts” that give newborns a $1,000 tax‑advantaged deposit, rising concerns about Social Security depletion by 2034, fast‑food price hikes and declining breakfast sales, and the impact of higher interest rates on retail bankruptcies.",
+      "source": "https://www.usatoday.com/story/nletter/2025/09/02/the-4-rule-becomes-the-4-7-rule/85935663007/",
+      "published_at": "2025-09-02T14:21:37+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "IJRJJ85IE"
+}

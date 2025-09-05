@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T04:18:09",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "PA57YBYVQ",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['9X7XOLXMH', '48JXC9VDP', '65UUBU0OR', 'W2622L6WW', '22PL3Q360', 'O4ZEED2EB', 'V7GV8YBQU', 'SGB2PAZGK']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article in the index directly supersedes this new item; no update to the graph is warranted at this time."
+    }
+  },
+  "id": "sp500__PA57YBYVQ__fundamental"
+}

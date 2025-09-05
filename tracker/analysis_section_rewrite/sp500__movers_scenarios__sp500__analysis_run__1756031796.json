@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:43:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756031796",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18968",
+    "output_chars": "1278",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Strengthen the causal chain from AI/cloud productivity to durable cash flow and moat expansion with explicit anchors (Azure growth 39% YoY in MSFT Q4 FY2025; cloud spend 21.2% CAGR 2024–2030) | What to watch: Azure growth staying in the high-30s to 40% range and megacloud free cash flow margins expanding, plus corroborating cash returns signals (0G3A676BP)(DBFSBGOEX) | 65% (0G3A676BP)(DBFSBGOEX)\n\nUp | 2–8 weeks | Tighten scenario structure to anchor the up-path in explicit catalysts: IPO momentum (95 deals in 2025, $12.9B vs 73/$16B in 2024) and small-cap rotation with robust risk controls | What to watch: confirm IPO pace translates into earnings visibility and that Russell–S&P valuation gaps narrow as value/quality leadership emerges; maintain IUSV/XLV ballast and AZO overlay signals (Q7VVGNSQE)(4661GWFP7)(2YP1X9B4T)(J0D96V7MS) | 60% (Q7VVGNSQE)(4661GWFP7)(2YP1X9B4T)(J0D96V7MS)\n\nDown | 8–24 weeks | Emphasize regime risk from growth slowdown and megacloud margin compression | What to watch: Azure growth drift into low- to mid-20s% and megacloud FCF margins compress beyond baseline; observe dispersion in levered software profitability (DBFSBGOEX)(9X7XOLXMH) | 50% (0G3A676BP)(DBFSBGOEX)(9X7XOLXMH)\n\nDown | 0–3 weeks | Tighten bear-case triggers and explicit invalidation paths around Intel vesting, Canada carve-out mirroring, and policy path | What to watch: vesting timing clarity; whether USMCA carve-out is mirrored; inflation path that delays rate cuts; XPeng/NIO margin and Shopify momentum signals; define invalidation thresholds to downgrade base case | 40% (XQWTVR71K)(OB27SL8WU)(HE99QDK4J)(19NO2GMNF)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756031796"
+}

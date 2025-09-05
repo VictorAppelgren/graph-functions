@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T17:45:57",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XTYF990XO",
+    "suggested_names": "['defense_spending']",
+    "topic_category": "macro_driver",
+    "topic_category_motivation": "US defense spending is a macro driver influencing defense industry and broader economic activity.",
+    "should_add": "True",
+    "motivation_for_relevance": "FY2026 $1T defense budget is a clear macro driver that will likely lift UST10Y yields by ~5‑15 bp, boost defense‑sector equities, and support broader US equity indices; provides a dated catalyst and causal path.",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "importance_remove"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article highlights upcoming $1T defense budget and AI spending, creating a new macro driver for US defense spending.",
+      "id": "us_defense_spending",
+      "name": "US Defense Spending",
+      "type": "macro"
+    }
+  },
+  "id": "none"
+}

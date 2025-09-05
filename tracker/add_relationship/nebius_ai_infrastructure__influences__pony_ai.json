@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:18:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nebius_ai_infrastructure",
+    "target_id": "pony_ai",
+    "selection_motivation": "Nebius AI Infrastructure provides the cloud compute and storage backbone that enables Pony AI’s autonomous driving models, making it a primary driver of Pony AI’s deployment capabilities.",
+    "candidate_motivation": "Nebius AI Infrastructure is a provider of AI infrastructure, so topics that involve competing AI platforms, regulatory scrutiny, security vulnerabilities, supply‑chain policy, and financial metrics for AI companies are the most likely strong influences or peers.",
+    "existing_links_count": "0",
+    "candidate_count": "13",
+    "all_nodes_count": "101",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['openai_gpt5_competition', 'openai_valuation', 'apple_antitrust_ai', 'adobe_ai_platform_lockin', 'lyno_ai_presale', 'pony_ai', 'empathic_ai_agents', 'generative_ai_film', 'hybrid_ad_environments', 'us_china_trade_policy', 'us_federal_court_cybersecurity', '5g_infrastructure', 'rule_of_40']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161505",
+    "rel_id": "nebius_ai_infrastructure__influences__pony_ai",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nebius_ai_infrastructure', 'target': 'pony_ai'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Nebius AI Infrastructure provides the cloud compute and storage backbone that enables Pony AI’s autonomous driving models, making it a primary driver of Pony AI’s deployment capabilities.",
+      "type": "INFLUENCES",
+      "source": "nebius_ai_infrastructure",
+      "target": "pony_ai"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nebius_ai_infrastructure__influences__pony_ai"
+}

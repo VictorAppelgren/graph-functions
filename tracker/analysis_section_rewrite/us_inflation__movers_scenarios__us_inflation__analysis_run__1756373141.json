@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T11:44:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756373141",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "11185",
+    "output_chars": "850",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft meets the 4‑item format but lacks the depth, first‑principles grounding, and quantitative rigor the section demands. 1) **Add first‑principles anchors**: tie each driver to the invariant real‑rate differential, Brazil soy terms‑of‑trade, or AI displacement. 2) **Quantify every claim**: replace vague “lift consumer‑staples demand” with the 0.5‑1.0 % per‑capita spending boost from the $3.4 trillion bill (EPJYXB7DX) and Walmart’s margin squeeze (YQOMV2HAJ). 3) **Cite numbers**: attach IDs to the 0.5‑1.0 % lift, the 2 million‑unit Switch 2 shipment (K2JWRPXRV), the 0.25 % Fed hike threshold (EPJYXB7DX), and the 5,000‑troop deployment trigger (PHWYW5YLQ). 4) **Justify probabilities**: derive 65 % from the 50 % chance of RNC bill passage (EPJYXB7DX) plus 15 % margin from Walmart’s cost‑control; set 70 % for Switch 2 based on the 2 million units already shipped and 10 % upside if sales exceed 2.2 million; set 45 % for Fed hike from the 30 % chance of a 25 bps hike (R3WNA7L7A) plus 15 % chance of a 50 bps hike; set 40 % for Trump deployment from the 25 % chance of >5,000 troops (PHWYW5YLQ). 5) **Trim each line to a single sentence**: e.g., “Up | 3‑6 months | RNC bill tax cuts (0.5‑1.0 % per‑capita lift) and Walmart cost‑control boost consumer‑staples demand (EPJYXB7DX,YQOMV2HAJ) | Watch RNC fundraising, Jan 2026 election, bill passage | 65 %.” 6) **Ensure coverage of all critical sources**: include the Fed minutes (OGK8WLL69) and Powell’s Jackson Hole remarks for the Fed‑hike trigger, and the Brazil soy moratorium (J54PXL0NV) if you want to mention a secondary catalyst. 7) **Avoid generic platitudes**: replace “dampening demand” with “reduces disposable income by ~0.3 % (EPJYXB7DX)”. 8) **Reconcile conflicts**: if any source contradicts a probability, adjust the figure or note the uncertainty.  Implement these edits to elevate the analysis to world‑class quality.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756373141"
+}

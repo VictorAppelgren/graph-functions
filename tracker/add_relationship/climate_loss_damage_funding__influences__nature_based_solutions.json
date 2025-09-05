@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:31:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "climate_loss_damage_funding",
+    "target_id": "nature_based_solutions",
+    "selection_motivation": "Climate loss and damage funding directly supports adaptation mechanisms, and nature‑based solutions in insurance are a primary vehicle for mitigating climate‑related losses, making this a key influence link.",
+    "candidate_motivation": "These topics are the most plausible co-influencers or peers to climate loss and damage funding, spanning climate finance, risk transfer, and resilience infrastructure.",
+    "existing_links_count": "2",
+    "candidate_count": "13",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['sustainability_reframing', 'sustainability_leadership', 'nature_based_solutions', 'sustainable_power_infrastructure_split_corp', 'tecogen_clean_energy', 'ccus_hubs_asia', 'global_plastics_treaty', 'climate_judiciary_project', 'urban_heatwaves', 'heatwaves', 'glacier_outburst_flooding', 'jokulhlaup', 'europe_heatwaves_wildfires']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'bric_program'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846505",
+    "rel_id": "climate_loss_damage_funding__influences__nature_based_solutions",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'bric_program'}, {'type': 'INFLUENCES', 'source': 'climate_loss_damage_funding', 'target': 'nature_based_solutions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Climate loss and damage funding directly supports adaptation mechanisms, and nature‑based solutions in insurance are a primary vehicle for mitigating climate‑related losses, making this a key influence link.",
+      "type": "INFLUENCES",
+      "source": "climate_loss_damage_funding",
+      "target": "nature_based_solutions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "climate_loss_damage_funding__influences__nature_based_solutions"
+}

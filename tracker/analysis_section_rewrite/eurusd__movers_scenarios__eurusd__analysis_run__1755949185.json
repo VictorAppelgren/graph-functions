@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T13:54:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755949185",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8240",
+    "output_chars": "859",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft meets the format but needs sharper causal links, tighter triggers, and evidence‑based probabilities. 1) Replace the generic “Q3 2025 semiconductor earnings beats” trigger with the concrete “Q3 2025 earnings report shows a 12% YoY rise in AI‑chip revenue” (5S9GJV2O3) and adjust the probability to 70% to reflect the sizable share of premium‑device revenue. 2) For the governance drag, cite the specific “Dayforce sale at $70 per share” (UVEQ2SJ0W) and “Black Hills‑NorthWestern merger” as the trigger, and lower the probability to 55% because the cost‑of‑capital impact is still uncertain. 3) In the consumer‑spending upside, replace “Costco K‑Cup promotion sales lift” with the concrete “$35.99 price point after a $6 discount drives a 15% sales lift in Q2 2025” (HWGNUP2XG) and set the probability at 60% to match the robust discretionary spend. 4) For the security‑risk downside, use the specific “ICE boric‑acid incident” (ISXY49HGS) as the trigger and set the probability at 50% to reflect the limited scope of the event. 5) Ensure each line remains a single sentence, remove any filler, and cite IDs only when stating a fact or number. 6) Verify that the time windows align with the event dates in the sources (e.g., Q3 2025 for earnings, Q2 2025 for Costco sales). 7) Finally, double‑check that no other critical sources (e.g., 5S9GJV2O3 for premium‑device revenue, UVEQ2SJ0W for governance risk) are omitted.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__movers_scenarios__eurusd__analysis_run__1755949185"
+}

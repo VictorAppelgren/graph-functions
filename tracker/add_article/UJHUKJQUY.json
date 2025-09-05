@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-16T02:06:25",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UJHUKJQUY",
+    "status": "success",
+    "topic_id": "sp500"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the sp500 node.",
+      "existing_node_ids": "sp500",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Unable to determine category due to lack of article content."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Article summary not provided, so cannot assess impact on sp500 node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article summary is not provided, so unable to assess the time frame."
+    },
+    "article_node": {
+      "id": "UJHUKJQUY",
+      "title": "MAHA Draft Report Brings Relief to Some, Chagrin to Others",
+      "summary": "A draft White House report on children’s health, released by the Trump administration’s Health Secretary Robert F. Kennedy Jr., offers modest proposals on food and pesticide regulation, sparking disappointment among advocates who wanted stronger limits on chemicals like glyphosate and atrazine. The report praises existing pesticide review procedures and calls for research on reducing pesticide use, while largely avoiding sweeping bans or new restrictions that could impact agriculture jobs and food prices. Meanwhile, the administration has also cut NIH funding, terminating over 1,300 awards and delaying more than 1,000 projects, disproportionately affecting research on health equity, sexual and gender minorities, and infectious diseases, and raising concerns about long‑term damage to U.S. scientific progress.",
+      "source": "https://www.nytimes.com/2025/08/15/health/maha-draft-report-pesticides.html",
+      "published_at": "2025-08-15T22:27:42.971000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "UJHUKJQUY"
+}

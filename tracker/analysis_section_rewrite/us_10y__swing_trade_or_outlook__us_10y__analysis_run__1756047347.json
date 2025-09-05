@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:04:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756047347",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "12938",
+    "output_chars": "1087",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft shows solid breadth (two Up and two Down within 0–3 weeks) and plausible LCID drivers (governance, rate-path, macro risk), but to reach world‑class quality you should: (1) strictly enforce the exact 5-field format for all movers—Up/Down | Time window | Driver/Mechanism | What to watch | Probability %—and remove headings like “Watch:” so the line content lives in the field; (2) replace narrative fluff with a first‑principles causal chain for each line (e.g., governance action reduces dilution risk → lowers equity risk premia → compresses discount rate → lifts growth multiple; rate expectations tighten/extend growth valuation under Regime A → supports upside); (3) harden the scenario structure with explicit, testable triggers and clear invalidation rules (e.g., for Upside: 2.50 breaks on volume within 2–3 sessions and governance outcome confirms, else de-emphasize; for Downside: a break and close below 1.93 on high‑volume days invalidates the thesis); (4) quantify with defensible, source‑anchored probabilities or ranges (avoid single numbers without basis; cite where the probability derives from price action or guidance); (5) tighten citations so every factual claim or number is tied to a source ID and reconcile conflicts across sources (e.g., link 2.50/1.93 levels to 5JQEA5Z1T; cite Regime A easing to GX057ADL7; cite macro/dollar/oil signals to W2622L6WW/J99EM2TPZ); (6) ensure the Up/Down lines are clearly differentiated by driver and watchpoints to prevent overlap; (7) for the Swing Trade, confirm tradability and present a clean spec in the required fields (entry/stop/target/R/R/invalidations) aligned to the 2.00 entry, 1.93 invalidation, 2.50 trigger; include a justified Probability % and Confidence; (8) prune non‑essential macro scaffolding unless it directly alters LCID risk premia in the horizon; (9) deliver the revised four movers first, then the Swing Trade line, all in the exact spec, with no trailing narrative. If LCID isn’t tradable, switch to a concise Outlook line per spec. A compact revised template would look like four crisp Up/Down lines with 2.50 and 1.93 anchors and a single Swing Trade line tied to those levels, each backed by the cited IDs, with probabilities clearly justified by the cited evidence.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__swing_trade_or_outlook__us_10y__analysis_run__1756047347"
+}

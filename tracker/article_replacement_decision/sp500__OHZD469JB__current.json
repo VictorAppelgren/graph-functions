@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T11:00:30",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "OHZD469JB",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "11",
+    "candidate_ids": "['MSPXAOHU8', 'E9KQQQ0FK', 'K2JWRPXRV', 'I35H3FBSN', '4VN4UTWX1', 'Z5IA1CYUF', '4LDHF4T77', 'Y4QWID79M', 'RAV2UWRTT', 'T7HLAX8QN']",
+    "mode": "MUST_REPLACE",
+    "target_id": "MSPXAOHU8",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "MSPXAOHU8",
+      "motivation": "The new article falls into the current‑timeframe bucket, which is already at capacity; to keep the bucket within limits we must remove an existing placeholder article."
+    }
+  },
+  "id": "sp500__OHZD469JB__current"
+}

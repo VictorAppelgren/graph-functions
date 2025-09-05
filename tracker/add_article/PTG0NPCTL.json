@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T15:14:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PTG0NPCTL",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and tariff uncertainty push US 10Y higher, while oil gains support commodity pricing.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "ust2y",
+        "wti",
+        "gold",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article discusses market reaction to tariff uncertainty, with futures slipping and indices down."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was specified to evaluate against the article, so impact cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to tariff uncertainty, policy events, and corporate news, affecting short-term price movements."
+    },
+    "article_node": {
+      "id": "PTG0NPCTL",
+      "title": "Wall Street Breakfast Podcast: Wall Street Futures Slip",
+      "summary": "Wall Street futures slipped on renewed tariff uncertainty, with the S&P 500 and Nasdaq futures down. The 10‑year Treasury yield rose to 4.28%, while the 2‑year held steady at 3.64%. Tesla's India launch underperformed with only about 600 orders, and Meta faced scrutiny for creating unconsented celebrity chatbots. Trump is scheduled to speak at 2 pm, adding further policy uncertainty.",
+      "source": "https://seekingalpha.com/article/4818457-wall-street-breakfast-podcast-wall-street-futures-slip-to-start-september",
+      "published_at": "2025-09-02T10:55:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "PTG0NPCTL"
+}

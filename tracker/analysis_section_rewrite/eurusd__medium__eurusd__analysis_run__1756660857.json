@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T19:27:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "medium",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1756660857",
+    "article_ids": "['XTQIQRP5K', 'XTQIQRP5K', 'XTQIQRP5K']",
+    "selected_articles_count": "3",
+    "material_chars": "84265",
+    "output_chars": "1550",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable Edit Checklist (compact paragraph)**  \n1. **Add inline citations** – after every substantive claim (e.g., “DXY rose 0.36 %”, “EUR/USD fell 0.27 %”, “Fed Governor Bowman signals three cuts”, “Trump’s tariffs raise average to 15.2 %”) insert a parenthetical `(XTQIQRP5K)` to satisfy the evidence rule.  \n2. **Quantify magnitude ranges** – replace vague “1–2 % rally” with a concrete range (e.g., “1.0–1.5 % rise in DXY over 3–6 months”) and specify the CPI expectation range (e.g., “CPI > 2.5 % vs. < 2.0 %”).  \n3. **Trim non‑core content** – remove the gold/precious‑metal paragraph; it does not map to a canonical handle in the focus and dilutes the FX narrative.  \n4. **Explicit catalyst windows** – state precise dates: “July 15 CPI release”, “Sept 16‑17 FOMC”, “Sept 11 ECB meeting”, “any tariff announcement between Aug 15‑Sep 30”.  \n5. **Causal transmission paths** – for each catalyst, add a short causal link: e.g., “Higher CPI → Fed cuts → lower UST yields → higher DXY”.  \n6. **Risk/invalidations** – list them as bullet points with clear triggers: “CPI < 2.0 % → Fed pause → DXY pullback”; “ECB cuts → rate differential narrows → DXY weakens”; “Tariff rollback → Euro growth ↑ → DXY declines”.  \n7. **Maintain focus** – ensure every sentence ends with a direct reference to a canonical handle (DXY, EURUSD, CPI, UST2y/10y, Fed policy, tariffs). Remove any mention of unrelated assets (e.g., gold, WTI).  \n8. **Formatting** – keep the paragraph concise (≤ 150 words) and use numbered bullets only for catalysts/risk to preserve readability for PMs.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__medium__eurusd__analysis_run__1756660857"
+}

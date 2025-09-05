@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:38:08",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PLKK9BN38",
+    "status": "success",
+    "topic_id": "trump_dc_public_safety"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the collaboration between local law enforcement and federal immigration authorities, which aligns with the existing node on Trump's Federal Control of DC Police, highlighting the intersection of law enforcement and immigration policy.",
+      "existing_node_ids": "trump_dc_public_safety",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses public safety measures and their implications, which may relate to regulatory changes or legal developments."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses public safety measures in Washington, D.C., which directly relates to the node on public safety under the Trump administration."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing issues related to public safety in Washington D.C. that may have long-term implications."
+    },
+    "article_node": {
+      "id": "PLKK9BN38",
+      "title": "Live Updates: Trump Speaks Amid D.C. Deployments and Putin Summit Preparations",
+      "summary": "The Department of Homeland Security and Metropolitan Police Department in Washington, D.C. are collaborating on traffic checks and immigration enforcement, following a directive from Chief Pamela A. Smith that allows police to share information about individuals detained during traffic stops with federal immigration authorities. This change comes amid the Trump administration's efforts to assert control over local law enforcement and diminish D.C.'s status as a sanctuary city. Concurrently, President Trump is preparing for a meeting with Russian President Vladimir Putin, where discussions will likely include trade and arms control alongside the ongoing conflict in Ukraine.",
+      "source": "https://www.nytimes.com/live/2025/08/14/us/trump-news-putin-dc-takeover",
+      "published_at": "2025-08-14T12:01:43+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "PLKK9BN38"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:35:44",
+  "processed": false,
+  "inputs": {
+    "topic_id": "core_cpi",
+    "section": "medium",
+    "test": "False",
+    "run_id": "core_cpi__analysis_run__1756074776",
+    "article_ids": "['WISLWAJ15', 'WISLWAJ15', 'WISLWAJ15']",
+    "selected_articles_count": "3",
+    "material_chars": "112471",
+    "output_chars": "4758",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong starting point, but to reach world‑class quality for a 3–6 month horizon you should (a) codify a formal catalyst map anchored to WISLWAJ15, with near‑term triggers and clear invalidations tied to AbbVie/Abbott/Pfizer events (LOEs for Eliquis/Ibrance/Xeljanz; pipeline milestones for Cibinqo, Elrexfio, Padcev; FDA/regulatory updates; and any shifts in dividend policy), (b) specify explicit timing windows and path dependence (0–2 weeks for quarterly data, 1–3 months for LOE/pipeline milestones, 3–6 months for regulatory/pipeline readouts) and show how outcomes feed valuation and income, (c) ground the analysis in first‑principles dividend sustainability by quantifying cash‑flow coverage (ABBV trailing FCF of about $18.2B vs ~\\$11.3B in dividends; ABBV payout >100% indicating sensitivity to FCF), Abbott’s 53‑year dividend growth, Pfizer’s 6.7% forward yield and 8.3x forward P/E, and explicitly link these to the near‑term dividend trajectory, (d) replace generic framing with a base case plus 1–2 explicit alts that include numerical return targets or price ranges and their drivers, (e) harden the risk/invalidation framework with concrete thresholds (e.g., if FCF payout coverage <80% or dividend growth <2% for two consecutive quarters, or LOEs accelerate beyond a stressed scenario, reprice the thesis), (f) enlarge the watch‑list to 6–8 concrete signals—regulatory dates, LOE schedules, pipeline milestones, quarterly FCF growth, dividend announcements, and pertinent macro/policy shifts—and (g) ensure every assertion is tied to the single source ID (WISLWAJ15) and address any conflicts between yields vs. growth narrative by reconciling the dividend safety with pipeline/FCF dynamics, ending with a tight base case, 1–2 actionable alts, clearly stated risks, watch‑list signals, and a concise confidence level.",
+      "tokens": {}
+    }
+  },
+  "id": "core_cpi__medium__core_cpi__analysis_run__1756074776"
+}

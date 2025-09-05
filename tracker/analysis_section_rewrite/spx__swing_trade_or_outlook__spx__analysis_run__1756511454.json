@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T02:14:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756511454",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5571",
+    "output_chars": "1302",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft meets the 4‑line up/down requirement but needs tighter formatting and clearer “What to watch” signals. Replace each line with the exact format:  \n**Up/Down | Time window | Driver/Mechanism | What to watch | Probability %**.  \nFor example:  \n`Up | 0‑3 weeks | Favorable court ruling (LJZYDXVL3) | Court decision outcome | 55%`  \n`Up | 0‑3 weeks | Fed rate cut (MEZ3P47LC) | Fed announcement on 25‑bp cut | 30%`  \n`Down | 0‑3 weeks | Unfavorable court ruling (LJZYDXVL3) | Court decision outcome | 45%`  \n`Down | 0‑3 weeks | Fed tightening/higher yields (MEZ3P47LC) | Fed announcement or 10‑yr yield rise | 25%`  \n\nThe trade line must follow the Swing‑Trade template:  \n`Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence`.  \nUse TSLA’s current price (≈$346) as a reference:  \n`Up | 0‑3 weeks | 330 | 320 | 360 | 1.2 | Unfavorable court ruling (LJZYDXVL3) or Fed tightening (MEZ3P47LC) | Favorable court ruling (LJZYDXVL3) or Fed rate cut (MEZ3P47LC) | 85% | 80`.  \n\nEnsure every probability is grounded in the cited evidence (e.g., 55 % from the court‑ruling likelihood, 30 % from FedWatch). Remove any extraneous fields or filler, keep citations inline only when stating specific facts, and avoid a trailing reference list. This will satisfy the format, provide actionable signals, and align with the canonical handle TSLA.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756511454"
+}

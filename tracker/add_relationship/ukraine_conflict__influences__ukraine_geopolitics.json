@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:07:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_conflict",
+    "target_id": "ukraine_geopolitics",
+    "selection_motivation": "The Ukraine conflict is a primary driver reshaping Ukraine’s geopolitical landscape, influencing alliances, security posture, and regional influence.",
+    "candidate_motivation": "These topics represent direct geopolitical, diplomatic, and regional security links to the Ukraine conflict, including key actors, negotiations, and related sovereignty concerns.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['zelensky_peace_negotiations', 'ukraine_diplomacy', 'ukraine_peace_negotiations', 'ukraine_sovereignty', 'ukraine_geopolitics', 'donbas_region', 'eu_geopolitics_ukraine', 'us_russia_ukraine_diplomacy', 'eu_us_relations_ukraine', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'donbas_region'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1173188802441643179",
+    "rel_id": "ukraine_conflict__influences__ukraine_geopolitics",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitics'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'donbas_region'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ukraine conflict is a primary driver reshaping Ukraine’s geopolitical landscape, influencing alliances, security posture, and regional influence.",
+      "type": "INFLUENCES",
+      "source": "ukraine_conflict",
+      "target": "ukraine_geopolitics"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_conflict__influences__ukraine_geopolitics"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T15:01:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "dxy",
+    "selection_motivation": "Gold and the US Dollar Index are strongly inversely correlated; a weaker dollar typically boosts gold prices, making this a key cross‑asset relationship for market analytics.",
+    "candidate_motivation": "Gold is a risk‑aversion and inflation‑hedge asset, so its price is strongly driven by the US dollar, interest rates, monetary policy, and global commodity peers. These topics are the most likely to influence or correlate with gold.",
+    "existing_links_count": "1",
+    "candidate_count": "22",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "22",
+    "candidate_ids_preview": "['dxy', 'us_inflation', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'wti', 'brent', 'copper', 'wheat', 'spx', 'sx5e', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'bund10y', 'gilt10y', 'jgb10y']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443789870",
+    "rel_id": "gold__correlates_with__dxy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold and the US Dollar Index are strongly inversely correlated; a weaker dollar typically boosts gold prices, making this a key cross‑asset relationship for market analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__dxy"
+}

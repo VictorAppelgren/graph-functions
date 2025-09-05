@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T21:59:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SOL40FBE7",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed independence risk around Lisa Cook and the Jackson Hole narrative could shift rate path expectations and USD pricing, with spillovers to equity sentiment; The AI data-center expansion under executive orders raises energy demand considerations that may influence energy costs and credit dynamics; Ukraine security guarantees discussions feed into geopolitical risk sentiment for risk assets.",
+      "existing_ids": [
+        "fed_policy",
+        "us_treasury_yields",
+        "ai_infrastructure",
+        "texas_redistricting",
+        "texas_flood_relief_legislation",
+        "dc_federal_policing_initiative",
+        "ukraine_geopolitical_security"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "Trump’s public attack on Fed Governor Lisa Cook is a political statement about central bank independence."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified; cannot determine impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent political actions and policy decisions that directly affect the node in the present moment."
+    },
+    "article_node": {
+      "id": "SOL40FBE7",
+      "title": "Trump Demands Lisa Cook Resign From Fed Board",
+      "summary": "The broadcast covers President Trump’s recent attack on Federal Reserve Governor Lisa Cook, citing alleged mortgage fraud and calling for her resignation, and the potential impact on the Fed’s independence ahead of the Jackson Hole symposium where Chair Jerome Powell is expected to speak. It also discusses Trump’s AI executive orders that loosen restrictions on data‑center development, the surge in demand for AI infrastructure, and the energy‑consumption concerns that accompany it. In addition, the program reports on political battles over redistricting, with California’s attorney general defending the state’s proposed map against a Texas‑style gerrymandering challenge, and touches on broader national security and law‑enforcement issues raised by the administration. Overall, the show highlights tensions between executive power, institutional independence, and economic policy in the current political climate.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-20/balance-of-power-late-edition-8-20-2025-video?srnd=phx-economics-v2",
+      "published_at": "2025-08-20T23:56:48.588000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "SOL40FBE7"
+}

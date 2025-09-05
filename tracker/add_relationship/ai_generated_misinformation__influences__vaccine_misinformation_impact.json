@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:12:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_generated_misinformation",
+    "target_id": "vaccine_misinformation_impact",
+    "selection_motivation": "AI-Generated Misinformation directly drives the measurable societal and health outcomes captured by Vaccine Misinformation Impact, making this link critical for assessing downstream effects.",
+    "candidate_motivation": "These topics are the most likely direct or tightly related peers and influences to AI-generated misinformation, covering mechanisms (deepfakes), governance, and vaccine-related misinformation.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ai_generated_content_seo', 'deepfake_ai_medical', 'deepfake_health_misinformation', 'vaccine_misinformation', 'vaccine_misinformation_impact', 'vaccine_misinformation_violence', 'disinformation_campaigns', 'ai_governance', 'ai_ideological_bias', 'ai_narrative_attacks']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587467",
+    "rel_id": "ai_generated_misinformation__influences__vaccine_misinformation_impact",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI-Generated Misinformation directly drives the measurable societal and health outcomes captured by Vaccine Misinformation Impact, making this link critical for assessing downstream effects.",
+      "type": "INFLUENCES",
+      "source": "ai_generated_misinformation",
+      "target": "vaccine_misinformation_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_generated_misinformation__influences__vaccine_misinformation_impact"
+}

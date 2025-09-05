@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:17:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1756022710",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16309",
+    "output_chars": "1973",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The piece has strong regime anchoring but is too long and unfocused for a 4–6 sentence executive brief, and the causal chain between AI productivity, governance frictions, consumer dynamics, and policy risk needs a tighter, first‑principles spine; tighten to a single house view that ties each regime to a market variable (AI uptake → tech capex/valuations; deal frictions → risk premia/exit terms; price discipline → margins/consumption; policy shocks → risk assets) and cite the four core sources for each link (5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG, ISXY49HGS) with exact matches. Reduce to 4–6 sentences or bullets that (i) present base/optimistic/pessimistic paths with explicit triggers and near-term windows (e.g., DAY/BKH thresholds, AI upgrade cadence, sustained Kirkland promos, security/shock events) and assign transparent, source-backed drivers; (ii) quantify the pricing channel using the available numbers (tariff cadence within ~4 weeks; Apple $100B capex signal in ~6–8 weeks; 50bp cut priced; dollar down roughly 2–3%; spreads compress 300–350bp; S&P/risk-on moves) rather than qualitative claims; (iii) resolve conflicts (tariff persistence vs capex-driven re-rating) by stating how the base case handles either outcome; (iv) prune non‑essential device/cycle specifics unless they drive the regime argument, and if kept, tether them tightly to the AI/regime narrative; and (v) overhaul the watch list into a single, source‑anchored set of signals with explicit invalidations. In short, deliver a crisp, source‑mapped house view with a clean four‑regime causal chain, precise triggers/invalidations with windows, quantified pricing implications, and a tightly scoped watch list, ensuring every assertion cites a source ID (e.g., 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG, ISXY49HGS) and staying within 4–6 sentences.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__executive_summary__eurusd__analysis_run__1756022710"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T23:19:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2LNZVORUK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Salesforce’s weak Q3 revenue guidance and $20B buyback lift weigh on cloud‑software stocks, causing a 4% after‑hours decline that modestly pressures the S&P 500 tech segment. Macro uncertainty from weaker global growth feeds broader IT‑spending restraint.",
+      "existing_ids": [
+        "spx",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article discusses Salesforce’s Q3 revenue guidance, EPS outlook, and buyback program—information pertaining to a company’s earnings forecast."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a revenue forecast miss and share decline for Salesforce, indicating a notable event for the company."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on a quarterly revenue forecast and the immediate share reaction, indicating a medium‑term view rather than long‑term fundamentals or day‑to‑day news."
+    },
+    "article_node": {
+      "id": "2LNZVORUK",
+      "title": "Salesforce forecasts weak current-quarter revenue, shares fall",
+      "summary": "Salesforce forecasts third‑quarter revenue below estimates as clients cut cloud spending amid macro uncertainty, prompting a 4% after‑hours decline in its shares. The company boosts its buyback program by $20 billion to $50 billion, while cutting 4,000 support jobs as AI tools take a larger role. Revenue is projected at $10.24‑$10.29 billion, slightly below analysts’ $10.29 billion average, but EPS guidance remains in line. The outlook reflects broader IT budget restraint and geopolitical pressures.",
+      "source": "https://finance.yahoo.com/news/salesforce-beats-quarterly-revenue-estimates-200748720.html?.tsrc=rss",
+      "published_at": "2025-09-03T20:07:48+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "2LNZVORUK"
+}

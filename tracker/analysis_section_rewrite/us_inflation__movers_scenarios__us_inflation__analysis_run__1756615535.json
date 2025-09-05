@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T06:57:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756615535",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "4356",
+    "output_chars": "508",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft fails to meet the strict mapping and catalyst requirements: the first “Fed rate cut → DXY rally” item cites a handle (dxy) but omits a clear catalyst window (e.g., the 2025‑09‑16 Fed meeting) and the probability is unsupported; the second “Lower inflation expectations → Fed pause → DXY gain” lacks a handle (no explicit dxy sign) and the trigger (July CPI < 2%) is not tied to a dated window; the “Fed rate hike → DXY decline” correctly maps to dxy but the catalyst (Fed minutes) is too vague and the probability is unsubstantiated; the “30‑yr Treasury rise → Mortgage tightening → DXY pressure” does not map to a canonical handle (dxy) with a sign, and the catalyst window (30‑yr Treasury yield increase) is not dated. To upgrade: 1) Re‑frame each item to include a canonical handle with explicit sign and magnitude range (e.g., dxy +0.5 % to +1.0 %); 2) Attach a specific catalyst window (e.g., July CPI release on 2025‑09‑10, Fed meeting on 2025‑09‑16, 30‑yr Treasury yield change on 2025‑09‑20); 3) Provide a probability grounded in the cited sources (e.g., 70 % for dxy +0.8 % if CPI ≈ 2.5 % per XTQIQRP5K); 4) Remove any statements that do not directly link to the asset or lack a catalyst; 5) Ensure each line is a single sentence, no filler, and includes at least one inline citation. This will satisfy the acceptance gate and produce a concise, actionable outlook.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756615535"
+}

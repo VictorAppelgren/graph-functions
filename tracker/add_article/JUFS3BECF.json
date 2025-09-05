@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T21:59:55",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JUFS3BECF",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; PC market decline and AI PC adoption may moderate inflation expectations, easing 10Y yields by ~5‑10 bp over 2025.",
+      "existing_ids": [
+        "us_inflation",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of PC market trends, including the decline of desktops, rise of laptops, tablets, mobile devices, AI adoption, cloud gaming, and the impact of U.S. tariffs on commercial demand, which constitutes a market commentary on industry dynamics."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant shift in the PC market, with declining desktop sales and rising laptop/tablet/mobile usage, influenced by AI, cloud gaming, and tariffs, directly affecting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers—shift from desktops to laptops, tablets, AI‑enabled PCs, and cloud gaming—with forecasts extending to 2025, indicating a fundamental trend."
+    },
+    "article_node": {
+      "id": "JUFS3BECF",
+      "title": "Desktop PCs: A Dying Breed in the Age of Laptops and Mobile Devices",
+      "summary": "The article traces the decline of desktop PCs as laptops, tablets, and mobile devices become the dominant personal computing platforms, driven by portability, convenience, and the rise of AI and cloud gaming. Desktop sales are shrinking, with laptops overtaking them globally for the first time in Q3 2023 and continuing to grow, while niche segments like gaming desktops and mini PCs retain a loyal base. Market forecasts project modest PC growth into 2025, but anticipate a gradual slowdown as Windows 11 adoption stabilizes and AI-enabled PCs face budget constraints. The piece also highlights the impact of U.S. tariffs, AI PC adoption, and commercial demand on future PC volumes.",
+      "source": "https://www.howtogeek.com/the-era-of-desktop-pcs-could-end-sooner-than-you-think/",
+      "published_at": "2025-08-31T18:30:15+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "JUFS3BECF"
+}

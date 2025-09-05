@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:55:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "VJF9415MG",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the Firearm Industry Nondiscrimination (FIND) Act, which has significant implications for the firearm industry and related financial services, warranting a dedicated node to analyze its impact on macroeconomic factors and trading decisions.",
+      "id": "find_act_oklahoma",
+      "name": "Oklahoma FIND Act",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Legislative act protecting firearm industry, a clear policy change."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "The Oklahoma FIND Act is a niche, state-level policy targeting the firearm industry; it does not constitute a macroeconomic driver or broad regulatory regime that would influence macro markets or tradable assets.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

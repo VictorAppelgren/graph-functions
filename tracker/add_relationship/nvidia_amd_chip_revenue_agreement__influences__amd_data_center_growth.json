@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:46:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nvidia_amd_chip_revenue_agreement",
+    "target_id": "amd_data_center_growth",
+    "selection_motivation": "The revenue agreement between Nvidia and AMD is expected to boost AMD's data center GPU sales, directly driving its data center growth trajectory.",
+    "candidate_motivation": "These topics represent the core peers, competitors, and external drivers that directly shape GPU/CPU chip revenue dynamics, AI compute demand, and semiconductor policy around Nvidia and AMD.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['amd_data_center_growth', 'amd_radeon_rx_9070', 'china_nvidia_policy', 'us_china_ai_chip_exports', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'intel_ceo_tan']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nvidia_amd_chip_revenue_agreement', 'target': 'us_chip_export_agreement'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160266",
+    "rel_id": "nvidia_amd_chip_revenue_agreement__influences__amd_data_center_growth",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nvidia_amd_chip_revenue_agreement', 'target': 'us_chip_export_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_amd_chip_revenue_agreement', 'target': 'amd_data_center_growth'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The revenue agreement between Nvidia and AMD is expected to boost AMD's data center GPU sales, directly driving its data center growth trajectory.",
+      "type": "INFLUENCES",
+      "source": "nvidia_amd_chip_revenue_agreement",
+      "target": "amd_data_center_growth"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nvidia_amd_chip_revenue_agreement__influences__amd_data_center_growth"
+}

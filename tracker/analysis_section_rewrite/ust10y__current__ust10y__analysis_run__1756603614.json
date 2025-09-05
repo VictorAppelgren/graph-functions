@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T03:36:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756603614",
+    "article_ids": "['JVVA5VP8C', '1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8']",
+    "selected_articles_count": "5",
+    "material_chars": "112002",
+    "output_chars": "1158",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the core requirements (ust10y, 10‑20 bps up, 0‑3 wk horizon, September FOMC & mid‑Oct tariff expiry), but it lacks a few key citations and could tighten the causal chain. Add a citation to the Business Insider article (ID 1DEM6P1Y2) after the sentence about the mid‑October tariff expiration and any reference to tariffs lifting earlier than mid‑Oct. Insert a citation (e.g., 97MD1FHW8 or 3YAQ8JUPL) when stating the 4.20‑4.25 % threshold as the “historical” cut‑pre‑level and the 4.25 % ceiling. Remove the generic “confidence in the base case is moderate” phrase; replace it with a quantified probability (e.g., “89 % odds of a September cut” already cited). Ensure every numeric claim (0.3 % core PCE, 89 % odds, 4.23 % current level, 32 bps 2‑yr decline, 10‑20 bps expected rise) has an inline citation. Finally, streamline the paragraph to 2‑3 concise sentences: state the 10‑year will likely rise 10‑20 bps, driven by dovish Fed rhetoric, sticky core PCE, and tariff‑driven inflation, with the September FOMC (16‑17 Sep) and mid‑Oct tariff expiration as the catalyst windows, and note the 4.20‑4.25 % threshold as the key pivot.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756603614"
+}

@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:22:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1NJO8OTHZ",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the critical issue of power supply for data centers connected to the PJM Interconnection grid, which has significant implications for energy policy and infrastructure investment, warranting a dedicated node for analysis.",
+      "id": "pjm_data_center_power_supply",
+      "name": "PJM Data Center Power Supply",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy recommendation on grid access and power generation for data centers, affecting energy infrastructure and regulation."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "Policy recommendation on PJM grid capacity and data center power supply directly impacts electricity markets and grid economics, a macro driver relevant to trading decisions.",
+      "confidence": 0.85,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "This query is designed to comprehensively capture all relevant discussions surrounding the operational and infrastructural challenges faced by data centers in relation to power supply requirements, particularly focusing on the PJM Interconnection grid. By including synonyms, abbreviations, and related financial and market terms, the query ensures a robust retrieval of articles pertinent to investment research and analysis in this sector.",
+      "query": "(data_centers OR data_center OR datacenters OR datacenter OR \"large data centers\" OR \"new data centers\" OR \"data center loads\") OR (power_supply OR \"own power supply\" OR \"power generation\" OR \"power plants\" OR \"energy supply\") OR (PJM OR \"PJM Interconnection LLC\" OR \"PJM grid\" OR \"PJM capacity\") OR (Monitoring_Analytics OR \"Monitoring Analytics LLC\" OR \"watchdog\") OR (demand OR \"power demand\" OR \"energy demand\" OR \"capacity demand\") OR (costs OR \"consumer costs\" OR \"high costs\" OR \"cost implications\") OR (news OR report OR analysis OR trend OR update OR insight OR forecast OR outlook) OR (infrastructure OR \"aging infrastructure\" OR \"infrastructure strain\" OR \"power infrastructure\")"
+    },
+    "importance_classification": {
+      "importance": 4,
+      "rationale": "Policy recommendation on PJM grid capacity and data center power supply is a slower‑moving structural issue that could influence electricity market dynamics but is not an immediate intraday driver. It warrants monitoring for regime shifts rather than daily trading signals."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:3368"
+}

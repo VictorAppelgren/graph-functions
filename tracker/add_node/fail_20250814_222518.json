@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:25:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5KRWCK58Q",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Repligen Corporation's performance and guidance, making it relevant for investment analysis in the biotech sector, thus warranting a dedicated node for this company.",
+      "id": "repligen_corporation",
+      "name": "Repligen Corporation",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Article focuses on Repligen Corporation’s financial performance and guidance, making it a distinct company node for investment analysis."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Repligen Corporation is a specific biotech company, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T11:58:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EA9SBW2T3",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; US drug price inflation expected to lift headline and core PCE, prompting Fed policy tightening and higher 10Y yields, with a catalyst window 2026‑2028 as tariffs take effect.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article describes the U.S. and EU agreeing on a 15% tariff on most EU goods and the Trump administration’s pursuit of sector‑specific duties, which constitutes an official policy statement on trade tariffs."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The node is not specified, so I cannot determine the relevance or magnitude of the article’s impact on it."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural shifts—tariff policy, reshoring of pharma, and delayed effects until 2027‑28—indicating a fundamental change in the industry landscape."
+    },
+    "article_node": {
+      "id": "EA9SBW2T3",
+      "title": "Trump plans a hefty tax on imported drugs, risking higher prices and shortages",
+      "summary": "The U.S. and EU have agreed on a 15% tariff on most EU goods, while the U.S. keeps a zero rate on cars, but Trump’s administration is still pursuing sector‑specific duties, notably a potential 200% tariff on imported pharmaceuticals that could raise U.S. drug prices and disrupt supply chains.  Trump’s threat is likely to be moderated and delayed, with analysts expecting a lower rate and a lagged impact until 2027‑28 due to stockpiling.  In response, major pharma firms such as Roche and Johnson & Johnson are committing $50 B and $55 B to U.S. manufacturing, aiming to shift production domestically and mitigate tariff exposure, but the shift will take years and may not fully shield generic makers from higher costs.  The combined tariff and investment moves signal a broader U.S. strategy to reshoring critical industries while managing inflationary pressures and national‑security concerns.",
+      "source": "https://www.ajc.com/news/2025/09/trump-plans-a-hefty-tax-on-imported-drugs-risking-higher-prices-and-shortages/",
+      "published_at": "2025-09-01T08:32:53.895000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "EA9SBW2T3"
+}

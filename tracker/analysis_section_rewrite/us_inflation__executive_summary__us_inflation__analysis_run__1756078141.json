@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:42:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756078141",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21873",
+    "output_chars": "1531",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong base: the draft is rich in sources but overextends the regime framework and macro digressions; to reach world-class quality, condense to 4–6 crisp sentences that deliver a single, decision-useful house view anchored in a clear causal chain. Edits: 1) crystallize the base-case as Regime A with a tight 1–2 sentence rationale (discount rates down, risk premia compress) and explicit alternative regimes (C/D) with concrete, testable triggers (AI capex cadence, tariff shocks) and a defined invalidation path; 2) repackage the crypto transmission as a tight, first-principles chain: policy regime shapes discount rates, which drives treasury/staking yields and ETH/ETF-driven institutional adoption, then to Ether/Bitcoin price anchors; back this with specific numbers (Ether ~4,955; Bitcoin ~110k–125k) and known inflows/yield measures (ETH ETFs, corporate treasury activity) cited to the IDs; 3) trim excess macro levers (private-labels, Ford, etc.) unless directly elevating the crypto house view, or clearly justify their relevance to regime-based asset pricing; 4) build a compact 4–5 item watch-list with observable triggers (Jackson Hole guidance, Nvidia capex momentum, tariff updates, AI capex milestones, core inflation path) and 2–3 explicit invalidation criteria (e.g., persistent inflation surprise, regime drift evidenced by rate paths or a sharp decline in AI capex signal); 5) replace the current multi‑section, residual narrative with a single cohesive causal map and ensure every factual claim has a cited source from the IDs listed (verify coverage of OGK8WLL69, NL5YYTLF2, SGB2PAZGK, EPJYXB7DX, YQOMV2HAJ, V8TEZOR8R, ILYC1M41F, UPV3X2MQ6, W2622L6WW, 1GVYF2V8O, 2QRLB974F, STBVARD8F, T1QE6JPIX, J99EM2TPZ, 22PL3Q360, 218AGGUXB, U6HXAJR4J, R3WNA7L7A, Y6SQOEK69); 6) explicitly reconcile any tensions (e.g., NL5YYTLF2’s social/UBI framing vs AI productivity upside) within the base-case narrative rather than leaving them as side notes; 7) tighten wording for executive cadence and remove redundancies to ensure a tight, decision-oriented tone; 8) verify all numbers are current, clearly unitized, and correctly sourced, replacing曳 any ambiguous or out‑of‑scope claims with ranges or conditional statements; 9) ensure the输出 remains within the 4–6 sentence/point limit and uses a consistent, industry-standard risk/trigger language suitable for professional investor briefs.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756078141"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:16:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_conflict",
+    "target_id": "oil",
+    "selection_motivation": "The Ukraine conflict has directly disrupted Russian oil exports, triggered sanctions on Russian oil, and caused significant volatility in global oil markets, making it a primary driver of oil price dynamics.",
+    "candidate_motivation": "These topics have direct geopolitical, diplomatic, and policy linkages to the Ukraine conflict. They represent the strongest potential influences, correlates, or peers in security, diplomacy, and energy dynamics that could shape the risk and investment landscape.",
+    "existing_links_count": "8",
+    "candidate_count": "12",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['ukraine_diplomacy', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_sovereignty', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'us_russia_ukraine_diplomacy', 'russia_economic_crisis', 'russian_sanctions', 'donbas_region', 'ukraine_post_war_instability', 'oil']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'donbas_region'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814272683",
+    "rel_id": "ukraine_conflict__influences__oil",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_conflict', 'target': 'donbas_region'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Ukraine conflict has directly disrupted Russian oil exports, triggered sanctions on Russian oil, and caused significant volatility in global oil markets, making it a primary driver of oil price dynamics.",
+      "type": "INFLUENCES",
+      "source": "ukraine_conflict",
+      "target": "oil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_conflict__influences__oil"
+}

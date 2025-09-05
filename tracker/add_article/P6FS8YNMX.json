@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T01:03:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "P6FS8YNMX",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities and equities; Gold may rise 5‑10% and the S&P 500 may fall 2‑5% over the next 30 days following the August 2025 protest at the BBC Proms, reflecting heightened geopolitical risk from the Gaza war.",
+      "existing_ids": [
+        "gold",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports a protest related to the Israel‑Gaza conflict, a geopolitical event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article describes a local protest at a cultural event with no direct macro or market impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific protest event that occurred recently, directly affecting the node."
+    },
+    "article_node": {
+      "id": "P6FS8YNMX",
+      "title": "BBC Proms performance interrupted by pro-Palestinian protesters",
+      "summary": "Pro‑Palestinian protesters interrupted a Melbourne Symphony Orchestra performance at the BBC Proms, demanding the orchestra stop accepting what they called Zionist funding and citing the Gaza war. The demonstration halted the concert for over ten minutes, after which security removed the protesters and the audience booed the resumption. Jewish Artists for Palestine claimed responsibility, linking the protest to the MSO’s earlier cancellation of a pianist who had criticized Israel’s actions. The incident follows a history of similar disruptions at the Proms and highlights the growing politicisation of cultural events amid the Israel‑Gaza conflict.",
+      "source": "https://www.bbc.com/news/articles/c4gl1kx1091o?at_medium=RSS&at_campaign=rss",
+      "published_at": "2025-08-29T21:56:19.576000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "P6FS8YNMX"
+}

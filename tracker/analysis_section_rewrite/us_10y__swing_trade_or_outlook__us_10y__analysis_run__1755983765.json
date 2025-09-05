@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T23:34:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755983765",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8368",
+    "output_chars": "628",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft violates several key constraints and lacks the rigor required for a world‑class swing‑trade outline. 1) **Movers & Scenarios**: you have 4 lines, but each line bundles multiple drivers or watches (e.g., “Q3 ramp‑up + Fed rate‑cut” and “export‑control tightening or China slowdown” in a single driver).  Separate each driver into its own line, keep the watch a single, observable signal, and base the probability on concrete evidence (e.g., “Q3 earnings hit upper guidance ≈ 70 %” from the guidance range). 2) **Citations**: attach IDs only to the specific fact or number you cite; do not attach a source ID to a probability or confidence that is not directly supported. 3) **Trade line**: the entry, stop, and target must be anchored to the current price (you need the actual price from the source; if it’s missing, state “Entry near current price” without a numeric value).  Use support/resistance levels for stop/target, not arbitrary numbers.  Invalidation should be a price break (e.g., “break below $27 support”), not a revenue target.  Trigger should be a clear event (e.g., “Q3 earnings release” or “Fed rate‑cut announcement”).  Probability and confidence must be derived from the evidence you cite (e.g., “Probability ≈ 45 % based on 70 % chance of upper‑guidance earnings and 60 % chance of a Fed cut”).  4) **Formatting**: keep each line strictly to the required format, no extra words or filler.  Revise the draft to meet these points, and you’ll have a concise, evidence‑driven swing‑trade plan.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__swing_trade_or_outlook__us_10y__analysis_run__1755983765"
+}

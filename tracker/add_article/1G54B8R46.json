@@ -1,0 +1,38 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T14:51:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1G54B8R46",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US tariffs and a slowdown in the Chinese market are likely to tighten US 10Y yields and pressure China exports, with a knock‑on effect on equity valuations in the automotive sector.",
+      "existing_ids": [
+        "ust10y",
+        "china_exports",
+        "us_inflation",
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a management change at Porsche, indicating a company update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a CEO search amid declining profits and tariff concerns, signaling potential operational and strategic shifts that could influence Porsche’s valuation and sector dynamics. This event is likely to affect investor sentiment and short‑term performance, but it is not a macro‑policy shock, so the impact is moderate."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate leadership change and short‑term operational challenges at Porsche, directly impacting the company’s near‑term outlook."
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "1G54B8R46"
+}

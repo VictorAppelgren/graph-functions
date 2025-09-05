@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T15:55:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756043080",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18843",
+    "output_chars": "1267",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is strong on regime thinking and the macro/storyline, but to reach world-class quality you should tighten formatting, sharpen first-principles links, quantify every driver with material-backed numbers, and deliver a clean Swing Trade/Outlook line anchored to a tradable asset. Actionable edits: (1) Reconstitute the Movers & Scenarios into exactly 4 lines, 2 Up and 2 Down, each line in the precise format: Up/Down | Time window | Driver/Mechanism | What to watch | Probability %. Do not mix in extra narrative or headings; ground each driver in the regime logic and cite the specific fact (e.g., Azure growth 39% or cloud CAGR 21.2%) inline (IDs: 0G3A676BP; IGP1Q4ZEJ) and only use citations where you state a fact or number. (2) Tie each Up/Down to a clean, first-principles causal chain: durable cloud cash flows and lower discount rates drive higher multiples; regime shifts (inflation/ tariffs/ disinflation) reprice risk via real yields; prune nonessential content (Beasley, UAS, tires) unless you can tie them to a tangible channel in the four lines. (3) Assign probabilities derived from regime-weighting rather than ad hoc; e.g., Base A persistence 60–65%, Upside 25–30% incremental from tariff relief, Down 0–3m 40%, Down 6–12m 45–50%, and clearly label these as scenario-weights with a brief justification in-line (no new facts), while attaching citations to any factual anchors you do state. (4) For the Trade/Outlook Plan, decide if the asset is tradable; if yes, output a Swing Trade line with 10 fields: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence (0–100); otherwise produce a single Outlook line with Direction | Horizon | Expected path/levels | Decision signals | Invalidation | Trigger | Probability % | Confidence. If you choose MSFT or another moat/play, populate entry/stop/targets using regime inputs and cite relevant numbers (e.g., Azure/Cloud growth, 10Y yield anchors). (5) Improve consistency and coverage of sources: ensure every numeric assertion has an ID, reconcile conflicts (e.g., tariff pass-through vs. policy uncertainty) in the “What to watch” items, and keep all IDs strictly from the given material (0G3A676BP; IGP1Q4ZEJ; GX057ADL7; RHXDOHQQX; J99EM2TPZ; S15934PBQ; 48JXC9VDP; YVQU6QCY4; etc.). (6) Prune formatting and length: keep each movers line concise (roughly 15–25 words) to fit a 4-line block; ensure the Outlook/Swing Trade line, if included, stays within the required 1–2 lines and uses the full 10-field Swing Trade template if tradable. (7) Provide a brief, explicit invalidation checklist per line (e.g., “Azure growth decelerates below X% for two consecutive quarters” with a source) to support the scenario discipline. These edits will yield a tight, source-faithful, quantitatively anchored Swing Trade/Outlook that aligns with the SECTION FOCUS and elevates the analysis to world-class quality.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756043080"
+}

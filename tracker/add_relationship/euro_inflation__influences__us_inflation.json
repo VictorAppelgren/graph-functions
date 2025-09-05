@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T21:47:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euro_inflation",
+    "target_id": "us_inflation",
+    "selection_motivation": "Euro inflation transmits to the US through import price pressures and global supply chain linkages, making it a primary driver of US inflation.",
+    "candidate_motivation": "Euro Area Inflation is tightly linked to monetary policy, global inflation expectations, bond yields, commodity price movements, and equity market sentiment. Therefore topics that directly influence or reflect these factors are strong peers or influences.",
+    "existing_links_count": "5",
+    "candidate_count": "18",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['ecb_policy', 'fed_policy', 'us_inflation', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'bund10y', 'sx5e', 'spx', 'dxy', 'eurusd', 'gold', 'wti', 'brent', 'wheat', 'fed_powell_rate_cut_hint_2025', 'us_unemployment_claims']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000588320",
+    "rel_id": "euro_inflation__influences__us_inflation",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'euro_inflation', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'euro_inflation', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro inflation transmits to the US through import price pressures and global supply chain linkages, making it a primary driver of US inflation.",
+      "type": "INFLUENCES",
+      "source": "euro_inflation",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euro_inflation__influences__us_inflation"
+}

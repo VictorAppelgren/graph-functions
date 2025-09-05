@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:24:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756034220",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17835",
+    "output_chars": "1379",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Government-backed governance signals in a leading semiconductor name that could compress policy premia and lift near-term AI/semi repricing | Intel vesting milestones, governance updates, USMCA/tariff shifts, and Fed rate-cut odds | 60% (XQWTVR71K)\nUp | 3–6 months | Cloud/AI tailwinds sustain demand for cloud infrastructure and software ecosystems, anchored by Azure growth approaching 39% and Shopify GMV monetization/margin restoration | Azure momentum, Shopify GMV monetization pace, and margin inflection post SFN | 65% (0G3A676BP)(QFDWCTAYB)\nDown | 0–3 weeks | Bear-case near-term risk arises if AI leadership intensifies large-cap outperformance and small-cap rotation stalls, risking a near-term risk-on reversal | IPO momentum, Russell 2000 leadership vs S&P 500, and small-cap earnings signals | 40% (Q7VVGNSQE)(4661GWFP7)(2YP1X9B4T)(YX2J8NHZ1)\nDown | 3–6 months | Bear-case unfolds if inflation surprises persist or easing is delayed, lifting discount rates toward 4.3%+ and compressing multiples; monitor CPI/payroll, Sept rate-cut timing, 10-year yield near the 4.0–4.3% corridor, ACMR guidance, IPO momentum, and IBM productivity signals | CPI/payroll surprises, rate-cut timing, 10-year yield trajectory, ACMR revenue/margin targets, IPO momentum, IBM hiring pause | 40% (GX057ADL7)(TN66GHPAT)(QFDWCTAYB)(4LQD15CFU)(SK994CBWR)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756034220"
+}

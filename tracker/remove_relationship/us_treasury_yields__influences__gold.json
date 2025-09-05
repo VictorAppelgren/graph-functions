@@ -1,0 +1,63 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-25T01:23:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_treasury_yields",
+    "target_id": "gold",
+    "selection_motivation": "Gold is a less direct indicator of Treasury yield movements compared to core inflation metrics, equity indices, or debt levels, making its influence link the weakest.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "Gold is a less direct indicator of Treasury yield movements compared to core inflation metrics, equity indices, or debt levels, making its influence link the weakest.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_national_debt'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882699716",
+    "rel_id": "us_treasury_yields__influences__gold",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'core_cpi'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_national_debt'}, {'type': 'INFLUENCES', 'source': 'us_treasury_yields', 'target': 'us_inflation_expectations'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_treasury_yields",
+      "target": "gold"
+    },
+    "prioritized_link": {
+      "motivation": "The 30‑year TIPS auction is a primary mechanism through which Treasury yields set the benchmark for inflation‑protected securities; thus Treasury yields directly influence auction outcomes.",
+      "type": "INFLUENCES",
+      "source": "us_treasury_yields",
+      "target": "30yr_tips_auction"
+    },
+    "llm_raw_response": {
+      "motivation": "Gold is a less direct indicator of Treasury yield movements compared to core inflation metrics, equity indices, or debt levels, making its influence link the weakest.",
+      "remove_link": "gold"
+    },
+    "removal_decision": {
+      "motivation": "Gold is a less direct indicator of Treasury yield movements compared to core inflation metrics, equity indices, or debt levels, making its influence link the weakest.",
+      "remove_link": "gold"
+    },
+    "source_node": {
+      "last_updated": "2023-10-06T00:00:00Z",
+      "implications": "",
+      "level": "main",
+      "current_analysis": "",
+      "importance": 1,
+      "query": "(CPI OR Consumer Price Index OR inflation OR price index OR inflation rate OR inflationary OR deflationary) OR (Treasuries OR Treasury OR bonds OR bond market OR fixed income OR government bonds OR US Treasuries OR T-bonds OR T-bill OR T-note) OR (stocks OR equities OR stock market OR share OR shares OR equity OR market OR markets) OR (Federal Reserve OR Fed OR monetary policy OR interest rates OR rate cuts OR dovish OR hawkish OR central bank) OR (stagflation OR economic outlook OR fiscal outlook OR US fiscal policy OR fiscal measures OR debt burden OR tariffs OR inflationary pressures) OR (yields OR yield curve OR ten-year yield OR bond yields OR interest yield OR yield rates) OR (sell-off OR market reaction OR volatility OR market disruption OR price action OR financial markets OR market trends OR market analysis OR news OR report OR update OR forecast)",
+      "motivation": "The article highlights the changing dynamics of the US Treasury market influenced by CPI data, necessitating a new node to capture the evolving narrative around Treasury yields and fiscal outlook.",
+      "last_queried_at": "2025-08-15T06:23:51+00:00",
+      "importance_rationale": "US Treasury Yields are a core macro asset that directly influences bond markets, interest rates, and broader financial markets. They are actively traded intraday and have immediate market impact, fitting the 1‑importance level for high‑impact, directly traded macro topics.",
+      "type": "macro",
+      "fundamental_analysis": "",
+      "queries": 4,
+      "parent_id": "QFLNVX",
+      "name": "US Treasury Yields",
+      "id": "us_treasury_yields",
+      "last_queried": "2025-08-19T17:28:45.779000000+00:00",
+      "medium_analysis": "",
+      "status": "active"
+    }
+  },
+  "id": "us_treasury_yields__influences__gold"
+}

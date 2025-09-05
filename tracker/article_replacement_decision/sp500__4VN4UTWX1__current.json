@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T23:54:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "4VN4UTWX1",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['19NO2GMNF', 'QGXA2WQJ3', 'NBX9RA9WX', '3G1PVPWPD', 'I2SJU04DF', 'M5SPVKG33', 'WC68LCU9R', 'I35H3FBSN', '6WRONTAG1']",
+    "mode": "MUST_REPLACE",
+    "target_id": "19NO2GMNF",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "19NO2GMNF",
+      "motivation": "New BHVN deadline alert saturates the competing timeframe bucket; to maintain capacity and reduce noise in the graph, remove the placeholder entry with ID 19NO2GMNF."
+    }
+  },
+  "id": "sp500__4VN4UTWX1__current"
+}

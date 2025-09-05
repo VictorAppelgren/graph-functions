@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-28T10:23:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PR72873RZ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; political uncertainty and federal intervention in local policing may elevate U.S. Treasury yields and affect the U.S. dollar.",
+      "existing_ids": [
+        "us_10y",
+        "usd"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article reports the deployment of National Guard troops to Washington DC and Chicago, indicating a militarized action by the US government, which is a geopolitical event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major deployment of National Guard troops to Washington, D.C., directly affecting the scope of the National Guard node by highlighting a significant change in its operational use and political implications."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a recent deployment of National Guard troops to Washington, D.C., an immediate event affecting policing and federal authority."
+    },
+    "article_node": {
+      "id": "PR72873RZ",
+      "title": "Hillary Clinton Says Her 2024 Warning Of Troops Patrolling Streets Has Come True In Trump 2.0: 'I Wish I'd Been Wrong'",
+      "summary": "Former Secretary of State Hillary Clinton warned that President Trump’s second term would bring a militarized America, a prediction that appears to have come true as National Guard troops are now patrolling Washington, D.C. and potentially other cities such as Chicago. Trump has deployed roughly 2,000 armed Guard members to the capital, citing crime reductions, while critics argue the moves are partisan and exaggerated. The deployment has sparked backlash from local leaders, including Illinois Governor JB Pritzker, who called it an abuse of power, and has raised legal and constitutional questions about federal authority over city policing.",
+      "source": "https://www.benzinga.com/news/politics/25/08/47325059/hillary-clinton-says-her-2024-warning-of-troops-patrolling-streets-has-come-true-in-trump-2-0-i-wish-id-been-wrong",
+      "published_at": "2025-08-26T02:49:45-04:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "PR72873RZ"
+}

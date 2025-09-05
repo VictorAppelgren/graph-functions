@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:41:48",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_takeover",
+    "target_id": "dc_federal_control",
+    "selection_motivation": "The federal takeover directly establishes federal control over the D.C. police force, making it a primary consequence of the takeover.",
+    "candidate_motivation": "These topics represent direct or closely aligned federal involvement in Washington, D.C. governance, policing, and urban security, which would influence or parallel a federal takeover scenario. They also include related federal interventions and guard deployments that could be contemporaneous or competitive with a takeover event.",
+    "existing_links_count": "2",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['dc_federal_intervention', 'dc_federal_policing_initiative', 'dc_federal_control', 'dc_federal_law_enforcement_takeover', 'dc_police_takeover', 'federal_intervention_urban_crime', 'federal_intervention_in_black_cities', 'trump_federal_control_dc', 'national_guard_dc_deployment', 'national_guard_domestic_deployment']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_policing_initiative'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216482",
+    "rel_id": "dc_federal_takeover__influences__dc_federal_control",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_policing_initiative'}, {'type': 'INFLUENCES', 'source': 'dc_federal_takeover', 'target': 'dc_federal_control'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The federal takeover directly establishes federal control over the D.C. police force, making it a primary consequence of the takeover.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_takeover",
+      "target": "dc_federal_control"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dc_federal_takeover__influences__dc_federal_control"
+}

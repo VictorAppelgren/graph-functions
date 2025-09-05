@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T21:47:35",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6HK1DZHJL",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; forward rate risk premium and anticipated Fed cuts will compress Treasury yields and widen spreads.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers analysis of treasury forward rates and simulation methodology, which constitutes market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Uncertain relevance due to missing node context, but article discusses U.S. Treasury yields, forward rates, and corporate bond risk, which would likely have a low impact on most macro nodes."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on near‑term expectations of steady rate cuts and forward‑rate risk premiums, indicating a medium‑term outlook for U.S. Treasury yields."
+    },
+    "article_node": {
+      "id": "6HK1DZHJL",
+      "title": "SAS Weekly Treasury Simulation, August 29, 2025: Steady Rate Cuts Ahead",
+      "summary": "The article discusses the SAS Weekly Treasury Simulation for August 29, 2025, highlighting that forward rates include a risk premium beyond market expectations for the 3‑month forward rate. It notes that the simulation tracks U.S. Treasury yields and spreads, and references a free trial of The Corporate Bond Investor, which ranks corporate bonds by reward‑to‑risk using modern big‑data default probabilities. The piece also mentions the steady rate cuts anticipated in the near term and provides a brief overview of the simulation’s methodology and its relevance to investors.",
+      "source": "https://seekingalpha.com/article/4818626-sas-weekly-treasury-simulation-august-29-2025-steady-rate-cuts-ahead",
+      "published_at": "2025-09-02T18:37:16+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "6HK1DZHJL"
+}

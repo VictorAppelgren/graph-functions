@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T21:55:11",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756583711",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "2400",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is already on target – it cites the source (LF0UUL917), links mortgage rates to Fed policy, inflation, debt and the balance‑sheet contraction, and gives a clear 6.5‑7 % range, catalysts, and invalidation scenarios. To elevate it to world‑class macro‑trading quality, tighten the first‑principles framing and broaden the causal chain:  \n1. **Add a real‑rate differential anchor** – state that the 30‑yr mortgage rate ≈ Fed funds rate + 10‑yr Treasury yield + term‑premium, and quantify the current differential (e.g., Fed funds 5.5 %, UST10Y 4.0 %, term‑premium 0.5 % → 6.0 % baseline).  \n2. **Explicit policy‑reaction function** – note that the Fed’s Taylor‑style rule (rate = 0.5 % + 0.5 × (π‑2%) + 0.5 × (ΔY/Y)) implies that a 0.5 % rise in inflation or a 1 % recessionary shock would trigger a 25‑bp hike, pushing mortgage rates up by ~1‑2 bp per 1‑bp Fed move.  \n3. **Quantify the balance‑sheet effect** – include the Fed’s asset‑sale pace (≈ $1.5 T/year) and its impact on the term‑premium (≈ +0.3 % per $1 T sold).  \n4. **Add a watch list with dates** – e.g., Fed FOMC meetings (Sept 16‑17, Oct 31‑Dec 2, Jan 15‑16, Mar 20‑21, May 22‑23, Jul 24‑25, Sep 25‑26, Nov 27‑28, Jan 2026); CPI/PCE releases (every month, 15th & 1st); Treasury auction schedule (e.g., 10‑yr on 12th of each month).  \n5. **Risk matrix** – list upside (Fed cuts, inflation drop, halt of asset‑sale) and downside (Fed hikes, debt‑issuance spike, recession) with probability estimates (e.g., 30 %/70 % for upside/downside).  \n6. **Confidence rating** – assign a 60‑70 % confidence based on the tight Fed‑rate‑yield linkage and the historical stability of the term‑premium.  \n\nNo sentence drifts from the macro‑focus; all claims are sourced and tied to the mortgage‑rate asset. Implement the above additions to meet the “first‑principles, scenario, and specificity” criteria and to fully satisfy the multi‑year structural mandate.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756583711"
+}

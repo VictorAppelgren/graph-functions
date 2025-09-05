@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T12:17:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "india_industrial_output",
+    "target_id": "copper",
+    "selection_motivation": "India's industrial output is a leading indicator of domestic demand for copper, directly influencing global copper consumption and price dynamics.",
+    "candidate_motivation": "India Industrial Output is driven by domestic demand, global trade flows, commodity price shocks, and global monetary conditions. Therefore topics that capture these drivers—China exports, China credit conditions, the USD/CNY exchange rate, the US Dollar Index, Fed policy, US inflation, energy and metal prices—are plausible influences or peers.",
+    "existing_links_count": "0",
+    "candidate_count": "9",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['china_exports', 'china_credit_impulse', 'usdcny', 'dxy', 'fed_policy', 'us_inflation', 'wti', 'brent', 'copper']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118474784",
+    "rel_id": "india_industrial_output__influences__copper",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India's industrial output is a leading indicator of domestic demand for copper, directly influencing global copper consumption and price dynamics.",
+      "type": "INFLUENCES",
+      "source": "india_industrial_output",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__influences__copper"
+}

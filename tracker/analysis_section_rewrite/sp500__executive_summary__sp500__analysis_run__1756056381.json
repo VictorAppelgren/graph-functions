@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T19:38:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756056381",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18773",
+    "output_chars": "1353",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The Analysis Draft shows solid regime thinking and credible anchors (MSFT/Shopify in Regime A; Ford in Regime B; UNH/LULU in Regime C; policy/AI‑capex in Regime D) but it is far too long and unfocused for a 4–6 sentence professional brief; it should be distilled into a tight house view with 1) a single core thesis, 2–3 data‑driven catalysts, 1–2 quantified risks/invalidation points, and 1–2 watch items. Actionable edits: condense to 5 sentences (or 5 crisp bullets) with a single base‑case line (e.g., “MSFT/Shopify benefit from Regime A’s durable FCF/moats; Ford remains income‑oriented with limited upside until EV profitability/tariffs improve; UNH/LULU provide downside protection; AI/capex re‑pricing in Regime D governs multiple/DV risk”), then embed 3 catalysts with numbers (e.g., MSFT cloud growth 39%, contracted base ~$368B; Shopify 31% rev growth with ~$422M FCF; Ford adj. margin ~4.3%, ROIC ~10.1%, EV loss ~$1.3B, forward P/E ~10.3, dividend ~5.18%), and one or two clear invalidation points (tariff/rate shock >25% on autos; Costa Coffee sale stalls; Disney Lightning Lane uptake disappoints) drawn from the cited IDs. Rebuild the transmission to show explicit causal links from Regimes to valuation (e.g., Regime A yields higher ROIC/durable FCF supporting higher multiples for cloud incumbents; Regime B limits upside for autos with income yield; Regime C cushions drawdowns; Regime D reprices risk premia with AI/capex momentum still the lever) and drop non‑core macro/digital‑economy aside from as risk overlays. Tighten citations to the core sources (e.g., 48JXC9VDP, STBVARD8F, 22PL3Q360, W2622L6WW, 65UUBU0OR, IGP1Q4ZEJ, U3ZK13ZQI, I2SJU04DF, NBX9RA9WX, WTNT85IPR, 4661GWFP7) and ensure every quantitative claim has a matching ID; reconcile any conflicting numbers (e.g., discount rate implications vs cloud TAM growth) by presenting ranges instead of precise points where sources diverge. Finally, replace the breadth of the current draft with a concise risk‑monitoring roll‑up (port advisories, Brent/WTI moves, shipping indices, AI/data‑center momentum signals) in a single, 1–2 sentence watchlist, followed by a 1 sentence go/no‑go in light of the stated invalidations.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756056381"
+}

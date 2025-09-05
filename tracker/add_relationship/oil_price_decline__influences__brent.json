@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T10:26:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil_price_decline",
+    "target_id": "brent",
+    "selection_motivation": "Oil price decline directly drives Brent crude oil price, a key global benchmark; linking them captures commodity price propagation.",
+    "candidate_motivation": "Oil price decline directly affects core commodity prices, inflation expectations, monetary policy, and equity markets, and has inverse relationships with the US dollar and gold, making these topics strong influences or correlates.",
+    "existing_links_count": "7",
+    "candidate_count": "17",
+    "all_nodes_count": "34",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['wti', 'brent', 'dxy', 'us_inflation', 'us_core_pce', 'euro_inflation', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'spx', 'sx5e', 'gold', 'wheat', 'usdcny']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814271500",
+    "rel_id": "oil_price_decline__influences__brent",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'oil_price_decline', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price decline directly drives Brent crude oil price, a key global benchmark; linking them captures commodity price propagation.",
+      "type": "INFLUENCES",
+      "source": "oil_price_decline",
+      "target": "brent"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil_price_decline__influences__brent"
+}

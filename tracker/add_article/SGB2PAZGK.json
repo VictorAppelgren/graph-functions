@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T21:05:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SGB2PAZGK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US-China tariffs and rare-earth/semiconductor supply-chain realignment influence inflation expectations and U.S. yields, with spillovers to equities (S&P 500).",
+      "existing_ids": [
+        "us_china_tariffs",
+        "rare_earth_elements",
+        "us_tariffs_semiconductors",
+        "ai_infrastructure",
+        "sp500",
+        "us_inflation",
+        "us_treasury_yields",
+        "china_chip_competition",
+        "us_china_trade_negotiations"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article discusses President Trump's policy statement on tariffs and reshoring supply chains, which is a policy statement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major policy shift affecting China’s trade and supply chain, directly impacting the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article outlines a policy shift that fundamentally alters supply chain and manufacturing strategy, indicating long-term structural change."
+    },
+    "article_node": {
+      "id": "SGB2PAZGK",
+      "title": "Trump learns a lesson grounded in faith, how best to stand tough on trade with China",
+      "summary": "President Donald Trump’s 2025 administration has intensified a two‑pronged strategy against China, using aggressive tariffs to pressure Beijing while reshoring supply chains and boosting domestic manufacturing, especially in semiconductors and AI. The administration frames these measures as essential for national security, arguing that China’s control of rare earths, semiconductors, and critical pharmaceuticals threatens U.S. sovereignty and economic resilience. Trump’s rhetoric emphasizes steadfast negotiation, faith‑based resolve, and a willingness to accept short‑term consumer price hikes for long‑term strategic gains. The policy has sparked criticism over its impact on allies and domestic costs, but Trump maintains that the tariffs are a necessary tool to secure fair trade terms and protect American technological leadership.",
+      "source": "https://www.foxnews.com/opinion/trump-learns-lesson-grounded-faith-how-best-stand-tough-trade-china",
+      "published_at": "2025-08-24T10:00:10-04:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "SGB2PAZGK"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:21:51",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756088130",
+    "drivers_count": "8",
+    "material_chars": "3456",
+    "output_chars": "3891",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft does many things well (a coherent macro-to-asset channel, a three-regime policy map, and a clear link from inflation dynamics to discount rates and crypto/AI re-rating), but it needs a tighter, world-class build: (1) articulate a clean, testable causal chain—inflation momentum and wage growth drive Jackson Hole/semiconductor capex signals, which shift discount rates and risk premia, which then re-price tech/crypto and AI infra—and spell this out step by step with explicit signposts and thresholds; (2) strengthen scenario structure by naming Regimes A–C, assigning explicit transition triggers (e.g., CPI momentum, wage growth pace, policy guidance) and probability weights, and providing clear invalidation points (e.g., inflation persistence above a regime threshold or a regime-shift shock); (3) inject quantitative discipline by anchoring claims to the cited numbers (2025 revenue midpoint near $900m; gross margin ~4%; RWA around 16T by 2030; U.S. Treasury tokenization ~$4.2B in 2025; crypto targets Ether 4,000–5,000 and BTC 110,000–125,000; oil regimes with Brent low-to-mid 60s; etc.) and avoiding qualitative assertions without numbers; (4) prune noise and keep material cross-topic drivers—remove irrelevant micro-details (e.g., consumer gadget specs) and ensure every claim ties to macro, policy, flows/positioning, or valuation/technicals; (5) tighten citation discipline: ensure each quantitative claim cites an ID from the SOURCE MATERIAL, reconcile any apparent conflicts across OGK8WLL69, 22PL3Q360, T1QE6JPIX, J99EM2TPZ, Y6SQOEK69, SGB2PAZGK, JPAIHPA4N, 5S9GJV2O3, HWGNUP2XG, UVEQ2SJ0W, and eliminate duplicative passages (the later “On funding and tokens” block repeats); (6) deliver a compact but complete watch-list: CPI prints, wage-growth momentum, Jackson Hole cues, semiconductor capex cadence, EV-capex leverage/margin impact, oil regime surprises, tariff/policy shifts, and crypto/AI funding flows; (7) align to SECTION FOCUS by foregrounding the cross-topic synthesis (macro, policy, flows/positioning, valuation/technicals) with a clear direction, mechanism, and fragility note, then conclude with a succinct, decisive signals watch-list; (8) provide a single, crisp narrative arc within a tight length constraint, ensuring all material cross‑topic drivers are connected and the view’s fragility points are explicit.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756088130"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T14:06:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TM07PVBE5",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article specifies the 2025 IRA contribution limits, a new policy detail needed for accurate retirement planning analysis.",
+      "id": "ira_contribution_limit_2025",
+      "name": "IRA Contribution Limit 2025",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy detail specifying 2025 IRA contribution limits, directly affecting retirement savings rules."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "IRA contribution limits are a specific retirement‑savings rule, not a macro driver or broad fiscal policy that directly influences market movements.",
+      "confidence": 0.9,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

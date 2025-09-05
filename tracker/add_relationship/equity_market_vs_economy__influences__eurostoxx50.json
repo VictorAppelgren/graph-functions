@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:01:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "equity_market_vs_economy",
+    "target_id": "eurostoxx50",
+    "selection_motivation": "Equity market vs economy is a key driver of European equity indices; linking it to Eurostoxx 50 captures the macro‑equity relationship for the Eurozone.",
+    "candidate_motivation": "These topics represent the core macro-financial backbone connecting equity markets to the broader economy, including major indices, policy actions, monetary policy signals, and key currency/commodity drivers. They are the most plausible direct influences, correlates, or peers to the Equity Market vs Economy dynamic.",
+    "existing_links_count": "6",
+    "candidate_count": "14",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['sp500', 'eurostoxx50', 'eurusd', 'us_inflation', 'euro_inflation', 'core_monthly_cpi', 'fed_policy', 'ecb_policy', 'us_10y', 'oil', 'gold', 'copper', 'usd', 'eur']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814274729",
+    "rel_id": "equity_market_vs_economy__influences__eurostoxx50",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Equity market vs economy is a key driver of European equity indices; linking it to Eurostoxx 50 captures the macro‑equity relationship for the Eurozone.",
+      "type": "INFLUENCES",
+      "source": "equity_market_vs_economy",
+      "target": "eurostoxx50"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "equity_market_vs_economy__influences__eurostoxx50"
+}

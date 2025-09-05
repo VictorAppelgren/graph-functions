@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T13:44:05",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "wheat",
+    "target_id": "fed_policy",
+    "selection_motivation": "Wheat price swings materially influence U.S. inflation expectations, a key input for Fed policy decisions.",
+    "candidate_motivation": "These topics are likely to influence wheat prices through macro inflation expectations, monetary policy, currency movements, and demand from major importers.",
+    "existing_links_count": "4",
+    "candidate_count": "8",
+    "all_nodes_count": "35",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'dxy', 'usdcny', 'usdjpy', 'china_exports']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'wheat', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wheat', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847292",
+    "rel_id": "wheat__influences__fed_policy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'wheat', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'wheat', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'wheat', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'wheat', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'wheat', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Wheat price swings materially influence U.S. inflation expectations, a key input for Fed policy decisions.",
+      "type": "INFLUENCES",
+      "source": "wheat",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "wheat__influences__fed_policy"
+}

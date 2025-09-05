@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T23:19:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "FIJQOZQLQ",
+    "status": "success",
+    "topic_id": "pandemic"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the pandemic node.",
+      "existing_node_ids": "pandemic",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "Unable to determine category due to lack of article content."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to lack of article content, but assuming minimal relevance, assign low score."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to assess due to lack of article summary."
+    },
+    "article_node": {
+      "id": "FIJQOZQLQ",
+      "title": "New I.R.S. Rules for Large Wind and Solar Projects Released",
+      "summary": "The IRS issued new rules tightening the definition of \"beginning of construction\" for wind and solar projects, eliminating the 5% safe harbor that previously allowed developers to claim tax credits after early equipment purchases. This change, combined with President Trump's bill that phases out tax credits for projects not started within 12 months, threatens the viability of many renewable energy developments. The safe harbor remains for rooftop and smaller solar installations, but large wind and solar farms face stricter qualification requirements.",
+      "source": "https://www.nytimes.com/2025/08/15/climate/irs-wind-solar-tax-credits.html",
+      "published_at": "2025-08-15T19:57:25.407000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "FIJQOZQLQ"
+}

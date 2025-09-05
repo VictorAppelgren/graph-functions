@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:01:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "2KR41N4JD",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights significant concerns regarding Meta's AI guidelines that could impact regulatory scrutiny and public perception, necessitating a dedicated node to analyze the implications for tech policy and child safety.",
+      "id": "meta_ai_guidelines",
+      "name": "Meta AI Guidelines",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy document detailing Meta's AI guidelines, directly relevant to tech regulation."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Meta AI Guidelines is a corporate policy, not a macroeconomic driver, regulation regime, or tradable asset; it falls under industry verticals, which are disallowed.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

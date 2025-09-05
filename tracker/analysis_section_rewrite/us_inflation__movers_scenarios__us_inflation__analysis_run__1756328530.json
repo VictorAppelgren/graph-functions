@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-27T23:14:31",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756328530",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9182",
+    "output_chars": "633",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft captures the key drivers but lacks the depth, specificity, and causal clarity required for a world‑class outlook. Tighten each line to a single, trigger‑centric sentence, include the exact numeric thresholds that would flip the probability (e.g., jobs >200 k, CPI >3.5 % for a Fed hike, euro CPI >3 % for a Regime B shift), and attach the precise source IDs for each fact (OGK8WLL69, 17F49LURJ, J54PXL0NV, R3WNA7L7A, NL5YYTLF2). Add the crypto price range ($4,800–$5,200 ETH, $110k–$125k BTC) as a concrete risk‑on indicator and cite OGK8WLL69. For the soy case, quote the $10–$12 / t price band and the 97 Mt export figure with J54PXL0NV. Include the AI‑displacement risk as a separate down catalyst (e.g., “rapid AI job loss >25 % of U.S. workforce triggers UBI and consumer contraction”) and cite 1GVYF2V8O. Quantify probabilities with the FedWatch 85 % cut likelihood (17F49LURJ) and adjust the down probabilities to reflect realistic odds (e.g., 20 % for a Fed hike, 25 % for a Regime B shift). Ensure each watch signal is a single data point (Fed minutes, August jobs, CPI, euro CPI, oil inventories, semiconductor capex). Finally, remove any generic phrasing and keep the four lines strictly formatted as required.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756328530"
+}

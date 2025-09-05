@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T13:44:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756035169",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15261",
+    "output_chars": "1858",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft does a solid job of laying out a Regime A/B/C framework and anchoring it with data points from MSFT, SHOP, UNH, LULU, and SLB, but its strength is buried in a long, somewhat scattered narrative that blurs a crisp, decision‑useful house view. To reach world‑class quality in 4–6 concise sentences, compress into a single, explicit base‑case thesis (Regime A as the durable, cloud/AI regime) anchored by two core assets (MSFT Azure and SHOP) with precise numbers (Azure contracted revenue ≈ $368B, Azure growth ≈ 39%; H1 2025 SHOP GMV ≈ $163B, revenue +29%, op income +51%), plus one or two counterweights (UNH/LULU/SLB) that validate cash generation and returns. Then add 2–3 catalysts and 2–3 clear invalidation signals with timelines, and finish with a tight watch‑list and horizons (0–3 weeks for terms/gov signals on Intel stake; 0–3/3–6 months for regime transition indicators). Eliminate or tightly re‑integrate side narratives (e.g., SFN’s sale and unrelated IPO commentary) unless they directly reinforce Regime A dynamics, and ensure every factual claim is tied to a cited ID; harmonize horizon language so the immediate driver, base case, and regime transitions don’t conflict. Finally, audit the cadence and citation density: keep to 2–4 citations per sentence, resolve any conflicts across sources, and use explicit regime language (Regime A durability; Regime B margin normalization; Regime C policy headwinds) rather than mixing disparate themes.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756035169"
+}

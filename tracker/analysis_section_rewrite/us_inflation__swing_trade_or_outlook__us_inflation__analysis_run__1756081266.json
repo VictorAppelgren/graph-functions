@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T02:31:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756081266",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18918",
+    "output_chars": "1741",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable feedback in one compact paragraph:\n\nYour ANALYSIS DRAFT oversteps the Movers & Scenarios constraint by listing six lines (three horizons plus a “Long” line) instead of exactly four; compress to four one-line movers: two Up and two Down, each strictly in the format “Up|Time window|Driver/Mechanism|What to watch|Probability %,” with probabilities tied to material evidence (e.g., 62%, 60%, 34%, 25% from the draft). Propose Up 0–3 weeks driven by ETF inflows and staking rails supporting ETH/BTC in a risk-on regime (cite OGK8WLL69; Scraped Source 4); Up 3–6 months driven by Regime A persistence (inflation anchored, data-dependent easing) and liquidity channels (cite OGK8WLL69; NL5YYTLF2; Scraped Source 4); Down 0–3 weeks driven by Regime B shocks (hawkish steps, higher real rates) with wage/inflation signals as triggers (cite OGK8WLL69; NL5YYTLF2); Down 2–6 weeks driven by AI/UBI dislocation and crypto-policy pivots with regulatory/friction risks as triggers (cite NL5YYTLF2; UPV3X2MQ6; 22PL3Q360). Then provide a Swing Trade plan since ETH/USD is tradable: an Up path with Horizon 0–6 weeks, Entry ≈ 5,000; Stop ≈ 4,700; Target ≈ 6,000; R/R ≈ 1.2; Invalidation ≈ 4,900; Trigger ≈ daily close above ≈ 5,050; Probability ≈ 60%; Confidence ≈ 65%. Tighten the first-principles backbone by naming a clean three-regime map (Regime A: disinflation, lower discount rates; Regime B: inflation nearer target with higher discount rates; Regime C: AI/UBI dislocation) and tie each mover to a regime with explicit invalidation rules (e.g., break of ETH/BTC floors or a sustained regime shift). Base all numeric assertions on concrete source facts, place inline IDs after facts (e.g., (OGK8WLL69)), and avoid duplicative or non-specific statements; explicitly state the reconciliation stance if sources conflict (e.g., default to OGK8WLL69 for regime signals and use NL5YYTLF2 to frame AI/dislocation risk). Finally, prune watchlists to core, measurable signals (ETF/inflows, staking share, regulatory developments like Project Crypto/GENIUS Act, Jackson Hole cues, wage/inflation prints) and remove extraneous data chatter, ensuring the output remains strictly 4 movers and a single Swing Trade line.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756081266"
+}

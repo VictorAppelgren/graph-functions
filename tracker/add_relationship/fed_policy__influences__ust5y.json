@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T04:56:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "ust5y",
+    "selection_motivation": "Fed policy directly shapes the 5‑year Treasury yield through its impact on the term‑structure and market expectations.",
+    "candidate_motivation": "Fed Policy directly drives U.S. monetary conditions and influences a wide array of market handles—interest rates, Treasury yields, the dollar, inflation expectations, and employment data—while also being a peer to other central bank policies. Therefore, topics that are either specific Fed policy actions, U.S. macro indicators that feed into or react to Fed decisions, or comparable policy actions from other major banks are the most plausible influences, correlates, or peers.",
+    "existing_links_count": "16",
+    "candidate_count": "12",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'ecb_policy']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_services_pmi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'fed_policy', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:4",
+    "rel_id": "fed_policy__influences__ust5y",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_services_pmi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'fed_policy', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly shapes the 5‑year Treasury yield through its impact on the term‑structure and market expectations.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__ust5y"
+}

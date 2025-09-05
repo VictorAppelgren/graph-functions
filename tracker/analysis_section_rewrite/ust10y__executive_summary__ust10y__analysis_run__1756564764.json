@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:03:07",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756564764",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6369",
+    "output_chars": "1111",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Add an explicit handle mapping for silver in the opening sentence – e.g., “Silver +15 % over the next 12 months (silver +15 %) (LF0UUL917).”  Keep the gold comparison only as a benchmark; it does not need a separate handle.  Verify that every claim carries a citation (the draft already cites LF0UUL917, Y474W9FO9, Z7O1DCHS7, FAN5RYW6T).  Highlight the catalyst window explicitly: “Fed’s September 2024 policy meeting (Z7O1DCHS7)” and the 2‑yr/10‑yr spread, CPI/PCE releases as real‑time gauges.  Ensure the risk list and watch signals are concise, each linked to the same citations.  No other assets or local micro‑details should appear; the focus must remain on silver and its macro‑financial transmission path.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__executive_summary__ust10y__analysis_run__1756564764"
+}

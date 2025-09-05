@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:37:04",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756027682",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21489",
+    "output_chars": "1434",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The analysis has solid macro scaffolding and a coherent regime-driven logic, but it needs tightenings to hit “world-class” quality. First, the Movers should be exactly 4 lines (2 Up, 2 Down) with crisp causal drivers and time horizons, and there is an extra Outlook/moonlighting line that violates the 4-line constraint; consolidate to four mover lines only and reserve a separate, single-line Swing Trade/Outlook as required. Second, calibrate probabilities to the source guidance (base-case ~40–50%, bull ~20–30%, bear ~20%), instead of the mixed 25/28/15/15/45 layout; assign each mover a single, defensible probability anchored to the regime framework and cited evidence. Third, sharpen the Driver/Mechanism to be explicit causal stems tied to the sources (e.g., Regime A easing priced in driving front-end yields lower, USD softening, equity/risk assets bid; Regime B hawkish labor vs. prices delaying easing; Regime C geopolitics/AI policy tightening) and keep What to watch tightly focused on actionable catalysts (CPI surprises, Jackson Hole rhetoric, CHIPS governance, policy-path signals, and notable WFE/IPO momentum). Fourth, separate macro and micro signals: ACMR/tactical stock specifics belong in the Swing Trade plan, not the four macro movers, unless you clearly label them as a micro‑signal subset and back them with a separate, discipline-focused invalidation rule. Fifth, tighten citations: use 1–2 IDs per line to support facts/numbers, ensure every asserted fact has a source, and avoid stacking many IDs on one clause; ensure all IDs are present in the SOURCE MATERIAL and reconcile any conflicts (e.g., base-case vs. policy signals) with a short, explicit weighting note. Finally, craft the Swing Trade plan as a single Up/Down line if tradable, or 1 line if not, with precise entry/stop/target and a single, citation-backed trigger; if ACMR remains the anchor, cite the rate-path and 2025 revenue guidance data succinctly (e.g., Sep–Nov target around 34.76 was cited, with the 150–175bp easing path) and attach a clear invalidation rule tied to the Fed/easing trajectory.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756027682"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T02:30:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756081318",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20605",
+    "output_chars": "1485",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 6–12 months | Policy easing around a credible 2% target with data-dependent governance lifting long-duration asset demand; ETH ETFs, staking yields, and corporate treasury activity support ETH leadership toward a $5k–$6k re-rating over longer horizons | Watch ETF inflows trajectory, staking economics, and regulatory clarity as flows mature | 32% (OGK8WLL69)(Scraped Source 6)(Scraped Source 4)(Scraped Source 3)\nUp | 0–3 months | Near-term dovish surprises or data-driven stance tilt boosting long-duration assets via lower discount rates; ETH staking yields and treasury demand would push ETH toward the upper end of the base path | Watch Jackson Hole signals and five-year framework updates for the shift toward easier policy and broader BTC participation | 28% (Scraped Source 1)(OGK8WLL69)(Scraped Source 3)\nDown | 0–3 months | Hawkish shift or clearer regulatory headwinds—tightening financial conditions and slower ETF inflows compress crypto risk premia and cap ETH leadership | Watch policy tone, regulatory clarity (Project Crypto), and ETF flow momentum as a test of the base case | 24% (OGK8WLL69)(Scraped Source 3)(Scraped Source 6)\nDown | 6–12 weeks | Data-dependent policy transmission failing to materialize; wage growth acceleration or tariff shocks widen deficits and push discount rates higher, tightening risk assets | Watch CPI momentum (0.30%–0.40% MoM), claims momentum, and tariff pass-through deviations | 16% (GZ9VV1RV0)(Y6SQOEK69)(EPJYXB7DX)(SGB2PAZGK)",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756081318"
+}

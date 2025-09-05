@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T11:07:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "third_party_cybersecurity_risks",
+    "new_article_id": "RX8RQQ9J4",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['NENHMLRH3', '6289R5SVT', 'R9VY14MO2', 'CYDX0LJP4', '25L9XAP5S', 'P91H4KDZF']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no existing substantive article in the graph that this new piece clearly supersedes; therefore no action is warranted to remove, hide, or deprioritize existing content."
+    }
+  },
+  "id": "third_party_cybersecurity_risks__RX8RQQ9J4__current"
+}

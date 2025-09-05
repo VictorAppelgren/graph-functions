@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T01:01:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "trump_tariffs",
+    "new_article_id": "218AGGUXB",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['4CJPTXOL0', 'WC68LCU9R', '0J41Q7KTX', '78BX9FDFE', 'I35H3FBSN', 'VFKZAGZL4', '9RVBO4NQJ']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no clear predecessor in the current set that this new piece supersedes; none of the existing articles summarize this Krugman-focused warning, so no action is warranted."
+    }
+  },
+  "id": "trump_tariffs__218AGGUXB__current"
+}

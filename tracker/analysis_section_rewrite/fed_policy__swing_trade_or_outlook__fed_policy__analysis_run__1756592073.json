@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T00:30:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756592073",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5896",
+    "output_chars": "1103",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the structural requirements but lacks evidence‑based citations for the probability figures and for the trade‑line confidence. Add (us_core_cpi)(fed_policy) after the 45 % and 35 % probabilities in the Up/Down lines to tie them to the CPI‑Fed‑rate link. For the 20 % and 25 % probabilities, cite (tariff_policy) and (B1KYJ1GPU)(97MD1FHW8)(Z7O1DCHS7) respectively. In the trade line, append (us_core_cpi)(fed_policy) after the 45 % probability and (KX6AOMQZ5) after the 70 % confidence to reference the confidence estimate. Also add (B1KYJ1GPU)(97MD1FHW8)(Z7O1DCHS7) after “Fed cut in September” (invalidation) and (us_core_cpi) after “CPI < 2.5% on Aug 1” (trigger). Ensure the entry (101.5), stop (101.3), and target (102.0) remain tied to the base‑case projection from XTQIQRP5K. No other content drift is present; keep the four Up/Down lines and the single trade line exactly as formatted.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756592073"
+}

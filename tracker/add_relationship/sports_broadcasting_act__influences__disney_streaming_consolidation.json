@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:20:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sports_broadcasting_act",
+    "target_id": "disney_streaming_consolidation",
+    "selection_motivation": "The Sports Broadcasting Act regulates sports broadcasting rights and competition, directly influencing Disney's strategy to consolidate streaming services.",
+    "candidate_motivation": "These topics capture direct competitive dynamics, rights/bundle strategies, and merger activity in the streaming/media space that would plausibly influence Disney's streaming consolidation strategy.",
+    "existing_links_count": "1",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['espn_fox_bundle', 'paramount_skydance_merger', 'premier_league_2025_26', 'netflix_tvos_redesign', 'sports_broadcasting_act']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'disney_streaming_consolidation', 'target': 'espn_fox_bundle'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530946",
+    "rel_id": "sports_broadcasting_act__influences__disney_streaming_consolidation",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'espn_fox_bundle'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'ufc_media_rights'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'premier_league_2025_26'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'disney_streaming_consolidation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Sports Broadcasting Act regulates sports broadcasting rights and competition, directly influencing Disney's strategy to consolidate streaming services.",
+      "type": "INFLUENCES",
+      "source": "sports_broadcasting_act",
+      "target": "disney_streaming_consolidation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sports_broadcasting_act__influences__disney_streaming_consolidation"
+}

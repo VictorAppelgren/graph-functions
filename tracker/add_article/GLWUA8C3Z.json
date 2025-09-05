@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:27:47",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GLWUA8C3Z",
+    "topic_discovery_motivation": "Article discusses adesso SE's financial performance and outlook, relevant to investment analysis and company profitability metrics.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "adesso_se",
+        "adesso_financial_performance",
+        "adesso_profitability_outlook"
+      ]
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports on adesso SE's earnings results, including financial metrics and analyst price target."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports recent earnings and financial metrics for adesso SE, directly affecting its valuation and outlook."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent earnings and analyst price target, indicating immediate events affecting the node."
+    },
+    "article_node": {
+      "id": "GLWUA8C3Z",
+      "title": "Solid Earnings Reflect adesso's (ETR:ADN1) Strength As A Business",
+      "summary": "adesso SE (ETR:ADN1) recently reported strong earnings, with a notable negative accrual ratio of -0.13, indicating that its free cash flow significantly exceeded its statutory profit. Despite a decline in earnings over the past five years, the company has shown revenue growth and has become profitable in the last year. Analysts have assigned a price target of €122, reflecting optimism about adesso's future profitability and ongoing IT investments.",
+      "source": "https://finance.yahoo.com/news/solid-earnings-reflect-adessos-etr-062337683.html?_guc_consent_skip=1755845492",
+      "published_at": "2025-08-22T06:23:37+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "GLWUA8C3Z"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T14:40:47",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_rate_cut_sept17_2025",
+    "target_id": "us_core_pce",
+    "selection_motivation": "A Fed rate cut is expected to dampen inflation expectations, directly influencing the US Core PCE gauge.",
+    "candidate_motivation": "Fed rate cuts directly affect monetary policy, Treasury yields, currency strength, and broad equity/commodity markets; thus topics linked to Fed policy, Treasury yields, major FX pairs, US inflation, and key market indices are natural peers or influences.",
+    "existing_links_count": "12",
+    "candidate_count": "18",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'us_inflation', 'us_core_pce', 'euro_inflation', 'ecb_policy', 'us_unemployment_claims', 'us_services_pmi']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_services_pmi'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1357836387163833069",
+    "rel_id": "fed_rate_cut_sept17_2025__influences__us_core_pce",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A Fed rate cut is expected to dampen inflation expectations, directly influencing the US Core PCE gauge.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "us_core_pce"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_rate_cut_sept17_2025__influences__us_core_pce"
+}

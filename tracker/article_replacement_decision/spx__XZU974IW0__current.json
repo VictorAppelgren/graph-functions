@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T14:52:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "XZU974IW0",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['DRW2E1P5J', '0QKLPBCAP', '56DSYR7J6', 'LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE', 'N2LL9C1D6', '3YAQ8JUPL', '1G54B8R46']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "N2LL9C1D6",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article to act on; new article not yet added."
+    }
+  },
+  "id": "spx__XZU974IW0__current"
+}

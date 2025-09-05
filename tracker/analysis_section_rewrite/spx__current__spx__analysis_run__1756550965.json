@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T13:01:02",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "current",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756550965",
+    "article_ids": "['LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE', '3YAQ8JUPL', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "103399",
+    "output_chars": "2033",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on the right topic but falls short of Argos’ “elite bar” on several fronts:\n\n1. **Canonical Handle Mapping** – The analysis references “Tesla equity” but never cites the ticker TSLA or any other handle (e.g., US10Y, DXY). Add explicit mapping: TSLA (positive/negative), US10Y (neutral), DXY (neutral).  \n2. **Magnitude & Horizon** – You state “5‑10 % decline” but do not tie it to a 0‑3‑week horizon or a precise sign. Rewrite as: “If the verdict is upheld, TSLA is expected to fall 5‑10 % over the next 2‑3 weeks; if overturned, a 5‑10 % rebound is projected.”  \n3. **Catalyst Window** – The Miami verdict (2025‑08‑29) is the catalyst. Explicitly note the window: “Catalyst: Miami jury verdict on 2025‑08‑29; market reaction expected within 5‑10 days.”  \n4. **Invalidation Triggers** – Mention what would invalidate the view: “If the court overturns the award or the verdict is reduced to < $100 M, the negative bias evaporates.”  \n5. **Causal Chain & Market Transmission** – Expand the chain: verdict → legal risk → investor sentiment → TSLA price; regulatory scrutiny → potential delay of robotaxi rollout → cost pressures → margin squeeze → TSLA valuation.  \n6. **Quantitative Anchors** – Cite the exact price (345.98), 30‑day MA (~330), resistance (~360), and core PCE (2.9 %) with source IDs.  \n7. **Avoid Generic Statements** – Replace “short‑term test of investor sentiment” with concrete metrics (“expected 5‑10 % move”).  \n8. **Add Cross‑Asset Link** – Note that the tech‑sector drag (Marvell, Dell) is reflected in the Nasdaq 100 (QQQ) and S&P 500 (SPX) indices, which are canonical handles.  \n9. **Citation Density** – Every claim should have an inline (ID) citation. For example, “core PCE 2.9 % (B1KYJ1GPU)” and “Tesla verdict 243 M (LJZYDXVL3).”\n\n**Actionable Edit Instructions**  \n- Insert TSLA, US10Y, DXY, SPX, QQQ, and US10Y handles with sign/magnitude.  \n- Re‑frame the forecast with explicit 0‑3‑week horizon and 5‑10 % range.  \n- Add a catalyst window line and an invalidation clause.  \n- Expand the causal chain with bullet points linking verdict → legal risk → market reaction → TSLA price.  \n- Replace vague language with specific numbers and source IDs.  \n- Ensure every substantive claim has a citation.  \n\nImplementing these changes will bring the analysis to the concise, defensible, and data‑driven standard Argos requires.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__current__spx__analysis_run__1756550965"
+}

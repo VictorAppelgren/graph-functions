@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T13:16:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "QGXA2WQJ3",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['HE99QDK4J', '261HLL6EA', 'YX2X8JAIX', 'OB27SL8WU', 'XQWTVR71K', 'ECJTP759G', '19NO2GMNF', 'T8V9WXMKC', 'UU5VNHJ8B']",
+    "mode": "MUST_REPLACE",
+    "target_id": "UU5VNHJ8B",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "UU5VNHJ8B",
+      "motivation": "Competing timeframe bucket is at capacity. The new Shopify earnings article overlaps with existing Shopify coverage, so removing an existing Shopify-focused article (UU5VNHJ8B) reduces duplication and frees space for higher-signal content."
+    }
+  },
+  "id": "sp500__QGXA2WQJ3__current"
+}

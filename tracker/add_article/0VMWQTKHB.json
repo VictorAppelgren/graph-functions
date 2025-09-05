@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T18:58:55",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "0VMWQTKHB",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; BDX is a large-cap medical equipment stock whose performance is benchmarked against the S&P 500, informing sector and market sentiment.",
+      "existing_ids": [
+        "sp500"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis and commentary on an investment model’s performance and its rating of Becton Dickinson & Co., which is market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article offers a model rating and performance data for Becton Dickinson & Co, but no new fundamental or event information, so its impact on the node is minimal."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article focuses on long‑term performance and fundamental assessment of BDX, discussing its PEG rating and historical returns over many years."
+    },
+    "article_node": {
+      "id": "0VMWQTKHB",
+      "title": "BDX Quantitative Stock Analysis - Peter Lynch",
+      "summary": "Validea’s P/E/Growth Investor model, based on Peter Lynch’s PEG concept, rates Becton Dickinson & Co (BDX) at 54%, indicating moderate attractiveness but below the 80% threshold for strong interest. The strategy seeks stocks trading at a reasonable price relative to earnings growth and strong balance sheets, and BDX’s fundamentals meet many of these criteria. Validea’s model has delivered an average annual return of 12.9% since 2003, outperforming the S&P 500’s 8.8% over the same period. The report includes extensive performance history, risk metrics, and a detailed explanation of Lynch’s investment philosophy and Validea’s methodology, with repeated disclaimer that model returns are hypothetical and not guaranteed.",
+      "source": "https://www.nasdaq.com/articles/bdx-quantitative-stock-analysis-peter-lynch-1",
+      "published_at": "2025-08-23T15:35:27+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "0VMWQTKHB"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T22:17:42",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756583711",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7383",
+    "output_chars": "656",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but needs tighter causal mapping, explicit handle references, and sharper quantification to meet the Argos standards. Rewrite it as 4–6 concise bullets, each starting with the asset (spx) and a clear sign (+/-) with a numeric range. Attach every claim to a canonical handle (spx, ust10y, dxy) and an inline citation ID. For example: “spx ↓ 5–10 % over 3–6 mo if the 2‑yr/10‑yr spread widens to > 57 bp (Z7O1DCHS7) and tech earnings fall below consensus (FAN5RYW6T).” Add the catalyst window (Sept 5 payrolls, Sept Fed meeting 16‑17 Sept, Aug 2025 tech earnings) and the magnitude of the Fed‑cut effect on yields (10‑20 bps drop in ust10y, 30 bp equity discount rise) with citations (97MD1FHW8, LF0UUL917). State the upside case (Fed cut → spx ↑ 3–5 % and dxy ↓ ≈ 2 pts to 95.8) and the downside invalidators (tech earnings rebound, core PCE > 2.9 % (3YAQ8JUPL), tariff removal). Remove any generic “confidence moderate” phrasing; instead quantify confidence as ~60 % with a reference (FAN5RYW6T). Finally, ensure every sentence ends with a citation and no extraneous commentary.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__executive_summary__ust10y__analysis_run__1756583711"
+}

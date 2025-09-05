@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-15T16:50:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755269414",
+    "article_ids": "['YW3POXCPH', 'HWGNUP2XG', 'J8D0E7VC2', 'XPGIRT4RH', 'OD4H7F875']",
+    "selected_articles_count": "5",
+    "material_chars": "112766",
+    "output_chars": "844",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-oss",
+      "feedback": "The article is overly long, repetitive, and mixes news‑style prose with encyclopedic content, violating Wikipedia’s style guidelines. Trim the “collectSPACE”‑style quotes and photo captions, keeping only the essential facts and notable quotations that are properly sourced. Re‑organize the content into clear sections (e.g., “Mission overview,” “Mission events,” “Aftermath and legacy”), and remove duplicate information (e.g., the same splashdown details appear multiple times). Ensure all statements are supported by inline citations and that the article follows a neutral tone. Delete the “advertisements” and “copyright” boilerplate, and replace informal phrasing (“problem‑ridden”) with neutral language. Finally, verify that the list of awardees and museum displays is concise and relevant, and delete any extraneous lists or repeated images.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__fundamental__eurusd__analysis_run__1755269414"
+}

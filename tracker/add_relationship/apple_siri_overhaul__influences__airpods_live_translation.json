@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T05:30:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_siri_overhaul",
+    "target_id": "airpods_live_translation",
+    "selection_motivation": "The Siri overhaul will enable real‑time translation capabilities in AirPods, directly driving the development and adoption of AirPods Live Translation and revealing a key product synergy for competitive analysis.",
+    "candidate_motivation": "These topics are the most plausible strong influences or peers for an Apple Siri overhaul, given the focus on AI-powered voice assistants, ecosystem integration, and regulatory/competitive AI dynamics.",
+    "existing_links_count": "4",
+    "candidate_count": "6",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['airpods_live_translation', 'iphone_innovation_stagnation', 'iphone_17', 'voice_ai_market', 'openai_gpt5_competition', 'apple_antitrust_ai']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'voice_ai_market'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'apple_antitrust_ai'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'apple_airpods_pro_2'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186903625",
+    "rel_id": "apple_siri_overhaul__influences__airpods_live_translation",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'airpods_live_translation'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'voice_ai_market'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'apple_antitrust_ai'}, {'type': 'INFLUENCES', 'source': 'apple_siri_overhaul', 'target': 'apple_airpods_pro_2'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Siri overhaul will enable real‑time translation capabilities in AirPods, directly driving the development and adoption of AirPods Live Translation and revealing a key product synergy for competitive analysis.",
+      "type": "INFLUENCES",
+      "source": "apple_siri_overhaul",
+      "target": "airpods_live_translation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_siri_overhaul__influences__airpods_live_translation"
+}

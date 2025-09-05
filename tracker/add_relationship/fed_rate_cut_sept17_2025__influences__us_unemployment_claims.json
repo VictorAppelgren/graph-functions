@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T02:16:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_rate_cut_sept17_2025",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "Fed rate cuts lower borrowing costs, stimulate hiring and reduce unemployment claims, making the cut a direct driver of US unemployment claims.",
+    "candidate_motivation": "Fed rate cuts directly influence short‑term rates, term‑structure yields, the dollar, inflation expectations, and risk‑on sentiment across equities, commodities, and credit.  Therefore topics that track Fed policy, Treasury yields, the dollar index, core inflation measures, employment data, and major market indices are the most likely strong peers or influences.",
+    "existing_links_count": "13",
+    "candidate_count": "26",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "26",
+    "candidate_ids_preview": "['fed_policy', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'euro_inflation', 'ecb_policy', 'usdjpy', 'gbpusd', 'eurusd', 'spx', 'sx5e', 'gold', 'wti', 'brent', 'copper', 'wheat', 'oil_price_decline', 'us_crude_inventory', 'us_sanctions_iranshipping']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_services_pmi'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1427642181388075757",
+    "rel_id": "fed_rate_cut_sept17_2025__influences__us_unemployment_claims",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed rate cuts lower borrowing costs, stimulate hiring and reduce unemployment claims, making the cut a direct driver of US unemployment claims.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_rate_cut_sept17_2025__influences__us_unemployment_claims"
+}

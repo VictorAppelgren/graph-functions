@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:40:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_program",
+    "target_id": "middle_east_investment",
+    "selection_motivation": "The status of Iran’s nuclear program directly shapes investor sentiment and capital allocation in the Middle East, making it a primary driver of regional investment flows.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with the Iran Nuclear Program due to their relevance in geopolitical dynamics, energy markets, and international relations.",
+    "existing_links_count": "2",
+    "candidate_count": "9",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['oil', 'us_china_trade_relations', 'us_russia_relations', 'iran_nuclear_sanctions', 'ukraine_geopolitics', 'middle_east_investment', 'us_tariffs_on_technology', 'us_tariffs_semiconductors', 'us_china_tariff_truce']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531032",
+    "rel_id": "iran_nuclear_program__influences__middle_east_investment",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The status of Iran’s nuclear program directly shapes investor sentiment and capital allocation in the Middle East, making it a primary driver of regional investment flows.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_program",
+      "target": "middle_east_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_program__influences__middle_east_investment"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T00:44:37",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "ust10y",
+    "selection_motivation": "JGB10Y movements signal shifts in global risk appetite; a rise in Japanese yields triggers carry‑trade unwinding, increasing demand for higher‑yielding US Treasuries and lifting the 10‑year yield.",
+    "candidate_motivation": "Japan 10Y JGB Yield is a sovereign bond rate that is strongly driven by global sovereign yields, monetary policy actions, currency dynamics, inflation expectations and overall risk sentiment. Therefore topics that capture these dimensions—other sovereign yields, major central bank policies, key currency pairs, inflation measures, and broad market risk indicators—are the most plausible peers or influences.",
+    "existing_links_count": "2",
+    "candidate_count": "16",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['bund10y', 'ust10y', 'gilt10y', 'sx5e', 'euro_inflation', 'euribor', 'dxy', 'usdjpy', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'gold', 'spx', 'fed_powell_rate_cut_hint_2025', 'sofr']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847157",
+    "rel_id": "jgb10y__influences__ust10y",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "JGB10Y movements signal shifts in global risk appetite; a rise in Japanese yields triggers carry‑trade unwinding, increasing demand for higher‑yielding US Treasuries and lifting the 10‑year yield.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jgb10y__influences__ust10y"
+}

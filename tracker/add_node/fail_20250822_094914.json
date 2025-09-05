@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T09:48:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Y19YTLGVI",
+    "status": "rejected",
+    "reject_category": "macro_other",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the implications of Microsoft's Windows 10 support extension, which affects enterprise IT migration strategies and operational continuity, warranting a new node to capture this macro-level impact on technology transitions.",
+      "id": "windows_10_support_extension",
+      "name": "Windows 10 Support Extension",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_other",
+      "motivation": "Guide to selecting best internet security suite for 2025"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Vendor‑specific IT policy, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:24:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_impact_on_stocks",
+    "target_id": "usd",
+    "selection_motivation": "Inflation‑driven equity weakness reduces demand for dollar‑denominated assets, exerting downward pressure on the USD; thus the inflation impact on stocks is a major driver of USD movements.",
+    "candidate_motivation": "These topics are the core macro variables that directly drive how inflation affects US stocks, including the measurement of inflation, market expectations, monetary policy, and the currency/yield channels. They are likely to be strong influences or correlates in a stock-inflation framework.",
+    "existing_links_count": "6",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'us_inflation_expectations', 'us_10y', 'fed_policy', 'usd']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1195706800578496784",
+    "rel_id": "us_inflation_impact_on_stocks__influences__usd",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_impact_on_healthcare_stocks'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_stock_impact'}, {'type': 'INFLUENCES', 'source': 'us_inflation_impact_on_stocks', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Inflation‑driven equity weakness reduces demand for dollar‑denominated assets, exerting downward pressure on the USD; thus the inflation impact on stocks is a major driver of USD movements.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_impact_on_stocks",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_impact_on_stocks__influences__usd"
+}

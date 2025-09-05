@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:30:32",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs",
+    "target_id": "usd",
+    "selection_motivation": "US tariffs directly alter trade balances, inflation expectations, and monetary policy stance, all of which are primary drivers of the USD’s value, making this influence a key macro link for portfolio and currency risk analysis.",
+    "candidate_motivation": "Tariffs directly affect import costs and consumer prices, shaping inflation, policy responses, and trade dynamics; hence the strongest plausible influences/peers are topics tied to U.S. trade policy, inflation signals, and macro market indicators.",
+    "existing_links_count": "10",
+    "candidate_count": "19",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_tariff_policies', 'trump_tariffs', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_craniomaxillofacial', 'china_us_tariff_truce', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'us_tariffs_inflation', 'us_inflation_data', 'core_monthly_cpi', 'us_10y', 'usd', 'eurusd', 'fed_policy', 'sp500', 'eurostoxx50', 'us_inflation_stock_impact']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1202462200019551656",
+    "rel_id": "us_tariffs__influences__usd",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariff_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US tariffs directly alter trade balances, inflation expectations, and monetary policy stance, all of which are primary drivers of the USD’s value, making this influence a key macro link for portfolio and currency risk analysis.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs",
+      "target": "usd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs__influences__usd"
+}

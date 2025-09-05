@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:33:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "ust5y",
+    "selection_motivation": "UK gilt yields reflect global risk appetite and long‑term inflation expectations, which directly influence the US 5‑year Treasury rate through cross‑currency carry and carry‑trade flows.",
+    "candidate_motivation": "The UK 10Y Gilt Yield is a sovereign bond rate that is directly driven by domestic monetary policy, inflation expectations, and global risk sentiment. It is closely correlated with other sovereign yields (Bund, JGB, US Treasuries), central‑bank policy (Fed, ECB), and currency pairs involving GBP and USD, making these topics strong influences or peers.",
+    "existing_links_count": "7",
+    "candidate_count": "14",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['bund10y', 'ust10y', 'ust30y', 'ust5y', 'ust2y', 'jgb10y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'sofr', 'gbpusd', 'dxy', 'eurusd']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814273028",
+    "rel_id": "gilt10y__influences__ust5y",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt yields reflect global risk appetite and long‑term inflation expectations, which directly influence the US 5‑year Treasury rate through cross‑currency carry and carry‑trade flows.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__influences__ust5y"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T14:41:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "corporate_governance",
+    "target_id": "sustainability_leadership",
+    "selection_motivation": "Corporate governance frameworks directly shape a firm’s sustainability strategy, making governance a primary driver of sustainability leadership.",
+    "candidate_motivation": "The selected topics are closely related to corporate governance, either through their influence on corporate policies, economic conditions affecting governance practices, or their relevance in the context of corporate accountability and performance.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['corporate_culture_performance', 'sustainability_leadership', 'us_tariffs_on_technology', 'us_inflation_impact_on_stocks', 'us_stock_buybacks', 'political_influence_on_stocks', 'us_trade_policy_inflation', 'corporate_governance']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745849074",
+    "rel_id": "corporate_governance__influences__sustainability_leadership",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'sustainability_leadership'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Corporate governance frameworks directly shape a firm’s sustainability strategy, making governance a primary driver of sustainability leadership.",
+      "type": "INFLUENCES",
+      "source": "corporate_governance",
+      "target": "sustainability_leadership"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "corporate_governance__influences__sustainability_leadership"
+}

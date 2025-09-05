@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T12:23:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "72L3EAB7H",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation rising 0.5-1% per quarter (Dec 2023), fueling higher stress and sleep decline.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses storytelling and its effects on stress and well‑being, which does not fit any of the specified categories such as macro events, earnings, regulation, policy statements, central bank actions, economic data, geopolitical events, company updates, or market commentary."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to assess relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers of resilience and social cooperation, rather than immediate, short‑term events."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "72L3EAB7H"
+}

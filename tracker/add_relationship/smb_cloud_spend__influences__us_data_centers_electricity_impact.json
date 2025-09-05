@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T12:01:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "smb_cloud_spend",
+    "target_id": "us_data_centers_electricity_impact",
+    "selection_motivation": "SMB Cloud Spend directly drives electricity consumption in data centers, which is a key component of the US data center electricity impact metric.",
+    "candidate_motivation": "SMB Cloud Spend is driven by factors that affect SMB IT budgets, connectivity costs, security, and emerging AI services. Topics that directly influence or correlate with these drivers—such as connectivity programs, 5G rollout, cloud security, AI infrastructure, and macro‑inflation—are the most plausible influences or peers.",
+    "existing_links_count": "0",
+    "candidate_count": "8",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['acp_end', '5g_infrastructure', 'hybrid_ad_environments', 'nebius_ai_infrastructure', 'openai_gpt5_competition', 'us_data_centers_electricity_impact', 'us_inflation', 'us_inflation_expectations']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845400",
+    "rel_id": "smb_cloud_spend__influences__us_data_centers_electricity_impact",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'smb_cloud_spend', 'target': 'us_data_centers_electricity_impact'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "SMB Cloud Spend directly drives electricity consumption in data centers, which is a key component of the US data center electricity impact metric.",
+      "type": "INFLUENCES",
+      "source": "smb_cloud_spend",
+      "target": "us_data_centers_electricity_impact"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "smb_cloud_spend__influences__us_data_centers_electricity_impact"
+}

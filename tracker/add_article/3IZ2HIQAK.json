@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T15:48:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3IZ2HIQAK",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; OBBBA coverage disruption is expected to raise health insurance premiums, feeding into US CPI and core PCE, which may prompt Fed policy adjustments.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Hyro’s launch of a new platform and related product, which is a company‑specific news event unrelated to earnings or regulatory changes."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses a specific company’s product launch and does not map to any canonical macro market handle or catalyst window."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a new platform launch aimed at mitigating coverage disruptions from the upcoming One Big Beautiful Bill Act, indicating a medium‑term effect as the act is expected to take effect soon but not immediately."
+    },
+    "article_node": {
+      "id": "3IZ2HIQAK",
+      "title": "Hyro Launches Proactive Px™ with AI Agent to Help Healthcare Organizations Handle Coverage Disruption Caused by OBBBA",
+      "summary": "Hyro has launched Proactive Px™, an outbound patient experience platform that uses AI voice and SMS agents to proactively engage patients on behalf of health systems. The platform includes a free component, ARMR™, designed to address coverage disruptions from the upcoming One Big Beautiful Bill Act (OBBBA), which is expected to cause significant insurance loss and uncompensated care costs. By automating outreach for ACA re‑enrollment and Medicaid redetermination, Hyro aims to improve operational efficiency, patient outcomes, and revenue protection for U.S. health providers.",
+      "source": "https://finance.yahoo.com/news/hyro-launches-proactive-px-ai-124100475.html",
+      "published_at": "2025-09-03T12:41:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "3IZ2HIQAK"
+}

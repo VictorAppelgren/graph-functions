@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:36:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_putin_summit",
+    "target_id": "ukraine_diplomacy",
+    "selection_motivation": "The Trump-Putin Summit directly shapes the strategic environment for Ukraine's diplomatic engagement, thereby influencing Ukraine diplomacy.",
+    "candidate_motivation": "These topics directly connect to US-Russia diplomacy and the Ukraine crisis, representing strong influences, correlates, or peers to a Trump-Putin Summit given policy, sanctions, cyber, and geopolitical negotiation dimensions.",
+    "existing_links_count": "4",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['ukraine_diplomacy', 'ukraine_geopolitics', 'zelensky_peace_negotiations', 'ukraine_peace_negotiations', 'russian_sanctions', 'trump_putin_meeting']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901797",
+    "rel_id": "trump_putin_summit__influences__ukraine_diplomacy",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'trump_putin_summit', 'target': 'us_russia_ukraine_diplomacy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Trump-Putin Summit directly shapes the strategic environment for Ukraine's diplomatic engagement, thereby influencing Ukraine diplomacy.",
+      "type": "INFLUENCES",
+      "source": "trump_putin_summit",
+      "target": "ukraine_diplomacy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_putin_summit__influences__ukraine_diplomacy"
+}

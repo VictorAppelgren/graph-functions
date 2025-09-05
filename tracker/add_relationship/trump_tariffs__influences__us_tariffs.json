@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T01:01:45",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "us_tariffs",
+    "selection_motivation": "Trump’s tariff actions formed a core component of the U.S. tariff regime, directly shaping the overall level of U.S. tariffs imposed during his administration.",
+    "candidate_motivation": "These topics are the most direct tariff-related policies and trade-tension nodes that would plausibly influence or be influenced by Trump Tariffs through policy spillovers and market expectations.",
+    "existing_links_count": "10",
+    "candidate_count": "14",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['trump_tariffs', 'us_tariffs', 'us_tariffs_brazil', 'us_tariffs_on_technology', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_craniomaxillofacial', 'tariff_driven_inflation', 'us_tariffs_inflation', 'china_us_tariff_truce', 'us_china_tariffs', 'us_china_tariff_truce', 'us_china_trade_talks', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_data'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1191203200951124711",
+    "rel_id": "trump_tariffs__influences__us_tariffs",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_data'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump’s tariff actions formed a core component of the U.S. tariff regime, directly shaping the overall level of U.S. tariffs imposed during his administration.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_tariffs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_tariffs__influences__us_tariffs"
+}

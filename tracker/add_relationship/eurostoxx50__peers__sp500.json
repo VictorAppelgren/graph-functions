@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T15:19:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "eurostoxx50",
+    "target_id": "sp500",
+    "selection_motivation": "Eurostoxx 50 and S&P 500 are the leading equity indices of Europe and the US respectively, serving as primary benchmarks for global equity performance; linking them as peers captures their comparable role and facilitates cross‑market comparative analytics.",
+    "candidate_motivation": "Eurostoxx 50 is a European equity index, so its performance is driven by euro‑area macro fundamentals, ECB policy, currency strength, and global commodity and bond markets. Peer indices and major US markets also provide strong correlation signals.",
+    "existing_links_count": "1",
+    "candidate_count": "11",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['ecb_policy', 'eur', 'us_inflation', 'us_10y', 'oil', 'gold', 'copper', 'wheat', 'sp500', 'usd', 'euribor']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'eurostoxx50', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155178801978671108",
+    "rel_id": "eurostoxx50__peers__sp500",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'eurostoxx50', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'eurostoxx50', 'target': 'sp500'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Eurostoxx 50 and S&P 500 are the leading equity indices of Europe and the US respectively, serving as primary benchmarks for global equity performance; linking them as peers captures their comparable role and facilitates cross‑market comparative analytics.",
+      "type": "PEERS",
+      "source": "eurostoxx50",
+      "target": "sp500"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurostoxx50__peers__sp500"
+}

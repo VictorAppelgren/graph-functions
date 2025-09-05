@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T01:26:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ether_price_surge",
+    "target_id": "crypto_security_threats",
+    "selection_motivation": "A significant Ether price surge attracts heightened attention from malicious actors, increasing the frequency and sophistication of security threats targeting the Ethereum ecosystem.",
+    "candidate_motivation": "Ether price surges are driven by crypto-market liquidity, stablecoin flows, on-chain data feeds, and macro-inflation/regulatory signaling that influence risk sentiment; the following topics are the strongest plausible influencers, correlates, or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "11",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['stablecoins', 'usdc_circulation', 'usdc_stablecoin', 'bakkt_crypto_infrastructure', 'crypto_security_threats', 'chainlink_integration', 'chainlink_ice_partnership', 'us_inflation_impact_on_bitcoin', 'us_inflation_data', 'tokenization_regulation', 'tokenized_real_world_assets']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ether_price_surge', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163023",
+    "rel_id": "ether_price_surge__influences__crypto_security_threats",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ether_price_surge', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'ether_price_surge', 'target': 'crypto_security_threats'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "A significant Ether price surge attracts heightened attention from malicious actors, increasing the frequency and sophistication of security threats targeting the Ethereum ecosystem.",
+      "type": "INFLUENCES",
+      "source": "ether_price_surge",
+      "target": "crypto_security_threats"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ether_price_surge__influences__crypto_security_threats"
+}

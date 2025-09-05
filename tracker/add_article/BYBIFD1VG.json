@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T12:13:02",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BYBIFD1VG",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; AI use in therapy raises regulatory scrutiny and privacy concerns, prompting potential new legislation on AI in healthcare.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses regulatory concerns and calls for safeguards in mental‑health therapy, which constitutes a regulatory issue."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess relevance due to missing node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate incidents and regulatory responses regarding AI use in therapy sessions."
+    },
+    "article_node": {
+      "id": "BYBIFD1VG",
+      "title": "Therapists are secretly using ChatGPT. Clients are triggered.",
+      "summary": "Therapists are increasingly integrating ChatGPT into sessions, often without clients’ knowledge, raising serious privacy, consent, and trust concerns. Incidents range from therapists inadvertently sharing AI-generated summaries during live sessions to covertly using the model for email responses, prompting backlash from clients and regulators. Studies show AI can improve therapeutic language but also risk bias, lack of authenticity, and potential harm, especially when clients suspect AI use. The mental‑health community calls for transparency, informed consent, and strict safeguards to protect sensitive data and maintain therapeutic integrity.",
+      "source": "https://www.technologyreview.com/2025/09/02/1122871/therapists-using-chatgpt-secretly/",
+      "published_at": "2025-09-02T04:38:24-04:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "BYBIFD1VG"
+}

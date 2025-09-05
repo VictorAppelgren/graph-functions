@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T14:44:12",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756038942",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16129",
+    "output_chars": "1188",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has strong backbone (clear regime framing, explicit policy-to-market transmission, and multiple source fragments tied to a coherent macro narrative), but to reach world-class quality you should tighten discipline around four concrete outputs, anchor every claim to specific IDs, and remove ambiguity/conflicts. Actionable edits in one paragraph: (1) Rebuild Movers to strictly 4 lines (2 Up, 2 Down) with exact format: Up | 0–3 weeks | Driver/Mechanism | What to watch | Probability %; Up | 3–6 months | Driver/Mechanism | What to watch | Probability %; Down | 0–3 weeks | Driver/Mechanism | What to watch | Probability %; Down | 3–6 months | Driver/Mechanism | What to watch | Probability %; tie each line to a single, source-backed catalyst (e.g., GX057ADL7 for near‑term easing/september cut, XQWTVR71K for 2‑yr yield move, 37UZC9X8I for inflation/hawkish Jackson Hole, H7Q52FKDH for Chips Act/geopolitics); use crisp, evidence-based probabilities (e.g., 60% and 25–30% ranges) rather than ad hoc numbers. (2) For catalysts/triggers/invalidation, present a short, testable rule per line (e.g., “trigger: September cut odds ≥70% as per Fed odds curve; invalidation: Fed signals no near-term cuts or dollar/yields reprice materially”). (3) Ground the base-case and alt scenarios in first-principles causal chain (policy stance → financial conditions → capex/risk appetite → asset pricing) and explicitly enumerate Regime A/B/C switch thresholds with explicit data points (CPI/payroll, Jackson Hole guidance, tariff/export-control signals; sources: GX057ADL7, 37UZC9X8I, XQWTVR71K, H7Q52FKDH, J99EM2TPZ). (4) Clean up the Swing Trade section: confirm INTC is tradable in the horizon; present a single, precise line with Entry/Stop/Target/Risk-Reward/Invalidation/Trigger/Probability/Confidence, or, if staying within the four-movers constraint, move the INTC line into the Outlook section as a dedicated 1‑line Swing Trade with concrete price levels; ensure the numbers match the cited pricing anchors (e.g., use explicit ranges from GX057ADL7 or XQWTVR71K where applicable). (5) Tighten numbers to avoid contradictions: for example, unify the easing path (25–50 bp September cut vs 150–175 bp total) under GX057ADL7 while noting mid-4% 10-year and dollar90 softness as ranges; flag any inconsistent profitability or revenue figures (TN66GHPAT) for verification and either remove or annotate as provisional. (6) Improve citation discipline: place IDs only after facts/numbers that rely on them, avoid stacking sources for qualitative claims, ensure all critical data points have a matching ID, and explicitly acknowledge conflicts between sources (e.g., Regime A vs Regime B signals) with a brief reconciliation note. (7) Finally, tighten formatting and length: keep the Movers strictly 4 lines, drop extraneous narrative from the Movers block, and ensure the Outlook line(s) stay within 1–2 lines as required.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756038942"
+}

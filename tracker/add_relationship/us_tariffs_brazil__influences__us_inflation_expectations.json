@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:32:34",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs_brazil",
+    "target_id": "us_inflation_expectations",
+    "selection_motivation": "US tariffs on Brazil are a key element of U.S. trade policy that directly shapes inflation expectations, which in turn influence monetary policy decisions and market sentiment.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with US Tariffs on Brazil due to their relevance in trade, tariffs, and economic policies affecting international relations and markets.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_tariffs', 'us_tariff_policies', 'us_tariffs_on_technology', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_relations', 'us_trade_policy_inflation', 'us_inflation', 'us_inflation_impact_on_stocks', 'us_inflation_expectations']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs_brazil', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593769323",
+    "rel_id": "us_tariffs_brazil__influences__us_inflation_expectations",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs_brazil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_brazil', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US tariffs on Brazil are a key element of U.S. trade policy that directly shapes inflation expectations, which in turn influence monetary policy decisions and market sentiment.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs_brazil",
+      "target": "us_inflation_expectations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs_brazil__influences__us_inflation_expectations"
+}

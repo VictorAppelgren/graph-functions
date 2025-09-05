@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T19:24:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "christian_nationalism",
+    "target_id": "trumpism",
+    "selection_motivation": "Christian Nationalism is a foundational ideological component of Trumpism, directly shaping its policy positions and rhetoric.",
+    "candidate_motivation": "Christian Nationalism is a political ideology that aligns closely with right‑wing populist movements, policy actions by the Trump administration, and related domestic security and immigration initiatives. Therefore, topics that directly involve Trump‑era policies, national security, and domestic law‑enforcement measures are the most plausible influences or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1024",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['trumpism', 'trump_putin_summit', 'trump_tariffs', 'trump_home_rule_act', 'trump_blue_crime', 'trump_bls_interference', 'trump_dc_crime_response', 'trump_dc_militarization']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'christian_nationalism', 'target': 'trump_dc_crime_response'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847854",
+    "rel_id": "christian_nationalism__influences__trumpism",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'christian_nationalism', 'target': 'trump_dc_crime_response'}, {'type': 'INFLUENCES', 'source': 'christian_nationalism', 'target': 'trumpism'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Christian Nationalism is a foundational ideological component of Trumpism, directly shaping its policy positions and rhetoric.",
+      "type": "INFLUENCES",
+      "source": "christian_nationalism",
+      "target": "trumpism"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "christian_nationalism__influences__trumpism"
+}

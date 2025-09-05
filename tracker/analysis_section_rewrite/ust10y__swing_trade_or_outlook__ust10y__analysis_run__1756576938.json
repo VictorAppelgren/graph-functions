@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T20:47:27",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756576938",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6382",
+    "output_chars": "944",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft mixes multiple assets (SPX, DXY, mortgage rates) and mixes short‑term “up/down” moves with a long‑term outlook, violating the 1‑asset focus. Remove all lines that do not reference the single target (e.g., SPX or DXY) and collapse the “Up/Down” list to exactly four lines: two up, two down, each with a single driver, watch item, and probability. Ensure each line ends with a probability and cites only the relevant ID (e.g., Z7O1DCHS7 for DXY fall, FAN5RYW6T for SPX decline). Replace the ambiguous “Fed tightening + PCE >3% + flattening 2‑yr/10‑yr spread” line with a clear causal chain: “Down | 1‑2 wks | Fed dovish stance + tariff escalation + steepening 2‑yr/10‑yr spread (Z7O1DCHS7)(B1KYJ1GPU) | July CPI/PCE release, Fed minutes (FAN5RYW6T)(Z7O1DCHS7) | 70%”. For the up side, use the Fed cut scenario: “Up | 1‑2 wks | Fed rate cut + lower inflation expectations + stronger labor market (97MD1FHW8)(Z7O1DCHS7)(FAN5RYW6T) | September payrolls, Fed minutes (FAN5RYW6T)(97MD1FHW8) | 15%”. Remove the mortgage‑rate‑centric line and any extraneous “97.5” line. Finally, provide a single Swing Trade line for the chosen asset (e.g., DXY) with direction, horizon, entry, stop, target, R/R, invalidation, trigger, probability, and confidence, all sourced from the IDs. Keep the trade line concise (≤1 sentence) and ensure all numbers are backed by the cited IDs.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756576938"
+}

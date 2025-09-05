@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:06:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756083186",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15437",
+    "output_chars": "1831",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft ambitiously folds a four‑regime macro framework into Ford‑and‑policy dynamics but it overreaches with a long, citation‑dense narrative and weakly defined triggers; it needs a crisp house view, tighter 4–6 sentence/point formatting, and explicit linkages from regime signals to Ford’s cash flows and valuation (SGB2PAZGK; 22PL3Q360). Actionable edits: 1) distill into 4–6 executive bullets or sentences under a single house view: Base, Alt‑1 (AI/capex‑driven upside), Alt‑2 ( Costa/defensive tilt), with 0–3 month vs multi‑year horizons; 2) anchor every assertion to specific, verifiable numbers from sources (e.g., 945 TWh compute/dc demand by 2030 STBVARD8F; Costa sale ~£2.0b STBVARD8F; KO forward P/E ~23.7x and yield ~2.9% 2025 data 2YP1X9B4T); 3) replace broad statements about “tariffs and reshoring” with a first‑principles, DCF‑style sensitivity: how regime shifts drive discount rates (T1QE6JPIX; NL5YYTLF2) and how tariff–terms‑of‑trade shifts translate into Ford’s margins and capex intensity (SGB2PAZGK; 22PL3Q360); 4) overhaul the scenario tree: define Regime A/B/C/D with explicit transition triggers (tariff milestones, Nvidia/chip policy developments, domestic data‑center/energy capex milestones) and concrete invalidation rules (e.g., CPI momentum accelerates beyond a threshold, sustained EV profitability inflection, or policy relapse) (SGB2PAZGK; I2SJU04DF; STBVARD8F); 5) tighten the Ford linkage: show how the 0–3 month geo risk plus 3–6 month AI capex trajectory would materialize into earnings, margins, and dividend capacity, not just narrative hand‑offs (22PL3Q360; 65UUBU0OR); 6) enforce strict citation discipline: attach the exact source ID after each factual assertion and reconcile conflicts (e.g., ranges like 34%–145% vs base baselines) (SGB2PAZGK; STBVARD8F; 2YP1X9B4T; I2SJU04DF); 7) prune nonessential color and ensure the watchlist remains 5–7 concrete triggers with precise timing; 8) verify all numbers come from the source material and remove any material gaps where forward valuation or risk premia are asserted without a source (e.g., bolt‑on claims about Nvidia/Disney/KO without a source tag).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756083186"
+}

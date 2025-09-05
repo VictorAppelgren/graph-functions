@@ -1,0 +1,30 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T18:09:23",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_core_pce",
+    "target_id": "us5y",
+    "selection_motivation": "US Core PCE is a primary core inflation gauge that directly drives expectations for the 5‑year Treasury yield, influencing short‑term corporate borrowing costs and market risk‑premia.",
+    "candidate_motivation": "US Core PCE is a core inflation gauge, so topics that directly influence or are influenced by US inflation, monetary policy, and Treasury yields are the most relevant peers or influences.",
+    "existing_links_count": "14",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['us_services_pmi', 'fed_rate_cut_sept17_2025', 'usdcny', 'us_unemployment_claims', 'fed_policy', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'gbpusd', 'sofr', 'us_inflation', 'dxy', 'usdjpy', 'fed_powell_rate_cut_hint_2025', 'eurusd']",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'us_core_pce', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'eurusd'}]",
+    "status": "error",
+    "error": "Cannot create link: source or target node missing. Link: {'motivation': 'US Core PCE is a primary core inflation gauge that directly drives expectations for the 5‑year Treasury yield, influencing short‑term corporate borrowing costs and market risk‑premia.', 'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'us5y'}"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Core PCE is a primary core inflation gauge that directly drives expectations for the 5‑year Treasury yield, influencing short‑term corporate borrowing costs and market risk‑premia.",
+      "type": "INFLUENCES",
+      "source": "us_core_pce",
+      "target": "us5y"
+    }
+  },
+  "id": "us_core_pce__influences__us5y"
+}

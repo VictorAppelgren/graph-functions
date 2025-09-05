@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:09:35",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756061626",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17046",
+    "output_chars": "1490",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong but overlong and at times unfocused; to reach world-class and fit the 4–6 sentence/bullet constraint, streamline into a crisp house view that ties a single, explicit causal chain to observable regime signals and price implications. Actionable edits: (1) compress to 4–6 concise lines that articulate the central causal chain (AI productivity p raises firm ROIC and capex reallocation; u labor frictions shifts labor demand; r policy reactions modulate inflation/unemployment) anchored to Regime A/B/C with explicit probabilities and a clear horizon, citing NL5YYTLF2 for the regime frame and the Brookings 25% automation exposure as the anchor; (2) unify near-term tariff assumptions into a single baseline (e.g., 25% tariff on imported passenger vehicles per WTNT85IPR) and present a structured sensitivity (e.g., 15%/25%/30%) tied to S15934PBQ to avoid mixed signals; (3) tighten the market transmission narrative around ROIC discipline and capex reallocation, anchoring to concrete numbers (Walmart ROIC 11.8% in 2022; Ford EV loss ≈ $1.3B in Q2; Ford forward P/E ≈ 10.3; dividend yield ≈ 5.2% per 22PL3Q360/65UUBU0OR); (4) codify the 0–2/2–8/8–26 week cadence with 2–3 explicit catalysts per window (Elevated Velocity Cadillac reveal; GM 2M+ U.S. output target; tariff signaling) and 1–2 invalidation triggers (tariff shift, GM delay, FDA/Medicare milestones for HeartSciences) with sources (WTNT85IPR, GM, UPV3X2MQ6, ILY C1M41F, S15934PBQ, U6HXAJR4J, 6OOEK8TUR); (5) convert the current bulk into an executive-ready brief by removing extraneous private-market catalysts unless you explicitly tie them to the productivity regime, and ensure every claim maps to a source ID (e.g., NL5YYTLF2, WTNT85IPR, GM, 22PL3Q360, UPV3X2MQ6, IGP1Q4ZEJ, ILY C1M41F); (6) add a tight, testable watch-list with thresholds (inflation converges toward target within 4 quarters; AI/capex announcements persist; GM capacity ramp stays on track; tariff outcomes through the next 8–26 weeks) and explicit invalidation signals (persistent inflation above target, tariff escalation, GM capex delay), all with source anchors; (7) ensure the draft conclusion clearly states the house view: Regime A remains base-case, Regime B risks rise on missteps/tariffs, Regime C emerges if retraining/income supports gain traction, with the probability split and the downside/upsides quantified; (8) fix minor consistency issues (keep to 4–6 sentences/bullets, remove duplicative clauses, and align all cited numbers to the exact source IDs). This will deliver a concise, first-principles–driven, scenario-aware brief that is decision-useful and strictly sourced.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756061626"
+}

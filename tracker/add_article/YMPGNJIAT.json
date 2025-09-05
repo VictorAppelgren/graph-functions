@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T12:42:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YMPGNJIAT",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; July 2025 postage hike adds ~0.1‑0.2% to US inflation, lifting 10‑year Treasury yields by ~2‑4 bps.",
+      "existing_ids": [
+        "us_inflation",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides commentary on an industry trend—shifting from paper checks to digital payment systems due to rising costs and operational risks, which is a market analysis of payment technology adoption."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided for assessment, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights current pressures (postage rates, fraud) accelerating a structural shift toward digital B2B payments, indicating a medium-term horizon."
+    },
+    "article_node": {
+      "id": "YMPGNJIAT",
+      "title": "Postage Hikes, Delivery Frictions Turn Paper Checks Into B2B Burden",
+      "summary": "Rising postage rates and delivery delays are making paper checks increasingly costly and risky for B2B payments, with 63% of firms reporting fraud and operational setbacks. Digital alternatives such as dynamic discounting, automated cash flow management, and virtual cards offer faster settlement, fraud protection, and visibility, turning payments into a strategic advantage. Despite the entrenched use of checks, the economic and operational pressures are accelerating a shift toward fully digital, automated payment systems.",
+      "source": "https://www.pymnts.com/news/b2b-payments/2025/postage-hikes-delivery-frictions-turn-paper-checks-into-b2b-burden/",
+      "published_at": "2025-09-04T21:09:49+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "YMPGNJIAT"
+}

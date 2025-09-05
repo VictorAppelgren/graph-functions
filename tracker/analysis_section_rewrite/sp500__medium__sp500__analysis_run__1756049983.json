@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:41:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "medium",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756049983",
+    "article_ids": "['U3ZK13ZQI', 'YX2J8NHZ1', 'Q7VVGNSQE', '4661GWFP7', '2YP1X9B4T']",
+    "selected_articles_count": "5",
+    "material_chars": "121614",
+    "output_chars": "4081",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong integration of cross‑asset signals (Russell 2000 value/IPO angles from Q7VVGNSQE; ETF-factor ballast from 4661GWFP7 and 2YP1X9B4T; discretionary tilt via U3ZK13ZQI) and a timely, stampable Disney example; but the draft needs a world‑class upgrade in structure, quantification, and sourcing discipline. Actionable edits: 1) Build a formal 3–6 month scenario map with a baseline, upside, and downside path, each anchored to explicit triggers drawn from the sources (e.g., IPO momentum in 2025 as per Q7VVGNSQE; small‑cap earnings quality signals; IUSV/XLV factor readings from 4661GWFP7 and 2YP1X9B4T). 2) Define clear timing windows and path‑dependency: weekly/biweekly signal checks for Russell 2000/S&P 500 relative performance, IPO tally (95 deals for $12.9B in 2025 vs 73/$16B in 2024), and ETF factor score moves as validators of the rotation; specify what constitutes a re‑weighting threshold and the invalidation rule if the trigger fails. 3) Quantify base case and alts with concrete numbers drawn from the sources (e.g., use the IUSV/XLV ballast weights and their factor profiles to imply a target allocation range; reference dividend profiles from YX2J8NHZ1 to calibrate defensiveness; avoid vague “value/quality tilt” language). 4) Distill catalysts and invalidations into a compact list: IPO momentum continues → tilt toward small caps; earnings revisions improve → small‑cap catch‑up broadens; AI/meme leadership persists or rate shocks worsen → pivot toward XLV/IUSV ballast; if any hits a predefined threshold, switch to a conservative stance. 5) Tighten source discipline: treat Motley Fool content (YX2J8NHZ1) as sentiment/context rather than data; ensure every assertion cites IDs and reconcile any conflicting signals across U3ZK13ZQI, Q7VVGNSQE, 4661GWFP7, 2YP1X9B4T, and YX2J8NHZ1. 6) End with a crisp base case, 1–2 explicit alt scenarios, a risk/watch list, and a transparent confidence band, with each line traceable to a cited ID; and replace prose generalities with data‑backed ranges and thresholds to lift the analysis from narrative to decision‑grade.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__medium__sp500__analysis_run__1756049983"
+}

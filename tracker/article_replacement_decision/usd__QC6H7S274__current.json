@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T09:08:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "usd",
+    "new_article_id": "QC6H7S274",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['HK8PTVBIX', 'CGSVV1ML9', 'U7EUJKGRB', 'RHRO98UVW', '7YQN9WX3K', '8DSBDPAZ5', 'EJA9EHSWW']",
+    "mode": "CAN_REPLACE",
+    "target_id": "HK8PTVBIX",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "HK8PTVBIX",
+      "motivation": "The new article provides detailed, up‑to‑date information on Pulsar Helium’s investor webinar, fully replacing the placeholder article with no content."
+    }
+  },
+  "id": "usd__QC6H7S274__current"
+}

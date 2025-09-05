@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T21:47:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "current",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756582772",
+    "article_ids": "['1DEM6P1Y2', '3YAQ8JUPL', 'U21K4ALYQ', '97MD1FHW8', '1G54B8R46']",
+    "selected_articles_count": "5",
+    "material_chars": "58713",
+    "output_chars": "1478",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but needs tighter focus, clearer causal mapping, and sharper action signals. 1) Explicitly map the analysis to the canonical handle **ust10y** (and note the related **us10y** for context). 2) Anchor the current level with the exact figure from the Reuters article: 4.23 % (ID 97MD1FHW8) and the 2‑year at 3.64 % (ID 97MD1FHW8). 3) Quantify the term premium (≈ 0.5‑0.6 %) and show the spread to the Fed’s policy rate target (≈ 5.375 % → spread ≈ ‑1.15 %), highlighting the market’s expectation of cuts. 4) Tighten the causal chain: core PCE = 2.6 % → Fed’s dovish rhetoric (Waller’s 25‑bp cut hint, ID 3YAQ8JUPL) → market pricing of a September cut → 10‑year yield dip of 10‑20 bps; contrast with tariff‑driven inflation risk (Trump tariffs remain until mid‑Oct, ID 1DEM6P1Y2) → potential 10‑30 bps rise. 5) State the catalyst window explicitly: September 16‑17 FOMC (ID U21K4ALYQ). 6) Provide an invalidation point: surprise core PCE > 2.6 % or a hawkish Fed shift (e.g., Powell signals tightening). 7) Add a brief equity/FX link: a 10‑year dip supports S&P 500 rally; a rise pressures DXY. 8) End with a concise action: “Short ust10y to 4.20‑4.30 % if the Fed cuts; go long if hawkish signals emerge.” 9) Ensure every claim has an inline ID citation (e.g., 97MD1FHW8, 3YAQ8JUPL, 1DEM6P1Y2). 10) Remove any generic statements that do not tie directly back to the 10‑year yield. This will satisfy the truth‑over‑verbosity rule, keep the analysis tightly market‑mapped, and provide a defensible, actionable view.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__current__ust10y__analysis_run__1756582772"
+}

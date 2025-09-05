@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T22:29:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_chip_export_controls",
+    "target_id": "us_chip_trade_china",
+    "selection_motivation": "Linking US Chip Export Controls to US-China Trade Relations will enhance the understanding of how export restrictions impact bilateral trade dynamics, providing critical insights for investment strategies in the semiconductor sector.",
+    "candidate_motivation": "The selected topics are closely related to the US Chip Export Controls, either through direct economic implications, competitive dynamics in the semiconductor industry, or broader trade relations that could influence chip exports.",
+    "existing_links_count": "4",
+    "candidate_count": "10",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_china_tariff_truce', 'us_chip_export_tax', 'us_chip_sales_agreement', 'us_china_chip_negotiations', 'us_tariffs_semiconductors', 'us_china_trade_relations', 'us_china_ai_chip_agreement', 'us_chip_trade_china', 'us_semiconductor_tariffs', 'china_semiconductor_policy']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'cvd_aerospace_defense'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395997",
+    "rel_id": "us_chip_export_controls__influences__us_chip_trade_china",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'macro_risks_technology'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_chip_trade_china'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'us_chip_export_controls', 'target': 'cvd_aerospace_defense'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking US Chip Export Controls to US-China Trade Relations will enhance the understanding of how export restrictions impact bilateral trade dynamics, providing critical insights for investment strategies in the semiconductor sector.",
+      "type": "INFLUENCES",
+      "source": "us_chip_export_controls",
+      "target": "us_chip_trade_china"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_chip_export_controls__influences__us_chip_trade_china"
+}

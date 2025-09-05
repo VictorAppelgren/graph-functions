@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:16:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "trump_tariffs",
+    "section": "medium",
+    "test": "False",
+    "run_id": "trump_tariffs__analysis_run__1756066470",
+    "article_ids": "['WTNT85IPR', 'WTNT85IPR', 'WTNT85IPR']",
+    "selected_articles_count": "3",
+    "material_chars": "87775",
+    "output_chars": "6016",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The piece solidly links Elevated Velocity to GM’s U.S. manufacturing push and tariff dynamics, but it needs a world‑class, horizon‑focused scenario map with explicit triggers, invalidations, and quantify‑able channels; tighten to a single, clear base case plus 2 alts, with time windows and a path‑dependent narrative, and ground all claims in a tight 3–6 month frame using the numbers in WTNT85IPR (and GM data) rather than glossing background trends. Edit suggestions in one compact paragraph: structure as Base Case (3–6 months) with a tariff backdrop (25% on imported passenger vehicles and auto parts) holding, GM/U.S. capacity ramp to >2 million U.S. vehicles per year, and the $4B domestic investment plus 10–12B in capex through 2027 as the supply‑side backbone; add Alt 1 (tariff escalation or enforcement of broader import constraints, inflationary pass‑through risk, potential price upticks for new vehicles, and AI‑driven pre‑tariff promo dynamics that push demand forward) with a concrete timing window (within 1–3 months, observable pricing/lead indicators); Alt 2 (policy reversal or emissions‑policy shifts such as a waiver restoration or a CA/ federal tweak) with a timing window and a defined unlikely but material impact on GM’s export/US share dynamics; for each scenario specify catalysts (tariff announcements, plant utilization metrics at Orion/Factory ZERO/Fairfax, Bolt/Esccalade IQ/Sierra EV rollout timing, and regulatory moves on waivers), invalidation signals (tariff rollback or rapid policy clarity that changes price expectations; production/recall risks; supply‑chain shocks), and watch‑list signals (tariff wording, GM production ramp milestones, Bolt/Sierra cadence, and any emissions policy moves); quantify plausible outcomes with numbers from the sources (e.g., GM capacity >2M/yr; $4B investment; $10–12B capex through 2027; 25% tariffs; Deutsche Bank/ S&P Mobility notes on front‑loading demand; 25% AI‑assisted lead/price dynamics in dealer networks); ensure the narrative remains anchored to WTNT85IPR only (and GM data) to satisfy the citation rule and reconcile any conflicts, e.g., inflationary pressures vs. front‑loaded demand, with a concise base case ending in a concrete takeaway like “GM/Cadillac EVs gain share as U.S. capacity comes online,” and end with a compact risk/confidence note.",
+      "tokens": {}
+    }
+  },
+  "id": "trump_tariffs__medium__trump_tariffs__analysis_run__1756066470"
+}

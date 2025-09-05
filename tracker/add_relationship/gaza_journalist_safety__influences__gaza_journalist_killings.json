@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:12:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_journalist_safety",
+    "target_id": "gaza_journalist_killings",
+    "selection_motivation": "Low safety conditions for journalists in Gaza directly increase the likelihood of targeted killings, a critical risk factor for media operations and conflict analysis.",
+    "candidate_motivation": "These topics are the most plausible direct peers or influences given the Gaza conflict’s focus on journalist safety, violence against reporters, and information warfare.",
+    "existing_links_count": "1",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['gaza_journalist_killings', 'journalist_assassinations_gaza', 'gaza_humanitarian_crisis', 'gaza_misinformation', 'disinformation_campaigns']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_journalist_safety', 'target': 'journalist_assassinations_gaza'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531936",
+    "rel_id": "gaza_journalist_safety__influences__gaza_journalist_killings",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_journalist_safety', 'target': 'journalist_assassinations_gaza'}, {'type': 'INFLUENCES', 'source': 'gaza_journalist_safety', 'target': 'gaza_journalist_killings'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Low safety conditions for journalists in Gaza directly increase the likelihood of targeted killings, a critical risk factor for media operations and conflict analysis.",
+      "type": "INFLUENCES",
+      "source": "gaza_journalist_safety",
+      "target": "gaza_journalist_killings"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gaza_journalist_safety__influences__gaza_journalist_killings"
+}

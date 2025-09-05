@@ -1,0 +1,38 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T13:18:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7EBQ4OS9Q",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; rising metal contamination from expanding offshore wind farms could push seafood prices up by 0.1‑0.3% of CPI over 2025‑2030, feeding into US inflation.",
+      "existing_ids": [
+        "us_inflation",
+        "ecb_policy"
+      ],
+      "new_names": [
+        "seafood"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article reports on environmental concerns from offshore wind farms, not a macro event, earnings, regulation, policy statement, central bank action, economic data, geopolitical event, company update, or market commentary."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article raises a new environmental risk for offshore wind farms, directly relevant to the offshore wind node, but the immediate market impact on commodity prices or investment flows is likely modest and short‑term."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long‑term structural drivers relevant to this node."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 2
+    }
+  },
+  "id": "7EBQ4OS9Q"
+}

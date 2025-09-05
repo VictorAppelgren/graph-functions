@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T05:25:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "corporate_governance",
+    "target_id": "insider_buying_after_selloff",
+    "selection_motivation": "Corporate governance frameworks directly shape insider trading behavior, especially following sell‑offs, making it a key driver of insider buying patterns.",
+    "candidate_motivation": "These topics directly touch governance structures, accountability, and external constraints that shape corporate decision-making and governance quality.",
+    "existing_links_count": "5",
+    "candidate_count": "5",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['sustainability_leadership', 'corporate_culture_performance', 'geopolitics_corporate_strategy', 'insider_buying_after_selloff', 'european_small_caps_insider_buying']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'us_stock_buybacks'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'sustainability_leadership'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'ai_governance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395595",
+    "rel_id": "corporate_governance__influences__insider_buying_after_selloff",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'insider_buying_after_selloff'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'us_stock_buybacks'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'political_influence_on_business'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'sustainability_leadership'}, {'type': 'INFLUENCES', 'source': 'corporate_governance', 'target': 'ai_governance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Corporate governance frameworks directly shape insider trading behavior, especially following sell‑offs, making it a key driver of insider buying patterns.",
+      "type": "INFLUENCES",
+      "source": "corporate_governance",
+      "target": "insider_buying_after_selloff"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "corporate_governance__influences__insider_buying_after_selloff"
+}

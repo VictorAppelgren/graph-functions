@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T11:47:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "copper",
+    "target_id": "china_credit_impulse",
+    "selection_motivation": "This link to china_credit_impulse has no canonical handle mapping, limited recent evidence, and minimal cross‑asset influence compared to other copper correlations.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "This link to china_credit_impulse has no canonical handle mapping, limited recent evidence, and minimal cross‑asset influence compared to other copper correlations.",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_credit_impulse'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159679103071159686",
+    "rel_id": "copper__correlates_with__china_credit_impulse",
+    "existing_links_after_len": "19",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "copper",
+      "target": "china_credit_impulse"
+    },
+    "prioritized_link": {
+      "motivation": "Copper price is highly sensitive to Fed rate cuts, as lower rates stimulate industrial demand and capital spending, typically lifting copper prices. The upcoming Fed cut on Sept 17 2025 is therefore a key catalyst for copper movements.",
+      "type": "CORRELATES_WITH",
+      "source": "copper",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "llm_raw_response": {
+      "motivation": "This link to china_credit_impulse has no canonical handle mapping, limited recent evidence, and minimal cross‑asset influence compared to other copper correlations.",
+      "remove_link": "china_credit_impulse"
+    },
+    "removal_decision": {
+      "motivation": "This link to china_credit_impulse has no canonical handle mapping, limited recent evidence, and minimal cross‑asset influence compared to other copper correlations.",
+      "remove_link": "china_credit_impulse"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(copper OR cu OR \"copper metal\" OR \"copper commodity\" OR \"copper price\" OR \"copper futures\" OR \"copper market\" OR \"copper supply\" OR \"copper demand\" OR \"copper mining\" OR \"copper smelting\" OR \"copper price forecast\" OR \"copper price trend\" OR \"copper price analysis\" OR \"copper price news\" OR \"copper price update\" OR \"copper price volatility\" OR \"copper price movement\" OR \"copper price drivers\" OR \"copper price catalysts\" OR \"copper price speculation\" OR \"copper price risk\" OR \"copper price outlook\" OR HG OR HG1 OR HG2 OR COP OR COP1 OR COP2) AND (news OR analysis OR report OR update OR trend OR market OR price OR forecast OR outlook OR volatility OR movement OR drivers OR catalysts OR risk OR speculation)",
+      "name": "Copper",
+      "id": "copper",
+      "last_queried": "2025-09-04T14:57:11.244000000+00:00",
+      "queries": 7
+    }
+  },
+  "id": "copper__correlates_with__china_credit_impulse"
+}

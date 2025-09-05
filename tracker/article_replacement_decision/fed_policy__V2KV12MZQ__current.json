@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T01:08:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "V2KV12MZQ",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['Z7K8PC4G5', 'U21K4ALYQ', 'P9A57NAU9', '97MD1FHW8', '3952FOSRQ', 'DJWTWIAMJ', 'XHDE9MSFQ', '3YAQ8JUPL', 'D0R3LX8F7']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "XHDE9MSFQ",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article provides fresh, non‑duplicate coverage of Powell’s dovish remarks, Fed policy implications, Asian market reactions, BOJ speculation, Chinese stock rally, and India gaming ban—none of which are present in existing articles."
+    }
+  },
+  "id": "fed_policy__V2KV12MZQ__current"
+}

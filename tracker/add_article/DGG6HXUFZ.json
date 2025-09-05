@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T15:05:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DGG6HXUFZ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: trade; Trump's tariffs on India and their implications for US trade relations and inflation are significant.",
+      "existing_ids": [
+        "us_tariffs",
+        "us_trade_policy_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article contains official statements from U.S. trade officials about punitive tariffs and trade policy, which qualifies as a policy statement."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports that the U.S. will impose punitive tariffs on Indian imports while India continues to buy Russian oil, directly affecting India’s trade policy and economic relations."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate actions and upcoming tariff implementation affecting trade flows."
+    },
+    "article_node": {
+      "id": "DGG6HXUFZ",
+      "title": "Trump tariffs live updates: White House advisor Navarro expects 50% India tariff",
+      "summary": "White House trade advisor Peter Navarro criticized India for its continued purchase of Russian oil and announced that punitive tariffs on Indian imports are expected to take effect next week. Meanwhile, a Chinese official expressed support for India against the U.S. tariffs, highlighting a growing cooperation between the two nations. The U.S. and EU have also established a trade deal framework that includes a 15% tariff on most EU imports, while U.S. Treasury Secretary Scott Bessent anticipates significant revenue from these tariffs to help reduce federal debt.",
+      "source": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-white-house-advisor-navarro-expects-50-india-tariff-200619702.html?_guc_consent_skip=1755864460",
+      "published_at": "2025-08-22T12:04:30+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "DGG6HXUFZ"
+}

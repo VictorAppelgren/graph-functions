@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T07:10:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AF2V7D6BE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US tariffs on India and related trade tensions feed into US inflation expectations and subsequently influence US Treasury yields.",
+      "existing_ids": [
+        "us_inflation",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses geopolitical tensions among authoritarian powers and the potential erosion of U.S. influence, fitting the geopolitical category."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Not enough context to determine relevance to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "AF2V7D6BE",
+      "title": "Trump Enemy John Bolton Reveals America’s ‘Main Threat’",
+      "summary": "Former national security adviser John Bolton warned that the United States faces a tightening coalition of authoritarian powers—China, Russia, India, and North Korea—whose recent military parade and diplomatic displays signal a shift toward a new global order. He cited India’s refusal to engage with Trump amid escalating tariffs and its growing ties to Russia and China as a key concern. Bolton’s op‑ed underscores the growing geopolitical rivalry and the potential erosion of U.S. influence in the coming years.",
+      "source": "https://www.thedailybeast.com/donald-trump-enemy-john-bolton-reveals-americas-main-threat/",
+      "published_at": "2025-09-03T03:39:34.325000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "AF2V7D6BE"
+}

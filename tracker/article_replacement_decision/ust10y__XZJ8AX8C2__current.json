@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T01:44:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "XZJ8AX8C2",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['CR3STT98T', 'QIEGXN543', 'U21K4ALYQ', '97MD1FHW8', 'BY233O0QM', '1DEM6P1Y2', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article focuses on Apple iPhone 17 Pro rumors, which does not map to any canonical macro market handle and lacks a macro catalyst, so it provides no actionable macro insight."
+    }
+  },
+  "id": "ust10y__XZJ8AX8C2__current"
+}

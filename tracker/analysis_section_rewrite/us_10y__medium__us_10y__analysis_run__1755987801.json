@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T00:28:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755987801",
+    "article_ids": "['SK994CBWR', 'FOM34PUWA', '3JR35PMNT', 'SK994CBWR', 'FOM34PUWA']",
+    "selected_articles_count": "5",
+    "material_chars": "107748",
+    "output_chars": "2742",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (≈ 200 words)**  \n1. **Add a concise scenario map** – a 2‑column table with *Trigger* (e.g., Q3 earnings beat, Fed rate cut, export‑control easing) and *Invalidation* (Fed hike, China‑US tension spike, supply‑chain bottleneck).  \n2. **Insert a watch‑list bullet list**: Fed policy meeting (Oct 2025), Q3 earnings release (Aug 2025), China export‑control policy change (Q4 2025), UAS job‑growth data (FOM34PUWA), competitor product launches.  \n3. **Embed macro data**: cite (SK994CBWR) for Fed‑rate optimism, (SK994CBWR) for AI‑driven demand, (FOM34PUWA) for 97 % UAS job rise, (SK994CBWR) for semiconductor‑sector growth.  \n4. **Detail path‑dependency**: product ramp of Ultra C wb with N2 bubbling (SK994CBWR) → revenue guidance (SK994CBWR) → earnings growth (SK994CBWR).  \n5. **Quantify valuation**: fair‑value $34.76 (SK994CBWR), current $30.53 (SK994CBWR), upside 14 % (SK994CBWR); optimistic $38.00 (SK994CBWR), downside $28.00 (SK994CBWR).  \n6. **Add risk & confidence**: list geopolitical, policy, supply‑chain risks; rate confidence “moderate‑high” (SK994CBWR).  \n7. **Cite every numeric claim**: e.g., revenue guidance $850‑$950 m (SK994CBWR), gross margin 49.4 % (SK994CBWR), debt‑to‑equity 23.3 % (SK994CBWR), 31.9 % earnings growth (SK994CBWR), 76.78 % total return (SK994CBWR).  \n8. **Remove generic phrasing** (“strong growth prospects”) and replace with specific drivers (AI, UAS job growth, export‑control environment).  \n9. **Ensure all critical sources are covered**: SK994CBWR for ACMR, FOM34PUWA for UAS data, and any other IDs referenced.  \n10. **Reconcile any conflicting data** (e.g., if a source cites a different revenue guidance, note the discrepancy and explain the chosen figure).  \n\nImplementing these edits will tighten the causal chain, anchor the analysis in first‑principles data, and elevate it to world‑class quality.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__medium__us_10y__analysis_run__1755987801"
+}

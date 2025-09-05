@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:32:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sp500",
+    "target_id": "amd_data_center_growth",
+    "selection_motivation": "AMD’s data center expansion drives a significant portion of its earnings and is highly sensitive to overall market sentiment and capital flows, which are captured by the S&P 500 index.",
+    "candidate_motivation": "These topics capture the macro drivers and key mega-cap constituents most likely to influence the S&P 500 through direct economic linkage or stock-specific dynamics. They include policy, inflation, yields, currency, and leading technology and consumer names that commonly move the index.",
+    "existing_links_count": "12",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_10y', 'usd', 'nvidia_ai_infrastructure', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'alphabet_ai_gemini', 'amazon_growth_segments', 'intel_ceo_tan']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_treasury_yields'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sp500', 'target': 'eurostoxx50'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765701",
+    "rel_id": "sp500__influences__amd_data_center_growth",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'china_macro'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'amd_data_center_growth'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_treasury_yields'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sp500', 'target': 'eurostoxx50'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AMD’s data center expansion drives a significant portion of its earnings and is highly sensitive to overall market sentiment and capital flows, which are captured by the S&P 500 index.",
+      "type": "INFLUENCES",
+      "source": "sp500",
+      "target": "amd_data_center_growth"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sp500__influences__amd_data_center_growth"
+}

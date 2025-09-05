@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T09:36:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BT0C353OH",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; US oil and gas policy is expected to boost US crude inventories, influencing energy prices.",
+      "existing_ids": [
+        "us_crude_inventory"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports mVISE AG’s 2024 loss, projected 2026 profitability, and revenue growth targets—key earnings information for the company."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant financial loss and future profitability outlook for mVISE AG, directly affecting the company’s valuation and investor sentiment."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses both current financial results for 2024 and medium‑term projections to 2026, indicating a focus on the near‑future performance of the company."
+    },
+    "article_node": {
+      "id": "BT0C353OH",
+      "title": "mVISE AG's (ETR:C1V) Path To Profitability",
+      "summary": "mVISE AG, a German IT consultancy, posted a €4 million loss in 2024 and is projected to break even in 2026, requiring an aggressive 113 % year‑on‑year revenue growth. The company’s debt‑to‑equity ratio of 107 % signals high leverage, while analysts see a modest €400 k profit in 2026 if growth targets are met. Market sentiment is bearish, with the stock trading well below its estimated fair value of €1.6, reflecting concerns over profitability and capital structure.",
+      "source": "https://finance.yahoo.com/news/mvise-ags-etr-c1v-path-062143749.html",
+      "published_at": "2025-09-03T06:21:43+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "BT0C353OH"
+}

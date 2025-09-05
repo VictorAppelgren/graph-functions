@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T03:08:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756601360",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6415",
+    "output_chars": "802",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft lines miss explicit catalyst windows and canonical handles for the Fed‑rate‑hike and tariff drivers, and the second and fourth items use non‑canonical IDs (Z7O1DCHS7) as drivers. Replace the Fed‑rate‑hike line with “Down | 0‑3 weeks | fed_policy tightening (September Fed meeting) → term premium rise → UST10Y up 0.20‑0.30 % (LF0UUL917) | Watch Fed minutes (B1KYJ1GPU), September Fed policy (B1KYJ1GPU), DXY momentum (XTQIQRP5K) | 60 %”. For the tariff‑driven DXY rise, swap “Trump tariff protection” for “trump_tariff_policy (August 29 tariff announcement 3952FOSRQ) → sector strength (NIT6JFIQF) → DXY up 0.5‑1 % (XTQIQRP5K) | Watch tariff announcement (3952FOSRQ), sector earnings (NIT6JFIQF), EUR/USD (XTQIQRP5K) | 65 %”. Ensure each line uses a single canonical handle (UST10Y or DXY), includes a catalyst ID, and states the magnitude range. The first and third items are fine but tighten the watch list to only the most relevant IDs (U21K4ALYQ, XTQIQRP5K). This will satisfy the mapping, catalyst, and causal‑chain requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1756601360"
+}

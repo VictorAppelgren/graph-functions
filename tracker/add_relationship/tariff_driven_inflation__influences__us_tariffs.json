@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:47:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "tariff_driven_inflation",
+    "target_id": "us_tariffs",
+    "selection_motivation": "Tariff‑driven inflation directly shapes U.S. tariff policy, influencing trade costs and supply‑chain dynamics, making it a primary driver of the ‘us_tariffs’ node.",
+    "candidate_motivation": "Tariff-driven inflation is most directly shaped by tariff policy and trade tensions that feed into import prices and consumer inflation. The strongest plausible influences and correlates are explicit tariff actions, trade relations, and broad inflation indicators.",
+    "existing_links_count": "6",
+    "candidate_count": "17",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['us_tariffs_brazil', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_tariffs', 'us_china_tariffs', 'us_china_trade_relations', 'us_china_trade_talks', 'us_tariffs_inflation', 'us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'fed_policy', 'usd', 'eurusd', 'oil', 'euro_inflation', 'china_macro']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814273014",
+    "rel_id": "tariff_driven_inflation__influences__us_tariffs",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Tariff‑driven inflation directly shapes U.S. tariff policy, influencing trade costs and supply‑chain dynamics, making it a primary driver of the ‘us_tariffs’ node.",
+      "type": "INFLUENCES",
+      "source": "tariff_driven_inflation",
+      "target": "us_tariffs"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "tariff_driven_inflation__influences__us_tariffs"
+}

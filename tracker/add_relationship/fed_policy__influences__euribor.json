@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T19:26:15",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "euribor",
+    "selection_motivation": "Fed policy sets the global monetary stance, which directly influences euro area interbank rates such as Euribor; linking them captures the spillover effect for cross‑currency yield analysis.",
+    "candidate_motivation": "Fed Policy is directly shaped by macro‑economic indicators such as inflation and Treasury yields, and it is coordinated with other central banks; therefore inflation metrics, Treasury yields, Euribor, and ECB policy are the most plausible strong peers or influences.",
+    "existing_links_count": "10",
+    "candidate_count": "5",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_10y', 'euribor', 'ecb_policy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780080136",
+    "rel_id": "fed_policy__influences__euribor",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'core_monthly_cpi'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy sets the global monetary stance, which directly influences euro area interbank rates such as Euribor; linking them captures the spillover effect for cross‑currency yield analysis.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "euribor"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy__influences__euribor"
+}

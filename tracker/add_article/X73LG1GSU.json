@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T22:17:41",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "X73LG1GSU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; high tech wages may elevate inflation expectations, modest upward pressure on US 10Y yields and Fed policy.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers commentary on labor market trends and AI talent demand, which qualifies as market analysis/opinion."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses labor market trends and skill demand, which does not map to any canonical market handle or provide a catalyst for a market move."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on the present job‑market demand for Excel skills and the current salary ranges for AI talent, describing a short‑term trend in hiring practices."
+    },
+    "article_node": {
+      "id": "X73LG1GSU",
+      "title": "Forget ChatGPT, Excel remains the most in-demand skill",
+      "summary": "AI talent wars in Silicon Valley highlight that Microsoft Excel remains the most cited skill in tech job listings, far outpacing Python and SQL. Despite AI’s prominence, demand for Excel experts persists because the tool is integral to managing the data that fuels AI. Companies are willing to pay up to $200,000 for machine‑learning talent and up to $1 million for top AI specialists, but even non‑technical hires can earn lucrative roles through prompt engineering. The narrative underscores that as AI matures, its real value lies in delivering accurate, contextual data directly into familiar tools like Excel.",
+      "source": "https://www.businessinsider.com/excel-most-in-demand-skill-tech-job-listings-ai-2025-8",
+      "published_at": "2025-08-31T18:14:29+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "X73LG1GSU"
+}

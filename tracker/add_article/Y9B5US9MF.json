@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T01:04:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Y9B5US9MF",
+    "status": "success",
+    "topic_id": "dc_federal_control"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the deployment of National Guard troops in Washington D.C., which aligns with the existing node on D.C. Federal Control of Police, highlighting the intersection of federal intervention and local governance.",
+      "existing_node_ids": "dc_federal_control",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The node relates to federal control, which may involve regulatory changes or legal developments."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses federal control, which directly relates to the governance and regulatory environment affecting economic conditions."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing regulatory changes and their implications for federal control, indicating a longer-term impact on the economy."
+    },
+    "article_node": {
+      "id": "Y9B5US9MF",
+      "title": "National Guard patrolling DC's Union Station draw heckles, photo ops and little action",
+      "summary": "President Trump has deployed 800 National Guard troops to Washington, D.C., citing a public safety emergency despite crime statistics showing a decline in violent crime in the city. The deployment has sparked controversy, with local leaders and residents questioning the necessity of military presence in a city where crime rates have decreased significantly. Critics argue that the move undermines local law enforcement and raises civil liberties concerns, while some residents express fear of a militarized environment.",
+      "source": "https://www.usatoday.com/story/news/politics/2025/08/14/national-guard-dc-union-station/85659275007/",
+      "published_at": "2025-08-14T22:02:07+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "Y9B5US9MF"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-29T20:10:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "QQQGQC98H",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "8",
+    "candidate_ids": "['QIEGXN543', 'U21K4ALYQ', '97MD1FHW8', 'QJEVQZHQR', 'BY233O0QM', 'HCYCKF3PN', 'VDO8D9T7M', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article on this topic to replace; the new article provides fresh coverage of U.S. equity highs and macro data."
+    }
+  },
+  "id": "ust10y__QQQGQC98H__current"
+}

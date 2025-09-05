@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T13:07:54",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_credit_impulse",
+    "target_id": "copper",
+    "selection_motivation": "China Credit Impulse is a leading indicator of Chinese industrial activity, a major driver of copper demand.",
+    "candidate_motivation": "Copper is a core industrial metal whose price is driven by global growth, manufacturing activity, infrastructure demand, and currency dynamics. Topics that directly influence or correlate with these drivers—such as major economies’ industrial output, monetary policy, Treasury yields, and the USD—are therefore strong influences or peers.",
+    "existing_links_count": "20",
+    "candidate_count": "24",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "24",
+    "candidate_ids_preview": "['us_services_pmi', 'us_inflation', 'us_core_pce', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx', 'china_exports', 'china_credit_impulse', 'cn_russia_gas_pipeline', 'china_pos2_pipeline', 'oil_price_decline', 'wti', 'brent', 'gold']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'copper', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'copper', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'oil_price_decline'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'india_industrial_output'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'china_exports'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'copper', 'target': 'dxy'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510069538",
+    "rel_id": "china_credit_impulse__influences__copper",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_credit_impulse', 'target': 'dxy'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China Credit Impulse is a leading indicator of Chinese industrial activity, a major driver of copper demand.",
+      "type": "INFLUENCES",
+      "source": "china_credit_impulse",
+      "target": "copper"
+    }
+  },
+  "id": "china_credit_impulse__influences__copper"
+}

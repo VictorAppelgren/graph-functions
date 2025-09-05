@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-01T00:27:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust5y",
+    "target_id": "bund10y",
+    "selection_motivation": "US 5‑year Treasury yields move closely with the German 10‑year Bund, reflecting cross‑border term‑structure dynamics that affect portfolio allocation and risk premia.",
+    "candidate_motivation": "US 5Y Treasury Yield is a core fixed‑income benchmark influenced by monetary policy, inflation expectations, the term‑structure of rates, and broader market sentiment; therefore other Treasury maturities, Fed policy signals, inflation data, currency indices, and key commodity prices are the most likely strong influences or peers.",
+    "existing_links_count": "16",
+    "candidate_count": "23",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "23",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'fed_policy', 'sofr', 'us_inflation', 'us_core_pce', 'us_unemployment_claims', 'dxy', 'fed_powell_rate_cut_hint_2025', 'sx5e', 'euro_inflation', 'bund10y', 'gilt10y', 'usdcny', 'gbpusd', 'usdjpy', 'eurusd', 'wti', 'brent', 'gold', 'copper', 'wheat']",
+    "existing_links_before_len": "16",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170938102139585935",
+    "rel_id": "ust5y__correlates_with__bund10y",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'jgb10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'ust5y', 'target': 'fed_powell_rate_cut_hint_2025'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5‑year Treasury yields move closely with the German 10‑year Bund, reflecting cross‑border term‑structure dynamics that affect portfolio allocation and risk premia.",
+      "type": "CORRELATES_WITH",
+      "source": "ust5y",
+      "target": "bund10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__correlates_with__bund10y"
+}

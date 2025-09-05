@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:42:41",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756049370",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21960",
+    "output_chars": "1316",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft is analytically rich but fails the 4–6 sentence executive brief requirement and folds too many disparate threads (policy theatrics, private-market signals, and micro‑pricing color) into one long narrative; tighten to a crisp house view: 1) state a single Regime A baseline, 2) define explicit A→B and B→C triggers with the Brookings 25% automation exposure anchor and a multi-quarter labor slack deterioration threshold, and 3) crystallize the near/mid-term catalysts, risks, and watch items in 4–6 tight lines; otherwise pare back nonessential color (Las Vegas pricing, Beasley/cap news, etc.) that distracts from the core horizon framing. Align every assertion to explicit source IDs (e.g., NL5YYTLF2 for regime shifts, 22PL3Q360/W2622L6WW for Ford/UNH/LULU fundamentals, EPJYXB7DX for the big policy bill, UPV3X2MQ6/FOM34PUWA/ILYC1M41F for productivity signals) and provide a single, traceable source map per claim to satisfy the citation density requirement. Strengthen the causal chain by anchoring the AI/TFP-to-capex-to-earnings transmission with 2–3 numeric anchors (Brookings’ 25% automation exposure; Ford EV losses ~$1.3B in Q2; forward P/E around 10 for a durable auto/industry proxy) and declare the validity/invalidity thresholds (e.g., if automation exposure does not cross threshold within multiple quarters, or if tariff signaling reverses, invalidate the base case). Reconcile conflicts by stating clearly when sources diverge (e.g., tariff trajectory versus extension risks) and adopt a first-principles stance on policy space as the primary arbiter of Regime tilt, then organize the 0–3 week, 3–6 month, and 12–18 month windows as a single flow, with a discrete watchlist of 4–5 IDs (e.g., NL5YYTLF2, EPJYXB7DX, UPV3X2MQ6, FOM34PUWA, 22PL3Q360) and a compact risk rubric (growth, inflation, policy space, and earnings quality) to render a decision-ready conclusion in 4–6 sentences.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756049370"
+}

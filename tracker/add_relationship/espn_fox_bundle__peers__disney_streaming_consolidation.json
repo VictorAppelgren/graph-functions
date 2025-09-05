@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:31:48",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "espn_fox_bundle",
+    "target_id": "disney_streaming_consolidation",
+    "selection_motivation": "Both ESPN & Fox Bundle and Disney Streaming Consolidation are major streaming platforms competing for sports broadcasting rights, making them direct peers in the market.",
+    "candidate_motivation": "These topics directly involve sports broadcasting rights, distribution deals, and media strategies tied to the Sports Broadcasting Act, making them plausible strong influences or peers.",
+    "existing_links_count": "4",
+    "candidate_count": "4",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['espn_fox_bundle', 'ufc_media_rights', 'premier_league_2025_26', 'disney_streaming_consolidation']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'espn_fox_bundle'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'ufc_media_rights'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'premier_league_2025_26'}, {'type': 'INFLUENCES', 'source': 'sports_broadcasting_act', 'target': 'disney_streaming_consolidation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155178801978671252",
+    "rel_id": "espn_fox_bundle__peers__disney_streaming_consolidation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'espn_fox_bundle', 'target': 'laliga_international_expansion'}, {'type': 'PEERS', 'source': 'espn_fox_bundle', 'target': 'disney_streaming_consolidation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Both ESPN & Fox Bundle and Disney Streaming Consolidation are major streaming platforms competing for sports broadcasting rights, making them direct peers in the market.",
+      "type": "PEERS",
+      "source": "espn_fox_bundle",
+      "target": "disney_streaming_consolidation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "espn_fox_bundle__peers__disney_streaming_consolidation"
+}

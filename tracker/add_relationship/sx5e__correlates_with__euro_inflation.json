@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T04:24:58",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "sx5e",
+    "target_id": "euro_inflation",
+    "selection_motivation": "Euro Stoxx 50 moves closely with euro area inflation, as higher inflation pressures corporate earnings and valuation multiples, making the index a key barometer of inflation expectations.",
+    "candidate_motivation": "Euro Stoxx 50 is a European equity benchmark whose performance is tightly linked to Eurozone macro fundamentals, ECB policy, sovereign yields, and global market sentiment. Therefore, topics that directly influence European growth, inflation, sovereign risk, and cross‑market equity dynamics are the strongest peers or influences.",
+    "existing_links_count": "3",
+    "candidate_count": "21",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['spx', 'bund10y', 'euro_inflation', 'ecb_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'us_core_pce', 'us_inflation', 'dxy', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'gold', 'wti', 'brent', 'copper', 'wheat']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257474598",
+    "rel_id": "sx5e__correlates_with__euro_inflation",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'sx5e', 'target': 'euro_inflation'}, {'type': 'PEERS', 'source': 'sx5e', 'target': 'spx'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euro Stoxx 50 moves closely with euro area inflation, as higher inflation pressures corporate earnings and valuation multiples, making the index a key barometer of inflation expectations.",
+      "type": "CORRELATES_WITH",
+      "source": "sx5e",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sx5e__correlates_with__euro_inflation"
+}

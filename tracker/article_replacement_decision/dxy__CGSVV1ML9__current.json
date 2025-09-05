@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T03:06:55",
+  "processed": false,
+  "inputs": {
+    "topic_id": "dxy",
+    "new_article_id": "CGSVV1ML9",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['DR5PMXH2G', 'VBLNR89G5', 'QIEGXN543', 'GUTGNG4IC', 'UEMV4BE8U', '7XH2DKEKV']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article reports a single company's earnings with no direct mapping to canonical macro handles and lacks a broader macro catalyst, so it does not add value to the graph."
+    }
+  },
+  "id": "dxy__CGSVV1ML9__current"
+}

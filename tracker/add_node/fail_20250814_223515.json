@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T22:35:03",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Q41JFJWI2",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the collaboration between Mastercard and Zand to enhance cross-border payments in the UAE, indicating a significant development in the financial technology landscape that could impact macroeconomic factors such as financial inclusion and economic opportunity in the region.",
+      "id": "uae_cross_border_payments",
+      "name": "UAE Cross-Border Payments",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Cross-border payments are a macro-level driver influencing financial inclusion and economic opportunity in the UAE."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific fintech partnership; not a macro driver or tradable asset, falls under industry vertical.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

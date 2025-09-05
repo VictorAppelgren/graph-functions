@@ -1,0 +1,53 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T08:20:26",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "7A5G8YVQW",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US PCE inflation expectations and falling unemployment claims signal potential Fed easing, affecting US Treasury yields, while oil price declines and USD/JPY gains reflect risk‑off sentiment.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "us_unemployment_claims",
+        "usdjpy",
+        "dxy",
+        "wti",
+        "brent"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses the upcoming U.S. PCE inflation report, a major macroeconomic event."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article announces the upcoming July US PCE reading, a primary driver for the us_pce node, directly influencing market expectations and policy outlook."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to upcoming PCE data and tariff news, reflecting short‑term price movements."
+    },
+    "article_node": {
+      "id": "7A5G8YVQW",
+      "title": "Global stocks are mostly down ahead of key U.S. inflation report",
+      "summary": "European stocks fell ahead of the U.S. PCE inflation report, with the S&P 500 and Dow futures down 0.3%. Asian markets were mixed, Japan’s Nikkei slipped on weak factory output and higher U.S. tariffs, while China’s tech shares saw volatility amid government chip support. Oil prices edged lower and the U.S. dollar gained modestly against the yen, as investors awaited the July PCE reading expected around 2.6%.",
+      "source": "https://www.fastcompany.com/91395490/global-stocks-mostly-down-ahead-key-u-s-inflation-report",
+      "published_at": "2025-08-29T13:00:06+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 7,
+      "successful": 7
+    }
+  },
+  "id": "7A5G8YVQW"
+}

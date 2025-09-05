@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T10:48:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "ust2y",
+    "selection_motivation": "UK 30‑year gilt yields are a leading indicator of global risk sentiment and tend to move in tandem with US short‑term rates, so a correlation link to US 2‑year Treasury yield is warranted.",
+    "candidate_motivation": "UK gilt yields are driven by sovereign risk, inflation expectations, and relative monetary policy stance. Peer and influence topics include other sovereign and treasury yields, core inflation data, central‑bank policy, and currency dynamics that affect GBP‑denominated debt pricing.",
+    "existing_links_count": "10",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['gilt10y', 'ust10y', 'ust30y', 'bund10y', 'euro_inflation', 'ecb_policy', 'fed_policy', 'us_inflation', 'us_core_pce', 'ust2y', 'ust5y', 'gbpusd', 'dxy']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166434502512214533",
+    "rel_id": "uk_30yr_gilt_yield__correlates_with__ust2y",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 30‑year gilt yields are a leading indicator of global risk sentiment and tend to move in tandem with US short‑term rates, so a correlation link to US 2‑year Treasury yield is warranted.",
+      "type": "CORRELATES_WITH",
+      "source": "uk_30yr_gilt_yield",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_30yr_gilt_yield__correlates_with__ust2y"
+}

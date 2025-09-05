@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T11:41:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "C5IXFUB52",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; falling oil prices (WTI, Brent) are expected to depress Gulf equity indices and small‑cap valuations through Q3 2025.",
+      "existing_ids": [
+        "wti",
+        "brent"
+      ],
+      "new_names": [
+        "gulf_equity_indices"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article highlights specific small‑cap companies in the Gulf region, noting their earnings growth, dividend cuts, and balance sheet strength—information that constitutes a company‑specific update rather than a formal earnings release, regulatory change, or macro event."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article does not provide a clear link to the specified node’s scope or canonical handle, so its relevance cannot be established."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market conditions and investment opportunities in Gulf small caps amid falling oil prices, indicating a short‑term view."
+    },
+    "article_node": {
+      "id": "C5IXFUB52",
+      "title": "Undiscovered Gems In The Middle East To Explore This September 2025",
+      "summary": "Gulf markets are retreating amid falling oil prices, prompting investors to seek small‑cap opportunities in the region. A list of 201 “undiscovered gems” highlights companies such as Emirates Insurance Company P.J.S.C, which has modest earnings growth and a recent dividend cut, and Emirates Reem Investments Company P.J.S.C, which boasts strong earnings momentum and a healthy balance sheet. The article suggests that these firms could offer value‑oriented upside despite broader market weakness, especially as investors look for resilient, growth‑oriented small caps in the Middle East.",
+      "source": "https://finance.yahoo.com/news/undiscovered-gems-middle-east-explore-083305738.html",
+      "published_at": "2025-09-01T08:33:05+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "C5IXFUB52"
+}

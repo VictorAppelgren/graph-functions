@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:31:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_border_security",
+    "target_id": "us_tariffs_brazil",
+    "selection_motivation": "US border security measures can directly shape specific tariff actions, such as tariffs on Brazil, reflecting a nuanced trade policy response to security concerns.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with US Border Security due to their relevance in economic, trade, and immigration contexts, which are directly affected by border security policies.",
+    "existing_links_count": "8",
+    "candidate_count": "9",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_illegal_immigration_2023', 'us_tariffs_brazil', 'us_trade_policy_inflation', 'us_net_migration', 'us_border_security_policy', 'us_china_trade_relations', 'us_immigration_conditions', 'us_tariffs', 'us_china_tariff_truce']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_2023'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765572",
+    "rel_id": "us_border_security__influences__us_tariffs_brazil",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_2023'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US border security measures can directly shape specific tariff actions, such as tariffs on Brazil, reflecting a nuanced trade policy response to security concerns.",
+      "type": "INFLUENCES",
+      "source": "us_border_security",
+      "target": "us_tariffs_brazil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_border_security__influences__us_tariffs_brazil"
+}

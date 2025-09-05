@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T15:06:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "euro_inflation",
+    "selection_motivation": "ECB policy directly shapes euro‑area inflation expectations, forming a core policy‑inflation feedback loop that is essential for understanding ECB actions and market reactions.",
+    "candidate_motivation": "ECB Policy directly shapes euro‑area inflation, yields, and the euro, and its stance reverberates through global rates, equities, commodities, and the USD, making these topics strong peers or correlates.",
+    "existing_links_count": "3",
+    "candidate_count": "19",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['fed_policy', 'bund10y', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'gilt10y', 'sx5e', 'sofr', 'us_inflation', 'euro_inflation', 'euribor', 'dxy', 'usdjpy', 'eurusd', 'gold', 'wti', 'brent', 'spx']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966396960",
+    "rel_id": "ecb_policy__influences__euro_inflation",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy directly shapes euro‑area inflation expectations, forming a core policy‑inflation feedback loop that is essential for understanding ECB actions and market reactions.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "euro_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__euro_inflation"
+}

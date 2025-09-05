@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:43:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "EUWPOUVU2",
+    "topic_discovery_motivation": "Article discusses Iran's nuclear program and potential sanctions, relevant to existing geopolitical tensions and U.S.-Iran relations.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "Iran Nuclear Program",
+        "UN Sanctions",
+        "Iran-Israel Conflict"
+      ]
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses the potential reimposition of UN sanctions over Iran's nuclear program, which constitutes a regulatory change."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unclear which node is being assessed; the article covers multiple nodes but likely low impact on any single node"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on imminent actions—potential sanctions by the end of August and a Supreme Court appeal—that directly affect the node in the near term."
+    },
+    "article_node": {
+      "id": "EUWPOUVU2",
+      "title": "Iran to hold call with European nations over nuclear program",
+      "summary": "Iran's Foreign Minister is set to hold a conference call with European counterparts to discuss the potential reimposition of UN sanctions over its nuclear program, which has escalated following the recent Iran-Israel conflict. The European nations have warned Iran of a 'snapback' mechanism that could restore sanctions if no satisfactory agreement is reached by the end of August. Meanwhile, in the U.S., Kim Davis is appealing to the Supreme Court to overturn the landmark same-sex marriage ruling, claiming it infringes on her religious freedoms, amidst a broader conservative push to challenge marriage rights.",
+      "source": "https://abcnews.go.com/International/wireStory/iran-hold-call-european-nations-nuclear-program-sanctions-124871263",
+      "published_at": "2025-08-22T06:37:46+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "EUWPOUVU2"
+}

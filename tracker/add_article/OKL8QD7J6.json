@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T07:15:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OKL8QD7J6",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates, FX; US inflation expectations and trade tensions with India influence Fed policy, Treasury yields, and the USD index.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy",
+        "us_10y_treasury_yield",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article contains official statements from Indian Commerce Minister Piyush Goyal about trade agreements and reports the US imposing tariffs, which constitute policy statements from policymakers or institutions."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to determine the specific node referenced; impact unclear but likely low."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on imminent trade negotiations and a newly imposed tariff, both affecting India’s trade environment in the near term."
+    },
+    "article_node": {
+      "id": "OKL8QD7J6",
+      "title": "India minister says country hopes to clinch US trade deal by November",
+      "summary": "India aims to finalize a bilateral trade agreement with the United States by November, according to Commerce Minister Piyush Goyal. Negotiations with the EU are progressing and ties with China are normalizing. India has already secured trade deals with Mauritius, Australia, EFTA, the UK, and the UAE. The US has imposed a 50% tariff on key Indian exports since August 27, reflecting strained relations over tariffs and Indian purchases of Russian oil.",
+      "source": "https://www.reuters.com/world/china/india-minister-says-country-hopes-clinch-us-trade-deal-by-november-2025-09-03/",
+      "published_at": "2025-09-03T03:36:33.818000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "OKL8QD7J6"
+}

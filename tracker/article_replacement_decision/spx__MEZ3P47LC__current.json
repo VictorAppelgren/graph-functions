@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T01:48:36",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "MEZ3P47LC",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['DRW2E1P5J', 'VBLNR89G5', '0QKLPBCAP', '4E23W4543', 'LJZYDXVL3', '5GZPY1XUE', 'OHZD469JB', '1G54B8R46', '2SW2RSVRM']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "4E23W4543",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article provides timely US equity and Fed policy data with a clear September rate cut catalyst, mapping to spx, ndx, ust10y, and thus adds value."
+    }
+  },
+  "id": "spx__MEZ3P47LC__current"
+}

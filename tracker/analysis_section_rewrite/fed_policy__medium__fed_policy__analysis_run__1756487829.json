@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-29T19:21:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756487829",
+    "article_ids": "['XQMF22EFB', 'XQMF22EFB', 'XQMF22EFB']",
+    "selected_articles_count": "3",
+    "material_chars": "93466",
+    "output_chars": "1297",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is on the right track but needs tightening to meet Argos standards. 1) **Canonical mapping** – explicitly state “spx (+0.5‑1 %)” with a clear sign and magnitude. 2) **Catalyst windows** – list the exact dates: *July 2025 GDP on blockchain (release ≈ July 2025)*, *Kraken/Robinhood tokenization launch (June 30 – July 2 2025)*, *stablecoin fragmentation persists (ongoing, but flag any fee spikes in Q3 2025)*. 3) **Scenario structure** – break the analysis into Base‑Case, 1‑Alt, 2‑Alt, and Risk‑Case, each with a concise headline, magnitude, and horizon. 4) **Watch signals** – add concrete, dated metrics: (a) tokenized trade volume > $X bn by end‑Q3 2025, (b) stablecoin cross‑border fee > Y % by Q4 2025, (c) GDP revision > Z % when blockchain‑published data is released. 5) **Invalidations** – list regulatory triggers with dates (e.g., SEC clamp‑down announcement in Q2 2025). 6) **Citations** – insert inline (ID) citations after each claim (e.g., “(XQMF22EFB)”). 7) **Remove drift** – any sentence not directly tied to spx or a catalyst must be linked or deleted. 8) **Quantify** – replace vague “tightening data integrity” with a specific effect on the equity risk premium (e.g., “reduces the equity risk premium by 0.3‑0.5 %”). 9) **Formatting** – use bullet‑pointed scenario map and watch‑list for clarity. Apply these edits to achieve a concise, defensible, and fully cited Argos‑style briefing.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1756487829"
+}

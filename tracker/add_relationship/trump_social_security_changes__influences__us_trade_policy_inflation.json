@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:23:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_social_security_changes",
+    "target_id": "us_trade_policy_inflation",
+    "selection_motivation": "Linking the Trump Administration's Social Security Changes to US Trade Policy and Inflation highlights the interplay between fiscal policy and trade dynamics, which is crucial for understanding broader economic impacts.",
+    "candidate_motivation": "The selected topics are closely related to economic policies and social security, which are influenced by government actions and economic conditions. They represent potential peers or influences on the topic of changes in Social Security under the Trump Administration.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'trump_tariffs', 'us_tariffs_pharmaceuticals_semiconductors', 'us_trade_policy_inflation', 'us_china_trade_talks', 'us_chip_export_controls', 'us_fiscal_outlook', 'us_tariff_policies', 'political_influence_on_stocks']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_social_security_changes', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932162117",
+    "rel_id": "trump_social_security_changes__influences__us_trade_policy_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_social_security_changes', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'trump_social_security_changes', 'target': 'us_trade_policy_inflation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking the Trump Administration's Social Security Changes to US Trade Policy and Inflation highlights the interplay between fiscal policy and trade dynamics, which is crucial for understanding broader economic impacts.",
+      "type": "INFLUENCES",
+      "source": "trump_social_security_changes",
+      "target": "us_trade_policy_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "trump_social_security_changes__influences__us_trade_policy_inflation"
+}

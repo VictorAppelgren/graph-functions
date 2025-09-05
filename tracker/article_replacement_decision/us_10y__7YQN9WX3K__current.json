@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-23T23:15:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "new_article_id": "7YQN9WX3K",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['MF8ZAFVAY', 'JY0YOJGAJ', '0R5LB61YY', '5JQEA5Z1T', '73G2X5JK2', 'FOA2XZ9D3', '08EIPMJ89', 'S545YX4ZA', 'U1KRCQOYR']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "S545YX4ZA",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article provides the latest developments on Russian advances and diplomatic calls, with no existing article covering this timeframe, so no removal or adjustment is required."
+    }
+  },
+  "id": "us_10y__7YQN9WX3K__current"
+}

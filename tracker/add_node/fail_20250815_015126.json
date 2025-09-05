@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T01:51:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "S0KQ3JBI3",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant legal challenge involving Paramount Global and its controlling shareholder, which could impact shareholder value and corporate governance, warranting a new node to analyze its implications on market dynamics.",
+      "id": "paramount_skydance_lawsuit",
+      "name": "Paramount Skydance Lawsuit",
+      "type": "company",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Legal challenge affecting shareholder value and corporate governance of Paramount Global."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company-specific lawsuit is an operational niche, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

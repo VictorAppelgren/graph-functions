@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T09:28:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756020502",
+    "article_ids": "['0G3A676BP', 'TN66GHPAT', '4LQD15CFU', 'JVKCZAPVG', 'P0K0UEOHU']",
+    "selected_articles_count": "5",
+    "material_chars": "172862",
+    "output_chars": "3822",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a good start but still feels like a collection of highlights rather than a coherent, first‑principles analysis. Re‑frame it around a clear causal chain that links macro fundamentals (real‑rate differentials, terms‑of‑trade, productivity, BoP, net external position, and policy reaction functions) to the market transmission that drives Microsoft, Shopify, Rivian, Tesla, and Donegal’s pricing. Add a structured scenario table (base case, upside, downside) and anchor each scenario to specific catalysts: • Cloud spending CAGR 21.2% to 2030 (source 0G3A676BP); • Azure revenue +39% YoY and Microsoft’s $368 bn contracted revenue (0G3A676BP); • Shopify’s 31% YoY revenue growth, 16% free‑cash‑flow margin, and price‑increase lift (0G3A676BP); • Rivian’s R2 launch in Q2 2026, $45 k price, $7.5 bn cash, $6.6 bn DOE loan, and 2027 EBITDA breakeven target (JVKCZAPVG); • Tesla’s 16% auto‑revenue decline, 17.9% gross margin, and limited robotaxi pilot (JVKCZAPVG); • Tariff escalation and $7,500 EV credit expiration (JVKCZAPVG); • Donegal’s dividend yield decline since 2020 (TN66GHPAT); • Layoff‑related productivity drag (4LQD15CFU). Quantify risks (e.g., a 25 bp Fed hike could compress cloud margins by X %); reconcile any conflicting figures (Shopify net income 906 m vs 171 m); and cite each figure with its ID. Replace generic “strong growth” statements with precise numbers, and end with a confidence rating (e.g., moderate‑high) and a watch list of leading indicators (cloud revenue, Shopify GM, R2 launch, Tesla deliveries, tariff changes). This will elevate the analysis to world‑class quality.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1756020502"
+}

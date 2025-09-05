@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T22:00:39",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756583711",
+    "article_ids": "['FAN5RYW6T', 'XQMF22EFB', 'F7K7Y35U5', 'KX6AOMQZ5', 'FAN5RYW6T']",
+    "selected_articles_count": "5",
+    "material_chars": "144293",
+    "output_chars": "2321",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Remove peripheral content** – delete or re‑frame any sentences that reference copper tariffs (F7K7Y35U5), blockchain GDP publication (XQMF22EFB), or adjustable‑rate mortgage costs (KX6AOMQZ5); these are not directly causal to the S&P 500 within a 3–6 month horizon and dilute focus.  \n2. **Add inline citations** – insert (FAN5RYW6T) after every substantive claim (e.g., 40 % concentration, CPI 2.7 %, PCE 2.9 %, September Fed rate‑cut expectation, September 5 payrolls).  \n3. **Quantify base‑case and alt scenarios** – state: *Base case: 5–10 % decline in spx by 3–6 months (i.e., 8 % drop by 12 Oct 2025 if current drivers persist).* *Alt 1: 0–5 % rise if tech earnings rebound, labor market strengthens, inflation eases, tariffs recede, and Fed cuts earlier (e.g., 15 Sep 2025).*  \n4. **Specify catalyst windows** – list: *Sep 5 2025 BLS payrolls (labor market), Sep 2025 Fed meeting (rate cuts), Jul 2025 CPI/PCE releases, Aug 2025 tech earnings season.*  \n5. **Clarify path‑dependency** – write: *If Fed cuts but inflation remains >2.5 %, spx will likely decline; if inflation eases <2.0 %, the rate cut will lift spx.*  \n6. **Add watch‑list signals** – bullet list: (i) tech earnings releases (Jun–Aug 2025), (ii) Sep 5 payrolls, (iii) July–Aug CPI/PCE, (iv) Fed policy statements (Sep 2025), (v) tariff announcements (Oct 2025).  \n7. **State confidence level** – e.g., *Confidence: moderate (≈60 %) given convergence of drivers but sensitivity to any reversal.*  \n8. **Eliminate generic platitudes** – replace vague phrases (“could be concerning”) with specific data or citations.  \n9. **Ensure every claim maps to canonical handle** – all statements must reference *spx* (S&P 500) with explicit sign and magnitude.  \n10. **Maintain 3–6 month horizon** – avoid long‑term speculation beyond Oct 2025; keep focus on the next 3–6 months.  \n\nImplement these edits to tighten the analysis, reinforce causal chains, and meet the Argos standards for actionable, evidence‑based macro commentary.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__medium__ust10y__analysis_run__1756583711"
+}

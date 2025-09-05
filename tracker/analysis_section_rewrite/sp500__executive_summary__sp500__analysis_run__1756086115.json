@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:55:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756086115",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17349",
+    "output_chars": "1099",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft overreaches in length and scope: it tries to cover Ford’s three-regime framework, NFLX/macroultra themes, and near-term catalysts in one long, multi-topic panorama, which obscures a crisp house view and violates the 4–6 sentence/point constraint. Actionable edits: (1) center the brief on Ford as the sole core idea and reframe into 4–6 concise bullets that deliver a single executive view (Base/Upside/Downside with explicit ROIC vs WACC thresholds and 1–2 sentence price implications per regime) and end with a clear, falsifiable inflection point; (2) remove or relocate NFLX/crypto/adjacent topics to an appendix or separate macro overlay to avoid cross-domain drift, unless you label them as a separate overlay and limit to 1–2 lines with citations (keep only IDs from SOURCE MATERIAL); (3) strengthen the causal chain from policy to price with explicit, measurable levers: EV profitability trajectory, capex efficiency, and policy/tariff stability driving ROIC vs WACC, citing the Ford metrics (EV losses ~$1.3B, Q2 margin ~4.3%, ROIC ~10%, dividend ~5%, forward P/E ~10x) after the Base claim (65UUBU0OR)(22PL3Q360); (4) codify regime-transition rules with a crisp, falsifiable rule (e.g., sustained ROIC>WACC for multi-year → Upside; sustained ROIC≤WACC → Downside) and attach sources (SGB2PAZGK) for each transition; (5) convert the current narrative into 4–6 tight sentences by replacing diffuse paragraphs with short, numbered lines, ensuring each line ends with a single page citation set and avoids repetition or tangential anecdotes (O4ZEED2EB should be reduced to a contextual note if kept at all); (6) quantify and anchor near-term watchpoints to the Ford thesis only where possible, and cite the exact sources after each claim; (7) resolve conflicts by stating explicitly how policy/tariff expectations would modify EV economics and ROIC and where that leaves the price path, rather than presenting them as separate, unintegrated streams; (8) ensure every critical Ford source is cited (65UUBU0OR)(22PL3Q360)(SGB2PAZGK) and that ancillary color from O4ZEED2EB is clearly labeled as contextual, not driver.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756086115"
+}

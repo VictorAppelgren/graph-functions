@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T21:08:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_tariffs_semiconductors",
+    "target_id": "us_export_policy_ai_chips",
+    "selection_motivation": "US tariffs on semiconductors directly influence U.S. export policy on AI chips, shaping supply chain restrictions and national security considerations.",
+    "candidate_motivation": "These topics represent the most direct policy, trade, and geopolitics signals that would influence or be influenced by US tariffs on semiconductors, including export controls, cross-border negotiations, and key chip players. The shortlist covers tariff policy, tech/trade tensions, and major semiconductor firms relevant to the supply chain and pricing dynamics.",
+    "existing_links_count": "4",
+    "candidate_count": "13",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_export_policy_ai_chips', 'china_semiconductor_policy', 'china_ai_semiconductors', 'china_nvidia_policy', 'nvidia_china_geopolitics', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'nvidia_ai_infrastructure', 'intel_ceo_tan', 'intel_ceo_management']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882699666",
+    "rel_id": "us_tariffs_semiconductors__influences__us_export_policy_ai_chips",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_tariffs_semiconductors', 'target': 'us_export_policy_ai_chips'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US tariffs on semiconductors directly influence U.S. export policy on AI chips, shaping supply chain restrictions and national security considerations.",
+      "type": "INFLUENCES",
+      "source": "us_tariffs_semiconductors",
+      "target": "us_export_policy_ai_chips"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_tariffs_semiconductors__influences__us_export_policy_ai_chips"
+}

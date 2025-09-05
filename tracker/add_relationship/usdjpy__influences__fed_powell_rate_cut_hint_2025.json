@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-04T01:16:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usdjpy",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "The Powell hint signals a likely Fed rate cut, which directly influences USD strength and thus USD/JPY.",
+    "candidate_motivation": "USD/JPY is driven by relative monetary policy, yield differentials, and cross‑currency dynamics. The listed topics directly influence US or Japanese rates, inflation expectations, or major currency cross‑rates, making them strong influences or correlates.",
+    "existing_links_count": "14",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'jgb10y', 'usdcny', 'gbpusd', 'dxy']",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usdjpy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1193455000764811481",
+    "rel_id": "usdjpy__influences__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "15",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdjpy', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'INFLUENCES', 'source': 'usdjpy', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'usdjpy', 'target': 'us_core_pce'}, {'type': 'COMPONENT_OF', 'source': 'usdjpy', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'usdcny'}, {'type': 'PEERS', 'source': 'usdjpy', 'target': 'gbpusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Powell hint signals a likely Fed rate cut, which directly influences USD strength and thus USD/JPY.",
+      "type": "INFLUENCES",
+      "source": "usdjpy",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdjpy__influences__fed_powell_rate_cut_hint_2025"
+}

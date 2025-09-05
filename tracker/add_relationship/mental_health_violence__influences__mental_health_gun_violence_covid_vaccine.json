@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T10:05:35",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "mental_health_violence",
+    "target_id": "mental_health_gun_violence_covid_vaccine",
+    "selection_motivation": "Mental health violence is a primary driver of the specific phenomenon of mental health and gun violence related to COVID‑19 vaccine skepticism, making a direct influence link essential for capturing causal pathways.",
+    "candidate_motivation": "These topics are the most plausible strong influences or peers given the mental health-violence focus, as they cover crime dynamics, gun-violence links, and the social impact of misinformation on public health and safety.",
+    "existing_links_count": "1",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['vaccine_misinformation_violence', 'vaccine_misinformation', 'vaccine_misinformation_impact', 'mental_health_gun_violence_covid_vaccine', 'us_crime_rates_2024', 'us_urban_crime']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'vaccine_misinformation_violence'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745848152",
+    "rel_id": "mental_health_violence__influences__mental_health_gun_violence_covid_vaccine",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'vaccine_misinformation_violence'}, {'type': 'INFLUENCES', 'source': 'mental_health_violence', 'target': 'mental_health_gun_violence_covid_vaccine'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Mental health violence is a primary driver of the specific phenomenon of mental health and gun violence related to COVID‑19 vaccine skepticism, making a direct influence link essential for capturing causal pathways.",
+      "type": "INFLUENCES",
+      "source": "mental_health_violence",
+      "target": "mental_health_gun_violence_covid_vaccine"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "mental_health_violence__influences__mental_health_gun_violence_covid_vaccine"
+}

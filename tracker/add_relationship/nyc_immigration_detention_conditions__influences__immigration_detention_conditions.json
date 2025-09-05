@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:26:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nyc_immigration_detention_conditions",
+    "target_id": "immigration_detention_conditions",
+    "selection_motivation": "NYC’s detention policies set a benchmark that informs and shapes national immigration detention standards, making NYC a key driver of broader detention conditions.",
+    "candidate_motivation": "The source topic concerns conditions for immigration detention in NYC, so the most relevant relationships are with broader immigration detention discussions, policy mechanisms that affect detention (e.g., clemency), migration trends that influence detention volumes, and enforcement actions that impact detainee status.",
+    "existing_links_count": "1",
+    "candidate_count": "4",
+    "all_nodes_count": "102",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['immigration_detention_conditions', '2025_us_migration_trends', 'clemency_system', 'human_trafficking_enforcement']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nyc_immigration_detention_conditions', 'target': 'us_urban_crime'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745848002",
+    "rel_id": "nyc_immigration_detention_conditions__influences__immigration_detention_conditions",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nyc_immigration_detention_conditions', 'target': 'us_urban_crime'}, {'type': 'INFLUENCES', 'source': 'nyc_immigration_detention_conditions', 'target': 'immigration_detention_conditions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "NYC’s detention policies set a benchmark that informs and shapes national immigration detention standards, making NYC a key driver of broader detention conditions.",
+      "type": "INFLUENCES",
+      "source": "nyc_immigration_detention_conditions",
+      "target": "immigration_detention_conditions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nyc_immigration_detention_conditions__influences__immigration_detention_conditions"
+}

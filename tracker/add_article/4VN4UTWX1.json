@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T22:47:10",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4VN4UTWX1",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Biohaven class action could depress biotech sector, modest negative impact on S&P 500 (~-0.5% to -1%) over short horizon (weeks) as investors reassess risk. Catalyst: September 12, 2025 lead plaintiff deadline.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a pending securities class action against Biohaven, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article concerns a company‑specific lawsuit with no direct mapping to macro market handles or catalysts."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on the current status of a pending securities class action against Biohaven, an immediate event affecting the company’s valuation and investor sentiment."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "4VN4UTWX1"
+}

@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:30:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_humanitarian_crisis",
+    "target_id": "journalist_safety_gaza",
+    "selection_motivation": "The Gaza humanitarian crisis is a primary driver of journalist safety conditions, and linking it to journalist_safety_gaza captures the causal relationship for downstream analytics.",
+    "candidate_motivation": "These topics are the strongest peers or influences because they directly pertain to conflict reporting, on-the-ground risks to journalists, and the information environment in Gaza.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['gaza_journalist_safety', 'journalist_safety_gaza', 'gaza_journalist_killings', 'gaza_misinformation', 'disinformation_campaigns', 'israeli_palestinian_policy', 'gaza_humanitarian_crisis']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'journalist_safety_gaza', 'target': 'gaza_journalist_killings'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846718",
+    "rel_id": "gaza_humanitarian_crisis__influences__journalist_safety_gaza",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_journalist_killings'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'disinformation_campaigns'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'journalist_safety_gaza'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_humanitarian_aid'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'israeli_palestinian_policy'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Gaza humanitarian crisis is a primary driver of journalist safety conditions, and linking it to journalist_safety_gaza captures the causal relationship for downstream analytics.",
+      "type": "INFLUENCES",
+      "source": "gaza_humanitarian_crisis",
+      "target": "journalist_safety_gaza"
+    }
+  },
+  "id": "gaza_humanitarian_crisis__influences__journalist_safety_gaza"
+}

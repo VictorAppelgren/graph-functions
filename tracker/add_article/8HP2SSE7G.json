@@ -1,0 +1,35 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T21:02:56",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8HP2SSE7G",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; AEO’s stock rally signals a temporary boost to the retail sector, exerting slight upward pressure on the S&P 500, +0.1‑0.3%.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a new marketing partnership and product launch by American Eagle Outfitters, which is a company update."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Limited edition collection and celebrity endorsement may modestly influence AEO's stock, but the effect is likely short‑term and limited."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a short‑term marketing initiative and immediate stock reaction, indicating a current event."
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "8HP2SSE7G"
+}

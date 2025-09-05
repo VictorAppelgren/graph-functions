@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T00:55:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "I0F5XCH5G",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses the implications of age verification laws on social media and online content, highlighting a significant legal and regulatory shift that impacts user privacy and speech rights, warranting a dedicated node for analysis.",
+      "id": "us_age_verification_laws",
+      "name": "US Age Verification Laws",
+      "type": "policy",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "US Age Verification Laws are a legal policy change affecting social media platforms, privacy, and speech rights."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "US Age Verification Laws is a specific state regulation affecting social media platforms, not a macro driver or broad policy regime with market-wide impact.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

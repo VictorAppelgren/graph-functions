@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T07:08:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_sanctions_iranshipping",
+    "target_id": "dxy",
+    "selection_motivation": "US sanctions on Iranian oil shipping constrain supply, driving up oil prices and boosting the USD’s demand as the global oil market is priced in dollars, thereby influencing the US Dollar Index.",
+    "candidate_motivation": "US sanctions on Iranian oil shipping directly constrain global oil supply, pushing WTI and Brent prices higher, tightening inventories, and raising risk premia that spill into the dollar and Treasury yields. The oil‑price‑inflation‑rate channel also links these shocks to Fed policy expectations and broader inflation metrics.",
+    "existing_links_count": "2",
+    "candidate_count": "14",
+    "all_nodes_count": "42",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['oil_price_decline', 'wti', 'brent', 'us_crude_inventory', 'dxy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'brent'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745846013",
+    "rel_id": "us_sanctions_iranshipping__influences__dxy",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'us_sanctions_iranshipping', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US sanctions on Iranian oil shipping constrain supply, driving up oil prices and boosting the USD’s demand as the global oil market is priced in dollars, thereby influencing the US Dollar Index.",
+      "type": "INFLUENCES",
+      "source": "us_sanctions_iranshipping",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_sanctions_iranshipping__influences__dxy"
+}

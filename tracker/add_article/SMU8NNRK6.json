@@ -1,0 +1,55 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T22:04:12",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SMU8NNRK6",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Tariff‑driven price hikes feed inflation expectations, tightening US yields and Fed policy stance.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "fed_policy",
+        "us_unemployment_claims",
+        "us_services_pmi"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a corporate operational change by Walmart (removing price tags) driven by tariff costs, which is a company‑specific update not related to earnings or broader macro data."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article describes a localized operational change in US retail pricing due to tariff costs, which has limited direct influence on broader macro or market handles."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an immediate operational change by Walmart and Target in response to anticipated tariff-driven price increases, indicating short‑term market impact rather than long‑term structural shifts."
+    },
+    "article_node": {
+      "id": "SMU8NNRK6",
+      "title": "Walmart and Target accused of sneakily removing price tags amid tariff-driven price hikes — leaving customers furious",
+      "summary": "Walmart and Target have begun removing price tags from items, a move linked to anticipated tariff‑driven price increases. Employees have posted videos showing them ripping off tags to reprice goods more quickly, while both chains say the change is part of a new labeling process. Walmart confirmed the policy shift and noted rising costs from tariffs, while Target has not publicly responded. The practice has sparked customer frustration and raised questions about transparency and pricing strategy amid ongoing trade tensions.",
+      "source": "https://nypost.com/2025/09/02/lifestyle/walmart-and-target-accused-of-removing-price-tags-amid-tariff-driven-price-hikes/",
+      "published_at": "2025-09-02T18:43:11+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 9,
+      "successful": 9
+    }
+  },
+  "id": "SMU8NNRK6"
+}

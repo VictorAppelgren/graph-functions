@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:32:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "technology_communications_sector",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "The technology & communications sector is a primary driver of U.S. semiconductor policy, directly influencing tariff decisions on semiconductors.",
+    "candidate_motivation": "These topics are the most plausible strong influences, correlates, or peers for the Technology & Communications Sector due to direct ties to leading hardware producers, AI infrastructure, and policy/regulatory dynamics. They cover chipmakers (Intel, Nvidia, AMD), AI platforms, and export/tariff policies that drive sector-wide performance.",
+    "existing_links_count": "4",
+    "candidate_count": "14",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['intel_ceo_tan', 'nvidia_ai_infrastructure', 'nvidia_amd_chip_revenue_agreement', 'amd_data_center_growth', 'us_chip_export_controls', 'us_chip_exports_china', 'us_china_ai_chip_exports', 'us_tariffs_semiconductors', 'china_nvidia_policy', 'china_nvidia_h20_chips', 'us_china_trade_talks', 'alphabet_ai_gemini', 'openai_gpt5_competition', 'apple_us_manufacturing']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': '5g_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000588654",
+    "rel_id": "technology_communications_sector__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': '5g_infrastructure'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The technology & communications sector is a primary driver of U.S. semiconductor policy, directly influencing tariff decisions on semiconductors.",
+      "type": "INFLUENCES",
+      "source": "technology_communications_sector",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "technology_communications_sector__influences__us_tariffs_semiconductors"
+}

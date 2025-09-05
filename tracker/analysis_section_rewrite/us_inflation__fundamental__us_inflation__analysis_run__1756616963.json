@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:09:23",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756616963",
+    "article_ids": "['KLK2Z03BO', 'LF0UUL917', 'H86O3XRUJ', '4PRAW7Z7Y', 'ZV3QI3K19']",
+    "selected_articles_count": "5",
+    "material_chars": "179472",
+    "output_chars": "2671",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is on the right topic but fails the acceptance gate: it never cites a canonical handle (no ust10y/ust2y link) and it lacks a concrete catalyst window (e.g., “September 16‑17 2025 FOMC meeting” or “October 2025 CPI release”). Add inline citations (LF0UUL917) after every substantive claim and map mortgage rates to the nearest canonical handle (ust10y). Tighten the causal chain: Fed policy → fed‑funds → term‑premium → 30‑yr mortgage rates, and quantify the term‑premium shift (≈+10–15 bp). Include a clear multi‑year regime (6.5–7 % band until a Fed cut or inflation easing), a catalyst window (FOMC 9/16‑17 2025, CPI Oct 2025), and a magnitude range (10–20 bp move). Ensure every sentence links back to the asset with an inline ID; remove any drift (e.g., avoid generic “inflation expectations” without a source). Finally, keep the structure concise: base case, key risks, watch list, confidence.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1756616963"
+}

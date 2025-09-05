@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:18:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756062636",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18294",
+    "output_chars": "1664",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | Tariff-driven reorientation of supply chains and a productivity push in AI/semis/data-center infrastructure lifting ROIC and prompting capex reallocation (SGB2PAZGK)(NL5YYTLF2) | What to watch: tariff deadlines, chip/EV capex announcements, Wyoming energy-cost backdrop shaping baseload power, and ROIC trends confirming regime progression | Probability 50% (NL5YYTLF2)(SGB2PAZGK).\nUp | 12–36 months | Tech leaders with durable ROIC expansion re-rating as capex accelerates in semis/AI and energy infrastructure supported by data-center buildouts and AI compute demand | What to watch: sustained ROIC expansion, capex intensity in semis/AI and energy infra, Nvidia/AI-data-center earnings cadence, and energy-demand signals | Probability 40% (65UUBU0OR)(O4ZEED2EB)(STBVARD8F).\nDown | 0–3 weeks | Geopolitical shocks and shipping disruptions driving a risk-off tilt as Israel–Houthi strikes threaten Red Sea routes and shipping-cost pressure emerges | What to watch: evolving Red Sea route status, UKMTO updates, and broader risk-premia signals that would weigh on growth equities | Probability 60% (I2SJU04DF)(NBX9RA9WX).\nDown | 3–6 months | Bear-case scenario where sustained escalation maintains a higher risk premium and compresses multiples for growth stocks; Shopify forward guidance and GMV trajectory under scrutiny while YouTube Music monetization momentum and Bandsintown live-event data shape near-term cash-flow expectations | What to watch: Shopify forward guidance/GMV growth, Costa/Disney/M&A cadence, and YouTube Music monetization signals via subscriber engagement and live-events integration | Probability 30% (I19NO2GMNF)(I2SJU04DF)(I11)(I12)(I3G1PVPWPD).",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756062636"
+}

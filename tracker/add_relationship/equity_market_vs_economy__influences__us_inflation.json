@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:53:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "equity_market_vs_economy",
+    "target_id": "us_inflation",
+    "selection_motivation": "Equity market performance is a leading indicator of inflation expectations, with market rallies and declines strongly preceding changes in US CPI, making a direct influence link to US inflation essential for macro‑equity analytics.",
+    "candidate_motivation": "These topics represent the strongest direct influences and correlates on the link between the equity market and the economy, spanning major indices, macro indicators, policy, currencies, and commodity drivers. They are likely to be peers or influences of the 'Equity Market vs Economy' axis in a graph.",
+    "existing_links_count": "3",
+    "candidate_count": "15",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['sp500', 'eurostoxx50', 'us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'usd', 'eur', 'oil', 'gold', 'copper', 'wheat', 'core_monthly_cpi', 'china_macro']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373218985",
+    "rel_id": "equity_market_vs_economy__influences__us_inflation",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'eurusd'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'equity_market_vs_economy', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Equity market performance is a leading indicator of inflation expectations, with market rallies and declines strongly preceding changes in US CPI, making a direct influence link to US inflation essential for macro‑equity analytics.",
+      "type": "INFLUENCES",
+      "source": "equity_market_vs_economy",
+      "target": "us_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "equity_market_vs_economy__influences__us_inflation"
+}

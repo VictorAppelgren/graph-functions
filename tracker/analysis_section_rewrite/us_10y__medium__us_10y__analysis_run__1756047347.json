@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T16:57:39",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756047347",
+    "article_ids": "['SK994CBWR', 'FOM34PUWA', '3JR35PMNT', 'SK994CBWR', 'FOM34PUWA']",
+    "selected_articles_count": "5",
+    "material_chars": "107748",
+    "output_chars": "3591",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong base but the write‑up needs a formal, decision‑oriented 3–6 month scenario map with explicit catalysts, timing, and invalidation logic anchored to the three sources (SK994CBWR, FOM34PUWA, 3JR35PMNT). Concrete edits: (1) replace the narrative with a scenario tree: Base case (midpoint of ACMR 2025 guidance, ~$900m revenue; GM ~49.4%, net margin ~13.8% giving ~$120–125m net income in near term), Upside (orders/uptake of Ultra C wb with N2 bubbling accelerates faster than plan; margin expansion), Downside (weaker order flow or export controls/macroe shakes). Tie each branch to a clear trigger window (e.g., Q3–Q4 2025 order intake and tool‑uptake signals; macro rate‑cut timing; export‑control developments) and a single invalidation rule (e.g., if quarterly orders miss guidance by more than a defined threshold or if rate cuts are not anticipated within a concrete date). (2) Quantify near‑term cash/earnings impact using first‑principles: take the Q2 run rate (rev $215m, net income $30m) and guidance midpoint (~$900m for 2025) to derive a near‑term revenue/margin trajectory; reflect gross margin 49.4% and net margin ~13.8% from the sources to anchor the base case and test sensitivities. (3) Tighten macro linkage: replace broad “Fed rate cuts” narrative with explicit timing windows and conditionality (e.g., rate‑cut signals by late 2025 would add risk‑on tilt; absence by early 2026 is a warning flag). (4) Refine the AI/digitalization cross‑theme to ACMR‑specific demand drivers (WFE node transitions, Ultra C wb N2 uptake, and regional capex momentum) rather than broad AI/healthcare exemplars; remove or sharply limit peripheral cross‑asset references (the M&T/AI healthcare piece) unless you can tie it to ACMR demand or risk sentiment. (5) Explicitly map threats and watchlist signals: U.S.–China export controls, China WFE localization cadence, supply‑chain resilience, and Fed path guidance; specify monitoring cadence (quarterly orders, tool adoption milestones, gross margin, and any export‑control developments). (6) Clarify data quality and reconcile conflicts: acknowledge AUVSI’s defunct 2014–2025 projections in FOM34PUWA and cite the 2025 UAS job data as a proxy for macro automation and capex sentiment, noting its imperfect tracking; (7) tighten governance of sources: attribute each assertion to its IDs (SK994CBWR for ACMR results/valuation, FOM34PUWA for UAS macro context, 3JR35PMNT for the dividend/macro‑AI framing) and avoid duplicative or inconsistent figures (e.g., the 2028 revenue forecast) unless you explicitly frame it as a long‑range context. (8) Deliver a concise, 1‑paragraph synthesis that ends with: base case, 1–2 alts, key risks, watch‑list signals, and a stated confidence level, with the near‑term catalysts clearly enumerated. This will transform the piece from a narrative digest into a testable, world‑class 3–6 month thesis.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__medium__us_10y__analysis_run__1756047347"
+}

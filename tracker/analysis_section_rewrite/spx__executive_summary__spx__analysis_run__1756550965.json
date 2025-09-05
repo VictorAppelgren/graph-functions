@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T13:16:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756550965",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5642",
+    "output_chars": "807",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "I’ll focus the brief on **CRWD** (CrowdStrike).  \nCould you paste the current draft so I can assess its depth, causal chain, catalyst clarity, and alignment with the 3‑6‑month horizon? Once I see the text I’ll provide a concise paragraph of actionable edits.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756550965"
+}

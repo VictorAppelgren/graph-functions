@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T10:37:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "gbpusd",
+    "selection_motivation": "UK gilt yield is a primary driver of GBP/USD, directly influencing the currency pair through interest rate differentials; linking them captures the causal path for analytics.",
+    "candidate_motivation": "GBP/USD is driven by relative currency strength, interest‑rate differentials, and global risk sentiment. Therefore, topics that directly affect the dollar index, U.S. and U.K. monetary policy, inflation data, and sovereign yields are the most relevant influences.",
+    "existing_links_count": "13",
+    "candidate_count": "14",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['dxy', 'usdjpy', 'usdcny', 'eurusd', 'fed_policy', 'ecb_policy', 'us_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'uk_30yr_gilt_yield', 'gilt10y']",
+    "existing_links_before_len": "13",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gbpusd', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'uk_30yr_gilt_yield'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gbpusd', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'gbpusd', 'target': 'dxy'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118475269",
+    "rel_id": "uk_30yr_gilt_yield__influences__gbpusd",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt yield is a primary driver of GBP/USD, directly influencing the currency pair through interest rate differentials; linking them captures the causal path for analytics.",
+      "type": "INFLUENCES",
+      "source": "uk_30yr_gilt_yield",
+      "target": "gbpusd"
+    }
+  },
+  "id": "uk_30yr_gilt_yield__influences__gbpusd"
+}

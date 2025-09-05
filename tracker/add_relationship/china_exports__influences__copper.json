@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T03:28:06",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "copper",
+    "selection_motivation": "China exports are a leading indicator of global demand for industrial metals; higher exports signal stronger Chinese manufacturing activity, which directly boosts copper consumption and price.",
+    "candidate_motivation": "China Exports are driven by global demand, commodity prices, currency strength, and major economies’ policy and economic conditions. Therefore topics that capture US and Eurozone macro data, US dollar dynamics, key commodity prices, and China’s own credit environment are strong influences, correlates, or peers.",
+    "existing_links_count": "10",
+    "candidate_count": "21",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "21",
+    "candidate_ids_preview": "['usdcny', 'dxy', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'china_credit_impulse', 'oil_price_decline', 'brent', 'wti', 'copper', 'gold', 'wheat', 'spx', 'sx5e']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1220476598529033502",
+    "rel_id": "china_exports__influences__copper",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China exports are a leading indicator of global demand for industrial metals; higher exports signal stronger Chinese manufacturing activity, which directly boosts copper consumption and price.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__copper"
+}

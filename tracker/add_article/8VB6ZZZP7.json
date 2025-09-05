@@ -1,0 +1,37 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T21:29:28",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "8VB6ZZZP7",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; Rising advertising spend on smart TVs could push US consumer price inflation higher.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": [
+        "smart_tv_ad_spend"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses privacy concerns and instructions for disabling ACR on smart TVs, which does not fit any of the predefined categories."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article discusses consumer privacy and advertising technology for smart TVs, which does not directly affect any of the canonical macro market handles or macro pillars covered by the system."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate privacy concerns and actionable steps for consumers regarding ACR in smart TVs."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 1
+    }
+  },
+  "id": "8VB6ZZZP7"
+}

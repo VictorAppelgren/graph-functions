@@ -1,0 +1,43 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-15T03:22:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_urban_crime",
+    "target_id": "dc_crime_crisis",
+    "selection_motivation": "The link to 'dc_crime_crisis' is the weakest as it overlaps significantly with other links related to crime trends and federal interventions, providing less unique analytical value.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to 'dc_crime_crisis' is the weakest as it overlaps significantly with other links related to crime trends and federal interventions, providing less unique analytical value.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'california_homelessness_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_violent_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_crime_crisis'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780081434",
+    "rel_id": "us_urban_crime__influences__dc_crime_crisis",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'political_manipulation_doj'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'california_homelessness_policy'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_violent_crime'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_police_control'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'dc_crime_trends'}, {'type': 'INFLUENCES', 'source': 'us_urban_crime', 'target': 'federal_intervention_urban_crime'}]",
+    "status": "error",
+    "error": "Object of type DateTime is not JSON serializable"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "us_urban_crime",
+      "target": "dc_crime_crisis"
+    },
+    "prioritized_link": {
+      "motivation": "Linking U.S. Urban Crime Dynamics to Federal Intervention in Predominantly Black Cities will enhance the understanding of how urban crime is influenced by targeted federal policies, particularly in communities facing systemic challenges.",
+      "type": "INFLUENCES",
+      "source": "us_urban_crime",
+      "target": "federal_intervention_in_black_cities"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to 'dc_crime_crisis' is the weakest as it overlaps significantly with other links related to crime trends and federal interventions, providing less unique analytical value.",
+      "remove_link": "dc_crime_crisis"
+    },
+    "removal_decision": {
+      "motivation": "The link to 'dc_crime_crisis' is the weakest as it overlaps significantly with other links related to crime trends and federal interventions, providing less unique analytical value.",
+      "remove_link": "dc_crime_crisis"
+    },
+    "source_node": {
+      "last_updated": 

@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T18:39:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WJOOO1RNJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; US inflation likely to rise 0.3-0.6% in Q3 2025 as Apple price hikes offset by tariff costs, pushing US core PCE up, strengthening the dollar (DXY +0.5-1.0%) and tightening the 10‑year Treasury yield (+5-10 bp).",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy",
+        "dxy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on Apple’s upcoming product launch and new features, which is a company update rather than earnings, regulation, or macro data."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article reports a corporate product launch with no direct macro‑market impact or catalyst window tied to a canonical handle."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports an upcoming product launch event and pricing changes, which are immediate events affecting Apple."
+    },
+    "article_node": {
+      "id": "WJOOO1RNJ",
+      "title": "The iPhone 17 event is likely in September: What to expect from Apple's upcoming launch",
+      "summary": "Apple is expected to unveil the iPhone 17 lineup in September, with rumors pointing to new color options, a slimmer iPhone 17 Air, and a titanium frame for the Air. Leaks suggest the Pro models will switch from titanium to aluminum and feature an expanded camera island, while the standard models may see a 120Hz display and higher storage starts at 256GB. Pricing is likely to rise by about $50 across the range to offset rising component costs and tariffs, and the event may also showcase new Apple Watch, AirPods, and iOS 26 features.",
+      "source": "https://www.engadget.com/mobile/smartphones/the-iphone-17-event-is-likely-in-september-what-to-expect-from-apples-upcoming-launch-153024626.html",
+      "published_at": "2025-08-25T21:15:32+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "WJOOO1RNJ"
+}

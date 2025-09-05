@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T10:33:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "UH4RAZS0K",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US 30‑year Treasury yield surge and UK long‑bond rally signal tightening sentiment, while Fed Chair succession talks add policy uncertainty.",
+      "existing_ids": [
+        "ust30y",
+        "uk_30yr_gilt_yield",
+        "gbpusd",
+        "fed_policy",
+        "eu_defense_spending"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article reports a spike in US Treasury yields due to falling long‑maturity European debt, describing a market movement."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The node to which the impact should be assessed was not provided, so I cannot determine relevance to the article."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to short‑term events affecting the 30‑year UST yield, such as the spike in long‑maturity yields and Fed Chair interview announcements."
+    },
+    "article_node": {
+      "id": "UH4RAZS0K",
+      "title": "US Joins Global Bond Rout, China Military Showcase, Poland’s Paralysis",
+      "summary": "US Treasury yields spiked as long‑maturity European debt fell, pushing the 30‑year yield toward 5%. UK long bonds hit a 1998 high, dragging the pound lower amid budget concerns. The Treasury Secretary announced plans to interview candidates for the Fed Chair role. China’s Xi showcased military strength at a parade, while Google faced antitrust scrutiny over data sharing. Meanwhile, Poland’s political paralysis threatens NATO’s defense posture in Europe.",
+      "source": "https://www.bloomberg.com/news/audio/2025-09-03/bloomberg-daybreak-europe-us-joins-global-bond-rout-podcast",
+      "published_at": "2025-09-03T05:39:40.810000+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "UH4RAZS0K"
+}

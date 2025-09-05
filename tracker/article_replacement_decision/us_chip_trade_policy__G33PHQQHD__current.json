@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T16:13:21",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_chip_trade_policy",
+    "new_article_id": "G33PHQQHD",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['UV9M96PL6', '3T8AGCL7T', '0XD2DT5W5', '3M2SHE57Q']",
+    "mode": "CAN_REPLACE",
+    "target_id": "UV9M96PL6",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "UV9M96PL6",
+      "motivation": "The new article provides critical updates on the CHIPS Act and its implications for Intel and other companies, which are not covered in existing articles."
+    }
+  },
+  "id": "us_chip_trade_policy__G33PHQQHD__current"
+}

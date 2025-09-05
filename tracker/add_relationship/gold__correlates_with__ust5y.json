@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T19:55:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "ust5y",
+    "selection_motivation": "Gold prices exhibit a robust inverse correlation with short‑term U.S. Treasury yields, reflecting risk‑sentiment dynamics that drive safe‑haven demand. Adding a CORRELATES_WITH link to ust5y captures this key transmission channel for portfolio stress testing and risk analytics.",
+    "candidate_motivation": "Gold is a commodity that reacts strongly to macro‑financial variables—inflation, monetary policy, sovereign yields, and currency strength—as well as to other commodity prices and equity market sentiment. The listed topics are those that have a direct or highly correlated influence on gold’s price movements.",
+    "existing_links_count": "10",
+    "candidate_count": "17",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'ecb_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'wti', 'brent', 'wheat', 'copper', 'euro_inflation', 'spx']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179945301394327598",
+    "rel_id": "gold__correlates_with__ust5y",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Gold prices exhibit a robust inverse correlation with short‑term U.S. Treasury yields, reflecting risk‑sentiment dynamics that drive safe‑haven demand. Adding a CORRELATES_WITH link to ust5y captures this key transmission channel for portfolio stress testing and risk analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "ust5y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gold__correlates_with__ust5y"
+}

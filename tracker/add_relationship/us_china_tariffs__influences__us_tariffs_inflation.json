@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:25:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_tariffs",
+    "target_id": "us_tariffs_inflation",
+    "selection_motivation": "US-China Tariffs directly drive inflationary pressures in the US, making the link to US Tariffs and Inflation essential for macro analysis.",
+    "candidate_motivation": "These topics are the strongest peers, correlates, or influences on US-China Tariffs, capturing bilateral policy, negotiation dynamics, and tariff-driven macro effects.",
+    "existing_links_count": "10",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_china_tariffs', 'us_china_tariff_truce', 'china_us_tariff_truce', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'tariff_driven_inflation', 'us_tariffs_inflation', 'us_china_trade_talks', 'us_tariffs_pharmaceuticals_semiconductors']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1179944201882698148",
+    "rel_id": "us_china_tariffs__influences__us_tariffs_inflation",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_chip_exports_china'}, {'type': 'INFLUENCES', 'source': 'us_china_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US-China Tariffs directly drive inflationary pressures in the US, making the link to US Tariffs and Inflation essential for macro analysis.",
+      "type": "INFLUENCES",
+      "source": "us_china_tariffs",
+      "target": "us_tariffs_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_tariffs__influences__us_tariffs_inflation"
+}

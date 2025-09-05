@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T22:31:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dxy",
+    "target_id": "gilt10y",
+    "selection_motivation": "DXY movements directly affect UK gilt yields through risk‑premium flows and currency‑hedged portfolio adjustments, making it a primary driver of gilt pricing.",
+    "candidate_motivation": "The US Dollar Index is driven by US monetary policy, inflation expectations, Treasury yields, and global currency and commodity markets. Topics that directly influence or correlate with these factors are the most relevant peers or influences.",
+    "existing_links_count": "20",
+    "candidate_count": "25",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "25",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'us_core_pce', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'us_unemployment_claims', 'us_services_pmi', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd', 'gold', 'wti', 'brent', 'copper', 'wheat', 'bund10y', 'gilt10y', 'jgb10y', 'uk_30yr_gilt_yield']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6949055324544304644",
+    "rel_id": "dxy__influences__gilt10y",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'gilt10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "DXY movements directly affect UK gilt yields through risk‑premium flows and currency‑hedged portfolio adjustments, making it a primary driver of gilt pricing.",
+      "type": "INFLUENCES",
+      "source": "dxy",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dxy__influences__gilt10y"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T21:31:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_powell_rate_cut_hint_2025",
+    "target_id": "dxy",
+    "selection_motivation": "The hint signals expected monetary easing, which historically weakens the USD relative to other currencies, directly influencing the US Dollar Index.",
+    "candidate_motivation": "Fed rate cut hints directly influence short‑term and long‑term Treasury yields, inflation expectations, the USD, and major equity indices, while also affecting other central bank policy and global FX pairs.",
+    "existing_links_count": "3",
+    "candidate_count": "18",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'euro_inflation', 'ecb_policy', 'dxy', 'usdjpy', 'usdcny', 'gbpusd', 'eurusd', 'spx', 'sx5e', 'sofr', 'euribor', 'us_unemployment_claims']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186904767",
+    "rel_id": "fed_powell_rate_cut_hint_2025__influences__dxy",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_powell_rate_cut_hint_2025', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The hint signals expected monetary easing, which historically weakens the USD relative to other currencies, directly influencing the US Dollar Index.",
+      "type": "INFLUENCES",
+      "source": "fed_powell_rate_cut_hint_2025",
+      "target": "dxy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_powell_rate_cut_hint_2025__influences__dxy"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T11:52:58",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "X234SZYRS",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; CWEN AT‑Market offering on Aug 6 2025 may lift green‑energy equity valuations and influence S&P 500 green‑sector weightings.",
+      "existing_ids": [],
+      "new_names": [
+        "CWEN"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a capital‑raising equity offering by Clearway Energy, which is a company‑specific news event unrelated to earnings, fitting the company_update category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant $100 million at‑the‑market equity offering for Clearway Energy, directly affecting its capital structure, valuation, and future investment plans."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a near‑term equity offering by CWEN, an event that directly impacts the company’s valuation and capital structure."
+    },
+    "article_node": {
+      "id": "X234SZYRS",
+      "title": "Clearway Energy, Inc. Declares $100,000,000 At-The-Market (ATM) Equity Offering Program",
+      "summary": "Clearway Energy, Inc. (NYSE:CWEN) has launched a $100 million at‑the‑market equity offering, partnering with major banks to sell Class C shares at NYSE pricing. Proceeds will fund capital expenditures, acquisitions, debt repayment and general corporate needs. The program, governed by a prospectus supplement dated August 6 2025, positions CWEN—an owner of 12 GW of renewable and dispatchable generation—as a top green stock favored by hedge funds.",
+      "source": "https://finance.yahoo.com/news/clearway-energy-inc-declares-100-083952560.html?_guc_consent_skip=1756802923",
+      "published_at": "2025-09-02T08:39:52+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "X234SZYRS"
+}

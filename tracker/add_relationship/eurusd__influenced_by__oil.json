@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T09:13:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCED_BY",
+    "source_id": "eurusd",
+    "target_id": "oil",
+    "selection_motivation": "Oil price movements are a key macro driver of the EUR/USD pair, influencing both the USD and EUR through import costs and energy market sentiment.",
+    "candidate_motivation": "EURUSD is a currency pair, so its dynamics are most directly influenced by macroeconomic indicators, monetary policy, and other currency-related factors. Topics that directly affect the euro, the dollar, or the broader macro environment—such as inflation, central‑bank policy, sovereign yields, and key commodity prices—are the strongest candidates for influence or correlation.",
+    "existing_links_count": "7",
+    "candidate_count": "14",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "14",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'us_inflation_expectations']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'usd'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168684103302643712",
+    "rel_id": "eurusd__influenced_by__oil",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'oil'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'usd'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price movements are a key macro driver of the EUR/USD pair, influencing both the USD and EUR through import costs and energy market sentiment.",
+      "type": "INFLUENCED_BY",
+      "source": "eurusd",
+      "target": "oil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influenced_by__oil"
+}

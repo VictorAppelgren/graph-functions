@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:40:41",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "mental_health_gun_violence",
+    "target_id": "mental_health_gun_violence_covid_vaccine",
+    "selection_motivation": "The general mental health and gun violence node is a major driver of the specific subtopic linking COVID‑vaccine skepticism to mental health and gun violence, providing a hierarchical relationship that enhances query precision and LLM reasoning.",
+    "candidate_motivation": "These topics are the strongest immediate influences or correlates of mental health and gun violence, including high-profile incidents, policy implications, and crime dynamics that commonly cluster with the source.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['mental_health_gun_violence', 'mental_health_gun_violence_covid_vaccine', 'mental_health_violence', 'uvalde_school_shooting_response', 'uvalde_school_shooting_legal_implications', 'uvalde_school_shooting', 'vaccine_misinformation_violence', 'vaccine_misinformation_impact']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_gun_violence', 'target': 'mental_health_violence'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163019",
+    "rel_id": "mental_health_gun_violence__influences__mental_health_gun_violence_covid_vaccine",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'mental_health_gun_violence', 'target': 'mental_health_gun_violence_covid_vaccine'}, {'type': 'INFLUENCES', 'source': 'mental_health_gun_violence', 'target': 'mental_health_violence'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The general mental health and gun violence node is a major driver of the specific subtopic linking COVID‑vaccine skepticism to mental health and gun violence, providing a hierarchical relationship that enhances query precision and LLM reasoning.",
+      "type": "INFLUENCES",
+      "source": "mental_health_gun_violence",
+      "target": "mental_health_gun_violence_covid_vaccine"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "mental_health_gun_violence__influences__mental_health_gun_violence_covid_vaccine"
+}

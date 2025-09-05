@@ -1,0 +1,37 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-22T10:10:40",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "4AVX1ENY2",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a significant increase in retail investment in Germany, driven by macroeconomic concerns and changing attitudes towards equities, warranting a new atomic node to capture this emerging trend.",
+      "id": "german_retail_investment",
+      "name": "German Retail Investment",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "Significant rise in German retail investment signals a macro-level shift affecting market dynamics."
+    },
+    "relevance_gate": {
+      "should_add": true,
+      "reason": "German retail investment is a macro driver that influences equity demand and market sentiment, directly impacting tradable assets in Germany.",
+      "confidence": 0.9,
+      "failure_category": null
+    },
+    "generated_query": {
+      "motivation": "This query is constructed to comprehensively capture the evolving landscape of retail investment in Germany, focusing on the significant increase in stock ownership and the rise of ETFs, while also addressing the underlying economic concerns and social influences driving this trend. It ensures that all relevant synonyms, abbreviations, and related terms are included for robust graph analytics and LLM reasoning.",
+      "query": "(Germany OR German OR DAX OR Deutsche Aktienindex OR retail investors OR mom and pop investors OR individual investors OR stocks OR equities OR stock ownership OR stock market OR investment OR investments OR ETF OR ETFs OR exchange-traded funds OR assets OR pension OR pensions OR pension system OR retirement OR financial security OR financial markets OR market trends OR market analysis OR economic concerns OR social media OR TikTok OR Instagram OR youth engagement OR investment attitudes OR investment behavior OR financial literacy OR news OR analysis OR report OR trend OR update OR recent OR breaking)"
+    },
+    "importance_classification": {
+      "importance": 3,
+      "rationale": "The rise in German retail investors represents a medium‑horizon, sector‑specific driver of equity demand. It signals a structural shift in market participation that can influence the DAX and broader equity markets over days to months, but it does not have the immediate, high‑centrality impact of core macro variables or intraday traded assets. Hence it is best classified as a level‑3 medium‑importance macro indicator."
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:755"
+}

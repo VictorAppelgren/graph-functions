@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:56:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ecb_policy",
+    "target_id": "political_influence_on_stocks",
+    "selection_motivation": "ECB policy is a major macro driver that shapes political influence on stock markets worldwide, especially in European equities, and is not yet linked in the graph.",
+    "candidate_motivation": "These topics are the most plausible political and policy-driven influencers or correlates for stock performance, given that policy shifts, tariffs, and international trade relations directly impact equities and sector valuations.",
+    "existing_links_count": "7",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'us_tariffs_semiconductors', 'us_chip_export_controls', 'us_china_trade_talks', 'us_china_trade_relations']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814271494",
+    "rel_id": "ecb_policy__influences__political_influence_on_stocks",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euro_inflation'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eurostoxx50'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'euribor'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'ecb_policy', 'target': 'political_influence_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "ECB policy is a major macro driver that shapes political influence on stock markets worldwide, especially in European equities, and is not yet linked in the graph.",
+      "type": "INFLUENCES",
+      "source": "ecb_policy",
+      "target": "political_influence_on_stocks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ecb_policy__influences__political_influence_on_stocks"
+}

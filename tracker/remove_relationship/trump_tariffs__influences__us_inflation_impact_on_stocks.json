@@ -1,0 +1,63 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-24T21:59:00",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "trump_tariffs",
+    "target_id": "us_inflation_impact_on_stocks",
+    "selection_motivation": "The link to us_inflation_impact_on_stocks is the most indirect and least specific to tariff policy, providing the weakest evidence of a direct influence compared to the other existing links.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to us_inflation_impact_on_stocks is the most indirect and least specific to tariff policy, providing the weakest evidence of a direct influence compared to the other existing links.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175440602255327975",
+    "rel_id": "trump_tariffs__influences__us_inflation_impact_on_stocks",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'tariff_driven_inflation'}, {'type': 'INFLUENCES', 'source': 'trump_tariffs', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_inflation_impact_on_stocks"
+    },
+    "prioritized_link": {
+      "motivation": "Trump Tariffs directly imposed duties on pharmaceuticals and semiconductors, making them a primary driver of the specific tariff policy in that sector.",
+      "type": "INFLUENCES",
+      "source": "trump_tariffs",
+      "target": "us_tariffs_pharmaceuticals_semiconductors"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to us_inflation_impact_on_stocks is the most indirect and least specific to tariff policy, providing the weakest evidence of a direct influence compared to the other existing links.",
+      "remove_link": "us_inflation_impact_on_stocks"
+    },
+    "removal_decision": {
+      "motivation": "The link to us_inflation_impact_on_stocks is the most indirect and least specific to tariff policy, providing the weakest evidence of a direct influence compared to the other existing links.",
+      "remove_link": "us_inflation_impact_on_stocks"
+    },
+    "source_node": {
+      "last_updated": "2023-10-06",
+      "implications": "",
+      "level": "main",
+      "current_analysis": "",
+      "importance": 1,
+      "query": "(Trump OR Trump Administration OR President Trump OR Donald Trump) OR (immigration OR immigrant OR immigrants OR immigration policy OR ICE OR Customs and Border Protection OR deportation OR asylum OR visa OR visas OR undocumented OR illegal) OR (labor OR jobs OR employment OR unemployment OR Bureau of Labor Statistics OR BLS OR Erika McEntarfer OR job report OR job numbers OR weak jobs OR labor market) OR (White House OR White House renovations OR ballroom OR East Wing OR historic preservation OR National Historic Preservation Act OR renovation OR construction OR McCrery Architects OR $200 million) OR (Jeanine Pirro OR U.S. Attorney OR Senate confirmation OR political controversy OR legal) OR (Chinese immigrants OR immigration raids OR fear OR asylum seekers OR political repression OR censorship) OR (tariffs OR trade policy OR revenue OR customs duties OR economic impact OR tax policy OR government revenue) OR (news OR update OR analysis OR report OR trend OR development OR breaking OR recent)",
+      "motivation": "The article highlights the significant impact of Trump's tariffs on U.S. revenue generation, necessitating a dedicated node to analyze the implications of tariff policies on the economy and trade.",
+      "last_queried_at": "2025-08-13T15:15:10+00:00",
+      "importance_rationale": "Trump tariffs are a macro-level policy decision with immediate and significant impact on trade flows, commodity prices, currency markets, and corporate earnings, making it a high-priority, intraday-relevant topic.",
+      "type": "macro",
+      "fundamental_analysis": "",
+      "queries": 5,
+      "parent_id": "XHVNKX",
+      "name": "Trump Tariffs",
+      "id": "trump_tariffs",
+      "last_queried": "2025-08-21T18:50:53.345000000+00:00",
+      "medium_analysis": "",
+      "status": "active"
+    }
+  },
+  "id": "trump_tariffs__influences__us_inflation_impact_on_stocks"
+}

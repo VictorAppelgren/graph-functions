@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:48:25",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "geopolitics_corporate_strategy",
+    "target_id": "us_trade_policy_inflation",
+    "selection_motivation": "Geopolitical dynamics directly shape U.S. trade policy and inflation expectations, making this link essential for understanding macro drivers.",
+    "candidate_motivation": "The selected topics are closely related to geopolitical dynamics and corporate strategy, influencing market conditions and corporate decision-making. Their interconnections with the source topic suggest they could serve as strong influences, correlates, or peers.",
+    "existing_links_count": "1",
+    "candidate_count": "15",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_china_trade_relations', 'ukraine_geopolitics', 'us_tariffs_on_technology', 'us_china_tariff_truce', 'us_china_trade_talks', 'china_macro', 'us_inflation', 'geopolitics_corporate_strategy', 'us_russia_ukraine_diplomacy', 'political_influence_on_business', 'us_trade_policy_inflation', 'us_china_chip_negotiations', 'us_tariffs_semiconductors', 'us_china_supply_chain_risks', 'china_semiconductor_policy']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161583",
+    "rel_id": "geopolitics_corporate_strategy__influences__us_trade_policy_inflation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'geopolitics_corporate_strategy', 'target': 'us_china_trade_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Geopolitical dynamics directly shape U.S. trade policy and inflation expectations, making this link essential for understanding macro drivers.",
+      "type": "INFLUENCES",
+      "source": "geopolitics_corporate_strategy",
+      "target": "us_trade_policy_inflation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "geopolitics_corporate_strategy__influences__us_trade_policy_inflation"
+}

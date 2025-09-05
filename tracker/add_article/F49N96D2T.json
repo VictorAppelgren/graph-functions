@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:07:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "F49N96D2T",
+    "topic_discovery_motivation": "Article highlights the cultural significance and evolving identities within the K-pop industry, which may connect to broader themes of cultural representation and community influence not currently captured in existing nodes.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 2,
+      "existing_ids": [],
+      "new_names": [
+        "K-pop Cultural Representation",
+        "Fandom Influence in Music Industry"
+      ]
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses a Netflix animated film’s cultural impact and fan culture, which does not fit any of the specified categories such as macroeconomic events, earnings, regulation, policy statements, central bank actions, economic data releases, geopolitical events, company updates, or market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses a Netflix animated film that highlights K-pop fan culture and its global success, which could influence the K-pop industry and fan dynamics, but the specific node is unclear and the impact appears modest."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "article_node": {
+      "id": "F49N96D2T",
+      "title": "‘Las guerreras K-pop’ es una buena película. Esta es la razón",
+      "summary": "La película de animación de Netflix, Las guerreras K-pop, ha sorprendido a críticos y espectadores al convertirse en un éxito mundial, destacando su relevancia cultural y su innovadora representación de la 'fandustria' del K-pop. A través de la historia de una banda femenina que lucha contra demonios, la película refleja la evolución de las identidades culturales y la importancia de los fans en el éxito del K-pop. Con una mezcla de idiomas y estilos, la obra desafía las nociones tradicionales de raza y cultura, sugiriendo que el futuro está en la comunidad de seguidores más que en las estructuras de poder convencionales.",
+      "source": "https://www.nytimes.com/es/2025/08/22/espanol/opinion/guerreras-k-pop-netflix-globalismo.html",
+      "published_at": "2025-08-22T07:00:11.459000+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "F49N96D2T"
+}

@@ -1,0 +1,61 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T14:13:45",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JD6D009I9",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; global 30‑year bond yields spiking and gold rallying reflect Fed policy uncertainty and inflation fears, shifting safe‑haven flows from fixed income to gold and currency markets.",
+      "existing_ids": [
+        "ust30y",
+        "bund10y",
+        "gilt10y",
+        "ust10y",
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy",
+        "gold",
+        "dxy",
+        "eurusd",
+        "sofr",
+        "us_unemployment_claims",
+        "us_services_pmi",
+        "spx",
+        "sx5e"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article describes a worldwide spike in bond yields and a corresponding gold rally, indicating a major macroeconomic event affecting fixed income markets and safe‑haven flows."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to determine node relevance as node not specified; article covers global bond yields and gold, but no node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent market movements in yields and gold, reflecting immediate investor sentiment and short‑term flows."
+    },
+    "article_node": {
+      "id": "JD6D009I9",
+      "title": "Investors are dumping bonds globally while gold is soaring. Here's why",
+      "summary": "Bond yields have spiked worldwide, with 30‑year Treasury and European sovereign yields hitting multi‑year highs, prompting a global sell‑off in fixed income. In contrast, gold has rallied to record levels, as investors view it as a hedge against fiscal excesses, potential debt crises, and political interference in central bank policy. The shift reflects growing fears of inflation, debt sustainability, and dollar debasement, driving safe‑haven flows away from bonds toward the physical asset.",
+      "source": "https://www.cnbc.com/2025/09/04/investors-dump-bonds-gold-record-high.html",
+      "published_at": "2025-09-04T07:25:06+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 15,
+      "successful": 15
+    }
+  },
+  "id": "JD6D009I9"
+}

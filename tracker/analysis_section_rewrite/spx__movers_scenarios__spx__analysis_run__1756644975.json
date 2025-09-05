@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T15:27:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756644975",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7036",
+    "output_chars": "851",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft satisfies most criteria but needs tightening: 1) add an explicit “spx” reference in every line to satisfy canonical‑handle mapping; 2) insert a brief causal link (e.g., “Fed cut → lower 10‑yr yield → risk‑premium easing → spx +0.5‑1.0%”) to meet the transmission‑path rule; 3) split the overlapping Aug 29‑Sep 5 window into two distinct windows—one for the Tesla lawsuit outcome (Aug 29‑30) and one for AI‑sector earnings weakness (Sep 1‑5)—or combine them only if the same catalyst drives both; 4) adjust probabilities to reflect source confidence (Fed cut 70%, Tesla lawsuit 35% favorable, concentration risk 45%, AI weakness 30%) and include a brief invalidation clause (e.g., “earlier Fed cut or core PCE <2.5% would flip the bias”); 5) add missing citations for the magnitude ranges (e.g., B1KYJ1GPU for Fed cut, LJZYDXVL3 for Tesla, CG8ZKHFI2/FAN5RYW6T for concentration, 5GZPY1XUE/3YAQ8JUPL for AI); 6) keep each line a single sentence, no period at the end, and avoid filler words. These edits will ensure full compliance with the format, mapping, and causal‑chain requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__movers_scenarios__spx__analysis_run__1756644975"
+}

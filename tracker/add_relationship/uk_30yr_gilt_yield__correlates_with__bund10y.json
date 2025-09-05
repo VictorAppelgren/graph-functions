@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T04:38:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "bund10y",
+    "selection_motivation": "UK 30‑year gilt yields are strongly correlated with German 10‑year Bund yields, providing a key cross‑border sovereign debt benchmark for European rate dynamics.",
+    "candidate_motivation": "UK 30‑year gilt yields move in tandem with relative term‑structure dynamics, monetary policy signals, and currency/credit conditions. The listed topics are the primary drivers or peers that influence or correlate with the UK 30‑year yield through relative yields, policy expectations, inflation, and FX dynamics.",
+    "existing_links_count": "4",
+    "candidate_count": "15",
+    "all_nodes_count": "41",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['gilt10y', 'bund10y', 'ust10y', 'ust30y', 'ust2y', 'ust5y', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ecb_policy', 'euro_inflation', 'us_inflation', 'us_core_pce', 'gbpusd', 'dxy']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157427303257473541",
+    "rel_id": "uk_30yr_gilt_yield__correlates_with__bund10y",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK 30‑year gilt yields are strongly correlated with German 10‑year Bund yields, providing a key cross‑border sovereign debt benchmark for European rate dynamics.",
+      "type": "CORRELATES_WITH",
+      "source": "uk_30yr_gilt_yield",
+      "target": "bund10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "uk_30yr_gilt_yield__correlates_with__bund10y"
+}

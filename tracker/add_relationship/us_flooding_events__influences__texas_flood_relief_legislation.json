@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T14:48:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_flooding_events",
+    "target_id": "texas_flood_relief_legislation",
+    "selection_motivation": "US Flooding Events directly drive the enactment of state‑level flood relief legislation, making Texas Flood Relief Legislation a natural downstream policy response.",
+    "candidate_motivation": "US flood events are driven by climate risks, hydrological extremes, and the policy/infrastructure response. The shortlist includes direct flood drivers, water-management initiatives, and disaster-relief funding that could plausibly influence flood outcomes.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['glacial_outburst_flooding', 'glacier_outburst_flooding', 'rising_sea_levels', 'bric_program', 'climate_loss_damage_funding', 'nm_water_testing', 'texas_flood_relief_legislation', 'urban_heatwaves', 'europe_heatwaves_wildfires', 'climate_judiciary_project']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_flooding_events', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745845829",
+    "rel_id": "us_flooding_events__influences__texas_flood_relief_legislation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_flooding_events', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_flooding_events', 'target': 'texas_flood_relief_legislation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Flooding Events directly drive the enactment of state‑level flood relief legislation, making Texas Flood Relief Legislation a natural downstream policy response.",
+      "type": "INFLUENCES",
+      "source": "us_flooding_events",
+      "target": "texas_flood_relief_legislation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_flooding_events__influences__texas_flood_relief_legislation"
+}

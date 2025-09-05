@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T17:45:45",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756049983",
+    "drivers_count": "3",
+    "material_chars": "1291",
+    "output_chars": "4964",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong on-ramp: the piece coherently anchors a base-case Regime A with a productivity/automation productivity thesis (NL5YYTLF2), ties it to durable earnings in high‑moat franchises, and uses Ford’s EV/capex signal and ACMR’s 2025 revenue/margin anchors (22PL3Q360) plus a four‑regime EURUSD spine (5S9GJV2O3; UVEQ2SJ0W; HWGNUP2XG) to organize cross‑asset dynamics. However, to reach world‑class quality you need: (1) a formal regime map with explicit, source‑backed criteria and time horizons for A→B→C (e.g., automation exposure threshold anchored to NL5YYTLF2 and “labor slack deteriorates over multiple quarters”), and a clear invalidation rule if policy space does not materialize; the current draft leaves the A/B/C definitions and the policy-space trigger underdefined (and contains the incomplete “policy space prese” fragment that must be fixed). (2) A grounded causal chain from macro productivity to capex, to earnings visibility and multiples, with quantified pass-through at each step; tie the Ford and ACMR anchors to forecast paths (e.g., how EV-cycle cash/EBIT and 2025 gross margin ~4% translate into equity/credit pricing under each regime). (3) Concrete, source-backed scenario ranges instead of qualitative statements: present base/minor/major tilt outcomes with bounds derived from the Ford/ACMR numbers and the 25% automation anchor, while avoiding unsubstantiated extrapolation. (4) A crisp watch-list with 4–6 signals, cadence, and explicit invalidation criteria (quarters of automation exposure crossing threshold, labor slack metrics, policy-space announcements, Ford/ACMR milestone releases, and a regime‑shift cue in EURUSD), each tied to a source, not left qualitative. (5) A reconciled, non-conflicting citation approach: attach claims to precise IDs immediately after the claim, fix any truncated phrases, and ensure coverage of all critical sources (NL5YYTLF2, 22PL3Q360, 5S9GJV2O3, UVEQ2SJ0W, HWGNUP2XG) with minimal redundancy. (6) Separate and sharpen FX transmission logic from the primary regime narrative, offering a conditional EURUSD path under regime tilt with explicit time windows rather than a single narrative pass; (7) tighten prose to remove repetition and ensure alignment with the horizon/style by making the medium-current view explicit (which regime is most plausible over the next 6–12 quarters) and by foregrounding fragilities (e.g., potential premature C-shift or faster EV/capex repricing). These edits will produce a tighter, numbers-driven, source-consistent piece that clearly maps mechanisms, signals, and risks across macro, policy, flows/positioning, and valuation/technicals.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756049983"
+}

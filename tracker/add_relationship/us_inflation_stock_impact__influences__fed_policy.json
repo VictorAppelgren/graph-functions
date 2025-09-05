@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T12:15:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_inflation_stock_impact",
+    "target_id": "fed_policy",
+    "selection_motivation": "US inflation and its impact on equities directly shape Federal Reserve policy decisions, making this a primary driver of Fed policy.",
+    "candidate_motivation": "These topics are the most directly connected to the dynamics of inflation and equity valuations in the US, including policy responses, benchmark yields, and inflation indicators that historically drive stock market moves.",
+    "existing_links_count": "1",
+    "candidate_count": "11",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['fed_policy', 'fed_chair_replacement', 'us_10y', 'usd', 'us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'us_inflation_expectations', 'cpi_impact_on_treasuries', 'us_inflation_impact_on_stocks', 'stagflation']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_stock_impact', 'target': 'us_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000588566",
+    "rel_id": "us_inflation_stock_impact__influences__fed_policy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_inflation_stock_impact', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_inflation_stock_impact', 'target': 'fed_policy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US inflation and its impact on equities directly shape Federal Reserve policy decisions, making this a primary driver of Fed policy.",
+      "type": "INFLUENCES",
+      "source": "us_inflation_stock_impact",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_inflation_stock_impact__influences__fed_policy"
+}

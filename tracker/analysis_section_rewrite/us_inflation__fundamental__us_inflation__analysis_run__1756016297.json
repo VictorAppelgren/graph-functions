@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T08:18:17",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756016297",
+    "article_ids": "['0G3A676BP', 'TN66GHPAT', '4LQD15CFU', 'JVKCZAPVG', 'P0K0UEOHU']",
+    "selected_articles_count": "5",
+    "material_chars": "172862",
+    "output_chars": "0",
+    "saved": "False",
+    "saved_field": "fundamental_analysis",
+    "status": "no_text_not_saved"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Re‑structure** the draft into a clear, multi‑section format: (a) Macro‑drivers (real‑rate differentials, Fed policy, tariff shocks, AI productivity, BoP & net external position), (b) Company fundamentals (Microsoft, Shopify, Rivian, Tesla), (c) Catalysts & transition conditions (R2 launch, AI‑driven cloud, robotaxi regulatory approval, tariff changes, EV tax‑credit expiration), (d) Risks & invalidation scenarios, (e) Base‑case projections & confidence rating, (f) Watch list.  \n2. **Embed first‑principles anchors**: cite Microsoft’s 39 % Azure growth, $368 B contracted revenue (0G3A676BP), Shopify’s 31 % YoY revenue to $2.7 B and $906 M net income (0G3A676BP), Rivian’s $7.5 B cash, $6.6 B DOE loan, projected EBITDA breakeven 2027 (4LQD15CFU), Tesla’s 16 % YoY revenue decline, 17 % gross‑margin contraction (4LQD15CFU).  \n3. **Quantify policy shocks**: note the 2025 federal EV tax‑credit end (–$7,500), U.S. tariff on EV components (e.g., 25 % on batteries), Fed rate hikes (e.g., 25 bp in Q3 2025).  \n4. **Add causal chain**: AI → cloud revenue → Microsoft EPS → market pricing; AI + logistics cost cuts → Shopify margin expansion → valuation; tariff + tax‑credit → Rivian cost structure → R2 launch → EV market share; robotaxi pilot → Tesla valuation hinge.  \n5. **Cite every numeric claim** with the appropriate source ID (e.g., 0G3A676BP, 4LQD15CFU, JVKCZAPVG, TN66GHPAT).  \n6. **Include specific triggers**: (i) R2 production start (Q1 2026), (ii) AI regulatory approval for robotaxis (mid‑2026), (iii) Fed rate change (quarterly), (iv) tariff adjustment on EV imports (annually).  \n7. **Outline invalidation scenarios**: (a) AI adoption stalls → Microsoft margin squeeze; (b) R2 launch delayed → Rivian cash burn; (c) Tesla regains margin → valuation compression; (d) tariff hike >25 % → Rivian & Tesla cost shock.  \n8. **Add a confidence matrix** (e.g., 70 % for Microsoft/Shopify, 60 % for Rivian, 50 % for Tesla) with justification.  \n9. **Ensure coverage of all critical sources**: incorporate Donegal’s dividend yield decline (TN66GHPAT), Ford’s platform obsolescence (JVKCZAPVG), Inc’s labor‑cost premium data (4LQD15CFU).  \n10. **Reconcile conflicts**: e.g., Microsoft’s 18 % revenue growth vs. Shopify’s 27 % share‑price rise—explain via margin and cash‑flow differences.  \nImplement these edits to elevate the analysis to a world‑class, multi‑year, first‑principles driven, quantitatively grounded, and fully cited market thesis.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1756016297"
+}

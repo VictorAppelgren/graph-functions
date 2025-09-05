@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T02:43:27",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gaza_humanitarian_crisis",
+    "target_id": "gaza_humanitarian_aid",
+    "selection_motivation": "Linking the Gaza Humanitarian Crisis to Gaza Humanitarian Aid highlights the critical relationship between the ongoing crisis and the need for aid, enhancing the understanding of humanitarian responses in conflict zones.",
+    "candidate_motivation": "The selected topics are likely to be strong influences or correlates due to their relevance to geopolitical issues, humanitarian crises, and economic impacts related to the Gaza Humanitarian Crisis.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1616",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ukraine_geopolitical_security', 'gaza_journalist_killings', 'gaza_humanitarian_aid', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_relations', 'us_russia_ukraine_diplomacy', 'israeli_palestinian_policy', 'us_immigration_conditions', 'vaccine_misinformation_violence', 'us_antisemitism_incidents']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'disinformation_campaigns'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'journalist_safety_gaza'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531966",
+    "rel_id": "gaza_humanitarian_crisis__influences__gaza_humanitarian_aid",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'disinformation_campaigns'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'journalist_safety_gaza'}, {'type': 'INFLUENCES', 'source': 'gaza_humanitarian_crisis', 'target': 'gaza_humanitarian_aid'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking the Gaza Humanitarian Crisis to Gaza Humanitarian Aid highlights the critical relationship between the ongoing crisis and the need for aid, enhancing the understanding of humanitarian responses in conflict zones.",
+      "type": "INFLUENCES",
+      "source": "gaza_humanitarian_crisis",
+      "target": "gaza_humanitarian_aid"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gaza_humanitarian_crisis__influences__gaza_humanitarian_aid"
+}

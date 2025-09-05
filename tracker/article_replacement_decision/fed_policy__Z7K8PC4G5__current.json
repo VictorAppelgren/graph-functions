@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T00:17:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "Z7K8PC4G5",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['XHDE9MSFQ', 'U21K4ALYQ', '97MD1FHW8', 'EIGII8HNM', 'QJEVQZHQR', 'HCYCKF3PN', 'VDO8D9T7M', 'B1JE9YGKN', 'D0R3LX8F7']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "HCYCKF3PN",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article to replace; the new Spirit Airlines bankruptcy story adds unique coverage and does not duplicate any current content."
+    }
+  },
+  "id": "fed_policy__Z7K8PC4G5__current"
+}

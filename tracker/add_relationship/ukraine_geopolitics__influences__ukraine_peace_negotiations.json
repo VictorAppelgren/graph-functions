@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T00:33:26",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ukraine_geopolitics",
+    "target_id": "ukraine_peace_negotiations",
+    "selection_motivation": "Ukraine Geopolitics directly shapes the actors, incentives, and strategic context of Ukraine Peace Negotiations, making it a primary driver of negotiation dynamics.",
+    "candidate_motivation": "These topics are the strongest direct or competitive links to Ukraine geopolitics, capturing conflict dynamics, diplomacy, regional flashpoints, and major external influences.",
+    "existing_links_count": "10",
+    "candidate_count": "10",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['ukraine_conflict', 'ukraine_sovereignty', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_diplomacy', 'donbas_region', 'eu_geopolitics_ukraine', 'eu_us_relations_ukraine', 'russia_economic_crisis', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_post_war_instability'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'zelensky_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'us_russia_ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'eu_us_relations_ukraine'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1177692402069014422",
+    "rel_id": "ukraine_geopolitics__influences__ukraine_peace_negotiations",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'zelensky_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'russia_economic_crisis'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_sovereignty'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_conflict'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'eu_geopolitics_ukraine'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'russian_sanctions'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'ukraine_peace_negotiations'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'us_russia_ukraine_diplomacy'}, {'type': 'INFLUENCES', 'source': 'ukraine_geopolitics', 'target': 'eu_us_relations_ukraine'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Ukraine Geopolitics directly shapes the actors, incentives, and strategic context of Ukraine Peace Negotiations, making it a primary driver of negotiation dynamics.",
+      "type": "INFLUENCES",
+      "source": "ukraine_geopolitics",
+      "target": "ukraine_peace_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ukraine_geopolitics__influences__ukraine_peace_negotiations"
+}

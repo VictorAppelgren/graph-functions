@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T03:39:35",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756603614",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1551",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit plan (≤ 5 steps):**  \n1. **Anchor every claim to a canonical handle** – explicitly state the handle (e.g., `dxy`, `ust10y`, `fed_policy`) in each sentence and add a single inline citation that supports the numeric range or causal link.  \n2. **Condense the causal chain into a 3‑step diagram in prose**: (a) Fed cuts → 2‑yr/10‑yr spread compresses → term‑premium falls; (b) fall in term‑premium → dollar yields rise → DXY gains; (c) early‑August CPI confirms easing → market prices in the cut. Cite the spread‑compression source (e.g., `Z7O1DCHS7`) and the term‑premium‑to‑yield link (e.g., `LF0UUL917`).  \n3. **Quantify risk scenarios with explicit ranges** – e.g., “a 25‑bp Fed hike would lift the 2‑yr/10‑yr spread to 45 bp, raising the term‑premium by ~0.2 % and pulling DXY down 0.3–0.5 %.” Cite the hike‑impact source (`B1KYJ1GPU`).  \n4. **Trim redundant sentences** – remove any paragraph that repeats the same catalyst or risk without adding new insight (e.g., the two “key catalyst window” paragraphs).  \n5. **Add a concise watch‑list table** (3 columns: Event, Date, Expected Impact) and embed it in the final paragraph, citing the relevant IDs for each event. Ensure the table is inline (no separate markdown) to keep the output compact.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756603614"
+}

@@ -1,0 +1,37 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T16:33:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HCYCKF3PN",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation remains above the Fed’s 2% target, rising unemployment claims signal labor market stress, and Fed policy is signaling a potential rate cut.",
+      "existing_ids": [
+        "us_unemployment_claims",
+        "fed_policy",
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports on the U.S. labor market data, a major macroeconomic event (jobs report)."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess relevance"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on current labor market conditions and policy uncertainty affecting the US economy."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 0
+    }
+  },
+  "id": "HCYCKF3PN"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T09:34:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756365643",
+    "drivers_count": "5",
+    "material_chars": "2136",
+    "output_chars": "2987",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a solid first pass but still reads like a collection of bullet‑points rather than a coherent, evidence‑driven narrative. Tighten the causal chain by explicitly linking Fed policy → inflation expectations → risk‑premia → sector valuations (e.g., crypto, AI, automotive). Replace vague phrases such as “AI displacement threatens consumer confidence” with a quantified trigger (e.g., a 1‑point rise in the unemployment‑benefits index from 1GVYF2V8O). For oil, embed the supply/demand numbers into a price range (Brent mid‑$60s, WTI low‑$60s) and note the threshold that would flip to Regime B (price > $70). Ensure every claim carries a citation—add OGK8WLL69 to the crypto rally line, 17F49LURJ to the CPI/jobs sensitivity, and J54PXL0NV to the soy price range. Reconcile the oil regime conflict by explicitly stating that the supply‑led overhang (Regime A) persists unless demand growth accelerates, at which point the model shifts to Regime B. For the AI chip section, clarify that EURUSD is a proxy for capital flow into high‑tech assets and tie the seven‑year update cadence to sustained demand (cite 5S9GJV2O3, HWGNUP2XG, UVEQ2SJ0W). Quantify the 10‑year Treasury yield’s role as a risk‑premium gauge using Ford’s Q2 EV loss data (22PL3Q360). Finally, condense the watch list into a single sentence: “Key signals are Fed minutes, CPI/jobs releases, Brazil soy moratorium decision, 10‑year yield trend, and any sustained rise in oil above $70.” This will elevate the piece to a world‑class, data‑rich, and actionable analysis.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756365643"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T15:56:55",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "DVWHUFW2R",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: FX; the launch of a high‑end Chinese gaming monitor priced in yuan and dollars may modestly weaken the USD/CNY by 0.5‑1.0% over the 2026 launch window as import demand for yuan rises.",
+      "existing_ids": [
+        "usdcny",
+        "china_exports"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a new product launch by AMD and AntGamer, which is a company‑specific update unrelated to earnings, policy, or macro data."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses a new high‑frequency gaming monitor, but without a specific node reference, I cannot determine its relevance to any particular market handle or macro pillar. Given the lack of context, I assign a low impact score."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article announces a new 1,000Hz gaming monitor slated for release in 2026, indicating a medium‑term product development cycle rather than an immediate market shock."
+    },
+    "article_node": {
+      "id": "DVWHUFW2R",
+      "title": "AMD and AntGamer team up for world's first 1,000Hz gaming monitor launching in 2026",
+      "summary": "AMD and Chinese firm AntGamer are collaborating on a 1,000Hz gaming monitor slated for 2026, building on AntGamer’s 750Hz model. The new monitor will use a Fast TN panel, local dimming, and Black Frame Insertion to reduce motion blur, targeting eSports titles like Counter‑Strike 2 and PUBG. While pricing is unclear, the 750Hz version sold for about $1,115, suggesting the 1,000Hz unit will be even more expensive. The announcement was highlighted at the Peak New Products and Ecological Co‑creation conference and detailed in a white paper released by the companies.",
+      "source": "https://www.techspot.com/news/109280-amd-antgamer-team-up-world-first-1000hz-gaming.html",
+      "published_at": "2025-09-01T07:28:00-05:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "DVWHUFW2R"
+}

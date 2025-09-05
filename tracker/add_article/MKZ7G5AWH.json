@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T22:27:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MKZ7G5AWH",
+    "status": "success",
+    "topic_id": "inflation"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article matches the inflation node.",
+      "existing_node_ids": "inflation",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No article summary provided, cannot determine a relevant category for the node 'inflation'."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "Unable to assess impact due to lack of article content."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Insufficient information to determine the appropriate time frame for the node 'inflation' based on the article summary."
+    },
+    "article_node": {
+      "id": "MKZ7G5AWH",
+      "title": "Liberty University faces second lawsuit accusing it of mishandling sexual assault cases",
+      "summary": "Former Liberty University employee Erika Woolfolk has sued the Christian university, claiming she was fired for cooperating with a federal investigation into the school’s handling of sexual assault cases and that she endured a hostile, racially discriminatory workplace with unequal pay. Liberty denies the allegations, saying her termination was for legitimate business reasons tied to Title IX investigations, and the suit follows a similar case by former investigator Peter Brake. The lawsuit comes amid a $16 million fine imposed by the Department of Education for widespread Title IX and Clery Act violations, and the university is under federal monitoring until 2026. Liberty also recently settled a lawsuit with former president Jerry Falwell Jr. for a similar claim of retaliation, while the federal probe has uncovered a culture of fear that discouraged survivors from reporting incidents.",
+      "source": "https://www.usatoday.com/story/news/education/2025/08/15/liberty-university-title-ix-sexault-assault-investigations/85666552007/",
+      "published_at": "2025-08-15T19:25:41+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "MKZ7G5AWH"
+}

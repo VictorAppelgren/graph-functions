@@ -1,0 +1,54 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T04:14:49",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_rate_cut_sept17_2025",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "The unemployment claims link is the least directly tied to the Fed rate cut and has minimal cross‑asset impact compared to other canonical handles.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The unemployment claims link is the least directly tied to the Fed rate cut and has minimal cross‑asset impact compared to other canonical handles.",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1427642181388075757",
+    "rel_id": "fed_rate_cut_sept17_2025__influences__us_unemployment_claims",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'us_core_pce'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_rate_cut_sept17_2025', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'fed_rate_cut_sept17_2025', 'target': 'fed_policy'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "us_unemployment_claims"
+    },
+    "prioritized_link": {
+      "motivation": "Fed rate cuts weaken the USD, lifting the GBP/USD pair.",
+      "type": "INFLUENCES",
+      "source": "fed_rate_cut_sept17_2025",
+      "target": "gbpusd"
+    },
+    "llm_raw_response": {
+      "motivation": "The unemployment claims link is the least directly tied to the Fed rate cut and has minimal cross‑asset impact compared to other canonical handles.",
+      "remove_link": "us_unemployment_claims"
+    },
+    "removal_decision": {
+      "motivation": "The unemployment claims link is the least directly tied to the Fed rate cut and has minimal cross‑asset impact compared to other canonical handles.",
+      "remove_link": "us_unemployment_claims"
+    },
+    "source_node": {
+      "importance": 4,
+      "query": "(bitcoin OR btc OR bitcoin* OR btc* OR BTC) OR (basis* OR \"basis trade\" OR \"basis spread\") OR (futures* OR \"futures market\" OR \"futures premium\" OR \"futures premiums\" OR \"futures open interest\" OR \"futures oi\") OR (spot OR \"spot market\" OR \"spot price\" OR spot*) OR (\"open interest\" OR oi OR openinterest) OR (premium OR premiums OR \"futures premium\" OR \"futures premiums\") OR (cme OR \"cme group\" OR \"cme futures\" OR \"cme futures market\" OR \"cme futures open interest\" OR \"cme futures premiums\") OR (fed OR fed* OR \"federal reserve\" OR \"fed rate cut\" OR \"fed rate cuts\" OR \"fed cuts\" OR fedwatch OR \"fedwatch tool\" OR \"cme fedwatch\") OR (interest OR \"interest rate\" OR \"interest rates\" OR \"rate cut\" OR \"rate cuts\") OR (liquidity OR \"liquidity conditions\") OR (risk OR \"risk asset\" OR \"risk assets\" OR \"risk appetite\") OR (leverage OR leveraged OR \"leveraged positions\" OR \"leveraged exposure\") OR (market OR markets OR \"market conditions\") OR (news OR analysis OR trend OR report OR update OR breaking OR latest OR today OR recent OR forecast OR outlook OR movement OR volatility OR vol)",
+      "motivation": "The article highlights a specific upcoming Fed rate cut on Sept. 17, 2025, which is a key catalyst for Bitcoin basis trade and UST rates, necessitating a dedicated policy event node.",
+      "name": "Fed Rate Cut Sept 17 2025",
+      "id": "fed_rate_cut_sept17_2025",
+      "last_queried": "2025-09-03T22:25:47.709000000+00:00",
+      "importance_rationale": "The Fed’s scheduled rate cut on Sept 17 2025 is a major policy event with immediate, cross‑asset transmission—affecting rates, equities, credit, FX, commodities, and crypto markets. While the article focuses on Bitcoin basis trade, the underlying policy shock is a high‑centrality driver that can move multiple canonical handles (e.g., UST 10y, DXY, BTC futures). According to the policy, policy events are typically rated 4, reflecting their supporting yet influential role in market dynamics.",
+      "type": "policy",
+      "queries": 1
+    }
+  },
+  "id": "fed_rate_cut_sept17_2025__influences__us_unemployment_claims"
+}

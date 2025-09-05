@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T13:11:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756550965",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5642",
+    "output_chars": "811",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your movers‑and‑scenarios block is structurally correct but tighten the formatting: keep each field separated by a single “|”, place the (ID) citation immediately after the element it supports, and ensure the probability is a plain “55%” (no extra parentheses). For the swing‑trade line, replace the current placeholder with a single, fully‑specified line that follows the required schema: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0‑100. Use the only price data in the source – current $451 and fair‑value $483 – so the line should read, for example: Up | 1‑2 months | $451 (KNWKYIQ1W) | $440 (KNWKYIQ1W) | $483 (KNWKYIQ1W) | 1:1 (KNWKYIQ1W) | Q3 earnings miss (KNWKYIQ1W) | Q3 earnings beat (KNWKYIQ1W) | 55% (KNWKYIQ1W) | 70 (KNWKYIQ1W). Remove all meta‑commentary (“Main‑focus check”, “The draft MUST…”) and any extraneous text; keep only the five lines of market logic, each with its inline citation. This will satisfy the format, source‑only constraint, and provide a clear, actionable swing‑trade plan.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__swing_trade_or_outlook__spx__analysis_run__1756550965"
+}

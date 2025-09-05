@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-27T23:18:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756328530",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9182",
+    "output_chars": "863",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable feedback for a world‑class investor brief**\n\n1. **Trim the prose to 4–6 bullets** – the draft is 10 + sentences and repeats many citations.  Each bullet should contain one core idea (e.g., catalyst, risk, watch item) and a single, specific number or range.\n\n2. **Anchor every claim in a first‑principle source** – e.g., “Fed’s dovish stance (OGK8WLL69) is the primary driver of the $4,954 ETH rally” or “Brazil’s soy moratorium (J54PXL0NV) has tightened supply, pushing prices to $10–$12/ t.”  Remove generic phrases like “high‑risk, high‑return environment” unless you quantify the upside (e.g., “potential 12–18 % upside on the IntelOrbis Graph”).\n\n3. **Prioritize catalysts and watch items** – list the 3–4 most material short‑term triggers (Fed minutes, August jobs/CPI, Nvidia earnings, Euro‑area CPI) and the 2–3 medium‑term catalysts (oil supply overhang, regime A persistence, tax bill extension).  Give each a concise, numeric threshold (e.g., “jobs > 200 k or CPI > 3.5 % would erase the 85 % cut probability”).\n\n4. **Quantify risks with probability or impact** – instead of “moderate to high confidence,” state something like “85 % probability of a 25‑bp cut; 15 % chance of a Fed hike if CPI > 3.5 %.”  Use the same source IDs for each figure.\n\n5. **Eliminate redundant citations** – each source ID should appear only once.  For example, cite OGK8WLL69 only when referring to Fed policy and crypto prices; J54PXL0NV only for soy supply and Brazil capital flows.\n\n6. **Reconcile conflicting data** – if a source gives a range (e.g., soy price $10–$12/ t), present it as a range and note the source.  If two sources disagree on a Fed probability, state the range and cite both.\n\n7. **Format as a clean executive summary** – use bullet points, bold key terms, and keep each line under 12 words where possible.  Example structure:\n\n   - **Catalyst**: Fed’s dovish stance (OGK8WLL69) → 85 % chance of 25‑bp cut, lifting ETH to $4,954 and BTC to $112 k.  \n   - **Commodity**: Brazil’s soy moratorium (J54PXL0NV) tightens supply, keeping prices $10–$12/ t and attracting capital.  \n   - **Macro risk**: Fed hike if August CPI > 3.5 % or jobs > 200 k (17F49LURJ).  \n   - **Policy risk**: Reversal of 2017 tax‑cut extension (EPJYXB7DX) could erode private‑label demand.  \n   - **Watch items**: Fed minutes, Brazilian export data, AI displacement metrics, Euro‑area CPI, Nvidia earnings.\n\nFollow this template, keep citations to the essential IDs, and you’ll have a concise, decision‑useful brief that meets the 4–6 sentence/ bullet constraint.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756328530"
+}

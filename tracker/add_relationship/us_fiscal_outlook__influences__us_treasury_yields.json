@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:35:34",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_fiscal_outlook",
+    "target_id": "us_treasury_yields",
+    "selection_motivation": "Fiscal policy decisions directly influence the U.S. government's debt issuance and risk premium, making Treasury yields a primary transmission channel for fiscal outlook effects.",
+    "candidate_motivation": "These topics are the strongest direct macro-policy and market drivers likely to influence the US fiscal outlook, including inflation dynamics, debt dynamics, and policy responses. They also cover trade and chip policy tensions that feed into deficits, revenue, and economic growth.",
+    "existing_links_count": "4",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_inflation_data', 'us_inflation_stock_impact', 'us_tariffs', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_trade_talks', 'us_national_debt', 'us_treasury_yields', 'us_tariff_policies']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_national_debt'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000588249",
+    "rel_id": "us_fiscal_outlook__influences__us_treasury_yields",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_treasury_yields'}, {'type': 'INFLUENCES', 'source': 'us_fiscal_outlook', 'target': 'us_national_debt'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fiscal policy decisions directly influence the U.S. government's debt issuance and risk premium, making Treasury yields a primary transmission channel for fiscal outlook effects.",
+      "type": "INFLUENCES",
+      "source": "us_fiscal_outlook",
+      "target": "us_treasury_yields"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_fiscal_outlook__influences__us_treasury_yields"
+}

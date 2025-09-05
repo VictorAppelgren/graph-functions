@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T18:16:15",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "2CYFNIGYB",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "6",
+    "candidate_ids": "['MXOF7MPYR', 'Z7O1DCHS7', 'XQMF22EFB', 'FAN5RYW6T', 'F7K7Y35U5', 'KX6AOMQZ5']",
+    "mode": "CAN_REPLACE",
+    "target_id": "MXOF7MPYR",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "MXOF7MPYR",
+      "motivation": "The new article provides comprehensive, up‑to‑date market outlook for H2 2025, replacing the placeholder entry MXOF7MPYR which lacks substantive content."
+    }
+  },
+  "id": "ust10y__2CYFNIGYB__medium"
+}

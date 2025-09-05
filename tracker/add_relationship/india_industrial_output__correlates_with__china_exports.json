@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T12:04:13",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "india_industrial_output",
+    "target_id": "china_exports",
+    "selection_motivation": "India industrial output and China exports are both leading indicators of global demand and commodity price cycles, exhibiting a strong co‑movement that reflects shared exposure to international trade and supply‑chain dynamics.",
+    "candidate_motivation": "India’s industrial output is driven by global demand, especially from China, and by the relative strength of the rupee against major currencies.  Therefore, topics that capture China’s export/credit activity, the USD/INR (USD/CNY) exchange dynamics, US monetary policy and dollar strength, and US inflation/consumption are the most plausible direct or competitive influences.",
+    "existing_links_count": "1",
+    "candidate_count": "7",
+    "all_nodes_count": "31",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['china_exports', 'china_credit_impulse', 'usdcny', 'fed_policy', 'dxy', 'us_inflation', 'us_core_pce']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155175503443787808",
+    "rel_id": "india_industrial_output__correlates_with__china_exports",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'india_industrial_output', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'india_industrial_output', 'target': 'china_exports'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "India industrial output and China exports are both leading indicators of global demand and commodity price cycles, exhibiting a strong co‑movement that reflects shared exposure to international trade and supply‑chain dynamics.",
+      "type": "CORRELATES_WITH",
+      "source": "india_industrial_output",
+      "target": "china_exports"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "india_industrial_output__correlates_with__china_exports"
+}

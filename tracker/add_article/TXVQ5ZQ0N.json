@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T20:45:50",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "TXVQ5ZQ0N",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy cuts are expected to lift equity valuations and support high‑growth, high‑beta sectors such as eVTOL and aviation services.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports a $407 million loss for Joby Aviation in the first half of 2025, which is a company earnings figure."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a significant event affecting Joby Aviation’s financial performance and market perception, indicating a major shift in investor confidence and valuation metrics."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent stock performance and immediate events affecting Joby Aviation, such as the last quarter surge and new partnerships, rather than long-term structural drivers."
+    },
+    "article_node": {
+      "id": "TXVQ5ZQ0N",
+      "title": "Joby Aviation (JOBY) Sees 125% Stock Price Increase Over Last Quarter",
+      "summary": "Joby Aviation’s stock surged 125% in the last quarter after a successful FAA‑controlled flight and new partnerships with ANA Holdings and L3Harris, boosting investor confidence despite a $407 million loss in the first half of 2025. The company’s share price now trades above analyst targets, with a 192.6% annual return that outpaces the US airline and market averages, yet its valuation score of 0/6 and a 14.2x price‑to‑book ratio signal potential overvaluation. Joby’s high volatility and unprofitable outlook contrast with projected revenue growth of 66.5% per year, leaving investors weighing speculative upside against fundamental risk.",
+      "source": "https://finance.yahoo.com/news/joby-aviation-joby-sees-125-172656897.html",
+      "published_at": "2025-08-23T17:26:56+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "TXVQ5ZQ0N"
+}

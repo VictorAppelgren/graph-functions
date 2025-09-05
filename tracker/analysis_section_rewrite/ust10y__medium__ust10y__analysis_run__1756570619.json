@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T18:21:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756570619",
+    "article_ids": "['FAN5RYW6T', 'XQMF22EFB', 'Z7O1DCHS7', 'F7K7Y35U5', 'KX6AOMQZ5']",
+    "selected_articles_count": "5",
+    "material_chars": "144378",
+    "output_chars": "2433",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Edit Instructions**\n\n1. **Remove Unsupported Copper Claim** – The sentence “U.S. copper tariff policy has boosted demand for U.S. copper, raising commodity prices” lacks a source. Either delete it or replace it with a citation from a credible copper‑price article (none provided).  \n2. **Add Explicit Causal Chains** – For each risk factor, spell out the transmission path. Example: *“Concentration risk → weak tech earnings → 40 % of index weight falls → 5–10 % spx decline.”* Do this for Fed‑cut/​hawk stance, inflation, and consumer‑spending squeeze.  \n3. **Ensure Every Claim is Cited** – Add inline citations for inflation figures (FAN5RYW6T), September payrolls (Z7O1DCHS7), Fed policy (Z7O1DCHS7), and tech earnings outlook (FAN5RYW6T).  \n4. **Keep Focus on spx** – While mentioning copper or ARMs is fine, keep the narrative centered on the S&P 500. Trim any peripheral discussion that dilutes the 3–6‑month spx scenario.  \n5. **Clarify Catalyst Windows** – Explicitly state the dates: *“September 5 payrolls, mid‑September Fed meeting, and the next CPI/PCE releases (Oct 2025)”* as the trigger windows.  \n6. **Quantify All Impacts** – Confirm the 5–10 % decline and 2–5 % rally ranges are tied to the spx handle.  \n7. **Add Watch‑List Signals** – List: September 5 payrolls, Fed minutes, CPI/PCE, tech earnings guidance, copper price trend (if kept), and spx volatility.  \n8. **State Confidence Levels** – Label the base case confidence as “moderate” and alternatives as “conditional on Fed shift.”  \n\nImplement these edits to meet the Argos criteria: canonical handle mapping, dated catalysts, causal clarity, and concise, actionable guidance.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__medium__ust10y__analysis_run__1756570619"
+}

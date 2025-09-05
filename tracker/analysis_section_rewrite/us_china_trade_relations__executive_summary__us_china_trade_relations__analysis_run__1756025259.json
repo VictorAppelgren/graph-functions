@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T10:58:50",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_china_trade_relations",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_china_trade_relations__analysis_run__1756025259",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19384",
+    "output_chars": "1580",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft does many things well (a coherent three-regime frame, explicit policy-forward catalysts, and a broad watch-list), but it fails the 4–6 sentence/point, decision-useful brief standard and dilutes a crisp house view with excessive depth and repetition. Actionable edits: compress to 4–6 bullets that (1) state a one‑line, decision-ready house view for today, anchored in Regimes A–C with first-principles logic; (2) list 3–4 precise catalysts/triggers with explicit thresholds and time windows (e.g., 90‑day tariff truce expiry; Nvidia/China licensing outcomes with a 15% revenue-share framing; potential tightening of export controls; AUKUS-related capex/maintenance signals), each tied to the relevant source IDs (e.g., OATKNJQ0E, NOTMRPS8C, P3SY5CIWY, MHTXPY45K, ZCBJZ55IT, WACQ58GJF, 40M82JY72); (3) specify 1–2 invalidation or regime-shift scenarios that would reprice risk toward Regime B or C (e.g., a durable extension failure or a material licensing tightening), with crisp triggers; (4) present a concise, quantified impact on assets or asset classes (e.g., implied drift in P/E or discount rates from a CPI path; 50% Norges Bank productivity anchor used as a long-horizon tailwind, with caveats) and tie to sources (AMHSWFZZI, NOTMRPS8C); (5) prune the narrative to eliminate nonessential verbiage (naval posture, multiple mid‑cycle macro detours) unless directly linked to policy risk, and ensure every assertion that rests on a source is cited. Tighten the causal chain so policy shock → inflation/margins → valuations is explicit and linear, and reframe the near‑term phase (0–4/8 weeks) as a subset of the 4–6 sentence brief with clearly prioritized watch-items and timing (e.g., CPI/Fed guidance, Nvidia licensing cadence, CPI-led Fed path, 90‑day window). Finally, resolve apparent conflicts by stating where views diverge (e.g., Regime B risk vs. Regime C productivity uplift) and present a single, probability-weighted base case with explicit ranges and scenario probabilities, citing the full set of critical sources (OATKNJQ0E; NOTMRPS8C; AMHSWFZZI; 40M82JY72; P3SY5CIWY; A8QHO9CST; MHTXPY45K; ZCBJZ55IT; WACQ58GJF; D5X8K1DDU; 9ER6IEHVO; V7GV8YBQU; RHXDOHQQX; X955JYCLU; VJH1YPVX5; 5NOSMEPTW).",
+      "tokens": {}
+    }
+  },
+  "id": "us_china_trade_relations__executive_summary__us_china_trade_relations__analysis_run__1756025259"
+}

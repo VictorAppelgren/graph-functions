@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:38:58",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756063770",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19186",
+    "output_chars": "959",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 months | AI-enabled productivity acceleration driving capex toward semis/data-center and energy-intensive infra | Watch for tangible AI capex breakthroughs and tariff stability that sustains external balance | 50% (NL5YYTLF2)(SGB2PAZGK)\nUp | 3–6 months | Tariff/tech shock regime intensifying protectionism with faster AI-driven capex cycle in semis/data infrastructure | Watch for tariff escalations and deterioration in external balance as risk premia reprice | 30% (SGB2PAZGK)(NL5YYTLF2)\nDown | 0–3 months | Energy-price shocks reassert inflation risk and risk-off shift, pressuring valuations | Watch for oil-price surprises and persistent inflation that feed into rates | 60% (J99EM2TPZ)(T1QE6JPIX)(NL5YYTLF2)\nDown | 3–6 months | Identity/UBI policy pivot risk dampening labor incentives and capex; inflation convergence would invalidate | Watch for inflation trajectory toward target and stronger policy credibility | 20% (NL5YYTLF2)(37UZC9X8I)",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756063770"
+}

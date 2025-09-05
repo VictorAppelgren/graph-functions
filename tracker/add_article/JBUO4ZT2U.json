@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T04:38:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JBUO4ZT2U",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Invesco’s municipal bond outlook signals expectations for Fed policy and Treasury yields, influencing municipal spreads.",
+      "existing_ids": [
+        "fed_policy",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides a fund outlook and commentary on market conditions, which is a market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses a fund’s outlook on municipal bonds, but without node context it’s unclear how it maps to a macro node; likely limited impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article presents a Q2 2025 municipal bond outlook, focusing on medium‑term credit strength and rate policy drivers."
+    },
+    "article_node": {
+      "id": "JBUO4ZT2U",
+      "title": "Invesco Intermediate Term Municipal Income Fund Q2 2025  Commentary (MUTF:VKLMX)",
+      "summary": "Invesco released its Q2 2025 municipal bond outlook, highlighting the fund’s focus on credit strength, rate policy, and portfolio strategy. The update offers investors insight into how the fund is positioning itself amid current market conditions.",
+      "source": "https://seekingalpha.com/article/4818727-invesco-intermediate-term-municipal-income-fund-q2-2025-commentary",
+      "published_at": "2025-09-03T01:15:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "JBUO4ZT2U"
+}

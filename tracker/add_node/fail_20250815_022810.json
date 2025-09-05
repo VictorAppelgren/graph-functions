@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:28:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "P1GROMUPH",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights AppTech Payments Corp.'s financial performance and strategic developments, which are relevant for understanding trends in the fintech sector and their impact on investment decisions.",
+      "id": "apptech_payments_corp",
+      "name": "AppTech Payments Corp.",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "AppTech Payments Corp. is a specific corporate entity, not a macro driver, asset, policy, geography, or industry vertical."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "AppTech Payments Corp. is a specific fintech company, an industry vertical, not a macro driver, policy anchor, or tradable macro asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T06:33:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "OXEL6JD5E",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; the antitrust ruling on Google introduces regulatory uncertainty that can depress valuations in the US tech sector, affecting index performance and risk premia.",
+      "existing_ids": [],
+      "new_names": [
+        "us_tech_sector"
+      ]
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a court ruling imposing antitrust remedies on Google, which constitutes a regulatory/legal development."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major antitrust ruling affecting Google's dominant position, directly impacting the Google node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article reports a regulatory ruling that will influence Google’s competitive position and data‑sharing obligations, implying medium‑term market adjustments."
+    },
+    "article_node": {
+      "id": "OXEL6JD5E",
+      "title": "Business and Tech leaders respond to the Google antitrust ruling after a judge spared it from a Chrome sell-off",
+      "summary": "Judge Amit Mehta ruled that Google will not be forced to divest its Chrome and Android platforms, but must share search data and remove exclusive contracts. The decision was welcomed by some business leaders but criticized by rivals like DuckDuckGo and Epic Games, who argue the remedies are insufficient to curb Google's monopoly power. Google’s CEO highlighted the impact of AI on search and expressed concerns about privacy and user experience under the new requirements. The ruling leaves Google free to continue its dominant position while imposing limited data‑sharing obligations.",
+      "source": "https://www.businessinsider.com/business-leaders-respond-googles-antitrust-lawsuit-remedies-chrome-ai-monopoly-2025-9",
+      "published_at": "2025-09-03T02:33:20+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "OXEL6JD5E"
+}

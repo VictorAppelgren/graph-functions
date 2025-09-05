@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T04:02:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "U9ERTH2SC",
+    "status": "success",
+    "topic_id": "lower_interest_rates"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights CaliberCos Inc's financial performance and strategic initiatives, which are relevant for investment analysis, particularly in the context of real estate and hospitality sectors.",
+      "existing_node_ids": null,
+      "new_node_dicts": "CaliberCos Inc Financial Performance"
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The node refers to a central bank action that typically involves lowering interest rates to stimulate the economy."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "Lower interest rates generally stimulate economic activity by making borrowing cheaper, which can lead to increased consumer spending and investment."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The discussion around lower interest rates often involves long-term economic implications and trends, making it relevant for a broader analysis."
+    },
+    "article_node": {
+      "id": "U9ERTH2SC",
+      "title": "CaliberCos Inc (CWD) Q2 2025 Earnings Call Highlights: Strategic Partnerships and Cost-Saving ...",
+      "summary": "CaliberCos Inc (NASDAQ:CWD) reported a significant reduction in its platform adjusted loss to $54,000 in Q2 2025, down from $2.5 million in Q2 2024, attributed to cost-saving initiatives. The company has entered a development rights agreement with Hyatt to develop 15 new hotels and has seen a 6% increase in managed capital, reaching $498 million. However, it faces challenges such as an impairment charge of $2.3 million and delays in securing construction loans, while a potential lower interest rate environment could improve financing capabilities and enhance performance allocations.",
+      "source": "https://finance.yahoo.com/news/calibercos-inc-cwd-q2-2025-010122179.html",
+      "published_at": "2025-08-15T01:01:22+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "U9ERTH2SC"
+}

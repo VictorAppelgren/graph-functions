@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:00:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756083186",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15437",
+    "output_chars": "1075",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 3–6 months | AI capex acceleration and Costa sale dynamics | Watch Nvidia data-center demand prints and Costa Coffee sale progress toward ~£2.0b with credible bidders, while KO's forward P/E sits around 23.7x and yield ~2.9% to anchor cash-flow valuation | (STBVARD8F)(2YP1X9B4T)\nUp | 6–12 months | AI/infra capex beta and Costa sale shaping KO's risk/return | Watch Nvidia AI capex momentum sustaining compute demand and Costa sale momentum toward favorable terms; KO valuation anchor persists with a mid-20s P/E and ~2.9% yield | (STBVARD8F)(2YP1X9B4T)\nDown | 0–3 weeks | Geopolitical/shipping risk in Red Sea corridor | Watch Red Sea disruption signals and energy/transport cost upticks that would lift risk premia in shipping and related equities | (I2SJU04DF)\nDown | 3–6 months | Policy relapse toward reaccelerated offshoring and tariff escalation | Watch tariff deadlines, China exposure, and Nvidia/export controls that could reassert margins pressure and widen risk premia; Ford EV profitability risk as a proxy | (SGB2PAZGK)(22PL3Q360)(65UUBU0OR)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756083186"
+}

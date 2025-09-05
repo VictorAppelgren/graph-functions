@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T07:18:39",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756616963",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "5694",
+    "output_chars": "573",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft fails the handle‑mapping rule – mortgage rates are not a canonical handle, so replace “mortgage rates” with the proxied rate “ust10y” in every line. Merge the two Down items into one: “Down | Q4 2025 | Fed 25 bp cut on 25 Sep 2025 | ust10y falls 5–20 bp if Fed cuts 25 bp and term‑premium drops 10–15 bp (B1KYJ1GPU)(LF0UUL917) | 70%”. Add explicit catalyst windows to each driver (e.g., “Fed meeting 16‑17 Sep 2025” for the pause/hike scenario, “CPI Oct 2025” for sticky inflation). Keep each line a single sentence, cite only when asserting a fact (use (LF0UUL917) for Fed policy, (B1KYJ1GPU) for the cut, (XTQIQRP5K) for CPI), and adjust probabilities to reflect the source’s implied odds (≈50% for pause/hike, 30% for sticky inflation, 70% for the cut). This will satisfy the 4‑item, canonical‑handle, catalyst‑window, and probability‑justification requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756616963"
+}

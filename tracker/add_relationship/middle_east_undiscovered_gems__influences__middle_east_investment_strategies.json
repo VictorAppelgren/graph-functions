@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-21T22:48:22",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "middle_east_undiscovered_gems",
+    "target_id": "middle_east_investment_strategies",
+    "selection_motivation": "The presence of undervalued assets in the Middle East directly shapes the design and execution of region‑specific investment strategies, providing a clear causal link for portfolio construction and risk assessment.",
+    "candidate_motivation": "The source “Middle East Undiscovered Gems” refers to emerging investment opportunities in the Middle East that are undervalued or under‑explored. Topics that are likely to be strong influences, correlates, or peers are those that discuss Middle East investment strategies or comparable “undiscovered gems” themes in nearby regions.",
+    "existing_links_count": "1",
+    "candidate_count": "2",
+    "all_nodes_count": "1025",
+    "candidate_ids_len": "2",
+    "candidate_ids_preview": "['middle_east_investment_strategies', 'asia_undiscovered_gems']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'middle_east_undiscovered_gems', 'target': 'oil'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161407",
+    "rel_id": "middle_east_undiscovered_gems__influences__middle_east_investment_strategies",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'middle_east_undiscovered_gems', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'middle_east_undiscovered_gems', 'target': 'middle_east_investment_strategies'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The presence of undervalued assets in the Middle East directly shapes the design and execution of region‑specific investment strategies, providing a clear causal link for portfolio construction and risk assessment.",
+      "type": "INFLUENCES",
+      "source": "middle_east_undiscovered_gems",
+      "target": "middle_east_investment_strategies"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "middle_east_undiscovered_gems__influences__middle_east_investment_strategies"
+}

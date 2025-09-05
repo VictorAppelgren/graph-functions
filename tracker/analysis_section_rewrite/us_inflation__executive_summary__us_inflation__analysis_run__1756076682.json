@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T01:18:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756076682",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17099",
+    "output_chars": "1066",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft good-faithly ties AI productivity, real-rate dynamics, and macro balances to asset pricing, but it fails the 4–6‑sentence/bullet brief format and overwhelms the reader with breadth over a crisp, testable house view; actionable edits: collapse to 4–6 executive bullets that start with a single, first-principles house view, then 3–4 testable catalysts/risks/watch items, and end with an explicit invalidation point; replace the sprawling multi-year narrative with a 3‑scenario framework (base/upside/downside) plus scenario‑specific price/return implications and probabilities; hard‑wire the causal chain from AI adoption to productivity gains, to household balance sheets, to durable-cash-flow assets, to ROIC–WACC dynamics and equity multiples, and back it with quantified inputs (e.g., automation exposure ~25% of US employment high risk; ~70% of tasks at risk; GM capex $4B/year with $10–12B annual cadence to 2027; automation productivity uplift 1–1.5% GDP per year; Ford EV losses ~$1.3B and ROIC around 10%); ensure every factual claim cites a SOURCE MATERIAL ID and avoid loose assertions by cross-checking conflicts (UBI macro tradeoffs vs employment effects, tariff pass‑through credibility, AI cadence) and presenting them as bounded ranges rather than single statements; tighten the near‑term catalyst map to 3–4 measurable items (tariff timing and pass‑through, Intel/industrial-policy signal, Nvidia/semis AI momentum or cadence of AI-enabled dealer tools) with explicit thresholds and time horizons; convert the long watch-list into compact, numerically defined triggers (e.g., tariff breakevens, AI capex milestones, ROIC–WACC gap narrows/widens by X bps), and ensure the writing is executive, concise, and free of repetition.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756076682"
+}

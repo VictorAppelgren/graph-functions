@@ -1,0 +1,68 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T12:40:38",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NNWZPFZ3N",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US postage price hike in July 2025 raises US inflation +0.3% in Q3 2025 and tightens liquidity, pushing US 10Y yield +5‑10 bp and DXY +5‑10 bp; FX; higher cost of paper checks pressures EURUSD +5‑10 bp; commodities; increased freight costs lift WTI and Brent; credit; check fraud risk widens credit spreads; liquidity; digital payment adoption improves cash‑flow management.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "us_pce",
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y",
+        "ust30y",
+        "dxy",
+        "eurusd",
+        "gold",
+        "copper",
+        "brent",
+        "wti",
+        "spx",
+        "sx5e",
+        "usdcny",
+        "gbpusd",
+        "usdjpy",
+        "euro_inflation",
+        "us_services_pmi",
+        "us_unemployment_claims"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis of a trend in B2B payment methods, describing the shift from paper checks to digital alternatives, which is a market commentary."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to assess impact against; cannot determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses a long‑term structural shift in B2B payment methods toward digital alternatives, indicating a fundamental change in working‑capital practices."
+    },
+    "article_node": {
+      "id": "NNWZPFZ3N",
+      "title": "Postage Hikes, Delivery Frictions Turn Paper Checks Into B2B Burden",
+      "summary": "Paper checks are becoming a costly and risky B2B payment method as postage costs rise and delivery delays increase, eroding the value of check float and exposing firms to higher fraud rates. Digital alternatives like dynamic discounting, automated cash flow management, and virtual cards offer faster settlement, fraud protection, and better supplier relationships. Despite the shift, many companies still rely on legacy check processes, driving inefficiencies and higher operational costs. The trend underscores a broader move toward digitized, automated payments to improve working capital and competitive advantage.",
+      "source": "https://www.pymnts.com/news/b2b-payments/2025/postage-hikes-delivery-frictions-turn-paper-checks-into-b2b-burden/",
+      "published_at": "2025-09-04T21:09:49+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 22,
+      "successful": 22
+    }
+  },
+  "id": "NNWZPFZ3N"
+}

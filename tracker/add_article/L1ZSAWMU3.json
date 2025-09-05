@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T11:53:49",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "L1ZSAWMU3",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Enphase Energy’s launch of a higher‑density battery system is likely to lift its product pipeline and support the ENPH stock price.",
+      "existing_ids": [],
+      "new_names": [
+        "ENPH"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a new product launch by Enphase Energy, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article is not relevant to this node's scope."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on a new product launch, an immediate event affecting the company’s operations and market perception."
+    },
+    "article_node": {
+      "id": "L1ZSAWMU3",
+      "title": "Enphase Energy Introduces Next-Generation Battery System For Smarter, Simpler Home Power",
+      "summary": "Enphase Energy has launched its fourth‑generation Enphase Energy System, featuring the IQ Battery 10C, IQ Meter Collar, and IQ Combiner 6C. The new battery delivers 7.08 kW continuous power, 10 kWh usable energy, and 34% higher energy density while reducing wall space by up to 62%. The system supports U.S. domestic content bonuses, comes with a 15‑year warranty, and aims to simplify installation and accelerate deployment for residential solar and battery customers.",
+      "source": "https://finance.yahoo.com/news/enphase-energy-introduces-next-generation-083818497.html",
+      "published_at": "2025-09-02T08:38:18+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "L1ZSAWMU3"
+}

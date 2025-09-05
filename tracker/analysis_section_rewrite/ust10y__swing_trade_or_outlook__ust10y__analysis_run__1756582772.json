@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T21:57:11",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756582772",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7839",
+    "output_chars": "638",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft meets the 4‑line mover requirement but the probabilities and citations need tightening: the second “Up” line cites FAN5RYW6T but assigns 50 % without a clear numeric basis; reduce to 30 % (the alternative scenario is a modest gain, not a 50 % upside). The two “Down” lines are fine, but the 30 % Down should be tied to the sticky‑inflation/no‑cut scenario (FAN5RYW6T) and the 20 % Down to the unexpected‑rate‑hike scenario (3YAQ8JUPL). The swing‑trade line is mis‑ordered and mis‑calculated: swap Invalidation and Trigger, set Invalidation to “Fed cuts fail / inflation > 2.6 %” (3YAQ8JUPL), keep Trigger as “Fed minutes dovish” (B1KYJ1GPU)(3YAQ8JUPL)(97MD1FHW8), correct R/R to 4:1 (target 4,200, stop 3,950), and cite the probability 70 % with 97MD1FHW8. Use the canonical handle spx, keep the entry at 4,000 only if that is the current level; otherwise adjust to the latest close. Drop any extraneous text, ensure each line follows the exact format, and keep the confidence at 70 % to reflect the moderate‑high base‑case certainty.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756582772"
+}

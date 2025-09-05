@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T21:50:47",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "new_article_id": "TLKJ83KUN",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['XQWTVR71K', '19NO2GMNF', 'QGXA2WQJ3', 'NBX9RA9WX', '8E5QMHLIH', '3G1PVPWPD', 'I2SJU04DF', 'M5SPVKG33', 'WC68LCU9R']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no existing article that this new piece clearly supersedes, so it should not trigger a replace/hide/low_priority action."
+    }
+  },
+  "id": "sp500__TLKJ83KUN__current"
+}

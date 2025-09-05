@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T13:58:28",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1755949185",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "8240",
+    "output_chars": "1042",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is too long, unfocused, and mixes macro‑policy, geopolitical, and sector‑specific themes that dilute the core house view. Condense it to **4–6 concise bullet points** that follow a clear causal chain:  \n1. **Premium smartphone AI chips** lift device margins by ~X % (cite 5S9GJV2O3), driving semiconductor earnings that support the tech index.  \n2. **Corporate‑governance risk** (Dayforce $70/share sale, Black Hills merger) could raise the cost of capital by Y % and compress valuations (cite UVEQ2SJ0W).  \n3. **Security incidents** (ICE envelope discovery) may push commodity costs up by Z % and strain supply chains (cite ISXY49HGS).  \n4. **Consumer resilience** is evidenced by Costco’s $35.99 K‑Cup pods sold at a $6 discount, showing robust convenience‑goods spending (cite HWGNUP2XG).  \n\nThen list **key catalysts** with numbers: Fed policy unchanged until Sep 2025 (cite 1443EJVX4), tariff escalation to 15–20 % on 40 countries (cite N9A7MEOD2), potential sanctions easing from the Trump‑Putin meeting (cite K8PPBLI93), and July CPI at 2.7 % YoY (cite V7GV8YBQU).  \n**Risks**: Fed rate hike, governance investigations, commodity cost spikes, geopolitical tensions (cite W3CN6QOQR, 4693XL4AP).  \n**Watch signals**: semiconductor earnings, SEC actions, ICE security budgets, Fed statements, redistricting ruling, sanctions announcements.  \n\nEnsure every claim ends with a single, correct citation, remove redundant phrases, and keep the tone executive and decision‑useful. This will meet the 4–6 sentence/point constraint and deliver a world‑class professional investor brief.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__executive_summary__eurusd__analysis_run__1755949185"
+}

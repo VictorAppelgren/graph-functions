@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:25:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust30y",
+    "target_id": "gilt10y",
+    "selection_motivation": "US 30‑year Treasury yields are highly correlated with UK 10‑year Gilt yields due to shared global risk sentiment and similar long‑term inflation expectations, making gilt10y a key cross‑market handle for risk analytics.",
+    "candidate_motivation": "The US 30Y Treasury Yield is a key long‑term benchmark that moves with the U.S. term structure, monetary policy, inflation expectations, and global sovereign yields; therefore topics that directly influence or are strongly correlated with long‑term U.S. rates—other U.S. Treasury maturities, Fed policy, inflation, the U.S. dollar, and comparable foreign benchmarks—are the most plausible peers or influences.",
+    "existing_links_count": "10",
+    "candidate_count": "17",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "17",
+    "candidate_ids_preview": "['ust10y', 'ust5y', 'ust2y', 'fed_policy', 'us_inflation', 'gilt10y', 'jgb10y', 'ecb_policy', 'euro_inflation', 'dxy', 'sofr', 'spx', 'sx5e', 'gold', 'wti', 'brent', 'wheat']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1175441701766956354",
+    "rel_id": "ust30y__correlates_with__gilt10y",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust30y', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 30‑year Treasury yields are highly correlated with UK 10‑year Gilt yields due to shared global risk sentiment and similar long‑term inflation expectations, making gilt10y a key cross‑market handle for risk analytics.",
+      "type": "CORRELATES_WITH",
+      "source": "ust30y",
+      "target": "gilt10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__correlates_with__gilt10y"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-24T15:37:29",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "new_article_id": "EPJYXB7DX",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['55GVT420Q', 'WLXM1819K', 'AJTHKYXQ3', 'OFY11YO0I']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new Gruters-RNC article does not clearly supersede any existing article in the graph (no matching summaries or explicit previous version to replace)."
+    }
+  },
+  "id": "us_tariffs__EPJYXB7DX__medium"
+}

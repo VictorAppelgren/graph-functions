@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:21:18",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "paramount_skydance_merger",
+    "target_id": "paramount_skydance",
+    "selection_motivation": "The Paramount‑Skydance merger is a primary catalyst for the combined entity’s equity valuation, directly driving short‑term and long‑term stock price movements.",
+    "candidate_motivation": "These topics reflect adjacent media/entertainment deal dynamics and competitive strategies relevant to a Paramount-Skydance merger. They include content rights deals, streaming consolidation, and sports broadcasting policy that could influence valuations and synergies.",
+    "existing_links_count": "1",
+    "candidate_count": "6",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['paramount_skydance', 'ufc_media_rights', 'disney_streaming_consolidation', 'espn_fox_bundle', 'premier_league_2025_26', 'sports_broadcasting_act']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'us_chip_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160697",
+    "rel_id": "paramount_skydance_merger__influences__paramount_skydance",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'paramount_skydance_merger', 'target': 'paramount_skydance'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Paramount‑Skydance merger is a primary catalyst for the combined entity’s equity valuation, directly driving short‑term and long‑term stock price movements.",
+      "type": "INFLUENCES",
+      "source": "paramount_skydance_merger",
+      "target": "paramount_skydance"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "paramount_skydance_merger__influences__paramount_skydance"
+}

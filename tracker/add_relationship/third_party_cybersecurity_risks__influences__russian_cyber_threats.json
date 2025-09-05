@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:14:34",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "third_party_cybersecurity_risks",
+    "target_id": "russian_cyber_threats",
+    "selection_motivation": "Third‑party vendors can serve as vectors for Russian threat actors, making third‑party cybersecurity risks a primary driver of Russian cyber threats.",
+    "candidate_motivation": "These topics are the closest complements to Third-Party Cybersecurity Risks, representing direct vendor risk, external threat dynamics, and security technology domains that influence or are influenced by third-party security practices. They capture vendor risk management, cyber incident exposure, AI-enabled security controls, and defense/cybersecurity policy context.",
+    "existing_links_count": "7",
+    "candidate_count": "7",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['third_party_vendor_risk', 'ml_cybersecurity', 'us_cybersecurity_incidents', 'crypto_security_threats', 'russian_cyber_threats', 'intrusion_dod_contract', 'us_federal_court_cybersecurity']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_china_supply_chain_risks'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397334",
+    "rel_id": "third_party_cybersecurity_risks__influences__russian_cyber_threats",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'hybrid_ad_environments'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'interlock_cyberattack'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'crypto_security_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_china_supply_chain_risks'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'russian_cyber_threats'}, {'type': 'INFLUENCES', 'source': 'third_party_cybersecurity_risks', 'target': 'us_cybersecurity_incidents'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Third‑party vendors can serve as vectors for Russian threat actors, making third‑party cybersecurity risks a primary driver of Russian cyber threats.",
+      "type": "INFLUENCES",
+      "source": "third_party_cybersecurity_risks",
+      "target": "russian_cyber_threats"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "third_party_cybersecurity_risks__influences__russian_cyber_threats"
+}

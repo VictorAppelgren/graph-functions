@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T22:52:06",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "4VN4UTWX1",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['8HP2SSE7G', 'ZUXOHE4Q9', '56DSYR7J6', 'LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE', '3YAQ8JUPL', '4LDHF4T77', '1G54B8R46']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "4LDHF4T77",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The article lacks a mapping to any canonical market handle and offers no actionable market insight, so it should not be added."
+    }
+  },
+  "id": "spx__4VN4UTWX1__current"
+}

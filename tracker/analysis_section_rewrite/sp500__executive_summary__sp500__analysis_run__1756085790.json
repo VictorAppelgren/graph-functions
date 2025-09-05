@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:48:03",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756085790",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "21752",
+    "output_chars": "1692",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Strong core: the piece deploys a coherent first-principles regime framework (tariff discipline, onshore CapEx, real rate/terms-of-trade, BoP) and ties it to a clear onshore‑CapEx/AI data‑center thesis with explicit anchors (tariff levels, energy infrastructure, Ford/NFLX/Alphabet dynamics). However, to reach world‑class quality it must be compressed into 4–6 crisp, decision‑useful sentences or bullets, with a single, explicit house view and a tight causal chain; every factual claim should carry a citation to a source ID and numbers should be bound to those IDs, not stated in the abstract. The draft currently sprawls across multiple sections (base case, bear paths, alt scenarios, near‑term watch items) and overloads with extraneous detail (Costa Coffee, Disney timing) that dilutes the core signal; remove non‑essential anecdotes or fold them into watch‑list notes only if they drive capital allocation. Strengthen first‑principles grounding by making the causal chain explicit in one line: tariff/shoring signals lift onshore capex (chips, AI infra) financed by reliable energy, driving ROIC-led re‑pricing of capital‑intensive names while autos stay pressured until EV profitability improves; anchor this with concrete numbers from the source (e.g., 10% baseline tariffs, 145% reciprocal, potential 80% extreme, Ford EV losses ~$1.3B with ~4.3% margin and ~10% ROIC; NFLX revenue +15.9% YoY, FCF +86.9%, US Nielsen 8.8% share) and attach citations to each claim. Translate the long dossiers into 4–6 items: 1) House view (regime persistence with onshore capex and energy backbone); 2) Key catalysts/triggers (tariff signaling plateau, ramp in chip fabs/data centers, EV profitability inflection for autos, monetization milestones for NFLX/YouTube); 3) Invalidation/risks (tariff rollback/escalation, geopolitics, supply-chain disruption, AI capex pacing disappointment); 4) Watch-list and timing anchors (tariff/compliance milestones; capex run-rates in fabs/data centers; Ford’s EV trajectory; NFLX international monetization; AI‑rotation shifts with the AI‑30 roster); 5) Near-term path (3–6 months) with a single probabilistic base vs upside/downside deltas and the corresponding P&L/ROIC implications; keep to 3–5 bullets for the 0–3/3–6 month slices if included. Ensure every quantitative claim has a source tag (SGB2PAZGK, O4ZEED2EB, 65UUBU0OR, 61SVFUKBY, A88B7V8PY, STBVARD8F, Z5IA1CYUF, 4VN4UTWX1, 4LDHF4T77, Y4QWID79M, JPAIHPA4N, Y6SQOEK69, OGK8WLL69, J99EM2TPZ, U3ZK13ZQI, W2622L6WW, 22PL3Q360, etc.) and avoid mixing IDs in longer streams; map each line to the most relevant IDs and reconcile any conflicting implications (e.g., tariff uplift vs rollback) within the same house view with a clear invalidation trigger. Finally, tighten prose to execute the executive‑summary standard: concise, no repetition, and decision‑useful framing of Ford vs tech pricing vs Netflix/Alphabet as the core signal, with a crisp closing judgment on the strategic exposure and risk controls.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756085790"
+}

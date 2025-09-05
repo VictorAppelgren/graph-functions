@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T13:36:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "CG8ZKHFI2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; S&P 500 high valuations and concentration risk may trigger a pullback, with the equal‑weight ETF offering a hedge.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis and commentary on the S&P 500’s performance and discusses the strategic use of the Invesco S&P 500 Equal‑Weight ETF (RSP) as a hedge, which is a market‑commentary piece."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses recent S&P 500 performance, valuation concerns, and a hedge strategy via RSP, directly affecting the S&P 500 index node."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses current market valuation and a tactical shift to RSP as a hedge against a potential pullback, indicating a medium‑term outlook."
+    },
+    "article_node": {
+      "id": "CG8ZKHFI2",
+      "title": "With the S&P 500 at Historically High Levels, This ETF Could Be the Best Way to Invest in the Index",
+      "summary": "The S&P 500 has surged 68% since early 2023, reaching historically high levels that historically precede sharp declines, largely driven by the Magnificent Seven tech giants. Its high Shiller P/E suggests overvaluation, prompting investors to consider the Invesco S&P 500 Equal‑Weight ETF (RSP) as a hedge, which reduces concentration in mega‑caps and offers a more balanced exposure. RSP has outperformed the cap‑weighted index during recent market recoveries and when smaller‑cap stocks outperform, but it lags during strong mega‑cap rallies and carries higher expense ratios. The article highlights RSP’s trade‑off between reduced concentration risk and potentially lower returns in a tech‑heavy market, suggesting it as a strategic option for investors wary of a S&P 500 pullback.",
+      "source": "https://www.fool.com/investing/2025/08/31/with-the-sp-500-at-historically-high-levels-this/",
+      "published_at": "2025-08-31T09:32:00+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "CG8ZKHFI2"
+}

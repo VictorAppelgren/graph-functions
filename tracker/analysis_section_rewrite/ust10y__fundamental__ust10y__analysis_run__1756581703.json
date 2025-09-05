@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T21:21:43",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756581703",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "70",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is off‑track: it focuses on 30‑year mortgage rates, which is **not** a canonical handle in the Argos taxonomy (the only handles allowed are the listed indices, rates, FX, commodities, credit/vol, etc.). Consequently, the piece fails the **Acceptance Gate** (no handle mapping) and has no explicit catalyst window.  \n**Actionable edits:**  \n1. Replace the mortgage‑rate narrative with a discussion of the **UST 10‑year yield** (handle ust10y).  Use the same data points (e.g., 6.548 % mortgage rate → 3.8 % UST10Y) to illustrate the transmission path.  \n2. Add a **catalyst window**: e.g., “Fed policy meetings (Sept 2024, Dec 2024, Jan 2025), CPI releases (Feb 2025, Apr 2025), and the Fed’s balance‑sheet taper schedule (Feb 2025 onward) will be the key triggers.”  \n3. Re‑frame the analysis to a concise, actionable view: state direction (e.g., “UST10Y likely to rise 10–20 bp until Q4 2025”), magnitude, horizon, catalysts, and invalidation scenarios (e.g., “if CPI falls below 2 % and Fed signals pause, UST10Y could fall 15 bp”).  \n4. Cite the source explicitly: e.g., “(LF0UUL917)”.  \n\nOnce these changes are made, the piece will meet the guidelines and be suitable for a top‑macro PM.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756581703"
+}

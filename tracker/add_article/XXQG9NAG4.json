@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:03:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "XXQG9NAG4",
+    "topic_discovery_motivation": "Article discusses the impact of AI on workplace dynamics and the need for human-centric integration strategies, relevant to existing discussions on AI applications and workplace stress.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 2,
+      "existing_ids": [
+        "ai_productivity",
+        "workplace_stress"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article offers analysis and opinion on AI adoption in the workplace, which falls under market commentary."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses general AI adoption in workplaces, not a specific event affecting the node's scope, so impact is low."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on the medium-term evolution of AI adoption in workplaces, emphasizing strategies, training, and gradual integration to avoid disruptions."
+    },
+    "article_node": {
+      "id": "XXQG9NAG4",
+      "title": "AI and the future of work: evolution, not extinction",
+      "summary": "The article discusses the transformative impact of artificial intelligence (AI) in the workplace, highlighting both the excitement and anxiety it generates among employees and decision-makers. It emphasizes the importance of gradual AI integration to avoid operational disruptions and internal resistance, citing examples of failed implementations. The piece advocates for a human-centric approach to AI, where technology augments rather than replaces human roles, and stresses the need for clear strategies, accountability, and training to ensure successful AI adoption.",
+      "source": "https://www.techradar.com/pro/ai-and-the-future-of-work-evolution-not-extinction",
+      "published_at": "2025-08-22T05:51:29+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "XXQG9NAG4"
+}

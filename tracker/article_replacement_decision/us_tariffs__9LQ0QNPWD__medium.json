@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-22T14:34:39",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_tariffs",
+    "new_article_id": "9LQ0QNPWD",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['YJ1DDL8O8', '55GVT420Q', 'AJTHKYXQ3', 'OFY11YO0I']",
+    "mode": "CAN_REPLACE",
+    "target_id": "YJ1DDL8O8",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "remove",
+      "id": "YJ1DDL8O8",
+      "motivation": "The new article provides specific insights into the tax cuts for Texas residents, which may supersede existing articles that lack localized detail on the impact of the tax bill."
+    }
+  },
+  "id": "us_tariffs__9LQ0QNPWD__medium"
+}

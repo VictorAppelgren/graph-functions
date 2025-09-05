@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T02:52:20",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1DVLO17C7",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US core PCE rise and Fed dovish stance weigh on equity indices and 10‑year Treasury yields.",
+      "existing_ids": [
+        "spx",
+        "ust10y",
+        "ust2y",
+        "ust30y",
+        "us_inflation",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports the US core PCE inflation figure, a major macroeconomic data release."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not specified, cannot assess relevance"
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent PCE reading and an immediate Fed rate‑cut signal that caused a day‑to‑day equity market reaction."
+    },
+    "article_node": {
+      "id": "1DVLO17C7",
+      "title": "Stocks Decline on Weakness in Tech Stocks and Sticky Inflation Pressures",
+      "summary": "US core PCE rose to 2.9% y/y in July, prompting Fed Governor Waller to signal a 25‑bp rate cut at the September FOMC, which weighed on equity markets – the S&P 500 fell 0.31% and the Nasdaq 100 slid 0.92% on the day.",
+      "source": "https://www.nasdaq.com/articles/stocks-decline-weakness-tech-stocks-and-sticky-inflation-pressures",
+      "published_at": "2025-08-29T15:45:19+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "1DVLO17C7"
+}

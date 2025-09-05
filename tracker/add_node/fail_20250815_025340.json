@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T02:53:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HTGU0DXND",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights a new life insurance product that addresses pricing transparency and consumer trust, which is crucial for understanding trends in financial services and consumer protection in the insurance sector.",
+      "id": "wealth_express_term_life_insurance",
+      "name": "Wealth Express Term Life Insurance",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "New life insurance product is a financial asset."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific product, not a macro driver or tradable asset",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

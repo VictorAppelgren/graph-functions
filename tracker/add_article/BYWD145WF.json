@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T03:32:23",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BYWD145WF",
+    "status": "success",
+    "topic_id": "us_russia_relations"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses a significant geopolitical event involving U.S.-Russia relations and potential implications for U.S. chip manufacturing, which aligns with existing discussions around U.S.-Russia relations and chip manufacturing strategies.",
+      "existing_node_ids": "us_russia_relations",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the current state of relations between the US and Russia, which involves geopolitical dynamics and risks."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the current state of US-Russia relations, which is directly relevant to this node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing geopolitical tensions and their implications for future relations, indicating a longer-term perspective."
+    },
+    "article_node": {
+      "id": "BYWD145WF",
+      "title": "The World Awaits Trump-Putin Summit",
+      "summary": "President Trump is set to meet with Russian President Vladimir Putin in Alaska, with expectations tempered by both leaders. The summit is historic as it marks Putin's first visit to U.S. soil in a decade and comes amid ongoing tensions from the Ukraine conflict. Trump has indicated that while he hopes for a positive outcome, he acknowledges the possibility of failure in the talks. Additionally, the Trump administration is reportedly in discussions to potentially take a stake in Intel to bolster U.S. chip manufacturing.",
+      "source": "https://www.bloomberg.com/news/videos/2025-08-15/balance-of-power-late-edition-8-14-2025-video?srnd=phx-technology",
+      "published_at": "2025-08-15T00:19:17.128000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "BYWD145WF"
+}

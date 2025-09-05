@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T00:54:38",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ust5y",
+    "target_id": "ust2y",
+    "selection_motivation": "US 5‑year Treasury yield is a key term‑premium indicator that drives expectations for short‑term rates; movements in the 5‑year yield strongly influence the 2‑year Treasury yield through term‑structure dynamics.",
+    "candidate_motivation": "US 5‑year Treasury yields are driven by monetary policy, inflation expectations, and the overall shape of the yield curve; they also move in tandem with other U.S. maturities, the dollar index, and comparable foreign yields, making these topics the most likely strong influences, peers, or correlates.",
+    "existing_links_count": "5",
+    "candidate_count": "12",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust30y', 'fed_policy', 'sofr', 'us_inflation', 'us_unemployment_claims', 'dxy', 'bund10y', 'jgb10y', 'ecb_policy', 'euro_inflation']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627958159",
+    "rel_id": "ust5y__influences__ust2y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'ust5y', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 5‑year Treasury yield is a key term‑premium indicator that drives expectations for short‑term rates; movements in the 5‑year yield strongly influence the 2‑year Treasury yield through term‑structure dynamics.",
+      "type": "INFLUENCES",
+      "source": "ust5y",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust5y__influences__ust2y"
+}

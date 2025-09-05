@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T19:39:22",
+  "processed": false,
+  "inputs": {
+    "topic_id": "eurusd",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "eurusd__analysis_run__1756660857",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "4024",
+    "output_chars": "566",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly identifies the key drivers but lacks explicit causal links and precise catalyst windows; replace the generic “CPI >2.5% + Fed cuts” line with a single, time‑specific trigger such as “2025‑08‑15 us_inflation >2.5% → Fed cut → DXY +1.0‑1.5% (XTQIQRP5K)”; similarly, tighten the Mizuho/MUFG M&A entry to “2025‑10‑01 deal announcement → Q2‑26 completion → DXY +0.5‑1.0% (PA57YBYVQ)”; for the downside, collapse the ECB cut and tariff rollback into one “2025‑09‑11 ECB 25bp cut or tariff rollback → DXY –0.5‑1.0% (XTQIQRP5K)”; drop the generic “Tariff rollback” line. Ensure each line cites a single ID, uses a concise causal chain, and includes a probability grounded in the source (e.g., 70% for CPI, 55% for M&A, 60% for ECB cut, 50% for tariff rollback). Remove any redundant or vague wording, and keep the format strictly “Up/Down | Time window | Driver/Mechanism | What to watch | Probability %”.",
+      "tokens": {}
+    }
+  },
+  "id": "eurusd__movers_scenarios__eurusd__analysis_run__1756660857"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T22:53:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "investment_analysis_techniques",
+    "target_id": "us_inflation_impact_on_stocks",
+    "selection_motivation": "Linking investment analysis techniques to US Inflation Impact on Stocks will provide insights into how inflation directly affects stock performance, enhancing the analytical framework for investment decisions.",
+    "candidate_motivation": "Investment Analysis Techniques are closely related to various economic indicators and financial instruments that influence investment decisions, making topics like US Inflation, S&P 500, and Fed Policy strong candidates for influence or correlation.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['us_inflation', 'sp500', 'fed_policy', 'core_monthly_cpi', 'us_10y', 'us_tariffs_on_technology', 'investment_risks', 'thematic_portfolio_investing', 'us_inflation_impact_on_stocks', 'us_inflation_data']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'fed_policy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186901148",
+    "rel_id": "investment_analysis_techniques__influences__us_inflation_impact_on_stocks",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'investment_analysis_techniques', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking investment analysis techniques to US Inflation Impact on Stocks will provide insights into how inflation directly affects stock performance, enhancing the analytical framework for investment decisions.",
+      "type": "INFLUENCES",
+      "source": "investment_analysis_techniques",
+      "target": "us_inflation_impact_on_stocks"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "investment_analysis_techniques__influences__us_inflation_impact_on_stocks"
+}

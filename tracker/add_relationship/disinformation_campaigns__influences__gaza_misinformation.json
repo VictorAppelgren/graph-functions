@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:13:36",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "disinformation_campaigns",
+    "target_id": "gaza_misinformation",
+    "selection_motivation": "Disinformation campaigns in geopolitical conflicts directly generate region‑specific misinformation such as Gaza Misinformation, making the influence link most relevant.",
+    "candidate_motivation": "These topics are the strongest related forms and enablers of geopolitical misinformation, including region-specific disinformation (Gaza), health-related misinformation used in political contexts, and AI/deepfake driven misinformation that could parallel the source's dynamics.",
+    "existing_links_count": "1",
+    "candidate_count": "8",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['gaza_misinformation', 'vaccine_misinformation', 'vaccine_misinformation_impact', 'vaccine_misinformation_violence', 'ai_generated_misinformation', 'deepfake_ai_medical', 'deepfake_medical_advertising', 'ai_narrative_attacks']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'disinformation_campaigns', 'target': 'ukraine_geopolitical_security'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559532044",
+    "rel_id": "disinformation_campaigns__influences__gaza_misinformation",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'disinformation_campaigns', 'target': 'ukraine_geopolitical_security'}, {'type': 'INFLUENCES', 'source': 'disinformation_campaigns', 'target': 'gaza_misinformation'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Disinformation campaigns in geopolitical conflicts directly generate region‑specific misinformation such as Gaza Misinformation, making the influence link most relevant.",
+      "type": "INFLUENCES",
+      "source": "disinformation_campaigns",
+      "target": "gaza_misinformation"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "disinformation_campaigns__influences__gaza_misinformation"
+}

@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T19:29:46",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6DHB4W7R8",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; La Niña‑driven hurricane activity raises supply‑disruption risk, tightening UST10y yields.",
+      "existing_ids": [
+        "hurricane_risk_ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses a weather forecast, which does not fit any of the specified categories such as macro_event, earnings, regulation, policy_statement, central_bank_action, economic_data, geopolitical, company_update, or market_commentary."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article describes a local weather pattern with no clear macro or market impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on a short‑term cold front expected to lower temperatures and reduce rainfall over the next few days, a near‑term weather event."
+    },
+    "article_node": {
+      "id": "6DHB4W7R8",
+      "title": "Chill to spill across Midwest, East this week. How cool will it get?",
+      "summary": "A cold front moving from Canada is expected to lower temperatures across the Midwest and East, with highs dropping into the 60s and 50s for several days. The front will bring unusually dry conditions, with August rainfall in the Northeast falling to 6–10% of normal. While the Midwest may see a brief return to warmth later in the week, the overall pattern points to a cooler, drier September in much of the eastern United States.",
+      "source": "https://www.usatoday.com/story/news/nation/2025/09/02/cool-weather-midwest-east-rain/85935524007/",
+      "published_at": "2025-09-02T16:15:04+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "6DHB4W7R8"
+}

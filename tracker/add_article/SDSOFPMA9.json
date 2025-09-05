@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T09:32:17",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "SDSOFPMA9",
+    "topic_discovery_motivation": "Article discusses the growth of the European space industry and the challenges in commercializing Earth observation data, which relates to macroeconomic trends in technology and innovation.",
+    "status": "failed"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 3,
+      "existing_ids": [],
+      "new_names": [
+        "European Space Industry",
+        "Earth Observation Data Commercialization",
+        "Satellite Data Utilization"
+      ]
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides analysis and commentary on the European space industry's growth and challenges, fitting the market commentary category."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant growth and challenges in the European space industry, directly impacting the node by highlighting commercial and collaboration dynamics."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses future industry trends and structural challenges in commercializing Earth observation data, indicating a medium-term outlook rather than immediate events or long-term fundamentals."
+    },
+    "article_node": {
+      "id": "SDSOFPMA9",
+      "title": "European space tech has data to sell — but where are the buyers?",
+      "summary": "The European space industry is experiencing significant growth but faces challenges in commercializing valuable Earth observation data. At the Living Planet Symposium 2025, ESA leaders emphasized the need for collaboration between the public and private sectors to bridge gaps in data utilization. Despite successful missions like the Φsat-2 satellite, many startups struggle to sell their data due to a disconnect between space companies and potential commercial buyers. The future of the industry hinges on European companies leveraging satellite data for various sectors, as competition in the global space economy intensifies.",
+      "source": "https://thenextweb.com/news/europe-space-tech-data-buyers",
+      "published_at": "2025-08-22T06:15:55",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 0
+    }
+  },
+  "id": "SDSOFPMA9"
+}

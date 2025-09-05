@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T16:21:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "80SJ07ZAE",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US unemployment rise signals potential Fed tightening, influencing UST yields.",
+      "existing_ids": [
+        "us_unemployment_claims"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports a change in U.S. unemployment, a key jobs market data release, which qualifies as a major macroeconomic event."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a notable rise in U.S. unemployment, signaling a softening labor market that could influence monetary policy expectations and equity valuations, but it is a single data point rather than a structural shock."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent rise in U.S. unemployment, an immediate labor market indicator affecting portfolio decisions."
+    },
+    "article_node": {
+      "id": "80SJ07ZAE",
+      "title": "The Labor Market’s Soft Underbelly Emerges",
+      "summary": "U.S. unemployment has climbed to 4.2% after falling below 3.5% in 2023, indicating a softening labor market. Investors may need to rethink portfolios in light of this slowdown.",
+      "source": "https://seekingalpha.com/article/4818247-labor-markets-soft-underbelly-emerges",
+      "published_at": "2025-09-01T13:05:27+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "80SJ07ZAE"
+}

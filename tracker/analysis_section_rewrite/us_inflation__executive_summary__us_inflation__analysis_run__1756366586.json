@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-28T10:14:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756366586",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "9082",
+    "output_chars": "1351",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is overly verbose, mixes long‑term, medium‑term and short‑term narratives, and fails to distill a single, decision‑useful house view.  Condense it into **4–6 bullet points** that each contain: (1) a clear catalyst, (2) the expected market impact, (3) a quantified range or number, and (4) a watch signal or risk.  Keep the causal chain tight: Fed cuts → lower real rates → dollar weakness → higher equity/crypto valuations (OGK8WLL69).  Replace vague phrases (“could damp aggregate demand”) with concrete metrics (e.g., “25 % of U.S. jobs exposed to automation, potentially reducing consumer spending by X %”).  Ensure every claim is sourced; for instance, cite the Brookings study (1GVYF2V8O) when mentioning automation exposure, and the soy moratorium data (J54PXL0NV) when noting commodity price support.  Remove redundant sections (e.g., the 3–6‑month narrative that repeats the same points) and focus on the most material drivers: Fed policy, crypto inflows, Brazil’s soy supply, AI productivity, and the 2026 fiscal‑political risk.  End with a concise risk/reward summary and a clear watch list (Fed minutes, AI adoption metrics, debt‑to‑GDP, crypto regulation).  This will produce a crisp, executive brief that meets the length/format constraints and provides actionable insight.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756366586"
+}

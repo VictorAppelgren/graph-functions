@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T16:28:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usdcny",
+    "target_id": "fed_policy",
+    "selection_motivation": "Fed policy decisions directly influence USD strength, which drives the USD/CNY exchange rate; linking Fed Policy to USD/CNY captures the causal transmission from monetary policy to the cross.",
+    "candidate_motivation": "USD/CNY is driven by US monetary conditions (Fed policy, Treasury yields, SOFR), US macro data (inflation, unemployment), the USD index, and China’s credit environment and export performance; it also moves in tandem with other major cross‑rates such as USD/JPY, GBP/USD and EURUSD.",
+    "existing_links_count": "1",
+    "candidate_count": "15",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['fed_policy', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_unemployment_claims', 'china_credit_impulse', 'china_exports', 'dxy', 'usdjpy', 'gbpusd', 'eurusd', 'sofr', 'ecb_policy']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932160896",
+    "rel_id": "usdcny__influences__fed_policy",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usdcny', 'target': 'fed_policy'}, {'type': 'COMPONENT_OF', 'source': 'usdcny', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy decisions directly influence USD strength, which drives the USD/CNY exchange rate; linking Fed Policy to USD/CNY captures the causal transmission from monetary policy to the cross.",
+      "type": "INFLUENCES",
+      "source": "usdcny",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usdcny__influences__fed_policy"
+}

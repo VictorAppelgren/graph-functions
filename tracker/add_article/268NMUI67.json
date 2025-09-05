@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T00:41:34",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "268NMUI67",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; US consumer inflation likely to rise as import duties on low‑value goods increase costs.",
+      "existing_ids": [
+        "us_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article describes the U.S. ending the de minimis tax loophole, a regulatory change imposing tariffs on online orders, which is a regulation."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Unable to determine relevance due to missing node context."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a newly announced policy that will take effect immediately, with a six‑month transition period, affecting consumer costs and delivery times."
+    },
+    "article_node": {
+      "id": "268NMUI67",
+      "title": "End of de minimis loophole means higher prices for overseas goods, experts say",
+      "summary": "The U.S. has ended the de minimis tax loophole, meaning all online orders valued at $800 or less will now face tariffs, raising consumer costs and potentially slowing delivery times. The move, announced by President Trump, aims to curb illicit drug shipments and level the playing field for domestic retailers, with industry groups praising the action. The policy will generate an estimated $10 billion in annual tariff revenue and includes a six‑month transition period for postal carriers to adjust duty calculations.",
+      "source": "https://finance.yahoo.com/news/end-minimis-loophole-means-higher-213725234.html",
+      "published_at": "2025-08-29T21:37:25+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "268NMUI67"
+}

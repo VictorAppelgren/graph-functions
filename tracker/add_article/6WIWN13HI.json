@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T11:39:36",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "6WIWN13HI",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; Amazon Labor Day deals and Prime membership discounts are likely to boost US consumer spending, tightening inflation and core PCE, prompting Fed policy adjustments.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article describes Amazon’s Labor Day sale, a company promotional event, which falls under company_update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was specified, so the impact on any particular market handle cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article describes a short‑term promotional event affecting Amazon’s sales."
+    },
+    "article_node": {
+      "id": "6WIWN13HI",
+      "title": "Looking for Labor Day tool deals? Here's how you can save.",
+      "summary": "Amazon’s Labor Day sale, starting August 22 and running through September 1, offers deep discounts—over 50% off on power tools, home improvement items, and electronics. Prime members gain early access to deals and free shipping, while discounted Prime memberships are available for young adults and government‑assisted customers. The promotion includes up to 81% off on select products and highlights key categories such as tools, mattresses, and appliances.",
+      "source": "https://www.usatoday.com/story/lifestyle/home-garden/2025/09/01/amazon-labor-day-diy-home-improvement-tool-deals/85898365007/",
+      "published_at": "2025-09-01T08:03:14+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "6WIWN13HI"
+}

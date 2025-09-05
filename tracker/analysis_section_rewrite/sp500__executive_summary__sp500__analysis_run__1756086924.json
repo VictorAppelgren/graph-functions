@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T04:08:52",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756086924",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "24080",
+    "output_chars": "1415",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft successfully articulates a Regime A framework and uses concrete IDs, but it overfits to a long, multi-page read and fails the 4–6 sentence house view target by diluting the causal chain; tighten into a single, crisp house view with a baseline Regime A stance, a concise Regime A→B/C transition narrative, and 2 core stock implications rather than an extended ticker-by-ticker catalog. Actionable edits: (1) compress to 4–6 sentences, foregrounding a base-case tariff path (baseline 10% on many partners with higher tariffs on China) and the potential peak/extreme regime, plus a brief note on alliance realignments; (2) fix the causal chain so tariff shocks flow into import prices, inflation expectations, then domestically reallocate capex (chip fabs, AI infra, EV/energy supply chains) and baseload power economics, culminating in sector margins and governance signals, with explicit source IDs for every link; (3) replace or collapse the Netflix–Ford–Hutchmed wiring into a tight 2–3 stock/asset anchors section (e.g., Ford as a Regime A income/cyclicality play and NFLX as a near-term monetization/watch item) and attach precise, sourced metrics (Ford EV losses and margins; NFLX YoY revenue growth and FCF, with the exact P/E/dividend context) rather than repeated narrative paragraphs; (4) provide 2–3 explicit catalysts and 2–3 invalidation points per regime, each with numeric guardrails where possible and all tied to IDs (e.g., tariff evolutions, US fab milestones, AI infra capex tempo, CPI prints, and policy signals at Jackson Hole); (5) consolidate the six decisive signals into a compact, traceable six-ID watch-list and ensure no non‑sourced assertions float (remove ambient references like Costa Coffee or Disney unless they are direct regime-price signals); (6) ensure every substantive claim is sourced to an ID from the material, and reconcile any tensions (e.g., “peaked” vs. gradual regime transition) by stating probabilities/conditional paths and their market implications; (7) sharpen style to executive, with minimal repetition and no filler, and clearly label the horizon boundaries (multi-year Regime A baseline; Regime B/C transition triggers; 0–6 month catalyst map) so the piece is decision-useful at a glance.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__executive_summary__sp500__analysis_run__1756086924"
+}

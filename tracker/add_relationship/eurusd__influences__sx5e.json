@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T13:17:07",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eurusd",
+    "target_id": "sx5e",
+    "selection_motivation": "EURUSD movements directly affect euro‑area equity valuations via currency‑adjusted earnings and trade dynamics, making the Euro Stoxx 50 a downstream asset of the currency pair.",
+    "candidate_motivation": "EURUSD is primarily driven by relative monetary policy, inflation, and yield differentials between the US and Eurozone, as well as broader FX dynamics. Therefore topics that directly influence these variables or represent major FX pairs are likely strong influences or peers.",
+    "existing_links_count": "8",
+    "candidate_count": "18",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "18",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'ust10y', 'bund10y', 'gilt10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'euribor', 'dxy', 'usdcny', 'usdjpy', 'gbpusd', 'sx5e', 'spx']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373219635",
+    "rel_id": "eurusd__influences__sx5e",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'sx5e'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'usdcny'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'COMPONENT_OF', 'source': 'eurusd', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EURUSD movements directly affect euro‑area equity valuations via currency‑adjusted earnings and trade dynamics, making the Euro Stoxx 50 a downstream asset of the currency pair.",
+      "type": "INFLUENCES",
+      "source": "eurusd",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influences__sx5e"
+}

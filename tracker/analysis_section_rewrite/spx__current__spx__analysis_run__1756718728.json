@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-09-01T11:25:28",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "current",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756718728",
+    "article_ids": "['8HP2SSE7G', '56DSYR7J6', 'LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE']",
+    "selected_articles_count": "5",
+    "material_chars": "186531",
+    "output_chars": "1614",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Edit Instructions**\n\n1. **Canonical Handle Mapping** – Add explicit references to the S&P 500 handle (`spx`) wherever the index is discussed.  \n   *Example*: “The **spx** sits at a historically high valuation…”  \n\n2. **Sign & Magnitude Ranges** – Provide concrete levels with ranges.  \n   *Example*: “**spx** support at **4,200 ± 50**; a break below 4,150 signals a short‑term reversal. A **4,400 ± 50** break would indicate a shift to a more bearish regime.”  \n\n3. **Catalyst Windows & Dates** – Attach clear dates to each catalyst.  \n   *Fed Waller statement*: September 16‑17 2025 (FOMC).  \n   *Q2 earnings (Marvell, Nvidia, etc.)*: August 28‑31 2025.  \n   *Core PCE data release*: August 30 2025.  \n   *Potential Fed rate hike*: September 16‑17 2025 (if announced).  \n\n4. **Invalidation Points** – Specify what would invalidate the thesis.  \n   *Example*: “A sustained drop in core PCE below 2 % or a Fed rate hike on September 16‑17 would undermine the dovish narrative and accelerate a pullback.”  \n\n5. **Horizon Specification** – Tighten the 0‑3‑week window with calendar dates.  \n   *Example*: “Over the next 0‑3 weeks (Aug 29 – Sep 20 2025) …”\n\n6. **Consistency & Brevity** – Remove any redundant or vague phrasing. Keep the focus on **spx** and the 0‑3‑week catalysts.  \n\nApply these edits to ensure the analysis meets the truth‑>verbosity, market‑mapped, action‑over‑prose, and canonical‑handle requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__current__spx__analysis_run__1756718728"
+}

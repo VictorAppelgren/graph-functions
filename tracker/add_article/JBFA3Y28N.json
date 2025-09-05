@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T15:34:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "JBFA3Y28N",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; tariffs on new camera gear raise US consumer prices, boosting inflation expectations around Labor Day (early September).",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article focuses on consumer camera deals and pricing influenced by tariffs, but does not describe a macroeconomic event, earnings report, regulatory change, policy statement, central bank action, economic data release, geopolitical event, or company-specific news. Therefore it does not fit any of the defined categories."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article only references tariffs in the narrow context of consumer camera pricing; it does not provide new policy data or macro‑level impact, so its relevance to a macro or policy node is minimal."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on short-term promotional events and pricing dynamics tied to Labor Day sales and tariff impacts, which are immediate and transient."
+    },
+    "article_node": {
+      "id": "JBFA3Y28N",
+      "title": "Want a great camera bargain for Labor day? You'll get a better deal buying secondhand than buying new",
+      "summary": "The article discusses Labor Day camera deals, noting that new gear prices are higher due to tariffs, but discounts remain available on models like the Panasonic Lumix S9 and Nikon D850. It highlights that the best bargains are often found in used gear from retailers such as Adorama and B&H Photo, where savings can reach 15‑25% for high‑condition items. The piece also lists other tech and appliance promotions, but emphasizes that camera deals are limited and second‑hand options are preferable for significant savings.",
+      "source": "https://www.techradar.com/seasonal-sales/labor-day-camera-deals-are-poor-this-year-heres-how-you-can-save-more-money-by-shopping-secondhand-instead",
+      "published_at": "2025-08-31T11:30:00+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "JBFA3Y28N"
+}

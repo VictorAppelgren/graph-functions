@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T02:53:10",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755995886",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "5625",
+    "output_chars": "3617",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft mixes a long narrative with the required 4‑line “Movers & Scenarios” block and a malformed trade plan. 1) Rewrite the Movers & Scenarios section to **exactly four lines** in the strict format:  \n`Up/Down | Time window | Driver/Mechanism | What to watch | Probability %`.  \nRemove any extra commas or parenthetical notes; keep each field concise. 2) Base each probability on a cited fact: 70 % for the September 50‑bp cut (37UZC9X8I)(GX057ADL7), 30 % for a Fed stall (C22MKA9VY), 60 % for IPO acceleration (>90 deals) (Q7VVGNSQE), and 10 % for an oil supply contraction (J99EM2TPZ). 3) Replace the “Long” line with a single, correctly ordered Swing‑Trade line:  \n`Long | 3‑6 mo | 31.00 | 29.50 | 35.00 | 2.7 | Fed stall or trade tensions | Fed September meeting | 70% | 80`.  \nCompute R/R as (35‑31)/(31‑29.5)=2.7. 4) Strip the narrative of filler; keep only the first‑principles logic (real‑rate differential, Fed cut trigger, IPO supply‑side, oil supply shock) and the concrete numbers. 5) Ensure every cited fact is tied to a single sentence and that no citation is repeated unnecessarily. 6) Verify that all numbers (price levels, probabilities, R/R) come from the source IDs provided. 7) Finally, double‑check that the trade plan uses only the provided material and that the “Outlook” or “Swing Trade” line is the sole output after the 4‑line block.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1755995886"
+}

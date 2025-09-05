@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T02:50:36",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755995886",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "5625",
+    "output_chars": "711",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Revise each line to match the three mutually‑exclusive scenarios and to use the exact probability figures from the sources. For the first Up line, combine the Fed cut and IPO acceleration into a single driver but cite both (C22MKA9VY) for the 50‑bp cut and (Q7VVGNSQE) for the 95 IPOs trigger, and state the joint probability as 70 % × 50 % = 35 % (or simply 35 % probability). Replace the generic “tightening credit spreads” with the concrete ACM outcome: lower personal‑loan rates by 0.5‑1 % and a 10‑15 % share rise to $35 (SK994CBWR). For the Down lines, use the Fed stall and U.S.–China trade‑tension spike as the driver, cite (C22MKA9VY)(SK994CBWR) for the export‑control escalation, and set the probability to 25 % (reflecting the 30 % risk in the source). For the inflation‑shock line, cite (C3ODMIQKZ) for the 0.5 % spike and 50 bp spread widening, and set the probability to 20 % (the source lists it as a risk, not a probability). Ensure each line remains a single sentence, includes the watch signal (Fed minutes, IPO count, semiconductor order books, export controls), and uses only the IDs present in the source material.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__movers_scenarios__fed_policy__analysis_run__1755995886"
+}

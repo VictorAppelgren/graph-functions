@@ -1,0 +1,51 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-03T17:56:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "gold",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "The link to the specific Fed rate cut on 17 Sept 2025 is a one‑off event with no ongoing relevance, offering minimal cross‑asset insight compared to the other handle‑based correlations.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to the specific Fed rate cut on 17 Sept 2025 is a one‑off event with no ongoing relevance, offering minimal cross‑asset insight compared to the other handle‑based correlations.",
+    "existing_links_before_len": "19",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1220477698040662062",
+    "rel_id": "gold__correlates_with__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "18",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gold', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'spx'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'brent'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gold', 'target': 'eurusd'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "prioritized_link": {
+      "motivation": "Gold tends to rise when US unemployment claims increase, reflecting risk‑off sentiment; linking them captures a key macro‑risk channel.",
+      "type": "CORRELATES_WITH",
+      "source": "gold",
+      "target": "us_unemployment_claims"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to the specific Fed rate cut on 17 Sept 2025 is a one‑off event with no ongoing relevance, offering minimal cross‑asset insight compared to the other handle‑based correlations.",
+      "remove_link": "fed_rate_cut_sept17_2025"
+    },
+    "removal_decision": {
+      "motivation": "The link to the specific Fed rate cut on 17 Sept 2025 is a one‑off event with no ongoing relevance, offering minimal cross‑asset insight compared to the other handle‑based correlations.",
+      "remove_link": "fed_rate_cut_sept17_2025"
+    },
+    "source_node": {
+      "importance": 2,
+      "query": "(gold OR gold* OR gold price OR gold spot OR gold futures OR gold bullion OR gold mining OR gold mining stocks OR gold mining companies OR gold mining sector OR gold mining industry OR gold mining ETF OR gold mining funds OR GLD OR IAU OR GDX OR GDXJ OR GOLD OR XAU OR XAUUSD OR XAUUSD* OR XAU*) OR (precious metals OR bullion OR metal OR metals) OR (price OR spot OR futures OR contract OR exchange OR CME OR NYMEX) OR (mining OR producer OR producer* OR company OR companies OR sector OR industry OR fund OR funds OR ETF) OR (news OR update OR breaking OR recent OR latest OR today OR report OR analysis OR forecast OR outlook OR trend OR movement OR volatility OR change OR shift OR impact) OR (market OR markets OR trading OR trade OR trader OR speculation OR speculator OR investment OR investor OR hedge OR hedging OR position OR positioning) OR (inflation OR inflation* OR safe haven OR hedge OR safe-haven OR safehaven OR risk OR risk* OR geopolitical OR political OR event OR events OR sentiment OR sentiment* OR confidence OR uncertainty OR crisis OR crises OR development OR developments)",
+      "name": "Gold",
+      "id": "gold",
+      "last_queried": "2025-09-03T09:40:54.389000000+00:00",
+      "queries": 3
+    }
+  },
+  "id": "gold__correlates_with__fed_rate_cut_sept17_2025"
+}

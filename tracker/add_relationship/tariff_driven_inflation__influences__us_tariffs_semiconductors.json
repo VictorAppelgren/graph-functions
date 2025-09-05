@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:51:57",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "tariff_driven_inflation",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "Tariff-driven inflation is a primary driver of sector-specific tariff measures; the semiconductor sector has been heavily impacted by such tariffs, making the link to US Tariffs on Semiconductors a key causal relationship.",
+    "candidate_motivation": "Tariff-Driven Inflation is most plausibly connected to broad inflation metrics, policy responses, and tariff-specific trade dynamics that influence price levels and inflation expectations.",
+    "existing_links_count": "4",
+    "candidate_count": "19",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "19",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'core_monthly_cpi', 'core_cpi', 'fed_policy', 'ecb_policy', 'us_tariffs', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'us_china_tariffs', 'us_china_trade_war_2025', 'us_china_trade_talks', 'us_tariff_inflation', 'us_inflation_data', 'us_inflation_stock_impact', 'oil', 'gold', 'usd']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373217270",
+    "rel_id": "tariff_driven_inflation__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_inflation'}, {'type': 'INFLUENCES', 'source': 'tariff_driven_inflation', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Tariff-driven inflation is a primary driver of sector-specific tariff measures; the semiconductor sector has been heavily impacted by such tariffs, making the link to US Tariffs on Semiconductors a key causal relationship.",
+      "type": "INFLUENCES",
+      "source": "tariff_driven_inflation",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "tariff_driven_inflation__influences__us_tariffs_semiconductors"
+}

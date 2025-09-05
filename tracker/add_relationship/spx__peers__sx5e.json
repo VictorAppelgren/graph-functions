@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T03:35:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "spx",
+    "target_id": "sx5e",
+    "selection_motivation": "Spx and Euro Stoxx 50 are the primary equity indices for the US and EU markets, respectively, and serve as direct competitors and benchmarks for global equity performance, warranting a PEERS link.",
+    "candidate_motivation": "The S&P 500 is a US equity index whose performance is tightly linked to US macro‑economic data, monetary policy, Treasury yields, currency dynamics, and global commodity prices, as well as peer equity indices. All listed topics have a direct or competitive influence or correlation with the index.",
+    "existing_links_count": "12",
+    "candidate_count": "27",
+    "all_nodes_count": "29",
+    "candidate_ids_len": "27",
+    "candidate_ids_preview": "['usdcny', 'us_unemployment_claims', 'fed_policy', 'bund10y', 'ust10y', 'ust2y', 'china_exports', 'china_credit_impulse', 'ust30y', 'copper', 'ust5y', 'gbpusd', 'gilt10y', 'sx5e', 'sofr', 'us_inflation', 'jgb10y', 'ecb_policy', 'wheat', 'wti', 'brent', 'dxy', 'usdjpy', 'india_industrial_output', 'euro_inflation', 'gold', 'eurusd']",
+    "existing_links_before_len": "12",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155178801978673161",
+    "rel_id": "spx__peers__sx5e",
+    "existing_links_after_len": "13",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'spx', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'gold'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'wti'}, {'type': 'CORRELATES_WITH', 'source': 'spx', 'target': 'dxy'}, {'type': 'PEERS', 'source': 'spx', 'target': 'sx5e'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Spx and Euro Stoxx 50 are the primary equity indices for the US and EU markets, respectively, and serve as direct competitors and benchmarks for global equity performance, warranting a PEERS link.",
+      "type": "PEERS",
+      "source": "spx",
+      "target": "sx5e"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "spx__peers__sx5e"
+}

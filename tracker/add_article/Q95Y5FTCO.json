@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T19:32:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Q95Y5FTCO",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy stance and inflation expectations shape UST yields and market sentiment.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "fed_rate_cut_sept17_2025"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article is a commentary by Rob Kaplan on Fed policy and potential rate cut, not an official statement or data release."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on an imminent Fed rate cut in September, an immediate event affecting policy."
+    },
+    "article_node": {
+      "id": "Q95Y5FTCO",
+      "title": "Goldman’s Kaplan on Fed Independence and Policy",
+      "summary": "Rob Kaplan stresses the importance of Fed independence amid the upcoming leadership transition, arguing that Fed officials must make decisions free of political pressure. He forecasts a possible rate cut in September but cautions that it will not signal the start of a broader easing cycle, citing sticky service‑sector inflation and sluggish growth. Kaplan also notes that tariffs are likely to have a temporary impact, while structural drivers such as a data‑center power boom could help moderate inflation over time.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-03/goldman-s-kaplan-on-fed-independence-and-policy-video",
+      "published_at": "2025-09-03T03:42:47.172000+00:00",
+      "vector_id": null,
+      "type": "market_commentary",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "Q95Y5FTCO"
+}

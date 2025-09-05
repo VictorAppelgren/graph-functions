@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T14:58:20",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "usd",
+    "target_id": "gold",
+    "selection_motivation": "USD is a major driver of gold price movements; a stronger USD typically depresses gold prices, making this link critical for cross‑asset analysis.",
+    "candidate_motivation": "The US Dollar is directly affected by monetary policy, inflation, and trade dynamics, and it is closely linked to major currency pairs, commodity prices, and global tariff regimes. These topics represent the most likely strong influences, correlates, or peers to the US Dollar.",
+    "existing_links_count": "3",
+    "candidate_count": "16",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['eurusd', 'us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'china_macro', 'oil', 'gold', 'copper', 'wheat', 'eur', 'us_tariffs_brazil', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765387",
+    "rel_id": "usd__influences__gold",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'usd', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'usd', 'target': 'gold'}, {'type': 'COMPONENT_OF', 'source': 'usd', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "USD is a major driver of gold price movements; a stronger USD typically depresses gold prices, making this link critical for cross‑asset analysis.",
+      "type": "INFLUENCES",
+      "source": "usd",
+      "target": "gold"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "usd__influences__gold"
+}

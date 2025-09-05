@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:21:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_cybersecurity_incidents",
+    "target_id": "intrusion_dod_contract",
+    "selection_motivation": "US cybersecurity incidents drive the Department of Defense’s procurement of intrusion detection contracts, making incidents a primary driver of such contracts.",
+    "candidate_motivation": "These topics reflect threat actors, policy actions, and operational risk factors that could directly influence US cybersecurity incidents. They are likely to be strong influences, correlates, or peers to the source.",
+    "existing_links_count": "5",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['third_party_cybersecurity_risks', 'third_party_vendor_risk', 'ml_cybersecurity', 'us_federal_court_cybersecurity', 'intrusion_dod_contract']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_cybersecurity_risks'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_court_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_judiciary_cybersecurity'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966397637",
+    "rel_id": "us_cybersecurity_incidents__influences__intrusion_dod_contract",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'ml_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_cybersecurity_risks'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'third_party_vendor_risk'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_court_cybersecurity'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'intrusion_dod_contract'}, {'type': 'INFLUENCES', 'source': 'us_cybersecurity_incidents', 'target': 'us_federal_judiciary_cybersecurity'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US cybersecurity incidents drive the Department of Defense’s procurement of intrusion detection contracts, making incidents a primary driver of such contracts.",
+      "type": "INFLUENCES",
+      "source": "us_cybersecurity_incidents",
+      "target": "intrusion_dod_contract"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_cybersecurity_incidents__influences__intrusion_dod_contract"
+}

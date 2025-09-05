@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T20:21:24",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756576938",
+    "drivers_count": "9",
+    "material_chars": "3905",
+    "output_chars": "1787",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is solid but narrowly focused on DXY and repeats the same citation (7XH2DKEKV) without tying each claim to a distinct handle. To meet the § Focus and the “≥ 1 canonical handle” rule, add explicit sign/magnitude ranges for every driver and map them to canonical handles (e.g., fed_policy → dxy, ust10y_ust2y_spread → dxy, tariff_policy → dxy). Include a causal chain that links Fed dovishness → higher probability of a 16‑17 Sep cut (+0.5‑1 %) → 2‑yr/10‑yr steepening (+0.5‑1 %) → dxy drop (‑2 %) and quantify each step. Add a second catalyst window: the July CPI/PCE release (key for spx) and the 16‑17 Sep Fed meeting minutes (key for fed_policy). For each, state the direction (e.g., sticky CPI → dxy +0.5‑1 %) and the magnitude range. Incorporate cross‑asset transmission: show how a dxy decline feeds the 30‑year mortgage rate (us_mortgage_rates → ust10y) and spx (spx +3‑5 % if Fed cuts). Add an “invalidation” scenario: a Fed tightening or a Cook lawsuit resolution would blunt the dxy fall; a PCE > 3 % or payroll > expected would lift dxy by +50‑100 bp. Finally, replace the repeated (7XH2DKEKV) with distinct IDs for each source (e.g., Z7O1DCHS7 for probability of cut, B1KYJ1GPU for spx impact). This will satisfy the handle‑mapping and catalyst‑window criteria and elevate the analysis to world‑class rigor.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__drivers__ust10y__analysis_run__1756576938"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T20:05:33",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756057972",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "20295",
+    "output_chars": "1122",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 12–24 months | AI productivity regime A with adaptable labor markets lifting potential output | Watch for a regime shift if automation exposure >25% and unemployment worsens despite productivity gains, with BoP constraints shaping investment alongside retraining uptake and policy credibility (NL5YYTLF2) | 50%\n\nUp | 0–12 months | AI-enabled wealth/real-asset platforms (Range, Pacaso) and cross‑sector AI adoption (HeartSciences) driving growth | Watch for uptake by high‑net-worth clients, international expansion, and regulatory milestones governing AI/healthcare adoption (UPV3X2MQ6)(ILYC1M41F)(V8TEZOR8R) | 50%\n\nDown | 0–8 weeks | Tariff pass‑through and inflation spillovers to autos | Watch for the timing of tariff announcements and the degree of pass‑through versus absorption that will influence pricing power and risk premia, with auto tariffs cut from 27.5% to 15% as a concrete anchor (S15934PBQ)(WTNT85IPR) | 40%\n\nDown | 6–24 months | Policy tightening or tariff/price shocks driving Regime C, compressing real incomes and shifting capital allocation | Watch for inflation prints, wage growth, and policy guidance that could reprice risk assets, given tariff/inflation shocks as core catalysts (NL5YYTLF2)(YVQU6QCY4) | 40%",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756057972"
+}

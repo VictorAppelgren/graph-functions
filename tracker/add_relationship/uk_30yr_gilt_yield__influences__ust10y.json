@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T00:01:14",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "ust10y",
+    "selection_motivation": "UK long‑term sovereign yields are a key benchmark for global risk sentiment; a rise in the 30‑yr Gilt pushes US 10‑yr Treasury yields higher to maintain relative yield spreads.",
+    "candidate_motivation": "UK 30‑Year Gilt Yield is driven by UK monetary and fiscal policy, inflation expectations, and global risk sentiment. It moves in tandem with other sovereign long‑term yields (US, German, Japanese), central‑bank policy signals (Fed, ECB), and currency/interest‑rate benchmarks (DXY, GBP/USD). Therefore, topics that directly influence or correlate with these drivers are strong peers or influences.",
+    "existing_links_count": "17",
+    "candidate_count": "20",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "20",
+    "candidate_ids_preview": "['gilt10y', 'ust30y', 'ust10y', 'bund10y', 'jgb10y', 'ecb_policy', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'euro_inflation', 'gbpusd', 'ust2y', 'ust5y', 'us_core_pce', 'us_services_pmi', 'us_unemployment_claims', 'dxy', 'sx5e', 'spx']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'euro_inflation'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586757",
+    "rel_id": "uk_30yr_gilt_yield__influences__ust10y",
+    "existing_links_after_len": "17",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'euro_inflation'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK long‑term sovereign yields are a key benchmark for global risk sentiment; a rise in the 30‑yr Gilt pushes US 10‑yr Treasury yields higher to maintain relative yield spreads.",
+      "type": "INFLUENCES",
+      "source": "uk_30yr_gilt_yield",
+      "target": "ust10y"
+    }
+  },
+  "id": "uk_30yr_gilt_yield__influences__ust10y"
+}

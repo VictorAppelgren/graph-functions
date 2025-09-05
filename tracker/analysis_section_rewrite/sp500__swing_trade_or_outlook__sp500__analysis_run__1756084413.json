@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:23:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756084413",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "14065",
+    "output_chars": "1549",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The current draft fails the SECTION FOCUS in two clear ways: it contains five–plus lines (including a stray “Long” line) instead of exactly four Movers lines (2 Up, 2 Down) and it mixes disparate narratives (Netflix monetization, Yemen geopolitics, Ford metrics) into a single Swing/Outlook frame, obscuring a clean first‑principles causal chain. Actionable edits: 1) collapse to 4 precisely formatted movers: two Up and two Down, each as “Up/Down | Time window | Driver/Mechanism | What to watch | Probability %” with probabilities anchored to material (e.g., tariff path from 10% toward 145%; macro regime shifts; ad/international monetization deltas) and with IDs cited only when asserting those facts (SGB2PAZGK, O4ZEED2EB, STBVARD8F, 61SVFUKBY, A88B7V8PY, OGK8WLL69, Y6SQOEK69, I2SJU04DF); remove all extraneous lines. 2) re‑center the causal chain on a tight, first‑principles transmission: tariff trajectory drives import incentives and domestic CAPEX reallocations (semiconductors, EVs, AI infra) which reprice cyclicals and income‑tilt stocks; define explicit catalysts (tariff moves, major capex announcements, AI/data‑center spend) and explicit invalidations (durable tariff concessions, inflation surprise, EV margin inflection) with probability anchors drawn from the material. 3) ensure exact, numeric grounding rather than generic statements; attach citations (IDs) to each numeric claim (e.g., baseline 10% to 145%, Ford metrics, dividend/yield figures) and reconcile conflicts (correct misattributions such as the Starbucks CEO and Bezos compensation) before including them. 4) for the Trade/Outlook Plan, only include a tradable asset if you intend a Swing Trade; if NFLX is chosen, supply a single concise Swing Trade line (Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence %) with explicit values pulled from the material (and cite the selectors); otherwise provide a one‑line Outlook with clear path levels and invalidation signals. 5) prune multi‑domain references (Netflix, Costa/Myers, Disney, etc.) to a single, consistent domestic‑first macro lens and a Netflix monetization sub‑scenario only as a subordinate risk signal, not the core driver, to avoid dilution of focus.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756084413"
+}

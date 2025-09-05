@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T13:15:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "technology_communications_sector",
+    "target_id": "us_chip_export_controls",
+    "selection_motivation": "The Technology & Communications Sector directly shapes U.S. chip export control policies, which in turn influence the entire semiconductor supply chain.",
+    "candidate_motivation": "These topics are the strongest direct or near-direct influences, correlates, or peers to the Technology & Communications Sector, spanning leading semiconductors, AI infrastructure, platform ecosystems, and policy/regulation impacting the tech landscape.",
+    "existing_links_count": "2",
+    "candidate_count": "28",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "28",
+    "candidate_ids_preview": "['nvidia_ai_infrastructure', 'nvidia_low_power_gpus', 'amd_data_center_growth', 'intel_ceo_tan', 'intel_stock_trump_influence', 'intel_customer_investment', 'us_chip_export_controls', 'us_chip_exports_china', 'us_china_ai_chip_exports', 'us_chip_revenue_sharing', 'us_tariffs_semiconductors', 'china_nvidia_policy', 'china_nvidia_h20_chips', 'china_chip_competition', 'china_ai_semiconductors', 'alphabet_ai_gemini', 'google_chrome_antitrust', 'starlink_pricing_strategy', '5g_infrastructure', 'broadband_equity_access_deployment', 'telecom_argentina_acquisition_tma', 'apple_antitrust_ai', 'apple_antitrust', 'apple_siri_overhaul', 'apple_airpods_pro_2', 'apple_us_manufacturing', 'openai_gpt5_competition', 'openai_valuation']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': '5g_infrastructure'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745847662",
+    "rel_id": "technology_communications_sector__influences__us_chip_export_controls",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'technology_communications_sector', 'target': '5g_infrastructure'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Technology & Communications Sector directly shapes U.S. chip export control policies, which in turn influence the entire semiconductor supply chain.",
+      "type": "INFLUENCES",
+      "source": "technology_communications_sector",
+      "target": "us_chip_export_controls"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "technology_communications_sector__influences__us_chip_export_controls"
+}

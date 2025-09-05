@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:23:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_program",
+    "target_id": "geopolitics_corporate_strategy",
+    "selection_motivation": "Iran’s nuclear program is a pivotal geopolitical driver that reshapes corporate strategy across energy, defense, and technology sectors worldwide.",
+    "candidate_motivation": "Iran's nuclear program has direct implications for sanctions policy, energy markets, and regional geopolitics. The shortlisted topics capture the energy/security nexus and Middle East dynamics most likely to influence or correlate with it.",
+    "existing_links_count": "7",
+    "candidate_count": "5",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "5",
+    "candidate_ids_preview": "['oil', 'iran_nuclear_sanctions', 'saudi_vision_2030', 'middle_east_investment', 'geopolitics_corporate_strategy']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_nuclear_capacity'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'nuclear_security_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593766959",
+    "rel_id": "iran_nuclear_program__influences__geopolitics_corporate_strategy",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'geopolitics_corporate_strategy'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_nuclear_capacity'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'us_chip_trade_policy'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'nuclear_security_technology'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_program', 'target': 'iran_nuclear_sanctions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Iran’s nuclear program is a pivotal geopolitical driver that reshapes corporate strategy across energy, defense, and technology sectors worldwide.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_program",
+      "target": "geopolitics_corporate_strategy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_program__influences__geopolitics_corporate_strategy"
+}

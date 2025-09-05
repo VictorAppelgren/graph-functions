@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-23T16:03:23",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "oil",
+    "target_id": "fed_policy",
+    "selection_motivation": "Oil price shocks directly affect inflation expectations, prompting the Fed to adjust monetary policy; linking oil to Fed policy captures this causal pathway and enhances macro‑financial analytics.",
+    "candidate_motivation": "Oil prices are closely tied to macroeconomic indicators, currency strength, and geopolitical trade dynamics, so topics that influence or correlate with these factors are strong candidates.",
+    "existing_links_count": "10",
+    "candidate_count": "9",
+    "all_nodes_count": "1031",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'us_10y', 'usd', 'fed_policy', 'ecb_policy', 'us_china_trade_talks', 'us_china_tariff_truce', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_war_2025'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation_data'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814271498",
+    "rel_id": "oil__influences__fed_policy",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'stagflation'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'oil', 'target': 'us_inflation_data'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Oil price shocks directly affect inflation expectations, prompting the Fed to adjust monetary policy; linking oil to Fed policy captures this causal pathway and enhances macro‑financial analytics.",
+      "type": "INFLUENCES",
+      "source": "oil",
+      "target": "fed_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "oil__influences__fed_policy"
+}

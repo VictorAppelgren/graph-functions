@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T14:04:14",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "V4R1KDVC2",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights Amphenol’s pivotal role in 5G and data center infrastructure, underscoring its significance as a key supplier in macro technology trends and justifying a dedicated company node.",
+      "id": "amphenol",
+      "name": "Amphenol",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "The article focuses on Amphenol’s business performance and investment recommendation, making it a company node."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Company is an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

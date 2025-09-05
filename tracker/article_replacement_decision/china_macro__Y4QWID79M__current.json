@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T03:35:20",
+  "processed": false,
+  "inputs": {
+    "topic_id": "china_macro",
+    "new_article_id": "Y4QWID79M",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "9",
+    "candidate_ids": "['HUYRKBXD2', 'ZTZGAMKN1', '4WR2YCC7L', 'ZBVVXT0W4', 'PSRZJ6OCU', '9380U9VP0', '1V91H60JJ', '04M4L5BHA']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new Hutchmed article does not supersede any existing record in the topic set, so no graph action is warranted."
+    }
+  },
+  "id": "china_macro__Y4QWID79M__current"
+}

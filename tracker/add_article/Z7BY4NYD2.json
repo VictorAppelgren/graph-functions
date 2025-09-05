@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T23:28:15",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "Z7BY4NYD2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Geopolitical tensions from North Korea missile test and US‑South Korea‑Japan trilateral summits could widen UST10Y spreads by 5–10 bp over the next 1–3 months, with catalyst window August 2024.",
+      "existing_ids": [
+        "ust10y",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses North Korea’s military cooperation with Russia, South Korea’s diplomatic shift, and the U.S. push to counter China—clear geopolitical developments."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to assess impact against; cannot determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports recent military and political actions by North Korea, South Korea, and the US, indicating immediate impacts on regional security and semiconductor policy."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "Z7BY4NYD2"
+}

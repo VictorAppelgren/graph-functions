@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T04:08:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "C0PE6HTBW",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "not_macro"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the significant implications of federal scrutiny and funding for higher education institutions, necessitating a new node to analyze the impact of federal funding on university operations and policies.",
+      "id": "columbia_university_federal_funding",
+      "name": "Columbia University Federal Funding",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Federal funding policy affecting higher education institutions"
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific to a single university; not a macro driver, policy regime, or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "not_macro"
+    }
+  },
+  "id": "none"
+}

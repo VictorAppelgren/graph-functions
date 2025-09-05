@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-05T08:35:37",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BMI4B633O",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: inflation; coffee price surge feeds into US CPI, raising headline inflation and tightening Fed policy outlook.",
+      "existing_ids": [
+        "us_inflation",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article highlights a 50% U.S. tariff on Brazilian coffee, which is a regulatory change impacting commodity prices."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Coffee is not a canonical commodity handle in the system, so the article does not map to a canonical handle and is not relevant."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article highlights short‑term supply shocks (droughts) and an ongoing tariff, both of which influence coffee futures prices in the near term."
+    },
+    "article_node": {
+      "id": "BMI4B633O",
+      "title": "Why your daily coffee is suddenly so expensive",
+      "summary": "Coffee futures have surged more than 33% since July, with ground coffee prices hitting a record $8.41 per pound in the U.S. The rally is fueled by droughts in Brazil and Vietnam, a 50% U.S. tariff on Brazilian coffee, and overall supply concerns. While improved weather in Brazil and a better outlook for Vietnam may ease pressure, the tariff remains a key driver of higher prices. The impact on consumers varies, with large chains likely absorbing most tariff costs, but grocery prices are expected to stay elevated for the near term.",
+      "source": "https://www.fastcompany.com/91398406/why-your-daily-coffee-is-suddenly-so-expensive",
+      "published_at": "2025-09-04T18:15:00+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "BMI4B633O"
+}

@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T12:08:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YYFB0DQA0",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates, FX, equities; Fed Beige Book signals cautious outlook, wage lag, muted consumer spending, falling job openings, and tariff‑related price pressure, which will weigh on US yields, the dollar, and risk‑seeking equity indices.",
+      "existing_ids": [
+        "fed_policy",
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "ust10y",
+        "dxy",
+        "eurusd",
+        "gold",
+        "copper",
+        "spx",
+        "sx5e"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports on the Fed Beige Book, an economic data release."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to map the article to a canonical handle; cannot assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on short‑term economic indicators from the Fed Beige Book, highlighting current weak demand and immediate policy signals."
+    },
+    "article_node": {
+      "id": "YYFB0DQA0",
+      "title": "Fed Says Businesses Face Pinch of Rising Costs and Weak Demand",
+      "summary": "Fed Beige Book signals a cautious outlook: wage growth is lagging rising costs, consumer spending is muted, and hiring remains restrained amid tariff‑related price pressure. Mixed district views show only Chicago improving, while job openings fell and skilled‑trade shortages persist. Firms are turning to automation and AI to curb costs, and consumer sentiment is 14% below a year ago. Overall, the report underscores a weak demand environment and growing uncertainty across the economy.",
+      "source": "https://www.pymnts.com/economy/2025/fed-says-businesses-face-pinch-of-rising-costs-and-weak-demand/",
+      "published_at": "2025-09-03T23:12:46+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "YYFB0DQA0"
+}

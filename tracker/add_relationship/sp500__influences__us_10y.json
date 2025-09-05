@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-14T22:26:03",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "sp500",
+    "target_id": "us_10y",
+    "selection_motivation": "Linking the S&P 500 to US 10Y Treasury Yield is essential as changes in treasury yields significantly influence equity valuations, making this connection critical for understanding market dynamics.",
+    "candidate_motivation": "The S&P 500 is influenced by macroeconomic factors, monetary policy, and global market trends, making topics like US Inflation, Fed Policy, and US 10Y Treasury Yield strong candidates for correlation or influence.",
+    "existing_links_count": "5",
+    "candidate_count": "9",
+    "all_nodes_count": "1608",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'us_10y', 'usd', 'us_tariffs_on_technology', 'us_china_trade_relations', 'us_stock_buybacks', 'stagflation', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765383",
+    "rel_id": "sp500__influences__us_10y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking the S&P 500 to US 10Y Treasury Yield is essential as changes in treasury yields significantly influence equity valuations, making this connection critical for understanding market dynamics.",
+      "type": "INFLUENCES",
+      "source": "sp500",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sp500__influences__us_10y"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T08:56:19",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "new_article_id": "0CPCO1X78",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['DRW2E1P5J', '0QKLPBCAP', 'LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE', '3YAQ8JUPL', '1G54B8R46']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article covers Apple iPhone 17 rumors, which is not addressed by any existing article, so it does not supersede any current content."
+    }
+  },
+  "id": "spx__0CPCO1X78__current"
+}

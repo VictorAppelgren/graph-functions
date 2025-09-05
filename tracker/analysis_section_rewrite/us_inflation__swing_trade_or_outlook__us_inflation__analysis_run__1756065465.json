@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T22:08:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756065465",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17149",
+    "output_chars": "1602",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft largely satisfies the 2 Up/2 Down Swing-Trade constraint but needs tightening to world-class standards: enforce exactly four Swing lines (Up/Down | Time window | Driver/Mechanism | What to watch | Probability %) with no extra lines in that block, and keep the Outlook as a single (or at most two) line(s) in the required 8-field format; anchor every factual claim to a source ID and prune any extraneous macro prose so the four lines read as a testable, evidence-driven forecast. Strengthen first-principles grounding by adding 2–3 explicit invariants (AI-driven productivity vs displacement; policy reaction functions under tariffs; real-rate environment and external balance shifts) and tie each line to a crisp regime-transition logic (e.g., A→B, B→C, C→D) with concrete, threshold-like language and at least one explicit trigger from the provided material. Deepen scenario structure by mapping each line to a single, auditable catalyst set (AI capex or data-center milestones; retraining progress; tariff announcements or expirations; GM/Ford capex cadence; HeartSciences FDA/Medicare timelines) and by replacing generic phrases with quantified anchors drawn from sources (e.g., 25% automation exposure; GM’s $4B domestic capex for ~2M output; Ford/YTD metrics; debt impulse estimates 2.4–4T; oil-supply/demand and Brent/WTI bands) with IDs after each fact. Calibrate probabilities to the evidence (e.g., 60% Up 3–6 mo; 55% Up 1–3 mo; 40% Down 3–6 mo; 35% Down 6–12 mo) and ensure all numbers cited are consistently placed; reconcile major conflicts (e.g., the debt-impulse figure range) by either selecting a single figure with a clarifying bracket or presenting a sourced range (2.4–4T) with a short note on source variance. For the Outlook, tighten to one line (or two at most) with Direction | Horizon | Expected path/levels | Trigger | Invalidation | Probability % | Confidence, and anchor each clause to a small set of IDs (e.g., WTNT85IPR; UPV3X2MQ6; EPJYXB7DX) to avoid drift. Finally, prune to remove redundant macro discussion and ensure the Swing lines and Outlook map cleanly to the invariant-driven regime narrative so the piece reads as a disciplined, numbers-backed, scenario-driven forecast.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__swing_trade_or_outlook__us_inflation__analysis_run__1756065465"
+}

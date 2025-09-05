@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T00:30:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5D0G1EK6Q",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US inflation, core PCE, services PMI, unemployment claims, and Fed policy will be influenced by the projected consumer spending decline, especially as tariffs weigh on demand.",
+      "existing_ids": [
+        "us_inflation",
+        "us_core_pce",
+        "us_services_pmi",
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "economic_data",
+      "motivation": "The article reports a consumer spending survey released by PwC, which is an economic data release about U.S. consumer behavior and spending trends."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "Article reports a 5% cut in U.S. consumer spending, likely impacting growth and equity markets, but node not specified so uncertain."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on short‑term consumer spending trends for the upcoming holiday season, reflecting immediate effects of tariff concerns and Gen Z behavior."
+    },
+    "article_node": {
+      "id": "5D0G1EK6Q",
+      "title": "Gen Z plans to pull back on holiday spending, survey says",
+      "summary": "PwC's latest holiday‑shopping survey indicates U.S. consumers will cut spending by about 5% compared with 2024, largely driven by Gen Z's sharper pullback. Gen Z is expected to spend roughly 23% less year‑over‑year, while millennials and Gen X remain flat and boomers increase spending by about 5%. The decline reflects heightened tariff concerns and a shift toward budget‑oriented, value‑focused shopping, with retailers struggling to keep pace with Gen Z's rapid trend adoption.",
+      "source": "https://finance.yahoo.com/video/gen-z-plans-pull-back-212521101.html",
+      "published_at": "2025-09-03T21:25:21+00:00",
+      "vector_id": null,
+      "type": "economic_data",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "5D0G1EK6Q"
+}

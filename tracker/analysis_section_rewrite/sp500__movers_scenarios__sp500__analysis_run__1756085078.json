@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:32:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756085078",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17418",
+    "output_chars": "1344",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Positive near-term risk-on relief from PubMatic/Biohaven litigation milestones (class-certification, interim rulings, or modest settlements) ahead of the Sept 12, 2025 Biohaven and Oct 20, 2025 PubMatic deadlines | Monitor docket actions and any settlements around those dates for potential risk-premia compression in affected names | 45%(4LDHF4T77)(4VN4UTWX1)(Z5IA1CYUF)(I2SJU04DF)\n\nDown | 0–3 weeks | Negative docket actions (denials of certification, larger settlements) around those milestones would reprice risk assets lower | Watch denials, larger settlements, adverse disclosures, Spirit Going Concern and Yemen energy risk as anchors | 35%(4LDHF4T77)(4VN4UTWX1)(Z5IA1CYUF)(I2SJU04DF)\n\nUp | 3–6 months | Material improvement in Ford EV economics or policy risk relief could lift ROIC, shrink EV losses, and reprice the stock toward a higher multiple | Track Ford EV margin trajectory (Q2 EV loss ≈ $1.3B; adj EBIT ≈ 4.3%; ROIC ≈ 10.1%; revenue CAGR ≈ 2.5%), plus signs of policy relief that could push multiple toward 8x–10.3x | 40%(65UUBU0OR)(22PL3Q360)\n\nDown | 3–6 months | Tariff pass-through intensification linking domestic capex to higher discount rates would bias toward cash-flow heavy defensives as Regime A tightens | Watch policy tempo, capex schedules, ROIC/cost-of-capital dispersion; durable tariff escalation would reprice risk assets lower | 55%(SGB2PAZGK)(O4ZEED2EB)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756085078"
+}

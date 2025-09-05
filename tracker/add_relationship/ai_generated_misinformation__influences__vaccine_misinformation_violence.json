@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:41:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ai_generated_misinformation",
+    "target_id": "vaccine_misinformation_violence",
+    "selection_motivation": "AI-generated misinformation directly fuels vaccine misinformation that escalates into violence, making this link critical for understanding the escalation chain.",
+    "candidate_motivation": "Topics closely tied to AI-generated misinformation through disinformation campaigns, deepfakes, and AI-driven content creation/bias governance, which would plausibly influence or correlate with the source.",
+    "existing_links_count": "2",
+    "candidate_count": "9",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['disinformation_campaigns', 'vaccine_misinformation', 'vaccine_misinformation_violence', 'deepfake_ai_medical', 'deepfake_health_misinformation', 'ai_journalism_impact', 'ai_narrative_attacks', 'ai_governance', 'ai_ideological_bias']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593765947",
+    "rel_id": "ai_generated_misinformation__influences__vaccine_misinformation_violence",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation_impact'}, {'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation'}, {'type': 'INFLUENCES', 'source': 'ai_generated_misinformation', 'target': 'vaccine_misinformation_violence'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "AI-generated misinformation directly fuels vaccine misinformation that escalates into violence, making this link critical for understanding the escalation chain.",
+      "type": "INFLUENCES",
+      "source": "ai_generated_misinformation",
+      "target": "vaccine_misinformation_violence"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ai_generated_misinformation__influences__vaccine_misinformation_violence"
+}

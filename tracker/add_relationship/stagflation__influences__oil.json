@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:39:08",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "stagflation",
+    "target_id": "oil",
+    "selection_motivation": "Stagflation drives higher commodity prices, especially oil, a core inflation component and key driver of overall price levels.",
+    "candidate_motivation": "Stagflation is a macro regime driven by persistent inflation alongside weak growth, so the strongest influences and correlates are global and domestic inflation signals, policy responses, and key commodity/dollar dynamics. The shortlisted topics include inflation metrics (US/Euro area), policy anchors (Fed/ECB), yields (10Y), currencies (US Dollar, Euro), and energy/commodity prices (Oil, Gold, Copper, Wheat) that typically move with or help drive stagflation.",
+    "existing_links_count": "5",
+    "candidate_count": "15",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_inflation_data', 'core_monthly_cpi', 'core_cpi', 'us_inflation_expectations', 'us_inflation_stock_impact', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'us_inflation_impact_on_stocks'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1184447801510068477",
+    "rel_id": "stagflation__influences__oil",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'ecb_policy'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'stagflation', 'target': 'us_inflation_impact_on_stocks'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Stagflation drives higher commodity prices, especially oil, a core inflation component and key driver of overall price levels.",
+      "type": "INFLUENCES",
+      "source": "stagflation",
+      "target": "oil"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "stagflation__influences__oil"
+}

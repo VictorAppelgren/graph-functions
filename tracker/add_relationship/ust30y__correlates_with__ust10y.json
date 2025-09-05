@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-29T15:01:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "ust30y",
+    "target_id": "ust10y",
+    "selection_motivation": "US 30‑year Treasury yields move tightly with the 10‑year curve, reflecting term‑premium dynamics and market expectations of long‑term policy; a correlation link captures this core relationship.",
+    "candidate_motivation": "US 30Y Treasury Yield is driven by monetary policy, inflation expectations, credit risk, and global risk sentiment. Other US Treasury maturities, Fed policy, inflation data, unemployment claims, SOFR, and the dollar index directly influence or correlate with it, while Euro Bund yield, ECB policy, and Euro area inflation provide cross‑border risk‑premium signals and equity and safe‑haven assets like the S&P 500 and gold also move in tandem with long‑term rates.",
+    "existing_links_count": "0",
+    "candidate_count": "13",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['fed_policy', 'us_inflation', 'us_unemployment_claims', 'ust10y', 'ust5y', 'ust2y', 'sofr', 'dxy', 'bund10y', 'euro_inflation', 'ecb_policy', 'spx', 'gold']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152923703630103874",
+    "rel_id": "ust30y__correlates_with__ust10y",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'ust30y', 'target': 'ust10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US 30‑year Treasury yields move tightly with the 10‑year curve, reflecting term‑premium dynamics and market expectations of long‑term policy; a correlation link captures this core relationship.",
+      "type": "CORRELATES_WITH",
+      "source": "ust30y",
+      "target": "ust10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ust30y__correlates_with__ust10y"
+}

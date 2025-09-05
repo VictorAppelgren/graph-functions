@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T10:57:21",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5QSHU3I7S",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; EU defense spending is projected to raise global copper demand growth from 2% to 2.4% annually, supporting copper prices and potentially boosting copper futures by 5‑10% over 2026‑27, contingent on inventory levels.",
+      "existing_ids": [
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses the projected increase in EU defense spending, a major macroeconomic event affecting industrial metals demand."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "EU defense spending is projected to lift global copper demand growth from 2% to 2.4% annually, directly influencing copper price expectations and market dynamics."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article highlights a medium‑term structural shift—EU defense spending rising to 2027 and the resulting 6% increase in copper demand—indicating a medium‑horizon impact on industrial metals pricing."
+    },
+    "article_node": {
+      "id": "5QSHU3I7S",
+      "title": "Defense stocks aren't the only winners of Europe's spending blitz",
+      "summary": "Defense stocks have surged this year as European governments boost military budgets, driving a significant rise in demand for industrial metals. Goldman Sachs estimates that EU defense spending will grow from 1.9% to 2.7% of GDP by 2027, adding €167 billion ($196 billion) and increasing metals demand by 6% in the region. The boost is projected to lift global copper demand growth from 2% to 2.4% annually, with potential upside to copper price forecasts amid high inventories. Nickel and steel demand are also expected to rise modestly, while the defense-driven demand could influence copper futures and overall market prices.",
+      "source": "https://www.businessinsider.com/defense-stocks-europe-rearmament-spending-metals-copper-demand-goldman-sachs-2025-8",
+      "published_at": "2025-08-25T05:27:27+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "5QSHU3I7S"
+}

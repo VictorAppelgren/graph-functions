@@ -1,0 +1,43 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-08-21T15:49:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "us_china_trade_talks",
+    "selection_motivation": "The link to US-China trade talks is the least directly relevant to Fed policy’s core inflation dynamics and can be removed to accommodate the new, more specific core CPI link.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The link to US-China trade talks is the least directly relevant to Fed policy’s core inflation dynamics and can be removed to accommodate the new, more specific core CPI link.",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000586245",
+    "rel_id": "fed_policy__influences__us_china_trade_talks",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sp500'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usd'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_data'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation_expectations'}]",
+    "status": "error",
+    "error": "Object of type DateTime is not JSON serializable"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "us_china_trade_talks"
+    },
+    "prioritized_link": {
+      "motivation": "Fed policy directly shapes U.S. inflation dynamics, and core monthly CPI is the primary gauge of underlying inflation that informs Fed decisions; linking them captures the causal chain for macro analytics.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "core_monthly_cpi"
+    },
+    "llm_raw_response": {
+      "motivation": "The link to US-China trade talks is the least directly relevant to Fed policy’s core inflation dynamics and can be removed to accommodate the new, more specific core CPI link.",
+      "remove_link": "us_china_trade_talks"
+    },
+    "removal_decision": {
+      "motivation": "The link to US-China trade talks is the least directly relevant to Fed policy’s core inflation dynamics and can be removed to accommodate the new, more specific core CPI link.",
+      "remove_link": "us_china_trade_talks"
+    },
+    "source_node": {
+      "last_updated": 

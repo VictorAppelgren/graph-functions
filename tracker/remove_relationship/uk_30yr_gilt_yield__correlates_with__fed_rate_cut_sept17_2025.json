@@ -1,0 +1,54 @@
+{
+  "type": "remove_relationship",
+  "timestamp": "2025-09-05T03:45:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "CORRELATES_WITH",
+    "source_id": "uk_30yr_gilt_yield",
+    "target_id": "fed_rate_cut_sept17_2025",
+    "selection_motivation": "The fed_rate_cut_sept17_2025 link is a one‑off event correlation with limited ongoing relevance and weak support from recent data, making it the weakest link relative to core market handles.",
+    "remove_cause": "capacity_rebalance_for_prioritized_link",
+    "entry_point": "graph_relationships.remove_link.select_and_remove_link",
+    "motivation": "The fed_rate_cut_sept17_2025 link is a one‑off event correlation with limited ongoing relevance and weak support from recent data, making it the weakest link relative to core market handles.",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_rate_cut_sept17_2025'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'euro_inflation'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170938102139585029",
+    "rel_id": "uk_30yr_gilt_yield__correlates_with__fed_rate_cut_sept17_2025",
+    "existing_links_after_len": "16",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'uk_30yr_gilt_yield', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust30y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'gilt10y'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'uk_30yr_gilt_yield', 'target': 'euro_inflation'}]",
+    "status": "success"
+  },
+  "details": {
+    "proposed_link": {
+      "type": "CORRELATES_WITH",
+      "source": "uk_30yr_gilt_yield",
+      "target": "fed_rate_cut_sept17_2025"
+    },
+    "prioritized_link": {
+      "motivation": "UK 30‑yr gilt yields are highly correlated with ECB policy moves because euro‑area inflation expectations and monetary stance directly influence UK inflation expectations and the GBP/USD pair.",
+      "type": "CORRELATES_WITH",
+      "source": "uk_30yr_gilt_yield",
+      "target": "ecb_policy"
+    },
+    "llm_raw_response": {
+      "motivation": "The fed_rate_cut_sept17_2025 link is a one‑off event correlation with limited ongoing relevance and weak support from recent data, making it the weakest link relative to core market handles.",
+      "remove_link": "fed_rate_cut_sept17_2025"
+    },
+    "removal_decision": {
+      "motivation": "The fed_rate_cut_sept17_2025 link is a one‑off event correlation with limited ongoing relevance and weak support from recent data, making it the weakest link relative to core market handles.",
+      "remove_link": "fed_rate_cut_sept17_2025"
+    },
+    "source_node": {
+      "importance": 1,
+      "query": "(UK OR United_Kingdom OR Britain OR Great_Britain) AND (borrowing costs OR borrowing cost OR debt cost OR debt yield OR gilt OR gilt yield OR bond OR bonds OR 30-year gilt OR 30 year gilt OR 30-year bond OR 30 year bond OR 30-year gilt yield OR 30 year gilt yield OR 30-year bond yield OR 30 year bond yield OR UK 30-year gilt OR UK 30-year bond OR UK gilt OR UK bond OR UK gilt yield OR UK bond yield OR UK debt OR UK government debt OR UK government bonds OR UK government bond) AND (Rachel Reeves OR Reeves OR UK chancellor OR UK Treasury OR Treasury) AND (fiscal credibility OR fiscal policy OR fiscal rules OR budget OR fiscal uncertainty OR fiscal risk) AND (bond vigilante OR bond vigilantes) AND (news OR analysis OR report OR update OR article OR press OR media OR blog OR commentary OR opinion OR interview OR market OR market move OR market reaction OR market volatility OR bond market OR gilt market OR UK gilt market OR UK bond market OR UK debt market OR UK borrowing market)",
+      "motivation": "The article reports a record rise in UK 30‑year gilt yields, a key macro indicator of fiscal credibility and borrowing costs, warranting a dedicated node linked to UK gilt yield.",
+      "name": "UK 30-Year Gilt Yield",
+      "id": "uk_30yr_gilt_yield",
+      "last_queried": "2025-09-04T09:04:35.291000000+00:00",
+      "importance_rationale": "The 30‑year UK gilt yield is a core market handle that directly reflects long‑term borrowing costs, influences pension and insurance funding, and is a key input for UST/UK rate spreads, credit spreads, and sovereign risk sentiment. It has immediate intraday impact on bond markets and cross‑asset spillovers to equities, credit, and FX. Thus it is a high‑centrality, actionable macro driver deserving importance 1.",
+      "type": "macro",
+      "queries": 2
+    }
+  },
+  "id": "uk_30yr_gilt_yield__correlates_with__fed_rate_cut_sept17_2025"
+}

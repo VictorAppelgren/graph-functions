@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:39:33",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_sanctions",
+    "target_id": "iran_nuclear_program",
+    "selection_motivation": "Iran nuclear sanctions are imposed specifically to curb Iran's nuclear program, directly limiting its funding, technology access, and development capabilities.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with Iran Nuclear Sanctions due to their relevance in geopolitical and economic contexts, particularly in relation to energy markets and international trade.",
+    "existing_links_count": "1",
+    "candidate_count": "10",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['oil', 'us_china_trade_relations', 'us_tariffs_semiconductors', 'iran_nuclear_program', 'russia_economic_crisis', 'us_russia_relations', 'us_tariffs_on_technology', 'us_china_tariff_truce', 'middle_east_investment', 'ukraine_geopolitics']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932163710",
+    "rel_id": "iran_nuclear_sanctions__influences__iran_nuclear_program",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Iran nuclear sanctions are imposed specifically to curb Iran's nuclear program, directly limiting its funding, technology access, and development capabilities.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_sanctions",
+      "target": "iran_nuclear_program"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_sanctions__influences__iran_nuclear_program"
+}

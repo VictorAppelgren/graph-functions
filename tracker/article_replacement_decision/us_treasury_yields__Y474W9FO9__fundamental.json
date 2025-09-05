@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-25T03:09:26",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_treasury_yields",
+    "new_article_id": "Y474W9FO9",
+    "test": "False",
+    "timeframe": "fundamental",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "5",
+    "candidate_ids": "['JPAIHPA4N', '22PL3Q360', 'SGB2PAZGK', 'OGK8WLL69']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "There is no existing article to supersede; therefore no replacement action is warranted. The new article should be indexed as a standalone node to enable future graph analytics, deduplication checks, and cross-linking with related topics."
+    }
+  },
+  "id": "us_treasury_yields__Y474W9FO9__fundamental"
+}

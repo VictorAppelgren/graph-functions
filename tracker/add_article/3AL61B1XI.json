@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-22T10:05:29",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3AL61B1XI",
+    "topic_discovery_motivation": "Article discusses the impact of immigration raids on warehouse operations and labor dynamics, relevant to U.S. labor market conditions.",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "total_topics_found": 2,
+      "existing_ids": [
+        "us_urban_crime",
+        "us_border_security"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports on immigration raids at warehouses, which is a legal enforcement action under immigration law, thus a regulatory/legal development."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports immigration raids at warehouses in Edison, directly affecting the local workforce and logistics corridor."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent immigration raids at warehouses in Edison, indicating immediate operational disruptions and short‑term impacts on the local logistics sector."
+    },
+    "article_node": {
+      "id": "3AL61B1XI",
+      "title": "Pair of Immigration Raids Disrupt a New Jersey Shipping Hub",
+      "summary": "A maze of warehouses wind through this New Jersey suburb, where highways assure easy access to New York City and beyond.\n\nIn Edison, thousands of immigrant workers toil in hundreds of warehouses, sorting millions of boxes arriving from nearby ports before being sent by trucks across the United States. But this summer has delivered something else.\n\nImmigration raids a few weeks apart at two warehouses have unsettled the daily rhythms of this busy corridor, where Amazon, FedEx and UPS have a large...",
+      "source": "https://www.nytimes.com/2025/08/22/nyregion/immigration-raids-edison-new-jersey.html",
+      "published_at": "2025-08-22T07:00:32.143000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "3AL61B1XI"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T00:43:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_exports",
+    "target_id": "us_unemployment_claims",
+    "selection_motivation": "China’s export growth directly boosts U.S. manufacturing demand, reducing unemployment claims; this causal link is missing.",
+    "candidate_motivation": "China Exports is driven by trade flows, currency competitiveness, domestic credit conditions, and commodity price swings that affect demand for Chinese goods. Therefore, topics that capture exchange rates, US demand indicators, monetary policy, domestic credit, and key commodity prices are the strongest potential influences or peers.",
+    "existing_links_count": "5",
+    "candidate_count": "10",
+    "all_nodes_count": "28",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['usdcny', 'us_unemployment_claims', 'fed_policy', 'china_credit_impulse', 'dxy', 'copper', 'wti', 'brent', 'wheat', 'gold']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902302",
+    "rel_id": "china_exports__influences__us_unemployment_claims",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'us_unemployment_claims'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'china_credit_impulse'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'china_exports', 'target': 'dxy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s export growth directly boosts U.S. manufacturing demand, reducing unemployment claims; this causal link is missing.",
+      "type": "INFLUENCES",
+      "source": "china_exports",
+      "target": "us_unemployment_claims"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_exports__influences__us_unemployment_claims"
+}

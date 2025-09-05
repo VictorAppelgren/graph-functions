@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T02:43:13",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "09SHYY483",
+    "status": "success",
+    "topic_id": "gaza_humanitarian_crisis"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the humanitarian crisis in Gaza and the implications of Israeli military actions, which aligns with the existing node on the Gaza humanitarian crisis.",
+      "existing_node_ids": "gaza_humanitarian_crisis",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "geopolitical",
+      "motivation": "The article discusses the humanitarian crisis in Gaza, which is a significant geopolitical event affecting the region."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses the ongoing humanitarian crisis in Gaza, which is directly related to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing humanitarian issues and their implications, suggesting a longer-term perspective on the crisis."
+    },
+    "article_node": {
+      "id": "09SHYY483",
+      "title": "Israeli gunfire kills at least 25 in Gaza as Netanyahu says he will allow Palestinians to leave",
+      "summary": "Israeli gunfire has reportedly killed at least 25 people in Gaza as Prime Minister Benjamin Netanyahu announced plans for a military offensive aimed at taking control of Gaza City and other areas, raising concerns about the humanitarian crisis and the safety of hostages. Netanyahu's strategy includes allowing Palestinians to leave combat zones, which critics warn could lead to ethnic cleansing. Meanwhile, international condemnation is growing over Israel's military actions, with calls for a ceasefire and humanitarian aid access amidst rising starvation and casualties in Gaza.",
+      "source": "https://www.latimes.com/world-nation/story/2025-08-13/israeli-gunfire-kills-at-least-25-in-gaza-as-netanyahu-says-he-will-allow-palestinians-to-leave",
+      "published_at": "2025-08-13T14:06:00.405000+00:00",
+      "vector_id": null,
+      "type": "geopolitical",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "09SHYY483"
+}

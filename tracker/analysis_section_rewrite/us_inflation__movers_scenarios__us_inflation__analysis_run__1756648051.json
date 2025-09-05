@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T16:27:04",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756648051",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6914",
+    "output_chars": "1051",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft mixes multiple assets (DXY, mortgage rates, Treasury, SPX) and dilutes focus; isolate the DXY view only. Tighten the causal chain: state that a Fed 25‑bp cut on 25 Sep compresses the 2‑yr/10‑yr spread by ~57 bp (Z7O1DCHS7), lifts the 10‑yr yield (LF0UUL917), and raises dollar yields, supporting a 0.5–1 % rally (B1KYJ1GPU). Replace the generic “Fed minutes” trigger with the specific “Sept Fed meeting minutes (GK86UUQPN)” and the “early‑Aug CPI (LF0UUL917)” as the term‑premium signal. Quantify the probability: 70 % for the rally, 30 % for a flat or slight decline if the cut is delayed or the CPI falls below 2.5 %. Remove the unrelated mortgage‑rate, Treasury‑bill, and SPX items; they violate the single‑asset rule. Ensure each line is one sentence, no filler, and cite only IDs when asserting facts or numbers. The final output should be: “Up | 3‑6 mo | Fed 25‑bp cut on 25 Sep (GK86UUQPN) compresses the 2‑yr/10‑yr spread by 57 bp (Z7O1DCHS7) and lifts 10‑yr yields (LF0UUL917) to support a 0.5–1 % DXY rally (B1KYJ1GPU) | Fed minutes, early‑Aug CPI (LF0UUL917), 2‑yr/10‑yr spread (Z7O1DCHS7) | 70 %.”",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756648051"
+}

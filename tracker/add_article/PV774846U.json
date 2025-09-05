@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T10:53:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PV774846U",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Swiss inflation above zero eases pressure on SNB policy, while US tariffs and franc weakness could lift import‑price inflation. Euro‑area inflation remains higher, influencing cross‑border price dynamics.",
+      "existing_ids": [
+        "eur_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article reports Swiss consumer price inflation data, a major macroeconomic event (inflation print)."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to map the article to a canonical handle, so relevance cannot be assessed."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports recent Swiss CPI data and the SNB’s near‑term policy stance, focusing on immediate inflation and policy implications."
+    },
+    "article_node": {
+      "id": "PV774846U",
+      "title": "Swiss Inflation Exceeds Zero for a Third Month in Relief for SNB",
+      "summary": "Swiss consumer prices rose 0.2% year‑on‑year in August, the third straight month above zero, easing pressure on the SNB to cut rates. The central bank’s policy rate is already at zero and is expected to stay unchanged through next year, with a negative rate only if conditions shift sharply. Weakening of the franc and high U.S. tariffs could lift import prices, adding uncertainty to the inflation outlook. Meanwhile, euro‑area inflation remains higher at 2.1%.",
+      "source": "https://financialpost.com/pmn/business-pmn/swiss-inflation-exceeds-zero-for-a-third-month-in-relief-for-snb?itm_source=business-pmn",
+      "published_at": "2025-09-04T06:56:27+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "PV774846U"
+}

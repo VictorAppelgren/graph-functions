@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T09:26:39",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "gilt10y",
+    "target_id": "fed_powell_rate_cut_hint_2025",
+    "selection_motivation": "UK gilt10y yields are a leading indicator of global rate expectations; higher yields signal higher expected Fed rates, influencing Powell’s rate‑cut hints.",
+    "candidate_motivation": "UK 10Y Gilt yields move in tandem with other sovereign and Treasury benchmarks, are driven by UK and global monetary policy, inflation expectations, and currency dynamics. Therefore peers include other UK and global sovereign yields, US Treasury maturities, and major inflation and policy indicators, while correlates encompass currency indices that reflect carry trade flows.",
+    "existing_links_count": "20",
+    "candidate_count": "16",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "16",
+    "candidate_ids_preview": "['uk_30yr_gilt_yield', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'us_inflation', 'us_core_pce', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'fed_policy', 'ecb_policy', 'euro_inflation', 'bund10y', 'jgb10y', 'gbpusd', 'dxy']",
+    "existing_links_before_len": "20",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'uk_30yr_gilt_yield'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1233987397411145220",
+    "rel_id": "gilt10y__influences__fed_powell_rate_cut_hint_2025",
+    "existing_links_after_len": "20",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'bund10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'gbpusd'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'gilt10y', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ust2y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'sofr'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'jgb10y'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'ecb_policy'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'euro_inflation'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'us_core_pce'}, {'type': 'CORRELATES_WITH', 'source': 'gilt10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "UK gilt10y yields are a leading indicator of global rate expectations; higher yields signal higher expected Fed rates, influencing Powell’s rate‑cut hints.",
+      "type": "INFLUENCES",
+      "source": "gilt10y",
+      "target": "fed_powell_rate_cut_hint_2025"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "gilt10y__influences__fed_powell_rate_cut_hint_2025"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-14T22:43:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "H4D7CS274",
+    "status": "success",
+    "topic_id": "us_inflation"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses the impact of inflation on Bitcoin's price, which aligns with the existing node on US Inflation, providing valuable insights for investment analysis.",
+      "existing_node_ids": "us_inflation",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses a major inflation print, which is a macroeconomic event relevant to this node."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article discusses economic conditions that influence inflation rates, making it relevant to the US inflation node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trends and factors influencing inflation in the U.S., which suggests a longer-term perspective."
+    },
+    "article_node": {
+      "id": "H4D7CS274",
+      "title": "Bitcoin retreats from record after markets get inflation jolt",
+      "summary": "Bitcoin's price has been volatile, recently hitting a record high of $124,515 before dropping over 4% due to rising inflation concerns and comments from Treasury Secretary Scott Bessent regarding the U.S. government's Bitcoin acquisition strategy. The cryptocurrency's market cap reached around $2.5 trillion, with Ether also seeing significant gains. Meanwhile, electric vehicle prices are rising due to tariffs and expiring tax credits, making affordable options scarce, as highlighted by various models under $35,000.",
+      "source": "https://www.latimes.com/business/story/2025-08-14/bitcoin-retreats-from-record-after-markets-get-inflation-jolt",
+      "published_at": "2025-08-14T19:38:46.426000+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    }
+  },
+  "id": "H4D7CS274"
+}

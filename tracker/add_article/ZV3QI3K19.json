@@ -1,0 +1,69 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-29T18:10:24",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZV3QI3K19",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; July 23 ICJ advisory opinion on climate obligations triggers potential litigation and policy shifts in US and EU, affecting yields, currency, commodities, and equity indices.",
+      "existing_ids": [
+        "fed_policy",
+        "ecb_policy",
+        "eurusd",
+        "dxy",
+        "ust10y",
+        "ust2y",
+        "ust30y",
+        "bund10y",
+        "gilt10y",
+        "jgb10y",
+        "gold",
+        "wti",
+        "brent",
+        "copper",
+        "spx",
+        "sx5e",
+        "usdcny",
+        "china_exports",
+        "china_credit_impulse",
+        "us_inflation",
+        "euro_inflation",
+        "sofr",
+        "euribor"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a non‑binding advisory opinion by the International Court of Justice, a legal development that could influence climate law and state obligations, fitting the 'regulation' category."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article's relevance to the node is unclear as the node context is missing."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses a non‑binding legal opinion that could shape future climate litigation and national law, representing a long‑term structural driver."
+    },
+    "article_node": {
+      "id": "ZV3QI3K19",
+      "title": "‘Landmark’ Climate Change Opinion Promised Reforms, May Be A Paper Tiger",
+      "summary": "The International Court of Justice released a non‑binding advisory opinion on July 23 that declares developed countries have a legal duty to reduce greenhouse‑gas emissions and may owe reparations to affected states. While the ruling provides a legal framework that climate activists can cite in future litigation, the Court’s lack of enforcement power and the muted response from world leaders mean the opinion is unlikely to change policy immediately. The opinion could spur a wave of climate‑related lawsuits and influence national courts, but its impact will depend on how states incorporate its principles into domestic law. Meanwhile, the upcoming COP30 in Brazil is already marred by infrastructure projects that undermine the summit’s environmental goals, illustrating the gap between rhetoric and action.",
+      "source": "https://www.forbes.com/sites/jonmcgowan/2025/08/27/landmark-climate-change-opinion-promised-reforms-may-be-a-paper-tiger/",
+      "published_at": "2025-08-28T00:57:17+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 23,
+      "successful": 23
+    }
+  },
+  "id": "ZV3QI3K19"
+}

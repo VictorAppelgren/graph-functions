@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-01T13:12:16",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3G9F6IF2R",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; wave energy pilot could reduce oil demand, easing oil prices and supporting lower US inflation.",
+      "existing_ids": [
+        "oil_price_decline",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Eco Wave Power’s pilot project and expansion plans, which is a company news update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "The article does not provide information relevant to the specified node, as no node context is given."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article outlines medium‑term expansion plans for a wave‑energy project, targeting additional U.S. and international sites by 2026 and contributing to California’s 2045 carbon‑neutral goal, indicating a medium‑horizon focus."
+    },
+    "article_node": {
+      "id": "3G9F6IF2R",
+      "title": "New wave: Sea power turned into energy at Los Angeles port",
+      "summary": "Eco Wave Power’s pilot in Los Angeles uses floating paddles to convert wave motion into electricity, aiming to power 60,000 homes if scaled across the 13‑km breakwater. The system, designed to withstand high waves and allow on‑shore maintenance, could supply up to 130 million homes’ worth of power along the West Coast. While wave energy remains underdeveloped, the project has attracted support from California regulators and investors like AltaSea, who see it as a key component of the state’s 2045 carbon‑neutral goal. The company plans to expand to other U.S. sites and international locations such as Portugal, Taiwan, and India by 2026.",
+      "source": "https://techxplore.com/news/2025-08-sea-power-energy-los-angeles.html",
+      "published_at": "2025-08-31T11:10:02-04:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "3G9F6IF2R"
+}

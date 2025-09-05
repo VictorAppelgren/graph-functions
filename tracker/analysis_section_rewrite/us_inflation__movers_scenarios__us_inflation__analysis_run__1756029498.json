@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T12:07:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756029498",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17886",
+    "output_chars": "1091",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Your draft hits the right levers but to reach world-class, do the following: 1) harden the causal chain with first-principles links from cloud/AI diffusion to durable margins and investment multiples, explicitly naming how each driver translates into revenue visibility, cash flow, and valuation; 2) reframe into exactly four lines (two Up, two Down) with 3–6 months as the horizon, each line containing: Driver/Mechanism, a single crisp What to watch trigger, and a tightly justified Probability anchored to the cited facts (e.g., Pacaso expansion to 10 destinations and ~21% top-destination growth from UPV3X2MQ6; IBM/Just Capital signals from 4LQD15CFU; avoid multi-factor bullets); 3) fix citation hygiene and typos (e.g., correct ILYC1M41F where needed) and ensure every assertion is supported by an in-text ID; 4) replace generic phrasing with quantified impact magnitudes (e.g., AI productivity uplift 1–1.5% of output; margin/FCF effects from labor discipline measured in bps or $ figures); 5) sharpen “What to watch” to 1–2 concrete metrics per line and add explicit invalidation events for each line (e.g., deal-flow stall, milestone slippage, policy/regime shocks); 6) reconcile conflicts across sources (0G3A676BP, UPV3X2MQ6, 4LQD15CFU, J99EM2TPZ, RHXDOHQQX, TN66GHPAT, ILYC1M41F, FOM34PUWA, A7VLN74BK, etc.) and ensure coverage of cross-cutting themes like oil/tariff dynamics vs discount-rate risk; 7) tighten prose to be concise, one-sentence-per-line if reproduced, and ensure the two Up and two Down lines collectively map to the same horizon and narrative; 8) explicitly tie each line to a testable event (e.g., Pacaso/Mogul deal-flow, HeartSciences milestones, Range AI translations) and specify the precise probability range supported by the sourced facts rather than a single point estimate.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756029498"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T03:01:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756082871",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "17537",
+    "output_chars": "1987",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit plan to elevate to world-class brief: compress the write‑up into 4–6 executive sentences that deliver one crisp house view and clear, testable catalysts/risk signals; restructure to a strict three‑scenario framework (Base/Upside/Downside) with explicit, quantifiable triggers and invalidation rules (e.g., Nvidia guidance miss or beat thresholds, CPI/moM ranges, Fed commentary shifts) and tie each to a source ID; quantify portfolio/asset paths using the numbers already in the material (ETH in the 4,000–5,000 zone, BTC near prior highs with prints ~124k and ~112k noted; 85% odds of a 25bp September cut; Alt A 20–25% probability; Alt B 10–15% probability) and state them as ranges rather than single points; sharpen the causal chain from policy credibility and real-rate normalization to crypto flows and price discovery, anchored in OGK8WLL69 while reconciling any tensions with NL5YYTLF2/22PL3Q360 and other cited sources rather than treating them as separate inputs; prune tangential macro examples (Ford EV, Pacaso, Range, Goodyear/Tire) unless they directly illuminate a linked risk channel, and instead use them as concise cross-checks only where they sharpen the macro/discipline narrative; tighten the 0–3 week window into a compact, data‑flow checklist centered on Nvidia, August inflation/jobs prints, and Powell/Policy signals (17F49LURJ, 218AGGUXB) with explicit invalidation rules; ensure every substantive claim cites an ID from the SOURCE MATERIAL and explicitly note any conflicts between sources with a brief, stated reconciliation or a range of views; deliver in a crisp, executive tone with no filler, and present the watch-list and timing as concrete, action‑oriented inputs for portfolio construction.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756082871"
+}

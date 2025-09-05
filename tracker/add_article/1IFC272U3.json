@@ -1,0 +1,36 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T01:19:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "1IFC272U3",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; ECB policy shifts and the EU Data Act influence euro yields and cross-border capital flows, tightening term structure and raising euro inflation expectations.",
+      "existing_ids": [
+        "ecb_policy",
+        "euro_inflation"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article discusses new regulatory developments—EU Data Act, UK data laws, and critical infrastructure policies—highlighting how geopolitical tensions are driving data sovereignty requirements, which constitutes a regulatory change or legal development."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses data sovereignty and geopolitical impacts on cloud infrastructure, but without a specific node reference it is unclear which part of the graph it targets. Given the broad relevance to data residency and regulatory compliance, I assign a low impact score."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to this node."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "1IFC272U3"
+}

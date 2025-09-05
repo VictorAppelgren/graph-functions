@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T17:03:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "MF8ZAFVAY",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; political risk from Texas redistricting may influence Treasury yields.",
+      "existing_ids": [
+        "us_10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a legal development—an indictment of a former top aide to NYC Mayor Eric Adams—making it a regulatory/legal event."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports a significant political scandal involving the mayor’s aide and a bribery attempt, directly affecting the mayor’s campaign and public perception."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate events affecting the mayor’s office, such as the aide’s indictment and the bribery claim."
+    },
+    "article_node": {
+      "id": "MF8ZAFVAY",
+      "title": "Shouting erupts after Texas GOP approve new congressional maps",
+      "summary": "Former top aide to NYC Mayor Eric Adams has been indicted, and a separate incident saw a reporter allegedly offered cash in a bag of potato chips in a bizarre bribery attempt. These events unfolded back‑to‑back as Adams campaigns for reelection. The article also references unrelated CNN pieces on Trump, ICE arrests, and other political stories, but the focus remains on the mayor’s aide indictment and the chip‑cash bribery claim.",
+      "source": "https://www.cnn.com/2025/08/23/politics/video/texas-republicans-approve-new-congressional-maps-vrtc",
+      "published_at": "2025-08-23T13:37:00+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "current",
+      "priority": 2,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "MF8ZAFVAY"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T16:44:04",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZHP7CT70G",
+    "suggested_names": "['uk_30y_gilt_yield']",
+    "topic_category": "asset",
+    "topic_category_motivation": "Bond yield, financial instrument.",
+    "should_add": "False",
+    "motivation_for_relevance": "No canonical handle mapping for UK 30‑year gilt yield; cannot satisfy the required mapping to a tradable asset handle.",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "relevance_gate_reject"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports a new, significant rise in the UK 30‑year gilt yield, a key macro‑driver for UK fiscal policy and bond market sentiment, warranting an atomic node.",
+      "id": "uk_30y_gilt_yield",
+      "name": "UK 30-Year Gilt Yield",
+      "type": "macro"
+    }
+  },
+  "id": "none"
+}

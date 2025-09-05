@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:25:16",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_border_security_policy",
+    "target_id": "us_immigration_conditions",
+    "selection_motivation": "US Border Security Policy directly shapes the legal and operational framework for immigration, making it a primary driver of US Immigration Conditions.",
+    "candidate_motivation": "These topics have direct policy, enforcement, or cross-border mobility implications that closely interact with US border security policy.",
+    "existing_links_count": "2",
+    "candidate_count": "4",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['us_border_security', 'us_immigration_conditions', 'immigration_detention_conditions', 'canadian_us_travel_boycott']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security_policy', 'target': 'us_border_security'}, {'type': 'INFLUENCES', 'source': 'us_border_security_policy', 'target': 'us_china_trade_relations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373218184",
+    "rel_id": "us_border_security_policy__influences__us_immigration_conditions",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security_policy', 'target': 'us_border_security'}, {'type': 'INFLUENCES', 'source': 'us_border_security_policy', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security_policy', 'target': 'us_immigration_conditions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Border Security Policy directly shapes the legal and operational framework for immigration, making it a primary driver of US Immigration Conditions.",
+      "type": "INFLUENCES",
+      "source": "us_border_security_policy",
+      "target": "us_immigration_conditions"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_border_security_policy__influences__us_immigration_conditions"
+}

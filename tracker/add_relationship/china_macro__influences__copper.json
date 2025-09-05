@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T09:05:42",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "china_macro",
+    "target_id": "copper",
+    "selection_motivation": "China’s macroeconomic activity is the largest driver of global copper demand, directly influencing price and supply dynamics that affect industrial and financial markets.",
+    "candidate_motivation": "These topics are directly related to macroeconomic indicators, monetary policy, and commodity prices that influence or are influenced by China's macro environment.",
+    "existing_links_count": "4",
+    "candidate_count": "13",
+    "all_nodes_count": "148",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'oil', 'gold', 'copper', 'wheat', 'usd', 'eur', 'us_inflation_expectations', 'us_wholesale_inflation']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1200210400205864969",
+    "rel_id": "china_macro__influences__copper",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'copper'}, {'type': 'INFLUENCES', 'source': 'china_macro', 'target': 'usd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "China’s macroeconomic activity is the largest driver of global copper demand, directly influencing price and supply dynamics that affect industrial and financial markets.",
+      "type": "INFLUENCES",
+      "source": "china_macro",
+      "target": "copper"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "china_macro__influences__copper"
+}

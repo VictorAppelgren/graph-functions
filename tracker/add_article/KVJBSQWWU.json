@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T17:58:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "KVJBSQWWU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Apple stock jump lifts S&P 500 and Nasdaq 100 modestly (≈+0.1‑0.3%) via component weight.",
+      "existing_ids": [
+        "spx",
+        "ndx"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Apple shares movement due to external events such as a court order and analyst upgrade, which is a company news update."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article describes a short‑term price lift and positive sentiment around AI and product outlooks, but explicitly states it is unlikely to materially alter Apple’s long‑term fundamentals."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article centers on a short‑term event (court order, share rally) that is unlikely to alter Apple’s long‑term fundamentals, so the focus is on immediate market impact."
+    },
+    "article_node": {
+      "id": "KVJBSQWWU",
+      "title": "Why Apple (AAPL) Stock Is Trading Up Today",
+      "summary": "Apple shares rose 2.6% after a court order compels Google to share search data, a move that could accelerate Apple’s AI chatbot development. The rally was supported by analyst Ming‑Chi Kuo’s upgraded iPhone Fold shipment outlook and reports of increased automation in Apple’s supply chain. While the gain reflects positive sentiment, it is unlikely to materially alter Apple’s long‑term fundamentals, which remain driven by its services segment and ongoing AI investments.",
+      "source": "https://finance.yahoo.com/news/why-apple-aapl-stock-trading-144540080.html",
+      "published_at": "2025-09-03T14:45:40+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "KVJBSQWWU"
+}

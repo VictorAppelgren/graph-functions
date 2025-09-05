@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T13:05:01",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756550965",
+    "drivers_count": "4",
+    "material_chars": "1015",
+    "output_chars": "1076",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft correctly links the EPAM upgrade to a modest S&P 500 lift (0.1–0.2 %) and a 5–10 bp uptick in the 10‑yr UST, but it suffers from three key weaknesses: (1) **Missing citations** – the Fed‑policy references lack source IDs; remove or replace them with a placeholder (e.g., “Fed minutes (ID X)”) and add a real citation if available. (2) **Unquantified causal chain** – explain why a 0.1–0.2 % equity move translates into a 5–10 bp yield shift (e.g., via risk‑aversion elasticity or historical correlation). (3) **Sparse catalyst window** – the watch‑list is vague; specify dates (e.g., EPAM Q2 earnings on 25 Jun 2024, Fed minutes 12 Jun 2024, CPI 12 Jun 2024) and tie each to a directional bias (e.g., “positive earnings → 0.1 % spx lift → 3 bp yield rise”). Tighten the narrative to a single paragraph, keep the focus on spx and ust10y, and ensure every claim is backed by a source ID or clearly marked as an assumption. This will meet the truth‑over‑verbosity and market‑mapped standards while providing a defensible, actionable view.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__drivers__spx__analysis_run__1756550965"
+}

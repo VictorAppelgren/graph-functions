@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T03:12:49",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755995886",
+    "prior_sections": "['fundamental', 'medium', 'drivers']",
+    "material_chars": "5625",
+    "output_chars": "981",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is dense but still too verbose, mixes macro and company analysis, and repeats anchor details without clear causal links. Tighten to 4–6 bullet‑style sentences: start with a concise macro thesis (real‑rate differential, Fed cut probability, dollar depreciation), then state the direct impact on credit spreads and personal‑loan rates, followed by the specific catalyst (September CPI) and its trigger/invalidations. For ACM, isolate the 3‑6‑month view: base‑case 10–15 % upside to $35, bull $38 if IPOs >90, bear $28 if Fed stalls and trade tensions spike. Replace generic “risk” phrasing with quantified thresholds (e.g., 0.5 % CPI spike, 50 bp spread widening). Ensure each claim cites a single source ID (e.g., C3ODMIQKZ, GX057ADL7, SK994CBWR, C22MKA9VY, Q7VVGNSQE). Remove redundant anchor sentences, merge overlapping points, and use active verbs (“Fed’s 50‑bp cut in September will trim personal‑loan rates by 0.5–1 %”). End with a confidence rating (70 %) and a clear watch list (July CPI, Fed minutes, IPO count, semiconductor order books). This will produce a crisp, decision‑useful brief that meets the 4–6 sentence limit and adheres to citation and quantification standards.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__executive_summary__fed_policy__analysis_run__1755995886"
+}

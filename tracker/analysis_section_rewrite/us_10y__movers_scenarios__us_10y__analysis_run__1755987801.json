@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T00:41:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1755987801",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "6523",
+    "output_chars": "563",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft needs tighter causal logic, richer macro‑linkage, and sharper probability calibration. 1) Merge the Q3 earnings beat and Ultra C wb ramp into a single “Q3 earnings & product launch” driver, citing the 36 % share‑price surge and 49.4 % gross margin (SK994CBWR) to justify a 75 % upside probability. 2) Add a Fed‑rate‑cut upside trigger for Q3 (Fed policy meeting in October 2025) with a 60 % probability, citing Powell’s optimism (SK994CBWR). 3) Replace the generic “Fed rate hike” down‑side with a concrete “Fed hike in Q4 2025” risk, citing the CPI 2.7 % rise (LZG5YWQMC) and its impact on growth‑heavy equities (V7GV8YBQU), assigning a 55 % probability. 4) Expand the China export‑control risk to include the 2025 policy change (FOM34PUWA) and the potential 30 % cut in Chinese orders, assigning a 45 % probability. 5) Include UAS job‑growth data as a secondary upside catalyst (FOM34PUWA) with a 50 % probability. 6) Ensure each line is a single sentence, uses only in‑text IDs for specific facts, and avoids generic phrasing. 7) Re‑calculate the base‑case valuation to reflect the new upside/downside probabilities, citing the $34.76 share price (SK994CBWR). 8) Finally, verify that all critical sources are cited and reconcile any conflicting margin figures.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__movers_scenarios__us_10y__analysis_run__1755987801"
+}

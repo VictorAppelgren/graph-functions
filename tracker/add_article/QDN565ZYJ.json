@@ -1,0 +1,51 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T16:31:01",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "QDN565ZYJ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; Boeing’s leadership shift and potential new aircraft program influence Boeing’s credit profile and, via Fed policy, US Treasury yields.",
+      "existing_ids": [
+        "ba",
+        "fed_policy",
+        "ust10y",
+        "ust2y",
+        "ust5y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports a leadership appointment at Boeing, which is a company update."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports a major leadership change at Boeing that could influence its product development trajectory and investor confidence."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses a corporate leadership change that may influence Boeing’s product development trajectory over the medium term."
+    },
+    "article_node": {
+      "id": "QDN565ZYJ",
+      "title": "How Boeing is quietly betting on a 'brilliant' 39-year old engineer—and setting the stage for a turnaround",
+      "summary": "Boeing has named 39‑year‑old Brian Yutko chief of commercial airplane product development, signalling a renewed focus on engineering after years of safety and production woes. Yutko, a MIT aerospace grad and former Wisk CEO, brings experience in advanced aircraft design and autonomous flight. The appointment comes as CEO Kelly Ortberg pushes to lift 737‑Max production, secure union agreements, and raise capital, positioning Boeing to rebuild credibility and pursue a new, fuel‑efficient aircraft platform. If Yutko can galvanize talent and streamline design, Boeing may regain competitive edge and restore investor confidence.",
+      "source": "https://fortune.com/2025/08/02/boeing-brian-yutko-leadership-turnaround-outlook/",
+      "published_at": "2025-08-02T10:00:00+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 5
+    }
+  },
+  "id": "QDN565ZYJ"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T16:47:34",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756046234",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "16984",
+    "output_chars": "841",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "This draft is solid in structure but needs a tighter, Ford-centric first-principles through-line, a cleaner 4-line Up/Down format, and explicit, source-backed triggers with justified probabilities; remove or narrowly anchor the non-Ford macro/private-market material unless you connect it to Ford cash flow (e.g., how Pacaso/Range or HeartSciences signals would alter Ford’s financing costs or non-EV cash flow), and ensure every claim about EV economics cites W2622L6WW or 22PL3Q360 (and other critical IDs) with reconciliation notes if sources conflict. Strengthen the causal chain from Model E profitability (durable EBIT, EV gross margin) to ROIC and the equity multiple, and codify regime thresholds (base/bear/bull) with explicit watchpoints and invalidation signals (e.g., if Model E EBIT remains negative for two consecutive quarters or if tariff pass-through deteriorates, the bull/price upgrade should be retracted). Ground all four outputs in concrete Ford-specific metrics from the material (1.3B Q2 EV loss; ~4.3% adj margin; ROIC ~10.1%; forward P/E 8–10x; ~5% yield; up to $12B EV capex deferral; 15% tariff pass-through after a 27.5% base) and, when framing probabilities, either anchor them to scenario weights implied by those facts or present explicit, justified ranges (e.g., base 25–35%, bull 15–25%, bear 30–40%) with citations; deliver exactly four one-sentence lines in the required Up/Down | Time window | Driver/Mechanism | What to watch | Probability format, and ensure all citations are the IDs present in SOURCE MATERIAL (no external references).",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756046234"
+}

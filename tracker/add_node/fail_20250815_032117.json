@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-15T03:21:09",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "HUC4WA36I",
+    "status": "rejected",
+    "reject_category": "asset",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article highlights the Tamarack Nickel-Copper-Cobalt Project, which is significant for its potential impact on the base metals market and investment decisions related to Talon Metals Corp. and its joint venture with Rio Tinto, warranting a dedicated node.",
+      "id": "tamarack_nickel_copper_cobalt_project",
+      "name": "Tamarack Nickel-Copper-Cobalt Project",
+      "type": "asset",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "asset",
+      "motivation": "Specific mining project asset, not a macro driver or policy."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "The Tamarack Nickel-Copper-Cobalt Project is a specific mining asset, not a macro driver or tradable instrument; it falls under an industry vertical and does not support macro-level trading decisions.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

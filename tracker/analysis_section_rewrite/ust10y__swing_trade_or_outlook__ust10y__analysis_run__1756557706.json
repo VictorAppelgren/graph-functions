@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T15:14:36",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756557706",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "5450",
+    "output_chars": "431",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is well‑grounded but needs tightening to meet the strict output format and focus on the 10‑year UST (ust10y). 1) Remove all narrative paragraphs that do not end with a concrete, cited fact (e.g., “Weak tech earnings compress equity risk‑premium demand…”). 2) Collapse the 4‑line “Up/Down” section into the required four lines, using the correct sign (yield up = “Up”, yield down = “Down”), a 3‑month window, a single driver, a single watch signal, and a probability with an inline ID. 3) Replace the long “Long | 3‑month …” block with a single swing‑trade line that follows the mandated syntax: Direction | Horizon | Entry | Stop | Target | R/R | Invalidation | Trigger | Probability % | Confidence 0–100. 4) Ensure every claim that cites a source uses the exact ID from the material (e.g., LF0UUL917, U21K4ALYQ, 1DEM6P1Y2). 5) Verify that the trade plan’s entry/stop/target are numerically consistent with the yield ranges discussed (e.g., entry 4.23%, stop 4.30%, target 4.10–4.15%). 6) Keep the trade line concise: “Long | 3‑wk | 4.23% | 4.30% | 4.10% | 1:1 | Fed cut reversal or PCE>2.9% | Fed 16‑17 FOMC | 70% | 80”. 7) Finally, delete any sentences that drift from ust10y (e.g., references to DXY or equity earnings) unless they explicitly link to the yield via a causal chain. This will produce a clean, actionable output that satisfies the 100‑topic limit and the “no FX‑centric” rule.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__swing_trade_or_outlook__ust10y__analysis_run__1756557706"
+}

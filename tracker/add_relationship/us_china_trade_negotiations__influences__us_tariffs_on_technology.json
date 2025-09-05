@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T11:01:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_china_trade_negotiations",
+    "target_id": "us_tariffs_on_technology",
+    "selection_motivation": "U.S.-China trade negotiations are a primary driver of U.S. tariff policy on technology goods, directly influencing the level and scope of tariffs imposed on semiconductor and related technology imports.",
+    "candidate_motivation": "These topics have direct, high-signal linkages to U.S.-China trade negotiations through tariffs, policy decisions, and cross-border tech supply chains, making them strong influences, correlates, or peers.",
+    "existing_links_count": "4",
+    "candidate_count": "15",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['us_china_trade_negotiations', 'china_us_tariff_truce', 'us_tariffs_semiconductors', 'us_tariffs_on_technology', 'us_tariffs_pharmaceuticals_semiconductors', 'china_semiconductor_policy', 'china_ai_semiconductors', 'us_china_ai_chip_exports', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'us_export_policy_ai_chips', 'us_tariffs', 'us_china_trade_relations', 'us_china_trade_war_2025', 'us_tariffs_inflation']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_export_controls'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902015",
+    "rel_id": "us_china_trade_negotiations__influences__us_tariffs_on_technology",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_agriculture_trade'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_china_trade_negotiations', 'target': 'us_china_export_controls'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "U.S.-China trade negotiations are a primary driver of U.S. tariff policy on technology goods, directly influencing the level and scope of tariffs imposed on semiconductor and related technology imports.",
+      "type": "INFLUENCES",
+      "source": "us_china_trade_negotiations",
+      "target": "us_tariffs_on_technology"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_china_trade_negotiations__influences__us_tariffs_on_technology"
+}

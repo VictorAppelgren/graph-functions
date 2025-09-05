@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T00:04:05",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1755986645",
+    "article_ids": "['X25AHBVDO', '4LQD15CFU', 'JVKCZAPVG', 'P0K0UEOHU', '3GW34ISLC']",
+    "selected_articles_count": "5",
+    "material_chars": "150137",
+    "output_chars": "3234",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft is a solid first pass but still falls short of a world‑class, multi‑year macro thesis. 1) **Depth & Causal Chain** – You jump from IBM’s AI hiring pause to O’Leary’s personal finance advice without a clear link. 2) **First‑Principles Anchors** – You mention “real‑rate differentials” and “terms‑of‑trade” but never quantify them or show how they drive the auto or tech regimes. 3) **Quantification & Sources** – You cite a 17.3% outperformance of the JUST Capital index but never give the absolute return numbers or the period; you quote a 4.7% safe withdrawal rate but omit the source (Morningstar May 2025). 4) **Citation Density** – Every claim (e.g., IBM’s 26,000 back‑office roles, Tesla’s 16% revenue slide, Rivian’s $6.6 bn DOE loan) needs an inline ID (e.g., X25AHBVDO, 4LQD15CFU, P0K0UEOHU). 5) **Regime & Transition Conditions** – You mention “AI‑enabled manufacturing” and “electrification” but never state the threshold (e.g., 2025 tariff hike, 2026 R2 launch) or the policy shock that triggers the regime shift. 6) **Risk & Watchlist** – Your risks are generic; add specific catalysts (e.g., tariff escalation > 10 %, Tesla’s robotaxi regulatory approval, consumer demand elasticity for $45k R2). 7) **Alignment with Section Focus** – The analysis is too broad; focus on a single structural theme (e.g., “AI‑driven productivity vs. labor‑cost drag”) and keep the narrative tight. 8) **Formatting** – Use bullet‑style regime tables, a clear causal diagram, and a concise base‑case paragraph. 9) **Avoid Generic Sentiment** – Replace “high‑growth, high‑leverage firms” with concrete metrics (e.g., Rivian’s projected 2027 EBITDA margin of 12‑15 % vs. Tesla’s 8‑10 %). 10) **Reconcile Conflicts** – The article says IBM will cut 7,800 jobs; your analysis should reflect the net effect on productivity and cost savings. 11) **Add a Confidence Scale** – Quantify confidence (e.g., 70 % based on consensus of 3 analysts). 12) **Add a “What to Watch” Timeline** – 2025 Q3: R2 launch; 2026 Q1: tariff policy change; 2027: Rivian EBITDA breakeven. 13) **Cite All Critical Sources** – Ensure every data point (e.g., JUST Capital 17.3 % outperformance, Tesla’s 16 % revenue decline) is linked to its source ID. 14) **Remove Redundant Sentences** – The paragraph about O’Leary’s “active listening” is irrelevant to macro; delete or reframe it as a human‑capital discipline example. 15) **Structure** – Start with a one‑sentence thesis, then a regime diagram, followed by a causal chain, then a base case, risks, watchlist, and confidence. Implement these edits to elevate the analysis to a rigorous, citation‑rich, multi‑year macro thesis.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__fundamental__us_inflation__analysis_run__1755986645"
+}

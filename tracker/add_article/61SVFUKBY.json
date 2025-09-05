@@ -1,0 +1,37 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T15:52:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "61SVFUKBY",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Netflix's valuation and growth outlook may influence the S&P 500 and US media sector exposure.",
+      "existing_ids": [
+        "spx"
+      ],
+      "new_names": [
+        "us_media"
+      ]
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports Netflix’s Q2 revenue, free cash flow, and growth outlook, which constitutes a company earnings release."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports Netflix’s Q2 earnings, growth, and valuation, directly affecting the Netflix node’s fundamentals and investor sentiment."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article focuses on Netflix’s long‑term growth prospects, valuation, and structural drivers rather than immediate events."
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 1
+    }
+  },
+  "id": "61SVFUKBY"
+}

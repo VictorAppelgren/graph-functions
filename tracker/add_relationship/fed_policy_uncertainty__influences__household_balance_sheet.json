@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-28T13:25:17",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy_uncertainty",
+    "target_id": "household_balance_sheet",
+    "selection_motivation": "Fed policy uncertainty directly affects household borrowing costs, mortgage rates, and credit availability, thereby shaping household balance sheets and downstream consumption.",
+    "candidate_motivation": "Fed Policy Uncertainty directly influences macro‑financial conditions, trade policy, household finances, and investment strategies. Topics that are economic policy, trade, or financial markets are therefore the most plausible peers or influences.",
+    "existing_links_count": "0",
+    "candidate_count": "4",
+    "all_nodes_count": "102",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['us_china_trade_policy', 'household_balance_sheet', 'thematic_portfolio_investing', 'creator_economy_investment']",
+    "existing_links_before_len": "0",
+    "existing_links_before_preview": "[]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1152922604118478604",
+    "rel_id": "fed_policy_uncertainty__influences__household_balance_sheet",
+    "existing_links_after_len": "1",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy_uncertainty', 'target': 'household_balance_sheet'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy uncertainty directly affects household borrowing costs, mortgage rates, and credit availability, thereby shaping household balance sheets and downstream consumption.",
+      "type": "INFLUENCES",
+      "source": "fed_policy_uncertainty",
+      "target": "household_balance_sheet"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "fed_policy_uncertainty__influences__household_balance_sheet"
+}

@@ -1,0 +1,57 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T18:40:51",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "PETWPQO5U",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; US 30‑year yield approaching 5% and Fed policy outlook drive bond market volatility and spill into equity and commodity pricing.",
+      "existing_ids": [
+        "ust10y",
+        "ust30y",
+        "ust2y",
+        "ust5y",
+        "fed_policy",
+        "gold",
+        "brent",
+        "wti",
+        "spx",
+        "ndx",
+        "dxy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "regulation",
+      "motivation": "The article reports a U.S. judge ruling that Google need not sell its Chrome browser, which is a regulatory/legal development affecting antitrust concerns."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node specified to assess impact on; cannot determine relevance."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article discusses medium‑term Fed policy expectations (five to six cuts by December 2026) and bond market moves, indicating a medium‑horizon focus."
+    },
+    "article_node": {
+      "id": "PETWPQO5U",
+      "title": "Global Bond Selloff; Google Avoids Chrome Sale in Antitrust Case",
+      "summary": "Global bond markets saw a selloff with U.S. 30‑year yields approaching 5%, though the decline eased slightly. A U.S. judge ruled that Google need not sell its Chrome browser, lifting a key antitrust concern and lifting Alphabet and Apple shares. Market analysts noted that bond contagion is unlikely, while Fed officials anticipate five to six rate cuts by December 2026. Petrobras CEO highlighted Asia’s role in offsetting U.S. trade‑war pressures, and equity futures and gold prices rose amid the broader backdrop of rising commodity and bond yields.",
+      "source": "https://www.bloomberg.com/news/videos/2025-09-03/bloomberg-brief-9-3-2025-video?srnd=phx-technology",
+      "published_at": "2025-09-03T11:27:04.654000+00:00",
+      "vector_id": null,
+      "type": "regulation",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 11,
+      "successful": 11
+    }
+  },
+  "id": "PETWPQO5U"
+}

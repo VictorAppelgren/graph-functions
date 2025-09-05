@@ -1,0 +1,52 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T16:49:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "CPJ402T3P",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: credit; Rising catastrophe losses raise insurers’ solvency concerns, tightening US Treasury yields (10‑30Y) by 10‑20 bp over next 12 months and prompting Fed/ECB to adjust collateral frameworks.",
+      "existing_ids": [
+        "ust10y",
+        "ust30y",
+        "fed_policy",
+        "ecb_policy",
+        "us_inflation",
+        "us_core_pce"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "central_bank_action",
+      "motivation": "The article reports that central banks are beginning to embed climate risk into collateral frameworks, which is a central bank action."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "Node not provided, cannot assess impact."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article highlights long‑term structural shifts in the insurance sector driven by climate change and central‑bank policy, indicating a fundamental change in risk‑pricing and resilience investment patterns."
+    },
+    "article_node": {
+      "id": "CPJ402T3P",
+      "title": "$152 Billion In Losses Signals A Crisis In Insurability",
+      "summary": "The global insurance industry faces a sharp rise in natural‑disaster losses, now averaging $152 billion annually—a 25% jump in one year—driven by more frequent severe thunderstorms, floods, and wildfires. Climate change, though a small direct contributor, acts as a multiplier, amplifying inflation and exposure growth and eroding insurability. Central banks are beginning to embed climate risk into collateral frameworks, and insurers are increasingly viewing insurability as a prerequisite for investability, prompting shifts toward resilience investments and new risk‑pricing mechanisms across markets.",
+      "source": "https://www.forbes.com/sites/feliciajackson/2025/09/03/152-billion-in-losses-signals-a-crisis-in-insurability/",
+      "published_at": "2025-09-03T13:41:12+00:00",
+      "vector_id": null,
+      "type": "central_bank_action",
+      "temporal_horizon": "fundamental",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 6,
+      "successful": 6
+    }
+  },
+  "id": "CPJ402T3P"
+}

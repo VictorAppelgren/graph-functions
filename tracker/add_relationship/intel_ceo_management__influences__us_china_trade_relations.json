@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:15:51",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_ceo_management",
+    "target_id": "us_china_trade_relations",
+    "selection_motivation": "Linking Intel CEO Management to US-China Trade Relations highlights the strategic importance of leadership decisions in navigating complex geopolitical landscapes affecting the semiconductor industry.",
+    "candidate_motivation": "The selected topics are likely to influence or correlate with Intel CEO Management due to their relevance in technology, corporate governance, and market dynamics, which are critical areas for a CEO's strategic decisions.",
+    "existing_links_count": "3",
+    "candidate_count": "10",
+    "all_nodes_count": "1610",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['intel_ceo_political_influence', 'intel_customer_investment', 'us_chip_export_controls', 'us_chip_revenue_policy', 'us_china_chip_negotiations', 'intel_stock_trump_influence', 'us_tariffs_semiconductors', 'us_china_ai_chip_agreement', 'us_china_trade_relations', 'us_china_trade_war_2025']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_chip_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559530751",
+    "rel_id": "intel_ceo_management__influences__us_china_trade_relations",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_chip_negotiations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Intel CEO Management to US-China Trade Relations highlights the strategic importance of leadership decisions in navigating complex geopolitical landscapes affecting the semiconductor industry.",
+      "type": "INFLUENCES",
+      "source": "intel_ceo_management",
+      "target": "us_china_trade_relations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_ceo_management__influences__us_china_trade_relations"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:04:43",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eurusd",
+    "target_id": "us_10y",
+    "selection_motivation": "The EURUSD exchange rate influences capital flows and relative yield attractiveness, thereby affecting the US 10Y Treasury yield.",
+    "candidate_motivation": "These topics represent the core macro drivers and policy/yield indicators most directly linked to EURUSD movements: US and Eurozone inflation, Federal/ECB policy, and key currency benchmarks and yields.",
+    "existing_links_count": "6",
+    "candidate_count": "9",
+    "all_nodes_count": "1035",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_inflation', 'euro_inflation', 'fed_policy', 'ecb_policy', 'us_10y', 'euribor', 'usd', 'eur', 'us_inflation_data']",
+    "existing_links_before_len": "6",
+    "existing_links_before_preview": "[{'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'usd'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'eur'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373215744",
+    "rel_id": "eurusd__influences__us_10y",
+    "existing_links_after_len": "7",
+    "existing_links_after_preview": "[{'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'us_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'euro_inflation'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'fed_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'ecb_policy'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'usd'}, {'type': 'INFLUENCED_BY', 'source': 'eurusd', 'target': 'eur'}, {'type': 'INFLUENCES', 'source': 'eurusd', 'target': 'us_10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The EURUSD exchange rate influences capital flows and relative yield attractiveness, thereby affecting the US 10Y Treasury yield.",
+      "type": "INFLUENCES",
+      "source": "eurusd",
+      "target": "us_10y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eurusd__influences__us_10y"
+}

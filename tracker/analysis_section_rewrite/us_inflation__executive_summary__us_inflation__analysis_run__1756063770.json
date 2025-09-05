@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:43:14",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756063770",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "19186",
+    "output_chars": "1712",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft shows real strength in its ambitious regime framework and explicit transmission channels, but it overreaches the 4–6 sentence/bullet limit, mixes too many peripheral examples, and lacks a tight, testable decision-ready house view with explicit regime triggers and invalidation points; it also frays the causal chain by not consistently anchoring every factual claim to a source ID and by not consolidating conflicting data into a single coherent stance. To upgrade to world-class quality, implement (1) a crisp 4–6 item executive structure: Base (Regime A), Tariff/Tech shock (Regime B), Policy-pivot/identity (Regime C), and an Upside/Relief regime (Regime D), each with 1–2 catalysts, explicit transition triggers, and 1 clear invalidation point; (2) convert the transmission chain into a single, testable flow (shock → policy/pricing → capex allocation and asset pricing → stock-level implications) with 2–3 metrics per regime (e.g., AI capex pace, inflation path, external balance stance) and testable catalysts like an AI capex breakthrough, tariff escalation, or a concrete UBI/identity policy shift; (3) tighten the numerical backbone by tying every quantitative claim to a source ID and prefer a single primary data point per claim, then present any conflicts as a stated range or choose the more reliable source, e.g., Ford metrics ( EV losses ~$1.3B; ROIC ~10%; dividend ~5%; forward P/E high‑single to low‑teens) anchored to 22PL3Q360/W2622L6WW, and corporate/macro numbers should be limited to 4–6 core figures; (4) prune nonessential tangents (Pacaso, Range AI, HeartSciences, Brookings exposure) and keep Ford plus one additional proxied company as the core cross‑sectional lens, to preserve focus and avoid dilution of the thesis; (5) reform the watchlist into 4–6 signals with explicit 30/60/90‑day triggers and clearly stated decision thresholds, ensuring every item maps to an ID, and (6) deliver in a concise, decision-oriented voice: state a single house view (e.g., overweight base/neutral to constructive under tariff relief) and attach a short, quantified probability sketch for Regime A–D, with a tightened causal chain and a single horizon (0–12 months) consistent with the 3–6 month and multi‑year framing.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756063770"
+}

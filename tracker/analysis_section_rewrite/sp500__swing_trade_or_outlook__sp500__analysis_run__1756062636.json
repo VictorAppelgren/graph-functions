@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T21:20:00",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756062636",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "18294",
+    "output_chars": "1349",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has strong thematic underpinnings but fails the SECTION FOCUS in three core ways: (1) format violations and horizon alignment— Movers must be exactly 4 lines (2 Up, 2 Down) with a single 3–6 month horizon each; the current piece includes >4 lines, plus a 0–3 week section and a separate “Constructive” line, which breaks the mandated 2 Up/2 Down structure and obscures the intended scenario framing. (2) probability anchoring and source discipline—assign the Up/Down probabilities strictly from explicit regime weights in the material (Regime A ~50%, Regime B ~30%, Regime C ~20% from NL5YYTLF2) and map the two Up lines to Regime A drivers while the two Down lines map to Regimes B and C; attach citations (NL5YYTLF2; SGB2PAZGK) only where you assert those facts or numbers. (3) first-principles coherence and quantification—ground each line in a clear, minimal causal chain (policy/shock -> capex/investment allocation -> ROIC/discounted cash flow re-rating -> price/valuation signals) and quantify where possible (e.g., ROIC, capex intensity, energy-cost backdrop such as the Wyoming baseline, Ford’s 5% yield, 10x forward multiple) with precise source IDs; avoid duplicative macro paragraphs and ensure every factual hook ties to a source. actionable edits: (a) produce exactly four movers: two Up and two Down, each with “Up/Down | 3–6 months | Driver/Mechanism | What to watch | Probability %” and anchor probabilities to NL5YYTLF2 (50%), Regime B (30%), Regime C (20%) with citations; (b) reframe the two Up lines under Regime A drivers (tariff-driven reorientation and productivity-led capex shift) and the two Down lines under Regime B and Regime C triggers (risk premium from policy/shocks and targeted policy stabilization), respectively; (c) drop the standalone macro sections and deliver a concise Outlook line if the asset is tradable (e.g., a swing trade on a liquid equity like Ford or KO) or an Outlook line if not; (d) add a single, crisp Swing Trade or Outlook line that specifies direction, horizon, entry/stop/target/RR, invalidation, trigger, probability, and confidence, with citations only where facts are sourced; (e) prune extraneous names and nonessential micro-signal lists unless they directly illuminate the 4 movers; (f) ensure internal consistency—no conflicting regime claims, and ensure every numeric assertion is sourced. As a concrete skeleton you could adopt: Up | 3–6 months | Tariff-driven Regime A reorientation lifting domestic capex in chips/AI and energy infra; What to watch: tariff deadlines, chip/EV capex announcements, AI/data-center deployments; Prob 50% (NL5YYTLF2)(SGB2PAZGK). Up | 3–6 months | AI compute/data-center capex expansion fueling ROIC lift and high-ROIC leadership re-rating; What to watch: Nvidia AI earnings cadence, data-center energy demand; Prob 50% (STBVARD8F)(4661GWFP7)(22PL3Q360). Down | 3–6 months | Regime B: policy frictions lift risk premia and tighten financial conditions; What to watch: ceasefire/Red Sea route normalization, macro risk signals; Prob 30% (NL5YYTLF2)(I2SJU04DF). Down | 3–6 months | Regime C: targeted policy stabilization reanchors inflation and recalibrates exit terms; What to watch: policy pivots and inflation dynamics; Prob 20% (NL5YYTLF2)(HWGNUP2XG). If tradable, add a Swing Trade line after these four movers with concrete entry/stop/targets and an explicit trigger; if not, append a concise Outlook line.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__swing_trade_or_outlook__sp500__analysis_run__1756062636"
+}

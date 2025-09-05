@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T07:51:12",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_10y",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_10y__analysis_run__1756013427",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "11124",
+    "output_chars": "1200",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable Edit Instructions (compact paragraph)**  \nCondense the draft into 4–6 bullet‑style sentences that separate DGICB and ACMR into distinct sections, each beginning with a clear headline (e.g., “DGICB – Cost‑of‑Capital & Justness Premium” and “ACMR – AI‑Driven Semiconductor Upside”). Replace generic phrases (“moderate”, “slightly below”) with quantified ranges (e.g., “dividend yield to 1.8‑2.2 %”, “justness premium 12‑18 % above peers”). Explicitly list catalysts, watch items, and risks for each company: for DGICB, IBM hiring pause (4LQD15CFU), JUST index outperformance (4LQD15CFU), and regulatory tightening (TN66GHPAT); for ACMR, Q3 earnings guidance, Fed September meeting, China self‑sufficiency policy, export‑control tightening. Include a concise base‑case, upside, and downside price target with dates (e.g., “$34.76 in 4–6 mo if revenue hits upper guidance; $32.00 if missed”). Ensure every claim is supported by a single, correct citation ID and that all critical sources are referenced (e.g., TN66GHPAT, 4LQD15CFU, SK994CBWR, C3ODMIQKZ, J99EM2TPZ). Remove filler (“over the next several years”, “the draft”), avoid repetition, and keep the tone executive, decision‑useful, and free of platitudes. The final output should read as a crisp, investor‑brief with clear catalysts, risks, watch signals, and confidence levels.",
+      "tokens": {}
+    }
+  },
+  "id": "us_10y__executive_summary__us_10y__analysis_run__1756013427"
+}

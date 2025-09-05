@@ -1,0 +1,40 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-30T00:33:07",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "AQTRFW2J8",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; FTSE breakout driven by U.S. capital flows, weak dollar, and Fed policy.",
+      "existing_ids": [
+        "fed_policy",
+        "dxy",
+        "spx",
+        "ust10y"
+      ],
+      "new_names": [
+        "ftse"
+      ]
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article provides market analysis of FTSE performance driven by macro factors such as Fed policy, dollar depreciation, and geopolitical dynamics."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to evaluate the article's impact on, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article focuses on macro drivers such as Fed policy, dollar depreciation, and geopolitical dynamics influencing the FTSE, indicating a medium‑term outlook rather than immediate events or long‑term fundamentals."
+    },
+    "multi_topic_results": {
+      "total_topics": 5,
+      "successful": 4
+    }
+  },
+  "id": "AQTRFW2J8"
+}

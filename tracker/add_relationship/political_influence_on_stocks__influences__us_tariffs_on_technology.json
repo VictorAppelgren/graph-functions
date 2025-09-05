@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T23:06:04",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "political_influence_on_stocks",
+    "target_id": "us_tariffs_on_technology",
+    "selection_motivation": "Political influence on stocks directly shapes U.S. technology tariff policy, affecting semiconductor supply chains and stock valuations.",
+    "candidate_motivation": "These topics represent direct macro policy, geopolitical, and trade channels that plausibly influence stock markets and align with the theme of political influence on stocks.",
+    "existing_links_count": "7",
+    "candidate_count": "30",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "30",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'core_monthly_cpi', 'core_cpi', 'us_tariffs', 'us_tariffs_semiconductors', 'us_tariffs_pharmaceuticals_semiconductors', 'us_tariffs_on_technology', 'us_china_trade_talks', 'us_china_trade_relations', 'us_china_trade_war_2025', 'china_us_tariff_truce', 'us_chip_export_controls', 'us_chip_exports_china', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_ai_semiconductors', 'ukraine_geopolitics', 'ukraine_conflict', 'ukraine_peace_negotiations', 'oil', 'gold', 'usd', 'eur', 'euro_inflation', 'us_inflation_data', 'us_inflation_stock_impact', 'geopolitics_corporate_strategy', 'political_influence_on_business']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1170937002627957596",
+    "rel_id": "political_influence_on_stocks__influences__us_tariffs_on_technology",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'intel_ceo_pressure'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'political_influence_on_stocks', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Political influence on stocks directly shapes U.S. technology tariff policy, affecting semiconductor supply chains and stock valuations.",
+      "type": "INFLUENCES",
+      "source": "political_influence_on_stocks",
+      "target": "us_tariffs_on_technology"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "political_influence_on_stocks__influences__us_tariffs_on_technology"
+}

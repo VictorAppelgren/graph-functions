@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-14T21:56:43",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3GL47P0WY",
+    "status": "rejected",
+    "reject_category": "macro_driver",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article discusses a novel enhanced oil recovery method utilizing alternative carbon carriers, which has significant implications for oil production and carbon storage, warranting a new atomic node for investment analysis.",
+      "id": "alternative_carbon_carrier_technology",
+      "name": "Alternative Carbon Carrier Technology",
+      "type": "macro",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "macro_driver",
+      "motivation": "New technology that can increase oil recovery and carbon storage, influencing macro trends and asset pricing."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific oil‑and‑gas technology, not a macro driver or tradable asset",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T15:59:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "ford_ev_investment_louisville",
+    "target_id": "ford_ev_investment",
+    "selection_motivation": "The Louisville investment is a flagship project that drives Ford’s overall EV investment strategy, making it a primary catalyst for the broader Ford EV Investment portfolio.",
+    "candidate_motivation": "These topics represent the closest direct or influential levers to Ford's Louisville EV investment, including Ford's EV platform/vehicle strategies and policy/supply-chain factors that could affect the project.",
+    "existing_links_count": "3",
+    "candidate_count": "6",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "6",
+    "candidate_ids_preview": "['ford_ev_investment', 'ford_universal_ev_platform', 'ford_ev_pickup', 'ev_infrastructure_funding', 'us_chip_export_controls', 'rare_earth_elements']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ev_infrastructure_funding'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_ev_pickup'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_electric_vehicle_strategy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186903202",
+    "rel_id": "ford_ev_investment_louisville__influences__ford_ev_investment",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_ev_investment'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ev_infrastructure_funding'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_ev_pickup'}, {'type': 'INFLUENCES', 'source': 'ford_ev_investment_louisville', 'target': 'ford_electric_vehicle_strategy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The Louisville investment is a flagship project that drives Ford’s overall EV investment strategy, making it a primary catalyst for the broader Ford EV Investment portfolio.",
+      "type": "INFLUENCES",
+      "source": "ford_ev_investment_louisville",
+      "target": "ford_ev_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "ford_ev_investment_louisville__influences__ford_ev_investment"
+}

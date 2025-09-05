@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-25T02:42:30",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "nvidia_ai_infrastructure",
+    "target_id": "nvidia_china_geopolitics",
+    "selection_motivation": "Nvidia’s AI infrastructure is a primary driver of the company’s strategic positioning and trade policy interactions with China, directly shaping geopolitical dynamics.",
+    "candidate_motivation": "These topics represent the strongest influencers, peers, or competitive forces surrounding Nvidia's AI infrastructure. They cover semiconductor peers and policy risks (US-China), and major AI platform competition (OpenAI GPT-5).",
+    "existing_links_count": "8",
+    "candidate_count": "11",
+    "all_nodes_count": "1036",
+    "candidate_ids_len": "11",
+    "candidate_ids_preview": "['amd_data_center_growth', 'nvidia_amd_chip_revenue_agreement', 'nvidia_china_geopolitics', 'china_nvidia_policy', 'china_nvidia_h20_chips', 'china_ai_semiconductors', 'us_chip_export_controls', 'us_tariffs_semiconductors', 'us_export_policy_ai_chips', 'us_china_ai_chip_exports', 'openai_gpt5_competition']",
+    "existing_links_before_len": "8",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'nvidia_amd_chip_revenue_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_data_centers_electricity_impact'}, {'type': 'PEERS', 'source': 'nvidia_ai_infrastructure', 'target': 'openai_gpt5_competition'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814274595",
+    "rel_id": "nvidia_ai_infrastructure__influences__nvidia_china_geopolitics",
+    "existing_links_after_len": "9",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'nvidia_amd_chip_revenue_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'nvidia_china_geopolitics'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'ai_infrastructure'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_agreement'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_export_policy_ai_chips'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_china_ai_chip_exports'}, {'type': 'INFLUENCES', 'source': 'nvidia_ai_infrastructure', 'target': 'us_data_centers_electricity_impact'}, {'type': 'PEERS', 'source': 'nvidia_ai_infrastructure', 'target': 'openai_gpt5_competition'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Nvidia’s AI infrastructure is a primary driver of the company’s strategic positioning and trade policy interactions with China, directly shaping geopolitical dynamics.",
+      "type": "INFLUENCES",
+      "source": "nvidia_ai_infrastructure",
+      "target": "nvidia_china_geopolitics"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "nvidia_ai_infrastructure__influences__nvidia_china_geopolitics"
+}

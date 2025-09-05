@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T02:19:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756597790",
+    "prior_sections": "['medium', 'current', 'drivers']",
+    "material_chars": "4366",
+    "output_chars": "1643",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft repeats the same “Up” scenario twice and mixes DXY with UST10Y/S&P 500 language, violating the single‑asset focus. Replace the duplicate Up line with a distinct upside case that hinges on sticky CPI and dovish Fed tone (XTQIQRP5K) and a separate downside case that hinges on CPI easing and Fed cuts (3YAQ8JUPL). Drop all UST10Y and equity references; keep only DXY. Rewrite the four mover lines in the required format:  \n**Up | 3‑6 mo | Sticky CPI & dovish Fed tone (XTQIQRP5K) | CPI Aug 12, Fed minutes (XTQIQRP5K) | 55%**  \n**Up | 3‑6 mo | Expansion of tariff measures & war‑risk premium (F7K7Y35U5, XTQIQRP5K) | Tariff announcements, Ukraine comments (F7K7Y35U5, XTQIQRP5K) | 50%**  \n**Down | 3‑6 mo | CPI easing & Fed cuts (3YAQ8JUPL, XTQIQRP5K) | CPI Aug 12, Fed policy meeting (3YAQ8JUPL, XTQIQRP5K) | 45%**  \n**Down | 3‑6 mo | Tech earnings rebound lifting equity risk premium (FAN5RYW6T) | Q3 earnings, equity reaction (FAN5RYW6T) | 40%**  \nThen craft a single swing‑trade line for DXY:  \n**Up | 3‑6 mo | 96.5 → 97.5 (XTQIQRP5K) | Entry 96.8, Stop 96.2, Target 97.5, R/R 1:1.5 | Invalidation CPI < 2% & Fed cuts (3YAQ8JUPL) | Trigger CPI Aug 12 (3YAQ8JUPL) | 55% | 70**  \n(If you prefer a downside trade, mirror the numbers with 96.5 → 95.5, entry 96.2, stop 96.8, target 95.5, R/R 1:1.5, invalidation CPI > 2% or tariff expansion, trigger CPI Aug 12, 45% probability, 60 confidence). Ensure every claim is cited, no extraneous assets appear, and the format matches the specification exactly.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756597790"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T00:08:19",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756072854",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "22527",
+    "output_chars": "1151",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Actionable edit: convert the draft into four exact, one‑sentence lines in the required Up/Down | Time window | Driver/Mechanism | What to watch | Probability% format, assigning two Ups to Regime A/B and two Downs to the tariff/ stalled‑growth path (0–3 weeks and 3–6 months), with probabilities aligned to the three‑scenario framing (A ≈45–55%, B ≈20–30%, C ≈25–35%); ground every line in a clean first‑principles chain (AI labor risk → 15% savings discipline/1GVYF2V8O → durable assets/ROIC/dividends → asset pricing/ macro growth, NL5YYTLF2) and anchor facts to IDs (e.g., 25–28% export ratio 0J41Q7KTX, Ford EV losses ~$1.3B 22PL3Q360, 5.18% dividend yield/8–10x P/E range with up to 10.3x cited, W2622L6WW, 22PL3Q360) while avoiding non‑ID assertions; replace vague statements with concrete triggers such as August trade print thresholds (export ratio, tariff pass‑through signals) and Jackson Hole policy signaling, so each line includes a definitive watch item (e.g., wage dynamics, policy crystallization, tariff cadence) and a crisp invalidation condition (e.g., wage acceleration or hawkish policy shift); ensure the two Up lines articulate a gradual‑rebalancing path (A and B) and the two Down lines articulate explicit downside channels (tariff pass‑through/near‑term risk‑off and policy missteps in Regime C), with explicit citations after each factual claim (NL5YYTLF2)(SGB2PAZGK)(0J41Q7KTX)(S15934PBQ)(U6HXAJR4J)(CDBMWIUTB)(22PL3Q360); finally, enforce tight formatting discipline so every claim is traceable to the IDs and the overall narrative remains concise, horizon‑focused, and free of filler.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__movers_scenarios__us_inflation__analysis_run__1756072854"
+}

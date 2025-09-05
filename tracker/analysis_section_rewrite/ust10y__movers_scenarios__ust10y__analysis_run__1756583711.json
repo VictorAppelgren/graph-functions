@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T22:10:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756583711",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "7383",
+    "output_chars": "1132",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft lacks canonical handle mapping (spx), magnitude ranges, and precise catalyst windows; probabilities are inconsistent with the 60 % decline base case. 1) Add “spx” to every line and include a ± range (e.g., “spx +3‑5%” or “spx –5 to –10%”). 2) Replace generic “Fed rate cuts combined with easing inflation” with a specific catalyst window (Sep 17 2025 Fed meeting, Aug 30 PCE, Aug 31 NFP) and cite (Z7O1DCHS7). 3) For the labor‑market/tariff up case, link directly to spx, give a tighter magnitude (spx +1‑3%), and cite (FAN5RYW6T). 4) For the weak‑tech‑earnings down case, specify the spread widening threshold (>30 bp), give magnitude (spx –5 to –10%), and cite (FAN5RYW6T). 5) Adjust probabilities: up scenarios 86 % (Fed cuts) and 20 % (labor/tariff); down scenarios 60 % (sticky inflation) and 40 % (weak tech earnings). 6) Ensure each line remains a single sentence and includes the required format: “Up/Down | 3‑6 months | Driver | What to watch | Probability %”.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__movers_scenarios__ust10y__analysis_run__1756583711"
+}

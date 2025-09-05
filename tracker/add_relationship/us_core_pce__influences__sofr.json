@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-05T02:23:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_core_pce",
+    "target_id": "sofr",
+    "selection_motivation": "US Core PCE is a primary inflation gauge that informs Fed policy decisions, which directly set the overnight rate (SOFR).",
+    "candidate_motivation": "US Core PCE is a core inflation gauge that is directly driven by monetary policy, Treasury yields, and inflation expectations, and is closely correlated with other inflation measures and leading economic indicators.",
+    "existing_links_count": "14",
+    "candidate_count": "13",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "13",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'fed_rate_cut_sept17_2025', 'fed_powell_rate_cut_hint_2025', 'ust10y', 'ust2y', 'ust5y', 'ust30y', 'dxy', 'us_services_pmi', 'us_unemployment_claims', 'euro_inflation', 'sofr']",
+    "existing_links_before_len": "14",
+    "existing_links_before_preview": "[{'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'us_core_pce', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_powell_rate_cut_hint_2025'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6987335921376953952",
+    "rel_id": "us_core_pce__influences__sofr",
+    "existing_links_after_len": "14",
+    "existing_links_after_preview": "[{'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_services_pmi'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'us_core_pce', 'target': 'euro_inflation'}, {'type': 'COMPONENT_OF', 'source': 'us_core_pce', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'us_core_pce', 'target': 'eurusd'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Core PCE is a primary inflation gauge that informs Fed policy decisions, which directly set the overnight rate (SOFR).",
+      "type": "INFLUENCES",
+      "source": "us_core_pce",
+      "target": "sofr"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_core_pce__influences__sofr"
+}

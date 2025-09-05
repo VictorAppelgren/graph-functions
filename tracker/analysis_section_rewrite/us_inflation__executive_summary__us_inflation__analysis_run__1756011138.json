@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T07:22:46",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_inflation",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "us_inflation__analysis_run__1756011138",
+    "prior_sections": "['fundamental', 'current', 'drivers']",
+    "material_chars": "6195",
+    "output_chars": "1547",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit instructions (to produce a 4‑6‑sentence investor brief):**  \n1. **Condense the narrative** into 5 bullet points or sentences, each focusing on a single theme (Microsoft/Shopify fundamentals, Rivian/EV credit risk, Fed‑rate trigger, oil‑price backdrop, geopolitical tailwinds).  \n2. **Remove redundant citations**—keep one source ID per fact (e.g., use 0G3A676BP for Microsoft revenue, EPS, Azure growth, and dividend yield; use P0K0UEOHU for EV credit and Tesla margin).  \n3. **Add missing numbers**: state Microsoft’s FY25 Q4 revenue ($76.4 bn), EPS ($3.65), Azure 39 % YoY, payout 33.6 %, yield 0.7 %; Shopify revenue ($2.7 bn), net income ($906 m), FCF margin 16 %; Rivian gross profit ($170 m), R2 200 k units 2026, breakeven 2027; Tesla gross margin 17.9 %.  \n4. **Clarify causal chains**: e.g., “R2 ramp → 200 k units → EBITDA breakeven 2027; EV credit phase‑out → margin compression for all U.S. EV makers.”  \n5. **Specify catalysts and watch signals**: list R2 ramp, EV credit phase‑out timing, Fed September 50‑bp cut, weekly oil inventory, Russia‑Ukraine front, U.S.–China tariff talks.  \n6. **State risks with concrete triggers**: higher personal‑loan rates >12 % (S7M6BJSRT), sanctuary ruling reversal (U1KRCQOYR), surge in signal‑relay theft (4S007SRUL).  \n7. **Avoid generic phrasing** (“robust cloud earnings”)—replace with quantified evidence.  \n8. **Ensure all cited IDs exist in the source material** and that no source is cited twice for the same fact.  \n9. **Maintain executive tone**: no filler, no repetition, no “moderate‑high confidence” unless backed by a specific metric.  \n10. **Format**: use bullet points or a concise paragraph, 4–6 sentences, no more than ~200 words.",
+      "tokens": {}
+    }
+  },
+  "id": "us_inflation__executive_summary__us_inflation__analysis_run__1756011138"
+}

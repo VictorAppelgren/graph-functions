@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-31T19:32:55",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "jgb10y",
+    "target_id": "ust30y",
+    "selection_motivation": "JGB yields serve as a global risk sentiment gauge; movements in JGB yields precede shifts in long‑term US yields, especially the 30‑year, reflecting global liquidity flows.",
+    "candidate_motivation": "Japan 10Y JGB Yield is a sovereign bond yield; its primary influences and peers are other sovereign yields, central bank policy, inflation metrics, and currency pairs that reflect yen value.",
+    "existing_links_count": "5",
+    "candidate_count": "15",
+    "all_nodes_count": "33",
+    "candidate_ids_len": "15",
+    "candidate_ids_preview": "['ust10y', 'bund10y', 'gilt10y', 'fed_policy', 'ecb_policy', 'us_inflation', 'euro_inflation', 'usdjpy', 'dxy', 'sofr', 'fed_powell_rate_cut_hint_2025', 'ust2y', 'ust5y', 'ust30y', 'us_core_pce']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186902901",
+    "rel_id": "jgb10y__influences__ust30y",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'jgb10y', 'target': 'usdjpy'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "JGB yields serve as a global risk sentiment gauge; movements in JGB yields precede shifts in long‑term US yields, especially the 30‑year, reflecting global liquidity flows.",
+      "type": "INFLUENCES",
+      "source": "jgb10y",
+      "target": "ust30y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "jgb10y__influences__ust30y"
+}

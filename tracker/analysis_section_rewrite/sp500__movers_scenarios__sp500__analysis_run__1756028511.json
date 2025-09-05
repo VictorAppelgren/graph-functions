@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-24T11:50:25",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "movers_scenarios",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756028511",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "15803",
+    "output_chars": "930",
+    "saved": "True",
+    "saved_field": "movers_scenarios",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "Up | 0–3 weeks | Intel government stake creates an onshore manufacturing impulse and governance alignment; early vesting milestones and favorable CAPEX commentary could trigger a positive repricing | Watch: cadence of vesting announcements and CAPEX guidance | 58% (XQWTVR71K)\n\nDown | 0–3 weeks | AI/meme-name leadership remains dominant with narrow breadth and elevated negative-earnings shares | Watch: breadth of AI leaders and earnings quality signals | 38% (Q7VVGNSQE)\n\nUp | 2–4 months | IPO momentum above the 95-deal pace and improving small-cap balance sheets widen Russell 2000 breadth | Watch: IPO pace and small-cap leverage/earnings quality signals | 62% (Q7VVGNSQE)\n\nDown | 2–4 months | Policy/regulatory tightening and higher discount rates compress cloud/AI multiples and amplify dispersion from levered software peers | Watch: regime signals, rate expectations, debt levels in software | 40% (0G3A676BP)(5S9GJV2O3)",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__movers_scenarios__sp500__analysis_run__1756028511"
+}

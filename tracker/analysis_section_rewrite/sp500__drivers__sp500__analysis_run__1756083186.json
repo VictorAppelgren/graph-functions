@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-25T02:58:59",
+  "processed": false,
+  "inputs": {
+    "topic_id": "sp500",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "sp500__analysis_run__1756083186",
+    "drivers_count": "6",
+    "material_chars": "2581",
+    "output_chars": "2901",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "gpt-5-nano",
+      "feedback": "The draft has a solid skeleton (cross‑topic synthesis, Regime A/B/C framing, near‑term vs multi‑year view) but it needs a tighter causal map, disciplined quantification, and sharper alignment to sources; currently several claims drift into narrative without explicit links to the cited numbers and there are tangential details that dilute rigor (notably the Pixel 9 Pro XL and AI‑feature language that aren’t clearly tethered to the macro/flows story). Actionable edits: (1) Rebuild the causal chain into a clean, two‑tier map: macro/inflation dynamics drive financial conditions, which reprice discount rates and risk premia, which in turn determine asset prices for AI infra/tech and related capex cycles; anchor each link to the exact regime definitions and to the source IDs (inflation path and 2% target; Regime A compresses discount rates; Regime B/C dynamics; see T1QE6JPIX, SGB2PAZGK, NL5YYTLF2). (2) Lock in a two‑horizon framework with explicit base/alternative scenarios: near term 0–3 months (Regime A ~50%, B ~25–30%, C ~5–10%) and a multi‑year path conditional on inflation convergence; show how regime probabilities evolve with CPI momentum, wage growth momentum, and Jackson Hole policy signals (cite the same trio of regime sources and OGK8WLL69 for the rate‑path/financial‑conditions link). (3) Quantify, don’t narrate: transplant every numerical anchor from sources—oil path (2025 supply +2.5 mbpd; 2026 +1.9; demand 0.68–0.70), refinery runs (~85.6 in 2025; 83.6–84.0 in 2025–26), Brent/WTI ranges, ACMR/Ford metrics (2025 revenue midpoint ≈ $900m; gross margin ≈ 4%; Ford EV losses ≈ $1.3B; adj. EBIT ≈ 4.3%; ROIC ≈ 10.1%; 2.5% revenue CAGR 2014–2024), and tie each to a specific source (T1QE6JPIX, J99EM2TPZ, 22PL3Q360, OGK8WLL69, etc.). (4) Strengthen the watch-list with actionable signals and thresholds: CPI momentum thresholds, wage growth momentum, Jackson Hole commentary, semiconductor capex cadence updates, oil prints and refinery utilization ticks, and shifts in futures‑implied rate cuts with predefined trigger levels (and cite OGK8WLL69, J99EM2TPZ, T1QE6JPIX); add an explicit invalidation rule if CPI momentum accelerates or policy missteps occur. (5) tighten formatting and remove off‑topic material: drop or recast the EURUSD/AI‑device conjecture and the Pixel/spec‑level detail unless it is clearly tied to a macro/flow mechanism in the cited sources; fix obvious typos and ensure consistent use of the named macro framework (ACMR vs ACMR’s). (6) Citation hygiene and conflict reconciliation: map every substantive claim to the IDs listed, explicitly note any conflicts between sources (e.g., regime weights vs oil path) and present a primary base-case with stated alternate paths; include a concise appendix/SVG schematic if possible. All changes should culminate in a concise, data‑driven base/alternative scenario with a transparent, source‑backed watch-list and an invalidation protocol.",
+      "tokens": {}
+    }
+  },
+  "id": "sp500__drivers__sp500__analysis_run__1756083186"
+}

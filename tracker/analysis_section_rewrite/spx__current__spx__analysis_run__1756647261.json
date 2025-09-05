@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T15:45:53",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "current",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756647261",
+    "article_ids": "['56DSYR7J6', 'LJZYDXVL3', 'B1KYJ1GPU', '5GZPY1XUE', '3YAQ8JUPL']",
+    "selected_articles_count": "5",
+    "material_chars": "171663",
+    "output_chars": "1951",
+    "saved": "True",
+    "saved_field": "current_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable feedback (compact paragraph)**  \n1. **Remove or re‑frame the tariff paragraph** – tariffs are not a canonical handle; either delete the sentence or replace it with a reference to a specific US tariff policy handle (e.g., `us_tariff_policy`) and a clear catalyst window (e.g., “Trump’s 50 % tariff on Indian imports announced 2025‑08‑13”).  \n2. **Add explicit handle mapping for the equal‑weight ETF** – RSP is not a canonical handle; map it to the underlying index (`spx`) or add a new handle `spx_equal_weight` and cite the source (ID 56DSYR7J6).  \n3. **Insert catalyst dates for all time‑bound claims** – e.g., “Tesla’s lawsuit filed 2025‑08‑29 (ID LJZYDXVL3)”, “Marvell’s earnings miss on 2025‑08‑29 (ID B1KYJ1GPU)”, “Fed Governor Waller’s 25‑bp cut signal on 2025‑08‑29 (ID 3YAQ8JUPL)”.  \n4. **Quantify magnitude ranges** – replace vague “5 % decline” with a specific range (e.g., “a 4–6 % drop from the current 4,950 level”), “10 % decline” with “10–12 % drop”, “Fed‑initiated rate cut” with “25–50 bp cut”, and “Marvell’s 18 % plunge” with “18 % drop on 2025‑08‑29”.  \n5. **Ensure every substantive claim cites a source ID** – e.g., Shiller P/E from ID 12, core PCE from ID 3YAQ8JUPL, Tesla lawsuit from ID LJZYDXVL3, Marvell earnings from ID B1KYJ1GPU, Fed comments from ID 3YAQ8JUPL, and RSP performance from ID 56DSYR7J6.  \n6. **Eliminate generic statements** – replace “high‑valuation corrections” with the specific historical pattern that “S&P 500 has historically corrected 10–15 % when Shiller P/E exceeds 30× (ID 12)”.  \n7. **Add a clear causal chain** – e.g., “High Shiller P/E → increased probability of pullback → potential 5–6 % drop in SPX → RSP outperforms by 10–12 % (ID 56DSYR7J6)”.  \n8. **Maintain focus on the 0–3 week horizon** – keep all catalysts within the next 21 days and remove any long‑term speculation.  \n\nImplement these edits to satisfy the mapping, catalyst, and quantification requirements while keeping the analysis concise, decisive, and defensible.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__current__spx__analysis_run__1756647261"
+}

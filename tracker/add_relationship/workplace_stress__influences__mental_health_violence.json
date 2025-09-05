@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T10:03:31",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "workplace_stress",
+    "target_id": "mental_health_violence",
+    "selection_motivation": "Workplace stress is a well-established driver of employee mental health deterioration and workplace violence incidents, making this link critical for modeling employee well-being outcomes.",
+    "candidate_motivation": "Workplace stress can be influenced by various economic and market factors, including inflation rates, labor market conditions, and corporate policies. The selected topics are relevant as they may impact workplace environments and employee well-being.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_inflation', 'uk_labor_market', 'corporate_culture_performance', 'dei_policy_changes', 'intel_ceo_pressure', 'us_tariff_policies', 'us_student_loan_repayment', 'mental_health_violence', 'workplace_stress']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'workplace_stress', 'target': 'corporate_culture_performance'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161779",
+    "rel_id": "workplace_stress__influences__mental_health_violence",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'workplace_stress', 'target': 'corporate_culture_performance'}, {'type': 'INFLUENCES', 'source': 'workplace_stress', 'target': 'mental_health_violence'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Workplace stress is a well-established driver of employee mental health deterioration and workplace violence incidents, making this link critical for modeling employee well-being outcomes.",
+      "type": "INFLUENCES",
+      "source": "workplace_stress",
+      "target": "mental_health_violence"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "workplace_stress__influences__mental_health_violence"
+}

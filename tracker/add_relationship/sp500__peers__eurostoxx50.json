@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T15:22:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "PEERS",
+    "source_id": "sp500",
+    "target_id": "eurostoxx50",
+    "selection_motivation": "The S&P 500 and Eurostoxx 50 are the premier equity benchmarks for the U.S. and Eurozone, respectively; linking them as peers enables cross‑market comparative analytics and captures their shared role as global equity market leaders.",
+    "candidate_motivation": "The S&P 500 is a key index that reflects the performance of the U.S. stock market, making it closely related to topics such as US Inflation, Fed Policy, and US Treasury Yields, which can influence its movements. Additionally, Eurostoxx 50 serves as a peer index in the global market context.",
+    "existing_links_count": "10",
+    "candidate_count": "4",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "4",
+    "candidate_ids_preview": "['us_inflation', 'fed_policy', 'us_10y', 'eurostoxx50']",
+    "existing_links_before_len": "10",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6917534525199220740",
+    "rel_id": "sp500__peers__eurostoxx50",
+    "existing_links_after_len": "11",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_10y'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_talks'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_tariffs_semiconductors'}, {'type': 'INFLUENCES', 'source': 'sp500', 'target': 'us_inflation_impact_on_stocks'}, {'type': 'CORRELATES_WITH', 'source': 'sp500', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'sp500', 'target': 'eurostoxx50'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The S&P 500 and Eurostoxx 50 are the premier equity benchmarks for the U.S. and Eurozone, respectively; linking them as peers enables cross‑market comparative analytics and captures their shared role as global equity market leaders.",
+      "type": "PEERS",
+      "source": "sp500",
+      "target": "eurostoxx50"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "sp500__peers__eurostoxx50"
+}

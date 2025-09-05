@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-23T22:17:33",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "YB758UDBU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: policy; Trump’s attempts to wrest control of the Fed and use of executive power influence policy expectations and market sentiment.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses political actions by the president, which do not fit any of the defined categories."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports significant actions by Donald Trump that directly affect his political power and the political environment."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports on recent actions by Trump, indicating immediate events affecting the node."
+    },
+    "article_node": {
+      "id": "YB758UDBU",
+      "title": "Trump ran on a promise of revenge. He’s making good on it",
+      "summary": "Donald Trump has been using his presidential powers to pursue a campaign promise of retribution, launching investigations into Democratic officials such as Letitia James, Adam Schiff, and Andrew Cuomo, while the FBI searched the home of former adviser John Bolton. He has also deployed the National Guard and federal law enforcement to cities, barred law firms involved in litigation against him from federal contracts, and targeted universities and judges that defied his directives. These actions, combined with pardons for Jan. 6 defendants and the firing of prosecutors, have alarmed Democrats who view the administration as consolidating unprecedented power and intimidating political opponents.",
+      "source": "https://www.washingtontimes.com/news/2025/aug/23/trump-making-good-promise-revenge/",
+      "published_at": "2025-08-23T18:48:08+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "YB758UDBU"
+}

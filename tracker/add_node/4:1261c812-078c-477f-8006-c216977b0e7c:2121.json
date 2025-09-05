@@ -1,0 +1,29 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-09-02T10:20:11",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "H164FXM0Q",
+    "suggested_names": "['oil_futures']",
+    "topic_category": "asset",
+    "topic_category_motivation": "WTI is a commodity futures asset.",
+    "should_add": "True",
+    "motivation_for_relevance": "WTI is a canonical commodity handle; article reports weekly gains and falling U.S. crude inventories, offering a clear trading signal for the asset.",
+    "importance_classification": "1",
+    "importance_classification_rationale": "WTI is a core commodity handle with immediate market impact. The context cites supply disruptions from Ukraine‑Russia conflict, inventory changes, and weekly gains in oil futures, all of which are catalysts that can move WTI prices intraday. The commodity asset is highly liquid, directly traded, and central to cross‑asset transmission (FX, equity, credit). Therefore it merits the highest importance rating (1).",
+    "status": "success"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "Article reports weekly gains in oil futures and falling U.S. crude inventories, providing a new trading signal for WTI.",
+      "id": "wti",
+      "name": "WTI",
+      "type": "asset"
+    },
+    "generated_query": {
+      "motivation": "Targeting energy market disruptions from Ukraine conflict, corporate moves in oil & gas, LNG, renewable incentives, AI‑driven demand, and oil futures dynamics to feed cross‑asset analytics.",
+      "query": "(Ukraine OR \"Russia-Ukraine war\" OR \"Russia Ukraine conflict\" OR \"Ukraine strikes\" OR \"Ukraine attacks\") AND (energy OR \"energy markets\" OR \"energy sector\" OR \"energy industry\" OR \"energy companies\" OR \"energy flow\" OR \"energy flows\" OR \"energy supply\" OR \"energy demand\" OR \"energy crisis\") AND (Cenovus OR \"MEG Energy\" OR \"Cenovus Energy\" OR \"MEG Energy\" OR \"NorthWestern Energy\" OR \"Black Hills\" OR Woodside OR \"Woodside Energy\" OR \"National Grid\" OR Centrica OR LNG OR \"Louisiana LNG\" OR Sinopec OR \"oil futures\" OR \"crude oil\" OR \"oil inventories\" OR \"oil stocks\" OR \"oil prices\" OR \"oil market\") AND (wind OR solar OR renewable OR \"green energy\" OR \"wind power\" OR \"solar power\" OR \"wind tax credits\" OR \"solar tax credits\" OR \"tax credits\") AND (AI OR \"artificial intelligence\" OR \"AI electricity demand\") AND (news OR analysis OR trend OR market OR update OR report OR insight OR outlook OR forecast OR movement OR volatility OR change OR shift OR impact OR effect)"
+    }
+  },
+  "id": "4:1261c812-078c-477f-8006-c216977b0e7c:2121"
+}

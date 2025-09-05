@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T05:22:56",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "section": "fundamental",
+    "test": "False",
+    "run_id": "ust10y__analysis_run__1756610576",
+    "article_ids": "['LF0UUL917', 'H86O3XRUJ', 'ZV3QI3K19', 'PA57YBYVQ', 'Y474W9FO9']",
+    "selected_articles_count": "5",
+    "material_chars": "147276",
+    "output_chars": "2518",
+    "saved": "True",
+    "saved_field": "fundamental_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Actionable Edits**\n\n1. **Add explicit citations for every quantitative claim** – the draft currently cites only (LF0UUL917) once.  Insert inline citations after each figure (e.g., “6.548 % (LF0UUL917)”, “up 2 bp (LF0UUL917)”, “down 8 bp (LF0UUL917)”, “hovered near 7 % since Sep 2024 (LF0UUL917)”).  \n\n2. **Map the view to canonical handles** – mortgage rates are driven by the UST 10‑year yield (ust10y).  Add a sentence such as “Mortgage rates track the real‑rate differential to the UST 10‑year (ust10y) and are currently ≈ 6.5 % versus a 10‑yr yield of 4.2 % (LF0UUL917).”  \n\n3. **Clarify the Fed policy narrative** – the article says the Fed *cut* rates in September 2024, yet the draft says “accommodative policy that has transitioned to a tightening trajectory.”  Rephrase to: “The Fed began cutting the federal funds rate in September 2024, but mortgage rates remain high because inflation expectations, debt‑to‑GDP, loan demand, and the Fed’s balance‑sheet contraction continue to exert upward pressure (LF0UUL917).”  \n\n4. **Embed first‑principles anchors** – explicitly state the three pillars:  \n   - *Real‑rate differential*: UST 10‑yr yield minus inflation expectations (LF0UUL917).  \n   - *Term premium*: Expanded by Fed tightening and balance‑sheet contraction (LF0UUL917).  \n   - *Liquidity premium*: Tightened credit conditions from asset‑sale tapering (LF0UUL917).  \n\n5. **Quantify the impact of each pillar** – e.g., “A 50‑bp rise in the term premium (likely if the Fed continues to sell 200 bn USD of Treasuries per quarter) would push mortgage rates up to ≈ 7.0 %.”  \n\n6. **Specify catalyst windows** – list exact dates: “Next FOMC meetings: Sept 16‑17 2025 and Mar 20‑21 2026; CPI releases: Apr 2025, Oct 2025; Treasury issuance schedule: 10‑yr auctions every 4 weeks; Fed asset‑sale pace: 200 bn USD/quarter (current).”  \n\n7. **Add a concise action line** – e.g., “Short‑term: Monitor Fed minutes for any sign of a rate‑cut reversal; Mid‑term: Watch CPI for a 0.2 % YoY drop that could compress the term premium; Long‑term: If the Fed cuts again in 2026, expect mortgage rates to fall 50‑100 bp over 12‑18 months.”  \n\n8. **Include invalidation scenarios** – e.g., “Unexpected Fed rate cut (e.g., 25 bp in Q4 2025) would trigger a 75‑100 bp decline in mortgage rates; a sharp drop in inflation expectations (e.g., 0.5 % YoY) would compress the term premium; a surge in mortgage demand (e.g., 10 % YoY) would tighten credit spreads and push rates higher.”  \n\n9. **State confidence level** – “Confidence: moderate (± 25 bp) given persistent inflation expectations and the Fed’s balance‑sheet contraction trajectory (LF0UUL917).”  \n\n10. **Remove any drift** – ensure every sentence ties back to mortgage rates or the three pillars; eliminate generic statements about “accommodative monetary policy” without a concrete link to the data.  \n\nImplement these edits to elevate the draft to a concise, defensible, and data‑driven macro view that satisfies the Argos criteria.",
+      "tokens": {}
+    }
+  },
+  "id": "ust10y__fundamental__ust10y__analysis_run__1756610576"
+}

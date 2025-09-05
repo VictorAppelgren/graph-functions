@@ -1,0 +1,38 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T06:08:30",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "NL5YYTLF2",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; AI‑driven job loss pressures Fed policy and US yields, while UBI proposals could widen fiscal deficits.",
+      "existing_ids": [
+        "us_unemployment_claims",
+        "fed_policy"
+      ],
+      "new_names": [
+        "universal_basic_income"
+      ]
+    },
+    "category": {
+      "type": "market_commentary",
+      "motivation": "The article is an opinion piece discussing policy proposals (UBI) and their potential social and economic impacts, which fits the definition of a market commentary or policy analysis rather than a formal statement or regulation."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article discusses AI‑driven job displacement and UBI, which directly influence unemployment dynamics and macro labor market health, making it relevant to a macro unemployment node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers and policy responses to AI-induced job displacement, which are fundamental to future labor markets and macro outcomes."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 2
+    }
+  },
+  "id": "NL5YYTLF2"
+}

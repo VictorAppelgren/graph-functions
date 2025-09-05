@@ -1,0 +1,48 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T13:12:06",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "BK3YLOO3Z",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; US small‑cap rally lifts S&P 500 by ~5% over the past month, while European equities fell ~3%, signalling a shift in risk appetite.",
+      "existing_ids": [
+        "spx",
+        "sx5e"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports on company‑specific developments—penny stock prospects, a legal claim, and projected earnings growth—for Capital World Limited and Winton Land, which is a company update rather than earnings, regulation, or macro data."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article provides new detailed information about Capital World Limited and Winton Land, confirming and expanding the node’s content on their status as promising penny stocks."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article emphasizes long‑term upside potential for two small‑cap real‑estate companies, highlighting structural factors such as cash strength, projected earnings growth, and a legal claim due in 2025, which are fundamental drivers for valuation and investment horizon."
+    },
+    "article_node": {
+      "id": "BK3YLOO3Z",
+      "title": "Capital World Leads The Charge With 2 Global Penny Stocks",
+      "summary": "Capital World Limited and Winton Land are highlighted as promising penny stocks amid mixed global market conditions. Capital World, a pre‑revenue property developer in Singapore and Malaysia, has reduced losses and holds strong cash but faces a legal claim due in September 2025. Winton Land, a New Zealand real‑estate company, shows solid cash coverage and projected earnings growth of 92% per year. Both companies offer potential long‑term upside for investors seeking growth in small‑cap segments.",
+      "source": "https://finance.yahoo.com/news/capital-world-leads-charge-2-100513697.html?.tsrc=rss",
+      "published_at": "2025-09-02T10:05:13+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "fundamental",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 2,
+      "successful": 2
+    }
+  },
+  "id": "BK3YLOO3Z"
+}

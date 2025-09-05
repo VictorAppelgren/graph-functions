@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-15T00:48:19",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_ceo_management",
+    "target_id": "intel_customer_investment",
+    "selection_motivation": "Linking Intel CEO Management to Intel Customer Investment highlights the direct influence of executive decisions on customer funding and strategic investments, crucial for understanding market dynamics.",
+    "candidate_motivation": "The selected topics are likely to have strong influences or correlations with Intel CEO Management due to their relevance in technology, corporate governance, and economic policies, which are critical areas for a CEO's strategic decisions.",
+    "existing_links_count": "5",
+    "candidate_count": "10",
+    "all_nodes_count": "1611",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['intel_ceo_political_influence', 'intel_customer_investment', 'us_chip_export_controls', 'us_chip_revenue_policy', 'us_china_chip_negotiations', 'us_tariffs_semiconductors', 'intel_stock_trump_influence', 'political_influence_on_stocks', 'ai_in_k12_education', 'ai_in_entertainment']",
+    "existing_links_before_len": "5",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_chip_negotiations'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395154",
+    "rel_id": "intel_ceo_management__influences__intel_customer_investment",
+    "existing_links_after_len": "6",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'intel_customer_investment'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_tariffs_on_technology'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'intel_ceo_management', 'target': 'us_china_chip_negotiations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Linking Intel CEO Management to Intel Customer Investment highlights the direct influence of executive decisions on customer funding and strategic investments, crucial for understanding market dynamics.",
+      "type": "INFLUENCES",
+      "source": "intel_ceo_management",
+      "target": "intel_customer_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_ceo_management__influences__intel_customer_investment"
+}

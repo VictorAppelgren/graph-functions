@@ -1,0 +1,27 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-31T14:04:35",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust10y",
+    "new_article_id": "GK86UUQPN",
+    "test": "False",
+    "timeframe": "medium",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "7",
+    "candidate_ids": "['XQMF22EFB', '7BLWI6OTC', 'FAN5RYW6T', 'O6LHRBLFM', 'F7K7Y35U5', 'KX6AOMQZ5']",
+    "mode": "CAN_REPLACE",
+    "target_id": "None",
+    "action_taken": "none",
+    "status": "no_action"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article offers unique, up-to-date analysis of US labor market stall speed and its macro implications, which is not covered by any existing article in the set."
+    }
+  },
+  "id": "ust10y__GK86UUQPN__medium"
+}

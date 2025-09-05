@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T18:30:24",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "apple_us_manufacturing",
+    "target_id": "us_tariffs_semiconductors",
+    "selection_motivation": "Apple’s U.S. manufacturing commitment drives lobbying for lower semiconductor tariffs to reduce production costs, directly influencing U.S. tariff policy on semiconductors.",
+    "candidate_motivation": "These topics cover regulatory and geopolitical factors that directly affect U.S. manufacturing incentives and costs for tech hardware, as well as the competitive landscape surrounding Apple’s chip supply and production. They include key peers and influencers (Intel, Nvidia) and Apple-linked investment considerations that could shape Apple’s U.S. manufacturing commitments.",
+    "existing_links_count": "2",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['us_tariffs_semiconductors', 'us_chip_export_controls', 'us_export_policy_ai_chips', 'us_china_tariffs', 'nvidia_china_geopolitics', 'intel_ceo_tan', 'apple_us_investment', 'us_china_ai_chip_exports']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'apple_us_investment'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1157426203745848695",
+    "rel_id": "apple_us_manufacturing__influences__us_tariffs_semiconductors",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_china_chip_negotiations'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'apple_us_investment'}, {'type': 'INFLUENCES', 'source': 'apple_us_manufacturing', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Apple’s U.S. manufacturing commitment drives lobbying for lower semiconductor tariffs to reduce production costs, directly influencing U.S. tariff policy on semiconductors.",
+      "type": "INFLUENCES",
+      "source": "apple_us_manufacturing",
+      "target": "us_tariffs_semiconductors"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "apple_us_manufacturing__influences__us_tariffs_semiconductors"
+}

@@ -1,0 +1,50 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-04T17:46:00",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "ZS7I9TBOT",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: equities; Spirit’s bankruptcy and route cuts weigh on the airline sector, pressuring S&P 500 and Boeing shares, while weak domestic leisure demand dampens US services PMI. Corporate debt risk may modestly lift US 10Y Treasury yields.",
+      "existing_ids": [
+        "ba",
+        "spx",
+        "us_services_pmi",
+        "ust10y"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article reports Spirit Airlines filing for Chapter 11 bankruptcy and restructuring operations, which is a company update."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node was provided to evaluate the article against, so relevance cannot be determined."
+    },
+    "time_frame": {
+      "temporal_horizon": "medium",
+      "motivation": "The article details Spirit Airlines’ bankruptcy filing and a restructuring plan that is expected to unfold until the end of 2025, indicating a medium‑term outlook rather than an immediate event or a long‑term fundamental shift."
+    },
+    "article_node": {
+      "id": "ZS7I9TBOT",
+      "title": "Spirit Airlines files second bankruptcy and will cut service",
+      "summary": "Spirit Airlines has filed for a second Chapter 11 bankruptcy and will cut service to 11 U.S. cities starting in October as it restructures its network. The carrier, which reported a $245.8 million net loss in Q2, is shedding routes, reducing its fleet, and laying off pilots to address weak domestic demand and high capacity. Frontier Airlines is targeting Spirit’s former markets with new routes. The bankruptcy filing is expected to continue until the end of 2025, with Spirit hoping to return to profitability after restructuring.",
+      "source": "https://qz.com/spirit-airlines-bankruptcy-cutting-service-cities",
+      "published_at": "2025-09-04T14:41:57.914000+00:00",
+      "vector_id": null,
+      "type": "company_update",
+      "temporal_horizon": "medium",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 4,
+      "successful": 4
+    }
+  },
+  "id": "ZS7I9TBOT"
+}

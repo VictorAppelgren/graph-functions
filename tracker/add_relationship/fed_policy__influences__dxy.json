@@ -1,0 +1,34 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-30T15:39:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "fed_policy",
+    "target_id": "dxy",
+    "selection_motivation": "Fed policy directly drives the US Dollar Index through interest rate differentials and market sentiment, making it a primary driver of DXY movements.",
+    "candidate_motivation": "The US Dollar Index is a benchmark of USD strength, driven by US monetary policy, Treasury yields, and inflation expectations, and it is tightly linked to other major currency pairs and USD cross rates. Therefore, Fed Policy, ECB Policy, US Treasury yields, US Inflation, and key USD cross rates such as USD/CNY, USD/JPY, EURUSD, and GBP/USD are the most plausible influences or peers.",
+    "existing_links_count": "17",
+    "candidate_count": "12",
+    "all_nodes_count": "30",
+    "candidate_ids_len": "12",
+    "candidate_ids_preview": "['fed_policy', 'ecb_policy', 'us_inflation', 'ust10y', 'ust2y', 'ust30y', 'ust5y', 'sofr', 'usdcny', 'usdjpy', 'eurusd', 'gbpusd']",
+    "existing_links_before_len": "17",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdcny'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'brent'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'dxy', 'target': 'eurusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'us_unemployment_claims'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'fed_policy'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'bund10y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'copper'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'ust5y'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gbpusd'}, {'type': 'CORRELATES_WITH', 'source': 'dxy', 'target': 'gold'}]",
+    "status": "skipped_duplicate",
+    "dedup_decision": "already_linked",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1159678003559531639",
+    "rel_id": "fed_policy__influences__dxy",
+    "existing_links_after_len": "12",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'ust5y'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'sofr'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'spx'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'gold'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'usdjpy'}, {'type': 'INFLUENCES', 'source': 'fed_policy', 'target': 'eurusd'}, {'type': 'PEERS', 'source': 'fed_policy', 'target': 'ecb_policy'}]"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Fed policy directly drives the US Dollar Index through interest rate differentials and market sentiment, making it a primary driver of DXY movements.",
+      "type": "INFLUENCES",
+      "source": "fed_policy",
+      "target": "dxy"
+    }
+  },
+  "id": "fed_policy__influences__dxy"
+}

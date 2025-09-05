@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-28T13:37:08",
+  "processed": false,
+  "inputs": {
+    "topic_id": "us_urban_crime",
+    "new_article_id": "GUTGNG4IC",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['C9L5KZZJZ', '8UB74OPU5', 'Q14XEM7PB', 'VBLNR89G5', 'UK8ESTOZL', '1L38JDK4D', 'C2XYVSI19', 'LPT34HH4U', '6ZILMI8BI']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "8UB74OPU5",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "The new article offers a comprehensive, up‑to‑date briefing on multiple high‑impact topics for August 28, and there is no existing article in this timeframe to replace or compete with it."
+    }
+  },
+  "id": "us_urban_crime__GUTGNG4IC__current"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-15T04:08:18",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "9JW1AHX53",
+    "status": "success",
+    "topic_id": "us_tariffs"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article highlights the conflict between the Trump administration and Harvard University regarding antisemitism and federal funding, which is relevant to the existing node on US Tariffs as it may influence broader economic and political dynamics.",
+      "existing_node_ids": "us_tariffs",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "macro_event",
+      "motivation": "The article discusses the impact of tariffs on trade and the economy, which is a significant macroeconomic event."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article discusses changes in trade policies that could affect tariffs, making it relevant to the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article addresses ongoing trade policies and their implications, which suggests a longer-term perspective on economic impacts."
+    },
+    "article_node": {
+      "id": "9JW1AHX53",
+      "title": "Trump administration threatens to cut all Harvard funding",
+      "summary": "The Trump administration has intensified its conflict with Harvard University, formally accusing it of tolerating antisemitism, which could threaten its federal funding. A federal task force's investigation found Harvard to be a 'willful participant' in antisemitic harassment, leading to potential civil rights lawsuits if the university does not comply with federal demands. Harvard has strongly disagreed with the findings and maintains its commitment to combatting bias, while the administration has already cut over $2.6 billion in research grants and threatened to revoke the university's tax-exempt status.",
+      "source": "https://fortune.com/2025/07/01/trump-cut-harvard-funding-violated-jewish-students-civil-rights-antisemitism/",
+      "published_at": "2025-07-01T08:46:16+00:00",
+      "vector_id": null,
+      "type": "macro_event",
+      "temporal_horizon": "fundamental",
+      "priority": 2,
+      "relevance_score": null
+    }
+  },
+  "id": "9JW1AHX53"
+}

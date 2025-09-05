@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T14:27:38",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "swing_trade_or_outlook",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756555734",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6211",
+    "output_chars": "967",
+    "saved": "True",
+    "saved_field": "swing_trade_or_outlook",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "Your draft mixes multiple assets (10‑yr yield, mortgage spread, DXY) and contains redundant “Up/Down” lines that do not map cleanly to a single canonical handle. Tighten the focus to the 10‑yr Treasury as the primary asset: collapse the two “Up” scenarios into one “Fed‑funds futures flat, 10‑yr near 4.25% resistance” line, and merge the two “Down” scenarios into a single “Fed cuts 25 bp, PCE < 2.5 % → 10‑yr falls to ~4.10 %” line. Remove the extraneous “Down” line that merely repeats the current 4.23 % level. Ensure every line contains a clear causal chain: e.g., “Fed cuts → 2‑yr/10‑yr steepening → 10‑yr yield decline” with an inline citation (U21K4ALYQ)(97MD1FHW8). Add a probability that reflects the 88 % cut probability and the 60–70 % confidence band for the cut (XTQIQRP5K)(FAN5RYW6T). Replace vague “Fed holds rates” with the specific “Fed‑funds futures flat, 10‑yr near 4.25% resistance” and cite (97MD1FHW8). Finally, keep the trade/outlook line concise: “Down | 0‑3 weeks | 10‑yr yield | 4.23% → 4.10% | 4.20% support | 4.25% resistance | 4.10% target | 3:1 R/R | Fed cut | 60% | 70”. This streamlines the output, eliminates duplication, and satisfies the handle‑mapping and catalyst‑window requirements.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__swing_trade_or_outlook__fed_policy__analysis_run__1756555734"
+}

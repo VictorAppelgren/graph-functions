@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-02T21:37:32",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "A06Z9M1KC",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: commodities; rising demand for copper in PC heatsinks may support copper prices.",
+      "existing_ids": [
+        "copper"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "other",
+      "motivation": "The article discusses technical details about heatsink materials, which does not fit any of the predefined categories."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article provides general material properties for heatsink materials but no specific event or catalyst, so limited impact on the node."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "The article discusses long-term structural drivers relevant to the node, focusing on material properties and trade-offs that shape future heatsink design choices."
+    },
+    "article_node": {
+      "id": "A06Z9M1KC",
+      "title": "Which of these materials is the best conductor of heat?",
+      "summary": "Aluminum and copper are the most common heatsink materials, offering a balance of cost, weight, and thermal conductivity (205 W/mK and 401 W/mK, respectively). Copper conducts heat better than aluminum but is heavier, while aluminum is lighter and easier to manufacture. Silver and diamond have higher conductivities (≈430 W/mK and 2,200–2,500 W/mK) but are too expensive for mass production. Graphite and graphene provide intermediate options, though they are less widely used. The choice ultimately depends on trade‑offs among conductivity, weight, durability, and cost.",
+      "source": "https://www.techspot.com/trivia/49-which-materials-best-conductor-heat/",
+      "published_at": "2025-08-31T14:03:00-05:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "A06Z9M1KC"
+}

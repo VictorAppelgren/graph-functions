@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-23T21:17:32",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "medium",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1755976463",
+    "article_ids": "['SK994CBWR', 'C22MKA9VY', 'SK994CBWR', 'C22MKA9VY', 'SK994CBWR']",
+    "selected_articles_count": "5",
+    "material_chars": "123876",
+    "output_chars": "3028",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable edit checklist (compact paragraph)**  \n1. **Cite every fact with the correct source ID** – e.g., revenue $215 m, net income $30 m, gross margin 49.4 % [SK994CBWR]; Fed‑rate‑cut call 150 bp, 50 bp cut in September [C22MKA9VY]; current price $30.53, consensus target $34.76, 52‑wk high $32.54 [SK994CBWR].  \n2. **Structure the narrative into a clear scenario map**:  \n   - *Base case*: Fed cuts begin September → 50 bp cut → 35 % revenue growth, 37 % earnings growth → share price $34.5–$35.5 by Q3/Q4 2025.  \n   - *Upside*: Early Fed cuts + China’s self‑sufficiency push + successful N2‑bubbling tool launch → revenue >$950 m, EPS >$2.0 → price $36–$37.5.  \n   - *Downside*: Fed cuts delayed or reversed, inflation >2 %, export controls tighten → fab spending falls, revenue <$850 m → price <$32.  \n3. **Add explicit timing windows** – first Fed cut September 2025, subsequent cuts Q4 2025/Q1 2026; ACMR earnings releases Q2/Q3 2025; product ramp Q3 2025.  \n4. **Quantify catalysts and invalidations** – e.g., 50 bp cut reduces financing costs by ~1 % → demand lift 5–7 %; export controls could cut China orders by 10–15 %.  \n5. **Integrate macro data, policy, positioning, flows, valuation** – mention Fed policy rate 4.25–4.5 % [C22MKA9VY], semiconductor capital‑spending index trend, ACMR’s high‑margin niche, debt‑to‑equity 23.3 % [SK994CBWR].  \n6. **Include watch‑list signals with source IDs** – Fed minutes, CPI, labor‑market revisions, semiconductor demand indices, ACMR quarterly guidance [C22MKA9VY], [SK994CBWR].  \n7. **State confidence level explicitly** – moderate‑high (70 % confidence) due to strong earnings trajectory and clear monetary‑policy transmission, but tempered by geopolitical risk.  \n8. **Remove redundant repetition** – consolidate overlapping sentences (e.g., multiple mentions of 36 % share‑price surge).  \n9. **Ensure first‑principles grounding** – explain why lower rates boost fab spending (lower debt service, higher ROIC) and how ACMR’s product pipeline feeds into that.  \n10. **Add a concise valuation note** – current price 12 % below consensus target, fair‑value estimate $35.5, upside potential 10–15 %.  \n\nImplement these edits to elevate the draft to a world‑class, 3–6 month horizon analysis that is data‑driven, well‑cited, and clearly structured.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__medium__fed_policy__analysis_run__1755976463"
+}

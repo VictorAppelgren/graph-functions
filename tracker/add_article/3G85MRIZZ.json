@@ -1,0 +1,38 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-31T11:54:59",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "3G85MRIZZ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: FX; USD/BRL conversion rate influences dividend payout and cross‑border capital flows.",
+      "existing_ids": [
+        "gold",
+        "copper"
+      ],
+      "new_names": [
+        "usd_brl"
+      ]
+    },
+    "category": {
+      "type": "company_update",
+      "motivation": "The article announces dividend payment details for BDR holders, which is a company update."
+    },
+    "impact": {
+      "priority": 2,
+      "motivation": "The article reports Aura Minerals Inc.'s dividend payment and BDR exchange rate, directly impacting the company's valuation and investor returns."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a specific dividend payment and exchange rate for Aura Minerals’ BDRs, which is an immediate event affecting the company’s financials."
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 2
+    }
+  },
+  "id": "3G85MRIZZ"
+}

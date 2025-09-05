@@ -1,0 +1,26 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-30T17:37:57",
+  "processed": false,
+  "inputs": {
+    "topic_id": "ust30y",
+    "section": "medium",
+    "test": "False",
+    "run_id": "ust30y__analysis_run__1756567970",
+    "article_ids": "['FAN5RYW6T', 'MXOF7MPYR', 'KX6AOMQZ5', 'FAN5RYW6T', 'MXOF7MPYR']",
+    "selected_articles_count": "5",
+    "material_chars": "118136",
+    "output_chars": "1318",
+    "saved": "True",
+    "saved_field": "medium_analysis",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Actionable feedback for the draft**\n\n1. **Canonical handle mapping** – Explicitly tag every claim with a handle:  \n   * S&P 500 → `spx` (40 % concentration)  \n   * Fed policy → `fed_policy` (September cut)  \n   * Core PCE → `us_core_cpi` (2.9 % YoY)  \n   * CPI → `us_cpi` (2.7 % YoY)  \n   * Labor market → `us_inflation` (weak growth)  \n   Add inline citations (ID FAN5RYW6T) after each handle.\n\n2. **Magnitude ranges & dates** – Provide concrete numbers:  \n   * Fed cut: 25–50 bp on 9/20/2025 (Fed meeting)  \n   * CPI & PCE: 2.7–2.9 % (July) and expected to stay ≥2.5 % in Q3  \n   * S&P 500 decline: 5–10 % over 3–6 months (base case)  \n   * Alternative: flat or +2–4 % if tech earnings hold and Fed holds rates.\n\n3. **Catalyst window** – State the exact dates:  \n   * 9/5/2025 – September payrolls (labor data)  \n   * 9/12/2025 – CPI release  \n   * 9/20/2025 – Fed policy meeting  \n   * Q3 earnings (Oct–Nov 2025) – tech sector.\n\n4. **Path‑dependency & transmission** – Clarify the chain:  \n   * Weak labor → Fed signals cut → lower rates → higher borrowing costs → tech earnings pressure → spx drop (40 % weight).  \n   * Sticky inflation → Fed keeps rates high → compresses tech margins → spx decline.\n\n5. **Invalidations & watch signals** – List them explicitly:  \n   * Positive shock in CPI (<2 %) → Fed may hold/raise → spx stabilizes.  \n   * Tech earnings rebound in Q3 → spx flat or up.  \n   * Fed hike instead of cut → spx up.  \n   * Watch: Q3 earnings, Fed minutes, CPI, payrolls.\n\n6. **Avoid drift** – Remove generic “could be a sign of weakness” language; replace with “Fed cut of 25–50 bp signals economic slack.”  \n   * Omit tariff discussion unless linked to a handle (e.g., `us_tariff_policy` if defined).\n\n7. **Conciseness & defensibility** – Trim narrative to bullet‑style, keep each sentence to one causal link, and end with a confidence rating (“moderate”) backed by the magnitude ranges and dates.\n\nImplementing these edits will satisfy the acceptance gate (handle mapping + catalyst window) and elevate the analysis to world‑class, actionable macro insight.",
+      "tokens": {}
+    }
+  },
+  "id": "ust30y__medium__ust30y__analysis_run__1756567970"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-21T21:44:52",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "GVVWFNF2O",
+    "status": "success",
+    "topic_id": "federal_reserve"
+  },
+  "details": {
+    "node_mapping": {
+      "motivation": "The article discusses Federal Reserve policy and its impact on the U.S. dollar, matching the 'federal_reserve' node.",
+      "existing_node_ids": "federal_reserve",
+      "new_node_dicts": null
+    },
+    "category": {
+      "type": "other",
+      "motivation": "No article summary provided, unable to determine relevant category for the federal_reserve node."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "No article summary was provided, so I cannot determine how the article relates to the federal reserve node. Given the lack of information, I assign a low impact score."
+    },
+    "time_frame": {
+      "temporal_horizon": "fundamental",
+      "motivation": "Unable to determine the time frame due to lack of article content."
+    },
+    "article_node": {
+      "id": "GVVWFNF2O",
+      "title": "MIT Report Spooks AI Investors, Claims 95% of Businesses Don't See Boosted Profits",
+      "summary": "A MIT study found that 95% of businesses using generative AI see little to no profit boost, with only 5% reporting significant revenue growth, sparking concerns that the AI boom may resemble past tech bubbles. The research indicates that companies building their own AI tools underperform compared to those purchasing pre‑built solutions, and that success often hinges on empowering lower‑level managers and choosing tools that integrate deeply into workflows. Despite some high‑profile successes—particularly among young startups that rapidly scaled—most enterprises struggle with integration and learning gaps, leading to stalled pilots and limited ROI. Investor sentiment has fluctuated, with initial stock sell‑offs followed by a partial recovery, while industry leaders like Sam Altman acknowledge the risk of over‑excitement around AI’s potential.}",
+      "source": "https://www.extremetech.com/computing/mit-report-spooks-ai-investors-claims-95-of-businesses-dont-see-boosted",
+      "published_at": "2025-08-21T17:18:03+00:00",
+      "vector_id": null,
+      "type": "other",
+      "temporal_horizon": "fundamental",
+      "priority": 1,
+      "relevance_score": null
+    }
+  },
+  "id": "GVVWFNF2O"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T03:04:30",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "section": "drivers",
+    "test": "False",
+    "run_id": "fed_policy__analysis_run__1756601360",
+    "drivers_count": "6",
+    "material_chars": "2617",
+    "output_chars": "1749",
+    "saved": "True",
+    "saved_field": "drivers",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "**Feedback & Edit Instructions (compact paragraph)**  \n1. **Causal Chain Tightening** – Explicitly link Fed policy → 2‑yr/10‑yr spread → term‑premium → 10‑yr yield → mortgage rate → tech valuation compression → spx move. Add a short schematic sentence (e.g., “Fed rate → 2‑yr/10‑yr steepening → term‑premium ↑ → 10‑yr yield ↑ → mortgage rate ↑ → tech earnings margin squeeze → spx ↓”) with citations (LF0UUL917, Z7O1DCHS7, 3YAQ8JUPL).  \n2. **Quantify Key Variables** – State current 10‑yr yield (4.20‑4.30 %) and 30‑yr yield (6.55 %) with citations (97MD1FHW8, LF0UUL917). Include projected 10‑yr range (4.5‑5.0 %) if Fed holds rates, and 6.55‑7.2 % mortgage band through 2026 (LF0UUL917).  \n3. **Scenario Structure** – Re‑organize into three concise scenarios: (a) **Fed cuts 25 bp in September** → spx +3‑5 % (B1KYJ1GPU, 3YAQ8JUPL); (b) **Fed holds/raises** → spx –5‑10 % (FAN5RYW6T); (c) **Fed cuts but PCE >3 % or NFP >expected** → DXY +50‑100 bp → spx dampened (7XH2DKEKV). Each scenario must list sign, magnitude, horizon, and catalysts.  \n4. **Catalyst Windows** – Explicitly list: July CPI/PCE (key Fed‑cut signal), Aug 30 PCE, Aug 31 NFP (dollar‑strength signal), Fed September policy announcement. Cite each (FAN5RYW6T, 7XH2DKEKV).  \n5. **Risk & Invalidation** – Add a risk paragraph: (i) sticky inflation or Fed rate hike → 10‑yr >4.5 % → spx –5‑10 % (FAN5RYW6T); (ii) PCE >3 % or NFP weak → DXY +50‑100 bp → spx dampened (7XH2DKEKV); (iii) tech earnings shock → sharp pullback (FAN5RYW6T).  \n6. **Remove Redundancies & Drift** – Delete repeated sentences about “Fed policy at 4.25 %” and “10‑year yield at 4.5 %” that appear twice. Ensure every sentence references a canonical handle (spx, ust10y, dxy, us_mortgage_rates) with a clear sign/magnitude.  \n7. **Citation Density** – Each claim must have at least one inline ID. Add missing citations for the 2‑yr/10‑yr spread steepening claim (Z7O1DCHS7) and for the DXY decline to 95.8 (7XH2DKEKV).  \n8. **Watch‑List Formatting** – End with a bulleted watch‑list: • July CPI/PCE, • Aug 30 PCE, • Aug 31 NFP, • Fed September policy.  \n9. **Confidence Rating** – Add a brief confidence statement (“Moderate confidence; sensitive to inflation & payroll data”).  \n\nImplement these edits to produce a concise, evidence‑driven view that satisfies the acceptance gate and aligns with the Section Focus.",
+      "tokens": {}
+    }
+  },
+  "id": "fed_policy__drivers__fed_policy__analysis_run__1756601360"
+}

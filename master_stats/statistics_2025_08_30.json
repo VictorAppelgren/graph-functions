@@ -1,0 +1,88 @@
+{
+  "today": {
+    "queries": 44,
+    "articles": 254,
+    "articles_added": 153,
+    "articles_removed": 36,
+    "added_node": 4,
+    "removes_node": 2,
+    "about_links_added": 308,
+    "about_links_removed": 0,
+    "relationships_added": 301,
+    "relationships_removed": 186,
+    "rewrites_saved": 210,
+    "rewrites_skipped_0_articles": 0,
+    "duplicates_skipped": 15,
+    "errors": 133,
+    "qa_reports_generated": 0,
+    "should_rewrite_true": 0,
+    "should_rewrite_false": 0,
+    "topic_replacements_decided": 0,
+    "llm_simple_calls": 66,
+    "llm_medium_calls": 1431,
+    "llm_complex_calls": 263,
+    "llm_simple_long_context_calls": 678
+  },
+  "graph_state": {
+    "topics": 31,
+    "topics_with_full_analysis": 3,
+    "articles": 2892,
+    "connections": 658,
+    "about_links": 386,
+    "inter_topic_links": 272,
+    "unique_relationship_types": [
+      "ABOUT",
+      "COMPONENT_OF",
+      "CORRELATES_WITH",
+      "INFLUENCES",
+      "PEERS"
+    ],
+    "orphans": {
+      "topics": 0,
+      "articles": 2771
+    },
+    "last_updated": "2025-08-30T21:59:23+00:00"
+  },
+  "problems": {
+    "zero_result_queries": 21,
+    "topics_zero_results": [
+      "usdcny",
+      "GBP/USD",
+      "gbpusd",
+      "ust30y",
+      "copper",
+      "ust5y",
+      "gilt10y",
+      "Euro Stoxx 50",
+      "sx5e",
+      "brent",
+      "sofr",
+      "USD/JPY",
+      "usdjpy"
+    ],
+    "topic_rejections": 15,
+    "rewrites_skipped_0_articles": 4,
+    "rewrite_skips": [
+      {
+        "timestamp": "2025-08-30T11:39:07+00:00",
+        "topic_id": "china_exports",
+        "section": "medium"
+      },
+      {
+        "timestamp": "2025-08-30T11:39:07+00:00",
+        "topic_id": "china_exports",
+        "section": "medium"
+      },
+      {
+        "timestamp": "2025-08-30T15:43:15+00:00",
+        "topic_id": "ust30y",
+        "section": "current"
+      },
+      {
+        "timestamp": "2025-08-30T15:43:15+00:00",
+        "topic_id": "ust30y",
+        "section": "current"
+      }
+    ]
+  }
+}

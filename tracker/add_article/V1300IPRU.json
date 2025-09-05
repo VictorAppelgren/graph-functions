@@ -1,0 +1,47 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T00:50:54",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "V1300IPRU",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Federal takeover of DC policing may increase perceived sovereign risk, pushing US Treasury yields up by ~0.5 bp.",
+      "existing_ids": [
+        "fed_policy"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article contains a statement by a US congresswoman calling for congressional action, which qualifies as a policy statement."
+    },
+    "impact": {
+      "priority": "hidden",
+      "motivation": "No node provided to assess impact against."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article reports a recent incident and calls for immediate congressional action, reflecting short‑term concerns about public safety in Washington DC."
+    },
+    "article_node": {
+      "id": "V1300IPRU",
+      "title": "Member of Congress says she was assaulted by gang of youth before Trump DC takeover",
+      "summary": "Rep. Julie Fedorchak, a Republican from North Dakota, accused Washington, D.C. of \"out‑of‑control\" violence after she was struck by a youth gang in July. She praised President Trump’s federal takeover of the Metropolitan Police Department and the National Guard deployment, arguing the crackdown has reduced crime. Fedorchak called for further congressional action to maintain safety and highlighted the need for more resources to police the capital.",
+      "source": "https://www.foxnews.com/politics/member-congress-says-she-assaulted-gang-youth-before-trump-dc-takeover",
+      "published_at": "2025-09-02T17:16:19-04:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": "hidden",
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 1,
+      "successful": 1
+    }
+  },
+  "id": "V1300IPRU"
+}

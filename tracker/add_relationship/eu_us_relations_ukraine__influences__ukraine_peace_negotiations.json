@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T17:23:44",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "eu_us_relations_ukraine",
+    "target_id": "ukraine_peace_negotiations",
+    "selection_motivation": "EU and US policy alignment on Ukraine directly shapes Ukraine's diplomatic leverage and negotiation strategy, making EU-U.S. Relations on Ukraine a primary driver of Ukraine's peace negotiations.",
+    "candidate_motivation": "These topics are direct geopolitical levers that could influence EU-US policy toward Ukraine. They cover diplomacy, negotiation dynamics, sovereignty, and key regional flashpoints that drive Western policy alignment.",
+    "existing_links_count": "1",
+    "candidate_count": "9",
+    "all_nodes_count": "1033",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['ukraine_diplomacy', 'ukraine_peace_negotiations', 'zelensky_peace_negotiations', 'ukraine_geopolitics', 'eu_geopolitics_ukraine', 'ukraine_sovereignty', 'ukraine_conflict', 'donbas_region', 'ukraine_post_war_instability']",
+    "existing_links_before_len": "1",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'eu_us_relations_ukraine', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1155174403932161977",
+    "rel_id": "eu_us_relations_ukraine__influences__ukraine_peace_negotiations",
+    "existing_links_after_len": "2",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'eu_us_relations_ukraine', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'eu_us_relations_ukraine', 'target': 'ukraine_peace_negotiations'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "EU and US policy alignment on Ukraine directly shapes Ukraine's diplomatic leverage and negotiation strategy, making EU-U.S. Relations on Ukraine a primary driver of Ukraine's peace negotiations.",
+      "type": "INFLUENCES",
+      "source": "eu_us_relations_ukraine",
+      "target": "ukraine_peace_negotiations"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "eu_us_relations_ukraine__influences__ukraine_peace_negotiations"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "article_replacement_decision",
+  "timestamp": "2025-08-30T03:36:13",
+  "processed": false,
+  "inputs": {
+    "topic_id": "fed_policy",
+    "new_article_id": "MZ546Q7CA",
+    "test": "False",
+    "timeframe": "current",
+    "min_per_tf": "5",
+    "max_per_tf": "10",
+    "same_tf_cnt": "10",
+    "candidate_ids": "['PHWYW5YLQ', '27DX8GPAL', 'Q14XEM7PB', 'Z7K8PC4G5', 'XHDE9MSFQ', 'U21K4ALYQ', '97MD1FHW8', '3952FOSRQ', 'D0R3LX8F7', 'T7HLAX8QN']",
+    "mode": "MUST_REPLACE",
+    "fallback_used": "True",
+    "fallback_reason": "capacity_cap",
+    "target_id": "27DX8GPAL",
+    "action_taken": "remove",
+    "status": "success"
+  },
+  "details": {
+    "llm_decision": {
+      "tool": "none",
+      "id": null,
+      "motivation": "No existing article overlaps or conflicts with the new Thai shares article; all current entries are empty, so no removal or adjustment is required."
+    }
+  },
+  "id": "fed_policy__MZ546Q7CA__current"
+}

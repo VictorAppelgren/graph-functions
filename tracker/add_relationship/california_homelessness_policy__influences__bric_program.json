@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T20:32:29",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "california_homelessness_policy",
+    "target_id": "bric_program",
+    "selection_motivation": "California’s homelessness policy establishes regulatory frameworks and funding mechanisms that directly shape state‑level infrastructure and community resilience programs such as the BRIC Program, making it a primary driver of that initiative.",
+    "candidate_motivation": "Topics in housing policy, urban development funding, and affordability are the strongest influences or peer topics for California homelessness policy.",
+    "existing_links_count": "2",
+    "candidate_count": "3",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "3",
+    "candidate_ids_preview": "['homelessness_initiatives', 'desjardins_affordable_housing_initiative', 'bric_program']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'california_homelessness_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'california_homelessness_policy', 'target': 'homelessness_initiatives'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6924285526593767182",
+    "rel_id": "california_homelessness_policy__influences__bric_program",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'california_homelessness_policy', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'california_homelessness_policy', 'target': 'bric_program'}, {'type': 'INFLUENCES', 'source': 'california_homelessness_policy', 'target': 'homelessness_initiatives'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "California’s homelessness policy establishes regulatory frameworks and funding mechanisms that directly shape state‑level infrastructure and community resilience programs such as the BRIC Program, making it a primary driver of that initiative.",
+      "type": "INFLUENCES",
+      "source": "california_homelessness_policy",
+      "target": "bric_program"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "california_homelessness_policy__influences__bric_program"
+}

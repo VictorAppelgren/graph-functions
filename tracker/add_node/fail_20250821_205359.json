@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T20:53:42",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5Q9B6Z5IC",
+    "status": "rejected",
+    "reject_category": "company",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article reports the closure of Guild Esports & Gaming Limited, a notable esports company, creating a new atomic company node for tracking its financial status and market impact.",
+      "id": "guild_esports",
+      "name": "Guild Esports & Gaming Limited",
+      "type": "company",
+      "level": "main"
+    },
+    "topic_category": {
+      "category": "company",
+      "motivation": "Company closure and financial impact, new company node."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Guild Esports is an esports company, an industry vertical, not a macro driver or tradable asset.",
+      "confidence": 0.95,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-03T19:19:21",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "euribor",
+    "target_id": "eurusd",
+    "selection_motivation": "Euribor, as the eurozone’s key short‑term rate, directly drives the EURUSD pair through carry and relative interest‑rate differentials.",
+    "candidate_motivation": "Euribor is a short‑term euro‑zone interbank rate, so it is directly driven by ECB policy, euro‑area inflation and liquidity conditions. It also moves in tandem with euro‑zone short‑term yields (Bund 2‑10y), the Euro Stoxx 50, and the USD‑Euro exchange rate (EURUSD). Global rate dynamics (US Treasury yields, Fed policy) and the US Dollar Index (DXY) influence cross‑border funding and thus Euribor. Therefore the most plausible influences and peers are the ECB policy, euro‑area inflation, US Treasury yields, US Fed policy, the Euro Stoxx 50, EURUSD, and DXY.",
+    "existing_links_count": "4",
+    "candidate_count": "7",
+    "all_nodes_count": "43",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['ecb_policy', 'euro_inflation', 'ust10y', 'fed_policy', 'sx5e', 'eurusd', 'dxy']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'euribor', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'dxy'}, {'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1164181603186903080",
+    "rel_id": "euribor__influences__eurusd",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'euribor', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'sx5e'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'euribor', 'target': 'eurusd'}, {'type': 'COMPONENT_OF', 'source': 'euribor', 'target': 'bund10y'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Euribor, as the eurozone’s key short‑term rate, directly drives the EURUSD pair through carry and relative interest‑rate differentials.",
+      "type": "INFLUENCES",
+      "source": "euribor",
+      "target": "eurusd"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "euribor__influences__eurusd"
+}

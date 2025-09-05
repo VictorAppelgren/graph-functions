@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-09-02T23:28:56",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "hurricane_risk_ust10y",
+    "target_id": "ust2y",
+    "selection_motivation": "Atlantic hurricane risk elevates short‑term Treasury risk premiums and liquidity demand, pushing the 2‑year yield higher; this causal link is not yet captured in the graph.",
+    "candidate_motivation": "The source topic concerns hurricane‑season risk to UST 10y yields, so the most relevant peers are other UST yield nodes, Fed policy, and macro indicators that influence the 10‑year curve. These topics provide direct or competitive relationships to the 10‑year Treasury yield and the risk premia that hurricanes can affect.",
+    "existing_links_count": "7",
+    "candidate_count": "9",
+    "all_nodes_count": "39",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['ust10y', 'ust2y', 'ust5y', 'ust30y', 'fed_policy', 'fed_powell_rate_cut_hint_2025', 'us_inflation', 'us_core_pce', 'dxy']",
+    "existing_links_before_len": "7",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_core_pce'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1168685202814271902",
+    "rel_id": "hurricane_risk_ust10y__influences__ust2y",
+    "existing_links_after_len": "8",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'fed_policy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust10y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust2y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'ust30y'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_inflation'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'wti'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'dxy'}, {'type': 'INFLUENCES', 'source': 'hurricane_risk_ust10y', 'target': 'us_core_pce'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Atlantic hurricane risk elevates short‑term Treasury risk premiums and liquidity demand, pushing the 2‑year yield higher; this causal link is not yet captured in the graph.",
+      "type": "INFLUENCES",
+      "source": "hurricane_risk_ust10y",
+      "target": "ust2y"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "hurricane_risk_ust10y__influences__ust2y"
+}

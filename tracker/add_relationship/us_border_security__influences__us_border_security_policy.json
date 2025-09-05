@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T16:10:50",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "us_border_security",
+    "target_id": "us_border_security_policy",
+    "selection_motivation": "US Border Security directly drives the formulation and enforcement of US Border Security Policy, making it a primary policy driver.",
+    "candidate_motivation": "The selected topics are relevant to US Border Security as they encompass economic, geopolitical, and immigration-related issues that can influence or correlate with border security policies and dynamics.",
+    "existing_links_count": "9",
+    "candidate_count": "9",
+    "all_nodes_count": "1030",
+    "candidate_ids_len": "9",
+    "candidate_ids_preview": "['us_illegal_immigration_2023', 'us_net_migration', 'us_tariffs_brazil', 'us_tariff_policies', 'us_china_trade_relations', 'ukraine_geopolitical_security', 'us_trade_policy_inflation', 'us_immigration_conditions', 'us_border_security_policy']",
+    "existing_links_before_len": "9",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_2023'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6922033726780082568",
+    "rel_id": "us_border_security__influences__us_border_security_policy",
+    "existing_links_after_len": "10",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_brazil'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_illegal_immigration_2023'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_trade_policy_inflation'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariff_policies'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_net_migration'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs_pharmaceuticals_semiconductors'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_china_trade_relations'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_tariffs'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_border_security_policy'}, {'type': 'INFLUENCES', 'source': 'us_border_security', 'target': 'us_immigration_conditions'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "US Border Security directly drives the formulation and enforcement of US Border Security Policy, making it a primary policy driver.",
+      "type": "INFLUENCES",
+      "source": "us_border_security",
+      "target": "us_border_security_policy"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "us_border_security__influences__us_border_security_policy"
+}

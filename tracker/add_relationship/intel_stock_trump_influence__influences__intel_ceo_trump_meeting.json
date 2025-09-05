@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T22:13:28",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "intel_stock_trump_influence",
+    "target_id": "intel_ceo_trump_meeting",
+    "selection_motivation": "Trump’s influence on Intel’s stock is often exercised through high‑profile interactions with company leadership; the CEO’s meeting with Trump is a direct conduit that can alter investor sentiment and stock performance.",
+    "candidate_motivation": "These topics capture policy actions, leadership signals, and competitive dynamics most likely to influence Intel's stock through Trump-era policy, export controls, and semiconductor market competition.",
+    "existing_links_count": "3",
+    "candidate_count": "8",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "8",
+    "candidate_ids_preview": "['intel_ceo_tan', 'intel_ceo_trump_meeting', 'us_tariffs_semiconductors', 'us_chip_export_controls', 'us_china_trade_talks', 'us_chip_revenue_sharing', 'nvidia_china_geopolitics', 'amd_data_center_growth']",
+    "existing_links_before_len": "3",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'trump_tariffs'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_tariffs_semiconductors'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1161929803373216588",
+    "rel_id": "intel_stock_trump_influence__influences__intel_ceo_trump_meeting",
+    "existing_links_after_len": "4",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_chip_export_controls'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'intel_ceo_trump_meeting'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'trump_tariffs'}, {'type': 'INFLUENCES', 'source': 'intel_stock_trump_influence', 'target': 'us_tariffs_semiconductors'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Trump’s influence on Intel’s stock is often exercised through high‑profile interactions with company leadership; the CEO’s meeting with Trump is a direct conduit that can alter investor sentiment and stock performance.",
+      "type": "INFLUENCES",
+      "source": "intel_stock_trump_influence",
+      "target": "intel_ceo_trump_meeting"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "intel_stock_trump_influence__influences__intel_ceo_trump_meeting"
+}

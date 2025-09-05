@@ -1,0 +1,54 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-08-24T21:13:05",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "WC68LCU9R",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed rate-cut expectations are driving a risk-on rally in equities as yields retreat, with tariff-driven inflation risks and AI sector dynamics shaping the near-term trajectory.",
+      "existing_ids": [
+        "sp500",
+        "fed_policy",
+        "us_inflation",
+        "us_10y",
+        "nvidia_ai_infrastructure",
+        "trump_tariffs",
+        "us_tariffs_semiconductors",
+        "us_inflation_impact_on_stocks"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "policy_statement",
+      "motivation": "The article reports Fed Chair Jerome Powell hinting at potential rate cuts, which is an official statement from a central bank policymaker."
+    },
+    "impact": {
+      "priority": 1,
+      "motivation": "The article discusses Fed policy and AI chip gains, but the specific node is not provided, so I cannot assess impact precisely."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on immediate market reactions to Fed policy hints and short‑term investor sentiment."
+    },
+    "article_node": {
+      "id": "WC68LCU9R",
+      "title": "Wall Street rallies on hopes for lower interest rates",
+      "summary": "Wall Street surged on Friday as investors reacted to Fed Chair Jerome Powell’s hint that rate cuts could come, lifting the S&P 500 1.6%, the Dow 2.1% and the Nasdaq 2%. Treasury yields fell as expectations of a September cut rose, and smaller‑cap stocks, homebuilders and travel firms led the gains. Nvidia and other AI‑chip makers also saw gains amid optimism over AI demand, while the rally was tempered by concerns over Trump’s tariffs and weaker job data. The rally marked the best day in months for the market, pushing major indices toward new all‑time highs.",
+      "source": "https://www.cheddar.com/media/wall-street-rallies-on-hopes-for-lower-interest-rates/",
+      "published_at": "2025-08-22T18:22:41.454000+00:00",
+      "vector_id": null,
+      "type": "policy_statement",
+      "temporal_horizon": "current",
+      "priority": 1,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 8,
+      "successful": 8
+    }
+  },
+  "id": "WC68LCU9R"
+}

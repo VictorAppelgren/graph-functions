@@ -1,0 +1,49 @@
+{
+  "type": "add_article",
+  "timestamp": "2025-09-03T12:50:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "15OCB8MGQ",
+    "status": "success"
+  },
+  "details": {
+    "multi_topic_discovery": {
+      "topic_discovery_motivation": "Impact: rates; Fed policy and September rate‑cut expectations are likely to compress HSBC’s net interest income, influencing its share price. Wealth‑management growth and a $3 bn buyback support valuation, but the key transmission is through Fed policy.",
+      "existing_ids": [
+        "fed_policy",
+        "fed_rate_cut_sept17_2025",
+        "fed_powell_rate_cut_hint_2025"
+      ],
+      "new_names": []
+    },
+    "category": {
+      "type": "earnings",
+      "motivation": "The article reports HSBC’s Q2 2025 earnings fell 29% YoY, detailing revenue, impairment charges, and cost‑reduction plans—directly describing the company’s financial results."
+    },
+    "impact": {
+      "priority": 3,
+      "motivation": "The article reports major events affecting HSBC’s stock—large buyback, dividend hike, earnings impairment, and cost‑cutting plans—directly influencing the node’s valuation and risk profile."
+    },
+    "time_frame": {
+      "temporal_horizon": "current",
+      "motivation": "The article focuses on recent earnings, buyback, dividend, and YTD stock performance, which are immediate events affecting HSBC stock."
+    },
+    "article_node": {
+      "id": "15OCB8MGQ",
+      "title": "Buy Or Fear HSBC Stock?",
+      "summary": "HSBC stock has surged 33% YTD, driven by strong wealth‑management growth in Asia, stable trading income, and a $3 billion buyback that boosts dividends above 4%. Q2 2025 earnings fell 29% YoY due to impairment charges and higher credit losses, but revenue held steady at $16.5 billion and cost‑reduction plans aim to save $1.5 billion by 2026. The bank’s robust capital ratios and large deposit base mitigate risks from U.S. tariffs and potential Fed rate cuts, though a rate decline could compress net interest income.\n",
+      "source": "https://www.forbes.com/sites/greatspeculations/2025/08/29/buy-or-fear-hsbc-stock/",
+      "published_at": "2025-08-29T09:00:59+00:00",
+      "vector_id": null,
+      "type": "earnings",
+      "temporal_horizon": "current",
+      "priority": 3,
+      "relevance_score": null
+    },
+    "multi_topic_results": {
+      "total_topics": 3,
+      "successful": 3
+    }
+  },
+  "id": "15OCB8MGQ"
+}

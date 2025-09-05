@@ -1,0 +1,31 @@
+{
+  "type": "add_node",
+  "timestamp": "2025-08-21T15:31:53",
+  "processed": false,
+  "inputs": {
+    "source_article_id": "5XFUY1SCQ",
+    "status": "rejected",
+    "reject_category": "policy",
+    "reject_failure_cat": "industry_vertical"
+  },
+  "details": {
+    "llm_topic_proposal_raw": {
+      "motivation": "The article introduces a new UK policy approving data centre projects, a macro driver affecting energy consumption and climate goals.",
+      "id": "uk_data_centre_approval_policy",
+      "name": "UK Data Centre Approval Policy",
+      "type": "policy",
+      "level": "driver"
+    },
+    "topic_category": {
+      "category": "policy",
+      "motivation": "Policy approving data centre projects, a macro driver affecting energy consumption and climate goals."
+    },
+    "relevance_gate": {
+      "should_add": false,
+      "reason": "Specific approval for a single data centre project is an industry‑level regulatory decision, not a macro driver or broad policy affecting markets.",
+      "confidence": 0.9,
+      "failure_category": "industry_vertical"
+    }
+  },
+  "id": "none"
+}

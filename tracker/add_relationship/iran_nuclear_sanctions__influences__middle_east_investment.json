@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-22T09:44:11",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "iran_nuclear_sanctions",
+    "target_id": "middle_east_investment",
+    "selection_motivation": "Iran nuclear sanctions directly constrain foreign investment flows into Iran and the broader Middle East, making it a key driver of Middle East investment dynamics.",
+    "candidate_motivation": "The selected topics are closely related to geopolitical dynamics and economic implications surrounding Iran's nuclear sanctions, making them plausible influences or correlates.",
+    "existing_links_count": "4",
+    "candidate_count": "10",
+    "all_nodes_count": "1027",
+    "candidate_ids_len": "10",
+    "candidate_ids_preview": "['iran_nuclear_program', 'us_china_trade_relations', 'us_tariffs_on_technology', 'us_russia_ukraine_diplomacy', 'middle_east_investment', 'ukraine_geopolitics', 'us_sanctions_congo_conflict_minerals', 'us_china_tariff_truce', 'us_tariffs_semiconductors', 'us_inflation_impact_on_stocks']",
+    "existing_links_before_len": "4",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_tariffs_on_technology'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:6919781926966395250",
+    "rel_id": "iran_nuclear_sanctions__influences__middle_east_investment",
+    "existing_links_after_len": "5",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'oil'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'middle_east_investment'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'iran_nuclear_program'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_russia_relations'}, {'type': 'INFLUENCES', 'source': 'iran_nuclear_sanctions', 'target': 'us_tariffs_on_technology'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "Iran nuclear sanctions directly constrain foreign investment flows into Iran and the broader Middle East, making it a key driver of Middle East investment dynamics.",
+      "type": "INFLUENCES",
+      "source": "iran_nuclear_sanctions",
+      "target": "middle_east_investment"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "iran_nuclear_sanctions__influences__middle_east_investment"
+}

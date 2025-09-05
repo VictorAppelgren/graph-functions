@@ -1,0 +1,25 @@
+{
+  "type": "analysis_section_rewrite",
+  "timestamp": "2025-08-31T16:42:28",
+  "processed": false,
+  "inputs": {
+    "topic_id": "spx",
+    "section": "executive_summary",
+    "test": "False",
+    "run_id": "spx__analysis_run__1756648033",
+    "prior_sections": "['fundamental', 'medium', 'current', 'drivers']",
+    "material_chars": "6347",
+    "output_chars": "1276",
+    "saved": "True",
+    "saved_field": "executive_summary",
+    "status": "success"
+  },
+  "details": {
+    "llm": {
+      "model": "openai/gpt-oss-20b",
+      "feedback": "The draft is within the 4‑6 sentence limit and contains the required magnitude range, catalysts, risks, and watch signals, but it needs a few tightening edits to meet the strict mapping and causal‑link criteria:  \n\n1. **Canonical handle** – explicitly reference the handle “ust10y” in the opening sentence (e.g., “ust10y is projected to climb 20–30 bp to 4.0–4.2 % by Q4 2025”).  \n2. **Asset mention in chain** – add “10‑year UST yield” in sentence 2 to keep the causal chain anchored to the asset (“…supporting the 10‑year UST yield trajectory”).  \n3. **Redundancy** – shorten sentence 2 by removing the phrase “with the July 2025 SEC Project Crypto announcement and the Trump‑era executive order already accelerating treasury allocations to digital assets” (the crypto link is implied by the risk‑on chain and can be omitted for concision).  \n4. **Explicit lift** – in sentence 4, change “Fed cut expected to lift the yield” to “Fed cut expected to lift the 10‑year UST yield” for clarity.  \n5. **Citation placement** – ensure each sentence ends with a single, concise citation block (e.g., (OGK8WLL69)(7XH2DKEKV)) and remove any duplicate IDs.  \n\nAfter these edits the brief will satisfy the mapping, causal, and format requirements while remaining a crisp, decision‑useful snapshot.",
+      "tokens": {}
+    }
+  },
+  "id": "spx__executive_summary__spx__analysis_run__1756648033"
+}

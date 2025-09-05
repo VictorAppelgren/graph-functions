@@ -1,0 +1,38 @@
+{
+  "type": "add_relationship",
+  "timestamp": "2025-08-24T19:29:40",
+  "processed": false,
+  "inputs": {
+    "relationship_type": "INFLUENCES",
+    "source_id": "dc_federal_policing_initiative",
+    "target_id": "dc_police_takeover",
+    "selection_motivation": "The D.C. Federal Policing Initiative is the primary driver behind the formal takeover of the city’s police force, making a causal link essential for accurate modeling of policy impacts.",
+    "candidate_motivation": "These topics are the most plausible peers or influences because they represent parallel federal policing actions, governance over DC law enforcement, or deployment of security forces that could directly affect the DC policing initiative.",
+    "existing_links_count": "2",
+    "candidate_count": "7",
+    "all_nodes_count": "1034",
+    "candidate_ids_len": "7",
+    "candidate_ids_preview": "['dc_federal_intervention', 'dc_federal_control', 'dc_police_takeover', 'dc_federal_law_enforcement_takeover', 'national_guard_dc_deployment', 'federal_intervention_urban_crime', 'federal_intervention_in_black_cities']",
+    "existing_links_before_len": "2",
+    "existing_links_before_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'national_guard_dc_deployment'}]",
+    "rel_graph_element_id": "5:1261c812-078c-477f-8006-c216977b0e7c:1166433403000587201",
+    "rel_id": "dc_federal_policing_initiative__influences__dc_police_takeover",
+    "existing_links_after_len": "3",
+    "existing_links_after_preview": "[{'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'dc_federal_intervention'}, {'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'national_guard_dc_deployment'}, {'type': 'INFLUENCES', 'source': 'dc_federal_policing_initiative', 'target': 'dc_police_takeover'}]",
+    "status": "success",
+    "dedup_decision": "new"
+  },
+  "details": {
+    "proposed_link": {
+      "motivation": "The D.C. Federal Policing Initiative is the primary driver behind the formal takeover of the city’s police force, making a causal link essential for accurate modeling of policy impacts.",
+      "type": "INFLUENCES",
+      "source": "dc_federal_policing_initiative",
+      "target": "dc_police_takeover"
+    },
+    "cypher_summary": {
+      "_contains_updates": true,
+      "relationships_created": 1
+    }
+  },
+  "id": "dc_federal_policing_initiative__influences__dc_police_takeover"
+}
