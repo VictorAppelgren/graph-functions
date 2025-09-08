@@ -1,156 +1,231 @@
-# Saga Graph — Minimal Setup Guide
+# Saga Graph — Setup Guide
 
 This guide gets you from zero to a working Saga Graph environment on macOS.
 
-## 1) Prerequisites
-- Python 3.11–3.13 (recommended: 3.13)
+## Quick Start (Automated Setup)
+
+**🚀 For the fastest setup, use our automated setup script:**
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-org/saga-graph.git
+   cd saga-graph
+   ```
+
+2. **Configure environment variables** (add to ~/.zshrc or ~/.bash_profile):
+   ```bash
+   # Neo4j (required)
+   export NEO4J_URI=neo4j://127.0.0.1:7687
+   export NEO4J_USER=neo4j
+   export NEO4J_PASSWORD=your_password
+   export NEO4J_DATABASE=argosgraph
+
+   # LLM Provider (at least one required)
+   export OPENAI_API_KEY=sk-...
+   # OR
+   export ANTHROPIC_API_KEY=...
+
+   # News API (optional, for news ingestion)
+   export NEWS_API_KEY=your_perigon_api_key
+   ```
+
+3. **Run the automated setup:**
+   ```bash
+   ./scripts/setup.sh
+   ```
+
+The script will:
+- ✅ Check Python 3.11+ is installed
+- ✅ Create `.venv` virtual environment with locked dependencies
+- ✅ Validate all required environment variables
+- ✅ Test Neo4j connectivity
+- ✅ Test LLM provider connection
+- ✅ Test News API (if configured)  
+- ✅ Seed initial anchor nodes in the graph
+- ✅ Provide next steps for running the system
+
+**That's it!** If the setup script completes successfully, you're ready to run Saga Graph.
+
+---
+
+## Manual Setup (Step-by-Step)
+
+If you prefer manual setup or need to troubleshoot, follow these detailed steps:
+
+### 1) Prerequisites
+- Python 3.11+ (we lock to 3.11.9 in `.python-version`)
 - Neo4j 5.x (Desktop or Docker)
-- macOS zsh terminal
+- macOS/Linux with bash/zsh terminal
 
 Optional:
 - Playwright (only if you want browser fallback scraping)
 
-## 2) Clone and enter the project
-```
+### 2) Clone and enter the project
+```bash
 git clone https://github.com/your-org/saga-graph.git
-cd saga-graph/V1
+cd saga-graph
 ```
 
-## 3) Configure environment variables
+### 3) Configure environment variables
 Export these in your shell profile (e.g., ~/.zshrc) or before running commands:
 
-- Neo4j
-  - NEO4J_URI=neo4j://127.0.0.1:7687
-  - NEO4J_USER=neo4j
-  - NEO4J_PASSWORD=your_password
-  - NEO4J_DATABASE=argosgraph
-
-- LLM Providers (set the ones you use)
-  - OPENAI_API_KEY=sk-...
-  - ANTHROPIC_API_KEY=... (if using Anthropic)
-  - OLLAMA: configure base URL per your local setup if used
-  - Tier overrides (optional): ARGOS_SIMPLE_*, ARGOS_MEDIUM_*, ARGOS_COMPLEX_* (keys: provider, model, temperature, base_url) per `model_config.py`
-
-- News API
-  - NEWS_API_KEY=your_perigon_api_key
-
-## 4) Python environment and dependencies
-Create an isolated environment and install requirements:
+**Neo4j (required):**
+```bash
+export NEO4J_URI=neo4j://127.0.0.1:7687
+export NEO4J_USER=neo4j
+export NEO4J_PASSWORD=your_password
+export NEO4J_DATABASE=argosgraph
 ```
+
+**LLM Providers (at least one required):**
+```bash
+export OPENAI_API_KEY=sk-...
+# OR/AND
+export ANTHROPIC_API_KEY=...
+```
+
+**Optional configurations:**
+```bash
+# News API for ingestion
+export NEWS_API_KEY=your_perigon_api_key
+
+# LLM tier overrides (optional)
+export ARGOS_SIMPLE_PROVIDER=openai
+export ARGOS_SIMPLE_MODEL=gpt-4o-mini
+# etc. - see model_config.py for full options
+```
+
+### 4) Python environment and dependencies
+Create an isolated environment and install requirements:
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -U pip wheel setuptools
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
-If you do not yet have a pinned requirements.txt, see section 7 to generate one.
-
-## 5) Neo4j database setup
+### 5) Neo4j database setup
 Ensure Neo4j is running locally and accessible via NEO4J_URI.
-- The helper in `graph_db/db_driver.py` will:
-  - Connect to Neo4j
-  - Create `NEO4J_DATABASE` if missing (requires admin)
-  - Poll until the database is online
 
-Quick connectivity check:
-```
-python - <<'PY'
+**Quick connectivity check:**
+```bash
+python -c "
 from graph_db.db_driver import run_cypher
-print(run_cypher('RETURN 1 AS ok'))
-PY
+print('Neo4j connection:', run_cypher('RETURN 1 AS ok'))
+"
 ```
-Expected: a list with a dict containing ok: 1
+Expected: `[{'ok': 1}]`
 
-## 6) Quick LLM and News client checks
-- LLM check (OpenAI-compatible endpoint):
-```
-python - <<'PY'
+### 6) LLM and News API verification
+**LLM check:**
+```bash
+python -c "
 from model_config import get_simple_llm
 llm = get_simple_llm()
-print(llm.invoke('ping'))
-PY
+print('LLM response:', llm.invoke('ping'))
+"
 ```
 
-- Perigon News API check:
-```
+**News API check:**
+```bash
 python -m perigon.news_api_client
 ```
-This runs a small demo search (see `perigon/news_api_client.py`).
 
-## 7) Generate a pinned requirements.txt (recommended)
-Use this to capture exact, reproducible versions (works with Python 3.13):
+### 7) Seed anchor nodes (one-time)
+```bash
+python user_anchor_nodes.py
 ```
-python3 -m venv .venv
+
+---
+
+## Testing Your Installation
+
+After setup (automated or manual), test your installation:
+
+### 1) Test with a sample report
+```bash
 source .venv/bin/activate
-python -m pip install -U pip wheel setuptools
-# Install curated top-level dependencies
-pip install \
-  neo4j \
-  langchain langchain-core langchain-openai langchain-anthropic langchain-ollama \
-  requests httpx trafilatura fpdf2
-# Freeze full lock
-pip freeze > requirements.txt
-```
-Note: Playwright is optional. If you want browser scraping fallback, also:
-```
-pip install playwright
-playwright install chromium
-```
-The code defaults to static (httpx + trafilatura) scraping.
-
-## Quickstart (10 min)
-
-Follow these minimal steps to get a working graph with anchor nodes.
-
-1) Activate env and install deps
-   - See §4 for the exact commands.
-
-2) Export environment variables
-   - See §3 for the list. At minimum set Neo4j and one LLM provider.
-
-3) Verify Neo4j connectivity
-   - See §5 quick connectivity check.
-
-4) Seed anchor nodes (one-time)
-   - Run from project root `V1/`:
-   ```
-   python user_anchor_nodes.py
-   ```
-   - This MERGEs the permanent anchors and creates explicit typed relationships.
-   - Note: `main.py` will also seed anchors automatically if none exist.
-
-5) (Optional) Export a sample report PDF
-   ```
-   python Reports/export_asset_analysis_pdf.py
-   ```
-   - Outputs under `Reports/PDFs/`.
-
-## 8) Run a minimal ingestion
-A safe test is to export a report PDF (does not require a long-running loop):
-```
 python Reports/export_asset_analysis_pdf.py
 ```
-Output should be created under `Reports/PDFs/`.
+This should create a PDF report under `Reports/PDFs/`
 
-For a fuller ingestion, refer to `perigon/news_ingestion_orchestrator.py` and the main loop in `main.py`. Be aware `main.py` is a continuous loop and assumes operational scheduling.
-
-## 9) Logs and stats
-- Minimal logger used throughout (`utils/minimal_logging.py`) with ISO 8601 timestamps
-- Master logs in `master_logs/` and per-module in `logs/`
-- Problems must be tracked only under `master_stats/<day>.json` → `problems` (per SAGA_V3 conventions)
-
-## 10) Optional: Playwright browser scraping
-The static path is default and recommended. To enable fallback browser scraping:
+### 2) Test news ingestion (if NEWS_API_KEY is set)
+```bash
+python perigon/run.py
 ```
+
+### 3) Run the main system loop
+```bash
+python main.py
+```
+**Note:** This runs continuously - use Ctrl+C to stop.
+
+---
+
+## Package Management
+
+### Dependencies with Locked Versions
+Our `requirements.txt` contains exact versions for reproducible builds:
+- Core Neo4j and LangChain dependencies
+- HTTP clients (requests, httpx)  
+- Content extraction (trafilatura)
+- PDF generation (fpdf2)
+
+### Python Version
+- Locked to Python 3.11.9 (see `python-version`)
+- Defined in `pyproject.toml` as `>=3.11,<3.12`
+
+### Optional: Playwright Browser Scraping
+If you need browser-based scraping fallback:
+```bash
+source .venv/bin/activate
 pip install playwright
 playwright install chromium
 ```
-Integrate import in your scraper if needed (see `perigon/source_scraper.py`).
 
-## 11) Troubleshooting
-- Neo4j connection errors: confirm credentials and NEO4J_URI; ensure DB is online
-- LLM errors: verify API keys; if using a custom base_url, confirm endpoint compatibility
-- Perigon 401/403: check NEWS_API_KEY
-- Trafilatura extraction empty: page may be heavy/JS-rendered; consider Playwright fallback
+The system defaults to static scraping (httpx + trafilatura).
 
-That’s it. You should now be able to connect to Neo4j, call the LLM, query news, and generate PDFs.
+---
+
+## Troubleshooting
+
+### Common Issues
+
+**Neo4j Connection Errors:**
+- Verify Neo4j server is running (`systemctl status neo4j` or Neo4j Desktop)
+- Check credentials: `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD`
+- Ensure database `NEO4J_DATABASE` exists or user has admin rights to create it
+- Test: `neo4j-admin ping` or manual connection via Neo4j Browser
+
+**LLM Provider Errors:**
+- Verify API keys are valid and have sufficient quota
+- Check network connectivity to provider endpoints
+- For custom `base_url` configurations, ensure endpoint compatibility
+- Test with a simple API call outside the application
+
+**News API Issues:**
+- `401/403 errors`: Check `NEWS_API_KEY` is valid and active
+- Rate limiting: Perigon has usage limits per plan
+- Test: `curl -H "Authorization: $NEWS_API_KEY" https://api.goperigon.com/v1/all`
+
+**Package Installation Problems:**
+- Update pip: `python -m pip install --upgrade pip`
+- Clear cache: `pip cache purge`
+- Check Python version: `python --version` (must be 3.11+)
+- Reinstall requirements: `pip install -r requirements.txt --force-reinstall`
+
+**Content Extraction Issues:**
+- Trafilatura returns empty: Page may be JS-heavy or blocked
+- Solution: Install Playwright fallback (see Package Management section)
+- Alternative: Check if target sites require specific user-agents or headers
+
+### Log Files
+- Master logs: `master_logs/`
+- Component logs: `logs/`
+- Daily stats: `master_stats/statistics_YYYY_MM_DD.json`
+- Problems tracked under `master_stats/.../problems[]`
+
+### Getting Help
+- Check logs for detailed error messages with ISO 8601 timestamps
+- Review `config.py` for configuration options
+- See SAGA_V3 principles in `README.md` for architecture guidance

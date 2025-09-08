@@ -25,7 +25,7 @@ from typing import Dict, Any
 
 # API keys (if needed) should be provided via environment variables externally.
 
-from utils.minimal_logging import get_logger
+from utils.logging import get_logger
 logger = get_logger(__name__)
 
 # --- OLLAMA SINGLE URL (manual toggle by commenting) ---
@@ -175,7 +175,7 @@ def get_model_config(tier: ModelTier) -> Dict[str, Any]:
 
 def get_llm(tier: ModelTier):
     # Minimal LLM tier call counter (increments on every get_llm call)
-    from utils.master_log import increment_llm_usage
+    from utils.pipeline_logging import increment_llm_usage
     increment_llm_usage(tier)
 
     """Get a LangChain-compatible LLM for the specified tier.

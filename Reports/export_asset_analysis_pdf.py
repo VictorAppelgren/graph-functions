@@ -11,9 +11,9 @@ if PROJECT_ROOT not in sys.path:
 
 from graph_utils.get_topic_id_by_name import get_topic_id_by_name
 from func_analysis.report_aggregator import aggregate_reports
-from utils import minimal_logging
+from utils import logging
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 # --- CONFIG ---
 ASSET = "S&P 500"

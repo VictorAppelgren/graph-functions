@@ -30,14 +30,14 @@ if PROJECT_ROOT not in sys.path:
 # Import from V1 using absolute imports
 from graph_utils.get_all_nodes import get_all_nodes
 from perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
-from utils import minimal_logging
-from utils.master_log import master_log
+from utils import logging
+from utils.pipeline_logging import master_log
 from utils.query_overdue_seconds import query_overdue_seconds
 from graph_db.db_driver import run_cypher
 from entry_point_enrich_topic.topic_enrichment import backfill_topic_from_storage
 
 # Configure logging
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 
 

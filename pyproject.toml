@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saga-graph"
+description = "Single-source Architecture & Guidelines for Saga Graph - LLM-powered real-time world macro graph"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "mypy==1.8.0",
+    "types-requests==2.32.0.20241016",
+    "pre-commit>=3.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/saga-graph"
+Repository = "https://github.com/your-username/saga-graph"
+
+[tool.setuptools_scm]
+write_to = "saga_graph/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["tests*"]
+
+# MyPy configuration (alternative to mypy.ini)
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+show_error_codes = true
+show_column_numbers = true
+
+# Development scripts for type checking
+[project.scripts]
+typecheck = "scripts.typecheck:main"

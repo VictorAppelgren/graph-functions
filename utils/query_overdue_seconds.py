@@ -1,7 +1,7 @@
 from func_add_topic.priority_policy import get_interval_for_importance
 from datetime import datetime
-from utils import minimal_logging
-logger = minimal_logging.get_logger(__name__)
+from utils import logging
+logger = logging.get_logger(__name__)
 
 def query_overdue_seconds(node):
     # Use current local time; tests can monkeypatch this function if needed

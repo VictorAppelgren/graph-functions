@@ -13,9 +13,9 @@ from graph_utils.get_all_nodes import get_all_nodes
 from entry_point_enrich_topic.generate_keywords_llm import generate_keywords
 from entry_point_enrich_topic.topic_enrichment import backfill_topic_from_storage
 from entry_point_enrich_topic.topic_enrichment import collect_candidates_by_keywords
-from utils import minimal_logging
+from utils import logging
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 def test_keywords():
     """Test keyword generation for a sample topic"""

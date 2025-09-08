@@ -12,10 +12,10 @@ if PROJECT_ROOT not in sys.path:
 
 from utils.load_article import load_article
 from graph_nodes.add_node import add_node
-from utils import minimal_logging
+from utils import logging
 from paths import get_raw_news_dir
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 def test_add_node():
     raw_base = get_raw_news_dir()  # base raw_news directory

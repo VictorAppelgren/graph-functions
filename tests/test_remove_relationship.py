@@ -7,13 +7,13 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from utils import minimal_logging
+from utils import logging
 from graph_utils.get_all_nodes import get_all_nodes
 from graph_relationships.remove_link import remove_link
 from graph_relationships.get_existing_links import get_existing_links
 from graph_relationships.llm_select_link_to_remove import llm_select_link_to_remove
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 def interactive_propose_and_remove():
     """

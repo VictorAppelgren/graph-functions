@@ -9,11 +9,11 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from utils import minimal_logging
+from utils import logging
 from graph_db.db_driver import run_cypher
 from analysis.should_rewrite import should_rewrite
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 def main():
     TOPIC_NAME = os.environ.get("ASSET", "EURUSD")  # override with ASSET env if you like

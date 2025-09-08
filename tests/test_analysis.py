@@ -13,9 +13,9 @@ from graph_utils.get_all_nodes import get_all_nodes
 from func_analysis.analysis_rewriter import analysis_rewriter
 from func_analysis.should_rewrite import should_rewrite
 from graph_db.db_driver import run_cypher
-from utils import minimal_logging
+from utils import logging
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 def test_should_rewrite():
     """Test the should_rewrite trigger function"""

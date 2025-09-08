@@ -16,9 +16,9 @@ sys.path.insert(0, "..")
 import json
 import random
 from graph_articles.add_article import add_article
-from utils import minimal_logging
+from utils import logging
 
-logger = minimal_logging.get_logger(__name__)
+logger = logging.get_logger(__name__)
 
 def find_latest_day_folder(base_dir):
     days = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]

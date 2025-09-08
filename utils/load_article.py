@@ -12,7 +12,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import json
-from utils.minimal_logging import get_logger
+from utils.logging import get_logger
 from pathlib import Path
 from typing import Dict, Any
 from datetime import datetime, timedelta

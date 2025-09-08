@@ -1,6 +1,66 @@
-# SAGA_V3: Single-source Architecture & Guidelines for Saga Graph
+# Saga Graph
+
+**LLM-powered, real-time world macro graph for investment research and swing trading.**
+
+Saga Graph automatically ingests news, maps articles to financial topics, updates graph relationships, and generates analytical reports. Built with a modular MVP approach for solo-developer speed and easy iteration.
+
+## 🚀 Quick Start
+
+**Get up and running in under 5 minutes:**
+
+1. **Clone and navigate:**
+   ```bash
+   git clone https://github.com/your-org/saga-graph.git
+   cd saga-graph
+   ```
+
+2. **Set environment variables** (add to `~/.zshrc`):
+   ```bash
+   export NEO4J_URI=neo4j://127.0.0.1:7687
+   export NEO4J_USER=neo4j
+   export NEO4J_PASSWORD=your_password
+   export NEO4J_DATABASE=argosgraph
+   export OPENAI_API_KEY=sk-...  # or ANTHROPIC_API_KEY
+   export NEWS_API_KEY=your_perigon_key  # optional
+   ```
+
+3. **Run automated setup:**
+   ```bash
+   ./scripts/setup.sh
+   ```
+
+4. **Test with a sample report:**
+   ```bash
+   source .venv/bin/activate
+   python Reports/export_asset_analysis_pdf.py
+   ```
+
+**📖 For detailed setup instructions, troubleshooting, and configuration options, see [setup.md](setup.md).**
 
 ---
+
+## Project Architecture
+
+The system follows these key flows:
+1. **Ingest** → 2. **Categorize/Score** → 3. **Map to Topics** → 4. **Link** → 5. **Rewrite** → 6. **Aggregate & Report**
+
+### Key Entry Points
+- **`main.py`** - Continuous maintenance loop (ingestion, mapping, analysis)
+- **`perigon/run.py`** - On-demand news ingestion
+- **`Reports/export_asset_analysis_pdf.py`** - Generate analytical PDF reports
+- **`user_anchor_nodes.py`** - Seed initial graph nodes (one-time setup)
+
+### Dependencies
+- **Neo4j 5.x** - Graph database for topics, articles, and relationships
+- **LangChain** - LLM orchestration and JSON parsing
+- **Python 3.11+** - Locked dependencies in `requirements.txt`
+- **LLM Providers** - OpenAI, Anthropic, or Ollama for analysis
+
+---
+
+# SAGA_V3: Architecture & Development Guidelines
+
+This section contains the detailed architecture principles and development guidelines for Saga Graph.
 
 ## 1. Core Principles (God-Tier Minimalism)
 

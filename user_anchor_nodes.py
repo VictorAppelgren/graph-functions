@@ -215,8 +215,8 @@ if __name__ == "__main__":
     from func_add_topic.create_query_llm import create_wide_query
     from func_add_relationships.add_link import add_link
     from graph_db.db_driver import run_cypher
-    from utils import minimal_logging
-    logger = minimal_logging.get_logger(__name__)
+    from utils import logging
+    logger = logging.get_logger(__name__)
 
     # First, seed all anchor nodes
     logger.info(f"Seeding {len(USER_ANCHOR_NODES)} anchor nodes...")
