@@ -16,8 +16,8 @@ from typing import Dict, List, Any, Optional, Set
 # Import local modules
 from . import config
 
-from utils import logging
-logger = logging.get_logger(__name__)
+from utils import app_logging
+logger = app_logging.get_logger(__name__)
 
 from .argos_id_generator import add_argos_id_to_article
 
@@ -216,8 +216,8 @@ if __name__ == "__main__":
     try:
         # Set up simple logging for direct execution
         import logging
-        logging.basicConfig(
-            level=logging.INFO,
+        app_logging.basicConfig(
+            level=app_logging.INFO,
             format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
         )
         

@@ -10,12 +10,12 @@ if PROJECT_ROOT not in sys.path:
 
 import random
 from graph_utils.get_all_nodes import get_all_nodes
-from entry_point_enrich_topic.generate_keywords_llm import generate_keywords
-from entry_point_enrich_topic.topic_enrichment import backfill_topic_from_storage
-from entry_point_enrich_topic.topic_enrichment import collect_candidates_by_keywords
-from utils import logging
+from analysis.policies.keyword_generator import generate_keywords
+from worker.workflows.topic_enrichment import backfill_topic_from_storage
+from worker.workflows.topic_enrichment import collect_candidates_by_keywords
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def test_keywords():
     """Test keyword generation for a sample topic"""

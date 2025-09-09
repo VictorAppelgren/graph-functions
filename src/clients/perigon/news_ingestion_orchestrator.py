@@ -34,24 +34,24 @@ from perigon.source_scraper import scrape_article_and_sources_sync, is_article_g
 from perigon.text_summarizer import summarize_article
 
 # Set up logger for this module
-from utils import logging
-logger = logging.get_logger("news_ingestion_orchestrator")
-from utils.pipeline_logging import master_log, master_log_error, problem_log
+from utils import app_logging
+logger = app_logging.get_logger("news_ingestion_orchestrator")
+from observability.pipeline_logging import master_log, master_log_error, problem_log
 
 
 def set_third_party_log_levels(debug: bool) -> None:
     """
     Control noisy third-party loggers. Show INFO only in debug mode; otherwise quiet them.
     """
-    httpx_level = logging.INFO if debug else logging.WARNING
-    httpcore_level = logging.INFO if debug else logging.WARNING
-    trafilatura_level = logging.WARNING if debug else logging.ERROR
+    httpx_level = app_logging.INFO if debug else app_logging.WARNING
+    httpcore_level = app_logging.INFO if debug else app_logging.WARNING
+    trafilatura_level = app_logging.WARNING if debug else app_logging.ERROR
 
-    logging.getLogger("httpx").setLevel(httpx_level)
-    logging.getLogger("httpcore").setLevel(httpcore_level)
-    logging.getLogger("trafilatura").setLevel(trafilatura_level)
-    logging.getLogger("trafilatura.core").setLevel(trafilatura_level)
-    logging.getLogger("trafilatura.utils").setLevel(trafilatura_level)
+    app_logging.getLogger("httpx").setLevel(httpx_level)
+    app_logging.getLogger("httpcore").setLevel(httpcore_level)
+    app_logging.getLogger("trafilatura").setLevel(trafilatura_level)
+    app_logging.getLogger("trafilatura.core").setLevel(trafilatura_level)
+    app_logging.getLogger("trafilatura.utils").setLevel(trafilatura_level)
 
 
 class NewsIngestionOrchestrator:
@@ -63,7 +63,7 @@ class NewsIngestionOrchestrator:
     of raw article data.
     """
     
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def __init__(self, debug: bool = False):
         """
         Initialize the NewsIngestionOrchestrator.
@@ -148,7 +148,7 @@ class NewsIngestionOrchestrator:
 
             # If not testing, trigger add_article for each processed article
             if not test:
-                from func_add_article.add_article import add_article
+                from articles.ingest_article import add_article
                 for article in processed_articles:
                     try:
                         article_id = article['argos_id']
@@ -171,7 +171,7 @@ class NewsIngestionOrchestrator:
             logger.error(f"❌ Error executing query: {e}")
             raise RuntimeError(f"Failed to execute query: {e}")
 
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def run_complete_test(self) -> Dict[str, Any]:
         """
         Run a minimal end-to-end test: execute two queries in test mode, collect saved IDs, and return stats.
@@ -189,7 +189,7 @@ class NewsIngestionOrchestrator:
         return {"statistics": self.stats, "saved_article_ids": saved_article_ids, "sample_articles": []}
  
   
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def _process_articles(self, articles: List[Dict[str, Any]], query_id: str) -> List[Dict[str, Any]]:
         """
         Process a list of articles: scrape content, summarize, and store raw data.
@@ -288,8 +288,8 @@ class NewsIngestionOrchestrator:
 
 if __name__ == "__main__":
     import logging
-    logging.basicConfig(
-        level=logging.INFO,
+    app_logging.basicConfig(
+        level=app_logging.INFO,
         format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
     )
     logger.info("📰 Starting News Ingestion Test Run")

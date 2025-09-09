@@ -15,9 +15,9 @@ from datetime import datetime
 # Import local modules
 from . import config
 
-from utils import logging
-from utils.pipeline_logging import master_log_error
-logger = logging.get_logger(__name__)
+from utils import app_logging
+from observability.pipeline_logging import master_log_error
+logger = app_logging.get_logger(__name__)
 
 
 class NewsApiError(Exception):
@@ -43,7 +43,7 @@ class NewsApiClient:
     rate limiting, and response parsing.
     """
     
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def __init__(self):
         """
         Initialize the NewsApiClient.
@@ -77,7 +77,7 @@ class NewsApiClient:
         
         logger.info("NewsApiClient initialized successfully")
     
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def search_articles(self, query: str, max_results: int = 10, **kwargs) -> Dict[str, Any]:
         """
         Search for articles using the news API.
@@ -105,7 +105,7 @@ class NewsApiClient:
             raise ValueError("max_results must be at least 1")
         
         # Truncate long queries in logs to reduce noise
-        _q = logging.truncate_str(query, max_len=200)
+        _q = app_logging.truncate_str(query, max_len=200)
         logger.info(f"Searching articles with query: '{_q}' (max: {max_results})")
         
         # Build request parameters
@@ -134,7 +134,7 @@ class NewsApiClient:
         # Execute request with retry logic
         return self._execute_request("all", params)
     
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def vector_search(self, vector_query: str, max_results: int = 10) -> Dict[str, Any]:
         """
         Perform a vector search using the news API.
@@ -157,7 +157,7 @@ class NewsApiClient:
             raise ValueError("Vector query cannot be empty")
         
         # Truncate long vector queries in logs to reduce noise
-        _vq = logging.truncate_str(vector_query, max_len=200)
+        _vq = app_logging.truncate_str(vector_query, max_len=200)
         logger.info(f"Performing vector search with query: '{_vq}' (max: {max_results})")
         
         # Build request parameters
@@ -170,7 +170,7 @@ class NewsApiClient:
         # Execute request with retry logic
         return self._execute_request("semantic", params)
     
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def _execute_request(self, endpoint: str, params: Dict[str, Any]) -> Dict[str, Any]:
         """
         Execute a request to the news API with rate limiting and retries.
@@ -266,7 +266,7 @@ class NewsApiClient:
         # This should not be reached due to the exception handling above
         raise NewsApiError("Maximum retries exceeded")
     
-    @logging.log_execution(logger)
+    @app_logging.log_execution(logger)
     def _apply_rate_limit(self) -> None:
         """
         Apply rate limiting to prevent API abuse.
@@ -290,8 +290,8 @@ if __name__ == "__main__":
     try:
         # Set up simple logging for direct execution
         import logging
-        logging.basicConfig(
-            level=logging.INFO,
+        app_logging.basicConfig(
+            level=app_logging.INFO,
             format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
         )
         

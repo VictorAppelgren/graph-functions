@@ -29,8 +29,8 @@ if PROJECT_ROOT not in sys.path:
 
 # Import local modules (now using perigon, not news_ingestion)
 from perigon.ingestion_orchestrator import NewsIngestionOrchestrator
-from utils import logging
-logger = logging.get_logger(__name__)
+from utils import app_logging
+logger = app_logging.get_logger(__name__)
 
 
 def main():
@@ -46,10 +46,10 @@ def main():
     
     # Set up logging level based on debug flag
     if args.debug:
-        logging.getLogger().setLevel(logging.DEBUG)
+        app_logging.getLogger().setLevel(app_logging.DEBUG)
         logger.debug("Debug mode enabled")
     else:
-        logging.getLogger().setLevel(logging.INFO)
+        app_logging.getLogger().setLevel(app_logging.INFO)
     
     try:
         logger.info("Starting news ingestion pipeline")

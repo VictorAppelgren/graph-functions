@@ -13,9 +13,9 @@ from graph_utils.get_all_nodes import get_all_nodes
 from graph_relationships.find_relationships import find_influences_and_correlates
 from graph_relationships.remove_link import remove_link
 from graph_relationships.get_existing_links import get_existing_links
-from utils import logging
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def test_relationship_finder():
     nodes = get_all_nodes()

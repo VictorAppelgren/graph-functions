@@ -1,15 +1,15 @@
 """
 LLM-driven summarization of articles for news ingestion.
 """
-from model_config import get_medium_llm
+from llm.llm_router import get_medium_llm
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
-from utils import logging
-from utils.logging import truncate_str
-from argos_description import SYSTEM_MISSION, SYSTEM_CONTEXT
-from utils.article_text_formatter import extract_text_from_json_article
+from utils import app_logging
+from utils.app_logging import truncate_str
+from llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from articles.article_text_formatter import extract_text_from_json_article
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 # Simple module-level cache for LLM chain
 _cached_chain = None

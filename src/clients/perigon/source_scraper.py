@@ -21,9 +21,9 @@ import httpx
 import trafilatura
 
 from . import config
-from utils import logging
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 USER_AGENT = config.USER_AGENT
 MIN_WORDS_OK = 100

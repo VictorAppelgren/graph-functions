@@ -11,9 +11,9 @@ if PROJECT_ROOT not in sys.path:
 import random
 from graph_utils.get_all_nodes import get_all_nodes
 from graph_nodes.topic_priority_classifier import classify_topic_importance
-from utils import logging
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def test_time_importance():
     nodes = get_all_nodes()

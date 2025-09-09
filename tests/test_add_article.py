@@ -8,7 +8,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import logging
-logging.basicConfig(level=logging.INFO)
+app_logging.basicConfig(level=app_logging.INFO)
 
 import sys
 sys.path.insert(0, "..")
@@ -16,9 +16,9 @@ sys.path.insert(0, "..")
 import json
 import random
 from graph_articles.add_article import add_article
-from utils import logging
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def find_latest_day_folder(base_dir):
     days = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]

@@ -10,12 +10,12 @@ if PROJECT_ROOT not in sys.path:
 
 import random
 from graph_utils.get_all_nodes import get_all_nodes
-from func_analysis.analysis_rewriter import analysis_rewriter
-from func_analysis.should_rewrite import should_rewrite
-from graph_db.db_driver import run_cypher
-from utils import logging
+from analysis.orchestration.analysis_rewriter import analysis_rewriter
+from analysis.orchestration.should_rewrite import should_rewrite
+from graph.neo4j_client import run_cypher
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def test_should_rewrite():
     """Test the should_rewrite trigger function"""

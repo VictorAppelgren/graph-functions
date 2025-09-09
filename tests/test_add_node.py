@@ -10,12 +10,12 @@ PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from utils.load_article import load_article
+from articles.load_article import load_article
 from graph_nodes.add_node import add_node
-from utils import logging
+from utils import app_logging
 from paths import get_raw_news_dir
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def test_add_node():
     raw_base = get_raw_news_dir()  # base raw_news directory

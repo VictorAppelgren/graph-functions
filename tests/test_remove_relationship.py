@@ -7,13 +7,13 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from utils import logging
+from utils import app_logging
 from graph_utils.get_all_nodes import get_all_nodes
 from graph_relationships.remove_link import remove_link
 from graph_relationships.get_existing_links import get_existing_links
 from graph_relationships.llm_select_link_to_remove import llm_select_link_to_remove
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 def interactive_propose_and_remove():
     """
@@ -23,10 +23,10 @@ def interactive_propose_and_remove():
     3) Build candidates and call LLM to pick weakest link; show motivation.
     4) Auto-remove and persist full context (no second y/N).
     """
-    from user_anchor_nodes import USER_ANCHOR_NODES
+    from graph.core.user_anchors import USER_ANCHOR_NODES
 
-    logging.getLogger('graph_relationships.get_existing_links').setLevel(logging.INFO)
-    logging.getLogger('graph_relationships.add_link').setLevel(logging.INFO)
+    app_logging.getLogger('graph_relationships.get_existing_links').setLevel(app_logging.INFO)
+    app_logging.getLogger('graph_relationships.add_link').setLevel(app_logging.INFO)
 
     anchor_ids = {n.get('id') for n in USER_ANCHOR_NODES}
     nodes = get_all_nodes()

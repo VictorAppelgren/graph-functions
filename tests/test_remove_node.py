@@ -6,10 +6,10 @@ PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from utils import logging
+from utils import app_logging
 from graph_utils.get_all_nodes import get_all_nodes
 from graph_nodes.remove_node import remove_node
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 ASSET = "Taylor Swift: The Life of a Showgirl"
 

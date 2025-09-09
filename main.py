@@ -18,7 +18,7 @@ import random
 import time
 import math
 import runpy
-from func_add_topic.priority_policy import PRIORITY_POLICY
+from graph.policies.priority_policy import PRIORITY_POLICY
 
 # Canonical import pattern: ensure project root (directory containing this main.py) is on sys.path
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -30,14 +30,14 @@ if PROJECT_ROOT not in sys.path:
 # Import from V1 using absolute imports
 from graph_utils.get_all_nodes import get_all_nodes
 from perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
-from utils import logging
-from utils.pipeline_logging import master_log
-from utils.query_overdue_seconds import query_overdue_seconds
-from graph_db.db_driver import run_cypher
-from entry_point_enrich_topic.topic_enrichment import backfill_topic_from_storage
+from utils import app_logging
+from observability.pipeline_logging import master_log
+from graph.scheduling.query_overdue import query_overdue_seconds
+from graph.neo4j_client import run_cypher
+from worker.workflows.topic_enrichment import backfill_topic_from_storage
 
 # Configure logging
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 
 

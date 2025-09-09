@@ -10,10 +10,10 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from graph_utils.get_topic_id_by_name import get_topic_id_by_name
-from func_analysis.report_aggregator import aggregate_reports
-from utils import logging
+from analysis.utils.report_aggregator import aggregate_reports
+from utils import app_logging
 
-logger = logging.get_logger(__name__)
+logger = app_logging.get_logger(__name__)
 
 # --- CONFIG ---
 ASSET = "S&P 500"
