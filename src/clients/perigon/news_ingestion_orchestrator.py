@@ -12,7 +12,6 @@ Following the simplified approach, it focuses only on:
 """
 import os
 import sys
-import logging
 
 # Canonical import pattern to ensure absolute imports work everywhere
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -28,15 +27,15 @@ from typing import Dict, List, Any
 # Import local modules
 from src.clients.perigon.query_eurusd import get_query as query1
 from src.clients.perigon.query_ai_data import get_query as query2
-from perigon.news_api_client import NewsApiClient
-from perigon.raw_storage_manager import RawStorageManager
-from perigon.source_scraper import scrape_article_and_sources_sync, is_article_good
-from perigon.text_summarizer import summarize_article
+from src.clients.perigon.news_api_client import NewsApiClient
+from src.clients.perigon.raw_storage_manager import RawStorageManager
+from src.clients.perigon.source_scraper import scrape_article_and_sources_sync, is_article_good
+from src.clients.perigon.text_summarizer import summarize_article
 
 # Set up logger for this module
 from utils import app_logging
 logger = app_logging.get_logger("news_ingestion_orchestrator")
-from observability.pipeline_logging import master_log, master_log_error, problem_log
+from src.observability.pipeline_logging import master_log, master_log_error, problem_log
 
 
 def set_third_party_log_levels(debug: bool) -> None:

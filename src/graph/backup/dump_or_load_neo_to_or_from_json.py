@@ -39,7 +39,7 @@ if PROJECT_ROOT not in sys.path:
 import json
 from datetime import datetime
 from neo4j import GraphDatabase
-from graph.neo4j_client import connect_graph_db, NEO4J_DATABASE
+from src.graph.neo4j_client import connect_graph_db, NEO4J_DATABASE
 
 # Dump directory anchored next to this script
 DUMPS_DIR = os.path.join(os.path.dirname(__file__), "dumps")

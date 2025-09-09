@@ -4,24 +4,19 @@ For Topic nodes, uses LLM to propose all required fields.
 For Article nodes, extracts properties directly from article data.
 """
 from utils import app_logging
-from graph.neo4j_client import connect_graph_db
-from llm.llm_router import get_complex_llm
-from langchain_core.output_parsers import JsonOutputParser
-import random
-import string
-from articles.load_article import load_article
-from articles.article_text_formatter import extract_text_from_json_article
+from src.articles.load_article import load_article
+from src.articles.article_text_formatter import extract_text_from_json_article
 from datetime import datetime, timezone
-from graph_nodes.topic_priority_classifier import classify_topic_importance
-from graph_nodes.topic_relevance_gate import check_topic_relevance
-from graph_nodes.topic_category_classifier import classify_topic_category
-from observability.pipeline_logging import problem_log, master_log
-from graph_nodes.create_query import create_wide_query
-from graph_nodes.propose_new_topic_node import propose_topic_node
-from graph_utils.create_topic_node import create_topic_node
-from demo_functions.topic_capacity_guard_llm import decide_topic_capacity
-from graph_utils.get_all_nodes import get_all_nodes
-from graph.neo4j_client import run_cypher
+from src.graph.policies.topic_priority import classify_topic_importance
+from src.graph.policies.topic_relevance import check_topic_relevance
+from src.graph.policies.topic_category import classify_topic_category
+from src.observability.pipeline_logging import problem_log, master_log
+from src.analysis.policies.query_generator import create_wide_query
+from src.analysis.policies.topic_proposal import propose_topic_node
+from src.graph.ops.create_topic_node import create_topic_node
+from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.neo4j_client import run_cypher
 
 logger = app_logging.get_logger(__name__)
 

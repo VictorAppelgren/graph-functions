@@ -2,9 +2,6 @@
 Selects the best articles for a node and time frame for analysis rewriting.
 """
 from typing import List, Dict
-
-import sys, os
-from typing import List, Dict
 from src.graph.neo4j_client import run_cypher
 
 from utils import app_logging

@@ -15,7 +15,6 @@ Usage:
 
 import argparse
 import sys
-import logging
 from datetime import datetime
 
 # --- Canonical import block for absolute imports (Argos_Graph_v1.md) ---
@@ -28,7 +27,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 # Import local modules (now using perigon, not news_ingestion)
-from perigon.ingestion_orchestrator import NewsIngestionOrchestrator
+from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 from utils import app_logging
 logger = app_logging.get_logger(__name__)
 

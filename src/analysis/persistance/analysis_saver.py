@@ -1,16 +1,11 @@
 """
 Saves updated analysis fields to the graph DB for a node.
 """
-from typing import Dict
-
-import sys, os
 from src.graph.neo4j_client import run_cypher
 
 from utils import app_logging
 from src.observability.pipeline_logging import master_log
 logger = app_logging.get_logger(__name__)
-
-from datetime import datetime
 
 def save_analysis(node_id: str, field: str, text: str):
     """

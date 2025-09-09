@@ -73,12 +73,12 @@ def _get_logfile():
     return os.path.join(LOG_DIR, f"master_{datetime.now().strftime('%Y-%m-%d')}.log")
 
 import json
-from graph_utils.graph_stats import get_graph_state_snapshot
-from graph_utils.graph_stats import record_zero_result_problem
-from graph_utils.graph_stats import record_topic_rejection
-from graph_utils.graph_stats import record_rewrites_skipped_zero_articles
-from graph_utils.graph_stats import record_no_replacement_candidates
-from graph_utils.graph_stats import record_missing_analysis_fields
+from src.graph.ops.graph_stats import get_graph_state_snapshot
+from src.graph.ops.graph_stats import record_zero_result_problem
+from src.graph.ops.graph_stats import record_topic_rejection
+from src.graph.ops.graph_stats import record_rewrites_skipped_zero_articles
+from src.graph.ops.graph_stats import record_no_replacement_candidates
+from src.graph.ops.graph_stats import record_missing_analysis_fields
 
 def _get_statsfile():
     os.makedirs(STATS_DIR, exist_ok=True)

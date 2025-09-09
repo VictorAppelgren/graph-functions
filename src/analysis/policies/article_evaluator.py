@@ -2,7 +2,7 @@
 LLM-driven helper to decide if a new article should replace an existing one for a topic node.
 Returns a dict with 'motivation' and 'id_to_replace'.
 """
-from typing import List, Dict, Optional
+from typing import Dict, Optional
 from src.llm.llm_router import get_medium_llm
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
@@ -17,7 +17,7 @@ MAX_PER_TIMEFRAME = 10
 
 def does_article_replace_old_llm(
     new_article_summary: str,
-    existing_articles: List[Dict],
+    existing_articles: list[Dict],
     test: bool = False,
     decision_instruction: str = "",
     context_text: Optional[str] = None,

@@ -10,8 +10,8 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from utils import app_logging
-from graph.neo4j_client import run_cypher
-from analysis.orchestration.should_rewrite import should_rewrite
+from src.graph.neo4j_client import run_cypher
+from src.analysis.orchestration.should_rewrite import should_rewrite
 
 logger = app_logging.get_logger(__name__)
 

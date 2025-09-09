@@ -9,8 +9,8 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import random
-from graph_utils.get_all_nodes import get_all_nodes
-from graph_nodes.topic_priority_classifier import classify_topic_importance
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.policies.topic_priority import classify_topic_importance
 from utils import app_logging
 
 logger = app_logging.get_logger(__name__)

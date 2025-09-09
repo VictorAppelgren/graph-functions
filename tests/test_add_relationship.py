@@ -9,10 +9,8 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import random
-from graph_utils.get_all_nodes import get_all_nodes
-from graph_relationships.find_relationships import find_influences_and_correlates
-from graph_relationships.remove_link import remove_link
-from graph_relationships.get_existing_links import get_existing_links
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.find_link import find_influences_and_correlates
 from utils import app_logging
 
 logger = app_logging.get_logger(__name__)

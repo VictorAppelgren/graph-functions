@@ -13,11 +13,10 @@ if PROJECT_ROOT not in sys.path:
 
 import json
 from utils.app_logging import get_logger
-from pathlib import Path
 from typing import Dict, Any
 from datetime import datetime, timedelta
 
-from paths import get_data_dir, get_raw_news_dir
+from paths import get_raw_news_dir
 
 logger = get_logger(__name__)
 

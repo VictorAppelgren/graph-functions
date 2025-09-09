@@ -1,4 +1,4 @@
-from graph.neo4j_client import connect_graph_db
+from src.graph.neo4j_client import connect_graph_db
 from typing import Dict
 from utils import app_logging
 

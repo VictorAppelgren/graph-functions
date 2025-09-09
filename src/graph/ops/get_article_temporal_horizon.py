@@ -1,4 +1,4 @@
-from graph.neo4j_client import run_cypher
+from src.graph.neo4j_client import run_cypher
 
 def get_article_temporal_horizon(article_id: str) -> str:
     """

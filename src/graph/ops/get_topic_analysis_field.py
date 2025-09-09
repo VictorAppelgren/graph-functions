@@ -1,4 +1,4 @@
-from graph.neo4j_client import run_cypher
+from src.graph.neo4j_client import run_cypher
 
 def get_topic_analysis_field(topic_id: str, field: str) -> str:
     """

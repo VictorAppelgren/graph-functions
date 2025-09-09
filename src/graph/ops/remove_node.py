@@ -3,9 +3,9 @@ Remove a Topic node from the graph by id, detaching all relationships.
 Stateless, minimal, and fail-fast per project principles.
 """
 from utils import app_logging
-from graph.neo4j_client import run_cypher
+from src.graph.neo4j_client import run_cypher
 from events.classifier import EventClassifier
-from observability.pipeline_logging import master_log
+from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 

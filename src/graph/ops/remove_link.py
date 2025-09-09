@@ -1,12 +1,12 @@
 
 from typing import Optional
 
-from graph.neo4j_client import connect_graph_db
+from src.graph.neo4j_client import connect_graph_db
 from utils import app_logging
-from observability.pipeline_logging import master_log, master_log_error
+from src.observability.pipeline_logging import master_log, master_log_error
 from events.classifier import EventClassifier
-from func_add_relationships.get_links import get_existing_links
-from graph.policies.link_removal import llm_select_link_to_remove
+from src.graph.ops.get_links import get_existing_links
+from src.graph.policies.link_removal import llm_select_link_to_remove
 
 logger = app_logging.get_logger(__name__)
 

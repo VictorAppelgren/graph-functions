@@ -10,7 +10,7 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from llm.llm_router import get_simple_llm, get_medium_llm, get_complex_llm, get_simple_long_context_llm
+from src.llm.llm_router import get_simple_llm, get_medium_llm, get_complex_llm, get_simple_long_context_llm
 from langchain_core.prompts import PromptTemplate
 
 def test_simple_llm():

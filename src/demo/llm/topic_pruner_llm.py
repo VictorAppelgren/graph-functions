@@ -15,14 +15,14 @@ if _PROJECT_ROOT not in sys.path:
     sys.path.insert(0, _PROJECT_ROOT)
 
 from utils import app_logging
-from graph_utils.get_all_nodes import get_all_nodes
-from graph_nodes.remove_node import remove_node
-from graph.config import MAX_TOPICS, describe_interest_areas
-from llm.llm_router import get_medium_llm
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.remove_node import remove_node
+from src.graph.config import MAX_TOPICS, describe_interest_areas
+from src.llm.llm_router import get_medium_llm
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
  

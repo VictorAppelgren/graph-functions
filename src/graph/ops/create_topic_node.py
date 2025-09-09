@@ -1,9 +1,9 @@
 """
 Utility to create a Topic node in the graph DB with required properties. Returns the created node as a dict.
 """
-from graph.neo4j_client import connect_graph_db
+from src.graph.neo4j_client import connect_graph_db
 from utils import app_logging
-from graph_utils.check_if_node_exists import check_if_node_exists
+from src.graph.ops.node_exists import check_if_node_exists
 
 logger = app_logging.get_logger(__name__)
 

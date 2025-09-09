@@ -3,7 +3,6 @@ Type definitions for Neo4j query results and graph entities.
 Provides strong typing for better code clarity and IDE support.
 """
 from typing import TypedDict, Any, Optional, Union, List
-from datetime import datetime
 
 # Basic Neo4j record type
 Neo4jRecord = dict[str, Any]

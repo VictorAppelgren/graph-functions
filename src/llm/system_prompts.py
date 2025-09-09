@@ -2,7 +2,7 @@
 # Shared system strings for all prompts (exactly two), kept minimal and universal.
 # SYSTEM_CONTEXT dynamically includes Interest Areas from graph_config.describe_interest_areas().
 
-from graph.config import describe_interest_areas
+from src.graph.config import describe_interest_areas
 
 SYSTEM_MISSION = """
 You are Argos — an uncompromising, LLM-driven Neo4j world model for institutional macro trading.

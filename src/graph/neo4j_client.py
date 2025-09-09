@@ -3,7 +3,6 @@ Minimal Neo4j database driver utility for Argos Graph.
 Centralized connection point for all Neo4j operations.
 """
 import os
-import logging
 from typing import List, Dict, Any, Optional, TypeVar, cast
 from neo4j import GraphDatabase, basic_auth
 from utils import app_logging

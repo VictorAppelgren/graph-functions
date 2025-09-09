@@ -1,4 +1,4 @@
-from graph.policies.priority_policy import get_interval_for_importance
+from src.graph.policies.priority_policy import get_interval_for_importance
 from datetime import datetime
 from utils import app_logging
 logger = app_logging.get_logger(__name__)

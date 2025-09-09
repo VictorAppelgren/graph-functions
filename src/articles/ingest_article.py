@@ -1,15 +1,15 @@
-from articles.load_article import load_article
-from observability.pipeline_logging import master_log
-from articles.article_text_formatter import extract_text_from_json_article
-from graph_utils.get_all_nodes import get_all_nodes
-from analysis.policies.node_identifier import find_node_mapping
-from analysis.policies.category_identifier import find_category
-from analysis.policies.impact_identifier import find_impact
-from analysis.policies.time_frame_identifier import find_time_frame
-from graph.neo4j_client import run_cypher
+from src.articles.load_article import load_article
+from src.observability.pipeline_logging import master_log
+from src.articles.article_text_formatter import extract_text_from_json_article
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.analysis.policies.node_identifier import find_node_mapping
+from src.analysis.policies.category_identifier import find_category
+from src.analysis.policies.impact_identifier import find_impact
+from src.analysis.policies.time_frame_identifier import find_time_frame
+from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
-from func_add_relationships.find_link import find_influences_and_correlates
-from analysis.orchestration.replace_article_orchestrator import does_article_replace_old
+from src.graph.ops.find_link import find_influences_and_correlates
+from src.analysis.orchestration.replace_article_orchestrator import does_article_replace_old
 
 logger = get_logger(__name__)
 

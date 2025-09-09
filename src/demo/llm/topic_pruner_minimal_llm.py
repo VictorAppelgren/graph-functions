@@ -23,10 +23,10 @@ import json
 from datetime import datetime, date
 
 from utils import app_logging
-from graph_utils.get_all_nodes import get_all_nodes
-from graph_nodes.remove_node import remove_node
-from llm.llm_router import get_medium_llm
-from llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.remove_node import remove_node
+from src.llm.llm_router import get_medium_llm
+from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser

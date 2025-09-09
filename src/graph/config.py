@@ -1,6 +1,5 @@
 # graph_config.py
 import os
-from datetime import datetime
 
 # Max number of topics allowed (unified capacity limit).
 # Can be overridden with env var MAX_TOPICS.

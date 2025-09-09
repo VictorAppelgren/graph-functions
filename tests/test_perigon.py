@@ -7,7 +7,7 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
+from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 
 def test_perigon():
     orchestrator = NewsIngestionOrchestrator(debug=True)

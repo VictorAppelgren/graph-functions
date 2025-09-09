@@ -1,7 +1,6 @@
 # Minimal test for add_node
 import os
 import sys
-import json
 import random
 
 # Ensure project root (V1) is on sys.path when running from tests/
@@ -10,8 +9,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from articles.load_article import load_article
-from graph_nodes.add_node import add_node
+from src.articles.load_article import load_article
+from src.graph.ops.add_node import add_node
 from utils import app_logging
 from paths import get_raw_news_dir
 

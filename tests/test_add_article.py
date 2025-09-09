@@ -7,7 +7,6 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-import logging
 app_logging.basicConfig(level=app_logging.INFO)
 
 import sys
@@ -15,7 +14,7 @@ sys.path.insert(0, "..")
 
 import json
 import random
-from graph_articles.add_article import add_article
+from src.articles.ingest_article import add_article
 from utils import app_logging
 
 logger = app_logging.get_logger(__name__)

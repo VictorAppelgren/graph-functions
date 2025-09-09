@@ -9,8 +9,8 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import random
-from graph_utils.get_all_nodes import get_all_nodes
-from analysis.policies.keyword_generator import generate_keywords
+from src.graph.ops.get_all_nodes import get_all_nodes
+from src.analysis.policies.keyword_generator import generate_keywords
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from worker.workflows.topic_enrichment import collect_candidates_by_keywords
 from utils import app_logging

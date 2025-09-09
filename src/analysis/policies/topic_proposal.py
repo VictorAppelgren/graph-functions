@@ -5,11 +5,8 @@ from src.llm.llm_router import get_medium_llm
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
-from utils.app_logging import truncate_str
 from src.graph.config import MAX_TOPICS, describe_interest_areas
 from src.graph.ops.get_all_nodes import get_all_nodes
-import random
-import string
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)

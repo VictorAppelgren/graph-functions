@@ -1,7 +1,6 @@
 """
 Utility functions for graph node operations: get, save, subnodes, and attached articles.
 """
-from typing import Dict, List
 
 def get_node(node_id: str) -> dict:
     """

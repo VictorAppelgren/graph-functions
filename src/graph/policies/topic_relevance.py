@@ -7,12 +7,12 @@ LLM-based trading relevance gate for proposed Topic nodes.
 
 Design goals: minimal, fail-fast, reusable (pre-insert and for cleanup scripts).
 """
-from llm.llm_router import get_simple_llm
+from src.llm.llm_router import get_simple_llm
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from utils.app_logging import truncate_str
-from llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
 

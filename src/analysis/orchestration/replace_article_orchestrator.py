@@ -2,7 +2,7 @@
 Orchestrator: decides if a new article should replace an existing one for a topic node.
 Fetches articles, calls does_article_replace_old_llm, handles DB replacement, and triggers should_rewrite if needed.
 """
-from typing import Dict, List
+from typing import Dict
 from src.analysis.policies.article_evaluator import does_article_replace_old_llm
 from src.analysis.orchestration.should_rewrite import should_rewrite
 from src.graph.neo4j_client import run_cypher

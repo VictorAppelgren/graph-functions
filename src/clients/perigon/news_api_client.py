@@ -16,7 +16,7 @@ from datetime import datetime
 from . import config
 
 from utils import app_logging
-from observability.pipeline_logging import master_log_error
+from src.observability.pipeline_logging import master_log_error
 logger = app_logging.get_logger(__name__)
 
 
