@@ -9,7 +9,7 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from graph_utils.get_topic_id_by_name import get_topic_id_by_name
+from src.graph.ops.get_topic_id_by_name import get_topic_id_by_name
 from analysis.utils.report_aggregator import aggregate_reports
 from utils import app_logging
 
