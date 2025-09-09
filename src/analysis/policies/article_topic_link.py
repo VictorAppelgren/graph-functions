@@ -1,7 +1,7 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from llm.llm_router import get_medium_llm
-from llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.llm_router import get_medium_llm
+from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
 
 logger = get_logger(__name__)

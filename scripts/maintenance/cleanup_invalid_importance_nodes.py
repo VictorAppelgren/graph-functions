@@ -15,9 +15,9 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from utils import app_logging
-from graph.neo4j_client import run_cypher
-from graph_nodes.remove_node import remove_node
-from observability.pipeline_logging import master_log
+from src.graph.neo4j_client import run_cypher
+from src.graph.ops.remove_node import remove_node
+from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 

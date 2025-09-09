@@ -3,17 +3,17 @@ Orchestrator: decides if a new article should replace an existing one for a topi
 Fetches articles, calls does_article_replace_old_llm, handles DB replacement, and triggers should_rewrite if needed.
 """
 from typing import Dict, List
-from analysis.policies.article_evaluator import does_article_replace_old_llm
-from analysis.orchestration.should_rewrite import should_rewrite
-from graph.neo4j_client import run_cypher
-from articles.load_article import load_article
+from src.analysis.policies.article_evaluator import does_article_replace_old_llm
+from src.analysis.orchestration.should_rewrite import should_rewrite
+from src.graph.neo4j_client import run_cypher
+from src.articles.load_article import load_article
 from utils import app_logging
-from observability.pipeline_logging import master_log, problem_log
+from src.observability.pipeline_logging import master_log, problem_log
 from events.classifier import EventClassifier
 logger = app_logging.get_logger(__name__)
 
-from graph_utils.get_article_temporal_horizon import get_article_temporal_horizon
-from analysis.policies.time_frame_identifier import find_time_frame
+from src.graph.ops.get_article_temporal_horizon import get_article_temporal_horizon
+from src.analysis.policies.time_frame_identifier import find_time_frame
 
 # Per-timeframe policy (simple defaults, aligned with LLM helper)
 MIN_PER_TIMEFRAME = 5

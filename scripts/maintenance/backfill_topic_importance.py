@@ -12,9 +12,9 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from utils import app_logging
-from graph.neo4j_client import connect_graph_db
-from graph_nodes.topic_priority_classifier import classify_topic_importance
-from graph_nodes.remove_node import remove_node
+from src.graph.neo4j_client import connect_graph_db
+from src.graph.policies.topic_priority import classify_topic_importance
+from src.graph.ops.remove_node import remove_node
 
 logger = app_logging.get_logger(__name__)
 

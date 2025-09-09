@@ -1,18 +1,18 @@
 # analysis/should_rewrite.py
 
 from typing import Dict
-from analysis.policies.should_rewrite import should_rewrite_llm
-from analysis.orchestration.analysis_rewriter import analysis_rewriter
-from graph.neo4j_client import run_cypher
+from src.analysis.policies.should_rewrite import should_rewrite_llm
+from src.analysis.orchestration.analysis_rewriter import analysis_rewriter
+from src.graph.neo4j_client import run_cypher
 from utils import app_logging
-from articles.load_article import load_article
-from observability.pipeline_logging import master_log
-from observability.pipeline_logging import master_statistics
-from observability.pipeline_logging import problem_log
+from src.articles.load_article import load_article
+from src.observability.pipeline_logging import master_log
+from src.observability.pipeline_logging import master_statistics
+from src.observability.pipeline_logging import problem_log
 
 # NEW imports for TF handling
-from graph_utils.get_article_temporal_horizon import get_article_temporal_horizon
-from analysis.policies.time_frame_identifier import find_time_frame
+from src.graph.ops.get_article_temporal_horizon import get_article_temporal_horizon
+from src.analysis.policies.time_frame_identifier import find_time_frame
 
 logger = app_logging.get_logger(__name__)
 

@@ -1,9 +1,9 @@
 from typing import List
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from llm.llm_router import get_simple_llm
-from llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from analysis.orchestration.analysis_rewriter import SECTION_FOCUS
+from src.llm.llm_router import get_simple_llm
+from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
 
 from utils.app_logging import get_logger
 logger = get_logger("generate_keywords_llm")

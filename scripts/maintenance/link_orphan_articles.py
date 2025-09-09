@@ -20,9 +20,9 @@ if PROJECT_ROOT not in sys.path:
     
 
 from utils.app_logging import get_logger
-from graph.neo4j_client import run_cypher
-from graph_articles.add_article import add_article
-from observability.pipeline_logging import master_log, master_log_error
+from src.graph.neo4j_client import run_cypher
+from src.articles.ingest_article import add_article
+from src.observability.pipeline_logging import master_log, master_log_error
 
 logger = get_logger(__name__)
 

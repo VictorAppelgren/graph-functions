@@ -7,7 +7,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
     
 # backfill_scripts/count_topics_by_importance.py
-from graph.neo4j_client import connect_graph_db
+from src.graph.neo4j_client import connect_graph_db
 
 def count_by_importance():
     driver = connect_graph_db()

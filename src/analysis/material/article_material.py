@@ -11,8 +11,8 @@ from typing import List, Tuple, Dict, Any
 from utils import app_logging
 logger = app_logging.get_logger(__name__)
 
-from analysis.selectors.best_articles import select_best_articles
-from articles.load_article import load_article
+from src.analysis.selectors.best_articles import select_best_articles
+from src.articles.load_article import load_article
  
 
 def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[str]]:

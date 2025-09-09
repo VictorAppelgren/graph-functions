@@ -5,7 +5,7 @@ from typing import List, Dict
 
 import sys, os
 from typing import List, Dict
-from graph.neo4j_client import run_cypher
+from src.graph.neo4j_client import run_cypher
 
 from utils import app_logging
 logger = app_logging.get_logger(__name__)
