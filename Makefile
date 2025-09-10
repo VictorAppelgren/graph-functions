@@ -33,11 +33,10 @@ help:
 # Installation
 install:
 	@echo "📦 Installing core dependencies..."
-	pip install -r requirements.txt
+	pip install -e .
 
 install-dev:
 	@echo "📦 Installing development dependencies..."
-	pip install -r requirements.txt
 	pip install -e ".[dev]"
 	pre-commit install
 

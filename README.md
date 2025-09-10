@@ -26,7 +26,7 @@ Saga Graph automatically ingests news, maps articles to financial topics, update
 
 3. **Run automated setup:**
    ```bash
-   ./scripts/setup.sh
+   ./setup.sh
    ```
 
 4. **Test with a sample report:**
@@ -53,7 +53,7 @@ The system follows these key flows:
 ### Dependencies
 - **Neo4j 5.x** - Graph database for topics, articles, and relationships
 - **LangChain** - LLM orchestration and JSON parsing
-- **Python 3.11+** - Locked dependencies in `requirements.txt`
+- **Python 3.11+** - Dependencies managed in `pyproject.toml`
 - **LLM Providers** - OpenAI, Anthropic, or Ollama for analysis
 
 ---

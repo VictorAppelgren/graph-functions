@@ -78,13 +78,14 @@ setup_python_env() {
     echo "Upgrading pip and installing build tools..."
     python -m pip install -U pip wheel setuptools
     
-    # Install requirements
-    if [ -f "config/requirements.txt" ]; then
-        echo "Installing requirements from config/requirements.txt..."
-        pip install -r config/requirements.txt
-        print_success "Requirements installed successfully!"
+    # Install dependencies from pyproject.toml
+    if [ -f "pyproject.toml" ]; then
+        echo "Installing dependencies from pyproject.toml..."
+        pip install -e .
+        print_success "Dependencies installed successfully!"
     else
-        print_warning "config/requirements.txt not found"
+        print_error "pyproject.toml not found - cannot install dependencies"
+        exit 1
     fi
 }
 
@@ -240,7 +241,7 @@ run_type_checks() {
     # Check if MyPy is available
     if ! python -c "import mypy" 2>/dev/null; then
         print_warning "MyPy not found - installing development dependencies"
-        pip install mypy types-requests
+        pip install -e ".[dev]"
     fi
     
     # Run type checking on core modules

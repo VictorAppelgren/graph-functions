@@ -31,12 +31,13 @@ This guide gets you from zero to a working Saga Graph environment on macOS.
 
 3. **Run the automated setup:**
    ```bash
-   ./scripts/setup.sh
+   ./setup.sh
    ```
 
 The script will:
 - ✅ Check Python 3.11+ is installed
-- ✅ Create `.venv` virtual environment with locked dependencies
+- ✅ Create `.venv` virtual environment 
+- ✅ Install all dependencies from `pyproject.toml`
 - ✅ Validate all required environment variables
 - ✅ Test Neo4j connectivity
 - ✅ Test LLM provider connection
@@ -96,12 +97,22 @@ export ARGOS_SIMPLE_MODEL=gpt-4o-mini
 ```
 
 ### 4) Python environment and dependencies
-Create an isolated environment and install requirements:
+Create an isolated environment and install dependencies:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -U pip wheel setuptools
-pip install -r config/requirements.txt
+pip install -e .
+```
+
+For development dependencies (type checking, pre-commit):
+```bash
+pip install -e ".[dev]"
+```
+
+For optional browser scraping:
+```bash
+pip install -e ".[browser]"
 ```
 
 ### 5) Neo4j database setup
@@ -164,22 +175,30 @@ python main.py
 
 ## Package Management
 
-### Dependencies with Locked Versions
-Our `requirements.txt` contains exact versions for reproducible builds:
-- Core Neo4j and LangChain dependencies
+### Modern Python Packaging
+All dependencies are now managed through `pyproject.toml` for clean, modern Python packaging:
+
+**Core dependencies:**
+- Neo4j and LangChain dependencies
 - HTTP clients (requests, httpx)  
 - Content extraction (trafilatura)
 - PDF generation (fpdf2)
+
+**Installation options:**
+```bash
+pip install -e .              # Core dependencies only
+pip install -e ".[dev]"       # + development tools (mypy, pre-commit)
+pip install -e ".[browser]"   # + Playwright for browser scraping
+```
 
 ### Python Version
 - Locked to Python 3.11.9 (see `python-version`)
 - Defined in `pyproject.toml` as `>=3.11,<3.12`
 
-### Optional: Playwright Browser Scraping
-If you need browser-based scraping fallback:
+### Browser Scraping (Optional)
+Browser-based scraping fallback via Playwright:
 ```bash
-source .venv/bin/activate
-pip install playwright
+pip install -e ".[browser]"
 playwright install chromium
 ```
 
@@ -212,7 +231,7 @@ The system defaults to static scraping (httpx + trafilatura).
 - Update pip: `python -m pip install --upgrade pip`
 - Clear cache: `pip cache purge`
 - Check Python version: `python --version` (must be 3.11+)
-- Reinstall requirements: `pip install -r requirements.txt --force-reinstall`
+- Reinstall dependencies: `pip install -e . --force-reinstall`
 
 **Content Extraction Issues:**
 - Trafilatura returns empty: Page may be JS-heavy or blocked

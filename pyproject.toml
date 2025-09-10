@@ -14,12 +14,28 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dynamic = ["version"]
+dependencies = [
+    "neo4j-driver==5.28.2",
+    "langchain==0.3.27",
+    "langchain-core==0.3.75",
+    "langchain-openai==0.3.32",
+    "langchain-anthropic==0.3.19",
+    "langchain-ollama==0.3.7",
+    "requests==2.32.5",
+    "httpx==0.28.1",
+    "trafilatura==2.0.0",
+    "fpdf2==2.8.4",
+    "neo4j==5.28.2",
+]
 
 [project.optional-dependencies]
 dev = [
     "mypy==1.8.0",
     "types-requests==2.32.0.20241016",
     "pre-commit>=3.0.0",
+]
+browser = [
+    "playwright>=1.40.0,<2.0.0",
 ]
 
 [project.urls]
@@ -43,6 +59,6 @@ warn_unused_configs = true
 show_error_codes = true
 show_column_numbers = true
 
-# Development scripts for type checking
+# Development scripts
 [project.scripts]
-typecheck = "scripts.typecheck:main"
+saga-typecheck = "scripts.typecheck:main"
