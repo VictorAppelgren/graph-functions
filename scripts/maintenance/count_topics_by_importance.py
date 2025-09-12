@@ -9,7 +9,7 @@ if PROJECT_ROOT not in sys.path:
 # backfill_scripts/count_topics_by_importance.py
 from src.graph.neo4j_client import connect_graph_db
 
-def count_by_importance():
+def count_by_importance() -> None:
     driver = connect_graph_db()
     for i in range(1, 6):
         q = f"MATCH (t:Topic) WHERE t.importance = {i} RETURN count(t) AS cnt"

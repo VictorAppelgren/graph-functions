@@ -1,11 +1,37 @@
 # graph_utils/graph_stats.py
 from __future__ import annotations
 from datetime import datetime, timezone
-from typing import List, Dict
+from typing import List, TypedDict, Any
 from src.graph.neo4j_client import run_cypher
 from src.graph.ops.get_all_nodes import get_all_nodes
 import os
 import json
+
+class Orphans(TypedDict):
+    topics: int
+    articles: int
+
+class Snapshot(TypedDict):
+    topics: int
+    topics_with_full_analysis: int
+    topics_with_full_analysis_examples: list[Any | None]
+    articles: int
+    connections: int  # adjust type if you have richer connection objects
+    about_links: int
+    inter_topic_links: int
+    unique_relationship_types: list[str]
+    orphans: Orphans
+    last_updated: str  # ISO-8601 formatted datetime string
+
+class ProblemsSection(TypedDict):
+    """Represents the 'problems' section of the stats dict."""
+    zero_result_queries: int
+    topics_zero_results: list[str]
+    topic_rejections: int
+    no_replacement_candidates: int
+    no_replacement_events: list[str]
+    missing_analysis_fields: int
+    missing_analysis_events: list[str]
 
 def _get_cnt(query: str, params: dict | None = None, key: str = "cnt") -> int:
     """Run a count query and return an int (robust to empty/no rows)."""
@@ -73,7 +99,7 @@ def get_topics_with_full_analysis_count() -> int:
         """
     )
     
-def get_graph_state_snapshot() -> Dict:
+def get_graph_state_snapshot() -> Snapshot:
     """
     Aggregate a live snapshot of core graph metrics for the daily statistics JSON.
     """
@@ -129,31 +155,30 @@ def _today_stats_path() -> str:
     """Return the path to today's statistics JSON file."""
     return os.path.join("master_stats", f"statistics_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}.json")
 
-def _load_daily_stats(path: str) -> dict:
+def _load_daily_stats(path: str) -> dict[str, str]:
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f) or {}
     if not isinstance(data, dict) or "today" not in data or "graph_state" not in data:
         raise ValueError("Daily stats malformed: missing 'today' or 'graph_state'")
     return data
 
-def _save_daily_stats(path: str, data: dict) -> None:
+def _save_daily_stats(path: str, data: dict[str, str]) -> None:
     if "today" not in data or "graph_state" not in data:
         raise ValueError("Refusing to save malformed stats: missing 'today' or 'graph_state'")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def ensure_problems_section(stats: dict) -> dict:
+def ensure_problems_section(stats: dict[str, object]) -> ProblemsSection | dict[str, object]:
     if "problems" not in stats or not isinstance(stats["problems"], dict):
-        stats["problems"] = {
-            "zero_result_queries": 0,
-            "topics_zero_results": [],
-            "topic_rejections": 0,
-            # New optional fields (created on first write if missing)
-            "no_replacement_candidates": 0,
-            "no_replacement_events": [],
-            "missing_analysis_fields": 0,
-            "missing_analysis_events": []
-        }
+        stats["problems"] = ProblemsSection(
+            zero_result_queries=0,
+            topics_zero_results=[],
+            topic_rejections=0,
+            no_replacement_candidates=0,
+            no_replacement_events=[],
+            missing_analysis_fields=0,
+            missing_analysis_events=[]
+        )
     return stats
 
 def record_zero_result_problem(topic_id: str) -> None:

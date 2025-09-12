@@ -1,6 +1,6 @@
 # analysis/should_rewrite.py
 
-from typing import Dict
+from typing import TypedDict
 from src.analysis.policies.should_rewrite import should_rewrite_llm
 from src.analysis.orchestration.analysis_rewriter import analysis_rewriter
 from src.graph.neo4j_client import run_cypher
@@ -16,7 +16,12 @@ from src.analysis.policies.time_frame_identifier import find_time_frame
 
 logger = app_logging.get_logger(__name__)
 
-def should_rewrite(topic_id: str, new_article_id: str, test: bool = False) -> Dict:
+class RewriteInfo(TypedDict):
+    should_rewrite: bool
+    motivation: str
+    section: str | None
+
+def should_rewrite(topic_id: str, new_article_id: str, test: bool = False) -> RewriteInfo:
     """
     Orchestrator: builds analysis+article text, LLM judge, targeted rewrite by temporal_horizon section.
     Returns dict: {'should_rewrite': bool, 'motivation': str, 'section': str}
@@ -79,7 +84,7 @@ def should_rewrite(topic_id: str, new_article_id: str, test: bool = False) -> Di
     return {'should_rewrite': bool(should_rewrite_flag), 'motivation': motivation, 'section': tf_section}
 
 
-def _check_and_enrich_other_sections(topic_id: str, current_section: str, test: bool = False):
+def _check_and_enrich_other_sections(topic_id: str, current_section: str, test: bool = False) -> None:
     """
     Check ALL sections for missing analysis. Handle timeframe vs non-timeframe sections differently.
     """

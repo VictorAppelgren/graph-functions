@@ -3,6 +3,8 @@ Adds new nodes (Topic, Article) to the graph and creates relationships.
 For Topic nodes, uses LLM to propose all required fields.
 For Article nodes, extracts properties directly from article data.
 """
+
+from typing import TypedDict
 from utils import app_logging
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
@@ -17,10 +19,19 @@ from src.graph.ops.create_topic_node import create_topic_node
 from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.neo4j_client import run_cypher
+from events.classifier import EventClassifier
 
 logger = app_logging.get_logger(__name__)
 
-def add_node(article_id: str, suggested_names: list = []) -> dict:
+class NodeStatus(TypedDict):
+    status: str
+    topic_name: str
+    category: None |
+    should_add: bool
+    motivation_for_relevance:
+    failure_category: str
+
+def add_node(article_id: str, suggested_names: list[str] = []) -> dict:
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
     Returns the created node as a dict.
@@ -30,7 +41,6 @@ def add_node(article_id: str, suggested_names: list = []) -> dict:
     logger.info('---------')
     
     # Minimal event tracking
-    from events.classifier import EventClassifier
     trk = EventClassifier("add_node")
     trk.put("source_article_id", article_id)
     trk.put("suggested_names", suggested_names)

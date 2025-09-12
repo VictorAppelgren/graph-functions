@@ -2,15 +2,16 @@
 Orchestrator: loops over all analysis sections for a topic, calls rewrite_analysis_llm for each, formats and saves results.
 No prompt logic here.
 """
-from typing import Dict, Optional
+from typing import Optional
 from src.analysis.writing.analysis_rewriter import rewrite_analysis_llm
 from src.analysis.persistance.analysis_saver import save_analysis
 from src.analysis.utils.driver_aggregator import aggregate_driver_analyses
-from src.analysis.material.article_material import build_material_for_section
+from src.analysis.material.article_material import build_material_for_synthesis_section
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, problem_log
 from src.graph.neo4j_client import run_cypher
 from events.classifier import EventClassifier
+from src.graph.ops.get_topic_analysis_field import get_topic_analysis_field
 import time
 logger = app_logging.get_logger(__name__)
 
@@ -75,7 +76,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
     section_summaries = []
     sections_to_run = [analysis_type] if analysis_type else SECTIONS
     run_trk.put("sections_to_run", sections_to_run)
-    analysis_results = {}
+    analysis_results: dict[str, str] = {}
     total_chars = 0
     for section in sections_to_run:
         section_focus = SECTION_FOCUS[section]
@@ -90,7 +91,6 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
         if section == "executive_summary":
             logger.info(f"writing executive_summary for topic_id={topic_id}")
             prior_sections = []
-            from graph_utils.get_topic_analysis_field import get_topic_analysis_field
             for s in ["fundamental", "medium", "current", "drivers"]:
                 if analysis_results.get(s):
                     prior_sections.append(s)
@@ -116,7 +116,6 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
         elif section == "movers_scenarios":
             logger.info(f"writing movers_scenarios for topic_id={topic_id}")
             prior_sections = []
-            from graph_utils.get_topic_analysis_field import get_topic_analysis_field
             for s in ["fundamental", "medium", "current", "drivers"]:
                 if analysis_results.get(s):
                     prior_sections.append(s)
@@ -142,7 +141,6 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
         elif section == "swing_trade_or_outlook":
             logger.info(f"writing swing_trade_or_outlook for topic_id={topic_id}")
             prior_sections = []
-            from graph_utils.get_topic_analysis_field import get_topic_analysis_field
             for s in ["fundamental", "medium", "current", "drivers", "executive_summary"]:
                 if analysis_results.get(s):
                     prior_sections.append(s)
@@ -193,7 +191,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
                 if section in ["drivers", "movers_scenarios", "swing_trade_or_outlook", "executive_summary"]:
                     material, article_ids = build_material_for_synthesis_section(topic_id, section)
                 else:
-                    material, article_ids = build_material_for_section(topic_id, section)
+                    material, article_ids = build_material_for_synthesis_section(topic_id, section)
                 sec_trk.put("article_ids", article_ids)
                 sec_trk.put("selected_articles_count", len(article_ids))
             except ValueError as e:
@@ -220,7 +218,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
                         )
                         # Retry once
                         try:
-                            material, article_ids = build_material_for_section(topic_id, section)
+                            material, article_ids = build_material_for_synthesis_section(topic_id, section)
                             sec_trk.put("article_ids", article_ids)
                             sec_trk.put("selected_articles_count", len(article_ids))
                         except ValueError:

@@ -1,7 +1,7 @@
 """
 Aggregates and merges analyses/reports from a node and its subnodes.
 """
-from typing import Dict
+from src.graph.models import Neo4jRecord
 
 from src.graph.neo4j_client import run_cypher
 from utils import app_logging
@@ -9,7 +9,7 @@ from src.analysis.orchestration.analysis_rewriter import SECTIONS
 
 logger = app_logging.get_logger(__name__)
 
-def aggregate_reports(node_id: str) -> dict:
+def aggregate_reports(node_id: str) -> dict[str, str]:
     """
     Minimal aggregator: fetch the node and return its analysis fields under
     canonical keys. No recursion, no concatenation.
@@ -39,7 +39,7 @@ def aggregate_reports(node_id: str) -> dict:
         "executive_summary": "executive_summary",
     }
 
-    report: Dict[str, str] = {}
+    report: dict[str, str] = {}
     for section in SECTIONS:
         key = property_map.get(section, section)
         val = node.get(key)

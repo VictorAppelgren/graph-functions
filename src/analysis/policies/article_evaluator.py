@@ -2,7 +2,7 @@
 LLM-driven helper to decide if a new article should replace an existing one for a topic node.
 Returns a dict with 'motivation' and 'id_to_replace'.
 """
-from typing import Dict, Optional
+from typing import Optional, Any, TypedDict
 from src.llm.llm_router import get_medium_llm
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
@@ -11,24 +11,33 @@ from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
 
+class TestParams(TypedDict):
+    motivation: str
+    tool: str
+    id: str | None
+
 # Per-timeframe policy (simple defaults)
 MIN_PER_TIMEFRAME = 5
 MAX_PER_TIMEFRAME = 10
 
 def does_article_replace_old_llm(
     new_article_summary: str,
-    existing_articles: list[Dict],
+    existing_articles: list[dict[str, Any]],
     test: bool = False,
     decision_instruction: str = "",
     context_text: Optional[str] = None,
-) -> Dict:
+) -> TestParams | Any:
     """
     Uses LLM to decide if the new article replaces any existing article for the topic.
     Each existing article is a dict with 'id' and 'argos_summary'.
     Returns a dict: {'motivation': str, 'tool': str, 'id': str or None}
     """
     if test:
-        return {'motivation': 'Test mode: no action.', 'tool': 'none', 'id': None}
+        return {
+            'motivation': 'Test mode: no action.', 
+            'tool': 'none', 
+            'id': None
+            }
     llm = get_medium_llm()
     parser = JsonOutputParser()
     summaries = "\n".join([f"- {a['id']}: {a.get('argos_summary', '')}" for a in existing_articles])

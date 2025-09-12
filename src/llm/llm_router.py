@@ -19,6 +19,10 @@ Target: SQLite-based router with multi-backend support:
 import os
 from enum import Enum
 from typing import Dict, Any
+from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
+from observability.pipeline_logging import increment_llm_usage
 
 # Set up API keys from environment variables if available
 # Otherwise, these will need to be set by the user
@@ -114,17 +118,15 @@ _LLM_RETRY_ATTEMPTS = 3      # total attempts via with_retry()
 def _build_llm(provider: str, model: str, temperature: float, base_url: str | None):
     """Construct a LangChain LLM client for the given provider (no network call)."""
     if provider == "ollama":
-        from langchain_ollama import ChatOllama
         llm = ChatOllama(
             model=model,
             temperature=temperature,
-            #num_ctx=49152,
-            num_ctn=16384,
-            timeout=int(_LLM_CALL_TIMEOUT_S),
+            num_ctx=49152,
+            #num_ctn=16384,
+            #timeout=int(_LLM_CALL_TIMEOUT_S),
         )
         return llm.with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
     elif provider == "openai":
-        from langchain_openai import ChatOpenAI
         if base_url == "" or base_url is None:
             llm = ChatOpenAI(
                 model=model,
@@ -142,7 +144,6 @@ def _build_llm(provider: str, model: str, temperature: float, base_url: str | No
             )
         return llm.with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
     elif provider == "anthropic":
-        from langchain_anthropic import ChatAnthropic
         llm = ChatAnthropic(
             model=model,
             temperature=temperature,
@@ -173,9 +174,8 @@ def get_model_config(tier: ModelTier) -> Dict[str, Any]:
             
     return config
 
-def get_llm(tier: ModelTier):
+def get_llm(tier: ModelTier) -> dict[str, ]:
     # Minimal LLM tier call counter (increments on every get_llm call)
-    from observability.pipeline_logging import increment_llm_usage
     increment_llm_usage(tier)
 
     """Get a LangChain-compatible LLM for the specified tier.

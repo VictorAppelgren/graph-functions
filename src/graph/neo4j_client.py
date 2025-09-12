@@ -4,7 +4,7 @@ Centralized connection point for all Neo4j operations.
 """
 import os
 from typing import List, Dict, Any, Optional, TypeVar, cast
-from neo4j import GraphDatabase, basic_auth
+from neo4j import GraphDatabase, basic_auth, Driver
 from utils import app_logging
 from .models import Neo4jRecord, TopicNode, ArticleNode, CountResult, IdResult, NodeExistsResult
 
@@ -17,7 +17,7 @@ NEO4J_USER = os.environ.get("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "password")
 NEO4J_DATABASE = os.environ.get("NEO4J_DATABASE", "argosgraph")
 
-def connect_graph_db():
+def connect_graph_db() -> Driver:
     """
     Creates and returns a Neo4j driver object using config from environment variables or defaults.
     Checks if the target database exists; if not, tries to create it (admin required).
@@ -51,7 +51,7 @@ def connect_graph_db():
                 import time
                 max_wait = 10  # seconds
                 interval = 0.5 # seconds
-                waited = 0
+                waited = 0.0
                 while waited < max_wait:
                     dbs_info = list(sys_session.run("SHOW DATABASES"))
                     db_status = None

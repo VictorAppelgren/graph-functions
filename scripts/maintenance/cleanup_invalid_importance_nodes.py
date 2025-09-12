@@ -18,13 +18,14 @@ from utils import app_logging
 from src.graph.neo4j_client import run_cypher
 from src.graph.ops.remove_node import remove_node
 from src.observability.pipeline_logging import master_log
+from src.graph.models import Neo4jRecord
 
 logger = app_logging.get_logger(__name__)
 
 VALID_IMPORTANCE = {1, 2, 3, 4, 5}
 
 
-def fetch_invalid_topics():
+def fetch_invalid_topics() -> list[Neo4jRecord]:
     """Return list of dicts with id, name, importance, labels for invalid Topic nodes."""
     q = (
         "MATCH (t:Topic) "
@@ -32,11 +33,11 @@ def fetch_invalid_topics():
         "RETURN t.id AS id, t.name AS name, t.importance AS importance, labels(t) AS labels "
         "ORDER BY t.id"
     )
-    rows = run_cypher(q) or []
+    rows = run_cypher(q)
     return rows
 
 
-def main():
+def main() -> None:
     logger.info("🔍 Scanning for Topic nodes with invalid importance…")
     rows = fetch_invalid_topics()
     total = len(rows)

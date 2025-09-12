@@ -79,7 +79,7 @@ template = PromptTemplate(
     ]
 )
 
-def propose_topic_node(article: dict, suggested_names: list = []) -> dict:
+def propose_topic_node(article: str, suggested_names: list = []) -> dict:
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
     Returns a dict with all required fields for insertion.

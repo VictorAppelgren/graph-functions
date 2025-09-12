@@ -7,7 +7,7 @@ from utils import app_logging
 from src.observability.pipeline_logging import master_log
 logger = app_logging.get_logger(__name__)
 
-def save_analysis(node_id: str, field: str, text: str):
+def save_analysis(node_id: str, field: str, text: str) -> None:
     """
     Writes a single updated analysis field (from the LLM) to the node in the graph DB, updating the timestamp as needed.
     Args:

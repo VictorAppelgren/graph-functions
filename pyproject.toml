@@ -62,3 +62,7 @@ show_column_numbers = true
 # Development scripts
 [project.scripts]
 saga-typecheck = "scripts.typecheck:main"
+
+[[tool.mypy.overrides]]
+module = "fpdf"
+ignore_missing_imports = true

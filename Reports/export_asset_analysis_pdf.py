@@ -10,7 +10,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from src.graph.ops.get_topic_id_by_name import get_topic_id_by_name
-from analysis.utils.report_aggregator import aggregate_reports
+from src.analysis.utils.report_aggregator import aggregate_reports
 from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
@@ -22,11 +22,7 @@ DATE = datetime.datetime.now().strftime("%Y_%m_%d")
 
 # Minimal text sanitizer for latin-1 PDF backend
 def sanitize_text(s: str) -> str:
-    if s is None:
-        return ""
-    if not isinstance(s, str):
-        s = str(s)
-    # Replace common unicode punctuation with ascii equivalents
+
     replacements = {
         "\u2013": "-",  # en dash
         "\u2014": "-",  # em dash
@@ -42,7 +38,7 @@ def sanitize_text(s: str) -> str:
     # Final guard: drop any remaining non-latin1 glyphs
     return s.encode("latin-1", errors="ignore").decode("latin-1")
 
-def get_topic_id_and_analysis(topic_name):
+def get_topic_id_and_analysis(topic_name: str) -> tuple[str, dict[str, str]]:
     """
     Deprecated wrapper. Use get_topic_id_by_name() and aggregate_reports().
     """
@@ -55,7 +51,7 @@ def get_topic_id_and_analysis(topic_name):
         raise RuntimeError(f"No analysis fields found for topic '{topic_name}' (id={topic_id})")
     return topic_id, analysis_fields
 
-def get_next_pdf_path(asset, date):
+def get_next_pdf_path(asset: str, date: str) -> str:
     base = os.path.join(PDF_DIR, f"{asset}_{date}.pdf")
     if not os.path.exists(base):
         return base
@@ -67,7 +63,7 @@ def get_next_pdf_path(asset, date):
             return path
         i += 1
 
-def export_pdf(asset, analysis_fields, pdf_path):
+def export_pdf(asset: str, analysis_fields: dict[str, str], pdf_path: str) -> None:
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=14)

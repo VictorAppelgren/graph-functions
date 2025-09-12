@@ -67,20 +67,56 @@ import time
 LOG_DIR = "master_logs"
 STATS_DIR = "master_stats"
 
-def _get_logfile():
+def _get_logfile() -> str:
     # Always ensure the directory exists before returning the logfile path
     os.makedirs(LOG_DIR, exist_ok=True)
     return os.path.join(LOG_DIR, f"master_{datetime.now().strftime('%Y-%m-%d')}.log")
 
 import json
+from typing import TypedDict
 from src.graph.ops.graph_stats import get_graph_state_snapshot
 from src.graph.ops.graph_stats import record_zero_result_problem
 from src.graph.ops.graph_stats import record_topic_rejection
 from src.graph.ops.graph_stats import record_rewrites_skipped_zero_articles
 from src.graph.ops.graph_stats import record_no_replacement_candidates
 from src.graph.ops.graph_stats import record_missing_analysis_fields
+from src.llm.llm_router import ModelTier
+from src.graph.ops.graph_stats import get_graph_state_snapshot
 
-def _get_statsfile():
+class Stats(TypedDict):
+    topics_total_today: int
+    all_topics_queried: bool
+    full_analysis_new_today: int
+    enrichment_attempts: int
+    enrichment_articles_added: int
+    queries: int
+    articles: int
+    articles_added: int
+    articles_removed: int
+    added_node: int
+    removes_node: int
+    about_links_added: int
+    about_links_removed: int
+    relationships_added: int
+    relationships_removed: int
+    rewrites_saved: int
+    rewrites_skipped_0_articles: int
+    duplicates_skipped: int
+    errors: int
+    qa_reports_generated: int
+    should_rewrite_true: int
+    should_rewrite_false: int
+    topic_replacements_decided: int
+    llm_simple_calls: int
+    llm_medium_calls: int
+    llm_complex_calls: int
+    llm_simple_long_context_calls: int
+
+class StatsFile(TypedDict):
+    today: Stats
+    graph_state: dict[]
+
+def _get_statsfile() -> str:
     os.makedirs(STATS_DIR, exist_ok=True)
     return os.path.join(STATS_DIR, f"statistics_{datetime.now().strftime('%Y_%m_%d')}.json")
 
@@ -122,7 +158,7 @@ _DEFAULT_STATS = {
     "llm_simple_long_context_calls": 0
 }
 
-def load_stats_file():
+def load_stats_file() -> StatsFile:
     statsfile = _get_statsfile()
     if os.path.exists(statsfile):
         try:
@@ -140,7 +176,6 @@ def load_stats_file():
     else:
         # Create a new stats file with today's defaults and graph_state
         try:
-            from graph_utils.graph_stats import get_graph_state_snapshot
             graph_state = get_graph_state_snapshot()
         except Exception:
             graph_state = {}
@@ -171,7 +206,7 @@ def _compute_full_analysis_new_today(current_graph_state: dict) -> int:
     t_count = len(t_full) if isinstance(t_full, list) else int(t_full or 0)
     return max(t_count - y_count, 0)
 
-def increment_llm_usage(tier):
+def increment_llm_usage(tier: ModelTier) -> None:
     """Increment the LLM usage counter for the given ModelTier."""
     stats = load_stats_file() or {}
     today = stats.get("today") or {}

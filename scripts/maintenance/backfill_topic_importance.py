@@ -15,10 +15,12 @@ from utils import app_logging
 from src.graph.neo4j_client import connect_graph_db
 from src.graph.policies.topic_priority import classify_topic_importance
 from src.graph.ops.remove_node import remove_node
+from neo4j import Driver
+from typing import Any
 
 logger = app_logging.get_logger(__name__)
 
-def fetch_missing(driver, limit: int | None):
+def fetch_missing(driver: Driver, limit: int | None) -> list[dict[str, Any]]:
     q = """
     MATCH (t:Topic)
     WHERE t.importance IS NULL OR t.importance IN [4,5] OR t.importance = 'REMOVE'
@@ -26,9 +28,9 @@ def fetch_missing(driver, limit: int | None):
     """ + (f" LIMIT {int(limit)}" if limit else "")
     with driver.session(database="argosgraph") as s:
         rows = s.run(q).data()
-    return rows or []
+    return rows
 
-def set_props(driver, topic_id: str, importance: int):
+def set_props(driver: Driver, topic_id: str, importance: int) -> list[dict[str, Any]]:
     q = """
     MATCH (t:Topic {id: $id})
     SET t.importance = $importance
@@ -38,7 +40,7 @@ def set_props(driver, topic_id: str, importance: int):
         res = s.run(q, {"id": topic_id, "importance": importance}).data()
     return res
 
-def main():
+def main() -> None:
     driver = connect_graph_db()
     rows = fetch_missing(driver, None)
     missing_only = sum(1 for r in rows if r.get("importance") is None)

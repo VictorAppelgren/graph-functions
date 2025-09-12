@@ -36,10 +36,16 @@ LIMIT $limit
 
 def fetch_orphan_article_ids(limit: int = 1000) -> list[str]:
     rows = run_cypher(ORPHAN_QUERY, {"limit": limit}) or []
-    return [r.get("id") for r in rows if r.get("id")]
+
+    ids: list[str] = []
+    for r in rows:
+        id_ = r.get("id")
+        if id_:
+            ids.append(id_)
+    return ids
 
 
-def link_orphan_articles(limit: int = 1000) -> dict:
+def link_orphan_articles(limit: int = 1000) -> dict[str, int]:
     ids = fetch_orphan_article_ids(limit=limit)
     logger.info(f"Found {len(ids)} orphan Article nodes to process (limit={limit})")
     processed = 0

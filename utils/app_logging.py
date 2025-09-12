@@ -91,7 +91,7 @@ def get_logger(name: str, level=logging.INFO) -> ContextLogger:
             h.setLevel(effective_level)
     return logger
 
-def truncate_str(s, max_len=100):
+def truncate_str(s: str, max_len:int = 100) -> str:
     if len(s) > max_len:
         return s[:max_len] + "..."
     return s

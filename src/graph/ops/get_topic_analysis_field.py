@@ -1,6 +1,9 @@
-from src.graph.neo4j_client import run_cypher
+from typing import Any
 
-def get_topic_analysis_field(topic_id: str, field: str) -> str:
+from src.graph.neo4j_client import run_cypher
+from src.graph.models import Neo4jRecord
+
+def get_topic_analysis_field(topic_id: str, field: str) -> Any:
     """
     Fetch the value of the specified analysis field for a topic node.
     Logs clearly if missing, but does NOT raise or crash.
@@ -10,8 +13,7 @@ def get_topic_analysis_field(topic_id: str, field: str) -> str:
     MATCH (n:AssetTopic {{id:$id}})
     RETURN n.{field} AS analysis
     """
-    rows = run_cypher(q, {"id": topic_id}) or []
-    if not rows or not rows[0].get("analysis"):
-        print(f"[get_topic_analysis_field] No value for field '{field}' on topic '{topic_id}'")
-        return ""
+    rows: list[Neo4jRecord] = run_cypher(q, {"id": topic_id}) or []
     return rows[0]["analysis"]
+
+

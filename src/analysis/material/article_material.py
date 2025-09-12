@@ -13,6 +13,7 @@ logger = app_logging.get_logger(__name__)
 
 from src.analysis.selectors.best_articles import select_best_articles
 from src.articles.load_article import load_article
+from src.observability.pipeline_logging import problem_log
  
 
 def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[str]]:
@@ -31,7 +32,6 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
     # 1) Select candidate articles (no fallbacks)
     selected = select_best_articles(topic_id, section)
     if not selected:
-        from observability.pipeline_logging import problem_log
         problem_log("rewrites_skipped_0_articles", topic=topic_id, details={"section": section})
         raise ValueError(f"No articles selected for topic_id={topic_id} section={section}")
 
@@ -53,7 +53,6 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         if "argos_summary" not in loaded:
             missing.append("argos_summary")
         if missing:
-            from observability.pipeline_logging import problem_log
             problem_log(
                 "missing_required_fields_for_analysis_material",
                 topic=topic_id,
@@ -76,7 +75,6 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         lines.append("===== ARTICLE END =====\n")
 
     if not lines:
-        from observability.pipeline_logging import problem_log
         problem_log("rewrites_skipped_0_articles_summary_only", topic=topic_id, details={"section": section})
         raise ValueError(f"No article summaries available for topic_id={topic_id} section={section}")
 
@@ -96,7 +94,7 @@ def build_material_for_synthesis_section(topic_id: str, section: str) -> Tuple[s
         material_str: Formatted material with analysis sections + all articles
         article_ids: List of article IDs used
     """
-    from graph.neo4j_client import run_cypher
+    from src.graph.neo4j_client import run_cypher
     
     # Get existing analysis sections
     analysis_query = """

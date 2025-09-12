@@ -2,7 +2,8 @@
 Orchestrator: decides if a new article should replace an existing one for a topic node.
 Fetches articles, calls does_article_replace_old_llm, handles DB replacement, and triggers should_rewrite if needed.
 """
-from typing import Dict
+from typing import Any
+from typing import TypedDict
 from src.analysis.policies.article_evaluator import does_article_replace_old_llm
 from src.analysis.orchestration.should_rewrite import should_rewrite
 from src.graph.neo4j_client import run_cypher
@@ -14,12 +15,19 @@ logger = app_logging.get_logger(__name__)
 
 from src.graph.ops.get_article_temporal_horizon import get_article_temporal_horizon
 from src.analysis.policies.time_frame_identifier import find_time_frame
+from src.graph.ops.update_article_priority import update_article_priority
+from src.graph.ops.set_article_hidden import set_article_hidden
 
 # Per-timeframe policy (simple defaults, aligned with LLM helper)
 MIN_PER_TIMEFRAME = 5
 MAX_PER_TIMEFRAME = 10
 
-def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = False) -> Dict:
+class ReplacementInfo(TypedDict):
+    tool: str | None
+    id: str | None
+    motivation: str
+
+def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = False) -> ReplacementInfo:
     """
     Orchestrator: fetches existing articles for topic, calls LLM to decide replacement, removes old if needed, triggers should_rewrite.
     Returns dict: {'replaces': bool, 'id_to_replace': str or None, 'motivation': str}
@@ -151,9 +159,12 @@ def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = Fa
             trk.put("fallback_reason", "invalid_llm_selection")
             # Deterministic fallback: choose lowest priority (1 < 2 < 3), then oldest published_at
             pmap = {"1": 1, "2": 2, "3": 3}
-            def sort_key(a: Dict):
-                return (pmap.get(str(a.get("priority")), 2), str(a.get("published_at") or ""))
-            target_id = sorted(candidates, key=sort_key)[0]["id"]
+
+            target_id = sorted(
+                candidates,
+                key=lambda a: (pmap.get(str(a.get("priority")), 2), str(a.get("published_at") or ""))
+                )[0]["id"]
+            
             if not motivation:
                 motivation = "Invalid LLM selection; used deterministic fallback under capacity cap."
         else:
@@ -167,9 +178,12 @@ def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = Fa
         trk.put("fallback_used", True)
         trk.put("fallback_reason", "capacity_cap")
         pmap = {"1": 1, "2": 2, "3": 3}
-        def sort_key(a: Dict):
-            return (pmap.get(str(a.get("priority")), 2), str(a.get("published_at") or ""))
-        target_id = sorted(candidates, key=sort_key)[0]["id"]
+        
+        target_id = sorted(
+                candidates,
+                key=lambda a: (pmap.get(str(a.get("priority")), 2), str(a.get("published_at") or ""))
+                )[0]["id"]
+        
         tool = "remove"
         motivation = motivation or "Capacity cap reached; removing weakest/oldest competing article."
 
@@ -192,12 +206,10 @@ def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = Fa
             # Trigger should_rewrite only when we changed graph state
             should_rewrite(topic_id, new_article_id)
         elif tool == "hide":
-            from graph_utils.set_article_hidden import set_article_hidden
             set_article_hidden(target_id)
             logger.info(f"Set article id={target_id} to hidden via graph_utils.set_article_hidden.")
             should_rewrite(topic_id, new_article_id)
         elif tool == "lower_priority":
-            from graph_utils.update_article_priority import update_article_priority
             update_article_priority(target_id)
             logger.info(f"Lowered priority for article id={target_id} via graph_utils.update_article_priority.")
             should_rewrite(topic_id, new_article_id)
