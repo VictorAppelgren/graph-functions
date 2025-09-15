@@ -13,7 +13,7 @@ from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
 
-def get_all_nodes(fields: list = None) -> List[Dict]:
+def get_all_nodes(fields: list[str]) -> List[dict[str, str]]:
     """
     Fetch all current graph nodes from the Neo4j database.
     Args:
@@ -23,9 +23,6 @@ def get_all_nodes(fields: list = None) -> List[Dict]:
     Raises:
         RuntimeError: If the database query fails.
     """
-    if fields is None:
-        fields = ['id', 'name', 'type']
-    logger.info(f" Called: Fetching all Topic nodes with fields: {fields}")
     try:
         driver = connect_graph_db()
         with driver.session(database="argosgraph") as session:
@@ -42,6 +39,6 @@ def get_all_nodes(fields: list = None) -> List[Dict]:
 
 # a main that simply prints all nodes and logs with numbers all nodes
 if __name__ == "__main__":
-    nodes = get_all_nodes()
+    nodes = get_all_nodes(['id', 'name', 'type'])
     for i, node in enumerate(nodes):
         logger.info(f" Node {i}: {node['name']} - {node['id']}")

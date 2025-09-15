@@ -1,4 +1,5 @@
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
@@ -11,7 +12,7 @@ def llm_select_link_to_remove(source_node: dict, existing_links: list[dict], pri
     Use LLM to select weakest link to remove if at max capacity.
     Returns: { "remove_link": target_id, "motivation": ... } or None
     """
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     prompt = f'''
     {SYSTEM_MISSION}
     {SYSTEM_CONTEXT}

@@ -1,8 +1,8 @@
 """
 LLM-driven wide query generation for a new node/topic.
 """
-from typing import Dict
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
@@ -11,13 +11,13 @@ from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
 
-def create_wide_query(article_text: str) -> dict:
+def create_wide_query(article_text: str) -> dict: # TODO
     """
     Uses LLM to generate a wide boolean search query for a given article/topic, based on formatted article text.
     Returns a dict with 'motivation' and 'query' keys containing the string.
     """
     logger.info("Generating wide query from article text for node/topic")
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
     prompt_template = """
 {system_mission}

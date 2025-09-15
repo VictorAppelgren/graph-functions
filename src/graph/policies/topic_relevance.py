@@ -7,7 +7,8 @@ LLM-based trading relevance gate for proposed Topic nodes.
 
 Design goals: minimal, fail-fast, reusable (pre-insert and for cleanup scripts).
 """
-from src.llm.llm_router import get_simple_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
@@ -84,7 +85,7 @@ def check_topic_relevance(
 ) -> dict:
     """Return a dict with keys: should_add(bool), motivation(str)"""
     logger.info("Running topic relevance gate for: %r (%s)", topic_name, topic_type)
-    llm = get_simple_llm()
+    llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = template | llm | parser  # exact style match
     result = chain.invoke({

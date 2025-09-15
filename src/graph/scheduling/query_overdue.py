@@ -3,7 +3,7 @@ from datetime import datetime
 from utils import app_logging
 logger = app_logging.get_logger(__name__)
 
-def query_overdue_seconds(node):
+def query_overdue_seconds(node) -> int:
     # Use current local time; tests can monkeypatch this function if needed
     now = datetime.now().astimezone()
     importance = node.get('importance', 5)

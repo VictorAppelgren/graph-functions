@@ -1,7 +1,8 @@
 """
 LLM-driven proposal for new Topic node based on article content.
 """
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
@@ -79,13 +80,13 @@ template = PromptTemplate(
     ]
 )
 
-def propose_topic_node(article: str, suggested_names: list = []) -> dict:
+def propose_topic_node(article: str, suggested_names: list = []) -> dict: # TODO
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
     Returns a dict with all required fields for insertion.
     """
     logger.info("Calling LLM to propose new Topic node based on article.")
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
 
     # Load capacity context (stateless to caller)

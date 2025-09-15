@@ -1,12 +1,20 @@
+import json
+
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
+from pydantic import BaseModel
 
 logger = get_logger(__name__)
 
-def validate_article_topic_relevance(article: dict, topic_name: str, topic_id: str):
+class ArticleModel(BaseModel):
+    title: str
+    summary: str
+
+def validate_article_topic_relevance(article: ArticleModel, topic_name: str, topic_id: str): # TODO
     """Deep LLM validation: does this article truly provide value to this topic?"""
     
     summary = article["argos_summary"]
@@ -41,7 +49,7 @@ def validate_article_topic_relevance(article: dict, topic_name: str, topic_id: s
     """
     
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
     
@@ -55,7 +63,6 @@ def validate_article_topic_relevance(article: dict, topic_name: str, topic_id: s
     })
     
     if isinstance(result, str):
-        import json
         result = json.loads(result)
     
     should_link = result.get('should_link', False)
@@ -71,9 +78,14 @@ if __name__ == "__main__":
         "title": "Fed Raises Interest Rates by 0.75% to Combat Inflation",
         "argos_summary": "The Federal Reserve raised interest rates by 75 basis points to 3.25%, the largest increase since 1994, as inflation remains near 40-year highs."
     }
+
+    a = ArticleModel(
+        title="Fed Raises Interest Rates by 0.75% to Combat Inflation", 
+        summary="The Federal Reserve raised interest rates by 75 basis points to 3.25%, the largest increase since 1994, as inflation remains near 40-year highs."
+        )
     
     should_link, motivation = validate_article_topic_relevance(
-        article, "US Interest Rates", "us_interest_rates"
+        a, "US Interest Rates", "us_interest_rates"
     )
     print(f"Should Link: {should_link}")
     print(f"Motivation: {motivation}")

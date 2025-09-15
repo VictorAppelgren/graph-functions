@@ -1,12 +1,13 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
 
-def find_time_frame(article_text: dict):
+def find_time_frame(article_text: dict): # TODO
     prompt_template = """
         {system_mission}
         {system_context}
@@ -31,7 +32,7 @@ def find_time_frame(article_text: dict):
         YOUR RESPONSE:
     """
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
     result = chain.invoke({

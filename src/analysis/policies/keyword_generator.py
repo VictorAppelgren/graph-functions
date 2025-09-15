@@ -1,7 +1,8 @@
 from typing import List
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from src.llm.llm_router import get_simple_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
 
@@ -113,7 +114,7 @@ def generate_keywords(topic_name: str, section: str) -> List[str]:
         template=prompt_template,
     )
     logger.info(f"will generate keywords")
-    llm = get_simple_llm()
+    llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
     result = chain.invoke({

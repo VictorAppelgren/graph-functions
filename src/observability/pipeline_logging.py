@@ -73,207 +73,182 @@ def _get_logfile() -> str:
     return os.path.join(LOG_DIR, f"master_{datetime.now().strftime('%Y-%m-%d')}.log")
 
 import json
-from typing import TypedDict
+import copy
+from pydantic import BaseModel
+from typing import TypedDict, Any, cast
+from enum import Enum, unique
 from src.graph.ops.graph_stats import get_graph_state_snapshot
-from src.graph.ops.graph_stats import record_zero_result_problem
-from src.graph.ops.graph_stats import record_topic_rejection
-from src.graph.ops.graph_stats import record_rewrites_skipped_zero_articles
-from src.graph.ops.graph_stats import record_no_replacement_candidates
-from src.graph.ops.graph_stats import record_missing_analysis_fields
-from src.llm.llm_router import ModelTier
-from src.graph.ops.graph_stats import get_graph_state_snapshot
+from src.graph.ops.graph_stats import update_stats
+from src.llm.config import ModelTier
+from src.graph.ops.graph_stats import get_graph_state_snapshot, SnapshotModel
 
-class Stats(TypedDict):
-    topics_total_today: int
-    all_topics_queried: bool
-    full_analysis_new_today: int
-    enrichment_attempts: int
-    enrichment_articles_added: int
-    queries: int
-    articles: int
-    articles_added: int
-    articles_removed: int
-    added_node: int
-    removes_node: int
-    about_links_added: int
-    about_links_removed: int
-    relationships_added: int
-    relationships_removed: int
-    rewrites_saved: int
-    rewrites_skipped_0_articles: int
-    duplicates_skipped: int
-    errors: int
-    qa_reports_generated: int
-    should_rewrite_true: int
-    should_rewrite_false: int
-    topic_replacements_decided: int
-    llm_simple_calls: int
-    llm_medium_calls: int
-    llm_complex_calls: int
-    llm_simple_long_context_calls: int
+@unique
+class Problem(Enum):
+    REWRITE_SKIPPED_0_ARTICLES = "rewrites_skipped_0_articles"
+    MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL = "missing_required_fields_for_analysis_material"
+    REWRITE_SKIPPED_0_ARTICLES_SUMMARY_ONLY = "rewrites_skipped_0_articles_summary_only"
+    MISSING_SUMMARY_FOR_REPLACEMENT_DECISION = "missing_summary_for_replacement_decision"
+    NO_REPLACEMENT_CANDIDATES = "no_replacement_candidates"
+    MISSING_SUMMARY_FOR_SHOULD_REWRITE = "missing_summary_for_should_rewrite"
+    ZERO_RESULTS = "zero_results"
+    CAPACITY_GUARD_REPLACE_DELETION_FAILED = "capacity_guard_replace_deletion_failed"
+    CAPACITY_GUARD_REPLACE_MISSING_ID_TO_REMOVE = "capacity_guard_replace_missing_id_to_remove"
+    CAPACITY_GUARD_REJECT = "capacity_guard_reject"
+    TOPIC_REJECTED = "topic_rejected"
 
-class StatsFile(TypedDict):
-    today: Stats
-    graph_state: dict[]
 
-def _get_statsfile() -> str:
+class StatsModel(BaseModel):
+    topics_total_today: int = 0
+    all_topics_queried: bool = False
+    full_analysis_new_today: int = 0
+    enrichment_attempts: int = 0
+    enrichment_articles_added: int = 0
+    queries: int = 0
+    articles: int = 0
+    articles_added: int = 0
+    articles_removed: int = 0
+    added_node: int = 0
+    removes_node: int = 0
+    about_links_added: int = 0
+    about_links_removed: int = 0
+    relationships_added: int = 0
+    relationships_removed: int = 0
+    rewrites_saved: int = 0
+    rewrites_skipped_0_articles: int = 0
+    duplicates_skipped: int = 0
+    errors: int = 0
+    qa_reports_generated: int = 0
+    should_rewrite_true: int = 0 
+    should_rewrite_false: int = 0
+    topic_replacements_decided: int = 0
+    llm_simple_calls: int = 0
+    llm_medium_calls: int = 0
+    llm_complex_calls: int = 0
+    llm_simple_long_context_calls: int = 0
+
+class StatsFileModel(BaseModel):
+    today: StatsModel
+    graph_state: SnapshotModel
+
+class ProblemMissingModel(BaseModel):
+    title: str
+    pub_date: str
+    argos_summary: str
+
+class ProblemDetailsModel(BaseModel):
+    section: str
+    article_id: str
+    missing: ProblemMissingModel
+
+class ProblemModel(BaseModel):
+    topic_id: int
+    problem: Problem
+    details: ProblemDetailsModel
+
+
+
+
+def _get_statsfile_path() -> str:
     os.makedirs(STATS_DIR, exist_ok=True)
     return os.path.join(STATS_DIR, f"statistics_{datetime.now().strftime('%Y_%m_%d')}.json")
 
-_DEFAULT_STATS = {
-    # Coverage (minimal, flat)
-    "topics_total_today": 0,
-    "all_topics_queried": False,
 
-    # Progress (vs yesterday)
-    "full_analysis_new_today": 0,
-
-    # Enrichment (try/find new data)
-    "enrichment_attempts": 0,
-    "enrichment_articles_added": 0,
-
-    "queries": 0,
-    "articles": 0,
-    "articles_added": 0,
-    "articles_removed": 0,
-    "added_node": 0,
-    "removes_node": 0,
-    "about_links_added": 0,
-    "about_links_removed": 0,
-    "relationships_added": 0,
-    "relationships_removed": 0,
-    "rewrites_saved": 0,
-    "rewrites_skipped_0_articles": 0,
-    "duplicates_skipped": 0,
-    "errors": 0,
-    "qa_reports_generated": 0,
-    "should_rewrite_true": 0,
-    "should_rewrite_false": 0,
-    # Decisions / actions (non-problem) counters
-    "topic_replacements_decided": 0,
-    # Explicit LLM counters (preserve across writes)
-    "llm_simple_calls": 0,
-    "llm_medium_calls": 0,
-    "llm_complex_calls": 0,
-    "llm_simple_long_context_calls": 0
-}
-
-def load_stats_file() -> StatsFile:
-    statsfile = _get_statsfile()
+def load_stats_file() -> StatsFileModel:
+    statsfile = _get_statsfile_path()
     if os.path.exists(statsfile):
-        try:
-            with open(statsfile, "r") as f:
-                return json.load(f) or {}
-        except json.JSONDecodeError:
-            # Likely partial write; short sleep and retry once
-            time.sleep(2)
-            try:
-                with open(statsfile, "r") as f:
-                    return json.load(f) or {}
-            except json.JSONDecodeError:
-                # Fail-soft: return empty dict; callers add defaults
-                return {}
+        
+        with open(statsfile, "r") as f:
+            return cast(StatsFileModel, json.load(f))
+
     else:
         # Create a new stats file with today's defaults and graph_state
-        try:
-            graph_state = get_graph_state_snapshot()
-        except Exception:
-            graph_state = {}
-        default_stats = {"today": _DEFAULT_STATS.copy(), "graph_state": graph_state}
-        save_stats_file(default_stats)
-        return default_stats
-
-def _compute_full_analysis_new_today(current_graph_state: dict) -> int:
-    """
-    Compute delta vs yesterday for topics with full analysis.
-    Returns max(today_full - yesterday_full, 0). Fail-soft: 0 on any I/O error.
-    """
-    try:
-        from datetime import timedelta
-        y = datetime.now() - timedelta(days=1)
-        ypath = os.path.join(STATS_DIR, f"statistics_{y.strftime('%Y_%m_%d')}.json")
-        if not os.path.exists(ypath):
-            return 0
-        with open(ypath, "r") as f:
-            ystats = json.load(f) or {}
-        y_graph = ystats.get("graph_state") or {}
-        y_full = y_graph.get("topics_with_full_analysis")
-        y_count = len(y_full) if isinstance(y_full, list) else int(y_full or 0)
-    except Exception:
-        return 0
-
-    t_full = current_graph_state.get("topics_with_full_analysis")
-    t_count = len(t_full) if isinstance(t_full, list) else int(t_full or 0)
-    return max(t_count - y_count, 0)
+        graph_state : SnapshotModel = get_graph_state_snapshot()
+        stats = StatsModel()
+        stats_file = StatsFileModel(today = stats, graph_state=graph_state)
+        save_stats_file(stats_file)
+        return stats_file
 
 def increment_llm_usage(tier: ModelTier) -> None:
     """Increment the LLM usage counter for the given ModelTier."""
-    stats = load_stats_file() or {}
-    today = stats.get("today") or {}
+    stats = load_stats_file()
+    today = stats.today
     key = f"llm_{tier.name.lower()}_calls"
-    today[key] = int(today.get(key, 0)) + 1
-    stats["today"] = today
+    current = getattr(today, key, 0)
+    updated_today = today.model_copy(update={key: current + 1})
+    stats = stats.model_copy(update={"today": updated_today})
     save_stats_file(stats)
 
-def save_stats_file(stats: dict):
-    statsfile = _get_statsfile()
+def save_stats_file(stats: StatsFileModel) -> None:
+    statsfile = _get_statsfile_path()
     with open(statsfile, "w") as f:
         json.dump(stats, f, indent=2)
 
-def master_statistics(queries=0, articles=0, articles_added=0, articles_removed=0, added_node=0, removes_node=0, about_links_added=0, about_links_removed=0, relationships_added=0, relationships_removed=0, rewrites_saved=0, rewrites_skipped_0_articles=0, duplicates_skipped=0, errors=0, should_rewrite_true=0, should_rewrite_false=0, topic_replacements_decided=0, enrichment_attempts=0, enrichment_articles_added=0):
+def master_statistics(
+        queries: int = 0, 
+        articles: int = 0, 
+        articles_added: int = 0, 
+        articles_removed: int = 0, 
+        added_node: int = 0, 
+        removes_node: int = 0, 
+        about_links_added: int = 0, 
+        about_links_removed: int = 0, 
+        relationships_added: int = 0, 
+        relationships_removed: int = 0, 
+        rewrites_saved: int = 0, 
+        rewrites_skipped_0_articles: int = 0, 
+        duplicates_skipped: int = 0, 
+        errors: int = 0, 
+        should_rewrite_true: int = 0, 
+        should_rewrite_false: int = 0, 
+        topic_replacements_decided: int = 0, 
+        enrichment_attempts: int = 0, 
+        enrichment_articles_added: int = 0
+    ) -> None:
     # Load existing stats and preserve any unknown counters in today's section (e.g., llm_*_calls)
     stats = load_stats_file()
-    existing_stats = stats if isinstance(stats, dict) else {}
-    # Start from existing 'today' to keep dynamic keys
-    today = dict(existing_stats.get("today") or {})
-    # Ensure all default keys exist
-    for k, default in _DEFAULT_STATS.items():
-        today[k] = today.get(k, default)
-    # Cleanup: drop deprecated keys
-    if "topics_queried_today" in today:
-        today.pop("topics_queried_today", None)
-    # Increment only nonzero arguments
-    for k, v in {
-        "queries": queries,
-        "articles": articles,
-        "articles_added": articles_added,
-        "articles_removed": articles_removed,
-        "added_node": added_node,
-        "removes_node": removes_node,
-        "about_links_added": about_links_added,
-        "about_links_removed": about_links_removed,
-        "relationships_added": relationships_added,
-        "relationships_removed": relationships_removed,
-        "rewrites_saved": rewrites_saved,
-        "rewrites_skipped_0_articles": rewrites_skipped_0_articles,
-        "duplicates_skipped": duplicates_skipped,
-        "errors": errors,
-        "should_rewrite_true": should_rewrite_true,
-        "should_rewrite_false": should_rewrite_false,
-        "topic_replacements_decided": topic_replacements_decided,
-        # New minimal coverage/enrichment counters
-        "enrichment_attempts": enrichment_attempts,
-        "enrichment_articles_added": enrichment_articles_added,
-    }.items():
-        if v:
-            today[k] = today.get(k, 0) + v
-    # Write back updates in-place and attach live graph snapshot
-    existing_stats["today"] = today
-    try:
-        existing_stats["graph_state"] = get_graph_state_snapshot()
-    except Exception as e:
-        # Fail-soft but ensure the field exists for observability
-        existing_stats["graph_state"] = {"error": str(e)[:200]}
-    # Minimal coverage/progress logic (flat, auto-managed)
-    g = existing_stats.get("graph_state") or {}
-    if int(today.get("topics_total_today") or 0) == 0:
-        today["topics_total_today"] = int(g.get("topics", 0) or 0)
-    total = int(today.get("topics_total_today") or 0)
-    # Compute daily delta for full analysis progress
-    today["full_analysis_new_today"] = int(_compute_full_analysis_new_today(g))
-    save_stats_file(existing_stats)
+    t = stats.today
 
-def master_log(message: str, queries=0, articles=0, articles_added=0, articles_removed=0, added_node=0, removes_node=0, about_links_added=0, about_links_removed=0, relationships_added=0, relationships_removed=0, rewrites_saved=0, rewrites_skipped_0_articles=0, duplicates_skipped=0, topic_replacements_decided=0):
+    if queries:                          t.queries += queries
+    if articles:                         t.articles += articles
+    if articles_added:                   t.articles_added += articles_added
+    if articles_removed:                 t.articles_removed += articles_removed
+    if added_node:                       t.added_node += added_node
+    if removes_node:                     t.removes_node += removes_node
+    if about_links_added:                t.about_links_added += about_links_added
+    if about_links_removed:              t.about_links_removed += about_links_removed
+    if relationships_added:              t.relationships_added += relationships_added
+    if relationships_removed:            t.relationships_removed += relationships_removed
+    if rewrites_saved:                   t.rewrites_saved += rewrites_saved
+    if rewrites_skipped_0_articles:      t.rewrites_skipped_0_articles += rewrites_skipped_0_articles
+    if duplicates_skipped:               t.duplicates_skipped += duplicates_skipped
+    if errors:                           t.errors += errors
+    if should_rewrite_true:              t.should_rewrite_true += should_rewrite_true
+    if should_rewrite_false:             t.should_rewrite_false += should_rewrite_false
+    if topic_replacements_decided:       t.topic_replacements_decided += topic_replacements_decided
+    if enrichment_attempts:              t.enrichment_attempts += enrichment_attempts
+    if enrichment_articles_added:        t.enrichment_articles_added += enrichment_articles_added
+
+    stats.graph_state = get_graph_state_snapshot()
+
+    save_stats_file(stats)
+
+def master_log(
+        message: str, 
+        queries: int = 0,
+        articles: int = 0,
+        articles_added: int = 0, 
+        articles_removed: int = 0, 
+        added_node: int = 0, 
+        removes_node: int = 0, 
+        about_links_added: int = 0, 
+        about_links_removed: int = 0, 
+        relationships_added: int = 0, 
+        relationships_removed: int = 0, 
+        rewrites_saved: int = 0, 
+        rewrites_skipped_0_articles: int = 0, 
+        duplicates_skipped: int = 0, 
+        topic_replacements_decided: int = 0
+        ) -> None:
     """Log a completed action (success, removal, etc) to the master daily log and increment stats."""
     timestamp = datetime.now().isoformat(timespec="seconds")
     with open(_get_logfile(), "a") as f:
@@ -295,7 +270,7 @@ def master_log(message: str, queries=0, articles=0, articles_added=0, articles_r
         topic_replacements_decided=topic_replacements_decided,
     )
 
-def master_log_error(message: str, error: Exception = None):
+def master_log_error(message: str, error: Exception | None = None) -> None:
     """Log an error in a standardized 4-field line and increment error stats."""
     timestamp = datetime.now().isoformat(timespec="seconds")
     details = f"{message}"
@@ -306,7 +281,7 @@ def master_log_error(message: str, error: Exception = None):
         f.write(line + "\n")
     master_statistics(errors=1)
 
-def problem_log(problem: str, topic: str, details=None):
+def problem_log(problem: Problem, topic: str, details: dict[str, str]| None = None) -> None:
     """
     Record a minimal problem into the daily master stats JSON under the
     top-level "problems" section. Currently supports only:
@@ -318,45 +293,46 @@ def problem_log(problem: str, topic: str, details=None):
 
     if not problem or not topic:
         raise ValueError("problem and topic are required")
-    if problem == "Zero results":
-        # Update the problems section in the daily stats JSON (fail-fast)
-        record_zero_result_problem(topic_id=topic)
-    elif problem == "Topic rejected":
+    if problem == Problem.ZERO_RESULTS:
+        update_stats(zero_result_topic_ids=[topic])
+    elif problem == Problem.TOPIC_REJECTED:
         category = None
         failure_category = None
         if isinstance(details, dict):
             category = details.get("category")
             failure_category = details.get("failure_category")
-        record_topic_rejection(topic_name=topic, category=category, failure_category=failure_category)
-    elif problem == "rewrites_skipped_0_articles":
+        update_stats(
+            topic_rejections = 1
+        )
+    elif problem == Problem.REWRITE_SKIPPED_0_ARTICLES:
         section = None
         if isinstance(details, dict) and "section" in details:
             section = details["section"]
         if not section:
             raise ValueError("details.section is required for rewrites_skipped_0_articles")
-        record_rewrites_skipped_zero_articles(topic_id=topic, section=section)
-    elif problem == "No replacement candidates":
+        update_stats(
+            rewrites_skipped_0_articles = 1, 
+            rewrite_skip_event=details
+        )
+    elif problem == Problem.NO_REPLACEMENT_CANDIDATES:
         timeframe = None
         if isinstance(details, dict):
             timeframe = details.get("timeframe")
         if not timeframe:
             raise ValueError("details.timeframe is required for 'No replacement candidates'")
-        record_no_replacement_candidates(topic_id=topic, timeframe=timeframe)
-    elif problem == "missing_required_fields_for_analysis_material":
-        section = None
-        article_id = None
-        missing = None
+        update_stats(
+            no_replacement_candidates = 1,
+            no_replacement_event = details
+            )
+    elif problem == Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL:
         if isinstance(details, dict):
             section = details.get("section")
             article_id = details.get("article_id")
             missing = details.get("missing")
-        if not section:
-            raise ValueError("details.section is required for 'missing_required_fields_for_analysis_material'")
-        if not article_id:
-            raise ValueError("details.article_id is required for 'missing_required_fields_for_analysis_material'")
-        if not missing or not isinstance(missing, list):
-            raise ValueError("details.missing list is required for 'missing_required_fields_for_analysis_material'")
-        record_missing_analysis_fields(topic_id=topic, section=section, article_id=article_id, missing_fields=missing)
+        update_stats(missing_analysis_event={"topic_id": topic,
+                                             "section": section,
+                                             "article_id": article_id,
+                                             "missing_fields": missing})
     else:
         # Keep the surface area minimal and explicit
         raise ValueError(f"Unsupported problem type: {problem}")

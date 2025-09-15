@@ -1,7 +1,8 @@
 """
 LLM-driven summarization of articles for news ingestion.
 """
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
@@ -24,7 +25,7 @@ def summarize_article(article: dict) -> dict:
     # Build input from full extracted text (title, main, scraped, metadata) via formatter
     input_text = extract_text_from_json_article(article)
 
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
 
     # Log stats about input
     logger.debug(f"About to generate summary with input text of {len(input_text)} characters.")

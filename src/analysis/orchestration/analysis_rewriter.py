@@ -8,7 +8,7 @@ from src.analysis.persistance.analysis_saver import save_analysis
 from src.analysis.utils.driver_aggregator import aggregate_driver_analyses
 from src.analysis.material.article_material import build_material_for_synthesis_section
 from utils import app_logging
-from src.observability.pipeline_logging import master_log, problem_log
+from src.observability.pipeline_logging import master_log, problem_log, Problem
 from src.graph.neo4j_client import run_cypher
 from events.classifier import EventClassifier
 from src.graph.ops.get_topic_analysis_field import get_topic_analysis_field
@@ -225,7 +225,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
                             logger.warning(
                                 f"Skipping rewrite for section '{section}' on node {topic_id}: no articles selected after enhancement retry."
                             )
-                            problem_log("rewrites_skipped_0_articles", topic=topic_id, details={"section": section})
+                            problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES, topic=topic_id, details={"section": section})
                             sec_trk.put("status", "skipped_selector_zero_articles")
                             sec_trk.set_id(f"{topic_id}__{section}__{run_id}")
                             section_summaries.append({"section": section, "tracker_id": f"{topic_id}__{section}__{run_id}"})
@@ -234,7 +234,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
                         logger.warning(
                             f"Skipping rewrite for section '{section}' on node {topic_id}: no articles selected by selector (0)."
                         )
-                        problem_log("rewrites_skipped_0_articles", topic=topic_id, details={"section": section})
+                        problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES, topic=topic_id, details={"section": section})
                         sec_trk.put("status", "skipped_selector_zero_articles")
                         sec_trk.set_id(f"{topic_id}__{section}__{run_id}")
                         section_summaries.append({"section": section, "tracker_id": f"{topic_id}__{section}__{run_id}"})

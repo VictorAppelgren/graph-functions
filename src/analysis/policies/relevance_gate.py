@@ -1,7 +1,8 @@
 from typing import Tuple
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from src.llm.llm_router import get_simple_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.orchestration.analysis_rewriter import SECTIONS, SECTION_FOCUS
 from src.graph.ops.get_node_by_id import get_node_by_id
@@ -116,7 +117,7 @@ def relevance_gate_llm(topic_id: str, section: str, article_text: str) -> Tuple[
         ],
         template=prompt_template,
     )
-    llm = get_simple_llm()
+    llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
 

@@ -2,14 +2,13 @@
 Orchestrator: decides if a new article should replace an existing one for a topic node.
 Fetches articles, calls does_article_replace_old_llm, handles DB replacement, and triggers should_rewrite if needed.
 """
-from typing import Any
-from typing import TypedDict
+
 from src.analysis.policies.article_evaluator import does_article_replace_old_llm
 from src.analysis.orchestration.should_rewrite import should_rewrite
 from src.graph.neo4j_client import run_cypher
 from src.articles.load_article import load_article
 from utils import app_logging
-from src.observability.pipeline_logging import master_log, problem_log
+from src.observability.pipeline_logging import master_log, problem_log, Problem
 from events.classifier import EventClassifier
 logger = app_logging.get_logger(__name__)
 
@@ -17,15 +16,11 @@ from src.graph.ops.get_article_temporal_horizon import get_article_temporal_hori
 from src.analysis.policies.time_frame_identifier import find_time_frame
 from src.graph.ops.update_article_priority import update_article_priority
 from src.graph.ops.set_article_hidden import set_article_hidden
+from src.analysis.types import ReplacementInfo
 
 # Per-timeframe policy (simple defaults, aligned with LLM helper)
 MIN_PER_TIMEFRAME = 5
 MAX_PER_TIMEFRAME = 10
-
-class ReplacementInfo(TypedDict):
-    tool: str | None
-    id: str | None
-    motivation: str
 
 def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = False) -> ReplacementInfo:
     """
@@ -43,7 +38,7 @@ def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = Fa
     logger.info(f"new_article_id that will be loaded={new_article_id}")
     new_article = load_article(new_article_id)
     if "argos_summary" not in new_article:
-        problem_log("missing_summary_for_replacement_decision", topic=topic_id, details={"article_id": new_article_id})
+        problem_log(Problem.MISSING_SUMMARY_FOR_REPLACEMENT_DECISION, topic=topic_id, details={"article_id": new_article_id})
         trk.put("status", "skipped_missing_summary")
         return {'tool': 'none', 'id': None, 'motivation': 'No argos_summary for new article'}
     summary = new_article["argos_summary"]
@@ -106,7 +101,7 @@ def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = Fa
     pool = run_cypher(pool_q, {"topic_id": topic_id, "tf": new_tf}) or []
     candidates = [a for a in pool if a["id"] != new_article_id and ("argos_summary" in a and a["argos_summary"])]
     if not candidates:
-        problem_log(problem="No replacement candidates", topic=topic_id, details={"timeframe": new_tf})
+        problem_log(Problem.NO_REPLACEMENT_CANDIDATES, topic=topic_id, details={"timeframe": new_tf})
         trk.put("status", "skipped_no_candidates")
         trk.set_id(event_id)
         master_log(f"Replacement of article skipped | {topic_id} | no competing candidates in timeframe {new_tf}")

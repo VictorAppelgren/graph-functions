@@ -5,7 +5,8 @@ LLM-driven helper to decide if a topic's analysis should be rewritten given a ne
 Returns a tuple: (should_rewrite: bool, motivation: str).
 """
 from typing import Tuple
-from src.llm.llm_router import get_complex_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
@@ -49,7 +50,7 @@ def should_rewrite_llm(analysis_str: str, new_article_summary: str, test: bool =
         YOUR RESPONSE:
     """
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_complex_llm()
+    llm = get_llm(ModelTier.COMPLEX)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
     result = chain.invoke({

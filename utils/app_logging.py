@@ -22,18 +22,29 @@ import sys
 from datetime import datetime
 from contextlib import contextmanager
 from functools import wraps
+from collections.abc import Callable
+from typing import TypeVar, ParamSpec, Any, Iterator, cast
+
+P = ParamSpec("P")  # captures parameter types of wrapped function
+R = TypeVar("R")    # captures return type of wrapped function
 
 class MinimalFormatter(logging.Formatter):
-    def format(self, record):
+    def format(self, record: logging.LogRecord) -> str:
+        """
+        Format a log record into a human-readable string with ISO timestamp,
+        log level, logger name, and optional context.
+        """
         iso_time = datetime.fromtimestamp(record.created).isoformat()
-        level = record.levelname
-        name = record.name
-        msg = record.getMessage()
-        # Add context if present
-        ctx = getattr(record, 'context', None)
-        ctx_str = f" | context: {ctx}" if ctx else ""
+        level: str = record.levelname
+        name: str = record.name
+        msg: str = record.getMessage()
+
+        # record.context is expected to be dict[str, object] | None
+        ctx = cast("dict[str, object] | None", getattr(record, "context", None))
+        ctx_str = f" | context: {ctx}" if ctx is not None else ""
+
         base = f"{iso_time} | {level:<8} | {name:<30} | {msg}{ctx_str}"
-        # Append traceback if present
+
         if record.exc_info:
             try:
                 exc_text = self.formatException(record.exc_info)
@@ -43,21 +54,27 @@ class MinimalFormatter(logging.Formatter):
         return base
 
 class ContextLogger(logging.Logger):
+
+    _log_ctx: dict[str, object] | None  # <-- explicitly declare type
+
+    def __init__(self, name: str, level: int = logging.NOTSET) -> None:
+        super().__init__(name, level)
+        self._log_ctx = None  # initialize it
+
     @contextmanager
-    def context(self, **kwargs):
-        old_ctx = getattr(self, '_log_ctx', None)
-        self._log_ctx = kwargs
+    def context(self, **kwargs: object) -> Iterator[None]:
+        """
+        Temporarily attach key/value context to all log records emitted within the block.
+        Usage:
+            with logger.context(user="alice", job_id="42"):
+                logger.info("starting")
+        """
+        old_ctx = self._log_ctx
+        self._log_ctx = kwargs 
         try:
             yield
         finally:
             self._log_ctx = old_ctx
-    def makeRecord(self, *args, **kwargs):
-        record = super().makeRecord(*args, **kwargs)
-        if hasattr(self, '_log_ctx') and self._log_ctx:
-            record.context = self._log_ctx
-        else:
-            record.context = None
-        return record
 
 # 
 def _level_from_env(default_level: int) -> int:
@@ -72,11 +89,11 @@ def _level_from_env(default_level: int) -> int:
     return mapping.get(lvl, default_level)
 
 
-def get_logger(name: str, level=logging.INFO) -> ContextLogger:
+def get_logger(name: str, level: int = logging.INFO) -> ContextLogger:
     logging.setLoggerClass(ContextLogger)
-    logger = logging.getLogger(name)
-    # Resolve effective level (env can override)
+    logger = cast(ContextLogger, logging.getLogger(name))  # getLogger returns Logger, so cast
     effective_level = _level_from_env(level)
+
     if not logger.handlers:
         handler = logging.StreamHandler(sys.stdout)
         handler.setFormatter(MinimalFormatter())
@@ -85,7 +102,6 @@ def get_logger(name: str, level=logging.INFO) -> ContextLogger:
         logger.setLevel(effective_level)
         logger.propagate = False
     else:
-        # Ensure existing logger/handlers respect env override
         logger.setLevel(effective_level)
         for h in logger.handlers:
             h.setLevel(effective_level)
@@ -96,10 +112,10 @@ def truncate_str(s: str, max_len:int = 100) -> str:
         return s[:max_len] + "..."
     return s
 
-def log_execution(logger):
-    def decorator(func):
+def log_execution(logger: logging.Logger) -> Callable[[Callable[P, R]], Callable[P, R]]:
+    def decorator(func: Callable[P, R]) -> Callable[P, R]:
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
             start = datetime.now()
             logger.debug(f"Entering {func.__name__}")
             try:

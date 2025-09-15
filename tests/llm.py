@@ -10,7 +10,8 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from src.llm.llm_router import get_simple_llm, get_medium_llm, get_complex_llm, get_simple_long_context_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.prompts import PromptTemplate
 
 def test_simple_llm():
@@ -25,7 +26,7 @@ def test_simple_llm():
     """
     
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_simple_llm()
+    llm = get_llm(ModelTier.SIMPLE)
     chain = prompt | llm
     
     result = chain.invoke({"text": "The market is performing well today"})
@@ -44,7 +45,7 @@ def test_medium_llm():
     """
     
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     chain = prompt | llm
     
     result = chain.invoke({"text": "The Federal Reserve announced today that interest rates will remain unchanged at 5.25%. This decision comes after months of economic uncertainty and inflation concerns. Market analysts expect this to stabilize bond yields in the short term."})
@@ -63,7 +64,7 @@ def test_complex_llm():
     """
     
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_complex_llm()
+    llm = get_llm(ModelTier.COMPLEX)
     chain = prompt | llm
     
     result = chain.invoke({"news": "ECB raises interest rates by 0.5% citing persistent inflation concerns across eurozone economies"})
@@ -77,7 +78,7 @@ def test_simple_long_context_llm():
     Repeat the following sentence exactly once: {text}
     """
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_simple_long_context_llm()
+    llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
     chain = prompt | llm
     result = chain.invoke({"text": "This is a test for long context."})
     print(f"Simple Long Context LLM result: {result.content}")

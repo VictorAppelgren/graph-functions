@@ -8,18 +8,14 @@ from utils import app_logging
 from src.articles.load_article import load_article
 from src.observability.pipeline_logging import master_log
 from src.observability.pipeline_logging import master_statistics
-from src.observability.pipeline_logging import problem_log
+from src.observability.pipeline_logging import problem_log, Problem
 
 # NEW imports for TF handling
 from src.graph.ops.get_article_temporal_horizon import get_article_temporal_horizon
 from src.analysis.policies.time_frame_identifier import find_time_frame
+from src.analysis.types import RewriteInfo
 
 logger = app_logging.get_logger(__name__)
-
-class RewriteInfo(TypedDict):
-    should_rewrite: bool
-    motivation: str
-    section: str | None
 
 def should_rewrite(topic_id: str, new_article_id: str, test: bool = False) -> RewriteInfo:
     """
@@ -52,7 +48,7 @@ def should_rewrite(topic_id: str, new_article_id: str, test: bool = False) -> Re
     # Load article and require existing argos_summary (no LLM fallback)
     article = load_article(new_article_id)
     if "argos_summary" not in article:
-        problem_log("missing_summary_for_should_rewrite", topic=topic_id, details={"article_id": new_article_id})
+        problem_log(Problem.MISSING_SUMMARY_FOR_SHOULD_REWRITE, topic=topic_id, details={"article_id": new_article_id})
         return {'should_rewrite': False, 'motivation': 'No argos_summary available', 'section': None}
     summary = article["argos_summary"]
 

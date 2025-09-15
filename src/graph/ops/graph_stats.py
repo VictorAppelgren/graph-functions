@@ -1,41 +1,81 @@
 # graph_utils/graph_stats.py
 from __future__ import annotations
 from datetime import datetime, timezone
-from typing import List, TypedDict, Any
+from typing import List, Any, Optional, Dict, cast
+from pydantic import BaseModel, Field
 from src.graph.neo4j_client import run_cypher
 from src.graph.ops.get_all_nodes import get_all_nodes
 import os
 import json
 
-class Orphans(TypedDict):
-    topics: int
-    articles: int
+class OrphansModel(BaseModel):
+    topics: int = 0
+    articles: int = 0
 
-class Snapshot(TypedDict):
-    topics: int
-    topics_with_full_analysis: int
-    topics_with_full_analysis_examples: list[Any | None]
-    articles: int
-    connections: int  # adjust type if you have richer connection objects
-    about_links: int
-    inter_topic_links: int
-    unique_relationship_types: list[str]
-    orphans: Orphans
-    last_updated: str  # ISO-8601 formatted datetime string
+class SnapshotModel(BaseModel):
+    topics: int = 0
+    topics_with_full_analysis: int = 0
+    topics_with_full_analysis_examples: List[str] = Field(default_factory=list)
+    articles: int = 0
+    connections: int = 0 # adjust type if you have richer connection objects
+    about_links: int = 0
+    inter_topic_links: int = 0
+    unique_relationship_types: List[str] = Field(default_factory=list)
+    orphans: OrphansModel = Field(default_factory=OrphansModel)
+    last_updated: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat(timespec="seconds"))
 
-class ProblemsSection(TypedDict):
+class ProblemsSectionModel(BaseModel):
     """Represents the 'problems' section of the stats dict."""
-    zero_result_queries: int
-    topics_zero_results: list[str]
-    topic_rejections: int
-    no_replacement_candidates: int
-    no_replacement_events: list[str]
-    missing_analysis_fields: int
-    missing_analysis_events: list[str]
+    zero_result_queries: int = 0
+    topics_zero_results: List[str] = Field(default_factory=list)
+    topic_rejections: int = 0 
+    no_replacement_candidates: int = 0
+    no_replacement_events: List[Dict[str, Any]] = Field(default_factory=list)
+    missing_analysis_fields: int = 0
+    missing_analysis_events: List[Dict[str, Any]] = Field(default_factory=list)
 
-def _get_cnt(query: str, params: dict | None = None, key: str = "cnt") -> int:
+class TodayStatsModel(BaseModel):
+    queries: int = 0
+    articles: int = 0
+    articles_added: int = 0
+    articles_removed: int = 0
+    added_node: int = 0
+    removes_node: int = 0
+    about_links_added: int = 0
+    about_links_removed: int = 0
+    relationships_added: int = 0
+    relationships_removed: int = 0
+    rewrites_saved: int = 0
+    rewrites_skipped_0_articles: int = 0
+    duplicates_skipped: int = 0
+    errors: int = 0
+    qa_reports_generated: int = 0
+    should_rewrite_true: int = 0
+    should_rewrite_false: int = 0
+    topic_replacements_decided: int = 0
+    enrichment_attempts: int = 0
+    enrichment_articles_added: int = 0
+    llm_simple_calls: int = 0
+    llm_medium_calls: int = 0
+    llm_complex_calls: int = 0
+    llm_simple_long_context_calls: int = 0
+    topics_total_today: int = 0
+    full_analysis_new_today: int = 0
+    rewrite_skip_event: List[RewriteSkipModel] = []
+
+class RewriteSkipModel(BaseModel):
+    timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    topic_id: str = ""
+    section: str = ""
+    
+class TodayStatsFileModel(BaseModel):
+    today: TodayStatsModel = Field(default_factory=TodayStatsModel)
+    graph_state: SnapshotModel = Field(default_factory=SnapshotModel)
+    problems: ProblemsSectionModel = Field(default_factory=ProblemsSectionModel)
+
+def _get_cnt(query: str, key: str = "cnt") -> int:
     """Run a count query and return an int (robust to empty/no rows)."""
-    rows = run_cypher(query, params or {}) or []
+    rows = run_cypher(query)
     if not rows:
         return 0
     val = rows[0].get(key, 0)
@@ -99,7 +139,7 @@ def get_topics_with_full_analysis_count() -> int:
         """
     )
     
-def get_graph_state_snapshot() -> Snapshot:
+def get_graph_state_snapshot() -> SnapshotModel:
     """
     Aggregate a live snapshot of core graph metrics for the daily statistics JSON.
     """
@@ -128,191 +168,143 @@ def get_graph_state_snapshot() -> Snapshot:
         RETURN t.name AS name
         LIMIT 5
         """
-    ) or []
-    analysis_examples = [r.get("name") for r in rows if r.get("name")]
+    )
 
-    return {
-        "topics": topics,
-        "topics_with_full_analysis": analysis_full,
-        "topics_with_full_analysis_examples": analysis_examples,
-        "articles": articles,
-        "connections": connections,
-        "about_links": about_links,
-        "inter_topic_links": inter_topic_links,
-        "unique_relationship_types": unique_relationship_types,
-        "orphans": {
-            "topics": orphans_topics,
-            "articles": orphans_articles,
-        },
-        "last_updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-    }
+    analysis_examples: list[str] = [r["name"] for r in rows if isinstance(r.get("name"), str)]
 
-# ----------------------
-# Problems section helpers
-# ----------------------
+    orphans = OrphansModel(topics=orphans_topics, articles=orphans_articles)
 
-def _today_stats_path() -> str:
-    """Return the path to today's statistics JSON file."""
-    return os.path.join("master_stats", f"statistics_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}.json")
+    return SnapshotModel(
+        topics=topics, 
+        topics_with_full_analysis=analysis_full, 
+        topics_with_full_analysis_examples=analysis_examples, 
+        articles=articles,
+        connections=connections,
+        about_links=about_links,
+        inter_topic_links=inter_topic_links,
+        unique_relationship_types=unique_relationship_types,
+        orphans=orphans,
+        last_updated=datetime.now(timezone.utc).isoformat(timespec="seconds")
+        )
 
-def _load_daily_stats(path: str) -> dict[str, str]:
+def _load_daily_stats() -> TodayStatsFileModel:
+
+    path = os.path.join("master_stats", f"statistics_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}.json")
+
     with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f) or {}
-    if not isinstance(data, dict) or "today" not in data or "graph_state" not in data:
-        raise ValueError("Daily stats malformed: missing 'today' or 'graph_state'")
-    return data
+        return cast(TodayStatsFileModel, json.load(f))
 
-def _save_daily_stats(path: str, data: dict[str, str]) -> None:
-    if "today" not in data or "graph_state" not in data:
-        raise ValueError("Refusing to save malformed stats: missing 'today' or 'graph_state'")
+def _save_daily_stats(data: TodayStatsFileModel) -> None:
+
+    path = os.path.join("master_stats", f"statistics_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}.json")
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def ensure_problems_section(stats: dict[str, object]) -> ProblemsSection | dict[str, object]:
-    if "problems" not in stats or not isinstance(stats["problems"], dict):
-        stats["problems"] = ProblemsSection(
-            zero_result_queries=0,
-            topics_zero_results=[],
-            topic_rejections=0,
-            no_replacement_candidates=0,
-            no_replacement_events=[],
-            missing_analysis_fields=0,
-            missing_analysis_events=[]
-        )
-    return stats
-
-def record_zero_result_problem(topic_id: str) -> None:
-    """Increment zero_result_queries and add topic_id to topics_zero_results (unique)."""
-    if not topic_id:
-        raise ValueError("topic_id is required")
-    path = _today_stats_path()
-    # Fail fast if the daily stats file does not exist; caller must ensure it is created via master_statistics
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Daily master stats file not found: {path}")
-
-    stats = _load_daily_stats(path)
-    ensure_problems_section(stats)
-    stats["problems"]["zero_result_queries"] = int(stats["problems"].get("zero_result_queries", 0)) + 1
-    lst = stats["problems"].get("topics_zero_results", [])
-    if topic_id not in lst:
-        lst.append(topic_id)
-    stats["problems"]["topics_zero_results"] = lst
-    _save_daily_stats(path, stats)
-
-def record_no_replacement_candidates(topic_id: str, timeframe: str) -> None:
-    """Record an event where no competing replacement candidates exist in the given timeframe.
-    Increments a dedicated counter and appends an event item with topic and timeframe.
-    Fail-fast if the daily stats file is missing.
+def update_stats(
+    *,
+    # increments (pass only what you need; zeros ignored)
+    queries: int = 0,
+    articles: int = 0,
+    articles_added: int = 0,
+    articles_removed: int = 0,
+    added_node: int = 0,
+    removes_node: int = 0,
+    about_links_added: int = 0,
+    about_links_removed: int = 0,
+    relationships_added: int = 0,
+    relationships_removed: int = 0,
+    rewrites_saved: int = 0,
+    rewrites_skipped_0_articles: int = 0,
+    duplicates_skipped: int = 0,
+    errors: int = 0,
+    qa_reports_generated: int = 0,
+    should_rewrite_true: int = 0,
+    should_rewrite_false: int = 0,
+    topic_replacements_decided: int = 0,
+    enrichment_attempts: int = 0,
+    enrichment_articles_added: int = 0,
+    no_replacement_candidates: int = 0,
+    # llm usage (choose one or none per call)
+    llm_simple_calls: int = 0,
+    llm_medium_calls: int = 0,
+    llm_complex_calls: int = 0,
+    llm_simple_long_context_calls: int = 0,
+    # optional problems events to append
+    zero_result_topic_ids: List[str] = [],
+    topic_rejections: int = 0,
+    no_replacement_event: Optional[Dict[str, Any]] = None,  
+    missing_analysis_event: Optional[Dict[str, Any]] = None,
+    rewrite_skip_event: Optional[Dict[str, Any]] = None,
+    # controls
+    refresh_snapshot: bool = True,
+) -> None:
     """
-    if not topic_id or not isinstance(topic_id, str):
-        raise ValueError("topic_id is required")
-    if not timeframe or not isinstance(timeframe, str):
-        raise ValueError("timeframe is required")
-
-    path = _today_stats_path()
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Daily master stats file not found: {path}")
-
-    stats = _load_daily_stats(path)
-    ensure_problems_section(stats)
-    probs = stats["problems"]
-
-    # Increment counter (create if missing)
-    probs["no_replacement_candidates"] = int(probs.get("no_replacement_candidates", 0)) + 1
-
-    # Append event record (create list if missing)
-    events = probs.get("no_replacement_events", [])
-    events.append({
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "topic_id": topic_id,
-        "timeframe": timeframe
-    })
-    probs["no_replacement_events"] = events
-
-    _save_daily_stats(path, stats)
-
-def record_topic_rejection(topic_name: str, category: str | None = None, failure_category: str | None = None) -> None:
-    """Record a topic gating rejection into today's master stats problems section.
-    Increments topic_rejections only. Fail-fast if the daily stats file is missing.
+    Load the current daily stats, apply increments and optional problem events,
+    recompute derived fields, optionally refresh the snapshot, and save atomically.
     """
-    if not topic_name or not isinstance(topic_name, str):
-        raise ValueError("topic_name is required")
-    path = _today_stats_path()
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Daily master stats file not found: {path}")
+    stats = _load_daily_stats()
+    t = stats.today
 
-    stats = _load_daily_stats(path)
-    ensure_problems_section(stats)
-    probs = stats["problems"]
-    probs["topic_rejections"] = int(probs.get("topic_rejections", 0)) + 1
-    _save_daily_stats(path, stats)
+    # ---- increments (attribute-style, ignore zeros) ----
+    if queries:                          t.queries += queries
+    if articles:                         t.articles += articles
+    if articles_added:                   t.articles_added += articles_added
+    if articles_removed:                 t.articles_removed += articles_removed
+    if added_node:                       t.added_node += added_node
+    if removes_node:                     t.removes_node += removes_node
+    if about_links_added:                t.about_links_added += about_links_added
+    if about_links_removed:              t.about_links_removed += about_links_removed
+    if relationships_added:              t.relationships_added += relationships_added
+    if relationships_removed:            t.relationships_removed += relationships_removed
+    if rewrites_saved:                   t.rewrites_saved += rewrites_saved
+    if rewrites_skipped_0_articles:      t.rewrites_skipped_0_articles += rewrites_skipped_0_articles
+    if duplicates_skipped:               t.duplicates_skipped += duplicates_skipped
+    if errors:                           t.errors += errors
+    if qa_reports_generated:             t.qa_reports_generated += qa_reports_generated
+    if should_rewrite_true:              t.should_rewrite_true += should_rewrite_true
+    if should_rewrite_false:             t.should_rewrite_false += should_rewrite_false
+    if topic_replacements_decided:       t.topic_replacements_decided += topic_replacements_decided
+    if enrichment_attempts:              t.enrichment_attempts += enrichment_attempts
+    if enrichment_articles_added:        t.enrichment_articles_added += enrichment_articles_added
+    if llm_simple_calls:                 t.llm_simple_calls += llm_simple_calls
+    if llm_medium_calls:                 t.llm_medium_calls += llm_medium_calls
+    if llm_complex_calls:                t.llm_complex_calls += llm_complex_calls
+    if llm_simple_long_context_calls:    t.llm_simple_long_context_calls += llm_simple_long_context_calls
 
-def record_rewrites_skipped_zero_articles(topic_id: str, section: str) -> None:
-    """Record a rewrite skip event (selected 0 articles) under today's problems.
-    Increments a dedicated counter and appends an event item with topic and section.
-    Fail-fast if the daily stats file is missing.
-    """
-    if not topic_id or not isinstance(topic_id, str):
-        raise ValueError("topic_id is required")
-    if not section or not isinstance(section, str):
-        raise ValueError("section is required")
+    # ---- problems section (optional) ----
+    if zero_result_topic_ids:
+        stats.problems.zero_result_queries += len(zero_result_topic_ids)
+        for tid in zero_result_topic_ids:
+            if tid not in stats.problems.topics_zero_results:
+                stats.problems.topics_zero_results.append(tid)
+    if topic_rejections:
+        stats.problems.topic_rejections += topic_rejections
+    if no_replacement_event:
+        stats.problems.no_replacement_candidates += 1
+        stats.problems.no_replacement_events.append({
+            "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            **no_replacement_event,
+        })
+    if missing_analysis_event:
+        stats.problems.missing_analysis_fields += 1
+        stats.problems.missing_analysis_events.append({
+            "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            **missing_analysis_event,
+        })
+    if rewrite_skip_event:
+        stats.today.rewrite_skip_event.append(RewriteSkipModel(timestamp=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            **rewrite_skip_event,
+        ))
 
-    path = _today_stats_path()
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Daily master stats file not found: {path}")
+    # ---- snapshot refresh + derived fields ----
+    if refresh_snapshot:
+        try:
+            stats.graph_state = get_graph_state_snapshot()
+        except Exception as e:
+            # keep previous snapshot but stamp an error marker
+            stats.graph_state.last_updated = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
-    stats = _load_daily_stats(path)
-    ensure_problems_section(stats)
-    probs = stats["problems"]
+            stats.problems.missing_analysis_events.append({"snapshot_error": str(e)[:200]})
 
-    # Increment counter
-    probs["rewrites_skipped_0_articles"] = int(probs.get("rewrites_skipped_0_articles", 0)) + 1
-
-    # Append event record
-    events = probs.get("rewrite_skips", [])
-    events.append({
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "topic_id": topic_id,
-        "section": section
-    })
-    probs["rewrite_skips"] = events
-
-    _save_daily_stats(path, stats)
-
-def record_missing_analysis_fields(topic_id: str, section: str, article_id: str, missing_fields: list) -> None:
-    """Record an event where required analysis fields are missing from article data.
-    Increments a dedicated counter and appends an event item with details.
-    Fail-fast if the daily stats file is missing.
-    """
-    if not topic_id or not isinstance(topic_id, str):
-        raise ValueError("topic_id is required")
-    if not section or not isinstance(section, str):
-        raise ValueError("section is required")
-    if not article_id or not isinstance(article_id, str):
-        raise ValueError("article_id is required")
-    if not missing_fields or not isinstance(missing_fields, list):
-        raise ValueError("missing_fields list is required")
-
-    path = _today_stats_path()
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Daily master stats file not found: {path}")
-
-    stats = _load_daily_stats(path)
-    ensure_problems_section(stats)
-    probs = stats["problems"]
-
-    # Increment counter
-    probs["missing_analysis_fields"] = int(probs.get("missing_analysis_fields", 0)) + 1
-
-    # Append event record
-    events = probs.get("missing_analysis_events", [])
-    events.append({
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "topic_id": topic_id,
-        "section": section,
-        "article_id": article_id,
-        "missing_fields": missing_fields
-    })
-    probs["missing_analysis_events"] = events
-
-    _save_daily_stats(path, stats)
+    _save_daily_stats(stats)

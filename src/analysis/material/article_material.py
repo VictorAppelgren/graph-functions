@@ -13,7 +13,7 @@ logger = app_logging.get_logger(__name__)
 
 from src.analysis.selectors.best_articles import select_best_articles
 from src.articles.load_article import load_article
-from src.observability.pipeline_logging import problem_log
+from src.observability.pipeline_logging import problem_log, Problem
  
 
 def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[str]]:
@@ -32,7 +32,7 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
     # 1) Select candidate articles (no fallbacks)
     selected = select_best_articles(topic_id, section)
     if not selected:
-        problem_log("rewrites_skipped_0_articles", topic=topic_id, details={"section": section})
+        problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES, topic=topic_id, details={"section": section})
         raise ValueError(f"No articles selected for topic_id={topic_id} section={section}")
 
     lines: List[str] = []
@@ -42,7 +42,7 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         aid = meta["id"]
 
         article_ids.append(aid)
-        loaded: Dict[str, Any] = load_article(aid)
+        loaded: Dict[str, Any] = load_article(aid) # TODO
 
         # Strict required fields: title, pubDate, argos_summary
         missing: list[str] = []
@@ -54,7 +54,7 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
             missing.append("argos_summary")
         if missing:
             problem_log(
-                "missing_required_fields_for_analysis_material",
+                Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL,
                 topic=topic_id,
                 details={"section": section, "article_id": aid, "missing": missing},
             )
@@ -75,7 +75,7 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         lines.append("===== ARTICLE END =====\n")
 
     if not lines:
-        problem_log("rewrites_skipped_0_articles_summary_only", topic=topic_id, details={"section": section})
+        problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES_SUMMARY_ONLY, topic=topic_id, details={"section": section})
         raise ValueError(f"No article summaries available for topic_id={topic_id} section={section}")
 
     material = "\n".join(lines).strip()

@@ -25,7 +25,8 @@ from datetime import datetime, date
 from utils import app_logging
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.ops.remove_node import remove_node
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 from langchain_core.prompts import PromptTemplate
@@ -92,7 +93,7 @@ Now output ONLY the JSON object described above.
 """
     parser = JsonOutputParser()
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     chain = prompt | llm | parser
     result = chain.invoke({
         "system_mission": SYSTEM_MISSION,

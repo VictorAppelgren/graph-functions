@@ -13,7 +13,8 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from src.graph.config import MAX_TOPICS, describe_interest_areas
-from src.llm.llm_router import get_medium_llm  # cost-aware
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from utils.app_logging import truncate_str
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.observability.pipeline_logging import master_log
@@ -73,7 +74,7 @@ OUTPUT FORMAT (STRICT JSON, NO EXTRA TEXT):
 }}
 """
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
 

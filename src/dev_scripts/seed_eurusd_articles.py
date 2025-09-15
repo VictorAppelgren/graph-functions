@@ -33,7 +33,8 @@ import json
 from pathlib import Path
 from utils.app_logging import get_logger
 from paths import get_raw_news_dir
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from src.articles.ingest_article import add_article
 from src.articles.article_text_formatter import extract_text_from_json_article
 from langchain_core.output_parsers import JsonOutputParser
@@ -105,7 +106,7 @@ def load_article_from_file(fp: Path):
     return obj
 
 def main():
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     total = 0
     relevant = 0
     added = 0

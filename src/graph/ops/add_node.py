@@ -26,9 +26,9 @@ logger = app_logging.get_logger(__name__)
 class NodeStatus(TypedDict):
     status: str
     topic_name: str
-    category: None |
+    category: None | str
     should_add: bool
-    motivation_for_relevance:
+    motivation_for_relevance: str
     failure_category: str
 
 def add_node(article_id: str, suggested_names: list[str] = []) -> dict:

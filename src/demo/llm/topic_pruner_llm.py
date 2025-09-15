@@ -18,7 +18,8 @@ from utils import app_logging
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.ops.remove_node import remove_node
 from src.graph.config import MAX_TOPICS, describe_interest_areas
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
@@ -81,7 +82,7 @@ Now output ONLY the JSON object described above.
 """
     parser = JsonOutputParser()
     prompt = PromptTemplate.from_template(prompt_template)
-    llm = get_medium_llm().bind(response_format={"type": "json_object"})
+    llm = get_llm(ModelTier.MEDIUM).bind(response_format={"type": "json_object"})
     chain = prompt | llm | parser
     result = chain.invoke({
         "system_mission": SYSTEM_MISSION,

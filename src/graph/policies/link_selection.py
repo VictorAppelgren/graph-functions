@@ -1,4 +1,5 @@
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
@@ -13,7 +14,7 @@ def llm_select_one_new_link(source_node: dict, candidate_nodes: list[dict], exis
     Use LLM to propose the single strongest missing link.
     Returns: { "type": ..., "source": ..., "target": ..., "motivation": ... } or None
     """
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     # Format candidate nodes as '- Name (id: id)'
     candidate_lines = '\n'.join([f"- {n['name']} (id: {n['id']})" for n in candidate_nodes])
     prompt_template = """

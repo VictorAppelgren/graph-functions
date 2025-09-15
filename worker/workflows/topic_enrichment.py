@@ -35,6 +35,7 @@ from paths import get_raw_news_dir
 from src.articles.ingest_article import add_article
 from src.analysis.policies.keyword_generator import generate_keywords
 from src.analysis.policies.relevance_gate import relevance_gate_llm
+from src.analysis.orchestration.should_rewrite import should_rewrite
 
 logger = get_logger(__name__)
 
@@ -240,7 +241,6 @@ def backfill_topic_from_storage(
     
     # Trigger analysis check if articles were added
     if total_added > 0 and not test:
-        from analysis.orchestration.should_rewrite import should_rewrite
         logger.info(f"🎯 ANALYSIS TRIGGER | topic={topic_id} | enrichment added {total_added} articles, now checking if analysis rewrite needed")
         master_log(f"Post-enrichment analysis check | {topic_id} | articles_added={total_added}")
         

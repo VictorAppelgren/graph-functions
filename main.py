@@ -17,7 +17,7 @@ from typing import Dict, Any
 import time
 import math
 import runpy
-from src.graph.policies.priority_policy import PRIORITY_POLICY
+from src.graph.policies.priority_policy import PRIORITY_POLICY, PriorityLevel
 
 # Canonical import pattern: ensure project root (directory containing this main.py) is on sys.path
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -132,7 +132,10 @@ def run_pipeline() -> Dict[str, Any]:
                     logger.info(f"Due in                 : {mins}m")
 
         query = node['query']
-        max_articles = PRIORITY_POLICY[int(node['importance'])]["number_of_articles"]
+        importance = PriorityLevel(int(node["importance"]))  # fails early if invalid
+        policy = PRIORITY_POLICY[importance]
+        max_articles = policy.number_of_articles
+
         orchestrator.run_query(node_name, query, max_articles=max_articles)
 
         # Increment queries after successful processing

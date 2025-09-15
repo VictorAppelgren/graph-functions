@@ -6,7 +6,7 @@ from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
 
-def find_node_mapping(article_text: str, node_list: list):
+def find_node_mapping(article_text: str, node_list: list): # TODO
 
     # preview of the summary
     logger.info(f"Article text: {article_text[:200]}{'...' if len(article_text) > 200 else ''}")

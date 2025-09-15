@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "saga-graph"
+version = "1.0.0"
 description = "Single-source Architecture & Guidelines for Saga Graph - LLM-powered real-time world macro graph"
 readme = "README.md"
 requires-python = ">=3.11,<3.12"
@@ -13,7 +14,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
 ]
-dynamic = ["version"]
 dependencies = [
     "neo4j-driver==5.28.2",
     "langchain==0.3.27",
@@ -41,9 +41,6 @@ browser = [
 [project.urls]
 Homepage = "https://github.com/your-username/saga-graph"
 Repository = "https://github.com/your-username/saga-graph"
-
-[tool.setuptools_scm]
-write_to = "saga_graph/_version.py"
 
 [tool.setuptools.packages.find]
 where = ["."]

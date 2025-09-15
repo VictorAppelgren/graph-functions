@@ -7,7 +7,8 @@ Topic taxonomy classifier for proposed Topic nodes.
 """
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from src.llm.llm_router import get_simple_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from utils.app_logging import get_logger
 from src.llm.system_prompts import SYSTEM_MISSION
 
@@ -68,7 +69,7 @@ def classify_topic_category(
     motivation: str,
     article_summary: str = "",
 ):
-    llm = get_simple_llm()
+    llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
     result = chain.invoke({

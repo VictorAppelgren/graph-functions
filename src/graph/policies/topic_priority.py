@@ -2,7 +2,8 @@
 """
 LLM-driven classifier for Topic importance (1–5) and rationale.
 """
-from src.llm.llm_router import get_medium_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
@@ -65,7 +66,7 @@ def classify_topic_importance(topic_name: str, topic_type: str = "", context: st
     logger.info("topic_name: %r", topic_name)
     logger.info("topic_type: %r", topic_type)
     logger.info("context: %r", truncate_str(context, 2000))
-    llm = get_medium_llm()
+    llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
     chain = template | llm | parser   # exact style match
     result = chain.invoke({
