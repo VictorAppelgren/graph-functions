@@ -73,9 +73,8 @@ def _get_logfile() -> str:
     return os.path.join(LOG_DIR, f"master_{datetime.now().strftime('%Y-%m-%d')}.log")
 
 import json
-import copy
 from pydantic import BaseModel
-from typing import TypedDict, Any, cast
+from typing import cast
 from enum import Enum, unique
 from src.graph.ops.graph_stats import get_graph_state_snapshot
 from src.graph.ops.graph_stats import update_stats
@@ -144,8 +143,6 @@ class ProblemModel(BaseModel):
     topic_id: int
     problem: Problem
     details: ProblemDetailsModel
-
-
 
 
 def _get_statsfile_path() -> str:

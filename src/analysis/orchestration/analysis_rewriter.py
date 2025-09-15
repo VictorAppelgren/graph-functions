@@ -10,7 +10,7 @@ from src.analysis.material.article_material import build_material_for_synthesis_
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, problem_log, Problem
 from src.graph.neo4j_client import run_cypher
-from events.classifier import EventClassifier
+from events.classifier import EventClassifier, EventType
 from src.graph.ops.get_topic_analysis_field import get_topic_analysis_field
 import time
 logger = app_logging.get_logger(__name__)
@@ -68,7 +68,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
     Now also emits tracker events for full run and per-section, capturing all LLM outputs/feedback.
     """
     logger.info(f"Starting analysis_rewriter for topic_id={topic_id}")
-    run_trk = EventClassifier("analysis_rewriter_run")
+    run_trk = EventClassifier(EventType.ANALYSIS_REWRITER_RUN)
     run_id = f"{topic_id}__analysis_run__{int(time.time())}"
     run_trk.put("topic_id", topic_id)
     run_trk.put("test", bool(test))
@@ -80,7 +80,7 @@ def analysis_rewriter(topic_id: str, test: bool = False, analysis_type: Optional
     total_chars = 0
     for section in sections_to_run:
         section_focus = SECTION_FOCUS[section]
-        sec_trk = EventClassifier("analysis_section_rewrite")
+        sec_trk = EventClassifier(EventType.ANALYSIS_SECTION_REWRITE)
         sec_trk.put("topic_id", topic_id)
         sec_trk.put("section", section)
         sec_trk.put("test", bool(test))

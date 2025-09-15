@@ -6,8 +6,6 @@ def update_article_priority(article_id: str) -> None:
     """
     Updates the priority of an Article node in the graph DB.
     """
-    if not article_id:
-        raise ValueError("article_id is required")
     # Fetch current priority
     cypher_get = """
     MATCH (a:Article {id: $article_id}) RETURN a.priority AS priority

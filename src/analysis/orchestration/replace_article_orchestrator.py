@@ -9,7 +9,7 @@ from src.graph.neo4j_client import run_cypher
 from src.articles.load_article import load_article
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, problem_log, Problem
-from events.classifier import EventClassifier
+from events.classifier import EventClassifier, EventType
 logger = app_logging.get_logger(__name__)
 
 from src.graph.ops.get_article_temporal_horizon import get_article_temporal_horizon
@@ -30,7 +30,7 @@ def does_article_replace_old(topic_id: str, new_article_id: str, test: bool = Fa
 
     logger.info(f"Starting does_article_replace_old for topic_id={topic_id}")
 
-    trk = EventClassifier("article_replacement_decision")
+    trk = EventClassifier(EventType.ARTICLE_REPLACEMENT_DECISION)
     trk.put("topic_id", topic_id)
     trk.put("new_article_id", new_article_id)
     trk.put("test", bool(test))

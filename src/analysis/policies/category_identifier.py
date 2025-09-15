@@ -7,8 +7,13 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
+from pydantic import BaseModel
 
 logger = get_logger(__name__)
+
+class CategoryModel(BaseModel):
+    motivation: str
+    name: str
 
 def find_category(article_text: dict): # TODO
     

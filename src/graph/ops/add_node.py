@@ -19,7 +19,7 @@ from src.graph.ops.create_topic_node import create_topic_node
 from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.neo4j_client import run_cypher
-from events.classifier import EventClassifier
+from events.classifier import EventClassifier, EventType
 
 logger = app_logging.get_logger(__name__)
 
@@ -41,7 +41,7 @@ def add_node(article_id: str, suggested_names: list[str] = []) -> dict:
     logger.info('---------')
     
     # Minimal event tracking
-    trk = EventClassifier("add_node")
+    trk = EventClassifier(EventType.ADD_NODE)
     trk.put("source_article_id", article_id)
     trk.put("suggested_names", suggested_names)
     # Load the article

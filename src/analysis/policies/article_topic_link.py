@@ -67,6 +67,8 @@ def validate_article_topic_relevance(article: ArticleModel, topic_name: str, top
     
     should_link = result.get('should_link', False)
     motivation = result.get('motivation', '')
+
+    # regex "should_link" och "motivation"
     
     logger.info(f"Validation result: link={should_link}, motivation={motivation[:200]}{'...' if len(motivation) > 200 else ''}")
     return should_link, motivation

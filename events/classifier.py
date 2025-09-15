@@ -9,10 +9,12 @@ Notes:
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from datetime import datetime
-from typing import Optional, Dict, Any
+from typing import Optional, Any, Mapping
+from enum import Enum
+from pydantic import BaseModel, ConfigDict, Field
+from datetime import datetime, timezone
 
 from paths import get_project_root
 
@@ -31,10 +33,43 @@ def get_tracker_dir() -> Path:
     return get_project_root() / "tracker"
 
 
-def get_event_dir(event_type: str) -> Path:
-    d = get_tracker_dir() / event_type
-    _ensure_dir(d)
+def get_event_dir(event_type: EventType) -> Path:
+    # replace with your real location policy
+    root = Path("events")
+    root.mkdir(parents=True, exist_ok=True)
+    d = root / event_type.value
+    d.mkdir(parents=True, exist_ok=True)
     return d
+
+class EventType(str, Enum):
+    ADD_ARTICLE = "add_article"
+    REMOVE_ARTICLE = "remove_article"
+    REWRITE_SKIPPED = "rewrite_skipped"
+    REMOVE_NODE = "remove_node"
+    ANALYSIS_REWRITER_RUN = "analysis_rewriter_run"
+    ANALYSIS_SECTION_REWRITE = "analysis_section_rewrite"
+    ARTICLE_REPLACEMENT_DECISION = "article_replacement_decision"
+    ADD_RELATIONSHIP = "add_relationship"
+    ADD_NODE = "add_node"
+    REMOVE_RELATIONSHIP = "remove_relationship"
+
+
+
+
+class EventModel(BaseModel):
+    """Canonical event structure written to disk."""
+    model_config = ConfigDict(extra="forbid")
+
+    type: EventType
+    timestamp: str = Field(default_factory=_now_iso)
+    processed: bool = False
+    id: Optional[str] = None
+
+    # small scalar inputs (ids/flags); always strings on disk -> easy to grep/compare
+    inputs: dict[str, str] = Field(default_factory=dict)
+
+    # richer payloads (free-form, but still validated to be a mapping)
+    details: dict[str, Any] = Field(default_factory=dict)
 
 
 # -------- Generic Tracker --------
@@ -50,69 +85,43 @@ class EventClassifier:
       If graph_id is None or "none", writes fail_<timestamp>.json and sets event["id"]="none".
     """
 
-    def __init__(self, event_type: str):
-        if not event_type or not isinstance(event_type, str):
-            raise ValueError("event_type must be a non-empty string")
-
-        self.event_type = event_type
-        self.event: Dict[str, Any] = {
-            "type": event_type,
-            "timestamp": _now_iso(),
-            "processed": False,
-        }
+    def __init__(self, event_type: EventType):
+        self.event = EventModel(type=event_type)
         self._out_dir = get_event_dir(event_type)
         
-    def _validate_event(self) -> None:
-        """Generic, minimal validation (no per-event schemas)."""
-        ev = self.event
-        if not isinstance(ev, dict):
-            raise ValueError("event must be a dict")
-        if not isinstance(ev.get("type"), str) or not ev["type"].strip():
-            raise ValueError("event.type must be a non-empty string")
-        if not isinstance(ev.get("timestamp"), str) or not ev["timestamp"]:
-            raise ValueError("event.timestamp must be a non-empty string")
-        if not isinstance(ev.get("processed"), bool):
-            raise ValueError("event.processed must be a bool")
-        if "id" in ev and (not isinstance(ev["id"], str) or not ev["id"].strip()):
-            raise ValueError("event.id must be a non-empty string when present")
-        inputs = ev.get("inputs")
-        if inputs is not None and not isinstance(inputs, dict):
-            raise ValueError("event.inputs must be a dict if present")
-        details = ev.get("details")
-        if details is not None and not isinstance(details, dict):
-            raise ValueError("event.details must be a dict if present")
-
-    def put(self, name: str, value: Any) -> None:
-        """Unified setter.
-        - If value is a dict → event['details'][name] = value
-        - Else → event['inputs'][name] = str(value)
+    def put(self, name: str, value: object) -> None:
         """
-        if not isinstance(name, str) or not name:
+        - If value is a mapping -> stored under event.details[name] (verbatim)
+        - Else -> stored under event.inputs[name] (stringified)
+        """
+        if not name:
             raise ValueError("name must be a non-empty string")
-        if isinstance(value, dict):
-            details = self.event.setdefault("details", {})
-            details[name] = value
-        else:
-            inputs = self.event.setdefault("inputs", {})
-            inputs[name] = str(value)
 
-    # Deprecated aliases for backward-compatibility
-    def set_field(self, name: str, value: str) -> None:
+        if isinstance(value, Mapping):
+            self.event.details[name] = dict(value) 
+        else:
+            self.event.inputs[name] = str(value)
+
+    def set_field(self, name: str, value: str | int | float | bool) -> None:
         self.put(name, value)
 
     def set_id(self, graph_id: Optional[str]) -> Path:
-        # Decide filename and id
-        if isinstance(graph_id, str) and graph_id.strip() and graph_id.lower() != "none":
-            self.event["id"] = graph_id
-            filename = f"{graph_id}.json"
+        """
+        Set stable id (if provided), or write a fail_<ts>.json with id="none".
+        Validates via Pydantic and writes pretty JSON.
+        """
+        gid = (graph_id or "").strip()
+        if gid and gid.lower() != "none":
+            self.event.id = gid
+            fname = f"{gid}.json"
         else:
-            self.event["id"] = "none"
-            stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"fail_{stamp}.json"
+            self.event.id = "none"
+            stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+            fname = f"fail_{stamp}.json"
 
-        # Final validation and write
-        self._validate_event()
-        out_path = self._out_dir / filename
-        with out_path.open("w", encoding="utf-8") as f:
-            json.dump(self.event, f, ensure_ascii=False, indent=2, default=str)
+        _ = self.event.model_dump()  
+        out_path = self._out_dir / fname
+        tmp = out_path.with_suffix(out_path.suffix + ".tmp")
+        tmp.write_text(self.event.model_dump_json(), encoding="utf-8")
+        tmp.replace(out_path) 
         return out_path

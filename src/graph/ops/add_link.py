@@ -2,7 +2,7 @@ from src.graph.neo4j_client import connect_graph_db
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, master_log_error
 from difflib import get_close_matches
-from events.classifier import EventClassifier
+from events.classifier import EventClassifier, EventType
 from src.graph.ops.get_links import get_existing_links
 from typing import Optional
 
@@ -15,7 +15,7 @@ def add_link(link: dict, context: Optional[dict] = None):
     """
     logger.info(f"Adding link: {link}")
     # Minimal tracker for add_relationship
-    trk = EventClassifier("add_relationship")
+    trk = EventClassifier(EventType.ADD_RELATIONSHIP)
     trk.put("relationship_type", link.get("type"))
     trk.put("source_id", link.get("source"))
     trk.put("target_id", link.get("target"))

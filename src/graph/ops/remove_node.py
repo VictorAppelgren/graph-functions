@@ -4,13 +4,13 @@ Stateless, minimal, and fail-fast per project principles.
 """
 from utils import app_logging
 from src.graph.neo4j_client import run_cypher
-from events.classifier import EventClassifier
+from events.classifier import EventClassifier, EventType
 from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 
 
-def remove_node(node_id: str, reason: str | None = None) -> dict:
+def remove_node(node_id: str, reason: str | None = None) -> dict[str, str]:
     """
     Removes a Topic node (and all its relationships) by property id.
 
@@ -36,7 +36,7 @@ def remove_node(node_id: str, reason: str | None = None) -> dict:
         raise ValueError("node_id must be a non-empty string")
 
     # Event Classifier
-    trk = EventClassifier("remove_node")
+    trk = EventClassifier(EventType.REMOVE_NODE)
     trk.put("target_node_id", node_id)
     if reason is not None:
         trk.put("reason", reason)

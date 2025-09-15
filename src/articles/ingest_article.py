@@ -10,10 +10,10 @@ from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
 from src.graph.ops.find_link import find_influences_and_correlates
 from src.analysis.orchestration.replace_article_orchestrator import does_article_replace_old
-
+from events.classifier import EventClassifier, EventType
 logger = get_logger(__name__)
 
-def trigger_next_steps(topic_id: str, argos_id: str):
+def trigger_next_steps(topic_id: str, argos_id: str) -> None:
     # Trigger relationship discovery
     logger.info(f"Starting relationship discovery for Topic {topic_id}")
     find_influences_and_correlates(topic_id)
@@ -34,8 +34,7 @@ def add_article(article_id: str, test: bool = False, intended_topic_id: str | No
     logger.info(f"Starting article processing for {article_id}")
 
     # Minimal event tracking
-    from events.classifier import EventClassifier
-    trk = EventClassifier("add_article")
+    trk = EventClassifier(EventType.ADD_ARTICLE)
     trk.put("source_article_id", article_id)
 
     # 1. Load article from cold storage
