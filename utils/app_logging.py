@@ -23,7 +23,7 @@ from datetime import datetime
 from contextlib import contextmanager
 from functools import wraps
 from collections.abc import Callable
-from typing import TypeVar, ParamSpec, Any, Iterator, cast
+from typing import TypeVar, ParamSpec, Iterator, cast
 
 P = ParamSpec("P")  # captures parameter types of wrapped function
 R = TypeVar("R")    # captures return type of wrapped function

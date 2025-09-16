@@ -23,7 +23,7 @@ if PROJECT_ROOT not in sys.path:
 from typing import List, Tuple
 
 from utils.app_logging import get_logger
-from src.observability.pipeline_logging import master_log, problem_log, master_statistics
+from src.observability.pipeline_logging import master_log, problem_log, master_statistics, Problem
 
 from src.analysis.orchestration.analysis_rewriter import SECTIONS, SECTION_FOCUS
 from src.graph.ops.get_all_nodes import get_all_nodes
@@ -176,7 +176,7 @@ def backfill_topic_from_storage(
         keywords = generate_keywords(topic_name, section)
         logger.info(f"Generated {len(keywords)} keywords for topic={topic_name} section={section}: {keywords}")
         if not keywords:
-            problem_log("Zero results", topic=topic_id)
+            problem_log(Problem.ZERO_RESULTS, topic=topic_id)
             continue
         # Search cold storage...
         candidates = collect_candidates_by_keywords(
@@ -185,7 +185,7 @@ def backfill_topic_from_storage(
             min_keyword_hits=min_keyword_hits,
         )
         if not candidates:
-            problem_log("Zero results", topic=topic_id)
+            problem_log(Problem.ZERO_RESULTS, topic=topic_id)
             continue
 
         added = 0
@@ -216,7 +216,7 @@ def backfill_topic_from_storage(
                 master_log(f"Backfill added | {article_id} -> {topic_id} | section={section}")
         # if no additions after candidates
         if added == 0:
-            problem_log("Zero results", topic=topic_id)
+            problem_log(Problem.ZERO_RESULTS, topic=topic_id)
         logger.info(
             f"Section summary | topic={topic_id} section={section} | candidates={len(candidates)} | rel_checked={rel_checked} | rel_passed={rel_passed} | added={added} | needed={needed}"
         )

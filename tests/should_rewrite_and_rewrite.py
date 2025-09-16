@@ -15,7 +15,7 @@ from src.analysis.orchestration.should_rewrite import should_rewrite
 
 logger = app_logging.get_logger(__name__)
 
-def main():
+def rewrite() -> None:
     TOPIC_NAME = os.environ.get("ASSET", "EURUSD")  # override with ASSET env if you like
     SAMPLE_LIMIT = int(os.environ.get("SAMPLE_LIMIT", "15"))
 
@@ -26,14 +26,15 @@ def main():
     logger.info(f"Topic resolved: {TOPIC_NAME} -> {topic_id}")
 
     # Get recent article candidates
-    arts = run_cypher("""
-MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
-RETURN a.id AS id, a.publishedAt AS ts
-ORDER BY ts DESC
-LIMIT $lim
-""", {"topic_id": topic_id, "lim": SAMPLE_LIMIT})
+    articles = run_cypher("""
+        MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
+        RETURN a.id AS id, a.publishedAt AS ts
+        ORDER BY ts DESC
+        LIMIT $lim
+        """, {"topic_id": topic_id, "lim": SAMPLE_LIMIT}
+    )
 
-    ids = [row["id"] for row in arts if row.get("id")]
+    ids = [row["id"] for row in articles if row.get("id")]
     assert ids, f"No articles found for topic_id={topic_id}"
     random.shuffle(ids)
 
@@ -52,4 +53,4 @@ LIMIT $lim
         logger.info("No rewrite was triggered in this sample. Increase SAMPLE_LIMIT or try a different ASSET.")
 
 if __name__ == "__main__":
-    main()
+    rewrite()

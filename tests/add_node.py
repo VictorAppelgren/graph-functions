@@ -13,10 +13,11 @@ from src.articles.load_article import load_article
 from src.graph.ops.add_node import add_node
 from utils import app_logging
 from paths import get_raw_news_dir
+from typing import cast
 
 logger = app_logging.get_logger(__name__)
 
-def test_add_node():
+def test_add_node() -> None:
     raw_base = get_raw_news_dir()  # base raw_news directory
     raw_base_str = str(raw_base)
     logger.info(f"Raw news base directory: {raw_base_str}")
@@ -49,7 +50,7 @@ def test_add_node():
     title = article.get('title', '[no title]')
     summary = article['argos_summary']
     logger.info(f"Article preview: title='{title}', summary='{summary[:120]}{'...' if len(summary) > 120 else ''}")
-    article_id = article.get('argos_id') or article.get('id')
+    article_id = cast(str, article.get('argos_id')) or cast(str, article.get('id'))
     if not article_id:
         raise ValueError(f'No argos_id or id found in article file {article_path}!')
     result = add_node(article_id)

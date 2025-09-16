@@ -12,16 +12,17 @@ import random
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.ops.find_link import find_influences_and_correlates
 from utils import app_logging
+from typing import cast
 
 logger = app_logging.get_logger(__name__)
 
-def test_relationship_finder():
+def test_relationship_finder() -> None:
     nodes = get_all_nodes()
     if not nodes:
         logger.error('No nodes found in the graph!')
         return
     node = random.choice(nodes)
-    node_id = node.get('id')
+    node_id = cast(str, node.get('id'))
     logger.info(f'Picked node: {node_id}')
     result = find_influences_and_correlates(node_id, test=False)
     logger.info(f"[test_relationship_finder] Results for node {node_id}: {result}")

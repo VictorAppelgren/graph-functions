@@ -9,6 +9,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import random
+from typing import cast
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.analysis.orchestration.analysis_rewriter import analysis_rewriter
 from src.analysis.orchestration.should_rewrite import should_rewrite
@@ -17,7 +18,7 @@ from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
 
-def test_should_rewrite():
+def test_should_rewrite() -> bool:
     """Test the should_rewrite trigger function"""
     logger.info("=== TESTING ANALYSIS TRIGGER (should_rewrite) ===")
     
@@ -48,7 +49,7 @@ def test_should_rewrite():
         logger.error(f"❌ should_rewrite failed: {e}")
         return False
 
-def test_analysis_direct():
+def test_analysis_direct() -> bool:
     """Test direct analysis generation"""
     logger.info("=== TESTING DIRECT ANALYSIS GENERATION ===")
     
@@ -66,7 +67,7 @@ def test_analysis_direct():
             nodes = get_all_nodes()
     
     node = random.choice(nodes)
-    topic_id = node.get('id')
+    topic_id = cast(str, node.get('id'))
     topic_name = node.get('name', topic_id)
     
     logger.info(f'Testing direct analysis for: {topic_name} ({topic_id})')
@@ -79,7 +80,7 @@ def test_analysis_direct():
         logger.error(f"❌ Direct analysis failed: {e}")
         return False
 
-def test_analysis_with_sections():
+def test_analysis_with_sections() -> bool:
     """Test analysis generation for specific sections"""
     logger.info("=== TESTING ANALYSIS BY SECTION ===")
     
@@ -89,7 +90,7 @@ def test_analysis_with_sections():
         return False
     
     node = random.choice(nodes)
-    topic_id = node.get('id')
+    topic_id = cast(str, node.get('id'))
     topic_name = node.get('name', topic_id)
     
     sections = ["fundamental", "medium", "current"]
@@ -111,7 +112,7 @@ def test_analysis_with_sections():
     
     return passed > 0  # Success if at least one section worked
 
-def run_analysis_tests():
+def run_analysis_tests() -> None:
     """Run all analysis-focused tests"""
     logger.info("🔬 STARTING ANALYSIS PIPELINE TESTS")
     

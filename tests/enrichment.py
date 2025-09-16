@@ -14,10 +14,11 @@ from src.analysis.policies.keyword_generator import generate_keywords
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from worker.workflows.topic_enrichment import collect_candidates_by_keywords
 from utils import app_logging
+from typing import cast
 
 logger = app_logging.get_logger(__name__)
 
-def test_keywords():
+def test_keywords() -> bool:
     """Test keyword generation for a sample topic"""
     logger.info("=== TESTING KEYWORD GENERATION ===")
     
@@ -35,7 +36,7 @@ def test_keywords():
         logger.error("❌ No keywords generated!")
         return False
 
-def test_keyword_search():
+def test_keyword_search() -> bool:
     """Test keyword-based article search"""
     logger.info("=== TESTING KEYWORD SEARCH ===")
     
@@ -58,7 +59,7 @@ def test_keyword_search():
         logger.error("❌ No candidates found!")
         return False
 
-def test_enrichment():
+def test_enrichment() -> bool:
     """Test enrichment for a sample topic"""
     logger.info("=== TESTING TOPIC ENRICHMENT ===")
     
@@ -69,7 +70,7 @@ def test_enrichment():
     
     # Pick a random topic
     node = random.choice(nodes)
-    topic_id = node.get('id')
+    topic_id = cast(str, node.get('id'))
     topic_name = node.get('name', topic_id)
     
     logger.info(f"Testing enrichment for topic='{topic_name}' ({topic_id})")
@@ -86,7 +87,7 @@ def test_enrichment():
     logger.info(f"Enrichment test completed: {added} articles added")
     return added >= 0  # Success if no errors
 
-def test_enrichment_full_pipeline():
+def test_enrichment_full_pipeline() -> bool:
     """Test the full enrichment pipeline step by step"""
     logger.info("=== TESTING FULL ENRICHMENT PIPELINE ===")
     
@@ -96,7 +97,7 @@ def test_enrichment_full_pipeline():
         return False
     
     node = random.choice(nodes)
-    topic_id = node.get('id')
+    topic_id = cast(str, node.get('id'))
     topic_name = node.get('name', topic_id)
     
     logger.info(f"Full pipeline test for: {topic_name} ({topic_id})")
@@ -134,7 +135,7 @@ def test_enrichment_full_pipeline():
     logger.info(f"✅ Step 3: Full pipeline completed, {added} articles added")
     return True
 
-def run_enrichment_tests():
+def run_enrichment_tests() -> None:
     """Run all enrichment-focused tests"""
     logger.info("🌱 STARTING ENRICHMENT PIPELINE TESTS")
     

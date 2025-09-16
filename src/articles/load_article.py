@@ -20,7 +20,7 @@ from paths import get_raw_news_dir
 
 logger = get_logger(__name__)
 
-def load_article(article_id: str, max_days: int = 30) -> Dict[str, Any]:
+def load_article(article_id: str, max_days: int = 30) -> Dict[str, Any] | None:
     """
     Loads a single article from raw news directories by its unique ID.
     Tries today, then yesterday, etc., up to max_days back.

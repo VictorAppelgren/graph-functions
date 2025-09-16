@@ -15,7 +15,7 @@ from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
 
-def test_time_importance():
+def test_time_importance() -> None:
     nodes = get_all_nodes()
     if not nodes:
         logger.error('No nodes found in the graph!')

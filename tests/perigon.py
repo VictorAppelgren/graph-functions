@@ -9,7 +9,7 @@ if PROJECT_ROOT not in sys.path:
 
 from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 
-def test_perigon():
+def test_perigon() -> None:
     orchestrator = NewsIngestionOrchestrator(debug=True)
     results = orchestrator.run_complete_test()
 
@@ -34,7 +34,7 @@ def test_perigon():
             print(f"  {'Sources:':<12} {article['num_sources_scraped']} linked sources scraped")
     
     print("\n✅ Pipeline execution successful")
-    return 0
+    return
 
 if __name__ == "__main__":
     test_perigon()

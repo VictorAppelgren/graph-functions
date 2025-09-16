@@ -1,5 +1,4 @@
 import sys, os
-import logging
 # Ensure absolute imports work from any CWD
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
@@ -7,15 +6,17 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
+import logging
 from utils import app_logging
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.ops.remove_link import remove_link
 from src.graph.ops.get_links import get_existing_links
 from src.graph.policies.link_removal import llm_select_link_to_remove
+from src.graph.core.user_anchors import USER_ANCHOR_NODES
 
 logger = app_logging.get_logger(__name__)
 
-def interactive_propose_and_remove():
+def interactive_propose_and_remove() -> None:
     """
     Stateless, minimal flow:
     1) Find a non-anchor source with >=2 non-ABOUT links (targets not anchors).
@@ -23,10 +24,9 @@ def interactive_propose_and_remove():
     3) Build candidates and call LLM to pick weakest link; show motivation.
     4) Auto-remove and persist full context (no second y/N).
     """
-    from graph.core.user_anchors import USER_ANCHOR_NODES
 
-    app_logging.getLogger('graph_relationships.get_existing_links').setLevel(app_logging.INFO)
-    app_logging.getLogger('graph_relationships.add_link').setLevel(app_logging.INFO)
+    app_logging.get_logger('graph_relationships.get_existing_links').setLevel(logging.INFO)
+    app_logging.get_logger('graph_relationships.add_link').setLevel(logging.INFO)
 
     anchor_ids = {n.get('id') for n in USER_ANCHOR_NODES}
     nodes = get_all_nodes()

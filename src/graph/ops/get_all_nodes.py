@@ -13,7 +13,7 @@ from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
 
-def get_all_nodes(fields: list[str]) -> List[dict[str, str]]:
+def get_all_nodes(fields: list[str] = ['id', 'name', 'type']) -> List[dict[str, str]]:
     """
     Fetch all current graph nodes from the Neo4j database.
     Args:
@@ -39,6 +39,6 @@ def get_all_nodes(fields: list[str]) -> List[dict[str, str]]:
 
 # a main that simply prints all nodes and logs with numbers all nodes
 if __name__ == "__main__":
-    nodes = get_all_nodes(['id', 'name', 'type'])
+    nodes = get_all_nodes()
     for i, node in enumerate(nodes):
         logger.info(f" Node {i}: {node['name']} - {node['id']}")

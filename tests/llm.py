@@ -14,7 +14,7 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from langchain_core.prompts import PromptTemplate
 
-def test_simple_llm():
+def test_simple_llm() -> None:
     """Test simple LLM with basic classification task."""
     print("🤖🔍 Testing SIMPLE LLM...")
     
@@ -31,9 +31,8 @@ def test_simple_llm():
     
     result = chain.invoke({"text": "The market is performing well today"})
     print(f"Simple LLM result: {result.content}")
-    return result.content
 
-def test_medium_llm():
+def test_medium_llm() -> None:
     """Test medium LLM with summarization task."""
     print("🤖📊 Testing MEDIUM LLM...")
     
@@ -50,9 +49,8 @@ def test_medium_llm():
     
     result = chain.invoke({"text": "The Federal Reserve announced today that interest rates will remain unchanged at 5.25%. This decision comes after months of economic uncertainty and inflation concerns. Market analysts expect this to stabilize bond yields in the short term."})
     print(f"Medium LLM result: {result.content}")
-    return result.content
-
-def test_complex_llm():
+    
+def test_complex_llm() -> None:
     """Test complex LLM with analysis task."""
     print("🤖🧠 Testing COMPLEX LLM...")
     
@@ -69,9 +67,8 @@ def test_complex_llm():
     
     result = chain.invoke({"news": "ECB raises interest rates by 0.5% citing persistent inflation concerns across eurozone economies"})
     print(f"Complex LLM result: {result.content}")
-    return result.content
 
-def test_simple_long_context_llm():
+def test_simple_long_context_llm() -> None:
     """Test simple long context LLM with a basic long-context task."""
     print("🤖🧩 Testing SIMPLE_LONG_CONTEXT LLM...")
     prompt_template = """
@@ -82,9 +79,8 @@ def test_simple_long_context_llm():
     chain = prompt | llm
     result = chain.invoke({"text": "This is a test for long context."})
     print(f"Simple Long Context LLM result: {result.content}")
-    return result.content
 
-def run_all_tests():
+def run_all_tests() -> None:
     """Run all LLM tier tests."""
     print("=" * 50)
     print("TESTING ALL LLM TIERS")
@@ -92,13 +88,9 @@ def run_all_tests():
     
     try:
         test_simple_llm()
-        print()
         test_medium_llm()
-        print()
         test_complex_llm()
-        print()
         test_simple_long_context_llm()
-        print()
         print("✅ All LLM tests completed successfully!")
         
     except Exception as e:

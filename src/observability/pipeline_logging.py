@@ -129,15 +129,12 @@ class StatsFileModel(BaseModel):
     today: StatsModel
     graph_state: SnapshotModel
 
-class ProblemMissingModel(BaseModel):
-    title: str
-    pub_date: str
-    argos_summary: str
-
 class ProblemDetailsModel(BaseModel):
-    section: str
-    article_id: str
-    missing: ProblemMissingModel
+    section: str = ""
+    article_id: str = ""
+    missing: list[str] = []
+    category: str | None = None
+    failure_category: str = ""
 
 class ProblemModel(BaseModel):
     topic_id: int
@@ -278,7 +275,7 @@ def master_log_error(message: str, error: Exception | None = None) -> None:
         f.write(line + "\n")
     master_statistics(errors=1)
 
-def problem_log(problem: Problem, topic: str, details: dict[str, str]| None = None) -> None:
+def problem_log(problem: Problem, topic: str, details: ProblemDetailsModel | None = None) -> None:
     """
     Record a minimal problem into the daily master stats JSON under the
     top-level "problems" section. Currently supports only:
@@ -293,46 +290,30 @@ def problem_log(problem: Problem, topic: str, details: dict[str, str]| None = No
     if problem == Problem.ZERO_RESULTS:
         update_stats(zero_result_topic_ids=[topic])
     elif problem == Problem.TOPIC_REJECTED:
-        category = None
-        failure_category = None
-        if isinstance(details, dict):
-            category = details.get("category")
-            failure_category = details.get("failure_category")
         update_stats(
             topic_rejections = 1
         )
     elif problem == Problem.REWRITE_SKIPPED_0_ARTICLES:
-        section = None
-        if isinstance(details, dict) and "section" in details:
-            section = details["section"]
-        if not section:
-            raise ValueError("details.section is required for rewrites_skipped_0_articles")
         update_stats(
             rewrites_skipped_0_articles = 1, 
             rewrite_skip_event=details
         )
     elif problem == Problem.NO_REPLACEMENT_CANDIDATES:
-        timeframe = None
-        if isinstance(details, dict):
-            timeframe = details.get("timeframe")
-        if not timeframe:
-            raise ValueError("details.timeframe is required for 'No replacement candidates'")
         update_stats(
             no_replacement_candidates = 1,
             no_replacement_event = details
             )
     elif problem == Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL:
-        if isinstance(details, dict):
-            section = details.get("section")
-            article_id = details.get("article_id")
-            missing = details.get("missing")
-        update_stats(missing_analysis_event={"topic_id": topic,
-                                             "section": section,
-                                             "article_id": article_id,
-                                             "missing_fields": missing})
+        update_stats(
+            missing_analysis_event={
+                "topic_id": topic,
+                "section": details.section,
+                "article_id": details.article_id,
+                "missing_fields": details.missing
+                }
+            )
     else:
-        # Keep the surface area minimal and explicit
-        raise ValueError(f"Unsupported problem type: {problem}")
+        return
 
 
         

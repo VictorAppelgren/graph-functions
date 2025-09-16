@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from src.graph.policies.topic_priority import classify_topic_importance
 from src.graph.policies.topic_relevance import check_topic_relevance
 from src.graph.policies.topic_category import classify_topic_category
-from src.observability.pipeline_logging import problem_log, master_log
+from src.observability.pipeline_logging import problem_log, master_log, Problem, ProblemDetailsModel
 from src.analysis.policies.query_generator import create_wide_query
 from src.analysis.policies.topic_proposal import propose_topic_node
 from src.graph.ops.create_topic_node import create_topic_node
@@ -36,9 +36,6 @@ def add_node(article_id: str, suggested_names: list[str] = []) -> dict:
     Uses an LLM to propose a new Topic node for the graph based on the article.
     Returns the created node as a dict.
     """
-    logger.info('---------')
-    logger.info('REMOVE THIS LATER! IF WE ADD A NODE, DOES IT ALSO CREATE THE ARTICLE AND THE ABOUT RELATIONSHIP?')
-    logger.info('---------')
     
     # Minimal event tracking
     trk = EventClassifier(EventType.ADD_NODE)
@@ -57,7 +54,7 @@ def add_node(article_id: str, suggested_names: list[str] = []) -> dict:
     if not isinstance(topic_dict, dict) or not topic_dict:
         # Unified rejection: treat as gating fail, but with special details
         problem_log(
-            problem="Topic rejected",
+            Problem.TOPIC_REJECTED,
             topic=article_json.get("title", "unknown") if 'article_json' in locals() else "unknown",
             details={
                 "category": None,

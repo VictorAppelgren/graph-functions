@@ -7,13 +7,14 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from utils import app_logging
+from typing import cast
 from src.graph.ops.get_all_nodes import get_all_nodes
 from src.graph.ops.remove_node import remove_node
 logger = app_logging.get_logger(__name__)
 
 ASSET = "Taylor Swift: The Life of a Showgirl"
 
-def test_remove_node():
+def test_remove_node() -> None:
     all_nodes = get_all_nodes()
     node_to_remove = None
     if ASSET:
@@ -34,7 +35,7 @@ def test_remove_node():
     if not node_to_remove:
         logger.warning("No removable node found (ASSET or importance==5)")
         return
-    node_id = node_to_remove.get('id')
+    node_id = cast(str, node_to_remove.get('id'))
     logger.info(f"Removing node: {node_to_remove.get('name')} (id={node_id})")
     result = remove_node(node_id, reason="cleanup test path")
     print(f"[test_remove_node] Removed: {node_to_remove.get('name')} (id={node_id}) Result: {result}")

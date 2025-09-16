@@ -7,8 +7,6 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-app_logging.basicConfig(level=app_logging.INFO)
-
 import sys
 sys.path.insert(0, "..")
 
@@ -19,17 +17,13 @@ from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
 
-def find_latest_day_folder(base_dir):
+def find_latest_day_folder(base_dir) -> int | None:
     days = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]
     return max(days) if days else None
 
-def pick_random_article_json(day_folder):
+def pick_random_article_json(day_folder) -> str | None:
     files = [f for f in os.listdir(day_folder) if f.endswith('.json')]
     return random.choice(files) if files else None
-
-def load_article_json(filepath):
-    with open(filepath, 'r') as f:
-        return json.load(f)
 
 def test_add_article(article_id: str = ""):
     # If an ID is provided, use it directly; else pick a random article from latest day
@@ -44,14 +38,17 @@ def test_add_article(article_id: str = ""):
     if not day:
         logger.error('No day folders found in raw_news!')
         return
-    day_folder = os.path.join(base_dir, day)
+    day_folder = os.path.join(base_dir, str(day))
     article_file = pick_random_article_json(day_folder)
     if not article_file:
         logger.error(f'No article JSONs found in {day_folder}!')
         return
     article_path = os.path.join(day_folder, article_file)
     logger.info(f'Picked article: {article_path}')
-    article = load_article_json(article_path)
+
+    with open(article_path, 'r') as f:
+        article = json.load(f)
+
     # Minimal preview log: title and truncated summary/description
     title = article.get('title', '[no title]')
     summary = article.get('summary') or article.get('description') or ''
