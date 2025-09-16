@@ -3,6 +3,8 @@ Minimal Neo4j database driver utility for Argos Graph.
 Centralized connection point for all Neo4j operations.
 """
 import os
+import logging
+from collections.abc import Mapping
 from typing import List, Dict, Any, Optional, TypeVar, cast
 from neo4j import GraphDatabase, basic_auth, Driver
 from utils import app_logging
@@ -28,9 +30,9 @@ def connect_graph_db() -> Driver:
     """
     try:
         # Suppress noisy warnings from the Neo4j Python driver unless explicitly enabled
-        app_logging.getLogger("neo4j").setLevel(app_logging.ERROR)
-        app_logging.getLogger("neo4j.io").setLevel(app_logging.ERROR)
-        app_logging.getLogger("neo4j.pool").setLevel(app_logging.ERROR)
+        app_logging.get_logger("neo4j").setLevel(logging.ERROR)
+        app_logging.get_logger("neo4j.io").setLevel(logging.ERROR)
+        app_logging.get_logger("neo4j.pool").setLevel(logging.ERROR)
         logger.debug(f"Connecting to Neo4j at {NEO4J_URI} as user '{NEO4J_USER}' (database: '{NEO4J_DATABASE}')")
         driver = GraphDatabase.driver(
             NEO4J_URI,
@@ -103,14 +105,24 @@ def run_cypher(query: str, params: Optional[Dict[str, Any]] = None, database: Op
             result = session.run(query, p)
             records = [dict(r) for r in result]
             # Log query as before
-            def _log_query(query, params, rows):
-                def truncate(val):
+            def _log_query(query: str, params: Mapping[str, Any], rows: int) -> None:
+                """Log the executed query, parameters, and row count (truncating long strings)."""
+                def truncate(val: Any) -> str | Any:
                     if isinstance(val, str) and len(val) > 100:
-                        return val[:100] + '...'
+                        return val[:100] + "..."
                     return val
-                params_str = "{\n" + ",\n".join(f"  {k}: {truncate(v)!r}" for k, v in params.items()) + "\n}"
-                logger.debug("Query executed:\nQUERY:\n%s\nPARAMS:\n%s\nROWS: %s", query.strip(), params_str, rows)
-            _log_query(query, p, len(records))
+
+                params_str = (
+                    "{\n"
+                    + ",\n".join(f"  {k}: {truncate(v)!r}" for k, v in params.items())
+                    + "\n}"
+                )
+                logger.debug(
+                    "Query executed:\nQUERY:\n%s\nPARAMS:\n%s\nROWS: %s",
+                    query.strip(),
+                    params_str,
+                    rows,
+                )
             # Log Neo4j property warnings in a readable way
             notifications = getattr(result, 'notifications', [])
             for n in notifications:
@@ -195,7 +207,7 @@ def get_articles(limit: Optional[int] = None, topic_id: Optional[str] = None) ->
     
     if limit:
         query += " LIMIT $limit"
-        params['limit'] = limit
+        params['limit'] = str(limit)
     
     results = run_cypher(query, params)
     return [cast(ArticleNode, r['a']) for r in results]

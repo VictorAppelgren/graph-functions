@@ -7,8 +7,8 @@ Project-URL: Repository, https://github.com/your-username/saga-graph
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Financial and Insurance Industry
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.11
-Requires-Python: <3.12,>=3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.12
 Description-Content-Type: text/markdown
 Requires-Dist: neo4j-driver==5.28.2
 Requires-Dist: langchain==0.3.27
@@ -83,7 +83,7 @@ The system follows these key flows:
 ### Dependencies
 - **Neo4j 5.x** - Graph database for topics, articles, and relationships
 - **LangChain** - LLM orchestration and JSON parsing
-- **Python 3.11+** - Dependencies managed in `pyproject.toml`
+- **Python 3.12+** - Dependencies managed in `pyproject.toml`
 - **LLM Providers** - OpenAI, Anthropic, or Ollama for analysis
 
 ---

@@ -74,7 +74,7 @@ def _get_logfile() -> str:
 
 import json
 from pydantic import BaseModel
-from typing import cast
+from typing import cast, Any
 from enum import Enum, unique
 from src.graph.ops.graph_stats import get_graph_state_snapshot
 from src.graph.ops.graph_stats import update_stats
@@ -296,22 +296,23 @@ def problem_log(problem: Problem, topic: str, details: ProblemDetailsModel | Non
     elif problem == Problem.REWRITE_SKIPPED_0_ARTICLES:
         update_stats(
             rewrites_skipped_0_articles = 1, 
-            rewrite_skip_event=details
+            rewrite_skip_event=cast(dict[str, Any], details)
         )
     elif problem == Problem.NO_REPLACEMENT_CANDIDATES:
         update_stats(
             no_replacement_candidates = 1,
-            no_replacement_event = details
+            no_replacement_event = cast(dict[str, Any], details)
             )
     elif problem == Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL:
-        update_stats(
-            missing_analysis_event={
-                "topic_id": topic,
-                "section": details.section,
-                "article_id": details.article_id,
-                "missing_fields": details.missing
-                }
-            )
+        if details:
+            update_stats(
+                missing_analysis_event={
+                    "topic_id": topic,
+                    "section": details.section,
+                    "article_id": details.article_id,
+                    "missing_fields": details.missing
+                    }
+                )
     else:
         return
 

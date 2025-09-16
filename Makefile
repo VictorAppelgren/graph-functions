@@ -1,5 +1,5 @@
 # SAGA Graph Development Tasks
-# Requires: make, python 3.11+, virtual environment activated
+# Requires: make, python 3.12+, virtual environment activated
 
 .PHONY: help install typecheck typecheck-strict format lint test clean pre-commit
 

@@ -1,14 +1,19 @@
 """
 LLM-driven proposal for new Topic node based on article content.
 """
+import json
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.graph.config import MAX_TOPICS, describe_interest_areas
-from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.topic import get_all_topic_nodes
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from typing import Any, Sequence
+from pydantic import BaseModel, ConfigDict, ValidationError
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_core.runnables import Runnable
 
 logger = app_logging.get_logger(__name__)
 
@@ -80,31 +85,54 @@ template = PromptTemplate(
     ]
 )
 
-def propose_topic_node(article: str, suggested_names: list = []) -> dict: # TODO
+class TopicProposal(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    id: str
+    name: str
+    type: str
+    motivation: str | None = None
+    importance: int | None = None
+    last_updated: str | None = None
+
+def _coerce_json_object(raw: Any) -> dict[str, Any]:
+    if isinstance(raw, dict):
+        return raw
+    if isinstance(raw, str):
+        parsed = json.loads(raw)
+        if isinstance(parsed, dict):
+            return parsed
+    raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
+
+def propose_topic_node(
+    article: str,
+    suggested_names: Sequence[str] | None = None,   # avoid mutable default
+) -> dict[str, Any] | None:
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
-    Returns a dict with all required fields for insertion.
+    Returns a dict with required fields for insertion, or None if no proposal.
     """
     logger.info("Calling LLM to propose new Topic node based on article.")
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
 
-    # Load capacity context (stateless to caller)
+    # compute context...
     scope_text = describe_interest_areas()
     try:
-        existing_topics = get_all_nodes(fields=["id", "name", "importance", "last_updated"])
+        existing_topics = get_all_topic_nodes(fields=["id", "name", "importance", "last_updated"])
     except Exception as e:
-        logger.warning(f"Failed to load existing topics for capacity context: {e}")
+        logger.warning("Failed to load existing topics for capacity context: %s", e)
         existing_topics = []
+
     current_count = len(existing_topics)
     max_topics = MAX_TOPICS
     capacity_full = current_count >= max_topics
-    weakest_importance = None
-    weakest_examples = []
+    weakest_importance: int | None = None
+    weakest_examples: list[dict[str, Any]] = []
+
     if capacity_full and existing_topics:
         try:
             sorted_all = sorted(existing_topics, key=lambda x: (x.get("importance") or 0))
-            weakest_importance = sorted_all[0].get("importance", 0)
+            weakest_importance = int(sorted_all[0].get("importance", 0))
             weakest_examples = [
                 {
                     "name": t.get("name"),
@@ -114,34 +142,40 @@ def propose_topic_node(article: str, suggested_names: list = []) -> dict: # TODO
                 for t in sorted_all[:3]
             ]
         except Exception as e:
-            logger.warning(f"Failed to compute weakest topics: {e}")
+            logger.warning("Failed to compute weakest topics: %s", e)
             weakest_importance = None
             weakest_examples = []
 
-    chain = template | llm | parser
-    topic_dict = chain.invoke({
+    # build your PromptTemplate as `template` earlier
+    chain: Runnable[dict[str, Any], Any] = template | llm | parser
+    raw = chain.invoke({
         "system_mission": SYSTEM_MISSION,
         "system_context": SYSTEM_CONTEXT,
         "article": article,
-        "suggested_names": suggested_names,
+        "suggested_names": list(suggested_names or []),
         "max_topics": max_topics,
         "current_count": current_count,
         "scope_text": scope_text,
         "weakest_importance": weakest_importance,
         "weakest_examples": weakest_examples,
     })
-    logger.info(f"LLM proposed new topic: {topic_dict}")
-    if topic_dict is None:
+
+    if raw is None:
         return None
-    # Log the motivation if present
-    motivation = topic_dict.get('motivation')
-    if motivation:
-        logger.info(f"LLM topic node motivation: {motivation}")
-    # Validate required fields
-    required_fields = ['id', 'name', 'type']
-    missing_fields = [f for f in required_fields if f not in topic_dict or topic_dict[f] in (None, "")]
-    if missing_fields:
-        logger.warning(f"Missing or empty fields in topic_dict: {missing_fields}. These will be inserted as empty strings.")
-        for f in missing_fields:
-            topic_dict[f] = topic_dict.get(f, "")
-    return topic_dict
+
+    try:
+        data = _coerce_json_object(raw)
+    except Exception as e:
+        logger.error("LLM topic JSON parse failed: %s", e)
+        return None
+
+    try:
+        proposal = TopicProposal.model_validate(data)
+    except ValidationError as e:
+        logger.error("LLM topic validation failed: %s", e)
+        return None
+
+    if proposal.motivation:
+        logger.info("LLM topic node motivation: %s", proposal.motivation)
+
+    return proposal.model_dump(exclude_none=True)

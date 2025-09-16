@@ -5,7 +5,7 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.orchestration.analysis_rewriter import SECTIONS, SECTION_FOCUS
-from src.graph.ops.get_node_by_id import get_node_by_id
+from src.graph.ops.topic import get_topic_node_by_id
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
 import time
@@ -39,13 +39,15 @@ def _fetch_existing_section_summaries(topic_id: str, section: str, limit: int = 
             logger.warning(f"Cold storage load failed | id={aid} | err={e}")
             continue
         # Prefer argos_summary; fallback to common summary-like fields
-        title = (art.get("title") if isinstance(art, dict) else None) or aid
-        summ_source = art['source']
-        summ = art["argos_summary"]
-        logger.info(
-            f"Existing coverage item | id={aid} | title={title} | src={summ_source} | summary_len={len(summ)} | preview={summ[:200]}"
-        )
-        out.append((title, summ))
+
+        if art:
+            title = (art.get("title") if isinstance(art, dict) else None) or aid
+            summ_source = art['source']
+            summ = art["argos_summary"]
+            logger.info(
+                f"Existing coverage item | id={aid} | title={title} | src={summ_source} | summary_len={len(summ)} | preview={summ[:200]}"
+            )
+            out.append((title, summ))
     return out
 
 
@@ -62,7 +64,7 @@ def relevance_gate_llm(topic_id: str, section: str, article_text: str) -> Tuple[
         raise ValueError("article_text is required")
 
     focus = SECTION_FOCUS[section]
-    topic_node = get_node_by_id(topic_id)
+    topic_node = get_topic_node_by_id(topic_id)
     topic_name = topic_node["name"] if ("name" in topic_node and topic_node["name"]) else topic_id
     logger.info(
         f"Relevance gate start | topic={topic_id}({topic_name}) section={section} | article_len_chars={len(article_text)} | article_len_words={len(article_text.split())}"

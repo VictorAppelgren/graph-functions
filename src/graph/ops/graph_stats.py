@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from typing import List, Any, Optional, Dict, cast
 from pydantic import BaseModel, Field
 from src.graph.neo4j_client import run_cypher
-from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.node import get_all_nodes
 import os
 import json
 

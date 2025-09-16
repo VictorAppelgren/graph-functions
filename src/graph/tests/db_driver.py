@@ -13,7 +13,7 @@ if PROJECT_ROOT not in sys.path:
 from src.graph.neo4j_client import connect_graph_db
 from utils import app_logging
 
-def main():
+def main() -> None:
     logger = app_logging.get_logger(__name__)
     logger.info("=== Starting Neo4j connection test ===")
     try:

@@ -1,5 +1,6 @@
 # graph_config.py
 import os
+from typing import Any
 
 # Max number of topics allowed (unified capacity limit).
 # Can be overridden with env var MAX_TOPICS.
@@ -47,7 +48,10 @@ INTEREST_AREAS = [
 
 def describe_interest_areas() -> str:
     """Compact text description for prompts."""
-    def entry(a):
+    def entry(a: dict[str, Any]) -> str:
+        """
+        Format a single entry as a string with priority, description, and included items.
+        """
         inc = ", ".join(a.get("include", [])[:8])
         return f"- {a['name']} (prio {a['priority']}): {a['description']} | include: {inc}"
     lines = "\n".join(entry(a) for a in INTEREST_AREAS)

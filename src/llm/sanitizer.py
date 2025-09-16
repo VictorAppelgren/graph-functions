@@ -46,7 +46,7 @@ def _coerce_to_dict(raw: Any) -> dict[str, Any]:
     raise ValueError("LLM output not parseable as JSON object")
 
 def run_llm_decision[T: BaseModel](
-    chain,
+    chain: Runnable[str, dict[str, Any]],
     prompt: str,
     allowed_ids: Iterable[str],
     model: type[T],
@@ -68,12 +68,11 @@ def run_llm_decision[T: BaseModel](
             logger.warning("Invalid LLM schema: %s", str(e)[:200])
             raise
 
-        # Optional business rule: coerce remove_link to None if not allowed
         if hasattr(parsed, "remove_link"):
             remove_link = getattr(parsed, "remove_link")
             if remove_link is not None and remove_link not in allowed:
                 logger.warning("remove_link %s not in allowed ids, coercing to None", remove_link)
-                parsed.remove_link = None  # type: ignore[attr-defined]
+                parsed.remove_link = None  
 
         return parsed
 

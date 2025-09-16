@@ -35,7 +35,7 @@ This guide gets you from zero to a working Saga Graph environment on macOS.
    ```
 
 The script will:
-- ✅ Check Python 3.11+ is installed
+- ✅ Check Python 3.12+ is installed
 - ✅ Create `.venv` virtual environment 
 - ✅ Install all dependencies from `pyproject.toml`
 - ✅ Validate all required environment variables
@@ -54,7 +54,7 @@ The script will:
 If you prefer manual setup or need to troubleshoot, follow these detailed steps:
 
 ### 1) Prerequisites
-- Python 3.11+ (we lock to 3.11.9 in `.python-version`)
+- Python 3.12+ (we lock to 3.12.9 in `.python-version`)
 - Neo4j 5.x (Desktop or Docker)
 - macOS/Linux with bash/zsh terminal
 
@@ -192,8 +192,8 @@ pip install -e ".[browser]"   # + Playwright for browser scraping
 ```
 
 ### Python Version
-- Locked to Python 3.11.9 (see `python-version`)
-- Defined in `pyproject.toml` as `>=3.11,<3.12`
+- Locked to Python 3.12.9 (see `python-version`)
+- Defined in `pyproject.toml` as `>=3.12,<3.13`
 
 ### Browser Scraping (Optional)
 Browser-based scraping fallback via Playwright:
@@ -230,7 +230,7 @@ The system defaults to static scraping (httpx + trafilatura).
 **Package Installation Problems:**
 - Update pip: `python -m pip install --upgrade pip`
 - Clear cache: `pip cache purge`
-- Check Python version: `python --version` (must be 3.11+)
+- Check Python version: `python --version` (must be 3.12+)
 - Reinstall dependencies: `pip install -e . --force-reinstall`
 
 **Content Extraction Issues:**

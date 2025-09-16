@@ -17,7 +17,7 @@ from typing import Dict, Any
 import time
 import math
 import runpy
-from src.graph.policies.priority_policy import PRIORITY_POLICY, PriorityLevel
+from graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 
 # Canonical import pattern: ensure project root (directory containing this main.py) is on sys.path
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -27,7 +27,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 # Import from V1 using absolute imports
-from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.topic import get_all_topic_nodes
 from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 from utils import app_logging
 from src.observability.pipeline_logging import master_log
@@ -59,7 +59,7 @@ def run_pipeline() -> Dict[str, Any]:
 
     # Minimal bootstrap: if the graph has no Topic nodes, seed anchors once.
     # This executes the existing script's __main__ block to avoid any refactor.
-    if len(get_all_nodes(fields=['id'])) < 1:
+    if len(get_all_topic_nodes(fields=['id'])) < 1:
         logger.info("No Topic nodes found. Seeding anchors via user_anchor_nodes.py...")
         runpy.run_module("user_anchor_nodes", run_name="__main__")
 
@@ -68,7 +68,7 @@ def run_pipeline() -> Dict[str, Any]:
         logger.info(f"Starting new pipeline cycle at {loop_start_time:%Y-%m-%d %H:%M:%S}")
 
         # Fresh fetch and selection each iteration
-        nodes = get_all_nodes(fields=['id', 'name', 'type', 'query', 'queries', 'last_queried', 'importance'])
+        nodes = get_all_topic_nodes(fields=['id', 'name', 'type', 'query', 'queries', 'last_queried', 'importance'])
         assert nodes, "No Topic nodes found in graph."
 
         # Optional filter to a single asset

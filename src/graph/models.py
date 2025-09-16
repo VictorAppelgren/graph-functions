@@ -37,8 +37,8 @@ class ArticleNode(TypedDict, total=False):
     relevance_score: Optional[float]
     status: str  # "active" | "hidden"
 
-class Relationship(TypedDict, total=False):
-    """Neo4j relationship properties"""
+class Link(TypedDict, total=False):
+    """Neo4j link properties"""
     type: str  # "INFLUENCES" | "CORRELATES_WITH" | "PEERS" | "ABOUT"
     strength: Optional[float]
     evidence: Optional[str]

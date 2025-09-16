@@ -7,12 +7,12 @@ name = "saga-graph"
 version = "1.0.0"
 description = "Single-source Architecture & Guidelines for Saga Graph - LLM-powered real-time world macro graph"
 readme = "README.md"
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.12,<3.13"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Financial and Insurance Industry",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
     "neo4j-driver==5.28.2",
@@ -49,7 +49,7 @@ exclude = ["tests*"]
 
 # MyPy configuration (alternative to mypy.ini)
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 strict = true
 warn_return_any = true
 warn_unused_configs = true

@@ -1,16 +1,18 @@
 from src.articles.load_article import load_article
 from src.observability.pipeline_logging import master_log
 from src.articles.article_text_formatter import extract_text_from_json_article
-from src.graph.ops.get_all_nodes import get_all_nodes
+from src.graph.ops.topic import get_all_topic_nodes
 from src.analysis.policies.node_identifier import find_node_mapping
 from src.analysis.policies.category_identifier import find_category
 from src.analysis.policies.impact_identifier import find_impact
 from src.analysis.policies.time_frame_identifier import find_time_frame
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
-from src.graph.ops.find_link import find_influences_and_correlates
+from src.graph.ops.link import find_influences_and_correlates
 from src.analysis.orchestration.replace_article_orchestrator import does_article_replace_old
 from events.classifier import EventClassifier, EventType
+from src.graph.ops.topic import add_topic_node
+from typing import cast
 logger = get_logger(__name__)
 
 def trigger_next_steps(topic_id: str, argos_id: str) -> None:
@@ -51,7 +53,7 @@ def add_article(article_id: str, test: bool = False, intended_topic_id: str | No
     # logger.info(f"Formatted article text for LLM input. Length: {len(formatted_article_text)}")
 
     # 3. Multi-topic identification (find ALL topics this article is ABOUT)
-    node_list = get_all_nodes()
+    node_list = get_all_topic_nodes()
     node_names = [f"\"{node['name']}\" - \"{node['id']}\"" for node in node_list]
     
     # 1. Get results from LLM  
@@ -78,7 +80,7 @@ def add_article(article_id: str, test: bool = False, intended_topic_id: str | No
     })
 
     # 3. Article-level processing (done ONCE regardless of topic count)
-    argos_id = article.get("argos_id")
+    argos_id = cast(str, article.get("argos_id"))
     
     # Check if Article node already exists
     article_exists_query = "OPTIONAL MATCH (a:Article {id: $id}) RETURN a IS NOT NULL AS exists"
@@ -161,7 +163,6 @@ def add_article(article_id: str, test: bool = False, intended_topic_id: str | No
             )
 
     # 8. Multi-topic processing: loop over all relevant topics
-    results = []
     successful_topics = 0
 
     # Process existing nodes
@@ -208,9 +209,8 @@ def add_article(article_id: str, test: bool = False, intended_topic_id: str | No
     if len(new_node_names) > 0:
         
         # Create new topic
-        from graph.ops.add_node import add_node
         logger.info(f"Testing to creating new topic, for article {article_id}")
-        new_node_result = add_node(article_id, suggested_names=new_node_names)
+        new_node_result = add_topic_node(article_id, suggested_names=new_node_names)
         topic_id = new_node_result.get("id")
         if not topic_id:
             logger.warning(f"Failed to create new topic for article {article_id}")

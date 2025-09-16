@@ -13,8 +13,8 @@ if PROJECT_ROOT not in sys.path:
 
 from utils import app_logging
 from src.graph.neo4j_client import connect_graph_db
-from src.graph.policies.topic_priority import classify_topic_importance
-from src.graph.ops.remove_node import remove_node
+from src.graph.policies.topic import classify_topic_importance
+from src.graph.ops.topic import remove_topic_node
 from neo4j import Driver
 from typing import Any
 
@@ -57,7 +57,7 @@ def main() -> None:
             if isinstance(importance, str) and importance.upper() == "REMOVE":
                 reason = (rationale or "")
                 logger.info("Topic %s → REMOVE (reason=%s)", topic_id, reason[:200])
-                remove_node(topic_id, reason=reason)
+                remove_topic_node(topic_id, reason=reason)
             else:
                 # Coerce to int if needed
                 if isinstance(importance, str) and importance.isdigit():

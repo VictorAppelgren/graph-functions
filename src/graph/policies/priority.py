@@ -67,6 +67,10 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
 }
 
 def get_interval_for_importance(importance: int) -> int:
-    if importance not in PRIORITY_POLICY:
+    try:
+        # Convert int to PriorityLevel safely
+        level = PriorityLevel(importance)
+    except ValueError:
         raise ValueError(f"Invalid importance: {importance}")
-    return PRIORITY_POLICY[importance]["interval_seconds"]
+
+    return PRIORITY_POLICY[level].interval_seconds

@@ -26,8 +26,7 @@ from utils.app_logging import get_logger
 from src.observability.pipeline_logging import master_log, problem_log, master_statistics, Problem
 
 from src.analysis.orchestration.analysis_rewriter import SECTIONS, SECTION_FOCUS
-from src.graph.ops.get_all_nodes import get_all_nodes
-from src.graph.ops.get_node_by_id import get_node_by_id
+from src.graph.ops.topic import get_all_topic_nodes, get_topic_node_by_id
 from src.graph.neo4j_client import run_cypher
 from src.articles.load_article import load_article
 from paths import get_raw_news_dir
@@ -107,31 +106,32 @@ def collect_candidates_by_keywords(
             # Load via canonical loader for consistency (fail-fast)
             article_id = f.stem
             loaded = load_article(article_id, max_days=365)
-            title = loaded.get("title") or ""
-            summary = loaded.get("summary") or loaded.get("description") or ""
-            argos = loaded["argos_summary"]
-            text = " ".join([title, summary, argos]).strip()
-            text_l = text.lower()
-            word_count = len(text_l.split())
-            # Match each keyword at most once using tolerant patterns (space/hyphen/slash/none)
-            matched_keywords = [k for (k, pat) in compiled if pat.search(text_l)]
-            hits = len(matched_keywords)
-            if hits > 0:
-                logger.debug(
-                    f"Keyword scan | id={article_id} | words={word_count} | hits={hits} (min={min_keyword_hits}) | tokens={matched_keywords}"
-                )
-            else:
-                logger.debug(
-                    f"Keyword scan | id={article_id} | words={word_count} | hits=0"
-                )
-            # Qualify only if we meet or exceed the minimum keyword hits
-            if hits >= min_keyword_hits:
-                matches.append((article_id, text))
-                if len(matches) >= max_articles:
-                    logger.info(
-                        f"Keyword scan done | scanned={scanned} | found={len(matches)}"
+            if loaded:
+                title = loaded.get("title") or ""
+                summary = loaded.get("summary") or loaded.get("description") or ""
+                argos = loaded["argos_summary"]
+                text = " ".join([title, summary, argos]).strip()
+                text_l = text.lower()
+                word_count = len(text_l.split())
+                # Match each keyword at most once using tolerant patterns (space/hyphen/slash/none)
+                matched_keywords = [k for (k, pat) in compiled if pat.search(text_l)]
+                hits = len(matched_keywords)
+                if hits > 0:
+                    logger.debug(
+                        f"Keyword scan | id={article_id} | words={word_count} | hits={hits} (min={min_keyword_hits}) | tokens={matched_keywords}"
                     )
-                    return matches
+                else:
+                    logger.debug(
+                        f"Keyword scan | id={article_id} | words={word_count} | hits=0"
+                    )
+                # Qualify only if we meet or exceed the minimum keyword hits
+                if hits >= min_keyword_hits:
+                    matches.append((article_id, text))
+                    if len(matches) >= max_articles:
+                        logger.info(
+                            f"Keyword scan done | scanned={scanned} | found={len(matches)}"
+                        )
+                        return matches
     logger.info(
         f"Keyword scan done | scanned={scanned} | found={len(matches)}"
     )
@@ -151,7 +151,7 @@ def backfill_topic_from_storage(
     Stateless API: requires only topic_id; resolves other fields via get_node_by_id().
     Returns total number of articles added for this topic.
     """
-    topic = get_node_by_id(topic_id)
+    topic = get_topic_node_by_id(topic_id)
     topic_name = topic.get("name") or topic_id
     total_added = 0
 
@@ -281,7 +281,7 @@ def enrich_topics_from_storage(
     - min_keyword_hits: minimum number of distinct keyword tokens in text to qualify (default 3)
     - test: passed through to add_article
     """
-    topics = get_all_nodes(["id", "name", "type"])  
+    topics = get_all_topic_nodes(["id", "name", "type"])  
     # Minimal fairness: shuffle to avoid always enriching the same first items
     random.shuffle(topics)
     logger.info(f"Starting enrichment over {len(topics)} topics")

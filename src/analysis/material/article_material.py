@@ -44,7 +44,7 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         aid = meta["id"]
 
         article_ids.append(aid)
-        loaded: Dict[str, Any] = load_article(aid) # TODO
+        loaded = load_article(aid) # TODO
 
         p = ProblemDetailsModel()
         if "title" not in loaded:

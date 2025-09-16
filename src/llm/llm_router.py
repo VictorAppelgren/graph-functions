@@ -17,16 +17,13 @@ Target: SQLite-based router with multi-backend support:
 """
 
 import os
-from typing import Dict, Any
-from src.llm.config import ModelTier, DEFAULT_CONFIG, ModelConfig
+from src.llm.config import ModelTier, DEFAULT_CONFIG
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from src.observability.pipeline_logging import increment_llm_usage
-from typing import Union, Sequence, Dict, Any, Optional
 from langchain_core.runnables import Runnable
 from langchain_core.messages import BaseMessage
-from langchain_core.prompts import BasePromptTemplate
 from langchain_core.language_models import LanguageModelInput
 
 # Set up API keys from environment variables if available

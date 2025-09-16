@@ -53,7 +53,7 @@ The system follows these key flows:
 ### Dependencies
 - **Neo4j 5.x** - Graph database for topics, articles, and relationships
 - **LangChain** - LLM orchestration and JSON parsing
-- **Python 3.11+** - Dependencies managed in `pyproject.toml`
+- **Python 3.12+** - Dependencies managed in `pyproject.toml`
 - **LLM Providers** - OpenAI, Anthropic, or Ollama for analysis
 
 ---

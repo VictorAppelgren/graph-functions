@@ -22484,6 +22484,7 @@ scripts/maintenance/cleanup_invalid_importance_nodes.py
 scripts/maintenance/count_topics_by_importance.py
 scripts/maintenance/link_orphan_articles.py
 src/analysis/__init__.py
+src/analysis/types.py
 src/analysis/material/article_material.py
 src/analysis/orchestration/analysis_rewriter.py
 src/analysis/orchestration/replace_article_orchestrator.py
@@ -22559,7 +22560,9 @@ src/graph/policies/topic_priority.py
 src/graph/policies/topic_relevance.py
 src/graph/scheduling/query_overdue.py
 src/graph/tests/db_driver.py
+src/llm/config.py
 src/llm/llm_router.py
+src/llm/sanitizer.py
 src/llm/system_prompts.py
 src/observability/pipeline_logging.py
 tests/add_article.py

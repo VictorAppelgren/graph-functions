@@ -16,7 +16,7 @@ if PROJECT_ROOT not in sys.path:
 
 from utils import app_logging
 from src.graph.neo4j_client import run_cypher
-from src.graph.ops.remove_node import remove_node
+from src.graph.ops.topic import remove_topic_node
 from src.observability.pipeline_logging import master_log
 from src.graph.models import Neo4jRecord
 
@@ -58,7 +58,7 @@ def main() -> None:
 
         reason = f"cleanup_invalid_importance:{imp} labels={labels}"
         logger.info(f"🗑️ Removing Topic id={node_id} name={name} importance={imp}")
-        out = remove_node(node_id, reason=reason)
+        out = remove_topic_node(node_id, reason=reason)
         removed += 1
         logger.debug(f"Removed: {out}")
 

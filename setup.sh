@@ -6,7 +6,7 @@ set -e
 
 VENV_NAME=".venv"
 PYTHON_CMD="python3"
-REQUIRED_PYTHON_VERSION="3.11"
+REQUIRED_PYTHON_VERSION="3.12"
 
 # Colors for output
 RED='\033[0;31m'
