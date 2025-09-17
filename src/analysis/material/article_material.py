@@ -5,16 +5,18 @@ Builds formatted SOURCE MATERIAL for analysis rewriting, using summaries-only pl
 - Per-article output includes exactly: Title, Published, optional Source, and Summary.
 - No URL or ID lines are included. Keeps prompts small and robust.
 """
+
 from __future__ import annotations
-from typing import List, Tuple, Dict, Any
+from typing import List, Tuple
 
 from utils import app_logging
+
 logger = app_logging.get_logger(__name__)
 
 from src.analysis.selectors.best_articles import select_best_articles
 from src.articles.load_article import load_article
-from src.observability.pipeline_logging import problem_log, Problem, ProblemDetailsModel, ProblemModel
- 
+from src.observability.pipeline_logging import problem_log, Problem, ProblemDetailsModel
+
 
 def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[str]]:
     """
@@ -35,7 +37,9 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         p = ProblemDetailsModel()
         p.section = section
         problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES, topic=topic_id, details=p)
-        raise ValueError(f"No articles selected for topic_id={topic_id} section={section}")
+        raise ValueError(
+            f"No articles selected for topic_id={topic_id} section={section}"
+        )
 
     lines: List[str] = []
     article_ids: List[str] = []
@@ -44,41 +48,47 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
         aid = meta["id"]
 
         article_ids.append(aid)
-        loaded = load_article(aid) # TODO
+        loaded = load_article(aid)  # TODO
 
-        p = ProblemDetailsModel()
-        if "title" not in loaded:
-            p.missing.append("title")
-        if "pubDate" not in loaded:
-            p.missing.append("pubDate")
-        if "argos_summary" not in loaded:
-            p.missing.append("argos_summary")
-        if p.missing:
-            problem_log(
-                Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL,
-                topic=topic_id,
-                details=p,
-            )
+        if loaded:
 
-        title = loaded["title"]
-        published = loaded["pubDate"]
-        summary = loaded["argos_summary"]
+            p = ProblemDetailsModel()
+            if "title" not in loaded:
+                p.missing.append("title")
+            if "pubDate" not in loaded:
+                p.missing.append("pubDate")
+            if "argos_summary" not in loaded:
+                p.missing.append("argos_summary")
+            if p.missing:
+                problem_log(
+                    Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL,
+                    topic=topic_id,
+                    details=p,
+                )
 
-        # Compose minimal entry
-        lines.append("===== ARTICLE START =====")
-        lines.append(f"Title: {title}")
-        lines.append(f"Published: {published}")
-        if "source" in loaded:
-            lines.append(f"Source: {loaded['source']}")
-        lines.append("Summary:")
-        lines.append(str(summary))
-        lines.append("===== ARTICLE END =====\n")
+            title = loaded["title"]
+            published = loaded["pubDate"]
+            summary = loaded["argos_summary"]
+
+            # Compose minimal entry
+            lines.append("===== ARTICLE START =====")
+            lines.append(f"Title: {title}")
+            lines.append(f"Published: {published}")
+            if "source" in loaded:
+                lines.append(f"Source: {loaded['source']}")
+            lines.append("Summary:")
+            lines.append(str(summary))
+            lines.append("===== ARTICLE END =====\n")
 
     if not lines:
         p = ProblemDetailsModel()
         p.section = section
-        problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES_SUMMARY_ONLY, topic=topic_id, details=p)
-        raise ValueError(f"No article summaries available for topic_id={topic_id} section={section}")
+        problem_log(
+            Problem.REWRITE_SKIPPED_0_ARTICLES_SUMMARY_ONLY, topic=topic_id, details=p
+        )
+        raise ValueError(
+            f"No article summaries available for topic_id={topic_id} section={section}"
+        )
 
     material = "\n".join(lines).strip()
     logger.info(
@@ -87,46 +97,48 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
     return material, article_ids
 
 
-def build_material_for_synthesis_section(topic_id: str, section: str) -> Tuple[str, List[str]]:
+def build_material_for_synthesis_section(
+    topic_id: str, section: str
+) -> Tuple[str, List[str]]:
     """
     Build material for synthesis sections using BOTH existing analysis AND all articles.
     Perfect formatting for research-grade synthesis.
-    
+
     Returns:
         material_str: Formatted material with analysis sections + all articles
         article_ids: List of article IDs used
     """
     from src.graph.neo4j_client import run_cypher
-    
+
     # Get existing analysis sections
     analysis_query = """
     MATCH (t:Topic {id: $topic_id})
     RETURN t.fundamental_analysis, t.medium_analysis, t.current_analysis, t.implications
     """
     analysis_result = run_cypher(analysis_query, {"topic_id": topic_id})
-    
+
     material_parts = []
-    
+
     # Format existing analysis sections with perfect presentation
     if analysis_result and analysis_result[0]:
         analysis_data = analysis_result[0]
-        
+
         material_parts.append("=" * 80)
         material_parts.append("EXISTING ANALYSIS SECTIONS")
         material_parts.append("=" * 80)
-        
+
         for field, label in [
             ("fundamental_analysis", "FUNDAMENTAL ANALYSIS (Multi-year Structural)"),
-            ("medium_analysis", "MEDIUM-TERM ANALYSIS (3-6 months)"), 
+            ("medium_analysis", "MEDIUM-TERM ANALYSIS (3-6 months)"),
             ("current_analysis", "CURRENT ANALYSIS (0-3 weeks)"),
-            ("implications", "IMPLICATIONS")
+            ("implications", "IMPLICATIONS"),
         ]:
             analysis_content = analysis_data.get(field)
             if analysis_content:
                 material_parts.append(f"\n--- {label} ---")
                 material_parts.append(str(analysis_content))
                 material_parts.append("")
-    
+
     # Get ALL article IDs for this topic from graph
     articles_query = """
     MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
@@ -135,52 +147,60 @@ def build_material_for_synthesis_section(topic_id: str, section: str) -> Tuple[s
     ORDER BY a.pubDate DESC
     """
     articles_result = run_cypher(articles_query, {"topic_id": topic_id})
-    
+
     if not articles_result:
         raise ValueError(f"No articles found for topic_id={topic_id}")
-    
+
     article_ids = [row["article_id"] for row in articles_result]
-    
+
     # Add articles section
     material_parts.append("=" * 80)
     material_parts.append("SOURCE ARTICLES")
     material_parts.append("=" * 80)
-    
+
     for i, row in enumerate(articles_result, 1):
         article_id = row["article_id"]
-        
+
         try:
             # Load article using the canonical utility
             loaded = load_article(article_id)
-            
-            # Strict requirements for synthesis
-            if "title" not in loaded or "argos_summary" not in loaded or "pubDate" not in loaded:
-                logger.warning(f"Skipping article {article_id}: missing required fields")
-                continue
-                
-            title = loaded["title"]
-            published = loaded["pubDate"]
-            argos_summary = loaded["argos_summary"]
-            
-            # Perfect formatting for synthesis
-            material_parts.append(f"\n--- ARTICLE {i}: {article_id} ---")
-            material_parts.append(f"Title: {title}")
-            material_parts.append(f"Published: {published}")
-            if "source" in loaded:
-                material_parts.append(f"Source: {loaded['source']}")
-            material_parts.append("Summary:")
-            material_parts.append(str(argos_summary))
-            material_parts.append("")
-            
+
+            if loaded:
+
+                # Strict requirements for synthesis
+                if (
+                    "title" not in loaded
+                    or "argos_summary" not in loaded
+                    or "pubDate" not in loaded
+                ):
+                    logger.warning(
+                        f"Skipping article {article_id}: missing required fields"
+                    )
+                    continue
+
+                title = loaded["title"]
+                published = loaded["pubDate"]
+                argos_summary = loaded["argos_summary"]
+
+                # Perfect formatting for synthesis
+                material_parts.append(f"\n--- ARTICLE {i}: {article_id} ---")
+                material_parts.append(f"Title: {title}")
+                material_parts.append(f"Published: {published}")
+                if "source" in loaded:
+                    material_parts.append(f"Source: {loaded['source']}")
+                material_parts.append("Summary:")
+                material_parts.append(str(argos_summary))
+                material_parts.append("")
+
         except Exception as e:
             logger.warning(f"Failed to load article {article_id}: {e}")
             continue
-    
+
     material = "\n".join(material_parts).strip()
-    
+
     logger.info(
         f"build_material_for_synthesis_section | topic_id={topic_id} section={section} | "
         f"articles={len(article_ids)} chars={len(material)}"
     )
-    
+
     return material, article_ids

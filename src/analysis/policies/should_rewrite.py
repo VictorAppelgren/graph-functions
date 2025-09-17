@@ -15,7 +15,10 @@ from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
 
-def should_rewrite_llm(analysis_str: str, new_article_summary: str, test: bool = False) -> Tuple[bool, str]:
+
+def should_rewrite_llm(
+    analysis_str: str, new_article_summary: str, test: bool = False
+) -> Tuple[bool, str]:
     """
     Uses LLM to decide if the analysis should be rewritten for this topic.
     Returns (should_rewrite: bool, motivation: str)
@@ -53,12 +56,14 @@ def should_rewrite_llm(analysis_str: str, new_article_summary: str, test: bool =
     llm = get_llm(ModelTier.COMPLEX)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "analysis_str": analysis_str,
-        "new_article_summary": new_article_summary,
-    })
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "analysis_str": analysis_str,
+            "new_article_summary": new_article_summary,
+        }
+    )
 
     logger.info("----- results should rewrite: ------")
     logger.info(result)
@@ -66,6 +71,7 @@ def should_rewrite_llm(analysis_str: str, new_article_summary: str, test: bool =
 
     # Normalize to (bool, str)
     import json
+
     if isinstance(result, str):
         result = json.loads(result)
 

@@ -2,6 +2,7 @@
 LLM-driven helper to decide if a new article should replace an existing one for a topic node.
 Returns a dict with 'motivation' and 'id_to_replace'.
 """
+
 from typing import Optional, Any
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
@@ -17,6 +18,7 @@ logger = app_logging.get_logger(__name__)
 MIN_PER_TIMEFRAME = 5
 MAX_PER_TIMEFRAME = 10
 
+
 def does_article_replace_old_llm(
     new_article_summary: str,
     existing_articles: list[dict[str, Any]],
@@ -30,16 +32,18 @@ def does_article_replace_old_llm(
     Returns a dict: {'motivation': str, 'tool': str, 'id': str or None}
     """
     if test:
-        return {
-            'motivation': 'Test mode: no action.', 
-            'tool': 'none', 
-            'id': None
-            }
+        return {"motivation": "Test mode: no action.", "tool": "none", "id": None}
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
-    summaries = "\n".join([f"- {a['id']}: {a.get('argos_summary', '')}" for a in existing_articles])
-    allowed_ids_str = ", ".join([a['id'] for a in existing_articles])
-    context_block = f"\nOTHER TIMEFRAMES CONTEXT (read-only, do not act on these):\n{context_text}\n" if context_text else ""
+    summaries = "\n".join(
+        [f"- {a['id']}: {a.get('argos_summary', '')}" for a in existing_articles]
+    )
+    allowed_ids_str = ", ".join([a["id"] for a in existing_articles])
+    context_block = (
+        f"\nOTHER TIMEFRAMES CONTEXT (read-only, do not act on these):\n{context_text}\n"
+        if context_text
+        else ""
+    )
     prompt = f"""
         {SYSTEM_MISSION}
         {SYSTEM_CONTEXT}
@@ -86,5 +90,5 @@ def does_article_replace_old_llm(
     logger.debug("Prompt: %s", truncate_str(str(prompt), 120))
     chain = llm | parser
     result = chain.invoke(prompt)
-    #logger.info(f"LLM article lifecycle result: {result}")
+    # logger.info(f"LLM article lifecycle result: {result}")
     return result

@@ -19,9 +19,10 @@ QUERY = """
   OR servers OR infrastructure OR facility OR facilities OR network OR networks)
 """
 
+
 def get_query():
     """Return the query string for AI data centers and related investment topics.
-    
+
     Returns:
         str: The query string for AI data centers and related investment topics
     """

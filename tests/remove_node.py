@@ -2,43 +2,47 @@ import os
 import sys
 
 CURRENT_DIR = os.path.dirname(__file__)
-PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, '..'))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from utils import app_logging
 from typing import cast
-from src.graph.ops.get_all_nodes import get_all_nodes
-from src.graph.ops.remove_node import remove_node
+from src.graph.ops.topic import get_all_topics, remove_topic
+
 logger = app_logging.get_logger(__name__)
 
 ASSET = "Taylor Swift: The Life of a Showgirl"
 
-def test_remove_node() -> None:
-    all_nodes = get_all_nodes()
-    node_to_remove = None
+
+def test_remove_topic() -> None:
+    all_topics = get_all_topics()
+    topic_to_remove = None
     if ASSET:
-        for node in all_nodes:
-            if node.get('name') == ASSET:
-                node_to_remove = node
+        for topic in all_topics:
+            if topic.get("name") == ASSET:
+                topic_to_remove = topic
                 break
-    if not node_to_remove:
-        for node in all_nodes:
-            imp = node.get('importance')
+    if not topic_to_remove:
+        for topic in all_topics:
+            imp = topic.get("importance")
             try:
                 imp_int = int(imp) if imp is not None else None
             except (ValueError, TypeError):
                 imp_int = None
             if imp_int == 5:
-                node_to_remove = node
+                topic_to_remove = topic
                 break
-    if not node_to_remove:
-        logger.warning("No removable node found (ASSET or importance==5)")
+    if not topic_to_remove:
+        logger.warning("No removable topic found (ASSET or importance==5)")
         return
-    node_id = cast(str, node_to_remove.get('id'))
-    logger.info(f"Removing node: {node_to_remove.get('name')} (id={node_id})")
-    result = remove_node(node_id, reason="cleanup test path")
-    print(f"[test_remove_node] Removed: {node_to_remove.get('name')} (id={node_id}) Result: {result}")
+    topic_id = cast(str, topic_to_remove.get("id"))
+    logger.info(f"Removing topic: {topic_to_remove.get('name')} (id={topic_id})")
+    result = remove_topic(topic_id, reason="cleanup test path")
+    print(
+        f"[test_remove_topic] Removed: {topic_to_remove.get('name')} (id={topic_id}) Result: {result}"
+    )
+
 
 if __name__ == "__main__":
-    test_remove_node()
+    test_remove_topic()

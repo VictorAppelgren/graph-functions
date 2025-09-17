@@ -1,6 +1,7 @@
 """
-LLM-driven categorization of articles in the context of a node.
+LLM-driven categorization of articles in the context of a topic.
 """
+
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
@@ -26,8 +27,10 @@ CategoryName = Literal[
     "other",
 ]
 
+
 class CategoryItem(BaseModel):
     """Expected shape of one category output from the LLM."""
+
     model_config = ConfigDict(extra="forbid")
     motivation: str = Field(min_length=1, max_length=400)
     name: CategoryName
@@ -51,6 +54,7 @@ def _coerce_to_obj_or_list(raw: Any) -> list[dict[str, Any]]:
         raise TypeError("Parsed JSON was not an object or array of objects")
     raise TypeError(f"Unsupported LLM output type: {type(raw).__name__}")
 
+
 def _sanitize_categories(raw: Any) -> list[CategoryItem]:
     """Parse, validate, and normalize the LLM categories output."""
     objs = _coerce_to_obj_or_list(raw)
@@ -65,6 +69,7 @@ def _sanitize_categories(raw: Any) -> list[CategoryItem]:
         item.motivation = " ".join(item.motivation.split())[:400]
         items.append(item)
     return items
+
 
 def find_category(article_text: str) -> tuple[str | None, CategoryName | None]:
     """
@@ -106,7 +111,12 @@ def find_category(article_text: str) -> tuple[str | None, CategoryName | None]:
     """
 
     prompt = PromptTemplate(
-        input_variables=["article_text", "categories", "system_mission", "system_context"],
+        input_variables=[
+            "article_text",
+            "categories",
+            "system_mission",
+            "system_context",
+        ],
         template=prompt_template,
     )
 
@@ -114,12 +124,14 @@ def find_category(article_text: str) -> tuple[str | None, CategoryName | None]:
     parser = JsonOutputParser()
     chain = prompt | llm | parser
 
-    raw = chain.invoke({
-        "article_text": article_text,
-        "categories": ", ".join(categories),
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-    })
+    raw = chain.invoke(
+        {
+            "article_text": article_text,
+            "categories": ", ".join(categories),
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+        }
+    )
 
     items = _sanitize_categories(raw)
     if not items:

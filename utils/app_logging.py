@@ -11,11 +11,12 @@ Usage:
     logger.info("Hello")
     with logger.context(asset="EURUSD", stage="F02_GAP_DETECTION"):
         logger.info("Context-aware log")
-    
+
     @log_execution(logger)
     def foo():
         ...
 """
+
 import logging
 import os
 import sys
@@ -26,7 +27,8 @@ from collections.abc import Callable
 from typing import TypeVar, ParamSpec, Iterator, cast
 
 P = ParamSpec("P")  # captures parameter types of wrapped function
-R = TypeVar("R")    # captures return type of wrapped function
+R = TypeVar("R")  # captures return type of wrapped function
+
 
 class MinimalFormatter(logging.Formatter):
     def format(self, record: logging.LogRecord) -> str:
@@ -53,6 +55,7 @@ class MinimalFormatter(logging.Formatter):
                 return base
         return base
 
+
 class ContextLogger(logging.Logger):
 
     _log_ctx: dict[str, object] | None  # <-- explicitly declare type
@@ -70,13 +73,14 @@ class ContextLogger(logging.Logger):
                 logger.info("starting")
         """
         old_ctx = self._log_ctx
-        self._log_ctx = kwargs 
+        self._log_ctx = kwargs
         try:
             yield
         finally:
             self._log_ctx = old_ctx
 
-# 
+
+#
 def _level_from_env(default_level: int) -> int:
     lvl = os.environ.get("ARGOS_LOG_LEVEL", "").upper().strip()
     mapping = {
@@ -91,7 +95,9 @@ def _level_from_env(default_level: int) -> int:
 
 def get_logger(name: str, level: int = logging.INFO) -> ContextLogger:
     logging.setLoggerClass(ContextLogger)
-    logger = cast(ContextLogger, logging.getLogger(name))  # getLogger returns Logger, so cast
+    logger = cast(
+        ContextLogger, logging.getLogger(name)
+    )  # getLogger returns Logger, so cast
     effective_level = _level_from_env(level)
 
     if not logger.handlers:
@@ -107,10 +113,12 @@ def get_logger(name: str, level: int = logging.INFO) -> ContextLogger:
             h.setLevel(effective_level)
     return logger
 
-def truncate_str(s: str, max_len:int = 100) -> str:
+
+def truncate_str(s: str, max_len: int = 100) -> str:
     if len(s) > max_len:
         return s[:max_len] + "..."
     return s
+
 
 def log_execution(logger: logging.Logger) -> Callable[[Callable[P, R]], Callable[P, R]]:
     def decorator(func: Callable[P, R]) -> Callable[P, R]:
@@ -123,9 +131,11 @@ def log_execution(logger: logging.Logger) -> Callable[[Callable[P, R]], Callable
                 elapsed = (datetime.now() - start).total_seconds()
                 logger.debug(f"Completed {func.__name__} in {elapsed:.2f}s")
                 return result
-            except Exception as e:
+            except Exception:
                 elapsed = (datetime.now() - start).total_seconds()
                 logger.exception(f"Error in {func.__name__} after {elapsed:.2f}s")
                 raise
+
         return wrapper
+
     return decorator

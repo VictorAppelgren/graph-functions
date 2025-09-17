@@ -7,7 +7,9 @@ from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
 
 from utils.app_logging import get_logger
+
 logger = get_logger("generate_keywords_llm")
+
 
 def _clean_list(items: List[str]) -> List[str]:
     """Normalize, dedupe, and drop overly long/joined phrases.
@@ -31,6 +33,7 @@ def _clean_list(items: List[str]) -> List[str]:
         seen.add(s)
         out.append(s)
     return out
+
 
 def generate_keywords(topic_name: str, section: str) -> List[str]:
     """Generate a flat list (target 25–35) of short newsroom-surface keywords for scanning news."""
@@ -110,38 +113,48 @@ def generate_keywords(topic_name: str, section: str) -> List[str]:
     RESPOND WITH ONLY THE JSON OBJECT - NOTHING ELSE:
     """
     prompt = PromptTemplate(
-        input_variables=["topic_name", "section", "focus", "system_mission", "system_context"],
+        input_variables=[
+            "topic_name",
+            "section",
+            "focus",
+            "system_mission",
+            "system_context",
+        ],
         template=prompt_template,
     )
-    logger.info(f"will generate keywords")
+    logger.info("will generate keywords")
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
-    result = chain.invoke({
-        "topic_name": topic_name,
-        "section": section,
-        "focus": focus,
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-    })
-    logger.debug(f"------------------------------------")
+    result = chain.invoke(
+        {
+            "topic_name": topic_name,
+            "section": section,
+            "focus": focus,
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+        }
+    )
+    logger.debug("------------------------------------")
     logger.debug("generated keywords: ")
     logger.info(f"{result}")
-    logger.debug(f"------------------------------------")
+    logger.debug("------------------------------------")
 
     # Basic validation and error handling
     if not isinstance(result, dict) or "list" not in result:
         logger.error(f"Invalid LLM response format: {result}")
         return []
-    
+
     list_result = result["list"]
     if not isinstance(list_result, list):
         logger.error(f"Expected list, got {type(list_result)}: {list_result}")
         return []
-    
+
     try:
         cleaned = _clean_list(list_result)  # Fix: pass list_result, not result
-        logger.info(f"Generated {len(cleaned)} keywords from {len(list_result)} raw keywords")
+        logger.info(
+            f"Generated {len(cleaned)} keywords from {len(list_result)} raw keywords"
+        )
         return cleaned[:40]
     except Exception as e:
         logger.error(f"Error cleaning keywords: {e}")

@@ -2,15 +2,17 @@
 Super minimal LLM-based topic pruner (non-prioritizing).
 
 Process:
-1) Load all Topic nodes (id, name, type, importance, level, last_updated)
+1) Load all Topics (id, name, type, importance, level, last_updated)
 2) Ask LLM, given SYSTEM_MISSION + SYSTEM_CONTEXT, to return ALL topic ids that are NOT crucial
-3) If PREVIEW_ONLY: print ids. Else: print and remove them via remove_node()
+3) If PREVIEW_ONLY: print ids. Else: print and remove them via remove_topic()
 
 No fallbacks. No try/except. Absolute imports guaranteed via canonical bootstrap.
 """
 
 # --- Canonical import pattern (see Saga_Graph_v2.md §8a) ---
-import sys, os
+import sys
+import os
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
     PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
@@ -23,8 +25,7 @@ import json
 from datetime import datetime, date
 
 from utils import app_logging
-from src.graph.ops.get_all_nodes import get_all_nodes
-from src.graph.ops.remove_node import remove_node
+from src.graph.ops.topic import get_all_topics, remove_topic
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
@@ -39,6 +40,7 @@ def _select_not_crucial_topics_llm(candidates: List[Dict[str, Any]]) -> List[str
     """Return ALL candidate topic IDs that are NOT crucial to the macro graph.
     Output must be EXACTLY: {"ids_to_remove": ["<id>", ...]}
     """
+
     def _json_safe(v):
         # Convert datetime-like objects to ISO strings; fallback to str for unknown types
         if isinstance(v, (datetime, date)):
@@ -49,7 +51,11 @@ def _select_not_crucial_topics_llm(candidates: List[Dict[str, Any]]) -> List[str
                 return v.isoformat()
         except Exception:
             pass
-        return v if v is None or isinstance(v, (str, int, float, bool, list, dict)) else str(v)
+        return (
+            v
+            if v is None or isinstance(v, (str, int, float, bool, list, dict))
+            else str(v)
+        )
 
     compact = [
         {
@@ -95,12 +101,14 @@ Now output ONLY the JSON object described above.
     prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM)
     chain = prompt | llm | parser
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "candidate_ids": candidate_ids_json,
-        "candidates": candidates_json,
-    })
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "candidate_ids": candidate_ids_json,
+            "candidates": candidates_json,
+        }
+    )
     return result["ids_to_remove"]
 
 
@@ -109,7 +117,7 @@ if __name__ == "__main__":
     PREVIEW_ONLY = True
 
     fields = ["id", "name", "type", "importance", "level", "last_updated"]
-    topics = get_all_nodes(fields=fields)
+    topics = get_all_topics(fields=fields)
     logger.info("Loaded %d topics for minimal prune check", len(topics))
 
     ids = _select_not_crucial_topics_llm(topics)
@@ -121,4 +129,4 @@ if __name__ == "__main__":
         logger.info("Removing %d topics: %s", len(ids), ids)
         print(ids)
         for tid in ids:
-            remove_node(tid, reason="minimal_prune_not_crucial")
+            remove_topic(tid, reason="minimal_prune_not_crucial")

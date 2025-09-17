@@ -4,8 +4,8 @@ from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from src.analysis.orchestration.analysis_rewriter import SECTIONS, SECTION_FOCUS
-from src.graph.ops.topic import get_topic_node_by_id
+from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
+from src.graph.ops.topic import get_topic_by_id
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
 import time
@@ -13,7 +13,10 @@ from src.articles.load_article import load_article
 
 logger = get_logger(__name__)
 
-def _fetch_existing_section_summaries(topic_id: str, section: str, limit: int = 10) -> list[tuple[str, str]]:
+
+def _fetch_existing_section_summaries(
+    topic_id: str, section: str, limit: int = 10
+) -> list[tuple[str, str]]:
     if not topic_id or not isinstance(topic_id, str):
         raise ValueError("topic_id is required")
     if section not in SECTION_FOCUS:
@@ -24,11 +27,22 @@ def _fetch_existing_section_summaries(topic_id: str, section: str, limit: int = 
         "RETURN a.id AS id "
         "ORDER BY a.published_at DESC LIMIT $limit"
     )
-    logger.info(f"========== about to perform cypher for getting all connected nodes ==========")
-    logger.info(f"Existing coverage fetch | topic={topic_id} section={section} | limit={limit}")
-    rows = run_cypher(q, {"topic_id": topic_id, "section": section, "limit": int(limit)}) or []
-    logger.info(f"Existing coverage fetch | topic={topic_id} section={section} | rows={len(rows)}")
-    logger.info(f"========== Done performing cypher for getting all connected nodes ==========")
+    logger.info(
+        "========== about to perform cypher for getting all connected nodes =========="
+    )
+    logger.info(
+        f"Existing coverage fetch | topic={topic_id} section={section} | limit={limit}"
+    )
+    rows = (
+        run_cypher(q, {"topic_id": topic_id, "section": section, "limit": int(limit)})
+        or []
+    )
+    logger.info(
+        f"Existing coverage fetch | topic={topic_id} section={section} | rows={len(rows)}"
+    )
+    logger.info(
+        "========== Done performing cypher for getting all connected nodes =========="
+    )
 
     out: list[tuple[str, str]] = []
     for r in rows:
@@ -42,7 +56,7 @@ def _fetch_existing_section_summaries(topic_id: str, section: str, limit: int = 
 
         if art:
             title = (art.get("title") if isinstance(art, dict) else None) or aid
-            summ_source = art['source']
+            summ_source = art["source"]
             summ = art["argos_summary"]
             logger.info(
                 f"Existing coverage item | id={aid} | title={title} | src={summ_source} | summary_len={len(summ)} | preview={summ[:200]}"
@@ -51,7 +65,9 @@ def _fetch_existing_section_summaries(topic_id: str, section: str, limit: int = 
     return out
 
 
-def relevance_gate_llm(topic_id: str, section: str, article_text: str) -> Tuple[bool, str]:
+def relevance_gate_llm(
+    topic_id: str, section: str, article_text: str
+) -> Tuple[bool, str]:
     """Return (is_relevant, motivation) by comparing candidate vs current section coverage.
 
     Inputs are IDs-only for context lookups (SAGA_V3).
@@ -64,17 +80,28 @@ def relevance_gate_llm(topic_id: str, section: str, article_text: str) -> Tuple[
         raise ValueError("article_text is required")
 
     focus = SECTION_FOCUS[section]
-    topic_node = get_topic_node_by_id(topic_id)
-    topic_name = topic_node["name"] if ("name" in topic_node and topic_node["name"]) else topic_id
+    topic_node = get_topic_by_id(topic_id)
+    topic_name = (
+        topic_node["name"]
+        if ("name" in topic_node and topic_node["name"])
+        else topic_id
+    )
     logger.info(
         f"Relevance gate start | topic={topic_id}({topic_name}) section={section} | article_len_chars={len(article_text)} | article_len_words={len(article_text.split())}"
     )
     existing = _fetch_existing_section_summaries(topic_id, section, limit=8)
     if existing:
-        existing_block = "\n".join([f"- {i+1}) {title}: {summary}" for i, (title, summary) in enumerate(existing)])
+        existing_block = "\n".join(
+            [
+                f"- {i+1}) {title}: {summary}"
+                for i, (title, summary) in enumerate(existing)
+            ]
+        )
     else:
         existing_block = "(none found)"
-    logger.info(f"Existing coverage items included: {len(existing)} | existing_block_chars={len(existing_block)}")
+    logger.info(
+        f"Existing coverage items included: {len(existing)} | existing_block_chars={len(existing_block)}"
+    )
 
     prompt_template = """
     THE KNOWLEDGE SYSTEM YOU ARE WORKING WITH AIMS TO DO THE FOLLOWING:
@@ -135,7 +162,9 @@ def relevance_gate_llm(topic_id: str, section: str, article_text: str) -> Tuple[
     prompt_str = prompt.format(**vars_)
     approx_tokens = max(1, int(len(prompt_str) / 4))
     lines_count = prompt_str.count("\n") + 1
-    logger.info(f"Prompt prepared | chars={len(prompt_str)} | lines={lines_count} | ~tokens={approx_tokens}")
+    logger.info(
+        f"Prompt prepared | chars={len(prompt_str)} | lines={lines_count} | ~tokens={approx_tokens}"
+    )
     logger.debug(f"Prompt preview (first 400 chars): {prompt_str[:400]}")
 
     start = time.monotonic()

@@ -19,9 +19,10 @@ QUERY = """
   OR developments)
 """
 
+
 def get_query():
     """Return the query string for EURUSD and related economic factors.
-    
+
     Returns:
         str: The query string for EURUSD and related economic factors
     """

@@ -4,30 +4,33 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
-from pydantic import BaseModel
 from __future__ import annotations
 
 logger = get_logger(__name__)
 
 # --- input typing (minimal) ---------------------------------------------------
 
+
 class ArticleModel(TypedDict, total=False):
     title: str
     argos_summary: str
 
+
 # --- output schema ------------------------------------------------------------
+
 
 class RelevanceDecision(BaseModel):
     model_config = ConfigDict(extra="forbid")
     should_link: bool
     motivation: str = Field(min_length=1, max_length=600)
 
+
 # --- small sanitizers ---------------------------------------------------------
+
 
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
     if isinstance(raw, dict):
@@ -38,6 +41,7 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
             return cast(dict[str, Any], parsed)
     raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
 
+
 def _sanitize_relevance(raw: Any) -> RelevanceDecision:
     data = _coerce_json_object(raw)
     dec = RelevanceDecision.model_validate(data)
@@ -45,7 +49,9 @@ def _sanitize_relevance(raw: Any) -> RelevanceDecision:
     dec.motivation = " ".join(dec.motivation.split())[:600]
     return dec
 
+
 # --- main ---------------------------------------------------------------------
+
 
 def validate_article_topic_relevance(
     article: ArticleModel,
@@ -91,14 +97,16 @@ def validate_article_topic_relevance(
     parser = JsonOutputParser()
     chain: Runnable[dict[str, str], Any] = prompt | llm | parser
 
-    raw = chain.invoke({
-        "title": title,
-        "summary": summary,
-        "topic_name": topic_name,
-        "topic_id": topic_id,
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-    })
+    raw = chain.invoke(
+        {
+            "title": title,
+            "summary": summary,
+            "topic_name": topic_name,
+            "topic_id": topic_id,
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+        }
+    )
 
     try:
         decision = _sanitize_relevance(raw)
@@ -120,14 +128,14 @@ def validate_article_topic_relevance(
 if __name__ == "__main__":
     article = {
         "title": "Fed Raises Interest Rates by 0.75% to Combat Inflation",
-        "argos_summary": "The Federal Reserve raised interest rates by 75 basis points to 3.25%, the largest increase since 1994, as inflation remains near 40-year highs."
+        "argos_summary": "The Federal Reserve raised interest rates by 75 basis points to 3.25%, the largest increase since 1994, as inflation remains near 40-year highs.",
     }
 
     a = ArticleModel(
-        title="Fed Raises Interest Rates by 0.75% to Combat Inflation", 
-        summary="The Federal Reserve raised interest rates by 75 basis points to 3.25%, the largest increase since 1994, as inflation remains near 40-year highs."
-        )
-    
+        title="Fed Raises Interest Rates by 0.75% to Combat Inflation",
+        argos_summary="The Federal Reserve raised interest rates by 75 basis points to 3.25%, the largest increase since 1994, as inflation remains near 40-year highs.",
+    )
+
     should_link, motivation = validate_article_topic_relevance(
         a, "US Interest Rates", "us_interest_rates"
     )

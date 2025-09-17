@@ -3,7 +3,7 @@ Minimal EURUSD Article Import Utility
 
 Purpose:
 - Reset the Neo4j graph database
-- Seed anchor nodes (incl. EURUSD) and anchor relationships
+- Seed anchor topics (incl. EURUSD) and anchor relationships
 - Iterate raw article JSON files under data/raw_news/
 - For each article, run a SIMPLE-tier (Ollama llama3.1) YES/NO relevance check for EURUSD swing trading
 - If relevant, add the article to the graph using add_article(article_id)
@@ -21,7 +21,9 @@ Note:
 - Requires Neo4j running and env vars for connection (NEO4J_*) as used by graph_db.db_driver
 - Requires Ollama running locally with model "llama3.1" per model_config SIMPLE tier
 """
-import sys, os
+
+import sys
+import os
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
@@ -43,16 +45,17 @@ from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = get_logger(__name__)
 
+
 def is_relevant_to_eurusd_swing(llm, formatted_text: str) -> bool:
     if not formatted_text or not formatted_text.strip():
         raise ValueError("Empty formatted_text passed to relevance check")
 
-    # Extend this function to use get_all_nodes to get all nodes
+    # Extend this function to use get_all_topics to get all topics
     # create a list of all id
-    # Then extend the promp to take in all nodes and have it say if the article is relevant to any of the nodes
-    # return the node that it is more relevant to
+    # Then extend the promp to take in all topics and have it say if the article is relevant to any of the topics
+    # return the topic that it is more relevant to
     # if a low quality article, return None
-    # So that we extend this to map out all not only the EURUSD node! 
+    # So that we extend this to map out all not only the EURUSD topic!
 
     prompt_template = """
     {system_mission}
@@ -70,11 +73,13 @@ def is_relevant_to_eurusd_swing(llm, formatted_text: str) -> bool:
     chain = prompt | llm | parser
 
     try:
-        result = chain.invoke({
-            "article": formatted_text,
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-        })
+        result = chain.invoke(
+            {
+                "article": formatted_text,
+                "system_mission": SYSTEM_MISSION,
+                "system_context": SYSTEM_CONTEXT,
+            }
+        )
         logger.info("----- results relevance check: ------")
         logger.info(result)
         logger.info("----- end results relevance check ------")
@@ -90,6 +95,7 @@ def is_relevant_to_eurusd_swing(llm, formatted_text: str) -> bool:
         return False
     return False
 
+
 def iter_raw_article_files():
     base = get_raw_news_dir()
     if not base.exists():
@@ -98,12 +104,14 @@ def iter_raw_article_files():
         for fp in sorted(day_dir.glob("*.json")):
             yield fp
 
+
 def load_article_from_file(fp: Path):
     with fp.open("r") as f:
         obj = json.load(f)
     if isinstance(obj, dict) and "data" in obj and isinstance(obj["data"], dict):
         return obj["data"]
     return obj
+
 
 def main():
     llm = get_llm(ModelTier.MEDIUM)
@@ -129,7 +137,10 @@ def main():
         except Exception as e:
             logger.error(f"Error processing {article_id} at {fp}: {e}")
             raise
-    logger.info(f"EURUSD Import complete | total={total}, relevant={relevant}, added={added}, skipped={skipped}")
+    logger.info(
+        f"EURUSD Import complete | total={total}, relevant={relevant}, added={added}, skipped={skipped}"
+    )
+
 
 if __name__ == "__main__":
     main()

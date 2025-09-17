@@ -2,7 +2,9 @@
 Minimalistic test for all three LLM tiers: simple, medium, complex.
 Tests basic LangChain functionality with string output.
 """
-import sys, os
+
+import sys
+import os
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
@@ -14,59 +16,71 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from langchain_core.prompts import PromptTemplate
 
+
 def test_simple_llm() -> None:
     """Test simple LLM with basic classification task."""
     print("🤖🔍 Testing SIMPLE LLM...")
-    
+
     prompt_template = """
     Classify this text as either "positive" or "negative":
     Text: {text}
     
     Answer with just one word: positive or negative
     """
-    
+
     prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.SIMPLE)
     chain = prompt | llm
-    
+
     result = chain.invoke({"text": "The market is performing well today"})
     print(f"Simple LLM result: {result.content}")
+
 
 def test_medium_llm() -> None:
     """Test medium LLM with summarization task."""
     print("🤖📊 Testing MEDIUM LLM...")
-    
+
     prompt_template = """
     Summarize this text in one sentence:
     Text: {text}
     
     Summary:
     """
-    
+
     prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM)
     chain = prompt | llm
-    
-    result = chain.invoke({"text": "The Federal Reserve announced today that interest rates will remain unchanged at 5.25%. This decision comes after months of economic uncertainty and inflation concerns. Market analysts expect this to stabilize bond yields in the short term."})
+
+    result = chain.invoke(
+        {
+            "text": "The Federal Reserve announced today that interest rates will remain unchanged at 5.25%. This decision comes after months of economic uncertainty and inflation concerns. Market analysts expect this to stabilize bond yields in the short term."
+        }
+    )
     print(f"Medium LLM result: {result.content}")
-    
+
+
 def test_complex_llm() -> None:
     """Test complex LLM with analysis task."""
     print("🤖🧠 Testing COMPLEX LLM...")
-    
+
     prompt_template = """
     Analyze the market implications of this news in 2-3 sentences:
     News: {news}
     
     Analysis:
     """
-    
+
     prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.COMPLEX)
     chain = prompt | llm
-    
-    result = chain.invoke({"news": "ECB raises interest rates by 0.5% citing persistent inflation concerns across eurozone economies"})
+
+    result = chain.invoke(
+        {
+            "news": "ECB raises interest rates by 0.5% citing persistent inflation concerns across eurozone economies"
+        }
+    )
     print(f"Complex LLM result: {result.content}")
+
 
 def test_simple_long_context_llm() -> None:
     """Test simple long context LLM with a basic long-context task."""
@@ -80,22 +94,24 @@ def test_simple_long_context_llm() -> None:
     result = chain.invoke({"text": "This is a test for long context."})
     print(f"Simple Long Context LLM result: {result.content}")
 
+
 def run_all_tests() -> None:
     """Run all LLM tier tests."""
     print("=" * 50)
     print("TESTING ALL LLM TIERS")
     print("=" * 50)
-    
+
     try:
         test_simple_llm()
         test_medium_llm()
         test_complex_llm()
         test_simple_long_context_llm()
         print("✅ All LLM tests completed successfully!")
-        
+
     except Exception as e:
         print(f"❌ Test failed: {e}")
         raise
+
 
 if __name__ == "__main__":
     run_all_tests()

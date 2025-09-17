@@ -6,7 +6,7 @@ and Runnable-level retries via `.with_retry()`.
 PLANNED EVOLUTION - Multi-Backend LLM Router:
 Current: Simple tier-based model selection with hardcoded endpoints
 Target: SQLite-based router with multi-backend support:
-- Backend types: openai_api (SDK), vllm_http (custom servers), ollama_local  
+- Backend types: openai_api (SDK), vllm_http (custom servers), ollama_local
 - Pools: short/long based on token estimates, with automatic backend selection
 - Features: Automatic failover, load balancing, passive health monitoring
 - Policy: Prefer idle backends, fallback to working ones, fail_count cooldowns
@@ -32,47 +32,58 @@ from langchain_core.language_models import LanguageModelInput
 # API keys (if needed) should be provided via environment variables externally.
 
 from utils.app_logging import get_logger
+
 logger = get_logger(__name__)
 
 # --- OLLAMA SINGLE URL (manual toggle by commenting) ---
 ollama_url = "http://gate04.cfa.handels.gu.se:11434"
-#ollama_url = "http://gate04.cfa.handels.gu.se:8787"
+# ollama_url = "http://gate04.cfa.handels.gu.se:8787"
 
-#vllm_url = "http://gate04.cfa.handels.gu.se:8787/v1"
+# vllm_url = "http://gate04.cfa.handels.gu.se:8787/v1"
 vllm_url = "http://gate04.cfa.handels.gu.se:8686/v1"
 
 # My OpenAI API key
-os.environ.setdefault('OPENAI_API_KEY', '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')  # User will need to set this
+os.environ.setdefault(
+    "OPENAI_API_KEY",
+    "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",
+)  # User will need to set this
 
 # --- LLM call policy (per-request) ---
 _LLM_CALL_TIMEOUT_S = 900.0  # 10 minutes per request
-_LLM_RETRY_ATTEMPTS = 3      # total attempts via with_retry()
+_LLM_RETRY_ATTEMPTS = 3  # total attempts via with_retry()
 
-def _build_llm(provider: str, model: str, temperature: float, base_url: str | None) -> Runnable[LanguageModelInput, BaseMessage]:
+
+def _build_llm(
+    provider: str, model: str, temperature: float, base_url: str | None
+) -> Runnable[LanguageModelInput, BaseMessage]:
     """Construct a LangChain LLM client for the given provider (no network call)."""
     if provider == "ollama":
         return ChatOllama(
             model=model,
             temperature=temperature,
             num_ctx=49152,
-            #num_ctn=16384,
-            #timeout=int(_LLM_CALL_TIMEOUT_S),
+            # num_ctn=16384,
+            # timeout=int(_LLM_CALL_TIMEOUT_S),
         ).with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
-    
+
     elif provider == "openai":
-        kwargs = dict(model=model, temperature=temperature,
-                      timeout=_LLM_CALL_TIMEOUT_S, max_retries=0)
-        
+        kwargs = dict(
+            model=model,
+            temperature=temperature,
+            timeout=_LLM_CALL_TIMEOUT_S,
+            max_retries=0,
+        )
+
         if base_url:
             kwargs["base_url"] = base_url
-        
+
         return ChatOpenAI(
-                model=model,
-                temperature=temperature,
-                timeout=_LLM_CALL_TIMEOUT_S,  # alias: request_timeout
-                max_retries=0,                # use Runnable-level retry for consistency
-            ).with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
-    
+            model=model,
+            temperature=temperature,
+            timeout=_LLM_CALL_TIMEOUT_S,  # alias: request_timeout
+            max_retries=0,  # use Runnable-level retry for consistency
+        ).with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
+
     elif provider == "anthropic":
         return ChatAnthropic(
             model_name=model,
@@ -83,6 +94,7 @@ def _build_llm(provider: str, model: str, temperature: float, base_url: str | No
         ).with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
     else:
         raise ValueError(f"Unsupported provider: {provider}")
+
 
 def get_llm(tier: ModelTier) -> Runnable[LanguageModelInput, BaseMessage]:
     # Minimal LLM tier call counter (increments on every get_llm call)
@@ -107,7 +119,9 @@ def get_llm(tier: ModelTier) -> Runnable[LanguageModelInput, BaseMessage]:
 
     # --- LOG WHERE THE REQUEST IS GOING ---
     if provider == "ollama":
-        logger.debug(f"[LLM REQUEST] Using Ollama (local) | Model: {model} | Base URL: {ollama_url}")
+        logger.debug(
+            f"[LLM REQUEST] Using Ollama (local) | Model: {model} | Base URL: {ollama_url}"
+        )
     elif provider == "openai":
         logger.debug(f"[LLM REQUEST] Using OpenAI | Model: {model}")
     elif provider == "anthropic":
@@ -124,9 +138,10 @@ def get_llm(tier: ModelTier) -> Runnable[LanguageModelInput, BaseMessage]:
 
     except ImportError as e:
         logger.error(f"❌ Failed to import {provider} client: {e}")
-        logger.error(f"Make sure you have installed the required package for {provider}")
+        logger.error(
+            f"Make sure you have installed the required package for {provider}"
+        )
         raise
     except Exception as e:
         logger.error(f"❌ Failed to initialize {provider} LLM: {e}")
         raise
-

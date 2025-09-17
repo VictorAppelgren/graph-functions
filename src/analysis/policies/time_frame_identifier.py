@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Literal, Tuple, cast
+from typing import Any, Literal, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable
@@ -16,10 +16,12 @@ logger = app_logging.get_logger(__name__)
 
 Horizon = Literal["fundamental", "medium", "current"]
 
+
 class TimeframeDecision(BaseModel):
     model_config = ConfigDict(extra="forbid")
     motivation: str = Field(min_length=1, max_length=400)
     horizon: Horizon
+
 
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
     if isinstance(raw, dict):
@@ -30,12 +32,14 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
             return cast(dict[str, Any], parsed)
     raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
 
+
 def _sanitize_timeframe(raw: Any) -> TimeframeDecision:
     data = _coerce_json_object(raw)
     dec = TimeframeDecision.model_validate(data)
     dec.motivation = " ".join(dec.motivation.split())[:400]  # normalize
     # horizon is validated by Literal, so it’s guaranteed correct here
     return dec
+
 
 def find_time_frame(article_text: str) -> tuple[str, Horizon]:
     """
@@ -74,11 +78,13 @@ def find_time_frame(article_text: str) -> tuple[str, Horizon]:
     parser = JsonOutputParser()
     chain: Runnable[dict[str, str], Any] = prompt | llm | parser
 
-    raw = chain.invoke({
-        "article_text": article_text,
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-    })
+    raw = chain.invoke(
+        {
+            "article_text": article_text,
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+        }
+    )
 
     try:
         decision = _sanitize_timeframe(raw)

@@ -8,6 +8,7 @@ Returns JSON dict with:
   "id_to_remove": str | null
 }
 """
+
 from typing import Dict, List, Any
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
@@ -21,15 +22,22 @@ from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 
-def decide_topic_capacity(candidate_topic: Dict[str, Any],
-                         existing_topics: List[Dict[str, Any]],
-                         test: bool = False) -> Dict[str, Any]:
+
+def decide_topic_capacity(
+    candidate_topic: Dict[str, Any],
+    existing_topics: List[Dict[str, Any]],
+    test: bool = False,
+) -> Dict[str, Any]:
     """
     candidate_topic: dict with at least {id?, name, importance, category?, motivation?}
     existing_topics: list of dicts like {id, name, importance, last_updated}
     """
     if test:
-        return {"action": "add", "motivation": "Test mode: allow add", "id_to_remove": None}
+        return {
+            "action": "add",
+            "motivation": "Test mode: allow add",
+            "id_to_remove": None,
+        }
 
     scope_text = describe_interest_areas()
     existing_compact = [
@@ -40,7 +48,9 @@ def decide_topic_capacity(candidate_topic: Dict[str, Any],
             "last_updated": t.get("last_updated"),
         }
         for t in existing_topics
-    ][:MAX_TOPICS + 10]  # safety bound for prompt size
+    ][
+        : MAX_TOPICS + 10
+    ]  # safety bound for prompt size
 
     prompt_template = """
 {system_mission}
@@ -96,6 +106,7 @@ OUTPUT FORMAT (STRICT JSON, NO EXTRA TEXT):
     # Parser ensures dict, but normalize fields:
     if isinstance(result, str):
         import json
+
         result = json.loads(result)
     action = (result.get("action") or "").lower()
     if action not in ("add", "replace", "reject"):

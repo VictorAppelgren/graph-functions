@@ -1,6 +1,7 @@
 """
 LLM-driven summarization of articles for news ingestion.
 """
+
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
@@ -15,12 +16,15 @@ logger = app_logging.get_logger(__name__)
 # Simple module-level cache for LLM chain
 _cached_chain = None
 
+
 def summarize_article(article: dict) -> dict:
     """
     Uses LLM to summarize the full extracted article text in a strict JSON format.
     Returns the input article with 'argos_summary' populated.
     """
-    logger.debug("Entering summarize_article for title: %s", article.get("title", "<no title>"))
+    logger.debug(
+        "Entering summarize_article for title: %s", article.get("title", "<no title>")
+    )
 
     # Build input from full extracted text (title, main, scraped, metadata) via formatter
     input_text = extract_text_from_json_article(article)
@@ -28,7 +32,9 @@ def summarize_article(article: dict) -> dict:
     llm = get_llm(ModelTier.MEDIUM)
 
     # Log stats about input
-    logger.debug(f"About to generate summary with input text of {len(input_text)} characters.")
+    logger.debug(
+        f"About to generate summary with input text of {len(input_text)} characters."
+    )
     if len(input_text) > 500:
         logger.debug(f"Summary input text (first 500 chars): {input_text[:500]}...")
     else:
@@ -57,16 +63,19 @@ def summarize_article(article: dict) -> dict:
         parser = JsonOutputParser()
         _cached_chain = prompt | llm | parser
         logger.debug("Created and cached LLM chain")
-    
-    result = _cached_chain.invoke({
-        "input_text": input_text,
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-    })
+
+    result = _cached_chain.invoke(
+        {
+            "input_text": input_text,
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+        }
+    )
 
     # Some backends may still return a string; align with should_rewrite_llm pattern
     if isinstance(result, str):
         import json  # local import to avoid top-level dependency
+
         result = json.loads(result)
 
     # Require 'summary' key (fail fast on malformed output)
@@ -74,7 +83,8 @@ def summarize_article(article: dict) -> dict:
 
     article = dict(article)  # shallow copy
     article["argos_summary"] = summary
-    logger.debug(f"Summary sample: {summary[:300]}{'...' if len(summary) > 300 else ''}")
+    logger.debug(
+        f"Summary sample: {summary[:300]}{'...' if len(summary) > 300 else ''}"
+    )
     logger.debug("Argos summary field added to article and returned.")
     return article
-   

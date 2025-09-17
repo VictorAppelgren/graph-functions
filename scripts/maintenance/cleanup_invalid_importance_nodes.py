@@ -5,7 +5,9 @@ Super simple, fail-fast script that immediately deletes offending nodes.
 Usage:
   python clean_up_scripts/cleanup_invalid_importance_nodes.py
 """
-import sys, os
+
+import sys
+import os
 
 # Ensure project root is on sys.path so 'utils', 'graph_db', etc. import correctly
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -16,7 +18,7 @@ if PROJECT_ROOT not in sys.path:
 
 from utils import app_logging
 from src.graph.neo4j_client import run_cypher
-from src.graph.ops.topic import remove_topic_node
+from src.graph.ops.topic import remove_topic
 from src.observability.pipeline_logging import master_log
 from src.graph.models import Neo4jRecord
 
@@ -45,7 +47,9 @@ def main() -> None:
         logger.info("✅ No invalid-importance Topic nodes found.")
         return
 
-    logger.warning(f"Found {total} invalid-importance Topic nodes. Proceeding to remove them now…")
+    logger.warning(
+        f"Found {total} invalid-importance Topic nodes. Proceeding to remove them now…"
+    )
     removed = 0
 
     for r in rows:
@@ -58,11 +62,14 @@ def main() -> None:
 
         reason = f"cleanup_invalid_importance:{imp} labels={labels}"
         logger.info(f"🗑️ Removing Topic id={node_id} name={name} importance={imp}")
-        out = remove_topic_node(node_id, reason=reason)
+        out = remove_topic(node_id, reason=reason)
         removed += 1
         logger.debug(f"Removed: {out}")
 
-    master_log(f"Cleanup removed {removed}/{total} Topic nodes with invalid importance", removes_node=removed)
+    master_log(
+        f"Cleanup removed {removed}/{total} Topic nodes with invalid importance",
+        removes_topic=removed,
+    )
     logger.info(f"✅ Cleanup complete. Removed {removed} nodes.")
 
 

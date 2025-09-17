@@ -5,18 +5,21 @@ Run this file directly. Configure PREVIEW_ONLY at the bottom.
 - PREVIEW_ONLY=True: print selected IDs once.
 - PREVIEW_ONLY=False: remove selected IDs and loop until within capacity.
 """
+
 from __future__ import annotations
 from typing import List, Dict, Any
 
-import os, sys, json
+import os
+import sys
+import json
+
 _CURRENT_DIR = os.path.dirname(__file__)
-_PROJECT_ROOT = os.path.abspath(os.path.join(_CURRENT_DIR, '..'))
+_PROJECT_ROOT = os.path.abspath(os.path.join(_CURRENT_DIR, ".."))
 if _PROJECT_ROOT not in sys.path:
     sys.path.insert(0, _PROJECT_ROOT)
 
 from utils import app_logging
-from src.graph.ops.get_all_nodes import get_all_nodes
-from src.graph.ops.remove_node import remove_node
+from src.graph.ops.topic import get_all_topics, remove_topic
 from src.graph.config import MAX_TOPICS, describe_interest_areas
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
@@ -26,16 +29,22 @@ from langchain_core.output_parsers import JsonOutputParser
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
- 
 
 
-def _select_topics_to_remove_llm(candidates: List[Dict[str, Any]], remove_count: int) -> List[str]:
+def _select_topics_to_remove_llm(
+    candidates: List[Dict[str, Any]], remove_count: int
+) -> List[str]:
     """Ask the LLM to pick which candidate topic ids to remove.
     Minimal version: no try/except, no fallbacks.
     """
     scope_text = describe_interest_areas()
     compact = [
-        {"id": t.get("id"), "name": t.get("name"), "importance": t.get("importance", 0), "type": t.get("type")}
+        {
+            "id": t.get("id"),
+            "name": t.get("name"),
+            "importance": t.get("importance", 0),
+            "type": t.get("type"),
+        }
         for t in candidates
     ]
     candidate_ids = [t.get("id") for t in compact if t.get("id")]
@@ -84,15 +93,17 @@ Now output ONLY the JSON object described above.
     prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM).bind(response_format={"type": "json_object"})
     chain = prompt | llm | parser
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "format_instructions": parser.get_format_instructions(),
-        "remove_count": remove_count,
-        "scope_text": scope_text,
-        "candidate_ids": candidate_ids_json,
-        "candidates": candidates_json,
-    })
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "format_instructions": parser.get_format_instructions(),
+            "remove_count": remove_count,
+            "scope_text": scope_text,
+            "candidate_ids": candidate_ids_json,
+            "candidates": candidates_json,
+        }
+    )
     return result.get("ids_to_remove") or []
 
 
@@ -104,39 +115,60 @@ if __name__ == "__main__":
 
     while True:
         fields = ["id", "name", "type", "importance", "level", "last_updated"]
-        all_topics = get_all_nodes(fields=fields)
+        all_topics = get_all_topics(fields=fields)
         total = len(all_topics)
         max_allowed = int(MAX_TOPICS)
         if total <= max_allowed:
-            # Log all current nodes in a nice list 
+            # Log all current topics in a nice list
             for t in all_topics:
                 logger.info("Current topic: %s", t.get("name"))
             break
 
         need_remove = total - max_allowed
         remove_now = 20 if need_remove > 20 else need_remove
-        logger.info("Capacity loop: before_total=%d, max=%d, need_remove=%d, batch=%d", total, max_allowed, need_remove, remove_now)
-        ranked = sorted(all_topics, key=lambda t: (int(t.get("importance") or 0), str(t.get("last_updated") or "1970-01-01")))
+        logger.info(
+            "Capacity loop: before_total=%d, max=%d, need_remove=%d, batch=%d",
+            total,
+            max_allowed,
+            need_remove,
+            remove_now,
+        )
+        ranked = sorted(
+            all_topics,
+            key=lambda t: (
+                int(t.get("importance") or 0),
+                str(t.get("last_updated") or "1970-01-01"),
+            ),
+        )
         candidates = [
-            {"id": t.get("id"), "name": t.get("name"), "importance": t.get("importance", 0), "type": t.get("type")}
+            {
+                "id": t.get("id"),
+                "name": t.get("name"),
+                "importance": t.get("importance", 0),
+                "type": t.get("type"),
+            }
             for t in ranked[: min(100, len(ranked))]
             if t.get("id")
         ]
         ids = _select_topics_to_remove_llm(candidates, remove_now)
 
         if PREVIEW_ONLY:
-            logger.info("Preview: before_total=%d, selected=%d, after_total=%d", total, len(ids), max(total - len(ids), 0))
+            logger.info(
+                "Preview: before_total=%d, selected=%d, after_total=%d",
+                total,
+                len(ids),
+                max(total - len(ids), 0),
+            )
             print(ids)
             break
 
         logger.info("Removing %d topics: %s", len(ids), ids)
         for tid in ids:
-            remove_node(tid, reason="capacity_prune_min")
+            remove_topic(tid, reason="capacity_prune_min")
 
         # Loop again with fresh state
-        all_topics_after = get_all_nodes(fields=fields)
-        after_total = len([t for t in all_topics_after if (t.get("level") or "main") == "main"])
+        all_topics_after = get_all_topics(fields=fields)
+        after_total = len(
+            [t for t in all_topics_after if (t.get("level") or "main") == "main"]
+        )
         logger.info("After prune: after_total=%d (removed=%d)", after_total, len(ids))
-
-
- 

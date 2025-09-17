@@ -1,6 +1,7 @@
 """
 Loads an article from cold storage by its unique ID.
 """
+
 import sys
 import os
 
@@ -21,13 +22,17 @@ from paths import get_raw_news_dir
 
 logger = get_logger(__name__)
 
+
 def _load_json_object(path: Path) -> dict[str, Any]:
     """Load JSON and guarantee the top-level is an object (dict)."""
     with path.open("r", encoding="utf-8") as f:
         obj = json.load(f)
     if not isinstance(obj, dict):
-        raise TypeError(f"Expected JSON object at top level in {path}, got {type(obj).__name__}")
+        raise TypeError(
+            f"Expected JSON object at top level in {path}, got {type(obj).__name__}"
+        )
     return cast(dict[str, Any], obj)
+
 
 def load_article(article_id: str, max_days: int = 30) -> Dict[str, str] | None:
     """
@@ -73,6 +78,7 @@ def load_article(article_id: str, max_days: int = 30) -> Dict[str, str] | None:
 
     logger.error(
         "Article %s not found in any raw_news day directory (checked %d days)",
-        article_id, max_days,
+        article_id,
+        max_days,
     )
     raise FileNotFoundError(f"Article {article_id} not found")

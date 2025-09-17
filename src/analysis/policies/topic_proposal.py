@@ -1,6 +1,7 @@
 """
 LLM-driven proposal for new Topic node based on article content.
 """
+
 import json
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
@@ -8,11 +9,10 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.graph.config import MAX_TOPICS, describe_interest_areas
-from src.graph.ops.topic import get_all_topic_nodes
+from src.graph.ops.topic import get_all_topics
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, Sequence
 from pydantic import BaseModel, ConfigDict, ValidationError
-from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable
 
 logger = app_logging.get_logger(__name__)
@@ -82,8 +82,9 @@ template = PromptTemplate(
         "scope_text",
         "weakest_importance",
         "weakest_examples",
-    ]
+    ],
 )
+
 
 class TopicProposal(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -94,6 +95,7 @@ class TopicProposal(BaseModel):
     importance: int | None = None
     last_updated: str | None = None
 
+
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
     if isinstance(raw, dict):
         return raw
@@ -103,9 +105,10 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
             return parsed
     raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
 
+
 def propose_topic_node(
     article: str,
-    suggested_names: Sequence[str] | None = None,   # avoid mutable default
+    suggested_names: Sequence[str] | None = None,  # avoid mutable default
 ) -> dict[str, Any] | None:
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
@@ -118,7 +121,9 @@ def propose_topic_node(
     # compute context...
     scope_text = describe_interest_areas()
     try:
-        existing_topics = get_all_topic_nodes(fields=["id", "name", "importance", "last_updated"])
+        existing_topics = get_all_topics(
+            fields=["id", "name", "importance", "last_updated"]
+        )
     except Exception as e:
         logger.warning("Failed to load existing topics for capacity context: %s", e)
         existing_topics = []
@@ -131,7 +136,9 @@ def propose_topic_node(
 
     if capacity_full and existing_topics:
         try:
-            sorted_all = sorted(existing_topics, key=lambda x: (x.get("importance") or 0))
+            sorted_all = sorted(
+                existing_topics, key=lambda x: (x.get("importance") or 0)
+            )
             weakest_importance = int(sorted_all[0].get("importance", 0))
             weakest_examples = [
                 {
@@ -148,19 +155,21 @@ def propose_topic_node(
 
     # build your PromptTemplate as `template` earlier
     chain: Runnable[dict[str, Any], Any] = template | llm | parser
-    raw = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "article": article,
-        "suggested_names": list(suggested_names or []),
-        "max_topics": max_topics,
-        "current_count": current_count,
-        "scope_text": scope_text,
-        "weakest_importance": weakest_importance,
-        "weakest_examples": weakest_examples,
-    })
+    raw = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "article": article,
+            "suggested_names": list(suggested_names or []),
+            "max_topics": max_topics,
+            "current_count": current_count,
+            "scope_text": scope_text,
+            "weakest_importance": weakest_importance,
+            "weakest_examples": weakest_examples,
+        }
+    )
 
-    if raw is None:
+    if raw:
         return None
 
     try:

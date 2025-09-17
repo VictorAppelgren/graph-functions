@@ -21,12 +21,14 @@ os.makedirs(SCRAPED_DATA_DIR, exist_ok=True)
 # Environment validation
 PERIGON_API_KEY = "42d445d4-0839-450f-a747-901e63b89bb2"
 
+
 # API Configuration
 def get_api_key():
     """Get API key for Perigon News API.
     Returns the NEWS_API_KEY environment variable if set, otherwise uses the PERIGON_API_KEY constant.
     """
     return os.environ.get("NEWS_API_KEY") or PERIGON_API_KEY
+
 
 # HTTP Request Settings
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -40,5 +42,3 @@ MAX_SOURCE_LINKS_TO_SCRAPE = 10  # Maximum number of links to scrape per article
 
 # Storage Settings
 JSON_INDENT = 2  # For readable JSON files
-
-

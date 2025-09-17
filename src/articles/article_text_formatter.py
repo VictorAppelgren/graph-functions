@@ -1,9 +1,11 @@
 """
 Extracts and formats all relevant text from a raw_news JSON article for LLM input or downstream processing.
 """
+
 from typing import Dict, Any
 
 import logging
+
 
 def extract_text_from_json_article(article: Dict[str, Any]) -> str:
     """
@@ -20,8 +22,8 @@ def extract_text_from_json_article(article: Dict[str, Any]) -> str:
     CHARS_PER_TOKEN = 4
     BUDGET = MAX_TOKENS * CHARS_PER_TOKEN
 
-    lines = []
-    found = []
+    lines: list[str] = []
+    found: list[str] = []
     used = 0
 
     def fits_and_add(segment: str) -> bool:
@@ -33,59 +35,66 @@ def extract_text_from_json_article(article: Dict[str, Any]) -> str:
         lines.append(segment)
         used += need
         return True
+
     # Title
     title = article.get("title")
     if title:
         if fits_and_add(f"Title: {title}"):
-            found.append('title')
+            found.append("title")
         else:
             return "\n".join(lines)
     # Content
     content = article.get("content")
     if content:
         if fits_and_add(f"Content: {content}"):
-            found.append('content')
+            found.append("content")
         else:
             return "\n".join(lines)
     # Description
     description = article.get("description")
     if description:
         if fits_and_add(f"Description: {description}"):
-            found.append('description')
+            found.append("description")
         else:
             return "\n".join(lines)
     # Argos summary
     argos_summary = article.get("argos_summary")
     if argos_summary:
         if fits_and_add(f"Argos Summary: {argos_summary}"):
-            found.append('argos_summary')
+            found.append("argos_summary")
         else:
             return "\n".join(lines)
     # Categories
     categories = article.get("categories")
     if categories and isinstance(categories, list):
-        cat_names = ", ".join([c.get("name", "") for c in categories if isinstance(c, dict)])
+        cat_names = ", ".join(
+            [c.get("name", "") for c in categories if isinstance(c, dict)]
+        )
         if cat_names:
             if fits_and_add(f"Categories: {cat_names}"):
-                found.append(f'categories({len(categories)})')
+                found.append(f"categories({len(categories)})")
             else:
                 return "\n".join(lines)
     # Taxonomies
     taxonomies = article.get("taxonomies")
     if taxonomies and isinstance(taxonomies, list):
-        taxo_names = ", ".join([t.get("name", "") for t in taxonomies if isinstance(t, dict)])
+        taxo_names = ", ".join(
+            [t.get("name", "") for t in taxonomies if isinstance(t, dict)]
+        )
         if taxo_names:
             if fits_and_add(f"Taxonomies: {taxo_names}"):
-                found.append(f'taxonomies({len(taxonomies)})')
+                found.append(f"taxonomies({len(taxonomies)})")
             else:
                 return "\n".join(lines)
     # Keywords
     keywords = article.get("keywords")
     if keywords and isinstance(keywords, list):
-        kw_names = ", ".join([k.get("name", "") for k in keywords if isinstance(k, dict)])
+        kw_names = ", ".join(
+            [k.get("name", "") for k in keywords if isinstance(k, dict)]
+        )
         if kw_names:
             if fits_and_add(f"Keywords: {kw_names}"):
-                found.append(f'keywords({len(keywords)})')
+                found.append(f"keywords({len(keywords)})")
             else:
                 return "\n".join(lines)
     # Sentiment
@@ -96,7 +105,7 @@ def extract_text_from_json_article(article: Dict[str, Any]) -> str:
             sent_parts.append(f"{k.capitalize()}: {v}")
         segment = "Sentiment: " + ", ".join(sent_parts)
         if fits_and_add(segment):
-            found.append('sentiment')
+            found.append("sentiment")
         else:
             return "\n".join(lines)
     # Scraped sources
@@ -112,7 +121,9 @@ def extract_text_from_json_article(article: Dict[str, Any]) -> str:
                     included += 1
                 else:
                     return "\n".join(lines)
-        found.append(f'scraped_sources({included})')
+        found.append(f"scraped_sources({included})")
     # Add any other fields as necessary
-    logger.info(f"extract_text_from_json_article grabbed: {', '.join(found) if found else 'nothing'}")
+    logger.info(
+        f"extract_text_from_json_article grabbed: {', '.join(found) if found else 'nothing'}"
+    )
     return "\n".join(lines)

@@ -10,14 +10,15 @@ This script does not delete or mutate Topics; it only attempts to attach orphans
 using existing ingestion logic.
 """
 
-import sys, os
+import sys
+import os
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
     PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
-    
+
 
 from utils.app_logging import get_logger
 from src.graph.neo4j_client import run_cypher
@@ -33,6 +34,7 @@ RETURN a.id AS id
 ORDER BY a.published_at DESC
 LIMIT $limit
 """
+
 
 def fetch_orphan_article_ids(limit: int = 1000) -> list[str]:
     rows = run_cypher(ORPHAN_QUERY, {"limit": limit}) or []
@@ -61,7 +63,9 @@ def link_orphan_articles(limit: int = 1000) -> dict[str, int]:
                 # add_article already emits master_log events for links created
             else:
                 failures += 1
-                master_log_error(f"Backfill link_orphan_articles: add_article returned status={status} for {aid}")
+                master_log_error(
+                    f"Backfill link_orphan_articles: add_article returned status={status} for {aid}"
+                )
         except Exception as e:
             failures += 1
             master_log_error(f"Backfill link_orphan_articles failed for {aid}", error=e)

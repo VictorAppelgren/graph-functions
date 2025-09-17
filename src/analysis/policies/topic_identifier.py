@@ -6,7 +6,6 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
@@ -16,19 +15,23 @@ logger = get_logger(__name__)
 
 # --- types --------------------------------------------------------------------
 
+
 class NodeRow(TypedDict, total=False):
     id: str
     name: str
     importance: int
     last_updated: str
 
+
 class NodeMappingDecision(BaseModel):
     model_config = ConfigDict(extra="forbid")
     motivation: str = Field(min_length=1, max_length=400)
-    existing: list[str] | None = None   # IDs
-    new: list[str] | None = None        # names
+    existing: list[str] | None = None  # IDs
+    new: list[str] | None = None  # names
+
 
 # --- helpers ------------------------------------------------------------------
+
 
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
     if isinstance(raw, dict):
@@ -38,6 +41,7 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
         if isinstance(parsed, dict):
             return cast(dict[str, Any], parsed)
     raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
+
 
 def _sanitize_node_mapping(
     raw: Any,
@@ -67,9 +71,11 @@ def _sanitize_node_mapping(
 
     return dec
 
+
 # --- main ---------------------------------------------------------------------
 
-def find_node_mapping(
+
+def find_topic_mapping(
     article_text: str,
     node_list: Sequence[NodeRow],
 ) -> tuple[str, list[str], list[str]]:
@@ -85,7 +91,11 @@ def find_node_mapping(
     logger.info("Node list length: %d", len(node_list))
 
     # Build allowed existing IDs from node_list
-    allowed_ids = [n["id"] for n in node_list if isinstance(n, dict) and "id" in n and isinstance(n["id"], str)]
+    allowed_ids = [
+        n["id"]
+        for n in node_list
+        if isinstance(n, dict) and "id" in n and isinstance(n["id"], str)
+    ]
 
     prompt_template = """
         {system_mission}
@@ -121,15 +131,19 @@ def find_node_mapping(
     parser = JsonOutputParser()
     chain: Runnable[dict[str, Any], Any] = prompt | llm | parser
 
-    raw = chain.invoke({
-        "article_text": article_text,
-        "node_list": node_list,            # the template prints it verbatim; OK for LLM context
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-    })
+    raw = chain.invoke(
+        {
+            "article_text": article_text,
+            "node_list": node_list,  # the template prints it verbatim; OK for LLM context
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+        }
+    )
 
     try:
-        decision = _sanitize_node_mapping(raw, allowed_existing_ids=allowed_ids, max_new=1)
+        decision = _sanitize_node_mapping(
+            raw, allowed_existing_ids=allowed_ids, max_new=1
+        )
     except (ValidationError, TypeError, json.JSONDecodeError) as e:
         logger.error("Node mapping parse/validate failed: %s", str(e)[:200])
         # Safe fallback: no mapping

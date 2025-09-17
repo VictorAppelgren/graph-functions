@@ -1,16 +1,15 @@
-# graph_nodes/topic_taxonomy_classifier.py
 """
-Topic taxonomy classifier for proposed Topic nodes.
+Topic taxonomy classifier for proposed Topics.
 - Adapts the style of graph_articles/category_identifier.py but for topics.
 - Maps to one of: ["macro_driver","asset","policy","geography","company","industry_vertical","ambiguous"].
 - Returns STRICT JSON object: {"category": str, "motivation": str}
 """
+
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from utils.app_logging import get_logger
-from utils import app_logging
 from utils.app_logging import truncate_str
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
@@ -59,7 +58,15 @@ YOUR RESPONSE (STRICT JSON ONLY):
 """
 
 prompt = PromptTemplate(
-    input_variables=["system_mission", "categories", "topic_id", "topic_name", "topic_type", "motivation", "summary"],
+    input_variables=[
+        "system_mission",
+        "categories",
+        "topic_id",
+        "topic_name",
+        "topic_type",
+        "motivation",
+        "summary",
+    ],
     template=prompt_template,
 )
 
@@ -74,15 +81,17 @@ def classify_topic_category(
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "categories": ", ".join(CATEGORIES),
-        "topic_id": topic_id or "",
-        "topic_name": topic_name or "",
-        "topic_type": topic_type or "",
-        "motivation": motivation or "",
-        "summary": article_summary or "",
-    })
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "categories": ", ".join(CATEGORIES),
+            "topic_id": topic_id or "",
+            "topic_name": topic_name or "",
+            "topic_type": topic_type or "",
+            "motivation": motivation or "",
+            "summary": article_summary or "",
+        }
+    )
     logger.info("Topic category result: %s", result)
     if isinstance(result, dict):
         # Normalize keys order to motivation first if needed by callers
@@ -92,6 +101,7 @@ def classify_topic_category(
     else:
         # Fail fast
         raise ValueError(f"Category classifier returned invalid structure: {result}")
+
 
 # ----- SIMPLE MAIN TO TEST -----
 if __name__ == "__main__":
@@ -104,45 +114,48 @@ if __name__ == "__main__":
     )
     print(demo)
 
-def llm_filter_all_interesting_topics(source_node: dict, all_nodes: list[dict]) -> dict:
+
+def llm_filter_all_interesting_topics(
+    source_topic: dict, all_topics: list[dict]
+) -> dict:
     """
-    Use LLM to filter all_nodes down to plausible candidates for strong relationships.
+    Use LLM to filter all_topics down to plausible candidates for strong relationships.
     Returns a dict: { 'candidate_ids': list[str], 'motivation': str | None }
     """
-    llm = get_simple_long_context_llm()
-    all_names = [n['name'] for n in all_nodes]
-    name = source_node['name']
-    prompt = f'''
+    llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
+    all_names = [n["name"] for n in all_topics]
+    name = source_topic["name"]
+    prompt = f"""
     {SYSTEM_MISSION}
     {SYSTEM_CONTEXT}
 
     YOU ARE A WORLD-CLASS MACRO/MARKETS RELATIONSHIP ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics.
 
     TASK:
-    - Given the source topic below and a list of all topics (names only), select all nodes that could plausibly be strong INFLUENCES, CORRELATES_WITH, or PEERS to the source.
-    - Only select nodes where a strong, direct, or competitive relationship is possible.
+    - Given the source topic below and a list of all topics (names only), select all topics that could plausibly be strong INFLUENCES, CORRELATES_WITH, or PEERS to the source.
+    - Only select topics where a strong, direct, or competitive relationship is possible.
     - Output a JSON object with two fields: 'motivation' (1-2 sentences, required, first field, justifying your shortlist) and 'candidates' (list of topic names). If none are plausible, output an empty list for 'candidates'.
     - ONLY INCLUDE THE MOTIVATION FIELD FIRST, THEN CANDIDATES. NO ADDITIONAL TEXT. STRICT JSON FORMAT.
 
     EXAMPLE OUTPUT:
     {{"motivation": "These topics are the most likely strong peers or influences based on the source topic\'s domain.", "candidates": ["EURUSD", "ECB Policy", "US Inflation"]}}
 
-    SOURCE NODE:
+    SOURCE TOPIC:
     {name}
 
     ALL TOPICS:
     {all_names}
 
     YOUR RESPONSE IN JSON:
-    '''
+    """
     logger.debug("Prompt: %s", truncate_str(str(prompt), 100))
     chain = llm | JsonOutputParser()
     result = chain.invoke(prompt)
-    motivation = result.get('motivation') if isinstance(result, dict) else None
+    motivation = result.get("motivation") if isinstance(result, dict) else None
     if motivation:
         logger.info(f"LLM candidate shortlist motivation: {motivation}")
-    candidate_names = result.get('candidates', []) if isinstance(result, dict) else []
-    name_to_id = {n['name']: n['id'] for n in all_nodes}
+    candidate_names = result.get("candidates", []) if isinstance(result, dict) else []
+    name_to_id = {n["name"]: n["id"] for n in all_topics}
     candidate_ids = [name_to_id[name] for name in candidate_names if name in name_to_id]
     logger.info(f"Candidate IDs after mapping: {candidate_ids}")
     return {"candidate_ids": candidate_ids, "motivation": motivation}
@@ -192,10 +205,20 @@ IF IT DOES NOT SUPPORT ACTIONABLE FINANCIAL DECISIONS, PREFER importance="REMOVE
 
 RETURN STRICT JSON ONLY. ONLY TWO FIELDS: importance (1..5 or "REMOVE") and rationale (string).
 """,
-    input_variables=["system_mission", "system_context", "policy_text", "topic_name", "topic_type", "context"],
+    input_variables=[
+        "system_mission",
+        "system_context",
+        "policy_text",
+        "topic_name",
+        "topic_type",
+        "context",
+    ],
 )
 
-def classify_topic_importance(topic_name: str, topic_type: str = "", context: str = "") -> tuple[int | str, str]:
+
+def classify_topic_importance(
+    topic_name: str, topic_type: str = "", context: str = ""
+) -> tuple[int | str, str]:
     logger.info("Classifying topic importance: input follows")
     logger.info("policy_text:\n%s", policy_text)
     logger.info("topic_name: %r", topic_name)
@@ -203,20 +226,23 @@ def classify_topic_importance(topic_name: str, topic_type: str = "", context: st
     logger.info("context: %r", truncate_str(context, 2000))
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
-    chain = template | llm | parser   # exact style match
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "policy_text": policy_text,
-        "topic_name": topic_name,
-        "topic_type": topic_type or "",
-        "context": truncate_str(context, 2000),
-    })
+    chain = template | llm | parser  # exact style match
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "policy_text": policy_text,
+            "topic_name": topic_name,
+            "topic_type": topic_type or "",
+            "context": truncate_str(context, 2000),
+        }
+    )
     logger.info("Importance classification result: %s", result)
     # Expected: {"importance": 1..5, "rationale": "..."} or null importance
     importance = result.get("importance", None)
-    rationale = result.get("rationale", "") 
+    rationale = result.get("rationale", "")
     return importance, rationale
+
 
 RELEVANCE_POLICY = """
 ALLOWED (must clearly support trading decisions):
@@ -233,7 +259,7 @@ REJECT (do not add as topics):
 PRINCIPLES:
 - Topic must help understand markets or make/plan trades.
 - If unsure, REJECT. Be strict; quality over recall.
-- Node must be atomic, human-readable, and non-duplicative with existing macro/asset anchors.
+- Topic must be atomic, human-readable, and non-duplicative with existing macro/asset anchors.
  - Minimal recall nudge: If there is any real, explicit trading relevance to our main interests (clear channel to pricing/liquidity/volatility) and the topic is a canonical asset/policy or macro transmitter, prefer should_add=true.
 """
 
@@ -276,6 +302,7 @@ No extra fields. No commentary. If unsure, set should_add=false with a clear mot
     ],
 )
 
+
 def check_topic_relevance(
     topic_id: str,
     topic_name: str,
@@ -289,21 +316,24 @@ def check_topic_relevance(
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = template | llm | parser  # exact style match
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "relevance_policy": RELEVANCE_POLICY,
-        "topic_id": topic_id or "",
-        "topic_name": topic_name or "",
-        "topic_type": topic_type or "",
-        "motivation": truncate_str(motivation or "", 800),
-        "article_summary": truncate_str(article_summary or "", 1200),
-        "context": truncate_str(context or "", 1200),
-    })
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "relevance_policy": RELEVANCE_POLICY,
+            "topic_id": topic_id or "",
+            "topic_name": topic_name or "",
+            "topic_type": topic_type or "",
+            "motivation": truncate_str(motivation or "", 800),
+            "article_summary": truncate_str(article_summary or "", 1200),
+            "context": truncate_str(context or "", 1200),
+        }
+    )
     logger.info("Relevance gate result: %s", result)
     should_add = result["should_add"]
     motivation_for_relevance = result["motivation"]
     return should_add, motivation_for_relevance
+
 
 # ----- SIMPLE MAIN TO TEST -----
 if __name__ == "__main__":

@@ -14,28 +14,62 @@ INTEREST_AREAS = [
         "name": "US/EU Macro & Markets",
         "priority": 1,
         "description": "Core macro and markets for US and EU: growth, inflation, employment, equities, credit, commodities.",
-        "include": ["US", "EU", "Eurozone", "macro", "equities", "credit", "commodities", "GDP", "inflation", "employment"],
+        "include": [
+            "US",
+            "EU",
+            "Eurozone",
+            "macro",
+            "equities",
+            "credit",
+            "commodities",
+            "GDP",
+            "inflation",
+            "employment",
+        ],
     },
     {
         "id": "policy_rates_tariffs",
         "name": "Policy, Interest Rates, Tariffs",
         "priority": 1,
         "description": "Monetary/fiscal policy, central banks, interest rates, tariffs/trade policy and their market impact.",
-        "include": ["Federal Reserve", "ECB", "interest rates", "tariffs", "fiscal policy", "monetary policy", "yields"],
+        "include": [
+            "Federal Reserve",
+            "ECB",
+            "interest rates",
+            "tariffs",
+            "fiscal policy",
+            "monetary policy",
+            "yields",
+        ],
     },
     {
         "id": "eurusd_drivers",
         "name": "EUR/USD Drivers",
         "priority": 1,
         "description": "Anything materially influencing the EUR/USD currency cross.",
-        "include": ["EURUSD", "EUR/USD", "exchange rate", "FX", "balance of payments", "trade balance"],
+        "include": [
+            "EURUSD",
+            "EUR/USD",
+            "exchange rate",
+            "FX",
+            "balance of payments",
+            "trade balance",
+        ],
     },
     {
         "id": "ai_datacenters",
         "name": "AI & Data Centers",
         "priority": 1,
         "description": "AI infrastructure, data centers, energy and supply-chain implications for markets.",
-        "include": ["AI", "data center", "GPUs", "semiconductors", "electricity demand", "NVIDIA", "hyperscalers"],
+        "include": [
+            "AI",
+            "data center",
+            "GPUs",
+            "semiconductors",
+            "electricity demand",
+            "NVIDIA",
+            "hyperscalers",
+        ],
     },
     {
         "id": "pulp_market",
@@ -46,13 +80,18 @@ INTEREST_AREAS = [
     },
 ]
 
+
 def describe_interest_areas() -> str:
     """Compact text description for prompts."""
+
     def entry(a: dict[str, Any]) -> str:
         """
         Format a single entry as a string with priority, description, and included items.
         """
         inc = ", ".join(a.get("include", [])[:8])
-        return f"- {a['name']} (prio {a['priority']}): {a['description']} | include: {inc}"
+        return (
+            f"- {a['name']} (prio {a['priority']}): {a['description']} | include: {inc}"
+        )
+
     lines = "\n".join(entry(a) for a in INTEREST_AREAS)
     return f"Max topics allowed: {MAX_TOPICS}\nAreas of interest:\n{lines}"

@@ -1,6 +1,7 @@
 from enum import IntEnum
 from dataclasses import dataclass
 
+
 class PriorityLevel(IntEnum):
     CORE = 1
     HIGH = 2
@@ -8,12 +9,14 @@ class PriorityLevel(IntEnum):
     LOW = 4
     STRUCTURAL = 5
 
+
 @dataclass(frozen=True)
 class PriorityPolicy:
     interval_seconds: int
     label: str
     characteristics: str
     number_of_articles: int
+
 
 PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
     PriorityLevel.CORE: PriorityPolicy(
@@ -65,6 +68,7 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
         number_of_articles=6,
     ),
 }
+
 
 def get_interval_for_importance(importance: int) -> int:
     try:

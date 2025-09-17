@@ -14,11 +14,12 @@ from datetime import datetime
 from typing import Optional, Any, Mapping
 from enum import Enum
 from pydantic import BaseModel, ConfigDict, Field
-from datetime import datetime, timezone
+from datetime import timezone
 
 from paths import get_project_root
 
 # -------- paths --------
+
 
 def _ensure_dir(p: Path) -> None:
     p.mkdir(parents=True, exist_ok=True)
@@ -41,23 +42,23 @@ def get_event_dir(event_type: EventType) -> Path:
     d.mkdir(parents=True, exist_ok=True)
     return d
 
+
 class EventType(str, Enum):
     ADD_ARTICLE = "add_article"
     REMOVE_ARTICLE = "remove_article"
     REWRITE_SKIPPED = "rewrite_skipped"
-    REMOVE_NODE = "remove_node"
+    REMOVE_TOPIC = "remove_topic"
     ANALYSIS_REWRITER_RUN = "analysis_rewriter_run"
     ANALYSIS_SECTION_REWRITE = "analysis_section_rewrite"
     ARTICLE_REPLACEMENT_DECISION = "article_replacement_decision"
     ADD_RELATIONSHIP = "add_relationship"
-    ADD_NODE = "add_node"
+    ADD_TOPIC = "add_topic"
     REMOVE_RELATIONSHIP = "remove_relationship"
-
-
 
 
 class EventModel(BaseModel):
     """Canonical event structure written to disk."""
+
     model_config = ConfigDict(extra="forbid")
 
     type: EventType
@@ -74,6 +75,7 @@ class EventModel(BaseModel):
 
 # -------- Generic Tracker --------
 
+
 class EventClassifier:
     """
     Minimal generic tracker.
@@ -88,7 +90,7 @@ class EventClassifier:
     def __init__(self, event_type: EventType):
         self.event = EventModel(type=event_type)
         self._out_dir = get_event_dir(event_type)
-        
+
     def put(self, name: str, value: object) -> None:
         """
         - If value is a mapping -> stored under event.details[name] (verbatim)
@@ -98,9 +100,20 @@ class EventClassifier:
             raise ValueError("name must be a non-empty string")
 
         if isinstance(value, Mapping):
-            self.event.details[name] = dict(value) 
+            self.event.details[name] = dict(value)
         else:
             self.event.inputs[name] = str(value)
+
+    def put_many(
+        self, mapping: Mapping[str, object] | None = None, /, **kwargs: Any
+    ) -> None:
+        if mapping is None:
+            mapping = kwargs
+        elif kwargs:
+            raise TypeError("Provide either a mapping OR kwargs, not both.")
+
+        for k, v in mapping.items():
+            self.put(k, v)
 
     def set_field(self, name: str, value: str | int | float | bool) -> None:
         self.put(name, value)
@@ -119,9 +132,9 @@ class EventClassifier:
             stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
             fname = f"fail_{stamp}.json"
 
-        _ = self.event.model_dump()  
+        _ = self.event.model_dump()
         out_path = self._out_dir / fname
         tmp = out_path.with_suffix(out_path.suffix + ".tmp")
         tmp.write_text(self.event.model_dump_json(), encoding="utf-8")
-        tmp.replace(out_path) 
+        tmp.replace(out_path)
         return out_path

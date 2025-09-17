@@ -8,11 +8,14 @@ Simplified Article Backfill Orchestrator
 - Adds relevant articles using add_article(..., intended_topic_id=topic_id)
 - Minimal surface area: no try/except, no fallbacks
 """
+
 from __future__ import annotations
 
-import os, sys
+import os
+import sys
 import re
 import random
+
 # Canonical import pattern: ensure project root is on sys.path when running this module directly
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
@@ -23,10 +26,15 @@ if PROJECT_ROOT not in sys.path:
 from typing import List, Tuple
 
 from utils.app_logging import get_logger
-from src.observability.pipeline_logging import master_log, problem_log, master_statistics, Problem
+from src.observability.pipeline_logging import (
+    master_log,
+    problem_log,
+    master_statistics,
+    Problem,
+)
 
-from src.analysis.orchestration.analysis_rewriter import SECTIONS, SECTION_FOCUS
-from src.graph.ops.topic import get_all_topic_nodes, get_topic_node_by_id
+from src.analysis.orchestration.analysis_rewriter import SECTIONS
+from src.graph.ops.topic import get_all_topics, get_topic_by_id
 from src.graph.neo4j_client import run_cypher
 from src.articles.load_article import load_article
 from paths import get_raw_news_dir
@@ -68,8 +76,11 @@ def count_articles_for_topic_section(topic_id: str, section: str) -> int:
     )
     res = run_cypher(q, {"topic_id": topic_id, "section": section})
     number_of_articles = int(res[0]["c"]) if res else 0
-    logger.info(f"count_articles_for_topic_section found {number_of_articles} articles for {topic_id} and {section}")
+    logger.info(
+        f"count_articles_for_topic_section found {number_of_articles} articles for {topic_id} and {section}"
+    )
     return number_of_articles
+
 
 def collect_candidates_by_keywords(
     keyword_list: List[str],
@@ -132,9 +143,7 @@ def collect_candidates_by_keywords(
                             f"Keyword scan done | scanned={scanned} | found={len(matches)}"
                         )
                         return matches
-    logger.info(
-        f"Keyword scan done | scanned={scanned} | found={len(matches)}"
-    )
+    logger.info(f"Keyword scan done | scanned={scanned} | found={len(matches)}")
     return matches
 
 
@@ -144,14 +153,14 @@ def backfill_topic_from_storage(
     max_articles_per_section: int = 5,
     min_keyword_hits: int = 3,
     test: bool = False,
-    sections: list[str] | None = None,            # NEW
+    sections: list[str] | None = None,  # NEW
 ) -> int:
     """
     Enrich a single topic across selected sections (default: TIMEFRAME_SECTIONS) by scanning cold storage.
-    Stateless API: requires only topic_id; resolves other fields via get_node_by_id().
+    Stateless API: requires only topic_id; resolves other fields via get_topic_by_id().
     Returns total number of articles added for this topic.
     """
-    topic = get_topic_node_by_id(topic_id)
+    topic = get_topic_by_id(topic_id)
     topic_name = topic.get("name") or topic_id
     total_added = 0
 
@@ -163,18 +172,28 @@ def backfill_topic_from_storage(
         logger.info(f"Enrichment check | {topic_id} | section={section}")
         master_log(f"Enrichment check | {topic_id} | section={section}")
         cnt = count_articles_for_topic_section(topic_id, section)
-        logger.info(f"Pre-enrichment | topic={topic_id} section={section} | current_articles={cnt} threshold={threshold}")
+        logger.info(
+            f"Pre-enrichment | topic={topic_id} section={section} | current_articles={cnt} threshold={threshold}"
+        )
         if cnt >= threshold:
-            logger.info(f"Enrichment skipped | topic={topic_id} section={section} | has {cnt} articles >= threshold {threshold}")
+            logger.info(
+                f"Enrichment skipped | topic={topic_id} section={section} | has {cnt} articles >= threshold {threshold}"
+            )
             continue
         needed = threshold - cnt
-        logger.info(f"Enrichment needed | topic={topic_id} section={section} | need {needed} more articles (have {cnt}, want {threshold})")
-        master_log(f"Enrichment attempt | topic={topic_id} section={section} | current={cnt} needed={needed}")
+        logger.info(
+            f"Enrichment needed | topic={topic_id} section={section} | need {needed} more articles (have {cnt}, want {threshold})"
+        )
+        master_log(
+            f"Enrichment attempt | topic={topic_id} section={section} | current={cnt} needed={needed}"
+        )
         # We are attempting enrichment for this section
         master_statistics(enrichment_attempts=1)
         # Generate keywords
         keywords = generate_keywords(topic_name, section)
-        logger.info(f"Generated {len(keywords)} keywords for topic={topic_name} section={section}: {keywords}")
+        logger.info(
+            f"Generated {len(keywords)} keywords for topic={topic_name} section={section}: {keywords}"
+        )
         if not keywords:
             problem_log(Problem.ZERO_RESULTS, topic=topic_id)
             continue
@@ -194,7 +213,7 @@ def backfill_topic_from_storage(
         logger.info(
             f"Relevance checks starting | topic={topic_id} section={section} | candidates={len(candidates)} | needed={needed}"
         )
-        for (article_id, article_text) in candidates:
+        for article_id, article_text in candidates:
             if added >= needed:
                 break
             logger.info(f"Relevance check start | id={article_id} | section={section}")
@@ -213,7 +232,9 @@ def backfill_topic_from_storage(
                 total_added += 1
                 master_statistics(enrichment_articles_added=1)
                 # Log informational message only; add_article already increments counters
-                master_log(f"Backfill added | {article_id} -> {topic_id} | section={section}")
+                master_log(
+                    f"Backfill added | {article_id} -> {topic_id} | section={section}"
+                )
         # if no additions after candidates
         if added == 0:
             problem_log(Problem.ZERO_RESULTS, topic=topic_id)
@@ -221,11 +242,13 @@ def backfill_topic_from_storage(
             f"Section summary | topic={topic_id} section={section} | candidates={len(candidates)} | rel_checked={rel_checked} | rel_passed={rel_passed} | added={added} | needed={needed}"
         )
         added_by_section[section] = added
-        
+
         # Post-enrichment article count
         final_cnt = count_articles_for_topic_section(topic_id, section)
-        logger.info(f"Post-enrichment | topic={topic_id} section={section} | final_articles={final_cnt} (was {cnt}, added {added})")
-        
+        logger.info(
+            f"Post-enrichment | topic={topic_id} section={section} | final_articles={final_cnt} (was {cnt}, added {added})"
+        )
+
     # Topic-level enrichment summary with clear separators
     parts = []
     for s in sections_to_run:
@@ -238,12 +261,16 @@ def backfill_topic_from_storage(
     logger.info(summary_line)
     logger.info("=" * 100)
     master_log(summary_line)
-    
+
     # Trigger analysis check if articles were added
     if total_added > 0 and not test:
-        logger.info(f"🎯 ANALYSIS TRIGGER | topic={topic_id} | enrichment added {total_added} articles, now checking if analysis rewrite needed")
-        master_log(f"Post-enrichment analysis check | {topic_id} | articles_added={total_added}")
-        
+        logger.info(
+            f"🎯 ANALYSIS TRIGGER | topic={topic_id} | enrichment added {total_added} articles, now checking if analysis rewrite needed"
+        )
+        master_log(
+            f"Post-enrichment analysis check | {topic_id} | articles_added={total_added}"
+        )
+
         # Get any recent article for this topic to use as trigger
         recent_article_query = """
         MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
@@ -255,16 +282,22 @@ def backfill_topic_from_storage(
         recent_articles = run_cypher(recent_article_query, {"topic_id": topic_id})
         if recent_articles:
             article_id = recent_articles[0]["article_id"]
-            logger.info(f"🔄 CALLING should_rewrite | topic={topic_id} trigger_article={article_id}")
+            logger.info(
+                f"🔄 CALLING should_rewrite | topic={topic_id} trigger_article={article_id}"
+            )
             should_rewrite(topic_id, article_id)
         else:
-            logger.warning(f"No recent articles found for analysis trigger | topic={topic_id}")
+            logger.warning(
+                f"No recent articles found for analysis trigger | topic={topic_id}"
+            )
     else:
         if total_added == 0:
-            logger.info(f"No analysis trigger | topic={topic_id} | no articles were added during enrichment")
+            logger.info(
+                f"No analysis trigger | topic={topic_id} | no articles were added during enrichment"
+            )
         elif test:
             logger.info(f"No analysis trigger | topic={topic_id} | test mode enabled")
-    
+
     return total_added
 
 
@@ -281,7 +314,7 @@ def enrich_topics_from_storage(
     - min_keyword_hits: minimum number of distinct keyword tokens in text to qualify (default 3)
     - test: passed through to add_article
     """
-    topics = get_all_topic_nodes(["id", "name", "type"])  
+    topics = get_all_topics(["id", "name", "type"])
     # Minimal fairness: shuffle to avoid always enriching the same first items
     random.shuffle(topics)
     logger.info(f"Starting enrichment over {len(topics)} topics")
@@ -292,7 +325,9 @@ def enrich_topics_from_storage(
         logger.info("=" * 100)
         logger.info(f"Processing topic        : {t['name']}")
         logger.info(f"Processing type         : {t.get('type')}")
-        logger.info(f"Enrichment params       : threshold={threshold} | max_candidates={max_articles_per_section} | min_kw_hits={min_keyword_hits}")
+        logger.info(
+            f"Enrichment params       : threshold={threshold} | max_candidates={max_articles_per_section} | min_kw_hits={min_keyword_hits}"
+        )
 
         topic_id = t["id"]
         backfill_topic_from_storage(

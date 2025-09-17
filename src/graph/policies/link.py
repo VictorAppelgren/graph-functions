@@ -5,12 +5,12 @@ from utils import app_logging
 from utils.app_logging import truncate_str
 from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.llm.sanitizer import run_llm_decision, RemoveDecision
-from typing import cast
 
 logger = app_logging.get_logger(__name__)
 
+
 def llm_select_link_to_remove(
-    source_node: dict[str, str],
+    source_topic: dict[str, str],
     existing_links: list[dict[str, str]],
     prioritized_link: dict[str, str],
 ) -> dict[str, object]:
@@ -21,7 +21,7 @@ def llm_select_link_to_remove(
     llm = get_llm(ModelTier.MEDIUM)
     chain = llm | JsonOutputParser()
 
-    prompt = f'''
+    prompt = f"""
         {SYSTEM_MISSION}
         {SYSTEM_CONTEXT}
 
@@ -38,8 +38,8 @@ def llm_select_link_to_remove(
         EXAMPLE OUTPUT:
         {{"motivation": "This link is the weakest correlation and least supported by recent data.", "remove_link": "eurusd"}}
 
-        SOURCE NODE:
-        {source_node}
+        SOURCE TOPIC:
+        {source_topic}
 
         CURRENT LINKS:
         {existing_links}
@@ -48,9 +48,9 @@ def llm_select_link_to_remove(
         {prioritized_link}
 
         YOUR RESPONSE IN JSON:
-    '''
+    """
 
-    logger.info("source_node name: %s", source_node.get("name"))
+    logger.info("source_topic name: %s", source_topic.get("name"))
     logger.info("existing_links: %s", existing_links)
     logger.info("prioritized_link: %s", prioritized_link)
 
@@ -59,8 +59,7 @@ def llm_select_link_to_remove(
     logger.debug("Prompt: %s", truncate_str(str(prompt), 100))
 
     allowed_ids = {
-        d.get("id") or d.get("target_id")
-        for d in existing_links if isinstance(d, dict)
+        d.get("id") or d.get("target_id") for d in existing_links if isinstance(d, dict)
     }
 
     decision = run_llm_decision(
@@ -79,14 +78,18 @@ def llm_select_link_to_remove(
     return decision.model_dump()
 
 
-def llm_select_one_new_link(source_node: dict, candidate_nodes: list[dict], existing_links: list[dict]) -> dict:
+def llm_select_one_new_link(
+    source_topic: dict, candidate_topics: list[dict], existing_links: list[dict]
+) -> dict:
     """
     Use LLM to propose the single strongest missing link.
     Returns: { "type": ..., "source": ..., "target": ..., "motivation": ... } or None
     """
     llm = get_llm(ModelTier.MEDIUM)
-    # Format candidate nodes as '- Name (id: id)'
-    candidate_lines = '\n'.join([f"- {n['name']} (id: {n['id']})" for n in candidate_nodes])
+    # Format candidate topics as '- Name (id: id)'
+    candidate_lines = "\n".join(
+        [f"- {n['name']} (id: {n['id']})" for n in candidate_topics]
+    )
     prompt_template = """
     {system_mission}
     {system_context}
@@ -94,7 +97,7 @@ def llm_select_one_new_link(source_node: dict, candidate_nodes: list[dict], exis
     YOU ARE A WORLD-CLASS MACRO/MARKETS RELATIONSHIP ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics.
 
     TASK:
-    - Given the source node, candidate nodes, and existing links, propose the single strongest missing link.
+    - Given the source topic, candidate topics, and existing links, propose the single strongest missing link.
     - Output a JSON object with:
         - 'motivation' (required, first field): Short, research-grade, actionable reasoning (1-2 sentences max) justifying why this link should be created. Motivation must be defensible to a top-tier financial analyst and maximally useful for graph analytics and LLM reasoning.
         - All other required fields (type, source, target, etc.).
@@ -109,10 +112,10 @@ def llm_select_one_new_link(source_node: dict, candidate_nodes: list[dict], exis
     - COMPONENT_OF: A is a component of B. Directional.
     - CORRELATES_WITH: A and B are correlated. Bi-directional. Moves together to some large degree.  
 
-    SOURCE NODE:
+    SOURCE TOPIC:
     {source_name} (id: {source_id})
 
-    CANDIDATE NODES:
+    CANDIDATE TOPICS:
     {candidate_lines}
 
     CURRENT LINKS:
@@ -125,35 +128,45 @@ def llm_select_one_new_link(source_node: dict, candidate_nodes: list[dict], exis
 
     YOUR RESPONSE IN JSON:
     """
-    logger.debug("[llm_propose_new_link] PromptTemplate: %s", truncate_str(str(prompt_template), 100))
+    logger.debug(
+        "[llm_propose_new_link] PromptTemplate: %s",
+        truncate_str(str(prompt_template), 100),
+    )
     prompt = PromptTemplate.from_template(prompt_template)
     chain = prompt | llm | JsonOutputParser()
-    result = chain.invoke({
-        "system_mission": SYSTEM_MISSION,
-        "system_context": SYSTEM_CONTEXT,
-        "source_name": source_node['name'],
-        "source_id": source_node['id'],
-        "candidate_lines": candidate_lines,
-        "existing_links": existing_links,
-    })
+    result = chain.invoke(
+        {
+            "system_mission": SYSTEM_MISSION,
+            "system_context": SYSTEM_CONTEXT,
+            "source_name": source_topic["name"],
+            "source_id": source_topic["id"],
+            "candidate_lines": candidate_lines,
+            "existing_links": existing_links,
+        }
+    )
     # Guard: LLM may output JSON null => parser returns None; or unexpected non-dict
     if result is None:
         logger.info("LLM proposed no link (null). Skipping new link creation.")
         return None
     if not isinstance(result, dict):
-        logger.warning(f"Unexpected LLM result type {type(result).__name__}; skipping. result={truncate_str(str(result), 200)}")
+        logger.warning(
+            f"Unexpected LLM result type {type(result).__name__}; skipping. result={truncate_str(str(result), 200)}"
+        )
         master_log_error("LLM link proposal non-dict result; skipping")
         return None
     # Minimal schema validation: required keys must exist and be non-empty strings
     required = ["type", "source", "target", "motivation"]
     missing = [k for k in required if k not in result or not str(result[k]).strip()]
     if missing:
-        logger.warning(f"LLM link proposal missing required fields {missing}; skipping. result={result}")
-        master_log_error(f"LLM link proposal missing required fields {missing}; skipping")
+        logger.warning(
+            f"LLM link proposal missing required fields {missing}; skipping. result={result}"
+        )
+        master_log_error(
+            f"LLM link proposal missing required fields {missing}; skipping"
+        )
         return None
-    motivation = result.get('motivation') if isinstance(result, dict) else None
+    motivation = result.get("motivation") if isinstance(result, dict) else None
     if motivation:
         logger.info(f"LLM proposed link motivation: {motivation}")
     logger.info(f"[llm_propose_new_link] LLM proposed new link: {result}")
     return result
-
