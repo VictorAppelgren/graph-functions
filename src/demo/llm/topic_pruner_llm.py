@@ -26,7 +26,7 @@ from src.llm.config import ModelTier
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = app_logging.get_logger(__name__)
 

@@ -5,7 +5,7 @@ from typing import Any, Literal, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.llm.llm_router import get_llm

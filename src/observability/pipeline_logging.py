@@ -146,6 +146,14 @@ class ProblemDetailsModel(BaseModel):
     category: str | None = None
     failure_category: str = ""
     timeframe: str | None = None
+    should_add_motivation: str | None = None
+    should_add: bool = False
+    rationale: str | None = None
+    importance: int = 0
+    guard_action: str | None = None
+    guard_motivation: str | None = None
+    error: str | None = None
+    id_to_remove: str | None = None
 
 
 class ProblemModel(BaseModel):

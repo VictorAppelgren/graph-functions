@@ -41,7 +41,7 @@ from src.articles.ingest_article import add_article
 from src.articles.article_text_formatter import extract_text_from_json_article
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 logger = get_logger(__name__)
 

@@ -8,7 +8,7 @@ from langchain_core.runnables import Runnable
 from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
@@ -16,11 +16,11 @@ logger = get_logger(__name__)
 # --- types --------------------------------------------------------------------
 
 
-class NodeRow(TypedDict, total=False):
-    id: str
-    name: str
-    importance: int
-    last_updated: str
+class NodeRow(BaseModel):
+    id: str = ""
+    name: str = ""
+    importance: int | None = None
+    last_updated: str | None = None
 
 
 class NodeMappingDecision(BaseModel):

@@ -10,11 +10,12 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from utils.app_logging import truncate_str
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.runnables import Runnable
 from __future__ import annotations
+from src.llm.sanitizer import run_llm_decision, WideQueryModel
 
 logger = app_logging.get_logger(__name__)
 
@@ -90,19 +91,11 @@ ARTICLE:
 YOUR RESPONSE IN JSON:
 """
     logger.debug("PromptTemplate: %s", truncate_str(prompt_template, 100))
-    prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(prompt_template).format()
 
-    chain: Runnable[dict[str, str], Any] = prompt | llm | parser
-    raw = chain.invoke(
-        {
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-            "article_text": article_text,
-        }
-    )
+    chain = llm | parser
 
-    wq = _sanitize_wide_query(raw, logger)
-    logger.info("LLM wide query sanitized: %s", wq.model_dump())
+    r = run_llm_decision(chain=chain, prompt=prompt, model=WideQueryModel, logger=logger)
 
     # If you prefer to return the model, change return type to WideQuery
-    return wq.model_dump()
+    return r.model_dump()

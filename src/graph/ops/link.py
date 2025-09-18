@@ -3,26 +3,31 @@ from utils import app_logging
 from src.observability.pipeline_logging import master_log, master_log_error
 from difflib import get_close_matches
 from events.classifier import EventClassifier, EventType
-from src.graph.ops.get_links import get_existing_links
-from typing import Optional
+from src.graph.ops.link import get_existing_links
+from typing import Optional, Any
+from src.graph.ops.topic import get_all_topics, get_topic_by_id
+from src.graph.policies.topic import llm_filter_all_interesting_topics
+from src.graph.policies.link import llm_select_link_to_remove, llm_select_one_new_link
+from pydantic import BaseModel
 
 logger = app_logging.get_logger(__name__)
 
+class LinkModel(BaseModel):
+    type: str = ""
+    source: str = ""
+    target: str = ""
 
-def add_link(link: dict, context: Optional[dict] = None):
+def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
     """
     Adds the link to the graph if not present. Expects link dict with type, source, target, motivation.
     Enhanced: Logs Cypher counters, checks topic existence, fails loud if nothing is created.
     """
     logger.info(f"Adding link: {link}")
     # Minimal tracker for add_relationship
-    trk = EventClassifier(EventType.ADD_RELATIONSHIP)
-    trk.put("relationship_type", link.get("type"))
-    trk.put("source_id", link.get("source"))
-    trk.put("target_id", link.get("target"))
-    # Store full proposed link and any LLM motivation/context
-    trk.put("proposed_link", link)
-    # Include upstream LLM provenance if provided
+    tracker = EventClassifier(EventType.ADD_RELATIONSHIP)
+
+    tracker.put_many(relationship_type=link.type, source_id=link.source, target_id=link.target, proposed_link=link)
+
     if isinstance(context, dict):
         # Scalars -> inputs
         for key in (
@@ -37,19 +42,19 @@ def add_link(link: dict, context: Optional[dict] = None):
             "entry_point",
         ):
             if key in context:
-                trk.put(key, context.get(key))
+                tracker.put(key, context.get(key))
         # Lists -> length + preview
         for list_key in ("candidate_ids", "existing_links_before"):
             val = context.get(list_key)
             if isinstance(val, list):
-                trk.put(f"{list_key}_len", len(val))
-                trk.put(f"{list_key}_preview", val[:50])
+                tracker.put(f"{list_key}_len", len(val))
+                tracker.put(f"{list_key}_preview", val[:50])
         # Dicts -> details
         for dict_key in ("prioritized_link", "llm_raw_response", "source_topic"):
             val = context.get(dict_key)
             if isinstance(val, dict):
-                trk.put(dict_key, val)
-    event_id = f"{str(link.get('source','none')).lower()}__{str(link.get('type','none')).lower()}__{str(link.get('target','none')).lower()}"
+                tracker.put(dict_key, val)
+    event_id = f"{link.source.lower()}__{link.type.lower()}__{link.target.lower()}"
     try:
         driver = connect_graph_db()
         with driver.session(database="argosgraph") as session:
@@ -67,25 +72,25 @@ def add_link(link: dict, context: Optional[dict] = None):
                 logger.info(f" - ... (and {len(topics) - 25} more)")
 
             # Check if source and target IDs exist in the topic list
-            source_exists = any(topic[0] == link["source"] for topic in topics)
-            target_exists = any(topic[0] == link["target"] for topic in topics)
-            logger.info(f"Source ID '{link['source']}' exists: {source_exists}")
-            logger.info(f"Target ID '{link['target']}' exists: {target_exists}")
+            source_exists = any(topic[0] == link.source for topic in topics)
+            target_exists = any(topic[0] == link.target for topic in topics)
+            logger.info(f"Source ID '{link.source}' exists: {source_exists}")
+            logger.info(f"Target ID '{link.target}' exists: {target_exists}")
 
             # Log closest matches for debugging
             if not source_exists:
                 source_matches = get_close_matches(
-                    link["source"], [topic[0] for topic in topics], n=3, cutoff=0.6
+                    link.source, [topic[0] for topic in topics], n=3, cutoff=0.6
                 )
                 logger.info(
-                    f"Closest matches for source ID '{link['source']}': {source_matches}"
+                    f"Closest matches for source ID '{link.source}': {source_matches}"
                 )
             if not target_exists:
                 target_matches = get_close_matches(
-                    link["target"], [topic[0] for topic in topics], n=3, cutoff=0.6
+                    link.target, [topic[0] for topic in topics], n=3, cutoff=0.6
                 )
                 logger.info(
-                    f"Closest matches for target ID '{link['target']}': {target_matches}"
+                    f"Closest matches for target ID '{link.target}': {target_matches}"
                 )
 
             # 1. Check if source and target topics exist
@@ -94,7 +99,7 @@ def add_link(link: dict, context: Optional[dict] = None):
             RETURN src, tgt
             """
             check_result = session.run(
-                query_check, {"source": link["source"], "target": link["target"]}
+                query_check, {"source": link.source, "target": link.target}
             )
             topics = check_result.single()
             if not topics:
@@ -123,8 +128,7 @@ def add_link(link: dict, context: Optional[dict] = None):
                     f"Relationship duplicate | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
                     duplicates_skipped=1,
                 )
-                trk.put("status", "skipped_duplicate")
-                trk.put("dedup_decision", "already_linked")
+                tracker.put_many(status="skipped_duplicate", dedup_decision="already_linked")
                 # Record graph relationship identifiers
                 try:
                     rel_element_id = record["rel_element_id"]
@@ -135,13 +139,12 @@ def add_link(link: dict, context: Optional[dict] = None):
                     rel_id = rid if rid else event_id
                 except Exception:
                     rel_id = event_id
-                trk.put("rel_graph_element_id", rel_element_id)
-                trk.put("rel_id", rel_id)
+
+                tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=rel_id)
                 # After snapshot (same as before if duplicate)
                 try:
                     after_links = get_existing_links(link["source"])  # snapshot
-                    trk.put("existing_links_after_len", len(after_links))
-                    trk.put("existing_links_after_preview", after_links[:50])
+                    tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
                 except Exception:
                     pass
                 trk.set_id(event_id)
@@ -179,7 +182,7 @@ def add_link(link: dict, context: Optional[dict] = None):
                         getattr(summary, "relationships_created", 0)
                     ),
                 }
-                trk.put("cypher_summary", cypher_summary)
+                tracker.put("cypher_summary", cypher_summary)
             except Exception:
                 # Best-effort; do not fail tracker on summary extraction
                 pass
@@ -188,15 +191,13 @@ def add_link(link: dict, context: Optional[dict] = None):
                 rel_element_id = (
                     create_record["rel_element_id"] if create_record else None
                 )
-                trk.put("rel_graph_element_id", rel_element_id)
-                trk.put("rel_id", event_id)
+                tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=event_id)
             except Exception:
                 pass
             # After snapshot
             try:
                 after_links = get_existing_links(link["source"])  # snapshot
-                trk.put("existing_links_after_len", len(after_links))
-                trk.put("existing_links_after_preview", after_links[:50])
+                tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
             except Exception:
                 pass
             # Increment about_links_added or relationships_added in stats
@@ -210,9 +211,8 @@ def add_link(link: dict, context: Optional[dict] = None):
                     f"topic relationship created | {link['source']}->{link['target']} | type={link['type']}",
                     relationships_added=1,
                 )
-            trk.put("status", "success")
-            trk.put("dedup_decision", "new")
-            trk.set_id(event_id)
+            tracker.put_many(status="success", dedup_decision="new")
+            tracker.set_id(event_id)
     except Exception as e:
         logger.error(f"[add_link] Failed to add link: {e}", exc_info=True)
         master_log_error(
@@ -220,9 +220,8 @@ def add_link(link: dict, context: Optional[dict] = None):
             e,
         )
         try:
-            trk.put("status", "error")
-            trk.put("error", str(e))
-            trk.set_id(event_id)
+            tracker.put_many(status="error", error=str(e))
+            tracker.set_id(event_id)
         except Exception:
             pass
         raise RuntimeError(f"Failed to add link: {e}")
@@ -233,7 +232,7 @@ logger = app_logging.get_logger(__name__)
 MAX_LINKS_PER_TYPE = 10
 
 
-def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict:
+def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict[str, str]:
     """
     God-tier orchestrator: discovers and manages the strongest new relationship for the given topic topic.
     Returns a dict with full trace of actions and results.
@@ -369,18 +368,15 @@ def get_existing_links(topic_id: str) -> list[dict]:
         raise RuntimeError(f"Failed to fetch links from Neo4j: {e}")
 
 
-def remove_link(link: dict, context: Optional[dict] = None):
+def remove_link(link: dict[str, str], context: Optional[dict[str, str]] = None):
     """
     Removes the specified link from the graph.
     Minimal tracker: logs IDs, rel identifiers, and before/after snapshots.
     """
     logger.info(f"Removing link: {link}")
-    trk = EventClassifier(EventType.REMOVE_RELATIONSHIP)
-    trk.put("relationship_type", link.get("type"))
-    trk.put("source_id", link.get("source"))
-    trk.put("target_id", link.get("target"))
-    # Store the proposed link object itself for provenance
-    trk.put("proposed_link", link)
+    tracker = EventClassifier(EventType.REMOVE_RELATIONSHIP)
+    tracker.put_many(relationship_type=link.get("type"), source_id=link.get("source"), target_id=link.get("target"), proposed_link=link)
+ 
     # Include upstream selection context (motivation, prioritized link, raw LLM response)
     if isinstance(context, dict):
         for key in (
@@ -390,10 +386,10 @@ def remove_link(link: dict, context: Optional[dict] = None):
             "entry_point",
         ):
             if key in context:
-                trk.put(key, context.get(key))
+                tracker.put(key, context.get(key))
         # Duplicate a friendly top-level 'motivation' for quick inspection
         if context.get("selection_motivation"):
-            trk.put("motivation", context.get("selection_motivation"))
+            tracker.put("motivation", context.get("selection_motivation"))
         for dict_key in (
             "prioritized_link",
             "llm_raw_response",
@@ -402,13 +398,12 @@ def remove_link(link: dict, context: Optional[dict] = None):
         ):
             val = context.get(dict_key)
             if isinstance(val, dict):
-                trk.put(dict_key, val)
+                tracker.put(dict_key, val)
     event_id = f"{str(link.get('source','none')).lower()}__{str(link.get('type','none')).lower()}__{str(link.get('target','none')).lower()}"
     try:
         # Pre-snapshot
         before_links = get_existing_links(link["source"])  # snapshot
-        trk.put("existing_links_before_len", len(before_links))
-        trk.put("existing_links_before_preview", before_links[:50])
+        tracker.put_many(existing_links_before_len=len(before_links), existing_links_before_preview=before_links[:50])
         driver = connect_graph_db()
         with driver.session(database="argosgraph") as session:
             query = """
@@ -430,13 +425,11 @@ def remove_link(link: dict, context: Optional[dict] = None):
             # Record relationship identifiers
             rel_element_id = record["rel_element_id"] if record else None
             rid = record["rel_id"] if record else None
-            trk.put("rel_graph_element_id", rel_element_id)
-            trk.put("rel_id", rid if rid else event_id)
+            tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=rid if rid else event_id)
             logger.info(f"Link removed: {link}")
         # Post-snapshot and stats
         after_links = get_existing_links(link["source"])  # snapshot
-        trk.put("existing_links_after_len", len(after_links))
-        trk.put("existing_links_after_preview", after_links[:50])
+        tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
         if link.get("type") == "ABOUT":
             master_log(
                 f"ABOUT link removed | {link.get('source','?')}->{link.get('target','?')} | type=ABOUT",
@@ -447,17 +440,16 @@ def remove_link(link: dict, context: Optional[dict] = None):
                 f"topic relationship removed | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
                 relationships_removed=1,
             )
-        trk.put("status", "success")
-        trk.set_id(event_id)
+        tracker.put("status", "success")
+        tracker.set_id(event_id)
     except Exception as e:
         logger.error(f"Failed to remove link: {e}", exc_info=True)
         master_log_error(
             f"Relationship remove error | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
             e,
         )
-        trk.put("status", "error")
-        trk.put("error", str(e))
-        trk.set_id(event_id)
+        tracker.put_many(status="error", error=str(e))
+        tracker.set_id(event_id)
         raise RuntimeError(f"Failed to remove link: {e}")
 
 

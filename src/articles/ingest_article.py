@@ -4,7 +4,7 @@ from src.articles.load_article import load_article
 from src.observability.pipeline_logging import master_log
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.graph.ops.topic import get_all_topics
-from src.analysis.policies.topic_identifier import find_topic_mapping
+from src.analysis.policies.topic_identifier import find_topic_mapping, NodeRow
 from src.analysis.policies.category_identifier import find_category
 from src.analysis.policies.impact_identifier import find_impact
 from src.analysis.policies.time_frame_identifier import find_time_frame
@@ -34,7 +34,7 @@ def trigger_next_steps(topic_id: str, argos_id: str) -> None:
 
 def add_article(
     article_id: str, test: bool = False, intended_topic_id: str | None = None
-) -> dict:
+) -> dict[str, str]:
     """
     Minimal, stateless pipeline for adding an Article and ABOUT edge.
     Loads article from cold storage, formats text, runs node identification, deduplication, LLM-driven field extraction, creates node and ABOUT edge.
@@ -62,11 +62,15 @@ def add_article(
 
     # 3. Multi-topic identification (find ALL topics this article is ABOUT)
     topic_list = get_all_topics()
-    topic_names = [f"\"{topic['name']}\" - \"{topic['id']}\"" for topic in topic_list]
+
+    l = []
+    for topic in topic_list:
+        n = NodeRow(id=topic["id"], name=topic["name"])
+        l.append(n)
 
     # 1. Get results from LLM
     motivation, existing_article_ids, new_topic_names = find_topic_mapping(
-        formatted_article_text, topic_names
+        formatted_article_text, l
     )
 
     logger.info(
@@ -251,56 +255,54 @@ def add_article(
         )
 
     # If new node names are found, run this one time
-    if len(new_article_names) > 0:
+    if len(new_topic_names) > 0:
 
         # Create new topic
         logger.info(f"Testing to creating new topic, for article {article_id}")
-        add_topic(article_id, suggested_names=new_node_names)
-        topic_id = new_node_result.get("id")
-        if not topic_id:
-            logger.warning(f"Failed to create new topic for article {article_id}")
-            master_log(
-                f"Failed to create new topic for article | {article.get('argos_id')} | to new topic {topic_id}"
-            )
-        else:
-            # Create ABOUT edge
-            about_query = """
-            MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
-            MERGE (a)-[:ABOUT]->(t)
-            """
-            run_cypher(about_query, {"article_id": argos_id, "topic_id": topic_id})
-            logger.info(
-                f"Created ABOUT edge from Article {argos_id} to Topic {topic_id}"
-            )
+        new_topic_result = add_topic(article_id, suggested_names=new_topic_names)
+        if new_topic_result:
+            topic_id = new_topic_result.get("id")
+            if not topic_id:
+                logger.warning(f"Failed to create new topic for article {article_id}")
+                master_log(
+                    f"Failed to create new topic for article | {article.get('argos_id')} | to new topic {topic_id}"
+                )
+            else:
+                # Create ABOUT edge
+                about_query = """
+                MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
+                MERGE (a)-[:ABOUT]->(t)
+                """
+                run_cypher(about_query, {"article_id": argos_id, "topic_id": topic_id})
+                logger.info(
+                    f"Created ABOUT edge from Article {argos_id} to Topic {topic_id}"
+                )
 
-            # Trigger next steps, relationship discovery and replacement analysis
-            trigger_next_steps(topic_id, argos_id)
+                # Trigger next steps, relationship discovery and replacement analysis
+                trigger_next_steps(topic_id, argos_id)
 
-            successful_topics += 1
-            master_log(
-                f"Added article | {article.get('argos_id')} | to new topic {topic_id}",
-                articles_added=1 if not article_already_exists else 0,
-                about_links_added=1,
-            )
+                successful_topics += 1
+                master_log(
+                    f"Added article | {article.get('argos_id')} | to new topic {topic_id}",
+                    articles_added=1 if not article_already_exists else 0,
+                    about_links_added=1,
+                )
 
     # Final tracking and logging, existing node len and if new nodes are more than 1, it still counts as 1
-    total_topics = len(existing_node_ids)
-    if len(new_node_names) > 0:
+    total_topics = len(existing_article_ids)
+    if len(new_topic_names) > 0:
         total_topics += 1
     # Count the intended topic if it was provided and not part of discovered/new
-    if intended_topic_id and intended_topic_id not in existing_node_ids:
+    if intended_topic_id and intended_topic_id not in existing_article_ids:
         # We already linked it above; include it in totals for traceability
         total_topics += 1
         successful_topics += 1
-    trk.put(
-        "multi_topic_results",
-        {"total_topics": total_topics, "successful": successful_topics},
-    )
-    trk.put("status", "success" if successful_topics > 0 else "failed")
-    trk.set_id(article.get("argos_id"))
+
+    tracker.put_many(multi_topic_results={"total_topics": total_topics, "successful": successful_topics}, status="success" if successful_topics > 0 else "failed")
+    tracker.set_id(article.get("argos_id"))
 
     logger.info(
-        f"Multi-topic processing complete: {successful_topics}/{total_topics} topics successful. Existing len: {len(existing_node_ids)} + New len: {len(new_node_names)}"
+        f"Multi-topic processing complete: {successful_topics}/{total_topics} topics successful. Existing len: {len(existing_article_ids)} + New len: {len(new_node_names)}"
     )
     return {
         "article_id": article.get("argos_id"),

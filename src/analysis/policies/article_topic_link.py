@@ -6,9 +6,11 @@ from langchain_core.runnables import Runnable
 from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
 from __future__ import annotations
+from src.llm.prompts.validate_article_topic_relevance import validate_article_topic_relevance_prompt
+from llm.sanitizer import run_llm_decision
 
 logger = get_logger(__name__)
 
@@ -69,33 +71,19 @@ def validate_article_topic_relevance(
         topic_id,
     )
 
-    prompt_template = """
-        {system_mission}
-        {system_context}
-
-        YOU ARE A WORLD-CLASS FINANCIAL ANALYST validating if an article provides genuine value to a specific investment topic in the Saga Graph.
-
-        TASK:
-        - Output ONLY a single JSON object with EXACTLY two fields:
-            - 'should_link': true/false (create the graph connection?)
-            - 'motivation': Short reasoning (1–2 sentences) defending your decision
-
-        ARTICLE TITLE: {title}
-        ARTICLE SUMMARY: {summary}
-        TARGET TOPIC: {topic_name} (ID: {topic_id})
-
-        EXAMPLES:
-        {{"should_link": true, "motivation": "Article provides specific inflation data and Fed policy implications directly relevant to US monetary policy analysis."}}
-        {{"should_link": false, "motivation": "Mentions topic briefly but lacks analytical depth or actionable investment insights."}}
-
-        STRICT JSON ONLY. NO EXTRA TEXT.
-        YOUR RESPONSE:
-    """
-
-    prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(
+        validate_article_topic_relevance_prompt
+        ).format(
+            article=article, 
+            topic_name=topic_name, 
+            topic_id=topic_id, 
+            summary=summary, 
+            title=title)
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
-    chain: Runnable[dict[str, str], Any] = prompt | llm | parser
+    chain = llm | parser
+
+    r = run_llm_decision(chain=chain, prompt=prompt, )
 
     raw = chain.invoke(
         {

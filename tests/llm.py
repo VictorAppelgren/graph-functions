@@ -14,85 +14,68 @@ if PROJECT_ROOT not in sys.path:
 
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
+from src.llm.sanitizer import run_llm_decision, TestResult
 from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
+from src.llm.prompts.test_simple_long_context_llm import test_simple_long_context_llm_prompt
+from src.llm.prompts.test_complex_llm import test_complex_llm_prompt
+from src.llm.prompts.test_medium_llm import test_medium_llm_prompt
+from src.llm.prompts.test_simple_llm import test_simple_llm_prompt
 
 
 def test_simple_llm() -> None:
     """Test simple LLM with basic classification task."""
     print("🤖🔍 Testing SIMPLE LLM...")
 
-    prompt_template = """
-    Classify this text as either "positive" or "negative":
-    Text: {text}
-    
-    Answer with just one word: positive or negative
-    """
-
-    prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(test_simple_llm_prompt).format()
     llm = get_llm(ModelTier.SIMPLE)
-    chain = prompt | llm
+    parser = JsonOutputParser()
+    chain = llm | parser
 
-    result = chain.invoke({"text": "The market is performing well today"})
-    print(f"Simple LLM result: {result.content}")
+    r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
+
+    print(f"Simple LLM result: {r.response}")
 
 
 def test_medium_llm() -> None:
     """Test medium LLM with summarization task."""
     print("🤖📊 Testing MEDIUM LLM...")
 
-    prompt_template = """
-    Summarize this text in one sentence:
-    Text: {text}
-    
-    Summary:
-    """
-
-    prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(test_medium_llm_prompt).format()
     llm = get_llm(ModelTier.MEDIUM)
-    chain = prompt | llm
+    parser = JsonOutputParser()
+    chain = llm | parser
 
-    result = chain.invoke(
-        {
-            "text": "The Federal Reserve announced today that interest rates will remain unchanged at 5.25%. This decision comes after months of economic uncertainty and inflation concerns. Market analysts expect this to stabilize bond yields in the short term."
-        }
-    )
-    print(f"Medium LLM result: {result.content}")
+    r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
+
+    print(f"Medium LLM result: {r.response}")
 
 
 def test_complex_llm() -> None:
     """Test complex LLM with analysis task."""
     print("🤖🧠 Testing COMPLEX LLM...")
 
-    prompt_template = """
-    Analyze the market implications of this news in 2-3 sentences:
-    News: {news}
-    
-    Analysis:
-    """
-
-    prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(test_complex_llm_prompt).format()
     llm = get_llm(ModelTier.COMPLEX)
-    chain = prompt | llm
+    parser = JsonOutputParser()
+    chain = llm | parser
 
-    result = chain.invoke(
-        {
-            "news": "ECB raises interest rates by 0.5% citing persistent inflation concerns across eurozone economies"
-        }
-    )
-    print(f"Complex LLM result: {result.content}")
+    r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
+
+    print(f"Complex LLM result: {r.response}")
 
 
 def test_simple_long_context_llm() -> None:
     """Test simple long context LLM with a basic long-context task."""
     print("🤖🧩 Testing SIMPLE_LONG_CONTEXT LLM...")
-    prompt_template = """
-    Repeat the following sentence exactly once: {text}
-    """
-    prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(test_simple_long_context_llm_prompt).format()
     llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
-    chain = prompt | llm
-    result = chain.invoke({"text": "This is a test for long context."})
-    print(f"Simple Long Context LLM result: {result.content}")
+    parser = JsonOutputParser()
+    chain = llm | parser
+
+    r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
+
+    print(f"Simple Long Context LLM result: {r.response}")
 
 
 def run_all_tests() -> None:

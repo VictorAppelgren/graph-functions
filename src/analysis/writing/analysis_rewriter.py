@@ -8,7 +8,7 @@ from utils import app_logging
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from langchain_core.output_parsers import StrOutputParser
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from events.classifier import EventClassifier
 
 logger = app_logging.get_logger(__name__)

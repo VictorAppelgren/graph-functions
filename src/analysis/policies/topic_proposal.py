@@ -10,7 +10,7 @@ from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.graph.config import MAX_TOPICS, describe_interest_areas
 from src.graph.ops.topic import get_all_topics
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, Sequence
 from pydantic import BaseModel, ConfigDict, ValidationError
 from langchain_core.runnables import Runnable
@@ -92,8 +92,10 @@ class TopicProposal(BaseModel):
     name: str
     type: str
     motivation: str | None = None
-    importance: int | None = None
+    importance: int = 0
     last_updated: str | None = None
+    query: str | None = None
+    importance_rationale: str | None = None
 
 
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
@@ -106,10 +108,10 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
     raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
 
 
-def propose_topic_node(
+def propose_topic(
     article: str,
-    suggested_names: Sequence[str] | None = None,  # avoid mutable default
-) -> dict[str, Any] | None:
+    suggested_names: Sequence[str] | None = None, 
+) -> TopicProposal | None:
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
     Returns a dict with required fields for insertion, or None if no proposal.
@@ -187,4 +189,4 @@ def propose_topic_node(
     if proposal.motivation:
         logger.info("LLM topic node motivation: %s", proposal.motivation)
 
-    return proposal.model_dump(exclude_none=True)
+    return proposal

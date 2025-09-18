@@ -5,13 +5,15 @@ Topic taxonomy classifier for proposed Topics.
 - Returns STRICT JSON object: {"category": str, "motivation": str}
 """
 
+import json
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from utils.app_logging import get_logger
 from utils.app_logging import truncate_str
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.sanitizer import run_llm_decision, CheckTopicRelevance, ClassifyTopicImportance, FilterInterestingTopics, ClassifyTopicCategory
 
 logger = get_logger(__name__)
 
@@ -75,12 +77,15 @@ def classify_topic_category(
     topic_id: str,
     topic_name: str,
     topic_type: str,
-    motivation: str,
+    motivation: str | None,
     article_summary: str = "",
 ):
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = prompt | llm | parser
+
+    r = run_llm_decision(chain=chain, parser=parser, model=ClassifyTopicCategory)
+
     result = chain.invoke(
         {
             "system_mission": SYSTEM_MISSION,
@@ -92,15 +97,9 @@ def classify_topic_category(
             "summary": article_summary or "",
         }
     )
-    logger.info("Topic category result: %s", result)
-    if isinstance(result, dict):
-        # Normalize keys order to motivation first if needed by callers
-        category = result.get("category")
-        motivation = result.get("motivation")
-        return category, motivation
-    else:
-        # Fail fast
-        raise ValueError(f"Category classifier returned invalid structure: {result}")
+   
+    return r.category, r.motivation
+
 
 
 # ----- SIMPLE MAIN TO TEST -----
@@ -122,9 +121,7 @@ def llm_filter_all_interesting_topics(
     Use LLM to filter all_topics down to plausible candidates for strong relationships.
     Returns a dict: { 'candidate_ids': list[str], 'motivation': str | None }
     """
-    llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
-    all_names = [n["name"] for n in all_topics]
-    name = source_topic["name"]
+    
     prompt = f"""
     {SYSTEM_MISSION}
     {SYSTEM_CONTEXT}
@@ -148,12 +145,18 @@ def llm_filter_all_interesting_topics(
 
     YOUR RESPONSE IN JSON:
     """
+
     logger.debug("Prompt: %s", truncate_str(str(prompt), 100))
+    llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
+    all_names = [n["name"] for n in all_topics]
+    name = source_topic["name"]
     chain = llm | JsonOutputParser()
-    result = chain.invoke(prompt)
-    motivation = result.get("motivation") if isinstance(result, dict) else None
-    if motivation:
-        logger.info(f"LLM candidate shortlist motivation: {motivation}")
+
+    r = run_llm_decision(chain=chain, prompt=prompt, model=FilterInterestingTopics)
+
+    if r.motivation and r.candidates:
+
+    logger.info(f"LLM candidate shortlist motivation: {motivation}")
     candidate_names = result.get("candidates", []) if isinstance(result, dict) else []
     name_to_id = {n["name"]: n["id"] for n in all_topics}
     candidate_ids = [name_to_id[name] for name in candidate_names if name in name_to_id]
@@ -218,7 +221,7 @@ RETURN STRICT JSON ONLY. ONLY TWO FIELDS: importance (1..5 or "REMOVE") and rati
 
 def classify_topic_importance(
     topic_name: str, topic_type: str = "", context: str = ""
-) -> tuple[int | str, str]:
+) -> tuple[int | str, str] | None:
     logger.info("Classifying topic importance: input follows")
     logger.info("policy_text:\n%s", policy_text)
     logger.info("topic_name: %r", topic_name)
@@ -226,22 +229,16 @@ def classify_topic_importance(
     logger.info("context: %r", truncate_str(context, 2000))
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
-    chain = template | llm | parser  # exact style match
-    result = chain.invoke(
-        {
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-            "policy_text": policy_text,
-            "topic_name": topic_name,
-            "topic_type": topic_type or "",
-            "context": truncate_str(context, 2000),
-        }
-    )
-    logger.info("Importance classification result: %s", result)
+    chain = llm | parser  # exact style match
+
+    r = run_llm_decision(chain=chain, prompt=template.format(), model=ClassifyTopicImportance)
+
+    logger.info("Importance classification result: %s", r)
     # Expected: {"importance": 1..5, "rationale": "..."} or null importance
-    importance = result.get("importance", None)
-    rationale = result.get("rationale", "")
-    return importance, rationale
+    if r.importance and r.rationale:
+        return r.importance, r.rationale
+    else:
+        return None
 
 
 RELEVANCE_POLICY = """
@@ -263,75 +260,66 @@ PRINCIPLES:
  - Minimal recall nudge: If there is any real, explicit trading relevance to our main interests (clear channel to pricing/liquidity/volatility) and the topic is a canonical asset/policy or macro transmitter, prefer should_add=true.
 """
 
-template = PromptTemplate(
-    template="""
-{system_mission}
-{system_context}
-
-YOU ARE A WORLD-CLASS MACRO/MARKETS RELEVANCE GATE for the Saga Graph (Neo4j-based, trading-focused).
-Decide if the proposed Topic is suitable for a trading-focused macro knowledge graph.
-
-RELEVANCE POLICY (STRICT):
-{relevance_policy}
-
-INPUTS:
-- topic_id: {topic_id}
-- topic_name: {topic_name}
-- topic_type: {topic_type}
-- motivation: {motivation}
-- article_summary: {article_summary}
-- context: {context}
-
-OUTPUT STRICT JSON ONLY with EXACT fields:
-{{
-  "should_add": true|false,
-  "motivation": "short, specific, research-grade justification",
-}}
-No extra fields. No commentary. If unsure, set should_add=false with a clear motivation.
-""",
-    input_variables=[
-        "system_mission",
-        "system_context",
-        "relevance_policy",
-        "topic_id",
-        "topic_name",
-        "topic_type",
-        "motivation",
-        "article_summary",
-        "context",
-    ],
-)
-
 
 def check_topic_relevance(
     topic_id: str,
     topic_name: str,
     topic_type: str,
-    motivation: str,
+    motivation: str | None,
     article_summary: str = "",
     context: str = "",
-) -> dict:
+) -> tuple[bool, str]:
     """Return a dict with keys: should_add(bool), motivation(str)"""
     logger.info("Running topic relevance gate for: %r (%s)", topic_name, topic_type)
+
+    template="""
+        {system_mission}
+        {system_context}
+
+        YOU ARE A WORLD-CLASS MACRO/MARKETS RELEVANCE GATE for the Saga Graph (Neo4j-based, trading-focused).
+        Decide if the proposed Topic is suitable for a trading-focused macro knowledge graph.
+
+        RELEVANCE POLICY (STRICT):
+        {relevance_policy}
+
+        INPUTS:
+        - topic_id: {topic_id}
+        - topic_name: {topic_name}
+        - topic_type: {topic_type}
+        - motivation: {motivation}
+        - article_summary: {article_summary}
+        - context: {context}
+
+        OUTPUT STRICT JSON ONLY with EXACT fields:
+        {{
+        "should_add": true|false,
+        "motivation": "short, specific, research-grade justification",
+        }}
+        No extra fields. No commentary. If unsure, set should_add=false with a clear motivation.
+        """
+    
+    prompt = PromptTemplate.from_template(template)
+    formatted = prompt.format(
+    system_mission=SYSTEM_MISSION,
+    system_context=SYSTEM_CONTEXT,
+    relevance_policy=RELEVANCE_POLICY,
+    topic_id=topic_id,
+    topic_name=topic_name,
+    topic_type=topic_type,
+    motivation=motivation,
+    article_summary=article_summary,
+    context=context,
+)
+    
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
-    chain = template | llm | parser  # exact style match
-    result = chain.invoke(
-        {
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-            "relevance_policy": RELEVANCE_POLICY,
-            "topic_id": topic_id or "",
-            "topic_name": topic_name or "",
-            "topic_type": topic_type or "",
-            "motivation": truncate_str(motivation or "", 800),
-            "article_summary": truncate_str(article_summary or "", 1200),
-            "context": truncate_str(context or "", 1200),
-        }
-    )
-    logger.info("Relevance gate result: %s", result)
-    should_add = result["should_add"]
-    motivation_for_relevance = result["motivation"]
+    chain = llm | parser
+
+    res = run_llm_decision(chain=chain, prompt=formatted, model=CheckTopicRelevance, logger=logger)
+
+    logger.info("Relevance gate result: %s", res)
+    should_add = res.should_add
+    motivation_for_relevance = res.motivation
     return should_add, motivation_for_relevance
 
 

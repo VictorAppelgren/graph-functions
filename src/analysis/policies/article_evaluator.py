@@ -9,7 +9,7 @@ from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
-from src.llm.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.types import TestParams
 
 logger = app_logging.get_logger(__name__)
