@@ -10,6 +10,8 @@ from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
+from src.llm.prompts.find_time_frame import find_time_frame_prompt
+from src.llm.sanitizer import run_llm_decision, TimeFrame
 
 # Configure logging
 logger = app_logging.get_logger(__name__)
@@ -52,42 +54,21 @@ def find_time_frame(article_text: str) -> tuple[str, Horizon]:
         "..." if len(article_text) > 200 else "",
     )
 
-    prompt_template = """
-        {system_mission}
-        {system_context}
-
-        YOU ARE A WORLD-CLASS MACRO/MARKETS TIME FRAME IDENTIFIER working on the Saga Graph.
-
-        TASK:
-        - Output a SINGLE JSON OBJECT with exactly:
-            - 'motivation' (first field): 1–2 sentences explaining the choice
-            - 'horizon': one of: fundamental | medium | current
-        - Only the JSON object. If unsure, say so in motivation but still pick one (default to "fundamental").
-
-        ARTICLE TEXT:
-        {article_text}
-
-        EXAMPLES:
-        {{"motivation": "Discusses long-term structural drivers.", "horizon": "fundamental"}}
-        {{"motivation": "Focuses on immediate market events.", "horizon": "current"}}
-
-        YOUR RESPONSE:
-    """
-    prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
-    chain: Runnable[dict[str, str], Any] = prompt | llm | parser
+    chain = llm | parser
 
-    raw = chain.invoke(
-        {
-            "article_text": article_text,
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-        }
-    )
+    p = PromptTemplate.from_template(
+        find_time_frame_prompt).format(
+            article_text=article_text,
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT
+        )
+    
+    r = run_llm_decision(chain=chain, prompt=p, model=TimeFrame)
 
     try:
-        decision = _sanitize_timeframe(raw)
+        decision = _sanitize_timeframe(r)
     except (ValidationError, TypeError, json.JSONDecodeError) as e:
         logger.error("Time frame parsing failed: %s", str(e)[:200])
         raise

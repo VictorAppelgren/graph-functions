@@ -2,7 +2,7 @@ import json
 import re
 import logging
 from enum import Enum
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel, Field, ConfigDict, ValidationError
 from langchain_core.runnables import Runnable
 from typing import Any, Iterable, cast
@@ -25,13 +25,40 @@ class TopicCategory(str, Enum):
     AMBIGUOUS = "ambiguous"
     NONE = "none"
 
+class CategoryName(str, Enum):
+    MACRO_EVENT = "macro_event"
+    EARNINGS = "earnings"
+    REGULATION = "regulation"
+    POLICY_STATEMENT = "policy_statement"
+    CENTRAL_BANK_ACTION = "central_bank_action"
+    ECONOMIC_DATA = "economic_data"
+    GEOPOLITICAL = "geopolitical"
+    COMPANY_UPDATE = "company_update"
+    MARKET_COMMENTARY = "market_commentary"
+    OTHER = "other"
+
+class Answer(str, Enum):
+    YES = "yes"
+    NO = "no"
+
+class IsRelevantModel(BaseModel):
+    relevant: Answer = Answer.NO
+
 class TopicAction(str, Enum):
     ADD = "add"
     REPLACE = "replace"
     REJECT = "reject"
 
+class Response(BaseModel):
+    response: str = ""
+
+class UncrucialTopics(BaseModel):
+    ids_to_remove: list[str] = []
+
+class Summary(BaseModel):
+    summary: str = ""
+
 class Decision(BaseModel):
-    model_config = ConfigDict(extra="forbid")  # reject unknown fields
     motivation: Optional[str] = Field(default=None, max_length=400)
     tool: Tool
     id: Optional[str] = None  # must be in Allowed IDs (checked post-parse)
@@ -75,6 +102,44 @@ class TopicCapacityModel(BaseModel):
     action: TopicAction = TopicAction.REJECT
     motivation: str = ""
     id_to_remove: str | None = None
+
+class ProposeTopic(BaseModel):
+    id: str = ""
+    name: str = ""
+    type: TopicCategory = TopicCategory.NONE
+    motivation: str = ""
+
+class TopicMapping(BaseModel):
+    motivation: str = ""
+    existing: list[str] = []
+    new: list[str] = []
+
+class TimeFrame(BaseModel):
+    motivation: str = ""
+    horizon: str = ""
+
+class ShouldRewrite(BaseModel):
+    motivation: str = ""
+    rewrite: bool = False
+
+class RelevanceGate(BaseModel):
+    motivation: str = ""
+    relevant: bool = False
+
+class Keywords(BaseModel):
+    list: List[str] = []
+
+class FindImpact(BaseModel):
+    motivation: str = ""
+    score: int = 0
+
+class FindCategory(BaseModel):
+    motivation: str = ""
+    name: CategoryName = CategoryName.OTHER
+
+class ValidateRelevance(BaseModel):
+    should_link: bool = False
+    motivation: str = ""
 
 JSON_FENCE = re.compile(r"```(?:json)?\s*(.*?)\s*```", re.DOTALL)
 

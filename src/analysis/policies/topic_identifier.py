@@ -10,6 +10,8 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
+from src.llm.sanitizer import run_llm_decision, TopicMapping
+from src.llm.prompts.find_topic_mapping import find_topic_mapping_prompt
 
 logger = get_logger(__name__)
 
@@ -96,53 +98,24 @@ def find_topic_mapping(
         for n in node_list
         if isinstance(n, dict) and "id" in n and isinstance(n["id"], str)
     ]
-
-    prompt_template = """
-        {system_mission}
-        {system_context}
-
-        YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC MAPPER for the NEO4j Graph.
-
-        OVERVIEW:
-        - Output exactly ONE flat JSON object with fields:
-          'motivation' (string), 'existing' (array of IDs or null), 'new' (array of NAMES or null).
-        - Prioritize 'existing'. Be generous with 'existing' suggestions.
-        - Be conservative with 'new' (at most one), otherwise null.
-        - Use IDs for 'existing' and NAMES for 'new'. No extra fields.
-
-        EXISTING NODE NAMES AND IDS:
-        {node_list}
-
-        ARTICLE TEXT:
-        {article_text}
-
-        EXAMPLES:
-        {{"motivation": "Impact: FX; EUR/USD and Fed policy drive currency repricing.", "existing": ["eurusd", "fed_policy"], "new": null}}
-        {{"motivation": "Impact: credit; Structured finance gap affects credit pricing.", "existing": null, "new": ["structured_finance"]}}
-        {{"motivation": "Impact: rates; US inflation affects yields.", "existing": ["us_inflation"], "new": null}}
-        {{"motivation": "Impact: none; No material mapping.", "existing": null, "new": null}}
-
-        STRICT OUTPUT: Only the JSON object. No extra text.
-        YOUR RESPONSE:
-    """
-
-    prompt = PromptTemplate.from_template(prompt_template)
+    
     llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
     parser = JsonOutputParser()
-    chain: Runnable[dict[str, Any], Any] = prompt | llm | parser
+    chain = llm | parser
 
-    raw = chain.invoke(
-        {
-            "article_text": article_text,
-            "node_list": node_list,  # the template prints it verbatim; OK for LLM context
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-        }
-    )
+    p = PromptTemplate.from_template(
+        find_topic_mapping_prompt).format(
+            article_text=article_text,
+            node_list=node_list,
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT
+        )
+    
+    r = run_llm_decision(chain=chain, prompt=p, model=TopicMapping)
 
     try:
         decision = _sanitize_node_mapping(
-            raw, allowed_existing_ids=allowed_ids, max_new=1
+            r, allowed_existing_ids=allowed_ids, max_new=1
         )
     except (ValidationError, TypeError, json.JSONDecodeError) as e:
         logger.error("Node mapping parse/validate failed: %s", str(e)[:200])

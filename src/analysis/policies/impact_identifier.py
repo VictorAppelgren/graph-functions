@@ -10,17 +10,10 @@ from utils.app_logging import get_logger
 from typing import Any, Literal, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.runnables import Runnable
+from src.llm.prompts.find_impact import find_impact_prompt
+from src.llm.sanitizer import run_llm_decision, FindImpact
 
 logger = get_logger(__name__)
-
-ImpactScore = Literal["hidden", 1, 2, 3]
-
-
-class ImpactDecision(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    motivation: str = Field(min_length=1, max_length=400)
-    score: ImpactScore
-
 
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
     """Accept dict or JSON string and return a dict, else raise."""
@@ -33,15 +26,7 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
     raise TypeError(f"Expected JSON object from LLM, got {type(raw).__name__}")
 
 
-def _sanitize_impact(raw: Any) -> ImpactDecision:
-    data = _coerce_json_object(raw)
-    dec = ImpactDecision.model_validate(data)
-    # normalize motivation (collapse whitespace, cap length)
-    dec.motivation = " ".join(dec.motivation.split())[:400]
-    return dec
-
-
-def find_impact(article_text: str) -> tuple[str, ImpactScore]:
+def find_impact(article_text: str) -> tuple[str, int] | None:
     """
     Ask the LLM to assess impact. Returns (motivation, score).
     Raises ValidationError/TypeError if the LLM output is malformed.
@@ -52,51 +37,42 @@ def find_impact(article_text: str) -> tuple[str, ImpactScore]:
         "..." if len(article_text) > 200 else "",
     )
 
-    prompt_template = """
-        {system_mission}
-        {system_context}
+    # prompt_template = """
+    #     {system_mission}
+    #     {system_context}
 
-        YOU ARE A WORLD-CLASS MACRO/MARKETS IMPACT ASSESSOR working on the Saga Graph—a knowledge graph for the global economy.
+    #     YOU ARE A WORLD-CLASS MACRO/MARKETS IMPACT ASSESSOR working on the Saga Graph—a knowledge graph for the global economy.
 
-        TASK:
-        - Output a SINGLE JSON OBJECT with exactly these two fields:
-            - 'motivation' (first field): Reason for the score (1–2 sentences)
-            - 'score': Impact score ('hidden' if not relevant, or 1=low, 2=medium, 3=high)
-        - Output ONLY the JSON object, no extra text. If unsure, say so in motivation but still choose a score.
+    #     TASK:
+    #     - Output a SINGLE JSON OBJECT with exactly these two fields:
+    #         - 'motivation' (first field): Reason for the score (1–2 sentences)
+    #         - 'score': Impact score ('hidden' if not relevant, or 1=low, 2=medium, 3=high)
+    #     - Output ONLY the JSON object, no extra text. If unsure, say so in motivation but still choose a score.
 
-        ARTICLE TEXT:
-        {article_text}
+    #     ARTICLE TEXT:
+    #     {article_text}
 
-        EXAMPLES:
-        {{"motivation": "The article directly impacts this node by reporting a major event.", "score": 3}}
-        {{"motivation": "The article is not relevant to this node's scope.", "score": "hidden"}}
+    #     EXAMPLES:
+    #     {{"motivation": "The article directly impacts this node by reporting a major event.", "score": 3}}
+    #     {{"motivation": "The article is not relevant to this node's scope.", "score": "hidden"}}
 
-        YOUR RESPONSE:
-    """
+    #     YOUR RESPONSE:
+    # """
 
-    prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
-    chain: Runnable[dict[str, str], Any] = prompt | llm | parser
+    chain = llm | parser
 
-    raw = chain.invoke(
-        {
-            "article_text": article_text,
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-        }
-    )
+    p = PromptTemplate.from_template(
+        find_impact_prompt).format(
+            article_text=article_text,
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT
+        )
+    
+    r = run_llm_decision(chain=chain, prompt=p, model=FindImpact)
 
-    try:
-        decision = _sanitize_impact(raw)
-    except (ValidationError, TypeError, json.JSONDecodeError) as e:
-        logger.error("Impact parsing failed: %s", str(e)[:200])
-        # choose your policy: raise or fallback
-        raise
-
-    logger.info(
-        "Impact decision: score=%s",
-        decision.score,
-        extra={"context": decision.model_dump()},
-    )
-    return decision.motivation, decision.score
+    if r.motivation:
+        return r.motivation, r.score
+    else:
+        return None

@@ -26,14 +26,16 @@ from src.llm.config import ModelTier
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.select_topics_to_remove_llm import select_topics_to_remove_llm_prompt
+from src.llm.sanitizer import run_llm_decision, UncrucialTopics
 
 logger = app_logging.get_logger(__name__)
 
 
 def _select_topics_to_remove_llm(
     candidates: List[Dict[str, Any]], remove_count: int
-) -> List[str]:
+) -> List[str] | None:
     """Ask the LLM to pick which candidate topic ids to remove.
     Minimal version: no try/except, no fallbacks.
     """
@@ -51,60 +53,27 @@ def _select_topics_to_remove_llm(
     candidates_json = json.dumps(compact, ensure_ascii=False)
     candidate_ids_json = json.dumps(candidate_ids, ensure_ascii=False)
 
-    prompt_template = """
-{system_mission}
-{system_context}
-
-You are selecting Topic IDs to remove to meet capacity.
-Output must be ONLY valid JSON. No prose, no markdown, no backticks, no comments.
-
-{format_instructions}
-
-Return exactly this JSON shape:
-{{"ids_to_remove": ["<id1>", "<id2>", "..."]}}
-
-Hard requirements:
-- Return a maximum {remove_count} unique IDs.
-- Each ID MUST be from the whitelist candidate_ids (see below).
-- Do NOT include any other fields.
-- Do NOT include explanations or extra text.
-- If you include anything other than the exact JSON object, your answer will be discarded.
-
-Selection policy (for decision quality; do not output this):
-- Prefer the lowest importance first (ascending).
-- Break ties by oldest last_updated first (ascending time).
-- If importance or last_updated is missing, treat importance=0 and last_updated="1970-01-01T00:00:00".
-
-Candidate whitelist (you may ONLY output IDs from this list):
-candidate_ids = {candidate_ids}
-
-Candidate details (context only, do not output):
-{candidates}
-
-Interest scope (for guidance only; do not output this):
-{scope_text}
-THESE ARE THE ONLY INTERESTS WE HAVE! SO ANYTHING NOT FULLY RELEVANT TO THESE TOPICS SHOULD BE REMOVED! 
-
-FOCUS ON IDENTIFYING THE LEAST INTERESTING TOPICS TO REMOVE.
-
-Now output ONLY the JSON object described above.
-"""
     parser = JsonOutputParser()
-    prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM).bind(response_format={"type": "json_object"})
-    chain = prompt | llm | parser
-    result = chain.invoke(
-        {
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-            "format_instructions": parser.get_format_instructions(),
-            "remove_count": remove_count,
-            "scope_text": scope_text,
-            "candidate_ids": candidate_ids_json,
-            "candidates": candidates_json,
-        }
-    )
-    return result.get("ids_to_remove") or []
+    chain = llm | parser
+
+    p = PromptTemplate.from_template(
+        select_topics_to_remove_llm_prompt).format(
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT,
+            format_instructions=parser.get_format_instructions(),
+            remove_count=remove_count,
+            scope_text=scope_text,
+            candidate_ids=candidate_ids_json,
+            candidates=candidates_json
+        )
+
+    r = run_llm_decision(chain=chain, prompt=p, model=UncrucialTopics)
+
+    if r:
+        return r.ids_to_remove
+    else:
+        return None
 
 
 if __name__ == "__main__":

@@ -42,11 +42,13 @@ from src.articles.article_text_formatter import extract_text_from_json_article
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.is_relevant_to_eurusd_swing import is_relevant_to_eurusd_swing_prompt
+from src.llm.sanitizer import run_llm_decision, IsRelevantModel
 
 logger = get_logger(__name__)
 
 
-def is_relevant_to_eurusd_swing(llm, formatted_text: str) -> bool:
+def is_relevant_to_eurusd_swing(llm, formatted_text: str) -> bool | None:
     if not formatted_text or not formatted_text.strip():
         raise ValueError("Empty formatted_text passed to relevance check")
 
@@ -57,44 +59,36 @@ def is_relevant_to_eurusd_swing(llm, formatted_text: str) -> bool:
     # if a low quality article, return None
     # So that we extend this to map out all not only the EURUSD topic!
 
-    prompt_template = """
-    {system_mission}
-    {system_context}
+    # prompt_template = """
+    # {system_mission}
+    # {system_context}
 
-    You are an expert FX macro analyst. Determine if the article below is directly relevant to EURUSD swing trading (multi-day to multi-week).
-    Criteria: Macro/ECB/Fed policy, rate differentials, Eurozone/US growth/inflation, risk sentiment, flows affecting EURUSD.
-    Respond ONLY with a single line of strict JSON: {{"relevant": "yes"}} or {{"relevant": "no"}}. No explanation, no extra text.
+    # You are an expert FX macro analyst. Determine if the article below is directly relevant to EURUSD swing trading (multi-day to multi-week).
+    # Criteria: Macro/ECB/Fed policy, rate differentials, Eurozone/US growth/inflation, risk sentiment, flows affecting EURUSD.
+    # Respond ONLY with a single line of strict JSON: {{"relevant": "yes"}} or {{"relevant": "no"}}. No explanation, no extra text.
 
-    Article:
-    {article}
-    """
-    prompt = PromptTemplate.from_template(prompt_template)
-    parser = JsonOutputParser()
-    chain = prompt | llm | parser
+    # Article:
+    # {article}
+    # """
 
-    try:
-        result = chain.invoke(
-            {
-                "article": formatted_text,
-                "system_mission": SYSTEM_MISSION,
-                "system_context": SYSTEM_CONTEXT,
-            }
+    p = PromptTemplate.from_template(
+        is_relevant_to_eurusd_swing_prompt).format(
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT,
+            article=formatted_text
         )
-        logger.info("----- results relevance check: ------")
-        logger.info(result)
-        logger.info("----- end results relevance check ------")
-    except Exception as e:
-        logger.warning(f"LLM relevance check failed to produce valid JSON: {e}")
-        return False
-    if result is None:
-        return False
-    val = result.get("relevant", "").strip().lower()
-    if val == "yes":
-        return True
-    if val == "no":
-        return False
-    return False
+    parser = JsonOutputParser()
+    chain = llm | parser
 
+    r = run_llm_decision(chain=chain, prompt=p, model=IsRelevantModel)
+
+    if r:
+        if r.relevant == "yes":
+            return True
+        else:
+            return False
+    else:
+        return None
 
 def iter_raw_article_files():
     base = get_raw_news_dir()

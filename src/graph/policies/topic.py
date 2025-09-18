@@ -12,66 +12,11 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from utils.app_logging import get_logger
 from utils.app_logging import truncate_str
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from src.llm.sanitizer import run_llm_decision, CheckTopicRelevance, ClassifyTopicImportance, FilterInterestingTopics, ClassifyTopicCategory
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.sanitizer import run_llm_decision, CheckTopicRelevance, ClassifyTopicImportance, FilterInterestingTopics, ClassifyTopicCategory, TopicCategory
+from src.llm.prompts.classify_topic_category import classify_topic_category_prompt
 
 logger = get_logger(__name__)
-
-CATEGORIES = [
-    "macro_driver",
-    "asset",
-    "policy",
-    "geography",
-    "company",
-    "industry_vertical",
-    "ambiguous",
-]
-
-prompt_template = """
-{system_mission}
-
-YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC TAXONOMY CLASSIFIER working on the Saga Graph—a trading-focused macro knowledge graph.
-
-TASK:
-- Classify the proposed topic into EXACTLY ONE of: {categories}
-- Output ONLY a single JSON object with EXACTLY two fields:
-    - 'category': one of {categories}
-    - 'motivation': Short justification for the category (first field in the object)
-
-STRICT RULES:
-- "industry_vertical" = sectors/sub-sectors/operational niches (e.g., packaging, logistics, advertising, sterilized packaging).
-- If the topic is not clearly a macro driver, asset, policy, geography, or company, choose "ambiguous".
-- Be strict; quality over recall. If in doubt, do NOT place in macro/asset/policy/geography/company.
-- Output STRICT JSON. NO arrays, NO extra fields, NO commentary.
-
-TOPIC CANDIDATE:
-- id: {topic_id}
-- name: {topic_name}
-- type: {topic_type}
-- motivation: {motivation}
-
-ARTICLE SUMMARY (optional context):
-{summary}
-
-EXAMPLE OUTPUT:
-{{"motivation": "Rates policy anchor, impacts asset pricing.", "category": "macro_driver"}}
-
-YOUR RESPONSE (STRICT JSON ONLY):
-"""
-
-prompt = PromptTemplate(
-    input_variables=[
-        "system_mission",
-        "categories",
-        "topic_id",
-        "topic_name",
-        "topic_type",
-        "motivation",
-        "summary",
-    ],
-    template=prompt_template,
-)
-
 
 def classify_topic_category(
     topic_id: str,
@@ -82,22 +27,20 @@ def classify_topic_category(
 ):
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
-    chain = prompt | llm | parser
+    chain = llm | parser
+    p = PromptTemplate.from_template(
+        classify_topic_category_prompt).format(
+            system_mission=SYSTEM_MISSION,
+            topic_id=topic_id,
+            topic_name=topic_name,
+            topic_type=topic_type,
+            motivation=motivation,
+            categories=list[TopicCategory],
+            summary=article_summary
+        )
 
-    r = run_llm_decision(chain=chain, parser=parser, model=ClassifyTopicCategory)
+    r = run_llm_decision(chain=chain, prompt=p, parser=parser, model=ClassifyTopicCategory)
 
-    result = chain.invoke(
-        {
-            "system_mission": SYSTEM_MISSION,
-            "categories": ", ".join(CATEGORIES),
-            "topic_id": topic_id or "",
-            "topic_name": topic_name or "",
-            "topic_type": topic_type or "",
-            "motivation": motivation or "",
-            "summary": article_summary or "",
-        }
-    )
-   
     return r.category, r.motivation
 
 

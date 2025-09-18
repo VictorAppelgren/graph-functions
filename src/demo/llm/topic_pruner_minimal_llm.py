@@ -32,11 +32,13 @@ from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
+from src.llm.prompts.select_not_crucial_topics_llm import select_not_crucial_topics_llm_prompt
+from src.llm.sanitizer import run_llm_decision, UncrucialTopics
 
 logger = app_logging.get_logger(__name__)
 
 
-def _select_not_crucial_topics_llm(candidates: List[Dict[str, Any]]) -> List[str]:
+def _select_not_crucial_topics_llm(candidates: List[Dict[str, Any]]) -> List[str] | None:
     """Return ALL candidate topic IDs that are NOT crucial to the macro graph.
     Output must be EXACTLY: {"ids_to_remove": ["<id>", ...]}
     """
@@ -72,44 +74,24 @@ def _select_not_crucial_topics_llm(candidates: List[Dict[str, Any]]) -> List[str
     candidates_json = json.dumps(compact, ensure_ascii=False)
     candidate_ids_json = json.dumps(candidate_ids, ensure_ascii=False)
 
-    prompt_template = """
-{system_mission}
-{system_context}
-
-You must identify all Topic IDs that are NOT crucial to the macro graph.
-A topic IS crucial if it clearly fits the mission and Interest Areas AND maps to market handles with a causal path and catalysts, or adds pillar diversification.
-Reject as NOT crucial if off-scope, micro/local with no scalable macro path, no handle mapping, no catalysts, duplicates/near-duplicates, or weak/no pillar contribution.
-
-Output must be ONLY a valid JSON object. No prose, no markdown, no backticks, no comments.
-Return exactly this shape:
-{{"ids_to_remove": ["<id1>", "<id2>", "..."]}}
-
-Hard requirements:
-- All IDs MUST come from the whitelist candidate_ids.
-- You may return zero or more IDs.
-- Do NOT include any other fields or text.
-
-Whitelist candidate IDs (return only from this list):
-candidate_ids = {candidate_ids}
-
-Candidate details (context only, do not output):
-{candidates}
-
-Now output ONLY the JSON object described above.
-"""
     parser = JsonOutputParser()
-    prompt = PromptTemplate.from_template(prompt_template)
     llm = get_llm(ModelTier.MEDIUM)
-    chain = prompt | llm | parser
-    result = chain.invoke(
-        {
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-            "candidate_ids": candidate_ids_json,
-            "candidates": candidates_json,
-        }
-    )
-    return result["ids_to_remove"]
+    chain = llm | parser
+
+    p = PromptTemplate.from_template(
+        select_not_crucial_topics_llm_prompt).format(
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT,
+            candidate_ids=candidate_ids_json,
+            candidates=candidates_json
+        )
+
+    r = run_llm_decision(chain=chain, prompt=p, model=UncrucialTopics)
+    
+    if r:
+        return r
+    else:
+        return None
 
 
 if __name__ == "__main__":

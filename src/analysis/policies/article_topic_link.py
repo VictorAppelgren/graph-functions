@@ -10,7 +10,7 @@ from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
 from __future__ import annotations
 from src.llm.prompts.validate_article_topic_relevance import validate_article_topic_relevance_prompt
-from llm.sanitizer import run_llm_decision
+from llm.sanitizer import run_llm_decision, ValidateRelevance
 
 logger = get_logger(__name__)
 
@@ -59,7 +59,7 @@ def validate_article_topic_relevance(
     article: ArticleModel,
     topic_name: str,
     topic_id: str,
-) -> tuple[bool, str]:
+) -> tuple[bool, str] | None:
     """Deep LLM validation: does this article truly provide value to this topic?"""
     summary = article.get("argos_summary", "")
     title = article.get("title", "")
@@ -71,7 +71,11 @@ def validate_article_topic_relevance(
         topic_id,
     )
 
-    prompt = PromptTemplate.from_template(
+    llm = get_llm(ModelTier.MEDIUM)
+    parser = JsonOutputParser()
+    chain = llm | parser
+
+    p = PromptTemplate.from_template(
         validate_article_topic_relevance_prompt
         ).format(
             article=article, 
@@ -79,37 +83,13 @@ def validate_article_topic_relevance(
             topic_id=topic_id, 
             summary=summary, 
             title=title)
-    llm = get_llm(ModelTier.MEDIUM)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    r = run_llm_decision(chain=chain, prompt=prompt, )
+    r = run_llm_decision(chain=chain, prompt=p, model=ValidateRelevance)
 
-    raw = chain.invoke(
-        {
-            "title": title,
-            "summary": summary,
-            "topic_name": topic_name,
-            "topic_id": topic_id,
-            "system_mission": SYSTEM_MISSION,
-            "system_context": SYSTEM_CONTEXT,
-        }
-    )
-
-    try:
-        decision = _sanitize_relevance(raw)
-    except (ValidationError, TypeError, json.JSONDecodeError) as e:
-        logger.error("Relevance parsing/validation failed: %s", str(e)[:200])
-        # choose policy: fail-fast or safe fallback. Here’s a safe fallback:
-        return (False, "Unable to validate confidently; not linking.")
-
-    logger.info(
-        "Validation result: link=%s, motivation=%s%s",
-        decision.should_link,
-        decision.motivation[:200],
-        "..." if len(decision.motivation) > 200 else "",
-    )
-    return decision.should_link, decision.motivation
+    if r.motivation:
+        return r.should_link, r.motivation
+    else:
+        return None
 
 
 # ----- SIMPLE MAIN TO TEST -----

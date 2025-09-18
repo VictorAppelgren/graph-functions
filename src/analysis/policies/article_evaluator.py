@@ -11,6 +11,9 @@ from utils import app_logging
 from utils.app_logging import truncate_str
 from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.types import TestParams
+from src.llm.prompts.article_evaluator import article_evaluator_prompt
+from src.llm.sanitizer import run_llm_decision, Decision
+from langchain_core.prompts import PromptTemplate
 
 logger = app_logging.get_logger(__name__)
 
@@ -33,8 +36,6 @@ def does_article_replace_old_llm(
     """
     if test:
         return {"motivation": "Test mode: no action.", "tool": "none", "id": None}
-    llm = get_llm(ModelTier.SIMPLE)
-    parser = JsonOutputParser()
     summaries = "\n".join(
         [f"- {a['id']}: {a.get('argos_summary', '')}" for a in existing_articles]
     )
@@ -44,51 +45,27 @@ def does_article_replace_old_llm(
         if context_text
         else ""
     )
-    prompt = f"""
-        {SYSTEM_MISSION}
-        {SYSTEM_CONTEXT}
 
-        YOU ARE A WORLD-CLASS MACRO/MARKETS ARTICLE LIFECYCLE JUDGE for the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics.
-
-        TASK:
-        - Given the summary of a new article and all current articles for this topic (with their IDs and summaries), output a strict JSON object with THREE fields:
-            - 'motivation' (required, first field): A short, specific, research-grade reasoning (1-2 sentences max) justifying your action. Motivation must be actionable, defensible to a top-tier financial analyst, and maximally useful for graph analytics and LLM reasoning.
-            - 'tool': one of 'remove', 'hide', 'lower_priority', or 'none'.
-            - 'id': the ID of the article to act on (or null if none).
-        - You may only ever act on one article per call. If no action is needed, use 'none' and null for id.
-        - Internally, reason as a top-tier financial analyst and knowledge engineer. Imagine you must defend every decision to a domain expert.
-        - Output ONLY the JSON object. NO explanations, markdown, commentary, or extra fields.
-
-        CONSTRAINTS:
-        - Allowed tools: remove | hide | lower_priority | none
-        - Choose 'id' ONLY from the Allowed IDs list below; otherwise set id to null.
-
-        DECISION INSTRUCTION:
-        {decision_instruction}
-
-        NEW ARTICLE SUMMARY:
-        {new_article_summary}
-
-        EXISTING ARTICLES:
-        {summaries}
-
-        ALLOWED IDS:
-        {allowed_ids_str}
-
-        {context_block}
-
-        EXAMPLES OF OUTPUT:
-        {{"motivation": "The new article is more comprehensive and up-to-date than article a123.", "tool": "remove", "id": "a123"}}
-        {{"motivation": "Article a124 is now less relevant, so its priority should be lowered.", "tool": "lower_priority", "id": "a124"}}
-        {{"motivation": "Article a125 is outdated and should be hidden.", "tool": "hide", "id": "a125"}}
-        {{"motivation": "The new article does not provide additional value over existing articles.", "tool": "none", "id": null}}
-
-        ONLY INCLUDE THE MOTIVATION, TOOL, AND ID FIELDS. NO ADDITIONAL TEXT. STRICT JSON FORMAT.
-
-        YOUR RESPONSE:
-        """
-    logger.debug("Prompt: %s", truncate_str(str(prompt), 120))
+    llm = get_llm(ModelTier.SIMPLE)
+    parser = JsonOutputParser()
     chain = llm | parser
-    result = chain.invoke(prompt)
-    # logger.info(f"LLM article lifecycle result: {result}")
-    return result
+
+    p = PromptTemplate.from_template(
+        article_evaluator_prompt).format(
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT,
+            decision_instruction=decision_instruction,
+            new_article_summary=new_article_summary,
+            summaries=summaries,
+            allowed_ids_str=allowed_ids_str,
+            context_block=context_block
+        )
+    
+    logger.debug("Prompt: %s", truncate_str(str(p), 120))
+
+    r = run_llm_decision(chain=chain, prompt=p, model=Decision)
+
+    if r.tool:
+        return r
+    else:
+        return None
