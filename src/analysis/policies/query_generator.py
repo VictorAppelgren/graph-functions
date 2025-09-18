@@ -10,7 +10,7 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from utils.app_logging import truncate_str
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.runnables import Runnable

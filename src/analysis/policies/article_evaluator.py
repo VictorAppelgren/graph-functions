@@ -9,7 +9,7 @@ from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.types import TestParams
 from src.llm.prompts.article_evaluator import article_evaluator_prompt
 from src.llm.sanitizer import run_llm_decision, Decision

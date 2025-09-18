@@ -10,7 +10,7 @@ from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.graph.config import MAX_TOPICS, describe_interest_areas
 from src.graph.ops.topic import get_all_topics
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, Sequence
 from pydantic import BaseModel, ConfigDict
 from src.llm.prompts.propose_topic import propose_topic_prompt

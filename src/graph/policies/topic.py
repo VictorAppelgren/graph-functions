@@ -15,6 +15,9 @@ from utils.app_logging import truncate_str
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.llm.sanitizer import run_llm_decision, CheckTopicRelevance, ClassifyTopicImportance, FilterInterestingTopics, ClassifyTopicCategory, TopicCategory
 from src.llm.prompts.classify_topic_category import classify_topic_category_prompt
+from src.llm.prompts.classify_topic_importance import classify_topic_importance_prompt
+from src.llm.prompts.llm_filter_all_interesting_topics import llm_filter_all_interesting_topics_prompt
+from src.graph.policies.priority import PRIORITY_POLICY
 
 logger = get_logger(__name__)
 
@@ -24,10 +27,11 @@ def classify_topic_category(
     topic_type: str,
     motivation: str | None,
     article_summary: str = "",
-):
+) -> tuple[str, str]:
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = llm | parser
+
     p = PromptTemplate.from_template(
         classify_topic_category_prompt).format(
             system_mission=SYSTEM_MISSION,
@@ -39,132 +43,56 @@ def classify_topic_category(
             summary=article_summary
         )
 
-    r = run_llm_decision(chain=chain, prompt=p, parser=parser, model=ClassifyTopicCategory)
+    r = run_llm_decision(chain=chain, prompt=p, model=ClassifyTopicCategory)
 
     return r.category, r.motivation
 
 
-
-# ----- SIMPLE MAIN TO TEST -----
-if __name__ == "__main__":
-    demo = classify_topic_category(
-        topic_id="us_inflation",
-        topic_name="US Inflation",
-        topic_type="macro",
-        motivation="Inflation drives monetary policy and market pricing.",
-        article_summary="US CPI rises above expectations; markets reprice Fed path.",
-    )
-    print(demo)
-
-
 def llm_filter_all_interesting_topics(
     source_topic: dict, all_topics: list[dict]
-) -> dict:
+) -> dict[str, str] | None:
     """
     Use LLM to filter all_topics down to plausible candidates for strong relationships.
     Returns a dict: { 'candidate_ids': list[str], 'motivation': str | None }
     """
-    
-    prompt = f"""
-    {SYSTEM_MISSION}
-    {SYSTEM_CONTEXT}
 
-    YOU ARE A WORLD-CLASS MACRO/MARKETS RELATIONSHIP ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics.
-
-    TASK:
-    - Given the source topic below and a list of all topics (names only), select all topics that could plausibly be strong INFLUENCES, CORRELATES_WITH, or PEERS to the source.
-    - Only select topics where a strong, direct, or competitive relationship is possible.
-    - Output a JSON object with two fields: 'motivation' (1-2 sentences, required, first field, justifying your shortlist) and 'candidates' (list of topic names). If none are plausible, output an empty list for 'candidates'.
-    - ONLY INCLUDE THE MOTIVATION FIELD FIRST, THEN CANDIDATES. NO ADDITIONAL TEXT. STRICT JSON FORMAT.
-
-    EXAMPLE OUTPUT:
-    {{"motivation": "These topics are the most likely strong peers or influences based on the source topic\'s domain.", "candidates": ["EURUSD", "ECB Policy", "US Inflation"]}}
-
-    SOURCE TOPIC:
-    {name}
-
-    ALL TOPICS:
-    {all_names}
-
-    YOUR RESPONSE IN JSON:
-    """
-
-    logger.debug("Prompt: %s", truncate_str(str(prompt), 100))
+    logger.debug("Prompt: %s", truncate_str(str(p), 100))
     llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
     all_names = [n["name"] for n in all_topics]
     name = source_topic["name"]
-    chain = llm | JsonOutputParser()
+    parser = JsonOutputParser()
+    chain = llm | parser
 
-    r = run_llm_decision(chain=chain, prompt=prompt, model=FilterInterestingTopics)
+    p = PromptTemplate.from_template(
+        llm_filter_all_interesting_topics_prompt).format(
+            system_mission=SYSTEM_MISSION, 
+            system_context=SYSTEM_CONTEXT,
+            name=name,
+            all_names=all_names)
+
+    r = run_llm_decision(chain=chain, prompt=p, model=FilterInterestingTopics)
 
     if r.motivation and r.candidates:
 
-    logger.info(f"LLM candidate shortlist motivation: {motivation}")
-    candidate_names = result.get("candidates", []) if isinstance(result, dict) else []
-    name_to_id = {n["name"]: n["id"] for n in all_topics}
-    candidate_ids = [name_to_id[name] for name in candidate_names if name in name_to_id]
-    logger.info(f"Candidate IDs after mapping: {candidate_ids}")
-    return {"candidate_ids": candidate_ids, "motivation": motivation}
-
-
-policy_text = "\n".join(
-    f"{lvl}: every {cfg['interval_seconds']}s | {cfg['label']} | {cfg['characteristics']}"
-    for lvl, cfg in sorted(PRIORITY_POLICY.items())
-)
-
-template = PromptTemplate(
-    template="""
-{system_mission}
-{system_context}
-
-YOU ARE A MASTER-LEVEL MACRO ECONOMIST AND PORTFOLIO STRATEGIST for the Saga Graph.
-
-TASK:
-- Assign an 'importance' integer in [1..5] to the given Topic.
-- Use this policy (no defaults, no hedging):
-{policy_text}
-
-TYPE GUIDANCE (not absolute, but strong):
-- macro, currency, commodity, asset are usually 1.
-- index, theme, driver are usually 2.
-- company is usually 3.
-- policy, event, sector, supporting, structural, geography are usually 4.
-- Assign an importance rating based on best judgment, even if context is limited.
-
-HARD RULES:
-- Output STRICT JSON with fields: importance (1..5 or "REMOVE"), rationale (string).
-- importance=5 is RESERVED for legitimate structural macro anchors (slow-moving, foundational drivers) — not a catch‑all for uncertainty.
-- Use importance="REMOVE" whenever the topic does NOT contribute to macro/markets understanding or actionable trading decisions (e.g., celebrity/entertainment, pop culture, general crime/legal gossip, memes, local human‑interest with no market link).
-- If inputs are insufficient AND the topic appears non‑market/irrelevant, prefer importance="REMOVE". Only default to a numeric importance when it is a legitimate market topic.
-
-TOPIC:
-- name: {topic_name}
-- type: {topic_type}
-- context: {context}
-
-WARNING! Some bad data has made it into the graph.
-If something is clearly misclassified or irrelevant to markets (e.g., celebrities, entertainment casting, sports injuries with no market linkage, local traffic/incidents), output importance="REMOVE".
-Do NOT use 5 as a dump bin. 5 should reflect genuine structural macro anchors (e.g., demographics trend, secular policy regime, long‑run productivity trajectory).
-
-THE MORE IT HELPS US UNDERSTAND THE FINANCIAL MARKET AND MAKE TRADES, THE HIGHER THE IMPORTANCE.
-IF IT DOES NOT SUPPORT ACTIONABLE FINANCIAL DECISIONS, PREFER importance="REMOVE".
-
-RETURN STRICT JSON ONLY. ONLY TWO FIELDS: importance (1..5 or "REMOVE") and rationale (string).
-""",
-    input_variables=[
-        "system_mission",
-        "system_context",
-        "policy_text",
-        "topic_name",
-        "topic_type",
-        "context",
-    ],
-)
+        logger.info(f"LLM candidate shortlist motivation: {r.motivation}")
+        candidate_names = r.candidates
+        name_to_id = {n["name"]: n["id"] for n in all_topics}
+        candidate_ids = [name_to_id[name] for name in candidate_names if name in name_to_id]
+        logger.info(f"Candidate IDs after mapping: {candidate_ids}")
+        return {"candidate_ids": candidate_ids, "motivation": r.motivation}
+    else:
+        return None
 
 
 def classify_topic_importance(
     topic_name: str, topic_type: str = "", context: str = ""
 ) -> tuple[int | str, str] | None:
+    
+    policy_text = "\n".join(
+    f"{lvl}: every {cfg['interval_seconds']}s | {cfg['label']} | {cfg['characteristics']}"
+    for lvl, cfg in sorted(PRIORITY_POLICY.items())
+    )
+
     logger.info("Classifying topic importance: input follows")
     logger.info("policy_text:\n%s", policy_text)
     logger.info("topic_name: %r", topic_name)
@@ -174,7 +102,17 @@ def classify_topic_importance(
     parser = JsonOutputParser()
     chain = llm | parser  # exact style match
 
-    r = run_llm_decision(chain=chain, prompt=template.format(), model=ClassifyTopicImportance)
+    p = PromptTemplate.from_template(
+        classify_topic_importance_prompt).format(
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT,
+            policy_text=policy_text,
+            topic_name=topic_name,
+            topic_type=topic_type,
+            context=context
+        )
+
+    r = run_llm_decision(chain=chain, prompt=p, model=ClassifyTopicImportance)
 
     logger.info("Importance classification result: %s", r)
     # Expected: {"importance": 1..5, "rationale": "..."} or null importance

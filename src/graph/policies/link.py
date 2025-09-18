@@ -3,7 +3,7 @@ from src.llm.config import ModelTier
 from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.llm.sanitizer import run_llm_decision, RemoveDecision, SelectOneNewLinkModel
 from langchain_core.prompts import PromptTemplate
 from src.llm.prompts.llm_select_one_new_link import llm_select_one_new_link_prompt
