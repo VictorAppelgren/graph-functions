@@ -19,13 +19,6 @@ import math
 import runpy
 from graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 
-# Canonical import pattern: ensure project root (directory containing this main.py) is on sys.path
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
-    PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-
 # Import from V1 using absolute imports
 from src.graph.ops.topic import get_all_topics
 from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator

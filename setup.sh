@@ -146,7 +146,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 try:
-    from graph_db.db_driver import run_cypher
+    from src.graph.neo4j_client import run_cypher
     result = run_cypher('RETURN 1 AS ok')
     print('Neo4j connection successful')
     exit(0)
@@ -180,8 +180,9 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 try:
-    from model_config import get_simple_llm
-    llm = get_simple_llm()
+    from src.llm.llm_router import get_llm
+    from src.llm.config import ModelTier
+    llm = get_llm(ModelTier.SIMPLE)
     response = llm.invoke('ping')
     print('LLM connection successful')
     exit(0)

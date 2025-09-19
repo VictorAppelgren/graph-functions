@@ -121,7 +121,7 @@ Ensure Neo4j is running locally and accessible via NEO4J_URI.
 **Quick connectivity check:**
 ```bash
 python -c "
-from graph_db.db_driver import run_cypher
+from src.graph.neo4j_client import run_cypher
 print('Neo4j connection:', run_cypher('RETURN 1 AS ok'))
 "
 ```
@@ -131,8 +131,9 @@ Expected: `[{'ok': 1}]`
 **LLM check:**
 ```bash
 python -c "
-from model_config import get_simple_llm
-llm = get_simple_llm()
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
+llm = get_llm(ModelTier.SIMPLE)
 print('LLM response:', llm.invoke('ping'))
 "
 ```

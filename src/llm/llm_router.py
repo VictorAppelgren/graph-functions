@@ -21,7 +21,6 @@ from src.llm.config import ModelTier, DEFAULT_CONFIG
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
-from src.observability.pipeline_logging import increment_llm_usage
 from langchain_core.runnables import Runnable
 from langchain_core.messages import BaseMessage
 from langchain_core.language_models import LanguageModelInput
@@ -34,13 +33,6 @@ from langchain_core.language_models import LanguageModelInput
 from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
-
-# --- OLLAMA SINGLE URL (manual toggle by commenting) ---
-ollama_url = "http://gate04.cfa.handels.gu.se:11434"
-# ollama_url = "http://gate04.cfa.handels.gu.se:8787"
-
-# vllm_url = "http://gate04.cfa.handels.gu.se:8787/v1"
-vllm_url = "http://gate04.cfa.handels.gu.se:8686/v1"
 
 # My OpenAI API key
 os.environ.setdefault(
@@ -78,10 +70,7 @@ def _build_llm(
             kwargs["base_url"] = base_url
 
         return ChatOpenAI(
-            model=model,
-            temperature=temperature,
-            timeout=_LLM_CALL_TIMEOUT_S,  # alias: request_timeout
-            max_retries=0,  # use Runnable-level retry for consistency
+            **kwargs
         ).with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
 
     elif provider == "anthropic":
@@ -97,8 +86,6 @@ def _build_llm(
 
 
 def get_llm(tier: ModelTier) -> Runnable[LanguageModelInput, BaseMessage]:
-    # Minimal LLM tier call counter (increments on every get_llm call)
-    increment_llm_usage(tier)
 
     """Get a LangChain-compatible LLM for the specified tier.
     

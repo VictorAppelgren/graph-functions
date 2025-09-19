@@ -77,8 +77,8 @@ pre-commit-install:
 # Testing
 test:
 	@echo "🧪 Running basic connectivity tests..."
-	python -c "from graph_db.db_driver import run_cypher; print('Neo4j:', run_cypher('RETURN 1 AS ok'))"
-	python -c "from model_config import get_simple_llm; print('LLM:', get_simple_llm().invoke('ping')[:50])"
+	python -c "from src.graph.neo4j_client import run_cypher; print('Neo4j:', run_cypher('RETURN 1 AS ok'))"
+	python -c "from src.llm.llm_router import get_llm; from src.llm.config import ModelTier; print('LLM:', get_llm(ModelTier.SIMPLE).invoke('ping')[:50])"
 
 test-report:
 	@echo "📊 Generating sample PDF report..."
