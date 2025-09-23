@@ -26,6 +26,8 @@ dependencies = [
     "trafilatura==2.0.0",
     "fpdf2==2.8.4",
     "neo4j==5.28.2",
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.32.1",
 ]
 
 [project.optional-dependencies]

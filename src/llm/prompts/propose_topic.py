@@ -9,18 +9,20 @@ propose_topic_prompt="""
     - Current topics count: {current_count}
     - Areas of interest:
     {scope_text}
-    - If capacity is full (current_count >= max_topics): Only propose a new topic if it is STRICTLY more important than the current weakest topic. If not, or if uncertain, return null.
+    - If capacity is full (current_count >= max_topics): Only propose a new topic if it is STRICTLY more important than the current weakest topic. If not, use type "none".
     - Weakest topic importance (if full): {weakest_importance}
     - Examples of weakest topics (name, importance, last_updated): {weakest_examples}
 
     TASK:
-    - Given the article below, propose a new Topic node for the graph if warranted. Output a JSON object with all required fields for a Topic node.
-    - The output object MUST have:
-        - 'motivation' (required, first field): Short, specific, research-grade reasoning (1-2 sentences) justifying why the new node is needed.
-        - All other required fields for a Topic node (id, name, type).
-    - If the article does not warrant a new node, output null.
-    - Before output, PAUSE AND CHECK: Would this node satisfy a top-tier macro analyst and be maximally useful for graph analytics and LLM reasoning?
-    - Output ONLY the JSON object. NO explanations, markdown, commentary, or extra fields. If unsure, output null.
+    - Given the article below, analyze whether it warrants a new Topic node for the graph.
+    - ALWAYS output a valid JSON object with exactly these fields:
+        - 'motivation' (required, first field): Your reasoning (1-2 sentences)
+        - 'id': Proposed topic ID (empty string if rejecting)
+        - 'name': Human-readable topic name (empty string if rejecting)  
+        - 'type': Topic category (use "none" if rejecting the proposal)
+    - If the article does NOT warrant a new node, use type "none" with empty id/name but explain why in motivation.
+    - Before output, PAUSE AND CHECK: Would this node satisfy a top-tier macro analyst?
+    - Output ONLY the JSON object. NO explanations, markdown, or commentary.
 
     STRICT TRADING RELEVANCE POLICY:
     - ALLOW topics that directly support trading decisions: macro drivers (inflation, growth, jobs, rates, credit), tradable assets (FX pairs, indices, commodities, rates), macro policy/regulation, macro-level geographies, or companies (only if central to macro/market impact).
@@ -29,7 +31,7 @@ propose_topic_prompt="""
 
     RECALL NUDGE (trading-first, minimal):
     - If the article surfaces a canonical tradable asset or policy anchor with a clear market-impact channel relevant to the Areas of interest above, prefer proposing the node.
-    - If there is any real trading relevance to our main interests, it is acceptable to propose the node; otherwise output null.
+    - If there is any real trading relevance to our main interests, it is acceptable to propose the node; otherwise use type "none".
 
     ARTICLE SUMMARY:
     {article}
@@ -37,18 +39,15 @@ propose_topic_prompt="""
     SUGGESTED NAMES:
     {suggested_names}
 
-    EXAMPLE OUTPUT:
-    {{"motivation": "The article introduces a new macro topic not yet present in the graph, requiring a new atomic node.", "id": "eurusd", "name": "EURUSD", "type": "asset"}}
+    EXAMPLE OUTPUTS:
+    Accept: {{"motivation": "The article introduces EUR/USD trading dynamics not yet present in the graph.", "id": "eurusd", "name": "EUR/USD", "type": "asset"}}
+    Reject: {{"motivation": "The article covers operational details without macro trading relevance.", "id": "", "name": "", "type": "none"}}
 
-    ONLY INCLUDE THE MOTIVATION FIELD FIRST, THEN ALL REQUIRED FIELDS. NO ADDITIONAL TEXT. STRICT JSON FORMAT.
-
-    YOUR RESPONSE:
-    The 'name' field must be human-readable (e.g., 'US Inflation', 'Eurozone Geopolitics', 'China').
-    The 'type' field must be one of: macro, asset, company, policy, geography, etc.
-    The 'motivation' field must be short and specific.
-    All analysis fields can be empty strings.
-    Return a JSON object with all required fields: id, name, type, motivation.
-
+    FIELD REQUIREMENTS:
+    - 'motivation': Always required, short and specific reasoning (1-2 sentences)
+    - 'id': Lowercase, underscore-separated (e.g., "us_inflation") or empty string
+    - 'name': Human-readable (e.g., "US Inflation", "EUR/USD") or empty string  
+    - 'type': Exactly one of: "macro", "asset", "policy", "geography", "company", "industry_vertical", "ambiguous", "none"
 
     YOUR RESPONSE IN JSON:
     """

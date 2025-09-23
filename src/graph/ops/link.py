@@ -3,7 +3,6 @@ from utils import app_logging
 from src.observability.pipeline_logging import master_log, master_log_error
 from difflib import get_close_matches
 from events.classifier import EventClassifier, EventType
-from src.graph.ops.link import get_existing_links
 from typing import Optional, Any
 from src.graph.ops.topic import get_all_topics, get_topic_by_id
 from src.graph.policies.topic import llm_filter_all_interesting_topics
@@ -116,16 +115,16 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
             result = session.run(
                 query_check_rel,
                 {
-                    "source": link["source"],
-                    "target": link["target"],
-                    "type": link["type"],
+                    "source": link.source,
+                    "target": link.target,
+                    "type": link.type,
                 },
             )
             record = result.single()
             if record:
-                logger.info(f"Link already exists: {link}")
+                logger.info(f"Link already exists: {link.type} {link.source}->{link.target}")
                 master_log(
-                    f"Relationship duplicate | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
+                    f"Relationship duplicate | {link.source}->{link.target} | type={link.type}",
                     duplicates_skipped=1,
                 )
                 tracker.put_many(status="skipped_duplicate", dedup_decision="already_linked")
@@ -143,24 +142,24 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
                 tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=rel_id)
                 # After snapshot (same as before if duplicate)
                 try:
-                    after_links = get_existing_links(link["source"])  # snapshot
+                    after_links = get_existing_links(link.source)  # snapshot
                     tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
                 except Exception:
                     pass
-                trk.set_id(event_id)
+                tracker.set_id(event_id)
                 return
             # 3. Add link
             query_create = f"""
             MATCH (src:Topic {{id: $source}}), (tgt:Topic {{id: $target}})
-            CREATE (src)-[r:{link['type']}] -> (tgt)
+            CREATE (src)-[r:{link.type}] -> (tgt)
             SET r.id = $rel_id
             RETURN r, elementId(r) AS rel_element_id
             """
             create_result = session.run(
                 query_create,
                 {
-                    "source": link["source"],
-                    "target": link["target"],
+                    "source": link.source,
+                    "target": link.target,
                     "rel_id": event_id,
                 },
             )
@@ -168,11 +167,11 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
             summary = create_result.consume().counters
             logger.info(f"Cypher CREATE summary: {summary}")
             if summary.relationships_created == 0:
-                logger.error(f"No relationship created for link: {link}")
+                logger.error(f"No relationship created for link: {link.type} {link.source}->{link.target}")
                 raise RuntimeError(
-                    f"Failed to add link: Cypher did not create a relationship. Link: {link}"
+                    f"Failed to add link: Cypher did not create a relationship. Link: {link.type} {link.source}->{link.target}"
                 )
-            logger.info(f"Link created: {link}")
+            logger.info(f"Link created: {link.type} {link.source}->{link.target}")
             try:
                 cypher_summary = {
                     "_contains_updates": bool(
@@ -196,19 +195,19 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
                 pass
             # After snapshot
             try:
-                after_links = get_existing_links(link["source"])  # snapshot
+                after_links = get_existing_links(link.source)  # snapshot
                 tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
             except Exception:
                 pass
             # Increment about_links_added or relationships_added in stats
-            if link["type"] == "ABOUT":
+            if link.type == "ABOUT":
                 master_log(
-                    f"ABOUT link created | {link['source']}->{link['target']} | type=ABOUT",
+                    f"ABOUT link created | {link.source}->{link.target} | type=ABOUT",
                     about_links_added=1,
                 )
             else:
                 master_log(
-                    f"topic relationship created | {link['source']}->{link['target']} | type={link['type']}",
+                    f"topic relationship created | {link.source}->{link.target} | type={link.type}",
                     relationships_added=1,
                 )
             tracker.put_many(status="success", dedup_decision="new")
@@ -216,7 +215,7 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
     except Exception as e:
         logger.error(f"[add_link] Failed to add link: {e}", exc_info=True)
         master_log_error(
-            f"Relationship create error | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
+            f"Relationship create error | {link.source}->{link.target} | type={link.type}",
             e,
         )
         try:
@@ -272,36 +271,34 @@ def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict[st
     logger.info(f" topic has {len(existing_links)} existing links.")
     # 5. LLM propose strongest new link
     new_link = llm_select_one_new_link(topic, candidate_topics, existing_links)
-    trace["proposed_link"] = new_link
+    trace["proposed_link"] = new_link.model_dump() if new_link else None
     if not new_link:
         logger.info(" No strong new link proposed by LLM. Exiting.")
         trace["action"] = "no_link_proposed"
         return trace
-    logger.info(f" LLM proposed link: {new_link}")
+    logger.info(f" LLM proposed link: {new_link.type} {new_link.source}->{new_link.target}")
     # 6. Check max-link cap for this type
-    link_type = new_link["type"]
+    link_type = new_link.type
     links_of_type = [l for l in existing_links if l["type"] == link_type]
     if len(links_of_type) >= MAX_LINKS_PER_TYPE:
         logger.info(
             f" Max links ({MAX_LINKS_PER_TYPE}) for type '{link_type}' reached. Invoking LLM removal selector."
         )
-        status = select_and_remove_link(topic, links_of_type, new_link)
+        status = select_and_remove_link(topic, links_of_type, new_link.model_dump())
         trace["removal_decision"] = status.get("removal_decision")
         if status.get("ok"):
             # Prepare context for tracker provenance (kept same keys used in add_link tracker)
             context = {
                 "candidate_ids": candidate_ids,
                 "candidate_motivation": candidate_motivation,
-                "selection_motivation": (
-                    new_link.get("motivation") if isinstance(new_link, dict) else None
-                ),
+                "selection_motivation": new_link.motivation,
                 "existing_links_before": existing_links,
                 "all_topics_count": len(all_topics),
                 "candidate_count": len(candidate_ids),
                 "existing_links_count": len(existing_links),
             }
-            add_link(new_link, context=context)
-            logger.info(f" Added new link after removal: {new_link}")
+            add_link(LinkModel(type=new_link.type, source=new_link.source, target=new_link.target), context=context)
+            logger.info(f" Added new link after removal: {new_link.type} {new_link.source}->{new_link.target}")
             trace["action"] = "removed_and_added"
             return trace
         else:
@@ -323,16 +320,14 @@ def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict[st
         context = {
             "candidate_ids": candidate_ids,
             "candidate_motivation": candidate_motivation,
-            "selection_motivation": (
-                new_link.get("motivation") if isinstance(new_link, dict) else None
-            ),
+            "selection_motivation": new_link.motivation,
             "existing_links_before": existing_links,
             "all_topics_count": len(all_topics),
             "candidate_count": len(candidate_ids),
             "existing_links_count": len(existing_links),
         }
-        add_link(new_link, context=context)
-        logger.info(f" Added new link: {new_link}")
+        add_link(LinkModel(type=new_link.type, source=new_link.source, target=new_link.target), context=context)
+        logger.info(f" Added new link: {new_link.type} {new_link.source}->{new_link.target}")
         trace["action"] = "added_new_link"
         return trace
 

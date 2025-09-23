@@ -8,7 +8,6 @@ import json
 from typing import Tuple
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
 from langchain_core.prompts import PromptTemplate
@@ -20,7 +19,7 @@ logger = app_logging.get_logger(__name__)
 
 
 def should_rewrite_llm(
-    analysis: str, new_article_summary: str, test: bool = False
+    analysis: str, new_article_summary: str, topic_name: str, test: bool = False
 ) -> Tuple[bool, str] | None:
     """
     Uses LLM to decide if the analysis should be rewritten for this topic.
@@ -51,27 +50,20 @@ def should_rewrite_llm(
 
     #     TWO EXAMPLES OF OUTPUT:
     #     {{ "motivation": "New policy change not reflected.", "should_rewrite": true }}
-    #     {{ "motivation": "Redundant with existing analysis.", "should_rewrite": false }}
-
-    #     YOUR RESPONSE:
-    # """
 
     llm = get_llm(ModelTier.COMPLEX)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    p = PromptTemplate.from_template(
-        should_rewrite_prompt).format(
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT,
-            analysis=analysis,
-            new_article_summary=new_article_summary
-        )
+    prompt = PromptTemplate.from_template(should_rewrite_prompt).format(
+        system_mission=SYSTEM_MISSION,
+        system_context=SYSTEM_CONTEXT,
+        topic_name=topic_name,
+        analysis=analysis,
+        new_article_summary=new_article_summary
+    )
 
-    r = run_llm_decision(chain=chain, prompt=p, model=ShouldRewrite)
+    r = run_llm_decision(chain=llm, prompt=prompt, model=ShouldRewrite)
 
     if r.motivation:
         return r.rewrite, r.motivation
     else:
         return None
-

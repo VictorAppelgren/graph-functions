@@ -41,7 +41,7 @@ os.environ.setdefault(
 )  # User will need to set this
 
 # --- LLM call policy (per-request) ---
-_LLM_CALL_TIMEOUT_S = 900.0  # 10 minutes per request
+_LLM_CALL_TIMEOUT_S = 300.0  # 5 minutes per request
 _LLM_RETRY_ATTEMPTS = 3  # total attempts via with_retry()
 
 
@@ -54,8 +54,8 @@ def _build_llm(
             model=model,
             temperature=temperature,
             num_ctx=49152,
-            # num_ctn=16384,
-            # timeout=int(_LLM_CALL_TIMEOUT_S),
+            timeout=int(_LLM_CALL_TIMEOUT_S),
+            request_timeout=_LLM_CALL_TIMEOUT_S,
         ).with_retry(stop_after_attempt=_LLM_RETRY_ATTEMPTS)
 
     elif provider == "openai":

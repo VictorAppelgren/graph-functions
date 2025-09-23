@@ -2,9 +2,8 @@
 from __future__ import annotations
 from datetime import datetime, timezone
 from typing import List, Any, Optional, Dict, cast
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 from src.graph.neo4j_client import run_cypher
-from src.graph.ops.topic import get_all_topics
 import os
 import json
 
@@ -66,8 +65,7 @@ class TodayStatsModel(BaseModel):
     llm_medium_calls: int = 0
     llm_complex_calls: int = 0
     llm_simple_long_context_calls: int = 0
-    topics_total_today: int = 0
-    full_analysis_new_today: int = 0
+    analysis_sections_written: int = 0
     rewrite_skip_event: List[RewriteSkipModel] = []
 
 
@@ -98,13 +96,8 @@ def _get_cnt(query: str, key: str = "cnt") -> int:
 
 
 def get_topic_count() -> int:
-    # Unified counting: rely on get_all_topics to fetch all Topic topics and take len
-    try:
-        topics = get_all_topics(fields=["id"])  # id-only for minimal payload
-        return len(topics)
-    except Exception:
-        # Fallback to direct Cypher count if utility fetch fails
-        return _get_cnt("MATCH (n:Topic) RETURN count(n) AS cnt")
+    """Count topics directly via Cypher to avoid cross-module imports."""
+    return _get_cnt("MATCH (n:Topic) RETURN count(n) AS cnt")
 
 
 def get_article_count() -> int:
@@ -214,63 +207,89 @@ def get_graph_state_snapshot() -> SnapshotModel:
 
 
 def _load_daily_stats() -> TodayStatsFileModel:
-
+    """Load daily stats with proper Pydantic validation."""
     path = os.path.join(
         "master_stats",
         f"statistics_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}.json",
     )
-
-    with open(path, "r", encoding="utf-8") as f:
-        return cast(TodayStatsFileModel, json.load(f))
+    
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return TodayStatsFileModel.model_validate(data)
+    except (FileNotFoundError, json.JSONDecodeError, ValidationError):
+        # Return default stats if file missing or corrupted
+        return TodayStatsFileModel(
+            today=TodayStatsModel(),
+            snapshot=SnapshotModel(),
+            problems=ProblemsSectionModel()
+        )
 
 
 def _save_daily_stats(data: TodayStatsFileModel) -> None:
-
+    """Save daily stats using Pydantic model_dump."""
     path = os.path.join(
         "master_stats",
         f"statistics_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}.json",
     )
+    
+    # Ensure directory exists
+    os.makedirs("master_stats", exist_ok=True)
 
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data.model_dump(), f, ensure_ascii=False, indent=2)
 
 
 def update_stats(
     *,
-    # increments (pass only what you need; zeros ignored)
+    # Phase 1: Data Ingestion
     queries: int = 0,
-    articles: int = 0,
+    articles_processed: int = 0,
     articles_added: int = 0,
     articles_removed: int = 0,
-    added_topic: int = 0,
-    removes_topic: int = 0,
+    articles_rejected_no_topics: int = 0,
+    duplicates_skipped: int = 0,
+    
+    # Phase 2: Topic & Relationship Discovery
+    topics_created: int = 0,
+    topics_deleted: int = 0,
     about_links_added: int = 0,
     about_links_removed: int = 0,
     relationships_added: int = 0,
     relationships_removed: int = 0,
-    rewrites_saved: int = 0,
-    rewrites_skipped_0_articles: int = 0,
-    duplicates_skipped: int = 0,
-    errors: int = 0,
-    qa_reports_generated: int = 0,
-    should_rewrite_true: int = 0,
-    should_rewrite_false: int = 0,
-    topic_replacements_decided: int = 0,
+    
+    # Phase 3: Topic Enrichment
     enrichment_attempts: int = 0,
     enrichment_articles_added: int = 0,
-    no_replacement_candidates: int = 0,
-    # llm usage (choose one or none per call)
+    topics_enriched_successfully: int = 0,
+    
+    # Phase 4: Analysis Generation
+    analysis_sections_written: int = 0,  # Combined: generated + rewritten
+    analysis_sections_skipped_insufficient_articles: int = 0,
+    should_rewrite_true: int = 0,
+    should_rewrite_false: int = 0,
+    
+    # Phase 5: Maintenance & Quality
+    topic_replacements_decided: int = 0,
+    qa_reports_generated: int = 0,
+    
+    # Phase 6: System Metrics
+    errors: int = 0,
+    llm_calls_failed: int = 0,
     llm_simple_calls: int = 0,
     llm_medium_calls: int = 0,
     llm_complex_calls: int = 0,
     llm_simple_long_context_calls: int = 0,
-    # optional problems events to append
+    
+    # Legacy/Problem Events
+    no_replacement_candidates: int = 0,
     zero_result_topic_ids: List[str] = [],
     topic_rejections: int = 0,
     no_replacement_event: Optional[Dict[str, Any]] = None,
     missing_analysis_event: Optional[Dict[str, Any]] = None,
     rewrite_skip_event: Optional[Dict[str, Any]] = None,
-    # controls
+    
+    # Controls
     refresh_snapshot: bool = True,
 ) -> None:
     """
@@ -281,18 +300,25 @@ def update_stats(
     t = stats.today
 
     # ---- increments (attribute-style, ignore zeros) ----
+    # Phase 1: Data Ingestion
     if queries:
         t.queries += queries
-    if articles:
-        t.articles += articles
+    if articles_processed:
+        t.articles_processed += articles_processed
     if articles_added:
         t.articles_added += articles_added
     if articles_removed:
         t.articles_removed += articles_removed
-    if added_topic:
-        t.added_topic += added_topic
-    if removes_topic:
-        t.removes_topic += removes_topic
+    if articles_rejected_no_topics:
+        t.articles_rejected_no_topics += articles_rejected_no_topics
+    if duplicates_skipped:
+        t.duplicates_skipped += duplicates_skipped
+    
+    # Phase 2: Topic & Relationship Discovery
+    if topics_created:
+        t.topics_created += topics_created
+    if topics_deleted:
+        t.topics_deleted += topics_deleted
     if about_links_added:
         t.about_links_added += about_links_added
     if about_links_removed:
@@ -301,26 +327,36 @@ def update_stats(
         t.relationships_added += relationships_added
     if relationships_removed:
         t.relationships_removed += relationships_removed
-    if rewrites_saved:
-        t.rewrites_saved += rewrites_saved
-    if rewrites_skipped_0_articles:
-        t.rewrites_skipped_0_articles += rewrites_skipped_0_articles
-    if duplicates_skipped:
-        t.duplicates_skipped += duplicates_skipped
-    if errors:
-        t.errors += errors
-    if qa_reports_generated:
-        t.qa_reports_generated += qa_reports_generated
-    if should_rewrite_true:
-        t.should_rewrite_true += should_rewrite_true
-    if should_rewrite_false:
-        t.should_rewrite_false += should_rewrite_false
-    if topic_replacements_decided:
-        t.topic_replacements_decided += topic_replacements_decided
+    
+    # Phase 3: Topic Enrichment
     if enrichment_attempts:
         t.enrichment_attempts += enrichment_attempts
     if enrichment_articles_added:
         t.enrichment_articles_added += enrichment_articles_added
+    if topics_enriched_successfully:
+        t.topics_enriched_successfully += topics_enriched_successfully
+    
+    # Phase 4: Analysis Generation
+    if analysis_sections_written:
+        t.analysis_sections_written += analysis_sections_written
+    if analysis_sections_skipped_insufficient_articles:
+        t.analysis_sections_skipped_insufficient_articles += analysis_sections_skipped_insufficient_articles
+    if should_rewrite_true:
+        t.should_rewrite_true += should_rewrite_true
+    if should_rewrite_false:
+        t.should_rewrite_false += should_rewrite_false
+    
+    # Phase 5: Maintenance & Quality
+    if topic_replacements_decided:
+        t.topic_replacements_decided += topic_replacements_decided
+    if qa_reports_generated:
+        t.qa_reports_generated += qa_reports_generated
+    
+    # Phase 6: System Metrics
+    if errors:
+        t.errors += errors
+    if llm_calls_failed:
+        t.llm_calls_failed += llm_calls_failed
     if llm_simple_calls:
         t.llm_simple_calls += llm_simple_calls
     if llm_medium_calls:

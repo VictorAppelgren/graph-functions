@@ -69,9 +69,10 @@ def add_article(
         l.append(n)
 
     # 1. Get results from LLM
-    motivation, existing_article_ids, new_topic_names = find_topic_mapping(
-        formatted_article_text, l
-    )
+    topic_mapping = find_topic_mapping(formatted_article_text, l)
+    motivation = topic_mapping.motivation
+    existing_article_ids = topic_mapping.existing or []
+    new_topic_names = topic_mapping.new or []
 
     logger.info(
         f"Discovery complete: {len(existing_article_ids)} existing + {len(new_topic_names)} new"
@@ -82,6 +83,10 @@ def add_article(
     if not existing_article_ids and not new_topic_names and not intended_topic_id:
         logger.warning(
             f"ABORT: No relevant topics found for article {article_id}. Skipping article."
+        )
+        master_log(
+            f"Article rejected | {article_id} | No relevant topics found",
+            articles_rejected_no_topics=1,
         )
         tracker.put("status", "skipped_no_topic")
         tracker.set_id(article_id)  # This sets the ID and triggers tracker to save.
@@ -118,27 +123,25 @@ def add_article(
     )
 
     # 4. Article-level LLM classifications (done ONCE for all topics)
-    category_motivation, type_val = find_category(article["argos_summary"])
-    logger.info(f"Category: {type_val}")
-    logger.info(f"Category motivation: {category_motivation}")
+    category_result = find_category(article["argos_summary"])
+    logger.info(f"Category: {category_result.name}")
+    logger.info(f"Category motivation: {category_result.motivation}")
 
-    impact_motivation, priority_val = find_impact(article["argos_summary"])
-    logger.info(f"Impact motivation: {impact_motivation}")
-    logger.info(f"Impact priority: {priority_val}")
+    impact_result = find_impact(article["argos_summary"])
+    logger.info(f"Impact motivation: {impact_result.motivation}")
+    logger.info(f"Impact priority: {impact_result.score}")
 
-    time_frame_motivation, temporal_horizon_val = find_time_frame(
-        article["argos_summary"]
-    )
-    logger.info(f"Time frame motivation: {time_frame_motivation}")
-    logger.info(f"Temporal horizon: {temporal_horizon_val}")
+    time_frame_result = find_time_frame(article["argos_summary"])
+    logger.info(f"Time frame motivation: {time_frame_result.motivation}")
+    logger.info(f"Temporal horizon: {time_frame_result.horizon}")
 
     # Save all LLM-driven classification outputs
     tracker.put_many(
-        category={"type": type_val, "motivation": category_motivation},
-        impact={"priority": priority_val, "motivation": impact_motivation},
+        category={"type": category_result.name, "motivation": category_result.motivation},
+        impact={"priority": impact_result.score, "motivation": impact_result.motivation},
         time_frame={
-            "temporal_horizon": temporal_horizon_val,
-            "motivation": time_frame_motivation,
+            "temporal_horizon": time_frame_result.horizon,
+            "motivation": time_frame_result.motivation,
         },
     )
 
@@ -154,9 +157,9 @@ def add_article(
                 "source": article.get("url"),
                 "published_at": article.get("pubDate"),
                 "vector_id": None,
-                "type": type_val,
-                "temporal_horizon": temporal_horizon_val,
-                "priority": priority_val,
+                "type": category_result.name,
+                "temporal_horizon": time_frame_result.horizon,
+                "priority": impact_result.score,
                 "relevance_score": relevance_score_val,
             }
 
@@ -179,7 +182,7 @@ def add_article(
         })
         RETURN a
         """
-        run_cypher(create_query, article)
+        run_cypher(create_query, a)
         logger.info(f"Created Article node for article id={argos_id}")
     else:
         logger.info(f"Article node {argos_id} already exists; skipping creation.")
@@ -247,6 +250,14 @@ def add_article(
         # Trigger next steps, relationship discovery and replacement analysis
         trigger_next_steps(topic_id, argos_id)
 
+        # Trigger analysis check for article ingestion
+        if not test:
+            from src.analysis.orchestration.should_rewrite import should_rewrite
+            try:
+                should_rewrite(topic_id, argos_id, triggered_by="ingestion")
+            except Exception as e:
+                logger.warning(f"Analysis trigger failed for {topic_id}/{argos_id}: {e}")
+
         successful_topics += 1
         master_log(
             f"Added article | {article.get('argos_id')} | to existing topic {topic_id}",
@@ -281,6 +292,14 @@ def add_article(
                 # Trigger next steps, relationship discovery and replacement analysis
                 trigger_next_steps(topic_id, argos_id)
 
+                # Trigger analysis check for article ingestion
+                if not test:
+                    from src.analysis.orchestration.should_rewrite import should_rewrite
+                    try:
+                        should_rewrite(topic_id, argos_id, triggered_by="ingestion")
+                    except Exception as e:
+                        logger.warning(f"Analysis trigger failed for {topic_id}/{argos_id}: {e}")
+
                 successful_topics += 1
                 master_log(
                     f"Added article | {article.get('argos_id')} | to new topic {topic_id}",
@@ -302,7 +321,7 @@ def add_article(
     tracker.set_id(article.get("argos_id"))
 
     logger.info(
-        f"Multi-topic processing complete: {successful_topics}/{total_topics} topics successful. Existing len: {len(existing_article_ids)} + New len: {len(new_node_names)}"
+        f"Multi-topic processing complete: {successful_topics}/{total_topics} topics successful. Existing len: {len(existing_article_ids)} + New len: {len(new_topic_names)}"
     )
     return {
         "article_id": article.get("argos_id"),

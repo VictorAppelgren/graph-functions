@@ -1,9 +1,8 @@
 from typing import List
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
 from src.llm.prompts.generate_keywords import generate_keyword_prompt
 from src.llm.sanitizer import run_llm_decision, Keywords
@@ -37,32 +36,29 @@ def _clean_list(items: List[str]) -> List[str]:
     return out
 
 
-def generate_keywords(topic_name: str, section: str) -> list[str] | None:
-    """Generate a flat list (target 25–35) of short newsroom-surface keywords for scanning news."""
-    focus = SECTION_FOCUS[section]
+def generate_keywords(topic_name: str, section: str) -> Keywords:
+    """Generate keywords for a topic section using LLM."""
+    logger.info("Generating keywords | topic=%s | section=%s", topic_name, section)
 
-    logger.info("will generate keywords")
     llm = get_llm(ModelTier.SIMPLE)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    p = PromptTemplate.from_template(
-        generate_keyword_prompt).format(
-            topic_name=topic_name,
-            section=section,
-            focus=focus,
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT
-        )
+    prompt = PromptTemplate.from_template(generate_keyword_prompt).format(
+        topic_name=topic_name,
+        section=section,
+        focus=SECTION_FOCUS[section],
+        system_mission=SYSTEM_MISSION,
+        system_context=SYSTEM_CONTEXT
+    )
     
-    r = run_llm_decision(chain=chain, prompt=p, model=Keywords)
+    r = run_llm_decision(chain=llm, prompt=prompt, model=Keywords)
 
     logger.debug("------------------------------------")
     logger.debug("generated keywords: ")
-    logger.info(f"{r}")
+    logger.info(f"list={r.list}")
     logger.debug("------------------------------------")
 
-    if r.list:
-        return r.list[:40]
-    else:
-        return None
+    # Track LLM call (statistics tracking disabled for now)
+    # from src.observability.pipeline_logging import master_statistics
+    # master_statistics(llm_simple_calls=1)
+
+    return r

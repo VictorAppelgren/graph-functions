@@ -69,7 +69,8 @@ def does_article_replace_old(
         logger.warning(
             f"Article {new_article_id} missing temporal_horizon. Inferring and backfilling."
         )
-        motivation, inferred_tf = find_time_frame(summary)
+        time_frame_result = find_time_frame(summary)
+        inferred_tf = time_frame_result.horizon
         run_cypher(
             "MATCH (a:Article {id:$id}) SET a.temporal_horizon = $tf",
             {"id": new_article_id, "tf": inferred_tf},
@@ -257,19 +258,19 @@ def does_article_replace_old(
                 articles_removed=1,
             )
             # Trigger should_rewrite only when we changed graph state
-            should_rewrite(topic_id, new_article_id)
+            should_rewrite(topic_id, new_article_id, triggered_by="article")
         elif tool == "hide":
             set_article_hidden(target_id)
             logger.info(
                 f"Set article id={target_id} to hidden via graph_utils.set_article_hidden."
             )
-            should_rewrite(topic_id, new_article_id)
+            should_rewrite(topic_id, new_article_id, triggered_by="article")
         elif tool == "lower_priority":
             update_article_priority(target_id)
             logger.info(
                 f"Lowered priority for article id={target_id} via graph_utils.update_article_priority."
             )
-            should_rewrite(topic_id, new_article_id)
+            should_rewrite(topic_id, new_article_id, triggered_by="article")
         else:
             logger.info(f"does_article_replace_old: no action taken, action={tool}")
     else:
@@ -280,7 +281,7 @@ def does_article_replace_old(
         # If no action and topic has no analysis, trigger analysis writing
         topic_cypher = """
         MATCH (t:Topic {id: $topic_id})
-        RETURN t.fundamental_analysis as fundamental_analysis, t.medium_analysis as medium_analysis, t.current_analysis as current_analysis, t.implications as implications
+        RETURN t.fundamental_analysis as fundamental_analysis, t.medium_analysis as medium_analysis, t.current_analysis as current_analysis
         """
         topic = run_cypher(topic_cypher, {"topic_id": topic_id})
         if topic:
@@ -290,14 +291,13 @@ def does_article_replace_old(
                     "fundamental_analysis",
                     "medium_analysis",
                     "current_analysis",
-                    "implications",
                 ]
             }
             missing_count = sum(1 for v in analysis_fields.values() if not v)
             if missing_count > 0:
                 logger.info(
-                    f"Analysis incomplete for topic {topic_id} ({missing_count}/4 fields missing); triggering analysis writing."
+                    f"Analysis incomplete for topic {topic_id} ({missing_count}/3 core fields missing); triggering analysis writing."
                 )
-                should_rewrite(topic_id, new_article_id)
+                should_rewrite(topic_id, new_article_id, triggered_by="article")
 
     return {"tool": tool, "id": target_id, "motivation": motivation}

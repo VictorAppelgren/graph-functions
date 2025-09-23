@@ -503,7 +503,7 @@ All modules whose directory starts with `func_` are single-action functions that
 
 - Topic Node
   - Properties: `id`, `name`, `type` (e.g., `asset`, `policy`), `level` (`main`|`driver`), `parent_id` (optional)
-  - Analysis fields: `fundamental_analysis`, `medium_analysis`, `current_analysis`, `implications`
+  - Analysis fields: `fundamental_analysis`, `medium_analysis`, `current_analysis`, `drivers`, `executive_summary`, `movers_scenarios`, `swing_trade_or_outlook`
   - Operational: `status` (`active`|`hidden`), `last_updated`
 
 - Article Node

@@ -69,7 +69,7 @@ class NewsIngestionOrchestrator:
     """
 
     @app_logging.log_execution(logger)
-    def __init__(self, debug: bool = False):
+    def __init__(self, debug: bool = False, scrape_enabled: bool = False):
         """
         Initialize the NewsIngestionOrchestrator.
 
@@ -90,6 +90,10 @@ class NewsIngestionOrchestrator:
 
         # Initialize storage manager
         self.storage_manager = RawStorageManager()
+
+        # Scrape toggle (constructor-only, default False for simplicity)
+        self.scrape_enabled = bool(scrape_enabled)
+        logger.debug("Scrape enabled: %s", self.scrape_enabled)
 
         # Initialize statistics
         self.stats = {
@@ -124,7 +128,6 @@ class NewsIngestionOrchestrator:
         if not query_text:
             raise ValueError("Query text cannot be empty")
 
-        query_id = f"query-{int(time.time())}"
         start_time = time.time()
 
         # Execute query
@@ -144,7 +147,7 @@ class NewsIngestionOrchestrator:
             master_log(
                 f"Retrieved articles | {topic} | Retrieved {len(articles)} from API",
                 queries=1,
-                articles=len(articles),
+                articles_processed=len(articles),
             )
             self.stats["queries_executed"] += 1
             self.stats["articles_retrieved"] += len(articles)
@@ -159,11 +162,11 @@ class NewsIngestionOrchestrator:
                 return []
 
             # Process articles
-            processed_articles = self._process_articles(articles, query_id)
+            processed_articles = self._process_articles(articles)
 
             # If not testing, trigger add_article for each processed article
             if not test:
-                from articles.ingest_article import add_article
+                from src.articles.ingest_article import add_article
 
                 for article in processed_articles:
                     try:
@@ -183,6 +186,7 @@ class NewsIngestionOrchestrator:
                 f"✅ Processed {len(processed_articles)} articles in {duration:.2f}s"
             )
             return processed_articles
+
         except Exception as e:
             # Handle NewsApiError with 414 status as warning (do not crash)
             if hasattr(e, "args") and e.args and "414" in str(e.args[0]):
@@ -194,6 +198,57 @@ class NewsIngestionOrchestrator:
             master_log_error(f"Query error | {topic} | {e}")
             logger.error(f"❌ Error executing query: {e}")
             raise RuntimeError(f"Failed to execute query: {e}")
+
+    # --- helpers -------------------------------------------------------------
+    def _fast_store(self, article: Dict[str, Any], title: str, title_sample: str) -> Dict[str, Any] | None:
+        """Store API article, generating summary if API summary missing.
+        Returns stored payload dict on success, None if failed.
+        """
+        summary = article.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            logger.info(
+                "📝 Missing API summary; generating summary for '%s'", title_sample
+            )
+            # Generate summary using our LLM summarizer
+            try:
+                generated_summary = summarize_article(article)
+                if generated_summary and generated_summary.strip():
+                    summary = generated_summary.strip()
+                    self.stats["articles_summarized"] += 1
+                    logger.info(
+                        "✅ Generated summary for '%s' | len=%d chars", title_sample, len(summary)
+                    )
+                else:
+                    logger.warning(
+                        "❌ Failed to generate summary for '%s'; skipping", title_sample
+                    )
+                    self.stats["errors"] += 1
+                    return None
+            except Exception as e:
+                logger.warning(
+                    "❌ Summary generation failed for '%s': %s", title_sample, str(e)
+                )
+                self.stats["errors"] += 1
+                return None
+        
+        payload: Dict[str, Any] = dict(article)
+        payload["argos_summary"] = summary.strip()
+        payload.setdefault("argos_topic", title)
+        
+        if summary == article.get("summary", "").strip():
+            logger.info(
+                "Fast path: stored with API summary | title='%s'", title_sample
+            )
+        else:
+            logger.info(
+                "Enhanced path: stored with generated summary | title='%s'", title_sample
+            )
+        stored_path = self.storage_manager.store_article(payload)
+        if stored_path:
+            logger.debug("💾 Stored article to %s", stored_path)
+            self.stats["articles_stored"] += 1
+            return payload
+        return None
 
     @app_logging.log_execution(logger)
     def run_complete_test(self) -> Dict[str, Any]:
@@ -222,7 +277,7 @@ class NewsIngestionOrchestrator:
 
     @app_logging.log_execution(logger)
     def _process_articles(
-        self, articles: List[Dict[str, Any]], query_id: str
+        self, articles: List[Dict[str, Any]]
     ) -> List[Dict[str, Any]]:
         """
         Process a list of articles: scrape content, summarize, and store raw data.
@@ -276,7 +331,14 @@ class NewsIngestionOrchestrator:
 
                 # No longer attach main article text under scraped_content; only use top-level 'content'.
 
-                # Scrape article content and sources
+                if not self.scrape_enabled:
+                    # Fast path: skip scraping & summarization; use API data only
+                    stored = self._fast_store(article, title, title_sample)
+                    if stored is not None:
+                        processed_articles.append(stored)
+                    continue
+
+                # Scrape article content and sources (slow path)
                 logger.debug("🔍 Scraping article content and sources")
                 enriched_article = scrape_article_and_sources_sync(article)
                 self.stats["articles_scraped"] += 1
@@ -305,20 +367,44 @@ class NewsIngestionOrchestrator:
                 # Generate summary from scraped content
                 logger.debug("summarizing...")
                 logger.debug("📝 Generating article summary")
-                summarized_article = summarize_article(enriched_article)
+                summary = summarize_article(enriched_article)
+                logger.debug(
+                    "summary generation complete | type=%s | len=%s",
+                    type(summary),
+                    (len(summary) if isinstance(summary, str) else "NA"),
+                )
+                if not isinstance(summary, str) or not summary.strip():
+                    logger.warning(
+                        "❌ Summary missing or invalid type; skipping article '%s'",
+                        title_sample,
+                    )
+                    self.stats["errors"] += 1
+                    continue
                 self.stats["articles_summarized"] += 1
                 # Single per-article INFO line summarizing scraping result
                 logger.info(
                     f"Article: '{title_sample}' scraped {num_sources} sources, summary generated!"
                 )
 
+                # Build strict dict payload for storage: merge enriched article + argos_summary
+                payload: Dict[str, Any] = dict(enriched_article)
+                payload["argos_summary"] = summary
+                # Minimal provenance
+                payload.setdefault("argos_topic", title)
+                # Debug the payload shape before storage
+                logger.debug(
+                    "storage payload | type=%s | keys_sample=%s",
+                    type(payload),
+                    list(payload.keys())[:12],
+                )
+
                 # Store the enriched and summarized article
                 logger.debug("saving...")
-                stored_path = self.storage_manager.store_article(summarized_article)
+                stored_path = self.storage_manager.store_article(payload)
                 if stored_path:
                     logger.debug(f"💾 Stored article to {stored_path}")
                     self.stats["articles_stored"] += 1
-                    processed_articles.append(summarized_article)
+                    processed_articles.append(payload)
 
                 logger.debug(
                     "============================================================================"

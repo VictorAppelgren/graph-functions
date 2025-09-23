@@ -75,7 +75,7 @@ def _get_logfile() -> str:
 
 import json
 from pydantic import BaseModel
-from typing import cast, Any
+from typing import Any
 from enum import Enum, unique
 from src.graph.ops.graph_stats import get_graph_state_snapshot
 from src.graph.ops.graph_stats import update_stats
@@ -105,29 +105,63 @@ class Problem(Enum):
 
 
 class StatsModel(BaseModel):
-    topics_total_today: int = 0
-    all_topics_queried: bool = False
-    full_analysis_new_today: int = 0
-    enrichment_attempts: int = 0
-    enrichment_articles_added: int = 0
+    # Phase 1: Data Ingestion
     queries: int = 0
-    articles: int = 0
+    articles_processed: int = 0
     articles_added: int = 0
     articles_removed: int = 0
-    added_topic: int = 0
-    removes_topic: int = 0
+    articles_rejected_no_topics: int = 0
+    articles_missing_from_storage: int = 0
+    duplicates_skipped: int = 0
+    
+    # Phase 2: Topic & Relationship Discovery
+    topics_created: int = 0
+    topics_deleted: int = 0
     about_links_added: int = 0
     about_links_removed: int = 0
     relationships_added: int = 0
     relationships_removed: int = 0
-    rewrites_saved: int = 0
-    rewrites_skipped_0_articles: int = 0
-    duplicates_skipped: int = 0
-    errors: int = 0
-    qa_reports_generated: int = 0
+    
+    # Phase 3: Topic Enrichment
+    enrichment_attempts: int = 0
+    enrichment_articles_added: int = 0
+    topics_enriched_successfully: int = 0
+    
+    # Phase 4: Analysis Generation
+    analysis_sections_written: int = 0  # Combined: generated + rewritten
+    analysis_sections_skipped_insufficient_articles: int = 0
     should_rewrite_true: int = 0
     should_rewrite_false: int = 0
+    
+    # Phase 4b: Should Rewrite Pipeline Tracking
+    should_rewrite_attempted: int = 0
+    should_rewrite_trigger_from_article_ingestion: int = 0
+    should_rewrite_trigger_from_enrichment_completion: int = 0
+    should_rewrite_stopped_insufficient_articles: int = 0
+    should_rewrite_stopped_uneven_sections: int = 0
+    should_rewrite_stopped_recent_analysis: int = 0
+    should_rewrite_stopped_llm_failure: int = 0
+    should_rewrite_llm_decided_false: int = 0
+    should_rewrite_llm_decided_true: int = 0
+    should_rewrite_completed_with_analysis: int = 0
+    should_rewrite_stopped_analysis_failed: int = 0
+    
+    # Phase 4c: Analysis Generation Pipeline Tracking
+    analysis_rewriter_attempted: int = 0
+    analysis_rewriter_stopped_no_articles: int = 0
+    analysis_llm_generation_proceeded: int = 0
+    analysis_llm_generation_stopped_failure: int = 0
+    analysis_save_proceeded: int = 0
+    analysis_save_stopped_error: int = 0
+    
+    # Phase 5: Maintenance & Quality
     topic_replacements_decided: int = 0
+    qa_reports_generated: int = 0
+    all_topics_queried: bool = False
+    
+    # Phase 6: System Metrics
+    errors: int = 0
+    llm_calls_failed: int = 0
     llm_simple_calls: int = 0
     llm_medium_calls: int = 0
     llm_complex_calls: int = 0
@@ -172,17 +206,28 @@ def _get_statsfile_path() -> str:
 def load_stats_file() -> StatsFileModel:
     statsfile = _get_statsfile_path()
     if os.path.exists(statsfile):
-
-        with open(statsfile, "r") as f:
-            return cast(StatsFileModel, json.load(f))
-
-    else:
-        # Create a new stats file with today's defaults and graph_state
-        graph_state: SnapshotModel = get_graph_state_snapshot()
-        stats = StatsModel()
-        stats_file = StatsFileModel(today=stats, graph_state=graph_state)
-        save_stats_file(stats_file)
-        return stats_file
+        try:
+            with open(statsfile, "r") as f:
+                content = f.read()
+                if not content.strip():
+                    # Empty file -> recreate defaults
+                    raise json.JSONDecodeError("empty", content, 0)
+                data = json.loads(content)
+                # Validate/construct a Pydantic model from the dict
+                return StatsFileModel.model_validate(data)
+        except json.JSONDecodeError:
+            # Corrupt or empty -> recreate defaults
+            graph_state: SnapshotModel = get_graph_state_snapshot()
+            stats = StatsModel()
+            stats_file = StatsFileModel(today=stats, graph_state=graph_state)
+            save_stats_file(stats_file)
+            return stats_file
+    # File does not exist -> create and return defaults
+    graph_state: SnapshotModel = get_graph_state_snapshot()
+    stats = StatsModel()
+    stats_file = StatsFileModel(today=stats, graph_state=graph_state)
+    save_stats_file(stats_file)
+    return stats_file
 
 
 def increment_llm_usage(tier: ModelTier) -> None:
@@ -198,47 +243,95 @@ def increment_llm_usage(tier: ModelTier) -> None:
 
 def save_stats_file(stats: StatsFileModel) -> None:
     statsfile = _get_statsfile_path()
+    # Serialize Pydantic model to a plain dict before JSON dumping
+    payload = stats.model_dump()
     with open(statsfile, "w") as f:
-        json.dump(stats, f, indent=2)
+        json.dump(payload, f, indent=2)
 
 
 def master_statistics(
+    # Phase 1: Data Ingestion
     queries: int = 0,
-    articles: int = 0,
+    articles_processed: int = 0,
     articles_added: int = 0,
     articles_removed: int = 0,
-    added_topic: int = 0,
-    removes_topic: int = 0,
+    articles_rejected_no_topics: int = 0,
+    duplicates_skipped: int = 0,
+    
+    # Phase 2: Topic & Relationship Discovery
+    topics_created: int = 0,
+    topics_deleted: int = 0,
     about_links_added: int = 0,
     about_links_removed: int = 0,
     relationships_added: int = 0,
     relationships_removed: int = 0,
-    rewrites_saved: int = 0,
-    rewrites_skipped_0_articles: int = 0,
-    duplicates_skipped: int = 0,
-    errors: int = 0,
-    should_rewrite_true: int = 0,
-    should_rewrite_false: int = 0,
-    topic_replacements_decided: int = 0,
+    
+    # Phase 3: Topic Enrichment
     enrichment_attempts: int = 0,
     enrichment_articles_added: int = 0,
+    topics_enriched_successfully: int = 0,
+    
+    # Phase 4: Analysis Generation
+    analysis_sections_written: int = 0,  # Combined: generated + rewritten
+    analysis_sections_skipped_insufficient_articles: int = 0,
+    should_rewrite_true: int = 0,
+    should_rewrite_false: int = 0,
+    
+    # Phase 4b: Should Rewrite Pipeline Tracking
+    should_rewrite_attempted: int = 0,
+    should_rewrite_trigger_from_article_ingestion: int = 0,
+    should_rewrite_trigger_from_enrichment_completion: int = 0,
+    should_rewrite_stopped_insufficient_articles: int = 0,
+    should_rewrite_stopped_uneven_sections: int = 0,
+    should_rewrite_stopped_recent_analysis: int = 0,
+    should_rewrite_stopped_llm_failure: int = 0,
+    should_rewrite_llm_decided_false: int = 0,
+    should_rewrite_llm_decided_true: int = 0,
+    should_rewrite_completed_with_analysis: int = 0,
+    should_rewrite_stopped_analysis_failed: int = 0,
+    
+    # Phase 4c: Analysis Generation Pipeline Tracking
+    analysis_rewriter_attempted: int = 0,
+    analysis_rewriter_stopped_no_articles: int = 0,
+    analysis_llm_generation_proceeded: int = 0,
+    analysis_llm_generation_stopped_failure: int = 0,
+    analysis_save_proceeded: int = 0,
+    analysis_save_stopped_error: int = 0,
+    
+    # Phase 5: Maintenance & Quality
+    topic_replacements_decided: int = 0,
+    
+    # Phase 6: System Metrics
+    errors: int = 0,
+    llm_calls_failed: int = 0,
+    llm_simple_calls: int = 0,
+    llm_medium_calls: int = 0,
+    llm_complex_calls: int = 0,
+    llm_simple_long_context_calls: int = 0,
 ) -> None:
     # Load existing stats and preserve any unknown counters in today's section (e.g., llm_*_calls)
     stats = load_stats_file()
     t = stats.today
 
+    # Phase 1: Data Ingestion
     if queries:
         t.queries += queries
-    if articles:
-        t.articles += articles
+    if articles_processed:
+        t.articles_processed += articles_processed
     if articles_added:
         t.articles_added += articles_added
     if articles_removed:
         t.articles_removed += articles_removed
-    if added_topic:
-        t.added_topic += added_topic
-    if removes_topic:
-        t.removes_topic += removes_topic
+    if articles_rejected_no_topics:
+        t.articles_rejected_no_topics += articles_rejected_no_topics
+    if duplicates_skipped:
+        t.duplicates_skipped += duplicates_skipped
+    
+    # Phase 2: Topic & Relationship Discovery
+    if topics_created:
+        t.topics_created += topics_created
+    if topics_deleted:
+        t.topics_deleted += topics_deleted
     if about_links_added:
         t.about_links_added += about_links_added
     if about_links_removed:
@@ -247,24 +340,80 @@ def master_statistics(
         t.relationships_added += relationships_added
     if relationships_removed:
         t.relationships_removed += relationships_removed
-    if rewrites_saved:
-        t.rewrites_saved += rewrites_saved
-    if rewrites_skipped_0_articles:
-        t.rewrites_skipped_0_articles += rewrites_skipped_0_articles
-    if duplicates_skipped:
-        t.duplicates_skipped += duplicates_skipped
-    if errors:
-        t.errors += errors
-    if should_rewrite_true:
-        t.should_rewrite_true += should_rewrite_true
-    if should_rewrite_false:
-        t.should_rewrite_false += should_rewrite_false
-    if topic_replacements_decided:
-        t.topic_replacements_decided += topic_replacements_decided
+    
+    # Phase 3: Topic Enrichment
     if enrichment_attempts:
         t.enrichment_attempts += enrichment_attempts
     if enrichment_articles_added:
         t.enrichment_articles_added += enrichment_articles_added
+    if topics_enriched_successfully:
+        t.topics_enriched_successfully += topics_enriched_successfully
+    
+    # Phase 4: Analysis Generation
+    if analysis_sections_written:
+        t.analysis_sections_written += analysis_sections_written
+    if analysis_sections_skipped_insufficient_articles:
+        t.analysis_sections_skipped_insufficient_articles += analysis_sections_skipped_insufficient_articles
+    if should_rewrite_true:
+        t.should_rewrite_true += should_rewrite_true
+    if should_rewrite_false:
+        t.should_rewrite_false += should_rewrite_false
+    
+    # Phase 4b: Should Rewrite Pipeline Tracking
+    if should_rewrite_attempted:
+        t.should_rewrite_attempted += should_rewrite_attempted
+    if should_rewrite_trigger_from_article_ingestion:
+        t.should_rewrite_trigger_from_article_ingestion += should_rewrite_trigger_from_article_ingestion
+    if should_rewrite_trigger_from_enrichment_completion:
+        t.should_rewrite_trigger_from_enrichment_completion += should_rewrite_trigger_from_enrichment_completion
+    if should_rewrite_stopped_insufficient_articles:
+        t.should_rewrite_stopped_insufficient_articles += should_rewrite_stopped_insufficient_articles
+    if should_rewrite_stopped_uneven_sections:
+        t.should_rewrite_stopped_uneven_sections += should_rewrite_stopped_uneven_sections
+    if should_rewrite_stopped_recent_analysis:
+        t.should_rewrite_stopped_recent_analysis += should_rewrite_stopped_recent_analysis
+    if should_rewrite_stopped_llm_failure:
+        t.should_rewrite_stopped_llm_failure += should_rewrite_stopped_llm_failure
+    if should_rewrite_llm_decided_false:
+        t.should_rewrite_llm_decided_false += should_rewrite_llm_decided_false
+    if should_rewrite_llm_decided_true:
+        t.should_rewrite_llm_decided_true += should_rewrite_llm_decided_true
+    if should_rewrite_completed_with_analysis:
+        t.should_rewrite_completed_with_analysis += should_rewrite_completed_with_analysis
+    if should_rewrite_stopped_analysis_failed:
+        t.should_rewrite_stopped_analysis_failed += should_rewrite_stopped_analysis_failed
+    
+    # Phase 4c: Analysis Generation Pipeline Tracking
+    if analysis_rewriter_attempted:
+        t.analysis_rewriter_attempted += analysis_rewriter_attempted
+    if analysis_rewriter_stopped_no_articles:
+        t.analysis_rewriter_stopped_no_articles += analysis_rewriter_stopped_no_articles
+    if analysis_llm_generation_proceeded:
+        t.analysis_llm_generation_proceeded += analysis_llm_generation_proceeded
+    if analysis_llm_generation_stopped_failure:
+        t.analysis_llm_generation_stopped_failure += analysis_llm_generation_stopped_failure
+    if analysis_save_proceeded:
+        t.analysis_save_proceeded += analysis_save_proceeded
+    if analysis_save_stopped_error:
+        t.analysis_save_stopped_error += analysis_save_stopped_error
+    
+    # Phase 5: Maintenance & Quality
+    if topic_replacements_decided:
+        t.topic_replacements_decided += topic_replacements_decided
+    
+    # Phase 6: System Metrics
+    if errors:
+        t.errors += errors
+    if llm_calls_failed:
+        t.llm_calls_failed += llm_calls_failed
+    if llm_simple_calls:
+        t.llm_simple_calls += llm_simple_calls
+    if llm_medium_calls:
+        t.llm_medium_calls += llm_medium_calls
+    if llm_complex_calls:
+        t.llm_complex_calls += llm_complex_calls
+    if llm_simple_long_context_calls:
+        t.llm_simple_long_context_calls += llm_simple_long_context_calls
 
     stats.graph_state = get_graph_state_snapshot()
 
@@ -273,20 +422,63 @@ def master_statistics(
 
 def master_log(
     message: str,
+    # Phase 1: Data Ingestion
     queries: int = 0,
-    articles: int = 0,
+    articles_processed: int = 0,
     articles_added: int = 0,
     articles_removed: int = 0,
-    added_topic: int = 0,
-    removes_topic: int = 0,
+    articles_rejected_no_topics: int = 0,
+    duplicates_skipped: int = 0,
+    
+    # Phase 2: Topic & Relationship Discovery
+    topics_created: int = 0,
+    topics_deleted: int = 0,
     about_links_added: int = 0,
     about_links_removed: int = 0,
     relationships_added: int = 0,
     relationships_removed: int = 0,
-    rewrites_saved: int = 0,
-    rewrites_skipped_0_articles: int = 0,
-    duplicates_skipped: int = 0,
+    
+    # Phase 3: Topic Enrichment
+    enrichment_attempts: int = 0,
+    enrichment_articles_added: int = 0,
+    topics_enriched_successfully: int = 0,
+    
+    # Phase 4: Analysis Generation
+    analysis_sections_written: int = 0,  # Combined: generated + rewritten
+    analysis_sections_skipped_insufficient_articles: int = 0,
+    should_rewrite_true: int = 0,
+    should_rewrite_false: int = 0,
+    
+    # Phase 4b: Should Rewrite Pipeline Tracking
+    should_rewrite_attempted: int = 0,
+    should_rewrite_trigger_from_article_ingestion: int = 0,
+    should_rewrite_trigger_from_enrichment_completion: int = 0,
+    should_rewrite_stopped_insufficient_articles: int = 0,
+    should_rewrite_stopped_uneven_sections: int = 0,
+    should_rewrite_stopped_recent_analysis: int = 0,
+    should_rewrite_stopped_llm_failure: int = 0,
+    should_rewrite_llm_decided_false: int = 0,
+    should_rewrite_llm_decided_true: int = 0,
+    should_rewrite_completed_with_analysis: int = 0,
+    should_rewrite_stopped_analysis_failed: int = 0,
+    
+    # Phase 4c: Analysis Generation Pipeline Tracking
+    analysis_rewriter_attempted: int = 0,
+    analysis_rewriter_stopped_no_articles: int = 0,
+    analysis_llm_generation_proceeded: int = 0,
+    analysis_llm_generation_stopped_failure: int = 0,
+    analysis_save_proceeded: int = 0,
+    analysis_save_stopped_error: int = 0,
+    
+    # Phase 5: Maintenance & Quality
     topic_replacements_decided: int = 0,
+    
+    # Phase 6: System Metrics
+    llm_calls_failed: int = 0,
+    llm_simple_calls: int = 0,
+    llm_medium_calls: int = 0,
+    llm_complex_calls: int = 0,
+    llm_simple_long_context_calls: int = 0,
 ) -> None:
     """Log a completed action (success, removal, etc) to the master daily log and increment stats."""
     timestamp = datetime.now().isoformat(timespec="seconds")
@@ -294,19 +486,47 @@ def master_log(
         f.write(f"{timestamp} | {message}\n")
     master_statistics(
         queries=queries,
-        articles=articles,
+        articles_processed=articles_processed,
         articles_added=articles_added,
         articles_removed=articles_removed,
-        added_topic=added_topic,
-        removes_topic=removes_topic,
+        articles_rejected_no_topics=articles_rejected_no_topics,
+        duplicates_skipped=duplicates_skipped,
+        topics_created=topics_created,
+        topics_deleted=topics_deleted,
         about_links_added=about_links_added,
         about_links_removed=about_links_removed,
         relationships_added=relationships_added,
         relationships_removed=relationships_removed,
-        rewrites_saved=rewrites_saved,
-        rewrites_skipped_0_articles=rewrites_skipped_0_articles,
-        duplicates_skipped=duplicates_skipped,
+        enrichment_attempts=enrichment_attempts,
+        enrichment_articles_added=enrichment_articles_added,
+        topics_enriched_successfully=topics_enriched_successfully,
+        analysis_sections_written=analysis_sections_written,
+        analysis_sections_skipped_insufficient_articles=analysis_sections_skipped_insufficient_articles,
+        should_rewrite_true=should_rewrite_true,
+        should_rewrite_false=should_rewrite_false,
+        should_rewrite_attempted=should_rewrite_attempted,
+        should_rewrite_trigger_from_article_ingestion=should_rewrite_trigger_from_article_ingestion,
+        should_rewrite_trigger_from_enrichment_completion=should_rewrite_trigger_from_enrichment_completion,
+        should_rewrite_stopped_insufficient_articles=should_rewrite_stopped_insufficient_articles,
+        should_rewrite_stopped_uneven_sections=should_rewrite_stopped_uneven_sections,
+        should_rewrite_stopped_recent_analysis=should_rewrite_stopped_recent_analysis,
+        should_rewrite_stopped_llm_failure=should_rewrite_stopped_llm_failure,
+        should_rewrite_llm_decided_false=should_rewrite_llm_decided_false,
+        should_rewrite_llm_decided_true=should_rewrite_llm_decided_true,
+        should_rewrite_completed_with_analysis=should_rewrite_completed_with_analysis,
+        should_rewrite_stopped_analysis_failed=should_rewrite_stopped_analysis_failed,
+        analysis_rewriter_attempted=analysis_rewriter_attempted,
+        analysis_rewriter_stopped_no_articles=analysis_rewriter_stopped_no_articles,
+        analysis_llm_generation_proceeded=analysis_llm_generation_proceeded,
+        analysis_llm_generation_stopped_failure=analysis_llm_generation_stopped_failure,
+        analysis_save_proceeded=analysis_save_proceeded,
+        analysis_save_stopped_error=analysis_save_stopped_error,
         topic_replacements_decided=topic_replacements_decided,
+        llm_calls_failed=llm_calls_failed,
+        llm_simple_calls=llm_simple_calls,
+        llm_medium_calls=llm_medium_calls,
+        llm_complex_calls=llm_complex_calls,
+        llm_simple_long_context_calls=llm_simple_long_context_calls,
     )
 
 
@@ -342,13 +562,13 @@ def problem_log(
         update_stats(topic_rejections=1)
     elif problem == Problem.REWRITE_SKIPPED_0_ARTICLES:
         update_stats(
-            rewrites_skipped_0_articles=1,
-            rewrite_skip_event=cast(dict[str, Any], details),
+            analysis_sections_skipped_insufficient_articles=1,
+            rewrite_skip_event=details.model_dump() if details else None,
         )
     elif problem == Problem.NO_REPLACEMENT_CANDIDATES:
         update_stats(
             no_replacement_candidates=1,
-            no_replacement_event=cast(dict[str, Any], details),
+            no_replacement_event=details.model_dump() if details else None,
         )
     elif problem == Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL:
         if details:

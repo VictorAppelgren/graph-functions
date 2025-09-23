@@ -1,6 +1,5 @@
 from typing import Tuple
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
@@ -69,7 +68,7 @@ def _fetch_existing_section_summaries(
 
 def relevance_gate_llm(
     topic_id: str, section: str, article_text: str
-) -> Tuple[bool, str] | None:
+) -> RelevanceGate:
     """Return (is_relevant, motivation) by comparing candidate vs current section coverage.
 
     Inputs are IDs-only for context lookups (SAGA_V3).
@@ -106,23 +105,20 @@ def relevance_gate_llm(
     )
 
     llm = get_llm(ModelTier.SIMPLE)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    p = PromptTemplate.from_template(
-        relevance_gate_llm_prompt).format(
-            topic_name=topic_name,
-            focus=focus,
-            existing_summaries=existing_block,
-            article_text=article_text,
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT
-        )
+    prompt = PromptTemplate.from_template(relevance_gate_llm_prompt).format(
+        article_text=article_text,
+        topic_name=topic_name,
+        focus=SECTION_FOCUS[section],
+        existing_summaries=existing_block,
+        system_mission=SYSTEM_MISSION,
+        system_context=SYSTEM_CONTEXT
+    )
 
-    r = run_llm_decision(chain=chain, prompt=p, model=RelevanceGate)
-
-    if r.motivation:
-        return r.relevant, r.motivation
-    else:
-        return None
-   
+    result = run_llm_decision(chain=llm, prompt=prompt, model=RelevanceGate)
+    
+    # Track LLM call
+    from src.observability.pipeline_logging import master_statistics
+    master_statistics(llm_simple_calls=1)
+    
+    return result

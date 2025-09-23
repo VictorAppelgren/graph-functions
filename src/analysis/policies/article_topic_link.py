@@ -1,16 +1,14 @@
 import json
 from typing import Any, TypedDict, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
-from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable
 from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
-from __future__ import annotations
 from src.llm.prompts.validate_article_topic_relevance import validate_article_topic_relevance_prompt
-from llm.sanitizer import run_llm_decision, ValidateRelevance
+from src.llm.sanitizer import run_llm_decision, ValidateRelevance
 
 logger = get_logger(__name__)
 
@@ -72,19 +70,14 @@ def validate_article_topic_relevance(
     )
 
     llm = get_llm(ModelTier.MEDIUM)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    p = PromptTemplate.from_template(
-        validate_article_topic_relevance_prompt
-        ).format(
-            article=article, 
-            topic_name=topic_name, 
-            topic_id=topic_id, 
-            summary=summary, 
-            title=title)
+    prompt = PromptTemplate.from_template(validate_article_topic_relevance_prompt).format(
+        topic_name=topic_name, 
+        summary=summary, 
+        title=title
+    )
 
-    r = run_llm_decision(chain=chain, prompt=p, model=ValidateRelevance)
+    r = run_llm_decision(chain=llm, prompt=prompt, model=ValidateRelevance)
 
     if r.motivation:
         return r.should_link, r.motivation

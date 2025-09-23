@@ -11,7 +11,7 @@ from typing import List, Tuple
 
 from utils import app_logging
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("analysis.material.article_material")
 
 from src.analysis.selectors.best_articles import select_best_articles
 from src.articles.load_article import load_article
@@ -19,101 +19,34 @@ from src.observability.pipeline_logging import problem_log, Problem, ProblemDeta
 
 
 def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[str]]:
-    """
-    Build the formatted SOURCE MATERIAL string and the ordered list of article IDs used.
-
-    Strategy (fail-fast, minimal):
-    - Use select_best_articles(topic_id, section) ONLY. If none, raise.
-    - For each article id, load cold-storage JSON and use existing summary (argos_summary/summary) only.
-    - Compose an entry per article with prominent ID for in-text citations.
-
-    Returns:
-      material_str: The fully formatted material string (may be very long; never truncated here).
-      article_ids: Ordered list of IDs included.
-    """
-    # 1) Select candidate articles (no fallbacks)
-    selected = select_best_articles(topic_id, section)
-    if not selected:
-        p = ProblemDetailsModel()
-        p.section = section
-        problem_log(Problem.REWRITE_SKIPPED_0_ARTICLES, topic=topic_id, details=p)
-        raise ValueError(
-            f"No articles selected for topic_id={topic_id} section={section}"
-        )
-
-    lines: List[str] = []
-    article_ids: List[str] = []
-
-    for meta in selected:
-        aid = meta["id"]
-
-        article_ids.append(aid)
-        loaded = load_article(aid)  # TODO
-
-        if loaded:
-
-            p = ProblemDetailsModel()
-            if "title" not in loaded:
-                p.missing.append("title")
-            if "pubDate" not in loaded:
-                p.missing.append("pubDate")
-            if "argos_summary" not in loaded:
-                p.missing.append("argos_summary")
-            if p.missing:
-                problem_log(
-                    Problem.MISSING_REQ_FIELDS_FOR_ANALYSIS_MATERIAL,
-                    topic=topic_id,
-                    details=p,
-                )
-
-            title = loaded["title"]
-            published = loaded["pubDate"]
-            summary = loaded["argos_summary"]
-
-            # Compose minimal entry
-            lines.append("===== ARTICLE START =====")
-            lines.append(f"Title: {title}")
-            lines.append(f"Published: {published}")
-            if "source" in loaded:
-                lines.append(f"Source: {loaded['source']}")
-            lines.append("Summary:")
-            lines.append(str(summary))
-            lines.append("===== ARTICLE END =====\n")
-
-    if not lines:
-        p = ProblemDetailsModel()
-        p.section = section
-        problem_log(
-            Problem.REWRITE_SKIPPED_0_ARTICLES_SUMMARY_ONLY, topic=topic_id, details=p
-        )
-        raise ValueError(
-            f"No article summaries available for topic_id={topic_id} section={section}"
-        )
-
-    material = "\n".join(lines).strip()
-    logger.info(
-        f"build_material_for_section | topic_id={topic_id} section={section} articles={len(article_ids)} chars={len(material)}"
-    )
-    return material, article_ids
+    """DEPRECATED: Use build_material_for_synthesis_section() instead"""
+    logger.warning(f"DEPRECATED: build_material_for_section() called for {topic_id}/{section} - redirecting to new function")
+    return build_material_for_synthesis_section(topic_id, section)
 
 
 def build_material_for_synthesis_section(
     topic_id: str, section: str
 ) -> Tuple[str, List[str]]:
     """
-    Build material for synthesis sections using BOTH existing analysis AND all articles.
-    Perfect formatting for research-grade synthesis.
-
+    Build material for analysis sections with smart article selection:
+    - Timeframe sections (fundamental/medium/current): 10 articles from that timeframe
+    - Synthesis sections (drivers/movers_scenarios/swing_trade_or_outlook/executive_summary): 5 articles each from fundamental/medium/current
+    
     Returns:
-        material_str: Formatted material with analysis sections + all articles
+        material_str: Formatted material with analysis sections + articles
         article_ids: List of article IDs used
     """
     from src.graph.neo4j_client import run_cypher
 
-    # Get existing analysis sections
+    # Section type detection
+    TIMEFRAME_SECTIONS = ["fundamental", "medium", "current"]
+    SYNTHESIS_SECTIONS = ["drivers", "movers_scenarios", "swing_trade_or_outlook", "executive_summary"]
+    
+    # Get existing analysis sections - query ALL sections for complete context
     analysis_query = """
     MATCH (t:Topic {id: $topic_id})
-    RETURN t.fundamental_analysis, t.medium_analysis, t.current_analysis, t.implications
+    RETURN t.fundamental_analysis, t.medium_analysis, t.current_analysis,
+           t.drivers, t.executive_summary, t.movers_scenarios, t.swing_trade_or_outlook
     """
     analysis_result = run_cypher(analysis_query, {"topic_id": topic_id})
 
@@ -124,14 +57,17 @@ def build_material_for_synthesis_section(
         analysis_data = analysis_result[0]
 
         material_parts.append("=" * 80)
-        material_parts.append("EXISTING ANALYSIS SECTIONS")
+        material_parts.append("SUPPORTING CONTEXT (Drivers/Correlations)")
         material_parts.append("=" * 80)
 
         for field, label in [
             ("fundamental_analysis", "FUNDAMENTAL ANALYSIS (Multi-year Structural)"),
             ("medium_analysis", "MEDIUM-TERM ANALYSIS (3-6 months)"),
             ("current_analysis", "CURRENT ANALYSIS (0-3 weeks)"),
-            ("implications", "IMPLICATIONS"),
+            ("drivers", "DRIVERS (Cross-topic Influences)"),
+            ("executive_summary", "EXECUTIVE SUMMARY"),
+            ("movers_scenarios", "MOVERS & SCENARIOS"),
+            ("swing_trade_or_outlook", "SWING TRADE / OUTLOOK"),
         ]:
             analysis_content = analysis_data.get(field)
             if analysis_content:
@@ -139,68 +75,120 @@ def build_material_for_synthesis_section(
                 material_parts.append(str(analysis_content))
                 material_parts.append("")
 
-    # Get ALL article IDs for this topic from graph
-    articles_query = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-    WHERE coalesce(a.priority, '') <> 'hidden'
-    RETURN a.id as article_id, a.pubDate as published_at
-    ORDER BY a.pubDate DESC
-    """
-    articles_result = run_cypher(articles_query, {"topic_id": topic_id})
+    # Smart article selection based on section type
+    if section in TIMEFRAME_SECTIONS:
+        # Timeframe sections: 10 articles from specific timeframe
+        articles_query = """
+        MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
+        WHERE coalesce(a.temporal_horizon, '') = $section AND coalesce(a.priority, '') <> 'hidden'
+        WITH a, 
+             CASE 
+               WHEN a.importance = 'hidden' THEN 0
+               WHEN a.importance IS NULL THEN 1
+               ELSE toInteger(a.importance)
+             END as numeric_importance
+        RETURN a.id as article_id, a.pubDate as published_at, numeric_importance, coalesce(a.temporal_horizon, 'unknown') as temporal_horizon
+        ORDER BY numeric_importance DESC, a.pubDate DESC
+        LIMIT 10
+        """
+        articles_result = run_cypher(articles_query, {"topic_id": topic_id, "section": section})
+    else:
+        # Synthesis sections: 5 articles each from fundamental/medium/current
+        all_articles = []
+        for timeframe in ["fundamental", "medium", "current"]:
+            timeframe_query = """
+            MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
+            WHERE coalesce(a.temporal_horizon, '') = $timeframe AND coalesce(a.priority, '') <> 'hidden'
+            WITH a, 
+                 CASE 
+                   WHEN a.importance = 'hidden' THEN 0
+                   WHEN a.importance IS NULL THEN 1
+                   ELSE toInteger(a.importance)
+                 END as numeric_importance
+            RETURN a.id as article_id, a.pubDate as published_at, numeric_importance, coalesce(a.temporal_horizon, 'unknown') as temporal_horizon
+            ORDER BY numeric_importance DESC, a.pubDate DESC
+            LIMIT 5
+            """
+            timeframe_result = run_cypher(timeframe_query, {"topic_id": topic_id, "timeframe": timeframe})
+            all_articles.extend(timeframe_result or [])
+        articles_result = all_articles
 
     if not articles_result:
         raise ValueError(f"No articles found for topic_id={topic_id}")
 
     article_ids = [row["article_id"] for row in articles_result]
 
-    # Add articles section
+    # Add primary asset articles section
     material_parts.append("=" * 80)
+    material_parts.append(f"PRIMARY ASSET ANALYSIS")
     material_parts.append("SOURCE ARTICLES")
     material_parts.append("=" * 80)
 
+    # Load and format each article
+    section_counts = {}
     for i, row in enumerate(articles_result, 1):
         article_id = row["article_id"]
-
+        horizon = row.get("temporal_horizon") or "unknown"
+        section_counts[horizon] = section_counts.get(horizon, 0) + 1
+        
         try:
-            # Load article using the canonical utility
             loaded = load_article(article_id)
-
-            if loaded:
-
-                # Strict requirements for synthesis
-                if (
-                    "title" not in loaded
-                    or "argos_summary" not in loaded
-                    or "pubDate" not in loaded
-                ):
-                    logger.warning(
-                        f"Skipping article {article_id}: missing required fields"
-                    )
-                    continue
-
-                title = loaded["title"]
-                published = loaded["pubDate"]
-                argos_summary = loaded["argos_summary"]
-
-                # Perfect formatting for synthesis
-                material_parts.append(f"\n--- ARTICLE {i}: {article_id} ---")
-                material_parts.append(f"Title: {title}")
-                material_parts.append(f"Published: {published}")
-                if "source" in loaded:
-                    material_parts.append(f"Source: {loaded['source']}")
-                material_parts.append("Summary:")
-                material_parts.append(str(argos_summary))
-                material_parts.append("")
-
+            if not loaded or "argos_summary" not in loaded:
+                raise ValueError(f"Article {article_id} missing argos_summary")
+            
+            material_parts.append(f"--- ARTICLE {i}: {article_id} ({horizon}) ---")
+            material_parts.append(loaded["argos_summary"])
+            material_parts.append("")
         except Exception as e:
             logger.warning(f"Failed to load article {article_id}: {e}")
-            continue
+            # Remove failed article from the list
+            if article_id in article_ids:
+                article_ids.remove(article_id)
+    
+    # Clear visual separation for each section
+    logger.info("=" * 80)
+    logger.info(f"🎯 STARTING {section.upper()} SECTION | topic_id={topic_id}")
+    logger.info("=" * 80)
+    
+    # Log article breakdown
+    for timeframe in ["fundamental", "medium", "current", "unknown"]:
+        if timeframe in section_counts:
+            logger.info(f"  {timeframe}: {section_counts[timeframe]} articles")
 
     material = "\n".join(material_parts).strip()
+    
+    # Limit material size to prevent LLM token overflow (roughly 100K chars = ~25K tokens)
+    # This leaves room for system prompts, analysis sections, and response generation
+    MAX_MATERIAL_SIZE = 100_000
+    if len(material) > MAX_MATERIAL_SIZE:
+        logger.warning(
+            f"Material too large ({len(material)} chars), truncating to {MAX_MATERIAL_SIZE} chars"
+        )
+        material = material[:MAX_MATERIAL_SIZE] + "\n\n[MATERIAL TRUNCATED DUE TO SIZE LIMIT]"
 
-    logger.info(
-        f"build_material_for_synthesis_section | topic_id={topic_id} section={section} | "
-        f"articles={len(article_ids)} chars={len(material)}"
-    )
+    # Continue with analysis section logging
+    
+    # Log existing analysis sections that are included in synthesis
+    included_sections = []
+    if analysis_result and analysis_result[0]:
+        analysis_data = analysis_result[0]
+        for field, label in [
+            ("fundamental_analysis", "fundamental analysis"),
+            ("medium_analysis", "medium analysis"), 
+            ("current_analysis", "current analysis"),
+            ("drivers", "drivers"),
+            ("movers_scenarios", "movers scenarios"),
+            ("swing_trade_or_outlook", "swing trade/outlook"),
+            ("executive_summary", "executive summary")
+        ]:
+            if analysis_data.get(field):
+                included_sections.append(label)
+    
+    if included_sections:
+        logger.info(f"  analysis sections: {', '.join(included_sections)}")
+    else:
+        logger.info(f"  analysis sections: none")
+    
+    logger.info(f"  total: {len(article_ids)} articles | {len(material)} chars")
 
     return material, article_ids

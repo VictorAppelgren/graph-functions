@@ -1,12 +1,11 @@
 """
 LLM-driven wide query generation for a new topic.
 """
-
+from __future__ import annotations
 import logging
 import json
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from utils.app_logging import truncate_str
@@ -14,7 +13,6 @@ from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, cast
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.runnables import Runnable
-from __future__ import annotations
 from src.llm.sanitizer import run_llm_decision, WideQueryModel
 
 logger = app_logging.get_logger(__name__)
@@ -70,7 +68,6 @@ def create_wide_query(article_text: str) -> dict[str, Any]:
     logger.info("Generating wide query from article text for topic")
 
     llm = get_llm(ModelTier.MEDIUM)
-    parser = JsonOutputParser()
 
     prompt_template = """
 {system_mission}
@@ -93,9 +90,7 @@ YOUR RESPONSE IN JSON:
     logger.debug("PromptTemplate: %s", truncate_str(prompt_template, 100))
     prompt = PromptTemplate.from_template(prompt_template).format()
 
-    chain = llm | parser
-
-    r = run_llm_decision(chain=chain, prompt=prompt, model=WideQueryModel, logger=logger)
+    r = run_llm_decision(chain=llm, prompt=prompt, model=WideQueryModel, logger=logger)
 
     # If you prefer to return the model, change return type to WideQuery
     return r.model_dump()

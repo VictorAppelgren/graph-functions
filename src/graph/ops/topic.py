@@ -1,6 +1,6 @@
 from src.graph.neo4j_client import connect_graph_db
 
-from typing import Any
+from typing import Any, TYPE_CHECKING
 from datetime import datetime, timezone
 
 from src.graph.neo4j_client import run_cypher
@@ -10,10 +10,12 @@ from events.classifier import EventClassifier, EventType
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.observability.pipeline_logging import problem_log, Problem, master_log, ProblemDetailsModel
-from src.analysis.policies.topic_proposal import propose_topic, TopicProposal
 from src.graph.policies.topic import classify_topic_category, classify_topic_importance, check_topic_relevance
 from src.analysis.policies.query_generator import create_wide_query
 from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
+
+if TYPE_CHECKING:
+    from src.analysis.policies.topic_proposal import TopicProposal
 
 logger = app_logging.get_logger(__name__)
 
@@ -24,6 +26,9 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
     Returns the created topic as a dict.
     """
 
+    # Initialize variables to prevent UnboundLocalError
+    p = None
+    
     # Minimal event tracking
     tracker = EventClassifier(EventType.ADD_TOPIC)
     tracker.put_many(source_article_id=article_id, suggested_names=suggested_names)
@@ -40,8 +45,12 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             f"Sample article_text: {article_text[:400]}{'...' if len(article_text) > 400 else ''}"
         )
 
-        # Propose new topic topic using formatted text
-        topic_proposal = propose_topic(article_text, suggested_names)
+        # Propose new topic using formatted text (lazy import to avoid circulars)
+        from src.analysis.policies.topic_proposal import propose_topic
+
+        existing_topics = get_all_topics(fields=["id", "name", "importance", "last_updated"])
+
+        topic_proposal = propose_topic(article_text, suggested_names, existing_topics=existing_topics)
         if not topic_proposal:
             # Unified rejection: treat as gating fail, but with special details
             p = ProblemDetailsModel(category=None, failure_category="proposal_null")
@@ -266,7 +275,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
 
         master_log(
             f"Topic added | name={topic_proposal.name} | category={category} | importance={topic_proposal.importance}",
-            added_topic=1,
+            topics_created=1,
         )
         return created_topic
     
@@ -420,10 +429,12 @@ def get_topic_analysis_field(topic_id: str, field: str) -> Any:
     Returns the string value or an empty string if not found.
     """
     q = f"""
-    MATCH (n:AssetTopic {{id:$id}})
+    MATCH (n:Topic {{id:$id}})
     RETURN n.{field} AS analysis
     """
     rows: list[Neo4jRecord] = run_cypher(q, {"id": topic_id}) or []
+    if not rows:
+        return None
     return rows[0]["analysis"]
 
 
@@ -512,7 +523,7 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     }
 
 
-def create_topic(topic_proposal: TopicProposal) -> dict[str, str]:
+def create_topic(topic_proposal: "TopicProposal") -> dict[str, str]:
     """
     Create a Topic in the Neo4j graph with the provided properties.
     If a topic with the same ID already exists, it will NOT be overwritten.

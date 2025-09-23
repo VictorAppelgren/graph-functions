@@ -31,7 +31,7 @@ def save_analysis(topic_id: str, field: str, text: str) -> None:
     # Update
     update_query = f"""
         MATCH (t:Topic {{id: $topic_id}})
-        SET t.{field} = $text, t.last_updated = datetime()
+        SET t.{field} = $text, t.last_updated = datetime(), t.last_analyzed = datetime()
     """
     params = {"topic_id": topic_id, "text": text}
     run_cypher(update_query, params)
@@ -44,5 +44,5 @@ def save_analysis(topic_id: str, field: str, text: str) -> None:
 
     master_log(
         f'Saved analysis | {topic_id} | field "{field}" len={len(str(text))}',
-        rewrites_saved=1,
+        analysis_sections_written=1,
     )

@@ -8,7 +8,7 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from utils.app_logging import truncate_str
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.llm.prompts.summarize_article import summarize_article_prompt
 from src.llm.sanitizer import run_llm_decision, Summary

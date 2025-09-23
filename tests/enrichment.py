@@ -31,7 +31,8 @@ def test_keywords() -> bool:
     logger.info(
         f"Testing keyword generation for topic='{topic_name}' section='{section}'"
     )
-    keywords = generate_keywords(topic_name, section)
+    keywords_result = generate_keywords(topic_name, section)
+    keywords = keywords_result.list
 
     if keywords:
         logger.info(f"✅ Generated {len(keywords)} keywords: {keywords[:5]}...")
@@ -111,7 +112,8 @@ def test_enrichment_full_pipeline() -> bool:
 
     # Step 1: Generate keywords
     logger.info("Step 1: Generating keywords...")
-    keywords = generate_keywords(topic_name, "current")
+    keywords_result = generate_keywords(topic_name, "current")
+    keywords = keywords_result.list
     if not keywords:
         logger.error("❌ Step 1 failed: No keywords generated")
         return False

@@ -6,7 +6,6 @@ Returns a dict with 'motivation' and 'id_to_replace'.
 from typing import Optional, Any
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from langchain_core.output_parsers import JsonOutputParser
 from utils import app_logging
 from utils.app_logging import truncate_str
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
@@ -47,23 +46,17 @@ def does_article_replace_old_llm(
     )
 
     llm = get_llm(ModelTier.SIMPLE)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    p = PromptTemplate.from_template(
-        article_evaluator_prompt).format(
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT,
-            decision_instruction=decision_instruction,
-            new_article_summary=new_article_summary,
-            summaries=summaries,
-            allowed_ids_str=allowed_ids_str,
-            context_block=context_block
-        )
+    prompt = PromptTemplate.from_template(article_evaluator_prompt).format(
+        article_text=new_article_summary,
+        allowed_ids=allowed_ids_str,
+        system_mission=SYSTEM_MISSION,
+        system_context=SYSTEM_CONTEXT
+    )
     
-    logger.debug("Prompt: %s", truncate_str(str(p), 120))
+    logger.debug("Prompt: %s", truncate_str(str(prompt), 120))
 
-    r = run_llm_decision(chain=chain, prompt=p, model=Decision)
+    r = run_llm_decision(chain=llm, prompt=prompt, model=Decision)
 
     if r.tool:
         return r

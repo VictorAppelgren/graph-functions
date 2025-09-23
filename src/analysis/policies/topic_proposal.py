@@ -5,11 +5,9 @@ LLM-driven proposal for new Topic node based on article content.
 import json
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from utils import app_logging
 from src.graph.config import MAX_TOPICS, describe_interest_areas
-from src.graph.ops.topic import get_all_topics
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from typing import Any, Sequence
 from pydantic import BaseModel, ConfigDict
@@ -43,7 +41,8 @@ def _coerce_json_object(raw: Any) -> dict[str, Any]:
 
 def propose_topic(
     article: str,
-    suggested_names: Sequence[str] | None = None, 
+    suggested_names: Sequence[str] | None = None,
+    existing_topics: list[dict[str, Any]] | None = None,
 ) -> TopicProposal | None:
     """
     Uses an LLM to propose a new Topic node for the graph based on the article.
@@ -51,17 +50,10 @@ def propose_topic(
     """
     logger.info("Calling LLM to propose new Topic node based on article.")
     llm = get_llm(ModelTier.MEDIUM)
-    parser = JsonOutputParser()
 
     # compute context...
     scope_text = describe_interest_areas()
-    try:
-        existing_topics = get_all_topics(
-            fields=["id", "name", "importance", "last_updated"]
-        )
-    except Exception as e:
-        logger.warning("Failed to load existing topics for capacity context: %s", e)
-        existing_topics = []
+    existing_topics = existing_topics or []
 
     current_count = len(existing_topics)
     max_topics = MAX_TOPICS
@@ -103,9 +95,7 @@ def propose_topic(
             weakest_examples=weakest_examples
         )
 
-    chain = llm | parser
-
-    r = run_llm_decision(chain=chain, prompt=p, model=ProposeTopic)
+    r = run_llm_decision(chain=llm, prompt=p, model=ProposeTopic)
 
     if r.id and r.model_config and r.motivation and r.name:
         

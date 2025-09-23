@@ -6,17 +6,22 @@ llm_select_one_new_link_prompt = """
 
     TASK:
     - Given the source topic, candidate topics, and existing links, propose the single strongest missing link.
-    - Output a JSON object with:
-        - 'motivation' (required, first field): Short, research-grade, actionable reasoning (1-2 sentences max) justifying why this link should be created. Motivation must be defensible to a top-tier financial analyst and maximally useful for graph analytics and LLM reasoning.
-        - All other required fields (type, source, target, etc.).
-    - ONLY INCLUDE THE MOTIVATION FIELD FIRST, THEN ALL REQUIRED FIELDS. NO ADDITIONAL TEXT. STRICT JSON FORMAT. Output null if no link should be created.
+    - If NO strong link exists, output: {{"motivation": "", "type": "", "source": "", "target": ""}}
+    - If a strong link exists, output a complete JSON object with all required fields.
 
-    EXAMPLE OUTPUT:
-    {{"motivation": "This link connects two highly correlated macro drivers not yet linked in the graph.", "type": "INFLUENCES", "source": "eurusd", "target": "ecb_policy"}}
+    CRITICAL REQUIREMENTS:
+    - ALWAYS output valid JSON, even if empty
+    - NEVER output null, undefined, or non-JSON responses
+    - ALL four fields are REQUIRED: "motivation", "type", "source", "target"
+    - Use empty strings ("") if no link should be created
+
+    EXAMPLE OUTPUTS:
+    Strong link: {{"motivation": "ECB policy directly influences EUR/USD exchange rate through interest rate differentials.", "type": "INFLUENCES", "source": "ecb_policy", "target": "eurusd"}}
+    No link: {{"motivation": "", "type": "", "source": "", "target": ""}}
 
     LINK TYPES:
     - INFLUENCES: A → B means A is a major driver or cause of B. Directional.
-    - PEERS: A ↔ B means A and B are direct competitors, alternatives, or fulfill the same role in a market or system. Bi-directional, “true peer” only.
+    - PEERS: A ↔ B means A and B are direct competitors, alternatives, or fulfill the same role in a market or system. Bi-directional, "true peer" only.
     - COMPONENT_OF: A is a component of B. Directional.
     - CORRELATES_WITH: A and B are correlated. Bi-directional. Moves together to some large degree.  
 
@@ -29,10 +34,5 @@ llm_select_one_new_link_prompt = """
     CURRENT LINKS:
     {existing_links}
 
-    STRICT OUTPUT FORMAT:
-    - Output exactly ONE JSON object with these REQUIRED keys only: "motivation", "type", "source", "target".
-    - All four fields are REQUIRED and MUST be non-empty strings.
-    - Do NOT include any other keys. Do NOT include any text before or after the JSON.
-
-    YOUR RESPONSE IN JSON:
+    RESPOND WITH VALID JSON ONLY - NO OTHER TEXT:
     """

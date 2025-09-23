@@ -18,7 +18,7 @@ logger = app_logging.get_logger(__name__)
 
 
 def should_rewrite(
-    topic_id: str, new_article_id: str, test: bool = False
+    topic_id: str, new_article_id: str, test: bool = False, triggered_by: str = "article"
 ) -> RewriteInfo:
     """
     Orchestrator: builds analysis+article text, LLM judge, targeted rewrite by temporal_horizon section.
@@ -26,41 +26,54 @@ def should_rewrite(
     """
     logger.info(f"Starting should_rewrite for topic_id={topic_id}")
 
+    # Track entry and trigger source
+    if triggered_by == "enrichment":
+        master_statistics(
+            should_rewrite_attempted=1,
+            should_rewrite_trigger_from_enrichment_completion=1
+        )
+    else:
+        master_statistics(
+            should_rewrite_attempted=1,
+            should_rewrite_trigger_from_article_ingestion=1
+        )
+
     topic_cypher = """
     MATCH (t:Topic {id: $topic_id})
-    RETURN t.fundamental_analysis as fundamental_analysis, t.medium_analysis as medium_analysis, t.current_analysis as current_analysis, t.implications as implications
+    RETURN t.name as name, t.fundamental_analysis as fundamental_analysis, t.medium_analysis as medium_analysis, t.current_analysis as current_analysis
     """
     topic = run_cypher(topic_cypher, {"topic_id": topic_id})
     if not topic:
         logger.warning(f"Topic {topic_id} not found for should_rewrite.")
+        master_statistics(should_rewrite_stopped_insufficient_articles=1)  # Using this for "topic not found" case
         return {
             "should_rewrite": False,
             "motivation": "Topic not found",
             "section": None,
         }
 
+    topic_name = topic[0].get("name", topic_id)  # Fallback to topic_id if no name
     analysis_fields = {
         k: topic[0][k]
         for k in [
             "fundamental_analysis",
             "medium_analysis",
             "current_analysis",
-            "implications",
         ]
+        if topic[0][k]
     }
 
     # Format analysis fields
     analysis_text = []
     for section, label in zip(
-        ["fundamental_analysis", "medium_analysis", "current_analysis", "implications"],
+        ["fundamental_analysis", "medium_analysis", "current_analysis"],
         [
             "Fundamental Analysis",
             "Medium-Term Analysis",
             "Current Analysis",
-            "Implications",
         ],
     ):
-        val = analysis_fields[section]
+        val = analysis_fields.get(section)  # Use .get() to handle missing keys
         analysis_text.append(f"{label}:\n{val}" if val else f"{label}: Not available")
     analysis_text_str = "\n\n".join(analysis_text)
 
@@ -88,7 +101,8 @@ def should_rewrite(
         logger.warning(
             f"Article {new_article_id} missing temporal_horizon. Inferring and backfilling."
         )
-        mot, inferred_tf = find_time_frame(summary)
+        time_frame_result = find_time_frame(summary)
+        inferred_tf = time_frame_result.horizon
         run_cypher(
             "MATCH (a:Article {id:$id}) SET a.temporal_horizon = $tf",
             {"id": new_article_id, "tf": inferred_tf},
@@ -99,21 +113,43 @@ def should_rewrite(
         tf_section = inferred_tf
 
     # LLM decision (tuple: (bool, str))
-    should_rewrite_flag, motivation = should_rewrite_llm(
-        analysis_text_str, summary, test=test
-    )
+    try:
+        should_rewrite_flag, motivation = should_rewrite_llm(
+            analysis_text_str, summary, topic_name, test=test
+        )
 
-    if should_rewrite_flag is True:
-        master_log(
-            f"Will rewrite section {tf_section} because response was: True | topic={topic_id} | article={new_article_id}"
-        )
-        master_statistics(should_rewrite_true=1)
-        analysis_rewriter(topic_id, test=test, analysis_type=tf_section)
-    else:
-        master_log(
-            f"No rewrite of section {tf_section} because response was: False | topic={topic_id} | article={new_article_id}"
-        )
-        master_statistics(should_rewrite_false=1)
+        if should_rewrite_flag is True:
+            master_log(
+                f"Will rewrite section {tf_section} because response was: True | topic={topic_id} | article={new_article_id}"
+            )
+            master_statistics(
+                should_rewrite_true=1,
+                should_rewrite_llm_decided_true=1
+            )
+            
+            # Try analysis generation
+            try:
+                analysis_rewriter(topic_id, test=test, analysis_type=tf_section)
+                master_statistics(should_rewrite_completed_with_analysis=1)
+            except Exception as e:
+                logger.error(f"Analysis rewriter failed for {topic_id}: {e}")
+                master_statistics(should_rewrite_stopped_analysis_failed=1)
+        else:
+            master_log(
+                f"No rewrite of section {tf_section} because response was: False | topic={topic_id} | article={new_article_id}"
+            )
+            master_statistics(
+                should_rewrite_false=1,
+                should_rewrite_llm_decided_false=1
+            )
+    except Exception as e:
+        logger.error(f"Should rewrite LLM call failed for {topic_id}: {e}")
+        master_statistics(should_rewrite_stopped_llm_failure=1)
+        return {
+            "should_rewrite": False,
+            "motivation": f"LLM call failed: {str(e)}",
+            "section": tf_section,
+        }
 
     # Always run cross-section check
     if not test:

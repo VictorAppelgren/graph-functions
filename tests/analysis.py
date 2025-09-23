@@ -24,34 +24,53 @@ def test_should_rewrite() -> bool:
     """Test the should_rewrite trigger function"""
     logger.info("=== TESTING ANALYSIS TRIGGER (should_rewrite) ===")
 
-    # Get a topic with articles
+    # Get EURUSD topic with recent articles that actually exist in file system
     query = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic)
+    MATCH (a:Article)-[:ABOUT]->(t:Topic {name: 'EURUSD'})
     WHERE coalesce(a.priority, '') <> 'hidden'
+    AND a.published_at >= '2025-09-19'
     RETURN t.id as topic_id, t.name as topic_name, a.id as article_id
-    LIMIT 1
+    ORDER BY a.published_at DESC
+    LIMIT 5
     """
 
     results = run_cypher(query)
     if not results:
-        logger.error("❌ No topics with articles found for testing")
-        return False
+        logger.warning("❌ No recent EURUSD articles found, trying any recent topic with articles")
+        # Fallback to any recent topic
+        fallback_query = """
+        MATCH (a:Article)-[:ABOUT]->(t:Topic)
+        WHERE coalesce(a.priority, '') <> 'hidden'
+        AND a.published_at >= '2025-09-19'
+        RETURN t.id as topic_id, t.name as topic_name, a.id as article_id
+        ORDER BY a.published_at DESC
+        LIMIT 5
+        """
+        results = run_cypher(fallback_query)
+        if not results:
+            logger.error("❌ No recent articles found for testing")
+            return False
 
-    topic_id = results[0]["topic_id"]
-    topic_name = results[0]["topic_name"]
-    article_id = results[0]["article_id"]
+    # Try each article until we find one that exists in the file system
+    for result in results:
+        topic_id = result["topic_id"]
+        topic_name = result["topic_name"]
+        article_id = result["article_id"]
 
-    logger.info(
-        f"Testing should_rewrite for topic='{topic_name}' ({topic_id}) with article={article_id}"
-    )
+        logger.info(
+            f"Testing should_rewrite for topic='{topic_name}' ({topic_id}) with article={article_id}"
+        )
 
-    try:
-        should_rewrite(topic_id, article_id)
-        logger.info(f"✅ should_rewrite completed for {topic_id}")
-        return True
-    except Exception as e:
-        logger.error(f"❌ should_rewrite failed: {e}")
-        return False
+        try:
+            result = should_rewrite(topic_id, article_id, triggered_by="test")
+            logger.info(f"✅ should_rewrite completed for {topic_id}: {result}")
+            return True
+        except Exception as e:
+            logger.warning(f"⚠️ Article {article_id} failed: {e}")
+            continue  # Try next article
+    
+    logger.error("❌ All articles failed - no working articles found")
+    return False
 
 
 def test_analysis_direct() -> bool:
@@ -63,17 +82,19 @@ def test_analysis_direct() -> bool:
         logger.error("❌ No topics found in the graph!")
         return False
 
-    # Filter for specific asset if set
+    # Try to use EURUSD first, then fallback to any topic
     ASSET = "EURUSD"
-    if ASSET:
-        topics = [topic for topic in topics if topic.get("name") == ASSET]
-        if not topics:
-            logger.warning(f"Asset '{ASSET}' not found, using random topic")
-            topics = get_all_topics()
-
-    topic = random.choice(topics)
-    topic_id = cast(str, topic.get("id"))
-    topic_name = topic.get("name", topic_id)
+    eurusd_topics = [topic for topic in topics if topic.get("name") == ASSET]
+    
+    if eurusd_topics:
+        topic = eurusd_topics[0]
+        topic_id = cast(str, topic.get("id"))
+        topic_name = topic.get("name", topic_id)
+    else:
+        logger.warning(f"Asset '{ASSET}' not found, using random topic")
+        topic = random.choice(topics)
+        topic_id = cast(str, topic.get("id"))
+        topic_name = topic.get("name", topic_id)
 
     logger.info(f"Testing direct analysis for: {topic_name} ({topic_id})")
 

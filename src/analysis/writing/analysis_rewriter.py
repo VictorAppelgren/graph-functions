@@ -4,21 +4,50 @@ LLM-driven analysis rewriting for a node based on selected articles.
 
 import re
 from utils import app_logging
-
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from langchain_core.output_parsers import StrOutputParser
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.rewrite_analysis_llm import (
+    initial_prompt,
+    critic_prompt,
+    source_checker_prompt,
+    final_prompt,
+)
 from events.classifier import EventClassifier
-from src.llm.prompts.rewrite_analysis_llm import initial_prompt, critic_prompt, source_checker_prompt, final_prompt
-from src.llm.sanitizer import run_llm_decision, Response
-from langchain_core.prompts import PromptTemplate
+from src.llm.sanitizer import run_llm_text_response
 
 logger = app_logging.get_logger(__name__)
 
+def extract_section_name(section_focus: str) -> str:
+    """Extract section name from section_focus string"""
+    if "Multi-year structural" in section_focus:
+        return "FUNDAMENTAL"
+    elif "3-6 months" in section_focus:
+        return "MEDIUM"
+    elif "0-3 weeks" in section_focus:
+        return "CURRENT"
+    elif "Cross-topic synthesis" in section_focus:
+        return "DRIVERS"
+    elif "Forward-looking scenarios" in section_focus:
+        return "MOVERS_SCENARIOS"
+    elif "Actionable trading" in section_focus:
+        return "SWING_TRADE_OR_OUTLOOK"
+    elif "Integrated synthesis" in section_focus:
+        return "EXECUTIVE_SUMMARY"
+    else:
+        return "UNKNOWN"
+
+def parse_material_overview(material: str, section_focus: str) -> str:
+    """Parse material to show clean overview - now handled by material builder logging"""
+    # Count articles in PRIMARY ASSET ANALYSIS section
+    article_matches = re.findall(r'--- ARTICLE \d+:', material)
+    return f"{len(article_matches)} articles loaded"
+
 
 def rewrite_analysis_llm(
-    material: str, section_focus: str, trk: EventClassifier | None = None
+    material: str, section_focus: str, asset_name: str = "", asset_id: str = "", trk: EventClassifier | None = None
 ) -> str:
     """
     Calls the LLM to generate new analysis text for the section, using formatted material and section_focus.
@@ -29,9 +58,10 @@ def rewrite_analysis_llm(
         raise ValueError(
             "Both material and section_focus are required for rewrite_analysis."
         )
-    logger.info(
-        f"rewrite_analysis_start | section_focus={section_focus} | material_len={len(material)} | material_sample={material[:600]}"
-    )
+    # Simple confirmation - detailed logging done by material builder
+    section_name = extract_section_name(section_focus)
+    material_overview = parse_material_overview(material, section_focus)
+    logger.info(f"🚀 STARTING LLM GENERATION | {section_name} | {material_overview}")
     llm = get_llm(ModelTier.COMPLEX)
   
     # Step 1: Initial draft (string output, inline citations and trailing Citations section)
@@ -41,16 +71,19 @@ def rewrite_analysis_llm(
             system_mission=SYSTEM_MISSION,
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
-            material=material
+            material=material,
+            asset_name=asset_name,
+            asset_id=asset_id
         )
 
+    # Use standardized LLM text response handler
     parser = StrOutputParser()
     chain = llm | parser
-
-    r_1 = run_llm_decision(chain=chain, prompt=p, model=Response)
+    
+    r_1 = run_llm_text_response(chain=chain, prompt=p_1)
 
     logger.info(
-        f"rewrite_analysis_initial | length={len(r)} | preview={r[:800]}"
+        f"rewrite_analysis_initial | length={len(r_1.response)} | preview={r_1.response[:800]}"
     )
 
     # Step 2: Critic feedback
@@ -61,13 +94,15 @@ def rewrite_analysis_llm(
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
             material=material,
-            initial=r_1.response
+            initial=r_1.response,
+            asset_name=asset_name,
+            asset_id=asset_id
         )
     
-    r_2 = run_llm_decision(chain=chain, prompt=p_2, model=Response)
+    r_2 = run_llm_text_response(chain=chain, prompt=p_2)
 
     logger.info(
-        f"rewrite_analysis_critic_feedback | length={len(r_1.response)} | preview={r_1.response[:800]}"
+        f"rewrite_analysis_critic_feedback | length={len(r_2.response)} | preview={r_2.response[:800]}"
     )
     # Attach LLM feedback and metadata to tracker if provided
     if trk is not None:
@@ -107,10 +142,12 @@ def rewrite_analysis_llm(
             section_focus=section_focus,
             material=material,
             initial=r_1.response,
-            feedback=r_2.response
+            feedback=r_2.response,
+            asset_name=asset_name,
+            asset_id=asset_id
         )
     
-    r_3 = run_llm_decision(chain.chain, prompt=p_3, model=Response)
+    r_3 = run_llm_text_response(chain=chain, prompt=p_3)
 
     logger.info(
         f"rewrite_analysis_source_checker | length={len(r_3.response)} | preview={r_3.response[:800]}"
@@ -124,10 +161,12 @@ def rewrite_analysis_llm(
             material=material,
             initial=r_1.response,
             feedback=r_2.response,
-            factual_corrections=r_3.response
+            factual_corrections=r_3.response,
+            asset_name=asset_name,
+            asset_id=asset_id
         )
     
-    r_4 = run_llm_decision(chain=chain, prompt=p_4, model=Response)
+    r_4 = run_llm_text_response(chain=chain, prompt=p_4)
 
     logger.info(f"rewrite_analysis_final | length={len(r_4.response)} | preview={r_4.response[:800]}")
     return re.split(r"\n?Citations?:", r_4.response, flags=re.IGNORECASE)[0].rstrip()

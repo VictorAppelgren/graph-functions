@@ -15,10 +15,12 @@ from typing import Dict, List, Any, Optional, Set
 
 # Import local modules
 from . import config
+from paths import get_raw_news_dir
 
 from utils import app_logging
 
-logger = app_logging.get_logger(__name__)
+# Use a short, friendly logger name for cleaner log prefixes
+logger = app_logging.get_logger("raw_storage")
 
 from .argos_id_generator import add_argos_id_to_article
 
@@ -49,10 +51,10 @@ class RawStorageManager:
         """
         logger.info("Initializing RawStorageManager")
 
-        # Set up storage paths
-        self.raw_data_dir = config.RAW_DATA_DIR
+        # Set up storage paths (project-root data/raw_news)
+        self.raw_data_dir = get_raw_news_dir()  # base dir: <project>/data/raw_news
         self.today_str = datetime.now().strftime("%Y-%m-%d")
-        self.today_dir = Path(self.raw_data_dir) / self.today_str
+        self.today_dir = get_raw_news_dir(self.today_str)
 
         # Ensure storage directories exist
         try:

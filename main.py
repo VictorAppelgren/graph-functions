@@ -17,7 +17,7 @@ from typing import Dict, Any
 import time
 import math
 import runpy
-from graph.policies.priority import PRIORITY_POLICY, PriorityLevel
+from src.graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 
 # Import from V1 using absolute imports
 from src.graph.ops.topic import get_all_topics
@@ -27,9 +27,36 @@ from src.observability.pipeline_logging import master_log
 from src.graph.scheduling.query_overdue import query_overdue_seconds
 from src.graph.neo4j_client import run_cypher
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
+from src.analysis.orchestration.should_rewrite import should_rewrite
 
-# Configure logging
 logger = app_logging.get_logger(__name__)
+
+
+def format_time_delta(timestamp_str: str) -> str:
+    """Format time delta from Neo4j datetime string to human readable format."""
+    if not timestamp_str or timestamp_str == "Never":
+        return "Never"
+    
+    try:
+        # Parse Neo4j datetime format
+        dt = datetime.datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
+        now = datetime.datetime.now(datetime.timezone.utc)
+        delta = now - dt
+        
+        total_minutes = int(delta.total_seconds() // 60)
+        
+        if total_minutes < 60:
+            return f"{total_minutes}m ago"
+        elif total_minutes < 1440:  # < 24 hours
+            hours = total_minutes // 60
+            minutes = total_minutes % 60
+            return f"{hours}h {minutes}m ago" if minutes > 0 else f"{hours}h ago"
+        else:  # >= 24 hours
+            days = total_minutes // 1440
+            hours = (total_minutes % 1440) // 60
+            return f"{days}d {hours}h ago" if hours > 0 else f"{days}d ago"
+    except Exception:
+        return "Unknown"
 
 
 def run_pipeline() -> Dict[str, Any]:
@@ -40,7 +67,7 @@ def run_pipeline() -> Dict[str, Any]:
         Dict with statistics about the run
     """
 
-    orchestrator = NewsIngestionOrchestrator(debug=False)
+    orchestrator = NewsIngestionOrchestrator(debug=False, scrape_enabled=False)
 
     # if ASSET is set, run only that topic
     ASSET = ""
@@ -68,6 +95,8 @@ def run_pipeline() -> Dict[str, Any]:
                 "query",
                 "queries",
                 "last_queried",
+                "last_updated",
+                "last_analyzed",
                 "importance",
             ]
         )
@@ -117,6 +146,7 @@ def run_pipeline() -> Dict[str, Any]:
         logger.info(f"Processing type        : {topic_type}")
         logger.info(f"Processing importance  : {topic['importance']}")
         logger.info(f"Processing last_queried: {topic['last_queried']}")
+        logger.info(f"Processing last_analyzed: {format_time_delta(topic.get('last_analyzed', 'Never'))}")
 
         if not math.isfinite(topic_overdue):
             # Missing or invalid last_queried -> treat as first run

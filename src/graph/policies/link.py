@@ -83,7 +83,7 @@ def llm_select_link_to_remove(
 
 def llm_select_one_new_link(
     source_topic: dict, candidate_topics: list[dict], existing_links: list[dict]
-) -> dict:
+) -> SelectOneNewLinkModel | None:
     """
     Use LLM to propose the single strongest missing link.
     Returns: { "type": ..., "source": ..., "target": ..., "motivation": ... } or None

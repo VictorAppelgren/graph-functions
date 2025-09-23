@@ -5,13 +5,6 @@ Loads an article from cold storage by its unique ID.
 import sys
 import os
 
-# Canonical import pattern to ensure absolute imports work everywhere
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
-    PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-
 import json
 from utils.app_logging import get_logger
 from typing import Dict, Any, cast
@@ -34,7 +27,7 @@ def _load_json_object(path: Path) -> dict[str, Any]:
     return cast(dict[str, Any], obj)
 
 
-def load_article(article_id: str, max_days: int = 30) -> Dict[str, str] | None:
+def load_article(article_id: str, max_days: int = 90) -> Dict[str, str] | None:
     """
     Loads a single article from raw news directories by its unique ID.
     Tries today, then yesterday, etc., up to max_days back.
@@ -42,7 +35,7 @@ def load_article(article_id: str, max_days: int = 30) -> Dict[str, str] | None:
 
     Args:
         article_id: Unique article ID
-        max_days: Number of days to look back (default 30)
+        max_days: Number of days to look back (default 90)
     Returns:
         Article data as a dictionary
     Raises:

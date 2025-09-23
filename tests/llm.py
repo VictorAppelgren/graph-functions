@@ -25,9 +25,12 @@ from src.llm.prompts.test_simple_llm import test_simple_llm_prompt
 
 def test_simple_llm() -> None:
     """Test simple LLM with basic classification task."""
+    print("\n" + "=" * 80)
+    print("TEST: SIMPLE LLM")
+    print("=" * 80)
     print("🤖🔍 Testing SIMPLE LLM...")
 
-    prompt = PromptTemplate.from_template(test_simple_llm_prompt).format()
+    prompt = PromptTemplate.from_template(test_simple_llm_prompt).format(text="This is a great day!")
     llm = get_llm(ModelTier.SIMPLE)
     parser = JsonOutputParser()
     chain = llm | parser
@@ -35,13 +38,16 @@ def test_simple_llm() -> None:
     r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
 
     print(f"Simple LLM result: {r.response}")
+    print("-" * 80)
 
 
 def test_medium_llm() -> None:
     """Test medium LLM with summarization task."""
+    print("\n" + "=" * 80)
+    print("TEST: MEDIUM LLM")
+    print("=" * 80)
     print("🤖📊 Testing MEDIUM LLM...")
-
-    prompt = PromptTemplate.from_template(test_medium_llm_prompt).format()
+    prompt = PromptTemplate.from_template(test_medium_llm_prompt).format(text="The Federal Reserve announced a 25 basis point rate cut today, citing concerns about economic growth and inflation targets.")
     llm = get_llm(ModelTier.MEDIUM)
     parser = JsonOutputParser()
     chain = llm | parser
@@ -49,13 +55,16 @@ def test_medium_llm() -> None:
     r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
 
     print(f"Medium LLM result: {r.response}")
+    print("-" * 80)
 
 
 def test_complex_llm() -> None:
     """Test complex LLM with analysis task."""
+    print("\n" + "=" * 80)
+    print("TEST: COMPLEX LLM")
+    print("=" * 80)
     print("🤖🧠 Testing COMPLEX LLM...")
-
-    prompt = PromptTemplate.from_template(test_complex_llm_prompt).format()
+    prompt = PromptTemplate.from_template(test_complex_llm_prompt).format(news="Oil prices surged 5% after OPEC announced surprise production cuts, while the dollar weakened against major currencies.")
     llm = get_llm(ModelTier.COMPLEX)
     parser = JsonOutputParser()
     chain = llm | parser
@@ -63,12 +72,16 @@ def test_complex_llm() -> None:
     r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
 
     print(f"Complex LLM result: {r.response}")
+    print("-" * 80)
 
 
 def test_simple_long_context_llm() -> None:
     """Test simple long context LLM with a basic long-context task."""
+    print("\n" + "=" * 80)
+    print("TEST: SIMPLE LONG CONTEXT LLM")
+    print("=" * 80)
     print("🤖🧩 Testing SIMPLE_LONG_CONTEXT LLM...")
-    prompt = PromptTemplate.from_template(test_simple_long_context_llm_prompt).format()
+    prompt = PromptTemplate.from_template(test_simple_long_context_llm_prompt).format(text="Hello, this is a test sentence for the simple long context LLM.")
     llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
     parser = JsonOutputParser()
     chain = llm | parser
@@ -76,6 +89,7 @@ def test_simple_long_context_llm() -> None:
     r = run_llm_decision(chain=chain, prompt=prompt, model=TestResult)
 
     print(f"Simple Long Context LLM result: {r.response}")
+    print("-" * 80)
 
 
 def run_all_tests() -> None:
@@ -97,4 +111,5 @@ def run_all_tests() -> None:
 
 
 if __name__ == "__main__":
+    print('About to run all LLM tests.')
     run_all_tests()

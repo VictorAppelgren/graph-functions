@@ -3,10 +3,9 @@ LLM-driven categorization of articles in the context of a topic.
 """
 
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import JsonOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from utils.app_logging import get_logger
 from pydantic import BaseModel, Field, ConfigDict, ValidationError
 from typing import cast, Any, Literal
@@ -16,30 +15,23 @@ from src.llm.sanitizer import run_llm_decision, CategoryName, FindCategory
 
 logger = get_logger(__name__)
 
-def find_category(article_text: str) -> tuple[str, CategoryName] | None:
+def find_category(article_text: str) -> FindCategory:
     """
-    Ask the LLM to assign categories to an article and return the first (motivation, name).
+    Ask the LLM to assign categories to an article and return FindCategory object.
 
     Returns:
-        (motivation, name) where both may be None if parsing/validation failed.
+        FindCategory object with motivation and name fields.
     """
+    logger.debug("Finding category | text_length=%d", len(article_text))
+    
     categories = [c.value for c in CategoryName]
-
     llm = get_llm(ModelTier.MEDIUM)
-    parser = JsonOutputParser()
-    chain = llm | parser
 
-    p = PromptTemplate.from_template(
-        find_category_prompt).format(
-            article_text=article_text,
-            categories=categories,
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT
-        )
+    prompt = PromptTemplate.from_template(find_category_prompt).format(
+        article_text=article_text,
+        categories=categories,
+        system_mission=SYSTEM_MISSION,
+        system_context=SYSTEM_CONTEXT
+    )
 
-    r = run_llm_decision(chain=chain, prompt=p, model=FindCategory)
-
-    if r.motivation:
-        return r.motivation, r.name
-    else: 
-        return None
+    return run_llm_decision(chain=llm, prompt=prompt, model=FindCategory)

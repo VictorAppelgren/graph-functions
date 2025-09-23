@@ -56,7 +56,6 @@ def llm_filter_all_interesting_topics(
     Returns a dict: { 'candidate_ids': list[str], 'motivation': str | None }
     """
 
-    logger.debug("Prompt: %s", truncate_str(str(p), 100))
     llm = get_llm(ModelTier.SIMPLE_LONG_CONTEXT)
     all_names = [n["name"] for n in all_topics]
     name = source_topic["name"]
@@ -69,6 +68,8 @@ def llm_filter_all_interesting_topics(
             system_context=SYSTEM_CONTEXT,
             name=name,
             all_names=all_names)
+    
+    logger.debug("Prompt: %s", truncate_str(str(p), 100))
 
     r = run_llm_decision(chain=chain, prompt=p, model=FilterInterestingTopics)
 
