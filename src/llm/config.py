@@ -29,7 +29,7 @@ from utils.app_logging import get_logger
 logger = get_logger(__name__)
 
 # --- Configuration ---
-TOKEN_THRESHOLD = 100  # If working/ using the laptop and minimize load on my system
+TOKEN_THRESHOLD = 2000  # If working/ using the laptop and minimize load on my system
 #TOKEN_THRESHOLD = 20000  # Simple vs Complex routing threshold
 LLM_CALL_TIMEOUT_S = 300.0
 LLM_RETRY_ATTEMPTS = 3
@@ -102,6 +102,23 @@ class RouterDB:
                         INSERT OR IGNORE INTO router_status (key, value) 
                         VALUES ('last_external', 'external_a')
                     """)
+                    # Initialize external server status
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_a_busy', '0')
+                    """)
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_b_busy', '0')
+                    """)
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_a_last_call', datetime('now'))
+                    """)
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_b_last_call', datetime('now'))
+                    """)
                     conn.commit()
                 logger.debug("Router database initialized")
                 return
@@ -153,6 +170,80 @@ class RouterDB:
         except Exception as e:
             logger.warning(f"Failed to update local busy status: {e}")
     
+    def is_external_busy(self, server_id: str) -> bool:
+        """Check if external server is busy."""
+        try:
+            result = self._execute_with_retry(
+                f"SELECT value FROM router_status WHERE key = '{server_id}_busy'", 
+                fetch=True
+            )
+            return result == '1' if result else False
+        except Exception:
+            return False  # Assume not busy if can't check
+
+    def set_external_busy(self, server_id: str, busy: bool):
+        """Set external server busy status."""
+        try:
+            # Update busy status
+            self._execute_with_retry(
+                f"INSERT OR REPLACE INTO router_status (key, value, updated_at) VALUES ('{server_id}_busy', ?, CURRENT_TIMESTAMP)",
+                ('1' if busy else '0',)
+            )
+            # Update last call timestamp if setting to busy
+            if busy:
+                self._execute_with_retry(
+                    f"INSERT OR REPLACE INTO router_status (key, value, updated_at) VALUES ('{server_id}_last_call', datetime('now'), CURRENT_TIMESTAMP)",
+                    ()
+                )
+        except Exception as e:
+            logger.warning(f"Failed to update {server_id} busy status: {e}")
+
+    def get_least_recently_used_external(self) -> str:
+        """Get external server that was called longest ago."""
+        try:
+            # Get last call times for both servers
+            a_time = self._execute_with_retry(
+                "SELECT value FROM router_status WHERE key = 'external_a_last_call'", 
+                fetch=True
+            )
+            b_time = self._execute_with_retry(
+                "SELECT value FROM router_status WHERE key = 'external_b_last_call'", 
+                fetch=True
+            )
+            
+            # If we don't have timestamps, fall back to round-robin
+            if not a_time or not b_time:
+                return self.get_next_external()
+            
+            # Return the one called longest ago (earlier timestamp)
+            return 'external_a' if a_time < b_time else 'external_b'
+            
+        except Exception as e:
+            logger.warning(f"Failed to get least recently used external: {e}")
+            return self.get_next_external()  # Fallback to round-robin
+
+    def get_next_external_smart(self) -> str:
+        """Smart external server selection with busy tracking."""
+        try:
+            # Check if external_a is free
+            if not self.is_external_busy('external_a'):
+                logger.debug("external_a is free, selecting it")
+                return 'external_a'
+            
+            # Check if external_b is free
+            if not self.is_external_busy('external_b'):
+                logger.debug("external_b is free, selecting it")
+                return 'external_b'
+            
+            # Both busy - pick least recently used
+            server = self.get_least_recently_used_external()
+            logger.debug(f"Both external servers busy, selecting least recently used: {server}")
+            return server
+            
+        except Exception as e:
+            logger.warning(f"Smart external selection failed: {e}, falling back to round-robin")
+            return self.get_next_external()  # Fallback to simple round-robin
+
     def get_next_external(self) -> str:
         """Get next external server using round-robin."""
         try:
@@ -187,8 +278,17 @@ def _mark_server_busy(server_id: str):
         finally:
             router_db.set_local_busy(False)
             logger.debug(f"Marked {server_id} as free")
+    elif server_id in ['external_a', 'external_b']:
+        # Track external server busy status
+        try:
+            router_db.set_external_busy(server_id, True)
+            logger.debug(f"Marked {server_id} as busy")
+            yield
+        finally:
+            router_db.set_external_busy(server_id, False)
+            logger.debug(f"Marked {server_id} as free")
     else:
-        # External servers don't need busy tracking (they handle queuing)
+        # Unknown server, just yield without tracking
         yield
 
 
@@ -238,15 +338,15 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
 
 
 def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
-    """Route request to appropriate server based on tier and token count."""
+    """Route request to appropriate server based on tier and token count with smart busy tracking."""
     
     if tier == ModelTier.COMPLEX:
-        # Complex requests always go to external servers
-        server_id = router_db.get_next_external()
-        logger.debug(f"COMPLEX tier → {server_id} (skipped local)")
+        # Complex requests always go to external servers - pick the best available
+        server_id = router_db.get_next_external_smart()
+        logger.debug(f"COMPLEX tier → {server_id} (smart external selection)")
         return server_id
     
-    elif tier in (ModelTier.SIMPLE, ModelTier.MEDIUM, ModelTier.SIMPLE_LONG_CONTEXT):  # MEDIUM and SIMPLE_LONG_CONTEXT route to SIMPLE logic
+    elif tier in (ModelTier.SIMPLE, ModelTier.MEDIUM, ModelTier.SIMPLE_LONG_CONTEXT):
         if tier == ModelTier.MEDIUM:
             logger.debug("MEDIUM tier → routing as SIMPLE (deprecation path)")
         elif tier == ModelTier.SIMPLE_LONG_CONTEXT:
@@ -254,18 +354,27 @@ def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
         
         # Check if request is small enough for local
         if estimated_tokens > TOKEN_THRESHOLD:
-            server_id = router_db.get_next_external()
+            # Large request - go external
+            server_id = router_db.get_next_external_smart()
             logger.debug(f"SIMPLE tier → {server_id} (tokens: {estimated_tokens} > {TOKEN_THRESHOLD})")
             return server_id
         
-        # Try local first if not busy
+        # Small request - try local first
         if not router_db.is_local_busy():
-            logger.debug(f"SIMPLE tier → local (tokens: {estimated_tokens}, not busy)")
+            logger.debug(f"SIMPLE tier → local (tokens: {estimated_tokens}, local free)")
             return 'local'
+        
+        # Local is busy - check external servers
+        if not router_db.is_external_busy('external_a'):
+            logger.debug(f"SIMPLE tier → external_a (local busy, external_a free)")
+            return 'external_a'
+        elif not router_db.is_external_busy('external_b'):
+            logger.debug(f"SIMPLE tier → external_b (local busy, external_b free)")
+            return 'external_b'
         else:
-            server_id = router_db.get_next_external()
-            logger.debug(f"SIMPLE tier → {server_id} (local busy, tokens: {estimated_tokens})")
-            return server_id
+            # All servers busy - spread load by using local anyway
+            logger.debug(f"SIMPLE tier → local (all servers busy, spreading load)")
+            return 'local'
     
     else:
         raise ValueError(f"Unknown tier: {tier}")

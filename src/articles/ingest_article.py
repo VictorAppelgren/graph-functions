@@ -21,12 +21,28 @@ logger = get_logger(__name__)
 
 
 def trigger_next_steps(topic_id: str, argos_id: str) -> None:
-    # Trigger relationship discovery
-    logger.info(f"Starting relationship discovery for Topic {topic_id}")
-    find_influences_and_correlates(topic_id)
-    logger.info(f"Completed relationship discovery for Topic {topic_id}")
+    # Count existing topic relationships (excluding articles)
+    relationship_count_query = """
+    MATCH (t:Topic {id: $topic_id})-[r:INFLUENCES|CORRELATES_WITH]-(other:Topic)
+    RETURN count(r) as relationship_count
+    """
+    result = run_cypher(relationship_count_query, {"topic_id": topic_id})
+    relationship_count = result[0]["relationship_count"] if result else 0
 
-    # Trigger replacement analysis
+    # Throttle relationship discovery for topics with >10 relationships
+    should_run_relationship_discovery = True
+    if relationship_count > 10:
+        import random
+        should_run_relationship_discovery = random.random() <= 0.1  # 10% chance to run
+
+    if should_run_relationship_discovery:
+        logger.info(f"Starting relationship discovery for Topic {topic_id}. Because it has {relationship_count} relationships.")
+        find_influences_and_correlates(topic_id)
+        logger.info(f"Completed relationship discovery for Topic {topic_id}")
+    else:
+        logger.info(f"Skipping relationship discovery for {topic_id} (has {relationship_count} relationships, throttled)")
+
+    # Always trigger replacement analysis
     replacement_result = does_article_replace_old(topic_id, argos_id)
     replaces = replacement_result.get("tool") != "none"
     logger.info(f"Article replacement for topic {topic_id}: replaces={replaces}")
