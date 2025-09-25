@@ -111,7 +111,7 @@ class RawStorageManager:
             # Track the article ID
             self.article_ids.add(argos_id)
 
-            logger.info(f"Article {argos_id} saved successfully to {file_path}")
+            logger.debug(f"Article {argos_id} saved successfully to {file_path}")
             return str(file_path)
 
         except (IOError, OSError) as e:

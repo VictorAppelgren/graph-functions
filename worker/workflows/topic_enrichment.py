@@ -44,7 +44,7 @@ from src.analysis.policies.keyword_generator import generate_keywords
 from src.analysis.policies.relevance_gate import relevance_gate_llm
 from src.analysis.orchestration.should_rewrite import should_rewrite
 
-logger = get_logger(__name__)
+logger = get_logger("topic_enrichment")
 
 # Use only timeframe sections for sparsity checks
 TIMEFRAME_SECTIONS = [s for s in SECTIONS if s in ("fundamental", "medium", "current")]

@@ -17,7 +17,7 @@ from src.graph.ops.topic import get_all_topics, get_topic_analysis_field
 from src.analysis.orchestration.analysis_rewriter import analysis_rewriter, SECTIONS
 from src.graph.neo4j_client import run_cypher
 
-logger = get_logger(__name__)
+logger = get_logger("rewrite_all_topics_analysis")
 
 def count_articles_for_topic_section(topic_id: str, section: str) -> int:
     """Count articles for a topic in a specific timeframe section"""

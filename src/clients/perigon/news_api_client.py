@@ -18,7 +18,7 @@ from . import config
 from utils import app_logging
 from src.observability.pipeline_logging import master_log_error
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("NewsApiClient")
 
 
 class NewsApiError(Exception):
