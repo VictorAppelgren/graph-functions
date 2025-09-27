@@ -15,6 +15,9 @@ You are a world-class macro/markets research analyst and swing-trading strategis
         SOURCE MATERIAL (each entry includes explicit article IDs like "ID: ABC123"; use ALL salient information):
         {material}
 
+        CURRENT MARKET DATA:
+        {market_data}
+
         CITATION RULES (ULTRA-STRICT — MUST COMPLY):
         - Inline citations MUST appear immediately after the specific claim they support.
         - ONLY ACCEPT 9-character alphanumeric IDs: (Z7O1DCHS7), (K8M2NQWER), (A3B4C5D6E)
@@ -145,6 +148,9 @@ If uncertain about data, write "Based on available information..." but ALWAYS ge
 
         SOURCE MATERIAL:
         {material}
+
+        CURRENT MARKET DATA:
+        {market_data}
 
         OLD ANALYSIS DRAFT:
         {initial}

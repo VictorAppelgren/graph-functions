@@ -23,7 +23,7 @@ from src.graph.ops.article import (
 from src.analysis.policies.time_frame_identifier import find_time_frame
 from src.analysis.types import ReplacementInfo
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("replace_article_orchestrator")
 
 # Per-timeframe policy (simple defaults, aligned with LLM helper)
 MIN_PER_TIMEFRAME = 5

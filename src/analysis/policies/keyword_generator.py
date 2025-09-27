@@ -9,7 +9,7 @@ from src.llm.sanitizer import run_llm_decision, Keywords
 
 from utils.app_logging import get_logger
 
-logger = get_logger("generate_keywords_llm")
+logger = get_logger("analysis.keyword_generator")
 
 
 def _clean_list(items: List[str]) -> List[str]:

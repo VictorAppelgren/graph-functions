@@ -15,7 +15,7 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from langchain_core.runnables import Runnable
 from src.llm.sanitizer import run_llm_decision, WideQueryModel
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("analysis.query_generator")
 
 
 class WideQuery(BaseModel):

@@ -10,7 +10,7 @@ from utils.app_logging import get_logger
 from src.llm.prompts.validate_article_topic_relevance import validate_article_topic_relevance_prompt
 from src.llm.sanitizer import run_llm_decision, ValidateRelevance
 
-logger = get_logger(__name__)
+logger = get_logger("analysis.article_topic_link")
 
 # --- input typing (minimal) ---------------------------------------------------
 

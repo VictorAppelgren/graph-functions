@@ -19,6 +19,10 @@ from src.observability.pipeline_logging import (
 from src.graph.neo4j_client import run_cypher
 from events.classifier import EventClassifier, EventType
 from src.graph.ops.topic import get_topic_analysis_field
+from src.market_data.neo4j_updater import load_market_data_from_neo4j
+from src.market_data.formatter import format_market_data_display
+from src.market_data.models import MarketSnapshot, AssetClass
+from datetime import date
 import time
 
 logger = app_logging.get_logger(__name__)
@@ -591,12 +595,32 @@ def analysis_rewriter_with_dependencies(
                 logger.warning(f"No material available for section '{section}' on topic {topic_id}")
                 continue
             
+            # Load market data using existing functions
+            market_data = ""
+            try:
+                neo4j_data = load_market_data_from_neo4j(topic_id)
+                if neo4j_data and neo4j_data.get("market_data"):
+                    asset_class = AssetClass(neo4j_data["asset_class"])
+                    snapshot = MarketSnapshot(
+                        ticker=neo4j_data["ticker"],
+                        asset_class=asset_class,
+                        data=neo4j_data["market_data"],
+                        updated_at=date.today(),
+                        source=neo4j_data["source"]
+                    )
+                    market_data = format_market_data_display(snapshot)
+                    logger.info(f"✅ Loaded market data for {topic_name} ({neo4j_data['ticker']})")
+            except Exception as e:
+                logger.debug(f"No market data available for {topic_name}: {e}")
+                market_data = ""  # Fail silently, continue without market data
+            
             # Generate analysis using existing LLM logic
             rewritten = rewrite_analysis_llm(
                 material=material,
                 section_focus=section_focus,
                 asset_name=topic_name,
-                asset_id=topic_id
+                asset_id=topic_id,
+                market_data=market_data
             )
             
             if not rewritten or not rewritten.strip():

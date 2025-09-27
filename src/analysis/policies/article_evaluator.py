@@ -14,7 +14,7 @@ from src.llm.prompts.article_evaluator import article_evaluator_prompt
 from src.llm.sanitizer import run_llm_decision, Decision
 from langchain_core.prompts import PromptTemplate
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("analysis.article_evaluator")
 
 # Per-timeframe policy (simple defaults)
 MIN_PER_TIMEFRAME = 5

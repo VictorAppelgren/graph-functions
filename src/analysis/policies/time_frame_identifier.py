@@ -12,7 +12,7 @@ from src.llm.prompts.find_time_frame import find_time_frame_prompt
 from src.llm.sanitizer import run_llm_decision, TimeFrame
 
 # Configure logging
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("analysis.time_frame_identifier")
 
 # Horizon type now defined in sanitizer.py TimeFrame model
 

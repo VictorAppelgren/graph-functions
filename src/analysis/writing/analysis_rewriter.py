@@ -47,7 +47,7 @@ def parse_material_overview(material: str, section_focus: str) -> str:
 
 
 def rewrite_analysis_llm(
-    material: str, section_focus: str, asset_name: str = "", asset_id: str = "", trk: EventClassifier | None = None
+    material: str, section_focus: str, asset_name: str = "", asset_id: str = "", market_data: str = "", trk: EventClassifier | None = None
 ) -> str:
     """
     Calls the LLM to generate new analysis text for the section, using formatted material and section_focus.
@@ -72,6 +72,7 @@ def rewrite_analysis_llm(
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
             material=material,
+            market_data=market_data,
             asset_name=asset_name,
             asset_id=asset_id
         )
@@ -94,6 +95,7 @@ def rewrite_analysis_llm(
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
             material=material,
+            market_data=market_data,
             initial=r_1.response,
             asset_name=asset_name,
             asset_id=asset_id
@@ -141,6 +143,7 @@ def rewrite_analysis_llm(
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
             material=material,
+            market_data=market_data,
             initial=r_1.response,
             feedback=r_2.response,
             asset_name=asset_name,
@@ -159,6 +162,7 @@ def rewrite_analysis_llm(
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
             material=material,
+            market_data=market_data,
             initial=r_1.response,
             feedback=r_2.response,
             factual_corrections=r_3.response,

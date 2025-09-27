@@ -12,7 +12,7 @@ from src.articles.load_article import load_article
 from src.llm.prompts.relevance_gate_llm import relevance_gate_llm_prompt
 from src.llm.sanitizer import run_llm_decision, RelevanceGate
 
-logger = get_logger(__name__)
+logger = get_logger("analysis.relevance_gate")
 
 
 def _fetch_existing_section_summaries(

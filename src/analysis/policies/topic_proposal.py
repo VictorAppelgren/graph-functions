@@ -14,7 +14,7 @@ from pydantic import BaseModel, ConfigDict
 from src.llm.prompts.propose_topic import propose_topic_prompt
 from src.llm.sanitizer import run_llm_decision, ProposeTopic
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("analysis.topic_proposal")
 
 
 class TopicProposal(BaseModel):

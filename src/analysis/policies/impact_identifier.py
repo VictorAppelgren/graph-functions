@@ -11,7 +11,7 @@ from langchain_core.runnables import Runnable
 from src.llm.prompts.find_impact import find_impact_prompt
 from src.llm.sanitizer import run_llm_decision, FindImpact
 
-logger = get_logger(__name__)
+logger = get_logger("analysis.impact_identifier")
 
 def _coerce_json_object(raw: Any) -> dict[str, Any]:
     """Accept dict or JSON string and return a dict, else raise."""

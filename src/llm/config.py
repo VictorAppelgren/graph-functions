@@ -29,7 +29,7 @@ from utils.app_logging import get_logger
 logger = get_logger(__name__)
 
 # --- Configuration ---
-TOKEN_THRESHOLD = 2000  # If working/ using the laptop and minimize load on my system
+TOKEN_THRESHOLD = 1000  # If working/ using the laptop and minimize load on my system
 #TOKEN_THRESHOLD = 20000  # Simple vs Complex routing threshold
 LLM_CALL_TIMEOUT_S = 300.0
 LLM_RETRY_ATTEMPTS = 3

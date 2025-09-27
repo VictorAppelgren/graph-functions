@@ -10,7 +10,7 @@ from utils.app_logging import get_logger
 from src.llm.sanitizer import run_llm_decision, TopicMapping
 from src.llm.prompts.find_topic_mapping import find_topic_mapping_prompt
 
-logger = get_logger(__name__)
+logger = get_logger("analysis.topic_identifier")
 
 # --- types --------------------------------------------------------------------
 

@@ -13,7 +13,7 @@ import json
 from src.llm.prompts.find_category import find_category_prompt
 from src.llm.sanitizer import run_llm_decision, CategoryName, FindCategory
 
-logger = get_logger(__name__)
+logger = get_logger("analysis.category_identifier")
 
 def find_category(article_text: str) -> FindCategory:
     """

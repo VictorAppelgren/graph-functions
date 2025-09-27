@@ -28,6 +28,7 @@ dependencies = [
     "neo4j==5.28.2",
     "fastapi==0.115.6",
     "uvicorn[standard]==0.32.1",
+    "yfinance>=0.2.18",
 ]
 
 [project.optional-dependencies]

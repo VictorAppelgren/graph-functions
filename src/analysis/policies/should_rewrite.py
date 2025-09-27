@@ -15,7 +15,7 @@ from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.llm.prompts.should_rewrite import should_rewrite_prompt
 from src.llm.sanitizer import run_llm_decision, ShouldRewrite
 
-logger = app_logging.get_logger(__name__)
+logger = app_logging.get_logger("analysis.should_rewrite")
 
 
 def should_rewrite_llm(
