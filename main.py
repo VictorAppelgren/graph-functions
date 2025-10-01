@@ -10,13 +10,10 @@ This script runs the core pipeline flow:
 Normally scheduled via main_scheduler.py to run every even hour.
 """
 
-import os
-import sys
 import datetime
 from typing import Dict, Any
 import time
 import math
-import runpy
 from src.graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 
 # Import from V1 using absolute imports
@@ -28,6 +25,7 @@ from src.graph.scheduling.query_overdue import query_overdue_seconds
 from src.graph.neo4j_client import run_cypher
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from src.analysis.orchestration.should_rewrite import should_rewrite
+from src.graph.core.user_anchors import set_user_anchors
 
 logger = app_logging.get_logger(__name__)
 
@@ -77,8 +75,7 @@ def run_pipeline() -> Dict[str, Any]:
     # Minimal bootstrap: if the graph has no Topic topics, seed anchors once.
     # This executes the existing script's __main__ block to avoid any refactor.
     if len(get_all_topics(fields=["id"])) < 1:
-        logger.info("No Topics found. Seeding anchors via user_anchor_topics.py...")
-        runpy.run_module("user_anchor_topics", run_name="__main__")
+        set_user_anchors()
 
     while True:
         loop_start_time = datetime.datetime.now()

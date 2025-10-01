@@ -18,7 +18,7 @@ logger = app_logging.get_logger(__name__)
 NEO4J_URI = os.environ.get("NEO4J_URI", "neo4j://127.0.0.1:7687")
 NEO4J_USER = os.environ.get("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "password")
-NEO4J_DATABASE = os.environ.get("NEO4J_DATABASE", "argosgraph")
+NEO4J_DATABASE = os.environ.get("NEO4J_DATABASE", "neo4j")
 
 
 def connect_graph_db() -> Driver:

@@ -23,6 +23,18 @@ EXAMPLE USAGE:
 
 """
 
+from src.graph.ops.topic import (
+        create_topic,
+        check_if_topic_exists,
+        get_topic_if_exists,
+    )
+from src.analysis.policies.query_generator import create_wide_query
+from src.graph.ops.link import add_link
+from src.graph.neo4j_client import run_cypher
+from utils import app_logging
+
+logger = app_logging.get_logger(__name__)
+
 USER_ANCHOR_TOPICS = [
     # Existing core
     {"id": "eurusd", "name": "EURUSD", "importance": 1},
@@ -202,18 +214,7 @@ USER_ANCHOR_RELATIONSHIPS = [
     {"from": "ASML", "to": "TSM", "type": "CORRELATES_WITH"},
 ]
 
-if __name__ == "__main__":
-    from src.graph.ops.topic import (
-        create_topic,
-        check_if_topic_exists,
-        get_topic_if_exists,
-    )
-    from src.analysis.policies.query_generator import create_wide_query
-    from src.graph.ops.link import add_link
-    from src.graph.neo4j_client import run_cypher
-    from utils import app_logging
-
-    logger = app_logging.get_logger(__name__)
+def set_user_anchors():
 
     # First, seed all anchor topics
     logger.info(f"Seeding {len(USER_ANCHOR_TOPICS)} anchor topics...")
@@ -268,7 +269,7 @@ if __name__ == "__main__":
     )
 
     # Validate that all anchors have a valid importance (1..5). Fail fast if any are missing/invalid.
-    anchor_ids = [n["id"] for n in USER_ANCHOR_topicS]
+    anchor_ids = [n["id"] for n in USER_ANCHOR_TOPICS]
     bad_rows = run_cypher(
         """
         MATCH (n:Topic)
