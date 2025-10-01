@@ -31,6 +31,23 @@ print_error() {
     echo -e "${RED}✗${NC} $1"
 }
 
+set_env_vars() {
+
+    print_step "Setting Environment Variables..."
+
+    set -e
+
+    # Load environment variables from file and export them
+    set -a  # automatically export all variables
+    source ./.env
+    set +a
+
+    echo "Environment variables loaded:"
+    env | grep -E 'DB_HOST|DB_PORT|API_KEY'
+
+    print_step "Environment variables set successfully!"
+}
+
 check_python_version() {
     print_step "Checking Python version..."
     
@@ -259,6 +276,7 @@ main() {
     echo "This script automates the setup steps described in setup.md"
     echo ""
     
+    set_env_vars
     check_python_version
     setup_python_env
     check_environment_variables

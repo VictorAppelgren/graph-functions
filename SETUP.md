@@ -31,7 +31,7 @@ This guide gets you from zero to a working Saga Graph environment on macOS.
 
 3. **Run the automated setup:**
    ```bash
-   ./setup.sh
+   source ./setup.sh
    ```
 
 The script will:

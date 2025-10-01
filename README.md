@@ -26,7 +26,7 @@ Saga Graph automatically ingests news, maps articles to financial topics, update
 
 3. **Run automated setup:**
    ```bash
-   ./setup.sh
+   source ./setup.sh
    ```
 
 4. **Test with a sample report:**
