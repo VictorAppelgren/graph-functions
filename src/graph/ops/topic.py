@@ -523,7 +523,7 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     }
 
 
-def create_topic(topic_proposal: "TopicProposal") -> dict[str, str]:
+def create_topic(topic_proposal: TopicProposal) -> dict[str, str]:
     """
     Create a Topic in the Neo4j graph with the provided properties.
     If a topic with the same ID already exists, it will NOT be overwritten.

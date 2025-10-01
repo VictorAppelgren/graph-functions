@@ -32,6 +32,7 @@ from src.analysis.policies.query_generator import create_wide_query
 from src.graph.ops.link import add_link
 from src.graph.neo4j_client import run_cypher
 from utils import app_logging
+from src.analysis.policies.topic_proposal import TopicProposal
 
 logger = app_logging.get_logger(__name__)
 
@@ -246,21 +247,21 @@ def set_user_anchors():
             continue
 
         # topic doesn't exist, create it
-        topic_dict = {"id": topic["id"], "name": topic["name"]}
-        if "importance" in topic and topic["importance"] is not None:
-            topic_dict["importance"] = topic["importance"]
+
+        t = TopicProposal(id=topic["id"], name=topic["name"], importance=topic["importance"])
+
 
         # If the topic already contains a query, respect it; otherwise generate via LLM
         if "query" in topic and topic["query"]:
-            topic_dict["query"] = topic["query"]
+            t.query = topic["query"]
         else:
             anchor_text = f"Name: {topic['name']}"
             qres = create_wide_query(anchor_text)
             if not isinstance(qres, dict) or not qres.get("query"):
                 raise RuntimeError(f"Query generation failed for anchor '{topic_id}'")
-            topic_dict["query"] = qres["query"]
+            t.query = qres["query"]
 
-        result = create_topic(topic_dict)
+        result = create_topic(t)
         logger.info(f"Created new anchor topic: {result['name']} (id={result['id']})")
         topics_created += 1
 

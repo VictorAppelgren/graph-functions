@@ -69,24 +69,24 @@ def create_wide_query(article_text: str) -> dict[str, Any]:
 
     llm = get_llm(ModelTier.MEDIUM)
 
-    prompt_template = """
-{system_mission}
-{system_context}
-YOU ARE A WORLD-CLASS MACRO/MARKETS BOOLEAN QUERY ENGINEER working on the Saga Graph…
+    prompt_template = f"""
+        {SYSTEM_MISSION}
+        {SYSTEM_CONTEXT}
+        YOU ARE A WORLD-CLASS MACRO/MARKETS BOOLEAN QUERY ENGINEER working on the Saga Graph…
 
-TASK:
-- Given the article text below, generate a wide boolean search query.
-- Output a JSON object with:
-    - 'motivation' (first field): short, research-grade justification.
-    - 'query': the boolean query string.
-- If no good query can be constructed, output null for 'query'.
-- ONLY the JSON object. NO extra text/fields.
+        TASK:
+        - Given the article text below, generate a wide boolean search query.
+        - Output a JSON object with:
+            - 'motivation' (first field): short, research-grade justification.
+            - 'query': the boolean query string.
+        - If no good query can be constructed, output null for 'query'.
+        - ONLY the JSON object. NO extra text/fields.
 
-ARTICLE:
-{article_text}
+        ARTICLE:
+        {article_text}
 
-YOUR RESPONSE IN JSON:
-"""
+        YOUR RESPONSE IN JSON:
+        """
     logger.debug("PromptTemplate: %s", truncate_str(prompt_template, 100))
     prompt = PromptTemplate.from_template(prompt_template).format()
 

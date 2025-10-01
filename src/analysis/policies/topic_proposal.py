@@ -21,7 +21,6 @@ class TopicProposal(BaseModel):
     model_config = ConfigDict(extra="forbid")
     id: str
     name: str
-    type: str
     motivation: str | None = None
     importance: int = 0
     last_updated: str | None = None
