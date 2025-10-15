@@ -82,6 +82,7 @@ class Article(BaseModel):
     summary: str
     url: Optional[str] = None
     published_date: Optional[str] = None
+    publisher: Optional[str] = None
 
 class Report(BaseModel):
     topic_id: str
@@ -130,7 +131,7 @@ def get_articles_for_topic(topic_id: str, limit: int = 10) -> List[Dict]:
     MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
     WHERE coalesce(a.priority, '') <> 'hidden'
     RETURN a.id as id, a.title as title, a.argos_summary as summary, 
-           a.url as url, a.published_date as published_date
+           a.url as url, a.published_date as published_date, a.publisher as publisher
     ORDER BY a.published_date DESC
     LIMIT $limit
     """
@@ -141,12 +142,20 @@ def get_articles_for_topic(topic_id: str, limit: int = 10) -> List[Dict]:
         # Load full article data
         article_data = load_article(result["id"])
         if article_data:
+            # Extract publisher from nested source.domain structure
+            publisher = None
+            if result.get("publisher"):
+                publisher = result["publisher"]
+            elif article_data.get("source") and isinstance(article_data["source"], dict):
+                publisher = article_data["source"].get("domain")
+            
             articles.append({
                 "id": result["id"],
                 "title": article_data.get("title", result["title"]),
                 "summary": result["summary"] or article_data.get("argos_summary", ""),
                 "url": result["url"] or article_data.get("url"),
-                "published_date": result["published_date"]
+                "published_date": result["published_date"] or article_data.get("pubDate"),
+                "publisher": publisher
             })
     
     return articles
@@ -361,6 +370,23 @@ def get_articles(
 ):
     """Get articles for a specific topic"""
     articles = get_articles_for_topic(topic_id, limit)
+    
+    # Log article data to verify all fields are populated
+    print(f"\n{'='*80}")
+    print(f"GET /articles - Topic: {topic_id}, Count: {len(articles)}")
+    print(f"{'='*80}")
+    for i, article in enumerate(articles[:3], 1):  # Log first 3 articles
+        print(f"\nArticle {i}:")
+        print(f"  ID: {article.get('id', 'MISSING')}")
+        print(f"  Title: {article.get('title', 'MISSING')[:60]}...")
+        print(f"  Publisher: {article.get('publisher', 'MISSING')}")
+        print(f"  Published: {article.get('published_date', 'MISSING')}")
+        print(f"  URL: {article.get('url', 'MISSING')[:50]}...")
+        print(f"  Summary: {len(article.get('summary', ''))} chars")
+    if len(articles) > 3:
+        print(f"\n... and {len(articles) - 3} more articles")
+    print(f"{'='*80}\n")
+    
     return {"articles": articles}
 
 @app.get("/articles/{article_id}")
@@ -370,14 +396,35 @@ def get_article(article_id: str):
     if not article_data:
         raise HTTPException(status_code=404, detail="Article not found")
     
-    return {
+    # Extract publisher from nested source.domain structure
+    publisher = ""
+    if article_data.get("source") and isinstance(article_data["source"], dict):
+        publisher = article_data["source"].get("domain", "")
+    
+    response = {
         "id": article_id,
         "title": article_data.get("title", ""),
         "content": article_data.get("content", ""),
         "summary": article_data.get("argos_summary", ""),
         "url": article_data.get("url", ""),
-        "published_date": article_data.get("published_date", "")
+        "published_date": article_data.get("pubDate", ""),
+        "publisher": publisher
     }
+    
+    # Log article data to verify all fields are populated
+    print(f"\n{'='*80}")
+    print(f"GET /articles/{article_id}")
+    print(f"{'='*80}")
+    print(f"ID: {response['id']}")
+    print(f"Title: {response['title'][:80]}...")
+    print(f"Publisher: {response['publisher'] or 'MISSING'}")
+    print(f"Published: {response['published_date'] or 'MISSING'}")
+    print(f"URL: {response['url'][:60]}...")
+    print(f"Summary: {len(response['summary'])} chars")
+    print(f"Content: {len(response['content'])} chars")
+    print(f"{'='*80}\n")
+    
+    return response
 
 @app.get("/reports/{topic_id}")
 def get_report(topic_id: str, format: str = Query("markdown", description="Response format: markdown or json")):
