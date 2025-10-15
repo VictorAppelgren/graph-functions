@@ -23,11 +23,20 @@ from src.graph.neo4j_client import run_cypher
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 
+# Import strategy management
+from API.user_data_manager import (
+    list_strategies,
+    load_strategy,
+    create_strategy,
+    update_strategy,
+    delete_strategy
+)
+
 # Initialize FastAPI
 app = FastAPI(
-    title="Argos API v2",
-    description="Neo4j-based API for topic research and chat",
-    version="2.0.0"
+    title="Argos API v3",
+    description="Neo4j-based API with strategy support and dual-context chat",
+    version="3.0.0"
 )
 
 # Add CORS middleware
@@ -54,8 +63,10 @@ class LoginRequest(BaseModel):
 
 class ChatRequest(BaseModel):
     message: str
-    topic_id: str
     history: List[Dict[str, str]] = []
+    topic_id: Optional[str] = None      # For asset intelligence
+    strategy_id: Optional[str] = None   # For user strategy
+    username: Optional[str] = None      # Required when strategy_id provided
 
 class User(BaseModel):
     username: str
@@ -80,6 +91,30 @@ class Report(BaseModel):
 class ChatResponse(BaseModel):
     response: str
     topic_id: str
+
+# Strategy models
+class StrategyListItem(BaseModel):
+    id: str
+    asset: str
+    target: str
+    updated_at: str
+    has_analysis: bool
+
+class StrategyListResponse(BaseModel):
+    strategies: List[StrategyListItem]
+
+class CreateStrategyRequest(BaseModel):
+    username: str
+    asset_primary: str
+    strategy_text: str
+    position_text: str = ""
+    target: str = ""
+
+class UpdateStrategyRequest(BaseModel):
+    username: str
+    strategy_text: Optional[str] = None
+    position_text: Optional[str] = None
+    target: Optional[str] = None
 
 # Utility functions
 def authenticate_user(username: str, password: str) -> Optional[Dict]:
@@ -116,12 +151,98 @@ def get_articles_for_topic(topic_id: str, limit: int = 10) -> List[Dict]:
     
     return articles
 
-# Context building is now handled directly in the chat endpoint for better separation
+def build_asset_context(topic_id: str) -> str:
+    """Build market intelligence context for an asset/topic."""
+    topic = get_topic_by_id(topic_id)
+    topic_name = topic.get("name", topic_id) if topic else topic_id
+    
+    # Get reports and articles
+    try:
+        reports = aggregate_reports(topic_id)
+    except Exception:
+        reports = {}
+    
+    articles = get_articles_for_topic(topic_id, limit=8)
+    
+    # Build context parts
+    context_parts = ["═══ MARKET INTELLIGENCE ═══", f"Asset: {topic_name}", ""]
+    
+    # Add articles (real-time intelligence)
+    if articles:
+        context_parts.append("◆ RECENT DEVELOPMENTS:")
+        for i, article in enumerate(articles, 1):
+            context_parts.append(f"{i}. {article['title']}")
+            if article['summary']:
+                summary_preview = article['summary'][:200]
+                context_parts.append(f"   {summary_preview}...")
+        context_parts.append("")
+    
+    # Add reports (comprehensive analysis)
+    if reports:
+        context_parts.append("【ANALYSIS REPORTS】")
+        for section, content in reports.items():
+            if content and content.strip():
+                section_title = section.replace('_', ' ').title()
+                content_preview = content.strip()[:500]
+                context_parts.append(f"\n{section_title}:")
+                context_parts.append(content_preview + "...")
+        context_parts.append("")
+    
+    return "\n".join(context_parts)
+
+
+def build_strategy_context(username: str, strategy_id: str) -> str:
+    """Build user strategy context."""
+    strategy = load_strategy(username, strategy_id)
+    
+    context_parts = [
+        "═══ USER'S TRADING STRATEGY ═══",
+        f"Asset: {strategy['asset']['primary']}",
+        "",
+        "USER'S THESIS:",
+        strategy['user_input']['strategy_text'],
+        ""
+    ]
+    
+    if strategy['user_input']['position_text']:
+        context_parts.append("POSITION DETAILS:")
+        context_parts.append(strategy['user_input']['position_text'])
+        context_parts.append("")
+    
+    if strategy['user_input']['target']:
+        context_parts.append(f"TARGET: {strategy['user_input']['target']}")
+        context_parts.append("")
+    
+    # Add AI analysis if exists
+    if strategy['analysis'].get('generated_at'):
+        context_parts.append("═══ AI ANALYSIS ═══")
+        if strategy['analysis'].get('fundamental'):
+            fundamental_preview = strategy['analysis']['fundamental'][:300]
+            context_parts.append(f"Fundamental: {fundamental_preview}...")
+        if strategy['analysis'].get('current'):
+            current_preview = strategy['analysis']['current'][:300]
+            context_parts.append(f"Current: {current_preview}...")
+        if strategy['analysis'].get('risks'):
+            risks_preview = strategy['analysis']['risks'][:200]
+            context_parts.append(f"Risks: {risks_preview}...")
+        context_parts.append("")
+        
+        if strategy['analysis'].get('supporting_evidence'):
+            context_parts.append("Supporting Evidence:")
+            for ev in strategy['analysis']['supporting_evidence'][:3]:
+                context_parts.append(f"  • {ev}")
+        
+        if strategy['analysis'].get('contradicting_evidence'):
+            context_parts.append("Contradicting Evidence:")
+            for ev in strategy['analysis']['contradicting_evidence'][:3]:
+                context_parts.append(f"  • {ev}")
+    
+    return "\n".join(context_parts)
 
 # Routes
 @app.get("/")
 def read_root():
-    return {"status": "online", "service": "Argos API v2", "version": "2.0.0"}
+    return {"status": "online", "service": "Argos API v3", "version": "3.0.0"}
 
 @app.post("/login")
 def login(request: LoginRequest):
@@ -159,6 +280,79 @@ def get_interests(username: str = Query(..., description="Username to get intere
             })
     
     return {"interests": interests}
+
+@app.get("/strategies")
+def get_strategies(username: str = Query(..., description="Username to get strategies for")):
+    """List all strategies for a user"""
+    try:
+        strategies = list_strategies(username)
+        return {"strategies": strategies}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error listing strategies: {str(e)}")
+
+
+@app.get("/strategies/{strategy_id}")
+def get_strategy(
+    strategy_id: str,
+    username: str = Query(..., description="Username who owns the strategy")
+):
+    """Get full strategy details"""
+    try:
+        strategy = load_strategy(username, strategy_id)
+        return strategy
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Strategy not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error loading strategy: {str(e)}")
+
+
+@app.post("/strategies")
+def create_new_strategy(request: CreateStrategyRequest):
+    """Create a new strategy"""
+    try:
+        strategy = create_strategy(
+            username=request.username,
+            asset_primary=request.asset_primary,
+            strategy_text=request.strategy_text,
+            position_text=request.position_text,
+            target=request.target
+        )
+        return strategy
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error creating strategy: {str(e)}")
+
+
+@app.put("/strategies/{strategy_id}")
+def update_existing_strategy(strategy_id: str, request: UpdateStrategyRequest):
+    """Update an existing strategy"""
+    try:
+        strategy = update_strategy(
+            username=request.username,
+            strategy_id=strategy_id,
+            strategy_text=request.strategy_text,
+            position_text=request.position_text,
+            target=request.target
+        )
+        return strategy
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Strategy not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error updating strategy: {str(e)}")
+
+
+@app.delete("/strategies/{strategy_id}")
+def delete_existing_strategy(
+    strategy_id: str,
+    username: str = Query(..., description="Username who owns the strategy")
+):
+    """Delete (archive) a strategy"""
+    try:
+        archived_name = delete_strategy(username, strategy_id)
+        return {"message": "Strategy archived successfully", "archived_as": archived_name}
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Strategy not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error deleting strategy: {str(e)}")
 
 @app.get("/articles")
 def get_articles(
@@ -253,42 +447,36 @@ def get_report(topic_id: str, format: str = Query("markdown", description="Respo
 
 @app.post("/chat")
 def chat(request: ChatRequest):
-    """Chat about a specific topic with context"""
+    """Chat with dual context support: asset intelligence OR strategy OR both"""
     try:
-        # Build separate context components for better prompt structure
-        topic = get_topic_by_id(request.topic_id)
-        topic_name = topic.get("name", request.topic_id) if topic else request.topic_id
+        # Validate: if strategy_id provided, username is required
+        if request.strategy_id and not request.username:
+            raise HTTPException(
+                status_code=400,
+                detail="username is required when strategy_id is provided"
+            )
         
-        # Get reports and articles separately
-        try:
-            reports = aggregate_reports(request.topic_id)
-        except Exception as e:
-            reports = {}
+        # Build context based on what's provided
+        context_parts = []
         
-        articles = get_articles_for_topic(request.topic_id, limit=8)
+        # PART 1: Asset/Topic Context
+        if request.topic_id:
+            asset_context = build_asset_context(request.topic_id)
+            context_parts.append(asset_context)
         
-        # Build articles context (first for chain-of-thought)
-        articles_context = ""
-        if articles:
-            articles_parts = ["═══ REAL-TIME MARKET INTELLIGENCE ═══", ""]
-            for i, article in enumerate(articles, 1):
-                articles_parts.append(f"◆ ARTICLE {i}: {article['title']}")
-                if article['summary']:
-                    articles_parts.append(f"Summary: {article['summary']}")
-                articles_parts.append("")
-            articles_context = "\n".join(articles_parts)
+        # PART 2: Strategy Context
+        if request.strategy_id:
+            try:
+                strategy_context = build_strategy_context(request.username, request.strategy_id)
+                context_parts.append(strategy_context)
+            except FileNotFoundError:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"Strategy {request.strategy_id} not found for user {request.username}"
+                )
         
-        # Build reports context (second for synthesis)
-        reports_context = ""
-        if reports:
-            reports_parts = ["═══ COMPREHENSIVE ANALYSIS REPORTS ═══", ""]
-            for section, content in reports.items():
-                if content and content.strip():
-                    section_title = section.replace('_', ' ').title()
-                    reports_parts.append(f"【{section_title}】")
-                    reports_parts.append(content.strip())
-                    reports_parts.append("")
-            reports_context = "\n".join(reports_parts)
+        # Combine contexts
+        full_context = "\n\n".join(context_parts) if context_parts else ""
         
         # Build chat history
         messages = []
@@ -301,55 +489,59 @@ def chat(request: ChatRequest):
         # Add current message
         messages.append(HumanMessage(content=request.message))
         
-        # God-tier financial analysis chat prompt
-        system_prompt = f"""You are Argos, an elite financial intelligence analyst. Your mission: distill complex market dynamics into razor-sharp, actionable insights.
+        # Determine context type for prompt
+        if request.strategy_id and request.topic_id:
+            context_type = "strategy + market intelligence"
+        elif request.strategy_id:
+            context_type = "user's trading strategy"
+        elif request.topic_id:
+            context_type = "market intelligence"
+        else:
+            context_type = "general financial knowledge"
+        
+        # Ultra-concise financial chat prompt
+        system_prompt = f"""You are Argos, an elite financial intelligence analyst delivering razor-sharp insights.
 
-═══ CORE DIRECTIVE ═══
-Transform the world's most difficult financial questions into concise, decision-useful intelligence. You have access to comprehensive research and real-time market data. Your colleague needs immediate clarity, not lengthy explanations.
+═══ MISSION ═══
+Transform complex financial questions into concise, actionable intelligence. Maximum 150 words.
+
+═══ CONTEXT TYPE ═══
+{context_type}
+
+{full_context}
 
 ═══ RESPONSE FRAMEWORK ═══
-1. **DIRECT ANSWER** (2-3 sentences max): Address their specific question immediately
-2. **KEY INSIGHT** (1-2 bullets): Most critical non-obvious factor they should know
-3. **RISK/OPPORTUNITY** (1-2 bullets): What could go wrong/right that others miss
-4. **CONVERSATION CATALYST** (1 question): Guide them toward the most valuable next discussion
+**Answer:** [Direct 2-3 sentence response]
 
-═══ MARKET INTELLIGENCE (Latest Developments) ═══
-{articles_context}
+**Key Insight:** [Most critical non-obvious factor]
 
-═══ ANALYTICAL FRAMEWORK (Research Foundation) ═══
-{reports_context}
+**Risk/Opportunity:** [What could go wrong/right]
 
-═══ COMMUNICATION RULES ═══
-• **BREVITY IS INTELLIGENCE**: Maximum 150 words total
-• **SPECIFICITY OVER GENERALITY**: Use exact numbers, dates, probabilities
-• **CONTRARIAN EDGE**: Challenge consensus where evidence supports it
-• **ACTIONABLE ONLY**: Every sentence must drive decision-making
-• **CONVERSATION LEADERSHIP**: End with a strategic question to advance their thinking
+**Next:** [Strategic question to advance discussion]
 
-═══ CURRENT FOCUS ═══
-Asset: {request.topic_id.upper()}
+═══ RULES ═══
+• BREVITY IS INTELLIGENCE: Max 150 words total
+• SPECIFICITY: Use exact numbers, dates, probabilities
+• Contrarian Edge: Challenge consensus where evidence supports
+• ACTIONABLE ONLY: Every sentence drives decisions
+• CONVERSATION LEADERSHIP: End with strategic question
+
 Question: "{request.message}"
 
-═══ OUTPUT STRUCTURE ═══
-**Answer:** [Direct response to their question]
-
-**Key Insight:** [Most important non-obvious factor]
-
-**Risk/Opportunity:** [Critical upside/downside they should monitor]
-
-**Next:** [Strategic question to guide conversation]
-
 Deliver maximum insight density. Every word must earn its place."""
-
+        
         # Get LLM response
         response = COMPLEX_LLM.invoke(system_prompt)
         reply = response.content if hasattr(response, 'content') else str(response)
         
         return {
             "response": reply.strip(),
-            "topic_id": request.topic_id
+            "topic_id": request.topic_id,
+            "strategy_id": request.strategy_id
         }
         
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chat error: {str(e)}")
 
@@ -364,8 +556,12 @@ def health_check():
         return {"status": "unhealthy", "neo4j": f"error: {str(e)}"}
 
 if __name__ == "__main__":
-    print("\nArgos API v2 server starting...")
+    print("\nArgos API v3 server starting...")
     print("API available at: http://0.0.0.0:8000")
-    print("Docs available at: http://0.0.0.0:8000/docs\n")
+    print("Docs available at: http://0.0.0.0:8000/docs")
+    print("\nNew features:")
+    print("  • Strategy management (CRUD)")
+    print("  • Dual-context chat (asset + strategy)")
+    print("  • Ultra-concise 150-word responses\n")
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
