@@ -1,3 +1,30 @@
+# Python
 .venv
 __pycache__/
 *.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+
+# User data and strategies
+API/users/
+
+# Stats and logs
+master_stats*.json
+master_logs*.json
+
+# Reports and PDFs
+Reports/PDFs/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# LLM router status
+src/llm/router_status.db
+
+# Data
+data/raw_news/
+
+# Events
+events/*/
