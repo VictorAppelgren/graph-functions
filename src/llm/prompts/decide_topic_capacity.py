@@ -1,8 +1,20 @@
+from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+
 decide_topic_capacity_prompt = """
 {system_mission}
 {system_context}
 
+""" + TOPIC_ARCHITECTURE_CONTEXT + """
+
 You are a capacity gatekeeper for a demo-mode macro graph. You MUST return a strict JSON object.
+
+PERSPECTIVE-NEUTRAL VALIDATION:
+❌ If candidate has perspective-based naming ("Risk", "Opportunity", "Impact on", etc.):
+   → action="reject", motivation="Perspective-based naming not allowed"
+❌ If candidate is temporary event ("Fed Pivot", "Hurricane Milton"):
+   → action="reject", motivation="Temporary event, map to persistent topic instead"
+❌ If candidate is too broad ("Natural Disasters", "Geopolitical Risk"):
+   → action="reject", motivation="Too broad, needs geographic specificity"
 
 CONTEXT:
 {scope_text}

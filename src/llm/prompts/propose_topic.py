@@ -1,8 +1,12 @@
+from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+
 propose_topic_prompt="""
     {system_mission}
     {system_context}
 
-    YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC NODE ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics. Every node is a specific, atomic, user-defined anchor (never a general group, catch-all, or ambiguous entity). Your output will be used for downstream graph analytics, LLM reasoning, and expert decision-making.
+    """ + TOPIC_ARCHITECTURE_CONTEXT + """
+
+    YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC NODE ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics. Every node is a PERSISTENT ANALYTICAL ANCHOR (recurring phenomena worth tracking for 6+ months). Your output will be used for downstream graph analytics, LLM reasoning, and expert decision-making.
 
     CAPACITY CONTEXT:
     - Max topics allowed: {max_topics}
@@ -24,14 +28,35 @@ propose_topic_prompt="""
     - Before output, PAUSE AND CHECK: Would this node satisfy a top-tier macro analyst?
     - Output ONLY the JSON object. NO explanations, markdown, or commentary.
 
-    STRICT TRADING RELEVANCE POLICY:
-    - ALLOW topics that directly support trading decisions: macro drivers (inflation, growth, jobs, rates, credit), tradable assets (FX pairs, indices, commodities, rates), macro policy/regulation, macro-level geographies, or companies (only if central to macro/market impact).
-    - REJECT topics that are industry verticals or operational niches, product categories, vendor lists, micro supply chain segments, or vague/ambiguous catch-alls.
-    - Nodes must be atomic, human-readable, and defensible to a top-tier macro analyst.
-
-    RECALL NUDGE (trading-first, minimal):
-    - If the article surfaces a canonical tradable asset or policy anchor with a clear market-impact channel relevant to the Areas of interest above, prefer proposing the node.
-    - If there is any real trading relevance to our main interests, it is acceptable to propose the node; otherwise use type "none".
+    CRITICAL ENFORCEMENT - PERSPECTIVE-NEUTRAL NAMING:
+    ❌ REJECT ANY topic name containing perspective language:
+       - Risk/Opportunity/Trend/Catalyst: "X Risk", "Y Opportunity", "Z Trend", "W Catalyst"
+       - Directional: "Upside", "Downside", "Bullish", "Bearish"
+       - Impact: "X Impact on Y", "Effect of X on Y"
+       - Combinations: "Hurricane Risk on Rates", "Fed Dovish Opportunity", "Inflation Upside"
+    
+    ❌ REJECT temporary events/narratives:
+       - "Fed Pivot" → Suggest mapping to: fed_policy
+       - "Hurricane Milton" → Suggest mapping to: florida_hurricanes
+       - "2024 Election" → Suggest mapping to: us_politics
+    
+    ✅ ACCEPT persistent analytical anchors:
+       - Tradable assets: eurusd, ust10y, spx, gold, wti
+       - Policy institutions: fed_policy, ecb_policy, opec_production_policy
+       - Macro drivers: us_inflation, eu_gdp, cn_credit_growth
+       - Recurring geographic events: florida_hurricanes, california_wildfires
+       - Tradable sectors: us_insurance, swedish_banks, northern_european_banks
+    
+    PERSISTENCE TEST:
+    - Will we track this for 6+ months? → PROPOSE
+    - Is this a one-time event/speculation? → REJECT, suggest existing topic
+    - Is this an institution making recurring decisions? → PROPOSE
+    - Is this a temporary market narrative? → REJECT, suggest existing topic
+    
+    GEOGRAPHIC SPECIFICITY:
+    ✅ florida_hurricanes (specific, recurring, valuable)
+    ⚠️ us_natural_disasters (broader, acceptable for structural analysis)
+    ❌ natural_disasters (too broad, links to everything)
 
     ARTICLE SUMMARY:
     {article}

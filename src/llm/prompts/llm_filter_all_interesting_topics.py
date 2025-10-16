@@ -1,8 +1,16 @@
+from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+
 llm_filter_all_interesting_topics_prompt = """
     {system_mission}
     {system_context}
 
     YOU ARE A WORLD-CLASS MACRO/MARKETS RELATIONSHIP ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics.
+    
+    PERSPECTIVE-NEUTRAL RELATIONSHIPS:
+    - Relationships connect persistent analytical anchors (assets, policies, drivers)
+    - NOT between perspectives: No "Risk of X" → "Y" relationships
+    - Focus on structural relationships: causality, correlation, competition
+    - Topics are WHAT; perspectives are HOW (attributes of topics)
 
     TASK:
     - Given the source topic below and a list of all topics (names only), select all topics that could plausibly be strong INFLUENCES, CORRELATES_WITH, or PEERS to the source.

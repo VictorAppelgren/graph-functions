@@ -25,6 +25,11 @@ class Topic(TypedDict, total=False):
     medium_analysis: Optional[str]
     current_analysis: Optional[str]
     implications: Optional[str]
+    # Perspective-focused analysis fields
+    risk_analysis: Optional[str]
+    opportunity_analysis: Optional[str]
+    trend_analysis: Optional[str]
+    catalyst_analysis: Optional[str]
 
 
 class Article(TypedDict, total=False):
@@ -41,6 +46,12 @@ class Article(TypedDict, total=False):
     priority: Optional[str]  # "3" | "2" | "1" | "hidden"
     relevance_score: Optional[float]
     status: str  # "active" | "hidden"
+    
+    # Perspective importance scores (0-3, independent - can all be 3!)
+    importance_risk: Optional[int]
+    importance_opportunity: Optional[int]
+    importance_trend: Optional[int]
+    importance_catalyst: Optional[int]
 
 
 class Link(TypedDict, total=False):

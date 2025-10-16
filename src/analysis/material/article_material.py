@@ -31,6 +31,7 @@ def build_material_for_synthesis_section(
     Build material for analysis sections with smart article selection:
     - Timeframe sections (fundamental/medium/current): 10 articles from that timeframe
     - Synthesis sections (drivers/movers_scenarios/swing_trade_or_outlook/executive_summary): 5 articles each from fundamental/medium/current
+    - Perspective sections (risk/opportunity/trend/catalyst_analysis): 10 articles with perspective score >= 2
     
     Returns:
         material_str: Formatted material with analysis sections + articles
@@ -41,12 +42,14 @@ def build_material_for_synthesis_section(
     # Section type detection
     TIMEFRAME_SECTIONS = ["fundamental", "medium", "current"]
     SYNTHESIS_SECTIONS = ["drivers", "movers_scenarios", "swing_trade_or_outlook", "executive_summary"]
+    PERSPECTIVE_SECTIONS = ["risk_analysis", "opportunity_analysis", "trend_analysis", "catalyst_analysis"]
     
     # Get existing analysis sections - query ALL sections for complete context
     analysis_query = """
     MATCH (t:Topic {id: $topic_id})
     RETURN t.fundamental_analysis, t.medium_analysis, t.current_analysis,
-           t.drivers, t.executive_summary, t.movers_scenarios, t.swing_trade_or_outlook
+           t.drivers, t.executive_summary, t.movers_scenarios, t.swing_trade_or_outlook,
+           t.risk_analysis, t.opportunity_analysis, t.trend_analysis, t.catalyst_analysis
     """
     analysis_result = run_cypher(analysis_query, {"topic_id": topic_id})
 
@@ -65,6 +68,10 @@ def build_material_for_synthesis_section(
             ("medium_analysis", "MEDIUM-TERM ANALYSIS (3-6 months)"),
             ("current_analysis", "CURRENT ANALYSIS (0-3 weeks)"),
             ("drivers", "DRIVERS (Cross-topic Influences)"),
+            ("risk_analysis", "RISK ANALYSIS (Downside Scenarios)"),
+            ("opportunity_analysis", "OPPORTUNITY ANALYSIS (Upside Scenarios)"),
+            ("trend_analysis", "TREND ANALYSIS (Structural Shifts)"),
+            ("catalyst_analysis", "CATALYST ANALYSIS (Immediate Triggers)"),
             ("executive_summary", "EXECUTIVE SUMMARY"),
             ("movers_scenarios", "MOVERS & SCENARIOS"),
             ("swing_trade_or_outlook", "SWING TRADE / OUTLOOK"),
@@ -92,6 +99,32 @@ def build_material_for_synthesis_section(
         LIMIT 10
         """
         articles_result = run_cypher(articles_query, {"topic_id": topic_id, "section": section})
+    elif section in PERSPECTIVE_SECTIONS:
+        # Perspective sections: 10 articles with perspective score >= 2
+        perspective_field_map = {
+            "risk_analysis": "importance_risk",
+            "opportunity_analysis": "importance_opportunity",
+            "trend_analysis": "importance_trend",
+            "catalyst_analysis": "importance_catalyst"
+        }
+        perspective_field = perspective_field_map[section]
+        
+        articles_query = f"""
+        MATCH (a:Article)-[:ABOUT]->(t:Topic {{id: $topic_id}})
+        WHERE coalesce(a.{perspective_field}, 0) >= 2 AND coalesce(a.priority, '') <> 'hidden'
+        WITH a, 
+             coalesce(a.{perspective_field}, 0) as perspective_score,
+             CASE 
+               WHEN a.importance = 'hidden' THEN 0
+               WHEN a.importance IS NULL THEN 1
+               ELSE toInteger(a.importance)
+             END as numeric_importance
+        RETURN a.id as article_id, a.pubDate as published_at, perspective_score, numeric_importance, 
+               coalesce(a.temporal_horizon, 'unknown') as temporal_horizon
+        ORDER BY perspective_score DESC, numeric_importance DESC, a.pubDate DESC
+        LIMIT 10
+        """
+        articles_result = run_cypher(articles_query, {"topic_id": topic_id})
     else:
         # Synthesis sections: 5 articles each from fundamental/medium/current
         all_articles = []
@@ -177,6 +210,10 @@ def build_material_for_synthesis_section(
             ("medium_analysis", "medium analysis"), 
             ("current_analysis", "current analysis"),
             ("drivers", "drivers"),
+            ("risk_analysis", "risk analysis"),
+            ("opportunity_analysis", "opportunity analysis"),
+            ("trend_analysis", "trend analysis"),
+            ("catalyst_analysis", "catalyst analysis"),
             ("movers_scenarios", "movers scenarios"),
             ("swing_trade_or_outlook", "swing trade/outlook"),
             ("executive_summary", "executive summary")
