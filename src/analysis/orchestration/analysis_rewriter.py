@@ -27,45 +27,88 @@ import time
 
 logger = app_logging.get_logger(__name__)
 
-MIN_ARTICLES_FOR_SECTION = 2
+MIN_ARTICLES_FOR_SECTION = 1  # Minimum articles required to attempt analysis
+IDEAL_ARTICLES_FOR_SECTION = 5  # Trigger enrichment if below this threshold
 
 SECTION_FOCUS = {
     "fundamental": (
-        "HORIZON: Multi-year structural analysis. "
-        "CONTENT: Derive first-principles/invariant anchors for the primary asset (real rate differentials, terms-of-trade, productivity, BoP, policy reaction functions). State regimes and transition conditions; articulate explicit causal chains to asset pricing. "
-        "FORMAT: 2-3 authoritative paragraphs, professional tone, maximum information density. "
-        "STRUCTURE: Causal chain → Base case → Key risks → Watch signals → Confidence level. "
-        "CITATIONS: Only 9-character IDs. FOCUS: Every sentence about primary asset performance."
+        "HORIZON: Multi-year structural analysis (6+ months). "
+        "CONTENT: Derive first-principles anchors for primary asset through perspective synthesis. "
+        "**SYNERGY MANDATE: What do risk articles + opportunity articles + trend articles reveal TOGETHER? "
+        "Build causal chains showing how structural risks create opportunities, how trends amplify catalysts. "
+        "1+1=3 synthesis: combine perspectives to generate insights impossible from single-perspective view.** "
+        "FORMAT: 2-3 authoritative paragraphs, maximum insight density. "
+        "STRUCTURE: Base case (first principles) → Risk transmission → Opportunity mechanisms → "
+        "Trend durability → Catalyst triggers → Synthesis (what X+Y means for asset). "
+        "**PERSPECTIVE INTEGRATION: Balance risks/opportunities/trends based on article scores. "
+        "Ask: 'What does THIS risk combined with THAT opportunity mean for asset performance?'** "
+        "CITATIONS: Only 9-character IDs (ABC123DEF). "
+        "FOCUS: Primary asset performance through multi-perspective lens. "
+        "AUTHORITY: Conviction-based, zero hedging, surgical precision."
     ),
     "medium": (
-        "HORIZON: 3-6 months scenario analysis. "
-        "CONTENT: Build scenario/catalyst map for primary asset with triggers and invalidations. Integrate macro data, policy, positioning, flows affecting the asset. "
-        "FORMAT: 2-3 compact paragraphs, authoritative tone, decision-focused. "
-        "STRUCTURE: Scenario map → Timing windows → Base case + alternatives → Risks → Watch signals → Confidence. "
-        "CITATIONS: Only 9-character IDs. FOCUS: All scenarios about primary asset movement."
+        "HORIZON: 3-6 months tactical scenario analysis. "
+        "CONTENT: Build integrated scenario map for primary asset across all perspectives. "
+        "**SYNERGY MANDATE: Synthesize risk scenarios + opportunity scenarios + trend shifts + upcoming catalysts. "
+        "Map causal chains: How does risk A interact with opportunity B? What triggers trend C? "
+        "Compound scenarios: Risk materializes → creates opportunity → accelerates trend → triggers catalyst.** "
+        "FORMAT: 2-3 compact paragraphs, scenario-focused. "
+        "STRUCTURE: Scenario matrix (bull/bear/base) → Risk paths → Opportunity paths → "
+        "Trend inflections → Catalyst timing → Cross-scenario synthesis. "
+        "**PERSPECTIVE BALANCE: Emphasize risk/opportunity interplay, note trend context, flag catalysts. "
+        "Ask: 'If risk X happens AND opportunity Y emerges, what's the net asset impact?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset tactical positioning through scenario synthesis. "
+        "AUTHORITY: Decisive, probability-weighted, actionable."
     ),
     "current": (
-        "HORIZON: 0-3 weeks immediate analysis. "
-        "CONTENT: Explain immediate drivers affecting primary asset (news/data/policy), near-term catalysts and positioning dynamics, expected reaction function. "
-        "FORMAT: 1-2 paragraphs, urgent tone, actionable intelligence. "
-        "STRUCTURE: Immediate drivers → Key levels/thresholds → Expected reaction → Invalidation signals → Next monitors. "
-        "CITATIONS: Only 9-character IDs. FOCUS: All catalysts about primary asset price action. "
-        "MANDATORY: Always generate content - this is core market analysis function."
+        "HORIZON: 0-3 weeks immediate intelligence. "
+        "CONTENT: Synthesize immediate drivers across all perspectives for primary asset. "
+        "**SYNERGY MANDATE: Combine near-term risks + immediate opportunities + trend shifts + active catalysts. "
+        "Real-time synthesis: What are markets missing? Where do perspectives conflict/reinforce? "
+        "Contrarian edge: If everyone sees risk, where's the hidden opportunity? If consensus is bullish, what's the tail risk?** "
+        "FORMAT: 1-2 paragraphs, urgent tone, maximum density. "
+        "STRUCTURE: Immediate drivers (by perspective) → Catalyst triggers → Risk/opportunity interplay → "
+        "Trend context → Positioning implications → Next 72-hour monitors. "
+        "**PERSPECTIVE BALANCE: Lead with catalysts, integrate risks/opportunities, note trend context. "
+        "Ask: 'What does catalyst X + risk Y + opportunity Z mean for asset RIGHT NOW?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset immediate price action through multi-perspective synthesis. "
+        "AUTHORITY: Urgent, conviction-driven, trade-ready. "
+        "MANDATORY: Always generate - core real-time intelligence function."
     ),
     "drivers": (
-        "HORIZON: Cross-topic synthesis. "
-        "CONTENT: Synthesize most material drivers affecting primary asset (macro, policy, flows/positioning, technicals). Show explicit transmission mechanisms to asset. "
-        "FORMAT: Concise synthesis, professional tone, maximum insight density. "
-        "STRUCTURE: Key drivers → Direction/mechanisms → Fragility points → Watch signals. "
-        "CITATIONS: Only 9-character IDs. FOCUS: All drivers impact primary asset specifically."
+        "HORIZON: Cross-topic, cross-perspective synthesis. "
+        "CONTENT: Synthesize material drivers affecting primary asset across ALL perspectives. "
+        "**FIRST-PRINCIPLES DRIVER SYNTHESIS: Build causal chains from root drivers to asset impact. "
+        "Multi-perspective integration: Organize by perspective (risk drivers, opportunity drivers, trend drivers, catalyst drivers). "
+        "Synergy detection: Which drivers reinforce? Which offset? What's the net vector? "
+        "Transmission mechanisms: Map explicit paths from driver → intermediate variables → asset performance.** "
+        "FORMAT: Concise synthesis, maximum insight density, shortest possible text. "
+        "STRUCTURE: Key drivers (by perspective) → Causal chains → Transmission paths → "
+        "Synergies/offsets → Net assessment → Watch signals. "
+        "**PERSPECTIVE INTEGRATION: Group drivers by risk/opportunity/trend/catalyst, show interactions.** "
+        "**SYNERGY QUESTION: 'What do risk drivers + opportunity drivers + trend drivers reveal TOGETHER?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset impact through integrated driver framework. "
+        "AUTHORITY: Surgical precision, causal clarity, maximum density."
     ),
     "executive_summary": (
-        "HORIZON: Integrated synthesis across all timeframes. "
-        "CONTENT: Integrate fundamental/medium/current views into crisp house view for primary asset. Highlight catalysts, risks, watch-items. "
-        "FORMAT: Executive brief, authoritative tone, decision-useful intelligence. "
-        "STRUCTURE: House view → Key catalysts → Critical risks → Watch items → Confidence. "
-        "LENGTH: Maximum information density - shortest possible text. "
-        "CITATIONS: Only 9-character IDs. FOCUS: All insights about primary asset performance."
+        "HORIZON: Integrated house view across all timeframes and perspectives. "
+        "CONTENT: Synthesize fundamental + medium + current analysis across all 4 perspectives into unified view. "
+        "**FIRST-PRINCIPLES HOUSE VIEW: Build conviction from ground truth, not consensus. "
+        "Multi-perspective synthesis: Balance key risks + top opportunities + structural trends + immediate catalysts. "
+        "Synergy intelligence: What does the COMBINATION of perspectives reveal? Where do they reinforce/conflict? "
+        "Contrarian edge: Where is consensus wrong? What's the market missing? What's the asymmetric bet?** "
+        "FORMAT: Executive brief, authoritative tone, decision-ready. "
+        "STRUCTURE: House view (conviction call) → Fundamental anchor → Medium-term scenarios → "
+        "Current drivers → Key risks → Top opportunities → Structural trends → Immediate catalysts → "
+        "Net assessment → Positioning → Watch items. "
+        "**PERSPECTIVE INTEGRATION: Balance all 4 perspectives, show how they interact to form house view.** "
+        "**SYNERGY QUESTION: 'What does the TOTALITY of perspectives reveal about asset trajectory?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset performance through complete perspective synthesis. "
+        "AUTHORITY: Maximum conviction, zero hedging, trade-executable, world-class."
     ),
     "movers_scenarios": (
         "HORIZON: Forward-looking scenarios for primary asset. "
@@ -83,16 +126,89 @@ SECTION_FOCUS = {
         "OUTLOOK: Direction | Horizon | Expected path/levels | Decision signals | Invalidation | Trigger | Probability % | Confidence. "
         "CITATIONS: Only 9-character IDs for specific facts. FOCUS: All analysis about primary asset performance only."
     ),
+    "risk_analysis": (
+        "HORIZON: Cross-timeframe risk synthesis (fundamental + medium + current risks). "
+        "CONTENT: Synthesize ALL downside scenarios, threats, vulnerabilities for primary asset. "
+        "**FIRST-PRINCIPLES RISK SYNTHESIS: Build causal chains from root causes to asset impact. "
+        "Multi-article integration: What does risk A + risk B reveal about systemic vulnerability? "
+        "Transmission mechanisms: How does geopolitical risk → policy risk → market risk → asset impact? "
+        "Probability trees: Which risks are independent? Which compound? What's the tail scenario?** "
+        "FORMAT: 2-3 authoritative paragraphs, risk-focused intelligence. "
+        "STRUCTURE: Critical risks (by timeframe) → Causal chains → Transmission paths → "
+        "Probability/magnitude assessment → Compounding scenarios → Mitigation/hedges → Watch signals. "
+        "**ARTICLE SELECTION: Use ONLY articles with importance_risk ≥ 2.** "
+        "**SYNERGY QUESTION: 'What do these risk articles reveal TOGETHER that none show alone?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset downside through integrated risk framework. "
+        "AUTHORITY: Unflinching, probability-weighted, defensible."
+    ),
+    "opportunity_analysis": (
+        "HORIZON: Cross-timeframe opportunity synthesis (structural + tactical + immediate). "
+        "CONTENT: Synthesize ALL upside scenarios, catalysts, bullish drivers for primary asset. "
+        "**FIRST-PRINCIPLES OPPORTUNITY SYNTHESIS: Build causal chains from catalyst to asset upside. "
+        "Multi-article integration: What does opportunity A + opportunity B reveal about asymmetric upside? "
+        "Transmission mechanisms: How does policy shift → liquidity flow → positioning change → asset rally? "
+        "Conviction framework: Which opportunities are high-probability? Which are high-magnitude? Which are both?** "
+        "FORMAT: 2-3 authoritative paragraphs, opportunity-focused intelligence. "
+        "STRUCTURE: Key opportunities (by timeframe) → Causal chains → Transmission paths → "
+        "Probability/magnitude assessment → Compounding scenarios → Catalyst timing → Entry points → Watch signals. "
+        "**ARTICLE SELECTION: Use ONLY articles with importance_opportunity ≥ 2.** "
+        "**SYNERGY QUESTION: 'What do these opportunity articles reveal TOGETHER about asymmetric upside?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset upside through integrated opportunity framework. "
+        "AUTHORITY: Conviction-driven, magnitude-focused, trade-ready."
+    ),
+    "trend_analysis": (
+        "HORIZON: Structural trend synthesis (secular shifts, regime changes). "
+        "CONTENT: Synthesize secular/structural shifts affecting primary asset across all timeframes. "
+        "**FIRST-PRINCIPLES TREND SYNTHESIS: Identify regime changes from first principles. "
+        "Multi-article integration: What do trend A + trend B reveal about structural transformation? "
+        "Durability assessment: Is this cyclical noise or secular shift? What's the half-life? "
+        "Inflection detection: Are we at trend start, middle, or exhaustion? What signals reversal?** "
+        "FORMAT: 2 paragraphs, trend-focused intelligence. "
+        "STRUCTURE: Structural shifts (identify) → First-principles drivers → Durability evidence → "
+        "Asset transmission → Inflection signals → Positioning implications → Reversal monitors. "
+        "**ARTICLE SELECTION: Use ONLY articles with importance_trend ≥ 2.** "
+        "**SYNERGY QUESTION: 'What do these trend articles reveal TOGETHER about regime change?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset structural drivers through integrated trend framework. "
+        "AUTHORITY: Secular conviction, regime-aware, contrarian when warranted."
+    ),
+    "catalyst_analysis": (
+        "HORIZON: Immediate catalyst synthesis (0-7 days, forcing functions). "
+        "CONTENT: Synthesize immediate triggers forcing price action in primary asset RIGHT NOW. "
+        "**FIRST-PRINCIPLES CATALYST SYNTHESIS: Identify forcing functions from first principles. "
+        "Multi-article integration: What do catalyst A + catalyst B reveal about immediate pressure? "
+        "Timing precision: Which catalysts are hours away? Days? Which are certain vs. probabilistic? "
+        "Market positioning: Is catalyst priced? Ignored? Misunderstood? Where's the edge?** "
+        "FORMAT: 1-2 paragraphs, urgent catalyst intelligence. "
+        "STRUCTURE: Immediate catalysts (by timing) → Forcing mechanisms → Market positioning → "
+        "Expected impact → Contrarian angles → Next 24-48h triggers → Real-time monitors. "
+        "**ARTICLE SELECTION: Use ONLY articles with importance_catalyst ≥ 2.** "
+        "**SYNERGY QUESTION: 'What do these catalyst articles reveal TOGETHER about immediate forcing functions?'** "
+        "CITATIONS: Only 9-character IDs. "
+        "FOCUS: Primary asset immediate action through integrated catalyst framework. "
+        "AUTHORITY: Urgent, timing-precise, trade-executable."
+    ),
 }
 
 SECTIONS = [
+    # Timeframe sections (perspective-balanced)
     "fundamental",
     "medium",
     "current",
+    
+    # Synthesis sections (perspective-aware)
     "drivers",
     "movers_scenarios",
     "swing_trade_or_outlook",
     "executive_summary",
+    
+    # NEW: Perspective-focused sections
+    "risk_analysis",
+    "opportunity_analysis",
+    "trend_analysis",
+    "catalyst_analysis",
 ]
 
 # =============================================================================
@@ -185,6 +301,10 @@ def get_all_analysis_sections(topic_id: str) -> Dict[str, str]:
            t.executive_summary as executive_summary,
            t.movers_scenarios as movers_scenarios,
            t.swing_trade_or_outlook as swing_trade_or_outlook,
+           t.risk_analysis as risk_analysis,
+           t.opportunity_analysis as opportunity_analysis,
+           t.trend_analysis as trend_analysis,
+           t.catalyst_analysis as catalyst_analysis,
            t.name as name
     """
     result = run_cypher(query, {"topic_id": topic_id})
@@ -349,6 +469,37 @@ def analysis_rewriter(
             )
 # REMOVED: drivers special case - now uses unified material builder
         else:
+            # Check if we should enrich BEFORE attempting to build material
+            # This ensures we have enough articles for quality analysis
+            if section in ["fundamental", "medium", "current"]:
+                cnt_q = """
+                MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
+                WHERE a.temporal_horizon = $section AND (a.priority IS NULL OR a.priority <> 'hidden')
+                RETURN count(a) AS c
+                """
+                cnt_res = run_cypher(cnt_q, {"topic_id": topic_id, "section": section}) or [{"c": 0}]
+                current_cnt = int(cnt_res[0]["c"] or 0)
+                
+                # Trigger enrichment if below ideal threshold (but above minimum)
+                if MIN_ARTICLES_FOR_SECTION <= current_cnt < IDEAL_ARTICLES_FOR_SECTION:
+                    from worker.workflows.topic_enrichment import backfill_topic_from_storage
+                    
+                    logger.info(
+                        f"Enriching before analysis | {topic_id} | section={section} | "
+                        f"current={current_cnt} < ideal={IDEAL_ARTICLES_FOR_SECTION}"
+                    )
+                    master_log(
+                        f"Enrich for quality | {topic_id} | section={section} | cnt={current_cnt} < {IDEAL_ARTICLES_FOR_SECTION}"
+                    )
+                    backfill_topic_from_storage(
+                        topic_id=topic_id,
+                        threshold=IDEAL_ARTICLES_FOR_SECTION,
+                        max_articles_per_section=5,
+                        min_keyword_hits=2,
+                        test=test,
+                        sections=[section],
+                    )
+            
             try:
                 # Use unified material builder for all sections
                 material, article_ids = build_material_for_synthesis_section(
@@ -372,6 +523,7 @@ def analysis_rewriter(
                     logger.info(
                         f"Rewrite missing material | {topic_id} | section={section} | current_cnt={current_cnt} < {MIN_ARTICLES_FOR_SECTION}"
                     )
+                    # Trigger enrichment if below minimum threshold
                     if current_cnt < MIN_ARTICLES_FOR_SECTION:
                         from worker.workflows.topic_enrichment import (
                             backfill_topic_from_storage,

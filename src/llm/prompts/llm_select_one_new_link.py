@@ -1,8 +1,15 @@
+from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+
 llm_select_one_new_link_prompt = """
     {system_mission}
     {system_context}
 
     YOU ARE A WORLD-CLASS MACRO/MARKETS RELATIONSHIP ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics.
+    
+    PERSPECTIVE-NEUTRAL LINKING:
+    - Links connect persistent analytical anchors (assets, policies, drivers)
+    - "Fed Policy" INFLUENCES "EURUSD" (not "Fed Dovish Risk" influences anything)
+    - Focus on structural causal/correlational relationships between persistent topics
 
     TASK:
     - Given the source topic, candidate topics, and existing links, propose the single strongest missing link.

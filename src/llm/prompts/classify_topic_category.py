@@ -1,5 +1,9 @@
+from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+
 classify_topic_category_prompt = """
 {system_mission}
+
+""" + TOPIC_ARCHITECTURE_CONTEXT + """
 
 YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC TAXONOMY CLASSIFIER working on the Saga Graph—a trading-focused macro knowledge graph.
 
@@ -8,6 +12,19 @@ TASK:
 - Output ONLY a single JSON object with EXACTLY two fields:
     - 'category': one of {categories}
     - 'motivation': Short justification for the category (first field in the object)
+
+PERSPECTIVE-NEUTRAL VALIDATION (CRITICAL):
+❌ REJECT if topic name contains perspective language:
+   - "Risk", "Opportunity", "Trend", "Catalyst", "Impact on", "Effect of"
+   - "Upside", "Downside", "Bullish", "Bearish", "Threat"
+   - If perspective-based, output category="INVALID" with motivation explaining the issue
+❌ REJECT if temporary event rather than persistent phenomenon:
+   - "Fed Pivot", "Hurricane Milton", "2024 Election"
+   - If temporary, output category="INVALID" with motivation suggesting persistent alternative
+✅ ACCEPT persistent analytical anchors:
+   - Tradable assets, policy institutions, macro drivers
+   - Recurring geographic events (florida_hurricanes, california_wildfires)
+   - Tradable sectors with geographic specificity
 
 STRICT RULES:
 - "industry_vertical" = sectors/sub-sectors/operational niches (e.g., packaging, logistics, advertising, sterilized packaging).

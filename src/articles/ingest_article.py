@@ -5,9 +5,7 @@ from src.observability.pipeline_logging import master_log
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.graph.ops.topic import get_all_topics
 from src.analysis.policies.topic_identifier import find_topic_mapping, NodeRow
-from src.analysis.policies.category_identifier import find_category
-from src.analysis.policies.impact_identifier import find_impact
-from src.analysis.policies.time_frame_identifier import find_time_frame
+from src.llm.classify_article import classify_article_complete
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
 from src.graph.ops.link import find_influences_and_correlates
@@ -138,26 +136,40 @@ def add_article(
         bool(exists_result[0].get("exists")) if exists_result else False
     )
 
-    # 4. Article-level LLM classifications (done ONCE for all topics)
-    category_result = find_category(article["argos_summary"])
-    logger.info(f"Category: {category_result.name}")
-    logger.info(f"Category motivation: {category_result.motivation}")
+    # 4. Article-level LLM classification (SINGLE unified call with perspective scores)
+    classification = classify_article_complete(article["argos_summary"])
+    
+    # Check if article is invalid
+    if classification.temporal_horizon == "invalid":
+        logger.warning(f"ABORT: Article {article_id} classified as invalid. Skipping.")
+        master_log(
+            f"Article rejected | {article_id} | Invalid content",
+            articles_rejected_invalid=1,
+        )
+        tracker.put("status", "skipped_invalid")
+        tracker.set_id(article_id)
+        return {
+            "article_id": article_id,
+            "status": "skipped",
+            "reason": "invalid_content",
+        }
+    
+    logger.info(f"Classification: horizon={classification.temporal_horizon}, category={classification.category}")
+    logger.info(f"Perspectives: {classification.primary_perspectives} (scores: R{classification.importance_risk}/O{classification.importance_opportunity}/T{classification.importance_trend}/C{classification.importance_catalyst})")
+    logger.info(f"Motivation: {classification.motivation}")
 
-    impact_result = find_impact(article["argos_summary"])
-    logger.info(f"Impact motivation: {impact_result.motivation}")
-    logger.info(f"Impact priority: {impact_result.score}")
-
-    time_frame_result = find_time_frame(article["argos_summary"])
-    logger.info(f"Time frame motivation: {time_frame_result.motivation}")
-    logger.info(f"Temporal horizon: {time_frame_result.horizon}")
-
-    # Save all LLM-driven classification outputs
+    # Save unified classification output
     tracker.put_many(
-        category={"type": category_result.name, "motivation": category_result.motivation},
-        impact={"priority": impact_result.score, "motivation": impact_result.motivation},
-        time_frame={
-            "temporal_horizon": time_frame_result.horizon,
-            "motivation": time_frame_result.motivation,
+        classification={
+            "category": classification.category,
+            "temporal_horizon": classification.temporal_horizon,
+            "importance_risk": classification.importance_risk,
+            "importance_opportunity": classification.importance_opportunity,
+            "importance_trend": classification.importance_trend,
+            "importance_catalyst": classification.importance_catalyst,
+            "primary_perspectives": classification.primary_perspectives,
+            "overall_importance": classification.overall_importance,
+            "motivation": classification.motivation,
         },
     )
 
@@ -173,10 +185,15 @@ def add_article(
                 "source": article.get("url"),
                 "published_at": article.get("pubDate"),
                 "vector_id": None,
-                "type": category_result.name,
-                "temporal_horizon": time_frame_result.horizon,
-                "priority": impact_result.score,
+                "type": classification.category,
+                "temporal_horizon": classification.temporal_horizon,
+                "priority": str(classification.overall_importance),
                 "relevance_score": relevance_score_val,
+                # NEW: Perspective importance scores
+                "importance_risk": classification.importance_risk,
+                "importance_opportunity": classification.importance_opportunity,
+                "importance_trend": classification.importance_trend,
+                "importance_catalyst": classification.importance_catalyst,
             }
 
         # Save the final built article_node dict for traceability
@@ -194,7 +211,11 @@ def add_article(
             type: $type,
             temporal_horizon: $temporal_horizon,
             priority: $priority,
-            relevance_score: $relevance_score
+            relevance_score: $relevance_score,
+            importance_risk: $importance_risk,
+            importance_opportunity: $importance_opportunity,
+            importance_trend: $importance_trend,
+            importance_catalyst: $importance_catalyst
         })
         RETURN a
         """

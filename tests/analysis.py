@@ -108,7 +108,7 @@ def test_analysis_direct() -> bool:
 
 
 def test_analysis_with_sections() -> bool:
-    """Test analysis generation for specific sections"""
+    """Test analysis generation for specific sections including new perspective sections"""
     logger.info("=== TESTING ANALYSIS BY SECTION ===")
 
     topics = get_all_topics()
@@ -120,24 +120,35 @@ def test_analysis_with_sections() -> bool:
     topic_id = cast(str, topic.get("id"))
     topic_name = topic.get("name", topic_id)
 
-    sections = ["fundamental", "medium", "current"]
+    # Test timeframe sections
+    timeframe_sections = ["fundamental", "medium", "current"]
+    # Test new perspective sections
+    perspective_sections = ["risk_analysis", "opportunity_analysis", "trend_analysis", "catalyst_analysis"]
+    
+    all_sections = timeframe_sections + perspective_sections
     results = {}
 
-    for section in sections:
-        logger.info(f"Testing {section} analysis for: {topic_name} ({topic_id})")
+    logger.info(f"Testing {len(all_sections)} sections for: {topic_name} ({topic_id})")
+    
+    for section in all_sections:
+        logger.info(f"  Testing {section}...")
         try:
             analysis_rewriter(topic_id, test=True, analysis_type=section)
-            logger.info(f"✅ {section} analysis completed")
+            logger.info(f"  ✅ {section} analysis completed")
             results[section] = True
         except Exception as e:
-            logger.error(f"❌ {section} analysis failed: {e}")
+            logger.error(f"  ❌ {section} analysis failed: {e}")
             results[section] = False
 
-    passed = sum(results.values())
-    total = len(results)
-    logger.info(f"Section analysis results: {passed}/{total} passed")
+    # Report results by category
+    timeframe_passed = sum(results.get(s, False) for s in timeframe_sections)
+    perspective_passed = sum(results.get(s, False) for s in perspective_sections)
+    
+    logger.info(f"Timeframe sections: {timeframe_passed}/{len(timeframe_sections)} passed")
+    logger.info(f"Perspective sections: {perspective_passed}/{len(perspective_sections)} passed")
+    logger.info(f"Total: {sum(results.values())}/{len(results)} passed")
 
-    return passed > 0  # Success if at least one section worked
+    return sum(results.values()) > 0  # Success if at least one section worked
 
 
 def run_analysis_tests() -> None:
