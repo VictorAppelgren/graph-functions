@@ -1,0 +1,57 @@
+# Pre-commit hooks for SAGA Graph
+# Run: pre-commit install (one time setup)
+# Run: pre-commit run --all-files (manual check)
+
+repos:
+  # Python code formatting and linting
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3.12
+        args: [--line-length=100]
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: [--profile, black, --line-length=100]
+
+  # Type checking with MyPy - STRICT mode
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        name: mypy-strict-typing
+        additional_dependencies:
+          - types-requests==2.32.0.20241016
+        args: [--config-file=config/mypy.ini]
+        # Only check Python files that should have strict typing
+        files: ^(graph_db/|utils/|.*_llm\.py|main\.py|user_anchor_nodes\.py)
+        
+  # Basic file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: \.md$
+      - id: end-of-file-fixer
+        exclude: \.md$
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: detect-private-key
+
+  # Python-specific checks
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        args: [--max-line-length=100, --extend-ignore=E203,W503]
+
+# Configuration for specific tools
+default_language_version:
+  python: python3.12
