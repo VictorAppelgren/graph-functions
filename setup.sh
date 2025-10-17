@@ -73,8 +73,8 @@ setup_python_env() {
     # Create virtual environment
     if [ -d "$VENV_NAME" ]; then
         print_warning "Virtual environment already exists at $VENV_NAME"
-        read -p "Do you want to recreate it? (y/N): " -n 1 -r
-        echo
+        echo -n "Do you want to recreate it? (y/N): "
+        read -r REPLY
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             rm -rf $VENV_NAME
         else
