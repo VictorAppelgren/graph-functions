@@ -36,11 +36,24 @@ def select_best_articles(topic_id: str, timeframe: str) -> list[dict[str, str]]:
         if not top_n:
             break
         q = """
-            MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-            WHERE a.temporal_horizon = $timeframe
-              AND coalesce(a.priority, '') <> 'hidden'
-            RETURN a.id AS id, a.title AS title, a.summary AS summary, a.priority AS priority, a.relevance_score AS relevance_score, a.published_at AS published_at
-            ORDER BY a.relevance_score DESC, a.published_at DESC
+            MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+            WHERE r.timeframe = $timeframe
+            WITH a, r,
+                 CASE 
+                   WHEN coalesce(r.importance_risk, 0) >= coalesce(r.importance_opportunity, 0) 
+                        AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_trend, 0)
+                        AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_catalyst, 0)
+                   THEN coalesce(r.importance_risk, 0)
+                   WHEN coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_trend, 0)
+                        AND coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_catalyst, 0)
+                   THEN coalesce(r.importance_opportunity, 0)
+                   WHEN coalesce(r.importance_trend, 0) >= coalesce(r.importance_catalyst, 0)
+                   THEN coalesce(r.importance_trend, 0)
+                   ELSE coalesce(r.importance_catalyst, 0)
+                 END as max_importance
+            RETURN a.id AS id, a.title AS title, a.summary AS summary, a.published_at AS published_at,
+                   r.importance_risk, r.importance_opportunity, r.importance_trend, r.importance_catalyst
+            ORDER BY max_importance DESC, a.published_at DESC
             LIMIT $limit
         """
         limit = top_n - len(articles)

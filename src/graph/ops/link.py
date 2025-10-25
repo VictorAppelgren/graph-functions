@@ -1,6 +1,6 @@
 from src.graph.neo4j_client import connect_graph_db
 from utils import app_logging
-from src.observability.pipeline_logging import master_log, master_log_error
+from src.observability.pipeline_logging import master_log, master_log_error, master_statistics
 from difflib import get_close_matches
 from events.classifier import EventClassifier, EventType
 from typing import Optional, Any
@@ -124,9 +124,9 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
             if record:
                 logger.info(f"Link already exists: {link.type} {link.source}->{link.target}")
                 master_log(
-                    f"Relationship duplicate | {link.source}->{link.target} | type={link.type}",
-                    duplicates_skipped=1,
+                    f"Relationship duplicate | {link.source}->{link.target} | type={link.type}"
                 )
+                master_statistics(duplicates_skipped=1)
                 tracker.put_many(status="skipped_duplicate", dedup_decision="already_linked")
                 # Record graph relationship identifiers
                 try:
@@ -172,6 +172,7 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
                     f"Failed to add link: Cypher did not create a relationship. Link: {link.type} {link.source}->{link.target}"
                 )
             logger.info(f"Link created: {link.type} {link.source}->{link.target}")
+            master_statistics(relationships_added=1)
             try:
                 cypher_summary = {
                     "_contains_updates": bool(
@@ -507,3 +508,96 @@ def select_and_remove_link(
         "link_removed": None,
         "reason": "no_removal_recommended",
     }
+
+
+def create_about_link_with_classification(
+    article_id: str,
+    topic_id: str,
+    timeframe: str,
+    importance_risk: int,
+    importance_opportunity: int,
+    importance_trend: int,
+    importance_catalyst: int,
+    motivation: str,
+    implications: str
+) -> None:
+    """
+    Create ABOUT relationship with rich classification properties.
+    
+    This is the NEW way - stores classification on relationship, not article node.
+    Each article-topic relationship gets its own context-aware classification.
+    
+    Args:
+        article_id: Article ID
+        topic_id: Topic ID
+        timeframe: "fundamental", "medium", or "current"
+        importance_risk: Risk importance score (0-10)
+        importance_opportunity: Opportunity importance score (0-10)
+        importance_trend: Trend importance score (0-10)
+        importance_catalyst: Catalyst importance score (0-10)
+        motivation: Why this article matters for THIS topic (1-2 sentences)
+        implications: What this could mean for THIS topic going forward (1-2 sentences)
+    
+    Example:
+        >>> create_about_link_with_classification(
+        ...     article_id="ABC123",
+        ...     topic_id="spx",
+        ...     timeframe="current",
+        ...     importance_risk=8,
+        ...     importance_opportunity=2,
+        ...     importance_trend=5,
+        ...     importance_catalyst=9,
+        ...     motivation="Powell's hawkish tone signals rates staying higher...",
+        ...     implications="Could trigger 5-8% correction as markets reprice..."
+        ... )
+    """
+    from src.graph.neo4j_client import run_cypher
+    
+    # Check if link already exists
+    check_query = """
+    MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic {id: $topic_id})
+    RETURN r
+    """
+    existing = run_cypher(check_query, {"article_id": article_id, "topic_id": topic_id})
+    
+    if existing:
+        logger.info(f"ABOUT link already exists: {article_id} -> {topic_id}")
+        master_statistics(duplicates_skipped=1)
+        return
+    
+    # Create new link with all classification properties
+    create_query = """
+    MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
+    CREATE (a)-[:ABOUT {
+        timeframe: $timeframe,
+        importance_risk: $importance_risk,
+        importance_opportunity: $importance_opportunity,
+        importance_trend: $importance_trend,
+        importance_catalyst: $importance_catalyst,
+        motivation: $motivation,
+        implications: $implications,
+        created_at: datetime()
+    }]->(t)
+    """
+    
+    run_cypher(create_query, {
+        "article_id": article_id,
+        "topic_id": topic_id,
+        "timeframe": timeframe,
+        "importance_risk": importance_risk,
+        "importance_opportunity": importance_opportunity,
+        "importance_trend": importance_trend,
+        "importance_catalyst": importance_catalyst,
+        "motivation": motivation,
+        "implications": implications
+    })
+    
+    # Calculate overall importance for logging
+    overall_importance = max(importance_risk, importance_opportunity, importance_trend, importance_catalyst)
+    
+    logger.info(
+        f"Created ABOUT link: {article_id} -> {topic_id} | "
+        f"timeframe={timeframe} | importance={overall_importance} "
+        f"(R:{importance_risk} O:{importance_opportunity} T:{importance_trend} C:{importance_catalyst})"
+    )
+    master_statistics(about_links_added=1)

@@ -23,8 +23,8 @@ def _fetch_existing_section_summaries(
     if section not in SECTION_FOCUS:
         raise KeyError(f"Unknown section: {section}")
     q = (
-        "MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id}) "
-        "WHERE a.temporal_horizon = $section AND coalesce(a.priority, '') <> 'hidden' "
+        "MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id}) "
+        "WHERE r.timeframe = $section "
         "RETURN a.id AS id "
         "ORDER BY a.published_at DESC LIMIT $limit"
     )

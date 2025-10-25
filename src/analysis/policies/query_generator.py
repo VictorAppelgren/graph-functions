@@ -69,26 +69,57 @@ def create_wide_query(article_text: str) -> dict[str, Any]:
 
     llm = get_llm(ModelTier.MEDIUM)
 
-    prompt_template = f"""
-        {SYSTEM_MISSION}
-        {SYSTEM_CONTEXT}
-        YOU ARE A WORLD-CLASS MACRO/MARKETS BOOLEAN QUERY ENGINEER working on the Saga Graph…
+    prompt = f"""You are a boolean search query expert for financial markets and macro topics.
 
-        TASK:
-        - Given the article text below, generate a wide boolean search query.
-        - Output a JSON object with:
-            - 'motivation' (first field): short, research-grade justification.
-            - 'query': the boolean query string.
-        - If no good query can be constructed, output null for 'query'.
-        - ONLY the JSON object. NO extra text/fields.
+TASK: Create a wide boolean search query for this topic.
 
-        ARTICLE:
-        {article_text}
+TOPIC:
+{article_text}
 
-        YOUR RESPONSE IN JSON:
-        """
-    logger.debug("PromptTemplate: %s", truncate_str(prompt_template, 100))
-    prompt = PromptTemplate.from_template(prompt_template).format()
+INSTRUCTIONS:
+1. Generate a boolean query using OR, AND, NOT operators
+2. Include synonyms, abbreviations, and related terms
+3. Make it WIDE to catch all relevant articles
+4. Keep it focused on the core topic
+
+EXAMPLES (covering different asset classes):
+
+Topic: "US Dollar"
+Query: ("USD" OR "US Dollar" OR "US$" OR "dollar" OR "DXY" OR "dollar index") AND ("Fed" OR "Federal Reserve" OR "monetary policy" OR "interest rates" OR "forex" OR "FX" OR "currency")
+
+Topic: "Fed Policy"
+Query: ("Fed" OR "Federal Reserve" OR "FOMC" OR "Powell" OR "Fed policy" OR "Federal Open Market Committee") AND ("interest rates" OR "monetary policy" OR "rate hike" OR "rate cut" OR "QE" OR "quantitative easing" OR "tightening" OR "dot plot" OR "Fed funds")
+
+Topic: "S&P 500"
+Query: ("S&P 500" OR "SPX" OR "SP500" OR "S&P" OR "Standard & Poor's 500") AND ("stocks" OR "equities" OR "market" OR "rally" OR "selloff" OR "earnings" OR "valuation" OR "index")
+
+Topic: "US 10Y Treasury Yield"
+Query: ("10-year" OR "10Y" OR "10 year" OR "Treasury yield" OR "UST10Y" OR "benchmark yield") AND ("bonds" OR "fixed income" OR "rates" OR "yield curve" OR "duration" OR "debt")
+
+Topic: "Brent Crude Oil"
+Query: ("Brent" OR "Brent crude" OR "oil" OR "crude oil" OR "petroleum") AND ("energy" OR "OPEC" OR "supply" OR "demand" OR "refining" OR "barrel" OR "WTI" OR "commodities")
+
+Topic: "Gold"
+Query: ("gold" OR "XAU" OR "bullion" OR "gold price") AND ("precious metals" OR "safe haven" OR "inflation hedge" OR "commodities" OR "central banks" OR "jewelry demand")
+
+Topic: "US Inflation"
+Query: ("inflation" OR "CPI" OR "consumer prices" OR "price growth" OR "PCE") AND ("United States" OR "US" OR "USA" OR "America" OR "Fed" OR "Federal Reserve") AND NOT ("Europe" OR "China" OR "Japan")
+
+Topic: "ECB Policy"
+Query: ("ECB" OR "European Central Bank" OR "Lagarde" OR "Eurozone central bank") AND ("monetary policy" OR "interest rates" OR "rate decision" OR "PEPP" OR "APP" OR "TLTRO" OR "deposit rate")
+
+Topic: "China Exports"
+Query: ("China" OR "Chinese" OR "PRC") AND ("exports" OR "trade" OR "shipments" OR "overseas sales" OR "trade balance" OR "customs data") AND ("goods" OR "manufacturing" OR "supply chain")
+
+Topic: "US Unemployment Rate"
+Query: ("unemployment" OR "jobless rate" OR "unemployment rate" OR "U3" OR "labor market") AND ("United States" OR "US" OR "USA" OR "BLS" OR "Bureau of Labor Statistics") AND ("jobs" OR "employment" OR "payrolls")
+
+YOUR TURN:
+Respond with ONLY this JSON format (no markdown, no extra text):
+{{
+  "motivation": "Brief explanation of query strategy",
+  "query": "your boolean query here"
+}}"""
 
     r = run_llm_decision(chain=llm, prompt=prompt, model=WideQueryModel, logger=logger)
 

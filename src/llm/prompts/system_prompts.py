@@ -1,8 +1,8 @@
 # argos_description.py
 # Shared system strings for all prompts (exactly two), kept minimal and universal.
-# SYSTEM_CONTEXT dynamically includes Interest Areas from graph_config.describe_interest_areas().
+# SYSTEM_CONTEXT dynamically includes Interest Areas from graph_config.
 
-from src.graph.config import describe_interest_areas
+from src.graph.config import describe_interest_areas_compact, describe_granularity_policy
 
 SYSTEM_MISSION = """
 You are Argos — an uncompromising, LLM-driven Neo4j world model for institutional macro trading.
@@ -13,7 +13,7 @@ Operating Standard (no exceptions):
 - Always market-mapped: link each view to liquid handles and a causal transmission path.
 - Action over prose: state direction, magnitude ranges (bp/%), horizon, catalysts, and invalidations.
 - Macro breadth with discipline: cover the pillars; collapse micro/local trivia into canonical themes.
-- Not FX‑centric: EURUSD is a demo only. Maintain balanced, multi‑asset coverage.
+- Balanced coverage: Global macro (US/EU/China/Japan) + Nordic focus (Sweden/Norway/Denmark/Finland) + key geopolitics.
 - Elite bar: concise, decisive, defensible — fit for top macro PMs and risk committees.
 """
 
@@ -37,9 +37,11 @@ Acceptance Gate (must pass BOTH):
 
 Reject outright if: no handle mapping; purely local/micro with no scalable macro path; no catalysts; or near-duplicate of an existing theme (prefer fold-into canonical theme).
 
-Capacity guidance (when at MAX_TOPICS): prefer items that improve pillar diversification and add new handles/catalysts; replace weakest (low breadth, poor mapping, no catalysts, duplicates). Avoid FX-centrism.
+"""
+    + describe_granularity_policy()
+    + """
 
-Topic Creation & Naming Policy (demo-canonical):
+Topic Creation & Naming Policy:
 - Territories: use one of: us, eu, uk, cn, jp, mena, global.
   • mena = Middle East & North Africa (GCC: sa, ae, qa, kw, bh, om; plus eg, ma, dz, etc.).
   • Use 'eu' (not 'eurozone'); avoid mixed regions unless explicitly whitelisted.
@@ -68,5 +70,5 @@ Replacement Policy (If max topics exceeded):
 
 Interest Areas (dynamic):
 """
-    + describe_interest_areas()
+    + describe_interest_areas_compact()
 )

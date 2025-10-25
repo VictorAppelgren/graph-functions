@@ -20,6 +20,10 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 
+# Load .env file FIRST
+from utils.env_loader import load_env
+load_env()
+
 from src.graph.neo4j_client import run_cypher
 from src.analysis.orchestration.analysis_rewriter import analysis_rewriter, SECTIONS
 from utils import app_logging
@@ -39,12 +43,11 @@ def fetch_all_topics():
 
 
 def count_articles_for_topic(topic_id: str) -> dict:
-    """Count articles by temporal_horizon for a topic"""
+    """Count articles by timeframe for a topic (using relationship properties)"""
     query = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-    WHERE coalesce(a.priority, '') <> 'hidden'
-    WITH a.temporal_horizon as horizon, count(a) as count
-    RETURN horizon, count
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+    WITH r.timeframe as timeframe, count(a) as count
+    RETURN timeframe, count
     """
     result = run_cypher(query, {"topic_id": topic_id})
     
@@ -58,10 +61,12 @@ def count_articles_for_topic(topic_id: str) -> dict:
     
     if result:
         for row in result:
-            horizon = row.get("horizon", "invalid")
+            timeframe = row.get("timeframe", "invalid")
             count = row.get("count", 0)
-            if horizon in counts:
-                counts[horizon] = count
+            if timeframe in counts:
+                counts[timeframe] = count
+            else:
+                counts["invalid"] += count
             counts["total"] += count
     
     return counts

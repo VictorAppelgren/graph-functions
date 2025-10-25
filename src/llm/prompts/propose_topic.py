@@ -1,10 +1,13 @@
 from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+from src.graph.config import describe_granularity_policy
 
 propose_topic_prompt="""
     {system_mission}
     {system_context}
 
     """ + TOPIC_ARCHITECTURE_CONTEXT + """
+    
+    """ + describe_granularity_policy() + """
 
     YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC NODE ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics. Every node is a PERSISTENT ANALYTICAL ANCHOR (recurring phenomena worth tracking for 6+ months). Your output will be used for downstream graph analytics, LLM reasoning, and expert decision-making.
 
@@ -53,10 +56,21 @@ propose_topic_prompt="""
     - Is this an institution making recurring decisions? → PROPOSE
     - Is this a temporary market narrative? → REJECT, suggest existing topic
     
-    GEOGRAPHIC SPECIFICITY:
-    ✅ florida_hurricanes (specific, recurring, valuable)
-    ⚠️ us_natural_disasters (broader, acceptable for structural analysis)
-    ❌ natural_disasters (too broad, links to everything)
+    CONSOLIDATION EXAMPLES:
+    Article: "Swedish fintech M&A heats up"
+    - Market: Nordics (HIGH granularity)
+    - Test: Is fintech distinct from banks + tech? NO
+    - Action: Map to nordic_banks + nordic_tech (don't create swedish_fintech)
+    
+    Article: "Nigerian port delays affect pulp"
+    - Market: Africa (LOW granularity)
+    - Test: Should we create nigeria_ports? NO
+    - Action: Map to africa_markets + shipping_logistics + pulp_market
+    
+    Article: "China EV exports surge"
+    - Market: China (MEDIUM granularity)
+    - Test: Is EV distinct from tech/exports? NO
+    - Action: Map to china_tech (don't create china_ev)
 
     ARTICLE SUMMARY:
     {article}

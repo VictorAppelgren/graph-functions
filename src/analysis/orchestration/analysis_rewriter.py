@@ -389,9 +389,8 @@ def analysis_rewriter(
     """
     logger.info(f"Starting analysis_rewriter for topic_id={topic_id}")
     
-    # Track analysis rewriter attempts - always increment regardless of analysis_type
+    # Analysis rewriter tracking removed (not in new stats structure)
     from src.observability.pipeline_logging import master_statistics
-    master_statistics(analysis_rewriter_attempted=1)
     
     run_tracker = EventClassifier(EventType.ANALYSIS_REWRITER_RUN)
     run_id = f"{topic_id}__analysis_run__{int(time.time())}"
@@ -473,8 +472,8 @@ def analysis_rewriter(
             # This ensures we have enough articles for quality analysis
             if section in ["fundamental", "medium", "current"]:
                 cnt_q = """
-                MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
-                WHERE a.temporal_horizon = $section AND (a.priority IS NULL OR a.priority <> 'hidden')
+                MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id})
+                WHERE r.timeframe = $section
                 RETURN count(a) AS c
                 """
                 cnt_res = run_cypher(cnt_q, {"topic_id": topic_id, "section": section}) or [{"c": 0}]
@@ -512,8 +511,8 @@ def analysis_rewriter(
                 if "No articles selected" in str(e):
                     # Count current pool; if under threshold, enhance then retry once
                     cnt_q = """
-                    MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
-                    WHERE a.temporal_horizon = $section AND (a.priority IS NULL OR a.priority <> 'hidden')
+                    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id})
+                    WHERE r.timeframe = $section
                     RETURN count(a) AS c
                     """
                     cnt_res = run_cypher(
@@ -602,7 +601,7 @@ def analysis_rewriter(
             section_summaries.append(
                 {"section": section, "tracker_id": f"{topic_id}__{section}__{run_id}"}
             )
-            master_statistics(analysis_rewriter_stopped_no_articles=1)
+            # Tracking removed
             continue
         
         # Track LLM generation attempt
@@ -614,13 +613,11 @@ def analysis_rewriter(
                 asset_id=topic_id, 
                 trk=section_tracker
             )
-            if rewritten and rewritten.strip():
-                master_statistics(analysis_llm_generation_proceeded=1)
-            else:
-                master_statistics(analysis_llm_generation_stopped_failure=1)
+            # Tracking removed - just check if generation succeeded
+            pass
         except Exception as e:
             logger.error(f"LLM generation failed for {topic_id}/{section}: {e}")
-            master_statistics(analysis_llm_generation_stopped_failure=1)
+            # Tracking removed
             raise
         
         section_tracker.put("output_chars", len(rewritten or ""))
@@ -635,10 +632,11 @@ def analysis_rewriter(
                 section_tracker.put_many(
                     saved=True, saved_field=mapped_field, status="success"
                 )
-                master_statistics(analysis_save_proceeded=1)
+                # Tracking removed
+                pass
             except Exception as e:
                 logger.error(f"Analysis save failed for {topic_id}/{section}: {e}")
-                master_statistics(analysis_save_stopped_error=1)
+                # Tracking removed
                 raise
         else:
             section_tracker.put_many(

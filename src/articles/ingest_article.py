@@ -1,11 +1,10 @@
 from typing import cast
 
 from src.articles.load_article import load_article
-from src.observability.pipeline_logging import master_log
+from src.observability.pipeline_logging import master_log, master_statistics
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.graph.ops.topic import get_all_topics
 from src.analysis.policies.topic_identifier import find_topic_mapping, NodeRow
-from src.llm.classify_article import classify_article_complete
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
 from src.graph.ops.link import find_influences_and_correlates
@@ -56,6 +55,9 @@ def add_article(
     """
 
     logger.info(f"Starting article processing for {article_id}")
+    
+    # Track article processing attempt
+    master_statistics(articles_processed=1)
 
     # Minimal event tracking
     tracker = EventClassifier(EventType.ADD_ARTICLE)
@@ -88,6 +90,18 @@ def add_article(
     existing_article_ids = topic_mapping.existing or []
     new_topic_names = topic_mapping.new or []
 
+    # 2. Validate that LLM only returned IDs that actually exist (prevent hallucinations)
+    valid_topic_ids = {node.id for node in l}
+    hallucinated_ids = [tid for tid in existing_article_ids if tid not in valid_topic_ids]
+    
+    if hallucinated_ids:
+        logger.warning(
+            f"LLM hallucinated non-existent topic IDs: {hallucinated_ids}. "
+            f"Filtering to only valid IDs from the provided list."
+        )
+        master_statistics(llm_hallucinated_topic_ids=len(hallucinated_ids))
+        existing_article_ids = [tid for tid in existing_article_ids if tid in valid_topic_ids]
+
     logger.info(
         f"Discovery complete: {len(existing_article_ids)} existing + {len(new_topic_names)} new"
     )
@@ -99,9 +113,9 @@ def add_article(
             f"ABORT: No relevant topics found for article {article_id}. Skipping article."
         )
         master_log(
-            f"Article rejected | {article_id} | No relevant topics found",
-            articles_rejected_no_topics=1,
+            f"Article rejected | {article_id} | No relevant topics found"
         )
+        master_statistics(articles_rejected_no_topics=1)
         tracker.put("status", "skipped_no_topic")
         tracker.set_id(article_id)  # This sets the ID and triggers tracker to save.
         return {
@@ -136,70 +150,26 @@ def add_article(
         bool(exists_result[0].get("exists")) if exists_result else False
     )
 
-    # 4. Article-level LLM classification (SINGLE unified call with perspective scores)
-    classification = classify_article_complete(article["argos_summary"])
-    
-    # Check if article is invalid
-    if classification.temporal_horizon == "invalid":
-        logger.warning(f"ABORT: Article {article_id} classified as invalid. Skipping.")
-        master_log(
-            f"Article rejected | {article_id} | Invalid content",
-            articles_rejected_invalid=1,
-        )
-        tracker.put("status", "skipped_invalid")
-        tracker.set_id(article_id)
-        return {
-            "article_id": article_id,
-            "status": "skipped",
-            "reason": "invalid_content",
-        }
-    
-    logger.info(f"Classification: horizon={classification.temporal_horizon}, category={classification.category}")
-    logger.info(f"Perspectives: {classification.primary_perspectives} (scores: R{classification.importance_risk}/O{classification.importance_opportunity}/T{classification.importance_trend}/C{classification.importance_catalyst})")
-    logger.info(f"Motivation: {classification.motivation}")
-
-    # Save unified classification output
-    tracker.put_many(
-        classification={
-            "category": classification.category,
-            "temporal_horizon": classification.temporal_horizon,
-            "importance_risk": classification.importance_risk,
-            "importance_opportunity": classification.importance_opportunity,
-            "importance_trend": classification.importance_trend,
-            "importance_catalyst": classification.importance_catalyst,
-            "primary_perspectives": classification.primary_perspectives,
-            "overall_importance": classification.overall_importance,
-            "motivation": classification.motivation,
-        },
-    )
+    # 4. Article node creation (SIMPLIFIED - no classification on node)
+    # Classification now happens per-topic on the ABOUT relationship
 
     relevance_score_val = None
 
     if not article_already_exists:
         if article:
-            # 5. Build Article dict (fail fast on missing required fields)
+            # 5. Build Article dict (SIMPLIFIED - just article data)
             a = {
                 "id": argos_id,
                 "title": article.get("title"),
                 "summary": article.get("argos_summary") or article.get("summary"),
                 "source": article.get("url"),
                 "published_at": article.get("pubDate"),
-                "vector_id": None,
-                "type": classification.category,
-                "temporal_horizon": classification.temporal_horizon,
-                "priority": str(classification.overall_importance),
-                "relevance_score": relevance_score_val,
-                # NEW: Perspective importance scores
-                "importance_risk": classification.importance_risk,
-                "importance_opportunity": classification.importance_opportunity,
-                "importance_trend": classification.importance_trend,
-                "importance_catalyst": classification.importance_catalyst,
             }
 
         # Save the final built article_node dict for traceability
         tracker.put("article", a)
 
-        # 6. Insert Article node in Neo4j (only if it doesn't already exist)
+        # 6. Insert Article node in Neo4j (SIMPLIFIED - just article data)
         create_query = """
         CREATE (a:Article {
             id: $id,
@@ -207,15 +177,7 @@ def add_article(
             summary: $summary,
             source: $source,
             published_at: $published_at,
-            vector_id: $vector_id,
-            type: $type,
-            temporal_horizon: $temporal_horizon,
-            priority: $priority,
-            relevance_score: $relevance_score,
-            importance_risk: $importance_risk,
-            importance_opportunity: $importance_opportunity,
-            importance_trend: $importance_trend,
-            importance_catalyst: $importance_catalyst
+            created_at: datetime()
         })
         RETURN a
         """
@@ -227,23 +189,48 @@ def add_article(
     # 7. Ensure intended topic link if explicitly provided (and not already in discovered list)
     if intended_topic_id:
         if intended_topic_id not in existing_article_ids:
-            about_query = """
-            MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
-            MERGE (a)-[:ABOUT]->(t)
-            """
-            run_cypher(
-                about_query, {"article_id": argos_id, "topic_id": intended_topic_id}
+            # NEW: Classify article FOR THIS INTENDED TOPIC
+            from src.graph.ops.topic import get_topic_context
+            from src.llm.classify_article_for_topic import classify_article_for_topic
+            from src.graph.ops.link import create_about_link_with_classification
+            
+            logger.info(f"Classifying article {argos_id} for intended topic {intended_topic_id}...")
+            
+            # Get topic context
+            topic_context = get_topic_context(intended_topic_id)
+            
+            # Classify article for this specific topic
+            classification = classify_article_for_topic(
+                article_summary=article.get("argos_summary") or article.get("summary"),
+                topic_id=intended_topic_id,
+                topic_name=topic_context["name"],
+                topic_analysis_snippet=topic_context["analysis_snippet"]
             )
+            
+            # Create ABOUT link with rich classification properties
+            create_about_link_with_classification(
+                article_id=argos_id,
+                topic_id=intended_topic_id,
+                timeframe=classification.timeframe,
+                importance_risk=classification.importance_risk,
+                importance_opportunity=classification.importance_opportunity,
+                importance_trend=classification.importance_trend,
+                importance_catalyst=classification.importance_catalyst,
+                motivation=classification.motivation,
+                implications=classification.implications
+            )
+            
             logger.info(
-                f"Created ABOUT edge from Article {argos_id} to Intended Topic {intended_topic_id}"
+                f"Created ABOUT link: {argos_id} -> {intended_topic_id} (intended topic)"
             )
             # Trigger next steps for the intended topic link
             trigger_next_steps(intended_topic_id, argos_id)
             master_log(
-                f"Added article | {article.get('argos_id')} | to intended topic {intended_topic_id}",
-                articles_added=1 if not article_already_exists else 0,
-                about_links_added=1,
+                f"Added article | {article.get('argos_id')} | to intended topic {intended_topic_id}"
             )
+            if not article_already_exists:
+                master_statistics(articles_added=1)
+            master_statistics(about_links_added=1)
 
     # 8. Multi-topic processing: loop over all relevant topics
     successful_topics = 0
@@ -274,15 +261,45 @@ def add_article(
                 logger.info(
                     f"Article {argos_id} already linked to topic {topic_id}. Skipping duplicate."
                 )
+                master_statistics(duplicates_skipped=1)
                 continue
 
-        # Create ABOUT edge
-        about_query = """
-        MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
-        MERGE (a)-[:ABOUT]->(t)
-        """
-        run_cypher(about_query, {"article_id": argos_id, "topic_id": topic_id})
-        logger.info(f"Created ABOUT edge from Article {argos_id} to Topic {topic_id}")
+        # NEW: Classify article FOR THIS SPECIFIC TOPIC
+        from src.graph.ops.topic import get_topic_context
+        from src.llm.classify_article_for_topic import classify_article_for_topic
+        from src.graph.ops.link import create_about_link_with_classification
+        
+        logger.info(f"Classifying article {argos_id} for topic {topic_id}...")
+        
+        # Get topic context for better classification
+        topic_context = get_topic_context(topic_id)
+        
+        # Classify article for this specific topic
+        classification = classify_article_for_topic(
+            article_summary=article.get("argos_summary") or article.get("summary"),
+            topic_id=topic_id,
+            topic_name=topic_context["name"],
+            topic_analysis_snippet=topic_context["analysis_snippet"]
+        )
+        
+        # Create ABOUT link with rich classification properties
+        create_about_link_with_classification(
+            article_id=argos_id,
+            topic_id=topic_id,
+            timeframe=classification.timeframe,
+            importance_risk=classification.importance_risk,
+            importance_opportunity=classification.importance_opportunity,
+            importance_trend=classification.importance_trend,
+            importance_catalyst=classification.importance_catalyst,
+            motivation=classification.motivation,
+            implications=classification.implications
+        )
+        
+        logger.info(
+            f"Created ABOUT link: {argos_id} -> {topic_id} | "
+            f"timeframe={classification.timeframe} | "
+            f"importance={classification.overall_importance}"
+        )
 
         # Trigger next steps, relationship discovery and replacement analysis
         trigger_next_steps(topic_id, argos_id)
@@ -297,10 +314,11 @@ def add_article(
 
         successful_topics += 1
         master_log(
-            f"Added article | {article.get('argos_id')} | to existing topic {topic_id}",
-            articles_added=1 if not article_already_exists else 0,
-            about_links_added=1,
+            f"Added article | {article.get('argos_id')} | to existing topic {topic_id}"
         )
+        if not article_already_exists:
+            master_statistics(articles_added=1)
+        master_statistics(about_links_added=1)
 
     # If new node names are found, run this one time
     if len(new_topic_names) > 0:
@@ -316,14 +334,40 @@ def add_article(
                     f"Failed to create new topic for article | {article.get('argos_id')} | to new topic {topic_id}"
                 )
             else:
-                # Create ABOUT edge
-                about_query = """
-                MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
-                MERGE (a)-[:ABOUT]->(t)
-                """
-                run_cypher(about_query, {"article_id": argos_id, "topic_id": topic_id})
+                # NEW: Classify article FOR THIS NEW TOPIC
+                from src.graph.ops.topic import get_topic_context
+                from src.llm.classify_article_for_topic import classify_article_for_topic
+                from src.graph.ops.link import create_about_link_with_classification
+                
+                logger.info(f"Classifying article {argos_id} for new topic {topic_id}...")
+                
+                # Get topic context
+                topic_context = get_topic_context(topic_id)
+                
+                # Classify article for this specific topic
+                classification = classify_article_for_topic(
+                    article_summary=article.get("argos_summary") or article.get("summary"),
+                    topic_id=topic_id,
+                    topic_name=topic_context["name"],
+                    topic_analysis_snippet=topic_context["analysis_snippet"]
+                )
+                
+                # Create ABOUT link with rich classification properties
+                create_about_link_with_classification(
+                    article_id=argos_id,
+                    topic_id=topic_id,
+                    timeframe=classification.timeframe,
+                    importance_risk=classification.importance_risk,
+                    importance_opportunity=classification.importance_opportunity,
+                    importance_trend=classification.importance_trend,
+                    importance_catalyst=classification.importance_catalyst,
+                    motivation=classification.motivation,
+                    implications=classification.implications
+                )
+                
                 logger.info(
-                    f"Created ABOUT edge from Article {argos_id} to Topic {topic_id}"
+                    f"Created ABOUT link: {argos_id} -> {topic_id} (new topic) | "
+                    f"timeframe={classification.timeframe}"
                 )
 
                 # Trigger next steps, relationship discovery and replacement analysis
@@ -339,10 +383,11 @@ def add_article(
 
                 successful_topics += 1
                 master_log(
-                    f"Added article | {article.get('argos_id')} | to new topic {topic_id}",
-                    articles_added=1 if not article_already_exists else 0,
-                    about_links_added=1,
+                    f"Added article | {article.get('argos_id')} | to new topic {topic_id}"
                 )
+                if not article_already_exists:
+                    master_statistics(articles_added=1)
+                master_statistics(about_links_added=1)
 
     # Final tracking and logging, existing node len and if new nodes are more than 1, it still counts as 1
     total_topics = len(existing_article_ids)

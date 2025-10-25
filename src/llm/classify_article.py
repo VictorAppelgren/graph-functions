@@ -26,6 +26,13 @@ CATEGORIES = [
 
 def classify_article_complete(article_text: str) -> ArticleClassification:
     """
+    DEPRECATED: Use classify_article_for_topic() instead.
+    
+    This is the OLD article-level classification (0-3 scale).
+    New code should use classify_article_for_topic() for per-topic classification (0-10 scale).
+    
+    Only kept for migration scripts and tests.
+    
     Complete article classification in single LLM call.
     
     Returns all fields:

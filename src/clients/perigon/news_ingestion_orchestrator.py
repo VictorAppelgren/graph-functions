@@ -41,7 +41,7 @@ from src.clients.perigon.text_summarizer import summarize_article
 from utils import app_logging
 
 logger = app_logging.get_logger("news_ingestion_orchestrator")
-from src.observability.pipeline_logging import master_log, master_log_error, problem_log
+from src.observability.pipeline_logging import master_log, master_log_error, problem_log, master_statistics
 
 
 def set_third_party_log_levels(debug: bool) -> None:
@@ -135,6 +135,10 @@ class NewsIngestionOrchestrator:
             raw_results = self.api_client.search_articles(
                 query=query_text, max_results=max_articles
             )
+            
+            # Track query execution (even if it fails or returns no results)
+            master_statistics(queries=1)
+            self.stats["queries_executed"] += 1
 
             if not raw_results or "articles" not in raw_results:
                 logger.warning("⚠️ No articles found or invalid API response")
@@ -146,10 +150,9 @@ class NewsIngestionOrchestrator:
             )
             master_log(
                 f"Retrieved articles | {topic} | Retrieved {len(articles)} from API",
-                queries=1,
                 articles_processed=len(articles),
             )
-            self.stats["queries_executed"] += 1
+            # Query already tracked above
             self.stats["articles_retrieved"] += len(articles)
             # If the query returned zero results, record as a problem (simple, observable)
             if len(articles) == 0:

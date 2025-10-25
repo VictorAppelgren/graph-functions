@@ -9,13 +9,11 @@ from utils import app_logging
 from events.classifier import EventClassifier, EventType
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
-from src.observability.pipeline_logging import problem_log, Problem, master_log, ProblemDetailsModel
+from src.observability.pipeline_logging import problem_log, Problem, master_log, ProblemDetailsModel, master_statistics
 from src.graph.policies.topic import classify_topic_category, classify_topic_importance, check_topic_relevance
 from src.analysis.policies.query_generator import create_wide_query
 from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
-
-if TYPE_CHECKING:
-    from src.analysis.policies.topic_proposal import TopicProposal
+from src.analysis.policies.topic_proposal import TopicProposal
 
 logger = app_logging.get_logger(__name__)
 
@@ -247,6 +245,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                     master_log(
                         f"Capacity replace | removed={id_to_remove} | adding={topic_proposal.id}"
                     )
+                    master_statistics(topics_deleted=1)
                 except Exception as e:
                     p = ProblemDetailsModel(id_to_remove=id_to_remove, error=str(e))
                     problem_log(
@@ -274,9 +273,9 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         tracker.set_id(event_id)
 
         master_log(
-            f"Topic added | name={topic_proposal.name} | category={category} | importance={topic_proposal.importance}",
-            topics_created=1,
+            f"Topic added | name={topic_proposal.name} | category={category} | importance={topic_proposal.importance}"
         )
+        master_statistics(topics_created=1)
         return created_topic
     
     else:
@@ -577,3 +576,50 @@ def create_topic(topic_proposal: TopicProposal) -> dict[str, str]:
         else:
             logger.error(f"Failed to create Topic topic with ID '{topic_proposal.id}'")
             raise RuntimeError(f"Failed to create Topic topic with ID '{topic_proposal.id}'")
+
+
+def get_topic_context(topic_id: str) -> dict:
+    """
+    Get context about a topic to help LLM classify articles.
+    
+    Returns topic name and a snippet of recent analysis to provide
+    context for generating topic-specific motivation and implications.
+    
+    Args:
+        topic_id: The topic ID
+        
+    Returns:
+        dict with:
+            - name: Topic name
+            - analysis_snippet: Recent analysis excerpt (up to 500 chars)
+    
+    Example:
+        >>> context = get_topic_context("fed_policy")
+        >>> print(context["name"])
+        "Federal Reserve Policy"
+    """
+    query = """
+    MATCH (t:Topic {id: $topic_id})
+    RETURN 
+        t.name as name,
+        COALESCE(
+            substring(t.current_analysis, 0, 500),
+            substring(t.medium_analysis, 0, 500),
+            substring(t.fundamental_analysis, 0, 500),
+            "No analysis available yet for this topic."
+        ) as analysis_snippet
+    """
+    
+    result = run_cypher(query, {"topic_id": topic_id})
+    
+    if not result or len(result) == 0:
+        logger.warning(f"Topic {topic_id} not found, using fallback context")
+        return {
+            "name": topic_id.replace("_", " ").title(),
+            "analysis_snippet": "No analysis available yet for this topic."
+        }
+    
+    return {
+        "name": result[0]["name"],
+        "analysis_snippet": result[0]["analysis_snippet"]
+    }

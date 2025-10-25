@@ -84,18 +84,30 @@ def build_material_for_synthesis_section(
 
     # Smart article selection based on section type
     if section in TIMEFRAME_SECTIONS:
-        # Timeframe sections: 10 articles from specific timeframe
+        # Timeframe sections: 10 articles from specific timeframe (using relationship properties)
         articles_query = """
-        MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-        WHERE coalesce(a.temporal_horizon, '') = $section AND coalesce(a.priority, '') <> 'hidden'
-        WITH a, 
+        MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+        WHERE r.timeframe = $section
+        WITH a, r,
              CASE 
-               WHEN a.importance = 'hidden' THEN 0
-               WHEN a.importance IS NULL THEN 1
-               ELSE toInteger(a.importance)
-             END as numeric_importance
-        RETURN a.id as article_id, a.pubDate as published_at, numeric_importance, coalesce(a.temporal_horizon, 'unknown') as temporal_horizon
-        ORDER BY numeric_importance DESC, a.pubDate DESC
+               WHEN coalesce(r.importance_risk, 0) >= coalesce(r.importance_opportunity, 0) 
+                    AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_trend, 0)
+                    AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_catalyst, 0)
+               THEN coalesce(r.importance_risk, 0)
+               WHEN coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_trend, 0)
+                    AND coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_catalyst, 0)
+               THEN coalesce(r.importance_opportunity, 0)
+               WHEN coalesce(r.importance_trend, 0) >= coalesce(r.importance_catalyst, 0)
+               THEN coalesce(r.importance_trend, 0)
+               ELSE coalesce(r.importance_catalyst, 0)
+             END as overall_importance
+        RETURN a.id as article_id, a.published_at as published_at, 
+               overall_importance as numeric_importance,
+               r.timeframe as temporal_horizon,
+               r.motivation as motivation,
+               r.implications as implications,
+               r.importance_risk, r.importance_opportunity, r.importance_trend, r.importance_catalyst
+        ORDER BY overall_importance DESC, a.published_at DESC
         LIMIT 10
         """
         articles_result = run_cypher(articles_query, {"topic_id": topic_id, "section": section})
@@ -110,18 +122,29 @@ def build_material_for_synthesis_section(
         perspective_field = perspective_field_map[section]
         
         articles_query = f"""
-        MATCH (a:Article)-[:ABOUT]->(t:Topic {{id: $topic_id}})
-        WHERE coalesce(a.{perspective_field}, 0) >= 2 AND coalesce(a.priority, '') <> 'hidden'
-        WITH a, 
-             coalesce(a.{perspective_field}, 0) as perspective_score,
+        MATCH (a:Article)-[r:ABOUT]->(t:Topic {{id: $topic_id}})
+        WHERE coalesce(r.{perspective_field}, 0) >= 2
+        WITH a, r,
+             coalesce(r.{perspective_field}, 0) as perspective_score,
              CASE 
-               WHEN a.importance = 'hidden' THEN 0
-               WHEN a.importance IS NULL THEN 1
-               ELSE toInteger(a.importance)
-             END as numeric_importance
-        RETURN a.id as article_id, a.pubDate as published_at, perspective_score, numeric_importance, 
-               coalesce(a.temporal_horizon, 'unknown') as temporal_horizon
-        ORDER BY perspective_score DESC, numeric_importance DESC, a.pubDate DESC
+               WHEN coalesce(r.importance_risk, 0) >= coalesce(r.importance_opportunity, 0) 
+                    AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_trend, 0)
+                    AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_catalyst, 0)
+               THEN coalesce(r.importance_risk, 0)
+               WHEN coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_trend, 0)
+                    AND coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_catalyst, 0)
+               THEN coalesce(r.importance_opportunity, 0)
+               WHEN coalesce(r.importance_trend, 0) >= coalesce(r.importance_catalyst, 0)
+               THEN coalesce(r.importance_trend, 0)
+               ELSE coalesce(r.importance_catalyst, 0)
+             END as overall_importance
+        RETURN a.id as article_id, a.published_at as published_at, 
+               perspective_score, overall_importance as numeric_importance,
+               r.timeframe as temporal_horizon,
+               r.motivation as motivation,
+               r.implications as implications,
+               r.importance_risk, r.importance_opportunity, r.importance_trend, r.importance_catalyst
+        ORDER BY perspective_score DESC, overall_importance DESC, a.published_at DESC
         LIMIT 10
         """
         articles_result = run_cypher(articles_query, {"topic_id": topic_id})
@@ -130,16 +153,27 @@ def build_material_for_synthesis_section(
         all_articles = []
         for timeframe in ["fundamental", "medium", "current"]:
             timeframe_query = """
-            MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-            WHERE coalesce(a.temporal_horizon, '') = $timeframe AND coalesce(a.priority, '') <> 'hidden'
-            WITH a, 
+            MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+            WHERE r.timeframe = $timeframe
+            WITH a, r,
                  CASE 
-                   WHEN a.importance = 'hidden' THEN 0
-                   WHEN a.importance IS NULL THEN 1
-                   ELSE toInteger(a.importance)
-                 END as numeric_importance
-            RETURN a.id as article_id, a.pubDate as published_at, numeric_importance, coalesce(a.temporal_horizon, 'unknown') as temporal_horizon
-            ORDER BY numeric_importance DESC, a.pubDate DESC
+                   WHEN coalesce(r.importance_risk, 0) >= coalesce(r.importance_opportunity, 0) 
+                        AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_trend, 0)
+                        AND coalesce(r.importance_risk, 0) >= coalesce(r.importance_catalyst, 0)
+                   THEN coalesce(r.importance_risk, 0)
+                   WHEN coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_trend, 0)
+                        AND coalesce(r.importance_opportunity, 0) >= coalesce(r.importance_catalyst, 0)
+                   THEN coalesce(r.importance_opportunity, 0)
+                   WHEN coalesce(r.importance_trend, 0) >= coalesce(r.importance_catalyst, 0)
+                   THEN coalesce(r.importance_trend, 0)
+                   ELSE coalesce(r.importance_catalyst, 0)
+                 END as overall_importance
+            RETURN a.id as article_id, a.published_at as published_at, 
+                   overall_importance as numeric_importance,
+                   r.timeframe as temporal_horizon,
+                   r.motivation as motivation,
+                   r.implications as implications
+            ORDER BY numeric_importance DESC, a.published_at DESC
             LIMIT 5
             """
             timeframe_result = run_cypher(timeframe_query, {"topic_id": topic_id, "timeframe": timeframe})
@@ -157,11 +191,13 @@ def build_material_for_synthesis_section(
     material_parts.append("SOURCE ARTICLES")
     material_parts.append("=" * 80)
 
-    # Load and format each article
+    # Load and format each article WITH motivation and implications
     section_counts = {}
     for i, row in enumerate(articles_result, 1):
         article_id = row["article_id"]
         horizon = row.get("temporal_horizon") or "unknown"
+        motivation = row.get("motivation") or "No motivation available"
+        implications = row.get("implications") or "No implications available"
         section_counts[horizon] = section_counts.get(horizon, 0) + 1
         
         try:
@@ -169,8 +205,11 @@ def build_material_for_synthesis_section(
             if not loaded or "argos_summary" not in loaded:
                 raise ValueError(f"Article {article_id} missing argos_summary")
             
+            # NEW FORMAT: Include motivation and implications for forward-looking analysis
             material_parts.append(f"--- ARTICLE {i}: {article_id} ({horizon}) ---")
-            material_parts.append(loaded["argos_summary"])
+            material_parts.append(f"SUMMARY: {loaded['argos_summary']}")
+            material_parts.append(f"WHY IT MATTERS: {motivation}")
+            material_parts.append(f"IMPLICATIONS: {implications}")
             material_parts.append("")
         except Exception as e:
             logger.warning(f"Failed to load article {article_id}: {e}")

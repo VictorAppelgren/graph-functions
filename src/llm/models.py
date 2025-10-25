@@ -4,50 +4,55 @@ Pydantic models for LLM outputs - type-safe classification results
 from pydantic import BaseModel, Field
 from typing import Literal, List
 
-
-class ArticleClassification(BaseModel):
-    """Complete article classification from unified LLM call"""
+class ArticleTopicClassification(BaseModel):
+    """
+    Classification of an article FOR A SPECIFIC TOPIC.
     
-    motivation: str = Field(..., description="Classification reasoning")
+    This is used to create rich ABOUT relationships with context-aware
+    motivation and forward-looking implications.
+    """
     
-    temporal_horizon: Literal["fundamental", "medium", "current", "invalid"]
-    category: str
+    timeframe: Literal["fundamental", "medium", "current"] = Field(
+        description="Time horizon of this article's relevance to THIS specific topic"
+    )
     
-    # Per-perspective importance (0-3, INDEPENDENT scoring - can all be 3!)
-    importance_risk: int = Field(..., ge=0, le=3)
-    importance_opportunity: int = Field(..., ge=0, le=3)
-    importance_trend: int = Field(..., ge=0, le=3)
-    importance_catalyst: int = Field(..., ge=0, le=3)
+    importance_risk: int = Field(
+        ge=0, le=10,
+        description="How important is this article for understanding RISK to this topic (0-10)"
+    )
     
-    @property
-    def primary_perspectives(self) -> List[str]:
-        """All perspectives with score ≥2 (NO LIMIT - can be all 4!)"""
-        perspectives = []
-        if self.importance_risk >= 2:
-            perspectives.append("risk")
-        if self.importance_opportunity >= 2:
-            perspectives.append("opportunity")
-        if self.importance_trend >= 2:
-            perspectives.append("trend")
-        if self.importance_catalyst >= 2:
-            perspectives.append("catalyst")
-        return perspectives
+    importance_opportunity: int = Field(
+        ge=0, le=10,
+        description="How important is this article for understanding OPPORTUNITY for this topic (0-10)"
+    )
     
-    @property
-    def dominant_perspective(self) -> str:
-        """Highest scoring perspective (for primary tagging)"""
-        scores = {
-            "risk": self.importance_risk,
-            "opportunity": self.importance_opportunity,
-            "trend": self.importance_trend,
-            "catalyst": self.importance_catalyst
-        }
-        max_score = max(scores.values())
-        return max(scores, key=scores.get) if max_score > 0 else "info"
+    importance_trend: int = Field(
+        ge=0, le=10,
+        description="How important is this article for understanding TRENDS affecting this topic (0-10)"
+    )
+    
+    importance_catalyst: int = Field(
+        ge=0, le=10,
+        description="How important is this article as a CATALYST for this topic (0-10)"
+    )
+    
+    motivation: str = Field(
+        description=(
+            "In 1-2 sentences: WHY does this article matter for THIS specific topic? "
+            "Be specific, not generic. Focus on the connection to THIS topic."
+        )
+    )
+    
+    implications: str = Field(
+        description=(
+            "In 1-2 sentences: What could this MEAN for THIS topic going forward? "
+            "Think predictively and forward-looking. What COULD happen next?"
+        )
+    )
     
     @property
     def overall_importance(self) -> int:
-        """Max score across all perspectives"""
+        """Calculate overall importance as max of all perspective scores."""
         return max(
             self.importance_risk,
             self.importance_opportunity,

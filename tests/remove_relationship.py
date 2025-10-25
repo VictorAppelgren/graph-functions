@@ -13,7 +13,7 @@ from utils import app_logging
 from src.graph.ops.topic import get_all_topics
 from src.graph.ops.link import remove_link, get_existing_links
 from src.graph.policies.link import llm_select_link_to_remove
-from src.graph.core.user_anchors import USER_ANCHOR_TOPICS
+from src.start_scripts.bootstrap_graph import USER_ANCHOR_TOPICS
 
 logger = app_logging.get_logger(__name__)
 

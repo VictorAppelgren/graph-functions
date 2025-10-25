@@ -10,6 +10,7 @@ from src.articles.load_article import load_article
 from utils import app_logging
 from src.observability.pipeline_logging import (
     master_log,
+    master_statistics,
     problem_log,
     Problem,
     ProblemDetailsModel,
@@ -62,24 +63,25 @@ def does_article_replace_old(
             }
         summary = new_article["argos_summary"]
 
-    # Derive timeframe; if missing, infer once and persist, then continue
-    try:
-        new_tf = get_article_temporal_horizon(new_article_id)
-    except ValueError:
+    # Derive timeframe from relationship (not article node)
+    tf_query = """
+    MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic {id: $topic_id})
+    RETURN r.timeframe as timeframe
+    """
+    tf_result = run_cypher(tf_query, {"article_id": new_article_id, "topic_id": topic_id})
+    
+    if not tf_result or not tf_result[0].get("timeframe"):
         logger.warning(
-            f"Article {new_article_id} missing temporal_horizon. Inferring and backfilling."
+            f"Article {new_article_id} -> Topic {topic_id} relationship missing timeframe. This shouldn't happen with new system."
         )
+        # Fallback: infer from summary
         time_frame_result = find_time_frame(summary)
-        inferred_tf = time_frame_result.horizon
-        run_cypher(
-            "MATCH (a:Article {id:$id}) SET a.temporal_horizon = $tf",
-            {"id": new_article_id, "tf": inferred_tf},
-        )
-        master_log(
-            f"Backfilled temporal_horizon | article={new_article_id} | tf={inferred_tf}"
-        )
-        new_tf = inferred_tf
-    logger.info(f"article: {new_article_id} temporal_horizon={new_tf}")
+        new_tf = time_frame_result.horizon
+        logger.warning(f"Using inferred timeframe: {new_tf}")
+    else:
+        new_tf = tf_result[0]["timeframe"]
+    
+    logger.info(f"article: {new_article_id} timeframe={new_tf}")
     event_id = f"{topic_id}__{new_article_id}__{new_tf}"
     tracker.put("timeframe", new_tf)
 
@@ -102,11 +104,10 @@ def does_article_replace_old(
         max_per_tf = MAX_PER_TIMEFRAME
     tracker.put_many(min_per_tf=int(min_per_tf), max_per_tf=int(max_per_tf))
 
-    # Count visible articles in the same timeframe (exclude priority='hidden')
+    # Count articles in the same timeframe (from relationships)
     cnt_q = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
-    WHERE a.temporal_horizon = $tf
-      AND (a.priority IS NULL OR a.priority <> 'hidden')
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id})
+    WHERE r.timeframe = $tf
     RETURN count(a) AS cnt
     """
     same_tf_cnt = (
@@ -121,12 +122,11 @@ def does_article_replace_old(
         )
         return {"tool": "none", "id": None, "motivation": "Under per-timeframe minimum"}
 
-    # Build competing candidates (same timeframe, visible, excluding the new one). Visible = not priority='hidden'
+    # Build competing candidates (same timeframe, excluding the new one)
     pool_q = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
-    WHERE a.temporal_horizon = $tf
-      AND (a.priority IS NULL OR a.priority <> 'hidden')
-    RETURN a.id AS id, a.argos_summary AS argos_summary, a.priority AS priority, a.published_at AS published_at
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id})
+    WHERE r.timeframe = $tf
+    RETURN a.id AS id, a.argos_summary AS argos_summary, a.published_at AS published_at
     """
     pool = run_cypher(pool_q, {"topic_id": topic_id, "tf": new_tf}) or []
     candidates = [
@@ -146,12 +146,11 @@ def does_article_replace_old(
         return {"tool": "none", "id": None, "motivation": "No competing candidates"}
     tracker.put("candidate_ids", [a["id"] for a in candidates])
 
-    # Build context from other timeframes (read-only). Only include not priority='hidden'
+    # Build context from other timeframes (read-only)
     ctx_q = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic {id:$topic_id})
-    WHERE a.temporal_horizon <> $tf
-      AND (a.priority IS NULL OR a.priority <> 'hidden')
-    RETURN a.id AS id, a.argos_summary AS argos_summary, a.temporal_horizon AS tf
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id})
+    WHERE r.timeframe <> $tf
+    RETURN a.id AS id, a.argos_summary AS argos_summary, r.timeframe AS tf
     """
     others = run_cypher(ctx_q, {"topic_id": topic_id, "tf": new_tf}) or []
     others = [
@@ -254,9 +253,9 @@ def does_article_replace_old(
             run_cypher(remove_query, {"id": target_id})
             logger.info(f"Removed article id={target_id} from graph.")
             master_log(
-                f"Article replaced | {topic_id} | old={target_id} new={new_article_id}",
-                articles_removed=1,
+                f"Article replaced | {topic_id} | old={target_id} new={new_article_id}"
             )
+            master_statistics(articles_removed=1)
             # Trigger should_rewrite only when we changed graph state
             should_rewrite(topic_id, new_article_id, triggered_by="article")
         elif tool == "hide":

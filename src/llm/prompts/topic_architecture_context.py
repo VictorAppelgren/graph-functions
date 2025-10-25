@@ -2,12 +2,16 @@
 # Shared context explaining the Saga Graph topic + perspective architecture
 # Include this in ALL prompts dealing with topic creation, mapping, or classification
 
+from src.graph.config import describe_granularity_policy
+
 TOPIC_ARCHITECTURE_CONTEXT = """
 ═══════════════════════════════════════════════════════════════════════════════
 SAGA GRAPH ARCHITECTURE: TOPICS AS PERSISTENT ANALYTICAL ANCHORS
 ═══════════════════════════════════════════════════════════════════════════════
 
 CORE PRINCIPLE: Topics = WHAT to Track | Perspectives = HOW to Analyze
+
+""" + describe_granularity_policy() + """
 
 TOPICS ARE PERSISTENT ANALYTICAL ANCHORS:
 - Represent entities/phenomena worth tracking for 6+ months
@@ -51,12 +55,11 @@ TOPIC CREATION DECISION FRAMEWORK
    ✅ middle_east_geopolitical_risk - Persistent regional dynamic
    ⚠️ natural_disasters - TOO BROAD, links to everything globally
 
-5. TRADABLE SECTORS (With Geographic Specificity)
-   ✅ us_insurance, eu_banks, swedish_banks, northern_european_banks
-   ✅ us_homebuilders, us_tech_sector, eu_auto_sector
-   ✅ cn_property_sector - Structural issue, ongoing
-   - Can be broad (us_insurance) or specific (swedish_banks) based on analytical need
-   - Geographic breakdown when it adds precision
+5. TRADABLE SECTORS (Respecting Market Granularity)
+   ✅ HIGH markets (Nordics/US/EU): nordic_real_estate, nordic_banks, nordic_tech, us_tech, eu_banks
+   ✅ MEDIUM markets (China/Japan): china_property, china_tech (key sectors only)
+   ❌ LOW markets (Africa/SA/Asia): NO sector breakdown, use regional topics only
+   - Granularity follows customer focus and article volume
 
 6. STRUCTURAL THEMES (If Persistent & Tradable)
    ✅ us_natural_disasters - Long-term climate impact analysis

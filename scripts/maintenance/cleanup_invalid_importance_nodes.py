@@ -16,6 +16,10 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
+# Load .env file FIRST
+from utils.env_loader import load_env
+load_env()
+
 from utils import app_logging
 from src.graph.neo4j_client import run_cypher
 from src.graph.ops.topic import remove_topic

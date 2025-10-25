@@ -29,12 +29,16 @@ from utils.app_logging import get_logger
 logger = get_logger(__name__)
 
 # --- Configuration ---
-TOKEN_THRESHOLD = 1670  # If working/ using the laptop and minimize load on my system
-#TOKEN_THRESHOLD = 20000  # Simple vs Complex routing threshold
+TOKEN_THRESHOLD = 17  # Requests ≤2k tokens use local, >2k use external
+NANO_THRESHOLD = 999999  # Effectively disabled - don't use Nano
+NANO_COOLDOWN_SECONDS = 60  # 60 seconds cooldown between Nano calls
 LLM_CALL_TIMEOUT_S = 300.0
-LLM_RETRY_ATTEMPTS = 3
+LLM_RETRY_ATTEMPTS = 2  # Reduced from 3 - we have fallback logic now
 DB_RETRY_ATTEMPTS = 5
 DB_RETRY_DELAY = 0.1
+
+# Nano API Key - Set this for testing, will be moved to server env vars later
+OPENAI_API_KEY = "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" #os.getenv("OPENAI_API_KEY_NANO", None)  # Use OPENAI_API_KEY_NANO env var
 
 # Minimal model tier enum (local definition to avoid circular imports)
 class ModelTier(Enum):
@@ -44,6 +48,8 @@ class ModelTier(Enum):
     SIMPLE_LONG_CONTEXT = "SIMPLE_LONG_CONTEXT"
 
 # Hardcoded server configuration
+# ONLY 2 EXTERNAL SERVERS NOW: 8686 (external_a) and 8787 (external_b)
+# External servers run vLLM with 10,240 token context limit
 SERVERS = {
     'local': {
         'provider': 'ollama', 
@@ -62,7 +68,25 @@ SERVERS = {
         'base_url': 'http://gate04.cfa.handels.gu.se:8787/v1', 
         'model': 'openai/gpt-oss-20b',
         'temperature': 0.2,
-    }
+    },
+    # 'external_c': {  # DISABLED - using 8686/8787 instead
+    #     'provider': 'openai', 
+    #     'base_url': 'http://gate04.cfa.handels.gu.se:8383/v1', 
+    #     'model': 'openai/gpt-oss-20b',
+    #     'temperature': 0.2,
+    # },
+    # 'external_d': {  # DISABLED - can't run 4 servers
+    #     'provider': 'openai', 
+    #     'base_url': 'http://gate04.cfa.handels.gu.se:8484/v1', 
+    #     'model': 'openai/gpt-oss-20b',
+    #     'temperature': 0.2,
+    # },
+    # 'nano': {  # DISABLED - not using external ChatGPT
+    #     'provider': 'openai',
+    #     'base_url': None,  # Use default OpenAI API
+    #     'model': 'gpt-5-nano',
+    #     'temperature': 0.2,
+    # }
 }
 
 # Database setup
@@ -118,6 +142,29 @@ class RouterDB:
                     conn.execute("""
                         INSERT OR IGNORE INTO router_status (key, value) 
                         VALUES ('external_b_last_call', datetime('now'))
+                    """)
+                    # Initialize external_c status
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_c_busy', '0')
+                    """)
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_c_last_call', datetime('now'))
+                    """)
+                    # Initialize external_d status
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_d_busy', '0')
+                    """)
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('external_d_last_call', datetime('now'))
+                    """)
+                    # Initialize nano cooldown tracking
+                    conn.execute("""
+                        INSERT OR IGNORE INTO router_status (key, value) 
+                        VALUES ('nano_last_call', datetime('1970-01-01'))
                     """)
                     conn.commit()
                 logger.debug("Router database initialized")
@@ -179,7 +226,7 @@ class RouterDB:
             )
             return result == '1' if result else False
         except Exception:
-            return False  # Assume not busy if can't check
+            return False
 
     def set_external_busy(self, server_id: str, busy: bool):
         """Set external server busy status."""
@@ -199,45 +246,61 @@ class RouterDB:
             logger.warning(f"Failed to update {server_id} busy status: {e}")
 
     def get_least_recently_used_external(self) -> str:
-        """Get external server that was called longest ago."""
+        """Get external server that was called longest ago (ONLY 2 servers now)."""
         try:
-            # Get last call times for both servers
-            a_time = self._execute_with_retry(
-                "SELECT value FROM router_status WHERE key = 'external_a_last_call'", 
-                fetch=True
-            )
-            b_time = self._execute_with_retry(
-                "SELECT value FROM router_status WHERE key = 'external_b_last_call'", 
-                fetch=True
-            )
+            # Get last call times for ONLY 2 active servers: 8686 and 8787
+            times = {}
+            for server in ['external_a', 'external_b']:
+                time_val = self._execute_with_retry(
+                    f"SELECT value FROM router_status WHERE key = '{server}_last_call'", 
+                    fetch=True
+                )
+                if time_val:
+                    times[server] = time_val
             
-            # If we don't have timestamps, fall back to round-robin
-            if not a_time or not b_time:
+            # If we don't have all timestamps, fall back to round-robin
+            if len(times) < 2:
                 return self.get_next_external()
             
-            # Return the one called longest ago (earlier timestamp)
-            return 'external_a' if a_time < b_time else 'external_b'
+            # Return the one called longest ago (earliest timestamp)
+            return min(times.items(), key=lambda x: x[1])[0]
             
         except Exception as e:
             logger.warning(f"Failed to get least recently used external: {e}")
             return self.get_next_external()  # Fallback to round-robin
 
     def get_next_external_smart(self) -> str:
-        """Smart external server selection with busy tracking."""
+        """Smart external server selection with busy tracking (ONLY 2 servers now).
+        
+        Uses round-robin to spread load evenly, skipping busy servers.
+        """
         try:
-            # Check if external_a is free
-            if not self.is_external_busy('external_a'):
-                logger.debug("external_a is free, selecting it")
-                return 'external_a'
+            # Start from the next server in round-robin order
+            last = self._execute_with_retry(
+                "SELECT value FROM router_status WHERE key = 'last_external'", 
+                fetch=True
+            )
             
-            # Check if external_b is free
-            if not self.is_external_busy('external_b'):
-                logger.debug("external_b is free, selecting it")
-                return 'external_b'
+            # Define rotation order - ONLY 2 servers now: 8686 and 8787
+            rotation = ['external_a', 'external_b']
+            start_idx = rotation.index(last) if last in rotation else 0
             
-            # Both busy - pick least recently used
+            # Check servers starting from next in rotation
+            for i in range(2):
+                idx = (start_idx + i + 1) % 2
+                server = rotation[idx]
+                if not self.is_external_busy(server):
+                    logger.debug(f"{server} is free (round-robin position {idx}), selecting it")
+                    # Update last_external to maintain round-robin state
+                    self._execute_with_retry(
+                        "UPDATE router_status SET value = ?, updated_at = CURRENT_TIMESTAMP WHERE key = 'last_external'",
+                        (server,)
+                    )
+                    return server
+            
+            # All busy - pick least recently used
             server = self.get_least_recently_used_external()
-            logger.debug(f"Both external servers busy, selecting least recently used: {server}")
+            logger.debug(f"All external servers busy, selecting least recently used: {server}")
             return server
             
         except Exception as e:
@@ -245,13 +308,18 @@ class RouterDB:
             return self.get_next_external()  # Fallback to simple round-robin
 
     def get_next_external(self) -> str:
-        """Get next external server using round-robin."""
+        """Get next external server using round-robin (ONLY 2 servers now)."""
         try:
             last = self._execute_with_retry(
                 "SELECT value FROM router_status WHERE key = 'last_external'", 
                 fetch=True
             )
-            next_server = 'external_b' if last == 'external_a' else 'external_a'
+            # Round-robin through ONLY 2 servers: a → b → a (8686 → 8787 → 8686)
+            rotation = {
+                'external_a': 'external_b',
+                'external_b': 'external_a'
+            }
+            next_server = rotation.get(last, 'external_a')
             
             self._execute_with_retry(
                 "UPDATE router_status SET value = ?, updated_at = CURRENT_TIMESTAMP WHERE key = 'last_external'",
@@ -260,7 +328,79 @@ class RouterDB:
             return next_server
         except Exception as e:
             logger.warning(f"Failed to get next external server: {e}")
-            return 'external_a'  # Default fallback
+            return 'external_a'
+    
+    def get_next_any_server(self) -> str:
+        """Get next free server, checking in order: local → external_a → external_b."""
+        # Check each server in order, return first free one
+        if not self.is_local_busy():
+            return 'local'
+        
+        if not self.is_external_busy('external_a'):
+            return 'external_a'
+        
+        if not self.is_external_busy('external_b'):
+            return 'external_b'
+        
+        # All busy - use local anyway (spread load)
+        return 'local'
+    
+    def can_use_nano(self) -> bool:
+        """Check if enough time has passed since last Nano call (60 sec cooldown)."""
+        try:
+            last_call = self._execute_with_retry(
+                "SELECT value FROM router_status WHERE key = 'nano_last_call'", 
+                fetch=True
+            )
+            if not last_call:
+                return True
+            
+            # Parse timestamp and check if 60 seconds have passed
+            from datetime import datetime
+            last_time = datetime.fromisoformat(last_call.replace(' ', 'T'))
+            now = datetime.now()
+            elapsed = (now - last_time).total_seconds()
+            
+            can_use = elapsed >= NANO_COOLDOWN_SECONDS
+            if not can_use:
+                logger.debug(f"Nano cooldown active: {elapsed:.1f}s / {NANO_COOLDOWN_SECONDS}s")
+            return can_use
+        except Exception as e:
+            logger.warning(f"Failed to check nano cooldown: {e}")
+            return False  # Conservative: don't use if can't verify
+    
+    def mark_nano_used(self):
+        """Mark that Nano was just used."""
+        try:
+            self._execute_with_retry(
+                "INSERT OR REPLACE INTO router_status (key, value, updated_at) VALUES ('nano_last_call', datetime('now'), CURRENT_TIMESTAMP)",
+                ()
+            )
+            logger.info("Nano marked as used, 60-second cooldown started")
+        except Exception as e:
+            logger.warning(f"Failed to mark nano used: {e}")
+    
+    def get_nano_cooldown_remaining(self) -> float:
+        """Get remaining cooldown time in seconds (0 if ready to use)."""
+        try:
+            last_call = self._execute_with_retry(
+                "SELECT value FROM router_status WHERE key = 'nano_last_call'", 
+                fetch=True
+            )
+            if not last_call:
+                return 0.0
+            
+            # Parse timestamp and calculate remaining time
+            from datetime import datetime
+            last_time = datetime.fromisoformat(last_call.replace(' ', 'T'))
+            now = datetime.now()
+            elapsed = (now - last_time).total_seconds()
+            
+            remaining = max(0.0, NANO_COOLDOWN_SECONDS - elapsed)
+            return remaining
+        except Exception as e:
+            logger.warning(f"Failed to get nano cooldown remaining: {e}")
+            return 0.0  # Assume ready if can't check
 
 
 # Global router instance
@@ -278,7 +418,7 @@ def _mark_server_busy(server_id: str):
         finally:
             router_db.set_local_busy(False)
             logger.debug(f"Marked {server_id} as free")
-    elif server_id in ['external_a', 'external_b']:
+    elif server_id in ['external_a', 'external_b', 'external_c', 'external_d']:
         # Track external server busy status
         try:
             router_db.set_external_busy(server_id, True)
@@ -287,6 +427,14 @@ def _mark_server_busy(server_id: str):
         finally:
             router_db.set_external_busy(server_id, False)
             logger.debug(f"Marked {server_id} as free")
+    elif server_id == 'nano':
+        # Nano uses cooldown instead of busy tracking
+        try:
+            router_db.mark_nano_used()
+            logger.debug(f"Marked {server_id} as used (cooldown started)")
+            yield
+        finally:
+            logger.debug(f"Nano request completed")
     else:
         # Unknown server, just yield without tracking
         yield
@@ -299,6 +447,22 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
     model = config['model']
     temperature = config['temperature']
     base_url = config.get('base_url')
+    
+    # Special handling for Nano (real OpenAI API)
+    if server_id == 'nano':
+        if not OPENAI_API_KEY:
+            raise ValueError("OPENAI_API_KEY not set! Set OPENAI_API_KEY_NANO environment variable for testing.")
+        
+        logger.info(f"Building Nano LLM with model: {model}")
+        # NO RETRIES for Nano - billing/quota errors should fail fast, not retry
+        return ChatOpenAI(
+            model=model,
+            temperature=temperature,
+            timeout=LLM_CALL_TIMEOUT_S,
+            max_retries=0,
+            api_key=OPENAI_API_KEY
+        )
+    
     # Temporary visibility log for routing target
     
     if provider == "ollama":
@@ -316,6 +480,7 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             temperature=temperature,
             timeout=LLM_CALL_TIMEOUT_S,
             max_retries=0,
+            max_tokens=2048,  # Reserve space for output (10240 context - ~8000 input max)
         )
         if base_url:
             kwargs["base_url"] = base_url
@@ -340,6 +505,21 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
 def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
     """Route request to appropriate server based on tier and token count with smart busy tracking."""
     
+    # CHECK FIRST: If request exceeds max context, route to Nano (with cooldown check)
+    if estimated_tokens > NANO_THRESHOLD:
+        if router_db.can_use_nano():
+            logger.info(f"🚀 Request too large ({estimated_tokens} > {NANO_THRESHOLD}), routing to Nano")
+            return 'nano'
+        else:
+            # WAIT for cooldown instead of crashing
+            logger.warning(f"⚠️ Request needs Nano ({estimated_tokens} tokens) but cooldown active, waiting...")
+            wait_time = router_db.get_nano_cooldown_remaining()
+            if wait_time > 0:
+                logger.info(f"⏳ Waiting {wait_time:.1f}s for Nano cooldown...")
+                time.sleep(wait_time + 0.5)  # Add 0.5s buffer
+            logger.info(f"✅ Cooldown complete, routing to Nano")
+            return 'nano'
+    
     if tier == ModelTier.COMPLEX:
         # Complex requests always go to external servers - pick the best available
         server_id = router_db.get_next_external_smart()
@@ -359,22 +539,9 @@ def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
             logger.debug(f"SIMPLE tier → {server_id} (tokens: {estimated_tokens} > {TOKEN_THRESHOLD})")
             return server_id
         
-        # Small request - try local first
-        if not router_db.is_local_busy():
-            logger.debug(f"SIMPLE tier → local (tokens: {estimated_tokens}, local free)")
-            return 'local'
-        
-        # Local is busy - check external servers
-        if not router_db.is_external_busy('external_a'):
-            logger.debug(f"SIMPLE tier → external_a (local busy, external_a free)")
-            return 'external_a'
-        elif not router_db.is_external_busy('external_b'):
-            logger.debug(f"SIMPLE tier → external_b (local busy, external_b free)")
-            return 'external_b'
-        else:
-            # All servers busy - spread load by using local anyway
-            logger.debug(f"SIMPLE tier → local (all servers busy, spreading load)")
-            return 'local'
+        # Small request - round-robin across ALL servers (local + external)
+        # This naturally distributes load across multiple processes
+        return router_db.get_next_any_server()
     
     else:
         raise ValueError(f"Unknown tier: {tier}")
@@ -430,10 +597,49 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
         except Exception:
             pass
         
+        # Track LLM usage for statistics
+        try:
+            from src.observability.pipeline_logging import increment_llm_usage
+            increment_llm_usage(self.tier)
+        except Exception:
+            pass  # Don't fail if tracking fails
+        
         # Get LLM for selected server and invoke with busy tracking
         llm = self._get_llm_for_server(server_id)
         with _mark_server_busy(server_id):
-            return llm.invoke(input, config, **kwargs)
+            try:
+                return llm.invoke(input, config, **kwargs)
+            except Exception as e:
+                error_msg = str(e).lower()
+                error_type = type(e).__name__
+                
+                # Special handling for Nano billing/quota errors - FAIL FAST
+                if server_id == 'nano':
+                    if any(keyword in error_msg for keyword in ['quota', 'billing', 'insufficient', 'credits', 'rate limit']):
+                        logger.error(f"💳 Nano billing/quota error: {e}")
+                        logger.error("⛔ Out of Nano credits or rate limited - request FAILED")
+                        raise  # Re-raise to fail the request (don't retry)
+                
+                # For external servers (a,b,c,d) - try fallback to another server on connection errors
+                if server_id.startswith('external_'):
+                    # Connection errors should try another server
+                    if 'connection' in error_msg or error_type in ['APIConnectionError', 'ConnectionError', 'Timeout']:
+                        logger.warning(f"⚠️ {server_id} connection failed: {error_type}")
+                        
+                        # Try to get another external server
+                        fallback_server = router_db.get_least_recently_used_external()
+                        if fallback_server != server_id:
+                            logger.info(f"🔄 Falling back to {fallback_server}")
+                            try:
+                                fallback_llm = self._get_llm_for_server(fallback_server)
+                                with _mark_server_busy(fallback_server):
+                                    return fallback_llm.invoke(input, config, **kwargs)
+                            except Exception as fallback_error:
+                                logger.error(f"❌ Fallback to {fallback_server} also failed: {fallback_error}")
+                                # Continue to raise original error
+                
+                # Re-raise all other errors
+                raise
     
     async def ainvoke(
         self, 

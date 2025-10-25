@@ -302,7 +302,6 @@ def enrich_topic_via_cold_storage(
             continue
         if res and res.get("status") not in ("skipped", "failed"):
             added += 1
-            master_statistics(enrichment_articles_added=1)
             master_log(f"Cold storage added | {article_id} -> {topic_id} | section={section}")
     
     if added == 0:
@@ -347,8 +346,6 @@ def backfill_topic_from_storage(
         needed = threshold - cnt
         logger.info(f"Enrichment needed | topic={topic_id} section={section} | need {needed} more articles (have {cnt}, want {threshold})")
         master_log(f"Enrichment attempt | topic={topic_id} section={section} | current={cnt} needed={needed}")
-        # We are attempting enrichment for this section
-        master_statistics(enrichment_attempts=1)
         
         added = 0
         
@@ -358,7 +355,6 @@ def backfill_topic_from_storage(
         added += perigon_added
         total_added += perigon_added
         if perigon_added > 0:
-            master_statistics(enrichment_articles_added=perigon_added)
             master_log(f"Perigon enrichment | {topic_id}/{section} | added {perigon_added} articles")
         
         # Check if we still need more articles

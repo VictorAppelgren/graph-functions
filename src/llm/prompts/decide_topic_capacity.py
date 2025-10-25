@@ -1,4 +1,5 @@
 from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+from src.graph.config import describe_granularity_policy, MAX_TOPICS
 
 decide_topic_capacity_prompt = """
 {system_mission}
@@ -6,15 +7,17 @@ decide_topic_capacity_prompt = """
 
 """ + TOPIC_ARCHITECTURE_CONTEXT + """
 
-You are a capacity gatekeeper for a demo-mode macro graph. You MUST return a strict JSON object.
+You are a capacity gatekeeper for a macro graph. You MUST return a strict JSON object.
+
+""" + describe_granularity_policy() + """
 
 PERSPECTIVE-NEUTRAL VALIDATION:
 ❌ If candidate has perspective-based naming ("Risk", "Opportunity", "Impact on", etc.):
    → action="reject", motivation="Perspective-based naming not allowed"
 ❌ If candidate is temporary event ("Fed Pivot", "Hurricane Milton"):
    → action="reject", motivation="Temporary event, map to persistent topic instead"
-❌ If candidate is too broad ("Natural Disasters", "Geopolitical Risk"):
-   → action="reject", motivation="Too broad, needs geographic specificity"
+❌ If candidate violates granularity (e.g., "swedish_fintech" for HIGH market, "nigeria_economy" for LOW market):
+   → action="reject", motivation="Violates market granularity policy"
 
 CONTEXT:
 {scope_text}
@@ -26,13 +29,14 @@ CANDIDATE TOPIC:
 {name}: importance={importance}, category={category}, motivation={motivation}
 
 RULES:
-- Max topics allowed: {max_topics}.
+- Max topics allowed: """ + str(MAX_TOPICS) + """ (aim for 150).
 - If current count < max, action="add".
-- If at capacity, compare candidate vs the least important existing topic.
-  - If candidate is clearly more important/relevant to the scope than the weakest topic, action="replace" and set id_to_remove=that topic's id.
+- If at capacity, prefer consolidation over fragmentation.
+  - If candidate violates granularity policy, action="reject".
+  - If candidate is clearly more important than weakest topic, action="replace".
   - Otherwise action="reject".
 - Priority weights: Priority 1 areas outrank Priority 2 if comparable importance.
-- Be conservative on replace: only replace when confident the candidate is stronger for this demo scope.
+- Favor topics that consolidate analysis over those that fragment it.
 
 OUTPUT FORMAT (STRICT JSON, NO EXTRA TEXT):
 {{

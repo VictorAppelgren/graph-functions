@@ -10,6 +10,10 @@ This script runs the core pipeline flow:
 Normally scheduled via main_scheduler.py to run every even hour.
 """
 
+# Load .env file FIRST before any other imports
+from utils.env_loader import load_env
+load_env()
+
 import datetime
 from typing import Dict, Any
 import time
@@ -20,12 +24,12 @@ from src.graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 from src.graph.ops.topic import get_all_topics
 from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 from utils import app_logging
-from src.observability.pipeline_logging import master_log
+from src.observability.pipeline_logging import master_log, load_stats_file, master_statistics
 from src.graph.scheduling.query_overdue import query_overdue_seconds
 from src.graph.neo4j_client import run_cypher
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from src.analysis.orchestration.should_rewrite import should_rewrite
-from src.graph.core.user_anchors import set_user_anchors
+from src.custom_user_analysis.daily_rewrite_orchestrator import rewrite_all_user_strategies
 
 logger = app_logging.get_logger(__name__)
 
@@ -72,16 +76,38 @@ def run_pipeline() -> Dict[str, Any]:
     # ASSET = "EURUSD"
     # Note: Asset filter applied at selection time per-iteration
 
-    # Minimal bootstrap: if the graph has no Topic topics, seed anchors once.
-    # This executes the existing script's __main__ block to avoid any refactor.
+    # Bootstrap check: if the graph has no topics, user needs to run bootstrap script
     if len(get_all_topics(fields=["id"])) < 1:
-        set_user_anchors()
+        logger.error("="*80)
+        logger.error("NO TOPICS FOUND IN GRAPH!")
+        logger.error("Please run the bootstrap script first:")
+        logger.error("  python -m src.start_scripts.bootstrap_graph")
+        logger.error("="*80)
+        raise RuntimeError("Graph not initialized. Run bootstrap script first.")
 
     while True:
         loop_start_time = datetime.datetime.now()
         logger.info(
             f"Starting new pipeline cycle at {loop_start_time:%Y-%m-%d %H:%M:%S}"
         )
+
+        # Daily strategy rewrite (once per day at 7am)
+        if loop_start_time.hour >= 7:
+            stats = load_stats_file()
+            flag_status = stats.today.custom_analysis.daily_rewrite_completed
+            logger.debug(f"Daily rewrite check: hour={loop_start_time.hour}, flag={flag_status}")
+            
+            if not flag_status:
+                # Set flag IMMEDIATELY to prevent other processes from starting
+                master_statistics(daily_rewrite_completed=True)
+                logger.info("🔄 Daily rewrite started (flag set to prevent duplicates)")
+                try:
+                    results = rewrite_all_user_strategies()
+                    logger.info(f"✅ Daily rewrite: {results['succeeded']}/{results['total']} succeeded")
+                except Exception as e:
+                    logger.error(f"❌ Daily rewrite failed: {e}")
+            else:
+                logger.debug("Daily rewrite already completed today, skipping")
 
         # Fresh fetch and selection each iteration
         topics = get_all_topics(
@@ -104,6 +130,10 @@ def run_pipeline() -> Dict[str, Any]:
             topics = [n for n in topics if n["name"] == ASSET]
             assert topics, f"No Topic topic found for ASSET={ASSET}"
 
+        # Log all topic IDs for diagnostics
+        logger.info(f"📋 Loaded {len(topics)} topics from database")
+        logger.debug(f"Topic IDs: {[t['id'] for t in topics[:10]]}...")  # Show first 10
+        
         # Compute SLA overdue seconds and select only overdue topics
         overdues = [(n, query_overdue_seconds(n)) for n in topics]
         overdue_topics = [(n, o) for n, o in overdues if o > 0]
@@ -124,14 +154,30 @@ def run_pipeline() -> Dict[str, Any]:
         topic_name = topic["name"]
         topic_type = topic["type"]
 
+        # Log what we're trying to claim
+        logger.info(f"🎯 Attempting to claim topic: id='{topic_id}', name='{topic_name}'")
+        logger.debug(f"Topic data: {topic}")
+        
         # Immediately claim by setting last_queried
         claim_res = run_cypher(
             "MATCH (t:Topic {id: $id}) SET t.last_queried = datetime() RETURN t.id AS id",
             {"id": topic_id},
         )
-        assert (
-            claim_res and claim_res[0]["id"] == topic_id
-        ), f"Failed to claim topic id={topic_id}"
+        
+        # Skip if claim fails (topic might have been deleted or race condition)
+        if not claim_res or not claim_res[0] or claim_res[0].get("id") != topic_id:
+            logger.error(f"❌ CLAIM FAILED for topic id='{topic_id}' name='{topic_name}'")
+            logger.error(f"Claim query returned: {claim_res}")
+            logger.error(f"Expected id: '{topic_id}' (type: {type(topic_id).__name__})")
+            
+            # Try to find if topic exists with different query
+            check_res = run_cypher(
+                "MATCH (t:Topic) WHERE t.id = $id OR t.name = $name RETURN t.id AS id, t.name AS name",
+                {"id": topic_id, "name": topic_name},
+            )
+            logger.error(f"Topic existence check: {check_res}")
+            
+            continue  # Skip to next topic in the loop
 
         logger.info(
             "================================================================================================="

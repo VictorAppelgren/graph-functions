@@ -45,7 +45,7 @@ def should_rewrite(
     topic = run_cypher(topic_cypher, {"topic_id": topic_id})
     if not topic:
         logger.warning(f"Topic {topic_id} not found for should_rewrite.")
-        master_statistics(should_rewrite_stopped_insufficient_articles=1)  # Using this for "topic not found" case
+        # Topic not found - no specific tracking for this
         return {
             "should_rewrite": False,
             "motivation": "Topic not found",
@@ -94,23 +94,23 @@ def should_rewrite(
             }
         summary = article["argos_summary"]
 
-    # Determine temporal horizon -> section
-    try:
-        tf_section = get_article_temporal_horizon(new_article_id)
-    except ValueError:
+    # Determine temporal horizon -> section (from relationship, not article node)
+    tf_query = """
+    MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic {id: $topic_id})
+    RETURN r.timeframe as timeframe
+    """
+    tf_result = run_cypher(tf_query, {"article_id": new_article_id, "topic_id": topic_id})
+    
+    if not tf_result or not tf_result[0].get("timeframe"):
         logger.warning(
-            f"Article {new_article_id} missing temporal_horizon. Inferring and backfilling."
+            f"Article {new_article_id} -> Topic {topic_id} relationship missing timeframe. This shouldn't happen with new system."
         )
+        # Fallback: infer from summary
         time_frame_result = find_time_frame(summary)
-        inferred_tf = time_frame_result.horizon
-        run_cypher(
-            "MATCH (a:Article {id:$id}) SET a.temporal_horizon = $tf",
-            {"id": new_article_id, "tf": inferred_tf},
-        )
-        master_log(
-            f"Backfilled temporal_horizon | article={new_article_id} | tf={inferred_tf}"
-        )
-        tf_section = inferred_tf
+        tf_section = time_frame_result.horizon
+        logger.warning(f"Using inferred timeframe: {tf_section}")
+    else:
+        tf_section = tf_result[0]["timeframe"]
 
     # LLM decision (tuple: (bool, str))
     try:
@@ -122,10 +122,7 @@ def should_rewrite(
             master_log(
                 f"Will rewrite section {tf_section} because response was: True | topic={topic_id} | article={new_article_id}"
             )
-            master_statistics(
-                should_rewrite_true=1,
-                should_rewrite_llm_decided_true=1
-            )
+            master_statistics(should_rewrite_true=1)
             
             # Try analysis generation
             try:
@@ -138,13 +135,10 @@ def should_rewrite(
             master_log(
                 f"No rewrite of section {tf_section} because response was: False | topic={topic_id} | article={new_article_id}"
             )
-            master_statistics(
-                should_rewrite_false=1,
-                should_rewrite_llm_decided_false=1
-            )
+            master_statistics(should_rewrite_false=1)
     except Exception as e:
         logger.error(f"Should rewrite LLM call failed for {topic_id}: {e}")
-        master_statistics(should_rewrite_stopped_llm_failure=1)
+        master_statistics(errors=1)  # LLM failure is an error
         return {
             "should_rewrite": False,
             "motivation": f"LLM call failed: {str(e)}",
@@ -208,11 +202,10 @@ def _check_and_enrich_other_sections(
         "executive_summary",
     ]
 
-    # Get total article count across all timeframe sections
+    # Get total article count across all timeframe sections (from relationships)
     total_query = """
-    MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-    WHERE a.temporal_horizon IN ['fundamental', 'medium', 'current']
-    AND coalesce(a.priority, '') <> 'hidden'
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+    WHERE r.timeframe IN ['fundamental', 'medium', 'current']
     RETURN count(a) as total_count
     """
     total_result = run_cypher(total_query, {"topic_id": topic_id})

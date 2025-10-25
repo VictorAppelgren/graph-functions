@@ -1,10 +1,13 @@
 from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+from src.graph.config import describe_granularity_policy
 
 find_topic_mapping_prompt = """
         {system_mission}
         {system_context}
 
         """ + TOPIC_ARCHITECTURE_CONTEXT + """
+        
+        """ + describe_granularity_policy() + """
 
         YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC MAPPER for the NEO4j Graph.
 
@@ -19,7 +22,8 @@ find_topic_mapping_prompt = """
           'motivation' (string), 'existing' (array of IDs or null), 'new' (array of NAMES or null).
         - Prioritize 'existing'. Be generous with 'existing' suggestions.
         - Be conservative with 'new' (at most one), otherwise null.
-        - Use IDs for 'existing' and NAMES for 'new'. No extra fields.
+        - For 'existing': ONLY use IDs that appear in the EXISTING NODE NAMES AND IDS list below. DO NOT invent or guess IDs.
+        - For 'new': use descriptive NAMES (not IDs). No extra fields.
 
         PERSPECTIVE-NEUTRAL MAPPING:
         - Map to the SUBJECT of the article, not the perspective/narrative
@@ -28,11 +32,11 @@ find_topic_mapping_prompt = """
         - OPEC cut article → ["opec_production_policy", "wti", "brent"]
         
         WHEN SUGGESTING 'NEW' TOPICS:
-        ✅ SUGGEST if persistent & recurring: "florida_hurricanes", "opec_production_policy"
+        ✅ SUGGEST if persistent & recurring: "florida_hurricanes", "opec_production_policy", "nordic_real_estate"
         ❌ REJECT if temporary: "fed_pivot", "hurricane_milton", "2024_election"
         ❌ REJECT if perspective-based: "hurricane_risk", "fed_opportunity", "inflation_trend"
-        ❌ REJECT if too broad: "natural_disasters", "geopolitical_risk"
-        ✅ ADD geographic specificity: "florida_hurricanes" not "hurricanes"
+        ❌ REJECT if too granular for market: "swedish_fintech" (map to nordic_banks + nordic_tech), "nigeria_ports" (map to africa_markets)
+        ✅ Respect granularity: HIGH markets allow sectors, MEDIUM allow key sectors, LOW only regional
         
         PERSISTENCE TEST FOR NEW TOPICS:
         - Will we track this for 6+ months? → SUGGEST
@@ -55,6 +59,7 @@ find_topic_mapping_prompt = """
 
         CRITICAL REMINDERS:
         - Map to WHAT (subjects), not HOW (perspectives)
+        - For 'existing': ONLY use exact IDs from the provided list - never invent or guess topic IDs
         - Suggest 'new' only if persistent (6+ months tracking)
         - Add geographic specificity to new suggestions
         - Articles can map to 3-5 topics if genuinely relevant

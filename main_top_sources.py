@@ -5,6 +5,10 @@ Just loop through top sources, query everything, save articles.
 No complexity, no topic processing, just pure data ingestion.
 """
 
+# Load .env file FIRST before any other imports
+from utils.env_loader import load_env
+load_env()
+
 import os
 import sys
 import datetime
