@@ -81,7 +81,7 @@ DRIVERS ANALYSIS:
 YOUR TASK: EXECUTIVE SUMMARY
 ═══════════════════════════════════════════════════════════════════════════
 
-Synthesize ALL 4 analysis sections into a **3-4 sentence** executive summary that answers:
+Synthesize ALL 4 analysis sections into a comprehensive executive summary that answers:
 
 1. **VERDICT**: Does the analysis support or contradict the user's thesis? (Clear yes/no/mixed)
 2. **KEY CATALYST**: What is the single most important driver? (1 specific factor with citation)
@@ -89,20 +89,19 @@ Synthesize ALL 4 analysis sections into a **3-4 sentence** executive summary tha
 4. **ACTION**: What should the user do? (Specific, actionable recommendation)
 
 REQUIREMENTS:
-• **LENGTH**: Exactly 3-4 sentences. No more, no less.
 • **SPECIFICITY**: Use exact numbers, levels, timeframes from the analysis
 • **CITATIONS**: Include 2-4 inline citations from the analysis sections
 • **ACTIONABLE**: End with a clear recommendation (enter, exit, wait, monitor)
 • **ASSET FOCUS**: Every sentence about {asset_name} specifically
+• **THOROUGHNESS**: Provide sufficient detail to support decision-making
 
 FORMATTING REQUIREMENTS:
 • HORIZON: Synthesis across all timeframes
 • CONTENT: Verdict + Key catalyst + Critical risk + Action
-• FORMAT: 3-4 sentences, ultra-dense, decision-focused
+• FORMAT: Comprehensive synthesis with sufficient detail for decision-making
 • STRUCTURE: Verdict → Catalyst → Risk → Action
 • CITATIONS: Only 9-character IDs in (XXXXXXXXX) format
 • FOCUS: Clear yes/no verdict on thesis with actionable next step
-• LENGTH: Maximum 500 characters
 
 STRICT CITATION RULE: Only in-text (9-CHAR-ID) citations are allowed. DO NOT include any citation lists, reference sections, or citation blocks at the end. Output only the analysis text.
 
@@ -124,6 +123,6 @@ MARKDOWN & FORMATTING RULES (CRITICAL):
 
 5. NO TRAILING CITATIONS: Every citation must be inline, never orphaned at the end
 
-CRITICAL: This is executive summary. You MUST generate substantive content in exactly 3-4 sentences. "I'm sorry, I cannot..." responses are not acceptable. Synthesize the analysis into actionable intelligence.
+CRITICAL: This is executive summary. You MUST generate substantive content with sufficient detail for decision-making. "I'm sorry, I cannot..." responses are not acceptable. Synthesize the analysis into actionable intelligence.
 
-OUTPUT: Plain text analysis only. No JSON wrapper. No preamble. No citation lists. No section headers. Exactly 3-4 sentences."""
+OUTPUT: Plain text analysis only. No JSON wrapper. No preamble. No citation lists. No section headers. Provide comprehensive synthesis."""

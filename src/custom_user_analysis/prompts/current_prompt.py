@@ -126,11 +126,11 @@ Address these dimensions:
 FORMATTING REQUIREMENTS:
 • HORIZON: 0-3 weeks immediate analysis
 • CONTENT: Immediate drivers affecting {asset_name}, near-term catalysts, positioning dynamics, expected reaction function
-• FORMAT: 1-2 paragraphs, urgent tone, actionable intelligence
+• FORMAT: Comprehensive near-term analysis with urgent tone and actionable intelligence
 • STRUCTURE: Immediate drivers → Key levels/thresholds → Expected reaction → Invalidation signals → Next monitors
 • CITATIONS: Only 9-character IDs in (XXXXXXXXX) format
 • FOCUS: All catalysts about {asset_name} price action
-• LENGTH: Maximum information density - shortest possible text
+• THOROUGHNESS: Cover all material near-term catalysts with sufficient detail
 
 STRICT CITATION RULE: Only in-text (9-CHAR-ID) citations are allowed. DO NOT include any citation lists, reference sections, or citation blocks at the end. Output only the analysis text.
 

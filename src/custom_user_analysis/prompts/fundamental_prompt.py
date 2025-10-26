@@ -123,11 +123,11 @@ INTELLIGENT ASSET RESEARCH DIRECTIVE — READ CAREFULLY:
 FORMATTING REQUIREMENTS:
 • HORIZON: Multi-year structural analysis
 • CONTENT: First-principles/invariant anchors for {asset_name} (real rate differentials, terms-of-trade, productivity, BoP, policy reaction functions)
-• FORMAT: 2-3 authoritative paragraphs, maximum information density
+• FORMAT: Comprehensive analysis with sufficient detail to evaluate structural drivers
 • STRUCTURE: Causal chain → Base case → Key risks → Watch signals → Confidence level
 • CITATIONS: Only 9-character IDs in (XXXXXXXXX) format
 • FOCUS: Every sentence about {asset_name} performance relative to user's target
-• LENGTH: Shortest possible text communicating all needed information
+• THOROUGHNESS: Provide thorough coverage of all structural factors
 
 STRICT CITATION RULE: Only in-text (9-CHAR-ID) citations are allowed. DO NOT include any citation lists, reference sections, or citation blocks at the end. Output only the analysis text.
 

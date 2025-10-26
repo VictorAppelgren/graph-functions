@@ -19,42 +19,36 @@ sys.path.insert(0, str(API_DIR))
 from src.custom_user_analysis.strategy_analyzer import generate_custom_user_analysis
 from src.observability.pipeline_logging import master_statistics, master_log
 from utils.app_logging import get_logger
-import user_data_manager
+from src.api.backend_client import get_all_users, get_user_strategies
 
 logger = get_logger("custom_analysis.daily_rewrite")
 
 
 def get_all_user_strategies() -> list[tuple[str, str]]:
     """
-    Get all users and their strategies.
+    Get all users and their strategies from Backend API.
     
     Returns:
         List of (username, strategy_id) tuples
     """
     strategies = []
     
-    # Get all users from API/users directory
-    users_dir = API_DIR / "users"
-    if not users_dir.exists():
-        logger.warning(f"Users directory not found: {users_dir}")
+    # Get all users from Backend API
+    usernames = get_all_users()
+    
+    if not usernames:
+        logger.warning("No users found from Backend API")
         return strategies
     
-    # Iterate through user directories
-    for user_dir in users_dir.iterdir():
-        if not user_dir.is_dir():
-            continue
-        
-        username = user_dir.name
-        
-        # Skip archive directories
-        if username == "archive":
-            continue
-        
-        # Get all strategies for this user
+    logger.info(f"Found {len(usernames)} users from Backend API")
+    
+    # Get strategies for each user
+    for username in usernames:
         try:
-            user_strategies = user_data_manager.list_strategies(username)
+            user_strategies = get_user_strategies(username)
             for strategy in user_strategies:
                 strategies.append((username, strategy["id"]))
+            logger.debug(f"User {username}: {len(user_strategies)} strategies")
         except Exception as e:
             logger.error(f"Failed to load strategies for user {username}: {e}")
             continue

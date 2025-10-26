@@ -123,11 +123,11 @@ Address these dimensions:
 FORMATTING REQUIREMENTS:
 • HORIZON: Cross-topic synthesis across all timeframes
 • CONTENT: Most material drivers affecting {asset_name} (macro, policy, flows/positioning, technicals)
-• FORMAT: Concise synthesis, professional tone, maximum insight density
+• FORMAT: Comprehensive synthesis with professional tone and maximum insight density
 • STRUCTURE: Key drivers → Direction/mechanisms → Fragility points → Watch signals
 • CITATIONS: Only 9-character IDs in (XXXXXXXXX) format
 • FOCUS: All drivers impact {asset_name} specifically with explicit transmission mechanisms
-• LENGTH: Maximum information density - shortest possible text
+• THOROUGHNESS: Cover all material drivers with sufficient detail and explicit transmission mechanisms
 
 CRITICAL REQUIREMENT FOR DRIVERS SECTION:
 For EVERY driver you mention, you MUST include the phrase "This affects {asset_name} by [specific mechanism]" or equivalent. This is non-negotiable. Drivers without explicit transmission mechanisms to {asset_name} should be removed.

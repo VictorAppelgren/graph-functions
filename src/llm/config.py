@@ -487,7 +487,7 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             temperature=temperature,
             timeout=LLM_CALL_TIMEOUT_S,
             max_retries=0,
-            max_tokens=2048,  # Reserve space for output (10240 context - ~8000 input max)
+            max_tokens=8192,  # Allow comprehensive responses (server supports 30k output)
         )
         if base_url:
             kwargs["base_url"] = base_url

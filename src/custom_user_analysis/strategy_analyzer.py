@@ -28,10 +28,8 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.observability.pipeline_logging import master_log
 
-# Import API user data manager
-API_DIR = os.path.join(PROJECT_ROOT, "API")
-sys.path.append(API_DIR)
-import user_data_manager
+# Import Backend API client
+from src.api.backend_client import get_strategy, update_strategy
 
 
 def log_and_print(message: str):
@@ -64,8 +62,10 @@ def generate_custom_user_analysis(
     master_log(f"Custom analysis started | {username}/{strategy_id}")
     
     try:
-        # 1. Load strategy
-        strategy = user_data_manager.load_strategy(username, strategy_id)
+        # 1. Load strategy from Backend API
+        strategy = get_strategy(username, strategy_id)
+        if not strategy:
+            raise ValueError(f"Strategy not found: {username}/{strategy_id}")
         master_log(f"Strategy loaded | {username}/{strategy_id} | asset={strategy['asset']['primary']}")
         
         # Extract user inputs
@@ -324,10 +324,12 @@ def _save_analysis_to_strategy(
     related_topics: list
 ) -> None:
     """
-    Update strategy JSON with generated analysis.
-    Automatically archives old version.
+    Update strategy JSON with generated analysis via Backend API.
     """
-    strategy = user_data_manager.load_strategy(username, strategy_id)
+    # Load current strategy from Backend API
+    strategy = get_strategy(username, strategy_id)
+    if not strategy:
+        raise ValueError(f"Strategy not found: {username}/{strategy_id}")
     
     # Update related topics
     strategy["asset"]["related"] = related_topics
@@ -344,9 +346,12 @@ def _save_analysis_to_strategy(
         "contradicting_evidence": contradicting_evidence
     }
     
-    # Save (auto-archives old version)
-    user_data_manager.save_strategy(username, strategy)
-    master_log(f"Analysis saved to strategy | {username}/{strategy_id}")
+    # Save via Backend API
+    success = update_strategy(username, strategy_id, strategy)
+    if success:
+        master_log(f"Analysis saved to strategy | {username}/{strategy_id}")
+    else:
+        raise Exception(f"Failed to save strategy to Backend API: {username}/{strategy_id}")
 
 
 if __name__ == "__main__":

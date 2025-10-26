@@ -126,11 +126,11 @@ Address these dimensions:
 FORMATTING REQUIREMENTS:
 • HORIZON: All timeframes (immediate to structural)
 • CONTENT: Comprehensive risk assessment identifying threats and contradicting evidence
-• FORMAT: 2-3 paragraphs, balanced tone, intellectually honest
+• FORMAT: Thorough risk analysis with balanced tone and intellectual honesty
 • STRUCTURE: Contradicting evidence → Structural risks → Tactical risks → Mitigation strategies
 • CITATIONS: Only 9-character IDs in (XXXXXXXXX) format
 • FOCUS: All risks about {asset_name} performance relative to thesis
-• LENGTH: Maximum information density - shortest possible text
+• THOROUGHNESS: Cover all material risks with sufficient detail for risk management
 
 STRICT CITATION RULE: Only in-text (9-CHAR-ID) citations are allowed. DO NOT include any citation lists, reference sections, or citation blocks at the end. Output only the analysis text.
 

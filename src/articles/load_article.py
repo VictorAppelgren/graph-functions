@@ -1,5 +1,5 @@
 """
-Loads an article from cold storage by its unique ID.
+Loads an article from Backend API by its unique ID.
 """
 
 import sys
@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from paths import get_raw_news_dir
+from src.api.backend_client import get_article as get_article_from_api
 
 logger = get_logger(__name__)
 
@@ -29,18 +30,31 @@ def _load_json_object(path: Path) -> dict[str, Any]:
 
 def load_article(article_id: str, max_days: int = 90) -> Dict[str, str] | None:
     """
-    Loads a single article from raw news directories by its unique ID.
-    Tries today, then yesterday, etc., up to max_days back.
-    Handles both flat and nested ('data' key) article formats.
+    Loads a single article from Backend API by its unique ID.
+    Falls back to local file storage if Backend API is unavailable.
 
     Args:
         article_id: Unique article ID
-        max_days: Number of days to look back (default 90)
+        max_days: Number of days to look back in fallback (default 90)
     Returns:
         Article data as a dictionary
     Raises:
-        FileNotFoundError: If the article cannot be found in any day directory
+        FileNotFoundError: If the article cannot be found
     """
+    # Try Backend API first
+    try:
+        article = get_article_from_api(article_id)
+        if article:
+            logger.debug("Loaded article %s from Backend API", article_id)
+            # Handle legacy wrapper
+            inner = article.get("data")
+            if isinstance(inner, dict):
+                return cast(Dict[str, str], inner)
+            return article
+    except Exception as e:
+        logger.warning("Backend API unavailable for article %s: %s. Trying local files...", article_id, e)
+    
+    # Fallback to local file storage
     today = datetime.now()
     for days_back in range(max_days):
         day = (today - timedelta(days=days_back)).strftime("%Y-%m-%d")
@@ -54,7 +68,7 @@ def load_article(article_id: str, max_days: int = 90) -> Dict[str, str] | None:
 
         try:
             obj = _load_json_object(article_path)
-            logger.debug("Loaded article %s from %s", article_id, article_path)
+            logger.debug("Loaded article %s from %s (fallback)", article_id, article_path)
 
             # Handle legacy wrapper
             inner = obj.get("data")
@@ -70,7 +84,7 @@ def load_article(article_id: str, max_days: int = 90) -> Dict[str, str] | None:
             continue
 
     logger.error(
-        "Article %s not found in any raw_news day directory (checked %d days)",
+        "Article %s not found in Backend API or local files (checked %d days)",
         article_id,
         max_days,
     )

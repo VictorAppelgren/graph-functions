@@ -23,6 +23,7 @@ from utils import app_logging
 logger = app_logging.get_logger("raw_storage")
 
 from .argos_id_generator import add_argos_id_to_article
+from src.api.backend_client import store_article as store_to_backend_api
 
 
 class StorageError(Exception):
@@ -73,7 +74,7 @@ class RawStorageManager:
 
     def store_article(self, article_data: Dict[str, Any]) -> Optional[str]:
         """
-        Store article data to a JSON file with a bulletproof unique 9-character argos_id.
+        Store article data to Backend API (primary) and local JSON file (backup).
         Args:
             article_data: Article data to store
         Returns:
@@ -97,6 +98,16 @@ class RawStorageManager:
         if "data" in article_data:
             article_data["data"]["argos_id"] = argos_id
 
+        # 1. SEND TO BACKEND API (Primary storage)
+        try:
+            result = store_to_backend_api(article_data)
+            if result.get("status") == "stored":
+                logger.debug(f"Article {argos_id} sent to Backend API successfully")
+        except Exception as e:
+            logger.warning(f"Failed to send article {argos_id} to Backend API: {e}")
+            # Continue to local storage even if Backend API fails
+
+        # 2. SAVE TO LOCAL FILE (Backup storage)
         # Create file path using the unique argos_id
         file_name = f"{argos_id}.json"
         file_path = self.today_dir / file_name
@@ -111,11 +122,11 @@ class RawStorageManager:
             # Track the article ID
             self.article_ids.add(argos_id)
 
-            logger.debug(f"Article {argos_id} saved successfully to {file_path}")
+            logger.debug(f"Article {argos_id} saved to local file: {file_path}")
             return str(file_path)
 
         except (IOError, OSError) as e:
-            logger.error(f"Error storing article {argos_id}: {e}")
+            logger.error(f"Error storing article {argos_id} to local file: {e}")
             raise StorageError(f"Failed to store article: {e}")
 
     def get_recent_articles(self, limit: int = 10) -> List[Dict[str, Any]]:
