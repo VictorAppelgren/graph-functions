@@ -46,14 +46,15 @@ CITATION RULES (ULTRA-STRICT — MUST COMPLY):
 - Inline citations are 9-character ID-only. DO NOT include URL, title, source, or date inline.
 
 WORLD-CLASS RESEARCH METHODOLOGY (strictly follow):
-1) SYNERGY SYNTHESIS: Combine multiple asset insights into superior {asset_name} intelligence. Map cross-asset correlations, transmission mechanisms, and compound scenarios where Asset A + Asset B = amplified {asset_name} effect. Connect non-obvious dots others miss.
-2) PROFESSIONAL AUTHORITY: Write with conviction and precision. Every sentence drives {asset_name} investment decisions. Use authoritative tone, avoid hedging language, maximize information density.
-3) CAUSAL CHAIN MASTERY: Extract explicit cause-and-effect chains for {asset_name}. Map: Macro Event → Financial Channel → {asset_name} Impact. Show temporal synthesis linking immediate catalysts to structural themes.
-4) GROUND EVERYTHING: Every substantive claim needs inline 9-character ID citations (Z7O1DCHS7). Cite frequently and precisely. Remove unsupported claims.
-5) QUANTIFIED PRECISION: Use specific numbers, probabilities, timeframes. Name exact policy/data variables driving {asset_name} (growth, inflation, rates, flows, positioning).
-6) DECISION FRAMEWORK: Base case (and drivers), Key risks (2-3), What to watch next (signals), Confidence level.
-7) OPTIMAL DENSITY: Shortest possible text communicating all needed information. Professional brevity - dense, precise, complete.
-8) RELATED ASSET INTELLIGENCE: When mentioning other assets, immediately state: "This affects {asset_name} by..." Show explicit transmission to {asset_name}.
+1) 1+1=3 SYNTHESIS: Two articles together reveal scenarios neither shows alone. Ask: "What does Article A + Article B mean for {asset_name}'s future?" Identify compound effects, transmission chains, and non-obvious implications. Connect dots others miss to generate superior forward-looking intelligence.
+2) SUBSTANCE ONLY: Zero fluff, zero filler. Every sentence delivers actionable insight. Cut introductions, transitions, and obvious statements. Maximum information density—write as if every word costs money.
+3) FORWARD SCENARIOS: Don't just summarize—project forward. What happens next? What scenarios emerge from combining these data points? Map probability-weighted paths for {asset_name}.
+4) CAUSAL CHAIN MASTERY: Extract explicit cause-and-effect chains for {asset_name}. Map: Macro Event → Financial Channel → {asset_name} Impact. Show temporal synthesis linking immediate catalysts to structural themes.
+5) GROUND EVERYTHING: Every substantive claim needs inline 9-character ID citations (Z7O1DCHS7). Cite frequently and precisely. Remove unsupported claims.
+6) QUANTIFIED PRECISION: Use specific numbers, probabilities, timeframes. Name exact policy/data variables driving {asset_name} (growth, inflation, rates, flows, positioning).
+7) DECISION FRAMEWORK: Base case (and drivers), Key risks (2-3), What to watch next (signals), Confidence level.
+8) PROFESSIONAL AUTHORITY: Write with conviction and precision. Every sentence drives {asset_name} investment decisions. Authoritative tone, no hedging.
+9) RELATED ASSET INTELLIGENCE: When mentioning other assets, immediately state: "This affects {asset_name} by..." Show explicit transmission to {asset_name}.
 
 INTELLIGENT ASSET RESEARCH DIRECTIVE — READ CAREFULLY:
 - PRIMARY FOCUS: All analysis serves {asset_name} decision-making exclusively within the next 0-3 weeks.

@@ -501,14 +501,22 @@ def analysis_rewriter(
             
             try:
                 # Use unified material builder for all sections
+                logger.info(f"📦 Building material | topic={topic_id} section={section}")
                 material, article_ids = build_material_for_synthesis_section(
                     topic_id, section
+                )
+                logger.info(
+                    f"✅ Material built | topic={topic_id} section={section} | "
+                    f"articles={len(article_ids)} chars={len(material)}"
                 )
                 section_tracker.put_many(
                     article_ids=article_ids, selected_articles_count=len(article_ids)
                 )
             except ValueError as e:
-                if "No articles selected" in str(e):
+                logger.warning(
+                    f"⚠️  Material builder failed | topic={topic_id} section={section} | error={str(e)[:100]}"
+                )
+                if "No articles selected" in str(e) or "No articles available" in str(e):
                     # Count current pool; if under threshold, enhance then retry once
                     cnt_q = """
                     MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id})
@@ -520,10 +528,15 @@ def analysis_rewriter(
                     ) or [{"c": 0}]
                     current_cnt = int(cnt_res[0]["c"] or 0)
                     logger.info(
-                        f"Rewrite missing material | {topic_id} | section={section} | current_cnt={current_cnt} < {MIN_ARTICLES_FOR_SECTION}"
+                        f"📊 Article count check | topic={topic_id} section={section} | "
+                        f"current={current_cnt} min_required={MIN_ARTICLES_FOR_SECTION}"
                     )
                     # Trigger enrichment if below minimum threshold
                     if current_cnt < MIN_ARTICLES_FOR_SECTION:
+                        logger.info(
+                            f"🔄 Triggering enrichment | topic={topic_id} section={section} | "
+                            f"current={current_cnt} < min={MIN_ARTICLES_FOR_SECTION}"
+                        )
                         from worker.workflows.topic_enrichment import (
                             backfill_topic_from_storage,
                         )
@@ -539,10 +552,15 @@ def analysis_rewriter(
                             test=test,
                             sections=[section],
                         )
-                        # Retry once
+                        # Retry once after enrichment
                         try:
+                            logger.info(f"🔄 Retry material build after enrichment | topic={topic_id} section={section}")
                             material, article_ids = (
                                 build_material_for_synthesis_section(topic_id, section)
+                            )
+                            logger.info(
+                                f"✅ Material built after enrichment | topic={topic_id} section={section} | "
+                                f"articles={len(article_ids)}"
                             )
                             section_tracker.put_many(
                                 article_ids=article_ids,
@@ -550,7 +568,8 @@ def analysis_rewriter(
                             )
                         except ValueError:
                             logger.warning(
-                                f"Skipping rewrite for section '{section}' on node {topic_id}: no articles selected after enhancement retry."
+                                f"⏭️  SKIPPING section | topic={topic_id} section={section} | "
+                                f"No articles after enrichment retry - needs manual investigation"
                             )
                             p = ProblemDetailsModel()
                             p.section = section
@@ -571,8 +590,10 @@ def analysis_rewriter(
                             )
                             continue
                     else:
-                        logger.warning(
-                            f"Skipping rewrite for section '{section}' on node {topic_id}: no articles selected by selector (0)."
+                        logger.info(
+                            f"⏭️  SKIPPING section | topic={topic_id} section={section} | "
+                            f"Has {current_cnt} articles (>= min) but selector returned 0 - "
+                            f"likely quality/filtering issue"
                         )
                         p = ProblemDetailsModel()
                         p.section = section

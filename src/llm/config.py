@@ -269,11 +269,15 @@ class RouterDB:
             logger.warning(f"Failed to get least recently used external: {e}")
             return self.get_next_external()  # Fallback to round-robin
 
-    def get_next_external_smart(self) -> str:
+    def get_next_external_smart(self, exclude: set[str] = None) -> str:
         """Smart external server selection with busy tracking (ONLY 2 servers now).
         
         Uses round-robin to spread load evenly, skipping busy servers.
+        
+        Args:
+            exclude: Set of server IDs to exclude from selection (e.g., failed servers)
         """
+        exclude = exclude or set()
         try:
             # Start from the next server in round-robin order
             last = self._execute_with_retry(
@@ -289,8 +293,11 @@ class RouterDB:
             for i in range(2):
                 idx = (start_idx + i + 1) % 2
                 server = rotation[idx]
-                if not self.is_external_busy(server):
-                    logger.debug(f"{server} is free (round-robin position {idx}), selecting it")
+                if server not in exclude and not self.is_external_busy(server):
+                    if exclude:
+                        logger.debug(f"{server} is free (round-robin position {idx}), selecting it (excluded: {exclude})")
+                    else:
+                        logger.debug(f"{server} is free (round-robin position {idx}), selecting it")
                     # Update last_external to maintain round-robin state
                     self._execute_with_retry(
                         "UPDATE router_status SET value = ?, updated_at = CURRENT_TIMESTAMP WHERE key = 'last_external'",
@@ -502,8 +509,15 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
         raise ValueError(f"Unsupported provider: {provider}")
 
 
-def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
-    """Route request to appropriate server based on tier and token count with smart busy tracking."""
+def _route_request(tier: ModelTier, estimated_tokens: int = 0, exclude: set[str] = None) -> str:
+    """Route request to appropriate server based on tier and token count with smart busy tracking.
+    
+    Args:
+        tier: Model tier (SIMPLE, COMPLEX, etc.)
+        estimated_tokens: Estimated token count for the request
+        exclude: Set of server IDs to exclude from selection (e.g., failed servers)
+    """
+    exclude = exclude or set()
     
     # CHECK FIRST: If request exceeds max context, route to Nano (with cooldown check)
     if estimated_tokens > NANO_THRESHOLD:
@@ -522,7 +536,7 @@ def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
     
     if tier == ModelTier.COMPLEX:
         # Complex requests always go to external servers - pick the best available
-        server_id = router_db.get_next_external_smart()
+        server_id = router_db.get_next_external_smart(exclude=exclude)
         logger.debug(f"COMPLEX tier → {server_id} (smart external selection)")
         return server_id
     
@@ -535,7 +549,7 @@ def _route_request(tier: ModelTier, estimated_tokens: int = 0) -> str:
         # Check if request is small enough for local
         if estimated_tokens > TOKEN_THRESHOLD:
             # Large request - go external
-            server_id = router_db.get_next_external_smart()
+            server_id = router_db.get_next_external_smart(exclude=exclude)
             logger.debug(f"SIMPLE tier → {server_id} (tokens: {estimated_tokens} > {TOKEN_THRESHOLD})")
             return server_id
         
@@ -584,62 +598,150 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
             if hasattr(last_msg, 'content'):
                 input_text = str(last_msg.content)
         
-        # Estimate tokens and route to appropriate server
+        # Estimate tokens
         estimated_tokens = estimate_tokens(input_text) if input_text else 0
-        server_id = _route_request(self.tier, estimated_tokens)
         
-        # Log the routing decision and target
-        try:
-            sc = SERVERS.get(server_id, {})
-            logger.info(
-                f"[LLM INVOKE] server={server_id} provider={sc.get('provider')} model={sc.get('model')} url={sc.get('base_url')} tokens={estimated_tokens}"
-            )
-        except Exception:
-            pass
+        # Track failed servers for this request
+        exclude_servers = set()
         
-        # Track LLM usage for statistics
-        try:
-            from src.observability.pipeline_logging import increment_llm_usage
-            increment_llm_usage(self.tier)
-        except Exception:
-            pass  # Don't fail if tracking fails
-        
-        # Get LLM for selected server and invoke with busy tracking
-        llm = self._get_llm_for_server(server_id)
-        with _mark_server_busy(server_id):
+        # Try up to 2 times (primary + 1 fallback)
+        for attempt in range(2):
+            # Route to appropriate server (excluding failed ones)
+            server_id = _route_request(self.tier, estimated_tokens, exclude=exclude_servers)
+            
+            # Log the routing decision and target
             try:
-                return llm.invoke(input, config, **kwargs)
-            except Exception as e:
-                error_msg = str(e).lower()
-                error_type = type(e).__name__
-                
-                # Special handling for Nano billing/quota errors - FAIL FAST
-                if server_id == 'nano':
-                    if any(keyword in error_msg for keyword in ['quota', 'billing', 'insufficient', 'credits', 'rate limit']):
-                        logger.error(f"💳 Nano billing/quota error: {e}")
-                        logger.error("⛔ Out of Nano credits or rate limited - request FAILED")
-                        raise  # Re-raise to fail the request (don't retry)
-                
-                # For external servers (a,b,c,d) - try fallback to another server on connection errors
-                if server_id.startswith('external_'):
-                    # Connection errors should try another server
-                    if 'connection' in error_msg or error_type in ['APIConnectionError', 'ConnectionError', 'Timeout']:
-                        logger.warning(f"⚠️ {server_id} connection failed: {error_type}")
+                sc = SERVERS.get(server_id, {})
+                attempt_info = f"attempt={attempt+1}/2" if attempt > 0 else "attempt=1/2"
+                excluded_info = f" (excluded={list(exclude_servers)})" if exclude_servers else ""
+                logger.info(
+                    f"[LLM INVOKE] {attempt_info} server={server_id} provider={sc.get('provider')} "
+                    f"model={sc.get('model')} url={sc.get('base_url')} tokens={estimated_tokens}{excluded_info}"
+                )
+            except Exception:
+                pass
+            
+            # Track LLM usage for statistics (only on first attempt)
+            if attempt == 0:
+                try:
+                    from src.observability.pipeline_logging import increment_llm_usage
+                    increment_llm_usage(self.tier)
+                except Exception:
+                    pass  # Don't fail if tracking fails
+            
+            # Get LLM for selected server and invoke with busy tracking
+            llm = self._get_llm_for_server(server_id)
+            with _mark_server_busy(server_id):
+                try:
+                    result = llm.invoke(input, config, **kwargs)
+                    
+                    # Detailed logging of what we got back
+                    result_type = type(result).__name__
+                    has_content = hasattr(result, 'content')
+                    
+                    if has_content:
+                        content = str(result.content).strip()
+                        content_length = len(content)
+                        content_preview = content[:200] if content else "(empty)"
                         
-                        # Try to get another external server
-                        fallback_server = router_db.get_least_recently_used_external()
-                        if fallback_server != server_id:
-                            logger.info(f"🔄 Falling back to {fallback_server}")
+                        logger.debug(
+                            f"📥 LLM RESPONSE | server={server_id} | "
+                            f"type={result_type} | has_content={has_content} | "
+                            f"length={content_length} | preview={content_preview}..."
+                        )
+                        
+                        # Check for empty response
+                        if not content:
+                            logger.error(
+                                f"❌ SERVER FAILED: {server_id} returned EMPTY response | "
+                                f"url={SERVERS.get(server_id, {}).get('base_url')} | "
+                                f"result_type={result_type} | has_content_attr={has_content} | "
+                                f"content_value='{result.content}' | content_length=0 | "
+                                f"This server may be down, overloaded, or hit token limit"
+                            )
+                            
+                            # Log additional result attributes for debugging
                             try:
-                                fallback_llm = self._get_llm_for_server(fallback_server)
-                                with _mark_server_busy(fallback_server):
-                                    return fallback_llm.invoke(input, config, **kwargs)
-                            except Exception as fallback_error:
-                                logger.error(f"❌ Fallback to {fallback_server} also failed: {fallback_error}")
-                                # Continue to raise original error
-                
-                # Re-raise all other errors
-                raise
+                                result_attrs = {k: v for k, v in vars(result).items() if not k.startswith('_')}
+                                logger.error(f"📋 Result attributes: {result_attrs}")
+                            except:
+                                pass
+                            
+                            exclude_servers.add(server_id)
+                            
+                            if attempt < 1:  # Have more attempts
+                                logger.info(f"🔄 RETRYING with different server (excluding {server_id})...")
+                                continue  # Try again with different server
+                            else:
+                                logger.warning(
+                                    f"⚠️  All attempts exhausted - returning empty response | "
+                                    f"failed_servers={list(exclude_servers)}"
+                                )
+                                # Return empty result - sanitizer will handle it
+                    else:
+                        # Result doesn't have content attribute
+                        logger.error(
+                            f"❌ UNEXPECTED RESULT FORMAT: {server_id} | "
+                            f"result_type={result_type} | has_content={has_content} | "
+                            f"result_value={str(result)[:200]}"
+                        )
+                    
+                    # Success!
+                    if attempt > 0:
+                        logger.info(
+                            f"✅ SUCCESS after retry | server={server_id} worked after {list(exclude_servers)} failed | "
+                            f"response_length={content_length if has_content else 'N/A'}"
+                        )
+                    return result
+                    
+                except Exception as e:
+                    error_msg = str(e).lower()
+                    error_type = type(e).__name__
+                    error_full = str(e)
+                    
+                    # Log detailed error information
+                    logger.error(
+                        f"❌ LLM EXCEPTION | server={server_id} | "
+                        f"error_type={error_type} | "
+                        f"url={SERVERS.get(server_id, {}).get('base_url')} | "
+                        f"tokens={estimated_tokens}"
+                    )
+                    logger.error(f"📋 Error details: {error_full[:500]}")
+                    
+                    # Check for specific error patterns
+                    if 'timeout' in error_msg:
+                        logger.error(f"⏱️  TIMEOUT ERROR - Request took longer than {LLM_CALL_TIMEOUT_S}s")
+                    elif 'connection' in error_msg:
+                        logger.error(f"🔌 CONNECTION ERROR - Cannot reach server")
+                    elif 'token' in error_msg and 'limit' in error_msg:
+                        logger.error(f"📏 TOKEN LIMIT ERROR - Request may exceed server capacity")
+                    elif 'memory' in error_msg or 'oom' in error_msg:
+                        logger.error(f"💾 MEMORY ERROR - Server out of memory")
+                    elif 'rate' in error_msg and 'limit' in error_msg:
+                        logger.error(f"🚦 RATE LIMIT ERROR - Too many requests")
+                    
+                    # Special handling for Nano billing/quota errors - FAIL FAST
+                    if server_id == 'nano':
+                        if any(keyword in error_msg for keyword in ['quota', 'billing', 'insufficient', 'credits', 'rate limit']):
+                            logger.error(f"💳 Nano billing/quota error: {e}")
+                            logger.error("⛔ Out of Nano credits or rate limited - request FAILED")
+                            raise  # Re-raise to fail the request (don't retry)
+                    
+                    # For external servers - log failure and try fallback
+                    if server_id.startswith('external_'):
+                        exclude_servers.add(server_id)
+                        
+                        if attempt < 1:  # Have more attempts
+                            logger.info(f"🔄 RETRYING with different server (excluding {server_id})...")
+                            continue  # Try again with different server
+                        else:
+                            logger.error(
+                                f"⛔ ALL SERVERS FAILED | failed_servers={list(exclude_servers)} | "
+                                f"last_error={error_type}: {error_full[:200]}"
+                            )
+                    
+                    # Re-raise on last attempt or non-external servers
+                    raise
     
     async def ainvoke(
         self, 

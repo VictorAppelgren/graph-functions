@@ -181,7 +181,12 @@ def build_material_for_synthesis_section(
         articles_result = all_articles
 
     if not articles_result:
-        raise ValueError(f"No articles found for topic_id={topic_id}")
+        logger.warning(
+            f"⚠️  No articles found | topic={topic_id} section={section} | "
+            f"Returning empty material - section will be skipped or use fallback"
+        )
+        # Return minimal material structure so analysis can continue
+        return f"[No articles available for {section} section - enrichment needed]"
 
     article_ids = [row["article_id"] for row in articles_result]
 
