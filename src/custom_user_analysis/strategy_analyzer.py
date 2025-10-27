@@ -175,10 +175,31 @@ def generate_custom_user_analysis(
         driver_material_risks = format_material_for_prompt(material, "driver_analysis")
         correlated_material_risks = format_material_for_prompt(material, "correlated_analysis")
         
-        # Limit each to avoid token overflow
-        primary_material_risks_limited = primary_material_risks[:5000]
-        driver_material_risks_limited = driver_material_risks[:5000]
-        correlated_material_risks_limited = correlated_material_risks[:5000]
+        # Smart total limit: 25K tokens = ~100K chars, but leave room for prompt (~20K chars for material)
+        # This is the bulk of the prompt, so we use most of the context window
+        TOTAL_MATERIAL_LIMIT = 80_000  # chars (~20K tokens, leaves 5K for prompt/response)
+        
+        total_material_length = len(primary_material_risks) + len(driver_material_risks) + len(correlated_material_risks)
+        
+        if total_material_length > TOTAL_MATERIAL_LIMIT:
+            log_and_print("")
+            log_and_print("⚠️" * 50)
+            log_and_print(f"⚠️  WARNING: Total material is {total_material_length:,} chars (limit: {TOTAL_MATERIAL_LIMIT:,})")
+            log_and_print(f"⚠️  Truncating to fit within token limits (25K tokens = ~100K chars)")
+            log_and_print(f"⚠️  TODO: Add compression LLM to summarize material instead of truncating")
+            log_and_print("⚠️" * 50)
+            log_and_print("")
+            
+            # Proportional truncation to maintain balance
+            ratio = TOTAL_MATERIAL_LIMIT / total_material_length
+            primary_material_risks_limited = primary_material_risks[:int(len(primary_material_risks) * ratio)]
+            driver_material_risks_limited = driver_material_risks[:int(len(driver_material_risks) * ratio)]
+            correlated_material_risks_limited = correlated_material_risks[:int(len(correlated_material_risks) * ratio)]
+        else:
+            # No truncation needed - use everything!
+            primary_material_risks_limited = primary_material_risks
+            driver_material_risks_limited = driver_material_risks
+            correlated_material_risks_limited = correlated_material_risks
         
         total_risks_input = len(primary_material_risks_limited) + len(driver_material_risks_limited) + len(correlated_material_risks_limited)
         

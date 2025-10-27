@@ -65,22 +65,36 @@ def create_wide_query(article_text: str) -> dict[str, Any]:
     Uses LLM to generate a wide boolean search query for a given article/topic.
     Returns: {"motivation": str|None, "query": str|None}
     """
-    logger.info("Generating wide query from article text for topic")
+    logger.info("="*80)
+    logger.info("GENERATING WIDE QUERY")
+    logger.info("="*80)
 
     llm = get_llm(ModelTier.MEDIUM)
 
-    prompt = f"""You are a boolean search query expert for financial markets and macro topics.
+    prompt = f"""You are a boolean search query expert for financial markets and macro topics using Perigon News API.
 
 TASK: Create a wide boolean search query for this topic.
 
 TOPIC:
 {article_text}
 
-INSTRUCTIONS:
-1. Generate a boolean query using OR, AND, NOT operators
-2. Include synonyms, abbreviations, and related terms
-3. Make it WIDE to catch all relevant articles
-4. Keep it focused on the core topic
+PERIGON BOOLEAN SYNTAX:
+- AND: Must include both sides (e.g., Tesla AND "Elon Musk")
+- OR: Either side will do (e.g., AI OR "machine learning")
+- NOT: Exclude term (e.g., blockchain NOT bitcoin)
+- "quotes": Exact phrase (e.g., "self-driving cars")
+- *: Wildcard 0+ chars (e.g., immuni* → immunity, immunization)
+- ?: Wildcard 1 char (e.g., wom?n → woman, women)
+- ( ): Group expressions (e.g., (Google OR Amazon) AND NOT Android)
+
+BEST PRACTICES:
+1. Use OR for synonyms, abbreviations, variants (e.g., "USD" OR "US Dollar" OR "dollar")
+2. Use AND to combine different concepts (e.g., currency AND policy)
+3. Use quotes for exact phrases with multiple words (e.g., "Federal Reserve")
+4. Use wildcards for word variants (e.g., inflat* → inflation, inflationary)
+5. Group related terms with parentheses
+6. KEEP IT WIDE - 3-6 key terms per group is enough. Too many terms = too narrow = fewer results!
+7. Focus on HIGH-IMPACT terms that appear in news, not exhaustive lists
 
 EXAMPLES (covering different asset classes):
 
@@ -117,11 +131,19 @@ Query: ("unemployment" OR "jobless rate" OR "unemployment rate" OR "U3" OR "labo
 YOUR TURN:
 Respond with ONLY this JSON format (no markdown, no extra text):
 {{
-  "motivation": "Brief explanation of query strategy",
+  "motivation": "1-2 sentences max",
   "query": "your boolean query here"
-}}"""
+}}
+
+REMEMBER: WIDE queries = more results. Keep it simple and focused!"""
 
     r = run_llm_decision(chain=llm, prompt=prompt, model=WideQueryModel, logger=logger)
+    
+    # Log the result
+    result = r.model_dump()
+    logger.info(f"Motivation: {result.get('motivation', 'N/A')}")
+    logger.info(f"Query: {result.get('query', 'N/A')[:200]}...")
+    logger.info("="*80)
 
     # If you prefer to return the model, change return type to WideQuery
-    return r.model_dump()
+    return result

@@ -246,18 +246,18 @@ def create_anchor_topics():
             importance=topic["importance"]
         )
         
-        # Generate query with fallback
+        # Generate query - NO FALLBACK, skip if fails
         anchor_text = f"Name: {topic['name']}"
         try:
             qres = create_wide_query(anchor_text)
             if isinstance(qres, dict) and qres.get("query"):
                 t.query = qres["query"]
             else:
-                logger.warning(f"Query generation returned empty for {topic_id}, using simple fallback")
-                t.query = f'("{topic["name"]}")'
+                logger.error(f"❌ Query generation returned empty for {topic_id} - SKIPPING")
+                continue
         except Exception as e:
-            logger.warning(f"Query generation failed for {topic_id}: {e}, using simple fallback")
-            t.query = f'("{topic["name"]}")'
+            logger.error(f"❌ Query generation failed for {topic_id}: {e} - SKIPPING")
+            continue
         
         result = create_topic(t)
         logger.info(f"✅ Created topic: {result['name']} (id={result['id']})")
