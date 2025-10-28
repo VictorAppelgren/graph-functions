@@ -1,4 +1,4 @@
-from src.graph.neo4j_client import connect_graph_db
+from src.graph.neo4j_client import connect_graph_db, NEO4J_DATABASE
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, master_log_error, master_statistics
 from difflib import get_close_matches
@@ -56,7 +56,7 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
     event_id = f"{link.source.lower()}__{link.type.lower()}__{link.target.lower()}"
     try:
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             # Fetch and log all Topic topics' IDs and names
             query_topics = """
             MATCH (n:Topic)
@@ -343,7 +343,7 @@ def get_existing_links(topic_id: str) -> list[dict]:
     )
     try:
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             query = """
             MATCH (src:Topic {id: $id})-[r]->(tgt:Topic)
             RETURN type(r) AS type, src.id AS source, tgt.id AS target
@@ -401,7 +401,7 @@ def remove_link(link: dict[str, str], context: Optional[dict[str, str]] = None):
         before_links = get_existing_links(link["source"])  # snapshot
         tracker.put_many(existing_links_before_len=len(before_links), existing_links_before_preview=before_links[:50])
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             query = """
             MATCH (src:Topic {id: $source})-[r]->(tgt:Topic {id: $target})
             WHERE type(r) = $type

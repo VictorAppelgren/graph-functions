@@ -1,9 +1,7 @@
-from src.graph.neo4j_client import connect_graph_db
-
 from typing import Any, TYPE_CHECKING
 from datetime import datetime, timezone
 
-from src.graph.neo4j_client import run_cypher
+from src.graph.neo4j_client import run_cypher, connect_graph_db, NEO4J_DATABASE
 from src.graph.models import Neo4jRecord
 from utils import app_logging
 from events.classifier import EventClassifier, EventType
@@ -293,7 +291,7 @@ def get_topic_by_id(topic_id: str) -> dict[str, str]:
     )
     try:
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             query = "MATCH (n:Topic {id: $id}) RETURN n"
             logger.info(f" Running query: {query} with id={topic_id}")
             result = session.run(query, {"id": topic_id})
@@ -331,7 +329,7 @@ def get_topic_id_by_name(name: str) -> str:
     logger.info(f"Resolving topic id by name: name='{name}'")
     try:
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             query = "MATCH (n:Topic {name: $name}) RETURN n.id AS id"
             logger.info(f"Running query: {query} | params={{'name': '{name}'}}")
             result = session.run(query, {"name": name})
@@ -358,7 +356,7 @@ def check_if_topic_exists(topic_id: str) -> bool:
         bool: True if topic exists, False otherwise
     """
     driver = connect_graph_db()
-    with driver.session(database="argosgraph") as session:
+    with driver.session(database=NEO4J_DATABASE) as session:
         cypher = "MATCH (n:Topic {id: $id}) RETURN n LIMIT 1"
         result = session.run(cypher, {"id": topic_id})
         exists = result.single() is not None
@@ -382,7 +380,7 @@ def get_topic_if_exists(topic_id: str) -> dict[str, str] | None:
         dict: topic data if found, None otherwise
     """
     driver = connect_graph_db()
-    with driver.session(database="argosgraph") as session:
+    with driver.session(database=NEO4J_DATABASE) as session:
         cypher = "MATCH (n:Topic {id: $id}) RETURN n LIMIT 1"
         result = session.run(cypher, {"id": topic_id})
         record = result.single()
@@ -408,7 +406,7 @@ def get_all_topics(fields: list[str] = ["id", "name", "type"]) -> list[dict[str,
     """
     try:
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             return_clause = ", ".join([f"n.{f} AS {f}" for f in fields])
             query = f"MATCH (n:Topic) RETURN {return_clause}"
             logger.info(f" Running query: {query}")
@@ -539,7 +537,7 @@ def create_topic(topic_proposal: TopicProposal) -> dict[str, str]:
 
         # Fetch existing topic and return it
         driver = connect_graph_db()
-        with driver.session(database="argosgraph") as session:
+        with driver.session(database=NEO4J_DATABASE) as session:
             cypher = "MATCH (n:Topic {id: $id}) RETURN n, elementId(n) AS eid"
             result = session.run(cypher, {"id": topic_proposal.id})
             record = result.single()
@@ -556,7 +554,7 @@ def create_topic(topic_proposal: TopicProposal) -> dict[str, str]:
 
     # Create the topic
     driver = connect_graph_db()
-    with driver.session(database="argosgraph") as session:
+    with driver.session(database=NEO4J_DATABASE) as session:
  
         # Convert all properties into a params dict for Cypher
         params = {"props": topic_proposal.model_dump()}

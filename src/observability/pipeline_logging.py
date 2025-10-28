@@ -66,7 +66,7 @@ import fcntl
 import time
 from datetime import datetime, timezone
 from pydantic import BaseModel
-from typing import Any, List, Dict
+from typing import Any, List, Dict, Optional
 from enum import Enum, unique
 
 from src.graph.neo4j_client import run_cypher
@@ -107,7 +107,7 @@ class SnapshotModel(BaseModel):
     # Timeframe Distribution
     articles_by_timeframe: Dict[str, int] = {}
     
-    # Perspective Scores
+    # Perspective Scores (use 0.0 for missing values)
     avg_perspective_scores: Dict[str, float] = {}
     
     # Analysis Section Coverage
@@ -203,7 +203,10 @@ def get_articles_by_topic_count() -> Dict[str, int]:
         avg(toFloat(topic_count)) AS avg_topics_per_article
     """
     result = run_cypher(query)
-    return result[0] if result else {}
+    if not result or not result[0]:
+        return {'zero_topics': 0, 'one_topic': 0, 'multiple_topics': 0, 'avg_topics_per_article': 0.0}
+    # Convert None values to 0
+    return {k: (v if v is not None else 0) for k, v in result[0].items()}
 
 
 def get_articles_by_timeframe() -> Dict[str, int]:
@@ -231,7 +234,16 @@ def get_perspective_score_stats() -> Dict[str, float]:
         avg(toFloat(coalesce(a.importance_catalyst, 0))) AS avg_catalyst
     """
     result = run_cypher(query)
-    return result[0] if result else {}
+    if not result or not result[0]:
+        # No articles yet - return empty dict with 0.0 defaults
+        return {
+            'avg_risk': 0.0,
+            'avg_opportunity': 0.0,
+            'avg_trend': 0.0,
+            'avg_catalyst': 0.0
+        }
+    # Convert None values to 0.0 (happens when no articles match)
+    return {k: (float(v) if v is not None else 0.0) for k, v in result[0].items()}
 
 
 def get_analysis_section_coverage() -> Dict[str, int]:

@@ -47,9 +47,61 @@ def get_article(article_id: str) -> Optional[Dict[str, Any]]:
         )
         response.raise_for_status()
         return response.json()
+    except requests.exceptions.HTTPError as e:
+        # 404 is expected during bootstrap - local fallback will handle it
+        if e.response.status_code == 404:
+            return None
+        print(f"⚠️  Failed to get article from Backend API: {e}")
+        return None
     except Exception as e:
         print(f"⚠️  Failed to get article from Backend API: {e}")
         return None
+
+
+def search_articles_by_keywords(
+    keywords: List[str],
+    limit: int = 5,
+    min_keyword_hits: int = 3,
+    exclude_ids: Optional[List[str]] = None
+) -> List[Dict[str, Any]]:
+    """
+    Search articles by keywords via Backend API.
+    
+    Args:
+        keywords: List of keywords to search for
+        limit: Maximum number of results (default 5)
+        min_keyword_hits: Minimum keyword matches required (default 3)
+        exclude_ids: Article IDs to exclude from results
+    
+    Returns:
+        List of dicts with article_id, matched_keywords, hit_count, text_preview
+    
+    Example:
+        results = search_articles_by_keywords(
+            keywords=["fed", "rate", "inflation"],
+            limit=5,
+            min_keyword_hits=2
+        )
+        # Returns: [{"article_id": "ABC", "matched_keywords": [...], ...}, ...]
+    """
+    try:
+        response = requests.post(
+            f"{BACKEND_URL}/api/articles/search",
+            json={
+                "keywords": keywords,
+                "limit": limit,
+                "min_keyword_hits": min_keyword_hits,
+                "exclude_ids": exclude_ids or []
+            },
+            headers={"X-API-Key": API_KEY} if API_KEY else {},
+            timeout=30  # Longer timeout for search
+        )
+        response.raise_for_status()
+        data = response.json()
+        return data.get("results", [])
+    except Exception as e:
+        print(f"⚠️  Failed to search articles from Backend API: {e}")
+        return []
 
 
 # ============ USERS & STRATEGIES ============

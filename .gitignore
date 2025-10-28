@@ -5,6 +5,9 @@ __pycache__/
 *$py.class
 *.egg-info/
 *.egg
+*.cpython-*.pyc
+**/__pycache__/
+**/*.cpython-*.pyc
 
 # User data and strategies
 API/users/

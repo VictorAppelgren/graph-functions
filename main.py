@@ -76,14 +76,17 @@ def run_pipeline() -> Dict[str, Any]:
     # ASSET = "EURUSD"
     # Note: Asset filter applied at selection time per-iteration
 
-    # Bootstrap check: if the graph has no topics, user needs to run bootstrap script
+    # Bootstrap check: if the graph has no topics, run bootstrap automatically
+    just_bootstrapped = False
     if len(get_all_topics(fields=["id"])) < 1:
-        logger.error("="*80)
-        logger.error("NO TOPICS FOUND IN GRAPH!")
-        logger.error("Please run the bootstrap script first:")
-        logger.error("  python -m src.start_scripts.bootstrap_graph")
-        logger.error("="*80)
-        raise RuntimeError("Graph not initialized. Run bootstrap script first.")
+        logger.warning("="*80)
+        logger.warning("NO TOPICS FOUND IN GRAPH!")
+        logger.warning("Running bootstrap script automatically...")
+        logger.warning("="*80)
+        from src.start_scripts.bootstrap_graph import main as bootstrap_main
+        bootstrap_main()
+        logger.info("✅ Bootstrap complete! Starting pipeline...")
+        just_bootstrapped = True
 
     while True:
         loop_start_time = datetime.datetime.now()
@@ -92,7 +95,7 @@ def run_pipeline() -> Dict[str, Any]:
         )
 
         # Daily strategy rewrite (once per day at 7am)
-        if loop_start_time.hour >= 7:
+        if loop_start_time.hour >= 7 and not just_bootstrapped:
             stats = load_stats_file()
             flag_status = stats.today.custom_analysis.daily_rewrite_completed
             logger.debug(f"Daily rewrite check: hour={loop_start_time.hour}, flag={flag_status}")
@@ -108,6 +111,9 @@ def run_pipeline() -> Dict[str, Any]:
                     logger.error(f"❌ Daily rewrite failed: {e}")
             else:
                 logger.debug("Daily rewrite already completed today, skipping")
+        elif just_bootstrapped:
+            logger.info("⏭️  Skipping daily rewrite (just bootstrapped)")
+            just_bootstrapped = False  # Reset flag after first iteration
 
         # Fresh fetch and selection each iteration
         topics = get_all_topics(
