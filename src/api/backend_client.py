@@ -1,6 +1,15 @@
 """
 Backend API Client - Simple interface to Backend API
 Handles articles and user strategies
+
+ARCHITECTURE:
+- All backend routes use /api/ prefix
+- BACKEND_API_URL changes per environment:
+  - Local dev: http://localhost:8000
+  - Server internal: http://saga-apis:8000 (Docker DNS)
+  - Server external: http://SERVER-IP (public IP)
+- All calls use /api/* paths for consistency
+- API key checked by NGINX (external) or trusted (internal)
 """
 import os
 import requests
@@ -13,19 +22,27 @@ API_KEY = os.getenv("BACKEND_API_KEY", "")
 
 # ============ ARTICLES ============
 
-def store_article(article_data: Dict[str, Any]) -> Dict[str, str]:
+def ingest_article(article_data: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Send article to Backend API for file storage
+    Ingest article with automatic deduplication.
+    
+    Backend checks if article exists (by URL + date):
+    - If exists: Returns existing article ID
+    - If new: Generates ID, stores article, returns new ID
     
     Args:
-        article_data: Article dictionary with all fields
+        article_data: Article dictionary (NO argos_id needed!)
         
     Returns:
-        {"argos_id": "...", "status": "stored"}
+        {
+            "argos_id": "ABC123XYZ",
+            "status": "created" | "existing",
+            "data": {...}
+        }
     """
     try:
         response = requests.post(
-            f"{BACKEND_URL}/api/articles",
+            f"{BACKEND_URL}/api/articles/ingest",
             json=article_data,
             headers={"X-API-Key": API_KEY} if API_KEY else {},
             timeout=10
@@ -33,8 +50,8 @@ def store_article(article_data: Dict[str, Any]) -> Dict[str, str]:
         response.raise_for_status()
         return response.json()
     except Exception as e:
-        print(f"⚠️  Failed to store article to Backend API: {e}")
-        return {"argos_id": article_data.get("argos_id", "unknown"), "status": "failed"}
+        print(f"⚠️  Failed to ingest article: {e}")
+        raise
 
 
 def get_article(article_id: str) -> Optional[Dict[str, Any]]:
@@ -126,7 +143,7 @@ def get_user_strategies(username: str) -> List[Dict[str, Any]]:
     """Get all strategies for a user"""
     try:
         response = requests.get(
-            f"{BACKEND_URL}/strategies",
+            f"{BACKEND_URL}/api/strategies",
             params={"username": username},
             headers={"X-API-Key": API_KEY} if API_KEY else {},
             timeout=10
@@ -142,7 +159,7 @@ def get_strategy(username: str, strategy_id: str) -> Optional[Dict[str, Any]]:
     """Get a specific strategy"""
     try:
         response = requests.get(
-            f"{BACKEND_URL}/strategies/{strategy_id}",
+            f"{BACKEND_URL}/api/strategies/{strategy_id}",
             params={"username": username},
             headers={"X-API-Key": API_KEY} if API_KEY else {},
             timeout=10
@@ -161,7 +178,7 @@ def update_strategy(username: str, strategy_id: str, strategy_data: Dict[str, An
         strategy_data["username"] = username
         
         response = requests.put(
-            f"{BACKEND_URL}/strategies/{strategy_id}",
+            f"{BACKEND_URL}/api/strategies/{strategy_id}",
             json=strategy_data,
             headers={"X-API-Key": API_KEY} if API_KEY else {},
             timeout=10

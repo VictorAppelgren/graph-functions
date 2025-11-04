@@ -1,4 +1,4 @@
-from typing import cast
+from typing import cast, Any
 
 from src.articles.load_article import load_article
 from src.observability.pipeline_logging import master_log, master_statistics
@@ -11,7 +11,7 @@ from src.graph.ops.link import find_influences_and_correlates
 from src.analysis.orchestration.replace_article_orchestrator import (
     does_article_replace_old,
 )
-from events.classifier import EventClassifier, EventType
+# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.graph.ops.topic import add_topic
 
 logger = get_logger(__name__)

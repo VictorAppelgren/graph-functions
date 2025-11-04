@@ -2,7 +2,7 @@ from src.graph.neo4j_client import connect_graph_db, NEO4J_DATABASE
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, master_log_error, master_statistics
 from difflib import get_close_matches
-from events.classifier import EventClassifier, EventType
+# from events.classifier import EventClassifier, EventType  # Disabled for now
 from typing import Optional, Any
 from src.graph.ops.topic import get_all_topics, get_topic_by_id
 from src.graph.policies.topic import llm_filter_all_interesting_topics

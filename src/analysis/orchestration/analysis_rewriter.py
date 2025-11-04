@@ -3,7 +3,7 @@ Orchestrator: loops over all analysis sections for a topic, calls rewrite_analys
 No prompt logic here.
 """
 
-from typing import Optional, Dict, List, Set
+from typing import Optional, Dict, List, Set, Any
 from dataclasses import dataclass
 from src.analysis.writing.analysis_rewriter import rewrite_analysis_llm
 from src.analysis.persistance.analysis_saver import save_analysis
@@ -17,7 +17,7 @@ from src.observability.pipeline_logging import (
     Problem,
 )
 from src.graph.neo4j_client import run_cypher
-from events.classifier import EventClassifier, EventType
+# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.graph.ops.topic import get_topic_analysis_field
 from src.market_data.neo4j_updater import load_market_data_from_neo4j
 from src.market_data.formatter import format_market_data_display

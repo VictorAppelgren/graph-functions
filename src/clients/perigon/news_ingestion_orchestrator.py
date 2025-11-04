@@ -30,12 +30,12 @@ import logging
 from src.clients.perigon.query_eurusd import get_query as query1
 from src.clients.perigon.query_ai_data import get_query as query2
 from src.clients.perigon.news_api_client import NewsApiClient
-from src.clients.perigon.raw_storage_manager import RawStorageManager
 from src.clients.perigon.source_scraper import (
     scrape_article_and_sources_sync,
     is_article_good,
 )
 from src.clients.perigon.text_summarizer import summarize_article
+from src.api.backend_client import ingest_article
 
 # Set up logger for this module
 from utils import app_logging
@@ -87,9 +87,6 @@ class NewsIngestionOrchestrator:
 
         # Initialize API client
         self.api_client = NewsApiClient()
-
-        # Initialize storage manager
-        self.storage_manager = RawStorageManager()
 
         # Scrape toggle (constructor-only, default False for simplicity)
         self.scrape_enabled = bool(scrape_enabled)
@@ -204,7 +201,9 @@ class NewsIngestionOrchestrator:
 
     # --- helpers -------------------------------------------------------------
     def _fast_store(self, article: Dict[str, Any], title: str, title_sample: str) -> Dict[str, Any] | None:
-        """Store API article, generating summary if API summary missing.
+        """
+        Store API article, generating summary if API summary missing.
+        Uses backend /ingest endpoint for automatic deduplication.
         Returns stored payload dict on success, None if failed.
         """
         summary = article.get("summary")
@@ -234,24 +233,33 @@ class NewsIngestionOrchestrator:
                 self.stats["errors"] += 1
                 return None
         
+        # Prepare payload with summary
         payload: Dict[str, Any] = dict(article)
         payload["argos_summary"] = summary.strip()
         payload.setdefault("argos_topic", title)
         
-        if summary == article.get("summary", "").strip():
-            logger.info(
-                "Fast path: stored with API summary | title='%s'", title_sample
-            )
-        else:
-            logger.info(
-                "Enhanced path: stored with generated summary | title='%s'", title_sample
-            )
-        stored_path = self.storage_manager.store_article(payload)
-        if stored_path:
-            logger.debug("💾 Stored article to %s", stored_path)
-            self.stats["articles_stored"] += 1
+        # Send to backend for deduplication and storage
+        # Backend will generate ID if new, or return existing ID if duplicate
+        try:
+            result = ingest_article(payload)
+            argos_id = result["argos_id"]
+            status = result["status"]
+            
+            # Add ID to payload for return
+            payload["argos_id"] = argos_id
+            
+            if status == "existing":
+                logger.info(f"Duplicate detected: '{title_sample}' → {argos_id}")
+            else:
+                logger.info(f"New article stored: '{title_sample}' → {argos_id}")
+                self.stats["articles_stored"] += 1
+            
             return payload
-        return None
+            
+        except Exception as e:
+            logger.error(f"Failed to ingest article '{title_sample}': {e}")
+            self.stats["errors"] += 1
+            return None
 
     @app_logging.log_execution(logger)
     def run_complete_test(self) -> Dict[str, Any]:
@@ -304,12 +312,8 @@ class NewsIngestionOrchestrator:
                     f"⚙️ Processing article {i+1}/{len(articles)}: {article.get('title', 'Untitled')}"
                 )
 
-                # Skip duplicate articles
-                if self.storage_manager.is_duplicate_article(article):
-                    logger.debug(
-                        f"👯 Skipping duplicate article: {article.get('title', 'Untitled')}"
-                    )
-                    continue
+                # Note: Duplicate checking now handled by backend /ingest endpoint
+                # No need for local duplicate check anymore
 
                 # Prepare metadata
                 datetime.utcnow().isoformat()
@@ -401,13 +405,27 @@ class NewsIngestionOrchestrator:
                     list(payload.keys())[:12],
                 )
 
-                # Store the enriched and summarized article
+                # Store the enriched and summarized article via backend
                 logger.debug("saving...")
-                stored_path = self.storage_manager.store_article(payload)
-                if stored_path:
-                    logger.debug(f"💾 Stored article to {stored_path}")
-                    self.stats["articles_stored"] += 1
+                try:
+                    result = ingest_article(payload)
+                    argos_id = result["argos_id"]
+                    status = result["status"]
+                    
+                    # Add ID to payload
+                    payload["argos_id"] = argos_id
+                    
+                    if status == "existing":
+                        logger.info(f"Duplicate detected: '{title_sample}' → {argos_id}")
+                    else:
+                        logger.debug(f"💾 Stored article: {argos_id}")
+                        self.stats["articles_stored"] += 1
+                    
                     processed_articles.append(payload)
+                    
+                except Exception as e:
+                    logger.error(f"Failed to ingest article '{title_sample}': {e}")
+                    self.stats["errors"] += 1
 
                 logger.debug(
                     "============================================================================"

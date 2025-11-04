@@ -3,6 +3,7 @@ LLM-driven analysis rewriting for a node based on selected articles.
 """
 
 import re
+from typing import Any
 from utils import app_logging
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
@@ -15,7 +16,7 @@ from src.llm.prompts.rewrite_analysis_llm import (
     source_checker_prompt,
     final_prompt,
 )
-from events.classifier import EventClassifier
+# from events.classifier import EventClassifier  # Disabled for now
 from src.llm.sanitizer import run_llm_text_response
 
 logger = app_logging.get_logger(__name__)
@@ -47,7 +48,7 @@ def parse_material_overview(material: str, section_focus: str) -> str:
 
 
 def rewrite_analysis_llm(
-    material: str, section_focus: str, asset_name: str = "", asset_id: str = "", market_data: str = "", trk: EventClassifier | None = None
+    material: str, section_focus: str, asset_name: str = "", asset_id: str = "", market_data: str = "", trk: Any = None
 ) -> str:
     """
     Calls the LLM to generate new analysis text for the section, using formatted material and section_focus.

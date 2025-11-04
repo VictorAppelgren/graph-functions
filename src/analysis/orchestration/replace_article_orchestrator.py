@@ -3,6 +3,7 @@ Orchestrator: decides if a new article should replace an existing one for a topi
 Fetches articles, calls does_article_replace_old_llm, handles DB replacement, and triggers should_rewrite if needed.
 """
 
+from typing import Any
 from src.analysis.policies.article_evaluator import does_article_replace_old_llm
 from src.analysis.orchestration.should_rewrite import should_rewrite
 from src.graph.neo4j_client import run_cypher
@@ -15,7 +16,7 @@ from src.observability.pipeline_logging import (
     Problem,
     ProblemDetailsModel,
 )
-from events.classifier import EventClassifier, EventType
+# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.graph.ops.article import (
     get_article_temporal_horizon,
     update_article_priority,
