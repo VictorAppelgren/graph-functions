@@ -31,12 +31,19 @@ def aggregate_reports(topic_id: str) -> dict[str, str]:
         raise RuntimeError(f"Topic not found: {topic_id}")
     topic = rows[0]["t"]
 
+    # Map SECTIONS to Neo4j property names (all 11 canonical sections)
     property_map = {
         "fundamental": "fundamental_analysis",
         "medium": "medium_analysis",
         "current": "current_analysis",
         "drivers": "drivers",
+        "movers_scenarios": "movers_scenarios",
+        "swing_trade_or_outlook": "swing_trade_or_outlook",
         "executive_summary": "executive_summary",
+        "risk_analysis": "risk_analysis",
+        "opportunity_analysis": "opportunity_analysis",
+        "trend_analysis": "trend_analysis",
+        "catalyst_analysis": "catalyst_analysis",
     }
 
     report: dict[str, str] = {}

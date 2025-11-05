@@ -156,26 +156,73 @@ def get_report(topic_id: str):
 
 @app.post("/neo/build-context")
 def build_context(topic_id: Optional[str] = None):
-    """Build context from Neo4j - returns data only, NO LLM"""
+    """Build comprehensive context from Neo4j with all canonical fields"""
     try:
         if not topic_id:
             return {"context": None}
         
-        # Get topic data
+        # Get ALL topic properties
         topic = get_topic_by_id(topic_id)
         topic_name = topic.get("name", topic_id) if topic else topic_id
         
-        # Get recent articles from Neo4j
-        query = """
-        MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
+        # Get article statistics by canonical timeframes
+        stats_query = """
+        MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
         WHERE coalesce(a.priority, '') <> 'hidden'
-        RETURN a.title as title, a.argos_summary as summary, a.published_date as date
-        ORDER BY a.published_date DESC
-        LIMIT 8
+        RETURN 
+            count(a) as total_articles,
+            count(CASE WHEN r.timeframe = 'fundamental' THEN 1 END) as fundamental_count,
+            count(CASE WHEN r.timeframe = 'medium' THEN 1 END) as medium_count,
+            count(CASE WHEN r.timeframe = 'current' THEN 1 END) as current_count
         """
-        articles = run_cypher(query, {"topic_id": topic_id})
+        stats_result = run_cypher(stats_query, {"topic_id": topic_id})
+        article_stats = stats_result[0] if stats_result else {
+            "total_articles": 0,
+            "fundamental_count": 0,
+            "medium_count": 0,
+            "current_count": 0
+        }
         
-        # Get reports if available
+        # Get articles with ALL ABOUT relationship properties
+        articles_query = """
+        MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+        WHERE coalesce(a.priority, '') <> 'hidden'
+        RETURN 
+            a.id as id,
+            a.title as title, 
+            a.summary as summary,
+            a.published_at as published_at,
+            a.source as source,
+            a.priority as priority,
+            r.timeframe as timeframe,
+            r.importance_risk as importance_risk,
+            r.importance_opportunity as importance_opportunity,
+            r.importance_trend as importance_trend,
+            r.importance_catalyst as importance_catalyst,
+            r.motivation as motivation,
+            r.implications as implications,
+            r.created_at as linked_at
+        ORDER BY a.published_at DESC
+        LIMIT 20
+        """
+        articles = run_cypher(articles_query, {"topic_id": topic_id})
+        
+        # Get relationship statistics
+        relationships_query = """
+        MATCH (t:Topic {id: $topic_id})
+        OPTIONAL MATCH (t)-[:INFLUENCES]-(influenced:Topic)
+        OPTIONAL MATCH (t)-[:CORRELATES_WITH]-(correlated:Topic)
+        RETURN 
+            count(DISTINCT influenced) as influences_count,
+            count(DISTINCT correlated) as correlates_count
+        """
+        rel_result = run_cypher(relationships_query, {"topic_id": topic_id})
+        relationships = rel_result[0] if rel_result else {
+            "influences_count": 0,
+            "correlates_count": 0
+        }
+        
+        # Get ALL analysis reports (all canonical sections)
         try:
             reports = aggregate_reports(topic_id)
         except:
@@ -184,9 +231,11 @@ def build_context(topic_id: Optional[str] = None):
         return {
             "topic_id": topic_id,
             "topic_name": topic_name,
+            "topic_data": topic,
             "articles": articles,
-            "reports": reports,
-            "topic_data": topic
+            "article_stats": article_stats,
+            "relationships": relationships,
+            "reports": reports
         }
         
     except Exception as e:
