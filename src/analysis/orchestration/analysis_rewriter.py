@@ -17,7 +17,6 @@ from src.observability.pipeline_logging import (
     Problem,
 )
 from src.graph.neo4j_client import run_cypher
-# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.graph.ops.topic import get_topic_analysis_field
 from src.market_data.neo4j_updater import load_market_data_from_neo4j
 from src.market_data.formatter import format_market_data_display
@@ -392,17 +391,8 @@ def analysis_rewriter(
     # Analysis rewriter tracking removed (not in new stats structure)
     from src.observability.pipeline_logging import master_statistics
     
-    run_tracker = EventClassifier(EventType.ANALYSIS_REWRITER_RUN)
     run_id = f"{topic_id}__analysis_run__{int(time.time())}"
-    section_summaries = []
     sections_to_run = [analysis_type] if analysis_type else SECTIONS
-
-    run_tracker.put_many(
-        topic_id=topic_id,
-        test=bool(test),
-        analysis_type=analysis_type or "all",
-        sections_to_run=sections_to_run,
-    )
 
     # Get topic name for asset focus
     try:
@@ -415,10 +405,6 @@ def analysis_rewriter(
     total_chars = 0
     for section in sections_to_run:
         section_focus = SECTION_FOCUS[section]
-        section_tracker = EventClassifier(EventType.ANALYSIS_SECTION_REWRITE)
-        section_tracker.put_many(
-            topic_id=topic_id, section=section, test=bool(test), run_id=run_id
-        )
         # Fail fast: section_focus must always be present and non-empty per contract
         if (
             not section_focus
@@ -447,20 +433,11 @@ def analysis_rewriter(
             logger.info(
                 f"Writing executive_summary for topic {topic_id} using sections: {prior_sections}"
             )
-            section_tracker.put("prior_sections", prior_sections)
             material = "\n\n".join([analysis_results[s] for s in prior_sections])
             logger.info(f"Aggregated material length: {len(material)}")
             if not material.strip():
                 logger.info(
                     f"Skipping rewrite for section 'executive_summary' on node {topic_id}: no prior section material available."
-                )
-                section_tracker.put("status", "skipped_no_material")
-                section_tracker.set_id(f"{topic_id}__{section}__{run_id}")
-                section_summaries.append(
-                    {
-                        "section": section,
-                        "tracker_id": f"{topic_id}__{section}__{run_id}",
-                    }
                 )
                 continue
             logger.info(
@@ -508,9 +485,6 @@ def analysis_rewriter(
                 logger.info(
                     f"✅ Material built | topic={topic_id} section={section} | "
                     f"articles={len(article_ids)} chars={len(material)}"
-                )
-                section_tracker.put_many(
-                    article_ids=article_ids, selected_articles_count=len(article_ids)
                 )
             except ValueError as e:
                 logger.warning(
@@ -562,10 +536,6 @@ def analysis_rewriter(
                                 f"✅ Material built after enrichment | topic={topic_id} section={section} | "
                                 f"articles={len(article_ids)}"
                             )
-                            section_tracker.put_many(
-                                article_ids=article_ids,
-                                selected_articles_count=len(article_ids),
-                            )
                         except ValueError:
                             logger.warning(
                                 f"⏭️  SKIPPING section | topic={topic_id} section={section} | "
@@ -577,16 +547,6 @@ def analysis_rewriter(
                                 Problem.REWRITE_SKIPPED_0_ARTICLES,
                                 topic=topic_id,
                                 details=p,
-                            )
-                            section_tracker.put(
-                                "status", "skipped_selector_zero_articles"
-                            )
-                            section_tracker.set_id(f"{topic_id}__{section}__{run_id}")
-                            section_summaries.append(
-                                {
-                                    "section": section,
-                                    "tracker_id": f"{topic_id}__{section}__{run_id}",
-                                }
                             )
                             continue
                     else:
@@ -602,27 +562,12 @@ def analysis_rewriter(
                             topic=topic_id,
                             details=p,
                         )
-                        section_tracker.put("status", "skipped_selector_zero_articles")
-                        section_tracker.set_id(f"{topic_id}__{section}__{run_id}")
-                        section_summaries.append(
-                            {
-                                "section": section,
-                                "tracker_id": f"{topic_id}__{section}__{run_id}",
-                            }
-                        )
                         continue
                 raise
-        section_tracker.put("material_chars", len(material))
         if not material.strip():
             logger.info(
                 f"Skipping rewrite for section '{section}' on node {topic_id}: no formatted material available."
             )
-            section_tracker.put("status", "skipped_no_material")
-            section_tracker.set_id(f"{topic_id}__{section}__{run_id}")
-            section_summaries.append(
-                {"section": section, "tracker_id": f"{topic_id}__{section}__{run_id}"}
-            )
-            # Tracking removed
             continue
         
         # Track LLM generation attempt
@@ -632,50 +577,27 @@ def analysis_rewriter(
                 section_focus, 
                 asset_name=topic_name, 
                 asset_id=topic_id, 
-                trk=section_tracker
+                trk=None
             )
-            # Tracking removed - just check if generation succeeded
-            pass
         except Exception as e:
             logger.error(f"LLM generation failed for {topic_id}/{section}: {e}")
-            # Tracking removed
             raise
         
-        section_tracker.put("output_chars", len(rewritten or ""))
         mapped_field = section
         if section in ["fundamental", "medium", "current"]:
             mapped_field = f"{section}_analysis"
         
-        # Track save attempt
         if not test and rewritten and rewritten.strip():
             try:
                 save_analysis(topic_id, mapped_field, rewritten)
-                section_tracker.put_many(
-                    saved=True, saved_field=mapped_field, status="success"
-                )
-                # Tracking removed
-                pass
             except Exception as e:
                 logger.error(f"Analysis save failed for {topic_id}/{section}: {e}")
-                # Tracking removed
                 raise
-        else:
-            section_tracker.put_many(
-                saved=False,
-                saved_field=mapped_field,
-                status="generated_no_save" if test else "no_text_not_saved",
-            )
-        section_tracker.set_id(f"{topic_id}__{section}__{run_id}")
-        section_summaries.append(
-            {"section": section, "tracker_id": f"{topic_id}__{section}__{run_id}"}
-        )
+        
         analysis_results[section] = rewritten
         total_chars += len(rewritten or "")
         logger.info(f"Section '{section}' rewritten and set for node {topic_id}.")
-    run_tracker.put_many(
-        total_chars=total_chars, sections=section_summaries, status="success"
-    )
-    run_tracker.set_id(run_id)
+    
     if test:
         logger.info(
             f"analysis_rewriter complete for topic_id={topic_id} but will not save. In testing mode."

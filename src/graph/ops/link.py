@@ -2,7 +2,6 @@ from src.graph.neo4j_client import connect_graph_db, NEO4J_DATABASE
 from utils import app_logging
 from src.observability.pipeline_logging import master_log, master_log_error, master_statistics
 from difflib import get_close_matches
-# from events.classifier import EventClassifier, EventType  # Disabled for now
 from typing import Optional, Any
 from src.graph.ops.topic import get_all_topics, get_topic_by_id
 from src.graph.policies.topic import llm_filter_all_interesting_topics
@@ -22,37 +21,6 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
     Enhanced: Logs Cypher counters, checks topic existence, fails loud if nothing is created.
     """
     logger.info(f"Adding link: {link}")
-    # Minimal tracker for add_relationship
-    tracker = EventClassifier(EventType.ADD_RELATIONSHIP)
-
-    tracker.put_many(relationship_type=link.type, source_id=link.source, target_id=link.target, proposed_link=link)
-
-    if isinstance(context, dict):
-        # Scalars -> inputs
-        for key in (
-            "remove_cause",
-            "selection_motivation",
-            "candidate_motivation",
-            "existing_links_count",
-            "candidate_count",
-            "all_topics_count",
-            "user_confirmation",
-            "trigger_stage",
-            "entry_point",
-        ):
-            if key in context:
-                tracker.put(key, context.get(key))
-        # Lists -> length + preview
-        for list_key in ("candidate_ids", "existing_links_before"):
-            val = context.get(list_key)
-            if isinstance(val, list):
-                tracker.put(f"{list_key}_len", len(val))
-                tracker.put(f"{list_key}_preview", val[:50])
-        # Dicts -> details
-        for dict_key in ("prioritized_link", "llm_raw_response", "source_topic"):
-            val = context.get(dict_key)
-            if isinstance(val, dict):
-                tracker.put(dict_key, val)
     event_id = f"{link.source.lower()}__{link.type.lower()}__{link.target.lower()}"
     try:
         driver = connect_graph_db()
@@ -123,30 +91,6 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
             record = result.single()
             if record:
                 logger.info(f"Link already exists: {link.type} {link.source}->{link.target}")
-                master_log(
-                    f"Relationship duplicate | {link.source}->{link.target} | type={link.type}"
-                )
-                master_statistics(duplicates_skipped=1)
-                tracker.put_many(status="skipped_duplicate", dedup_decision="already_linked")
-                # Record graph relationship identifiers
-                try:
-                    rel_element_id = record["rel_element_id"]
-                except Exception:
-                    rel_element_id = None
-                try:
-                    rid = record["rel_id"]
-                    rel_id = rid if rid else event_id
-                except Exception:
-                    rel_id = event_id
-
-                tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=rel_id)
-                # After snapshot (same as before if duplicate)
-                try:
-                    after_links = get_existing_links(link.source)  # snapshot
-                    tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
-                except Exception:
-                    pass
-                tracker.set_id(event_id)
                 return
             # 3. Add link
             query_create = f"""
@@ -172,58 +116,8 @@ def add_link(link: LinkModel, context: Optional[dict[str, Any]] = None) -> None:
                     f"Failed to add link: Cypher did not create a relationship. Link: {link.type} {link.source}->{link.target}"
                 )
             logger.info(f"Link created: {link.type} {link.source}->{link.target}")
-            master_statistics(relationships_added=1)
-            try:
-                cypher_summary = {
-                    "_contains_updates": bool(
-                        getattr(summary, "contains_updates", False)
-                    ),
-                    "relationships_created": int(
-                        getattr(summary, "relationships_created", 0)
-                    ),
-                }
-                tracker.put("cypher_summary", cypher_summary)
-            except Exception:
-                # Best-effort; do not fail tracker on summary extraction
-                pass
-            # Record graph relationship identifiers
-            try:
-                rel_element_id = (
-                    create_record["rel_element_id"] if create_record else None
-                )
-                tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=event_id)
-            except Exception:
-                pass
-            # After snapshot
-            try:
-                after_links = get_existing_links(link.source)  # snapshot
-                tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
-            except Exception:
-                pass
-            # Increment about_links_added or relationships_added in stats
-            if link.type == "ABOUT":
-                master_log(
-                    f"ABOUT link created | {link.source}->{link.target} | type=ABOUT",
-                    about_links_added=1,
-                )
-            else:
-                master_log(
-                    f"topic relationship created | {link.source}->{link.target} | type={link.type}",
-                    relationships_added=1,
-                )
-            tracker.put_many(status="success", dedup_decision="new")
-            tracker.set_id(event_id)
     except Exception as e:
         logger.error(f"[add_link] Failed to add link: {e}", exc_info=True)
-        master_log_error(
-            f"Relationship create error | {link.source}->{link.target} | type={link.type}",
-            e,
-        )
-        try:
-            tracker.put_many(status="error", error=str(e))
-            tracker.set_id(event_id)
-        except Exception:
-            pass
         raise RuntimeError(f"Failed to add link: {e}")
 
 
@@ -245,10 +139,6 @@ def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict[st
     except Exception as e:
         logger.warning(
             f" Source topic missing for topic_id={topic_id}; skipping discovery"
-        )
-        master_log_error(
-            f"find_influences_and_correlates skipped: Topic missing | topic_id={topic_id}",
-            error=e,
         )
         trace["action"] = "topic_missing"
         return trace
@@ -288,7 +178,6 @@ def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict[st
         status = select_and_remove_link(topic, links_of_type, new_link.model_dump())
         trace["removal_decision"] = status.get("removal_decision")
         if status.get("ok"):
-            # Prepare context for tracker provenance (kept same keys used in add_link tracker)
             context = {
                 "candidate_ids": candidate_ids,
                 "candidate_motivation": candidate_motivation,
@@ -317,7 +206,6 @@ def find_influences_and_correlates(topic_id: str, test: bool = False) -> dict[st
             return trace
     else:
         # Add new link directly
-        # Prepare context for tracker provenance
         context = {
             "candidate_ids": candidate_ids,
             "candidate_motivation": candidate_motivation,
@@ -367,49 +255,18 @@ def get_existing_links(topic_id: str) -> list[dict]:
 def remove_link(link: dict[str, str], context: Optional[dict[str, str]] = None):
     """
     Removes the specified link from the graph.
-    Minimal tracker: logs IDs, rel identifiers, and before/after snapshots.
     """
     logger.info(f"Removing link: {link}")
-    tracker = EventClassifier(EventType.REMOVE_RELATIONSHIP)
-    tracker.put_many(relationship_type=link.get("type"), source_id=link.get("source"), target_id=link.get("target"), proposed_link=link)
- 
-    # Include upstream selection context (motivation, prioritized link, raw LLM response)
-    if isinstance(context, dict):
-        for key in (
-            "selection_motivation",
-            "remove_cause",
-            "trigger_stage",
-            "entry_point",
-        ):
-            if key in context:
-                tracker.put(key, context.get(key))
-        # Duplicate a friendly top-level 'motivation' for quick inspection
-        if context.get("selection_motivation"):
-            tracker.put("motivation", context.get("selection_motivation"))
-        for dict_key in (
-            "prioritized_link",
-            "llm_raw_response",
-            "removal_decision",
-            "source_topic",
-        ):
-            val = context.get(dict_key)
-            if isinstance(val, dict):
-                tracker.put(dict_key, val)
     event_id = f"{str(link.get('source','none')).lower()}__{str(link.get('type','none')).lower()}__{str(link.get('target','none')).lower()}"
     try:
-        # Pre-snapshot
-        before_links = get_existing_links(link["source"])  # snapshot
-        tracker.put_many(existing_links_before_len=len(before_links), existing_links_before_preview=before_links[:50])
         driver = connect_graph_db()
         with driver.session(database=NEO4J_DATABASE) as session:
             query = """
             MATCH (src:Topic {id: $source})-[r]->(tgt:Topic {id: $target})
             WHERE type(r) = $type
-            WITH r, elementId(r) AS rel_element_id, r.id AS rel_id
             DELETE r
-            RETURN rel_element_id, rel_id
             """
-            delete_result = session.run(
+            session.run(
                 query,
                 {
                     "source": link["source"],
@@ -417,35 +274,9 @@ def remove_link(link: dict[str, str], context: Optional[dict[str, str]] = None):
                     "type": link["type"],
                 },
             )
-            record = delete_result.single()
-            # Record relationship identifiers
-            rel_element_id = record["rel_element_id"] if record else None
-            rid = record["rel_id"] if record else None
-            tracker.put_many(rel_graph_element_id=rel_element_id, rel_id=rid if rid else event_id)
             logger.info(f"Link removed: {link}")
-        # Post-snapshot and stats
-        after_links = get_existing_links(link["source"])  # snapshot
-        tracker.put_many(existing_links_after_len=len(after_links), existing_links_after_preview=after_links[:50])
-        if link.get("type") == "ABOUT":
-            master_log(
-                f"ABOUT link removed | {link.get('source','?')}->{link.get('target','?')} | type=ABOUT",
-                about_links_removed=1,
-            )
-        else:
-            master_log(
-                f"topic relationship removed | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
-                relationships_removed=1,
-            )
-        tracker.put("status", "success")
-        tracker.set_id(event_id)
     except Exception as e:
         logger.error(f"Failed to remove link: {e}", exc_info=True)
-        master_log_error(
-            f"Relationship remove error | {link.get('source','?')}->{link.get('target','?')} | type={link.get('type','?')}",
-            e,
-        )
-        tracker.put_many(status="error", error=str(e))
-        tracker.set_id(event_id)
         raise RuntimeError(f"Failed to remove link: {e}")
 
 

@@ -11,7 +11,6 @@ from src.graph.ops.link import find_influences_and_correlates
 from src.analysis.orchestration.replace_article_orchestrator import (
     does_article_replace_old,
 )
-# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.graph.ops.topic import add_topic
 
 logger = get_logger(__name__)
@@ -58,10 +57,6 @@ def add_article(
     
     # Track article processing attempt
     master_statistics(articles_processed=1)
-
-    # Minimal event tracking
-    tracker = EventClassifier(EventType.ADD_ARTICLE)
-    tracker.put("source_article_id", article_id)
 
     # 1. Load article from cold storage
     article = load_article(article_id)
@@ -116,8 +111,6 @@ def add_article(
             f"Article rejected | {article_id} | No relevant topics found"
         )
         master_statistics(articles_rejected_no_topics=1)
-        tracker.put("status", "skipped_no_topic")
-        tracker.set_id(article_id)  # This sets the ID and triggers tracker to save.
         return {
             "article_id": article_id,
             "status": "skipped",
@@ -128,17 +121,7 @@ def add_article(
             f"No topics discovered by LLM; will link to intended_topic_id={intended_topic_id}"
         )
 
-    # 2. Save motivation and all topic discovery results for traceability
-    tracker.put(
-        "multi_topic_discovery",
-        {
-            "topic_discovery_motivation": motivation,
-            "existing_ids": existing_article_ids,
-            "new_names": new_topic_names,
-        },
-    )
-
-    # 3. Article-level processing (done ONCE regardless of topic count)
+    # 2. Article-level processing (done ONCE regardless of topic count)
     argos_id = cast(str, article.get("argos_id"))
 
     # Check if Article already exists
@@ -166,10 +149,7 @@ def add_article(
                 "published_at": article.get("pubDate"),
             }
 
-        # Save the final built article_node dict for traceability
-        tracker.put("article", a)
-
-        # 6. Insert Article node in Neo4j (SIMPLIFIED - just article data)
+        # 3. Insert Article node in Neo4j (SIMPLIFIED - just article data)
         create_query = """
         CREATE (a:Article {
             id: $id,
@@ -333,6 +313,7 @@ def add_article(
                 master_log(
                     f"Failed to create new topic for article | {article.get('argos_id')} | to new topic {topic_id}"
                 )
+                master_statistics(articles_rejected_no_topics=1)
             else:
                 # NEW: Classify article FOR THIS NEW TOPIC
                 from src.graph.ops.topic import get_topic_context
@@ -398,9 +379,6 @@ def add_article(
         # We already linked it above; include it in totals for traceability
         total_topics += 1
         successful_topics += 1
-
-    tracker.put_many(multi_topic_results={"total_topics": total_topics, "successful": successful_topics}, status="success" if successful_topics > 0 else "failed")
-    tracker.set_id(article.get("argos_id"))
 
     logger.info(
         f"Multi-topic processing complete: {successful_topics}/{total_topics} topics successful. Existing len: {len(existing_article_ids)} + New len: {len(new_topic_names)}"

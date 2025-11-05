@@ -16,7 +16,6 @@ from src.observability.pipeline_logging import (
     Problem,
     ProblemDetailsModel,
 )
-# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.graph.ops.article import (
     get_article_temporal_horizon,
     update_article_priority,
@@ -42,9 +41,6 @@ def does_article_replace_old(
 
     logger.info(f"Starting does_article_replace_old for topic_id={topic_id}")
 
-    tracker = EventClassifier(EventType.ARTICLE_REPLACEMENT_DECISION)
-    tracker.put_many(topic_id=topic_id, new_article_id=new_article_id, test=bool(test))
-
     logger.info(f"new_article_id that will be loaded={new_article_id}")
     new_article = load_article(new_article_id)
     if new_article:
@@ -56,7 +52,6 @@ def does_article_replace_old(
                 topic=topic_id,
                 details=p,
             )
-            tracker.put("status", "skipped_missing_summary")
             return {
                 "tool": "none",
                 "id": None,
@@ -84,7 +79,6 @@ def does_article_replace_old(
     
     logger.info(f"article: {new_article_id} timeframe={new_tf}")
     event_id = f"{topic_id}__{new_article_id}__{new_tf}"
-    tracker.put("timeframe", new_tf)
 
     # Per-topic min/max caps: read from Topic if present, else fall back to module defaults.
     # This keeps the function stateless and configurable per topic without changing code.
@@ -103,7 +97,6 @@ def does_article_replace_old(
         max_per_tf = int(tf_max) if tf_max is not None else MAX_PER_TIMEFRAME
     except Exception:
         max_per_tf = MAX_PER_TIMEFRAME
-    tracker.put_many(min_per_tf=int(min_per_tf), max_per_tf=int(max_per_tf))
 
     # Count articles in the same timeframe (from relationships)
     cnt_q = """
@@ -114,10 +107,7 @@ def does_article_replace_old(
     same_tf_cnt = (
         run_cypher(cnt_q, {"topic_id": topic_id, "tf": new_tf}) or [{"cnt": 0}]
     )[0]["cnt"]
-    tracker.put("same_tf_cnt", int(same_tf_cnt))
     if same_tf_cnt < min_per_tf:
-        tracker.put("status", "skipped_under_min")
-        tracker.set_id(event_id)
         master_log(
             f"Replacement of article skipped | {topic_id} | tf={new_tf} cnt={same_tf_cnt} < {min_per_tf}"
         )
@@ -139,13 +129,10 @@ def does_article_replace_old(
         p = ProblemDetailsModel()
         p.timeframe = new_tf
         problem_log(Problem.NO_REPLACEMENT_CANDIDATES, topic=topic_id, details=p)
-        tracker.put("status", "skipped_no_candidates")
-        tracker.set_id(event_id)
         master_log(
             f"Replacement of article skipped | {topic_id} | no competing candidates in timeframe {new_tf}"
         )
         return {"tool": "none", "id": None, "motivation": "No competing candidates"}
-    tracker.put("candidate_ids", [a["id"] for a in candidates])
 
     # Build context from other timeframes (read-only)
     ctx_q = """
@@ -167,8 +154,6 @@ def does_article_replace_old(
         if same_tf_cnt >= max_per_tf
         else "CAN_REPLACE: Only act if the new article clearly supersedes an existing one. Otherwise use 'tool'='none' and id=null."
     )
-    mode = "MUST_REPLACE" if same_tf_cnt >= max_per_tf else "CAN_REPLACE"
-    tracker.put("mode", mode)
 
     res = does_article_replace_old_llm(
         summary,
@@ -180,9 +165,6 @@ def does_article_replace_old(
     motivation = res.get("motivation", "")
     tool = res.get("tool", "none")
     target_id = res.get("id")
-    tracker.put(
-        "llm_decision", {"tool": tool, "id": target_id, "motivation": motivation}
-    )
     logger.info(f"does_article_replace_old: tool={tool}")
     logger.info(f"does_article_replace_old: id={target_id}")
     logger.info(f"does_article_replace_old: motivation={motivation}")
@@ -194,9 +176,6 @@ def does_article_replace_old(
     if tool != "none" and (not target_id or target_id not in candidate_ids):
         if same_tf_cnt >= max_per_tf:
             tool = "remove"
-            tracker.put_many(
-                fallback_used=True, fallback_reason="invalid_llm_selection"
-            )
             # Deterministic fallback: choose lowest priority (1 < 2 < 3), then oldest published_at
             pmap = {"1": 1, "2": 2, "3": 3}
 
@@ -218,7 +197,6 @@ def does_article_replace_old(
 
     # In MUST mode, if LLM chose none, pick deterministically: lowest priority, then oldest
     if same_tf_cnt >= max_per_tf and (tool == "none" or not target_id):
-        tracker.put_many(fallback_used=True, fallback_reason="capacity_cap")
         pmap = {"1": 1, "2": 2, "3": 3}
 
         target_id = sorted(
@@ -234,17 +212,6 @@ def does_article_replace_old(
             motivation
             or "Capacity cap reached; removing weakest/oldest competing article."
         )
-
-    tracker.put_many(
-        target_id=target_id,
-        action_taken=tool if tool in ("remove", "hide", "lower_priority") else "none",
-    )
-
-    if tool in ("remove", "hide", "lower_priority"):
-        tracker.put("status", "success")
-    else:
-        tracker.put("status", "no_action")
-    tracker.set_id(event_id)
 
     if tool != "none" and target_id and not test:
         if tool == "remove":

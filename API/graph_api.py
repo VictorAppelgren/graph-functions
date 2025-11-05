@@ -22,6 +22,9 @@ from src.graph.ops.topic import get_topic_by_id
 from src.analysis.utils.report_aggregator import aggregate_reports
 from src.graph.neo4j_client import run_cypher
 
+# Import admin router
+from API.admin_api import router as admin_router
+
 # Initialize FastAPI
 app = FastAPI(
     title="Graph API",
@@ -37,6 +40,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include admin router
+app.include_router(admin_router)
 
 # Models - No LLM needed anymore!
 

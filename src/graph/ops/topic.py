@@ -4,7 +4,6 @@ from datetime import datetime, timezone
 from src.graph.neo4j_client import run_cypher, connect_graph_db, NEO4J_DATABASE
 from src.graph.models import Neo4jRecord
 from utils import app_logging
-# from events.classifier import EventClassifier, EventType  # Disabled for now
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.observability.pipeline_logging import problem_log, Problem, master_log, ProblemDetailsModel, master_statistics
@@ -25,9 +24,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
     # Initialize variables to prevent UnboundLocalError
     p = None
     
-    # Minimal event tracking (disabled for now)
-    # tracker = EventClassifier(EventType.ADD_TOPIC)
-    # tracker.put_many(source_article_id=article_id, suggested_names=suggested_names)
     # Load the article
     article_json = load_article(article_id)
     logger.debug(
@@ -59,8 +55,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 ),
                 details=p,
             )
-            # tracker.put_many(status="rejected", reject_category=str(None), reject_failure_cat="proposal_null", llm_topic_proposal_raw="")
-            # tracker.set_id("none")
             master_log(
                 f"Topic rejected | name={article_json.get('title', 'unknown') if 'article_json' in locals() else 'unknown'} | category=None | failure=proposal_null"
             )
@@ -75,8 +69,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 "failure_category": "proposal_null",
                 "reason": "proposal_null",
             }
-        # Attach raw proposal immediately so gating rejections are traceable
-        # tracker.put("llm_topic_proposal_raw", topic_proposal.model_dump())
 
         # Topic gating: category + trading relevance before any DB write
         category, motivation_for_category = classify_topic_category(
@@ -94,7 +86,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             article_summary=article_text,
             context=article_text,
         )
-        # tracker.put_many(topic_category=category, topic_category_motivation=motivation_for_category, should_add=should_add, motivation_for_relevance=motivation_for_relevance)
 
         if not should_add:
             p = ProblemDetailsModel(category=category, should_add=should_add, should_add_motivation=motivation_for_relevance)
@@ -103,8 +94,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 topic=topic_proposal.name,
                 details=p,
             )
-            # tracker.put_many(status="rejected", reject_category=str(category), reject_failure_cat="relevance_gate_reject")
-            # tracker.set_id("none")
             # Do not crash on legitimate rejection; log and return minimal status
             master_log(
                 f"Topic rejected | name={topic_proposal.name} | category={category} | failure=relevance_gate_reject"
@@ -138,8 +127,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 topic=topic_proposal.name,
                 details=p,
             )
-            # tracker.put_many(status="rejected", reject_category=str(category), reject_failure_cat="importance_remove")
-            # tracker.set_id("none")
             master_log(
                 f"Topic rejected | name={topic_proposal.name} | category={category} | failure=importance_remove"
             )
@@ -165,9 +152,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         topic_proposal.last_updated = datetime.now(timezone.utc).isoformat(
             timespec="seconds"
         )
-
-        # Attach full reasoning artifacts (IDs only remain in inputs)
-        # tracker.put_many(llm_topic_proposal_raw=topic_proposal.model_dump(), generated_query=query, importance_classification=topic_importance, importance_classification_rationale=topic_importance_rationale)
 
         # ---- DEMO CAPACITY GUARD (always run) ----
         try:
@@ -198,8 +182,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                     details=p,
                 )
 
-                # tracker.put_many(status="rejected", reject_category=str(category), reject_failure_cat="capacity_guard_reject")
-                # tracker.set_id("none")
                 master_log(
                     f"Topic rejected by capacity guard | name={topic_proposal.name}"
                 )
@@ -221,8 +203,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                         topic=topic_proposal.name,
                         details=p
                     )
-                    # tracker.put_many(status="rejected", reject_category=str(category), reject_failure_cat="capacity_guard_replace_missing_id")
-                    # tracker.set_id("none")
                     master_log(
                         f"Topic rejected by capacity guard (missing id_to_remove) | name={topic_proposal.name}"
                     )
@@ -267,8 +247,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             raise ValueError(
                 "create_topic_topic returned topic without usable id (element_id or id)"
             )
-        # tracker.put("status", "success")
-        # tracker.set_id(event_id)
 
         master_log(
             f"Topic added | name={topic_proposal.name} | category={category} | importance={topic_proposal.importance}"
@@ -460,12 +438,6 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     if not isinstance(topic_id, str) or not topic_id.strip():
         raise ValueError("topic_id must be a non-empty string")
 
-    # Event Classifier (disabled for now)
-    # tracker = EventClassifier(EventType.REMOVE_TOPIC)
-    # tracker.put("target_topic_id", topic_id)
-    # if reason is not None:
-    #     tracker.put("reason", reason)
-
     # 1) Fetch minimal topic details (fail fast if not found)
     q_fetch = (
         "MATCH (t:Topic {id: $id}) "
@@ -473,8 +445,6 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     )
     res = run_cypher(q_fetch, {"id": topic_id})
     if not res:
-        # tracker.put("status", "not_found")
-        # tracker.set_id("none")
         raise ValueError(f"Topic topic with id '{topic_id}' not found")
 
     row = res[0]
@@ -482,8 +452,6 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     name = row.get("name")
     importance = row.get("importance")
     labels = row.get("labels")
-
-    # tracker.put_many(topic_name=str(name), topic_importance=str(importance), topic_labels={"labels": labels} if isinstance(labels, list) else {"labels": []})
 
     # 2) Count attached relationships (for reporting)
     q_count = (
@@ -493,14 +461,10 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     )
     count_res = run_cypher(q_count, {"id": topic_id})
     rel_count = int(count_res[0]["rel_count"]) if count_res else 0
-    # tracker.put("attached_relationships", str(rel_count))
 
     # 3) Delete the topic and detach all rels
     q_delete = "MATCH (t:Topic {id: $id}) " "DETACH DELETE t"
     run_cypher(q_delete, {"id": topic_id})
-
-    # tracker.put("status", "success")
-    # tracker.set_id(element_id or topic_id)
 
     logger.info(
         f"Removed Topic topic: name={name} id={topic_id} element_id={element_id} rels={rel_count}"

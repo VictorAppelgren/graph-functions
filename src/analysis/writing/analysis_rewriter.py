@@ -16,7 +16,6 @@ from src.llm.prompts.rewrite_analysis_llm import (
     source_checker_prompt,
     final_prompt,
 )
-# from events.classifier import EventClassifier  # Disabled for now
 from src.llm.sanitizer import run_llm_text_response
 
 logger = app_logging.get_logger(__name__)
