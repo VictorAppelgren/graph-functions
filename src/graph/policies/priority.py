@@ -28,7 +28,7 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
             "Emphasis: macro core with clear, actionable intraday implications. "
             "Type guidance: macro, currency, commodity, asset are usually 1. "
         ),
-        number_of_articles=10,
+        number_of_articles=25,
     ),
     PriorityLevel.HIGH: PriorityPolicy(
         interval_seconds=3600,
@@ -38,7 +38,7 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
             "Examples: major central-bank guidance/setup outside meetings, key index/theme/driver signals, liquidity/funding impulses. "
             "Type guidance: index, theme, driver are usually 2. "
         ),
-        number_of_articles=10,
+        number_of_articles=25,
     ),
     PriorityLevel.MEDIUM: PriorityPolicy(
         interval_seconds=7200,
@@ -47,7 +47,7 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
             "Meaningful drivers with sector/thematic scope; medium horizon (days–months); indirect cross-asset spillovers. "
             "Type guidance: company is usually 3. "
         ),
-        number_of_articles=8,
+        number_of_articles=20,
     ),
     PriorityLevel.LOW: PriorityPolicy(
         interval_seconds=14400,
@@ -56,7 +56,7 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
             "Supporting signals with limited centrality and slow impact; monitor periodically for regime shifts or structural evidence. "
             "Type guidance: policy, event, sector, supporting, structural, geography are usually 4. "
         ),
-        number_of_articles=8,
+        number_of_articles=15,
     ),
     PriorityLevel.STRUCTURAL: PriorityPolicy(
         interval_seconds=86400,
@@ -65,7 +65,7 @@ PRIORITY_POLICY: dict[PriorityLevel, PriorityPolicy] = {
             "Foundational, slow-moving macro anchors with long-run impact; strategic cadence suffices. "
             "Examples: demographics, secular policy regimes, long-run productivity."
         ),
-        number_of_articles=6,
+        number_of_articles=10,
     ),
 }
 

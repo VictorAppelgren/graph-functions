@@ -24,6 +24,8 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from typing import List, Dict, Tuple
+import requests
+import os
 
 from utils.app_logging import get_logger
 from src.observability.pipeline_logging import (
@@ -36,8 +38,6 @@ from src.observability.pipeline_logging import (
 from src.analysis.orchestration.analysis_rewriter import SECTIONS
 from src.graph.ops.topic import get_all_topics, get_topic_by_id
 from src.graph.neo4j_client import run_cypher
-from src.articles.load_article import load_article
-from paths import get_raw_news_dir
 
 from src.articles.ingest_article import add_article
 from src.analysis.policies.keyword_generator import generate_keywords
@@ -50,21 +50,8 @@ logger = get_logger("topic_enrichment")
 TIMEFRAME_SECTIONS = [s for s in SECTIONS if s in ("fundamental", "medium", "current")]
 
 
-def _build_keyword_pattern(kw: str) -> "re.Pattern[str]":
-    """Return a compiled regex matching kw with optional separators between tokens.
-    - Lowercase kw, split on spaces/hyphens/slashes, escape parts, join with optional [-/\\s].
-    - Add loose non-alnum boundaries to avoid partial-word matches.
-    """
-    s = kw.lower().strip()
-    parts = re.split(r"[-/\s]+", s)
-    parts = [p for p in parts if p]
-    if not parts:
-        # Fallback to escaped whole kw
-        inner = re.escape(s)
-    else:
-        inner = r"(?:[-/\s]?)".join(re.escape(p) for p in parts)
-    pattern = rf"(?<![a-z0-9]){inner}(?![a-z0-9])"
-    return re.compile(pattern)
+# Backend API configuration
+BACKEND_API_URL = os.getenv("BACKEND_API_URL", "http://saga-apis:8000")
 
 
 def count_articles_for_topic_section(topic_id: str, section: str) -> int:
@@ -100,66 +87,32 @@ def collect_candidates_by_keywords(
     exclude_ids: set[str] = None,
 ) -> List[Tuple[str, str]]:
     """
-    Scan cold storage newest->oldest.
-    Return up to max_articles of (article_id, full_text) for files where at least
-    min_keyword_hits tokens from keyword_list appear in the text. Stops when max_articles reached.
+    Call backend API to search articles by keywords.
+    Return up to max_articles of (article_id, full_text) tuples.
     """
-    base = get_raw_news_dir()
-    days = [p for p in base.iterdir() if p.is_dir()]
-    days_sorted = sorted(days, key=lambda p: p.name, reverse=True)
-
-    # Prepare deduped, lowercase keywords and compile tolerant regex patterns once per call
-    kw_lower: List[str] = []
-    seen_kw: set[str] = set()
-    for k in keyword_list:
-        if not k:
-            continue
-        kk = k.lower()
-        if kk in seen_kw:
-            continue
-        seen_kw.add(kk)
-        kw_lower.append(kk)
-    compiled = [(k, _build_keyword_pattern(k)) for k in kw_lower]
-    matches: List[Tuple[str, str]] = []
-    scanned = 0
-
-    for day in days_sorted:
-        for f in sorted(day.glob("*.json"), key=lambda p: p.name, reverse=True):
-            scanned += 1
-            article_id = f.stem
-            # Skip articles we already have linked to this topic (BEFORE expensive loading)
-            if exclude_ids and article_id in exclude_ids:
-                continue
-            # Load via canonical loader for consistency (fail-fast)
-            loaded = load_article(article_id, max_days=365)
-            if loaded:
-                title = loaded.get("title") or ""
-                summary = loaded.get("summary") or loaded.get("description") or ""
-                argos = loaded["argos_summary"]
-                text = " ".join([title, summary, argos]).strip()
-                text_l = text.lower()
-                word_count = len(text_l.split())
-                # Match each keyword at most once using tolerant patterns (space/hyphen/slash/none)
-                matched_keywords = [k for (k, pat) in compiled if pat.search(text_l)]
-                hits = len(matched_keywords)
-                if hits > 0:
-                    logger.debug(
-                        f"Keyword scan | id={article_id} | words={word_count} | hits={hits} (min={min_keyword_hits}) | tokens={matched_keywords}"
-                    )
-                else:
-                    logger.debug(
-                        f"Keyword scan | id={article_id} | words={word_count} | hits=0"
-                    )
-                # Qualify only if we meet or exceed the minimum keyword hits
-                if hits >= min_keyword_hits:
-                    matches.append((article_id, text))
-                    if len(matches) >= max_articles:
-                        logger.info(
-                            f"Keyword scan done | scanned={scanned} | found={len(matches)}"
-                        )
-                        return matches
-    logger.info(f"Keyword scan done | scanned={scanned} | found={len(matches)}")
-    return matches
+    url = f"{BACKEND_API_URL}/api/articles/search"
+    payload = {
+        "keywords": keyword_list,
+        "limit": max_articles,
+        "min_keyword_hits": min_keyword_hits,
+        "exclude_ids": list(exclude_ids) if exclude_ids else []
+    }
+    
+    try:
+        response = requests.post(url, json=payload, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+        
+        # Transform API response to expected format: List[Tuple[article_id, full_text]]
+        results = data.get("results", [])
+        matches = [(r["article_id"], r["full_text"]) for r in results]
+        
+        logger.info(f"Backend API search | keywords={len(keyword_list)} | found={len(matches)}")
+        return matches
+        
+    except Exception as e:
+        logger.error(f"Backend API search failed: {e}")
+        return []
 
 
 def _generate_boolean_query_for_perigon(topic_name: str, section: str) -> str:
