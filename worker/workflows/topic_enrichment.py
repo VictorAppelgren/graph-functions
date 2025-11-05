@@ -85,10 +85,10 @@ def collect_candidates_by_keywords(
     max_articles: int = 5,
     min_keyword_hits: int = 3,
     exclude_ids: set[str] = None,
-) -> List[Tuple[str, str]]:
+) -> List[Tuple[str, Dict]]:
     """
     Call backend API to search articles by keywords.
-    Return up to max_articles of (article_id, full_text) tuples.
+    Return up to max_articles of (article_id, article_object) tuples.
     """
     url = f"{BACKEND_API_URL}/api/articles/search"
     payload = {
@@ -103,9 +103,9 @@ def collect_candidates_by_keywords(
         response.raise_for_status()
         data = response.json()
         
-        # Transform API response to expected format: List[Tuple[article_id, full_text]]
+        # Transform API response to expected format: List[Tuple[article_id, article_object]]
         results = data.get("results", [])
-        matches = [(r["article_id"], r["full_text"]) for r in results]
+        matches = [(r["article_id"], r["article"]) for r in results]
         
         logger.info(f"Backend API search | keywords={len(keyword_list)} | found={len(matches)}")
         return matches
@@ -233,9 +233,16 @@ def enrich_topic_via_cold_storage(
         f"Cold storage relevance checks | topic={topic_id} section={section} | candidates={len(candidates)} | needed={needed}"
     )
     
-    for (article_id, article_text) in candidates:
+    for (article_id, article_obj) in candidates:
         if added >= needed:
             break
+        
+        # Extract text from article object for relevance check (no wrapper, direct access)
+        title = article_obj.get("title", "")
+        summary = article_obj.get("summary", "") or article_obj.get("description", "")
+        argos_summary = article_obj.get("argos_summary", "")
+        article_text = " ".join([title, summary, argos_summary]).strip()
+        
         logger.info(f"Relevance check start | id={article_id} | section={section}")
         relevance_result = relevance_gate_llm(topic_id, section, article_text)
         rel_checked += 1
@@ -245,13 +252,11 @@ def enrich_topic_via_cold_storage(
         logger.info(f"Relevance check pass | id={article_id}")
         rel_passed += 1
         
-        # Add and explicitly link to the topic
-        # Note: add_article will call load_article again, but with default max_days=30
-        # For cold storage articles, we need to handle this differently
+        # Add article with full object (not just ID)
         try:
-            res = add_article(article_id, test=test, intended_topic_id=topic_id)
-        except FileNotFoundError:
-            logger.warning(f"Article {article_id} not found during add_article (likely outside 30-day window)")
+            res = add_article(article_obj, test=test, intended_topic_id=topic_id)
+        except Exception as e:
+            logger.warning(f"Failed to add article {article_id}: {e}")
             continue
         if res and res.get("status") not in ("skipped", "failed"):
             added += 1
