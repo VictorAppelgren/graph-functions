@@ -403,8 +403,13 @@ def get_admin_summary() -> Dict:
         for item in trends_7d
     )
     
+    # Unpack the stats model to avoid double nesting
+    stats_dict = today_stats.model_dump()
+    
     return {
-        "today": today_stats.model_dump(),
+        "today": stats_dict.get("today", {}),
+        "graph_state": stats_dict.get("graph_state", {}),
+        "problems": stats_dict.get("problems", {}),
         "last_7_days": {
             "articles_added": articles_7d,
             "sections_written": sections_7d,
