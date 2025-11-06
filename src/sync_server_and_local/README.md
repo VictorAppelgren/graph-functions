@@ -13,6 +13,41 @@
 
 ---
 
+## **⚠️ TODO / Known Limitations**
+
+### **Current Status:**
+- ✅ **Neo4j Graph Sync**: Fully implemented (Topics, Articles, Relationships)
+- ⚠️ **Article JSON Files**: Partially implemented - needs enhancement
+
+### **What Needs Work:**
+
+1. **Article File Sync Enhancement**
+   - Current: Uses `/api/articles` endpoint (may not return all IDs efficiently)
+   - Needed: Use new `/api/articles/check-existence` endpoint for batch checking
+   - Benefit: Much faster - check 500 IDs per request instead of fetching all articles
+
+2. **File-Based Article Sync**
+   - Current: Syncs via API only
+   - Needed: Option to sync article JSON files directly (for bulk backup/restore)
+   - Use case: Initial setup, disaster recovery, offline development
+
+3. **Master Statistics & Logs Sync**
+   - Not implemented yet
+   - Files: `logs/master_statistics/*.json`, `logs/master_logs/*.txt`
+   - Important for admin dashboard historical data
+
+4. **Incremental Sync Optimization**
+   - Current: Full scan every time
+   - Needed: Track last sync timestamp, only sync changes since then
+   - Benefit: Much faster for regular syncs
+
+### **Priority:**
+1. Article file sync enhancement (use check-existence endpoint) - **HIGH**
+2. Master stats/logs sync - **MEDIUM**
+3. Incremental sync - **LOW** (nice to have)
+
+---
+
 ## **What It Syncs**
 
 1. **Articles** (JSON files via Backend API)

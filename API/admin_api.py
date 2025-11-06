@@ -412,3 +412,84 @@ def get_admin_summary() -> Dict:
         },
         "available_dates": [item["date"] for item in trends_7d]
     }
+
+
+# ============================================================================
+# DEBUG ENDPOINTS (Development/Troubleshooting)
+# ============================================================================
+
+@router.get("/stats/debug/files")
+def debug_stats_files():
+    """
+    Debug endpoint: List all available stats files.
+    Helps troubleshoot why stats might be missing.
+    """
+    import os
+    
+    stats_path = Path(STATS_DIR)
+    
+    if not stats_path.exists():
+        return {
+            "stats_dir": str(stats_path.absolute()),
+            "exists": False,
+            "error": "Stats directory does not exist",
+            "files": []
+        }
+    
+    # List all JSON files
+    files = sorted([f.name for f in stats_path.glob("*.json")])
+    
+    return {
+        "stats_dir": str(stats_path.absolute()),
+        "exists": True,
+        "files": files,
+        "count": len(files)
+    }
+
+
+@router.get("/stats/debug/latest")
+def debug_latest_stats():
+    """
+    Debug endpoint: Show raw contents of the latest stats file.
+    Helps verify if data is being written correctly.
+    """
+    import os
+    
+    stats_path = Path(STATS_DIR)
+    
+    if not stats_path.exists():
+        return {
+            "error": "Stats directory does not exist",
+            "path": str(stats_path.absolute())
+        }
+    
+    # Find all stats files
+    files = sorted(list(stats_path.glob("*.json")))
+    
+    if not files:
+        return {
+            "error": "No stats files found",
+            "path": str(stats_path.absolute()),
+            "files_checked": str(list(stats_path.iterdir()))
+        }
+    
+    # Get latest file
+    latest_file = files[-1]
+    
+    try:
+        with open(latest_file, 'r') as f:
+            stats = json.load(f)
+        
+        return {
+            "file": latest_file.name,
+            "path": str(latest_file.absolute()),
+            "size": latest_file.stat().st_size,
+            "modified": datetime.fromtimestamp(latest_file.stat().st_mtime).isoformat(),
+            "stats": stats
+        }
+    except Exception as e:
+        return {
+            "error": f"Failed to read file: {str(e)}",
+            "file": latest_file.name,
+            "path": str(latest_file.absolute())
+        }
