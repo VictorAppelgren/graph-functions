@@ -20,6 +20,7 @@ import random
 from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 from src.articles.ingest_article import add_article
 from utils import app_logging
+from src.llm.health_check import wait_for_llm_health
 
 logger = app_logging.get_logger(__name__)
 
@@ -156,6 +157,10 @@ def run_simple_sources_pipeline():
 
 
 if __name__ == "__main__":
+    # Wait for LLMs to be healthy before starting pipeline
+    # This prevents crash loops when LLM servers are down
+    wait_for_llm_health()
+    
     try:
         run_simple_sources_pipeline()
     except KeyboardInterrupt:

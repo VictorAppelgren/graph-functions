@@ -30,6 +30,7 @@ from src.graph.neo4j_client import run_cypher
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from src.analysis.orchestration.should_rewrite import should_rewrite
 from src.custom_user_analysis.daily_rewrite_orchestrator import rewrite_all_user_strategies
+from src.llm.health_check import wait_for_llm_health
 
 logger = app_logging.get_logger(__name__)
 
@@ -258,4 +259,8 @@ def run_pipeline() -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
+    # Wait for LLMs to be healthy before starting pipeline
+    # This prevents crash loops when LLM servers are down
+    wait_for_llm_health()
+    
     run_pipeline()
