@@ -322,16 +322,16 @@ def get_graph_state_snapshot() -> SnapshotModel:
     perspective_query = """
     MATCH (t:Topic)
     OPTIONAL MATCH (t)<-[r:ABOUT]-(a:Article)
-    WITH t, 
-         count(CASE WHEN r.importance_risk >= 2 THEN 1 END) as risk_count,
-         count(CASE WHEN r.importance_opportunity >= 2 THEN 1 END) as opp_count,
-         count(CASE WHEN r.importance_trend >= 2 THEN 1 END) as trend_count,
-         count(CASE WHEN r.importance_catalyst >= 2 THEN 1 END) as cat_count
+    WITH t.id as topic_id,
+         sum(CASE WHEN r.importance_risk >= 2 THEN 1 ELSE 0 END) as risk_count,
+         sum(CASE WHEN r.importance_opportunity >= 2 THEN 1 ELSE 0 END) as opp_count,
+         sum(CASE WHEN r.importance_trend >= 2 THEN 1 ELSE 0 END) as trend_count,
+         sum(CASE WHEN r.importance_catalyst >= 2 THEN 1 ELSE 0 END) as cat_count
     RETURN 
-        avg(risk_count) as avg_risk,
-        avg(opp_count) as avg_opportunity,
-        avg(trend_count) as avg_trend,
-        avg(cat_count) as avg_catalyst
+        avg(toFloat(risk_count)) as avg_risk,
+        avg(toFloat(opp_count)) as avg_opportunity,
+        avg(toFloat(trend_count)) as avg_trend,
+        avg(toFloat(cat_count)) as avg_catalyst
     """
     perspective_result = run_cypher(perspective_query)
     
