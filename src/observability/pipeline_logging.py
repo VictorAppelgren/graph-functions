@@ -424,6 +424,10 @@ class SystemStats(BaseModel):
     llm_complex_calls: int = 0
     llm_simple_long_context_calls: int = 0
     llm_hallucinated_topic_ids: int = 0
+    topic_rejections_proposal_null: int = 0
+    topic_rejections_relevance_gate: int = 0
+    topic_rejections_importance_remove: int = 0
+    topic_rejections_capacity_guard: int = 0
 
 
 class StatsModel(BaseModel):
@@ -633,6 +637,12 @@ def master_statistics(
     llm_complex_calls: int = 0,
     llm_simple_long_context_calls: int = 0,
     llm_hallucinated_topic_ids: int = 0,
+    
+    # Topic rejection breakdown
+    topic_rejections_proposal_null: int = 0,
+    topic_rejections_relevance_gate: int = 0,
+    topic_rejections_importance_remove: int = 0,
+    topic_rejections_capacity_guard: int = 0,
 ) -> None:
     # Load existing stats
     stats = load_stats_file()
@@ -711,6 +721,16 @@ def master_statistics(
         t.system.llm_simple_long_context_calls += llm_simple_long_context_calls
     if llm_hallucinated_topic_ids:
         t.system.llm_hallucinated_topic_ids += llm_hallucinated_topic_ids
+    
+    # Topic rejection breakdown
+    if topic_rejections_proposal_null:
+        t.system.topic_rejections_proposal_null += topic_rejections_proposal_null
+    if topic_rejections_relevance_gate:
+        t.system.topic_rejections_relevance_gate += topic_rejections_relevance_gate
+    if topic_rejections_importance_remove:
+        t.system.topic_rejections_importance_remove += topic_rejections_importance_remove
+    if topic_rejections_capacity_guard:
+        t.system.topic_rejections_capacity_guard += topic_rejections_capacity_guard
 
     stats.graph_state = get_graph_state_snapshot()
 

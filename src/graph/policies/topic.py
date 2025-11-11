@@ -134,12 +134,15 @@ REJECT (do not add as topics):
 - industry verticals or operational niches (e.g., sterilized packaging, logistics, advertising)
 - product categories, vendor lists, micro supply chain segments, marketing/HR/operations
 - vague/general groups, ambiguous or non-atomic concepts not defensible to a macro analyst
+- sports, entertainment, celebrity news, local human interest without market linkage
 
 PRINCIPLES:
 - Topic must help understand markets or make/plan trades.
-- If unsure, REJECT. Be strict; quality over recall.
+- Default to REJECT, but allow topics with clear macro/trading relevance.
+- If topic has explicit connection to pricing, liquidity, volatility, or macro transmission → ACCEPT.
+- If topic is canonical asset, policy institution, or macro driver → ACCEPT.
+- If uncertain and topic lacks clear market linkage → REJECT.
 - Topic must be atomic, human-readable, and non-duplicative with existing macro/asset anchors.
- - Minimal recall nudge: If there is any real, explicit trading relevance to our main interests (clear channel to pricing/liquidity/volatility) and the topic is a canonical asset/policy or macro transmitter, prefer should_add=true.
 """
 
 

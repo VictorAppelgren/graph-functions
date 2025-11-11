@@ -56,8 +56,11 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 details=p,
             )
             master_log(
-                f"Topic rejected | name={article_json.get('title', 'unknown') if 'article_json' in locals() else 'unknown'} | category=None | failure=proposal_null"
+                f"Topic rejected | gate=proposal_null | "
+                f"article={article_json.get('title', 'unknown')[:80] if 'article_json' in locals() else 'unknown'} | "
+                f"reason=LLM returned no topic proposal"
             )
+            master_statistics(topic_rejections_proposal_null=1)
             return {
                 "status": "rejected",
                 "topic_name": (
@@ -96,8 +99,14 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             )
             # Do not crash on legitimate rejection; log and return minimal status
             master_log(
-                f"Topic rejected | name={topic_proposal.name} | category={category} | failure=relevance_gate_reject"
+                f"Topic rejected | gate=relevance_gate | "
+                f"name={topic_proposal.name} | "
+                f"category={category} | "
+                f"type={topic_proposal.type} | "
+                f"motivation={topic_proposal.motivation[:100] if topic_proposal.motivation else 'none'} | "
+                f"reason={motivation_for_relevance[:100] if motivation_for_relevance else 'no_trading_relevance'}"
             )
+            master_statistics(topic_rejections_relevance_gate=1)
             return {
                 "status": "rejected",
                 "topic_name": topic_proposal.name,
@@ -128,8 +137,14 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 details=p,
             )
             master_log(
-                f"Topic rejected | name={topic_proposal.name} | category={category} | failure=importance_remove"
+                f"Topic rejected | gate=importance_remove | "
+                f"name={topic_proposal.name} | "
+                f"category={category} | "
+                f"type={topic_proposal.type} | "
+                f"motivation={topic_proposal.motivation[:100] if topic_proposal.motivation else 'none'} | "
+                f"reason={topic_importance_rationale[:100] if topic_importance_rationale else 'flagged_for_removal'}"
             )
+            master_statistics(topic_rejections_importance_remove=1)
             return {
                 "status": "rejected",
                 "topic_name": topic_proposal.name,
@@ -183,8 +198,14 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 )
 
                 master_log(
-                    f"Topic rejected by capacity guard | name={topic_proposal.name}"
+                    f"Topic rejected | gate=capacity_guard | "
+                    f"name={topic_proposal.name} | "
+                    f"category={category} | "
+                    f"importance={topic_proposal.importance} | "
+                    f"motivation={topic_proposal.motivation[:100] if topic_proposal.motivation else 'none'} | "
+                    f"reason={decision.motivation[:100] if decision.motivation else 'capacity_limit'}"
                 )
+                master_statistics(topic_rejections_capacity_guard=1)
                 return {
                     "status": "rejected",
                     "topic_name": topic_proposal.name,
