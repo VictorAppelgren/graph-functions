@@ -113,6 +113,12 @@ class SnapshotModel(BaseModel):
     # Analysis Section Coverage
     analysis_section_coverage: Dict[str, int] = {}
     
+    # Average perspective articles per topic
+    avg_risk_articles_per_topic: float = 0.0
+    avg_opportunity_articles_per_topic: float = 0.0
+    avg_trend_articles_per_topic: float = 0.0
+    avg_catalyst_articles_per_topic: float = 0.0
+    
     last_updated: str = ""
 
 
@@ -312,6 +318,31 @@ def get_graph_state_snapshot() -> SnapshotModel:
     # Analysis section coverage
     analysis_section_coverage = get_analysis_section_coverage()
     
+    # Average perspective articles per topic
+    perspective_query = """
+    MATCH (t:Topic)
+    OPTIONAL MATCH (t)<-[r:ABOUT]-(a:Article)
+    WITH t, 
+         count(CASE WHEN r.importance_risk >= 2 THEN 1 END) as risk_count,
+         count(CASE WHEN r.importance_opportunity >= 2 THEN 1 END) as opp_count,
+         count(CASE WHEN r.importance_trend >= 2 THEN 1 END) as trend_count,
+         count(CASE WHEN r.importance_catalyst >= 2 THEN 1 END) as cat_count
+    RETURN 
+        avg(risk_count) as avg_risk,
+        avg(opp_count) as avg_opportunity,
+        avg(trend_count) as avg_trend,
+        avg(cat_count) as avg_catalyst
+    """
+    perspective_result = run_cypher(perspective_query)
+    
+    if perspective_result and perspective_result[0]:
+        avg_risk = perspective_result[0].get("avg_risk") or 0.0
+        avg_opportunity = perspective_result[0].get("avg_opportunity") or 0.0
+        avg_trend = perspective_result[0].get("avg_trend") or 0.0
+        avg_catalyst = perspective_result[0].get("avg_catalyst") or 0.0
+    else:
+        avg_risk = avg_opportunity = avg_trend = avg_catalyst = 0.0
+    
     orphans = OrphansModel(topics=orphans_topics, articles=orphans_articles)
     
     return SnapshotModel(
@@ -332,6 +363,10 @@ def get_graph_state_snapshot() -> SnapshotModel:
         articles_by_timeframe=articles_by_timeframe,
         avg_perspective_scores=avg_perspective_scores,
         analysis_section_coverage=analysis_section_coverage,
+        avg_risk_articles_per_topic=round(avg_risk, 1),
+        avg_opportunity_articles_per_topic=round(avg_opportunity, 1),
+        avg_trend_articles_per_topic=round(avg_trend, 1),
+        avg_catalyst_articles_per_topic=round(avg_catalyst, 1),
         last_updated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
     )
 

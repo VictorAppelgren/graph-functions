@@ -127,10 +127,10 @@ def should_rewrite(
             # Try analysis generation
             try:
                 analysis_rewriter(topic_id, test=test, analysis_type=tf_section)
-                master_statistics(should_rewrite_completed_with_analysis=1)
+                master_statistics(rewrite_succeeded=1)  # Track successful completion
             except Exception as e:
                 logger.error(f"Analysis rewriter failed for {topic_id}: {e}")
-                master_statistics(should_rewrite_stopped_analysis_failed=1)
+                master_statistics(errors=1)  # Track failure as error
         else:
             master_log(
                 f"No rewrite of section {tf_section} because response was: False | topic={topic_id} | article={new_article_id}"
