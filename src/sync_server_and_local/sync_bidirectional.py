@@ -13,9 +13,9 @@ Strategy:
 - Conflicts: Cloud wins (master source of truth)
 
 Usage:
-    python sync_bidirectional.py --sync       # Full bidirectional sync
-    python sync_bidirectional.py --dry-run    # Preview changes
-    python sync_bidirectional.py --catch-up   # After being offline
+    python sync_bidirectional.py --sync         # Full bidirectional sync
+    python sync_bidirectional.py --dry-run      # Preview changes
+    python sync_bidirectional.py --continuous   # Run continuously (for backup)
 
 Requirements:
     pip install neo4j requests python-dotenv
@@ -36,9 +36,14 @@ from dotenv import load_dotenv
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, PROJECT_ROOT)
 
-from utils import app_logging
-
-logger = app_logging.get_logger(__name__)
+# Use basic logging (no utils dependency for Docker container)
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
@@ -49,14 +54,14 @@ load_dotenv()
 LOCAL_NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 LOCAL_NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
 LOCAL_NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
-LOCAL_BACKEND_API = "http://localhost:8000"
+LOCAL_BACKEND_API = os.getenv("LOCAL_BACKEND_API", "http://localhost:8000")
 
 # CLOUD (Production Server - MASTER)
 CLOUD_SERVER_IP = os.getenv("CLOUD_SERVER_IP", "YOUR_SERVER_IP_HERE")
-CLOUD_NEO4J_URI = f"bolt://{CLOUD_SERVER_IP}:7687"
-CLOUD_NEO4J_USER = os.getenv("CLOUD_NEO4J_USER", "neo4j")
-CLOUD_NEO4J_PASSWORD = os.getenv("CLOUD_NEO4J_PASSWORD", "password")
-CLOUD_BACKEND_API = f"http://{CLOUD_SERVER_IP}/api"
+CLOUD_NEO4J_URI = os.getenv("CLOUD_NEO4J_URI", f"bolt://{CLOUD_SERVER_IP}:7687")
+CLOUD_NEO4J_USER = os.getenv("CLOUD_NEO4J_USER", os.getenv("NEO4J_USER", "neo4j"))
+CLOUD_NEO4J_PASSWORD = os.getenv("CLOUD_NEO4J_PASSWORD", os.getenv("NEO4J_PASSWORD", "password"))
+CLOUD_BACKEND_API = os.getenv("CLOUD_BACKEND_API", f"http://{CLOUD_SERVER_IP}/api")
 
 # API Key (same for both)
 API_KEY = os.getenv("BACKEND_API_KEY", "785fc6c1647ff650b6b611509cc0a8f47009e6b743340503519d433f111fcf12")
@@ -149,16 +154,46 @@ class ArticleBidirectionalSyncer:
             # Upload local-only articles to cloud
             if only_local:
                 logger.info(f"⬆️  Uploading {len(only_local)} articles to cloud...")
-                for article_id in only_local:
-                    if self._sync_article_to_cloud(article_id):
-                        self.stats["local_to_cloud"] += 1
+                BATCH_SIZE = 100
+                local_list = list(only_local)
+                
+                for i in range(0, len(local_list), BATCH_SIZE):
+                    batch_ids = local_list[i:i + BATCH_SIZE]
+                    articles = []
+                    
+                    # Download batch
+                    for article_id in batch_ids:
+                        article = self._download_article(self.local_api, article_id)
+                        if article:
+                            articles.append(article)
+                    
+                    # Upload batch to cloud
+                    if articles:
+                        imported = self._upload_batch(self.cloud_api, articles)
+                        self.stats["local_to_cloud"] += imported
+                        logger.info(f"   Batch {i//BATCH_SIZE + 1}: {imported} imported")
             
             # Download cloud-only articles to local (cloud is master)
             if only_cloud:
                 logger.info(f"⬇️  Downloading {len(only_cloud)} articles from cloud...")
-                for article_id in only_cloud:
-                    if self._sync_article_to_local(article_id):
-                        self.stats["cloud_to_local"] += 1
+                BATCH_SIZE = 100
+                cloud_list = list(only_cloud)
+                
+                for i in range(0, len(cloud_list), BATCH_SIZE):
+                    batch_ids = cloud_list[i:i + BATCH_SIZE]
+                    articles = []
+                    
+                    # Download batch
+                    for article_id in batch_ids:
+                        article = self._download_article(self.cloud_api, article_id)
+                        if article:
+                            articles.append(article)
+                    
+                    # Upload batch to local
+                    if articles:
+                        imported = self._upload_batch(self.local_api, articles)
+                        self.stats["cloud_to_local"] += imported
+                        logger.info(f"   Batch {i//BATCH_SIZE + 1}: {imported} imported")
             
             logger.info("📊 Article Sync Summary:")
             logger.info(f"   Local → Cloud: {self.stats['local_to_cloud']}")
@@ -170,22 +205,65 @@ class ArticleBidirectionalSyncer:
             raise
     
     def _get_article_ids(self, api_url: str) -> Set[str]:
-        """Get set of all article IDs from an API"""
+        """Get all article IDs using pagination"""
+        all_ids = set()
+        offset = 0
+        
+        while True:
+            try:
+                response = requests.get(
+                    f"{api_url}/articles/ids",
+                    headers={"X-API-Key": self.api_key},
+                    params={"offset": offset},
+                    timeout=60
+                )
+                
+                if response.status_code != 200:
+                    logger.error(f"Failed to get IDs: {response.status_code}")
+                    break
+                
+                data = response.json()
+                all_ids.update(data["article_ids"])
+                
+                # Check if more pages
+                if not data.get("has_more", False):
+                    break
+                
+                offset += data["count"]
+                
+            except Exception as e:
+                logger.error(f"Error fetching IDs: {e}")
+                break
+        
+        return all_ids
+    
+    def _download_article(self, api_url: str, article_id: str) -> Optional[Dict]:
+        """Download single article"""
         try:
             response = requests.get(
-                f"{api_url}/articles",
+                f"{api_url}/articles/{article_id}",
                 headers={"X-API-Key": self.api_key},
-                params={"limit": 10000},
-                timeout=30
+                timeout=10
             )
-            
-            if response.status_code == 200:
-                articles = response.json()
-                return {a.get("argos_id") for a in articles if a.get("argos_id")}
-            return set()
+            return response.json() if response.status_code == 200 else None
         except Exception as e:
-            logger.warning(f"Could not get article IDs from {api_url}: {e}")
-            return set()
+            logger.error(f"Error downloading {article_id}: {e}")
+            return None
+    
+    def _upload_batch(self, api_url: str, articles: List[Dict]) -> int:
+        """Upload articles using bulk endpoint"""
+        try:
+            response = requests.post(
+                f"{api_url}/articles/bulk",
+                headers={"X-API-Key": self.api_key},
+                json={"articles": articles, "overwrite": False},
+                timeout=120
+            )
+            result = response.json()
+            return result.get("imported", 0)
+        except Exception as e:
+            logger.error(f"Bulk upload failed: {e}")
+            return 0
     
     def _sync_article_to_cloud(self, article_id: str) -> bool:
         """Upload article from local to cloud"""
@@ -271,7 +349,7 @@ class ArticleBidirectionalSyncer:
 # ============ NEO4J BIDIRECTIONAL SYNC ============
 
 class Neo4jBidirectionalSyncer:
-    """Syncs Neo4j graph in both directions with cloud as master"""
+    """Syncs Neo4j graph - ALL properties including analysis (cloud is master)"""
     
     def __init__(
         self,
@@ -302,6 +380,8 @@ class Neo4jBidirectionalSyncer:
         logger.info("=" * 50)
         logger.info("🔷 Syncing Neo4j Graph (Bidirectional)")
         logger.info("=" * 50)
+        logger.info(f"   Local:  {self.local_uri}")
+        logger.info(f"   Cloud:  {self.cloud_uri}")
         
         try:
             # Connect to both databases
@@ -407,21 +487,19 @@ class Neo4jBidirectionalSyncer:
                         logger.error(f"Error uploading topic {topic_id}: {e}")
                         self.stats["errors"] += 1
         
-        # Download cloud-only topics to local (cloud is master)
+        # Download cloud-only topics to local (ALL properties including analysis)
         if only_cloud:
             with local_driver.session() as session:
                 for topic_id in only_cloud:
                     try:
+                        # SET t = $props replaces ALL properties (analysis included)
                         session.run("""
                             MERGE (t:Topic {id: $id})
                             SET t = $props
-                        """, {
-                            "id": topic_id,
-                            "props": cloud_topics[topic_id]["props"]
-                        })
+                        """, id=topic_id, props=cloud_topics[topic_id]["props"])
                         self.stats["cloud_to_local_topics"] += 1
                     except Exception as e:
-                        logger.error(f"Error downloading topic {topic_id}: {e}")
+                        logger.error(f"Failed to sync topic {topic_id} to local: {e}")
                         self.stats["errors"] += 1
         
         # For topics on both sides: Cloud is master, always overwrite local
@@ -467,6 +545,7 @@ class Neo4jBidirectionalSyncer:
         only_local = local_article_ids - cloud_article_ids
         only_cloud = cloud_article_ids - local_article_ids
         
+        logger.info(f"   Local: {len(local_article_ids)} | Cloud: {len(cloud_article_ids)}")
         logger.info(f"   Only local: {len(only_local)}, Only cloud: {len(only_cloud)}")
         
         if self.dry_run:
@@ -539,6 +618,7 @@ class Neo4jBidirectionalSyncer:
         only_local = local_rels - cloud_rels
         only_cloud = cloud_rels - local_rels
         
+        logger.info(f"   Local: {len(local_rels)} | Cloud: {len(cloud_rels)}")
         logger.info(f"   Only local: {len(only_local)}, Only cloud: {len(only_cloud)}")
         
         if self.dry_run:
@@ -619,27 +699,74 @@ class Neo4jBidirectionalSyncer:
         logger.info(f"   ✅ Relationships synced: {self.stats['local_to_cloud_rels']}⬆️  {self.stats['cloud_to_local_rels']}⬇️")
 
 
+# ============ CONTINUOUS SYNC ============
+
+def run_continuous_sync(interval: int = 300):
+    """Run sync continuously for backup - simple and minimal"""
+    import time
+    import signal
+    
+    shutdown = False
+    
+    def signal_handler(sig, frame):
+        nonlocal shutdown
+        shutdown = True
+        logger.info("Shutdown requested...")
+    
+    signal.signal(signal.SIGTERM, signal_handler)
+    signal.signal(signal.SIGINT, signal_handler)
+    
+    logger.info("="*60)
+    logger.info("🔄 SAGA Continuous Sync Started")
+    logger.info(f"Interval: {interval}s | Local → Cloud (bidirectional)")
+    logger.info("="*60)
+    
+    sync_count = 0
+    
+    while not shutdown:
+        sync_count += 1
+        logger.info(f"\n{'='*60}")
+        logger.info(f"Sync #{sync_count} - {datetime.now(timezone.utc).isoformat()}")
+        logger.info(f"{'='*60}")
+        
+        try:
+            # Neo4j sync (ALL properties including analysis)
+            neo4j_syncer = Neo4jBidirectionalSyncer(
+                LOCAL_NEO4J_URI, CLOUD_NEO4J_URI,
+                LOCAL_NEO4J_USER, LOCAL_NEO4J_PASSWORD,
+                dry_run=False
+            )
+            neo4j_syncer.sync()
+            
+            # Article sync
+            article_syncer = ArticleBidirectionalSyncer(
+                LOCAL_BACKEND_API, CLOUD_BACKEND_API, API_KEY,
+                dry_run=False
+            )
+            article_syncer.sync()
+            
+            logger.info(f"✅ Sync #{sync_count} complete")
+        except Exception as e:
+            logger.error(f"❌ Sync #{sync_count} failed: {e}", exc_info=True)
+        
+        if not shutdown:
+            logger.info(f"⏳ Next sync in {interval}s...")
+            time.sleep(interval)
+    
+    logger.info("Sync stopped gracefully")
+
+
 # ============ MAIN CLI ============
 
 def main():
     parser = argparse.ArgumentParser(
         description="Bidirectional sync between local and cloud SAGA Graph"
     )
-    parser.add_argument(
-        "--sync",
-        action="store_true",
-        help="Full bidirectional sync"
-    )
-    parser.add_argument(
-        "--catch-up",
-        action="store_true",
-        help="Catch up after being offline (same as --sync)"
-    )
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Preview changes without syncing"
-    )
+    parser.add_argument("--sync", action="store_true", help="Run full sync")
+    parser.add_argument("--dry-run", action="store_true", help="Preview only")
+    parser.add_argument("--catch-up", action="store_true", help="After offline")
+    parser.add_argument("--continuous", action="store_true", help="Run continuously (for backup)")
+    parser.add_argument("--interval", type=int, default=300, help="Sync interval in seconds")
     parser.add_argument(
         "--articles-only",
         action="store_true",
@@ -652,6 +779,11 @@ def main():
     )
     
     args = parser.parse_args()
+    
+    # Handle continuous mode
+    if args.continuous:
+        run_continuous_sync(args.interval)
+        return
     
     # Determine what to sync
     sync_all = args.sync or args.catch_up or (not args.articles_only and not args.neo4j_only)

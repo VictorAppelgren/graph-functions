@@ -86,3 +86,28 @@ def describe_interest_areas() -> str:
         return f"- {a['name']} (prio {a['priority']}): {a['description']} | include: {inc}"
     lines = "\n".join(entry(a) for a in INTEREST_AREAS)
     return f"Max topics allowed: {MAX_TOPICS}\nAreas of interest:\n{lines}"
+
+
+# ============================================================================
+# ARTICLE CAPACITY MANAGEMENT
+# ============================================================================
+
+# Total hard limit per topic
+MAX_ARTICLES_PER_TOPIC = 120
+
+# Per-timeframe, per-perspective limits
+# Each timeframe (fundamental/medium/current) × each perspective (risk/opp/trend/cat)
+# gets: 4 premium + 3 standard + 3 filler = 10 articles
+MAX_ARTICLES_PER_TIMEFRAME_PERSPECTIVE = 10
+
+# Per-importance tier within each timeframe-perspective bucket
+TIER_LIMITS_PER_TIMEFRAME_PERSPECTIVE = {
+    3: 4,  # Premium: max 4 importance=3 articles per timeframe-perspective
+    2: 3,  # Standard: max 3 importance=2 articles per timeframe-perspective
+    1: 3,  # Filler: max 3 importance=1 articles per timeframe-perspective
+}
+
+# Math: 
+# - Per timeframe-perspective: 4 + 3 + 3 = 10 articles
+# - Per timeframe: 4 perspectives × 10 = 40 articles
+# - Total per topic: 3 timeframes × 40 = 120 articles
