@@ -54,6 +54,11 @@ class ModelTier(Enum):
 # Check if local LLM should be disabled (for server deployment)
 DISABLE_LOCAL_LLM = os.getenv("DISABLE_LOCAL_LLM", "false").lower() == "true"
 
+# Debug logging at module load time
+import logging
+_init_logger = logging.getLogger(__name__)
+_init_logger.info(f"🔧 LLM CONFIG INIT: DISABLE_LOCAL_LLM={DISABLE_LOCAL_LLM} (from env: {os.getenv('DISABLE_LOCAL_LLM', 'NOT_SET')})")
+
 SERVERS = {}
 
 # Only add local server if not disabled
@@ -64,6 +69,9 @@ if not DISABLE_LOCAL_LLM:
         'model': 'gpt-oss:20b',
         'temperature': 0.2,
     }
+    _init_logger.info("🔧 LLM CONFIG: Added 'local' server to SERVERS")
+else:
+    _init_logger.info("🔧 LLM CONFIG: Skipped 'local' server (DISABLE_LOCAL_LLM=true)")
 
 # Always add external servers
 SERVERS.update({
@@ -98,6 +106,9 @@ SERVERS.update({
     #     'temperature': 0.2,
     # }
 })
+
+# Log final server configuration
+_init_logger.info(f"🔧 LLM CONFIG: Final SERVERS = {list(SERVERS.keys())}")
 
 # Database setup
 DB_PATH = Path(__file__).parent / "router_status.db"
