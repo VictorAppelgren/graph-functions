@@ -50,13 +50,23 @@ class ModelTier(Enum):
 # Hardcoded server configuration
 # ONLY 2 EXTERNAL SERVERS NOW: 8686 (external_a) and 8787 (external_b)
 # External servers run vLLM with 10,240 token context limit
-SERVERS = {
-    'local': {
+ 
+# Check if local LLM should be disabled (for server deployment)
+DISABLE_LOCAL_LLM = os.getenv("DISABLE_LOCAL_LLM", "false").lower() == "true"
+
+SERVERS = {}
+
+# Only add local server if not disabled
+if not DISABLE_LOCAL_LLM:
+    SERVERS['local'] = {
         'provider': 'ollama', 
         'base_url': 'http://localhost:11434', 
         'model': 'gpt-oss:20b',
         'temperature': 0.2,
-    },
+    }
+
+# Always add external servers
+SERVERS.update({
     'external_a': {
         'provider': 'openai', 
         'base_url': 'http://gate04.cfa.handels.gu.se:8686/v1', 
@@ -87,7 +97,7 @@ SERVERS = {
     #     'model': 'gpt-5-nano',
     #     'temperature': 0.2,
     # }
-}
+})
 
 # Database setup
 DB_PATH = Path(__file__).parent / "router_status.db"

@@ -54,7 +54,7 @@ load_dotenv()
 LOCAL_NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 LOCAL_NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
 LOCAL_NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
-LOCAL_BACKEND_API = os.getenv("LOCAL_BACKEND_API", "http://localhost:8000")
+LOCAL_BACKEND_API = os.getenv("LOCAL_BACKEND_API", "http://localhost:8000/api")
 
 # CLOUD (Production Server - MASTER)
 CLOUD_SERVER_IP = os.getenv("CLOUD_SERVER_IP", "YOUR_SERVER_IP_HERE")
@@ -189,11 +189,15 @@ class ArticleBidirectionalSyncer:
                         if article:
                             articles.append(article)
                     
+                    logger.info(f"   Batch {i//BATCH_SIZE + 1}: Downloaded {len(articles)}/{len(batch_ids)} articles")
+                    
                     # Upload batch to local
                     if articles:
                         imported = self._upload_batch(self.local_api, articles)
                         self.stats["cloud_to_local"] += imported
                         logger.info(f"   Batch {i//BATCH_SIZE + 1}: {imported} imported")
+                    else:
+                        logger.warning(f"   Batch {i//BATCH_SIZE + 1}: No articles to upload!")
             
             logger.info("📊 Article Sync Summary:")
             logger.info(f"   Local → Cloud: {self.stats['local_to_cloud']}")
@@ -211,15 +215,18 @@ class ArticleBidirectionalSyncer:
         
         while True:
             try:
+                url = f"{api_url}/articles/ids"
+                logger.info(f"   Fetching from: {url}")
                 response = requests.get(
-                    f"{api_url}/articles/ids",
+                    url,
                     headers={"X-API-Key": self.api_key},
                     params={"offset": offset},
                     timeout=60
                 )
                 
                 if response.status_code != 200:
-                    logger.error(f"Failed to get IDs: {response.status_code}")
+                    logger.error(f"Failed to get IDs from {url}: {response.status_code}")
+                    logger.error(f"Response: {response.text[:200]}")
                     break
                 
                 data = response.json()
@@ -240,12 +247,17 @@ class ArticleBidirectionalSyncer:
     def _download_article(self, api_url: str, article_id: str) -> Optional[Dict]:
         """Download single article"""
         try:
+            url = f"{api_url}/articles/{article_id}"
             response = requests.get(
-                f"{api_url}/articles/{article_id}",
+                url,
                 headers={"X-API-Key": self.api_key},
                 timeout=10
             )
-            return response.json() if response.status_code == 200 else None
+            if response.status_code == 200:
+                return response.json()
+            else:
+                logger.warning(f"Failed to download {article_id}: {response.status_code}")
+                return None
         except Exception as e:
             logger.error(f"Error downloading {article_id}: {e}")
             return None
@@ -253,16 +265,26 @@ class ArticleBidirectionalSyncer:
     def _upload_batch(self, api_url: str, articles: List[Dict]) -> int:
         """Upload articles using bulk endpoint"""
         try:
+            url = f"{api_url}/articles/bulk"
             response = requests.post(
-                f"{api_url}/articles/bulk",
+                url,
                 headers={"X-API-Key": self.api_key},
-                json={"articles": articles, "overwrite": False},
+                params={"overwrite": False},
+                json=articles,
                 timeout=120
             )
-            result = response.json()
-            return result.get("imported", 0)
+            if response.status_code == 200:
+                result = response.json()
+                imported = result.get("imported", 0)
+                skipped = result.get("skipped", 0)
+                errors = result.get("errors", 0)
+                logger.info(f"      Bulk result: {imported} imported, {skipped} skipped, {errors} errors")
+                return imported
+            else:
+                logger.error(f"Bulk upload failed: {response.status_code} - {response.text[:200]}")
+                return 0
         except Exception as e:
-            logger.error(f"Bulk upload failed: {e}")
+            logger.error(f"Bulk upload exception: {e}")
             return 0
     
     def _sync_article_to_cloud(self, article_id: str) -> bool:
