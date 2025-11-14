@@ -361,7 +361,8 @@ class RouterDB:
     def get_next_any_server(self) -> str:
         """Get next free server, checking in order: local → external_a → external_b."""
         # Check each server in order, return first free one
-        if not self.is_local_busy():
+        # Only check local if it exists in SERVERS
+        if 'local' in SERVERS and not self.is_local_busy():
             return 'local'
         
         if not self.is_external_busy('external_a'):
@@ -370,8 +371,8 @@ class RouterDB:
         if not self.is_external_busy('external_b'):
             return 'external_b'
         
-        # All busy - use local anyway (spread load)
-        return 'local'
+        # All busy - fallback to external_a (or local if available)
+        return 'local' if 'local' in SERVERS else 'external_a'
     
     def can_use_nano(self) -> bool:
         """Check if enough time has passed since last Nano call (60 sec cooldown)."""
