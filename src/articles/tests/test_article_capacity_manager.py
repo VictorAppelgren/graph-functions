@@ -82,8 +82,8 @@ def test_prompt_includes_article_details():
          patch('src.articles.policies.article_capacity_manager.run_llm_decision') as mock_run_llm:
         
         mock_run_llm.return_value = ArticleCapacityDecision(
-            motivation="Test", action=ArticleCapacityAction.remove, 
-            target_article_id="old123", new_importance=None
+            motivation="Test", action=ArticleCapacityAction.downgrade, 
+            target_article_id="old123", new_importance=0
         )
         
         article_capacity_manager_llm(
@@ -107,8 +107,8 @@ def test_rejects_invalid_article_id():
          patch('src.articles.policies.article_capacity_manager.run_llm_decision') as mock_run_llm:
         
         mock_run_llm.return_value = ArticleCapacityDecision(
-            motivation="Test", action=ArticleCapacityAction.remove,
-            target_article_id="invalid999", new_importance=None
+            motivation="Test", action=ArticleCapacityAction.downgrade,
+            target_article_id="invalid999", new_importance=0
         )
         
         decision = article_capacity_manager_llm(
@@ -141,18 +141,20 @@ def test_accepts_when_no_existing():
         assert not mock_llm.called, "LLM should not be called"
 
 
-def test_removes_article():
-    """Removes article when LLM decides."""
+def test_archives_article():
+    """Archives article (downgrade to tier 0) when LLM decides."""
     with patch('src.articles.orchestration.article_capacity_orchestrator.run_cypher') as mock_cypher, \
          patch('src.articles.orchestration.article_capacity_orchestrator.get_topic_by_id') as mock_get_topic, \
          patch('src.articles.orchestration.article_capacity_orchestrator.article_capacity_manager_llm') as mock_llm, \
-         patch('src.articles.orchestration.article_capacity_orchestrator.master_statistics') as mock_stats:
+         patch('src.articles.orchestration.article_capacity_orchestrator.master_statistics') as mock_stats, \
+         patch('src.articles.orchestration.article_capacity_orchestrator.master_log') as mock_log:
         
-        mock_cypher.return_value = [get_sample_existing_article()]
+        # First call: get existing articles, Second call: archive query (returns None)
+        mock_cypher.side_effect = [[get_sample_existing_article()], None]
         mock_get_topic.return_value = {"name": "Fed Policy"}
         mock_llm.return_value = ArticleCapacityDecision(
-            motivation="Fresher", action=ArticleCapacityAction.remove,
-            target_article_id="old123", new_importance=None
+            motivation="Fresher", action=ArticleCapacityAction.downgrade,
+            target_article_id="old123", new_importance=0
         )
         
         result = make_room_for_article(
@@ -161,9 +163,10 @@ def test_removes_article():
             new_article_classification=get_sample_classification(), test=False
         )
         
-        assert result["action"] == "remove", f"Expected remove, got {result['action']}"
-        assert any('DELETE r' in str(call) for call in mock_cypher.call_args_list), "DELETE query not executed"
-        assert mock_stats.call_args[1]['about_links_removed'] == 1, "Stats not tracked"
+        assert result["action"] == "downgrade", f"Expected downgrade, got {result['action']}"
+        assert result["new_importance"] == 0, "Expected tier 0 (archive)"
+        assert any('importance_risk = 0' in str(call) for call in mock_cypher.call_args_list), "Archive query not executed"
+        assert mock_stats.call_args[1]['articles_archived'] == 1, "Archive stat not tracked"
 
 
 def test_downgrades_article():
@@ -171,9 +174,11 @@ def test_downgrades_article():
     with patch('src.articles.orchestration.article_capacity_orchestrator.run_cypher') as mock_cypher, \
          patch('src.articles.orchestration.article_capacity_orchestrator.get_topic_by_id') as mock_get_topic, \
          patch('src.articles.orchestration.article_capacity_orchestrator.article_capacity_manager_llm') as mock_llm, \
-         patch('src.articles.orchestration.article_capacity_orchestrator.master_statistics') as mock_stats:
+         patch('src.articles.orchestration.article_capacity_orchestrator.master_statistics') as mock_stats, \
+         patch('src.articles.orchestration.article_capacity_orchestrator.master_log') as mock_log:
         
-        mock_cypher.return_value = [get_sample_existing_article()]
+        # First call: get existing articles, Second call: check target tier capacity, Third call: downgrade query
+        mock_cypher.side_effect = [[get_sample_existing_article()], [{"count": 2}], None]
         mock_get_topic.return_value = {"name": "Fed Policy"}
         mock_llm.return_value = ArticleCapacityDecision(
             motivation="Overrated", action=ArticleCapacityAction.downgrade,
@@ -200,8 +205,8 @@ def test_skips_db_in_test_mode():
         mock_cypher.return_value = [get_sample_existing_article()]
         mock_get_topic.return_value = {"name": "Fed Policy"}
         mock_llm.return_value = ArticleCapacityDecision(
-            motivation="Test", action=ArticleCapacityAction.remove,
-            target_article_id="old123", new_importance=None
+            motivation="Test", action=ArticleCapacityAction.downgrade,
+            target_article_id="old123", new_importance=2
         )
         
         make_room_for_article(
@@ -210,7 +215,7 @@ def test_skips_db_in_test_mode():
             new_article_classification=get_sample_classification(), test=True
         )
         
-        assert not any('DELETE r' in str(call) for call in mock_cypher.call_args_list), "DELETE should be skipped in test mode"
+        assert not any('SET' in str(call) for call in mock_cypher.call_args_list), "DB writes should be skipped in test mode"
 
 
 # Main test runner
@@ -224,8 +229,8 @@ if __name__ == "__main__":
         ("Prompt includes article details", test_prompt_includes_article_details),
         ("Rejects invalid article ID", test_rejects_invalid_article_id),
         ("Accepts when no existing articles", test_accepts_when_no_existing),
-        ("Removes article", test_removes_article),
-        ("Downgrades article", test_downgrades_article),
+        ("Archives article (tier 0)", test_archives_article),
+        ("Downgrades article (tier 1-2)", test_downgrades_article),
         ("Skips DB in test mode", test_skips_db_in_test_mode),
     ]
     

@@ -21,6 +21,7 @@ from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchest
 from src.articles.ingest_article import add_article
 from utils import app_logging
 from src.llm.health_check import wait_for_llm_health
+from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 
@@ -147,6 +148,7 @@ def run_simple_sources_pipeline():
         
         logger.info(f"✅ Cycle #{cycle_count} completed: {cycle_articles} articles in {cycle_duration:.1f}s")
         logger.info(f"📊 Total articles processed: {total_articles}")
+        master_log(f"Top sources cycle complete | cycle={cycle_count} | articles={cycle_articles}")
         
         # Re-shuffle for next cycle
         random.shuffle(sources)

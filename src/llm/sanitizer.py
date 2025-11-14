@@ -88,7 +88,6 @@ class FilterInterestingTopics(BaseModel):
     candidates: List[str] = []
 
 class ArticleCapacityAction(str, Enum):
-    remove = "remove"
     downgrade = "downgrade"
     reject = "reject"
 
@@ -96,7 +95,7 @@ class ArticleCapacityDecision(BaseModel):
     motivation: str = Field(max_length=400)
     action: ArticleCapacityAction
     target_article_id: Optional[str] = None
-    new_importance: Optional[int] = Field(default=None, ge=1, le=2)  # Only 1 or 2 for downgrades
+    new_importance: Optional[int] = Field(default=None, ge=0, le=2)  # 0=archive, 1=filler, 2=standard
 
 class WideQueryModel(BaseModel):
     motivation: str = ""

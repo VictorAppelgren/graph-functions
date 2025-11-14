@@ -386,6 +386,8 @@ def get_admin_summary() -> Dict:
     
     Returns complete overview with today's stats, graph state, and recent trends.
     """
+    from src.api.backend_client import get_article_storage_stats
+    
     today_stats = load_stats_file()
     trends_7d = get_stats_range(7)
     
@@ -403,6 +405,9 @@ def get_admin_summary() -> Dict:
         for item in trends_7d
     )
     
+    # Get article storage stats from backend
+    storage_stats = get_article_storage_stats()
+    
     # Unpack the stats model to avoid double nesting
     stats_dict = today_stats.model_dump()
     
@@ -410,6 +415,7 @@ def get_admin_summary() -> Dict:
         "today": stats_dict.get("today", {}),
         "graph_state": stats_dict.get("graph_state", {}),
         "problems": stats_dict.get("problems", {}),
+        "storage": storage_stats,
         "last_7_days": {
             "articles_added": articles_7d,
             "sections_written": sections_7d,

@@ -1,6 +1,6 @@
 """
 LLM policy for article capacity management decisions.
-Decides whether to remove, downgrade, or reject when adding new article at capacity.
+Decides whether to downgrade an existing article or reject when adding new article at capacity.
 """
 
 from typing import Any
@@ -142,7 +142,7 @@ def article_capacity_manager_llm(
     )
     
     # Validate target_article_id is in allowed list
-    if decision.action in ["remove", "downgrade"]:
+    if decision.action == "downgrade":
         valid_ids = {a["id"] for a in existing_articles}
         if decision.target_article_id not in valid_ids:
             logger.warning(

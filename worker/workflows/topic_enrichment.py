@@ -247,9 +247,9 @@ def enrich_topic_via_cold_storage(
         relevance_result = relevance_gate_llm(topic_id, section, article_text)
         rel_checked += 1
         if not relevance_result.relevant:
-            logger.info(f"Relevance check fail | id={article_id}")
+            logger.info(f"Article not relevant | id={article_id} | rejected by LLM")
             continue
-        logger.info(f"Relevance check pass | id={article_id}")
+        logger.info(f"Article relevant | id={article_id} | approved by LLM")
         rel_passed += 1
         
         # Add article with full object (not just ID)

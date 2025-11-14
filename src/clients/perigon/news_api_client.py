@@ -16,7 +16,7 @@ from datetime import datetime
 from . import config
 
 from utils import app_logging
-from src.observability.pipeline_logging import master_log_error
+from src.observability.pipeline_logging import master_log_error, master_statistics
 
 logger = app_logging.get_logger("NewsApiClient")
 
@@ -265,6 +265,8 @@ class NewsApiClient:
                     logger.info(
                         f"Request successful: found {len(result.get('articles', []))} articles"
                     )
+                    # Track successful query
+                    master_statistics(queries=1)
                     return result
                 except json.JSONDecodeError as e:
                     logger.error(f"Error parsing API response: {e}")

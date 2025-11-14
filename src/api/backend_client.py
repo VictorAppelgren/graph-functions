@@ -121,6 +121,21 @@ def search_articles_by_keywords(
         return []
 
 
+def get_article_storage_stats() -> Dict[str, int]:
+    """Get article storage statistics from Backend API"""
+    try:
+        response = requests.get(
+            f"{BACKEND_URL}/api/articles/storage/stats",
+            headers={"X-API-Key": API_KEY} if API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        print(f"⚠️  Failed to get storage stats from Backend API: {e}")
+        return {"total_raw_articles": 0}
+
+
 # ============ USERS & STRATEGIES ============
 
 def get_all_users() -> List[str]:

@@ -1,6 +1,6 @@
 """
 Prompt for article capacity management LLM decision.
-Decides whether to remove, downgrade, or reject when adding new article at capacity.
+Decides whether to downgrade an existing article or reject when adding new article at capacity.
 """
 
 ARTICLE_CAPACITY_MANAGER_PROMPT = """
@@ -28,20 +28,16 @@ EXISTING ARTICLES (same timeframe + tier):
 {existing_articles_formatted}
 
 DECISION REQUIRED:
-Should we add this new article? If yes, what should we do to make room?
+Should we add this new article? If yes, which existing article should we downgrade?
 
 OPTIONS:
-1. "remove": Remove an existing article completely
-   - Choose the LEAST valuable article to remove
+1. "downgrade": Downgrade an existing article's importance
+   - Choose the article to downgrade (least valuable or overrated)
+   - Suggest new importance tier: 2, 1, or 0
+   - Tier 0 = archive (no longer used in analysis, but preserved in graph)
    - Consider: redundancy, staleness, lower quality source, less relevant perspective
-   - Only if new article is clearly better
    
-2. "downgrade": Downgrade an existing article's importance
-   - Choose an article that's good but overrated for this tier
-   - Suggest new importance (must be < {importance_tier})
-   - Preserves article but reduces its weight in analysis
-   
-3. "reject": Do NOT add the new article
+2. "reject": Do NOT add the new article
    - New article doesn't justify replacing any existing ones
    - Existing portfolio is already optimal
    - Prefer this if uncertain
@@ -49,9 +45,9 @@ OPTIONS:
 RESPONSE FORMAT (strict JSON only):
 {{
   "motivation": "Brief explanation (1-2 sentences)",
-  "action": "remove" | "downgrade" | "reject",
+  "action": "downgrade" | "reject",
   "target_article_id": "article_id" | null,
-  "new_importance": 1 | 2 | null
+  "new_importance": 0 | 1 | 2 | null
 }}
 
 PRIORITIZATION RULES:
@@ -65,7 +61,7 @@ ALLOWED TARGET IDS:
 {allowed_ids_str}
 
 EXAMPLES:
-{{"motivation": "New article provides fresher data on same topic. Removing older redundant article.", "action": "remove", "target_article_id": "a123", "new_importance": null}}
+{{"motivation": "New article provides fresher data. Archiving older redundant article.", "action": "downgrade", "target_article_id": "a123", "new_importance": 0}}
 {{"motivation": "Article a124 is good but overrated for tier 3. Downgrading to tier 2.", "action": "downgrade", "target_article_id": "a124", "new_importance": 2}}
 {{"motivation": "New article doesn't add value beyond existing portfolio.", "action": "reject", "target_article_id": null, "new_importance": null}}
 

@@ -440,8 +440,8 @@ class AnalysisStats(BaseModel):
 
 class MaintenanceStats(BaseModel):
     """Maintenance and quality workflow counters."""
-    articles_removed: int = 0
-    topic_replacements: int = 0
+    articles_downgraded: int = 0  # Downgraded from tier 3→2 or 2→1
+    articles_archived: int = 0    # Set to importance=0 (all perspectives)
 
 
 class CustomAnalysisStats(BaseModel):
@@ -657,8 +657,8 @@ def master_statistics(
     should_rewrite_trigger_from_enrichment_completion: int = 0,
     
     # Maintenance workflow
-    articles_removed: int = 0,
-    topic_replacements_decided: int = 0,
+    articles_downgraded: int = 0,
+    articles_archived: int = 0,
     
     # Custom analysis workflow
     custom_strategies_rewritten: int = 0,
@@ -730,10 +730,10 @@ def master_statistics(
         t.analysis.rewrite_trigger_from_enrichment += should_rewrite_trigger_from_enrichment_completion
     
     # Maintenance workflow
-    if articles_removed:
-        t.maintenance.articles_removed += articles_removed
-    if topic_replacements_decided:
-        t.maintenance.topic_replacements += topic_replacements_decided
+    if articles_downgraded:
+        t.maintenance.articles_downgraded += articles_downgraded
+    if articles_archived:
+        t.maintenance.articles_archived += articles_archived
     
     # Custom analysis workflow
     if custom_strategies_rewritten:
@@ -802,8 +802,8 @@ def master_log(
     should_rewrite_trigger_from_enrichment_completion: int = 0,
     
     # Maintenance workflow
-    articles_removed: int = 0,
-    topic_replacements_decided: int = 0,
+    articles_downgraded: int = 0,
+    articles_archived: int = 0,
     
     # System metrics
     errors: int = 0,
@@ -838,8 +838,8 @@ def master_log(
         should_rewrite_false=should_rewrite_false,
         should_rewrite_trigger_from_article_ingestion=should_rewrite_trigger_from_article_ingestion,
         should_rewrite_trigger_from_enrichment_completion=should_rewrite_trigger_from_enrichment_completion,
-        articles_removed=articles_removed,
-        topic_replacements_decided=topic_replacements_decided,
+        articles_downgraded=articles_downgraded,
+        articles_archived=articles_archived,
         errors=errors,
         llm_calls_failed=llm_calls_failed,
         llm_simple_calls=llm_simple_calls,

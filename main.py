@@ -252,7 +252,7 @@ def run_pipeline() -> Dict[str, Any]:
         )
 
         logger.info("Pipeline run complete.")
-        master_log("Pipeline complete | pipeline | run complete", queries=1)
+        master_log("Pipeline complete | pipeline | run complete")
 
         # Scheduler: no fixed cycle sleep; loop continues. Sleeping is handled when no topics are overdue.
         logger.info("SLEEPING FUNCTION IS MISSING!!")
