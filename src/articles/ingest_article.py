@@ -187,8 +187,8 @@ def add_article(
                 topic_analysis_snippet=topic_context["analysis_snippet"]
             )
             
-            # Create ABOUT link with rich classification properties
-            create_about_link_with_classification(
+            # Create ABOUT link with capacity management
+            capacity_result = create_about_link_with_classification(
                 article_id=argos_id,
                 topic_id=intended_topic_id,
                 timeframe=classification.timeframe,
@@ -197,8 +197,14 @@ def add_article(
                 importance_trend=classification.importance_trend,
                 importance_catalyst=classification.importance_catalyst,
                 motivation=classification.motivation,
-                implications=classification.implications
+                implications=classification.implications,
+                test=test
             )
+            
+            # Handle rejection
+            if capacity_result.get("action") == "rejected":
+                logger.warning(f"Article {argos_id} rejected for intended topic {intended_topic_id} due to capacity")
+                # Continue to try other topics
             
             logger.info(
                 f"Created ABOUT link: {argos_id} -> {intended_topic_id} (intended topic)"
@@ -262,8 +268,8 @@ def add_article(
             topic_analysis_snippet=topic_context["analysis_snippet"]
         )
         
-        # Create ABOUT link with rich classification properties
-        create_about_link_with_classification(
+        # Create ABOUT link with capacity management
+        capacity_result = create_about_link_with_classification(
             article_id=argos_id,
             topic_id=topic_id,
             timeframe=classification.timeframe,
@@ -272,8 +278,14 @@ def add_article(
             importance_trend=classification.importance_trend,
             importance_catalyst=classification.importance_catalyst,
             motivation=classification.motivation,
-            implications=classification.implications
+            implications=classification.implications,
+            test=test
         )
+        
+        # Handle rejection
+        if capacity_result.get("action") == "rejected":
+            logger.warning(f"Article {argos_id} rejected for topic {topic_id} due to capacity")
+            continue  # Skip this topic
         
         logger.info(
             f"Created ABOUT link: {argos_id} -> {topic_id} | "
@@ -333,8 +345,8 @@ def add_article(
                     topic_analysis_snippet=topic_context["analysis_snippet"]
                 )
                 
-                # Create ABOUT link with rich classification properties
-                create_about_link_with_classification(
+                # Create ABOUT link with capacity management
+                capacity_result = create_about_link_with_classification(
                     article_id=argos_id,
                     topic_id=topic_id,
                     timeframe=classification.timeframe,
@@ -343,16 +355,22 @@ def add_article(
                     importance_trend=classification.importance_trend,
                     importance_catalyst=classification.importance_catalyst,
                     motivation=classification.motivation,
-                    implications=classification.implications
+                    implications=classification.implications,
+                    test=test
                 )
                 
-                logger.info(
-                    f"Created ABOUT link: {argos_id} -> {topic_id} (new topic) | "
-                    f"timeframe={classification.timeframe}"
-                )
+                # Handle rejection
+                if capacity_result.get("action") == "rejected":
+                    logger.warning(f"Article {argos_id} rejected for new topic {topic_id} due to capacity")
+                    # Don't trigger next steps for rejected article
+                else:
+                    logger.info(
+                        f"Created ABOUT link: {argos_id} -> {topic_id} (new topic) | "
+                        f"timeframe={classification.timeframe}"
+                    )
 
-                # Trigger next steps, relationship discovery and replacement analysis
-                trigger_next_steps(topic_id, argos_id)
+                    # Trigger next steps, relationship discovery and replacement analysis
+                    trigger_next_steps(topic_id, argos_id)
 
                 # Trigger analysis check for article ingestion
                 if not test:

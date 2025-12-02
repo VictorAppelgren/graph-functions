@@ -9,6 +9,9 @@ httpx==0.28.1
 trafilatura==2.0.0
 fpdf2==2.8.4
 neo4j==5.28.2
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+yfinance>=0.2.18
 
 [browser]
 playwright<2.0.0,>=1.40.0

@@ -31,6 +31,7 @@ from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from src.analysis.orchestration.should_rewrite import should_rewrite
 from src.custom_user_analysis.daily_rewrite_orchestrator import rewrite_all_user_strategies
 from src.llm.health_check import wait_for_llm_health
+from src.market_data.market_data_entrypoint import run_market_data_if_needed
 
 logger = app_logging.get_logger(__name__)
 
@@ -115,6 +116,9 @@ def run_pipeline() -> Dict[str, Any]:
         elif just_bootstrapped:
             logger.info("⏭️  Skipping daily rewrite (just bootstrapped)")
             just_bootstrapped = False  # Reset flag after first iteration
+
+        # Market data update (3x daily: 6am, 10am, 4pm)
+        run_market_data_if_needed()
 
         # Fresh fetch and selection each iteration
         topics = get_all_topics(

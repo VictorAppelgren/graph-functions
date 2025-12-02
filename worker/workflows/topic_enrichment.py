@@ -209,7 +209,8 @@ def enrich_topic_via_cold_storage(
     keywords = generate_keywords(topic_name, section)
     logger.info(f"Generated {len(keywords.list)} keywords for topic={topic_name} section={section}: {keywords.list}")
     if not keywords.list:
-        problem_log(Problem.ZERO_RESULTS, topic_id)
+        logger.warning(f"No keywords generated for topic={topic_id} section={section}")
+        master_statistics(enrichment_no_keywords=1)
         return 0
     
     # Get existing article IDs to exclude from search
@@ -223,7 +224,8 @@ def enrich_topic_via_cold_storage(
         exclude_ids=existing_ids,
     )
     if not candidates:
-        problem_log(Problem.ZERO_RESULTS, topic_id)
+        logger.warning(f"No candidates found for topic={topic_id} section={section}")
+        master_statistics(enrichment_no_candidates=1)
         return 0
 
     added = 0
@@ -263,6 +265,8 @@ def enrich_topic_via_cold_storage(
             master_log(f"Cold storage added | {article_id} -> {topic_id} | section={section}")
     
     if added == 0:
+        logger.warning(f"No articles added for topic={topic_id} section={section} despite {len(candidates)} candidates")
+        master_statistics(enrichment_no_articles_added=1)
         problem_log(Problem.ZERO_RESULTS, topic_id)
     
     logger.info(

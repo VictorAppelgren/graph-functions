@@ -29,7 +29,7 @@ from utils.app_logging import get_logger
 logger = get_logger(__name__)
 
 # --- Configuration ---
-TOKEN_THRESHOLD = 17  # Requests ≤2k tokens use local, >2k use external
+TOKEN_THRESHOLD = 1700  # Requests ≤2k tokens use local, >2k use external
 NANO_THRESHOLD = 999999  # Effectively disabled - don't use Nano
 NANO_COOLDOWN_SECONDS = 60  # 60 seconds cooldown between Nano calls
 LLM_CALL_TIMEOUT_S = 300.0

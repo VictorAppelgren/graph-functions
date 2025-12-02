@@ -22,13 +22,14 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from src.graph.neo4j_client import run_cypher, execute_write
+from src.observability.pipeline_logging import load_stats_file, master_statistics
 from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
 
 
-class MarketDataWorkflow:
-    """Workflow to process all topics for market data."""
+class MarketDataOrchestrator:
+    """Orchestrator to process all topics for market data."""
     
     def __init__(self):
         self.stats = {
@@ -225,10 +226,61 @@ class MarketDataWorkflow:
         logger.info(f"{'='*80}")
 
 
-def run_market_data_workflow(limit: Optional[int] = None) -> Dict[str, Any]:
-    """Run the market data workflow."""
-    workflow = MarketDataWorkflow()
-    return workflow.run(limit)
+def run_market_data_orchestrator(limit: Optional[int] = None) -> Dict[str, Any]:
+    """Run the market data orchestrator."""
+    orchestrator = MarketDataOrchestrator()
+    return orchestrator.run(limit)
+
+
+def run_market_data_if_needed() -> Optional[Dict[str, Any]]:
+    """
+    Check if market data update is needed and run if so.
+    
+    Updates run 3x daily:
+    - 6am: Pre-market data
+    - 10am: Market open data
+    - 4pm: Market close data
+    
+    Returns:
+        Stats dict if update ran, None if skipped
+    """
+    from datetime import datetime
+    
+    current_hour = datetime.now().hour
+    
+    # Only run at specific hours
+    if current_hour not in [6, 10, 16]:
+        return None
+    
+    # Check if already done this hour
+    try:
+        stats = load_stats_file()
+        if stats.today.custom_analysis.market_data_daily_update_completed:
+            logger.debug(f"Market data already updated today (hour {current_hour})")
+            return None
+    except Exception as e:
+        logger.warning(f"Could not load stats file: {e}, proceeding with update")
+    
+    # Set flag IMMEDIATELY to prevent other processes from starting
+    try:
+        master_statistics(market_data_daily_update_completed=True)
+        logger.info(f"📊 Market data update started (hour {current_hour}, flag set)")
+    except Exception as e:
+        logger.error(f"Failed to set market data flag: {e}")
+        return None
+    
+    # Run the orchestrator
+    try:
+        results = run_market_data_orchestrator()
+        logger.info(f"✅ Market data: {results['data_fetched']}/{results['total_topics']} topics updated")
+        logger.info(f"   • Existing tickers: {results['existing_tickers']}")
+        logger.info(f"   • LLM resolved: {results['llm_resolved']}")
+        logger.info(f"   • No market data: {results['no_ticker_appropriate']}")
+        logger.info(f"   • Errors: {results['errors']}")
+        return results
+    except Exception as e:
+        logger.error(f"❌ Market data update failed: {e}")
+        return None
 
 
 if __name__ == "__main__":
@@ -239,5 +291,5 @@ if __name__ == "__main__":
     parser.add_argument("--limit", type=int, help="Limit number of topics to process")
     args = parser.parse_args()
     
-    stats = run_market_data_workflow(args.limit)
-    print(f"\n🎯 Workflow completed with stats: {stats}")
+    stats = run_market_data_orchestrator(args.limit)
+    print(f"\n🎯 Orchestrator completed with stats: {stats}")

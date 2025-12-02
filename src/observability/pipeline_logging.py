@@ -200,7 +200,7 @@ def get_articles_by_topic_count() -> Dict[str, int]:
     """Get distribution of articles by number of topics."""
     query = """
     MATCH (a:Article)
-    OPTIONAL MATCH (a)-[:MAPPED_TO]->(t:Topic)
+    OPTIONAL MATCH (a)-[:ABOUT]->(t:Topic)
     WITH a, count(t) AS topic_count
     RETURN 
         sum(CASE WHEN topic_count = 0 THEN 1 ELSE 0 END) AS zero_topics,
@@ -440,14 +440,17 @@ class AnalysisStats(BaseModel):
 
 class MaintenanceStats(BaseModel):
     """Maintenance and quality workflow counters."""
-    articles_downgraded: int = 0  # Downgraded from tier 3→2 or 2→1
-    articles_archived: int = 0    # Set to importance=0 (all perspectives)
+    articles_downgraded: int = 0  # Existing article moved down a tier
+    articles_archived: int = 0    # Article moved to tier 0 (archive)
+    articles_downgraded_on_arrival: int = 0  # New article cascaded down tiers
+    articles_rejected_capacity: int = 0  # Article rejected due to capacity
 
 
 class CustomAnalysisStats(BaseModel):
     """Custom user strategy analysis counters."""
     custom_strategies_rewritten: int = 0
     daily_rewrite_completed: bool = False
+    market_data_daily_update_completed: bool = False
 
 
 class SystemStats(BaseModel):
@@ -492,6 +495,11 @@ class ProblemsSectionModel(BaseModel):
     missing_analysis_fields: int = 0
     capacity_guard_rejects: int = 0
     other_problems: int = 0
+    
+    # Enrichment-specific zero-result breakdowns
+    enrichment_no_keywords: int = 0  # LLM failed to generate keywords
+    enrichment_no_candidates: int = 0  # No articles matched keywords in storage
+    enrichment_no_articles_added: int = 0  # Candidates found but none passed relevance gate
 
 
 class StatsFileModel(BaseModel):
@@ -659,10 +667,13 @@ def master_statistics(
     # Maintenance workflow
     articles_downgraded: int = 0,
     articles_archived: int = 0,
+    articles_downgraded_on_arrival: int = 0,
+    articles_rejected_capacity: int = 0,
     
     # Custom analysis workflow
     custom_strategies_rewritten: int = 0,
     daily_rewrite_completed: bool = False,
+    market_data_daily_update_completed: bool = False,
     
     # System metrics
     errors: int = 0,
@@ -678,6 +689,11 @@ def master_statistics(
     topic_rejections_relevance_gate: int = 0,
     topic_rejections_importance_remove: int = 0,
     topic_rejections_capacity_guard: int = 0,
+    
+    # Enrichment failure breakdown
+    enrichment_no_keywords: int = 0,
+    enrichment_no_candidates: int = 0,
+    enrichment_no_articles_added: int = 0,
 ) -> None:
     # Load existing stats
     stats = load_stats_file()
@@ -734,12 +750,18 @@ def master_statistics(
         t.maintenance.articles_downgraded += articles_downgraded
     if articles_archived:
         t.maintenance.articles_archived += articles_archived
+    if articles_downgraded_on_arrival:
+        t.maintenance.articles_downgraded_on_arrival += articles_downgraded_on_arrival
+    if articles_rejected_capacity:
+        t.maintenance.articles_rejected_capacity += articles_rejected_capacity
     
     # Custom analysis workflow
     if custom_strategies_rewritten:
         t.custom_analysis.custom_strategies_rewritten += custom_strategies_rewritten
     if daily_rewrite_completed:  # Only set to True when explicitly passed
         t.custom_analysis.daily_rewrite_completed = True
+    if market_data_daily_update_completed:  # Only set to True when explicitly passed
+        t.custom_analysis.market_data_daily_update_completed = True
     
     # System metrics
     if errors:
@@ -766,6 +788,14 @@ def master_statistics(
         t.system.topic_rejections_importance_remove += topic_rejections_importance_remove
     if topic_rejections_capacity_guard:
         t.system.topic_rejections_capacity_guard += topic_rejections_capacity_guard
+    
+    # Enrichment failure breakdown
+    if enrichment_no_keywords:
+        stats.problems.enrichment_no_keywords += enrichment_no_keywords
+    if enrichment_no_candidates:
+        stats.problems.enrichment_no_candidates += enrichment_no_candidates
+    if enrichment_no_articles_added:
+        stats.problems.enrichment_no_articles_added += enrichment_no_articles_added
 
     stats.graph_state = get_graph_state_snapshot()
 
@@ -813,6 +843,11 @@ def master_log(
     llm_complex_calls: int = 0,
     llm_simple_long_context_calls: int = 0,
     llm_hallucinated_topic_ids: int = 0,
+    
+    # Enrichment failure breakdown
+    enrichment_no_keywords: int = 0,
+    enrichment_no_candidates: int = 0,
+    enrichment_no_articles_added: int = 0,
 ) -> None:
     """Log a completed action (success, removal, etc) to the master daily log and increment stats."""
     timestamp = datetime.now().isoformat(timespec="seconds")
@@ -847,6 +882,9 @@ def master_log(
         llm_complex_calls=llm_complex_calls,
         llm_simple_long_context_calls=llm_simple_long_context_calls,
         llm_hallucinated_topic_ids=llm_hallucinated_topic_ids,
+        enrichment_no_keywords=enrichment_no_keywords,
+        enrichment_no_candidates=enrichment_no_candidates,
+        enrichment_no_articles_added=enrichment_no_articles_added,
     )
 
 

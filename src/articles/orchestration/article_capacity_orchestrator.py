@@ -261,3 +261,297 @@ def make_room_for_article(
         "new_importance": decision.new_importance,
         "motivation": decision.motivation
     }
+
+
+# ============================================================================
+# NEW: Two-Stage Capacity Management Functions
+# ============================================================================
+
+def check_capacity(topic_id: str, timeframe: str, tier: int) -> dict:
+    """
+    Check capacity at this tier.
+    
+    AUTO-CLEANUP: If tier is over capacity, automatically downgrades
+    weakest articles using LLM quality assessment until within limits.
+    This ensures the system self-heals over time.
+    
+    Returns:
+        {
+            "has_room": bool,
+            "count": int,
+            "max": int,
+            "articles": list[dict]
+        }
+    """
+    max_allowed = TIER_LIMITS_PER_TIMEFRAME_PERSPECTIVE[tier]
+    
+    # Get articles at EXACTLY this tier (max perspective = tier, not higher)
+    query = """
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+    WHERE r.timeframe = $timeframe
+      AND (r.importance_risk = $tier 
+           OR r.importance_opportunity = $tier
+           OR r.importance_trend = $tier
+           OR r.importance_catalyst = $tier)
+      AND NOT (r.importance_risk > $tier 
+               OR r.importance_opportunity > $tier
+               OR r.importance_trend > $tier
+               OR r.importance_catalyst > $tier)
+      AND NOT (r.importance_risk = 0 
+               AND r.importance_opportunity = 0 
+               AND r.importance_trend = 0 
+               AND r.importance_catalyst = 0)
+    RETURN 
+        a.id as id,
+        a.summary as summary,
+        a.source as source,
+        a.published_at as published_at
+    ORDER BY a.published_at DESC
+    """
+    
+    articles = run_cypher(query, {
+        "topic_id": topic_id,
+        "timeframe": timeframe,
+        "tier": tier
+    })
+    
+    count = len(articles) if articles else 0
+    
+    # ============================================================================
+    # AUTO-CLEANUP: If over capacity, use LLM to downgrade weakest articles
+    # ============================================================================
+    if count > max_allowed:
+        excess = count - max_allowed
+        logger.warning(
+            f"🔧 AUTO-CLEANUP: Tier {tier} over capacity ({count}/{max_allowed}). "
+            f"Using LLM to downgrade {excess} weakest articles..."
+        )
+        
+        # Import here to avoid circular dependency
+        from src.graph.ops.link import get_existing_article_data, remove_link
+        
+        # Downgrade excess articles one by one using LLM quality assessment
+        for i in range(excess):
+            # Re-query each time (list changes as we downgrade)
+            current_articles = run_cypher(query, {
+                "topic_id": topic_id,
+                "timeframe": timeframe,
+                "tier": tier
+            })
+            
+            if len(current_articles) <= max_allowed:
+                logger.info(f"✅ Auto-cleanup complete after {i} downgrades")
+                break  # Done!
+            
+            # Use LLM to pick weakest article
+            weakest_result = pick_weakest_article(
+                topic_id=topic_id,
+                timeframe=timeframe,
+                tier=tier,
+                existing_articles=current_articles,
+                test=False  # Real LLM call for quality assessment
+            )
+            
+            weakest_id = weakest_result["downgrade"]
+            reasoning = weakest_result.get("reasoning", "No reason provided")
+            
+            logger.info(
+                f"  [{i+1}/{excess}] Downgrading weakest: {weakest_id} "
+                f"(Reason: {reasoning[:100]}...)"
+            )
+            
+            # Get article data for recursive downgrade
+            article_data = get_existing_article_data(weakest_id, topic_id)
+            if not article_data:
+                logger.error(f"Could not get data for {weakest_id}, skipping")
+                continue
+            
+            # Remove from current tier
+            remove_link(weakest_id, topic_id)
+            master_statistics(articles_downgraded=1)
+            
+            # Recursively add to tier-1 (will cascade if needed)
+            from src.graph.ops.link import add_article_with_capacity_check
+            downgrade_result = add_article_with_capacity_check(
+                article_id=weakest_id,
+                topic_id=topic_id,
+                timeframe=timeframe,
+                initial_tier=tier - 1,
+                article_summary=article_data["summary"],
+                article_source=article_data["source"],
+                article_published=article_data["published_at"],
+                motivation=article_data.get("motivation", "Downgraded from higher tier"),
+                implications=article_data.get("implications", "Lower priority"),
+                test=False
+            )
+            
+            logger.info(f"    → Placed at tier {downgrade_result.get('tier', 'unknown')}")
+        
+        logger.info(f"✅ Auto-cleanup complete. Downgraded {excess} articles from tier {tier}.")
+        
+        # Re-query after cleanup
+        articles = run_cypher(query, {
+            "topic_id": topic_id,
+            "timeframe": timeframe,
+            "tier": tier
+        })
+        count = len(articles)
+    
+    return {
+        "has_room": count < max_allowed,
+        "count": count,
+        "max": max_allowed,
+        "articles": articles or []
+    }
+
+
+def gate_decision(
+    topic_id: str,
+    timeframe: str,
+    tier: int,
+    new_article_summary: str,
+    new_article_source: str,
+    new_article_published: str,
+    existing_articles: list[dict],
+    test: bool = False
+) -> dict:
+    """
+    Stage 1: Gate decision with reject option.
+    
+    Returns:
+        {
+            "downgrade": str,  # "NEW" or existing ID
+            "reject": bool,
+            "reasoning": str
+        }
+    """
+    if test:
+        return {"downgrade": "NEW", "reject": False, "reasoning": "Test mode"}
+    
+    from src.llm.llm_router import get_llm
+    from src.llm.config import ModelTier
+    from src.llm.sanitizer import run_llm_decision, DowngradeDecision
+    from src.articles.prompts.article_capacity_manager import ARTICLE_CAPACITY_MANAGER_PROMPT
+    from src.llm.prompts.system_prompts import SYSTEM_MISSION
+    from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+    
+    topic_info = get_topic_by_id(topic_id)
+    
+    # Format existing articles
+    articles_formatted = []
+    for i, article in enumerate(existing_articles, 1):
+        articles_formatted.append(
+            f"{i}. ID: {article['id']}\n"
+            f"   Source: {article.get('source', 'unknown')}\n"
+            f"   Published: {article.get('published_at', 'unknown')}\n"
+            f"   Summary: {article['summary'][:200]}..."
+        )
+    
+    allowed_ids = ", ".join([a["id"] for a in existing_articles])
+    
+    prompt = ARTICLE_CAPACITY_MANAGER_PROMPT.format(
+        system_mission=SYSTEM_MISSION,
+        architecture_context=TOPIC_ARCHITECTURE_CONTEXT,
+        topic_name=topic_info["name"],
+        timeframe=timeframe,
+        tier=tier,
+        next_tier=tier - 1,
+        count=len(existing_articles),
+        max_allowed=TIER_LIMITS_PER_TIMEFRAME_PERSPECTIVE[tier],
+        new_source=new_article_source,
+        new_published=new_article_published,
+        new_summary=new_article_summary,
+        existing_articles="\n\n".join(articles_formatted),
+        allowed_ids=allowed_ids
+    )
+    
+    llm = get_llm(ModelTier.SIMPLE)
+    decision = run_llm_decision(chain=llm, prompt=prompt, model=DowngradeDecision)
+    
+    # Validate downgrade ID
+    valid_ids = {a["id"] for a in existing_articles} | {"NEW"}
+    if decision.downgrade not in valid_ids:
+        logger.warning(f"LLM returned invalid ID: {decision.downgrade}, defaulting to NEW")
+        decision.downgrade = "NEW"
+    
+    logger.info(
+        f"Gate decision for tier {tier}: "
+        f"downgrade={decision.downgrade}, reject={decision.reject} - {decision.reasoning}"
+    )
+    
+    return {
+        "downgrade": decision.downgrade,
+        "reject": decision.reject,
+        "reasoning": decision.reasoning
+    }
+
+
+def pick_weakest_article(
+    topic_id: str,
+    timeframe: str,
+    tier: int,
+    existing_articles: list[dict],
+    test: bool = False
+) -> dict:
+    """
+    Stage 2: Pick weakest article (no reject option).
+    
+    Returns:
+        {
+            "downgrade": str,  # Existing article ID
+            "reasoning": str
+        }
+    """
+    if test:
+        return {
+            "downgrade": existing_articles[0]["id"],
+            "reasoning": "Test mode - picked first article"
+        }
+    
+    from src.llm.llm_router import get_llm
+    from src.llm.config import ModelTier
+    from src.llm.sanitizer import run_llm_decision, DowngradeDecision
+    from src.articles.prompts.article_capacity_pick_weakest import ARTICLE_CAPACITY_PICK_WEAKEST_PROMPT
+    from src.llm.prompts.system_prompts import SYSTEM_MISSION
+    from src.llm.prompts.topic_architecture_context import TOPIC_ARCHITECTURE_CONTEXT
+    
+    topic_info = get_topic_by_id(topic_id)
+    
+    # Format existing articles
+    articles_formatted = []
+    for i, article in enumerate(existing_articles, 1):
+        articles_formatted.append(
+            f"{i}. ID: {article['id']}\n"
+            f"   Source: {article.get('source', 'unknown')}\n"
+            f"   Published: {article.get('published_at', 'unknown')}\n"
+            f"   Summary: {article['summary'][:200]}..."
+        )
+    
+    allowed_ids = ", ".join([a["id"] for a in existing_articles])
+    
+    prompt = ARTICLE_CAPACITY_PICK_WEAKEST_PROMPT.format(
+        system_mission=SYSTEM_MISSION,
+        architecture_context=TOPIC_ARCHITECTURE_CONTEXT,
+        topic_name=topic_info["name"],
+        timeframe=timeframe,
+        tier=tier,
+        next_tier=tier - 1,
+        existing_articles="\n\n".join(articles_formatted),
+        allowed_ids=allowed_ids
+    )
+    
+    llm = get_llm(ModelTier.SIMPLE)
+    decision = run_llm_decision(chain=llm, prompt=prompt, model=DowngradeDecision)
+    
+    # Validate downgrade ID (must be existing, not NEW)
+    valid_ids = {a["id"] for a in existing_articles}
+    if decision.downgrade not in valid_ids:
+        logger.warning(f"LLM returned invalid ID: {decision.downgrade}, picking first article")
+        decision.downgrade = existing_articles[0]["id"]
+    
+    logger.info(f"Picked weakest article: {decision.downgrade} - {decision.reasoning}")
+    
+    return {
+        "downgrade": decision.downgrade,
+        "reasoning": decision.reasoning
+    }

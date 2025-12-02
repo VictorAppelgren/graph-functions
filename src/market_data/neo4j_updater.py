@@ -35,8 +35,7 @@ def create_neo4j_update_draft(topic_id: str, snapshot: MarketSnapshot) -> Neo4jU
     neo4j_properties.update({
         "market_data_ticker": snapshot.ticker,
         "market_data_asset_class": snapshot.asset_class.value,
-        "market_data_last_updated": str(snapshot.updated_at),
-        "market_data_source": snapshot.source
+        "market_data_last_updated": str(snapshot.updated_at)
     })
     
     return Neo4jUpdate(
@@ -148,7 +147,6 @@ def load_market_data_from_neo4j(topic_id: str) -> Dict[str, Any]:
     ticker = all_props.get("market_data_ticker", "Unknown")
     asset_class = all_props.get("market_data_asset_class", "unknown")
     last_update = all_props.get("market_data_last_updated", "Unknown")
-    source = all_props.get("market_data_source", "unknown")
     
     logger.info(f"✅ Loaded {len(market_data)} market data fields for {topic_id}")
     
@@ -156,6 +154,5 @@ def load_market_data_from_neo4j(topic_id: str) -> Dict[str, Any]:
         "ticker": ticker,
         "asset_class": asset_class,
         "market_data": market_data,
-        "last_update": last_update,
-        "source": source
+        "last_update": last_update
     }

@@ -350,37 +350,32 @@ def create_about_link_with_classification(
     importance_trend: int,
     importance_catalyst: int,
     motivation: str,
-    implications: str
-) -> None:
+    implications: str,
+    test: bool = False
+) -> dict:
     """
-    Create ABOUT relationship with rich classification properties.
+    Create ABOUT relationship with two-stage capacity management.
     
-    This is the NEW way - stores classification on relationship, not article node.
-    Each article-topic relationship gets its own context-aware classification.
+    This function now includes recursive capacity checking that will:
+    1. Check if tier has room
+    2. If full, run gate decision (accept/downgrade_new/reject)
+    3. If downgrading existing article, recursively add it to lower tier
+    4. Continue until all articles find their correct tier
     
     Args:
         article_id: Article ID
         topic_id: Topic ID
         timeframe: "fundamental", "medium", or "current"
-        importance_risk: Risk importance score (0-10)
-        importance_opportunity: Opportunity importance score (0-10)
-        importance_trend: Trend importance score (0-10)
-        importance_catalyst: Catalyst importance score (0-10)
-        motivation: Why this article matters for THIS topic (1-2 sentences)
-        implications: What this could mean for THIS topic going forward (1-2 sentences)
+        importance_risk: Risk importance score (0-3)
+        importance_opportunity: Opportunity importance score (0-3)
+        importance_trend: Trend importance score (0-3)
+        importance_catalyst: Catalyst importance score (0-3)
+        motivation: Why this article matters for THIS topic
+        implications: What this could mean for THIS topic
+        test: If True, skip capacity checks
     
-    Example:
-        >>> create_about_link_with_classification(
-        ...     article_id="ABC123",
-        ...     topic_id="spx",
-        ...     timeframe="current",
-        ...     importance_risk=8,
-        ...     importance_opportunity=2,
-        ...     importance_trend=5,
-        ...     importance_catalyst=9,
-        ...     motivation="Powell's hawkish tone signals rates staying higher...",
-        ...     implications="Could trigger 5-8% correction as markets reprice..."
-        ... )
+    Returns:
+        {"action": "added"|"archived"|"rejected"|"duplicate", "tier": int}
     """
     from src.graph.neo4j_client import run_cypher
     
@@ -394,17 +389,227 @@ def create_about_link_with_classification(
     if existing:
         logger.info(f"ABOUT link already exists: {article_id} -> {topic_id}")
         master_statistics(duplicates_skipped=1)
-        return
+        return {"action": "duplicate"}
     
-    # Create new link with all classification properties
+    # Calculate initial tier
+    initial_tier = max(importance_risk, importance_opportunity, importance_trend, importance_catalyst)
+    
+    # Get article metadata for capacity check
+    article_query = """
+    MATCH (a:Article {id: $article_id})
+    RETURN a.summary as summary, a.source as source, a.published_at as published_at
+    """
+    article_result = run_cypher(article_query, {"article_id": article_id})
+    
+    if not article_result:
+        logger.error(f"Article {article_id} not found")
+        return {"action": "error"}
+    
+    article_data = article_result[0]
+    
+    # Add with capacity check (recursive)
+    result = add_article_with_capacity_check(
+        article_id=article_id,
+        topic_id=topic_id,
+        timeframe=timeframe,
+        initial_tier=initial_tier,
+        article_summary=article_data["summary"],
+        article_source=article_data["source"],
+        article_published=article_data["published_at"],
+        motivation=motivation,
+        implications=implications,
+        test=test
+    )
+    
+    return result
+
+
+# ============================================================================
+# NEW: Recursive Capacity Management Functions
+# ============================================================================
+
+def add_article_with_capacity_check(
+    article_id: str,
+    topic_id: str,
+    timeframe: str,
+    initial_tier: int,
+    article_summary: str,
+    article_source: str,
+    article_published: str,
+    motivation: str,
+    implications: str,
+    test: bool = False
+) -> dict:
+    """
+    Recursively add article with two-stage capacity management.
+    
+    CRITICAL: When downgrading an existing article, we recursively call
+    try_add_at_tier() which will check capacity at the lower tier and
+    potentially trigger another downgrade cascade.
+    
+    Returns:
+        {"action": "added", "tier": int}
+        {"action": "archived", "tier": 0}
+        {"action": "rejected"}
+    """
+    from src.articles.orchestration.article_capacity_orchestrator import (
+        check_capacity,
+        gate_decision
+    )
+    
+    def try_add_at_tier(
+        aid: str,
+        tier: int,
+        summary: str,
+        source: str,
+        published: str,
+        motivation_text: str,
+        implications_text: str
+    ) -> dict:
+        """
+        Try to add article at this tier.
+        
+        This function is RECURSIVE and will cascade down tiers
+        until the article finds a home or reaches tier 0 (archive).
+        """
+        
+        if tier == 0:
+            # Tier 0 = archive, unlimited capacity
+            logger.info(f"Archiving article {aid} at tier 0")
+            try:
+                create_link_at_tier(aid, topic_id, timeframe, 0, motivation_text, implications_text)
+                master_statistics(articles_archived=1)
+                return {"action": "archived", "tier": 0}
+            except Exception as e:
+                logger.error(f"Failed to archive article {aid}: {e}")
+                master_statistics(errors=1)
+                return {"action": "error", "tier": 0}
+        
+        # Check capacity at this tier
+        capacity_info = check_capacity(topic_id, timeframe, tier)
+        
+        if capacity_info["has_room"]:
+            # Room available - just add it
+            logger.info(f"Adding article {aid} at tier {tier} (room available)")
+            create_link_at_tier(aid, topic_id, timeframe, tier, motivation_text, implications_text)
+            master_statistics(about_links_added=1)
+            return {"action": "added", "tier": tier}
+        
+        # Tier is full - Stage 1: Gate Decision
+        logger.info(
+            f"Tier {tier} full ({capacity_info['count']}/{capacity_info['max']}) "
+            f"- running gate decision for article {aid}"
+        )
+        
+        gate_result = gate_decision(
+            topic_id=topic_id,
+            timeframe=timeframe,
+            tier=tier,
+            new_article_summary=summary,
+            new_article_source=source,
+            new_article_published=published,
+            existing_articles=capacity_info["articles"],
+            test=test
+        )
+        
+        # Check for rejection
+        if gate_result["reject"]:
+            logger.warning(f"Article {aid} rejected at tier {tier}: {gate_result['reasoning']}")
+            master_statistics(articles_rejected_capacity=1)
+            return {"action": "rejected"}
+        
+        # Not rejected - check who to downgrade
+        downgrade_id = gate_result["downgrade"]
+        
+        if downgrade_id == "NEW":
+            # Downgrade new article - try next tier
+            logger.info(
+                f"Article {aid} downgraded from tier {tier} to tier {tier-1}: "
+                f"{gate_result['reasoning']}"
+            )
+            master_statistics(articles_downgraded_on_arrival=1)
+            return try_add_at_tier(
+                aid, tier - 1, summary, source, published, 
+                motivation_text, implications_text
+            )
+        
+        # Downgrade existing article - THIS IS WHERE THE CASCADE HAPPENS
+        logger.info(
+            f"Downgrading existing article {downgrade_id} from tier {tier} to tier {tier-1}: "
+            f"{gate_result['reasoning']}"
+        )
+        
+        # Get existing article data
+        existing_data = get_existing_article_data(downgrade_id, topic_id)
+        
+        if not existing_data:
+            logger.error(f"Could not get data for article {downgrade_id}, aborting")
+            return {"action": "error"}
+        
+        # Remove existing article from current tier
+        remove_link(downgrade_id, topic_id)
+        master_statistics(articles_downgraded=1)
+        
+        # CRITICAL: Recursively add existing article to tier-1
+        # This will check capacity at tier-1 and potentially trigger
+        # another downgrade cascade if tier-1 is also full!
+        logger.info(
+            f"Recursively adding downgraded article {downgrade_id} to tier {tier-1}"
+        )
+        
+        existing_result = try_add_at_tier(
+            aid=downgrade_id,
+            tier=tier - 1,
+            summary=existing_data["summary"],
+            source=existing_data["source"],
+            published=existing_data["published_at"],
+            motivation_text=existing_data["motivation"],
+            implications_text=existing_data["implications"]
+        )
+        
+        logger.info(
+            f"Downgraded article {downgrade_id} placed at tier {existing_result.get('tier', 'unknown')}: "
+            f"{existing_result}"
+        )
+        
+        # Now we have room at current tier - add new article
+        logger.info(f"Adding article {aid} at tier {tier} (made room by downgrading {downgrade_id})")
+        create_link_at_tier(aid, topic_id, timeframe, tier, motivation_text, implications_text)
+        master_statistics(about_links_added=1)
+        return {"action": "added", "tier": tier}
+    
+    # Start recursive process
+    logger.info(f"Starting capacity check for article {article_id} at tier {initial_tier}")
+    return try_add_at_tier(
+        aid=article_id,
+        tier=initial_tier,
+        summary=article_summary,
+        source=article_source,
+        published=article_published,
+        motivation_text=motivation,
+        implications_text=implications
+    )
+
+
+def create_link_at_tier(
+    article_id: str,
+    topic_id: str,
+    timeframe: str,
+    tier: int,
+    motivation: str,
+    implications: str
+):
+    """Create ABOUT link with uniform importance scores at tier."""
+    from src.graph.neo4j_client import run_cypher
+    
     create_query = """
     MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
     CREATE (a)-[:ABOUT {
         timeframe: $timeframe,
-        importance_risk: $importance_risk,
-        importance_opportunity: $importance_opportunity,
-        importance_trend: $importance_trend,
-        importance_catalyst: $importance_catalyst,
+        importance_risk: $tier,
+        importance_opportunity: $tier,
+        importance_trend: $tier,
+        importance_catalyst: $tier,
         motivation: $motivation,
         implications: $implications,
         created_at: datetime()
@@ -415,20 +620,45 @@ def create_about_link_with_classification(
         "article_id": article_id,
         "topic_id": topic_id,
         "timeframe": timeframe,
-        "importance_risk": importance_risk,
-        "importance_opportunity": importance_opportunity,
-        "importance_trend": importance_trend,
-        "importance_catalyst": importance_catalyst,
+        "tier": tier,
         "motivation": motivation,
         "implications": implications
     })
     
-    # Calculate overall importance for logging
-    overall_importance = max(importance_risk, importance_opportunity, importance_trend, importance_catalyst)
+    logger.info(f"Created ABOUT link: {article_id} -> {topic_id} | tier={tier}")
+
+
+def get_existing_article_data(article_id: str, topic_id: str) -> dict:
+    """Get existing article data from relationship."""
+    from src.graph.neo4j_client import run_cypher
     
-    logger.info(
-        f"Created ABOUT link: {article_id} -> {topic_id} | "
-        f"timeframe={timeframe} | importance={overall_importance} "
-        f"(R:{importance_risk} O:{importance_opportunity} T:{importance_trend} C:{importance_catalyst})"
-    )
-    master_statistics(about_links_added=1)
+    query = """
+    MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic {id: $topic_id})
+    RETURN 
+        a.summary as summary,
+        a.source as source,
+        a.published_at as published_at,
+        r.motivation as motivation,
+        r.implications as implications
+    """
+    
+    result = run_cypher(query, {"article_id": article_id, "topic_id": topic_id})
+    
+    if not result:
+        logger.warning(f"No data found for article {article_id} -> topic {topic_id}")
+        return {}
+    
+    return result[0]
+
+
+def remove_link(article_id: str, topic_id: str):
+    """Remove ABOUT relationship."""
+    from src.graph.neo4j_client import run_cypher
+    
+    query = """
+    MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic {id: $topic_id})
+    DELETE r
+    """
+    
+    run_cypher(query, {"article_id": article_id, "topic_id": topic_id})
+    logger.info(f"Removed ABOUT link: {article_id} -> {topic_id}")

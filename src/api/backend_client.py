@@ -203,3 +203,65 @@ def update_strategy(username: str, strategy_id: str, strategy_data: Dict[str, An
     except Exception as e:
         print(f"⚠️  Failed to update strategy in Backend API: {e}")
         return False
+
+
+def save_strategy_topics(username: str, strategy_id: str, topics: Dict[str, List[str]]) -> bool:
+    """Save topic mapping for strategy"""
+    try:
+        response = requests.post(
+            f"{BACKEND_URL}/users/{username}/strategies/{strategy_id}/topics",
+            json=topics,
+            headers={"X-API-Key": API_KEY} if API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"⚠️  Failed to save topics to Backend API: {e}")
+        return False
+
+
+def get_strategy_topics(username: str, strategy_id: str) -> Optional[Dict[str, List[str]]]:
+    """Get topic mapping for strategy"""
+    try:
+        response = requests.get(
+            f"{BACKEND_URL}/users/{username}/strategies/{strategy_id}/topics",
+            headers={"X-API-Key": API_KEY} if API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        print(f"⚠️  Failed to get topics from Backend API: {e}")
+        return None
+
+
+def save_strategy_analysis(username: str, strategy_id: str, analysis: Dict[str, Any]) -> bool:
+    """Save analysis results (updates latest + appends to history)"""
+    try:
+        response = requests.post(
+            f"{BACKEND_URL}/users/{username}/strategies/{strategy_id}/analysis",
+            json=analysis,
+            headers={"X-API-Key": API_KEY} if API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"⚠️  Failed to save analysis to Backend API: {e}")
+        return False
+
+
+def get_latest_analysis(username: str, strategy_id: str) -> Optional[Dict[str, Any]]:
+    """Get latest analysis for strategy"""
+    try:
+        response = requests.get(
+            f"{BACKEND_URL}/users/{username}/strategies/{strategy_id}/analysis",
+            headers={"X-API-Key": API_KEY} if API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        print(f"⚠️  Failed to get analysis from Backend API: {e}")
+        return None

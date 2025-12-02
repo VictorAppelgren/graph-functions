@@ -97,6 +97,24 @@ class ArticleCapacityDecision(BaseModel):
     target_article_id: Optional[str] = None
     new_importance: Optional[int] = Field(default=None, ge=0, le=2)  # 0=archive, 1=filler, 2=standard
 
+class DowngradeDecision(BaseModel):
+    """
+    Decision for article capacity management.
+    
+    Stage 1 (Gate): Can reject or pick article to downgrade (NEW or existing)
+    Stage 2 (Pick Weakest): Must pick existing article to downgrade
+    """
+    downgrade: str = Field(
+        description="Article ID to downgrade. Can be 'NEW' or existing article ID."
+    )
+    reject: bool = Field(
+        default=False,
+        description="If True, reject new article completely. Only used in Stage 1."
+    )
+    reasoning: str = Field(
+        description="Brief explanation of decision"
+    )
+
 class WideQueryModel(BaseModel):
     motivation: str = ""
     query: str = ""

@@ -45,8 +45,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from graph-functions/.env
+ENV_FILE = Path(PROJECT_ROOT) / ".env"
+load_dotenv(ENV_FILE)
 
 # ============ CONFIGURATION ============
 
@@ -144,6 +145,15 @@ class ArticleBidirectionalSyncer:
             logger.info(f"Local articles: {len(local_ids)}")
             logger.info(f"Cloud articles: {len(cloud_ids)}")
             
+            # SAFETY CHECK: Prevent uploading everything if cloud appears empty
+            if len(local_ids) > 1000 and len(cloud_ids) < len(local_ids) * 0.5:
+                logger.error("🚨 SAFETY CHECK FAILED!")
+                logger.error(f"   Local: {len(local_ids)} articles")
+                logger.error(f"   Cloud: {len(cloud_ids)} articles (< 50% of local)")
+                logger.error("   This suggests server error, not actual state.")
+                logger.error("   Aborting sync to prevent mass upload!")
+                raise Exception("Cloud article count suspiciously low - server may be unavailable")
+            
             # Find differences
             only_local = local_ids - cloud_ids
             only_cloud = cloud_ids - local_ids
@@ -227,6 +237,13 @@ class ArticleBidirectionalSyncer:
                 if response.status_code != 200:
                     logger.error(f"Failed to get IDs from {url}: {response.status_code}")
                     logger.error(f"Response: {response.text[:200]}")
+                    
+                    # Detect server unavailable (502/503) - don't assume empty!
+                    if response.status_code in [502, 503, 504]:
+                        logger.error("⚠️  Server unavailable (502/503/504) - aborting sync to prevent data loss!")
+                        logger.error("   Server may be restarting. Wait and try again.")
+                        raise Exception(f"Server unavailable ({response.status_code})")
+                    
                     break
                 
                 data = response.json()
@@ -366,6 +383,97 @@ class ArticleBidirectionalSyncer:
             logger.error(f"Error downloading {article_id}: {e}")
             self.stats["errors"] += 1
             return False
+
+
+# ============ STATS/LOGS SYNC (Cloud → Local Only) ============
+
+class StatsLogsSyncer:
+    """Syncs stats and logs from cloud to local (one-way download)"""
+    
+    def __init__(self, cloud_api: str, local_dir: Path, api_key: str = None, dry_run: bool = False):
+        self.cloud_api = cloud_api
+        self.local_dir = local_dir
+        self.api_key = api_key
+        self.dry_run = dry_run
+        self.headers = {"X-API-Key": api_key} if api_key else {}
+    
+    def sync_stats(self):
+        """Download stats files from server"""
+        logger.info("📊 Syncing stats files...")
+        stats_dir = self.local_dir / "master_stats"
+        stats_dir.mkdir(parents=True, exist_ok=True)
+        
+        try:
+            # Get list of files
+            response = requests.get(
+                f"{self.cloud_api}/admin/stats/list",
+                headers=self.headers,
+                timeout=10
+            )
+            response.raise_for_status()
+            files = response.json().get("files", [])
+            
+            logger.info(f"   Found {len(files)} stats files on server")
+            
+            for filename in files:
+                if self.dry_run:
+                    logger.info(f"   [DRY RUN] Would download: {filename}")
+                    continue
+                
+                # Download file
+                response = requests.get(
+                    f"{self.cloud_api}/admin/stats/download/{filename}",
+                    headers=self.headers,
+                    timeout=10
+                )
+                if response.status_code == 200:
+                    file_path = stats_dir / filename
+                    file_path.write_bytes(response.content)
+                    logger.debug(f"   ✅ {filename}")
+            
+            logger.info(f"✅ Stats sync complete")
+        except Exception as e:
+            logger.error(f"Stats sync failed: {e}")
+    
+    def sync_logs(self):
+        """Download log files from server (last 7 days only)"""
+        logger.info("📝 Syncing log files...")
+        logs_dir = self.local_dir / "master_logs"
+        logs_dir.mkdir(parents=True, exist_ok=True)
+        
+        try:
+            # Get list of files
+            response = requests.get(
+                f"{self.cloud_api}/admin/logs/list",
+                headers=self.headers,
+                timeout=10
+            )
+            response.raise_for_status()
+            files = response.json().get("files", [])
+            
+            # Only sync recent logs (last 7 days)
+            recent_files = files[-7:] if len(files) > 7 else files
+            logger.info(f"   Found {len(files)} log files, syncing last {len(recent_files)}")
+            
+            for filename in recent_files:
+                if self.dry_run:
+                    logger.info(f"   [DRY RUN] Would download: {filename}")
+                    continue
+                
+                # Download file
+                response = requests.get(
+                    f"{self.cloud_api}/admin/logs/download/{filename}",
+                    headers=self.headers,
+                    timeout=10
+                )
+                if response.status_code == 200:
+                    file_path = logs_dir / filename
+                    file_path.write_bytes(response.content)
+                    logger.debug(f"   ✅ {filename}")
+            
+            logger.info(f"✅ Logs sync complete")
+        except Exception as e:
+            logger.error(f"Logs sync failed: {e}")
 
 
 # ============ NEO4J BIDIRECTIONAL SYNC ============
@@ -767,6 +875,16 @@ def run_continuous_sync(interval: int = 300):
             )
             article_syncer.sync()
             
+            # Stats/Logs sync (cloud → local only)
+            stats_logs_syncer = StatsLogsSyncer(
+                CLOUD_BACKEND_API,
+                Path(PROJECT_ROOT),
+                api_key=API_KEY,
+                dry_run=False
+            )
+            stats_logs_syncer.sync_stats()
+            stats_logs_syncer.sync_logs()
+            
             logger.info(f"✅ Sync #{sync_count} complete")
         except Exception as e:
             logger.error(f"❌ Sync #{sync_count} failed: {e}", exc_info=True)
@@ -854,6 +972,20 @@ def main():
                 dry_run=args.dry_run
             )
             neo4j_syncer.sync()
+        
+        # Sync Stats/Logs (cloud → local only)
+        if sync_all or sync_articles:  # Include with article sync
+            logger.info("=" * 50)
+            logger.info("📊 Syncing Stats & Logs (Cloud → Local)")
+            logger.info("=" * 50)
+            stats_logs_syncer = StatsLogsSyncer(
+                CLOUD_BACKEND_API,
+                Path(PROJECT_ROOT),
+                api_key=API_KEY,
+                dry_run=args.dry_run
+            )
+            stats_logs_syncer.sync_stats()
+            stats_logs_syncer.sync_logs()
         
         # Update sync state
         if not args.dry_run:

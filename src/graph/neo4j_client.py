@@ -3,6 +3,10 @@ Minimal Neo4j database driver utility for Argos Graph.
 Centralized connection point for all Neo4j operations.
 """
 
+# Load .env file FIRST before reading environment variables
+from utils.env_loader import load_env
+load_env()
+
 import os
 import logging
 from collections.abc import Mapping
