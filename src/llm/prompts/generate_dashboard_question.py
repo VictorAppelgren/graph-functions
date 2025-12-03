@@ -3,7 +3,8 @@ Generate a single actionable question for the dashboard based on strategy analys
 SUPER SIMPLE: One question, risk-focused, clickable to start chat.
 """
 
-from src.llm.llm_openai import call_llm
+from src.llm.llm_router import get_llm
+from src.llm.config import ModelTier
 
 
 def generate_dashboard_question(strategy_text: str, analysis_dict: dict, asset_name: str) -> str:
@@ -19,12 +20,20 @@ def generate_dashboard_question(strategy_text: str, analysis_dict: dict, asset_n
         str: Single question (max 150 chars)
     """
     
-    # Combine all analysis sections
-    analysis_text = "\n\n".join([
-        f"## {section.replace('_', ' ').title()}\n{content}"
-        for section, content in analysis_dict.items()
-        if content and len(str(content).strip()) > 0
-    ])
+    # Extract key summary from analysis
+    risk_summary = ""
+    opp_summary = ""
+    
+    if "risk_assessment" in analysis_dict and isinstance(analysis_dict["risk_assessment"], dict):
+        risk_summary = analysis_dict["risk_assessment"].get("key_risk_summary", "")
+    
+    if "opportunity_assessment" in analysis_dict and isinstance(analysis_dict["opportunity_assessment"], dict):
+        opp_summary = analysis_dict["opportunity_assessment"].get("key_summary", "")
+    
+    if "final_analysis" in analysis_dict and isinstance(analysis_dict["final_analysis"], dict):
+        exec_summary = analysis_dict["final_analysis"].get("executive_summary", "")
+    else:
+        exec_summary = ""
     
     prompt = f"""You are a risk-focused financial analyst. Generate ONE actionable question for the user's dashboard.
 
@@ -33,8 +42,14 @@ ASSET: {asset_name}
 USER'S STRATEGY:
 {strategy_text}
 
-LATEST ANALYSIS:
-{analysis_text}
+KEY RISKS:
+{risk_summary}
+
+KEY OPPORTUNITIES:
+{opp_summary}
+
+EXECUTIVE SUMMARY:
+{exec_summary}
 
 Generate ONE question that:
 - Is specific to their strategy and the latest analysis
@@ -46,16 +61,12 @@ Generate ONE question that:
 Output ONLY the question, nothing else. No quotes, no explanation.
 """
     
-    question = call_llm(
-        system_prompt="You generate concise, actionable questions for financial dashboards.",
-        user_prompt=prompt,
-        model="gpt-4o-mini",
-        temperature=0.7,
-        max_tokens=50
-    )
+    llm = get_llm(tier=ModelTier.MEDIUM)
+    response = llm.invoke(prompt)
+    question = response.content.strip()
     
     # Clean up
-    question = question.strip().strip('"').strip("'")
+    question = question.strip('"').strip("'")
     
     # Truncate if too long
     if len(question) > 150:

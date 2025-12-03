@@ -66,10 +66,18 @@ def run_strategy_analysis(
             "final_analysis": {...}
         }
     """
-    logger.info(f"Running strategy analysis | user={user_id} strategy={strategy_id}")
+    logger.info("="*80)
+    logger.info(f"🚀 STRATEGY ANALYSIS PIPELINE | {user_id}/{strategy_id}")
+    logger.info("="*80)
+    logger.info(f"Asset: {asset}")
+    logger.info(f"Strategy: {strategy_text[:200]}..." if len(strategy_text) > 200 else f"Strategy: {strategy_text}")
+    logger.info(f"Position: {position_text[:100]}..." if len(position_text) > 100 else f"Position: {position_text}")
+    logger.info("="*80)
     
     # Step 1: Map topics (always run - topics may change)
-    logger.info("Mapping strategy to topics")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 1: TOPIC MAPPING")
+    logger.info("="*80)
     mapper = TopicMapperAgent()
     topic_mapping = mapper.run(
         asset_text=asset,
@@ -77,15 +85,20 @@ def run_strategy_analysis(
         position_text=position_text
     )
     
-    # Debug logging
-    logger.info(f"📋 Topic mapping type: {type(topic_mapping)}")
-    logger.info(f"📋 Topic mapping content: {topic_mapping}")
+    # Preview topic mapping
+    logger.info("\n📋 TOPIC MAPPING RESULT:")
     if isinstance(topic_mapping, dict):
-        for key, value in topic_mapping.items():
-            logger.info(f"   {key}: {type(value)} = {value}")
+        primary = topic_mapping.get('primary', 'N/A')
+        drivers = topic_mapping.get('drivers', [])
+        correlated = topic_mapping.get('correlated', [])
+        logger.info(f"   Primary: {primary}")
+        logger.info(f"   Drivers: {drivers}")
+        logger.info(f"   Correlated: {correlated}")
+        logger.info(f"   Total Topics: {1 + len(drivers) + len(correlated)}")
+    logger.info("="*80)
     
     # Save topic mapping to backend
-    logger.info("Saving topic mapping to backend")
+    logger.info("\n💾 Saving topic mapping to backend...")
     save_strategy_topics(
         username=user_id,
         strategy_id=strategy_id,
@@ -93,25 +106,65 @@ def run_strategy_analysis(
     )
     
     # Step 2: Build complete material package
-    logger.info("Building material package")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 2: BUILD MATERIAL PACKAGE")
+    logger.info("="*80)
     material_package = build_material_package(
         user_strategy=strategy_text,
         position_text=position_text,
         topic_mapping=topic_mapping
     )
     
+    # Preview material package
+    logger.info("\n📦 MATERIAL PACKAGE:")
+    logger.info(f"   Strategy: {len(strategy_text)} chars")
+    logger.info(f"   Position: {len(position_text)} chars")
+    logger.info(f"   Topic Analyses: {len(material_package.get('topic_analyses', ''))} chars")
+    logger.info(f"   Market Context: {len(material_package.get('market_context', ''))} chars")
+    total_chars = len(strategy_text) + len(position_text) + len(material_package.get('topic_analyses', '')) + len(material_package.get('market_context', ''))
+    logger.info(f"   TOTAL: {total_chars:,} chars (~{total_chars//1000}K)")
+    logger.info("="*80)
+    
     # Step 3: Assess risks
-    logger.info("Assessing risks")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 3: RISK ASSESSMENT")
+    logger.info("="*80)
     risk_assessor = RiskAssessorAgent()
     risk_assessment = risk_assessor.run(material_package)
     
+    # Preview risk assessment
+    logger.info("\n⚠️  RISK ASSESSMENT RESULT:")
+    logger.info(f"   Overall Risk Level: {risk_assessment.overall_risk_level}")
+    logger.info(f"   Position Risks: {len(risk_assessment.position_risks)}")
+    logger.info(f"   Market Risks: {len(risk_assessment.market_risks)}")
+    logger.info(f"   Thesis Risks: {len(risk_assessment.thesis_risks)}")
+    logger.info(f"   Execution Risks: {len(risk_assessment.execution_risks)}")
+    summary_preview = risk_assessment.key_risk_summary[:150] + "..." if len(risk_assessment.key_risk_summary) > 150 else risk_assessment.key_risk_summary
+    logger.info(f"   Summary: {summary_preview}")
+    logger.info("="*80)
+    
     # Step 4: Find opportunities
-    logger.info("Finding opportunities")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 4: OPPORTUNITY ASSESSMENT")
+    logger.info("="*80)
     opportunity_finder = OpportunityFinderAgent()
     opportunity_assessment = opportunity_finder.run(material_package)
     
+    # Preview opportunity assessment
+    logger.info("\n💡 OPPORTUNITY ASSESSMENT RESULT:")
+    logger.info(f"   Overall Opportunity Level: {opportunity_assessment.overall_opportunity_level}")
+    logger.info(f"   Position Optimization: {len(opportunity_assessment.position_optimization)}")
+    logger.info(f"   Strategy Enhancement: {len(opportunity_assessment.strategy_enhancement)}")
+    logger.info(f"   Related Opportunities: {len(opportunity_assessment.related_opportunities)}")
+    logger.info(f"   Tactical Opportunities: {len(opportunity_assessment.tactical_opportunities)}")
+    summary_preview = opportunity_assessment.key_opportunity_summary[:150] + "..." if len(opportunity_assessment.key_opportunity_summary) > 150 else opportunity_assessment.key_opportunity_summary
+    logger.info(f"   Summary: {summary_preview}")
+    logger.info("="*80)
+    
     # Step 5: Write final analysis
-    logger.info("Writing final analysis")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 5: FINAL ANALYSIS")
+    logger.info("="*80)
     writer = StrategyWriterAgent()
     final_analysis = writer.run(
         material_package=material_package,
@@ -119,8 +172,21 @@ def run_strategy_analysis(
         opportunity_assessment=opportunity_assessment
     )
     
+    # Preview final analysis
+    logger.info("\n📝 FINAL ANALYSIS RESULT:")
+    logger.info(f"   Executive Summary: {len(final_analysis.executive_summary)} chars")
+    logger.info(f"   Position Analysis: {len(final_analysis.position_analysis)} chars")
+    logger.info(f"   Risk Analysis: {len(final_analysis.risk_analysis)} chars")
+    logger.info(f"   Opportunity Analysis: {len(final_analysis.opportunity_analysis)} chars")
+    logger.info(f"   Recommendation: {len(final_analysis.recommendation)} chars")
+    exec_preview = final_analysis.executive_summary[:200] + "..." if len(final_analysis.executive_summary) > 200 else final_analysis.executive_summary
+    logger.info(f"   Preview: {exec_preview}")
+    logger.info("="*80)
+    
     # Step 6: Save analysis to backend
-    logger.info("Saving analysis to backend")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 6: SAVE TO BACKEND")
+    logger.info("="*80)
     analysis_dict = {
         "risk_level": risk_assessment.overall_risk_level,
         "opportunity_level": opportunity_assessment.overall_opportunity_level,
@@ -134,8 +200,13 @@ def run_strategy_analysis(
         analysis=analysis_dict
     )
     
+    logger.info("✅ Analysis saved to backend")
+    logger.info("="*80)
+    
     # Step 7: Generate dashboard question
-    logger.info("Generating dashboard question")
+    logger.info("\n" + "="*80)
+    logger.info("STEP 7: GENERATE DASHBOARD QUESTION")
+    logger.info("="*80)
     try:
         from src.llm.prompts.generate_dashboard_question import generate_dashboard_question
         from src.api.backend_client import save_dashboard_question
@@ -146,12 +217,17 @@ def run_strategy_analysis(
             asset_name=asset
         )
         
-        logger.info(f"Generated question: {question}")
+        logger.info(f"\n💡 GENERATED QUESTION:")
+        logger.info(f"   {question}")
         save_dashboard_question(user_id, strategy_id, question)
+        logger.info("✅ Question saved to backend")
     except Exception as e:
-        logger.warning(f"Failed to generate dashboard question: {e}")
+        logger.warning(f"⚠️  Failed to generate dashboard question: {e}")
     
-    logger.info("Strategy analysis complete")
+    logger.info("="*80)
+    logger.info("\n" + "="*80)
+    logger.info("✅ STRATEGY ANALYSIS COMPLETE")
+    logger.info("="*80)
     
     return {
         "topic_mapping": topic_mapping,

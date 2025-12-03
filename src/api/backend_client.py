@@ -158,8 +158,7 @@ def get_user_strategies(username: str) -> List[Dict[str, Any]]:
     """Get all strategies for a user"""
     try:
         response = requests.get(
-            f"{BACKEND_URL}/api/strategies",
-            params={"username": username},
+            f"{BACKEND_URL}/api/users/{username}/strategies",
             headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
             timeout=10
         )
@@ -174,8 +173,7 @@ def get_strategy(username: str, strategy_id: str) -> Optional[Dict[str, Any]]:
     """Get a specific strategy"""
     try:
         response = requests.get(
-            f"{BACKEND_URL}/api/strategies/{strategy_id}",
-            params={"username": username},
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}",
             headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
             timeout=10
         )
@@ -189,11 +187,8 @@ def get_strategy(username: str, strategy_id: str) -> Optional[Dict[str, Any]]:
 def update_strategy(username: str, strategy_id: str, strategy_data: Dict[str, Any]) -> bool:
     """Update a strategy"""
     try:
-        # Add username to strategy data
-        strategy_data["username"] = username
-        
         response = requests.put(
-            f"{BACKEND_URL}/api/strategies/{strategy_id}",
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}",
             json=strategy_data,
             headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
             timeout=10
@@ -281,3 +276,33 @@ def save_dashboard_question(username: str, strategy_id: str, question: str) -> b
     except Exception as e:
         print(f"⚠️  Failed to save dashboard question to Backend API: {e}")
         return False
+
+
+def get_dashboard_question(username: str, strategy_id: str) -> Optional[str]:
+    """Get dashboard question for strategy"""
+    try:
+        response = requests.get(
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/question",
+            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json().get("question")
+    except Exception as e:
+        print(f"⚠️  Failed to get dashboard question from Backend API: {e}")
+        return None
+
+
+def get_analysis_history(username: str, strategy_id: str) -> List[Dict[str, Any]]:
+    """Get all analysis history for strategy"""
+    try:
+        response = requests.get(
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/analysis/history",
+            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json().get("history", [])
+    except Exception as e:
+        print(f"⚠️  Failed to get analysis history from Backend API: {e}")
+        return []
