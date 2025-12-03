@@ -14,77 +14,31 @@ from src.analysis_agents.source_registry import SourceRegistry
 from src.analysis_agents.synthesis_scout.agent import SynthesisScoutAgent
 from src.analysis_agents.contrarian_finder.agent import ContrarianFinderAgent
 from src.analysis_agents.depth_finder.agent import DepthFinderAgent
+from src.analysis_agents.section_config import AGENT_SECTIONS, AGENT_SECTION_CONFIGS
 import time
 
 
 # =============================================================================
-# NEW: RISK-FOCUSED CHAIN REACTION ANALYSIS SECTIONS
+# SECTION CONFIGURATION (imported from section_config.py - SINGLE SOURCE OF TRUTH)
 # =============================================================================
 
-# Section-specific agent configuration - RISK & CHAIN REACTION FOCUSED
-SECTION_AGENT_CONFIG = {
-    # TIER 1: FOUNDATION
-    "chain_reaction_map": {
-        "agents": ["synthesis", "depth", "contrarian"],
-        "description": "Map event cascades through connected systems",
-        "priority": "CRITICAL"
-    },
-    
-    # TIER 2: TIMEFRAME RISK ANALYSIS
-    "structural_threats": {
-        "agents": ["synthesis", "depth", "contrarian"],
-        "description": "Multi-year vulnerabilities + structural opportunities (6+ months)",
-        "priority": "HIGH"
-    },
-    "tactical_scenarios": {
-        "agents": ["synthesis", "contrarian", "depth"],
-        "description": "Scenario trees (bull/bear/base) + tactical opportunities (3-6 months)",
-        "priority": "HIGH"
-    },
-    "immediate_intelligence": {
-        "agents": ["depth", "contrarian"],
-        "description": "Urgent threats + immediate opportunities + catalysts (0-3 weeks)",
-        "priority": "URGENT"
-    },
-    
-    # TIER 3: CROSS-TOPIC SYNTHESIS
-    "macro_cascade": {
-        "agents": ["synthesis", "depth"],
-        "description": "How macro themes cascade across assets + supply chain stress",
-        "priority": "MEDIUM"
-    },
-    
-    # TIER 4: ACTIONABLE INTELLIGENCE
-    "trade_intelligence": {
-        "agents": ["synthesis", "depth", "contrarian"],
-        "description": "Scenarios (2 Up, 2 Down) + trade setup with levels",
-        "priority": "HIGH"
-    },
-    
-    # TIER 5: EXECUTIVE SYNTHESIS
-    "house_view": {
-        "agents": ["synthesis", "contrarian"],
-        "description": "Integrated conviction call across all sections",
-        "priority": "CRITICAL"
-    },
-    "risk_monitor": {
-        "agents": ["depth", "contrarian"],
-        "description": "Key signals to monitor, early warning indicators",
-        "priority": "HIGH"
-    }
-}
+SECTION_AGENT_CONFIG = AGENT_SECTION_CONFIGS
 
 # Execution order - CUMULATIVE BUILDING (each section uses all prior sections)
-EXECUTION_ORDER = [
-    "chain_reaction_map",      # Foundation: articles only
-    "structural_threats",       # + chain_reaction_map
-    "tactical_scenarios",       # + chain_reaction_map + structural_threats
-    "immediate_intelligence",   # + all prior
-    "macro_cascade",           # + all prior
-    "trade_intelligence",      # + all prior (no new articles)
-    "house_view",              # + all prior (no new articles)
-    "risk_monitor"             # + all prior (no new articles)
-]
+# NOTE: This MUST match AGENT_SECTIONS from section_config.py
+EXECUTION_ORDER = AGENT_SECTIONS
+
+# Validate that EXECUTION_ORDER matches the config
+assert EXECUTION_ORDER == [
+    "chain_reaction_map",
+    "structural_threats",
+    "tactical_scenarios",
+    "immediate_intelligence",
+    "macro_cascade",
+    "trade_intelligence",
+    "house_view",
+    "risk_monitor"
+], "EXECUTION_ORDER must match AGENT_SECTIONS in section_config.py"
 
 # Section dependencies - defines what prior sections each section needs
 SECTION_DEPENDENCIES = {

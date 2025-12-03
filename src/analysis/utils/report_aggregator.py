@@ -5,6 +5,7 @@ Aggregates and merges analyses/reports from a node and its subnodes.
 from src.graph.neo4j_client import run_cypher
 from utils import app_logging
 from src.analysis.orchestration.analysis_rewriter import SECTIONS
+from src.analysis_agents.section_config import ALL_ANALYSIS_SECTIONS
 
 logger = app_logging.get_logger(__name__)
 
@@ -31,33 +32,13 @@ def aggregate_reports(topic_id: str) -> dict[str, str]:
         raise RuntimeError(f"Topic not found: {topic_id}")
     topic = rows[0]["t"]
 
-    # Map SECTIONS to Neo4j property names (all canonical sections + new 8 agent-based sections)
-    property_map = {
-        # OLD sections
-        "fundamental": "fundamental_analysis",
-        "medium": "medium_analysis",
-        "current": "current_analysis",
-        "drivers": "drivers",
-        "movers_scenarios": "movers_scenarios",
-        "swing_trade_or_outlook": "swing_trade_or_outlook",
-        "executive_summary": "executive_summary",
-        "risk_analysis": "risk_analysis",
-        "opportunity_analysis": "opportunity_analysis",
-        "trend_analysis": "trend_analysis",
-        "catalyst_analysis": "catalyst_analysis",
-        # NEW agent-based sections (8 sections)
-        "chain_reaction_map": "chain_reaction_map",
-        "structural_threats": "structural_threats",
-        "medium_term_risks": "medium_term_risks",
-        "immediate_catalysts": "immediate_catalysts",
-        "quantification_targets": "quantification_targets",
-        "contrarian_scenarios": "contrarian_scenarios",
-    }
-
     report: dict[str, str] = {}
-    for section in SECTIONS:
-        key = property_map.get(section, section)
-        val = topic.get(key)
+    # Check both legacy SECTIONS and new ALL_ANALYSIS_SECTIONS (from section_config.py)
+    all_sections_to_check = list(set(SECTIONS + ALL_ANALYSIS_SECTIONS))
+    
+    for section in all_sections_to_check:
+        # Section name IS the Neo4j property name (no mapping needed!)
+        val = topic.get(section)
         raw_len = len(val) if isinstance(val, str) else 0
         stripped = val.strip() if isinstance(val, str) else ""
         strip_len = len(stripped)
@@ -67,10 +48,10 @@ def aggregate_reports(topic_id: str) -> dict[str, str]:
             else ""
         )
         logger.info(
-            f"report_aggregator | section={section} | key={key} | present={bool(val)} | raw_len={raw_len} | strip_len={strip_len} | sample={sample}"
+            f"report_aggregator | section={section} | present={bool(val)} | raw_len={raw_len} | strip_len={strip_len} | sample={sample}"
         )
         if strip_len > 0:
-            report[key] = stripped
+            report[section] = stripped
     if not report:
         logger.warning(f"report_aggregator | empty_report | topic_id={topic_id}")
     return report
