@@ -77,16 +77,20 @@ def run_strategy_analysis(
         position_text=position_text
     )
     
-    # Save topic mapping to backend (optional - won't crash if backend unavailable)
-    try:
-        logger.info("Saving topic mapping to backend")
-        save_strategy_topics(
-            username=user_id,
-            strategy_id=strategy_id,
-            topics=topic_mapping
-        )
-    except Exception as e:
-        logger.warning(f"Failed to save topics to backend: {e}")
+    # Debug logging
+    logger.info(f"📋 Topic mapping type: {type(topic_mapping)}")
+    logger.info(f"📋 Topic mapping content: {topic_mapping}")
+    if isinstance(topic_mapping, dict):
+        for key, value in topic_mapping.items():
+            logger.info(f"   {key}: {type(value)} = {value}")
+    
+    # Save topic mapping to backend
+    logger.info("Saving topic mapping to backend")
+    save_strategy_topics(
+        username=user_id,
+        strategy_id=strategy_id,
+        topics=topic_mapping
+    )
     
     # Step 2: Build complete material package
     logger.info("Building material package")
@@ -115,22 +119,19 @@ def run_strategy_analysis(
         opportunity_assessment=opportunity_assessment
     )
     
-    # Step 6: Save analysis to backend (optional - won't crash if backend unavailable)
-    try:
-        logger.info("Saving analysis to backend")
-        save_strategy_analysis(
-            username=user_id,
-            strategy_id=strategy_id,
-            analysis={
-                "risk_level": risk_assessment.overall_risk_level,
-                "opportunity_level": opportunity_assessment.overall_opportunity_level,
-                "risk_assessment": risk_assessment.dict(),
-                "opportunity_assessment": opportunity_assessment.dict(),
-                "final_analysis": final_analysis.dict()
-            }
-        )
-    except Exception as e:
-        logger.warning(f"Failed to save analysis to backend: {e}")
+    # Step 6: Save analysis to backend
+    logger.info("Saving analysis to backend")
+    save_strategy_analysis(
+        username=user_id,
+        strategy_id=strategy_id,
+        analysis={
+            "risk_level": risk_assessment.overall_risk_level,
+            "opportunity_level": opportunity_assessment.overall_opportunity_level,
+            "risk_assessment": risk_assessment.model_dump(),
+            "opportunity_assessment": opportunity_assessment.model_dump(),
+            "final_analysis": final_analysis.model_dump()
+        }
+    )
     
     logger.info("Strategy analysis complete")
     
@@ -148,8 +149,7 @@ def run_strategy_analysis(
 
 def analyze_user_strategy(
     username: str,
-    strategy_id: str,
-    test: bool = False
+    strategy_id: str
 ) -> Dict[str, Any]:
     """
     Analyze a user's strategy.
@@ -160,7 +160,6 @@ def analyze_user_strategy(
     Args:
         username: User's username
         strategy_id: Strategy ID (e.g., "strategy_001")
-        test: If True, use test mode (currently unused, for future)
     
     Returns:
         Dict with analysis results
@@ -210,8 +209,8 @@ if __name__ == "__main__":
         username = sys.argv[1]
         strategy_id = sys.argv[2]
         
-        logger.info(f"Testing strategy analysis for {username}/{strategy_id}")
-        results = analyze_user_strategy(username, strategy_id, test=True)
+        logger.info(f"Running strategy analysis for {username}/{strategy_id}")
+        results = analyze_user_strategy(username, strategy_id)
         
         logger.info("\n" + "="*80)
         logger.info("RESULTS SUMMARY")

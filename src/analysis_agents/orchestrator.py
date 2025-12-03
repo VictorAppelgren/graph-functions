@@ -478,7 +478,6 @@ class AnalysisAgentOrchestrator:
 
 def analysis_rewriter_with_agents(
     topic_id: str,
-    test: bool = False,
     analysis_type: Optional[str] = None
 ) -> None:
     """
@@ -500,7 +499,6 @@ def analysis_rewriter_with_agents(
     
     Args:
         topic_id: Topic to analyze
-        test: Test mode (skip saves, verbose logging)
         analysis_type: Specific section to run (or None for all 8 sections)
     """
     from src.analysis.material.article_material import build_material_for_synthesis_section
@@ -513,7 +511,7 @@ def analysis_rewriter_with_agents(
     print("\n" + "="*100)
     print("🚀 AGENT-BASED ANALYSIS PIPELINE - RISK & CHAIN REACTION FOCUSED")
     print("="*100)
-    logger.info(f"Starting analysis_rewriter_with_agents | topic={topic_id} | test={test}")
+    logger.info(f"Starting analysis_rewriter_with_agents | topic={topic_id}")
     
     # Determine which sections to run
     sections_to_run = [analysis_type] if analysis_type else EXECUTION_ORDER
@@ -560,9 +558,15 @@ def analysis_rewriter_with_agents(
                 if prior_context:
                     material = f"{material}\n\n{'='*80}\nPRIOR ANALYSIS:\n{'='*80}\n\n{prior_context}"
             
+            # Log material composition
+            logger.info(f"   prior sections: {len(prior_context):,} chars (~{len(prior_context)//4:,} tokens)")
+            articles_size = len(material) - len(prior_context) if prior_context else len(material)
+            logger.info(f"   articles: {articles_size:,} chars (~{articles_size//4:,} tokens)")
+            
             # STEP 4: LLM synthesis
             print(f"🧠 LLM synthesis...")
             agent_context = format_agent_outputs_for_llm(agent_results)
+            logger.info(f"   agent insights: {len(agent_context):,} chars (~{len(agent_context)//4:,} tokens)")
             section_focus = SECTION_FOCUS.get(section, "")
             
             prompt = f"""You are a world-class financial analyst writing risk-focused intelligence.
@@ -584,16 +588,34 @@ MATERIAL & CONTEXT:
 TASK: Synthesize into authoritative analysis following the structure above.
 """
             
+            # Log total prompt size
+            total_prompt_size = len(prompt)
+            logger.info(f"   📊 TOTAL PROMPT: {total_prompt_size:,} chars (~{total_prompt_size//4:,} tokens)")
+            if total_prompt_size > 100000:
+                logger.warning(f"   ⚠️  Large prompt! May hit token limits")
+            
             from src.llm.llm_router import get_llm, ModelTier
             llm = get_llm(ModelTier.COMPLEX)
             analysis_text = llm.invoke(prompt).content
             
-            print(f"✅ Generated: {len(analysis_text)} chars")
+            print(f"✅ Generated: {len(analysis_text):,} chars")
             
-            # STEP 5: Save
-            if not test:
-                save_analysis(topic_id, section, analysis_text)
-                print(f"💾 Saved to Neo4j")
+            # Show analysis preview (capped at 2000 chars)
+            preview_length = 2000
+            if len(analysis_text) > preview_length:
+                preview = analysis_text[:preview_length] + f"\n\n... [truncated, total: {len(analysis_text):,} chars] ..."
+            else:
+                preview = analysis_text
+            
+            print(f"\n{'='*80}")
+            print(f"📄 GENERATED ANALYSIS:")
+            print(f"{'='*80}")
+            print(preview)
+            print(f"{'='*80}\n")
+            
+            # STEP 5: Save to Neo4j and memory
+            save_analysis(topic_id, section, analysis_text)
+            print(f"💾 Saved to Neo4j")
             
             completed_sections[section] = analysis_text
             print(f"✅ COMPLETE\n")
@@ -601,8 +623,7 @@ TASK: Synthesize into authoritative analysis following the structure above.
         except Exception as e:
             logger.error(f"Failed {section}: {e}", exc_info=True)
             print(f"❌ FAILED: {e}")
-            if not test:
-                raise
+            raise
     
     print(f"\n{'='*100}")
     print(f"✅ PIPELINE COMPLETE | {len(completed_sections)}/{len(sections_to_run)} sections")
@@ -663,27 +684,64 @@ if __name__ == "__main__":
     
     # Test the GOD-TIER pipeline
     import sys
+    import random
     
     if len(sys.argv) > 1:
         topic_id = sys.argv[1]
         
+        # Check for "all" mode - analyze ALL topics randomly
+        if topic_id == "all":
+            from src.graph.ops.topic import get_all_topics
+            
+            print(f"\n🌍 RUNNING ALL TOPICS MODE")
+            print("="*80)
+            
+            # Get all topics
+            all_topics = get_all_topics(fields=["id", "name"])
+            topic_ids = [t["id"] for t in all_topics]
+            
+            print(f"📊 Found {len(topic_ids)} topics")
+            
+            # Shuffle for randomness
+            random.shuffle(topic_ids)
+            
+            print(f"🎲 Shuffled order, starting analysis...\n")
+            
+            # Run full analysis for each topic
+            for i, tid in enumerate(topic_ids, 1):
+                print(f"\n{'='*80}")
+                print(f"🎯 TOPIC {i}/{len(topic_ids)}: {tid}")
+                print(f"{'='*80}")
+                
+                try:
+                    analysis_rewriter_with_agents(tid)
+                    print(f"✅ Completed {tid}")
+                except Exception as e:
+                    print(f"❌ Failed {tid}: {e}")
+                    continue
+            
+            print(f"\n{'='*80}")
+            print(f"🎉 ALL TOPICS COMPLETE!")
+            print(f"{'='*80}")
+        
         # Check if specific section or full analysis
-        if len(sys.argv) > 2 and sys.argv[2] != "full":
+        elif len(sys.argv) > 2 and sys.argv[2] != "full":
             # Run single section
             section = sys.argv[2]
             print(f"\n🎯 Running SINGLE SECTION: {section}")
-            analysis_rewriter_with_agents(topic_id, test=True, analysis_type=section)
+            analysis_rewriter_with_agents(topic_id, analysis_type=section)
         else:
             # Run FULL analysis (all 8 sections)
             print(f"\n🚀 Running FULL ANALYSIS (all 8 sections)")
-            analysis_rewriter_with_agents(topic_id, test=True)
+            analysis_rewriter_with_agents(topic_id)
     else:
         print("="*80)
         print("GOD-TIER AGENT-BASED ANALYSIS PIPELINE")
         print("="*80)
         print("\nUsage:")
-        print("  python -m src.analysis_agents.orchestrator <topic_id> [section|full]")
+        print("  python -m src.analysis_agents.orchestrator <topic_id> [section|full|all]")
         print("\nExamples:")
+        print("  python -m src.analysis_agents.orchestrator all                      # Run ALL topics (random order)")
         print("  python -m src.analysis_agents.orchestrator eurusd full              # Run all 8 sections")
         print("  python -m src.analysis_agents.orchestrator eurusd                   # Run all 8 sections")
         print("  python -m src.analysis_agents.orchestrator eurusd chain_reaction_map  # Run single section")

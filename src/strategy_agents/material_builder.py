@@ -53,10 +53,11 @@ def build_material_package(
     """
     logger.info("Building material package for strategy analysis")
     
-    # Collect all unique topic IDs
+    # Collect all unique topic IDs (only from topic lists, not 'reasoning' string)
     all_topic_ids = set()
-    for topic_list in topic_mapping.values():
-        all_topic_ids.update(topic_list)
+    for key in ['primary', 'drivers', 'correlated']:
+        if key in topic_mapping and isinstance(topic_mapping[key], list):
+            all_topic_ids.update(topic_mapping[key])
     
     # Load analysis and market data for each topic
     topics = {}

@@ -25,7 +25,7 @@ from datetime import datetime
 
 # Backend URL
 BACKEND_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
-API_KEY = os.getenv("BACKEND_API_KEY", "")
+BACKEND_API_KEY = os.getenv("BACKEND_API_KEY", "")
 
 
 def test_backend_connection():
@@ -35,7 +35,7 @@ def test_backend_connection():
     print("🧪 BACKEND API CONNECTION TEST")
     print("=" * 80)
     print(f"Backend URL: {BACKEND_URL}")
-    print(f"API Key: {'✅ Set' if API_KEY else '❌ Missing'}")
+    print(f"API Key: {'✅ Set' if BACKEND_API_KEY else '❌ Missing'}")
     print()
     
     # Test 1: Health check
@@ -66,14 +66,14 @@ def test_backend_connection():
             if method == "GET":
                 response = requests.get(
                     f"{BACKEND_URL}{path}",
-                    headers={"X-API-Key": API_KEY} if API_KEY else {},
+                    headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
                     timeout=5
                 )
             else:  # POST
                 response = requests.post(
                     f"{BACKEND_URL}{path}",
                     json={},
-                    headers={"X-API-Key": API_KEY} if API_KEY else {},
+                    headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
                     timeout=5
                 )
             

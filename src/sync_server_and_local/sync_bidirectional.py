@@ -65,7 +65,7 @@ CLOUD_NEO4J_PASSWORD = os.getenv("CLOUD_NEO4J_PASSWORD", os.getenv("NEO4J_PASSWO
 CLOUD_BACKEND_API = os.getenv("CLOUD_BACKEND_API", f"http://{CLOUD_SERVER_IP}/api")
 
 # API Key (same for both)
-API_KEY = os.getenv("BACKEND_API_KEY", "785fc6c1647ff650b6b611509cc0a8f47009e6b743340503519d433f111fcf12")
+BACKEND_API_KEY = os.getenv("BACKEND_API_KEY", "785fc6c1647ff650b6b611509cc0a8f47009e6b743340503519d433f111fcf12")
 
 # Sync state file (tracks last sync time)
 SYNC_STATE_FILE = Path.home() / ".saga_sync_state.json"
@@ -870,7 +870,7 @@ def run_continuous_sync(interval: int = 300):
             
             # Article sync
             article_syncer = ArticleBidirectionalSyncer(
-                LOCAL_BACKEND_API, CLOUD_BACKEND_API, API_KEY,
+                LOCAL_BACKEND_API, CLOUD_BACKEND_API, BACKEND_API_KEY,
                 dry_run=False
             )
             article_syncer.sync()
@@ -879,7 +879,7 @@ def run_continuous_sync(interval: int = 300):
             stats_logs_syncer = StatsLogsSyncer(
                 CLOUD_BACKEND_API,
                 Path(PROJECT_ROOT),
-                api_key=API_KEY,
+                api_key=BACKEND_API_KEY,
                 dry_run=False
             )
             stats_logs_syncer.sync_stats()
@@ -957,7 +957,7 @@ def main():
             article_syncer = ArticleBidirectionalSyncer(
                 LOCAL_BACKEND_API,
                 CLOUD_BACKEND_API,
-                API_KEY,
+                BACKEND_API_KEY,
                 dry_run=args.dry_run
             )
             article_syncer.sync()
@@ -981,7 +981,7 @@ def main():
             stats_logs_syncer = StatsLogsSyncer(
                 CLOUD_BACKEND_API,
                 Path(PROJECT_ROOT),
-                api_key=API_KEY,
+                api_key=BACKEND_API_KEY,
                 dry_run=args.dry_run
             )
             stats_logs_syncer.sync_stats()
