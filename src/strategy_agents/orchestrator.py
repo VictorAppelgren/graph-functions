@@ -121,17 +121,35 @@ def run_strategy_analysis(
     
     # Step 6: Save analysis to backend
     logger.info("Saving analysis to backend")
+    analysis_dict = {
+        "risk_level": risk_assessment.overall_risk_level,
+        "opportunity_level": opportunity_assessment.overall_opportunity_level,
+        "risk_assessment": risk_assessment.model_dump(),
+        "opportunity_assessment": opportunity_assessment.model_dump(),
+        "final_analysis": final_analysis.model_dump()
+    }
     save_strategy_analysis(
         username=user_id,
         strategy_id=strategy_id,
-        analysis={
-            "risk_level": risk_assessment.overall_risk_level,
-            "opportunity_level": opportunity_assessment.overall_opportunity_level,
-            "risk_assessment": risk_assessment.model_dump(),
-            "opportunity_assessment": opportunity_assessment.model_dump(),
-            "final_analysis": final_analysis.model_dump()
-        }
+        analysis=analysis_dict
     )
+    
+    # Step 7: Generate dashboard question
+    logger.info("Generating dashboard question")
+    try:
+        from src.llm.prompts.generate_dashboard_question import generate_dashboard_question
+        from src.api.backend_client import save_dashboard_question
+        
+        question = generate_dashboard_question(
+            strategy_text=f"{strategy_text}\n\n{position_text}",
+            analysis_dict=analysis_dict,
+            asset_name=asset
+        )
+        
+        logger.info(f"Generated question: {question}")
+        save_dashboard_question(user_id, strategy_id, question)
+    except Exception as e:
+        logger.warning(f"Failed to generate dashboard question: {e}")
     
     logger.info("Strategy analysis complete")
     

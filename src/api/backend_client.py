@@ -265,3 +265,19 @@ def get_latest_analysis(username: str, strategy_id: str) -> Optional[Dict[str, A
     except Exception as e:
         print(f"⚠️  Failed to get analysis from Backend API: {e}")
         return None
+
+
+def save_dashboard_question(username: str, strategy_id: str, question: str) -> bool:
+    """Save dashboard question for strategy"""
+    try:
+        response = requests.post(
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/question",
+            json={"question": question},
+            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"⚠️  Failed to save dashboard question to Backend API: {e}")
+        return False
