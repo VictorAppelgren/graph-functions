@@ -62,21 +62,15 @@ def link_orphan_articles(limit: int = 1000) -> dict[str, int]:
             status = res.get("status")
             if status == "success":
                 processed += 1
-                # add_article already emits master_log events for links created
             else:
                 failures += 1
-                master_log_error(
-                    f"Backfill link_orphan_articles: add_article returned status={status} for {aid}"
-                )
+                logger.error(f"Backfill link_orphan_articles: add_article returned status={status} for {aid}")
         except Exception as e:
             failures += 1
-            master_log_error(f"Backfill link_orphan_articles failed for {aid}", error=e)
+            logger.error(f"Backfill link_orphan_articles failed for {aid}: {e}")
 
-    master_log(
-        f"Backfill orphan links completed | processed={processed} | failures={failures}",
-        queries=0,
-        articles=0,
-        about_links_added=0,  # individual edges are logged within add_article
+    logger.info(
+        f"Backfill orphan links completed | processed={processed} | failures={failures}"
     )
     return {"processed": processed, "failures": failures, "total": len(ids)}
 

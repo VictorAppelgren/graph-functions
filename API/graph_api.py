@@ -148,9 +148,19 @@ def get_report(topic_id: str):
 
 # ============ CONTEXT BUILDING (NO LLM) ============
 
+class ContextRequest(BaseModel):
+    topic_id: Optional[str] = None
+    include_full_articles: bool = False
+    include_related_topics: bool = True
+    max_articles: int = 20
+
 @app.post("/neo/build-context")
-def build_context(topic_id: Optional[str] = None):
+def build_context(request: ContextRequest):
     """Build comprehensive context from Neo4j with all canonical fields"""
+    topic_id = request.topic_id
+    include_full = request.include_full_articles
+    include_related = request.include_related_topics
+    max_articles = request.max_articles
     try:
         if not topic_id:
             return {"context": None}
@@ -197,9 +207,23 @@ def build_context(topic_id: Optional[str] = None):
             r.implications as implications,
             r.created_at as linked_at
         ORDER BY a.published_at DESC
-        LIMIT 20
+        LIMIT $max_articles
         """
-        articles = run_cypher(articles_query, {"topic_id": topic_id})
+        articles = run_cypher(articles_query, {"topic_id": topic_id, "max_articles": max_articles})
+        
+        # If full content requested, load article files
+        if include_full and articles:
+            from src.storage.article_loader import load_article
+            for article in articles:
+                try:
+                    full_article = load_article(article["id"])
+                    if full_article:
+                        # Add full content fields
+                        article["content"] = full_article.get("content", "")
+                        article["full_text"] = full_article.get("full_text", "")
+                except Exception as e:
+                    # Continue without full content if loading fails
+                    pass
         
         # Get relationship statistics
         relationships_query = """
@@ -222,6 +246,39 @@ def build_context(topic_id: Optional[str] = None):
         except:
             reports = {}
         
+        # Get related topics with their executive summaries
+        related_topics = []
+        if include_related:
+            related_query = """
+            MATCH (t:Topic {id: $topic_id})-[r]-(related:Topic)
+            WHERE type(r) IN ['INFLUENCES', 'CORRELATES_WITH', 'DRIVES', 'IMPACTS']
+            RETURN DISTINCT
+                related.id as id,
+                related.name as name,
+                type(r) as relationship_type,
+                coalesce(r.strength, 0.5) as strength
+            ORDER BY strength DESC
+            LIMIT 5
+            """
+            related_results = run_cypher(related_query, {"topic_id": topic_id})
+            
+            # For each related topic, get executive summary
+            for rel in related_results:
+                try:
+                    rel_reports = aggregate_reports(rel["id"])
+                    executive_summary = rel_reports.get("executive_summary", "")
+                    if executive_summary:
+                        related_topics.append({
+                            "id": rel["id"],
+                            "name": rel["name"],
+                            "relationship": rel["relationship_type"],
+                            "strength": rel["strength"],
+                            "executive_summary": executive_summary[:500]  # First 500 chars
+                        })
+                except:
+                    # Skip if no reports available
+                    pass
+        
         return {
             "topic_id": topic_id,
             "topic_name": topic_name,
@@ -229,7 +286,8 @@ def build_context(topic_id: Optional[str] = None):
             "articles": articles,
             "article_stats": article_stats,
             "relationships": relationships,
-            "reports": reports
+            "reports": reports,
+            "related_topics": related_topics
         }
         
     except Exception as e:

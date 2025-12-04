@@ -69,11 +69,7 @@ def main() -> None:
         removed += 1
         logger.debug(f"Removed: {out}")
 
-    master_log(
-        f"Cleanup removed {removed}/{total} Topic nodes with invalid importance",
-        removes_topic=removed,
-    )
-    logger.info(f"✅ Cleanup complete. Removed {removed} nodes.")
+    logger.info(f"✅ Cleanup complete. Removed {removed}/{total} nodes with invalid importance.")
 
 
 if __name__ == "__main__":

@@ -158,15 +158,18 @@ class NewsIngestionOrchestrator:
                 from src.articles.ingest_article import add_article
 
                 for article in processed_articles:
+                    article_id = article["argos_id"]
                     try:
-                        article_id = article["argos_id"]
                         add_article(article_id=article_id, test=False)
                     except Exception as e:
+                        # Log full error details including traceback
+                        import traceback
                         logger.error(
-                            "Error triggering add_article for article %s: %r",
-                            article_id,
-                            e,
+                            f"Failed to add article {article_id} | "
+                            f"error={type(e).__name__}: {e} | "
+                            f"title={article.get('title', 'N/A')[:100]}"
                         )
+                        logger.error(f"Traceback:\n{traceback.format_exc()}")
             else:
                 logger.info("❌❌❌ Test mode enabled, skipping add_article")
 

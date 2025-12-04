@@ -262,6 +262,10 @@ def analyze_user_strategy(
     logger.info(f"STRATEGY ANALYSIS | {username}/{strategy_id}")
     logger.info("="*80)
     
+    # Track start
+    from src.observability.stats_client import track
+    track("strategy_analysis_triggered", f"{username}/{strategy_id}")
+    
     # 1. Load strategy from Backend API
     logger.info("Loading strategy from Backend API")
     strategy = get_strategy(username, strategy_id)
@@ -288,6 +292,9 @@ def analyze_user_strategy(
     logger.info("="*80)
     logger.info(f"✅ STRATEGY ANALYSIS COMPLETE | {username}/{strategy_id}")
     logger.info("="*80)
+    
+    # Track completion
+    track("strategy_analysis_completed", f"{username}/{strategy_id}")
     
     return results
 

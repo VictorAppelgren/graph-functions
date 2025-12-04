@@ -84,10 +84,9 @@ def decide_topic_capacity(
     # Instrumentation: track replacement decisions in master stats/logs
     if r.action == "replace":
         cand_name = candidate_topic.get("name") or ""
-        msg = (
+        logger.info(
             f"Topic capacity decision: REPLACE | candidate={cand_name} | remove_id={r.id_to_remove} | "
             f"reason={truncate_str(t.motivation, 200)}"
         )
-        master_log(msg, topic_replacements_decided=1)
 
     return r

@@ -182,7 +182,6 @@ def enrich_topic_via_perigon(topic_id: str, section: str, target_articles: int =
     # For now, we'll implement a simple version without NewsIngestionOrchestrator
     # This can be enhanced later when the Perigon integration is available
     logger.info(f"Perigon enrichment | {topic_id}/{section} | queries={queries}")
-    master_log(f"Perigon enrichment attempted | {topic_id}/{section} | target={target_articles}")
     
     # Return 0 for now - this will be enhanced when Perigon integration is ready
     return 0
@@ -294,7 +293,6 @@ def backfill_topic_from_storage(
 
     for section in sections_to_run:
         logger.info(f"Enrichment check | {topic_id} | section={section}")
-        master_log(f"Enrichment check | {topic_id} | section={section}")
         cnt = count_articles_for_topic_section(topic_id, section)
         logger.info(f"Pre-enrichment | topic={topic_id} section={section} | current_articles={cnt} threshold={threshold}")
         if cnt >= threshold:
@@ -302,7 +300,6 @@ def backfill_topic_from_storage(
             continue
         needed = threshold - cnt
         logger.info(f"Enrichment needed | topic={topic_id} section={section} | need {needed} more articles (have {cnt}, want {threshold})")
-        master_log(f"Enrichment attempt | topic={topic_id} section={section} | current={cnt} needed={needed}")
         
         added = 0
         
@@ -311,8 +308,6 @@ def backfill_topic_from_storage(
         perigon_added = enrich_topic_via_perigon(topic_id, section, needed)
         added += perigon_added
         total_added += perigon_added
-        if perigon_added > 0:
-            master_log(f"Perigon enrichment | {topic_id}/{section} | added {perigon_added} articles")
         
         # Check if we still need more articles
         cnt_after_perigon = count_articles_for_topic_section(topic_id, section)
@@ -331,7 +326,6 @@ def backfill_topic_from_storage(
         
         # Final count for this section
         final_cnt = count_articles_for_topic_section(topic_id, section)
-        master_log(f"Section status | {topic_id}/{section} | before={cnt} | after={final_cnt} | threshold={threshold}")
         
         # Post-enrichment article count
         logger.info(f"Post-enrichment | topic={topic_id} section={section} | final_articles={final_cnt} (was {cnt}, added {added})")
@@ -345,7 +339,6 @@ def backfill_topic_from_storage(
     logger.info("=" * 100)
     logger.info(summary_line)
     logger.info("=" * 100)
-    master_log(summary_line)
     
     # Check if analysis is missing and trigger generation
     if not test:
@@ -365,12 +358,15 @@ def backfill_topic_from_storage(
                 
                 if missing_analysis:
                     from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
-                    master_log(f"Analysis generation triggered (NEW AGENTS) | {topic_id} | sufficient_articles=True | missing={missing_analysis}")
+                    from src.observability.stats_client import track
+                    track("agent_analysis_triggered", f"Topic {topic_id}: Enrichment triggered analysis (missing sections: {missing_analysis})")
                     analysis_rewriter_with_agents(topic_id)
+                    track("agent_analysis_completed", f"Topic {topic_id}: Enrichment analysis complete")
     
     # NOTE: Analysis is now triggered automatically in add_article() when Level 2/3 articles are added
     if total_added > 0 and not test:
-        master_log(f"Post-enrichment complete | {topic_id} | articles_added={total_added}")
+        from src.observability.stats_client import track
+        track("topic_enriched", f"Topic {topic_id}: {total_added} articles added")
         logger.info(f"✅ Enrichment complete for {topic_id} | {total_added} articles added (analysis triggered in add_article if Level 2/3)")
     else:
         if total_added == 0:

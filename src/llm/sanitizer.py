@@ -324,14 +324,20 @@ def run_llm_decision[T: BaseModel](
     local_logger = logger or MODULE_LOGGER
 
     def _try_invoke() -> T:
+        raw = chain.invoke(prompt)
+        raw_str = str(raw)
+        local_logger.info(f"LLM raw output | caller={caller_context} | model={model_name} | length={len(raw_str)}")
+        
         try:
-            raw = chain.invoke(prompt)
-            local_logger.debug(f"LLM raw output | caller={caller_context} | model={model_name} | length={len(str(raw))}")
             data = _coerce_to_dict(raw)
-        except ValueError as e:
-            # Add caller context to parsing errors
-            enhanced_msg = f"{str(e)} | caller={caller_context} | model={model_name}"
-            raise ValueError(enhanced_msg) from e
+        except (ValueError, KeyError, json.JSONDecodeError) as e:
+            # Log the actual raw output to diagnose JSON parsing issues
+            raw_preview = raw_str[:500] + "..." if len(raw_str) > 500 else raw_str
+            local_logger.error(
+                f"LLM JSON parsing failed | caller={caller_context} | model={model_name} | "
+                f"error={type(e).__name__}({e}) | raw_output={raw_preview}"
+            )
+            raise ValueError(f"LLM parsing failed: {type(e).__name__}({e})") from e
 
         # Minimal, centralized normalization for known schemas
         try:

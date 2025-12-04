@@ -40,8 +40,3 @@ def save_analysis(topic_id: str, field: str, text: str) -> None:
     logger.info(
         f"Saved analysis for topic_id={topic_id} field={field} before_sample={before_sample} after_sample={after_sample}"
     )
-
-    master_log(
-        f'Saved analysis | {topic_id} | field "{field}" len={len(str(text))}',
-        analysis_sections_written=1,
-    )
