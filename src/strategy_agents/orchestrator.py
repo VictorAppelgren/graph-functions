@@ -71,7 +71,15 @@ def run_strategy_analysis(
     logger.info("="*80)
     logger.info(f"Asset: {asset}")
     logger.info(f"Strategy: {strategy_text[:200]}..." if len(strategy_text) > 200 else f"Strategy: {strategy_text}")
-    logger.info(f"Position: {position_text[:100]}..." if len(position_text) > 100 else f"Position: {position_text}")
+    
+    # Check if user has active position or just monitoring
+    has_position = position_text and position_text.strip()
+    if has_position:
+        logger.info(f"Position: {position_text[:100]}..." if len(position_text) > 100 else f"Position: {position_text}")
+        logger.info("📊 Mode: ACTIVE POSITION ANALYSIS")
+    else:
+        logger.info("Position: None (monitoring/outlook mode)")
+        logger.info("📊 Mode: THESIS MONITORING (no active position)")
     logger.info("="*80)
     
     # Step 1: Map topics (always run - topics may change)

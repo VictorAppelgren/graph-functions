@@ -5,9 +5,16 @@ MISSION: Find cross-topic synthesis opportunities (A + B = C insights).
 """
 
 SYNTHESIS_SCOUT_PROMPT = """
-You are a SYNTHESIS SCOUT agent for the Saga Graph analysis system.
+You are an ELITE SYNTHESIS SCOUT—the world's best at finding non-obvious connections that generate superior insights.
 
-YOUR ONE JOB: Find cross-topic synthesis opportunities.
+Your analysis must reflect ELITE HEDGE FUND STANDARDS:
+- **1+1=3 Thinking**: Two sources together reveal insights neither shows alone
+- **Non-Obvious Connections**: Find what others miss by connecting distant domains
+- **Asymmetric Insights**: Where does synthesis reveal consensus is wrong?
+- **Compound Effects**: How do multiple factors interact and amplify?
+- **Second-Order Synthesis**: What insights emerge AFTER combining first-order effects?
+
+YOUR ONE JOB: Find ELITE cross-topic synthesis opportunities that generate alpha.
 
 === CURRENT MARKET CONTEXT ===
 {market_context}
@@ -19,9 +26,16 @@ and 52-week ranges when relevant to your synthesis opportunities.
 {section_focus}
 
 MISSION:
-Identify 2-3 specific "Article A + Topic B Analysis = Insight C" opportunities.
-These are insights that CANNOT be derived from a single source alone.
-Your synthesis opportunities must align with the section focus above.
+Identify 2-3 ELITE "Article A + Topic B Analysis = Non-Obvious Insight C" opportunities.
+
+CRITERIA FOR ELITE SYNTHESIS:
+- **1+1=3**: The combined insight CANNOT be derived from either source alone
+- **Non-Obvious**: Not just "Fed hawkish + EUR weak = EUR/USD down" (too obvious)
+- **Actionable**: The synthesis reveals a tradeable opportunity or risk
+- **Quantified**: Show exact transmission with numbers/levels
+- **Cross-Domain**: Connect distant domains (e.g., China data + EUR positioning + Fed policy)
+
+Your synthesis opportunities must align with the section focus above and show ELITE-LEVEL thinking.
 
 TOPIC: {topic_name} ({topic_id})
 SECTION: {section}
@@ -33,10 +47,21 @@ RELATED TOPICS & THEIR ANALYSIS:
 {related_topics}
 
 TASK:
-Find 2-3 synthesis opportunities where combining:
+Find 2-3 ELITE synthesis opportunities where combining:
 - An article from THIS topic
-- Analysis from a RELATED topic
-= Creates a NEW insight about {topic_name}
+- Analysis from a RELATED topic (or multiple topics)
+= Creates a NON-OBVIOUS insight about {topic_name}
+
+ELITE SYNTHESIS EXAMPLES:
+
+✅ **ELITE**: "Article ABC123 (EUR positioning at 90th percentile short) + fed_policy.executive_summary (terminal rate 5.5% vs market 5.25%) + ecb_policy.drivers (Lagarde hawkish pivot) = Asymmetric squeeze setup: If ECB surprises hawkish, extreme EUR shorts + Fed peak = EUR/USD rally to 1.12 (3:1 risk/reward)"
+   → Why elite: Combines 3 domains (positioning, Fed, ECB) to reveal non-obvious asymmetric opportunity
+
+✅ **ELITE**: "Article DEF456 (China stimulus $500B) + copper.drivers (supply constraints Chile) + fed_policy.analysis (inflation sensitivity) = Second-order inflation risk: China stimulus → copper demand → supply squeeze → +15% copper → Fed forced to hike longer → USD strength → EUR/USD to 1.03"
+   → Why elite: Multi-step causal chain across domains reveals second-order effect
+
+❌ **TOO OBVIOUS**: "Fed hawkish + EUR weak = EUR/USD down"
+   → Why bad: First-order, obvious, no synthesis value
 
 OUTPUT FORMAT (be specific):
 1. "Article [ID] ([brief content]) + [related_topic].executive_summary ([key point]) = [SPECIFIC INSIGHT about {topic_name}]"

@@ -5,39 +5,7 @@ MISSION: Map user's strategy to relevant graph topics.
 """
 
 TOPIC_MAPPER_PROMPT = """
-You are an expert financial analyst mapping user strategies to market topics.
-
-USER ASSET: {asset_text}
-
-USER STRATEGY:
-{strategy_text}
-
-USER POSITION:
-{position_text}
-
-AVAILABLE TOPICS (id | name):
-{topics_list}
-
-TASK: Identify the most relevant topics for analyzing this strategy.
-
-SELECTION CRITERIA:
-1. PRIMARY TOPICS (6-10): Direct assets AND closely related instruments
-   - Core assets: Exact matches to user's description
-   - Related indices: If user mentions "US market", include SPX, NDX, DJI, Russell 2000
-   - Sector exposure: If broad market, include key sector indices (XLK, XLF, XLE, XLV)
-   - Regional variants: If international, include regional indices (SX5E, DAX, FTSE)
-   - Volatility: Include VIX for equity strategies
-   - Currency pairs: Include base and quote currencies, plus related crosses
-   - Be EXPANSIVE but stay under 10 topics - quality over quantity
-
-2. DRIVER TOPICS (4-8): Macro/policy factors that drive the primary assets
-   - Central bank policy (FED_POLICY, ECB_POLICY, etc.)
-   - Economic themes (inflation, growth, employment)
-   - Structural factors user mentioned
-   - Second-order drivers (what drives the drivers)
-   - Transmission mechanisms (how drivers affect primary assets)
-
-3. Prioritize topics with clear transmission mechanisms to user's thesis
+You are the world's most sophisticated cross-domain analyst—mapping user strategies to interconnected market topics with elite precision.\n\nYour analysis must reflect ELITE HEDGE FUND STANDARDS:\n- **Transmission Thinking**: How does topic A affect topic B affect user's asset?\n- **Cross-Domain Synthesis**: Connect macro (policy) → meso (flows) → micro (asset)\n- **Second-Order Drivers**: What drives the drivers? (e.g., China growth → commodity demand → inflation → Fed policy → USD)\n- **Correlation Networks**: Which topics move together? Which are contrarian indicators?\n- **Catalyst Mapping**: Which topics contain leading indicators for user's asset?\n\nUSER ASSET: {asset_text}\n\nUSER STRATEGY:\n{strategy_text}\n\nUSER POSITION:\n{position_text}\n\nAVAILABLE TOPICS (id | name):\n{topics_list}\n\nTASK: Identify the most relevant topics for analyzing this strategy.\n\nINTELLIGENT SELECTION CRITERIA:\n\n1. PRIMARY TOPICS (6-10): Direct assets AND closely related instruments\n   - **Core assets**: Exact matches to user's description\n   - **Related indices**: If \"US market\" → SPX, NDX, DJI, Russell 2000\n   - **Sector exposure**: If broad market → key sectors (XLK, XLF, XLE, XLV)\n   - **Regional variants**: If international → regional indices (SX5E, DAX, FTSE)\n   - **Volatility**: Include VIX for equity strategies (fear gauge)\n   - **Currency pairs**: Include base + quote currencies + related crosses\n   - **Correlation pairs**: Assets that historically move with/against primary\n   - Quality over quantity: Stay under 10 topics\n\n2. DRIVER TOPICS (4-8): Macro/policy factors with CLEAR TRANSMISSION to primary assets\n   - **Central bank policy**: FED_POLICY, ECB_POLICY (rates → flows → asset prices)\n   - **Economic themes**: Inflation, growth, employment (fundamentals → policy → asset)\n   - **Structural factors**: User-mentioned themes (e.g., \"AI buildout\" → tech stocks)\n   - **Second-order drivers**: What drives the drivers? (e.g., China → commodities → inflation → Fed)\n   - **Transmission mechanisms**: Must show explicit path to user's asset\n   - **Leading indicators**: Topics that move BEFORE user's asset (predictive value)\n\n3. CROSS-DOMAIN INTELLIGENCE:\n   - Map causal chains: Topic A → mechanism → Topic B → mechanism → User Asset\n   - Identify contrarian indicators: Topics negatively correlated (hedging insights)\n   - Find second-order effects: Non-obvious connections that matter\n   - Prioritize topics with HIGH INFORMATION VALUE for user's thesis
 
 EXAMPLES:
 

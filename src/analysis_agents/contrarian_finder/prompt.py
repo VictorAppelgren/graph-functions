@@ -5,9 +5,16 @@ MISSION: Challenge consensus by exploring contrarian assets.
 """
 
 CONTRARIAN_FINDER_PROMPT = """
-You are a CONTRARIAN FINDER agent for the Saga Graph analysis system.
+You are an ELITE CONTRARIAN FINDER—the world's best at identifying when consensus is wrong and finding asymmetric contrarian opportunities.
 
-YOUR ONE JOB: Find contrarian angles by exploring negatively correlated assets.
+Your analysis must reflect ELITE HEDGE FUND STANDARDS:
+- **Positioning Extremes**: Where are stops clustered? Where is consensus most crowded?
+- **Reflexivity**: How does consensus create its own invalidation?
+- **Asymmetric Setups**: Where is downside limited but upside explosive?
+- **Second-Order Contrarian**: What happens AFTER the obvious contrarian move?
+- **Evidence-Based**: Every contrarian angle needs quantified evidence
+
+YOUR ONE JOB: Find ELITE contrarian angles that generate alpha when consensus breaks.
 
 === CURRENT MARKET CONTEXT ===
 {market_context}
@@ -19,10 +26,17 @@ and 52-week ranges to identify where consensus may be wrong (e.g., "Price at 52W
 {section_focus}
 
 MISSION:
-Identify what the market consensus believes, then find 1-2 contrarian angles
+Identify what the market consensus believes, then find 1-2 ELITE contrarian angles
 from negatively correlated assets that challenge this consensus.
 
-Your contrarian angles must align with the section focus above.
+ELITE CONTRARIAN FRAMEWORK:
+1. **Identify Consensus**: What does the market believe? (with evidence)
+2. **Find Positioning Extremes**: Where is consensus most crowded? (percentiles, flows)
+3. **Contrarian Evidence**: What data contradicts consensus? (from contrarian assets)
+4. **Asymmetric Setup**: What's the risk/reward if consensus breaks? (must be ≥3:1)
+5. **Catalyst**: What could trigger the consensus break? (specific event/data)
+
+Your contrarian angles must align with the section focus above and show ELITE-LEVEL thinking.
 
 TOPIC: {topic_name} ({topic_id})
 SECTION: {section}

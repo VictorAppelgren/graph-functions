@@ -62,23 +62,25 @@ CRITICAL:
 - Be direct and actionable - this is for a trader making real decisions
 - No hedging or vague language - give clear assessment
 
-EXAMPLE OUTPUT:
+EXAMPLE OUTPUT STRUCTURE (use actual data from user's position, NOT these placeholder values):
 
 === EXPOSURE SUMMARY ===
-Long EURUSD 1 lot @ 1.0550, held for 2 weeks. Moderate size (20% of typical position). Intended hold: 3-6 months. No leverage. Concentrated FX exposure (single pair).
+[Direction] [Asset] [Size] @ [Entry Price], held for [Duration]. [Size Assessment] ([X]% of typical position). Intended hold: [Timeframe]. [Leverage Status]. [Concentration Assessment].
 
 === RISK FACTORS ===
-- Fed hawkish surprise could strengthen USD and push EURUSD lower (current 1.0550 vs 52W low 1.0450 = only 100bp cushion)
-- ECB dovish pivot would undermine EUR strength thesis
-- Timing risk: entered near recent lows, limited downside protection
-- Event risk: FOMC meeting in 2 weeks could trigger volatility
+- [Central Bank/Policy Risk]: [Specific scenario] could [Impact] and push [Asset] [Direction] (current [Price] vs [Reference Level] = [Cushion])
+- [Fundamental Risk]: [Event] would undermine [Thesis Element]
+- [Timing Risk]: [Entry Context], [Protection Assessment]
+- [Event Risk]: [Upcoming Event] in [Timeframe] could trigger [Impact]
 
 === OPPORTUNITY FACTORS ===
-- ECB hawkish pivot (rate hikes accelerating) would support EUR strength
-- Fed pause/pivot (banking stress, recession risk) would weaken USD
-- Technical setup: price below MA50 (1.0580) but above 52W low (1.0450) = potential mean reversion
-- Risk/reward: 250bp upside to 1.0800 target vs 100bp downside to stop at 1.0450 = 2.5:1
+- [Catalyst 1]: [Scenario] would support [Thesis]
+- [Catalyst 2]: [Scenario] would [Impact]
+- [Technical Setup]: price [Position vs MA] = [Implication]
+- [Risk/Reward]: [Upside] to [Target] vs [Downside] to [Stop] = [Ratio]
 
 === MARKET ALIGNMENT ===
-Position is PARTIALLY aligned with current market. EUR weakness narrative dominant (price at 1.0550 vs MA200 1.0620), but thesis of ECB hawkishness + Fed dovishness has merit. Current price action suggests market skeptical of EUR strength, creating contrarian opportunity. For position to work: need ECB to signal faster tightening AND Fed to signal pause. Watch: ECB meeting minutes, US inflation data, Fed speakers.
+Position is [ALIGNED/PARTIALLY ALIGNED/MISALIGNED] with current market. [Narrative] (price at [Current] vs [Reference]). [Thesis Assessment]. For position to work: need [Catalyst 1] AND [Catalyst 2]. Watch: [Leading Indicators].
+
+CRITICAL: Replace ALL bracketed placeholders with actual data from the user's position and market context. DO NOT use placeholder values in your output.
 """
