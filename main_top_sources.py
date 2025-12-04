@@ -21,7 +21,6 @@ from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchest
 from src.articles.ingest_article import add_article
 from utils import app_logging
 from src.llm.health_check import wait_for_llm_health
-from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 

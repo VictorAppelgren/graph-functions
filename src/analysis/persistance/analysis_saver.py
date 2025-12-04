@@ -5,7 +5,6 @@ Saves updated analysis fields to the graph DB for a topic node.
 from src.graph.neo4j_client import run_cypher
 
 from utils import app_logging
-from src.observability.pipeline_logging import master_log
 
 logger = app_logging.get_logger(__name__)
 

@@ -13,9 +13,7 @@ from utils import app_logging
 
 logger = app_logging.get_logger("analysis.material.article_material")
 
-from src.analysis.selectors.best_articles import select_best_articles
 from src.articles.load_article import load_article
-from src.observability.pipeline_logging import problem_log, Problem, ProblemDetailsModel
 
 
 def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[str]]:

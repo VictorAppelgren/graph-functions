@@ -23,7 +23,6 @@ load_env()
 from utils import app_logging
 from src.graph.neo4j_client import run_cypher
 from src.graph.ops.topic import remove_topic
-from src.observability.pipeline_logging import master_log
 from src.graph.models import Neo4jRecord
 
 logger = app_logging.get_logger(__name__)

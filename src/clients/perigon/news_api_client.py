@@ -16,7 +16,7 @@ from datetime import datetime
 from . import config
 
 from utils import app_logging
-from src.observability.pipeline_logging import master_log_error, master_statistics
+from src.observability.stats_client import track
 
 logger = app_logging.get_logger("NewsApiClient")
 
@@ -232,9 +232,7 @@ class NewsApiClient:
                 # Handle rate limiting
                 if response.status_code == 429:
                     # Provider refuses service due to rate limit/quota -> hard stop
-                    master_log_error(
-                        f"Fatal provider error | news_api | rate limit 429 Retry-After={response.headers.get('Retry-After')}"
-                    )
+                    track("error_occurred", f"News API rate limit 429 Retry-After={response.headers.get('Retry-After')}")
                     logger.error("FATAL News API rate limit: 429")
                     sys.exit(4)
 
@@ -262,11 +260,15 @@ class NewsApiClient:
                 # Parse response
                 try:
                     result = response.json()
+                    article_count = len(result.get('articles', []))
                     logger.info(
-                        f"Request successful: found {len(result.get('articles', []))} articles"
+                        f"Request successful: found {article_count} articles"
                     )
                     # Track successful query
-                    master_statistics(queries=1)
+                    track("query_executed")
+                    # Track each article fetched
+                    for _ in range(article_count):
+                        track("article_fetched")
                     return result
                 except json.JSONDecodeError as e:
                     logger.error(f"Error parsing API response: {e}")
@@ -283,14 +285,12 @@ class NewsApiClient:
                         time.sleep(retry_delay)
                         continue
                     # Transient persisted after retries -> hard stop
-                    master_log_error(
-                        f"Fatal provider error | news_api | transient persisted: {e}"
-                    )
+                    track("error_occurred", f"News API transient error persisted: {e}")
                     logger.error(f"FATAL News API transient error persisted: {e}")
                     sys.exit(5)
                 else:
                     # Non-transient provider/network error -> hard stop immediately
-                    master_log_error(f"Fatal provider error | news_api | {e}")
+                    track("error_occurred", f"News API error: {e}")
                     logger.error(f"FATAL News API error: {e}")
                     sys.exit(6)
 

@@ -6,7 +6,7 @@ from src.graph.models import Neo4jRecord
 from utils import app_logging
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
-from src.observability.pipeline_logging import problem_log, Problem, master_log, ProblemDetailsModel, master_statistics
+from src.observability.stats_client import track
 from src.graph.policies.topic import classify_topic_category, classify_topic_importance, check_topic_relevance
 from src.analysis.policies.query_generator import create_wide_query
 from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
@@ -45,22 +45,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         topic_proposal = propose_topic(article_text, suggested_names, existing_topics=existing_topics)
         if not topic_proposal:
             # Unified rejection: treat as gating fail, but with special details
-            p = ProblemDetailsModel(category=None, failure_category="proposal_null")
-            problem_log(
-                Problem.TOPIC_REJECTED,
-                topic=(
-                    article_json.get("title", "unknown")
-                    if "article_json" in locals()
-                    else "unknown"
-                ),
-                details=p,
-            )
-            master_log(
-                f"Topic rejected | gate=proposal_null | "
-                f"article={article_json.get('title', 'unknown')[:80] if 'article_json' in locals() else 'unknown'} | "
-                f"reason=LLM returned no topic proposal"
-            )
-            master_statistics(topic_rejections_proposal_null=1)
+            track("topic_rejected", "LLM returned no topic proposal")
             return {
                 "status": "rejected",
                 "topic_name": (
@@ -91,22 +76,8 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         )
 
         if not should_add:
-            p = ProblemDetailsModel(category=category, should_add=should_add, should_add_motivation=motivation_for_relevance)
-            problem_log(
-                problem=Problem.TOPIC_REJECTED,
-                topic=topic_proposal.name,
-                details=p,
-            )
             # Do not crash on legitimate rejection; log and return minimal status
-            master_log(
-                f"Topic rejected | gate=relevance_gate | "
-                f"name={topic_proposal.name} | "
-                f"category={category} | "
-                f"type={topic_proposal.type} | "
-                f"motivation={topic_proposal.motivation[:100] if topic_proposal.motivation else 'none'} | "
-                f"reason={motivation_for_relevance[:100] if motivation_for_relevance else 'no_trading_relevance'}"
-            )
-            master_statistics(topic_rejections_relevance_gate=1)
+            track("topic_rejected", f"Topic {topic_proposal.name} failed relevance gate")
             return {
                 "status": "rejected",
                 "topic_name": topic_proposal.name,
@@ -130,21 +101,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         )
         # If LLM flags this topic for removal, reject and do not persist
         if isinstance(topic_importance, str) and topic_importance.upper() == "REMOVE":
-            p = ProblemDetailsModel(failure_category="importance_remove", rationale=topic_importance_rationale)
-            problem_log(
-                problem=Problem.TOPIC_REJECTED,
-                topic=topic_proposal.name,
-                details=p,
-            )
-            master_log(
-                f"Topic rejected | gate=importance_remove | "
-                f"name={topic_proposal.name} | "
-                f"category={category} | "
-                f"type={topic_proposal.type} | "
-                f"motivation={topic_proposal.motivation[:100] if topic_proposal.motivation else 'none'} | "
-                f"reason={topic_importance_rationale[:100] if topic_importance_rationale else 'flagged_for_removal'}"
-            )
-            master_statistics(topic_rejections_importance_remove=1)
+            track("topic_rejected", f"Topic {topic_proposal.name} flagged for removal (low importance)")
             return {
                 "status": "rejected",
                 "topic_name": topic_proposal.name,
@@ -190,22 +147,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             logger.info("capacity_guard decision: %s", decision)
 
             if decision.action == "reject":
-                p = ProblemDetailsModel(article_id=topic_proposal.id, importance=topic_proposal.importance, guard_action=decision.action, guard_motivation=decision.motivation)
-                problem_log(
-                    problem=Problem.CAPACITY_GUARD_REJECT,
-                    topic=topic_proposal.name,
-                    details=p,
-                )
-
-                master_log(
-                    f"Topic rejected | gate=capacity_guard | "
-                    f"name={topic_proposal.name} | "
-                    f"category={category} | "
-                    f"importance={topic_proposal.importance} | "
-                    f"motivation={topic_proposal.motivation[:100] if topic_proposal.motivation else 'none'} | "
-                    f"reason={decision.motivation[:100] if decision.motivation else 'capacity_limit'}"
-                )
-                master_statistics(topic_rejections_capacity_guard=1)
+                track("topic_rejected", f"Topic {topic_proposal.name} rejected by capacity guard")
                 return {
                     "status": "rejected",
                     "topic_name": topic_proposal.name,
@@ -218,15 +160,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             elif decision.action == "replace":
                 id_to_remove = decision.id_to_remove
                 if not id_to_remove:
-                    p = ProblemDetailsModel(guard_action=decision.action, guard_motivation=decision.motivation)
-                    problem_log(
-                        problem=Problem.CAPACITY_GUARD_REPLACE_MISSING_ID_TO_REMOVE,
-                        topic=topic_proposal.name,
-                        details=p
-                    )
-                    master_log(
-                        f"Topic rejected by capacity guard (missing id_to_remove) | name={topic_proposal.name}"
-                    )
                     return {
                         "status": "rejected",
                         "topic_name": topic_proposal.name,
@@ -241,17 +174,9 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                     run_cypher(
                         "MATCH (t:Topic {id: $id}) DETACH DELETE t", {"id": id_to_remove}
                     )
-                    master_log(
-                        f"Capacity replace | removed={id_to_remove} | adding={topic_proposal.id}"
-                    )
-                    master_statistics(topics_deleted=1)
+                    track("topic_deleted", f"Topic {id_to_remove} removed for capacity replacement")
                 except Exception as e:
-                    p = ProblemDetailsModel(id_to_remove=id_to_remove, error=str(e))
-                    problem_log(
-                        problem=Problem.CAPACITY_GUARD_REPLACE_DELETION_FAILED,
-                        topic=topic_proposal.name,
-                        details=p,
-                    )
+                    logger.error(f"Failed to delete topic {id_to_remove}: {e}")
                     raise
         except Exception:
             # Fail-open on guard issues to avoid blocking normal adds due to guard errors.
@@ -269,10 +194,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 "create_topic_topic returned topic without usable id (element_id or id)"
             )
 
-        master_log(
-            f"Topic added | name={topic_proposal.name} | category={category} | importance={topic_proposal.importance}"
-        )
-        master_statistics(topics_created=1)
+        track("topic_created", f"Topic {topic_proposal.name} created (category={category}, importance={topic_proposal.importance})")
         return created_topic
     
     else:
@@ -490,10 +412,7 @@ def remove_topic(topic_id: str, reason: str | None = None) -> dict[str, str]:
     logger.info(
         f"Removed Topic topic: name={name} id={topic_id} element_id={element_id} rels={rel_count}"
     )
-    master_log(
-        f"Topic removed | name={name} | id={topic_id} | element_id={element_id} | rels={rel_count} | reason={(reason or '')[:200]}",
-        removes_topic=1,
-    )
+    track("topic_deleted", f"Topic {name} removed (id={topic_id}, rels={rel_count})")
     return {
         "status": "deleted",
         "id": topic_id,

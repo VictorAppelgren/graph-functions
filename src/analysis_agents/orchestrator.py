@@ -456,11 +456,26 @@ def analysis_rewriter_with_agents(
         analysis_type: Specific section to run (or None for all 8 sections)
     """
     from src.analysis.material.article_material import build_material_for_synthesis_section
-    from src.analysis.persistance.analysis_saver import save_analysis
     from src.graph.ops.topic import get_topic_analysis_field
+    from src.graph.neo4j_client import run_cypher
     from utils import app_logging
     
     logger = app_logging.get_logger(__name__)
+    
+    def save_analysis(topic_id: str, section: str, analysis_text: str):
+        """Save analysis section to Neo4j Topic node"""
+        query = f"""
+        MATCH (t:Topic {{id: $topic_id}})
+        SET t.{section} = $analysis_text,
+            t.last_updated = datetime()
+        RETURN t.id
+        """
+        result = run_cypher(query, {
+            "topic_id": topic_id,
+            "analysis_text": analysis_text
+        })
+        if not result:
+            raise Exception(f"Failed to save {section} for topic {topic_id}")
     
     print("\n" + "="*100)
     print("🚀 AGENT-BASED ANALYSIS PIPELINE - RISK & CHAIN REACTION FOCUSED")
@@ -570,6 +585,10 @@ TASK: Synthesize into authoritative analysis following the structure above.
             # STEP 5: Save to Neo4j and memory
             save_analysis(topic_id, section, analysis_text)
             print(f"💾 Saved to Neo4j")
+            
+            # Track section written
+            from src.observability.stats_client import track
+            track("agent_section_written", f"Topic {topic_id}: {section}")
             
             completed_sections[section] = analysis_text
             print(f"✅ COMPLETE\n")

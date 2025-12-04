@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
+from src.analysis_agents.section_config import AGENT_SECTION_CONFIGS
 from src.graph.ops.topic import get_topic_by_id
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
@@ -20,7 +20,7 @@ def _fetch_existing_section_summaries(
 ) -> list[tuple[str, str]]:
     if not topic_id or not isinstance(topic_id, str):
         raise ValueError("topic_id is required")
-    if section not in SECTION_FOCUS:
+    if section not in AGENT_SECTION_CONFIGS:
         raise KeyError(f"Unknown section: {section}")
     q = (
         "MATCH (a:Article)-[r:ABOUT]->(t:Topic {id:$topic_id}) "
@@ -75,12 +75,12 @@ def relevance_gate_llm(
     """
     if not topic_id or not isinstance(topic_id, str):
         raise ValueError("topic_id is required")
-    if section not in SECTION_FOCUS:
+    if section not in AGENT_SECTION_CONFIGS:
         raise KeyError(f"Unknown section: {section}")
     if not article_text or not isinstance(article_text, str):
         raise ValueError("article_text is required")
 
-    focus = SECTION_FOCUS[section]
+    focus = AGENT_SECTION_CONFIGS[section].get("description", "")
     topic_node = get_topic_by_id(topic_id)
     topic_name = (
         topic_node["name"]
@@ -109,7 +109,7 @@ def relevance_gate_llm(
     prompt = PromptTemplate.from_template(relevance_gate_llm_prompt).format(
         article_text=article_text,
         topic_name=topic_name,
-        focus=SECTION_FOCUS[section],
+        focus=AGENT_SECTION_CONFIGS[section].get("description", ""),
         existing_summaries=existing_block,
         system_mission=SYSTEM_MISSION,
         system_context=SYSTEM_CONTEXT
@@ -117,8 +117,6 @@ def relevance_gate_llm(
 
     result = run_llm_decision(chain=llm, prompt=prompt, model=RelevanceGate)
     
-    # Track LLM call
-    from src.observability.pipeline_logging import master_statistics
-    master_statistics(llm_simple_calls=1)
+    # LLM call tracking removed - not critical for flow visibility
     
     return result

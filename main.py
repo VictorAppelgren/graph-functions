@@ -24,12 +24,12 @@ from src.graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 from src.graph.ops.topic import get_all_topics
 from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchestrator
 from utils import app_logging
-from src.observability.pipeline_logging import master_log, load_stats_file, master_statistics
+from src.observability.stats_client import track
 from src.graph.scheduling.query_overdue import query_overdue_seconds
 from src.graph.neo4j_client import run_cypher
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
-from src.analysis.orchestration.should_rewrite import should_rewrite
-from src.custom_user_analysis.daily_rewrite_orchestrator import rewrite_all_user_strategies
+from src.strategy_agents.orchestrator import analyze_user_strategy
+from src.api.backend_client import get_user_strategies
 from src.llm.health_check import wait_for_llm_health
 from src.market_data.market_data_entrypoint import run_market_data_if_needed
 
@@ -96,25 +96,37 @@ def run_pipeline() -> Dict[str, Any]:
             f"Starting new pipeline cycle at {loop_start_time:%Y-%m-%d %H:%M:%S}"
         )
 
-        # Daily strategy rewrite (once per day at 7am)
+        # Daily strategy analysis (once per day at 7am) - NEW ORCHESTRATOR
         if loop_start_time.hour >= 7 and not just_bootstrapped:
-            stats = load_stats_file()
-            flag_status = stats.today.custom_analysis.daily_rewrite_completed
-            logger.debug(f"Daily rewrite check: hour={loop_start_time.hour}, flag={flag_status}")
+            # TODO: Add daily flag check via backend API if needed
+            flag_status = False  # For now, run daily analysis
+            logger.debug(f"Daily strategy analysis check: hour={loop_start_time.hour}")
             
             if not flag_status:
-                # Set flag IMMEDIATELY to prevent other processes from starting
-                master_statistics(daily_rewrite_completed=True)
-                logger.info("🔄 Daily rewrite started (flag set to prevent duplicates)")
+                track("daily_strategy_analysis_started")
+                logger.info("🔄 Daily strategy analysis started (NEW orchestrator)")
                 try:
-                    results = rewrite_all_user_strategies()
-                    logger.info(f"✅ Daily rewrite: {results['succeeded']}/{results['total']} succeeded")
+                    # Get all user strategies from backend
+                    all_strategies = get_user_strategies("Victor")  # TODO: Support multiple users
+                    succeeded = 0
+                    failed = 0
+                    
+                    for strategy in all_strategies:
+                        try:
+                            logger.info(f"Analyzing strategy: {strategy['id']}")
+                            analyze_user_strategy("Victor", strategy['id'])
+                            succeeded += 1
+                        except Exception as e:
+                            logger.error(f"Failed to analyze {strategy['id']}: {e}")
+                            failed += 1
+                    
+                    logger.info(f"✅ Daily analysis: {succeeded}/{len(all_strategies)} succeeded, {failed} failed")
                 except Exception as e:
-                    logger.error(f"❌ Daily rewrite failed: {e}")
+                    logger.error(f"❌ Daily strategy analysis failed: {e}")
             else:
-                logger.debug("Daily rewrite already completed today, skipping")
+                logger.debug("Daily strategy analysis already completed today, skipping")
         elif just_bootstrapped:
-            logger.info("⏭️  Skipping daily rewrite (just bootstrapped)")
+            logger.info("⏭️  Skipping daily strategy analysis (just bootstrapped)")
             just_bootstrapped = False  # Reset flag after first iteration
 
         # Market data update (3x daily: 6am, 10am, 4pm)
@@ -254,9 +266,10 @@ def run_pipeline() -> Dict[str, Any]:
         logger.info(
             f"Backfill completed for id={topic_id} | added_articles={added_cnt}"
         )
+        # NOTE: Analysis is now triggered in add_article() when Level 2/3 articles are added
 
         logger.info("Pipeline run complete.")
-        master_log("Pipeline complete | pipeline | run complete")
+        track("pipeline_run_completed")
 
         # Scheduler: no fixed cycle sleep; loop continues. Sleeping is handled when no topics are overdue.
         logger.info("SLEEPING FUNCTION IS MISSING!!")

@@ -19,7 +19,7 @@ from src.analysis_agents.writer.agent import WriterAgent
 from src.analysis_agents.critic.agent import CriticAgent
 from src.analysis_agents.source_checker.agent import SourceCheckerAgent
 from src.graph.neo4j_client import run_cypher
-from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
+from src.analysis_agents.section_config import AGENT_SECTION_CONFIGS
 
 
 def get_random_topic():
@@ -88,7 +88,7 @@ def test(topic_id=None, section="fundamental", pre_only=False):
     print("="*80)
     
     # Get section focus
-    section_focus_text = SECTION_FOCUS.get(section, "")
+    section_focus_text = AGENT_SECTION_CONFIGS.get(section, {}).get("description", "")
     
     print(f"\n📝 Writing Section: {section.upper()}")
     if section_focus_text:
@@ -153,7 +153,7 @@ def test(topic_id=None, section="fundamental", pre_only=False):
     source_output = source_checker.run(
         draft=draft,
         material=material,
-        section_focus=SECTION_FOCUS[section],
+        section_focus=AGENT_SECTION_CONFIGS[section]["description"],
         critic_feedback=critic_feedback,
         asset_name=topic_name,
         asset_id=topic_id

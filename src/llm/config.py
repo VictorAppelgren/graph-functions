@@ -642,13 +642,7 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
             except Exception:
                 pass
             
-            # Track LLM usage for statistics (only on first attempt)
-            if attempt == 0:
-                try:
-                    from src.observability.pipeline_logging import increment_llm_usage
-                    increment_llm_usage(self.tier)
-                except Exception:
-                    pass  # Don't fail if tracking fails
+            # LLM usage tracking removed - not critical for flow visibility
             
             # Get LLM for selected server and invoke with busy tracking
             llm = self._get_llm_for_server(server_id)

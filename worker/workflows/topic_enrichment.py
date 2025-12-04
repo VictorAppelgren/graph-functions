@@ -28,21 +28,15 @@ import requests
 import os
 
 from utils.app_logging import get_logger
-from src.observability.pipeline_logging import (
-    master_log,
-    problem_log,
-    master_statistics,
-    Problem,
-)
+from src.observability.stats_client import track
 
-from src.analysis.orchestration.analysis_rewriter import SECTIONS
+from src.analysis_agents.section_config import AGENT_SECTIONS as SECTIONS
 from src.graph.ops.topic import get_all_topics, get_topic_by_id
 from src.graph.neo4j_client import run_cypher
 
 from src.articles.ingest_article import add_article
 from src.analysis.policies.keyword_generator import generate_keywords
 from src.analysis.policies.relevance_gate import relevance_gate_llm
-from src.analysis.orchestration.should_rewrite import should_rewrite
 
 logger = get_logger("topic_enrichment")
 
@@ -210,7 +204,7 @@ def enrich_topic_via_cold_storage(
     logger.info(f"Generated {len(keywords.list)} keywords for topic={topic_name} section={section}: {keywords.list}")
     if not keywords.list:
         logger.warning(f"No keywords generated for topic={topic_id} section={section}")
-        master_statistics(enrichment_no_keywords=1)
+        track("enrichment_no_keywords", f"Topic {topic_id} section {section}: No keywords generated")
         return 0
     
     # Get existing article IDs to exclude from search
@@ -225,7 +219,7 @@ def enrich_topic_via_cold_storage(
     )
     if not candidates:
         logger.warning(f"No candidates found for topic={topic_id} section={section}")
-        master_statistics(enrichment_no_candidates=1)
+        track("enrichment_no_candidates", f"Topic {topic_id} section {section}: No candidates found")
         return 0
 
     added = 0
@@ -262,12 +256,13 @@ def enrich_topic_via_cold_storage(
             continue
         if res and res.get("status") not in ("skipped", "failed"):
             added += 1
-            master_log(f"Cold storage added | {article_id} -> {topic_id} | section={section}")
     
     if added == 0:
         logger.warning(f"No articles added for topic={topic_id} section={section} despite {len(candidates)} candidates")
-        master_statistics(enrichment_no_articles_added=1)
-        problem_log(Problem.ZERO_RESULTS, topic_id)
+        track("enrichment_no_articles_added", f"Topic {topic_id} section {section}: No articles added despite {len(candidates)} candidates")
+    else:
+        # Track successful enrichment
+        track("enrichment_succeeded", f"Topic {topic_id} section {section}: {added} articles added")
     
     logger.info(
         f"Cold storage summary | topic={topic_id} section={section} | candidates={len(candidates)} | rel_checked={rel_checked} | rel_passed={rel_passed} | added={added} | needed={needed}"
@@ -369,29 +364,14 @@ def backfill_topic_from_storage(
                 missing_analysis = [k for k, v in analysis_fields.items() if not v]
                 
                 if missing_analysis:
-                    from src.analysis.orchestration.analysis_rewriter import analysis_rewriter
-                    master_log(f"Analysis generation triggered | {topic_id} | sufficient_articles=True | missing={missing_analysis}")
-                    analysis_rewriter(topic_id, test=False)
+                    from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
+                    master_log(f"Analysis generation triggered (NEW AGENTS) | {topic_id} | sufficient_articles=True | missing={missing_analysis}")
+                    analysis_rewriter_with_agents(topic_id)
     
-    # Trigger analysis check if articles were added
+    # NOTE: Analysis is now triggered automatically in add_article() when Level 2/3 articles are added
     if total_added > 0 and not test:
-        master_log(f"Post-enrichment analysis check | {topic_id} | articles_added={total_added}")
-        
-        # Get any recent article for this topic to use as trigger
-        recent_article_query = """
-        MATCH (a:Article)-[:ABOUT]->(t:Topic {id: $topic_id})
-        WHERE coalesce(a.priority, '') <> 'hidden'
-        RETURN a.id as article_id
-        ORDER BY a.published_at DESC
-        LIMIT 1
-        """
-        recent_articles = run_cypher(recent_article_query, {"topic_id": topic_id})
-        if recent_articles:
-            article_id = recent_articles[0]["article_id"]
-            logger.info(f"🔄 CALLING should_rewrite | topic={topic_id} trigger_article={article_id}")
-            should_rewrite(topic_id, article_id, triggered_by="enrichment")
-        else:
-            logger.warning(f"No recent articles found for analysis trigger | topic={topic_id}")
+        master_log(f"Post-enrichment complete | {topic_id} | articles_added={total_added}")
+        logger.info(f"✅ Enrichment complete for {topic_id} | {total_added} articles added (analysis triggered in add_article if Level 2/3)")
     else:
         if total_added == 0:
             logger.info(f"No analysis trigger | topic={topic_id} | no articles were added during enrichment")

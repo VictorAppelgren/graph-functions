@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from src.analysis.orchestration.analysis_rewriter import SECTION_FOCUS
+from src.analysis_agents.section_config import AGENT_SECTION_CONFIGS
 from src.llm.prompts.generate_keywords import generate_keyword_prompt
 from src.llm.sanitizer import run_llm_decision, Keywords
 
@@ -45,7 +45,7 @@ def generate_keywords(topic_name: str, section: str) -> Keywords:
     prompt = PromptTemplate.from_template(generate_keyword_prompt).format(
         topic_name=topic_name,
         section=section,
-        focus=SECTION_FOCUS[section],
+        focus=AGENT_SECTION_CONFIGS.get(section, {}).get("description", ""),
         system_mission=SYSTEM_MISSION,
         system_context=SYSTEM_CONTEXT
     )

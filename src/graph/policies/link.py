@@ -7,7 +7,6 @@ from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.llm.sanitizer import run_llm_decision, RemoveDecision, SelectOneNewLinkModel
 from langchain_core.prompts import PromptTemplate
 from src.llm.prompts.llm_select_one_new_link import llm_select_one_new_link_prompt
-from src.observability.pipeline_logging import master_log_error
 
 logger = app_logging.get_logger(__name__)
 

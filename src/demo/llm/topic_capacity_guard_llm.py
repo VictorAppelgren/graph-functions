@@ -20,7 +20,6 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from utils.app_logging import truncate_str
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from src.observability.pipeline_logging import master_log
 from pydantic import BaseModel
 from src.llm.prompts.decide_topic_capacity import decide_topic_capacity_prompt
 from src.llm.sanitizer import run_llm_decision, TopicCapacityModel

@@ -22,7 +22,6 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from src.graph.neo4j_client import run_cypher, execute_write
-from src.observability.pipeline_logging import load_stats_file, master_statistics
 from utils import app_logging
 
 logger = app_logging.get_logger(__name__)
@@ -252,22 +251,9 @@ def run_market_data_if_needed() -> Optional[Dict[str, Any]]:
     if current_hour not in [6, 10, 16]:
         return None
     
-    # Check if already done this hour
-    try:
-        stats = load_stats_file()
-        if stats.today.custom_analysis.market_data_daily_update_completed:
-            logger.debug(f"Market data already updated today (hour {current_hour})")
-            return None
-    except Exception as e:
-        logger.warning(f"Could not load stats file: {e}, proceeding with update")
-    
-    # Set flag IMMEDIATELY to prevent other processes from starting
-    try:
-        master_statistics(market_data_daily_update_completed=True)
-        logger.info(f"📊 Market data update started (hour {current_hour}, flag set)")
-    except Exception as e:
-        logger.error(f"Failed to set market data flag: {e}")
-        return None
+    # TODO: Add daily flag check via backend API if needed
+    # For now, run market data update
+    logger.info(f"📊 Market data update started (hour {current_hour})")
     
     # Run the orchestrator
     try:

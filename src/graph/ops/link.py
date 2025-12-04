@@ -1,6 +1,6 @@
 from src.graph.neo4j_client import connect_graph_db, NEO4J_DATABASE
 from utils import app_logging
-from src.observability.pipeline_logging import master_log, master_log_error, master_statistics
+from src.observability.stats_client import track
 from difflib import get_close_matches
 from typing import Optional, Any
 from src.graph.ops.topic import get_all_topics, get_topic_by_id
@@ -388,7 +388,7 @@ def create_about_link_with_classification(
     
     if existing:
         logger.info(f"ABOUT link already exists: {article_id} -> {topic_id}")
-        master_statistics(duplicates_skipped=1)
+        track("article_duplicate_skipped")
         return {"action": "duplicate"}
     
     # Calculate initial tier
@@ -478,11 +478,11 @@ def add_article_with_capacity_check(
             logger.info(f"Archiving article {aid} at tier 0")
             try:
                 create_link_at_tier(aid, topic_id, timeframe, 0, motivation_text, implications_text)
-                master_statistics(articles_archived=1)
+                track("article_archived", f"Article {aid} archived at tier 0")
                 return {"action": "archived", "tier": 0}
             except Exception as e:
                 logger.error(f"Failed to archive article {aid}: {e}")
-                master_statistics(errors=1)
+                track("error_occurred", f"Failed to archive article {aid}: {e}")
                 return {"action": "error", "tier": 0}
         
         # Check capacity at this tier
@@ -492,7 +492,7 @@ def add_article_with_capacity_check(
             # Room available - just add it
             logger.info(f"Adding article {aid} at tier {tier} (room available)")
             create_link_at_tier(aid, topic_id, timeframe, tier, motivation_text, implications_text)
-            master_statistics(about_links_added=1)
+            track("about_link_created")
             return {"action": "added", "tier": tier}
         
         # Tier is full - Stage 1: Gate Decision
@@ -515,7 +515,7 @@ def add_article_with_capacity_check(
         # Check for rejection
         if gate_result["reject"]:
             logger.warning(f"Article {aid} rejected at tier {tier}: {gate_result['reasoning']}")
-            master_statistics(articles_rejected_capacity=1)
+            track("article_rejected_capacity", f"Article {aid} rejected at tier {tier}: {gate_result['reasoning']}")
             return {"action": "rejected"}
         
         # Not rejected - check who to downgrade
@@ -527,7 +527,7 @@ def add_article_with_capacity_check(
                 f"Article {aid} downgraded from tier {tier} to tier {tier-1}: "
                 f"{gate_result['reasoning']}"
             )
-            master_statistics(articles_downgraded_on_arrival=1)
+            track("article_downgraded", f"Article {aid} downgraded on arrival from tier {tier} to {tier-1}")
             return try_add_at_tier(
                 aid, tier - 1, summary, source, published, 
                 motivation_text, implications_text
@@ -548,7 +548,7 @@ def add_article_with_capacity_check(
         
         # Remove existing article from current tier
         remove_link(downgrade_id, topic_id)
-        master_statistics(articles_downgraded=1)
+        track("article_downgraded", f"Article {downgrade_id} downgraded to make room")
         
         # CRITICAL: Recursively add existing article to tier-1
         # This will check capacity at tier-1 and potentially trigger
@@ -575,7 +575,7 @@ def add_article_with_capacity_check(
         # Now we have room at current tier - add new article
         logger.info(f"Adding article {aid} at tier {tier} (made room by downgrading {downgrade_id})")
         create_link_at_tier(aid, topic_id, timeframe, tier, motivation_text, implications_text)
-        master_statistics(about_links_added=1)
+        track("about_link_created")
         return {"action": "added", "tier": tier}
     
     # Start recursive process

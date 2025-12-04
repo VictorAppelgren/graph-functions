@@ -1,6 +1,12 @@
 """
 Admin API endpoints for observability data.
 Serves daily statistics, logs, and trends.
+
+TODO: This entire file needs to be updated to call the new backend stats API
+instead of loading local files. The new stats are at:
+  - POST http://localhost:8000/api/stats/track
+  - GET http://localhost:8000/api/stats/today
+  - GET http://localhost:8000/api/stats/logs/today
 """
 from fastapi import APIRouter, HTTPException
 from pathlib import Path
@@ -8,12 +14,13 @@ from datetime import datetime
 import json
 from typing import List, Dict
 
-from src.observability.pipeline_logging import (
-    load_stats_file,
-    StatsFileModel,
-    STATS_DIR,
-    LOG_DIR
-)
+# TODO: Remove these imports and call backend API instead
+# from src.observability.pipeline_logging import (
+#     load_stats_file,
+#     StatsFileModel,
+#     STATS_DIR,
+#     LOG_DIR
+# )
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 

@@ -7,7 +7,7 @@ from src.articles.policies.article_capacity_manager import article_capacity_mana
 from src.graph.neo4j_client import run_cypher
 from src.graph.ops.topic import get_topic_by_id
 from src.graph.config import TIER_LIMITS_PER_TIMEFRAME_PERSPECTIVE
-from src.observability.pipeline_logging import master_log, master_statistics
+from src.observability.stats_client import track
 from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
@@ -142,11 +142,8 @@ def make_room_for_article(
                     "reason": decision.motivation
                 })
                 
-                master_log(
-                    f"Archived article | {decision.target_article_id} | "
-                    f"downgraded to tier 0 | reason: {decision.motivation}"
-                )
-                master_statistics(articles_archived=1)
+                track("article_archived", 
+                      f"Article {decision.target_article_id} archived (tier 0): {decision.motivation}")
                 
                 logger.info(
                     f"Archived article {decision.target_article_id} (downgraded to tier 0) "
@@ -243,11 +240,8 @@ def make_room_for_article(
                     "reason": decision.motivation
                 })
                 
-                master_log(
-                    f"Downgraded article | {decision.target_article_id} | "
-                    f"to importance {decision.new_importance} | reason: {decision.motivation}"
-                )
-                master_statistics(articles_downgraded=1)
+                track("article_downgraded",
+                      f"Article {decision.target_article_id} downgraded to {decision.new_importance}: {decision.motivation}")
                 
                 logger.info(
                     f"Downgraded article {decision.target_article_id} to importance {decision.new_importance} "
@@ -368,7 +362,7 @@ def check_capacity(topic_id: str, timeframe: str, tier: int) -> dict:
             
             # Remove from current tier
             remove_link(weakest_id, topic_id)
-            master_statistics(articles_downgraded=1)
+            track("article_downgraded", f"Article {weakest_id} downgraded due to capacity in topic {topic_id}")
             
             # Recursively add to tier-1 (will cascade if needed)
             from src.graph.ops.link import add_article_with_capacity_check

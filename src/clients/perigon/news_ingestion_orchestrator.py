@@ -41,7 +41,6 @@ from src.api.backend_client import ingest_article
 from utils import app_logging
 
 logger = app_logging.get_logger("news_ingestion_orchestrator")
-from src.observability.pipeline_logging import master_log, master_log_error, problem_log, master_statistics
 
 
 def set_third_party_log_levels(debug: bool) -> None:
@@ -133,8 +132,7 @@ class NewsIngestionOrchestrator:
                 query=query_text, max_results=max_articles
             )
             
-            # Track query execution (even if it fails or returns no results)
-            master_statistics(queries=1)
+            # Track query execution (done in news_api_client)
             self.stats["queries_executed"] += 1
 
             if not raw_results or "articles" not in raw_results:
@@ -145,20 +143,11 @@ class NewsIngestionOrchestrator:
             logger.info(
                 f"Retrieved {len(articles)} articles from API for topic {topic}"
             )
-            master_log(
-                f"Retrieved articles | {topic} | Retrieved {len(articles)} from API",
-                articles_processed=len(articles),
-            )
-            # Query already tracked above
+            # Query already tracked in news_api_client
             self.stats["articles_retrieved"] += len(articles)
-            # If the query returned zero results, record as a problem (simple, observable)
+            # If the query returned zero results, nothing more to process
             if len(articles) == 0:
-                problem_log(
-                    problem="Zero results",
-                    topic=topic,
-                    details={"query": query_text, "max_results": max_articles},
-                )
-                # Nothing more to process for this query
+                logger.warning(f"Zero results for topic {topic}")
                 return []
 
             # Process articles
@@ -195,7 +184,6 @@ class NewsIngestionOrchestrator:
                 )
                 return []
             self.stats["errors"] += 1
-            master_log_error(f"Query error | {topic} | {e}")
             logger.error(f"❌ Error executing query: {e}")
             raise RuntimeError(f"Failed to execute query: {e}")
 

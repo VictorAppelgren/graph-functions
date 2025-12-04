@@ -1,16 +1,13 @@
 from typing import cast, Any
 
 from src.articles.load_article import load_article
-from src.observability.pipeline_logging import master_log, master_statistics
+from src.observability.stats_client import track
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.graph.ops.topic import get_all_topics
 from src.analysis.policies.topic_identifier import find_topic_mapping, NodeRow
 from src.graph.neo4j_client import run_cypher
 from utils.app_logging import get_logger
 from src.graph.ops.link import find_influences_and_correlates
-from src.analysis.orchestration.replace_article_orchestrator import (
-    does_article_replace_old,
-)
 from src.graph.ops.topic import add_topic
 
 logger = get_logger(__name__)
@@ -38,11 +35,6 @@ def trigger_next_steps(topic_id: str, argos_id: str) -> None:
     else:
         logger.info(f"Skipping relationship discovery for {topic_id} (has {relationship_count} relationships, throttled)")
 
-    # Always trigger replacement analysis
-    replacement_result = does_article_replace_old(topic_id, argos_id)
-    replaces = replacement_result.get("tool") != "none"
-    logger.info(f"Article replacement for topic {topic_id}: replaces={replaces}")
-
 
 def add_article(
     article_id: str, test: bool = False, intended_topic_id: str | None = None
@@ -56,7 +48,7 @@ def add_article(
     logger.info(f"Starting article processing for {article_id}")
     
     # Track article processing attempt
-    master_statistics(articles_processed=1)
+    track("article_processed")
 
     # 1. Load article from cold storage
     article = load_article(article_id)
@@ -94,7 +86,7 @@ def add_article(
             f"LLM hallucinated non-existent topic IDs: {hallucinated_ids}. "
             f"Filtering to only valid IDs from the provided list."
         )
-        master_statistics(llm_hallucinated_topic_ids=len(hallucinated_ids))
+        track("llm_hallucinated_topic_ids")
         existing_article_ids = [tid for tid in existing_article_ids if tid in valid_topic_ids]
 
     logger.info(
@@ -107,10 +99,7 @@ def add_article(
         logger.warning(
             f"ABORT: No relevant topics found for article {article_id}. Skipping article."
         )
-        master_log(
-            f"Article rejected | {article_id} | No relevant topics found"
-        )
-        master_statistics(articles_rejected_no_topics=1)
+        track("article_rejected_no_topics", f"Article {article_id}: LLM found no relevant topics")
         return {
             "article_id": article_id,
             "status": "skipped",
@@ -211,12 +200,9 @@ def add_article(
             )
             # Trigger next steps for the intended topic link
             trigger_next_steps(intended_topic_id, argos_id)
-            master_log(
-                f"Added article | {article.get('argos_id')} | to intended topic {intended_topic_id}"
-            )
             if not article_already_exists:
-                master_statistics(articles_added=1)
-            master_statistics(about_links_added=1)
+                track("article_added")
+            track("about_link_created")
 
     # 8. Multi-topic processing: loop over all relevant topics
     successful_topics = 0
@@ -247,7 +233,7 @@ def add_article(
                 logger.info(
                     f"Article {argos_id} already linked to topic {topic_id}. Skipping duplicate."
                 )
-                master_statistics(duplicates_skipped=1)
+                track("article_duplicate_skipped")
                 continue
 
         # NEW: Classify article FOR THIS SPECIFIC TOPIC
@@ -292,25 +278,34 @@ def add_article(
             f"timeframe={classification.timeframe} | "
             f"importance={classification.overall_importance}"
         )
+        
+        # Track article classification by priority
+        track(f"article_classified_priority_{classification.overall_importance}")
 
         # Trigger next steps, relationship discovery and replacement analysis
         trigger_next_steps(topic_id, argos_id)
 
-        # Trigger analysis check for article ingestion
+        # Trigger NEW agent-based analysis ONLY for Level 2/3 articles
         if not test:
-            from src.analysis.orchestration.should_rewrite import should_rewrite
-            try:
-                should_rewrite(topic_id, argos_id, triggered_by="ingestion")
-            except Exception as e:
-                logger.warning(f"Analysis trigger failed for {topic_id}/{argos_id}: {e}")
+            # Check if this is a Level 2 or 3 article
+            priority_query = "MATCH (a:Article {id: $article_id}) RETURN a.priority as priority"
+            priority_result = run_cypher(priority_query, {"article_id": argos_id})
+            priority = priority_result[0]["priority"] if priority_result else None
+            
+            if priority in ['2', '3']:
+                from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
+                track("agent_analysis_triggered", f"Topic {topic_id}: Level {priority} article {argos_id}")
+                logger.info(f"🤖 Triggering agent analysis for {topic_id} (Level {priority} article added: {argos_id})")
+                analysis_rewriter_with_agents(topic_id)
+                track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
+                logger.info(f"✅ Agent analysis complete for {topic_id}")
+            else:
+                logger.info(f"⏭️  Skipping analysis for {topic_id} (Level {priority} article, need Level 2/3)")
 
         successful_topics += 1
-        master_log(
-            f"Added article | {article.get('argos_id')} | to existing topic {topic_id}"
-        )
         if not article_already_exists:
-            master_statistics(articles_added=1)
-        master_statistics(about_links_added=1)
+            track("article_added")
+        track("about_link_created")
 
     # If new node names are found, run this one time
     if len(new_topic_names) > 0:
@@ -322,10 +317,7 @@ def add_article(
             topic_id = new_topic_result.get("id")
             if not topic_id:
                 logger.warning(f"Failed to create new topic for article {article_id}")
-                master_log(
-                    f"Failed to create new topic for article | {article.get('argos_id')} | to new topic {topic_id}"
-                )
-                master_statistics(articles_rejected_no_topics=1)
+                track("article_rejected_no_topics", f"Failed to create topic for article {article.get('argos_id')}")
             else:
                 # NEW: Classify article FOR THIS NEW TOPIC
                 from src.graph.ops.topic import get_topic_context
@@ -365,28 +357,38 @@ def add_article(
                     # Don't trigger next steps for rejected article
                 else:
                     logger.info(
-                        f"Created ABOUT link: {argos_id} -> {topic_id} (new topic) | "
-                        f"timeframe={classification.timeframe}"
+                        f"Created ABOUT link: {argos_id} -> {topic_id} | "
+                        f"timeframe={classification.timeframe} | "
+                        f"importance={classification.overall_importance}"
                     )
+                
+                    # Track article classification by priority
+                    track(f"article_classified_priority_{classification.overall_importance}")
 
                     # Trigger next steps, relationship discovery and replacement analysis
                     trigger_next_steps(topic_id, argos_id)
 
-                # Trigger analysis check for article ingestion
-                if not test:
-                    from src.analysis.orchestration.should_rewrite import should_rewrite
-                    try:
-                        should_rewrite(topic_id, argos_id, triggered_by="ingestion")
-                    except Exception as e:
-                        logger.warning(f"Analysis trigger failed for {topic_id}/{argos_id}: {e}")
+                    # Trigger NEW agent-based analysis ONLY for Level 2/3 articles
+                    if not test:
+                        # Check if this is a Level 2 or 3 article
+                        priority_query = "MATCH (a:Article {id: $article_id}) RETURN a.priority as priority"
+                        priority_result = run_cypher(priority_query, {"article_id": argos_id})
+                        priority = priority_result[0]["priority"] if priority_result else None
+                        
+                        if priority in ['2', '3']:
+                            from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
+                            track("agent_analysis_triggered", f"Topic {topic_id}: Level {priority} article {argos_id}")
+                            logger.info(f"🤖 Triggering agent analysis for {topic_id} (Level {priority} article added: {argos_id})")
+                            analysis_rewriter_with_agents(topic_id)
+                            track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
+                            logger.info(f"✅ Agent analysis complete for {topic_id}")
+                        else:
+                            logger.info(f"⏭️  Skipping analysis for {topic_id} (Level {priority} article, need Level 2/3)")
 
                 successful_topics += 1
-                master_log(
-                    f"Added article | {article.get('argos_id')} | to new topic {topic_id}"
-                )
                 if not article_already_exists:
-                    master_statistics(articles_added=1)
-                master_statistics(about_links_added=1)
+                    track("article_added")
+                track("about_link_created")
 
     # Final tracking and logging, existing node len and if new nodes are more than 1, it still counts as 1
     total_topics = len(existing_article_ids)

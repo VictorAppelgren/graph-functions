@@ -26,7 +26,6 @@ load_env()
 from utils.app_logging import get_logger
 from src.graph.neo4j_client import run_cypher
 from src.articles.ingest_article import add_article
-from src.observability.pipeline_logging import master_log, master_log_error
 
 logger = get_logger(__name__)
 
