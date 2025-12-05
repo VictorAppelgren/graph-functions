@@ -7,6 +7,7 @@ Usage:
     python -m src.analysis_agents.orchestrator eurusd                    # Full pipeline (all 8 sections)
     python -m src.analysis_agents.orchestrator eurusd full               # Full pipeline (all 8 sections)
     python -m src.analysis_agents.orchestrator eurusd chain_reaction_map # Single section
+    python -m src.analysis_agents.orchestrator all                       # Full pipeline (all 8 sections)
 """
 
 from typing import Dict, Any, List, Tuple, Optional

@@ -18,6 +18,7 @@ import datetime
 from typing import Dict, Any
 import time
 import math
+from dateutil import parser as date_parser
 from src.graph.policies.priority import PRIORITY_POLICY, PriorityLevel
 
 # Import from V1 using absolute imports
@@ -29,7 +30,7 @@ from src.graph.scheduling.query_overdue import query_overdue_seconds
 from src.graph.neo4j_client import run_cypher
 from worker.workflows.topic_enrichment import backfill_topic_from_storage
 from src.strategy_agents.orchestrator import analyze_user_strategy
-from src.api.backend_client import get_user_strategies
+from src.api.backend_client import get_user_strategies, get_all_users
 from src.llm.health_check import wait_for_llm_health
 from src.market_data.market_data_entrypoint import run_market_data_if_needed
 
@@ -98,33 +99,60 @@ def run_pipeline() -> Dict[str, Any]:
 
         # Daily strategy analysis (once per day at 7am) - NEW ORCHESTRATOR
         if loop_start_time.hour >= 7 and not just_bootstrapped:
-            # TODO: Add daily flag check via backend API if needed
-            flag_status = False  # For now, run daily analysis
             logger.debug(f"Daily strategy analysis check: hour={loop_start_time.hour}")
             
-            if not flag_status:
-                track("daily_strategy_analysis_started")
-                logger.info("🔄 Daily strategy analysis started (NEW orchestrator)")
-                try:
-                    # Get all user strategies from backend
-                    all_strategies = get_user_strategies("Victor")  # TODO: Support multiple users
+            # Simple flag: if any strategy was analyzed before 7am today, skip
+            today_7am = datetime.datetime.combine(
+                loop_start_time.date(), 
+                datetime.time(7, 0)
+            )
+            
+            # Get all users and check if any need analysis
+            all_users = get_all_users()
+            if not all_users:
+                logger.warning("No users found, skipping daily analysis")
+            else:
+                needs_analysis = False
+                for username in all_users:
+                    strategies = get_user_strategies(username)
+                    for strategy in strategies:
+                        last_analyzed = strategy.get("last_analyzed_at")
+                        if not last_analyzed:
+                            needs_analysis = True
+                            break
+                        # Check if analyzed before 7am today
+                        analyzed_time = date_parser.parse(last_analyzed)
+                        if analyzed_time < today_7am:
+                            needs_analysis = True
+                            break
+                    if needs_analysis:
+                        break
+                
+                if not needs_analysis:
+                    logger.debug("All strategies analyzed after 7am today, skipping")
+                else:
+                    track("daily_strategy_analysis_started")
+                    logger.info("🔄 Daily strategy analysis started (NEW orchestrator)")
+                    
                     succeeded = 0
                     failed = 0
+                    total_strategies = 0
                     
-                    for strategy in all_strategies:
-                        try:
-                            logger.info(f"Analyzing strategy: {strategy['id']}")
-                            analyze_user_strategy("Victor", strategy['id'])
-                            succeeded += 1
-                        except Exception as e:
-                            logger.error(f"Failed to analyze {strategy['id']}: {e}")
-                            failed += 1
+                    for username in all_users:
+                        user_strategies = get_user_strategies(username)
+                        total_strategies += len(user_strategies)
+                        logger.info(f"User {username}: {len(user_strategies)} strategies")
+                        
+                        for strategy in user_strategies:
+                            try:
+                                logger.info(f"Analyzing {username}/{strategy['id']}")
+                                analyze_user_strategy(username, strategy['id'])
+                                succeeded += 1
+                            except Exception as e:
+                                logger.error(f"Failed {username}/{strategy['id']}: {e}")
+                                failed += 1
                     
-                    logger.info(f"✅ Daily analysis: {succeeded}/{len(all_strategies)} succeeded, {failed} failed")
-                except Exception as e:
-                    logger.error(f"❌ Daily strategy analysis failed: {e}")
-            else:
-                logger.debug("Daily strategy analysis already completed today, skipping")
+                    logger.info(f"✅ Daily analysis: {succeeded}/{total_strategies} succeeded, {failed} failed across {len(all_users)} users")
         elif just_bootstrapped:
             logger.info("⏭️  Skipping daily strategy analysis (just bootstrapped)")
             just_bootstrapped = False  # Reset flag after first iteration

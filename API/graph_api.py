@@ -294,6 +294,36 @@ def build_context(request: ContextRequest):
         raise HTTPException(status_code=500, detail=f"Context building error: {str(e)}")
 
 
+# ============ STRATEGY ANALYSIS TRIGGER ============
+
+@app.post("/trigger/strategy-analysis")
+def trigger_strategy_analysis(request: Dict[str, str]):
+    """
+    Trigger strategy analysis asynchronously.
+    Called by Backend when user saves a strategy.
+    """
+    username = request.get("username")
+    strategy_id = request.get("strategy_id")
+    
+    if not username or not strategy_id:
+        raise HTTPException(400, "Missing username or strategy_id")
+    
+    # Run in background thread (non-blocking)
+    import threading
+    from src.strategy_agents.orchestrator import analyze_user_strategy
+    
+    def run_analysis():
+        try:
+            analyze_user_strategy(username, strategy_id)
+        except Exception as e:
+            print(f"❌ Strategy analysis failed for {username}/{strategy_id}: {e}")
+    
+    thread = threading.Thread(target=run_analysis, daemon=True)
+    thread.start()
+    
+    return {"status": "triggered", "username": username, "strategy_id": strategy_id}
+
+
 # ============ HEALTH ============
 
 @app.get("/neo/health")
