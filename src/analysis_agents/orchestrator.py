@@ -10,13 +10,23 @@ Usage:
     python -m src.analysis_agents.orchestrator all                       # Full pipeline (all 8 sections)
 """
 
-from typing import Dict, Any, List, Tuple, Optional
+from typing import Dict, Any, List, Tuple, Optional, Set
 from src.analysis_agents.source_registry import SourceRegistry
 from src.analysis_agents.synthesis_scout.agent import SynthesisScoutAgent
 from src.analysis_agents.contrarian_finder.agent import ContrarianFinderAgent
 from src.analysis_agents.depth_finder.agent import DepthFinderAgent
+from src.analysis_agents.writer.agent import WriterAgent
+from src.analysis_agents.critic.agent import CriticAgent
+from src.analysis_agents.source_checker.agent import SourceCheckerAgent
 from src.analysis_agents.section_config import AGENT_SECTIONS, AGENT_SECTION_CONFIGS
+from src.analysis.citations.validator import validate_citations
+from src.llm.llm_router import get_llm, ModelTier
+from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.market_data.loader import get_market_context_for_prompt
+from utils import app_logging
 import time
+
+logger = app_logging.get_logger(__name__)
 
 
 # =============================================================================
@@ -95,7 +105,7 @@ SECTION_FOCUS = {
         "→ WATCH SIGNALS (what confirms/invalidates each step?)\n\n"
         "OUTPUT: 2-3 authoritative paragraphs showing explicit causal chains.\n"
         "AUTHORITY: Surgical precision. Zero hand-waving. If you can't map the transmission, don't claim the connection.\n"
-        "CITATIONS: Only 9-character IDs (ABC123DEF). Cite the source for each link in the chain."
+        "CITATIONS: Only 9-character IDs from SOURCE MATERIAL. Cite the source for each link in the chain."
     ),
     "structural_threats": (
         "═══════════════════════════════════════════════════════════════════════════════\n"
@@ -490,6 +500,7 @@ def analysis_rewriter_with_agents(
     completed_sections = {}
     
     orchestrator = AnalysisAgentOrchestrator()
+    writer = WriterAgent()
     
     for i, section in enumerate(sections_to_run, 1):
         print(f"\n{'='*100}")
@@ -522,6 +533,7 @@ def analysis_rewriter_with_agents(
             if section in SECTIONS_USING_PRIOR_ONLY:
                 print(f"📚 Using prior sections only (no new articles)")
                 material = prior_context
+                article_ids = []  # No new articles for these sections by design
             else:
                 print(f"📦 Building material from articles...")
                 material, article_ids = build_material_for_synthesis_section(topic_id, section)
@@ -532,55 +544,85 @@ def analysis_rewriter_with_agents(
             logger.info(f"   prior sections: {len(prior_context):,} chars (~{len(prior_context)//4:,} tokens)")
             articles_size = len(material) - len(prior_context) if prior_context else len(material)
             logger.info(f"   articles: {articles_size:,} chars (~{articles_size//4:,} tokens)")
-            
-            # STEP 4: LLM synthesis
-            print(f"🧠 LLM synthesis...")
-            agent_context = format_agent_outputs_for_llm(agent_results)
-            logger.info(f"   agent insights: {len(agent_context):,} chars (~{len(agent_context)//4:,} tokens)")
-            section_focus = SECTION_FOCUS.get(section, "")
-            
-            prompt = f"""You are a world-class financial analyst writing risk-focused intelligence.
 
-{section_focus}
-
-{'═'*80}
-AGENT INSIGHTS:
-{'═'*80}
-
-{agent_context}
-
-{'═'*80}
-MATERIAL & CONTEXT:
-{'═'*80}
-
-{material}
-
-TASK: Synthesize into authoritative analysis following the structure above.
-"""
+            # HARD GUARD: If this section is supposed to use articles but none were
+            # successfully loaded from the Backend API, skip the section entirely.
+            if section not in SECTIONS_USING_PRIOR_ONLY and not article_ids:
+                logger.error(
+                    f"   ❌ No source articles successfully loaded | topic={topic_id} section={section} | "
+                    f"material_chars={len(material):,}"
+                )
+                print(
+                    f"   ❌ Skipping section {section} for topic {topic_id}: "
+                    f"no source articles loaded from backend."
+                )
+                from src.observability.stats_client import track
+                track("agent_section_skipped_no_articles", f"Topic {topic_id}: {section}")
+                continue
             
-            # Log total prompt size
-            total_prompt_size = len(prompt)
-            logger.info(f"   📊 TOTAL PROMPT: {total_prompt_size:,} chars (~{total_prompt_size//4:,} tokens)")
-            if total_prompt_size > 100000:
-                logger.warning(f"   ⚠️  Large prompt! May hit token limits")
-            
-            from src.llm.llm_router import get_llm, ModelTier
-            llm = get_llm(ModelTier.COMPLEX)
-            analysis_text = llm.invoke(prompt).content
-            
-            print(f"✅ Generated: {len(analysis_text):,} chars")
-            
-            # Show analysis preview (capped at 2000 chars)
-            preview_length = 2000
-            if len(analysis_text) > preview_length:
-                preview = analysis_text[:preview_length] + f"\n\n... [truncated, total: {len(analysis_text):,} chars] ..."
+            # STEP 4: Load existing analysis (if any) for incremental updates
+            existing_analysis = get_topic_analysis_field(topic_id, section)
+            if existing_analysis:
+                logger.info(f"   📄 Found existing analysis: {len(existing_analysis):,} chars")
             else:
-                preview = analysis_text
+                logger.info(f"   🆕 No existing analysis - fresh write")
             
+            # Get article IDs for validation (only for sections using articles)
+            allowed_article_ids: Set[str] = set()
+            if section not in SECTIONS_USING_PRIOR_ONLY and 'article_ids' in locals():
+                allowed_article_ids = set(article_ids)
+                logger.info(f"   📋 Allowed article IDs: {len(allowed_article_ids)}")
+            
+            # STEP 5: Writer synthesis (using unified WriterAgent)
+            print(f"🧠 LLM synthesis via WriterAgent...")
+            section_focus = SECTION_FOCUS.get(section, "")
+
+            writer_output = writer.write(
+                topic_id=topic_id,
+                section=section,
+                material=material,
+                section_focus=section_focus,
+                pre_writing_results=agent_results,
+                previous_analysis=existing_analysis,  # Pass existing for incremental update
+            )
+            analysis_text = writer_output.analysis_text
+            logger.info(f"   initial analysis length: {len(analysis_text):,} chars")
+
+            # STEP 5b: ID Validation Loop (only for sections with articles)
+            if allowed_article_ids:
+                analysis_text = run_id_validation_loop(
+                    writer=writer,
+                    draft=analysis_text,
+                    topic_id=topic_id,
+                    section=section,
+                    material=material,
+                    section_focus=section_focus,
+                    allowed_article_ids=allowed_article_ids,
+                    pre_writing_results=agent_results,
+                )
+
+            # STEP 5c: Quality loop (Critic + SourceChecker + Writer rewrite)
+            try:
+                analysis_text = run_topic_quality_loop(
+                    writer=writer,
+                    section_name=section,
+                    draft_text=analysis_text,
+                    section_material=material,
+                    section_focus=section_focus,
+                    topic_id=topic_id,
+                    pre_writing_results=agent_results,
+                )
+                logger.info(f"   final analysis length after quality loop: {len(analysis_text):,} chars")
+            except Exception as e:
+                logger.warning(f"   ⚠️  Quality loop failed for {section}: {e}")
+
+            print(f"✅ Generated: {len(analysis_text):,} chars")
+
+            # Show full generated analysis with clear section title and separators
             print(f"\n{'='*80}")
-            print(f"📄 GENERATED ANALYSIS:")
+            print(f"📄 GENERATED ANALYSIS - {section.upper()}:")
             print(f"{'='*80}")
-            print(preview)
+            print(analysis_text)
             print(f"{'='*80}\n")
             
             # STEP 5: Save to Neo4j and memory
@@ -599,10 +641,158 @@ TASK: Synthesize into authoritative analysis following the structure above.
             print(f"❌ FAILED: {e}")
             raise
     
+    # After all sections: print a consolidated view of all generated sections
+    if completed_sections:
+        print("\n" + "=" * 80)
+        print("=" * 80)
+        print("=" * 80)
+        print("ALL SECTIONS (FINAL CONSOLIDATED OUTPUT):")
+        
+        # Respect execution order but only show sections that were actually run
+        for idx, section in enumerate(sections_to_run, 1):
+            if section not in completed_sections:
+                continue
+            print(f"\nSection {idx}: {section.upper()}")
+            print("-" * 80)
+            print(completed_sections[section])
+        
+        print("=" * 80)
+        print("=" * 80)
+        print("=" * 80)
+    
     print(f"\n{'='*100}")
     print(f"✅ PIPELINE COMPLETE | {len(completed_sections)}/{len(sections_to_run)} sections")
     print(f"{'='*100}\n")
     logger.info(f"Pipeline complete: {len(completed_sections)}/{len(sections_to_run)} sections")
+
+
+def run_id_validation_loop(
+    writer: WriterAgent,
+    draft: str,
+    topic_id: str,
+    section: str,
+    material: str,
+    section_focus: str,
+    allowed_article_ids: Set[str],
+    pre_writing_results: Dict[str, Any] | None = None,
+    max_attempts: int = 2,
+) -> str:
+    """
+    Validate article IDs in draft. If invalid IDs found, re-prompt Writer to fix.
+    
+    This runs BEFORE the quality loop to catch hallucinated IDs early.
+    
+    Returns validated draft.
+    """
+    current = draft
+    
+    for attempt in range(max_attempts):
+        report = validate_citations(current, allowed_article_ids)
+        
+        if report.is_valid:
+            logger.info(f"   ✅ ID validation passed (attempt {attempt + 1}) | {len(report.article_ids_in_text)} IDs found")
+            return current
+        
+        logger.warning(
+            f"   ⚠️ Invalid IDs found (attempt {attempt + 1}/{max_attempts}): "
+            f"{sorted(report.unknown_article_ids)}"
+        )
+        print(f"   ⚠️ Invalid IDs: {sorted(report.unknown_article_ids)} - triggering rewrite...")
+        
+        # Re-prompt Writer with error feedback
+        output = writer.write(
+            topic_id=topic_id,
+            section=section,
+            material=material,
+            section_focus=section_focus,
+            pre_writing_results=pre_writing_results,
+            previous_analysis=current,  # The bad draft
+            invalid_ids_feedback=report.format_error_message(),
+        )
+        current = output.analysis_text
+    
+    # Final check after all attempts
+    final_report = validate_citations(current, allowed_article_ids)
+    if final_report.unknown_article_ids:
+        logger.error(
+            f"   ❌ ID validation failed after {max_attempts} attempts | "
+            f"still invalid: {sorted(final_report.unknown_article_ids)}"
+        )
+        logger.warning(
+            f"   ❌ WARNING: Could not fix all invalid IDs: {sorted(final_report.unknown_article_ids)}"
+        )
+    else:
+        logger.info(f"   ✅ ID validation passed after {max_attempts} attempts")
+    
+    return current
+
+
+def run_topic_quality_loop(
+    writer: WriterAgent,
+    section_name: str,
+    draft_text: str,
+    section_material: str,
+    section_focus: str,
+    topic_id: str,
+    pre_writing_results: Dict[str, Any] | None = None,
+    max_rounds: int = 1,
+) -> str:
+    """
+    Run Critic + SourceChecker + Writer rewrite loop for a single topic section.
+    
+    Uses the unified Writer for rewrites instead of a separate rewrite prompt.
+    
+    Returns the refined analysis text.
+    """
+    critic_agent = CriticAgent()
+    source_agent = SourceCheckerAgent()
+    current = draft_text
+
+    for round_idx in range(max_rounds):
+        round_num = round_idx + 1
+        logger.info(f"   🧪 Quality loop round {round_num}/{max_rounds} | section={section_name}")
+
+        # Critic reviews
+        critic_fb = critic_agent.run(
+            draft=current,
+            material=section_material,
+            section_focus=section_focus,
+            asset_name=topic_id,
+            asset_id=topic_id,
+        )
+
+        # SourceChecker reviews
+        source_fb = source_agent.run(
+            draft=current,
+            material=section_material,
+            section_focus=section_focus,
+            critic_feedback=critic_fb.feedback,
+            asset_name=topic_id,
+            asset_id=topic_id,
+        )
+
+        logger.info(
+            f"      critic: {len(critic_fb.feedback):,} chars | "
+            f"source: {len(source_fb.feedback):,} chars"
+        )
+
+        # Rewrite using unified Writer
+        output = writer.write(
+            topic_id=topic_id,
+            section=section_name,
+            material=section_material,
+            section_focus=section_focus,
+            pre_writing_results=pre_writing_results,
+            previous_analysis=current,
+            critic_feedback=critic_fb.feedback,
+            source_feedback=source_fb.feedback,
+        )
+        
+        revised = output.analysis_text
+        logger.info(f"      revised: {len(revised):,} chars")
+        current = revised
+
+    return current
 
 
 def format_agent_outputs_for_llm(agent_results: Dict[str, Any]) -> str:

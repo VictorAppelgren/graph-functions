@@ -76,7 +76,8 @@ class ContrarianFinderAgent(BaseAgent):
         
         # Step 3: Format data for LLM
         our_analysis = graph_data.get("our_analysis", "No existing analysis")
-        contrarian_str = self._format_contrarian_assets(graph_data.get("contrarian_assets", []))
+        contrarian_assets = graph_data.get("contrarian_assets", [])
+        contrarian_str = self._format_contrarian_assets(contrarian_assets)
         
         # Step 4: Call LLM
         prompt = CONTRARIAN_FINDER_PROMPT.format(
@@ -89,6 +90,14 @@ class ContrarianFinderAgent(BaseAgent):
             contrarian_assets=contrarian_str
         )
         
+        exec_summaries = sum(1 for a in contrarian_assets if a.get("executive_summary"))
+        
+        self._log("==== INPUT SUMMARY ====")
+        self._log(f"Contrarian assets: {len(contrarian_assets)} (executive_summaries: {exec_summaries})")
+        self._log(f"Prompt length: {len(prompt)} chars, ~{len(prompt)//4} tokens")
+        self._log("==== END INPUT SUMMARY ====")
+        self._log("")
+
         llm = get_llm(ModelTier.COMPLEX)
         parser = StrOutputParser()
         chain = llm | parser

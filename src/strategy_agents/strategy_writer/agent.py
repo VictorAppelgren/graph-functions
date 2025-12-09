@@ -16,11 +16,57 @@ from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 
 class StrategyAnalysis(BaseModel):
     """Complete strategy analysis output."""
-    executive_summary: str = Field(description="3-4 sentence overview")
-    position_analysis: str = Field(description="2-3 paragraphs on position status")
-    risk_analysis: str = Field(description="2-3 paragraphs on risks")
-    opportunity_analysis: str = Field(description="2-3 paragraphs on opportunities")
-    recommendation: str = Field(description="2-3 paragraphs with clear action")
+    executive_summary: str = Field(
+        description=(
+            "High-compression overview of the strategy: current status vs market, core thesis, "
+            "conviction, and primary recommendation in 3-4 elite, information-dense sentences."
+        )
+    )
+    position_analysis: str = Field(
+        description=(
+            "Deep position readout: entry vs current market, sizing, time-in-trade, P&L context, "
+            "and how the live or potential position expresses the thesis across timeframes."
+        )
+    )
+    risk_analysis: str = Field(
+        description=(
+            "Cohesive narrative of the top risks across position, market, thesis, and execution, "
+            "with levels, probabilities, mechanisms, and what to watch to avoid blind spots."
+        )
+    )
+    opportunity_analysis: str = Field(
+        description=(
+            "Synthesis of the strongest asymmetric opportunities and trade expressions, with "
+            "levels, catalysts, timing, and how they compound or hedge the core view."
+        )
+    )
+    recommendation: str = Field(
+        description=(
+            "Crystal-clear action plan: hold/add/reduce/exit, concrete levels and time windows, "
+            "and how to adapt as data comes in, written as if the trader executes on it today."
+        )
+    )
+    scenarios_and_catalysts: str = Field(
+        description=(
+            "Bull/base/bear (and tail, if relevant) scenario map with probability-weighted paths, "
+            "linked to an event and catalyst timeline and explicit triggers for upgrades, "
+            "downgrades, or thesis invalidation."
+        )
+    )
+    structuring_and_risk_management: str = Field(
+        description=(
+            "How to structure and risk-manage the trade: instrument choices, sizing frameworks, "
+            "volatility and options tactics, hedges and correlated overlays, and execution/" 
+            "liquidity guidance at a professional PM level."
+        )
+    )
+    context_and_alignment: str = Field(
+        description=(
+            "How this strategy fits into the wider world: market positioning and flows, "
+            "alignment vs house view and macro backdrop, and portfolio-level context such as "
+            "concentration, diversification, and net exposure impact."
+        )
+    )
 
 
 class StrategyWriterAgent(BaseStrategyAgent):
@@ -52,6 +98,42 @@ class StrategyWriterAgent(BaseStrategyAgent):
             StrategyAnalysis with complete personalized analysis
         """
         self._log("Writing strategy analysis")
+        # Determine mode from material package (canonical flag if present)
+        has_position = material_package.get("has_position")
+        if has_position is None:
+            has_position = bool(material_package.get("position_text", "").strip())
+        mode_label = "ACTIVE POSITION ANALYSIS" if has_position else "THESIS MONITORING (no active position)"
+        self._log(f"Mode: {mode_label}")
+
+        if has_position:
+            analysis_mode = (
+                "ACTIVE POSITION ANALYSIS: the user currently has a live position described "
+                "in USER POSITION. All sections must speak about the actual trade "
+                "(status, PnL, entry vs current price, sizing) using ONLY the provided "
+                "strategy, position text, risk assessment, and opportunity assessment."
+            )
+        else:
+            analysis_mode = (
+                "THESIS MONITORING (NO ACTIVE POSITION): the user has NO live position. "
+                "Your primary job is SCENARIO AND STRATEGIC ANALYSIS: explain what is "
+                "going on in the relevant markets/sector, who the key movers and drivers "
+                "are, and how bull/base/bear paths and catalysts could unfold over time. "
+                "You must NOT describe them as currently long/short, and must NOT invent "
+                "specific entries, stops, position sizes, or realized PnL. It is "
+                "acceptable to briefly mention ways the thesis could eventually be "
+                "expressed (for example, that a situation could reward exposure to "
+                "certain assets, sectors, or styles), but do NOT design a full trade "
+                "plan or over-emphasize structuring details in this mode. CRITICAL: In "
+                "this mode, you MUST begin the EXECUTIVE SUMMARY with a clear sentence "
+                "stating that there is no active position and that any trades discussed "
+                "are potential future setups only (for example: 'There is currently NO "
+                "ACTIVE POSITION; this is a thesis monitoring analysis and any trades are "
+                "potential future setups only.'). Across ALL sections, any mention of "
+                "losses, stop-loss hits, exposure, or PnL must be explicitly conditional "
+                "and forward-looking (e.g. 'a potential position would lose X if...' or "
+                "'this setup could trigger stop-losses on a hypothetical trade'), never "
+                "written as if a live position is already taking those losses."
+            )
         
         # Format all material for prompt
         topic_analyses = self._format_topic_analyses(material_package["topics"])
@@ -66,21 +148,27 @@ class StrategyWriterAgent(BaseStrategyAgent):
         prompt = STRATEGY_WRITER_PROMPT.format(
             system_mission=SYSTEM_MISSION,
             system_context=SYSTEM_CONTEXT,
+            analysis_mode=analysis_mode,
             user_strategy=material_package["user_strategy"],
             position_text=material_package["position_text"],
             topic_analyses=topic_analyses,
             market_context=market_context,
             risk_assessment=risk_summary,
-            opportunity_assessment=opportunity_summary
+            opportunity_assessment=opportunity_summary,
         )
         
         # Get LLM analysis
         llm = get_llm(ModelTier.COMPLEX)
         analysis = run_llm_decision(llm, prompt, StrategyAnalysis)
-        
+
+        # In thesis monitoring mode, de-emphasize the dedicated Position Analysis section
+        # so that the frontend can simply hide it based on an empty string.
+        if not has_position:
+            analysis.position_analysis = ""
+
         # Log output summary
         self._log_output_summary(analysis)
-        
+
         return analysis
     
     def _format_topic_analyses(self, topics: Dict[str, Dict]) -> str:
@@ -180,7 +268,19 @@ class StrategyWriterAgent(BaseStrategyAgent):
         risk_chars = len(analysis.risk_analysis)
         opp_chars = len(analysis.opportunity_analysis)
         rec_chars = len(analysis.recommendation)
-        total_output = exec_chars + pos_chars + risk_chars + opp_chars + rec_chars
+        scen_chars = len(analysis.scenarios_and_catalysts)
+        struct_chars = len(analysis.structuring_and_risk_management)
+        ctx_chars = len(analysis.context_and_alignment)
+        total_output = (
+            exec_chars
+            + pos_chars
+            + risk_chars
+            + opp_chars
+            + rec_chars
+            + scen_chars
+            + struct_chars
+            + ctx_chars
+        )
         
         self._log(f"""
 📤 OUTPUT SUMMARY:
@@ -189,6 +289,9 @@ class StrategyWriterAgent(BaseStrategyAgent):
    Risk Analysis: {risk_chars:,} chars
    Opportunity Analysis: {opp_chars:,} chars
    Recommendation: {rec_chars:,} chars
+   Scenarios & Catalysts: {scen_chars:,} chars
+   Structuring & Risk Mgmt: {struct_chars:,} chars
+   Context & Alignment: {ctx_chars:,} chars
    ─────────────────────────────
    TOTAL OUTPUT: {total_output:,} chars (~{total_output//1000}K)
 """)

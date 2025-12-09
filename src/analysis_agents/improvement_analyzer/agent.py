@@ -99,6 +99,13 @@ class ImprovementAnalyzerAgent(BaseAgent):
             new_articles=new_articles_str
         )
         
+        self._log("==== INPUT SUMMARY ====")
+        self._log(f"Existing analysis: {len(existing_analysis)} chars")
+        self._log(f"Old articles: {len(old_articles)}, new articles: {len(new_articles)}")
+        self._log(f"Prompt length: {len(prompt)} chars, ~{len(prompt)//4} tokens")
+        self._log("==== END INPUT SUMMARY ====")
+        self._log("")
+
         llm = get_llm(ModelTier.COMPLEX)
         parser = StrOutputParser()
         chain = llm | parser

@@ -84,7 +84,7 @@ def explore_graph(topic_id: str, section: str) -> Dict:
         }) as articles
         
         // Get related topics for synthesis
-        OPTIONAL MATCH (t)-[rel:RELATED_TO|DRIVES|DRIVEN_BY]-(related:Topic)
+        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF]-(related:Topic)
         WITH t, articles, collect(DISTINCT {
             id: related.id,
             name: related.name,
@@ -159,7 +159,7 @@ def explore_graph(topic_id: str, section: str) -> Dict:
         }) as articles
         
         // Get related topics
-        OPTIONAL MATCH (t)-[rel:RELATED_TO|DRIVES|DRIVEN_BY]-(related:Topic)
+        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF]-(related:Topic)
         WITH t, articles, collect(DISTINCT {{
             id: related.id,
             name: related.name,

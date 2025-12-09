@@ -132,14 +132,11 @@ def make_room_for_article(
                     r.importance_risk = 0,
                     r.importance_opportunity = 0,
                     r.importance_trend = 0,
-                    r.importance_catalyst = 0,
-                    r.archived_at = datetime(),
-                    r.archive_reason = $reason
+                    r.importance_catalyst = 0
                 """
                 run_cypher(archive_query, {
                     "article_id": decision.target_article_id,
-                    "topic_id": topic_id,
-                    "reason": decision.motivation
+                    "topic_id": topic_id
                 })
                 
                 track("article_archived", 
@@ -317,13 +314,14 @@ def check_capacity(topic_id: str, timeframe: str, tier: int) -> dict:
     if count > max_allowed:
         excess = count - max_allowed
         logger.warning(
-            f"🔧 AUTO-CLEANUP: Tier {tier} over capacity ({count}/{max_allowed}). "
-            f"Using LLM to downgrade {excess} weakest articles..."
+            f"🔧 AUTO-CLEANUP: topic={topic_id} | timeframe={timeframe} | tier={tier} "
+            f"over capacity ({count}/{max_allowed}). Using LLM to downgrade "
+            f"{excess} weakest articles..."
         )
         
         # Import here to avoid circular dependency
-        from src.graph.ops.link import get_existing_article_data, remove_link
-        
+        from src.graph.ops.link import set_about_link_tier
+
         # Downgrade excess articles one by one using LLM quality assessment
         for i in range(excess):
             # Re-query each time (list changes as we downgrade)
@@ -332,56 +330,49 @@ def check_capacity(topic_id: str, timeframe: str, tier: int) -> dict:
                 "timeframe": timeframe,
                 "tier": tier
             })
-            
-            if len(current_articles) <= max_allowed:
+
+            current_count = len(current_articles)
+            if current_count <= max_allowed:
                 logger.info(f"✅ Auto-cleanup complete after {i} downgrades")
                 break  # Done!
-            
+
             # Use LLM to pick weakest article
             weakest_result = pick_weakest_article(
                 topic_id=topic_id,
                 timeframe=timeframe,
                 tier=tier,
                 existing_articles=current_articles,
-                test=False  # Real LLM call for quality assessment
+                test=False,  # Real LLM call for quality assessment
             )
-            
+
             weakest_id = weakest_result["downgrade"]
             reasoning = weakest_result.get("reasoning", "No reason provided")
-            
+
             logger.info(
                 f"  [{i+1}/{excess}] Downgrading weakest: {weakest_id} "
                 f"(Reason: {reasoning[:100]}...)"
             )
-            
-            # Get article data for recursive downgrade
-            article_data = get_existing_article_data(weakest_id, topic_id)
-            if not article_data:
-                logger.error(f"Could not get data for {weakest_id}, skipping")
-                continue
-            
-            # Remove from current tier
-            remove_link(weakest_id, topic_id)
-            track("article_downgraded", f"Article {weakest_id} downgraded due to capacity in topic {topic_id}")
-            
-            # Recursively add to tier-1 (will cascade if needed)
-            from src.graph.ops.link import add_article_with_capacity_check
-            downgrade_result = add_article_with_capacity_check(
-                article_id=weakest_id,
-                topic_id=topic_id,
-                timeframe=timeframe,
-                initial_tier=tier - 1,
-                article_summary=article_data["summary"],
-                article_source=article_data["source"],
-                article_published=article_data["published_at"],
-                motivation=article_data.get("motivation", "Downgraded from higher tier"),
-                implications=article_data.get("implications", "Lower priority"),
-                test=False
+
+            # Move the weakest article down one tier IN PLACE (keep ABOUT link)
+            new_tier = max(tier - 1, 0)
+            set_about_link_tier(weakest_id, topic_id, timeframe, new_tier)
+            track(
+                "article_downgraded",
+                f"Article {weakest_id} downgraded in-place from tier {tier} to tier {new_tier} in topic {topic_id}",
             )
-            
-            logger.info(f"    → Placed at tier {downgrade_result.get('tier', 'unknown')}")
-        
-        logger.info(f"✅ Auto-cleanup complete. Downgraded {excess} articles from tier {tier}.")
+
+            if new_tier == 0:
+                logger.info(
+                    f"    → Moved {weakest_id} to tier 0 (ABOUT retained; all importance_* = 0)"
+                )
+            else:
+                logger.info(
+                    f"    → Moved {weakest_id} from tier {tier} to tier {new_tier} (ABOUT retained)"
+                )
+
+        logger.info(
+            f"✅ Auto-cleanup complete. Attempted to downgrade {excess} articles from tier {tier}."
+        )
         
         # Re-query after cleanup
         articles = run_cypher(query, {
@@ -396,6 +387,153 @@ def check_capacity(topic_id: str, timeframe: str, tier: int) -> dict:
         "count": count,
         "max": max_allowed,
         "articles": articles or []
+    }
+
+
+def check_capacity_per_perspective(
+    topic_id: str,
+    timeframe: str,
+    perspective: str,
+    tier: int,
+) -> dict:
+    """Check capacity for a single (timeframe, perspective, tier) bucket.
+
+    AUTO-CLEANUP: If this perspective bucket is over capacity, automatically
+    downgrades weakest articles using LLM quality assessment until within
+    limits, downgrading tiers in-place via set_about_link_tier.
+
+    Returns:
+        {
+            "has_room": bool,
+            "count": int,
+            "max": int,
+            "articles": list[dict]
+        }
+    """
+    max_allowed = TIER_LIMITS_PER_TIMEFRAME_PERSPECTIVE[tier]
+
+    # Get articles where THIS perspective is exactly at this tier
+    query = """
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+    WITH a, r,
+         CASE $perspective
+             WHEN 'risk'        THEN coalesce(r.importance_risk, 0)
+             WHEN 'opportunity' THEN coalesce(r.importance_opportunity, 0)
+             WHEN 'trend'       THEN coalesce(r.importance_trend, 0)
+             WHEN 'catalyst'    THEN coalesce(r.importance_catalyst, 0)
+             ELSE 0
+         END AS p_tier
+    WHERE r.timeframe = $timeframe
+      AND p_tier = $tier
+      AND NOT (
+          coalesce(r.importance_risk, 0) = 0 AND
+          coalesce(r.importance_opportunity, 0) = 0 AND
+          coalesce(r.importance_trend, 0) = 0 AND
+          coalesce(r.importance_catalyst, 0) = 0
+      )
+    RETURN
+        a.id as id,
+        a.summary as summary,
+        a.source as source,
+        a.published_at as published_at
+    ORDER BY a.published_at DESC
+    """
+
+    articles = run_cypher(
+        query,
+        {
+            "topic_id": topic_id,
+            "timeframe": timeframe,
+            "perspective": perspective,
+            "tier": tier,
+        },
+    )
+
+    count = len(articles) if articles else 0
+
+    if count > max_allowed:
+        excess = count - max_allowed
+        logger.warning(
+            f"🔧 AUTO-CLEANUP (perspective): topic={topic_id} | timeframe={timeframe} | "
+            f"perspective={perspective} | tier={tier} over capacity ({count}/{max_allowed}). "
+            f"Using LLM to downgrade {excess} weakest articles..."
+        )
+
+        from src.graph.ops.link import set_about_link_tier
+
+        for i in range(excess):
+            current_articles = run_cypher(
+                query,
+                {
+                    "topic_id": topic_id,
+                    "timeframe": timeframe,
+                    "perspective": perspective,
+                    "tier": tier,
+                },
+            )
+
+            current_count = len(current_articles)
+            if current_count <= max_allowed:
+                logger.info(
+                    f"✅ Perspective auto-cleanup complete after {i} downgrades "
+                    f"for perspective={perspective}"
+                )
+                break
+
+            weakest_result = pick_weakest_article(
+                topic_id=topic_id,
+                timeframe=timeframe,
+                tier=tier,
+                existing_articles=current_articles,
+                test=False,
+            )
+
+            weakest_id = weakest_result["downgrade"]
+            reasoning = weakest_result.get("reasoning", "No reason provided")
+
+            logger.info(
+                f"  [{i+1}/{excess}] Downgrading weakest (perspective={perspective}): "
+                f"{weakest_id} (Reason: {reasoning[:100]}...)"
+            )
+
+            new_tier = max(tier - 1, 0)
+            set_about_link_tier(weakest_id, topic_id, timeframe, new_tier)
+            track(
+                "article_downgraded",
+                f"Article {weakest_id} downgraded in-place from tier {tier} to {new_tier} "
+                f"in topic {topic_id} (perspective={perspective})",
+            )
+
+            if new_tier == 0:
+                logger.info(
+                    f"    → Moved {weakest_id} to tier 0 (ABOUT retained; all importance_* = 0)"
+                )
+            else:
+                logger.info(
+                    f"    → Moved {weakest_id} from tier {tier} to tier {new_tier} (ABOUT retained)"
+                )
+
+        logger.info(
+            f"✅ Perspective auto-cleanup complete. Attempted to downgrade {excess} "
+            f"articles from tier {tier} for perspective={perspective}."
+        )
+
+        articles = run_cypher(
+            query,
+            {
+                "topic_id": topic_id,
+                "timeframe": timeframe,
+                "perspective": perspective,
+                "tier": tier,
+            },
+        )
+        count = len(articles)
+
+    return {
+        "has_room": count < max_allowed,
+        "count": count,
+        "max": max_allowed,
+        "articles": articles or [],
     }
 
 
@@ -431,9 +569,12 @@ def gate_decision(
     
     topic_info = get_topic_by_id(topic_id)
     
-    # Format existing articles
+    # Format existing articles for prompt (cap at 50 to keep prompt size safe)
+    MAX_LLM_ARTICLES = 50
+    prompt_articles = existing_articles[:MAX_LLM_ARTICLES]
+
     articles_formatted = []
-    for i, article in enumerate(existing_articles, 1):
+    for i, article in enumerate(prompt_articles, 1):
         articles_formatted.append(
             f"{i}. ID: {article['id']}\n"
             f"   Source: {article.get('source', 'unknown')}\n"
@@ -441,7 +582,7 @@ def gate_decision(
             f"   Summary: {article['summary'][:200]}..."
         )
     
-    allowed_ids = ", ".join([a["id"] for a in existing_articles])
+    allowed_ids = ", ".join([a["id"] for a in prompt_articles])
     
     prompt = ARTICLE_CAPACITY_MANAGER_PROMPT.format(
         system_mission=SYSTEM_MISSION,
@@ -462,9 +603,9 @@ def gate_decision(
     llm = get_llm(ModelTier.SIMPLE)
     decision = run_llm_decision(chain=llm, prompt=prompt, model=DowngradeDecision)
     
-    # Validate downgrade ID
-    valid_ids = {a["id"] for a in existing_articles} | {"NEW"}
-    if decision.downgrade not in valid_ids:
+    # Validate downgrade ID (must be one of the prompt_articles IDs, not NEW)
+    valid_ids = {a["id"] for a in prompt_articles}
+    if decision.downgrade not in valid_ids and decision.downgrade != "NEW":
         logger.warning(f"LLM returned invalid ID: {decision.downgrade}, defaulting to NEW")
         decision.downgrade = "NEW"
     
@@ -511,9 +652,12 @@ def pick_weakest_article(
     
     topic_info = get_topic_by_id(topic_id)
     
-    # Format existing articles
+    # Format existing articles for prompt (cap at 50 to keep prompt size safe)
+    MAX_LLM_ARTICLES = 50
+    prompt_articles = existing_articles[:MAX_LLM_ARTICLES]
+
     articles_formatted = []
-    for i, article in enumerate(existing_articles, 1):
+    for i, article in enumerate(prompt_articles, 1):
         articles_formatted.append(
             f"{i}. ID: {article['id']}\n"
             f"   Source: {article.get('source', 'unknown')}\n"
@@ -521,7 +665,7 @@ def pick_weakest_article(
             f"   Summary: {article['summary'][:200]}..."
         )
     
-    allowed_ids = ", ".join([a["id"] for a in existing_articles])
+    allowed_ids = ", ".join([a["id"] for a in prompt_articles])
     
     prompt = ARTICLE_CAPACITY_PICK_WEAKEST_PROMPT.format(
         system_mission=SYSTEM_MISSION,
@@ -537,11 +681,11 @@ def pick_weakest_article(
     llm = get_llm(ModelTier.SIMPLE)
     decision = run_llm_decision(chain=llm, prompt=prompt, model=DowngradeDecision)
     
-    # Validate downgrade ID (must be existing, not NEW)
-    valid_ids = {a["id"] for a in existing_articles}
+    # Validate downgrade ID (must be one of the prompt_articles IDs, not NEW)
+    valid_ids = {a["id"] for a in prompt_articles}
     if decision.downgrade not in valid_ids:
         logger.warning(f"LLM returned invalid ID: {decision.downgrade}, picking first article")
-        decision.downgrade = existing_articles[0]["id"]
+        decision.downgrade = prompt_articles[0]["id"]
     
     logger.info(f"Picked weakest article: {decision.downgrade} - {decision.reasoning}")
     

@@ -13,6 +13,7 @@ Philosophy: SIMPLEST POSSIBLE - no over-engineering.
 from abc import ABC, abstractmethod
 from typing import Any, Dict
 from pydantic import BaseModel
+from utils import app_logging
 
 
 class BaseAgent(ABC):
@@ -25,6 +26,7 @@ class BaseAgent(ABC):
     
     def __init__(self, agent_name: str):
         self.agent_name = agent_name
+        self.logger = app_logging.get_logger(f"src.analysis_agents.{agent_name}")
     
     @abstractmethod
     def run(self, topic_id: str, section: str, **kwargs) -> BaseModel:
@@ -43,4 +45,4 @@ class BaseAgent(ABC):
     
     def _log(self, message: str):
         """Simple logging helper"""
-        print(f"[{self.agent_name}] {message}")
+        self.logger.info(message)

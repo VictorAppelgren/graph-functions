@@ -16,7 +16,8 @@ logger = app_logging.get_logger(__name__)
 def build_material_package(
     user_strategy: str,
     position_text: str,
-    topic_mapping: Dict[str, List[str]]
+    topic_mapping: Dict[str, List[str]],
+    has_position: bool,
 ) -> Dict[str, Any]:
     """
     Build complete material package for strategy agents.
@@ -88,11 +89,19 @@ def build_material_package(
     # Log detailed material summary
     _log_material_summary(topics, topic_mapping)
     
+    # Build combined strings for high-level logging and downstream consumers
+    topic_analyses_str = _build_combined_topic_analyses(topics)
+    market_context_str = _build_combined_market_context(topics)
+
     return {
         "user_strategy": user_strategy,
         "position_text": position_text,
+        "has_position": has_position,
         "topics": topics,
-        "topic_groups": topic_mapping
+        "topic_groups": topic_mapping,
+        # Combined strings for quick visibility into what goes into prompts
+        "topic_analyses": topic_analyses_str,
+        "market_context": market_context_str,
     }
 
 
@@ -161,6 +170,36 @@ def _log_material_summary(topics: Dict[str, Dict], topic_mapping: Dict[str, List
         market = "✅" if data.get('market_context') else "❌"
         
         logger.info(f"   {data['name']:30s} | {topic_total:6,} chars | Sections: {', '.join(sections_available) if sections_available else 'NONE':30s} | Market: {market}")
+
+
+def _build_combined_topic_analyses(topics: Dict[str, Dict]) -> str:
+    """Build one long string with all topic analyses.
+
+    This mirrors the formatting used in individual agents, but keeps
+    the logic local so orchestrator and logs can see exactly what
+    goes into downstream prompts.
+    """
+    lines = []
+    for topic_id, data in topics.items():
+        lines.append(f"\n{'='*70}")
+        lines.append(f"TOPIC: {data.get('name', topic_id)} ({topic_id})")
+        lines.append("="*70)
+        for section in ["fundamental", "medium", "current", "drivers"]:
+            content = data.get(section, "")
+            if content:
+                lines.append(f"\n{section.upper()}:")
+                lines.append(content)
+    return "\n".join(lines) if lines else "No topic analyses available"
+
+
+def _build_combined_market_context(topics: Dict[str, Dict]) -> str:
+    """Build one long string with all market context snippets."""
+    lines = []
+    for topic_id, data in topics.items():
+        context = data.get("market_context", "")
+        if context:
+            lines.append(f"{data.get('name', topic_id)}: {context}")
+    return "\n".join(lines) if lines else "No market data available"
 
 
 def _get_topic_name(topic_id: str) -> str:

@@ -58,18 +58,25 @@ class CriticAgent(BaseAgent):
         from src.market_data.loader import get_market_context_for_prompt
         market_context = get_market_context_for_prompt(asset_id)
         
-        # Call LLM
+        # Call LLM with FULL material (no truncation)
         prompt = CRITIC_PROMPT.format(
             system_mission=SYSTEM_MISSION,
             system_context=SYSTEM_CONTEXT,
             section_focus=section_focus,
             market_context=market_context,
-            material=material[:2000],  # Limit material length
+            material=material,
             draft=draft,
             asset_name=asset_name,
             asset_id=asset_id
         )
         
+        self._log("==== INPUT SUMMARY ====")
+        self._log(f"Draft length: {len(draft)} chars")
+        self._log(f"Material length: {len(material)} chars")
+        self._log(f"Prompt length: {len(prompt)} chars, ~{len(prompt)//4} tokens")
+        self._log("==== END INPUT SUMMARY ====")
+        self._log("")
+
         llm = get_llm(ModelTier.COMPLEX)
         parser = StrOutputParser()
         chain = llm | parser

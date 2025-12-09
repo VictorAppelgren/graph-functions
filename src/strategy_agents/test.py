@@ -214,22 +214,32 @@ def test_full_strategy_pipeline():
     print("🧪 TEST 3: Full Strategy Pipeline")
     print("="*80)
     
-    from src.strategy_agents.orchestrator import run_strategy_analysis
-    
-    # Get sample strategy
-    strategy = get_random_user_strategy()
-    
-    print(f"\n🚀 Running complete strategy analysis...")
-    print(f"Asset: {strategy['asset']}")
-    
-    # Run full pipeline
-    result = run_strategy_analysis(
-        user_id="victor",
-        strategy_id="victor_eurusd_001",
-        asset=strategy['asset'],
-        strategy_text=strategy['strategy'],
-        position_text=strategy['position']
-    )
+    from src.strategy_agents.orchestrator import analyze_user_strategy
+    from src.api.backend_client import get_user_strategies
+
+    # Use real strategies from Backend API
+    username = "Victor"
+    strategies = get_user_strategies(username)
+    if not strategies:
+        print(f"❌ No strategies found for user {username} in Backend API")
+        return
+
+    # Pick the first available strategy
+    s = strategies[0]
+    strategy_id = s.get("id")
+    asset = s.get("asset")
+    target = s.get("target")
+
+    print(f"\n🚀 Running complete strategy analysis from Backend API...")
+    print(f"User: {username}")
+    print(f"Strategy ID: {strategy_id}")
+    if asset:
+        print(f"Asset: {asset}")
+    if target:
+        print(f"Target: {target}")
+
+    # Run full pipeline via orchestrator (this will save to Backend API)
+    result = analyze_user_strategy(username, strategy_id)
     
     # Display results
     print(f"\n{'='*80}")
@@ -254,6 +264,69 @@ def test_full_strategy_pipeline():
     print(result['final_analysis'].recommendation[:500] + "..." if len(result['final_analysis'].recommendation) > 500 else result['final_analysis'].recommendation)
 
 
+def test_full_strategy_pipeline_no_position():
+    """Test the full strategy analysis pipeline in THESIS MONITORING mode (no position)."""
+    print("\n" + "="*80)
+    print("🧪 TEST 4: Full Strategy Pipeline (NO POSITION)")
+    print("="*80)
+    
+    from src.strategy_agents.orchestrator import run_strategy_analysis
+    from src.api.backend_client import get_user_strategies, get_strategy
+
+    # Use the same real backend strategy but drop the position text to force has_position = False
+    username = "Victor"
+    strategies = get_user_strategies(username)
+    if not strategies:
+        print(f"❌ No strategies found for user {username} in Backend API")
+        return
+
+    s = strategies[0]
+    strategy_id = s.get("id")
+
+    full_strategy = get_strategy(username, strategy_id)
+    if not full_strategy:
+        print(f"❌ Failed to load strategy {strategy_id} from Backend API")
+        return
+
+    asset = full_strategy["asset"]["primary"]
+    strategy_text = full_strategy["user_input"]["strategy_text"]
+    position_text = ""  # explicit no-position case
+    
+    print(f"\n🚀 Running strategy analysis in THESIS MONITORING mode (no position) using backend strategy...")
+    print(f"User: {username}")
+    print(f"Strategy ID: {strategy_id}")
+    print(f"Asset: {asset}")
+    
+    # Run full pipeline with empty position_text, but do NOT save this synthetic variant to Backend API
+    result = run_strategy_analysis(
+        user_id=username,
+        strategy_id=strategy_id,
+        asset=asset,
+        strategy_text=strategy_text,
+        position_text=position_text,
+        save_to_backend=False,
+    )
+    
+    # Display high-level results (details will also be visible in logs)
+    print(f"\n{'='*80}")
+    print("📊 RISK ASSESSMENT (NO POSITION)")
+    print('='*80)
+    print(f"Overall Risk Level: {result['risk_assessment'].overall_risk_level.upper()}")
+    print(f"\n{result['risk_assessment'].key_risk_summary}")
+    
+    print(f"\n{'='*80}")
+    print("💡 OPPORTUNITY ASSESSMENT (NO POSITION)")
+    print('='*80)
+    print(f"Overall Opportunity Level: {result['opportunity_assessment'].overall_opportunity_level.upper()}")
+    print(f"\n{result['opportunity_assessment'].key_opportunity_summary}")
+    
+    print(f"\n{'='*80}")
+    print("📝 FINAL ANALYSIS (NO POSITION)")
+    print('='*80)
+    print(f"\nEXECUTIVE SUMMARY:")
+    print(result['final_analysis'].executive_summary)
+
+
 def main():
     """Run all tests."""
     print("\n" + "="*80)
@@ -269,8 +342,11 @@ def main():
         # Test 2: Integration with topic analysis
         test_topic_analysis_integration()
         
-        # Test 3: Full pipeline preview
+        # Test 3: Full pipeline preview (with active position)
         test_full_strategy_pipeline()
+
+        # Test 4: Full pipeline preview (THESIS MONITORING mode, no position)
+        test_full_strategy_pipeline_no_position()
         
         print("\n" + "="*80)
         print("✅ ALL TESTS COMPLETED")
@@ -279,7 +355,7 @@ def main():
         print("\n💡 TIPS:")
         print("- ✅ All strategy agents built and working")
         print("- ✅ Topic mapping, risks, opportunities, and analysis generated")
-        print("- ✅ Results saved to backend API (JSON files)")
+        print("- ✅ Backend save pipeline exercised (see logs for success/failure details)")
         print("- Next: Integrate with chat for strategy context")
         
     except Exception as e:

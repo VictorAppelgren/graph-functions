@@ -10,36 +10,44 @@ llm_select_one_new_link_prompt = """
     - Links connect persistent analytical anchors (assets, policies, drivers)
     - "Fed Policy" INFLUENCES "EURUSD" (not "Fed Dovish Risk" influences anything)
     - Focus on structural causal/correlational relationships between persistent topics
-
+    
     TASK:
     - Given the source topic, candidate topics, and existing links, propose the single strongest missing link.
     - If NO strong link exists, output: {{"motivation": "", "type": "", "source": "", "target": ""}}
     - If a strong link exists, output a complete JSON object with all required fields.
-
+    
     CRITICAL REQUIREMENTS:
     - ALWAYS output valid JSON, even if empty
     - NEVER output null, undefined, or non-JSON responses
     - ALL four fields are REQUIRED: "motivation", "type", "source", "target"
     - Use empty strings ("") if no link should be created
 
+    CANONICAL LINK TYPES (YOU MUST USE EXACTLY ONE OF THESE STRINGS):
+
+    {link_type_descriptions}
+
+    HARD CONSTRAINTS ON "type":
+    - The "type" field MUST be one of: "INFLUENCES", "CORRELATES_WITH", "PEERS", "COMPONENT_OF".
+    - NEVER output "DRIVES", "DRIVEN_BY", "IMPACTS", "RELATED_TO", or any other relationship label.
+    - If you think "A drives B" or "A impacts B", you MUST output "INFLUENCES" with direction A → B.
+    - If you think "A is driven by B", you MUST flip the direction and output B INFLUENCES A.
+
     EXAMPLE OUTPUTS:
-    Strong link: {{"motivation": "ECB policy directly influences EUR/USD exchange rate through interest rate differentials.", "type": "INFLUENCES", "source": "ecb_policy", "target": "eurusd"}}
-    No link: {{"motivation": "", "type": "", "source": "", "target": ""}}
+    Strong link:
+    {{"motivation": "ECB policy directly influences EUR/USD exchange rate through interest rate differentials.",
+      "type": "INFLUENCES", "source": "ecb_policy", "target": "eurusd"}}
 
-    LINK TYPES:
-    - INFLUENCES: A → B means A is a major driver or cause of B. Directional.
-    - PEERS: A ↔ B means A and B are direct competitors, alternatives, or fulfill the same role in a market or system. Bi-directional, "true peer" only.
-    - COMPONENT_OF: A is a component of B. Directional.
-    - CORRELATES_WITH: A and B are correlated. Bi-directional. Moves together to some large degree.  
-
+    No link:
+    {{"motivation": "", "type": "", "source": "", "target": ""}}
+    
     SOURCE TOPIC:
     {source_name} (id: {source_id})
-
+    
     CANDIDATE TOPICS:
     {candidate_lines}
-
+    
     CURRENT LINKS:
     {existing_links}
-
+    
     RESPOND WITH VALID JSON ONLY - NO OTHER TEXT:
     """

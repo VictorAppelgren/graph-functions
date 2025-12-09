@@ -539,37 +539,12 @@ def add_article_with_capacity_check(
             f"{gate_result['reasoning']}"
         )
         
-        # Get existing article data
-        existing_data = get_existing_article_data(downgrade_id, topic_id)
-        
-        if not existing_data:
-            logger.error(f"Could not get data for article {downgrade_id}, aborting")
-            return {"action": "error"}
-        
-        # Remove existing article from current tier
-        remove_link(downgrade_id, topic_id)
-        track("article_downgraded", f"Article {downgrade_id} downgraded to make room")
-        
-        # CRITICAL: Recursively add existing article to tier-1
-        # This will check capacity at tier-1 and potentially trigger
-        # another downgrade cascade if tier-1 is also full!
-        logger.info(
-            f"Recursively adding downgraded article {downgrade_id} to tier {tier-1}"
-        )
-        
-        existing_result = try_add_at_tier(
-            aid=downgrade_id,
-            tier=tier - 1,
-            summary=existing_data["summary"],
-            source=existing_data["source"],
-            published=existing_data["published_at"],
-            motivation_text=existing_data["motivation"],
-            implications_text=existing_data["implications"]
-        )
-        
-        logger.info(
-            f"Downgraded article {downgrade_id} placed at tier {existing_result.get('tier', 'unknown')}: "
-            f"{existing_result}"
+        # Move existing article down one tier IN PLACE (keep ABOUT link)
+        new_tier = max(tier - 1, 0)
+        set_about_link_tier(downgrade_id, topic_id, timeframe, new_tier)
+        track(
+            "article_downgraded",
+            f"Article {downgrade_id} downgraded in-place from tier {tier} to tier {new_tier}"
         )
         
         # Now we have room at current tier - add new article
@@ -626,6 +601,45 @@ def create_link_at_tier(
     })
     
     logger.info(f"Created ABOUT link: {article_id} -> {topic_id} | tier={tier}")
+
+
+def set_about_link_tier(
+    article_id: str,
+    topic_id: str,
+    timeframe: str,
+    tier: int,
+):
+    """Set all importance_* fields for an existing ABOUT link to the given tier.
+
+    This updates the relationship in place and does NOT create or delete any links.
+    """
+    from src.graph.neo4j_client import run_cypher
+
+    safe_tier = max(tier, 0)
+
+    query = """
+    MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic {id: $topic_id})
+    WHERE r.timeframe = $timeframe
+    SET
+        r.importance_risk = $tier,
+        r.importance_opportunity = $tier,
+        r.importance_trend = $tier,
+        r.importance_catalyst = $tier
+    """
+
+    run_cypher(
+        query,
+        {
+            "article_id": article_id,
+            "topic_id": topic_id,
+            "timeframe": timeframe,
+            "tier": safe_tier,
+        },
+    )
+
+    logger.info(
+        f"Set ABOUT link tier for {article_id} -> {topic_id} | timeframe={timeframe} | tier={safe_tier}"
+    )
 
 
 def get_existing_article_data(article_id: str, topic_id: str) -> dict:

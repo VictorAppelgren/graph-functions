@@ -29,7 +29,7 @@ from utils.app_logging import get_logger
 logger = get_logger(__name__)
 
 # --- Configuration ---
-TOKEN_THRESHOLD = 1700  # Requests ≤2k tokens use local, >2k use external
+TOKEN_THRESHOLD = 2000  # Requests ≤2k tokens use local, >2k use external
 NANO_THRESHOLD = 999999  # Effectively disabled - don't use Nano
 NANO_COOLDOWN_SECONDS = 60  # 60 seconds cooldown between Nano calls
 LLM_CALL_TIMEOUT_S = 300.0
@@ -496,11 +496,13 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
     
     if provider == "ollama":
         # Log target for Ollama
+        # num_predict caps output tokens to prevent infinite generation loops
         return ChatOllama(
             model=model,
             temperature=temperature,
             timeout=int(LLM_CALL_TIMEOUT_S),
             request_timeout=LLM_CALL_TIMEOUT_S,
+            num_predict=2048,  # Max output tokens - prevents runaway generation
         ).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
     
     elif provider == "openai":
@@ -515,6 +517,9 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             # LangChain's ChatOpenAI still requires an api_key even when using a custom base_url.
             # Provide a harmless dummy to avoid touching global env vars.
             kwargs["api_key"] = os.getenv("OPENAI_API_KEY", "sk-noop")
+            # Cap output tokens for vLLM servers to prevent runaway generation
+            # 8k allows for research writing while preventing infinite loops
+            kwargs["max_tokens"] = 8192
 
         return ChatOpenAI(**kwargs).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
     

@@ -77,9 +77,12 @@ def article_capacity_manager_llm(
             new_importance=None
         )
     
-    # Format existing articles for prompt
+    # Format existing articles for prompt (cap at 50 to keep prompt size safe)
+    MAX_LLM_ARTICLES = 50
+    prompt_articles = existing_articles[:MAX_LLM_ARTICLES]
+
     articles_formatted = []
-    for i, article in enumerate(existing_articles, 1):
+    for i, article in enumerate(prompt_articles, 1):
         max_imp = max(article['risk'], article['opp'], article['trend'], article['cat'])
         
         # Determine dominant perspective
@@ -102,7 +105,7 @@ def article_capacity_manager_llm(
             f"   Classification Reason: {article.get('motivation', 'N/A')[:150]}"
         )
     
-    allowed_ids_str = ", ".join([a["id"] for a in existing_articles])
+    allowed_ids_str = ", ".join([a["id"] for a in prompt_articles])
     
     # Build prompt
     prompt_text = ARTICLE_CAPACITY_MANAGER_PROMPT.format(
@@ -143,7 +146,7 @@ def article_capacity_manager_llm(
     
     # Validate target_article_id is in allowed list
     if decision.action == "downgrade":
-        valid_ids = {a["id"] for a in existing_articles}
+        valid_ids = {a["id"] for a in prompt_articles}
         if decision.target_article_id not in valid_ids:
             logger.warning(
                 f"LLM selected invalid article ID: {decision.target_article_id}. "

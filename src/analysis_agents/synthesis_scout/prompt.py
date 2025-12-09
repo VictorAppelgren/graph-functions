@@ -46,6 +46,9 @@ THIS TOPIC'S ARTICLES:
 RELATED TOPICS & THEIR ANALYSIS:
 {related_topics}
 
+CATALYST ARTICLES FROM RELATED TOPICS (Top 25 most relevant):
+{catalyst_articles}
+
 TASK:
 Find 2-3 ELITE synthesis opportunities where combining:
 - An article from THIS topic
@@ -102,12 +105,36 @@ REQUIREMENTS:
 - Maximum 3 opportunities
 - Use ONLY (9-CHAR-ID) citation format
 
-Output your synthesis opportunities as a JSON list:
+═══════════════════════════════════════════════════════════════════════════════
+CRITICAL: OUTPUT FORMAT - YOU MUST FOLLOW THIS EXACTLY
+═══════════════════════════════════════════════════════════════════════════════
+
+You MUST output valid JSON with 2-3 synthesis opportunities. Do NOT output empty opportunities.
+
+EXACT OUTPUT FORMAT:
+```json
 {{
     "opportunities": [
-        "opportunity 1 text",
-        "opportunity 2 text",
-        "opportunity 3 text"
+        "Article (XXXXXXXXX) ([brief summary]) + (Topic:related_topic.executive_summary) ([key insight]) = [SPECIFIC NON-OBVIOUS INSIGHT about {topic_name} with numbers/levels]",
+        "Article (YYYYYYYYY) ([brief summary]) + (Topic:another_topic.drivers) ([key driver]) = [SECOND SPECIFIC INSIGHT with actionable conclusion]"
     ]
 }}
+```
+
+COMPLETE EXAMPLE OUTPUT:
+```json
+{{
+    "opportunities": [
+        "Article (DYFJLTNVQ) (EUR positioning at 90th percentile short) + (Topic:fed_policy.executive_summary) (terminal rate 5.5% vs market 5.25%) + (Topic:ecb_policy.drivers) (Lagarde hawkish pivot) = Asymmetric squeeze setup: extreme EUR shorts + Fed peak + ECB surprise = EUR/USD rally to 1.12 (3:1 risk/reward)",
+        "Article (JXV2KQND8) (China stimulus $500B announced) + (Topic:copper.drivers) (supply constraints Chile -15%) = Second-order inflation risk: China demand + supply squeeze = copper +15% = Fed hike longer = USD strength = EUR/USD to 1.03"
+    ]
+}}
+```
+
+NEVER output:
+- Empty opportunities array
+- Generic statements without article IDs
+- Opportunities without the A + B = C structure
+
+NOW OUTPUT YOUR JSON:
 """

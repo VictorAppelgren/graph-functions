@@ -39,6 +39,12 @@ def connect_graph_db() -> Driver:
         app_logging.get_logger("neo4j").setLevel(logging.ERROR)
         app_logging.get_logger("neo4j.io").setLevel(logging.ERROR)
         app_logging.get_logger("neo4j.pool").setLevel(logging.ERROR)
+        # logger.info(
+        #     "Neo4j target configuration | uri=%s | user=%s | database=%s",
+        #     NEO4J_URI,
+        #     NEO4J_USER,
+        #     NEO4J_DATABASE,
+        # )
         logger.debug(
             f"Connecting to Neo4j at {NEO4J_URI} as user '{NEO4J_USER}' (database: '{NEO4J_DATABASE}')"
         )

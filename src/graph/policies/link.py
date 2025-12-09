@@ -7,6 +7,7 @@ from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.llm.sanitizer import run_llm_decision, RemoveDecision, SelectOneNewLinkModel
 from langchain_core.prompts import PromptTemplate
 from src.llm.prompts.llm_select_one_new_link import llm_select_one_new_link_prompt
+from src.graph.relationship_types import RELATIONSHIP_DESCRIPTIONS
 
 logger = app_logging.get_logger(__name__)
 
@@ -93,15 +94,20 @@ def llm_select_one_new_link(
         [f"- {n['name']} (id: {n['id']})" for n in candidate_topics]
     )
 
+    # Build human-readable link type descriptions from canonical relationship types
+    link_type_descriptions = "\n    ".join(RELATIONSHIP_DESCRIPTIONS.values())
+
     p = PromptTemplate.from_template(
-        llm_select_one_new_link_prompt).format(
-            system_mission=SYSTEM_MISSION, 
-            system_context=SYSTEM_CONTEXT, 
-            source_name=source_topic["name"], 
-            source_id=source_topic["id"], 
-            candidate_lines=candidate_lines, 
-            existing_links=existing_links
-            )
+        llm_select_one_new_link_prompt
+    ).format(
+        system_mission=SYSTEM_MISSION,
+        system_context=SYSTEM_CONTEXT,
+        source_name=source_topic["name"],
+        source_id=source_topic["id"],
+        candidate_lines=candidate_lines,
+        existing_links=existing_links,
+        link_type_descriptions=link_type_descriptions,
+    )
 
     logger.debug(
         "[llm_propose_new_link] PromptTemplate: %s",

@@ -124,7 +124,7 @@ def get_report(topic_id: str):
         
         topic_name = topic.get("name", topic_id) if topic else topic_id
         
-        # Format as markdown
+        # Format as markdown (for backward compatibility)
         markdown_parts = [f"# {topic_name}", ""]
         
         for section, content in reports.items():
@@ -137,10 +137,12 @@ def get_report(topic_id: str):
         
         markdown_content = "\n".join(markdown_parts)
         
+        # Return BOTH markdown (legacy) AND sections (for new collapsible UI)
         return {
             "topic_id": topic_id,
             "topic_name": topic_name,
-            "markdown": markdown_content
+            "markdown": markdown_content,
+            "sections": reports  # Add sections dict for frontend collapsible cards!
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
@@ -251,7 +253,7 @@ def build_context(request: ContextRequest):
         if include_related:
             related_query = """
             MATCH (t:Topic {id: $topic_id})-[r]-(related:Topic)
-            WHERE type(r) IN ['INFLUENCES', 'CORRELATES_WITH', 'DRIVES', 'IMPACTS']
+            WHERE type(r) IN ['INFLUENCES', 'CORRELATES_WITH', 'PEERS', 'COMPONENT_OF']
             RETURN DISTINCT
                 related.id as id,
                 related.name as name,

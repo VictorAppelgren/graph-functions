@@ -54,6 +54,27 @@ class RiskAssessorAgent(BaseStrategyAgent):
             RiskAssessment with all identified risks
         """
         self._log("Assessing strategy risks")
+        # Determine mode from material package (canonical flag if present)
+        has_position = material_package.get("has_position")
+        if has_position is None:
+            has_position = bool(material_package.get("position_text", "").strip())
+        mode_label = "ACTIVE POSITION ANALYSIS" if has_position else "THESIS MONITORING (no active position)"
+        self._log(f"Mode: {mode_label}")
+
+        if has_position:
+            analysis_mode = (
+                "ACTIVE POSITION ANALYSIS: the user currently has a live position described "
+                "in USER POSITION. You must identify precise, concrete position risks "
+                "(entry vs current price, sizing, stops, exposure) grounded ONLY in the "
+                "provided strategy, position text, and market context."
+            )
+        else:
+            analysis_mode = (
+                "THESIS MONITORING (NO ACTIVE POSITION): the user has NO live position. "
+                "You must NOT invent current trades, entries, stops, PnL, or leverage. "
+                "Any position_risks should be about how a future position could be "
+                "structured, not about a non-existent live trade."
+            )
         
         # Format material for prompt
         topic_analyses = self._format_topic_analyses(material_package["topics"])
@@ -66,10 +87,11 @@ class RiskAssessorAgent(BaseStrategyAgent):
         prompt = RISK_ASSESSOR_PROMPT.format(
             system_mission=SYSTEM_MISSION,
             system_context=SYSTEM_CONTEXT,
+            analysis_mode=analysis_mode,
             user_strategy=material_package["user_strategy"],
             position_text=material_package["position_text"],
             topic_analyses=topic_analyses,
-            market_context=market_context
+            market_context=market_context,
         )
         
         # Get LLM assessment

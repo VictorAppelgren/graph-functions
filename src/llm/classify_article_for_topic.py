@@ -42,21 +42,29 @@ Provide a JSON object with:
    - "medium": Medium-term developments (weeks to months)
    - "current": Immediate/short-term events (days to weeks)
 
-2. importance_risk (0-10): How important is this article for understanding RISKS to this topic?
-   - 0 = No risk information
-   - 10 = Critical risk information that could significantly impact the topic
+2. importance_risk (0-3): How important is this article for understanding RISKS to this topic?
+   - 0 = No real risk information for THIS topic
+   - 1 = Minor / background risk information (filler tier)
+   - 2 = Clear, meaningful risk signal (standard tier)
+   - 3 = Critical risk information that could significantly impact this topic (premium tier)
 
-3. importance_opportunity (0-10): How important is this article for understanding OPPORTUNITIES for this topic?
-   - 0 = No opportunity information
-   - 10 = Major opportunity that could significantly benefit the topic
+3. importance_opportunity (0-3): How important is this article for understanding OPPORTUNITIES for this topic?
+   - 0 = No real opportunity information for THIS topic
+   - 1 = Minor / background opportunity information
+   - 2 = Clear, meaningful opportunity signal
+   - 3 = Major opportunity that could significantly benefit this topic
 
-4. importance_trend (0-10): How important is this article for understanding TRENDS affecting this topic?
-   - 0 = No trend information
-   - 10 = Reveals critical trend that shapes the topic's trajectory
+4. importance_trend (0-3): How important is this article for understanding TRENDS affecting this topic?
+   - 0 = No real trend information for THIS topic
+   - 1 = Weak / background trend information
+   - 2 = Solid, meaningful trend signal
+   - 3 = Critical trend that shapes the topic's trajectory
 
-5. importance_catalyst (0-10): How important is this article as a CATALYST for this topic?
-   - 0 = No catalyst potential
-   - 10 = Major catalyst that could trigger significant movement
+5. importance_catalyst (0-3): How important is this article as a CATALYST for this topic?
+   - 0 = No catalyst potential for THIS topic
+   - 1 = Weak / background catalyst
+   - 2 = Clear, meaningful potential catalyst
+   - 3 = Major catalyst that could trigger significant movement for this topic
 
 6. motivation (1-2 sentences): WHY does this article matter for THIS specific topic?
    - Be SPECIFIC to the topic, not generic
@@ -69,34 +77,51 @@ Provide a JSON object with:
    - Be CONCRETE about potential outcomes
    - Connect to market impact, price action, or strategic positioning
 
-CRITICAL RULES:
-✓ motivation: Explain WHY relevant to THIS SPECIFIC TOPIC (not generic statements)
-✓ implications: Think AHEAD - what could happen NEXT for THIS TOPIC?
-✓ Be CONCRETE and SPECIFIC, avoid vague language
-✓ Keep motivation and implications to 1-2 sentences each
-✓ At least ONE importance score should be > 0 (otherwise why is it linked?)
+CRITICAL RULES ABOUT IMPORTANCE SCORES (MUST FOLLOW):
 
-GOOD EXAMPLE (specific, forward-looking):
+- ALL importance_* fields MUST be integers in the CLOSED range 0–3.
+- MAX IMPORTANCE VALUE IS 3. YOU MUST NEVER OUTPUT 4, 5, 6, 7, 8, 9, OR 10.
+- Do NOT use any scale other than 0–3. This is NOT a 0–10 scale.
+- If you instinctively think "this is like 7/10 importance", you MUST map it into this 0–3 system:
+  - 0 = no meaningful information
+  - 1 = weak / background (filler)
+  - 2 = standard, solid importance
+  - 3 = premium / critical importance, top-tier signal
+- If you output ANY importance_* above 3, the downstream capacity manager WILL BREAK.
+  You MUST strictly stay in 0–3.
+
+ADDITIONAL RULES:
+
+- At least ONE importance score should be > 0 (otherwise why is it linked?).
+- motivation: Explain WHY relevant to THIS SPECIFIC TOPIC (not generic statements).
+- implications: Think AHEAD - what could happen NEXT for THIS TOPIC?
+- Be CONCRETE and SPECIFIC, avoid vague language.
+- Keep motivation and implications to 1-2 sentences each.
+
+GOOD EXAMPLE (valid 0–3 tiers, specific, forward-looking):
+{{
+    "timeframe": "current",
+    "importance_risk": 3,
+    "importance_opportunity": 1,
+    "importance_trend": 2,
+    "importance_catalyst": 3,
+    "motivation": "Powell's unexpectedly hawkish tone implies rates may stay higher for longer, directly raising downside risk for US equities.",
+    "implications": "Could trigger a short-term 5–8% SPX correction as valuations reprice; growth stocks are most exposed if this hawkish stance persists."
+}}
+
+BAD EXAMPLE (INVALID – NEVER DO THIS):
 {{
     "timeframe": "current",
     "importance_risk": 8,
-    "importance_opportunity": 2,
-    "importance_trend": 5,
+    "importance_opportunity": 5,
+    "importance_trend": 7,
     "importance_catalyst": 9,
-    "motivation": "Powell's unexpectedly hawkish tone signals Fed may hold rates at 5.5% through Q3 2025, contradicting market pricing of cuts starting Q2.",
-    "implications": "Could trigger 5-8% equity correction as markets reprice rate expectations, with growth stocks most vulnerable. SPX likely tests 4800 support if Fed maintains hawkish stance at next meeting."
-}}
-
-BAD EXAMPLE (generic, backward-looking):
-{{
-    "timeframe": "current",
-    "importance_risk": 7,
-    "importance_opportunity": 3,
-    "importance_trend": 5,
-    "importance_catalyst": 6,
     "motivation": "This article discusses Federal Reserve policy and interest rate decisions.",
     "implications": "The Fed might change interest rates in the future, which could affect markets."
 }}
+
+- The BAD EXAMPLE is INVALID because importance_* values above 3 are STRICTLY FORBIDDEN.
+- DO NOT copy those numbers. ALWAYS keep importance_* in 0–3.
 
 Output valid JSON only. No additional text.
 """

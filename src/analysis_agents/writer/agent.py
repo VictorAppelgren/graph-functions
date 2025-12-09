@@ -1,17 +1,27 @@
 """
-Writer Agent
+Writer Agent (UNIFIED VERSION)
 
-Writes initial analysis draft using all guidance from pre-writing agents.
+Handles ALL writing scenarios with one unified method:
+- Fresh write (no prior analysis)
+- Update with new data (has prior analysis)
+- Fix invalid IDs (has prior draft + error feedback)
+- Quality rewrite (has prior draft + critic/source feedback)
 """
 
 from pydantic import BaseModel, Field
 from typing import Dict, Any
 from src.analysis_agents.base_agent import BaseAgent
 from src.analysis_agents.writer.graph_strategy import explore_graph
-from src.analysis_agents.writer.prompt import WRITER_PROMPT
+from src.analysis_agents.writer.prompt import (
+    WRITER_PROMPT,
+    build_previous_analysis_section,
+    build_correction_section,
+    get_task_instruction,
+)
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.market_data.loader import get_market_context_for_prompt
 from langchain_core.output_parsers import StrOutputParser
 
 
@@ -24,13 +34,188 @@ class WriterOutput(BaseModel):
 
 class WriterAgent(BaseAgent):
     """
-    Writer Agent
+    Writer Agent (UNIFIED VERSION)
     
-    Writes initial analysis draft using pre-writing guidance.
+    Single entry point for all writing scenarios.
     """
     
     def __init__(self):
         super().__init__("Writer")
+    
+    # =========================================================================
+    # UNIFIED WRITE METHOD - handles ALL scenarios
+    # =========================================================================
+    
+    def write(
+        self,
+        topic_id: str,
+        section: str,
+        material: str,
+        section_focus: str = "",
+        pre_writing_results: Dict[str, Any] | None = None,
+        previous_analysis: str | None = None,
+        invalid_ids_feedback: str | None = None,
+        critic_feedback: str | None = None,
+        source_feedback: str | None = None,
+    ) -> WriterOutput:
+        """
+        UNIFIED write method for ALL scenarios.
+        
+        Args:
+            topic_id: Topic to analyze
+            section: Analysis section name
+            material: Source material (articles + prior sections)
+            section_focus: Section focus text
+            pre_writing_results: Results from pre-writing agents
+            previous_analysis: Existing analysis to update/fix (optional)
+            invalid_ids_feedback: Error message about invalid IDs (optional)
+            critic_feedback: Feedback from Critic agent (optional)
+            source_feedback: Feedback from SourceChecker agent (optional)
+        
+        Returns:
+            WriterOutput with analysis text
+        """
+        # Determine scenario for logging
+        scenario = self._determine_scenario(
+            previous_analysis, invalid_ids_feedback, critic_feedback, source_feedback
+        )
+        
+        self._log(f"")
+        self._log(f"{'='*60}")
+        self._log(f"📝 WRITER: {topic_id}/{section}")
+        self._log(f"   Scenario: {scenario}")
+        self._log(f"{'='*60}")
+        
+        # Build dynamic sections
+        previous_section = build_previous_analysis_section(previous_analysis)
+        correction_section = build_correction_section(
+            invalid_ids_feedback, critic_feedback, source_feedback
+        )
+        
+        # Get task instruction based on context
+        task_instruction = get_task_instruction(
+            asset_name=topic_id,
+            has_previous=bool(previous_analysis),
+            has_invalid_ids=bool(invalid_ids_feedback),
+            has_feedback=bool(critic_feedback or source_feedback),
+        )
+        
+        # Format pre-writing guidance
+        pre_writing_guidance = self._format_pre_writing_guidance(pre_writing_results or {})
+        
+        # Load market context
+        market_context = get_market_context_for_prompt(topic_id)
+        
+        # Build the full prompt
+        prompt = WRITER_PROMPT.format(
+            system_mission=SYSTEM_MISSION,
+            system_context=SYSTEM_CONTEXT,
+            section_focus=section_focus or "Write comprehensive analysis",
+            market_context=market_context,
+            pre_writing_guidance=pre_writing_guidance,
+            material=material,
+            previous_analysis_section=previous_section,
+            correction_section=correction_section,
+            task_instruction=task_instruction,
+            asset_name=topic_id,
+            asset_id=topic_id,
+        )
+        
+        # Log input summary
+        self._log_input_summary(
+            material=material,
+            previous_analysis=previous_analysis,
+            invalid_ids_feedback=invalid_ids_feedback,
+            critic_feedback=critic_feedback,
+            source_feedback=source_feedback,
+            pre_writing_results=pre_writing_results,
+            prompt=prompt,
+        )
+        
+        # Invoke LLM
+        llm = get_llm(ModelTier.COMPLEX)
+        parser = StrOutputParser()
+        chain = llm | parser
+        
+        response = chain.invoke(prompt)
+        
+        self._log(f"✅ Output: {len(response):,} chars")
+        self._log(f"{'='*60}")
+        self._log(f"")
+        
+        return WriterOutput(analysis_text=response)
+    
+    def _determine_scenario(
+        self,
+        previous_analysis: str | None,
+        invalid_ids_feedback: str | None,
+        critic_feedback: str | None,
+        source_feedback: str | None,
+    ) -> str:
+        """Determine which scenario we're in for logging."""
+        if invalid_ids_feedback:
+            return "🔧 FIX_INVALID_IDS"
+        if critic_feedback or source_feedback:
+            return "🔄 QUALITY_REWRITE"
+        if previous_analysis:
+            return "📈 UPDATE_EXISTING"
+        return "🆕 FRESH_WRITE"
+    
+    def _log_input_summary(
+        self,
+        material: str,
+        previous_analysis: str | None,
+        invalid_ids_feedback: str | None,
+        critic_feedback: str | None,
+        source_feedback: str | None,
+        pre_writing_results: Dict[str, Any] | None,
+        prompt: str,
+    ) -> None:
+        """Log detailed input summary."""
+        self._log("==== INPUT SUMMARY ====")
+        self._log(f"   Material: {len(material):,} chars")
+        
+        if previous_analysis:
+            self._log(f"   Previous analysis: {len(previous_analysis):,} chars")
+        
+        if invalid_ids_feedback:
+            self._log(f"   ⚠️ Invalid IDs feedback: {len(invalid_ids_feedback):,} chars")
+        
+        if critic_feedback:
+            self._log(f"   Critic feedback: {len(critic_feedback):,} chars")
+        
+        if source_feedback:
+            self._log(f"   Source feedback: {len(source_feedback):,} chars")
+        
+        # Count pre-writing results
+        if pre_writing_results:
+            synth_count = 0
+            depth_count = 0
+            contrarian_count = 0
+            
+            if "synthesis" in pre_writing_results and pre_writing_results["synthesis"]:
+                syn = pre_writing_results["synthesis"]
+                if hasattr(syn, "opportunities"):
+                    synth_count = len(syn.opportunities)
+            
+            if "depth" in pre_writing_results and pre_writing_results["depth"]:
+                depth = pre_writing_results["depth"]
+                if hasattr(depth, "causal_chain_opportunities"):
+                    depth_count = len(depth.causal_chain_opportunities)
+            
+            if "contrarian" in pre_writing_results and pre_writing_results["contrarian"]:
+                con = pre_writing_results["contrarian"]
+                if hasattr(con, "contrarian_opportunities"):
+                    contrarian_count = len(con.contrarian_opportunities)
+            
+            self._log(f"   Pre-writing: synth={synth_count}, depth={depth_count}, contrarian={contrarian_count}")
+        
+        self._log(f"   Total prompt: {len(prompt):,} chars (~{len(prompt)//4:,} tokens)")
+        self._log("==== END INPUT SUMMARY ====")
+    
+    # =========================================================================
+    # LEGACY METHODS - kept for backwards compatibility
+    # =========================================================================
     
     def run(
         self, 
@@ -41,58 +226,52 @@ class WriterAgent(BaseAgent):
         **kwargs
     ) -> WriterOutput:
         """
-        Write analysis draft.
-        
-        Args:
-            topic_id: Topic to analyze
-            section: Analysis section (fundamental/medium/current)
-            section_focus: Section focus text (horizon, style, goals)
-            pre_writing_results: Results from pre-writing agents
-        
-        Returns:
-            WriterOutput with analysis text
+        Legacy method - explores graph and writes.
+        Use write() for the unified approach.
         """
-        self._log(f"Writing analysis for {topic_id}/{section}")
+        self._log(f"[LEGACY] Writing analysis for {topic_id}/{section}")
         
-        # Step 1: Get material from graph
+        # Get material from graph
         graph_data = explore_graph(topic_id, section)
         
         if not graph_data.get("articles"):
             self._log("No articles found - cannot write")
             return WriterOutput(analysis_text="No articles available for analysis.")
         
-        self._log(f"Writing with {len(graph_data['articles'])} articles")
-        
-        # Step 2: Load market context
-        from src.market_data.loader import get_market_context_for_prompt
-        market_context = get_market_context_for_prompt(topic_id)
-        
-        # Step 3: Format material
+        # Format material
         material = self._format_material(graph_data)
         
-        # Step 4: Format pre-writing guidance
-        pre_writing_guidance = self._format_pre_writing_guidance(pre_writing_results or {})
-        
-        # Step 5: Call LLM
-        prompt = WRITER_PROMPT.format(
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT,
-            section_focus=section_focus or "Write comprehensive analysis",
-            market_context=market_context,
-            pre_writing_guidance=pre_writing_guidance,
+        # Use unified write method
+        return self.write(
+            topic_id=topic_id,
+            section=section,
             material=material,
-            asset_name=graph_data.get("topic_name", topic_id),
-            asset_id=topic_id
+            section_focus=section_focus,
+            pre_writing_results=pre_writing_results,
         )
+    
+    def run_with_material(
+        self,
+        topic_id: str,
+        section: str,
+        material: str,
+        section_focus: str = "",
+        pre_writing_results: Dict[str, Any] | None = None,
+        **kwargs,
+    ) -> WriterOutput:
+        """
+        Legacy method - writes with provided material.
+        Use write() for the unified approach.
+        """
+        self._log(f"[LEGACY] run_with_material for {topic_id}/{section}")
         
-        llm = get_llm(ModelTier.COMPLEX)
-        parser = StrOutputParser()
-        chain = llm | parser
-        
-        response = chain.invoke(prompt)
-        
-        self._log(f"Analysis written: {len(response)} characters")
-        return WriterOutput(analysis_text=response)
+        return self.write(
+            topic_id=topic_id,
+            section=section,
+            material=material,
+            section_focus=section_focus,
+            pre_writing_results=pre_writing_results,
+        )
     
     def _format_material(self, graph_data: dict) -> str:
         """Format graph data for prompt with crystal clear structure"""

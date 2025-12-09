@@ -77,6 +77,7 @@ class SynthesisScoutAgent(BaseAgent):
         # Step 3: Format data for LLM
         topic_articles_str = self._format_articles(graph_data.get("topic_articles", []))
         related_topics_str = self._format_related_topics(graph_data.get("related_topics", []))
+        catalyst_articles_str = self._format_catalyst_articles(graph_data.get("catalyst_articles", []))
         
         # Step 4: Call LLM
         prompt = SYNTHESIS_SCOUT_PROMPT.format(
@@ -86,14 +87,28 @@ class SynthesisScoutAgent(BaseAgent):
             section_focus=section_focus or "Multi-perspective synthesis",
             market_context=market_context,
             topic_articles=topic_articles_str,
-            related_topics=related_topics_str
+            related_topics=related_topics_str,
+            catalyst_articles=catalyst_articles_str
         )
         
+        catalyst_count = len(graph_data.get("catalyst_articles", []))
+        exec_summaries = sum(1 for t in related_topics if t.get("executive_summary"))
+        drivers_count = sum(1 for t in related_topics if t.get("drivers"))
+        
+        self._log("==== INPUT SUMMARY ====")
+        self._log(f"Topic articles: {len(graph_data.get('topic_articles', []))}")
+        self._log(f"Related topics: {len(related_topics)} (executive_summaries: {exec_summaries}, drivers: {drivers_count})")
+        self._log(f"Catalyst articles: {catalyst_count}")
+        self._log(f"Prompt length: {len(prompt)} chars, ~{len(prompt)//4} tokens")
+        self._log("==== END INPUT SUMMARY ====")
+        self._log("")
+
         llm = get_llm(ModelTier.COMPLEX)
         parser = StrOutputParser()
         chain = llm | parser
         
         response = chain.invoke(prompt)
+        self._log(f"Raw LLM response length: {len(response)} chars")
         
         # Step 4: Parse response
         try:
@@ -166,6 +181,20 @@ class SynthesisScoutAgent(BaseAgent):
             if rel.get('drivers'):
                 lines.append(f"   Drivers: {rel['drivers'][:300]}...")
             
+            lines.append("")
+        
+        return "\n".join(lines)
+    
+    def _format_catalyst_articles(self, articles: List[dict]) -> str:
+        """Format reranked catalyst articles from related topics"""
+        if not articles:
+            return "No catalyst articles available"
+        
+        lines = []
+        for i, art in enumerate(articles, 1):
+            source = art.get('source_topic', 'unknown')
+            lines.append(f"{i}. [{art['id']}] (from {source})")
+            lines.append(f"   {art['summary'][:200]}...")
             lines.append("")
         
         return "\n".join(lines)

@@ -4,7 +4,6 @@ Depth Finder Agent
 Deep dives into articles to find causal chain and quantification opportunities.
 """
 
-import json
 from pydantic import BaseModel, Field
 from typing import List
 from src.analysis_agents.base_agent import BaseAgent
@@ -13,7 +12,7 @@ from src.analysis_agents.depth_finder.prompt import DEPTH_FINDER_PROMPT
 from src.analysis_agents.utils.extract_article_ids import extract_article_ids_from_list, extract_topic_references_from_list
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
-from langchain_core.output_parsers import StrOutputParser
+from src.llm.sanitizer import run_llm_decision
 
 
 class DepthOpportunities(BaseModel):
@@ -36,6 +35,11 @@ class DepthOpportunities(BaseModel):
         default=[],
         description="Topic references cited (e.g., fed_policy.executive_summary)"
     )
+
+
+class DepthLLMRaw(BaseModel):
+    causal_chain_opportunities: List[str] = Field(default=[])
+    quantification_targets: List[str] = Field(default=[])
 
 
 class DepthFinderAgent(BaseAgent):
@@ -88,50 +92,43 @@ class DepthFinderAgent(BaseAgent):
             articles=articles_str
         )
         
+        self._log("==== INPUT SUMMARY ====")
+        self._log(f"Articles: {len(graph_data.get('articles', []))}")
+        self._log(f"Prompt length: {len(prompt)} chars, ~{len(prompt)//4} tokens")
+        self._log("==== END INPUT SUMMARY ====")
+        self._log("")
+
         llm = get_llm(ModelTier.COMPLEX)
-        parser = StrOutputParser()
-        chain = llm | parser
+        raw = run_llm_decision(chain=llm, prompt=prompt, model=DepthLLMRaw)
         
-        response = chain.invoke(prompt)
+        chains = raw.causal_chain_opportunities or []
+        quants = raw.quantification_targets or []
         
-        # Step 4: Parse response
-        try:
-            # Try to extract JSON from response
-            if "```json" in response:
-                json_str = response.split("```json")[1].split("```")[0].strip()
-            elif "```" in response:
-                json_str = response.split("```")[1].split("```")[0].strip()
-            else:
-                json_str = response.strip()
-            
-            data = json.loads(json_str)
-            
-            chains = data.get("causal_chain_opportunities", [])
-            quants = data.get("quantification_targets", [])
-            
-            self._log(f"Found {len(chains)} causal chains, {len(quants)} quantification targets")
-            
-            # Extract article IDs and topic references from all generated text
-            all_text = chains + quants
-            article_ids = extract_article_ids_from_list(all_text)
-            topic_refs = extract_topic_references_from_list(all_text)
-            
-            if article_ids:
-                self._log(f"Article IDs used: {', '.join(article_ids[:5])}{'...' if len(article_ids) > 5 else ''}")
-            if topic_refs:
-                topic_strs = [f"{r['topic_id']}.{r['field']}" for r in topic_refs]
-                self._log(f"Topic references used: {', '.join(topic_strs[:5])}{'...' if len(topic_strs) > 5 else ''}")
-            
-            return DepthOpportunities(
-                causal_chain_opportunities=chains,
-                quantification_targets=quants,
-                article_ids_used=article_ids,
-                topic_references_used=topic_refs
-            )
-            
-        except Exception as e:
-            self._log(f"Failed to parse LLM response: {e}")
-            return DepthOpportunities(causal_chain_opportunities=[], quantification_targets=[], article_ids_used=[], topic_references_used=[])
+        if len(chains) > 3:
+            self._log(f"Truncating causal_chain_opportunities from {len(chains)} to 3")
+            chains = chains[:3]
+        if len(quants) > 3:
+            self._log(f"Truncating quantification_targets from {len(quants)} to 3")
+            quants = quants[:3]
+        
+        self._log(f"Found {len(chains)} causal chains, {len(quants)} quantification targets")
+        
+        all_text = chains + quants
+        article_ids = extract_article_ids_from_list(all_text)
+        topic_refs = extract_topic_references_from_list(all_text)
+        
+        if article_ids:
+            self._log(f"Article IDs used: {', '.join(article_ids[:5])}{'...' if len(article_ids) > 5 else ''}")
+        if topic_refs:
+            topic_strs = [f"{r['topic_id']}.{r['field']}" for r in topic_refs]
+            self._log(f"Topic references used: {', '.join(topic_strs[:5])}{'...' if len(topic_strs) > 5 else ''}")
+        
+        return DepthOpportunities(
+            causal_chain_opportunities=chains,
+            quantification_targets=quants,
+            article_ids_used=article_ids,
+            topic_references_used=topic_refs
+        )
     
     def _format_articles(self, articles: List[dict]) -> str:
         """Format articles for prompt"""
