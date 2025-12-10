@@ -26,16 +26,15 @@ CURRENT TOPICS (truncated):
 {existing_topics}
 
 CANDIDATE TOPIC:
-{name}: importance={importance}, category={category}, motivation={motivation}
+{name}: category={category}, motivation={motivation}
 
 RULES:
 - Max topics allowed: """ + str(MAX_TOPICS) + """ (aim for 150).
 - If current count < max, action="add".
 - If at capacity, prefer consolidation over fragmentation.
   - If candidate violates granularity policy, action="reject".
-  - If candidate is clearly more important than weakest topic, action="replace".
+  - If candidate is clearly more valuable than least-used topic, action="replace".
   - Otherwise action="reject".
-- Priority weights: Priority 1 areas outrank Priority 2 if comparable importance.
 - Favor topics that consolidate analysis over those that fragment it.
 
 OUTPUT FORMAT (STRICT JSON, NO EXTRA TEXT):

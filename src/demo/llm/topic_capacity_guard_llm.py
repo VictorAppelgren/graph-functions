@@ -63,7 +63,6 @@ def decide_topic_capacity(
             scope_text=scope_text, 
             existing_topics=existing_topics, 
             name=candidate_topic.get("name", ""),
-            importance=candidate_topic.get("importance", 0),
             category=candidate_topic.get("category"),
             motivation=candidate_topic.get("motivation"),
             max_topics=MAX_TOPICS)

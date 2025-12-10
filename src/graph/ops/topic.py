@@ -7,7 +7,7 @@ from utils import app_logging
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.observability.stats_client import track
-from src.graph.policies.topic import classify_topic_category, classify_topic_importance, check_topic_relevance
+from src.graph.policies.topic import classify_topic_category, check_topic_relevance
 from src.analysis.policies.query_generator import create_wide_query
 from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
 from src.analysis.policies.topic_proposal import TopicProposal
@@ -20,10 +20,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
     Uses an LLM to propose a new Topic for the graph based on the article.
     Returns the created topic as a dict.
     """
-
-    # Initialize variables to prevent UnboundLocalError
-    p = None
-    
     # Load the article
     article_json = load_article(article_id)
     logger.debug(
@@ -40,11 +36,12 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         # Propose new topic using formatted text (lazy import to avoid circulars)
         from src.analysis.policies.topic_proposal import propose_topic
 
-        existing_topics = get_all_topics(fields=["id", "name", "importance", "last_updated"])
+        existing_topics = get_all_topics(fields=["id", "name", "last_updated"])
 
         topic_proposal = propose_topic(article_text, suggested_names, existing_topics=existing_topics)
         if not topic_proposal:
             # Unified rejection: treat as gating fail, but with special details
+            track("topic_rejected_no_proposal", "LLM returned no topic proposal")
             track("topic_rejected", "LLM returned no topic proposal")
             return {
                 "status": "rejected",
@@ -77,6 +74,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
 
         if not should_add:
             # Do not crash on legitimate rejection; log and return minimal status
+            track("topic_rejected_relevance", f"Topic {topic_proposal.name} failed relevance gate: {motivation_for_relevance}")
             track("topic_rejected", f"Topic {topic_proposal.name} failed relevance gate")
             return {
                 "status": "rejected",
@@ -92,49 +90,21 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             f"Sample query: {query['query'][:400]}{'...' if len(query['query']) > 400 else ''}"
         )
         topic_proposal.query = query["query"]
-
-        # Classify topic importance (1..5) using LLM helper and set scheduling props
-        topic_importance, topic_importance_rationale = classify_topic_importance(
-            topic_name=topic_proposal.name,
-            topic_type=topic_proposal.type,
-            context=article_text,
-        )
-        # If LLM flags this topic for removal, reject and do not persist
-        if isinstance(topic_importance, str) and topic_importance.upper() == "REMOVE":
-            track("topic_rejected", f"Topic {topic_proposal.name} flagged for removal (low importance)")
-            return {
-                "status": "rejected",
-                "topic_name": topic_proposal.name,
-                "category": category,
-                "should_add": False,
-                "motivation_for_relevance": motivation_for_relevance,
-                "failure_category": "importance_remove",
-            }
-
-        # Coerce numeric string importance to int
-        if isinstance(topic_importance, str) and topic_importance.isdigit():
-            topic_importance = int(topic_importance)
-        if not isinstance(topic_importance, int):
-            raise ValueError(
-                f"Classifier returned non-numeric importance: {topic_importance}"
-            )
-
-        topic_proposal.importance = topic_importance
-        topic_proposal.importance_rationale = topic_importance_rationale
+        
+        # Set last_updated timestamp (importance is no longer used - ABOUT links have importance instead)
         topic_proposal.last_updated = datetime.now(timezone.utc).isoformat(
             timespec="seconds"
         )
 
-        # ---- DEMO CAPACITY GUARD (always run) ----
+        # ---- CAPACITY GUARD (quality control + max topics) ----
         try:
             existing_topics = get_all_topics(
-                fields=["id", "name", "type", "importance", "last_updated"]
+                fields=["id", "name", "type", "last_updated"]
             )
 
             candidate_topic = {
                 "id": topic_proposal.id,
                 "name": topic_proposal.name,
-                "importance": topic_proposal.importance,
                 "category": category,
                 "motivation": topic_proposal.motivation,
             }
@@ -147,6 +117,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             logger.info("capacity_guard decision: %s", decision)
 
             if decision.action == "reject":
+                track("topic_rejected_capacity", f"Topic {topic_proposal.name} rejected by capacity guard: {decision.motivation}")
                 track("topic_rejected", f"Topic {topic_proposal.name} rejected by capacity guard")
                 return {
                     "status": "rejected",
@@ -194,7 +165,7 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
                 "create_topic_topic returned topic without usable id (element_id or id)"
             )
 
-        track("topic_created", f"Topic {topic_proposal.name} created (category={category}, importance={topic_proposal.importance})")
+        track("topic_created", f"Topic {topic_proposal.name} created (category={category})")
         return created_topic
     
     else:

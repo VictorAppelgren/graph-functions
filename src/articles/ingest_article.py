@@ -94,6 +94,10 @@ def add_article(
     )
     logger.info(f"Existing: {existing_article_ids}")
     logger.info(f"New: {new_topic_names}")
+    
+    # Track when LLM suggests new topics (before gates)
+    if new_topic_names:
+        track("topic_suggested", f"LLM suggested new topics: {new_topic_names}")
 
     if not existing_article_ids and not new_topic_names and not intended_topic_id:
         logger.warning(

@@ -13,11 +13,9 @@ from src.llm.config import ModelTier
 from utils.app_logging import get_logger
 from utils.app_logging import truncate_str
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
-from src.llm.sanitizer import run_llm_decision, CheckTopicRelevance, ClassifyTopicImportance, FilterInterestingTopics, ClassifyTopicCategory, TopicCategory
+from src.llm.sanitizer import run_llm_decision, CheckTopicRelevance, FilterInterestingTopics, ClassifyTopicCategory, TopicCategory
 from src.llm.prompts.classify_topic_category import classify_topic_category_prompt
-from src.llm.prompts.classify_topic_importance import classify_topic_importance_prompt
 from src.llm.prompts.llm_filter_all_interesting_topics import llm_filter_all_interesting_topics_prompt
-from src.graph.policies.priority import PRIORITY_POLICY
 
 logger = get_logger(__name__)
 
@@ -81,44 +79,6 @@ def llm_filter_all_interesting_topics(
         candidate_ids = [name_to_id[name] for name in candidate_names if name in name_to_id]
         logger.info(f"Candidate IDs after mapping: {candidate_ids}")
         return {"candidate_ids": candidate_ids, "motivation": r.motivation}
-    else:
-        return None
-
-
-def classify_topic_importance(
-    topic_name: str, topic_type: str = "", context: str = ""
-) -> tuple[int | str, str] | None:
-    
-    policy_text = "\n".join(
-    f"{lvl}: every {cfg['interval_seconds']}s | {cfg['label']} | {cfg['characteristics']}"
-    for lvl, cfg in sorted(PRIORITY_POLICY.items())
-    )
-
-    logger.info("Classifying topic importance: input follows")
-    logger.info("policy_text:\n%s", policy_text)
-    logger.info("topic_name: %r", topic_name)
-    logger.info("topic_type: %r", topic_type)
-    logger.info("context: %r", truncate_str(context, 2000))
-    llm = get_llm(ModelTier.MEDIUM)
-    parser = JsonOutputParser()
-    chain = llm | parser  # exact style match
-
-    p = PromptTemplate.from_template(
-        classify_topic_importance_prompt).format(
-            system_mission=SYSTEM_MISSION,
-            system_context=SYSTEM_CONTEXT,
-            policy_text=policy_text,
-            topic_name=topic_name,
-            topic_type=topic_type,
-            context=context
-        )
-
-    r = run_llm_decision(chain=chain, prompt=p, model=ClassifyTopicImportance)
-
-    logger.info("Importance classification result: %s", r)
-    # Expected: {"importance": 1..5, "rationale": "..."} or null importance
-    if r.importance and r.rationale:
-        return r.importance, r.rationale
     else:
         return None
 
