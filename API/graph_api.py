@@ -114,35 +114,20 @@ def query_articles(topic_id: str = Query(...)):
 
 @app.get("/neo/reports/{topic_id}")
 def get_report(topic_id: str):
-    """Get aggregated report for a topic"""
+    """Get aggregated report for a topic - returns sections dict for collapsible UI"""
     try:
-        reports = aggregate_reports(topic_id)
+        sections = aggregate_reports(topic_id)
         topic = get_topic_by_id(topic_id)
         
-        if not reports:
+        if not sections:
             raise HTTPException(status_code=404, detail="No reports found")
         
         topic_name = topic.get("name", topic_id) if topic else topic_id
         
-        # Format as markdown (for backward compatibility)
-        markdown_parts = [f"# {topic_name}", ""]
-        
-        for section, content in reports.items():
-            if content and content.strip():
-                section_title = section.replace('_', ' ').title()
-                markdown_parts.append(f"## {section_title}")
-                markdown_parts.append("")
-                markdown_parts.append(content.strip())
-                markdown_parts.append("")
-        
-        markdown_content = "\n".join(markdown_parts)
-        
-        # Return BOTH markdown (legacy) AND sections (for new collapsible UI)
         return {
             "topic_id": topic_id,
             "topic_name": topic_name,
-            "markdown": markdown_content,
-            "sections": reports  # Add sections dict for frontend collapsible cards!
+            "sections": sections
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")

@@ -285,22 +285,17 @@ def add_article(
         # Trigger next steps, relationship discovery and replacement analysis
         trigger_next_steps(topic_id, argos_id)
 
-        # Trigger NEW agent-based analysis ONLY for Level 2/3 articles
-        if not test:
-            # Check if this is a Level 2 or 3 article
-            priority_query = "MATCH (a:Article {id: $article_id}) RETURN a.priority as priority"
-            priority_result = run_cypher(priority_query, {"article_id": argos_id})
-            priority = priority_result[0]["priority"] if priority_result else None
-            
-            if priority in ['2', '3']:
-                from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
-                track("agent_analysis_triggered", f"Topic {topic_id}: Level {priority} article {argos_id}")
-                logger.info(f"🤖 Triggering agent analysis for {topic_id} (Level {priority} article added: {argos_id})")
-                analysis_rewriter_with_agents(topic_id)
-                track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
-                logger.info(f"✅ Agent analysis complete for {topic_id}")
-            else:
-                logger.info(f"⏭️  Skipping analysis for {topic_id} (Level {priority} article, need Level 2/3)")
+        # Trigger agent-based analysis for Tier 2/3 articles (high importance)
+        if not test and classification.overall_importance >= 2:
+            from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
+            track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
+            logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
+            analysis_rewriter_with_agents(topic_id)
+            track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
+            logger.info(f"✅ Agent analysis complete for {topic_id}")
+        elif not test:
+            track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
+            logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 2+)")
 
         successful_topics += 1
         if not article_already_exists:
@@ -368,22 +363,17 @@ def add_article(
                     # Trigger next steps, relationship discovery and replacement analysis
                     trigger_next_steps(topic_id, argos_id)
 
-                    # Trigger NEW agent-based analysis ONLY for Level 2/3 articles
-                    if not test:
-                        # Check if this is a Level 2 or 3 article
-                        priority_query = "MATCH (a:Article {id: $article_id}) RETURN a.priority as priority"
-                        priority_result = run_cypher(priority_query, {"article_id": argos_id})
-                        priority = priority_result[0]["priority"] if priority_result else None
-                        
-                        if priority in ['2', '3']:
-                            from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
-                            track("agent_analysis_triggered", f"Topic {topic_id}: Level {priority} article {argos_id}")
-                            logger.info(f"🤖 Triggering agent analysis for {topic_id} (Level {priority} article added: {argos_id})")
-                            analysis_rewriter_with_agents(topic_id)
-                            track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
-                            logger.info(f"✅ Agent analysis complete for {topic_id}")
-                        else:
-                            logger.info(f"⏭️  Skipping analysis for {topic_id} (Level {priority} article, need Level 2/3)")
+                    # Trigger agent-based analysis for Tier 2/3 articles (high importance)
+                    if not test and classification.overall_importance >= 2:
+                        from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
+                        track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
+                        logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
+                        analysis_rewriter_with_agents(topic_id)
+                        track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
+                        logger.info(f"✅ Agent analysis complete for {topic_id}")
+                    elif not test:
+                        track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
+                        logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 2+)")
 
                 successful_topics += 1
                 if not article_already_exists:
