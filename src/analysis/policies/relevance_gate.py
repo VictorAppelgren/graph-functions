@@ -53,12 +53,14 @@ def _fetch_existing_section_summaries(
         except Exception as e:
             logger.warning(f"Cold storage load failed | id={aid} | err={e}")
             continue
-        # Prefer argos_summary; fallback to common summary-like fields
-
+        # Prefer argos_summary; fallback to summary, then description
         if art:
             title = (art.get("title") if isinstance(art, dict) else None) or aid
-            summ_source = art["source"]
-            summ = art["argos_summary"]
+            summ_source = art.get("source", "unknown")
+            summ = art.get("argos_summary") or art.get("summary") or art.get("description")
+            if not summ:
+                logger.warning(f"Article {aid} missing summary, skipping")
+                continue
             logger.info(
                 f"Existing coverage item | id={aid} | title={title} | src={summ_source} | summary_len={len(summ)} | preview={summ[:200]}"
             )

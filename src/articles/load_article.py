@@ -24,11 +24,10 @@ def load_article(article_id: str, max_days: int = 90) -> Dict[str, str] | None:
     article = get_article_from_api(article_id)
     if article:
         logger.debug("Loaded article %s from Backend API", article_id)
-        # Handle legacy wrapper
-        inner = article.get("data")
-        if isinstance(inner, dict):
-            return cast(Dict[str, str], inner)
-        return article
+        # Safety net: unwrap if nested (backend should already return flat)
+        while isinstance(article.get("data"), dict):
+            article = article["data"]
+        return cast(Dict[str, str], article)
     
     logger.error("Article %s not found in Backend API", article_id)
     raise FileNotFoundError(f"Article {article_id} not found")

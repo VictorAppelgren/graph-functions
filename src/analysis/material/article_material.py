@@ -1,9 +1,8 @@
 """
 Builds formatted SOURCE MATERIAL for analysis rewriting, using summaries-only plus minimal metadata.
-- Loads full article JSON via utils.load_article.load_article
-- Requires existing argos_summary (strict); no fallbacks.
+- Loads full article JSON via load_article
+- Uses argos_summary, falls back to summary, then description
 - Per-article output includes exactly: Title, Published, optional Source, and Summary.
-- No URL or ID lines are included. Keeps prompts small and robust.
 """
 
 from __future__ import annotations
@@ -205,12 +204,16 @@ def build_material_for_synthesis_section(
         
         try:
             loaded = load_article(article_id)
-            if not loaded or "argos_summary" not in loaded:
-                raise ValueError(f"Article {article_id} missing argos_summary")
+            # Try argos_summary first, fallback to summary, then description
+            summary = None
+            if loaded:
+                summary = loaded.get("argos_summary") or loaded.get("summary") or loaded.get("description")
+            if not loaded or not summary:
+                raise ValueError(f"Article {article_id} missing summary")
             
             # NEW FORMAT: Include motivation and implications for forward-looking analysis
             material_parts.append(f"--- ARTICLE {i}: {article_id} ({horizon}) ---")
-            material_parts.append(f"SUMMARY: {loaded['argos_summary']}")
+            material_parts.append(f"SUMMARY: {summary}")
             material_parts.append(f"WHY IT MATTERS: {motivation}")
             material_parts.append(f"IMPLICATIONS: {implications}")
             material_parts.append("")

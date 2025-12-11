@@ -16,7 +16,8 @@ Usage:
     python sync_bidirectional.py --sync         # Full bidirectional sync
     python sync_bidirectional.py --dry-run      # Preview changes
     python sync_bidirectional.py --continuous   # Run continuously (for backup)
-
+    python src/sync_server_and_local/sync_bidirectional.py --articles-only # Sync articles only
+    
 Requirements:
     pip install neo4j requests python-dotenv
 """
@@ -119,12 +120,14 @@ class ArticleBidirectionalSyncer:
         local_api: str, 
         cloud_api: str, 
         api_key: str,
-        dry_run: bool = False
+        dry_run: bool = False,
+        force: bool = False
     ):
         self.local_api = local_api
         self.cloud_api = cloud_api
         self.api_key = api_key
         self.dry_run = dry_run
+        self.force = force
         self.stats = {
             "local_to_cloud": 0,
             "cloud_to_local": 0,
@@ -147,12 +150,18 @@ class ArticleBidirectionalSyncer:
             
             # SAFETY CHECK: Prevent uploading everything if cloud appears empty
             if len(local_ids) > 1000 and len(cloud_ids) < len(local_ids) * 0.5:
-                logger.error("🚨 SAFETY CHECK FAILED!")
-                logger.error(f"   Local: {len(local_ids)} articles")
-                logger.error(f"   Cloud: {len(cloud_ids)} articles (< 50% of local)")
-                logger.error("   This suggests server error, not actual state.")
-                logger.error("   Aborting sync to prevent mass upload!")
-                raise Exception("Cloud article count suspiciously low - server may be unavailable")
+                if not self.force:
+                    logger.error("🚨 SAFETY CHECK FAILED!")
+                    logger.error(f"   Local: {len(local_ids)} articles")
+                    logger.error(f"   Cloud: {len(cloud_ids)} articles (< 50% of local)")
+                    logger.error("   This suggests server error, not actual state.")
+                    logger.error("   Use --force to override if you're sure this is correct.")
+                    raise Exception("Cloud article count suspiciously low - use --force to override")
+                else:
+                    logger.warning("⚠️  SAFETY CHECK BYPASSED with --force")
+                    logger.warning(f"   Local: {len(local_ids)} articles")
+                    logger.warning(f"   Cloud: {len(cloud_ids)} articles")
+                    logger.warning(f"   Will upload {len(local_ids) - len(cloud_ids)} articles to cloud")
             
             # Find differences
             only_local = local_ids - cloud_ids
@@ -214,9 +223,74 @@ class ArticleBidirectionalSyncer:
             logger.info(f"   Cloud → Local: {self.stats['cloud_to_local']}")
             logger.info(f"   Errors:        {self.stats['errors']}")
             
+            # Run cleanup pass to fix any corrupted articles
+            self._cleanup_corrupted_articles()
+            
         except Exception as e:
             logger.error(f"Article sync failed: {e}", exc_info=True)
             raise
+    
+    def _unwrap_article(self, article: Dict) -> tuple[Dict, int]:
+        """Unwrap nested data wrappers. Returns (unwrapped, depth)."""
+        result = article
+        depth = 0
+        while isinstance(result.get("data"), dict) and ("url" in result["data"] or "argos_id" in result["data"]):
+            result = result["data"]
+            depth += 1
+        return result, depth
+    
+    def _cleanup_corrupted_articles(self):
+        """Scan and fix ALL corrupted articles with nested data wrappers"""
+        logger.info("🧹 Running cleanup pass for corrupted articles...")
+        
+        for api_url, name in [(self.local_api, "local"), (self.cloud_api, "cloud")]:
+            try:
+                ids = list(self._get_article_ids(api_url))
+                total = len(ids)
+                corrupted = 0
+                fixed = 0
+                
+                # Process in batches for progress reporting
+                BATCH_SIZE = 100
+                for i in range(0, total, BATCH_SIZE):
+                    batch_ids = ids[i:i + BATCH_SIZE]
+                    batch_to_fix = []
+                    
+                    for article_id in batch_ids:
+                        article = self._download_article(api_url, article_id)
+                        if not article:
+                            continue
+                        
+                        unwrapped, depth = self._unwrap_article(article)
+                        if depth > 0:
+                            corrupted += 1
+                            batch_to_fix.append(unwrapped)
+                    
+                    # Bulk fix the batch
+                    if batch_to_fix and not self.dry_run:
+                        response = requests.post(
+                            f"{api_url}/articles/bulk",
+                            headers={"X-API-Key": self.api_key},
+                            params={"overwrite": True},
+                            json=batch_to_fix,
+                            timeout=120
+                        )
+                        if response.status_code == 200:
+                            fixed += len(batch_to_fix)
+                    
+                    # Progress every 1000
+                    if (i + BATCH_SIZE) % 1000 == 0 or i + BATCH_SIZE >= total:
+                        logger.info(f"   {name}: {i + len(batch_ids)}/{total} scanned, {corrupted} corrupted")
+                
+                if corrupted > 0:
+                    logger.warning(f"⚠️  {name}: Found {corrupted} corrupted out of {total}")
+                    if not self.dry_run:
+                        logger.info(f"   ✅ Fixed {fixed} articles")
+                else:
+                    logger.info(f"✅ {name}: No corruption found ({total} articles clean)")
+                    
+            except Exception as e:
+                logger.error(f"Cleanup failed for {name}: {e}")
     
     def _get_article_ids(self, api_url: str) -> Set[str]:
         """Get all article IDs using pagination"""
@@ -303,86 +377,6 @@ class ArticleBidirectionalSyncer:
         except Exception as e:
             logger.error(f"Bulk upload exception: {e}")
             return 0
-    
-    def _sync_article_to_cloud(self, article_id: str) -> bool:
-        """Upload article from local to cloud"""
-        try:
-            # Get from local
-            response = requests.get(
-                f"{self.local_api}/articles/{article_id}",
-                headers={"X-API-Key": self.api_key},
-                timeout=10
-            )
-            
-            if response.status_code != 200:
-                return False
-            
-            article = response.json()
-            
-            if self.dry_run:
-                logger.debug(f"Would upload: {article_id}")
-                return True
-            
-            # Upload to cloud
-            response = requests.post(
-                f"{self.cloud_api}/articles",
-                headers={"X-API-Key": self.api_key},
-                json=article,
-                timeout=10
-            )
-            
-            if response.status_code in [200, 201]:
-                logger.debug(f"✅ Uploaded: {article_id}")
-                return True
-            else:
-                logger.warning(f"Failed to upload {article_id}: {response.status_code}")
-                self.stats["errors"] += 1
-                return False
-                
-        except Exception as e:
-            logger.error(f"Error uploading {article_id}: {e}")
-            self.stats["errors"] += 1
-            return False
-    
-    def _sync_article_to_local(self, article_id: str) -> bool:
-        """Download article from cloud to local"""
-        try:
-            # Get from cloud
-            response = requests.get(
-                f"{self.cloud_api}/articles/{article_id}",
-                headers={"X-API-Key": self.api_key},
-                timeout=10
-            )
-            
-            if response.status_code != 200:
-                return False
-            
-            article = response.json()
-            
-            if self.dry_run:
-                logger.debug(f"Would download: {article_id}")
-                return True
-            
-            # Upload to local
-            response = requests.post(
-                f"{self.local_api}/articles",
-                headers={"X-API-Key": self.api_key},
-                json=article,
-                timeout=10
-            )
-            
-            if response.status_code in [200, 201]:
-                logger.debug(f"✅ Downloaded: {article_id}")
-                return True
-            else:
-                logger.warning(f"Failed to download {article_id}: {response.status_code}")
-                self.stats["errors"] += 1
-                return False
-                
-        except Exception as e:
-            logger.error(f"Error downloading {article_id}: {e}")
-            self.stats["errors"] += 1
-            return False
 
 
 # ============ STATS/LOGS SYNC (Cloud → Local Only) ============
@@ -917,6 +911,11 @@ def main():
         action="store_true",
         help="Sync only Neo4j graph"
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force sync even if cloud has fewer articles (bypass safety check)"
+    )
     
     args = parser.parse_args()
     
@@ -958,7 +957,8 @@ def main():
                 LOCAL_BACKEND_API,
                 CLOUD_BACKEND_API,
                 BACKEND_API_KEY,
-                dry_run=args.dry_run
+                dry_run=args.dry_run,
+                force=args.force
             )
             article_syncer.sync()
         
