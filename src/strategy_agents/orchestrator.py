@@ -391,8 +391,6 @@ def rewrite_single_section(
     section: str,
     feedback: str,
     current_content: str,
-    section_title: str = "",
-    messages: list = None,
 ) -> Dict[str, str]:
     """
     Rewrite a single section of strategy analysis based on user feedback.
@@ -403,11 +401,9 @@ def rewrite_single_section(
         section: Section key (e.g., "risk_analysis")
         feedback: User's feedback/instructions
         current_content: Existing section content
-        section_title: Human-readable section title
-        messages: Conversation history for context
     
     Returns:
-        Dict with "new_content" and "comment"
+        Dict with "new_content"
     """
     logger.info("="*80)
     logger.info(f"🔄 SECTION REWRITE | {username}/{strategy_id} | {section}")
