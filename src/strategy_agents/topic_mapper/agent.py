@@ -13,7 +13,6 @@ from src.strategy_agents.topic_mapper.prompt import TOPIC_MAPPER_PROMPT
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.sanitizer import run_llm_decision
-from langchain_core.output_parsers import StrOutputParser
 
 
 class TopicMapping(BaseModel):
@@ -94,15 +93,17 @@ class TopicMapperAgent(BaseStrategyAgent):
             TopicMapping
         )
         
-        # Step 4: Validate topic IDs exist
+        # Step 4: STRICT validation - only exact matches against Neo4j topic IDs
         valid_ids = {t["id"] for t in topic_list}
+        
+        # Filter to only valid IDs (exact string match)
         primary = [tid for tid in mapping.primary_topics if tid in valid_ids]
         drivers = [tid for tid in mapping.driver_topics if tid in valid_ids]
         
-        if not primary:
-            self._log(f"No valid primary topics found for asset: {asset_text}", level="warning")
-            # Fallback: try to find exact match
-            primary = [t["id"] for t in topic_list if asset_text.lower() in t["name"].lower()][:1]
+        # Log what was filtered out
+        filtered_count = len(mapping.primary_topics) + len(mapping.driver_topics) - len(primary) - len(drivers)
+        if filtered_count > 0:
+            self._log(f"⚠️ Filtered {filtered_count} invalid topic IDs from LLM response", level="warning")
         
         self._log(f"Topics discovered | primary={len(primary)} drivers={len(drivers)}")
         

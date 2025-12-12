@@ -375,6 +375,16 @@ def analyze_all_user_strategies() -> None:
                 logger.warning(f"⚠️  Failed analysis for {username}/{strategy_id}: {e}")
 
 
+def _run_topic_discovery(strategy: Dict, strategy_text: str, position_text: str) -> Dict:
+    """Run TopicMapperAgent to discover topics for a strategy."""
+    mapper = TopicMapperAgent()
+    return mapper.run(
+        asset_text=strategy["asset"]["primary"],
+        strategy_text=strategy_text,
+        position_text=position_text
+    )
+
+
 def rewrite_single_section(
     username: str,
     strategy_id: str,
@@ -405,18 +415,28 @@ def rewrite_single_section(
     if not strategy:
         raise ValueError(f"Strategy not found: {username}/{strategy_id}")
     
-    # 2. Get topic mapping (already saved)
-    topic_mapping = strategy.get("topics", {})
-    if not topic_mapping or not topic_mapping.get("primary"):
-        # Fallback: use primary asset as topic (must be a list)
-        primary_asset = strategy["asset"]["primary"]
-        # Convert asset name to lowercase topic ID format
-        topic_id = primary_asset.lower().replace(" ", "_").replace("&", "and")
-        topic_mapping = {"primary": [topic_id], "drivers": [], "correlated": []}
-    
-    # 3. Build material package (same as full analysis)
+    # Extract strategy text early (needed for topic remapping)
     strategy_text = strategy["user_input"]["strategy_text"]
     position_text = strategy["user_input"]["position_text"]
+    
+    # 2. Validate topic mapping - re-run if empty or any invalid IDs
+    topic_mapping = strategy.get("topics", {})
+    primary_ids = topic_mapping.get("primary", [])
+    
+    if not primary_ids:
+        logger.info("No topics found - running topic discovery")
+        topic_mapping = _run_topic_discovery(strategy, strategy_text, position_text)
+        save_strategy_topics(username, strategy_id, topic_mapping)
+    else:
+        # Check all topic IDs exist in Neo4j
+        from src.graph.ops.topic import check_if_topic_exists
+        invalid = [tid for tid in primary_ids if not check_if_topic_exists(tid)]
+        if invalid:
+            logger.warning(f"⚠️ Invalid topic IDs: {invalid} - re-running discovery")
+            topic_mapping = _run_topic_discovery(strategy, strategy_text, position_text)
+            save_strategy_topics(username, strategy_id, topic_mapping)
+    
+    # 3. Build material package
     has_position = bool(position_text and position_text.strip())
     
     material_package = build_material_package(
@@ -425,6 +445,10 @@ def rewrite_single_section(
         topic_mapping=topic_mapping,
         has_position=has_position,
     )
+    
+    # Check if we have any topic material (rewrite can still work without it)
+    if not material_package.get("topics"):
+        logger.warning("⚠️  No valid topics found - rewrite will use feedback and current content only")
     
     # 4. Rewrite the section
     writer = StrategyWriterAgent()

@@ -169,7 +169,7 @@ def _log_material_summary(topics: Dict[str, Dict], topic_mapping: Dict[str, List
    - Market Data: {section_counts['market_context']}/{len(topics)} topics
 
 💾 TOTAL MATERIAL: {total_chars:,} characters (~{total_chars//1000}K)
-   Average per topic: {total_chars//len(topics):,} chars
+   Average per topic: {total_chars//max(len(topics),1):,} chars
 
 {'='*80}
 """
