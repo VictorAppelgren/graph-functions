@@ -43,10 +43,6 @@ def track(event_type: str, message: Optional[str] = None):
         )
         response.raise_for_status()
     except Exception as e:
-        # Log the error with full details for debugging
+        # Log but don't crash - stats tracking is non-critical
         import sys
-        print(f"❌ STATS TRACKING FAILED: {e}", file=sys.stderr)
-        print(f"   URL: {BACKEND_URL}/api/stats/track", file=sys.stderr)
-        print(f"   Event: {event_type}", file=sys.stderr)
-        print(f"   API Key: {'SET' if API_KEY else 'NOT SET'}", file=sys.stderr)
-        raise
+        print(f"⚠️ Stats tracking failed (non-blocking): {e}", file=sys.stderr)
