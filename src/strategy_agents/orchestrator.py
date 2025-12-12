@@ -385,55 +385,6 @@ def _run_topic_discovery(strategy: Dict, strategy_text: str, position_text: str)
     )
 
 
-def _generate_rewrite_comment(
-    section_title: str,
-    feedback: str,
-    new_content: str,
-    messages: list,
-) -> str:
-    """
-    Generate a brief, contextual comment about the rewrite.
-    Uses a fast LLM call to create a conversational response.
-    """
-    from src.llm.llm_router import get_llm
-    from src.llm.config import ModelTier
-    from langchain_core.output_parsers import StrOutputParser
-    
-    # Format conversation history
-    conversation = ""
-    if messages:
-        conversation = "\n".join([
-            f"{m.get('role', 'user').upper()}: {m.get('content', '')[:200]}"
-            for m in messages[-5:]  # Last 5 messages
-        ])
-    
-    prompt = f"""You just rewrote a strategy analysis section based on user feedback.
-
-SECTION: {section_title}
-USER'S REQUEST: {feedback}
-NEW CONTENT PREVIEW: {new_content[:400]}...
-
-RECENT CONVERSATION:
-{conversation if conversation else "(No prior conversation)"}
-
-Write ONE brief response (2-3 sentences max) that:
-1. Confirms you made the changes they asked for
-2. Briefly mentions what you focused on
-3. Asks if they want any other adjustments
-
-Be conversational and helpful. Start with ✅. Do NOT repeat the full analysis."""
-
-    try:
-        llm = get_llm(ModelTier.FAST)  # Use fast model for quick response
-        parser = StrOutputParser()
-        chain = llm | parser
-        result = chain.invoke(prompt)
-        return result.strip()
-    except Exception as e:
-        logger.warning(f"⚠️ Failed to generate comment: {e}")
-        return f"✅ Done! I've updated the {section_title} section based on your feedback. Let me know if you'd like any other changes."
-
-
 def rewrite_single_section(
     username: str,
     strategy_id: str,
@@ -522,22 +473,13 @@ def rewrite_single_section(
     else:
         logger.warning(f"⚠️ No existing analysis to update for {username}/{strategy_id}")
     
-    # 6. Generate contextual comment about the rewrite
-    comment = _generate_rewrite_comment(
-        section_title=section_title or section,
-        feedback=feedback,
-        new_content=new_content,
-        messages=messages or [],
-    )
-    
     logger.info("="*80)
     logger.info(f"✅ SECTION REWRITE COMPLETE | {section} | {len(new_content)} chars")
-    logger.info(f"💬 Comment: {comment[:100]}...")
     logger.info("="*80)
     
+    # Comment generation moved to saga-be (uses Anthropic)
     return {
         "new_content": new_content,
-        "comment": comment,
     }
 
 
