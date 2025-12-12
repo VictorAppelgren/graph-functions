@@ -7,7 +7,12 @@ MISSION: Write world-class personalized strategy analysis.
 from typing import Dict, Any
 from pydantic import BaseModel, Field
 from src.strategy_agents.base_agent import BaseStrategyAgent
-from src.strategy_agents.strategy_writer.prompt import STRATEGY_WRITER_PROMPT
+from src.strategy_agents.strategy_writer.prompt import (
+    STRATEGY_WRITER_PROMPT,
+    SECTION_REWRITE_PROMPT,
+    SHARED_CITATION_AND_METHODOLOGY,
+)
+from langchain_core.output_parsers import StrOutputParser
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.sanitizer import run_llm_decision
@@ -144,6 +149,9 @@ class StrategyWriterAgent(BaseStrategyAgent):
         # Log input summary
         self._log_input_summary(material_package, topic_analyses, market_context, risk_summary, opportunity_summary)
         
+        # Get articles reference from material package
+        articles_reference = material_package.get("articles_reference", "No referenced articles available.")
+        
         # Build prompt
         prompt = STRATEGY_WRITER_PROMPT.format(
             system_mission=SYSTEM_MISSION,
@@ -152,7 +160,9 @@ class StrategyWriterAgent(BaseStrategyAgent):
             user_strategy=material_package["user_strategy"],
             position_text=material_package["position_text"],
             topic_analyses=topic_analyses,
+            articles_reference=articles_reference,
             market_context=market_context,
+            citation_rules=SHARED_CITATION_AND_METHODOLOGY,
             risk_assessment=risk_summary,
             opportunity_assessment=opportunity_summary,
         )
@@ -295,3 +305,50 @@ class StrategyWriterAgent(BaseStrategyAgent):
    ─────────────────────────────
    TOTAL OUTPUT: {total_output:,} chars (~{total_output//1000}K)
 """)
+
+    def rewrite_section(
+        self,
+        section: str,
+        current_content: str,
+        feedback: str,
+        material_package: Dict[str, Any],
+    ) -> str:
+        """
+        Rewrite a single section based on user feedback.
+        
+        Args:
+            section: Section key (e.g., "risk_analysis")
+            current_content: Existing section content
+            feedback: User's feedback/instructions
+            material_package: Complete material from material_builder
+        
+        Returns:
+            Rewritten section content as plain text
+        """
+        self._log(f"Rewriting section: {section}")
+        self._log(f"Feedback: {feedback[:100]}...")
+        
+        # Format material for prompt
+        topic_analyses = self._format_topic_analyses(material_package["topics"])
+        articles_reference = material_package.get("articles_reference", "No referenced articles available.")
+        
+        # Build prompt
+        prompt = SECTION_REWRITE_PROMPT.format(
+            section_name=section,
+            current_content=current_content,
+            user_feedback=feedback,
+            topic_analyses=topic_analyses,
+            articles_reference=articles_reference,
+            citation_rules=SHARED_CITATION_AND_METHODOLOGY,
+        )
+        
+        # Get LLM response as plain text
+        llm = get_llm(ModelTier.COMPLEX)
+        parser = StrOutputParser()
+        chain = llm | parser
+        
+        result = chain.invoke(prompt)
+        
+        self._log(f"Rewritten section: {len(result)} chars")
+        
+        return result.strip()

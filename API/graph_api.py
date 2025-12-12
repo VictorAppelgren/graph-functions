@@ -311,6 +311,37 @@ def trigger_strategy_analysis(request: Dict[str, str]):
     return {"status": "triggered", "username": username, "strategy_id": strategy_id}
 
 
+# ============ STRATEGY REWRITE ============
+
+class RewriteSectionRequest(BaseModel):
+    username: str
+    strategy_id: str
+    section: str  # e.g., "risk_analysis"
+    feedback: str  # user's feedback
+    current_content: str  # existing section content
+
+
+@app.post("/strategy/rewrite-section")
+def rewrite_strategy_section(request: RewriteSectionRequest):
+    """
+    Rewrite a single section of strategy analysis based on user feedback.
+    """
+    from src.strategy_agents.orchestrator import rewrite_single_section
+    
+    try:
+        result = rewrite_single_section(
+            username=request.username,
+            strategy_id=request.strategy_id,
+            section=request.section,
+            feedback=request.feedback,
+            current_content=request.current_content,
+        )
+        
+        return {"new_content": result, "section": request.section}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # ============ HEALTH ============
 
 @app.get("/neo/health")

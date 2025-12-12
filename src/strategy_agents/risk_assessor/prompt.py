@@ -6,6 +6,7 @@ World-class risk analysis with precision and depth.
 """
 
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.citation_rules import SHARED_CITATION_AND_METHODOLOGY
 
 RISK_ASSESSOR_PROMPT = """
 {system_mission}
@@ -41,8 +42,13 @@ USER POSITION:
 RELEVANT TOPIC ANALYSES:
 {topic_analyses}
 
+REFERENCED ARTICLES (source material for citations):
+{articles_reference}
+
 MARKET CONTEXT:
 {market_context}
+
+{citation_rules}
 
 === YOUR MISSION ===
 

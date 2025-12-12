@@ -5,10 +5,11 @@ Chains all strategy agents together.
 
 Usage:
     python -m src.strategy_agents.orchestrator username strategy_id
-    python -m src.strategy_agents.orchestrator Victor strategy_001
+    python -m src.strategy_agents.orchestrator Victor 
     python -m src.strategy_agents.orchestrator all
 """
 
+import random
 from typing import Dict, Any, Optional
 from utils import app_logging
 
@@ -374,6 +375,80 @@ def analyze_all_user_strategies() -> None:
                 logger.warning(f"⚠️  Failed analysis for {username}/{strategy_id}: {e}")
 
 
+def rewrite_single_section(
+    username: str,
+    strategy_id: str,
+    section: str,
+    feedback: str,
+    current_content: str,
+) -> str:
+    """
+    Rewrite a single section of strategy analysis based on user feedback.
+    
+    Args:
+        username: User's username
+        strategy_id: Strategy ID
+        section: Section key (e.g., "risk_analysis")
+        feedback: User's feedback/instructions
+        current_content: Existing section content
+    
+    Returns:
+        Rewritten section content
+    """
+    logger.info("="*80)
+    logger.info(f"🔄 SECTION REWRITE | {username}/{strategy_id} | {section}")
+    logger.info("="*80)
+    logger.info(f"Feedback: {feedback[:200]}...")
+    
+    # 1. Load strategy from Backend API
+    strategy = get_strategy(username, strategy_id)
+    if not strategy:
+        raise ValueError(f"Strategy not found: {username}/{strategy_id}")
+    
+    # 2. Get topic mapping (already saved)
+    topic_mapping = strategy.get("topics", {})
+    if not topic_mapping:
+        # Fallback: use primary asset as topic
+        topic_mapping = {"primary": strategy["asset"]["primary"], "drivers": [], "correlated": []}
+    
+    # 3. Build material package (same as full analysis)
+    strategy_text = strategy["user_input"]["strategy_text"]
+    position_text = strategy["user_input"]["position_text"]
+    has_position = bool(position_text and position_text.strip())
+    
+    material_package = build_material_package(
+        user_strategy=strategy_text,
+        position_text=position_text,
+        topic_mapping=topic_mapping,
+        has_position=has_position,
+    )
+    
+    # 4. Rewrite the section
+    writer = StrategyWriterAgent()
+    new_content = writer.rewrite_section(
+        section=section,
+        current_content=current_content,
+        feedback=feedback,
+        material_package=material_package,
+    )
+    
+    # 5. Save updated section to backend
+    # Get current analysis, update the section, save back
+    current_analysis = strategy.get("latest_analysis", {})
+    if current_analysis and "final_analysis" in current_analysis:
+        current_analysis["final_analysis"][section] = new_content
+        save_strategy_analysis(username, strategy_id, current_analysis)
+        logger.info(f"✅ Saved updated {section} to backend")
+    else:
+        logger.warning(f"⚠️ No existing analysis to update for {username}/{strategy_id}")
+    
+    logger.info("="*80)
+    logger.info(f"✅ SECTION REWRITE COMPLETE | {section} | {len(new_content)} chars")
+    logger.info("="*80)
+    
+    return new_content
+
+
 if __name__ == "__main__":
     # Load .env FIRST
     from utils.env_loader import load_env
@@ -383,9 +458,21 @@ if __name__ == "__main__":
     
     if len(sys.argv) >= 2 and sys.argv[1] == "all":
         analyze_all_user_strategies()
-    elif len(sys.argv) >= 3:
+    elif len(sys.argv) >= 2:
         username = sys.argv[1]
-        strategy_id = sys.argv[2]
+        if len(sys.argv) >= 3:
+            strategy_id = sys.argv[2]
+        else:
+            strategies = get_user_strategies(username)
+            if not strategies:
+                raise ValueError(f"No strategies found for user: {username}")
+            chosen_strategy = random.choice(strategies)
+            strategy_id = chosen_strategy.get("id")
+            if not strategy_id:
+                raise ValueError(f"Randomly selected strategy missing ID for user: {username}")
+            logger.info(
+                f"Randomly selected strategy '{strategy_id}' for user {username}"
+            )
 
         logger.info(f"Running strategy analysis for {username}/{strategy_id}")
         results = analyze_user_strategy(username, strategy_id)
@@ -403,6 +490,7 @@ if __name__ == "__main__":
         print("=" * 80)
         print("\nUsage:")
         print("  python -m src.strategy_agents.orchestrator <username> <strategy_id>")
+        print("  python -m src.strategy_agents.orchestrator <username>  # picks random strategy")
         print("  python -m src.strategy_agents.orchestrator all")
         print("\nExample:")
         print("  python -m src.strategy_agents.orchestrator testuser strategy_001")

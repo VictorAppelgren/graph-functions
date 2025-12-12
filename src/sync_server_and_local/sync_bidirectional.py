@@ -223,74 +223,9 @@ class ArticleBidirectionalSyncer:
             logger.info(f"   Cloud → Local: {self.stats['cloud_to_local']}")
             logger.info(f"   Errors:        {self.stats['errors']}")
             
-            # Run cleanup pass to fix any corrupted articles
-            self._cleanup_corrupted_articles()
-            
         except Exception as e:
             logger.error(f"Article sync failed: {e}", exc_info=True)
             raise
-    
-    def _unwrap_article(self, article: Dict) -> tuple[Dict, int]:
-        """Unwrap nested data wrappers. Returns (unwrapped, depth)."""
-        result = article
-        depth = 0
-        while isinstance(result.get("data"), dict) and ("url" in result["data"] or "argos_id" in result["data"]):
-            result = result["data"]
-            depth += 1
-        return result, depth
-    
-    def _cleanup_corrupted_articles(self):
-        """Scan and fix ALL corrupted articles with nested data wrappers"""
-        logger.info("🧹 Running cleanup pass for corrupted articles...")
-        
-        for api_url, name in [(self.local_api, "local"), (self.cloud_api, "cloud")]:
-            try:
-                ids = list(self._get_article_ids(api_url))
-                total = len(ids)
-                corrupted = 0
-                fixed = 0
-                
-                # Process in batches for progress reporting
-                BATCH_SIZE = 100
-                for i in range(0, total, BATCH_SIZE):
-                    batch_ids = ids[i:i + BATCH_SIZE]
-                    batch_to_fix = []
-                    
-                    for article_id in batch_ids:
-                        article = self._download_article(api_url, article_id)
-                        if not article:
-                            continue
-                        
-                        unwrapped, depth = self._unwrap_article(article)
-                        if depth > 0:
-                            corrupted += 1
-                            batch_to_fix.append(unwrapped)
-                    
-                    # Bulk fix the batch
-                    if batch_to_fix and not self.dry_run:
-                        response = requests.post(
-                            f"{api_url}/articles/bulk",
-                            headers={"X-API-Key": self.api_key},
-                            params={"overwrite": True},
-                            json=batch_to_fix,
-                            timeout=120
-                        )
-                        if response.status_code == 200:
-                            fixed += len(batch_to_fix)
-                    
-                    # Progress every 1000
-                    if (i + BATCH_SIZE) % 1000 == 0 or i + BATCH_SIZE >= total:
-                        logger.info(f"   {name}: {i + len(batch_ids)}/{total} scanned, {corrupted} corrupted")
-                
-                if corrupted > 0:
-                    logger.warning(f"⚠️  {name}: Found {corrupted} corrupted out of {total}")
-                    if not self.dry_run:
-                        logger.info(f"   ✅ Fixed {fixed} articles")
-                else:
-                    logger.info(f"✅ {name}: No corruption found ({total} articles clean)")
-                    
-            except Exception as e:
-                logger.error(f"Cleanup failed for {name}: {e}")
     
     def _get_article_ids(self, api_url: str) -> Set[str]:
         """Get all article IDs using pagination"""

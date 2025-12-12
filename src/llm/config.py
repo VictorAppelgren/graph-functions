@@ -29,7 +29,7 @@ from utils.app_logging import get_logger
 logger = get_logger(__name__)
 
 # --- Configuration ---
-TOKEN_THRESHOLD = 2000  # Requests ≤2k tokens use local, >2k use external
+TOKEN_THRESHOLD = 3000  # Requests ≤2k tokens use local, >2k use external
 NANO_THRESHOLD = 999999  # Effectively disabled - don't use Nano
 NANO_COOLDOWN_SECONDS = 60  # 60 seconds cooldown between Nano calls
 LLM_CALL_TIMEOUT_S = 300.0
@@ -64,12 +64,12 @@ SERVERS = {}
 # Only add local server if not disabled
 if not DISABLE_LOCAL_LLM:
     SERVERS['local'] = {
-        'provider': 'ollama', 
-        'base_url': 'http://localhost:11434', 
-        'model': 'gpt-oss:20b',
+        'provider': 'openai',  # llama.cpp server is OpenAI-compatible
+        'base_url': 'http://127.0.0.1:8080/v1', 
+        'model': 'ggml-org/gpt-oss-20b-GGUF',  # Model name (llama.cpp ignores this, uses loaded model)
         'temperature': 0.2,
     }
-    _init_logger.info("🔧 LLM CONFIG: Added 'local' server to SERVERS")
+    _init_logger.info("🔧 LLM CONFIG: Added 'local' server (llama.cpp) to SERVERS")
 else:
     _init_logger.info("🔧 LLM CONFIG: Skipped 'local' server (DISABLE_LOCAL_LLM=true)")
 
@@ -517,9 +517,9 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             # LangChain's ChatOpenAI still requires an api_key even when using a custom base_url.
             # Provide a harmless dummy to avoid touching global env vars.
             kwargs["api_key"] = os.getenv("OPENAI_API_KEY", "sk-noop")
-            # Cap output tokens for vLLM servers to prevent runaway generation
-            # 8k allows for research writing while preventing infinite loops
-            kwargs["max_tokens"] = 8192
+            # Cap output tokens for vLLM servers
+            # 16k allows for CoT reasoning + actual output without truncation
+            kwargs["max_tokens"] = 16384
 
         return ChatOpenAI(**kwargs).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
     

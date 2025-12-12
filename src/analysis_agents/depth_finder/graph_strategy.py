@@ -46,6 +46,7 @@ def explore_graph(topic_id: str, section: str) -> Dict:
             ELSE 4
         END,
         art.published_at DESC
+    LIMIT 45
     """
     
     result = run_cypher(query, {"topic_id": topic_id})

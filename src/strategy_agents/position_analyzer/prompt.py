@@ -4,6 +4,8 @@ Position Analyzer - LLM Prompt
 MISSION: Analyze user's position exposure, risks, opportunities, and market alignment.
 """
 
+from src.llm.prompts.citation_rules import SHARED_CITATION_AND_METHODOLOGY
+
 POSITION_ANALYZER_PROMPT = """
 You are an expert portfolio manager analyzing a user's trading position.
 
@@ -15,6 +17,11 @@ USER POSITION:
 
 RELEVANT TOPIC ANALYSES:
 {topic_analyses}
+
+REFERENCED ARTICLES (source material for citations):
+{articles_reference}
+
+{citation_rules}
 
 TASK: Analyze the user's current position across 4 dimensions.
 

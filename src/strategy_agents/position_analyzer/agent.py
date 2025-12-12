@@ -7,7 +7,7 @@ Analyzes user's current position, exposure, and market alignment.
 from typing import Dict, Any
 from pydantic import BaseModel
 from src.strategy_agents.base_agent import BaseStrategyAgent
-from src.strategy_agents.position_analyzer.prompt import POSITION_ANALYZER_PROMPT
+from src.strategy_agents.position_analyzer.prompt import POSITION_ANALYZER_PROMPT, SHARED_CITATION_AND_METHODOLOGY
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from langchain_core.output_parsers import StrOutputParser
@@ -56,11 +56,16 @@ class PositionAnalyzerAgent(BaseStrategyAgent):
         # Format topic analyses for prompt
         analyses_str = self._format_topic_analyses(topic_analyses, market_contexts)
         
+        # Get articles reference if provided
+        articles_reference = kwargs.get("articles_reference", "No referenced articles available.")
+        
         # Build prompt
         prompt = POSITION_ANALYZER_PROMPT.format(
             strategy_text=strategy_text,
             position_text=position_text,
-            topic_analyses=analyses_str
+            topic_analyses=analyses_str,
+            articles_reference=articles_reference,
+            citation_rules=SHARED_CITATION_AND_METHODOLOGY,
         )
         
         # Call LLM

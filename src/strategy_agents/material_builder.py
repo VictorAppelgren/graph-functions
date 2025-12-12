@@ -5,8 +5,10 @@ MISSION: Build ONE complete material package with ALL relevant data.
 Simple, minimal, complete.
 """
 
-from typing import Dict, List, Any
+import re
+from typing import Dict, List, Any, Set
 from src.graph.ops.topic import get_topic_analysis_field
+from src.api.backend_client import get_article as get_article_by_id
 from src.market_data.loader import load_market_context
 from utils import app_logging
 
@@ -92,6 +94,15 @@ def build_material_package(
     # Build combined strings for high-level logging and downstream consumers
     topic_analyses_str = _build_combined_topic_analyses(topics)
     market_context_str = _build_combined_market_context(topics)
+    
+    # Extract article IDs from topic analyses and fetch them
+    all_article_ids = _extract_article_ids_from_topics(topics)
+    logger.info(f"📚 Found {len(all_article_ids)} unique article IDs in topic analyses")
+    
+    referenced_articles = _fetch_referenced_articles(all_article_ids)
+    logger.info(f"📚 Fetched {len(referenced_articles)}/{len(all_article_ids)} articles for strategy material")
+    
+    articles_reference_str = _build_articles_reference(referenced_articles)
 
     return {
         "user_strategy": user_strategy,
@@ -102,6 +113,9 @@ def build_material_package(
         # Combined strings for quick visibility into what goes into prompts
         "topic_analyses": topic_analyses_str,
         "market_context": market_context_str,
+        # Referenced articles extracted from topic analyses
+        "referenced_articles": referenced_articles,
+        "articles_reference": articles_reference_str,
     }
 
 
@@ -207,3 +221,66 @@ def _get_topic_name(topic_id: str) -> str:
     from src.graph.ops.topic import get_topic_by_id
     topic = get_topic_by_id(topic_id)
     return topic.get("name", topic_id.upper()) if topic else topic_id.upper()
+
+
+def _extract_article_ids_from_topics(topics: Dict[str, Dict]) -> Set[str]:
+    """
+    Extract all 9-character article IDs from topic analyses.
+    
+    Scans all analysis sections for patterns like (08HD556V4) or (Z7O1DCHS7)(K8M2NQWER)
+    """
+    all_ids = set()
+    # Pattern matches 9-character alphanumeric IDs in parentheses
+    pattern = r'\(([A-Z0-9]{9})\)'
+    
+    for topic_id, data in topics.items():
+        for section in ["fundamental", "medium", "current", "drivers"]:
+            content = data.get(section, "")
+            if content:
+                matches = re.findall(pattern, content)
+                all_ids.update(matches)
+    
+    return all_ids
+
+
+def _fetch_referenced_articles(article_ids: Set[str]) -> Dict[str, Dict]:
+    """
+    Fetch article data for all referenced IDs.
+    
+    Returns dict of {article_id: {id, title, summary, published_date}}
+    """
+    articles = {}
+    for article_id in article_ids:
+        try:
+            article = get_article_by_id(article_id)
+            if article:
+                articles[article_id] = {
+                    'id': article_id,
+                    'title': article.get('title', ''),
+                    'summary': article.get('summary', ''),
+                    'published_date': article.get('published_date', ''),
+                }
+        except Exception as e:
+            logger.debug(f"Could not fetch article {article_id}: {e}")
+    return articles
+
+
+def _build_articles_reference(articles: Dict[str, Dict]) -> str:
+    """Build formatted article reference section for prompts."""
+    if not articles:
+        return "No referenced articles available."
+    
+    lines = [f"=== REFERENCED ARTICLES ({len(articles)} articles from topic analyses) ===\n"]
+    for article_id, data in articles.items():
+        lines.append(f"Article ID: {article_id}")
+        lines.append(f"Title: {data.get('title', 'Unknown')}")
+        # Truncate summary to avoid huge prompts
+        summary = data.get('summary', 'No summary')
+        if len(summary) > 500:
+            summary = summary[:500] + "..."
+        lines.append(f"Summary: {summary}")
+        if data.get('published_date'):
+            lines.append(f"Date: {data.get('published_date')}")
+        lines.append("")
+    
+    return "\n".join(lines)

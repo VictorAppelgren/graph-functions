@@ -7,7 +7,7 @@ MISSION: Identify ALL opportunities aligned with user's strategy.
 from typing import Dict, Any, List
 from pydantic import BaseModel, Field
 from src.strategy_agents.base_agent import BaseStrategyAgent
-from src.strategy_agents.opportunity_finder.prompt import OPPORTUNITY_FINDER_PROMPT
+from src.strategy_agents.opportunity_finder.prompt import OPPORTUNITY_FINDER_PROMPT, SHARED_CITATION_AND_METHODOLOGY
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.sanitizer import run_llm_decision
@@ -85,6 +85,9 @@ class OpportunityFinderAgent(BaseStrategyAgent):
         # Log input summary
         self._log_input_summary(material_package, topic_analyses, market_context)
         
+        # Get articles reference from material package
+        articles_reference = material_package.get("articles_reference", "No referenced articles available.")
+        
         # Build prompt
         prompt = OPPORTUNITY_FINDER_PROMPT.format(
             system_mission=SYSTEM_MISSION,
@@ -93,7 +96,9 @@ class OpportunityFinderAgent(BaseStrategyAgent):
             user_strategy=material_package["user_strategy"],
             position_text=material_package["position_text"],
             topic_analyses=topic_analyses,
+            articles_reference=articles_reference,
             market_context=market_context,
+            citation_rules=SHARED_CITATION_AND_METHODOLOGY,
         )
         
         # Get LLM assessment

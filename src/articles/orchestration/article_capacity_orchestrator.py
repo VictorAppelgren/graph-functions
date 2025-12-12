@@ -1,6 +1,10 @@
 """
 Orchestrator for article capacity management.
 Handles removal/downgrade of articles when capacity limits are reached.
+
+For bulk cleanup, use capacity_cleanup.py instead:
+    python -m src.articles.orchestration.capacity_cleanup           # all topics
+    python -m src.articles.orchestration.capacity_cleanup EURUSD    # single topic
 """
 
 from src.articles.policies.article_capacity_manager import article_capacity_manager_llm

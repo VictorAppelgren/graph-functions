@@ -6,6 +6,7 @@ God-tier synthesis of all material into actionable intelligence.
 """
 
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.llm.prompts.citation_rules import SHARED_CITATION_AND_METHODOLOGY
 
 STRATEGY_WRITER_PROMPT = """
 {system_mission}
@@ -39,8 +40,13 @@ USER POSITION:
 RELEVANT TOPIC ANALYSES:
 {topic_analyses}
 
+REFERENCED ARTICLES (source material for citations):
+{articles_reference}
+
 MARKET CONTEXT:
 {market_context}
+
+{citation_rules}
 
 RISK ASSESSMENT:
 {risk_assessment}
@@ -170,4 +176,36 @@ RULES:
 10. Write in professional, authoritative tone
 
 Make every word count. This is premium analysis.
+"""
+
+
+SECTION_REWRITE_PROMPT = """
+You are rewriting a SINGLE SECTION of strategy analysis based on user feedback.
+
+SECTION: {section_name}
+
+CURRENT CONTENT:
+{current_content}
+
+USER FEEDBACK:
+{user_feedback}
+
+SOURCE MATERIAL (topic analyses):
+{topic_analyses}
+
+REFERENCED ARTICLES (source material for citations):
+{articles_reference}
+
+{citation_rules}
+
+TASK:
+Rewrite this section addressing the user's feedback while:
+1. Maintaining all citation rules (every claim needs article ID)
+2. Keeping similar structure and length
+3. Improving based on the specific feedback
+4. Using ONLY article IDs from SOURCE MATERIAL
+5. Applying causal chain reasoning (A → B → C)
+
+Output ONLY the rewritten section content as plain text, nothing else.
+No JSON wrapping, no field names, just the improved section text.
 """
