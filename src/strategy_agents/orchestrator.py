@@ -407,9 +407,12 @@ def rewrite_single_section(
     
     # 2. Get topic mapping (already saved)
     topic_mapping = strategy.get("topics", {})
-    if not topic_mapping:
-        # Fallback: use primary asset as topic
-        topic_mapping = {"primary": strategy["asset"]["primary"], "drivers": [], "correlated": []}
+    if not topic_mapping or not topic_mapping.get("primary"):
+        # Fallback: use primary asset as topic (must be a list)
+        primary_asset = strategy["asset"]["primary"]
+        # Convert asset name to lowercase topic ID format
+        topic_id = primary_asset.lower().replace(" ", "_").replace("&", "and")
+        topic_mapping = {"primary": [topic_id], "drivers": [], "correlated": []}
     
     # 3. Build material package (same as full analysis)
     strategy_text = strategy["user_input"]["strategy_text"]
