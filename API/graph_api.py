@@ -317,14 +317,17 @@ class RewriteSectionRequest(BaseModel):
     username: str
     strategy_id: str
     section: str  # e.g., "risk_analysis"
+    section_title: str = ""  # e.g., "Risk Analysis"
     feedback: str  # user's feedback
     current_content: str  # existing section content
+    messages: list = []  # conversation history for context
 
 
 @app.post("/strategy/rewrite-section")
 def rewrite_strategy_section(request: RewriteSectionRequest):
     """
     Rewrite a single section of strategy analysis based on user feedback.
+    Returns new content and a contextual comment.
     """
     from src.strategy_agents.orchestrator import rewrite_single_section
     
@@ -333,11 +336,17 @@ def rewrite_strategy_section(request: RewriteSectionRequest):
             username=request.username,
             strategy_id=request.strategy_id,
             section=request.section,
+            section_title=request.section_title or request.section,
             feedback=request.feedback,
             current_content=request.current_content,
+            messages=request.messages,
         )
         
-        return {"new_content": result, "section": request.section}
+        return {
+            "new_content": result["new_content"],
+            "comment": result["comment"],
+            "section": request.section
+        }
     except Exception as e:
         import traceback
         error_detail = f"{str(e)}\n{traceback.format_exc()}"

@@ -187,8 +187,7 @@ SECTION: {section_name}
 CURRENT CONTENT:
 {current_content}
 
-USER FEEDBACK:
-{user_feedback}
+{user_feedback_section}
 
 SOURCE MATERIAL (topic analyses):
 {topic_analyses}

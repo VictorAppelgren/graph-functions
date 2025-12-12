@@ -332,11 +332,21 @@ class StrategyWriterAgent(BaseStrategyAgent):
         topic_analyses = self._format_topic_analyses(material_package["topics"])
         articles_reference = material_package.get("articles_reference", "No referenced articles available.")
         
+        # Format user feedback section (only include if feedback provided)
+        if feedback and feedback.strip():
+            user_feedback_section = f"""⚠️ CRITICAL - YOUR PRIMARY DIRECTIVE:
+USER FEEDBACK:
+{feedback}
+
+You MUST address this feedback in your rewrite."""
+        else:
+            user_feedback_section = ""
+        
         # Build prompt
         prompt = SECTION_REWRITE_PROMPT.format(
             section_name=section,
             current_content=current_content,
-            user_feedback=feedback,
+            user_feedback_section=user_feedback_section,
             topic_analyses=topic_analyses,
             articles_reference=articles_reference,
             citation_rules=SHARED_CITATION_AND_METHODOLOGY,
