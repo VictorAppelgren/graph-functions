@@ -20,6 +20,43 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
     Uses an LLM to propose a new Topic for the graph based on the article.
     Returns the created topic as a dict.
     """
+    # ========== DAILY TOPIC LIMIT CHECK ==========
+    # Max 3 new topics per day to ensure controlled growth
+    MAX_NEW_TOPICS_PER_DAY = 3
+
+    try:
+        import os
+        import requests
+        backend_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+        api_key = os.getenv("BACKEND_API_KEY", "")
+
+        headers = {"X-API-Key": api_key} if api_key else {}
+        response = requests.get(
+            f"{backend_url}/api/admin/stats/today",
+            headers=headers,
+            timeout=5
+        )
+
+        if response.ok:
+            stats = response.json()
+            topics_created_today = stats.get("events", {}).get("topic_created", 0)
+
+            if topics_created_today >= MAX_NEW_TOPICS_PER_DAY:
+                logger.info(f"Daily topic limit reached: {topics_created_today}/{MAX_NEW_TOPICS_PER_DAY}")
+                track("topic_rejected_daily_limit", f"Daily limit of {MAX_NEW_TOPICS_PER_DAY} reached ({topics_created_today} already created today)")
+                return {
+                    "status": "rejected",
+                    "reason": "daily_limit",
+                    "topics_created_today": topics_created_today,
+                    "max_per_day": MAX_NEW_TOPICS_PER_DAY
+                }
+            else:
+                logger.info(f"Daily topic budget: {topics_created_today}/{MAX_NEW_TOPICS_PER_DAY} used")
+    except Exception as e:
+        # Fail open - if we can't check stats, allow topic creation
+        logger.warning(f"Could not check daily topic limit (proceeding anyway): {e}")
+    # ========== END DAILY LIMIT CHECK ==========
+
     # Load the article
     article_json = load_article(article_id)
     logger.debug(

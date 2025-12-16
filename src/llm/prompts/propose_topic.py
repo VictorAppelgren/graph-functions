@@ -55,22 +55,47 @@ propose_topic_prompt="""
     - Is this a one-time event/speculation? → REJECT, suggest existing topic
     - Is this an institution making recurring decisions? → PROPOSE
     - Is this a temporary market narrative? → REJECT, suggest existing topic
-    
-    CONSOLIDATION EXAMPLES:
+
+    ✅ WHEN TO CREATE NEW TOPICS:
+    Create a new topic when ALL of these are true:
+    1. The theme is PERSISTENT (6+ months relevance)
+    2. No existing topic in the graph adequately covers this theme
+    3. The topic fits our interest areas (see scope below)
+
+    Examples of when to CREATE:
+    - Article about "Nordic banks face capital requirements" + no nordic_banks exists → CREATE nordic_banks
+    - Article about "Japan semiconductor investment" + no japan_semiconductors exists → CREATE japan_semiconductors
+    - Article about "US commercial real estate stress" + no us_commercial_real_estate exists → CREATE us_commercial_real_estate
+
+    KEY: Always check the existing_topics list first. If a suitable topic exists, map to it. If not, CREATE.
+
+    CREATION VS CONSOLIDATION EXAMPLES:
+
+    Example 1 - CREATE (topic doesn't exist):
+    Article: "Nordic banks face new Basel IV requirements"
+    - Is this persistent? YES (banking regulation is ongoing, 6+ months)
+    - Does nordic_banks exist in existing_topics? NO
+    - Action: CREATE nordic_banks (fits our interest areas, persistent theme)
+
+    Example 2 - MAP (topic already exists):
     Article: "Swedish fintech M&A heats up"
-    - Market: Nordics (HIGH granularity)
-    - Test: Is fintech distinct from banks + tech? NO
-    - Action: Map to nordic_banks + nordic_tech (don't create swedish_fintech)
-    
-    Article: "Nigerian port delays affect pulp"
-    - Market: Africa (LOW granularity)
-    - Test: Should we create nigeria_ports? NO
-    - Action: Map to africa_markets + shipping_logistics + pulp_market
-    
-    Article: "China EV exports surge"
-    - Market: China (MEDIUM granularity)
-    - Test: Is EV distinct from tech/exports? NO
-    - Action: Map to china_tech (don't create china_ev)
+    - Is this persistent? MAYBE (M&A waves are episodic)
+    - Does nordic_banks exist? YES (check existing_topics)
+    - Is swedish_fintech distinct enough? NO (subset of nordic_banks + nordic_tech)
+    - Action: MAP to nordic_banks, nordic_tech (don't create narrow subtopic)
+
+    Example 3 - CREATE (new persistent theme):
+    Article: "Japan ramps up semiconductor subsidies"
+    - Is this persistent? YES (industrial policy, multi-year)
+    - Does japan_semiconductors exist? NO
+    - Does it fit interest areas? YES (medium granularity for Japan = key sectors)
+    - Action: CREATE japan_semiconductors
+
+    Example 4 - MAP (low granularity region):
+    Article: "Nigerian port delays affect pulp shipments"
+    - Market: Africa (LOW granularity = regional only)
+    - Should we create nigeria_ports? NO (too granular for Africa)
+    - Action: MAP to africa_markets + shipping_logistics + pulp_market
 
     ARTICLE SUMMARY:
     {article}

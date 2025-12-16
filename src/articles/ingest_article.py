@@ -289,8 +289,8 @@ def add_article(
         # Trigger next steps, relationship discovery and replacement analysis
         trigger_next_steps(topic_id, argos_id)
 
-        # Trigger agent-based analysis for Tier 2/3 articles (high importance)
-        if not test and classification.overall_importance >= 2:
+        # Trigger agent-based analysis for Tier 3 articles only (premium importance)
+        if not test and classification.overall_importance >= 3:
             from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
             track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
             logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
@@ -299,7 +299,7 @@ def add_article(
             logger.info(f"✅ Agent analysis complete for {topic_id}")
         elif not test:
             track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
-            logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 2+)")
+            logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 3)")
 
         successful_topics += 1
         if not article_already_exists:
@@ -367,8 +367,8 @@ def add_article(
                     # Trigger next steps, relationship discovery and replacement analysis
                     trigger_next_steps(topic_id, argos_id)
 
-                    # Trigger agent-based analysis for Tier 2/3 articles (high importance)
-                    if not test and classification.overall_importance >= 2:
+                    # Trigger agent-based analysis for Tier 3 articles only (premium importance)
+                    if not test and classification.overall_importance >= 3:
                         from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
                         track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
                         logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
@@ -377,7 +377,7 @@ def add_article(
                         logger.info(f"✅ Agent analysis complete for {topic_id}")
                     elif not test:
                         track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
-                        logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 2+)")
+                        logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 3)")
 
                 successful_topics += 1
                 if not article_already_exists:
