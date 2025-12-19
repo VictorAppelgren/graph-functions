@@ -1,14 +1,21 @@
 """
-Main orchestration script for Saga Graph pipeline.
+Ingest Articles - Server 1 & 2 Entrypoint
 
-This script runs the core pipeline flow:
-1. Load all topics from the graph database
-2. Loop through each topic
-3. Trigger the pipeline for each topic
-4. Continue to next topic
+Fetches and ingests articles from news APIs into the graph.
+Runs continuously, processing topics based on their SLA priority.
 
-Normally scheduled via main_scheduler.py to run every even hour.
+WORKER_MODE:
+- Set WORKER_MODE=ingest to disable analysis writing (recommended for ingest servers)
+- Unset or WORKER_MODE='' to do everything (local dev)
 """
+
+import os
+import sys
+
+# Add project root to path BEFORE any other imports
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 # Load .env file FIRST before any other imports
 from utils.env_loader import load_env
@@ -33,6 +40,7 @@ from src.strategy_agents.orchestrator import analyze_user_strategy
 from src.api.backend_client import get_user_strategies, get_all_users
 from src.llm.health_check import wait_for_llm_health
 from src.market_data.market_data_entrypoint import run_market_data_if_needed
+from src.config.worker_mode import can_write, get_mode_description
 
 logger = app_logging.get_logger(__name__)
 
@@ -97,14 +105,15 @@ def run_pipeline() -> Dict[str, Any]:
             f"Starting new pipeline cycle at {loop_start_time:%Y-%m-%d %H:%M:%S}"
         )
 
-        # Daily strategy analysis (once per day at 7am) - NEW ORCHESTRATOR
-        if loop_start_time.hour >= 7 and not just_bootstrapped:
+        # Daily strategy analysis (once per day at 6am) - ONLY if can_write()
+        # WORKER_MODE check: ingest servers skip this, write server handles it
+        if loop_start_time.hour >= 6 and not just_bootstrapped and can_write():
             logger.debug(f"Daily strategy analysis check: hour={loop_start_time.hour}")
             
-            # Simple flag: if any strategy was analyzed before 7am today, skip
-            today_7am = datetime.datetime.combine(
+            # Simple flag: if any strategy was analyzed after 6am today, skip
+            today_6am = datetime.datetime.combine(
                 loop_start_time.date(), 
-                datetime.time(7, 0)
+                datetime.time(6, 0)
             )
             
             # Get all users and check if any need analysis
@@ -120,19 +129,19 @@ def run_pipeline() -> Dict[str, Any]:
                         if not last_analyzed:
                             needs_analysis = True
                             break
-                        # Check if analyzed before 7am today
+                        # Check if analyzed before 6am today
                         analyzed_time = date_parser.parse(last_analyzed)
-                        if analyzed_time < today_7am:
+                        if analyzed_time < today_6am:
                             needs_analysis = True
                             break
                     if needs_analysis:
                         break
                 
                 if not needs_analysis:
-                    logger.debug("All strategies analyzed after 7am today, skipping")
+                    logger.debug("All strategies analyzed after 6am today, skipping")
                 else:
                     track("daily_strategy_analysis_started")
-                    logger.info("🔄 Daily strategy analysis started (NEW orchestrator)")
+                    logger.info("🔄 Daily strategy analysis started")
                     
                     succeeded = 0
                     failed = 0
@@ -304,6 +313,9 @@ def run_pipeline() -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
+    # Log worker mode at startup
+    logger.info(f"🚀 INGEST ARTICLES - Mode: {get_mode_description()}")
+    
     # Wait for LLMs to be healthy before starting pipeline
     # This prevents crash loops when LLM servers are down
     wait_for_llm_health()

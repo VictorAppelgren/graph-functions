@@ -106,23 +106,22 @@ Each agent has a **prompt.py** with:
 
 **Synthesis Scout:**
 ```
-"Article ABC123 (EURUSD outlook) + fed_policy.executive_summary 
-(hawkish terminal rate 5.5%) + ecb_policy.executive_summary 
-(dovish pivot expected) = Central bank divergence creates 
-EURUSD downside to 1.05"
+"Article (ARTICLE_ID) ([RATE_OUTLOOK]) + (Topic:fed_policy.executive_summary) 
+([FED_STANCE]) + (Topic:ecb_policy.executive_summary) 
+([ECB_STANCE]) = Central bank divergence creates [DIRECTIONAL_IMPACT]"
 ```
 
 **Contrarian Finder:**
 ```
-"Consensus: EUR strength on ECB hawkish pivot
-Our view: dxy.executive_summary shows $50B repatriation flows - 
-USD support underestimated by consensus"
+"Consensus: [ASSET] strength on [CATALYST]
+Our view: (Topic:dxy.executive_summary) shows [CONTRADICTING_FACTOR] - 
+[OVERLOOKED_DRIVER] underestimated by consensus"
 ```
 
 **Depth Finder:**
 ```
-"Article DEF456 mentions 'significant flows' - quantify as 
-$50B repatriation estimate from Article GHI789"
+"Article (ARTICLE_ID_1) mentions '[VAGUE_CLAIM]' - quantify as 
+[SPECIFIC_NUMBER] from Article (ARTICLE_ID_2)"
 ```
 
 ---

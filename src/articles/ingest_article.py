@@ -2,6 +2,7 @@ from typing import cast, Any
 
 from src.articles.load_article import load_article
 from src.observability.stats_client import track
+from src.config.worker_mode import can_write
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.graph.ops.topic import get_all_topics
 from src.analysis.policies.topic_identifier import find_topic_mapping, NodeRow
@@ -290,13 +291,17 @@ def add_article(
         trigger_next_steps(topic_id, argos_id)
 
         # Trigger agent-based analysis for Tier 3 articles only (premium importance)
-        if not test and classification.overall_importance >= 3:
+        # WORKER_MODE check: only write if allowed
+        if not test and classification.overall_importance >= 3 and can_write():
             from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
             track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
             logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
             analysis_rewriter_with_agents(topic_id)
             track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
             logger.info(f"✅ Agent analysis complete for {topic_id}")
+        elif not test and classification.overall_importance >= 3 and not can_write():
+            track("agent_analysis_deferred", f"Topic {topic_id}: Tier {classification.overall_importance} - WORKER_MODE=ingest")
+            logger.info(f"⏭️  Deferring analysis for {topic_id} (WORKER_MODE=ingest, write server will handle)")
         elif not test:
             track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
             logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 3)")
@@ -368,13 +373,17 @@ def add_article(
                     trigger_next_steps(topic_id, argos_id)
 
                     # Trigger agent-based analysis for Tier 3 articles only (premium importance)
-                    if not test and classification.overall_importance >= 3:
+                    # WORKER_MODE check: only write if allowed
+                    if not test and classification.overall_importance >= 3 and can_write():
                         from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
                         track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
                         logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
                         analysis_rewriter_with_agents(topic_id)
                         track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
                         logger.info(f"✅ Agent analysis complete for {topic_id}")
+                    elif not test and classification.overall_importance >= 3 and not can_write():
+                        track("agent_analysis_deferred", f"Topic {topic_id}: Tier {classification.overall_importance} - WORKER_MODE=ingest")
+                        logger.info(f"⏭️  Deferring analysis for {topic_id} (WORKER_MODE=ingest, write server will handle)")
                     elif not test:
                         track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
                         logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 3)")

@@ -57,22 +57,28 @@ Find 2-3 ELITE synthesis opportunities where combining:
 
 ELITE SYNTHESIS EXAMPLES:
 
-✅ **ELITE**: "Article ABC123 (EUR positioning at 90th percentile short) + fed_policy.executive_summary (terminal rate 5.5% vs market 5.25%) + ecb_policy.drivers (Lagarde hawkish pivot) = Asymmetric squeeze setup: If ECB surprises hawkish, extreme EUR shorts + Fed peak = EUR/USD rally to 1.12 (3:1 risk/reward)"
-   → Why elite: Combines 3 domains (positioning, Fed, ECB) to reveal non-obvious asymmetric opportunity
+✅ **ELITE**: "Article (ARTICLE_ID) ([POSITIONING_DATA]) + (Topic:related_topic.executive_summary) ([POLICY_STANCE]) + (Topic:another_topic.drivers) ([KEY_DRIVER]) = [NON-OBVIOUS INSIGHT]: [MECHANISM] → [SECOND_ORDER_EFFECT] → [ACTIONABLE_CONCLUSION]"
+   → Why elite: Combines 3 domains to reveal non-obvious asymmetric opportunity
 
-✅ **ELITE**: "Article DEF456 (China stimulus $500B) + copper.drivers (supply constraints Chile) + fed_policy.analysis (inflation sensitivity) = Second-order inflation risk: China stimulus → copper demand → supply squeeze → +15% copper → Fed forced to hike longer → USD strength → EUR/USD to 1.03"
+✅ **ELITE**: "Article (ARTICLE_ID) ([CATALYST_EVENT]) + (Topic:commodity.drivers) ([SUPPLY_FACTOR]) + (Topic:policy.analysis) ([SENSITIVITY]) = Second-order effect: [EVENT] → [TRANSMISSION] → [CHAIN_REACTION] → [UNEXPECTED_IMPACT]"
    → Why elite: Multi-step causal chain across domains reveals second-order effect
 
 ❌ **TOO OBVIOUS**: "Fed hawkish + EUR weak = EUR/USD down"
    → Why bad: First-order, obvious, no synthesis value
 
+HUNT FOR THESE SYNTHESIS TYPES:
+→ **Timing Synthesis**: Article shows X happening now + Topic analysis shows Y lagging = Catch-up trade
+→ **Positioning Synthesis**: Article shows extreme positioning + Topic shows catalyst = Squeeze setup
+→ **Cross-Domain Synthesis**: Article in domain A + Topic in domain B = Hidden transmission path
+→ **Second-Order Synthesis**: Combine two 1st-order effects to reveal 2nd-order impact market misses
+
 OUTPUT FORMAT (be specific):
 1. "Article [ID] ([brief content]) + [related_topic].executive_summary ([key point]) = [SPECIFIC INSIGHT about {topic_name}]"
 
 EXAMPLES OF GOOD OUTPUT:
-✅ "Article ABC123 (EURUSD rate outlook) + fed_policy.executive_summary (hawkish terminal rate 5.5%) + ecb_policy.executive_summary (dovish pivot expected) = Central bank divergence creates EURUSD downside to 1.05"
+✅ "Article (ARTICLE_ID) ([RATE_OUTLOOK_SUMMARY]) + (Topic:fed_policy.executive_summary) ([FED_STANCE]) + (Topic:ecb_policy.executive_summary) ([ECB_STANCE]) = Central bank divergence creates [DIRECTIONAL_IMPACT]"
 
-✅ "Article DEF456 (EUR positioning data) + dxy.drivers (USD repatriation flows $50B) = Positioning asymmetry suggests oversold EUR bounce risk despite fundamental bearishness"
+✅ "Article (ARTICLE_ID) ([POSITIONING_DATA]) + (Topic:dxy.drivers) ([FLOW_DESCRIPTION]) = Positioning asymmetry suggests [CONTRARIAN_OPPORTUNITY]"
 
 ❌ BAD: "Combine Fed and ECB analysis" (too vague)
 ❌ BAD: "Article mentions rates" (not synthesis)
@@ -125,8 +131,8 @@ COMPLETE EXAMPLE OUTPUT:
 ```json
 {{
     "opportunities": [
-        "Article (DYFJLTNVQ) (EUR positioning at 90th percentile short) + (Topic:fed_policy.executive_summary) (terminal rate 5.5% vs market 5.25%) + (Topic:ecb_policy.drivers) (Lagarde hawkish pivot) = Asymmetric squeeze setup: extreme EUR shorts + Fed peak + ECB surprise = EUR/USD rally to 1.12 (3:1 risk/reward)",
-        "Article (JXV2KQND8) (China stimulus $500B announced) + (Topic:copper.drivers) (supply constraints Chile -15%) = Second-order inflation risk: China demand + supply squeeze = copper +15% = Fed hike longer = USD strength = EUR/USD to 1.03"
+        "Article (ARTICLE_ID_1) ([POSITIONING_EXTREME]) + (Topic:policy_topic.executive_summary) ([POLICY_STANCE]) + (Topic:another_topic.drivers) ([KEY_DRIVER]) = [NON-OBVIOUS_SETUP]: [FACTOR_A] + [FACTOR_B] + [CATALYST] = [DIRECTIONAL_OUTCOME]",
+        "Article (ARTICLE_ID_2) ([EVENT_OR_DATA]) + (Topic:related_topic.drivers) ([SUPPLY_DEMAND_FACTOR]) = Second-order effect: [FIRST_ORDER] → [TRANSMISSION] → [SECOND_ORDER_IMPACT]"
     ]
 }}
 ```

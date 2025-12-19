@@ -29,16 +29,24 @@ MISSION:
 Identify 2-3 ELITE opportunities in each category:
 
 1. **CAUSAL CHAINS**: Build multi-step transmission mechanisms
-   - Not just A→B, but A→mechanism1→B→mechanism2→C→impact
-   - Show cross-domain connections (macro→flows→price)
+   - Not just A→B, but A→B→C→D (3-4 steps minimum)
+   - Show cross-domain connections (macro→flows→positioning→price)
    - Identify second-order effects and feedback loops
    - Quantify each step in the chain
+   - HUNT FOR 3RD/4TH ORDER EFFECTS the market ignores
 
 2. **QUANTIFICATION**: Transform vague claims into precise, sourced numbers
    - Replace "significant" with exact magnitudes
    - Add probabilities, timeframes, price levels
    - Show ranges when point estimates uncertain
    - Every number must have source citation
+
+3. **UNSEEN CONNECTIONS** (HIGH PRIORITY): Find what the market is missing
+   - What 3rd/4th order effects are not priced? (A→B→C→D where D is ignored)
+   - What timing mismatches exist? (what's lagging that will catch up?)
+   - What hidden correlations are breaking down or forming?
+   - Where is consensus focused on 1st order while 2nd/3rd order dominates?
+   - What structural shift in one domain cascades unexpectedly to another?
 
 Your depth opportunities must align with the section focus above and show ELITE-LEVEL thinking.
 
@@ -53,37 +61,64 @@ Find 2-3 ELITE depth opportunities:
 
 **CAUSAL CHAINS**: Where can we build multi-step transmission mechanisms?
 - Look for: Article A mentions X, Article B discusses Y mechanism, Article C shows Z impact
-- Build: X → explicit mechanism Y → quantified transmission → Z impact on {topic_name} at level
+- Build: X → mechanism → Y → transmission → Z → 3rd order effect on {topic_name}
 - Add: Second-order effects ("then what?"), feedback loops, cross-domain connections
 - Quantify: Each step in the chain with specific numbers/levels
+- GO DEEPER: What's the 3rd/4th order effect? What happens AFTER the obvious?
 
 **QUANTIFICATION**: Where are vague claims that need precision?
 - Find: "Significant flows", "substantial impact", "considerable pressure"
-- Replace with: "$50B flows (Article ABC123)", "2.5% impact (Article DEF456)", "200bp pressure (Article GHI789)"
-- Add: Probabilities ("60% likelihood"), timeframes ("next 2-3 weeks"), ranges ("1.05-1.08")
+- Replace with: Exact numbers with article citations
+- Add: Probabilities, timeframes, ranges
 - Source: Every number needs article ID citation
 
-OUTPUT FORMAT:
+**UNSEEN CONNECTIONS**: What is the market missing?
+- Find: Timing mismatches (what's lagging?), hidden correlations, 3rd/4th order effects
+- Look for: Consensus focused on 1st order while 2nd/3rd order dominates
+- Identify: Structural shifts cascading unexpectedly across domains
+
+OUTPUT FORMAT (STRICT - FOLLOW EXACTLY):
 {{
     "causal_chain_opportunities": [
-        "Article [ID] mentions X → Article [ID] discusses Y → Build chain: X → mechanism → Y → impact on {topic_name}",
-        "Article [ID] mentions X → Article [ID] discusses Y → Build chain: X → mechanism → Y → impact on {topic_name}"
+        "string describing the causal chain opportunity",
+        "another string describing another causal chain"
     ],
     "quantification_targets": [
-        "Article [ID] says 'vague claim' - quantify as [specific number/range] from Article [ID]",
-        "Article [ID] mentions 'rates' - specify [exact level/range]"
+        "string describing what to quantify",
+        "another string describing another quantification target"
     ]
 }}
 
-EXAMPLES OF GOOD OUTPUT:
-✅ CAUSAL CHAIN: "Article ABC123 mentions Fed terminal rate 5.5% → Article DEF456 discusses USD flows → Build chain: Fed 5.5% terminal → Real rate differential +200bps → Capital flows $50B → EUR/USD downside to 1.05"
+⚠️ CRITICAL FORMAT RULES:
+- Each item MUST be a plain STRING, not an object
+- Do NOT use {{"description": "..."}} - just use the string directly
+- Do NOT nest objects inside the arrays
+- Arrays contain ONLY strings, nothing else
 
-✅ QUANTIFICATION: "Article GHI789 says 'significant flows' - quantify as $50B repatriation estimate from Article JKL012"
+✅ CORRECT FORMAT EXAMPLE:
+{{
+    "causal_chain_opportunities": [
+        "Article (ARTICLE_ID_1) mentions [FACT_A] → Article (ARTICLE_ID_2) discusses [MECHANISM_B] → Build chain: [FACT_A] → [QUANTIFIED_LINK] → [IMPACT_ON_TOPIC]",
+        "Article (ARTICLE_ID_3) shows [DATA_POINT] → Article (ARTICLE_ID_4) links to [EFFECT] → Build chain: [DATA_POINT] → [TRANSMISSION] → [OUTCOME]"
+    ],
+    "quantification_targets": [
+        "Article (ARTICLE_ID_5) says '[VAGUE_CLAIM]' - quantify as [SPECIFIC_NUMBER] from Article (ARTICLE_ID_6)",
+        "Article (ARTICLE_ID_7) mentions '[UNQUANTIFIED_TERM]' - specify [EXACT_RANGE] from Article (ARTICLE_ID_8)"
+    ]
+}}
 
-✅ QUANTIFICATION: "Article MNO345 mentions 'Fed terminal rate' - specify 5.25-5.50% range from Article PQR678"
+❌ WRONG FORMAT (DO NOT DO THIS):
+{{
+    "causal_chain_opportunities": [
+        {{"description": "some text here"}},  // WRONG - no objects!
+        {{"chain": "some text"}}              // WRONG - no objects!
+    ]
+}}
 
-❌ BAD: "Add more detail" (not specific)
-❌ BAD: "Article mentions rates" (no chain or quantification)
+❌ OTHER MISTAKES TO AVOID:
+- "Add more detail" (not specific)
+- "Article mentions rates" (no chain or quantification)
+- Using objects/dicts instead of plain strings
 
 CITATION RULES (ULTRA-STRICT):
 

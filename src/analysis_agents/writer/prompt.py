@@ -130,6 +130,23 @@ STRICT: Only in-text citations allowed. NO citation lists, reference sections, o
     When mentioning other assets, IMMEDIATELY state: "This affects {asset_name} by [mechanism]"
     Show explicit transmission to {asset_name}—never discuss assets in isolation.
 
+12) **CROSS-TOPIC SYNTHESIS** (Connect the Dots)
+    Reference related topic analyses using (Topic:topic_id.field_name) format.
+    Show how insights from fed_policy, dxy, energy, etc. cascade to {asset_name}.
+    The best analysis connects multiple domains—don't analyze in isolation.
+
+13) **HUNT FOR UNSEEN CONNECTIONS** (What Others Miss)
+    Look for 3rd/4th order effects the market ignores (A→B→C→D where D is not priced).
+    Identify timing mismatches—what's lagging that will catch up?
+    Find hidden correlations breaking down or forming.
+    Where is consensus focused on 1st order while 2nd/3rd order dominates?
+
+14) **COMPREHENSIVE DEPTH** (Go Deep, Not Shallow)
+    Write thorough, detailed analysis—not bullet points or surface summaries.
+    Each risk/opportunity deserves full exploration of transmission mechanisms.
+    Show the complete causal chain with quantified steps at each link.
+    Don't rush—take the space needed to fully develop each insight.
+
 === INTELLIGENT ASSET RESEARCH DIRECTIVE ===
 - PRIMARY FOCUS: All analysis serves {asset_name} decision-making exclusively within the specified timeframe.
 - SMART RELATED ASSET HANDLING: Discuss other assets ONLY to understand {asset_name} better.

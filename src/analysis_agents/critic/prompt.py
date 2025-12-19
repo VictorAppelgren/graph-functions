@@ -40,9 +40,10 @@ in the draft align with actual market data. Flag any outdated forecasts or hallu
 
 1. **CAUSAL CHAIN MASTERY**
    - Does EVERY claim show explicit A→mechanism→B→mechanism→C transmission?
-   - Are mechanisms quantified? (e.g., "rate differential +200bp" not "rate gap")
+   - Are mechanisms quantified? (e.g., "rate differential +Xbp" not "rate gap")
    - Are cross-domain connections explicit? (macro→flows→microstructure→price)
    - Is second-order thinking present? ("then what?")
+   - Are 3rd/4th order effects explored? (what happens AFTER the obvious?)
    - Flag: Any claim without explicit transmission path
 
 2. **QUANTIFICATION EXCELLENCE**

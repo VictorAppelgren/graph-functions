@@ -16,6 +16,8 @@ import sys
 import re
 import random
 
+from src.config.worker_mode import can_write
+
 # Canonical import pattern: ensure project root is on sys.path when running this module directly
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT != "/":
@@ -356,12 +358,14 @@ def backfill_topic_from_storage(
                 analysis_fields = analysis_result[0]
                 missing_analysis = [k for k, v in analysis_fields.items() if not v]
                 
-                if missing_analysis:
+                if missing_analysis and can_write():
                     from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
                     from src.observability.stats_client import track
                     track("agent_analysis_triggered", f"Topic {topic_id}: Enrichment triggered analysis (missing sections: {missing_analysis})")
                     analysis_rewriter_with_agents(topic_id)
                     track("agent_analysis_completed", f"Topic {topic_id}: Enrichment analysis complete")
+                elif missing_analysis:
+                    logger.info(f"⏭️  Deferring analysis for {topic_id} (WORKER_MODE=ingest, write server will handle)")
     
     # NOTE: Analysis is now triggered automatically in add_article() when Level 2/3 articles are added
     if total_added > 0 and not test:

@@ -1,16 +1,26 @@
 """
-ULTRA-SIMPLE Top Sources Pipeline - Maximum Data Ingestion
+Ingest Top Sources - Server 1 & 2 Entrypoint
 
-Just loop through top sources, query everything, save articles.
-No complexity, no topic processing, just pure data ingestion.
+Monitors premium news sources and ingests articles into the graph.
+Runs continuously, cycling through top sources.
+
+WORKER_MODE:
+- Set WORKER_MODE=ingest to disable analysis writing (recommended for ingest servers)
+- Unset or WORKER_MODE='' to do everything (local dev)
 """
+
+import os
+import sys
+
+# Add project root to path BEFORE any other imports
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 # Load .env file FIRST before any other imports
 from utils.env_loader import load_env
 load_env()
 
-import os
-import sys
 import datetime
 from typing import List
 import time
@@ -21,6 +31,7 @@ from src.clients.perigon.news_ingestion_orchestrator import NewsIngestionOrchest
 from src.articles.ingest_article import add_article
 from utils import app_logging
 from src.llm.health_check import wait_for_llm_health
+from src.config.worker_mode import get_mode_description
 
 logger = app_logging.get_logger(__name__)
 
@@ -157,6 +168,9 @@ def run_simple_sources_pipeline():
 
 
 if __name__ == "__main__":
+    # Log worker mode at startup
+    logger.info(f"\ud83d\ude80 INGEST TOP SOURCES - Mode: {get_mode_description()}")
+    
     # Wait for LLMs to be healthy before starting pipeline
     # This prevents crash loops when LLM servers are down
     wait_for_llm_health()

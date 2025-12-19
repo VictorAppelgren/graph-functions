@@ -47,10 +47,10 @@ Flag outdated forecasts, hallucinated price levels, or claims that contradict ac
 
 2. **QUANTIFICATION ACCURACY** (Exact Matching)
    - Does EVERY number match SOURCE MATERIAL exactly?
-   - Are there rounding errors? ("5.5%" in source but "5%" in draft)
-   - Are there approximations? ("about $50B" when source says "$47.3B")
-   - Are probabilities accurate? ("60%" vs "likely")
-   - Are timeframes exact? ("next 2-3 weeks" vs "soon")
+   - Are there rounding errors? (e.g., source says "X.X%" but draft rounds to "X%")
+   - Are there approximations? (e.g., "about $XB" when source says exact figure)
+   - Are probabilities accurate? (e.g., "X%" vs vague "likely")
+   - Are timeframes exact? (e.g., "next X weeks" vs vague "soon")
    - Verify: Every number against source, flag any mismatch
 
 3. **FACTUAL ACCURACY** (Zero Hallucinations)
@@ -65,7 +65,7 @@ Flag outdated forecasts, hallucinated price levels, or claims that contradict ac
    - Do prices/levels match CURRENT MARKET CONTEXT?
    - Are trends accurate? (MA50/MA200 positions)
    - Are 52-week ranges correct?
-   - Are there outdated forecasts? ("EUR to 1.10" when already at 1.12)
+   - Are there outdated forecasts? (forecast level already breached by current price)
    - Are there hallucinated price levels?
    - Verify: All market data against current context
 
