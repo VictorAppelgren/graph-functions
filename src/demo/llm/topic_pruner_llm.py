@@ -54,7 +54,7 @@ def _select_topics_to_remove_llm(
     candidate_ids_json = json.dumps(candidate_ids, ensure_ascii=False)
 
     parser = JsonOutputParser()
-    llm = get_llm(ModelTier.MEDIUM).bind(response_format={"type": "json_object"})
+    llm = get_llm(ModelTier.SIMPLE).bind(response_format={"type": "json_object"})  # Topic work uses SIMPLE tier (20B)
     chain = llm | parser
 
     p = PromptTemplate.from_template(

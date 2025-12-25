@@ -349,6 +349,65 @@ def rewrite_strategy_section(request: RewriteSectionRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# ============ ARTICLE DISTRIBUTION STATS ============
+
+@app.get("/neo/article-distribution")
+def get_article_distribution():
+    """
+    Get article distribution by timeframe and perspective across all topics.
+
+    Returns counts per topic for each timeframe × perspective combination.
+    """
+    # Query to get distribution by topic, timeframe, and perspective
+    query = """
+    MATCH (a:Article)-[r:ABOUT]->(t:Topic)
+    WHERE coalesce(a.priority, '') <> 'hidden'
+    WITH t, r.timeframe as timeframe,
+         CASE
+           WHEN r.importance_risk > 0.5 THEN 'risk'
+           WHEN r.importance_opportunity > 0.5 THEN 'opportunity'
+           WHEN r.importance_trend > 0.5 THEN 'trend'
+           WHEN r.importance_catalyst > 0.5 THEN 'catalyst'
+           ELSE 'unclassified'
+         END as perspective,
+         count(*) as count
+    RETURN t.id as topic_id, t.name as topic_name,
+           timeframe, perspective, count
+    ORDER BY t.name, timeframe, perspective
+    """
+
+    results = run_cypher(query, {})
+
+    # Aggregate into structure: {topic_id: {timeframe: {perspective: count}}}
+    distribution = {}
+    for r in results:
+        topic_id = r["topic_id"]
+        if topic_id not in distribution:
+            distribution[topic_id] = {
+                "name": r["topic_name"],
+                "fundamental": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0},
+                "medium": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0},
+                "current": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0}
+            }
+
+        tf = r["timeframe"] or "current"
+        persp = r["perspective"]
+        if tf in distribution[topic_id] and persp in distribution[topic_id][tf]:
+            distribution[topic_id][tf][persp] = r["count"]
+
+    # Calculate totals and averages
+    total_articles = sum(
+        sum(sum(p.values()) for tf, p in topic.items() if tf != "name")
+        for topic in distribution.values()
+    )
+
+    return {
+        "distribution": distribution,
+        "topic_count": len(distribution),
+        "total_articles": total_articles
+    }
+
+
 # ============ HEALTH ============
 
 @app.get("/neo/health")

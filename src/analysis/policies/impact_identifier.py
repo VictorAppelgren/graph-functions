@@ -35,7 +35,7 @@ def find_impact(article_text: str) -> FindImpact:
         "..." if len(article_text) > 200 else "",
     )
 
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Article work uses SIMPLE tier (20B)
 
     prompt = PromptTemplate.from_template(find_impact_prompt).format(
         article_text=article_text,

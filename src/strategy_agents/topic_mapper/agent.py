@@ -84,7 +84,7 @@ class TopicMapperAgent(BaseStrategyAgent):
             topics_list=topics_str
         )
         
-        llm = get_llm(ModelTier.COMPLEX)
+        llm = get_llm(ModelTier.SIMPLE)
         
         # Parse structured output
         mapping = run_llm_decision(

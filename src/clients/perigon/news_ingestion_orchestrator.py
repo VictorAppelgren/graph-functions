@@ -9,6 +9,11 @@ Following the simplified approach, it focuses only on:
 3. Scraping article content and linked sources
 4. Generating summaries
 5. Storing enriched raw data
+
+Testing:
+    python tests/perigon.py
+    python -m tests.perigon
+    python tests/perigon_content_check.py  # validates full vs truncated content
 """
 
 import os

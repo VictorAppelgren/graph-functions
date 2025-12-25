@@ -81,7 +81,7 @@ class SourceCheckerAgent(BaseAgent):
         self._log("==== END INPUT SUMMARY ====")
         self._log("")
 
-        llm = get_llm(ModelTier.COMPLEX)
+        llm = get_llm(ModelTier.SIMPLE)
         parser = StrOutputParser()
         chain = llm | parser
         

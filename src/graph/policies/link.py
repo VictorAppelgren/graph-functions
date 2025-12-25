@@ -21,7 +21,7 @@ def llm_select_link_to_remove(
     Use LLM to select weakest link to remove if at max capacity.
     Returns a clean dict: {"motivation": str|None, "remove_link": str|None}
     """
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Link work uses SIMPLE tier (20B)
     chain = llm | JsonOutputParser()
 
     prompt = f"""
@@ -88,7 +88,7 @@ def llm_select_one_new_link(
     Use LLM to propose the single strongest missing link.
     Returns: { "type": ..., "source": ..., "target": ..., "motivation": ... } or None
     """
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Link work uses SIMPLE tier (20B)
     # Format candidate topics as '- Name (id: id)'
     candidate_lines = "\n".join(
         [f"- {n['name']} (id: {n['id']})" for n in candidate_topics]

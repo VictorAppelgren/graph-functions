@@ -14,12 +14,16 @@ Usage:
 from src.exploration_agent.models import ExplorationResult, ExplorationMode
 from src.exploration_agent.explorer.agent import ExplorationAgent
 from src.exploration_agent.critic.agent import CriticAgent
-from src.exploration_agent.critic.models import CriticVerdict
+from src.exploration_agent.critic.models import CriticFeedback
+from src.exploration_agent.final_critic.agent import FinalCriticAgent
+from src.exploration_agent.final_critic.models import FinalVerdict
 
 __all__ = [
-    "ExplorationAgent", 
-    "ExplorationResult", 
+    "ExplorationAgent",
+    "ExplorationResult",
     "ExplorationMode",
     "CriticAgent",
-    "CriticVerdict",
+    "CriticFeedback",
+    "FinalCriticAgent",
+    "FinalVerdict",
 ]

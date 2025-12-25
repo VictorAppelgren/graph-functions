@@ -75,7 +75,7 @@ def _select_not_crucial_topics_llm(candidates: List[Dict[str, Any]]) -> List[str
     candidate_ids_json = json.dumps(candidate_ids, ensure_ascii=False)
 
     parser = JsonOutputParser()
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Topic work uses SIMPLE tier (20B)
     chain = llm | parser
 
     p = PromptTemplate.from_template(

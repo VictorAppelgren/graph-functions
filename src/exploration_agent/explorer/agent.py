@@ -65,7 +65,7 @@ class ExplorationAgent:
     - PERMANENT: Saved excerpts via save_excerpt. Survives entire exploration.
     """
     
-    def __init__(self, max_steps: int = 15):
+    def __init__(self, max_steps: int = 20):
         self.max_steps = max_steps
         self.llm = get_llm(ModelTier.COMPLEX)
     
@@ -387,9 +387,8 @@ Output ONLY the JSON object, no other text.""",
             temp_warning = f"\n⚠️ **TEMPORARY CONTENT LOADED**: {state.temp_content_ids}\n   Use save_excerpt NOW or this content will be DELETED on your next action!\n"
         
         return f"""
-═══════════════════════════════════════════════════════════════════════════════
-EXPLORATION STEP {state.step_count}/{state.max_steps}
-═══════════════════════════════════════════════════════════════════════════════
+📊 **EXPLORATION STEP {state.step_count}/{state.max_steps}**
+
 {hint_section}
 🎯 **Target**: Finding {state.mode.value}s for **{state.target_topic_id}**
 
@@ -521,15 +520,31 @@ What do you want to do next? Output your decision as JSON.
             
             # Parse JSON
             parsed = json.loads(content)
-            
+
+            # Auto-fix: If LLM returned flat tool call without wrapper, wrap it
+            if "tool_call" not in parsed and "tool" in parsed:
+                logger.warning("⚠️ Response missing 'tool_call' wrapper - auto-fixing")
+                logger.warning("   Got: %s", app_logging.truncate_str(str(parsed), 300))
+
+                # Auto-wrap the tool call
+                thinking = parsed.pop("thinking", "")
+                wrapped = {
+                    "thinking": thinking,
+                    "tool_call": parsed  # Everything else is the tool call
+                }
+                logger.info("🔧 Auto-wrapped into correct schema")
+                parsed = wrapped
+
             # Validate structure - must have tool_call with tool
             if "tool_call" not in parsed:
-                logger.warning("⚠️ Response missing 'tool_call' key")
-                logger.warning("   Raw parsed: %s", app_logging.truncate_str(str(parsed), 300))
+                logger.warning("⚠️ Response missing 'tool_call' key (after auto-fix attempt)")
+                logger.warning("   Got: %s", app_logging.truncate_str(str(parsed), 300))
+                logger.warning("   Expected schema: {'thinking': '...', 'tool_call': {'tool': '...', ...}}")
                 return None
             if not parsed.get("tool_call", {}).get("tool"):
                 logger.warning("⚠️ Response has empty tool in tool_call")
-                logger.warning("   Raw parsed: %s", app_logging.truncate_str(str(parsed), 300))
+                logger.warning("   Got: %s", app_logging.truncate_str(str(parsed), 300))
+                logger.warning("   Expected schema: {'thinking': '...', 'tool_call': {'tool': '...', ...}}")
                 return None
             
             logger.info(f"🧠 Thinking: {parsed.get('thinking', '')[:100]}...")
@@ -550,17 +565,21 @@ What do you want to do next? Output your decision as JSON.
 
     def _extract_tool_from_text(self, text: str) -> Optional[dict]:
         """
-        Try to extract a valid tool call from malformed LLM output.
-        Handles cases where LLM outputs partial JSON, extra text, or nested structures.
+        MINIMAL BUT POWERFUL extraction from malformed LLM output.
+
+        Strategy:
+        1. Brace-match to find complete JSON object
+        2. If valid JSON but missing wrapper, auto-wrap it
+        3. If no valid JSON, regex extract tool name
         """
         import re
-        
+
         if not text:
             return None
-        
-        logger.debug("   Attempting extraction from: %s", app_logging.truncate_str(text, 200))
-        
-        # Strategy 1: Find the outermost JSON object with braces matching
+
+        logger.debug("   🔧 Attempting extraction from: %s", app_logging.truncate_str(text, 200))
+
+        # Strategy 1: Brace-counting to find outermost complete JSON
         brace_count = 0
         start_idx = None
         for i, char in enumerate(text):
@@ -574,30 +593,36 @@ What do you want to do next? Output your decision as JSON.
                     candidate = text[start_idx:i+1]
                     try:
                         obj = json.loads(candidate)
-                        # Check if it's a valid tool call structure
+
+                        # Perfect structure - return as-is
                         if "tool_call" in obj and obj["tool_call"].get("tool"):
+                            logger.info("   ✅ Extracted valid structure")
                             return obj
+
+                        # Missing wrapper - auto-wrap bare tool call
+                        # Handles: {"tool": "read_articles", "limit": 3}
                         if "tool" in obj and obj["tool"]:
-                            return {"thinking": "Recovered from malformed output", "tool_call": obj}
+                            logger.info("   🔧 Wrapped bare tool call: %s", obj.get("tool"))
+                            return {
+                                "thinking": "Recovered - missing tool_call wrapper",
+                                "tool_call": obj
+                            }
                     except json.JSONDecodeError:
                         pass
                     start_idx = None
-        
-        # Strategy 2: Look for tool name patterns and construct minimal call
-        tool_patterns = [
-            r'"tool"\s*:\s*"(read_articles|read_section|save_excerpt|think|move_to_topic|draft_finding|finish)"',
-        ]
-        for pattern in tool_patterns:
-            match = re.search(pattern, text)
-            if match:
-                tool_name = match.group(1)
-                logger.info("   Extracted tool name: %s", tool_name)
-                # Try to build a minimal valid call
-                return {
-                    "thinking": "Recovered from malformed output",
-                    "tool_call": {"tool": tool_name}
-                }
-        
+
+        # Strategy 2: Regex extract tool name as last resort
+        tool_pattern = r'"tool"\s*:\s*"(read_articles|read_section|save_excerpt|think|move_to_topic|draft_finding|finish)"'
+        match = re.search(tool_pattern, text)
+        if match:
+            tool_name = match.group(1)
+            logger.info("   🔧 Regex extracted tool: %s", tool_name)
+            return {
+                "thinking": "Recovered - regex extraction",
+                "tool_call": {"tool": tool_name}
+            }
+
+        logger.warning("   ❌ All extraction strategies failed")
         return None
 
     # ------------------------------------------------------------------
@@ -905,25 +930,49 @@ To save: {{"tool": "save_excerpt", "saves": [{{"source_id": "{source_id}", "exce
             headline = tool_call.get("headline", "")
             rationale = tool_call.get("rationale", "")
             flow_path = tool_call.get("flow_path", "")
-            
+
+            # CRITICAL: Check for missing citations BEFORE accepting draft
+            missing_sources_msg = self._check_and_fetch_missing_citations(rationale, state)
+
+            # If missing citations found, REJECT this draft immediately
+            if missing_sources_msg:
+                logger.warning("❌ Draft rejected: Missing citations detected before storing")
+                return [missing_sources_msg], False
+
+            # All citations valid - store draft
             state.draft_finding = {
                 "headline": headline,
                 "rationale": rationale,
                 "flow_path": flow_path,
             }
-            
+
             self._log_tool_effect(
                 "draft_finding",
                 headline=app_logging.truncate_str(headline, 120),
                 flow=app_logging.truncate_str(flow_path, 120),
             )
-            
-            return [MessageEntry(
-                role="user",
-                content=f"📝 **Finding drafted!**\n\nHeadline: {headline}\n\nCall 'finish' when satisfied, or continue exploring to strengthen.",
-                msg_id=f"draft_{state.step_count}",
-                prunable=False
-            )], False
+
+            # Run critic on FIRST draft only (not on revisions after feedback)
+            # This gives agent 1 feedback cycle to improve before final submission
+            if not state.critic_feedback_received:
+                remaining_steps = self.max_steps - state.step_count
+                logger.info("🔍 Draft at step %d/%d - Running CRITIC (first draft, %d steps remaining)...",
+                           state.step_count, self.max_steps, remaining_steps)
+
+                feedback_msg = self._run_critic(state)
+
+                state.critic_feedback_received = True  # Mark that critic has run
+                return [feedback_msg], False
+            else:
+                # Subsequent drafts after critic feedback - no more critic
+                logger.info("✅ Revised draft after critic feedback (step %d/%d)",
+                           state.step_count, self.max_steps)
+                return [MessageEntry(
+                    role="user",
+                    content=f"📝 **Revised finding drafted!**\n\nHeadline: {headline}\n\nCall 'finish' when satisfied, or continue exploring to strengthen.",
+                    msg_id=f"draft_{state.step_count}",
+                    prunable=False
+                )], False
         
         # ----- FINISH -----
         elif tool_name == "finish":
@@ -964,3 +1013,141 @@ To save: {{"tool": "save_excerpt", "saves": [{{"source_id": "{source_id}", "exce
                 content=f"⚠️ Unknown tool '{tool_name}'. Valid tools: read_section, read_articles, save_excerpt, think, move_to_topic, draft_finding, finish",
                 prunable=True
             )], False
+
+    def _run_critic(self, state: ExplorationState) -> MessageEntry:
+        """
+        Run mid-exploration critic and return feedback as USER message.
+
+        Called when agent drafts before 50% progress.
+        """
+        from src.exploration_agent.critic import CriticAgent
+
+        critic = CriticAgent()
+
+        feedback = critic.review(
+            finding_headline=state.draft_finding["headline"],
+            finding_rationale=state.draft_finding["rationale"],
+            finding_flow_path=state.draft_finding["flow_path"],
+            saved_excerpts=state.saved_excerpts,
+            current_step=state.step_count,
+            max_steps=self.max_steps
+        )
+
+        # Format feedback as user message
+        verdict_emoji = {
+            "continue_exploring": "🔍",
+            "revise_draft": "✏️",
+            "ready_to_finish": "✅"
+        }.get(feedback.verdict, "📋")
+
+        # Build sharp, directive feedback message
+        content_parts = [
+            f"{verdict_emoji} **CRITIC REVIEW** - Quality Score: {feedback.quality_score:.2f}/1.0",
+            "",
+            f"**VERDICT: {feedback.verdict.replace('_', ' ').upper()}**",
+            ""
+        ]
+
+        # Critical issues first - these MUST be fixed
+        if feedback.citation_issues or feedback.chain_gaps:
+            content_parts.append("🚨 **CRITICAL ISSUES - MUST FIX BEFORE CALLING FINISH:**")
+            content_parts.append("")
+
+            if feedback.citation_issues:
+                content_parts.append("**Missing/Wrong Citations:**")
+                for i, issue in enumerate(feedback.citation_issues, 1):
+                    content_parts.append(f"  {i}. {issue}")
+                content_parts.append("")
+
+            if feedback.chain_gaps:
+                content_parts.append("**Chain Gaps (No Evidence):**")
+                for i, gap in enumerate(feedback.chain_gaps, 1):
+                    content_parts.append(f"  {i}. {gap}")
+                content_parts.append("")
+
+        # Actionable next steps - EMPHASIZE THE ACTION
+        if feedback.suggestions:
+            content_parts.append("💡 **YOUR ACTION PLAN (FOLLOW THESE STEPS):**")
+            for i, sug in enumerate(feedback.suggestions, 1):
+                content_parts.append(f"  {i}. {sug}")
+            content_parts.append("")
+
+        content_parts.append(f"**Why**: {feedback.reasoning}")
+        content_parts.append("")
+
+        # Add explicit reminder based on verdict
+        if feedback.verdict == "revise_draft":
+            content_parts.append("⚠️ **MANDATORY NEXT ACTION: Call draft_finding again with fixes. DO NOT call finish until ALL issues are resolved!**")
+        elif feedback.verdict == "continue_exploring":
+            content_parts.append("⚠️ **MANDATORY NEXT ACTION: Keep exploring to gather missing evidence, then call draft_finding again.**")
+        elif feedback.verdict == "ready_to_finish":
+            content_parts.append("✅ **You may now call finish to submit this finding.**")
+
+        return MessageEntry(
+            role="user",
+            content="\n".join(content_parts),
+            msg_id=f"critic_feedback_{state.step_count}",
+            prunable=False
+        )
+
+    def _check_and_fetch_missing_citations(
+        self,
+        rationale: str,
+        state: ExplorationState
+    ) -> Optional[MessageEntry]:
+        """
+        Check if rationale cites sources that aren't in saved_excerpts.
+        If missing sources are found, try to fetch them from temp content or log warning.
+
+        Returns a message to agent if action needed, None otherwise.
+        """
+        import re
+
+        # Extract all (source_id) citations from rationale
+        cited_sources = set(re.findall(r'\(([a-z_0-9]+)\)', rationale))
+
+        if not cited_sources:
+            return None  # No citations found
+
+        # Get all saved source IDs
+        saved_sources = set(exc.source_id for exc in state.saved_excerpts)
+
+        # Find missing citations
+        missing = cited_sources - saved_sources
+
+        if not missing:
+            return None  # All cited sources are saved ✅
+
+        # We have missing citations!
+        logger.warning("⚠️ Found %d cited sources not in saved excerpts: %s",
+                      len(missing), list(missing))
+
+        # Try to recover: check if any are in temp_content_ids
+        available_in_temp = [s for s in missing if s in state.temp_content_ids]
+
+        warnings = []
+        warnings.append("🚨 **DRAFT REJECTED - CITATION ERROR!**")
+        warnings.append("")
+        warnings.append(f"❌ You cited {len(missing)} source(s) in your rationale that you haven't saved as excerpts:")
+        warnings.append("")
+
+        for source_id in missing:
+            if source_id in available_in_temp:
+                warnings.append(f"  • `{source_id}` → Currently loaded! Save an excerpt from this NOW!")
+            else:
+                warnings.append(f"  • `{source_id}` → NOT loaded. You must read this and save an excerpt!")
+
+        warnings.append("")
+        warnings.append("⚠️ **MANDATORY NEXT STEPS:**")
+        warnings.append("1. For each missing source, use save_excerpt to save the relevant text")
+        warnings.append("2. Then call draft_finding again with proper citations")
+        warnings.append("")
+        warnings.append("**CRITICAL**: The final critic will REJECT any finding with unsaved citations!")
+        warnings.append("Every claim in your rationale MUST be backed by a saved excerpt.")
+
+        return MessageEntry(
+            role="user",
+            content="\n".join(warnings),
+            msg_id=f"missing_citations_{state.step_count}",
+            prunable=False
+        )

@@ -26,8 +26,8 @@ from typing import Optional
 
 from src.exploration_agent.explorer.agent import ExplorationAgent
 from src.exploration_agent.models import ExplorationMode, ExplorationResult
-from src.exploration_agent.critic.agent import CriticAgent
-from src.exploration_agent.critic.models import CriticInput, CriticVerdict
+from src.exploration_agent.final_critic.agent import FinalCriticAgent
+from src.exploration_agent.final_critic.models import FinalCriticInput, FinalVerdict
 from src.api.backend_client import get_user_strategies
 from utils import app_logging
 from utils.env_loader import load_env
@@ -62,9 +62,9 @@ def fetch_random_strategy_for_user(username: str) -> Optional[str]:
 def explore_topic(
     topic_id: str,
     mode: str,
-    max_steps: int = 15,
+    max_steps: int = 20,
     skip_critic: bool = False,
-) -> tuple[ExplorationResult, CriticVerdict | None]:
+) -> tuple[ExplorationResult, FinalVerdict | None]:
     """
     Run exploration for a topic, then validate with critic.
     
@@ -75,7 +75,7 @@ def explore_topic(
         skip_critic: If True, skip critic validation
         
     Returns:
-        (ExplorationResult, CriticVerdict or None)
+        (ExplorationResult, FinalVerdict or None)
     """
     # Phase 1: Explore
     agent = ExplorationAgent(max_steps=max_steps)
@@ -94,31 +94,35 @@ def explore_strategy(
     strategy_user: str,
     strategy_id: str,
     mode: str,
-    max_steps: int = 15,
+    max_steps: int = 20,
     skip_critic: bool = False,
-) -> tuple[ExplorationResult, CriticVerdict | None]:
+) -> tuple[ExplorationResult, FinalVerdict | None]:
     """
     Run exploration for a strategy, then validate with critic.
-    
+
     Args:
+        strategy_user: Username who owns the strategy
         strategy_id: Strategy to explore for
         mode: "risk" or "opportunity"
         max_steps: Maximum exploration steps
         skip_critic: If True, skip critic validation
-        
+
     Returns:
-        (ExplorationResult, CriticVerdict or None)
+        (ExplorationResult, FinalVerdict or None)
     """
     # Phase 1: Explore
     agent = ExplorationAgent(max_steps=max_steps)
     exploration_mode = ExplorationMode(mode)
     result = agent.explore_strategy(strategy_user, strategy_id, exploration_mode)
-    
+
     if not result.success or skip_critic:
         return result, None
-    
-    # Phase 2: Critic validation
-    verdict = run_critic(result, mode, result.target_topic_id)
+
+    # Phase 2: Critic validation (with strategy context for fetching/saving findings)
+    verdict = run_critic(
+        result, mode, result.target_topic_id,
+        strategy_user=strategy_user, strategy_id=strategy_id
+    )
     return result, verdict
 
 
@@ -126,20 +130,31 @@ def run_critic(
     result: ExplorationResult,
     mode: str,
     target_topic: str,
-) -> CriticVerdict:
+    strategy_user: Optional[str] = None,
+    strategy_id: Optional[str] = None,
+) -> FinalVerdict:
     """
     Run critic validation on an exploration result.
-    
+
     Gathers all source material and existing items, then evaluates.
+    If strategy context is provided, fetches existing findings and saves accepted ones.
+
+    Args:
+        result: The exploration result to validate
+        mode: "risk" or "opportunity"
+        target_topic: The topic this finding is for
+        strategy_user: Optional - username for fetching/saving findings
+        strategy_id: Optional - strategy ID for fetching/saving findings
     """
     from src.exploration_agent.explorer.tools import get_topic_snapshot, ANALYSIS_SECTIONS
     from src.graph.ops.topic import get_topic_analysis_field
-    
+    from src.api.backend_client import get_strategy_findings, save_strategy_finding
+
     logger.info("")
     logger.info("=" * 80)
     logger.info("🎯 STARTING CRITIC EVALUATION")
     logger.info("=" * 80)
-    
+
     # Gather articles cited in evidence
     articles = {}
     for exc in result.evidence:
@@ -153,7 +168,7 @@ def run_critic(
                 articles[exc.source_id] = exc.excerpt
             except Exception as e:
                 logger.warning("Failed to fetch article %s: %s", exc.source_id, e)
-    
+
     # Gather topic analyses from visited topics (target + saved_at_topic)
     topic_analyses = {}
     topic_ids_for_context = set([target_topic])
@@ -183,12 +198,14 @@ def run_critic(
         if sections:
             topic_analyses[topic_id] = sections
 
-    # Get existing risks/opportunities for target
-    # TODO: Fetch from graph or backend
+    # Get existing risks/opportunities for strategy (if strategy context provided)
     existing_items = []
-    
+    if strategy_user and strategy_id:
+        existing_items = get_strategy_findings(strategy_user, strategy_id, mode)
+        logger.info("📊 Fetched %d existing %s(s) for comparison", len(existing_items), mode)
+
     # Build critic input
-    critic_input = CriticInput(
+    critic_input = FinalCriticInput(
         finding=result,
         articles=articles,
         topic_analyses=topic_analyses,
@@ -196,11 +213,32 @@ def run_critic(
         mode=mode,
         target_topic=target_topic,
     )
-    
-    # Run critic
-    critic = CriticAgent()
-    verdict = critic.evaluate(critic_input)
-    
+
+    # Run final critic
+    final_critic = FinalCriticAgent()
+    verdict = final_critic.evaluate(critic_input)
+
+    # Save accepted findings to strategy (if strategy context provided)
+    if verdict.accepted and strategy_user and strategy_id:
+        finding_data = {
+            "headline": result.headline,
+            "rationale": result.rationale,
+            "flow_path": result.flow_path,
+            "evidence": [e.model_dump() for e in result.evidence],
+            "confidence": verdict.confidence,
+            "target_topic": target_topic,
+            "exploration_steps": result.exploration_steps,
+        }
+        success = save_strategy_finding(
+            strategy_user, strategy_id, mode,
+            finding_data,
+            replaces=verdict.replaces
+        )
+        if success:
+            logger.info("💾 Saved accepted %s to strategy %s/%s", mode, strategy_user, strategy_id)
+        else:
+            logger.warning("⚠️ Failed to save %s to strategy", mode)
+
     return verdict
 
 
@@ -302,8 +340,8 @@ def main():
     parser.add_argument(
         "--max-steps",
         type=int,
-        default=15,
-        help="Maximum exploration steps (default: 15)"
+        default=20,
+        help="Maximum exploration steps (default: 20)"
     )
     parser.add_argument(
         "--verbose",
@@ -377,7 +415,7 @@ def main():
 # TEST EXAMPLES
 # =============================================================================
 
-def print_verdict(verdict: CriticVerdict) -> None:
+def print_verdict(verdict: FinalVerdict) -> None:
     """Pretty print a critic verdict."""
     print("\n" * 3 + "=" * 80)
     print("⚖️ GOD-TIER CRITIC FEEDBACK")

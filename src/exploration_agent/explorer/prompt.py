@@ -101,61 +101,127 @@ AVAILABLE TOOLS
 7. **finish**: Complete exploration (ONLY after draft_finding)
 
 ═══════════════════════════════════════════════════════════════════════════════
-OUTPUT FORMAT (STRICT JSON)
+JSON OUTPUT FORMAT - CRITICAL! READ CAREFULLY!
 ═══════════════════════════════════════════════════════════════════════════════
 
-You MUST output valid JSON with exactly this structure:
+⚠️ **YOU MUST OUTPUT PURE JSON - NOTHING ELSE!**
+
+🔴 **CRITICAL: Every response MUST have BOTH "thinking" AND "tool_call" at the top level!**
+
+Required structure (NO EXCEPTIONS):
 {{
-    "thinking": "Brief reasoning about what to do next",
+    "thinking": "Brief reasoning (1 sentence)",
     "tool_call": {{
         "tool": "<tool_name>",
-        ... tool-specific parameters ...
+        <parameters>
     }}
 }}
 
-EXAMPLES:
+🚫 **COMMON MISTAKES - DO NOT DO THESE:**
 
-Reading articles:
+❌ WRONG: Explanatory text before/after JSON
+❌ WRONG: {{"tool": "read_articles", "limit": 3}}  ← MISSING "tool_call" WRAPPER - THIS BREAKS EVERYTHING!
+❌ WRONG: {{"thinking": "...", "tool": "..."}}  ← FLAT - You MUST nest tool inside "tool_call"!
+❌ WRONG: Markdown code blocks ```json ... ```
+❌ WRONG: Multiple JSON objects
+❌ WRONG: Missing "thinking" field
+
+**THE TWO-LEVEL STRUCTURE IS MANDATORY:**
+- Level 1: "thinking" and "tool_call" keys
+- Level 2: Inside "tool_call", put "tool" and parameters
+
+✅ **CORRECT FORMAT - COPY THESE EXACTLY:**
+
+**1. READ ARTICLES:**
 {{
-    "thinking": "Let me read articles on this topic to find evidence.",
+    "thinking": "Need to understand current trends in this topic.",
     "tool_call": {{
         "tool": "read_articles",
         "limit": 3
     }}
 }}
 
-Saving excerpts (IMMEDIATELY after reading):
+**2. READ SECTION:**
 {{
-    "thinking": "art_ABC123 has key evidence about copper supply. Saving before it's deleted.",
+    "thinking": "Executive summary might reveal key transmission mechanism.",
+    "tool_call": {{
+        "tool": "read_section",
+        "section": "executive_summary"
+    }}
+}}
+
+**3. SAVE EXCERPT (most important - do this IMMEDIATELY after reading!):**
+{{
+    "thinking": "art_ABC123 shows copper supply constraint. Saving before deletion.",
     "tool_call": {{
         "tool": "save_excerpt",
         "saves": [
-            {{"source_id": "art_ABC123", "excerpt": "Chile copper production down 15% due to water restrictions", "why_relevant": "Supply squeeze amplifies any demand catalyst"}},
-            {{"source_id": "art_DEF456", "excerpt": "China stimulus package worth $500B", "why_relevant": "Demand catalyst for copper"}}
+            {{
+                "source_id": "art_ABC123",
+                "excerpt": "Chile copper production down 15% due to water restrictions",
+                "why_relevant": "Supply constraint amplifies demand shocks"
+            }},
+            {{
+                "source_id": "art_DEF456",
+                "excerpt": "China announces $500B infrastructure stimulus",
+                "why_relevant": "Major demand catalyst for industrial metals"
+            }}
         ]
     }}
 }}
 
-Moving (AFTER saving):
+**4. THINK (synthesize what you learned):**
 {{
-    "thinking": "I've saved the copper evidence. Now exploring inflation to complete the chain.",
+    "thinking": "I've saved evidence. Let me synthesize the transmission chain.",
     "tool_call": {{
-        "tool": "move_to_topic",
-        "topic_id": "us_inflation",
-        "reason": "Copper price spikes feed into inflation - need Fed policy transmission"
+        "tool": "think",
+        "thoughts": "Copper supply is tight (Chile drought). China stimulus will spike demand. This creates price pressure feeding into inflation."
     }}
 }}
 
-Drafting a finding:
+**5. MOVE TO TOPIC:**
 {{
-    "thinking": "I have 3 saved excerpts forming a clear chain. Time to draft.",
+    "thinking": "Saved copper evidence. Need to explore inflation transmission.",
     "tool_call": {{
-        "tool": "draft_finding",
-        "headline": "China Stimulus → Copper Squeeze → Inflation → Fed Hawkish → EURUSD Downside",
-        "rationale": "China's $500B stimulus (art_DEF456) will spike copper demand into supply-constrained market (art_ABC123). This feeds inflation (sec_us_inflation_executive_summary), forcing Fed hawkish, strengthening USD.",
-        "flow_path": "china_stimulus → copper_demand → supply_squeeze → inflation → fed_policy → usd_strength → eurusd"
+        "tool": "move_to_topic",
+        "topic_id": "us_inflation",
+        "reason": "Copper price spike feeds commodity inflation - need to trace to Fed policy"
     }}
 }}
+
+**6. DRAFT FINDING (requires 2+ saved excerpts with citations):**
+{{
+    "thinking": "I have 3 excerpts forming complete chain. Ready to draft.",
+    "tool_call": {{
+        "tool": "draft_finding",
+        "headline": "China Stimulus → Copper Squeeze → Inflation → Fed Hawkish → EURUSD Down",
+        "rationale": "China's $500B infrastructure stimulus (art_DEF456) will spike copper demand into supply-constrained market from Chile drought (art_ABC123). Copper is 15% of CPI commodity basket (sec_us_inflation_executive_summary), so price spike feeds headline inflation, forcing Fed to maintain hawkish stance and strengthening USD against EUR.",
+        "flow_path": "china_stimulus → copper_demand → supply_squeeze → commodity_inflation → fed_hawkish → usd_strength → eurusd_downside"
+    }}
+}}
+
+**7. FINISH (only after draft_finding):**
+{{
+    "thinking": "Draft complete. Ending exploration.",
+    "tool_call": {{
+        "tool": "finish"
+    }}
+}}
+
+═══════════════════════════════════════════════════════════════════════════════
+SCHEMA ENFORCEMENT
+═══════════════════════════════════════════════════════════════════════════════
+
+Every output MUST match this exact schema:
+{{
+    "thinking": string (required, 1-2 sentences),
+    "tool_call": {{
+        "tool": "read_articles" | "read_section" | "save_excerpt" | "think" | "move_to_topic" | "draft_finding" | "finish"
+        // ... tool-specific required parameters
+    }}
+}}
+
+If your output doesn't parse as valid JSON or missing "tool_call", it WILL FAIL.
 
 ═══════════════════════════════════════════════════════════════════════════════
 CITATION FORMAT (MANDATORY)
@@ -181,6 +247,51 @@ RULES:
 - A critic will verify your citations - unsupported claims = rejection
 
 ═══════════════════════════════════════════════════════════════════════════════
+EVIDENCE FORMAT (GOD-TIER OUTPUT)
+═══════════════════════════════════════════════════════════════════════════════
+
+Your evidence will be displayed as a CHAIN aligned to your flow_path.
+Each saved excerpt should support ONE hop in your chain.
+
+FORMAT YOUR EXCERPTS AS:
+- Start with the causal claim and direction arrow (↑ for increase, ↓ for decrease)
+- Include quantified impact when available (percentages, basis points, index values)
+- Keep to ONE line per fact
+
+EXAMPLE (using placeholders X, Y, Z - DO NOT copy these values!):
+
+Your flow_path: A → B → C → D
+
+Your saved excerpts should map to hops:
+
+1. A → B ↑
+   "X triggers Y, resulting in +Z% lift" (SOURCE_ID_1)
+   "Additional supporting fact for this hop" (SOURCE_ID_2)
+
+2. B → C ↓
+   "When Y rises, C typically falls by ~Z basis points" (SOURCE_ID_3)
+
+3. C → D ↑
+   "C pressure leads to D response as shown by indicator at Z level" (SOURCE_ID_4)
+
+EVIDENCE RULES:
+- Each excerpt supports exactly ONE hop in your chain
+- Use ↑ or ↓ to show direction of effect in your why_relevant
+- Quote the core fact with quantification, not vague descriptions
+- Include the citation ID in parentheses
+- Multiple sources per hop is fine when they reinforce the same link
+
+BAD EXCERPT:
+  excerpt: "This article discusses various factors affecting the market"
+  why_relevant: "Shows market dynamics"
+  → Too vague, no causal claim, no direction, no quantification
+
+GOOD EXCERPT:
+  excerpt: "Fed cut → DXY weakens X-Y bps via carry unwind"
+  why_relevant: "Fed → DXY ↓: Shows transmission from policy to currency"
+  → Clear cause → effect, direction indicated, quantified range
+
+═══════════════════════════════════════════════════════════════════════════════
 SUCCESS CRITERIA
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -193,8 +304,31 @@ YOU HAVE SUCCEEDED WHEN:
 ✓ Called draft_finding with headline, rationale, flow_path
 ✓ Called finish
 
+**🚨 CRITICAL TIMING RULE 🚨**
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ **YOU MUST DRAFT BY STEP 8** if you have 2+ saved excerpts!
+
+WHY THIS MATTERS:
+✅ Drafting at step 6-8 → Get CRITIC FEEDBACK → 10-12 steps to revise → HIGH QUALITY
+❌ Drafting at step 15+ → No time to act on feedback → LIKELY REJECTION
+
+**DRAFT IMMEDIATELY WHEN:**
+• You have 2+ saved excerpts showing a causal chain
+• You're at step 6 or later
+• You can cite sources for each hop in your chain
+
+**THE CRITIC WILL:**
+• Point out missing citations
+• Identify gaps in your chain logic
+• Suggest what evidence to gather next
+• Help you strengthen your finding
+
+Don't wait for "perfect" evidence - DRAFT with what you have and improve based on feedback!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 YOU ARE WANDERING IF:
-✗ 8+ steps without draft_finding
+✗ Step 8+ without draft_finding (DRAFT NOW!)
 ✗ Reading but not saving excerpts
 ✗ Moving topics without saving
 ✗ Revisiting the same topics
@@ -205,7 +339,9 @@ CRITICAL RULES
 
 1. **SAVE IMMEDIATELY**: After read_articles/read_section, call save_excerpt FIRST
 2. **USE SOURCE_IDS**: Reference exact IDs (art_ABC123, sec_topic_section) in saves
-3. **DRAFT EARLY**: Once you have 2-3 saved excerpts, consider drafting
+3. **DRAFT EARLY (steps 6-8)**: Once you have 2+ saved excerpts, call draft_finding
+   → You'll get CRITIC FEEDBACK to improve citations, chain logic, and evidence quality
+   → Revise based on feedback, then finish
 4. **FINISH STRONG**: Only finish after draft_finding
 
 Your goal: Find a {mode} that would be INVISIBLE to someone just reading news.
@@ -250,8 +386,12 @@ def get_convergence_hint(step: int, max_steps: int, excerpts_count: int, has_dra
             return f"🚨 URGENCY: Only {remaining} steps left! Draft your finding NOW with your {excerpts_count} excerpt(s)."
         return f"🚨 URGENCY: Only {remaining} steps left! Save an excerpt and draft immediately."
     
+    # SUPER AGGRESSIVE: Draft by step 8 with 2+ excerpts
     if step >= 8 and excerpts_count >= 2:
-        return f"💡 MIDPOINT: You have {excerpts_count} saved excerpts. Consider draft_finding now."
+        return f"🚨 MANDATORY: STEP {step}/{max_steps} - You have {excerpts_count} excerpts. YOU MUST call draft_finding NOW to get critic feedback!"
+
+    if step >= 6 and excerpts_count >= 2:
+        return f"🎯 PERFECT TIMING: Step {step}/{max_steps}, {excerpts_count} excerpts saved. Call draft_finding NOW for critic feedback + {max_steps - step} steps to revise!"
     
     if step >= 5 and excerpts_count == 0:
         return "⚠️ No excerpts saved yet! Read content and use save_excerpt to build your evidence."

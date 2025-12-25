@@ -162,8 +162,8 @@ def classify_article_for_topic(
     
     logger.info(f"Classifying article for topic: {topic_id} ({topic_name})")
     
-    # Get LLM (use COMPLEX tier - needs large context for article + topic analysis)
-    llm = get_llm(ModelTier.COMPLEX)
+    # Get LLM - article classification uses SIMPLE tier (20B)
+    llm = get_llm(ModelTier.SIMPLE)
     
     # Format prompt
     prompt = PromptTemplate.from_template(CLASSIFY_ARTICLE_FOR_TOPIC_PROMPT).format(

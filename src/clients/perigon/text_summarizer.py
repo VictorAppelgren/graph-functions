@@ -31,7 +31,7 @@ def summarize_article(article: dict) -> str | None:
     # Build input from full extracted text (title, main, scraped, metadata) via formatter
     input_text = extract_text_from_json_article(article)
 
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Article work uses SIMPLE tier (20B)
 
     # Log stats about input
     logger.debug(

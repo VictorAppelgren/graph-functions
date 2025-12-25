@@ -306,3 +306,67 @@ def get_analysis_history(username: str, strategy_id: str) -> List[Dict[str, Any]
     except Exception as e:
         print(f"⚠️  Failed to get analysis history from Backend API: {e}")
         return []
+
+
+# ============ EXPLORATION FINDINGS ============
+
+def get_strategy_findings(username: str, strategy_id: str, mode: str) -> List[Dict[str, Any]]:
+    """Get current exploration findings (risks or opportunities) for strategy.
+
+    Args:
+        username: User who owns the strategy
+        strategy_id: Strategy ID
+        mode: "risk" or "opportunity"
+
+    Returns:
+        List of findings (max 3), empty list if none or error
+    """
+    try:
+        response = requests.get(
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/findings/{mode}",
+            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json().get("findings", [])
+    except Exception as e:
+        print(f"⚠️  Failed to get {mode} findings from Backend API: {e}")
+        return []
+
+
+def save_strategy_finding(
+    username: str,
+    strategy_id: str,
+    mode: str,
+    finding: Dict[str, Any],
+    replaces: Optional[int] = None
+) -> bool:
+    """Save an exploration finding to strategy.
+
+    Args:
+        username: User who owns the strategy
+        strategy_id: Strategy ID
+        mode: "risk" or "opportunity"
+        finding: The finding dict (headline, rationale, flow_path, evidence, confidence)
+        replaces: If None, add new (max 3). If 1/2/3, replace that slot.
+
+    Returns:
+        True if saved successfully
+    """
+    try:
+        # Add replaces to finding if specified
+        payload = finding.copy()
+        if replaces is not None:
+            payload["replaces"] = replaces
+
+        response = requests.post(
+            f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/findings/{mode}",
+            json=payload,
+            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"⚠️  Failed to save {mode} finding to Backend API: {e}")
+        return False

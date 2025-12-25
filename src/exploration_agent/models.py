@@ -139,8 +139,9 @@ class ExplorationState(BaseModel):
     messages: List[MessageEntry] = Field(default_factory=list)
     
     draft_finding: Optional[dict] = None  # {headline, rationale, flow_path}
+    critic_feedback_received: bool = False  # Track if critic has run (run once per exploration)
     step_count: int = 0
-    max_steps: int = 15
+    max_steps: int = 20
 
 
 # =============================================================================

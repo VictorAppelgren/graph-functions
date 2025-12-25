@@ -1,12 +1,16 @@
-"""LLM Router - Drop-in replacement with new smart routing
+"""LLM Router - Smart 4-tier routing system
 
-This module provides the same interface as the old llm_router but uses
-the new smart routing system from config.py under the hood.
+4-Tier Architecture:
+- SIMPLE: 20B model (local + :8686 + :8787) - Article ingestion, classification, relevance
+- MEDIUM: 120B model (:3331) - Research writing, deeper analysis
+- COMPLEX: DeepSeek v3.2 - Strategic reasoning, complex synthesis
+- FAST: Anthropic Claude - User-facing chat, quick rewrites (expensive but fast)
 
-Maintains backward compatibility while adding:
-- Smart local vs external routing based on token count
-- Automatic busy status tracking
-- Round-robin load balancing for external servers
+Environment variables:
+- DISABLE_LOCAL_LLM=true: Skip local server (for cloud deployment)
+- LOCAL_LLM_ONLY=true: Only use local server (for offline/testing)
+- DEEPSEEK_API_KEY: Required for COMPLEX tier
+- ANTHROPIC_API_KEY: Required for FAST tier
 """
 
 from src.llm.config import get_llm as _get_routed_llm, ModelTier
@@ -21,31 +25,24 @@ logger = get_logger(__name__)
 
 def get_llm(tier: ModelTier) -> Runnable[LanguageModelInput, BaseMessage]:
     """Get a LangChain-compatible LLM for the specified tier.
-    
-    Perfect drop-in replacement for the old get_llm function with smart routing:
-    - Exact same API: get_llm(tier) -> llm.invoke(text)
-    - Smart routing happens at invoke() time based on actual input size
-    - Respects TOKEN_THRESHOLD for laptop-friendly routing
-    - Round-robin load balancing across external servers
-    
+
     Args:
-        tier: The model tier to use (SIMPLE, MEDIUM, COMPLEX, SIMPLE_LONG_CONTEXT)
-        
+        tier: The model tier to use:
+            - SIMPLE: Article work (20B model, cheap)
+            - MEDIUM: Research/writing (120B model)
+            - COMPLEX: Strategic reasoning (DeepSeek v3.2)
+            - FAST: User-facing (Anthropic Claude)
+            - SIMPLE_LONG_CONTEXT: Deprecated, routes to SIMPLE
+
     Returns:
-        A LangChain-compatible LLM instance (RoutedLLM that inherits from Runnable)
+        A LangChain-compatible LLM instance (RoutedLLM)
     """
-    
-    # Route SIMPLE_LONG_CONTEXT to SIMPLE (same as MEDIUM → SIMPLE)
+    # Route deprecated SIMPLE_LONG_CONTEXT to SIMPLE
     if tier == ModelTier.SIMPLE_LONG_CONTEXT:
-        logger.debug("SIMPLE_LONG_CONTEXT tier → routing as SIMPLE")
+        logger.debug("SIMPLE_LONG_CONTEXT tier -> routing as SIMPLE")
         tier = ModelTier.SIMPLE
-    
-    # Get the smart routed LLM from the new config system
-    routed_llm = _get_routed_llm(tier)
-    
-    # Return the RoutedLLM directly - it now properly inherits from Runnable
-    # and routes intelligently at invoke() time for true drop-in compatibility
-    return routed_llm
+
+    return _get_routed_llm(tier)
 
 
 # Backward compatibility alias

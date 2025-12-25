@@ -1,9 +1,5 @@
-"""Critic submodule - validates and ranks exploration findings."""
+"""Critic - Mid-exploration feedback at 50% progress."""
 from .agent import CriticAgent
-from .models import CriticInput, CriticVerdict
+from .models import CriticFeedback
 
-__all__ = [
-    "CriticAgent",
-    "CriticInput",
-    "CriticVerdict",
-]
+__all__ = ["CriticAgent", "CriticFeedback"]

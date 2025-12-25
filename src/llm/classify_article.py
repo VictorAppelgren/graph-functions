@@ -47,7 +47,7 @@ def classify_article_complete(article_text: str) -> ArticleClassification:
     """
     logger.info("Calling unified classifier")
     
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Article work uses SIMPLE tier (20B)
     
     prompt = CLASSIFY_ARTICLE_COMPLETE_PROMPT.format(
         system_mission=SYSTEM_MISSION,

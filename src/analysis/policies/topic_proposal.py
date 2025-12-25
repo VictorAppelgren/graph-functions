@@ -48,7 +48,7 @@ def propose_topic(
     Returns a dict with required fields for insertion, or None if no proposal.
     """
     logger.info("Calling LLM to propose new Topic node based on article.")
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Topic work uses SIMPLE tier (20B)
 
     # compute context...
     scope_text = describe_interest_areas()

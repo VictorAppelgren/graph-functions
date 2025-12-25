@@ -1,9 +1,14 @@
 """Model Configuration for Argos Research Platform
 
 Smart LLM Router with SQLite-based status tracking for optimal server selection.
-- Simple requests (<25k tokens): Try local first, fallback to external servers
-- Complex requests: Skip local, use external servers with round-robin
-- Automatic busy status tracking and round-robin load balancing
+
+4-Tier Architecture:
+- SIMPLE: 20B model (local + :8686 + :8787) - Article ingestion, classification, relevance
+- MEDIUM: 120B model (:3331) - Research writing, deeper analysis
+- COMPLEX: DeepSeek v3.2 API - Strategic reasoning, complex synthesis
+- FAST: Anthropic Claude - User-facing chat, quick rewrites (expensive but fast)
+
+Automatic busy status tracking and round-robin load balancing for SIMPLE tier.
 """
 
 import os
@@ -28,84 +33,131 @@ from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
 
+# --- Load .env file from victor_deployment ---
+# This ensures API keys are available without manual sourcing
+def _load_env_file():
+    """Load .env file from victor_deployment if it exists."""
+    try:
+        from dotenv import load_dotenv
+        # Find victor_deployment/.env relative to this file
+        config_dir = Path(__file__).parent  # src/llm/
+        graph_functions_dir = config_dir.parent.parent  # graph-functions/
+        env_file = graph_functions_dir.parent / "victor_deployment" / ".env"
+
+        if env_file.exists():
+            load_dotenv(env_file)
+            logger.debug(f"Loaded .env from {env_file}")
+        else:
+            # Also try graph-functions/.env as fallback
+            local_env = graph_functions_dir / ".env"
+            if local_env.exists():
+                load_dotenv(local_env)
+                logger.debug(f"Loaded .env from {local_env}")
+    except ImportError:
+        # python-dotenv not installed, skip
+        pass
+    except Exception as e:
+        logger.warning(f"Failed to load .env file: {e}")
+
+_load_env_file()
+
 # --- Configuration ---
-TOKEN_THRESHOLD = 3000  # Requests ≤2k tokens use local, >2k use external
-NANO_THRESHOLD = 999999  # Effectively disabled - don't use Nano
-NANO_COOLDOWN_SECONDS = 60  # 60 seconds cooldown between Nano calls
+TOKEN_THRESHOLD = 3000  # Requests ≤3k tokens use local, >3k use external (SIMPLE tier)
 LLM_CALL_TIMEOUT_S = 300.0
 LLM_RETRY_ATTEMPTS = 2  # Reduced from 3 - we have fallback logic now
 DB_RETRY_ATTEMPTS = 5
 DB_RETRY_DELAY = 0.1
 
-# Nano API Key - Set this for testing, will be moved to server env vars later
-OPENAI_API_KEY = "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" #os.getenv("OPENAI_API_KEY_NANO", None)  # Use OPENAI_API_KEY_NANO env var
+# API Keys from environment (loaded from .env above)
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
-# Minimal model tier enum (local definition to avoid circular imports)
+# Model tier enum - 4 tiers for different use cases
 class ModelTier(Enum):
-    SIMPLE = "SIMPLE"
-    MEDIUM = "MEDIUM"  # routes like SIMPLE per current router
-    COMPLEX = "COMPLEX"
-    SIMPLE_LONG_CONTEXT = "SIMPLE_LONG_CONTEXT"
+    SIMPLE = "SIMPLE"              # 20B model - article work (cheap, bulk)
+    MEDIUM = "MEDIUM"              # 120B model - research/writing (better quality)
+    COMPLEX = "COMPLEX"            # DeepSeek v3.2 - strategic reasoning (thinker)
+    FAST = "FAST"                  # Anthropic - user-facing (expensive but fast)
+    SIMPLE_LONG_CONTEXT = "SIMPLE_LONG_CONTEXT"  # Deprecated - routes to SIMPLE
 
-# Hardcoded server configuration
-# ONLY 2 EXTERNAL SERVERS NOW: 8686 (external_a) and 8787 (external_b)
-# External servers run vLLM with 10,240 token context limit
- 
-# Check if local LLM should be disabled (for server deployment)
+# --- Server Configuration ---
+#
+# SIMPLE tier: local + external_a + external_b (all 20B model)
+# MEDIUM tier: external_120b (120B model on :3331)
+# COMPLEX tier: deepseek (DeepSeek v3.2 API)
+# FAST tier: anthropic (Claude for user-facing)
+#
+# Environment variables:
+# - DISABLE_LOCAL_LLM=true: Skip local server (for cloud deployment)
+# - LOCAL_LLM_ONLY=true: Only use local server (for offline/testing)
+# - DEEPSEEK_API_KEY: Required for COMPLEX tier
+# - ANTHROPIC_API_KEY: Required for FAST tier
+
+# Check deployment mode
 DISABLE_LOCAL_LLM = os.getenv("DISABLE_LOCAL_LLM", "false").lower() == "true"
+LOCAL_LLM_ONLY = os.getenv("LOCAL_LLM_ONLY", "false").lower() == "true"
 
 # Debug logging at module load time
 import logging
 _init_logger = logging.getLogger(__name__)
-_init_logger.info(f"🔧 LLM CONFIG INIT: DISABLE_LOCAL_LLM={DISABLE_LOCAL_LLM} (from env: {os.getenv('DISABLE_LOCAL_LLM', 'NOT_SET')})")
+_init_logger.info(f"LLM CONFIG INIT: DISABLE_LOCAL_LLM={DISABLE_LOCAL_LLM}, LOCAL_LLM_ONLY={LOCAL_LLM_ONLY}")
 
 SERVERS = {}
 
+# --- SIMPLE tier servers (20B model) ---
 # Only add local server if not disabled
 if not DISABLE_LOCAL_LLM:
     SERVERS['local'] = {
         'provider': 'openai',  # llama.cpp server is OpenAI-compatible
-        'base_url': 'http://127.0.0.1:8080/v1', 
-        'model': 'ggml-org/gpt-oss-20b-GGUF',  # Model name (llama.cpp ignores this, uses loaded model)
+        'base_url': 'http://127.0.0.1:8080/v1',
+        'model': 'ggml-org/gpt-oss-20b-GGUF',
         'temperature': 0.2,
     }
-    _init_logger.info("🔧 LLM CONFIG: Added 'local' server (llama.cpp) to SERVERS")
-else:
-    _init_logger.info("🔧 LLM CONFIG: Skipped 'local' server (DISABLE_LOCAL_LLM=true)")
+    _init_logger.info("LLM CONFIG: Added 'local' server (20B llama.cpp)")
 
-# Always add external servers
-SERVERS.update({
-    'external_a': {
-        'provider': 'openai', 
-        'base_url': 'http://gate04.cfa.handels.gu.se:8686/v1', 
-        'model': 'openai/gpt-oss-20b',
+# Add external 20B servers unless in local-only mode
+if not LOCAL_LLM_ONLY:
+    SERVERS.update({
+        'external_a': {
+            'provider': 'openai',
+            'base_url': 'http://gate04.cfa.handels.gu.se:8686/v1',
+            'model': 'openai/gpt-oss-20b',
+            'temperature': 0.2,
+        },
+        'external_b': {
+            'provider': 'openai',
+            'base_url': 'http://gate04.cfa.handels.gu.se:8787/v1',
+            'model': 'openai/gpt-oss-20b',
+            'temperature': 0.2,
+        },
+    })
+    _init_logger.info("LLM CONFIG: Added external_a, external_b (20B vLLM on :8686, :8787)")
+
+    # --- MEDIUM tier server (120B model) ---
+    SERVERS['external_120b'] = {
+        'provider': 'openai',
+        'base_url': 'http://gate04.cfa.handels.gu.se:3331/v1',
+        'model': 'openai/gpt-oss-120b',  # 120B model
         'temperature': 0.2,
-    },
-    'external_b': {
-        'provider': 'openai', 
-        'base_url': 'http://gate04.cfa.handels.gu.se:8787/v1', 
-        'model': 'openai/gpt-oss-20b',
+    }
+    _init_logger.info("LLM CONFIG: Added external_120b (120B vLLM on :3331)")
+
+    # --- COMPLEX tier server (DeepSeek v3.2) ---
+    SERVERS['deepseek'] = {
+        'provider': 'openai',  # DeepSeek uses OpenAI-compatible API
+        'base_url': 'https://api.deepseek.com',
+        'model': 'deepseek-chat',  # DeepSeek v3.2
         'temperature': 0.2,
-    },
-    # 'external_c': {  # DISABLED - using 8686/8787 instead
-    #     'provider': 'openai', 
-    #     'base_url': 'http://gate04.cfa.handels.gu.se:8383/v1', 
-    #     'model': 'openai/gpt-oss-20b',
-    #     'temperature': 0.2,
-    # },
-    # 'external_d': {  # DISABLED - can't run 4 servers
-    #     'provider': 'openai', 
-    #     'base_url': 'http://gate04.cfa.handels.gu.se:8484/v1', 
-    #     'model': 'openai/gpt-oss-20b',
-    #     'temperature': 0.2,
-    # },
-    # 'nano': {  # DISABLED - not using external ChatGPT
-    #     'provider': 'openai',
-    #     'base_url': None,  # Use default OpenAI API
-    #     'model': 'gpt-5-nano',
-    #     'temperature': 0.2,
-    # }
-})
+    }
+    _init_logger.info("LLM CONFIG: Added deepseek (DeepSeek v3.2 API)")
+
+    # --- FAST tier server (Anthropic Claude) ---
+    SERVERS['anthropic'] = {
+        'provider': 'anthropic',
+        'model': 'claude-sonnet-4-20250514',  # Fast and capable
+        'temperature': 0.2,
+    }
+    _init_logger.info("LLM CONFIG: Added anthropic (Claude for FAST tier)")
 
 # Log final server configuration
 _init_logger.info(f"🔧 LLM CONFIG: Final SERVERS = {list(SERVERS.keys())}")
@@ -121,11 +173,11 @@ def estimate_tokens(text: str) -> int:
 
 
 class RouterDB:
-    """Simple SQLite-based router status manager with retry logic."""
-    
+    """Simple SQLite-based router status manager for SIMPLE tier load balancing."""
+
     def __init__(self):
         self._init_db()
-    
+
     def _init_db(self):
         """Initialize database with retry logic."""
         for attempt in range(DB_RETRY_ATTEMPTS):
@@ -138,54 +190,31 @@ class RouterDB:
                             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                         )
                     """)
-                    # Initialize default values if they don't exist
+                    # Initialize default values for SIMPLE tier load balancing
                     conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
+                        INSERT OR IGNORE INTO router_status (key, value)
                         VALUES ('local_busy', '0')
                     """)
                     conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
+                        INSERT OR IGNORE INTO router_status (key, value)
                         VALUES ('last_external', 'external_a')
                     """)
-                    # Initialize external server status
+                    # Initialize external server status (20B servers for SIMPLE tier)
                     conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
+                        INSERT OR IGNORE INTO router_status (key, value)
                         VALUES ('external_a_busy', '0')
                     """)
                     conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
+                        INSERT OR IGNORE INTO router_status (key, value)
                         VALUES ('external_b_busy', '0')
                     """)
                     conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
+                        INSERT OR IGNORE INTO router_status (key, value)
                         VALUES ('external_a_last_call', datetime('now'))
                     """)
                     conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
+                        INSERT OR IGNORE INTO router_status (key, value)
                         VALUES ('external_b_last_call', datetime('now'))
-                    """)
-                    # Initialize external_c status
-                    conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
-                        VALUES ('external_c_busy', '0')
-                    """)
-                    conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
-                        VALUES ('external_c_last_call', datetime('now'))
-                    """)
-                    # Initialize external_d status
-                    conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
-                        VALUES ('external_d_busy', '0')
-                    """)
-                    conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
-                        VALUES ('external_d_last_call', datetime('now'))
-                    """)
-                    # Initialize nano cooldown tracking
-                    conn.execute("""
-                        INSERT OR IGNORE INTO router_status (key, value) 
-                        VALUES ('nano_last_call', datetime('1970-01-01'))
                     """)
                     conn.commit()
                 logger.debug("Router database initialized")
@@ -359,77 +388,21 @@ class RouterDB:
             return 'external_a'
     
     def get_next_any_server(self) -> str:
-        """Get next free server, checking in order: local → external_a → external_b."""
+        """Get next free server for SIMPLE tier: local → external_a → external_b."""
         # Check each server in order, return first free one
-        # Only check local if it exists in SERVERS
         if 'local' in SERVERS and not self.is_local_busy():
             return 'local'
-        
-        if not self.is_external_busy('external_a'):
+
+        if 'external_a' in SERVERS and not self.is_external_busy('external_a'):
             return 'external_a'
-        
-        if not self.is_external_busy('external_b'):
+
+        if 'external_b' in SERVERS and not self.is_external_busy('external_b'):
             return 'external_b'
-        
-        # All busy - fallback to external_a (or local if available)
-        return 'local' if 'local' in SERVERS else 'external_a'
-    
-    def can_use_nano(self) -> bool:
-        """Check if enough time has passed since last Nano call (60 sec cooldown)."""
-        try:
-            last_call = self._execute_with_retry(
-                "SELECT value FROM router_status WHERE key = 'nano_last_call'", 
-                fetch=True
-            )
-            if not last_call:
-                return True
-            
-            # Parse timestamp and check if 60 seconds have passed
-            from datetime import datetime
-            last_time = datetime.fromisoformat(last_call.replace(' ', 'T'))
-            now = datetime.now()
-            elapsed = (now - last_time).total_seconds()
-            
-            can_use = elapsed >= NANO_COOLDOWN_SECONDS
-            if not can_use:
-                logger.debug(f"Nano cooldown active: {elapsed:.1f}s / {NANO_COOLDOWN_SECONDS}s")
-            return can_use
-        except Exception as e:
-            logger.warning(f"Failed to check nano cooldown: {e}")
-            return False  # Conservative: don't use if can't verify
-    
-    def mark_nano_used(self):
-        """Mark that Nano was just used."""
-        try:
-            self._execute_with_retry(
-                "INSERT OR REPLACE INTO router_status (key, value, updated_at) VALUES ('nano_last_call', datetime('now'), CURRENT_TIMESTAMP)",
-                ()
-            )
-            logger.info("Nano marked as used, 60-second cooldown started")
-        except Exception as e:
-            logger.warning(f"Failed to mark nano used: {e}")
-    
-    def get_nano_cooldown_remaining(self) -> float:
-        """Get remaining cooldown time in seconds (0 if ready to use)."""
-        try:
-            last_call = self._execute_with_retry(
-                "SELECT value FROM router_status WHERE key = 'nano_last_call'", 
-                fetch=True
-            )
-            if not last_call:
-                return 0.0
-            
-            # Parse timestamp and calculate remaining time
-            from datetime import datetime
-            last_time = datetime.fromisoformat(last_call.replace(' ', 'T'))
-            now = datetime.now()
-            elapsed = (now - last_time).total_seconds()
-            
-            remaining = max(0.0, NANO_COOLDOWN_SECONDS - elapsed)
-            return remaining
-        except Exception as e:
-            logger.warning(f"Failed to get nano cooldown remaining: {e}")
-            return 0.0  # Assume ready if can't check
+
+        # All busy - fallback to local if available, else external_a
+        if 'local' in SERVERS:
+            return 'local'
+        return 'external_a' if 'external_a' in SERVERS else 'local'
 
 
 # Global router instance
@@ -438,7 +411,11 @@ router_db = RouterDB()
 
 @contextmanager
 def _mark_server_busy(server_id: str):
-    """Context manager to mark server as busy during request."""
+    """Context manager to mark server as busy during request.
+
+    Only tracks busy status for SIMPLE tier servers (local, external_a, external_b).
+    Other servers (external_120b, deepseek, anthropic) don't need busy tracking.
+    """
     if server_id == 'local':
         try:
             router_db.set_local_busy(True)
@@ -447,8 +424,8 @@ def _mark_server_busy(server_id: str):
         finally:
             router_db.set_local_busy(False)
             logger.debug(f"Marked {server_id} as free")
-    elif server_id in ['external_a', 'external_b', 'external_c', 'external_d']:
-        # Track external server busy status
+    elif server_id in ['external_a', 'external_b']:
+        # Track external server busy status for SIMPLE tier load balancing
         try:
             router_db.set_external_busy(server_id, True)
             logger.debug(f"Marked {server_id} as busy")
@@ -456,16 +433,8 @@ def _mark_server_busy(server_id: str):
         finally:
             router_db.set_external_busy(server_id, False)
             logger.debug(f"Marked {server_id} as free")
-    elif server_id == 'nano':
-        # Nano uses cooldown instead of busy tracking
-        try:
-            router_db.mark_nano_used()
-            logger.debug(f"Marked {server_id} as used (cooldown started)")
-            yield
-        finally:
-            logger.debug(f"Nano request completed")
     else:
-        # Unknown server, just yield without tracking
+        # Other servers (external_120b, deepseek, anthropic) - no busy tracking needed
         yield
 
 
@@ -476,35 +445,17 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
     model = config['model']
     temperature = config['temperature']
     base_url = config.get('base_url')
-    
-    # Special handling for Nano (real OpenAI API)
-    if server_id == 'nano':
-        if not OPENAI_API_KEY:
-            raise ValueError("OPENAI_API_KEY not set! Set OPENAI_API_KEY_NANO environment variable for testing.")
-        
-        logger.info(f"Building Nano LLM with model: {model}")
-        # NO RETRIES for Nano - billing/quota errors should fail fast, not retry
-        return ChatOpenAI(
-            model=model,
-            temperature=temperature,
-            timeout=LLM_CALL_TIMEOUT_S,
-            max_retries=0,
-            api_key=OPENAI_API_KEY
-        )
-    
-    # Temporary visibility log for routing target
-    
+
     if provider == "ollama":
-        # Log target for Ollama
         # num_predict caps output tokens to prevent infinite generation loops
         return ChatOllama(
             model=model,
             temperature=temperature,
             timeout=int(LLM_CALL_TIMEOUT_S),
             request_timeout=LLM_CALL_TIMEOUT_S,
-            num_predict=2048,  # Max output tokens - prevents runaway generation
+            num_predict=2048,
         ).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
-    
+
     elif provider == "openai":
         kwargs = dict(
             model=model,
@@ -512,79 +463,92 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             timeout=LLM_CALL_TIMEOUT_S,
             max_retries=0,
         )
-        if base_url:
+
+        # Handle DeepSeek API (uses OpenAI-compatible endpoint)
+        if server_id == 'deepseek':
+            if not DEEPSEEK_API_KEY:
+                raise ValueError("DEEPSEEK_API_KEY not set! Required for COMPLEX tier.")
             kwargs["base_url"] = base_url
-            # LangChain's ChatOpenAI still requires an api_key even when using a custom base_url.
-            # Provide a harmless dummy to avoid touching global env vars.
+            kwargs["api_key"] = DEEPSEEK_API_KEY
+            kwargs["max_tokens"] = 16384
+        elif base_url:
+            # Local vLLM servers (local, external_a, external_b, external_120b)
+            kwargs["base_url"] = base_url
             kwargs["api_key"] = os.getenv("OPENAI_API_KEY", "sk-noop")
-            # Cap output tokens for vLLM servers
-            # 16k allows for CoT reasoning + actual output without truncation
             kwargs["max_tokens"] = 16384
 
         return ChatOpenAI(**kwargs).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
-    
+
     elif provider == "anthropic":
+        if not ANTHROPIC_API_KEY:
+            raise ValueError("ANTHROPIC_API_KEY not set! Required for FAST tier.")
         return ChatAnthropic(
             model_name=model,
             timeout=LLM_CALL_TIMEOUT_S,
             max_retries=0,
             stop=None,
         ).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
-    
+
     else:
         raise ValueError(f"Unsupported provider: {provider}")
 
 
 def _route_request(tier: ModelTier, estimated_tokens: int = 0, exclude: set[str] = None) -> str:
-    """Route request to appropriate server based on tier and token count with smart busy tracking.
-    
+    """Route request to appropriate server based on tier.
+
+    4-Tier Routing:
+    - FAST: Anthropic Claude (user-facing, expensive but fast)
+    - COMPLEX: DeepSeek v3.2 (strategic reasoning, cheap thinker)
+    - MEDIUM: 120B model on :3331 (research/writing)
+    - SIMPLE: 20B models (local + :8686 + :8787) with load balancing
+
     Args:
-        tier: Model tier (SIMPLE, COMPLEX, etc.)
-        estimated_tokens: Estimated token count for the request
+        tier: Model tier (SIMPLE, MEDIUM, COMPLEX, FAST)
+        estimated_tokens: Estimated token count for the request (used for SIMPLE tier)
         exclude: Set of server IDs to exclude from selection (e.g., failed servers)
     """
     exclude = exclude or set()
-    
-    # CHECK FIRST: If request exceeds max context, route to Nano (with cooldown check)
-    if estimated_tokens > NANO_THRESHOLD:
-        if router_db.can_use_nano():
-            logger.info(f"🚀 Request too large ({estimated_tokens} > {NANO_THRESHOLD}), routing to Nano")
-            return 'nano'
-        else:
-            # WAIT for cooldown instead of crashing
-            logger.warning(f"⚠️ Request needs Nano ({estimated_tokens} tokens) but cooldown active, waiting...")
-            wait_time = router_db.get_nano_cooldown_remaining()
-            if wait_time > 0:
-                logger.info(f"⏳ Waiting {wait_time:.1f}s for Nano cooldown...")
-                time.sleep(wait_time + 0.5)  # Add 0.5s buffer
-            logger.info(f"✅ Cooldown complete, routing to Nano")
-            return 'nano'
-    
+
+    # --- FAST tier: Anthropic Claude ---
+    if tier == ModelTier.FAST:
+        if 'anthropic' not in SERVERS:
+            logger.warning("FAST tier requested but anthropic not available, falling back to MEDIUM")
+            return _route_request(ModelTier.MEDIUM, estimated_tokens, exclude)
+        logger.debug("FAST tier → anthropic (Claude)")
+        return 'anthropic'
+
+    # --- COMPLEX tier: DeepSeek v3.2 ---
     if tier == ModelTier.COMPLEX:
-        # Complex requests always go to external servers - pick the best available
-        server_id = router_db.get_next_external_smart(exclude=exclude)
-        logger.debug(f"COMPLEX tier → {server_id} (smart external selection)")
-        return server_id
-    
-    elif tier in (ModelTier.SIMPLE, ModelTier.MEDIUM, ModelTier.SIMPLE_LONG_CONTEXT):
-        if tier == ModelTier.MEDIUM:
-            logger.debug("MEDIUM tier → routing as SIMPLE (deprecation path)")
-        elif tier == ModelTier.SIMPLE_LONG_CONTEXT:
+        if 'deepseek' not in SERVERS:
+            logger.warning("COMPLEX tier requested but deepseek not available, falling back to MEDIUM")
+            return _route_request(ModelTier.MEDIUM, estimated_tokens, exclude)
+        logger.debug("COMPLEX tier → deepseek (DeepSeek v3.2)")
+        return 'deepseek'
+
+    # --- MEDIUM tier: 120B model ---
+    if tier == ModelTier.MEDIUM:
+        if 'external_120b' not in SERVERS:
+            logger.warning("MEDIUM tier requested but external_120b not available, falling back to SIMPLE")
+            return _route_request(ModelTier.SIMPLE, estimated_tokens, exclude)
+        logger.debug("MEDIUM tier → external_120b (120B on :3331)")
+        return 'external_120b'
+
+    # --- SIMPLE tier: 20B models with load balancing ---
+    if tier in (ModelTier.SIMPLE, ModelTier.SIMPLE_LONG_CONTEXT):
+        if tier == ModelTier.SIMPLE_LONG_CONTEXT:
             logger.debug("SIMPLE_LONG_CONTEXT tier → routing as SIMPLE")
-        
+
         # Check if request is small enough for local
         if estimated_tokens > TOKEN_THRESHOLD:
-            # Large request - go external
+            # Large request - prefer external servers
             server_id = router_db.get_next_external_smart(exclude=exclude)
             logger.debug(f"SIMPLE tier → {server_id} (tokens: {estimated_tokens} > {TOKEN_THRESHOLD})")
             return server_id
-        
-        # Small request - round-robin across ALL servers (local + external)
-        # This naturally distributes load across multiple processes
+
+        # Small request - round-robin across all SIMPLE tier servers
         return router_db.get_next_any_server()
-    
-    else:
-        raise ValueError(f"Unknown tier: {tier}")
+
+    raise ValueError(f"Unknown tier: {tier}")
 
 
 class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
@@ -730,37 +694,36 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
                     
                     # Check for specific error patterns
                     if 'timeout' in error_msg:
-                        logger.error(f"⏱️  TIMEOUT ERROR - Request took longer than {LLM_CALL_TIMEOUT_S}s")
+                        logger.error(f"TIMEOUT ERROR - Request took longer than {LLM_CALL_TIMEOUT_S}s")
                     elif 'connection' in error_msg:
-                        logger.error(f"🔌 CONNECTION ERROR - Cannot reach server")
+                        logger.error(f"CONNECTION ERROR - Cannot reach server")
                     elif 'token' in error_msg and 'limit' in error_msg:
-                        logger.error(f"📏 TOKEN LIMIT ERROR - Request may exceed server capacity")
+                        logger.error(f"TOKEN LIMIT ERROR - Request may exceed server capacity")
                     elif 'memory' in error_msg or 'oom' in error_msg:
-                        logger.error(f"💾 MEMORY ERROR - Server out of memory")
+                        logger.error(f"MEMORY ERROR - Server out of memory")
                     elif 'rate' in error_msg and 'limit' in error_msg:
-                        logger.error(f"🚦 RATE LIMIT ERROR - Too many requests")
-                    
-                    # Special handling for Nano billing/quota errors - FAIL FAST
-                    if server_id == 'nano':
+                        logger.error(f"RATE LIMIT ERROR - Too many requests")
+
+                    # For API servers (anthropic, deepseek) - fail fast on billing/quota errors
+                    if server_id in ['anthropic', 'deepseek']:
                         if any(keyword in error_msg for keyword in ['quota', 'billing', 'insufficient', 'credits', 'rate limit']):
-                            logger.error(f"💳 Nano billing/quota error: {e}")
-                            logger.error("⛔ Out of Nano credits or rate limited - request FAILED")
+                            logger.error(f"API billing/quota error for {server_id}: {e}")
                             raise  # Re-raise to fail the request (don't retry)
-                    
-                    # For external servers - log failure and try fallback
-                    if server_id.startswith('external_'):
+
+                    # For SIMPLE tier servers - try fallback
+                    if server_id in ['local', 'external_a', 'external_b']:
                         exclude_servers.add(server_id)
-                        
+
                         if attempt < 1:  # Have more attempts
-                            logger.info(f"🔄 RETRYING with different server (excluding {server_id})...")
+                            logger.info(f"RETRYING with different server (excluding {server_id})...")
                             continue  # Try again with different server
                         else:
                             logger.error(
-                                f"⛔ ALL SERVERS FAILED | failed_servers={list(exclude_servers)} | "
+                                f"ALL SIMPLE TIER SERVERS FAILED | failed_servers={list(exclude_servers)} | "
                                 f"last_error={error_type}: {error_full[:200]}"
                             )
-                    
-                    # Re-raise on last attempt or non-external servers
+
+                    # Re-raise on last attempt or non-SIMPLE tier servers
                     raise
     
     async def ainvoke(
@@ -841,17 +804,18 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
 
 def get_llm(tier: ModelTier) -> RoutedLLM:
     """Get a smart-routed LLM for the specified tier.
-    
-    Exact same API as the old router but with intelligent routing:
-    - Server selection happens at invoke() time based on actual input size
-    - Supports TOKEN_THRESHOLD for laptop-friendly routing
-    - Round-robin load balancing across external servers
-    
+
+    4-Tier Architecture:
+    - SIMPLE: 20B model (local + :8686 + :8787) - Article ingestion, classification
+    - MEDIUM: 120B model (:3331) - Research writing, deeper analysis
+    - COMPLEX: DeepSeek v3.2 - Strategic reasoning, complex synthesis
+    - FAST: Anthropic Claude - User-facing chat, quick rewrites
+
     Args:
-        tier: The model tier to use (SIMPLE, MEDIUM, COMPLEX, SIMPLE_LONG_CONTEXT)
-        
+        tier: The model tier to use (SIMPLE, MEDIUM, COMPLEX, FAST)
+
     Returns:
-        A RoutedLLM instance that routes intelligently at invoke time
+        A RoutedLLM instance that routes to the appropriate server
     """
     try:
         logger.debug(f"Creating smart router for tier: {tier.name}")

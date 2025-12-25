@@ -67,7 +67,7 @@ def decide_topic_capacity(
             motivation=candidate_topic.get("motivation"),
             max_topics=MAX_TOPICS)
     
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Topic work uses SIMPLE tier (20B)
     parser = JsonOutputParser()
     chain = llm | parser
 

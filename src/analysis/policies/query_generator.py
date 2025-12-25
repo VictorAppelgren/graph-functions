@@ -69,7 +69,7 @@ def create_wide_query(article_text: str) -> dict[str, Any]:
     logger.info("GENERATING WIDE QUERY")
     logger.info("="*80)
 
-    llm = get_llm(ModelTier.MEDIUM)
+    llm = get_llm(ModelTier.SIMPLE)  # Query generation uses SIMPLE tier (20B)
 
     prompt = f"""You are a boolean search query expert for financial markets and macro topics using Perigon News API.
 
