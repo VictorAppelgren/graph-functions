@@ -12,6 +12,7 @@ ARCHITECTURE:
 - API key checked by NGINX (external) or trusted (internal)
 """
 import os
+import socket
 import requests
 from typing import Dict, List, Optional, Any
 
@@ -19,20 +20,49 @@ from typing import Dict, List, Optional, Any
 BACKEND_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
 BACKEND_API_KEY = os.getenv("BACKEND_API_KEY", "")
 
+# Worker identification (set by entrypoints)
+_WORKER_ID: Optional[str] = None
+_WORKER_TASK: Optional[str] = None
+
+
+def set_worker_identity(worker_id: str) -> None:
+    """Set worker ID (call once at entrypoint startup)."""
+    global _WORKER_ID
+    _WORKER_ID = worker_id
+
+
+def set_worker_task(task: str) -> None:
+    """Set current task (call when starting a task)."""
+    global _WORKER_TASK
+    _WORKER_TASK = task
+
+
+def _get_headers() -> Dict[str, str]:
+    """Build headers with API key and worker info."""
+    headers = {}
+    if BACKEND_API_KEY:
+        headers["X-API-Key"] = BACKEND_API_KEY
+    if _WORKER_ID:
+        headers["X-Worker-ID"] = _WORKER_ID
+        headers["X-Worker-Machine"] = socket.gethostname()
+        if _WORKER_TASK:
+            headers["X-Worker-Task"] = _WORKER_TASK
+    return headers
+
 
 # ============ ARTICLES ============
 
 def ingest_article(article_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Ingest article with automatic deduplication.
-    
+
     Backend checks if article exists (by URL + date):
     - If exists: Returns existing article ID
     - If new: Generates ID, stores article, returns new ID
-    
+
     Args:
         article_data: Article dictionary (NO argos_id needed!)
-        
+
     Returns:
         {
             "argos_id": "ABC123XYZ",
@@ -44,7 +74,7 @@ def ingest_article(article_data: Dict[str, Any]) -> Dict[str, Any]:
         response = requests.post(
             f"{BACKEND_URL}/api/articles/ingest",
             json=article_data,
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -59,7 +89,7 @@ def get_article(article_id: str) -> Optional[Dict[str, Any]]:
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/articles/{article_id}",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -110,7 +140,7 @@ def search_articles_by_keywords(
                 "min_keyword_hits": min_keyword_hits,
                 "exclude_ids": exclude_ids or []
             },
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=30  # Longer timeout for search
         )
         response.raise_for_status()
@@ -126,7 +156,7 @@ def get_article_storage_stats() -> Dict[str, int]:
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/articles/storage/stats",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -143,7 +173,7 @@ def get_all_users() -> List[str]:
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -159,7 +189,7 @@ def get_user_strategies(username: str) -> List[Dict[str, Any]]:
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -174,7 +204,7 @@ def get_strategy(username: str, strategy_id: str) -> Optional[Dict[str, Any]]:
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -190,7 +220,7 @@ def update_strategy(username: str, strategy_id: str, strategy_data: Dict[str, An
         response = requests.put(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}",
             json=strategy_data,
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -206,7 +236,7 @@ def save_strategy_topics(username: str, strategy_id: str, topics: Dict[str, List
         response = requests.post(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/topics",
             json=topics,
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -221,7 +251,7 @@ def get_strategy_topics(username: str, strategy_id: str) -> Optional[Dict[str, L
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/topics",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -237,7 +267,7 @@ def save_strategy_analysis(username: str, strategy_id: str, analysis: Dict[str, 
         response = requests.post(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/analysis",
             json=analysis,
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -252,7 +282,7 @@ def get_latest_analysis(username: str, strategy_id: str) -> Optional[Dict[str, A
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/analysis",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -268,7 +298,7 @@ def save_dashboard_question(username: str, strategy_id: str, question: str) -> b
         response = requests.post(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/question",
             json={"question": question},
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -283,7 +313,7 @@ def get_dashboard_question(username: str, strategy_id: str) -> Optional[str]:
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/question",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -298,7 +328,7 @@ def get_analysis_history(username: str, strategy_id: str) -> List[Dict[str, Any]
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/analysis/history",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -324,7 +354,7 @@ def get_strategy_findings(username: str, strategy_id: str, mode: str) -> List[Di
     try:
         response = requests.get(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/findings/{mode}",
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()
@@ -362,7 +392,7 @@ def save_strategy_finding(
         response = requests.post(
             f"{BACKEND_URL}/api/users/{username}/strategies/{strategy_id}/findings/{mode}",
             json=payload,
-            headers={"X-API-Key": BACKEND_API_KEY} if BACKEND_API_KEY else {},
+            headers=_get_headers(),
             timeout=10
         )
         response.raise_for_status()

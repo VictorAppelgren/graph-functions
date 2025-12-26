@@ -242,4 +242,8 @@ def main():
 
 
 if __name__ == "__main__":
+    # Register worker identity for tracking
+    from src.api.backend_client import set_worker_identity
+    set_worker_identity("worker-writer")
+
     main()

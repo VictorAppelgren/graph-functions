@@ -41,6 +41,7 @@ from src.api.backend_client import get_user_strategies, get_all_users
 from src.llm.health_check import wait_for_llm_health
 from src.market_data.market_data_entrypoint import run_market_data_if_needed
 from src.config.worker_mode import can_write, get_mode_description
+from src.api.backend_client import set_worker_task
 
 logger = app_logging.get_logger(__name__)
 
@@ -239,6 +240,9 @@ def run_pipeline() -> Dict[str, Any]:
             
             continue  # Skip to next topic in the loop
 
+        # Update worker task for tracking
+        set_worker_task(f"Processing: {topic_name}")
+
         logger.info(
             "================================================================================================="
         )
@@ -313,11 +317,15 @@ def run_pipeline() -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
+    # Register worker identity for tracking
+    from src.api.backend_client import set_worker_identity, set_worker_task
+    set_worker_identity("worker-main")
+
     # Log worker mode at startup
     logger.info(f"🚀 INGEST ARTICLES - Mode: {get_mode_description()}")
-    
+
     # Wait for LLMs to be healthy before starting pipeline
     # This prevents crash loops when LLM servers are down
     wait_for_llm_health()
-    
+
     run_pipeline()

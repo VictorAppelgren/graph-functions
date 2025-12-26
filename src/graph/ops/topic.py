@@ -27,13 +27,12 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
     try:
         import os
         import requests
+        from src.api.backend_client import _get_headers
         backend_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
-        api_key = os.getenv("BACKEND_API_KEY", "")
 
-        headers = {"X-API-Key": api_key} if api_key else {}
         response = requests.get(
             f"{backend_url}/api/admin/stats/today",
-            headers=headers,
+            headers=_get_headers(),
             timeout=5
         )
 
