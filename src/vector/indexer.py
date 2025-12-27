@@ -9,10 +9,13 @@ logger = get_logger(__name__)
 
 
 def index_article(article_id: str) -> bool:
-    """Index article if Tier 2+. Call after Tier 2/3 promotion."""
+    """Index article if any importance score >= 2."""
     query = """
     MATCH (a:Article {id: $article_id})-[r:ABOUT]->(t:Topic)
-    WHERE r.tier >= 2
+    WHERE r.importance_risk >= 2
+       OR r.importance_opportunity >= 2
+       OR r.importance_trend >= 2
+       OR r.importance_catalyst >= 2
     RETURN a.id AS id, a.title AS title, a.summary AS summary,
            a.content AS content, a.url AS url, a.source AS source,
            a.published_date AS pub_date, collect(DISTINCT t.id) AS topics
@@ -47,10 +50,13 @@ def index_article(article_id: str) -> bool:
 
 
 def reindex_all(batch_size: int = 50) -> dict:
-    """Reindex ALL Tier 2+. Run once after setup."""
+    """Reindex ALL articles with any importance >= 2. Run once after setup."""
     query = """
     MATCH (a:Article)-[r:ABOUT]->(t:Topic)
-    WHERE r.tier >= 2
+    WHERE r.importance_risk >= 2
+       OR r.importance_opportunity >= 2
+       OR r.importance_trend >= 2
+       OR r.importance_catalyst >= 2
     WITH a, collect(DISTINCT t.id) AS topics
     RETURN a.id AS id, a.title AS title, a.summary AS summary,
            a.content AS content, a.url AS url, a.source AS source,
