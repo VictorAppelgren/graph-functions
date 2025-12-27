@@ -103,12 +103,13 @@ class SynthesisScoutAgent(BaseAgent):
         self._log("==== END INPUT SUMMARY ====")
         self._log("")
 
-        llm = get_llm(ModelTier.COMPLEX)
+        # Use MEDIUM tier for synthesis (pattern finding, not reasoning)
+        llm = get_llm(ModelTier.MEDIUM)
         parser = StrOutputParser()
         chain = llm | parser
-        
+
         response = chain.invoke(prompt)
-        self._log(f"Raw LLM response length: {len(response)} chars")
+        self._log(f"Raw LLM response length: {len(response)} chars (MEDIUM tier)")
         
         # Step 4: Parse response
         try:

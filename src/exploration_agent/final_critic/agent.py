@@ -29,8 +29,8 @@ class FinalCriticAgent:
     """
 
     def __init__(self):
-        # Use COMPLEX tier for best reasoning
-        self.llm = get_llm(ModelTier.COMPLEX)
+        # Use MEDIUM tier (120B model) for cost efficiency
+        self.llm = get_llm(ModelTier.MEDIUM)
 
     def evaluate(self, critic_input: FinalCriticInput) -> FinalVerdict:
         """

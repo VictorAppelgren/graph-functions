@@ -22,19 +22,29 @@ def build_material_for_section(topic_id: str, section: str) -> Tuple[str, List[s
 
 
 def build_material_for_synthesis_section(
-    topic_id: str, section: str
+    topic_id: str,
+    section: str,
+    new_article_ids: List[str] | None = None
 ) -> Tuple[str, List[str]]:
     """
     Build material for analysis sections with smart article selection:
     - Timeframe sections (fundamental/medium/current): 10 articles from that timeframe
     - Synthesis sections (drivers/movers_scenarios/swing_trade_or_outlook/executive_summary): 5 articles each from fundamental/medium/current
     - Perspective sections (risk/opportunity/trend/catalyst_analysis): 10 articles with perspective score >= 2
-    
+
+    Args:
+        topic_id: Topic to analyze
+        section: Analysis section name
+        new_article_ids: Optional list of NEW article IDs to highlight (added since last analysis)
+
     Returns:
         material_str: Formatted material with analysis sections + articles
         article_ids: List of article IDs used
     """
     from src.graph.neo4j_client import run_cypher
+
+    # Track which articles are NEW (added since last analysis)
+    new_ids_set = set(new_article_ids) if new_article_ids else set()
 
     # Section type detection
     TIMEFRAME_SECTIONS = ["fundamental", "medium", "current"]
@@ -191,17 +201,25 @@ def build_material_for_synthesis_section(
     material_parts.append("=" * 80)
     material_parts.append(f"PRIMARY ASSET ANALYSIS")
     material_parts.append("SOURCE ARTICLES")
+    if new_ids_set:
+        material_parts.append(f"*** {len(new_ids_set)} NEW articles since last analysis - FOCUS ON THESE ***")
     material_parts.append("=" * 80)
 
     # Load and format each article WITH motivation and implications
     section_counts = {}
+    new_count = 0
     for i, row in enumerate(articles_result, 1):
         article_id = row["article_id"]
         horizon = row.get("temporal_horizon") or "unknown"
         motivation = row.get("motivation") or "No motivation available"
         implications = row.get("implications") or "No implications available"
         section_counts[horizon] = section_counts.get(horizon, 0) + 1
-        
+
+        # Check if this article is NEW
+        is_new = article_id in new_ids_set
+        if is_new:
+            new_count += 1
+
         try:
             loaded = load_article(article_id)
             # Try argos_summary first, fallback to summary, then description
@@ -210,9 +228,10 @@ def build_material_for_synthesis_section(
                 summary = loaded.get("argos_summary") or loaded.get("summary") or loaded.get("description")
             if not loaded or not summary:
                 raise ValueError(f"Article {article_id} missing summary")
-            
-            # NEW FORMAT: Include motivation and implications for forward-looking analysis
-            material_parts.append(f"--- ARTICLE {i}: {article_id} ({horizon}) ---")
+
+            # Format with [NEW] tag if article was added since last analysis
+            new_tag = "[NEW] " if is_new else ""
+            material_parts.append(f"--- {new_tag}ARTICLE {i}: {article_id} ({horizon}) ---")
             material_parts.append(f"SUMMARY: {summary}")
             material_parts.append(f"WHY IT MATTERS: {motivation}")
             material_parts.append(f"IMPLICATIONS: {implications}")
@@ -227,11 +246,15 @@ def build_material_for_synthesis_section(
     logger.info("=" * 80)
     logger.info(f"🎯 STARTING {section.upper()} SECTION | topic_id={topic_id}")
     logger.info("=" * 80)
-    
+
     # Log article breakdown
     for timeframe in ["fundamental", "medium", "current", "unknown"]:
         if timeframe in section_counts:
             logger.info(f"  {timeframe}: {section_counts[timeframe]} articles")
+
+    # Log NEW article count
+    if new_count > 0:
+        logger.info(f"  📰 NEW articles: {new_count} (highlighted for agents)")
 
     material = "\n".join(material_parts).strip()
     

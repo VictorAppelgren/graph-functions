@@ -31,12 +31,15 @@ if PROJECT_ROOT not in sys.path:
 from utils.env_loader import load_env
 load_env()
 
+from typing import Optional, List
 from src.graph.ops.topic import get_all_topics
 from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
 from src.strategy_agents.orchestrator import analyze_user_strategy
-from src.api.backend_client import get_user_strategies, get_all_users
+from src.api.backend_client import get_user_strategies, get_all_users, get_strategy, get_strategy_topics
+from src.graph.neo4j_client import run_cypher
 from src.config.worker_mode import get_mode_description
 from src.observability.stats_client import track
+from src.analysis.rewrite_policy import should_rewrite_topic
 from utils import app_logging
 from dateutil import parser as date_parser
 
@@ -46,91 +49,302 @@ logger = app_logging.get_logger(__name__)
 _last_strategy_date = None
 
 
-def write_single_topic(topic_id: str) -> bool:
-    """Run full analysis for a single topic. Returns True if successful."""
+def strategy_needs_update(username: str, strategy_id: str) -> tuple[bool, str]:
+    """
+    Check if strategy needs reanalysis.
+
+    A strategy needs update if ANY of its linked topics have been
+    analyzed more recently than the strategy's last analysis.
+
+    This ensures strategy analysis reflects the latest topic insights.
+
+    Args:
+        username: User who owns the strategy
+        strategy_id: Strategy ID to check
+
+    Returns:
+        Tuple of (needs_update: bool, reason: str)
+    """
+    # Get strategy details
+    strategy = get_strategy(username, strategy_id)
+    if not strategy:
+        return False, "strategy_not_found"
+
+    strategy_last_analyzed = strategy.get("last_analyzed_at")
+    if not strategy_last_analyzed:
+        return True, "never_analyzed"
+
+    # Parse strategy timestamp
+    try:
+        strategy_analyzed_dt = date_parser.parse(strategy_last_analyzed)
+        if strategy_analyzed_dt.tzinfo is not None:
+            strategy_analyzed_dt = strategy_analyzed_dt.replace(tzinfo=None)
+    except Exception as e:
+        logger.warning(f"Could not parse strategy last_analyzed_at: {e}")
+        return True, "invalid_timestamp"
+
+    # Get linked topics
+    topics_data = get_strategy_topics(username, strategy_id)
+    if not topics_data:
+        return False, "no_linked_topics"
+
+    topic_ids = topics_data.get("topics", [])
+    if not topic_ids:
+        return False, "no_linked_topics"
+
+    # Check if any linked topic has newer analysis via Neo4j
+    query = """
+    UNWIND $topic_ids AS topic_id
+    MATCH (t:Topic {id: topic_id})
+    WHERE t.last_analyzed IS NOT NULL
+    RETURN t.id AS topic_id, t.last_analyzed AS last_analyzed
+    """
+    result = run_cypher(query, {"topic_ids": topic_ids})
+
+    for row in result or []:
+        topic_last_analyzed = row.get("last_analyzed")
+        if not topic_last_analyzed:
+            continue
+
+        try:
+            # Handle both string and Neo4j datetime types
+            if isinstance(topic_last_analyzed, str):
+                topic_analyzed_dt = date_parser.parse(topic_last_analyzed)
+                if topic_analyzed_dt.tzinfo is not None:
+                    topic_analyzed_dt = topic_analyzed_dt.replace(tzinfo=None)
+            else:
+                # Neo4j datetime object
+                topic_analyzed_dt = datetime.datetime(
+                    topic_last_analyzed.year, topic_last_analyzed.month, topic_last_analyzed.day,
+                    topic_last_analyzed.hour, topic_last_analyzed.minute, topic_last_analyzed.second
+                )
+
+            # If topic was analyzed after strategy, strategy needs update
+            if topic_analyzed_dt > strategy_analyzed_dt:
+                return True, f"topic_{row['topic_id']}_updated"
+        except Exception as e:
+            logger.warning(f"Could not compare timestamps for topic {row.get('topic_id')}: {e}")
+            continue
+
+    return False, "no_topic_updates"
+
+
+def run_topic_exploration(topic_id: str) -> None:
+    """
+    Ensure topic has 3 risks and 3 opportunities.
+
+    - If < 3 findings: run exploration until we have 3
+    - If already 3: run once to potentially improve/refresh
+    """
+    from src.graph.ops.topic_findings import get_topic_findings
+    from src.exploration_agent.orchestrator import explore_topic
+
+    for mode in ["risk", "opportunity"]:
+        existing = get_topic_findings(topic_id, mode)
+        count = len(existing)
+
+        # Run 3 times if < 3, otherwise run 1 time to refresh
+        runs = 3 - count if count < 3 else 1
+
+        logger.info(f"🔍 {topic_id}: {count} {mode}s exist, running {runs} exploration(s)")
+
+        for i in range(runs):
+            try:
+                logger.info(f"   🔍 Explore {topic_id} {mode} ({i+1}/{runs})")
+                explore_topic(topic_id, mode)
+                track("exploration_completed", f"{topic_id}:{mode}")
+            except Exception as e:
+                logger.warning(f"   ⚠️ Exploration failed for {topic_id} {mode}: {e}")
+                track("exploration_failed", f"{topic_id}:{mode}")
+
+
+def run_strategy_exploration(username: str, strategy_id: str) -> None:
+    """
+    Ensure strategy has 3 risks and 3 opportunities.
+
+    - If < 3 findings: run exploration until we have 3
+    - If already 3: run once to potentially improve/refresh
+    """
+    from src.api.backend_client import get_strategy_findings
+    from src.exploration_agent.orchestrator import explore_strategy
+
+    for mode in ["risk", "opportunity"]:
+        existing = get_strategy_findings(username, strategy_id, mode)
+        count = len(existing)
+
+        # Run 3 times if < 3, otherwise run 1 time to refresh
+        runs = 3 - count if count < 3 else 1
+
+        logger.info(f"🔍 {username}/{strategy_id}: {count} {mode}s exist, running {runs} exploration(s)")
+
+        for i in range(runs):
+            try:
+                logger.info(f"   🔍 Explore {username}/{strategy_id} {mode} ({i+1}/{runs})")
+                explore_strategy(username, strategy_id, mode)
+                track("exploration_completed", f"{username}/{strategy_id}:{mode}")
+            except Exception as e:
+                logger.warning(f"   ⚠️ Exploration failed for {username}/{strategy_id} {mode}: {e}")
+                track("exploration_failed", f"{username}/{strategy_id}:{mode}")
+
+
+def write_single_topic(topic_id: str, new_article_ids: Optional[List[str]] = None) -> bool:
+    """
+    Run full analysis for a single topic. Returns True if successful.
+
+    Args:
+        topic_id: Topic to analyze
+        new_article_ids: Optional list of NEW article IDs to highlight to agents.
+                        If provided, agents will focus on these new articles.
+    """
     try:
         logger.info(f"🎯 Writing analysis for: {topic_id}")
-        analysis_rewriter_with_agents(topic_id)
+        if new_article_ids:
+            logger.info(f"   📰 Highlighting {len(new_article_ids)} NEW articles to agents")
+
+        # Run exploration BEFORE analysis so findings are available as context
+        run_topic_exploration(topic_id)
+
+        # Pass new_article_ids to orchestrator so agents know what's new
+        analysis_rewriter_with_agents(topic_id, new_article_ids=new_article_ids)
         logger.info(f"✅ Completed: {topic_id}")
+        track("agent_analysis_completed", f"{topic_id}")
         return True
     except Exception as e:
         logger.error(f"Failed {topic_id}: {e}")
         return False
 
 
-def write_all_topics(shuffle: bool = True) -> dict:
+def write_all_topics(shuffle: bool = True, force: bool = False) -> dict:
     """
-    Run full analysis for all topics.
-    
+    Run full analysis for all topics that need updates.
+
+    Smart rewrite logic (unless force=True):
+    - Only rewrites topics with NEW Tier 3 articles since last analysis
+    - Respects cooldown period (MIN_REWRITE_INTERVAL_HOURS)
+    - Highlights new articles to agents for focused analysis
+
+    Args:
+        shuffle: Randomize topic order for balanced coverage
+        force: If True, skip rewrite checks and write all topics
+
     Returns:
-        dict with success/failure counts
+        dict with success/failure/skipped counts
     """
     all_topics = get_all_topics(fields=["id", "name"])
     topic_ids = [t["id"] for t in all_topics]
-    
+
     logger.info(f"{'='*60}")
-    logger.info(f"📊 WRITE ALL TOPICS - Found {len(topic_ids)} topics")
+    logger.info(f"📊 WRITE ALL TOPICS - Checking {len(topic_ids)} topics")
+    if force:
+        logger.info("⚠️  FORCE MODE: Skipping rewrite checks")
     logger.info(f"{'='*60}")
-    
+
     if shuffle:
         random.shuffle(topic_ids)
         logger.info("🎲 Shuffled order for balanced coverage")
-    
-    stats = {"success": 0, "failed": 0, "total": len(topic_ids)}
-    
+
+    stats = {
+        "success": 0,
+        "failed": 0,
+        "skipped_no_new": 0,
+        "skipped_cooldown": 0,
+        "total": len(topic_ids)
+    }
+
     for i, topic_id in enumerate(topic_ids, 1):
-        logger.info(f"[{i}/{len(topic_ids)}] Processing {topic_id}")
-        
-        if write_single_topic(topic_id):
+        logger.info(f"[{i}/{len(topic_ids)}] Checking {topic_id}")
+
+        # Smart rewrite check (unless force mode)
+        if not force:
+            should_write, reason, new_article_ids = should_rewrite_topic(topic_id)
+
+            if not should_write:
+                if reason == "no_new_articles":
+                    stats["skipped_no_new"] += 1
+                elif reason == "cooldown":
+                    stats["skipped_cooldown"] += 1
+                continue
+        else:
+            new_article_ids = None  # Force mode doesn't track new articles
+
+        # Rewrite with highlighted new articles
+        if write_single_topic(topic_id, new_article_ids=new_article_ids):
             stats["success"] += 1
         else:
             stats["failed"] += 1
-    
+
     logger.info(f"{'='*60}")
-    logger.info(f"🎉 TOPICS COMPLETE: {stats['success']}/{stats['total']} succeeded, {stats['failed']} failed")
+    logger.info(f"🎉 TOPICS COMPLETE:")
+    logger.info(f"   ✅ Rewritten: {stats['success']}")
+    logger.info(f"   ❌ Failed: {stats['failed']}")
+    logger.info(f"   ⏭️  Skipped (no new articles): {stats['skipped_no_new']}")
+    logger.info(f"   ⏸️  Skipped (cooldown): {stats['skipped_cooldown']}")
     logger.info(f"{'='*60}")
-    
+
     return stats
 
 
 def write_all_strategies() -> dict:
     """
     Run strategy analysis for all users.
-    
+
+    Smart rewrite logic:
+    - Only analyzes strategies whose linked topics have newer analysis
+    - Prevents rewriting strategies when no underlying data changed
+
     Returns:
-        dict with success/failure counts
+        dict with success/failure/skipped counts
     """
     all_users = get_all_users()
-    
+
     if not all_users:
         logger.warning("No users found, skipping strategy analysis")
-        return {"success": 0, "failed": 0, "total": 0}
-    
+        return {"success": 0, "failed": 0, "skipped": 0, "total": 0}
+
     logger.info(f"{'='*60}")
-    logger.info(f"📈 WRITE ALL STRATEGIES - Found {len(all_users)} users")
+    logger.info(f"📈 WRITE ALL STRATEGIES - Checking {len(all_users)} users")
     logger.info(f"{'='*60}")
-    
-    stats = {"success": 0, "failed": 0, "total": 0}
-    
+
+    stats = {"success": 0, "failed": 0, "skipped": 0, "total": 0}
+
     for username in all_users:
         user_strategies = get_user_strategies(username)
         stats["total"] += len(user_strategies)
         logger.info(f"User {username}: {len(user_strategies)} strategies")
-        
+
         for strategy in user_strategies:
+            strategy_id = strategy['id']
+
+            # Check if strategy needs update
+            needs_update, reason = strategy_needs_update(username, strategy_id)
+
+            if not needs_update:
+                logger.info(f"  ⏭️  Skip {username}/{strategy_id}: {reason}")
+                stats["skipped"] += 1
+                track("strategy_analysis_skipped", f"{username}/{strategy_id}:{reason}")
+                continue
+
             try:
-                logger.info(f"  Analyzing {username}/{strategy['id']}")
-                analyze_user_strategy(username, strategy['id'])
+                logger.info(f"  🔄 Analyzing {username}/{strategy_id}: {reason}")
+                track("strategy_analysis_triggered", f"{username}/{strategy_id}:{reason}")
+
+                # Run exploration BEFORE analysis so findings are available as context
+                run_strategy_exploration(username, strategy_id)
+
+                analyze_user_strategy(username, strategy_id)
                 stats["success"] += 1
-                track("strategy_analysis_completed", f"{username}/{strategy['id']}")
+                track("strategy_analysis_completed", f"{username}/{strategy_id}")
             except Exception as e:
-                logger.error(f"  Failed {username}/{strategy['id']}: {e}")
+                logger.error(f"  ❌ Failed {username}/{strategy_id}: {e}")
                 stats["failed"] += 1
-    
+
     logger.info(f"{'='*60}")
-    logger.info(f"🎉 STRATEGIES COMPLETE: {stats['success']}/{stats['total']} succeeded, {stats['failed']} failed")
+    logger.info(f"🎉 STRATEGIES COMPLETE:")
+    logger.info(f"   ✅ Analyzed: {stats['success']}")
+    logger.info(f"   ❌ Failed: {stats['failed']}")
+    logger.info(f"   ⏭️  Skipped (no updates): {stats['skipped']}")
     logger.info(f"{'='*60}")
-    
+
     return stats
 
 
@@ -219,6 +433,7 @@ def main():
     parser.add_argument("--loop", action="store_true", help="Run continuously")
     parser.add_argument("--no-shuffle", action="store_true", help="Don't randomize topic order")
     parser.add_argument("--delay", type=int, default=60, help="Seconds between loops (default: 60)")
+    parser.add_argument("--force", action="store_true", help="Force rewrite all topics (skip cooldown/new article checks)")
     
     args = parser.parse_args()
     
@@ -238,7 +453,7 @@ def main():
         # Single run: strategies (if needed) + topics
         if not args.topics_only and should_run_daily_strategies():
             write_all_strategies()
-        write_all_topics(shuffle=not args.no_shuffle)
+        write_all_topics(shuffle=not args.no_shuffle, force=args.force)
 
 
 if __name__ == "__main__":

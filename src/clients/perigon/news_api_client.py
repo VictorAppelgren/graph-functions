@@ -149,14 +149,17 @@ class NewsApiClient:
     @app_logging.log_execution(logger)
     def vector_search(self, vector_query: str, max_results: int = 10) -> Dict[str, Any]:
         """
-        Perform a vector search using the news API.
+        Perform a vector/semantic search using the Perigon API.
+
+        Uses POST /v1/vector/news/all endpoint with natural language query.
+        The index contains the most recent 6 months of articles.
 
         Args:
-            vector_query: Vector search query
-            max_results: Maximum number of results to return
+            vector_query: Natural language query (e.g., "AI privacy concerns in Europe")
+            max_results: Maximum number of results to return (default 10, max 100)
 
         Returns:
-            Dict with API response
+            Dict with 'results' list containing articles with title, match, score, path
 
         Raises:
             ValueError: On invalid input parameters
@@ -174,11 +177,106 @@ class NewsApiClient:
             f"Performing vector search with query: '{_vq}' (max: {max_results})"
         )
 
-        # Build request parameters
-        params = {"q": vector_query, "size": max_results, "sortBy": "relevance"}
+        # Vector search uses POST with JSON body
+        return self._execute_vector_request(vector_query, max_results)
 
-        # Execute request with retry logic
-        return self._execute_request("semantic", params)
+    def _execute_vector_request(self, prompt: str, limit: int, days_back: int = 14) -> Dict[str, Any]:
+        """
+        Execute vector search POST request.
+
+        Endpoint: POST /v1/vector/news/all
+
+        Args:
+            prompt: Natural language query
+            limit: Max results to return
+            days_back: Only include articles from the past N days (default 7)
+        """
+        self._apply_rate_limit()
+
+        url = f"{self.base_url}vector/news/all"
+        # Request more than limit since we'll filter by date
+        payload = {
+            "prompt": prompt,
+            "limit": min(limit * 3, 100),  # Request 3x to account for date filtering
+            "liveSearch": False,
+            "searchDocs": False  # Only articles, not Perigon docs
+        }
+
+        for attempt in range(config.MAX_RETRIES):
+            try:
+                response = self.session.post(
+                    url, json=payload, timeout=config.REQUEST_TIMEOUT
+                )
+
+                if response.status_code == 429:
+                    track("error_occurred", f"Vector search rate limit 429")
+                    logger.error("FATAL Vector search rate limit: 429")
+                    sys.exit(4)
+
+                if response.status_code in (401, 403):
+                    logger.error(f"Authentication error: {response.status_code}")
+                    raise AuthenticationError(f"API auth error: {response.text}")
+
+                if response.status_code != 200:
+                    logger.error(f"Vector API error: {response.status_code} - {response.text}")
+                    if attempt < config.MAX_RETRIES - 1:
+                        time.sleep(config.RETRY_DELAY * (attempt + 1))
+                        continue
+                    raise NewsApiError(f"Vector API error: {response.status_code}")
+
+                result = response.json()
+                raw_results = result.get("results", [])
+
+                # Calculate date cutoff
+                from datetime import datetime, timedelta
+                cutoff = datetime.utcnow() - timedelta(days=days_back)
+
+                # Flatten and filter by date
+                articles = []
+                for item in raw_results:
+                    data = item.get("data", {})
+                    pub_date_str = data.get("pubDate", "")
+
+                    # Parse date and filter
+                    try:
+                        if pub_date_str:
+                            pub_date = datetime.fromisoformat(pub_date_str.replace("Z", "+00:00"))
+                            pub_date = pub_date.replace(tzinfo=None)
+                            if pub_date < cutoff:
+                                continue  # Skip old articles
+                    except (ValueError, TypeError):
+                        pass  # Keep articles with unparseable dates
+
+                    # Flatten: merge data with score at top level
+                    article = {
+                        "score": item.get("score", 0),
+                        "articleId": data.get("articleId"),
+                        "title": data.get("title"),
+                        "summary": data.get("summary"),
+                        "url": data.get("url"),
+                        "pubDate": data.get("pubDate"),
+                        "source": data.get("source", {}).get("domain"),
+                        "imageUrl": data.get("imageUrl"),
+                    }
+                    articles.append(article)
+
+                    if len(articles) >= limit:
+                        break
+
+                logger.info(f"Vector search: {len(raw_results)} raw -> {len(articles)} after date filter (past {days_back} days)")
+                track("query_executed")
+
+                return {
+                    "articles": articles,
+                    "totalResults": len(articles)
+                }
+
+            except requests.RequestException as e:
+                logger.error(f"Vector request error: {e}")
+                if attempt < config.MAX_RETRIES - 1:
+                    time.sleep(config.RETRY_DELAY * (attempt + 1))
+                    continue
+                raise NewsApiError(f"Vector search failed: {e}")
 
     @app_logging.log_execution(logger)
     def _execute_request(self, endpoint: str, params: Dict[str, Any]) -> Dict[str, Any]:
@@ -200,8 +298,8 @@ class NewsApiClient:
         # Apply rate limiting
         self._apply_rate_limit()
 
-        # Build URL
-        url = f"{self.base_url}/{endpoint}"
+        # Build URL (base_url already has trailing slash)
+        url = f"{self.base_url}{endpoint}"
 
         # Minimal fail-fast policy
         # - Retry ONLY for transient network issues

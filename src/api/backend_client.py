@@ -22,19 +22,12 @@ BACKEND_API_KEY = os.getenv("BACKEND_API_KEY", "")
 
 # Worker identification (set by entrypoints)
 _WORKER_ID: Optional[str] = None
-_WORKER_TASK: Optional[str] = None
 
 
 def set_worker_identity(worker_id: str) -> None:
     """Set worker ID (call once at entrypoint startup)."""
     global _WORKER_ID
     _WORKER_ID = worker_id
-
-
-def set_worker_task(task: str) -> None:
-    """Set current task (call when starting a task)."""
-    global _WORKER_TASK
-    _WORKER_TASK = task
 
 
 def _get_headers() -> Dict[str, str]:
@@ -45,8 +38,6 @@ def _get_headers() -> Dict[str, str]:
     if _WORKER_ID:
         headers["X-Worker-ID"] = _WORKER_ID
         headers["X-Worker-Machine"] = socket.gethostname()
-        if _WORKER_TASK:
-            headers["X-Worker-Task"] = _WORKER_TASK
     return headers
 
 

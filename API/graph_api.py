@@ -408,6 +408,29 @@ def get_article_distribution():
     }
 
 
+# ============ CHAT NEWS SEARCH ============
+
+class ChatSearchRequest(BaseModel):
+    query: str
+    max_results: int = 5
+
+
+@app.post("/chat/search-news")
+def chat_search_news(request: ChatSearchRequest):
+    """
+    Search recent news for chat context.
+    Returns immediately, adds articles to DB in background.
+    """
+    from src.chat.news_search import search_news
+
+    try:
+        articles = search_news(request.query, max_results=request.max_results)
+        return {"articles": articles}
+    except Exception as e:
+        print(f"News search error: {e}")
+        return {"articles": [], "error": str(e)}
+
+
 # ============ HEALTH ============
 
 @app.get("/neo/health")

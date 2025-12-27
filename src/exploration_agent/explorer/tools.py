@@ -221,9 +221,10 @@ def get_existing_findings(topic_id: str, mode: str) -> List[str]:
     Get existing risks or opportunities for a topic.
     Returns list of headlines/titles.
     """
-    # TODO: Implement when we have the storage for findings
-    # For now, return empty list
-    return []
+    from src.graph.ops.topic_findings import get_topic_findings
+
+    findings = get_topic_findings(topic_id, mode)
+    return [f.get("headline", "") for f in findings if f.get("headline")]
 
 
 def get_strategy_context(username: str, strategy_id: str) -> Optional[Dict[str, Any]]:

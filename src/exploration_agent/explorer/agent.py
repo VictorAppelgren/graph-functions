@@ -67,7 +67,7 @@ class ExplorationAgent:
     
     def __init__(self, max_steps: int = 20):
         self.max_steps = max_steps
-        self.llm = get_llm(ModelTier.COMPLEX)
+        self.llm = get_llm(ModelTier.MEDIUM)
     
     def explore_topic(
         self,

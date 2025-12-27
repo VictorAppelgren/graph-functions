@@ -21,6 +21,7 @@ from src.analysis_agents.writer.prompt import (
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.analysis_agents.section_config import get_section_model_tier
 from src.market_data.loader import get_market_context_for_prompt
 from langchain_core.output_parsers import StrOutputParser
 
@@ -132,14 +133,18 @@ class WriterAgent(BaseAgent):
             prompt=prompt,
         )
         
-        # Invoke LLM
-        llm = get_llm(ModelTier.COMPLEX)
+        # Invoke LLM with section-based tier routing
+        tier_name = get_section_model_tier(section)
+        tier = ModelTier.MEDIUM if tier_name == "MEDIUM" else ModelTier.COMPLEX
+        self._log(f"   Model tier: {tier_name}")
+
+        llm = get_llm(tier)
         parser = StrOutputParser()
         chain = llm | parser
-        
+
         response = chain.invoke(prompt)
-        
-        self._log(f"✅ Output: {len(response):,} chars")
+
+        self._log(f"✅ Output: {len(response):,} chars ({tier_name})")
         self._log(f"{'='*60}")
         self._log(f"")
         

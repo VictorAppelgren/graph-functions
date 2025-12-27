@@ -98,8 +98,10 @@ class DepthFinderAgent(BaseAgent):
         self._log("==== END INPUT SUMMARY ====")
         self._log("")
 
-        llm = get_llm(ModelTier.COMPLEX)
+        # Use MEDIUM tier for depth finding (article analysis, not reasoning)
+        llm = get_llm(ModelTier.MEDIUM)
         raw = run_llm_decision(chain=llm, prompt=prompt, model=DepthLLMRaw)
+        self._log("Using MEDIUM tier for depth analysis")
         
         chains = raw.causal_chain_opportunities or []
         quants = raw.quantification_targets or []

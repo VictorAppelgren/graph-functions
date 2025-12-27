@@ -576,7 +576,7 @@ def create_link_at_tier(
 ):
     """Create ABOUT link with uniform importance scores at tier."""
     from src.graph.neo4j_client import run_cypher
-    
+
     create_query = """
     MATCH (a:Article {id: $article_id}), (t:Topic {id: $topic_id})
     CREATE (a)-[:ABOUT {
@@ -590,7 +590,7 @@ def create_link_at_tier(
         created_at: datetime()
     }]->(t)
     """
-    
+
     run_cypher(create_query, {
         "article_id": article_id,
         "topic_id": topic_id,
@@ -599,8 +599,13 @@ def create_link_at_tier(
         "motivation": motivation,
         "implications": implications
     })
-    
+
     logger.info(f"Created ABOUT link: {article_id} -> {topic_id} | tier={tier}")
+
+    # Index to Qdrant if Tier 2 or 3 (wider coverage)
+    if tier >= 2:
+        from src.vector.indexer import index_article
+        index_article(article_id)  # Fail loud - crash if Qdrant is down
 
 
 def set_about_link_tier(

@@ -218,8 +218,8 @@ def run_critic(
     final_critic = FinalCriticAgent()
     verdict = final_critic.evaluate(critic_input)
 
-    # Save accepted findings to strategy (if strategy context provided)
-    if verdict.accepted and strategy_user and strategy_id:
+    # Save accepted findings
+    if verdict.accepted:
         finding_data = {
             "headline": result.headline,
             "rationale": result.rationale,
@@ -229,15 +229,34 @@ def run_critic(
             "target_topic": target_topic,
             "exploration_steps": result.exploration_steps,
         }
-        success = save_strategy_finding(
-            strategy_user, strategy_id, mode,
-            finding_data,
-            replaces=verdict.replaces
-        )
-        if success:
-            logger.info("💾 Saved accepted %s to strategy %s/%s", mode, strategy_user, strategy_id)
+
+        if strategy_user and strategy_id:
+            # Save to strategy (backend API)
+            success = save_strategy_finding(
+                strategy_user, strategy_id, mode,
+                finding_data,
+                replaces=verdict.replaces
+            )
+            if success:
+                logger.info("💾 Saved accepted %s to strategy %s/%s", mode, strategy_user, strategy_id)
+                print(f"\n💾 SAVED: {mode} finding saved to strategy '{strategy_user}/{strategy_id}'")
+            else:
+                logger.warning("⚠️ Failed to save %s to strategy", mode)
+                print(f"\n⚠️ FAILED: Could not save {mode} to strategy '{strategy_user}/{strategy_id}'")
         else:
-            logger.warning("⚠️ Failed to save %s to strategy", mode)
+            # Save to topic (Neo4j) - topic-only exploration
+            from src.graph.ops.topic_findings import save_topic_finding
+            success = save_topic_finding(
+                target_topic, mode,
+                finding_data,
+                replaces=verdict.replaces
+            )
+            if success:
+                logger.info("💾 Saved accepted %s to topic %s", mode, target_topic)
+                print(f"\n💾 SAVED: {mode} finding saved to topic '{target_topic}' in Neo4j")
+            else:
+                logger.warning("⚠️ Failed to save %s to topic", mode)
+                print(f"\n⚠️ FAILED: Could not save {mode} to topic '{target_topic}'")
 
     return verdict
 

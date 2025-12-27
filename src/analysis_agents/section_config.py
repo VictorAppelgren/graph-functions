@@ -76,3 +76,27 @@ LEGACY_SECTIONS = [
 # =============================================================================
 
 ALL_ANALYSIS_SECTIONS = AGENT_SECTIONS + LEGACY_SECTIONS
+
+# =============================================================================
+# SECTION MODEL TIER ROUTING (LLM Cost Optimization)
+# =============================================================================
+# MEDIUM (120B free model): Research/writing sections that don't need cutting-edge reasoning
+# COMPLEX (DeepSeek paid): Actionable/synthesis sections that need best reasoning
+
+SECTION_MODEL_TIER = {
+    # MEDIUM tier - pattern finding, research, article synthesis
+    "chain_reaction_map": "MEDIUM",
+    "structural_threats": "MEDIUM",
+    "tactical_scenarios": "MEDIUM",
+    "immediate_intelligence": "MEDIUM",
+    "macro_cascade": "MEDIUM",
+    # COMPLEX tier - actionable synthesis requiring best reasoning
+    "trade_intelligence": "COMPLEX",
+    "house_view": "COMPLEX",
+    "risk_monitor": "COMPLEX",
+}
+
+
+def get_section_model_tier(section: str) -> str:
+    """Get the model tier for a given section. Defaults to COMPLEX for unknown sections."""
+    return SECTION_MODEL_TIER.get(section, "COMPLEX")

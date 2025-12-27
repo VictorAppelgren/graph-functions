@@ -365,6 +365,47 @@ SECTION_FOCUS = {
 }
 
 
+def build_findings_context(topic_id: str) -> str:
+    """
+    Get formatted risks/opportunities from exploration agent for analysis context.
+
+    These findings were discovered by the exploration agent BEFORE analysis runs.
+    They provide pre-identified risks and opportunities that the writer should incorporate.
+    """
+    from src.graph.ops.topic_findings import get_topic_findings
+
+    output = []
+    risks = get_topic_findings(topic_id, "risk")
+    opps = get_topic_findings(topic_id, "opportunity")
+
+    if risks:
+        output.append("\n═══ IDENTIFIED RISKS (from Exploration Agent) ═══")
+        for i, r in enumerate(risks, 1):
+            output.append(f"\n【Risk {i}】 {r.get('headline', 'Untitled')}")
+            if r.get('rationale'):
+                output.append(f"Rationale: {r.get('rationale')}")
+            if r.get('flow_path'):
+                output.append(f"Causal Chain: {r.get('flow_path')}")
+            if r.get('confidence'):
+                output.append(f"Confidence: {r.get('confidence')}")
+
+    if opps:
+        output.append("\n═══ IDENTIFIED OPPORTUNITIES (from Exploration Agent) ═══")
+        for i, o in enumerate(opps, 1):
+            output.append(f"\n【Opportunity {i}】 {o.get('headline', 'Untitled')}")
+            if o.get('rationale'):
+                output.append(f"Rationale: {o.get('rationale')}")
+            if o.get('flow_path'):
+                output.append(f"Causal Chain: {o.get('flow_path')}")
+            if o.get('confidence'):
+                output.append(f"Confidence: {o.get('confidence')}")
+
+    if output:
+        logger.info(f"Found {len(risks)} risks and {len(opps)} opportunities for {topic_id}")
+
+    return "\n".join(output) if output else ""
+
+
 class AnalysisAgentOrchestrator:
     """
     Orchestrates analysis agents based on section needs.
@@ -496,13 +537,14 @@ class AnalysisAgentOrchestrator:
 
 def analysis_rewriter_with_agents(
     topic_id: str,
-    analysis_type: Optional[str] = None
+    analysis_type: Optional[str] = None,
+    new_article_ids: Optional[List[str]] = None
 ) -> None:
     """
     🚀 NEW AGENT-BASED ANALYSIS PIPELINE - RISK & CHAIN REACTION FOCUSED
-    
+
     This is the GOD-TIER entry point that REPLACES the old analysis_rewriter.
-    
+
     CUMULATIVE BUILDING FLOW:
     1. chain_reaction_map (articles only) → Foundation
     2. structural_threats (articles + chain_reaction_map) → Long-term
@@ -512,12 +554,13 @@ def analysis_rewriter_with_agents(
     6. trade_intelligence (NO articles, uses all 5 prior) → Actionable
     7. house_view (NO articles, uses all 6 prior) → Executive synthesis
     8. risk_monitor (NO articles, uses all 7 prior) → Watch list
-    
+
     Each section gets progressively MORE context. By house_view, we have 6 prior analyses!
-    
+
     Args:
         topic_id: Topic to analyze
         analysis_type: Specific section to run (or None for all 8 sections)
+        new_article_ids: Optional list of NEW article IDs to highlight in prompts
     """
     from src.analysis.material.article_material import build_material_for_synthesis_section
     from src.graph.ops.topic import get_topic_analysis_field
@@ -589,9 +632,17 @@ def analysis_rewriter_with_agents(
                 article_ids = []  # No new articles for these sections by design
             else:
                 print(f"📦 Building material from articles...")
-                material, article_ids = build_material_for_synthesis_section(topic_id, section)
+                material, article_ids = build_material_for_synthesis_section(
+                    topic_id, section, new_article_ids=new_article_ids
+                )
                 if prior_context:
                     material = f"{material}\n\n{'='*80}\nPRIOR ANALYSIS:\n{'='*80}\n\n{prior_context}"
+
+            # STEP 3b: Add exploration findings (risks/opportunities) to material
+            findings_context = build_findings_context(topic_id)
+            if findings_context:
+                print(f"🔍 Adding exploration findings to context...")
+                material = f"{findings_context}\n\n{'='*80}\n\n{material}"
             
             # Log material composition
             logger.info(f"   prior sections: {len(prior_context):,} chars (~{len(prior_context)//4:,} tokens)")
@@ -717,6 +768,19 @@ def analysis_rewriter_with_agents(
     print(f"✅ PIPELINE COMPLETE | {len(completed_sections)}/{len(sections_to_run)} sections")
     print(f"{'='*100}\n")
     logger.info(f"Pipeline complete: {len(completed_sections)}/{len(sections_to_run)} sections")
+
+    # Update last_analyzed timestamp after successful completion
+    if completed_sections:
+        try:
+            update_query = """
+            MATCH (t:Topic {id: $topic_id})
+            SET t.last_analyzed = datetime()
+            RETURN t.id
+            """
+            run_cypher(update_query, {"topic_id": topic_id})
+            logger.info(f"Updated last_analyzed timestamp for {topic_id}")
+        except Exception as e:
+            logger.warning(f"Failed to update last_analyzed for {topic_id}: {e}")
 
 
 def run_id_validation_loop(

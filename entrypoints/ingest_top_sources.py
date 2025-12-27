@@ -32,7 +32,6 @@ from src.articles.ingest_article import add_article
 from utils import app_logging
 from src.llm.health_check import wait_for_llm_health
 from src.config.worker_mode import get_mode_description
-from src.api.backend_client import set_worker_task
 
 logger = app_logging.get_logger(__name__)
 
@@ -119,7 +118,6 @@ def run_simple_sources_pipeline():
         logger.info(f"📰 Starting cycle #{cycle_count} at {cycle_start:%H:%M:%S}")
         
         for i, source in enumerate(sources, 1):
-            set_worker_task(f"Source: {source}")
             logger.info(f"[{i}/{len(sources)}] Processing {source}")
             
             try:
