@@ -17,7 +17,7 @@ QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 COLLECTION = "saga_articles"
-VECTOR_SIZE = 1536
+VECTOR_SIZE = 768  # BAAI/bge-base-en-v1.5 dimension
 
 _client = None
 

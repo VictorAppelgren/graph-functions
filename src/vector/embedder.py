@@ -1,32 +1,34 @@
-"""OpenAI embeddings. Simple."""
-import os
+"""Embeddings using FastEmbed (lightweight, ONNX-based, no PyTorch)."""
 from typing import List
-from openai import OpenAI
+from fastembed import TextEmbedding
 from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
 
-MODEL = "text-embedding-3-small"
-_client = None
+# FastEmbed supported models:
+# BAAI/bge-small-en-v1.5: 384 dims, 67MB, fast
+# BAAI/bge-base-en-v1.5: 768 dims, 210MB, better quality
+# BAAI/bge-large-en-v1.5: 1024 dims, 1.2GB, best quality
+MODEL = "BAAI/bge-base-en-v1.5"
+VECTOR_SIZE = 768
+_model = None
 
 
-def _get_client() -> OpenAI:
-    global _client
-    if _client is None:
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            raise ValueError("OPENAI_API_KEY not set")
-        _client = OpenAI(api_key=api_key)
-    return _client
+def _get_model() -> TextEmbedding:
+    global _model
+    if _model is None:
+        logger.info(f"Loading embedding model: {MODEL}")
+        _model = TextEmbedding(model_name=MODEL)
+    return _model
 
 
 def embed(text: str) -> List[float]:
     """Embed single text."""
-    response = _get_client().embeddings.create(input=text, model=MODEL)
-    return response.data[0].embedding
+    embeddings = list(_get_model().embed([text]))
+    return embeddings[0].tolist()
 
 
 def embed_batch(texts: List[str]) -> List[List[float]]:
-    """Embed batch (max 2048)."""
-    response = _get_client().embeddings.create(input=texts, model=MODEL)
-    return [item.embedding for item in response.data]
+    """Embed batch."""
+    embeddings = list(_get_model().embed(texts))
+    return [e.tolist() for e in embeddings]
