@@ -35,12 +35,12 @@ def get_client() -> QdrantClient:
             logger.info(f"Qdrant: HTTPS proxy at {QDRANT_URL}")
         else:
             # Direct connection (inside Docker or local Qdrant)
+            # Use url= with http:// to avoid SSL issues with API key
             _client = QdrantClient(
-                host=QDRANT_HOST,
-                port=QDRANT_PORT,
+                url=f"http://{QDRANT_HOST}:{QDRANT_PORT}",
                 api_key=QDRANT_API_KEY
             )
-            logger.info(f"Qdrant: Direct at {QDRANT_HOST}:{QDRANT_PORT}")
+            logger.info(f"Qdrant: Direct at http://{QDRANT_HOST}:{QDRANT_PORT}")
         _ensure_collection()
     return _client
 
