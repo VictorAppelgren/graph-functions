@@ -118,16 +118,28 @@ def get_report(topic_id: str):
     try:
         sections = aggregate_reports(topic_id)
         topic = get_topic_by_id(topic_id)
-        
+
         if not sections:
             raise HTTPException(status_code=404, detail="No reports found")
-        
+
         topic_name = topic.get("name", topic_id) if topic else topic_id
-        
+
+        # Get exploration_findings if it exists on the topic (JSON stored as string)
+        exploration_findings = None
+        if topic:
+            raw_findings = topic.get("exploration_findings")
+            if raw_findings:
+                import json
+                try:
+                    exploration_findings = json.loads(raw_findings) if isinstance(raw_findings, str) else raw_findings
+                except (json.JSONDecodeError, TypeError):
+                    pass
+
         return {
             "topic_id": topic_id,
             "topic_name": topic_name,
-            "sections": sections
+            "sections": sections,
+            "exploration_findings": exploration_findings
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
