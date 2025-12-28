@@ -11,11 +11,6 @@ from utils.app_logging import get_logger
 
 logger = get_logger(__name__)
 
-# Config: Use URL for HTTPS proxy, or host:port for direct
-QDRANT_URL = os.getenv("QDRANT_URL")  # e.g., "https://167.172.185.204/qdrant"
-QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
-QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
-QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 COLLECTION = "saga_articles"
 VECTOR_SIZE = 384  # BAAI/bge-small-en-v1.5 dimension
 
@@ -26,21 +21,34 @@ def get_client() -> QdrantClient:
     """Get Qdrant client. Creates collection if needed."""
     global _client
     if _client is None:
-        if QDRANT_URL:
-            # HTTPS via NGINX proxy (local dev connecting to remote)
+        # Read env vars lazily (after load_env() is called)
+        qdrant_url = os.getenv("QDRANT_URL")
+        qdrant_host = os.getenv("QDRANT_HOST", "localhost")
+        qdrant_port = int(os.getenv("QDRANT_PORT", "6333"))
+        qdrant_api_key = os.getenv("QDRANT_API_KEY")
+
+        if qdrant_url:
+            # Via NGINX proxy (local dev connecting to remote)
+            # Explicit port required: 443 for HTTPS, 80 for HTTP
+            # prefix without leading slash per qdrant-client docs
+            is_https = qdrant_url.startswith("https://")
+            port = 443 if is_https else 80
+
             _client = QdrantClient(
-                url=QDRANT_URL,
-                api_key=QDRANT_API_KEY
+                url=qdrant_url,
+                port=port,
+                api_key=qdrant_api_key,
+                prefix="qdrant"
             )
-            logger.info(f"Qdrant: HTTPS proxy at {QDRANT_URL}")
+            logger.info(f"Qdrant: {'HTTPS' if is_https else 'HTTP'} proxy at {qdrant_url}:{port}/qdrant")
         else:
             # Direct connection (inside Docker or local Qdrant)
             # Use url= with http:// to avoid SSL issues with API key
             _client = QdrantClient(
-                url=f"http://{QDRANT_HOST}:{QDRANT_PORT}",
-                api_key=QDRANT_API_KEY
+                url=f"http://{qdrant_host}:{qdrant_port}",
+                api_key=qdrant_api_key
             )
-            logger.info(f"Qdrant: Direct at http://{QDRANT_HOST}:{QDRANT_PORT}")
+            logger.info(f"Qdrant: Direct at http://{qdrant_host}:{qdrant_port}")
         _ensure_collection()
     return _client
 
@@ -71,19 +79,14 @@ def upsert(article_id: str, vector: List[float], payload: Dict) -> bool:
 def search(
     vector: List[float],
     limit: int = 10,
-    days_back: int = 14,
     min_score: float = 0.5
 ) -> List[Dict]:
-    """Search similar articles."""
+    """Search similar articles. All indexed articles are Tier 2+ and recent."""
     client = get_client()
-    cutoff = datetime.utcnow() - timedelta(days=days_back)
 
     results = client.search(
         collection_name=COLLECTION,
         query_vector=vector,
-        query_filter=Filter(must=[
-            FieldCondition(key="indexed_at", range=Range(gte=cutoff.isoformat()))
-        ]),
         limit=limit,
         with_payload=True,
         score_threshold=min_score

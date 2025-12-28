@@ -1,7 +1,7 @@
 # Core dependencies
 neo4j-driver
 neo4j
-qdrant-client
+qdrant-client>=1.7.0,<1.8.0  # Pin to 1.7.x to match server version 1.7.4
 fastembed
 langchain
 langchain-core

@@ -1,4 +1,7 @@
 """Embeddings using FastEmbed (lightweight, ONNX-based, no PyTorch)."""
+import warnings
+warnings.filterwarnings("ignore", message=".*DefaultEmbedding.*deprecated.*")
+
 from typing import List
 from fastembed import TextEmbedding
 from utils.app_logging import get_logger

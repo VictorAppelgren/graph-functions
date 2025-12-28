@@ -1,6 +1,6 @@
 """Index Tier 2+ articles into Qdrant."""
 import gc
-from datetime import datetime
+from datetime import datetime, timezone
 from .embedder import embed, embed_batch
 from .client import upsert, count
 from src.graph.neo4j_client import run_cypher
@@ -42,7 +42,7 @@ def index_article(article_id: str) -> bool:
         "source": article.get("source"),
         "pub_date": str(article.get("pub_date", "")),
         "topics": article.get("topics", []),
-        "indexed_at": datetime.utcnow().isoformat()
+        "indexed_at": datetime.now(timezone.utc).isoformat()
     }
 
     upsert(article_id, vector, payload)
@@ -98,7 +98,7 @@ def reindex_all(batch_size: int = 10) -> dict:
                     "source": article.get("source"),
                     "pub_date": str(article.get("pub_date", "")),
                     "topics": article.get("topics", []),
-                    "indexed_at": datetime.utcnow().isoformat()
+                    "indexed_at": datetime.now(timezone.utc).isoformat()
                 }
                 upsert(article["id"], vector, payload)
                 stats["indexed"] += 1
