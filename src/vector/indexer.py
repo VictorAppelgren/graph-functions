@@ -1,4 +1,5 @@
 """Index Tier 2+ articles into Qdrant."""
+import gc
 from datetime import datetime
 from .embedder import embed, embed_batch
 from .client import upsert, count
@@ -49,8 +50,11 @@ def index_article(article_id: str) -> bool:
     return True
 
 
-def reindex_all(batch_size: int = 50) -> dict:
-    """Reindex ALL articles with any importance >= 2. Run once after setup."""
+def reindex_all(batch_size: int = 10) -> dict:
+    """Reindex ALL articles with any importance >= 2. Run once after setup.
+
+    Uses small batches and gc to stay within 2GB memory limit.
+    """
     query = """
     MATCH (a:Article)-[r:ABOUT]->(t:Topic)
     WHERE r.importance_risk >= 2
@@ -63,9 +67,12 @@ def reindex_all(batch_size: int = 50) -> dict:
            a.published_date AS pub_date, topics
     """
     articles = run_cypher(query, {})
+    total = len(articles)
     stats = {"indexed": 0, "skipped": 0, "failed": 0}
 
-    for i in range(0, len(articles), batch_size):
+    logger.info(f"Reindexing {total} articles in batches of {batch_size}")
+
+    for i in range(0, total, batch_size):
         batch = articles[i:i+batch_size]
         texts, valid = [], []
 
@@ -95,6 +102,15 @@ def reindex_all(batch_size: int = 50) -> dict:
                 }
                 upsert(article["id"], vector, payload)
                 stats["indexed"] += 1
+
+            # Progress log every 100 articles
+            if stats["indexed"] % 100 == 0:
+                logger.info(f"Progress: {stats['indexed']}/{total} indexed")
+
+            # Clear memory after each batch
+            del vectors, texts, valid
+            gc.collect()
+
         except Exception as e:
             logger.error(f"Batch failed: {e}")
             stats["failed"] += len(valid)
