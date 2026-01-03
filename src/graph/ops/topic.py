@@ -3,13 +3,13 @@ from datetime import datetime, timezone
 
 from src.graph.neo4j_client import run_cypher, connect_graph_db, NEO4J_DATABASE
 from src.graph.models import Neo4jRecord
+from src.graph.config import DAILY_TOPIC_LIMIT
 from utils import app_logging
 from src.articles.load_article import load_article
 from src.articles.article_text_formatter import extract_text_from_json_article
 from src.observability.stats_client import track
 from src.graph.policies.topic import classify_topic_category, check_topic_relevance
 from src.analysis.policies.query_generator import create_wide_query
-from src.demo.llm.topic_capacity_guard_llm import decide_topic_capacity
 from src.analysis.policies.topic_proposal import TopicProposal
 
 logger = app_logging.get_logger(__name__)
@@ -21,9 +21,6 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
     Returns the created topic as a dict.
     """
     # ========== DAILY TOPIC LIMIT CHECK ==========
-    # Max 3 new topics per day to ensure controlled growth
-    MAX_NEW_TOPICS_PER_DAY = 3
-
     try:
         import os
         import requests
@@ -40,17 +37,17 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
             stats = response.json()
             topics_created_today = stats.get("events", {}).get("topic_created", 0)
 
-            if topics_created_today >= MAX_NEW_TOPICS_PER_DAY:
-                logger.info(f"Daily topic limit reached: {topics_created_today}/{MAX_NEW_TOPICS_PER_DAY}")
-                track("topic_rejected_daily_limit", f"Daily limit of {MAX_NEW_TOPICS_PER_DAY} reached ({topics_created_today} already created today)")
+            if topics_created_today >= DAILY_TOPIC_LIMIT:
+                logger.info(f"Daily topic limit reached: {topics_created_today}/{DAILY_TOPIC_LIMIT}")
+                track("topic_rejected_daily_limit", f"Daily limit of {DAILY_TOPIC_LIMIT} reached ({topics_created_today} already created today)")
                 return {
                     "status": "rejected",
                     "reason": "daily_limit",
                     "topics_created_today": topics_created_today,
-                    "max_per_day": MAX_NEW_TOPICS_PER_DAY
+                    "max_per_day": DAILY_TOPIC_LIMIT
                 }
             else:
-                logger.info(f"Daily topic budget: {topics_created_today}/{MAX_NEW_TOPICS_PER_DAY} used")
+                logger.info(f"Daily topic budget: {topics_created_today}/{DAILY_TOPIC_LIMIT} used")
     except Exception as e:
         # Fail open - if we can't check stats, allow topic creation
         logger.warning(f"Could not check daily topic limit (proceeding anyway): {e}")
@@ -127,72 +124,12 @@ def add_topic(article_id: str, suggested_names: list[str] = []) -> dict[str, str
         )
         topic_proposal.query = query["query"]
         
-        # Set last_updated timestamp (importance is no longer used - ABOUT links have importance instead)
+        # Set last_updated timestamp
         topic_proposal.last_updated = datetime.now(timezone.utc).isoformat(
             timespec="seconds"
         )
 
-        # ---- CAPACITY GUARD (quality control + max topics) ----
-        try:
-            existing_topics = get_all_topics(
-                fields=["id", "name", "type", "last_updated"]
-            )
-
-            candidate_topic = {
-                "id": topic_proposal.id,
-                "name": topic_proposal.name,
-                "category": category,
-                "motivation": topic_proposal.motivation,
-            }
-
-            decision = decide_topic_capacity(
-                candidate_topic=candidate_topic,
-                existing_topics=existing_topics,
-                test=False,
-            )
-            logger.info("capacity_guard decision: %s", decision)
-
-            if decision.action == "reject":
-                track("topic_rejected_capacity", f"Topic {topic_proposal.name} rejected by capacity guard: {decision.motivation}")
-                track("topic_rejected", f"Topic {topic_proposal.name} rejected by capacity guard")
-                return {
-                    "status": "rejected",
-                    "topic_name": topic_proposal.name,
-                    "category": category,
-                    "should_add": False,
-                    "motivation_for_relevance": motivation_for_relevance,
-                    "capacity_guard": decision,
-                }
-
-            elif decision.action == "replace":
-                id_to_remove = decision.id_to_remove
-                if not id_to_remove:
-                    return {
-                        "status": "rejected",
-                        "topic_name": topic_proposal.name,
-                        "category": category,
-                        "should_add": False,
-                        "motivation_for_relevance": motivation_for_relevance,
-                        "capacity_guard": decision,
-                    }
-
-                # Remove the weakest topic suggested by guard, then proceed with creation
-                try:
-                    run_cypher(
-                        "MATCH (t:Topic {id: $id}) DETACH DELETE t", {"id": id_to_remove}
-                    )
-                    track("topic_deleted", f"Topic {id_to_remove} removed for capacity replacement")
-                except Exception as e:
-                    logger.error(f"Failed to delete topic {id_to_remove}: {e}")
-                    raise
-        except Exception:
-            # Fail-open on guard issues to avoid blocking normal adds due to guard errors.
-            logger.exception(
-                "Capacity guard encountered an error; proceeding without guard enforcement."
-            )
-        # ---- END CAPACITY GUARD ----
-
-        # Insert into DB via graph_utils
+        # Insert into DB
         created_topic = create_topic(topic_proposal)
         # Prefer graph element_id (stable within DB) for event identity; fallback to property id
         event_id = created_topic.get("element_id") or created_topic.get("id")
@@ -466,12 +403,12 @@ def create_topic(topic_proposal: TopicProposal) -> dict[str, str]:
     # Create the topic
     driver = connect_graph_db()
     with driver.session(database=NEO4J_DATABASE) as session:
- 
+
         # Convert all properties into a params dict for Cypher
         params = {"props": topic_proposal.model_dump()}
 
-        # Create topic with all properties from topic_dict
-        cypher = "CREATE (n:Topic $props) RETURN n, elementId(n) AS eid"
+        # Create topic with all properties + created_at timestamp for tracking
+        cypher = "CREATE (n:Topic $props) SET n.created_at = datetime() RETURN n, elementId(n) AS eid"
         result = session.run(cypher, params)
         record = result.single()
 

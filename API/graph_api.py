@@ -443,6 +443,78 @@ def chat_search_news(request: ChatSearchRequest):
         return {"articles": [], "error": str(e)}
 
 
+# ============ RECENTLY CREATED TOPICS ============
+
+@app.get("/neo/topics/recent")
+def get_recent_topics(days: int = Query(default=7, le=30)):
+    """
+    Get topics created in the last N days, grouped by day.
+    Returns: {today: [...], yesterday: [...], this_week: [...]}
+    """
+    query = """
+    MATCH (t:Topic)
+    WHERE t.created_at IS NOT NULL AND t.created_at >= datetime() - duration({days: $days})
+    RETURN t.id as id, t.name as name, t.created_at as created_at
+    ORDER BY t.created_at DESC
+    """
+    results = run_cypher(query, {"days": days})
+
+    from datetime import datetime, timedelta
+    now = datetime.now()
+    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    yesterday_start = today_start - timedelta(days=1)
+
+    today = []
+    yesterday = []
+    this_week = []
+
+    for r in results:
+        created = r.get("created_at")
+        topic_info = {"id": r["id"], "name": r["name"]}
+
+        # Neo4j datetime objects need conversion
+        if hasattr(created, 'to_native'):
+            created = created.to_native()
+
+        if created and created >= today_start:
+            today.append(topic_info)
+        elif created and created >= yesterday_start:
+            yesterday.append(topic_info)
+        else:
+            this_week.append(topic_info)
+
+    return {
+        "today": today,
+        "yesterday": yesterday,
+        "this_week": this_week,
+        "total": len(today) + len(yesterday) + len(this_week)
+    }
+
+
+# ============ TOPIC DELETION ============
+
+@app.delete("/neo/topics/{topic_id}")
+def delete_topic(topic_id: str):
+    """
+    Delete a topic and all its relationships from Neo4j.
+    Returns the deleted topic info.
+    """
+    # First get topic info for confirmation
+    check_query = "MATCH (t:Topic {id: $id}) RETURN t.id as id, t.name as name"
+    check_result = run_cypher(check_query, {"id": topic_id})
+
+    if not check_result:
+        raise HTTPException(status_code=404, detail=f"Topic {topic_id} not found")
+
+    topic_info = {"id": check_result[0]["id"], "name": check_result[0]["name"]}
+
+    # Delete topic and all relationships
+    delete_query = "MATCH (t:Topic {id: $id}) DETACH DELETE t"
+    run_cypher(delete_query, {"id": topic_id})
+
+    return {"deleted": True, "topic": topic_info}
+
+
 # ============ HEALTH ============
 
 @app.get("/neo/health")

@@ -84,25 +84,24 @@ def llm_filter_all_interesting_topics(
 
 
 RELEVANCE_POLICY = """
-ALLOWED (must clearly support trading decisions):
+ACCEPT (topics that support trading/macro analysis):
 - macro drivers (inflation, growth, jobs, rates, credit, trade, fiscal)
 - tradable assets/instruments (FX pairs, indices, commodities, rates, bonds)
 - macro policy/regulation regimes (central banks, fiscal/tariffs with market impact)
 - geographies at macro level (countries/regions) when used as macro anchors
+- sectors with clear market impact (banking, real estate, tech, energy, industrials)
 
 REJECT (do not add as topics):
-- industry verticals or operational niches (e.g., sterilized packaging, logistics, advertising)
-- product categories, vendor lists, micro supply chain segments, marketing/HR/operations
-- vague/general groups, ambiguous or non-atomic concepts not defensible to a macro analyst
-- sports, entertainment, celebrity news, local human interest without market linkage
+- operational niches without market linkage (sterilized packaging, HR operations)
+- vague/general concepts not defensible to a macro analyst
+- sports, entertainment, celebrity news, local human interest
 
 PRINCIPLES:
-- Topic must help understand markets or make/plan trades.
-- Default to REJECT, but allow topics with clear macro/trading relevance.
-- If topic has explicit connection to pricing, liquidity, volatility, or macro transmission → ACCEPT.
-- If topic is canonical asset, policy institution, or macro driver → ACCEPT.
-- If uncertain and topic lacks clear market linkage → REJECT.
-- Topic must be atomic, human-readable, and non-duplicative with existing macro/asset anchors.
+- Topic must help understand markets or inform trading decisions.
+- If topic has connection to pricing, liquidity, volatility, or macro transmission → ACCEPT.
+- If topic is canonical asset, policy institution, sector, or macro driver → ACCEPT.
+- Only reject if topic clearly lacks any market/trading relevance.
+- Topic must be atomic, human-readable, and non-duplicative with existing anchors.
 """
 
 

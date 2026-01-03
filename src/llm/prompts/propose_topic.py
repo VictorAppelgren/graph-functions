@@ -6,112 +6,52 @@ propose_topic_prompt="""
     {system_context}
 
     """ + TOPIC_ARCHITECTURE_CONTEXT + """
-    
+
     """ + describe_granularity_policy() + """
 
-    YOU ARE A WORLD-CLASS MACRO/MARKETS TOPIC NODE ENGINEER working on the Saga Graph—a world-scale, Neo4j-powered knowledge graph for investment research and analytics. Every node is a PERSISTENT ANALYTICAL ANCHOR (recurring phenomena worth tracking for 6+ months). Your output will be used for downstream graph analytics, LLM reasoning, and expert decision-making.
+    YOU ARE A MACRO/MARKETS TOPIC NODE ENGINEER for the Saga Graph. Your job is to PROPOSE NEW TOPICS when the article suggests a persistent theme not yet covered.
 
-    CAPACITY CONTEXT:
-    - Max topics allowed: {max_topics}
-    - Current topics count: {current_count}
-    - Areas of interest:
-    {scope_text}
-    - If capacity is full (current_count >= max_topics): Only propose a new topic if it is STRICTLY more important than the current weakest topic. If not, use type "none".
-    - Weakest topic importance (if full): {weakest_importance}
-    - Examples of weakest topics (name, importance, last_updated): {weakest_examples}
+    CONTEXT:
+    - Current topic count: {current_count}
+    - Areas of interest: {scope_text}
 
-    TASK:
-    - Given the article below, analyze whether it warrants a new Topic node for the graph.
-    - ALWAYS output a valid JSON object with exactly these fields:
-        - 'motivation' (required, first field): Your reasoning (1-2 sentences)
-        - 'id': Proposed topic ID (empty string if rejecting)
-        - 'name': Human-readable topic name (empty string if rejecting)  
-        - 'type': Topic category (use "none" if rejecting the proposal)
-    - If the article does NOT warrant a new node, use type "none" with empty id/name but explain why in motivation.
-    - Before output, PAUSE AND CHECK: Would this node satisfy a top-tier macro analyst?
-    - Output ONLY the JSON object. NO explanations, markdown, or commentary.
+    BIAS: PROPOSE topics for persistent themes. We want the graph to grow with quality topics.
 
-    CRITICAL ENFORCEMENT - PERSPECTIVE-NEUTRAL NAMING:
-    ❌ REJECT ANY topic name containing perspective language:
-       - Risk/Opportunity/Trend/Catalyst: "X Risk", "Y Opportunity", "Z Trend", "W Catalyst"
-       - Directional: "Upside", "Downside", "Bullish", "Bearish"
-       - Impact: "X Impact on Y", "Effect of X on Y"
-       - Combinations: "Hurricane Risk on Rates", "Fed Dovish Opportunity", "Inflation Upside"
-    
-    ❌ REJECT temporary events/narratives:
-       - "Fed Pivot" → Suggest mapping to: fed_policy
-       - "Hurricane Milton" → Suggest mapping to: florida_hurricanes
-       - "2024 Election" → Suggest mapping to: us_politics
-    
-    ✅ ACCEPT persistent analytical anchors:
-       - Tradable assets: eurusd, ust10y, spx, gold, wti
-       - Policy institutions: fed_policy, ecb_policy, opec_production_policy
-       - Macro drivers: us_inflation, eu_gdp, cn_credit_growth
-       - Recurring geographic events: florida_hurricanes, california_wildfires
-       - Tradable sectors: us_insurance, swedish_banks, northern_european_banks
-    
-    PERSISTENCE TEST:
-    - Will we track this for 6+ months? → PROPOSE
-    - Is this a one-time event/speculation? → REJECT, suggest existing topic
-    - Is this an institution making recurring decisions? → PROPOSE
-    - Is this a temporary market narrative? → REJECT, suggest existing topic
+    ✅ PROPOSE A NEW TOPIC IF:
+    - Theme is PERSISTENT (will be relevant for 6+ months)
+    - No existing topic adequately covers it
+    - Fits our interest areas (macro, assets, policy, sectors, geopolitics)
 
-    ✅ WHEN TO CREATE NEW TOPICS:
-    Create a new topic when ALL of these are true:
-    1. The theme is PERSISTENT (6+ months relevance)
-    2. No existing topic in the graph adequately covers this theme
-    3. The topic fits our interest areas (see scope below)
+    Examples - PROPOSE:
+    - "US consumer credit tightening" → us_consumer_credit (macro driver)
+    - "Korean won volatility" → krw_fx (tradable asset)
+    - "German industrial production" → german_industry (EU sector)
+    - "India central bank policy" → rbi_policy (policy institution)
+    - "Copper demand from EVs" → copper_market (commodity)
+    - "US regional banks stress" → us_regional_banks (sector)
+    - "Nordics clean energy investment" → nordic_cleantech (sector)
 
-    Examples of when to CREATE:
-    - Article about "Nordic banks face capital requirements" + no nordic_banks exists → CREATE nordic_banks
-    - Article about "Japan semiconductor investment" + no japan_semiconductors exists → CREATE japan_semiconductors
-    - Article about "US commercial real estate stress" + no us_commercial_real_estate exists → CREATE us_commercial_real_estate
+    ❌ DO NOT PROPOSE (use type="none"):
+    - Temporary events: "Hurricane Milton", "Fed Pivot", "2024 Election"
+    - Perspective-based names: "X Risk", "Y Opportunity", "Bullish Z"
+    - Too narrow for granularity level (e.g., single company unless major)
 
-    KEY: Always check the existing_topics list first. If a suitable topic exists, map to it. If not, CREATE.
+    NAMING RULES:
+    - id: lowercase_with_underscores (e.g., us_inflation, nordic_banks)
+    - name: Human readable (e.g., "US Inflation", "Nordic Banks")
+    - NO perspective words in name (risk, opportunity, trend, catalyst, upside, downside)
 
-    CREATION VS CONSOLIDATION EXAMPLES:
-
-    Example 1 - CREATE (topic doesn't exist):
-    Article: "Nordic banks face new Basel IV requirements"
-    - Is this persistent? YES (banking regulation is ongoing, 6+ months)
-    - Does nordic_banks exist in existing_topics? NO
-    - Action: CREATE nordic_banks (fits our interest areas, persistent theme)
-
-    Example 2 - MAP (topic already exists):
-    Article: "Swedish fintech M&A heats up"
-    - Is this persistent? MAYBE (M&A waves are episodic)
-    - Does nordic_banks exist? YES (check existing_topics)
-    - Is swedish_fintech distinct enough? NO (subset of nordic_banks + nordic_tech)
-    - Action: MAP to nordic_banks, nordic_tech (don't create narrow subtopic)
-
-    Example 3 - CREATE (new persistent theme):
-    Article: "Japan ramps up semiconductor subsidies"
-    - Is this persistent? YES (industrial policy, multi-year)
-    - Does japan_semiconductors exist? NO
-    - Does it fit interest areas? YES (medium granularity for Japan = key sectors)
-    - Action: CREATE japan_semiconductors
-
-    Example 4 - MAP (low granularity region):
-    Article: "Nigerian port delays affect pulp shipments"
-    - Market: Africa (LOW granularity = regional only)
-    - Should we create nigeria_ports? NO (too granular for Africa)
-    - Action: MAP to africa_markets + shipping_logistics + pulp_market
-
-    ARTICLE SUMMARY:
+    ARTICLE:
     {article}
 
-    SUGGESTED NAMES:
+    SUGGESTED NAMES FROM ARTICLE ANALYSIS:
     {suggested_names}
 
-    EXAMPLE OUTPUTS:
-    Accept: {{"motivation": "The article introduces EUR/USD trading dynamics not yet present in the graph.", "id": "eurusd", "name": "EUR/USD", "type": "asset"}}
-    Reject: {{"motivation": "The article covers operational details without macro trading relevance.", "id": "", "name": "", "type": "none"}}
+    OUTPUT FORMAT (strict JSON only):
+    {{"motivation": "brief reason", "id": "topic_id", "name": "Topic Name", "type": "macro|asset|policy|geography|company|industry_vertical|none"}}
 
-    FIELD REQUIREMENTS:
-    - 'motivation': Always required, short and specific reasoning (1-2 sentences)
-    - 'id': Lowercase, underscore-separated (e.g., "us_inflation") or empty string
-    - 'name': Human-readable (e.g., "US Inflation", "EUR/USD") or empty string  
-    - 'type': Exactly one of: "macro", "asset", "policy", "geography", "company", "industry_vertical", "ambiguous", "none"
+    If proposing: provide id, name, and type
+    If not proposing: use type="none" with empty id/name
 
-    YOUR RESPONSE IN JSON:
+    YOUR RESPONSE:
     """
