@@ -54,11 +54,12 @@ def get_all_topics():
     # Get ALL topics (no limit)
     query = """
     MATCH (t:Topic)
-    RETURN t.id as id, t.name as name, t.importance as importance, 
-           t.category as category, labels(t) as labels
+    RETURN t.id as id, t.name as name, t.importance as importance,
+           t.category as category, t.motivation as motivation,
+           t.created_at as created_at, labels(t) as labels
     ORDER BY t.importance DESC, t.name ASC
     """
-    
+
     results = run_cypher(query, {})
     topics = [
         {
@@ -66,6 +67,8 @@ def get_all_topics():
             "name": r.get("name", r["id"]),
             "importance": r.get("importance", 0),
             "category": r.get("category", ""),
+            "motivation": r.get("motivation", ""),
+            "created_at": str(r.get("created_at", "")) if r.get("created_at") else "",
             "labels": r.get("labels", [])
         }
         for r in results

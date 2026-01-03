@@ -31,10 +31,26 @@ propose_topic_prompt="""
     - "US regional banks stress" → us_regional_banks (sector)
     - "Nordics clean energy investment" → nordic_cleantech (sector)
 
+    🏢 SINGLE COMPANY RULES (STRICT - max ~15 total company topics):
+    ALLOWED single companies (market-moving, macro-significant):
+    - Mag7 tech: Apple, Microsoft, Google/Alphabet, Amazon, Meta, Tesla, NVIDIA
+    - AI leaders: OpenAI, Anthropic
+    - China AI: group as "china_ai" (DeepSeek, Baidu AI, etc. - NOT individual companies)
+    - Semiconductor: TSMC, ASML (already covered in sector topics)
+
+    NOT ALLOWED as single company topics:
+    - Broadcom, Intel, AMD, Qualcomm → use "ai_semiconductors" or "us_tech" sector
+    - Individual banks → use sector topics (us_banks, nordic_banks, eu_banks)
+    - Individual retailers → use "us_consumer" sector
+    - Any company that fits an existing sector topic
+
+    ALWAYS prefer sector topics over single companies!
+
     ❌ DO NOT PROPOSE (use type="none"):
     - Temporary events: "Hurricane Milton", "Fed Pivot", "2024 Election"
     - Perspective-based names: "X Risk", "Y Opportunity", "Bullish Z"
-    - Too narrow for granularity level (e.g., single company unless major)
+    - Single companies that belong in sector topics (see rules above)
+    - Companies not in the ALLOWED list above
 
     NAMING RULES:
     - id: lowercase_with_underscores (e.g., us_inflation, nordic_banks)

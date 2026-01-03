@@ -104,7 +104,7 @@ def run_simple_sources_pipeline():
     sources = TOP_PREMIUM_SOURCES.copy()
     random.shuffle(sources)
     
-    logger.info(f"🚀 Starting SIMPLE sources pipeline with {len(sources)} sources")
+    logger.info(f"Starting SIMPLE sources pipeline with {len(sources)} sources")
     logger.info(f"First 5 sources: {sources[:5]}")
     
     cycle_count = 0
@@ -115,7 +115,7 @@ def run_simple_sources_pipeline():
         cycle_start = datetime.datetime.now()
         cycle_articles = 0
         
-        logger.info(f"📰 Starting cycle #{cycle_count} at {cycle_start:%H:%M:%S}")
+        logger.info(f"Starting cycle #{cycle_count} at {cycle_start:%H:%M:%S}")
         
         for i, source in enumerate(sources, 1):
             logger.info(f"[{i}/{len(sources)}] Processing {source}")
@@ -147,23 +147,23 @@ def run_simple_sources_pipeline():
                         continue
                 
                 cycle_articles += articles_added
-                logger.info(f"✅ {source}: {articles_added}/{len(articles)} articles added")
+                logger.info(f"{source}: {articles_added}/{len(articles)} articles added")
                 
             except Exception as e:
-                logger.error(f"❌ Error with {source}: {e}")
+                logger.error(f"Error with {source}: {e}")
                 continue
         
         total_articles += cycle_articles
         cycle_duration = (datetime.datetime.now() - cycle_start).total_seconds()
         
-        logger.info(f"✅ Cycle #{cycle_count} completed: {cycle_articles} articles in {cycle_duration:.1f}s")
-        logger.info(f"📊 Total articles processed: {total_articles}")
+        logger.info(f"Cycle #{cycle_count} completed: {cycle_articles} articles in {cycle_duration:.1f}s")
+        logger.info(f"Total articles processed: {total_articles}")
         
         # Re-shuffle for next cycle
         random.shuffle(sources)
         
         # Brief pause between cycles
-        logger.info("😴 Sleeping 30s before next cycle...")
+        logger.info("Sleeping 30s before next cycle...")
         time.sleep(30)
 
 
@@ -173,7 +173,7 @@ if __name__ == "__main__":
     set_worker_identity("worker-sources")
 
     # Log worker mode at startup
-    logger.info(f"\ud83d\ude80 INGEST TOP SOURCES - Mode: {get_mode_description()}")
+    logger.info(f"INGEST TOP SOURCES - Mode: {get_mode_description()}")
 
     # Wait for LLMs to be healthy before starting pipeline
     # This prevents crash loops when LLM servers are down
