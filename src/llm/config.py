@@ -71,6 +71,7 @@ DB_RETRY_DELAY = 0.1
 # API Keys from environment (loaded from .env above)
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 # Model tier enum - 4 tiers for different use cases
 class ModelTier(Enum):
@@ -92,6 +93,7 @@ class ModelTier(Enum):
 # - LOCAL_LLM_ONLY=true: Only use local server (for offline/testing)
 # - DEEPSEEK_API_KEY: Required for COMPLEX tier
 # - ANTHROPIC_API_KEY: Required for FAST tier
+# - OPENROUTER_API_KEY: Required for MEDIUM tier (OpenRouter)
 
 # Check deployment mode
 DISABLE_LOCAL_LLM = os.getenv("DISABLE_LOCAL_LLM", "false").lower() == "true"
@@ -133,14 +135,24 @@ if not LOCAL_LLM_ONLY:
     })
     _init_logger.info("LLM CONFIG: Added external_a, external_b (20B vLLM on :8686, :8787)")
 
-    # --- MEDIUM tier server (120B model) ---
+    # --- MEDIUM tier server (120B model via OpenRouter) ---
+    # Local 120B server (commented out - boss using the server)
+    # SERVERS['external_120b'] = {
+    #     'provider': 'openai',
+    #     'base_url': 'http://gate04.cfa.handels.gu.se:3331/v1',
+    #     'model': 'openai/gpt-oss-120b',  # 120B model
+    #     'temperature': 0.2,
+    # }
+    # _init_logger.info("LLM CONFIG: Added external_120b (120B vLLM on :3331)")
+
+    # OpenRouter 120B (free tier - 1000 req/day with $10 credits)
     SERVERS['external_120b'] = {
         'provider': 'openai',
-        'base_url': 'http://gate04.cfa.handels.gu.se:3331/v1',
-        'model': 'openai/gpt-oss-120b',  # 120B model
+        'base_url': 'https://openrouter.ai/api/v1',
+        'model': 'openai/gpt-oss-120b:free',
         'temperature': 0.2,
     }
-    _init_logger.info("LLM CONFIG: Added external_120b (120B vLLM on :3331)")
+    _init_logger.info("LLM CONFIG: Added external_120b (120B via OpenRouter free tier)")
 
     # --- COMPLEX tier server (DeepSeek v3.2) ---
     SERVERS['deepseek'] = {
@@ -471,8 +483,15 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             kwargs["base_url"] = base_url
             kwargs["api_key"] = DEEPSEEK_API_KEY
             kwargs["max_tokens"] = 16384
+        # Handle OpenRouter API (external_120b via OpenRouter)
+        elif server_id == 'external_120b' and 'openrouter.ai' in (base_url or ''):
+            if not OPENROUTER_API_KEY:
+                raise ValueError("OPENROUTER_API_KEY not set! Required for MEDIUM tier (OpenRouter).")
+            kwargs["base_url"] = base_url
+            kwargs["api_key"] = OPENROUTER_API_KEY
+            kwargs["max_tokens"] = 16384
         elif base_url:
-            # Local vLLM servers (local, external_a, external_b, external_120b)
+            # Local vLLM servers (local, external_a, external_b)
             kwargs["base_url"] = base_url
             kwargs["api_key"] = os.getenv("OPENAI_API_KEY", "sk-noop")
             kwargs["max_tokens"] = 16384

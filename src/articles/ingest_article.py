@@ -14,7 +14,11 @@ from src.graph.ops.topic import add_topic
 logger = get_logger(__name__)
 
 
-def trigger_next_steps(topic_id: str, argos_id: str) -> None:
+def discover_topic_relationships(topic_id: str, argos_id: str) -> None:
+    """
+    Discover INFLUENCES and CORRELATES_WITH relationships for a topic.
+    Throttled for topics with >10 existing relationships (10% chance to run).
+    """
     # Count existing topic relationships (excluding articles)
     relationship_count_query = """
     MATCH (t:Topic {id: $topic_id})-[r:INFLUENCES|CORRELATES_WITH]-(other:Topic)
@@ -204,7 +208,7 @@ def add_article(
                 f"Created ABOUT link: {argos_id} -> {intended_topic_id} (intended topic)"
             )
             # Trigger next steps for the intended topic link
-            trigger_next_steps(intended_topic_id, argos_id)
+            discover_topic_relationships(intended_topic_id, argos_id)
             if not article_already_exists:
                 track("article_added")
             track("about_link_created")
@@ -288,13 +292,13 @@ def add_article(
         track(f"article_classified_priority_{classification.overall_importance}")
 
         # Trigger next steps, relationship discovery and replacement analysis
-        trigger_next_steps(topic_id, argos_id)
+        discover_topic_relationships(topic_id, argos_id)
 
         # Trigger agent-based analysis for Tier 3 articles only (premium importance)
         # WORKER_MODE check: only write if allowed
         if not test and classification.overall_importance >= 3 and can_write():
             from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
-            track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
+            track("analysis.triggered.new_articles", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
             logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
             analysis_rewriter_with_agents(topic_id)
             track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
@@ -370,13 +374,21 @@ def add_article(
                     track(f"article_classified_priority_{classification.overall_importance}")
 
                     # Trigger next steps, relationship discovery and replacement analysis
-                    trigger_next_steps(topic_id, argos_id)
+                    discover_topic_relationships(topic_id, argos_id)
+
+                    # Enrich new topic from Perigon + cold storage (get more articles quickly)
+                    if not test:
+                        from worker.workflows.topic_enrichment import backfill_topic_from_storage
+                        logger.info(f"🔄 Enriching new topic {topic_id} from Perigon + cold storage...")
+                        enrichment_added = backfill_topic_from_storage(topic_id=topic_id, test=False)
+                        logger.info(f"✅ Enrichment complete for new topic {topic_id}: {enrichment_added} articles added")
+                        track("new_topic_enriched", f"Topic {topic_id}: {enrichment_added} articles added")
 
                     # Trigger agent-based analysis for Tier 3 articles only (premium importance)
                     # WORKER_MODE check: only write if allowed
                     if not test and classification.overall_importance >= 3 and can_write():
                         from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
-                        track("agent_analysis_triggered", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
+                        track("analysis.triggered.new_articles", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
                         logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
                         analysis_rewriter_with_agents(topic_id)
                         track("agent_analysis_completed", f"Topic {topic_id}: All sections written")

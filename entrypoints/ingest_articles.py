@@ -26,7 +26,8 @@ from typing import Dict, Any
 import time
 import math
 from dateutil import parser as date_parser
-from src.graph.policies.priority import PRIORITY_POLICY, PriorityLevel
+# Fixed article count for all topics (no importance-based variation)
+DEFAULT_ARTICLES_PER_QUERY = 20
 
 # Import from V1 using absolute imports
 from src.graph.ops.topic import get_all_topics
@@ -125,7 +126,7 @@ def run_pipeline() -> Dict[str, Any]:
                 for username in all_users:
                     strategies = get_user_strategies(username)
                     for strategy in strategies:
-                        last_analyzed = strategy.get("last_analyzed_at")
+                        last_analyzed = strategy.get("latest_analysis", {}).get("analyzed_at")
                         if not last_analyzed:
                             needs_analysis = True
                             break
@@ -180,7 +181,6 @@ def run_pipeline() -> Dict[str, Any]:
                 "last_queried",
                 "last_updated",
                 "last_analyzed",
-                "importance",
             ]
         )
         assert topics, "No Topic topics found in graph."
@@ -247,7 +247,6 @@ def run_pipeline() -> Dict[str, Any]:
         )
         logger.info(f"Processing topic        : {topic_name}")
         logger.info(f"Processing type        : {topic_type}")
-        logger.info(f"Processing importance  : {topic['importance']}")
         logger.info(f"Processing last_queried: {topic['last_queried']}")
         logger.info(f"Processing last_analyzed: {format_time_delta(topic.get('last_analyzed', 'Never'))}")
 
@@ -281,11 +280,7 @@ def run_pipeline() -> Dict[str, Any]:
                     logger.info(f"Due in                 : {mins}m")
 
         query = topic["query"]
-        importance = PriorityLevel(int(topic["importance"]))  # fails early if invalid
-        policy = PRIORITY_POLICY[importance]
-        max_articles = policy.number_of_articles
-
-        orchestrator.run_query(topic_name, query, max_articles=max_articles)
+        orchestrator.run_query(topic_name, query, max_articles=DEFAULT_ARTICLES_PER_QUERY)
 
         # Increment queries after successful processing
         res = run_cypher(

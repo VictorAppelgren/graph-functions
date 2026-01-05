@@ -47,7 +47,8 @@ def propose_topic(
     Returns a TopicProposal or None if no proposal.
     """
     logger.info("Calling LLM to propose new Topic node based on article.")
-    llm = get_llm(ModelTier.COMPLEX)
+    # TODO: Upgrade to ModelTier.MEDIUM (120B) when available for better topic proposals
+    llm = get_llm(ModelTier.SIMPLE)
 
     scope_text = describe_interest_areas()
     existing_topics = existing_topics or []

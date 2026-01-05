@@ -361,7 +361,7 @@ def backfill_topic_from_storage(
                 if missing_analysis and can_write():
                     from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
                     from src.observability.stats_client import track
-                    track("agent_analysis_triggered", f"Topic {topic_id}: Enrichment triggered analysis (missing sections: {missing_analysis})")
+                    track("analysis.triggered.new_articles", f"Topic {topic_id}: Enrichment triggered analysis (missing sections: {missing_analysis})")
                     analysis_rewriter_with_agents(topic_id)
                     track("agent_analysis_completed", f"Topic {topic_id}: Enrichment analysis complete")
                 elif missing_analysis:

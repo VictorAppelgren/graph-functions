@@ -1,6 +1,10 @@
 """Embeddings using FastEmbed (lightweight, ONNX-based, no PyTorch)."""
 import warnings
+# Suppress fastembed deprecation warnings (they're internal, we use the correct API)
 warnings.filterwarnings("ignore", message=".*DefaultEmbedding.*deprecated.*")
+warnings.filterwarnings("ignore", message=".*FlagEmbedding.*deprecated.*")
+warnings.filterwarnings("ignore", message=".*JinaEmbedding.*deprecated.*")
+warnings.filterwarnings("ignore", module="fastembed.*")
 
 from typing import List
 from fastembed import TextEmbedding

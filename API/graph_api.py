@@ -117,33 +117,104 @@ def query_articles(topic_id: str = Query(...)):
 
 @app.get("/neo/reports/{topic_id}")
 def get_report(topic_id: str):
-    """Get aggregated report for a topic - returns sections dict for collapsible UI"""
+    """Get aggregated report for a topic - returns sections dict for collapsible UI.
+
+    Also used by admin dashboard to get topic details - returns topic info even if no reports exist.
+    """
     try:
-        sections = aggregate_reports(topic_id)
+        # Get topic first - fail if topic doesn't exist
         topic = get_topic_by_id(topic_id)
+        if not topic:
+            raise HTTPException(status_code=404, detail=f"Topic {topic_id} not found")
 
-        if not sections:
-            raise HTTPException(status_code=404, detail="No reports found")
+        topic_name = topic.get("name", topic_id)
 
-        topic_name = topic.get("name", topic_id) if topic else topic_id
+        # Get reports (may be empty for new topics)
+        try:
+            sections = aggregate_reports(topic_id)
+        except:
+            sections = {}
 
         # Get exploration_findings if it exists on the topic (JSON stored as string)
         exploration_findings = None
-        if topic:
-            raw_findings = topic.get("exploration_findings")
-            if raw_findings:
-                import json
-                try:
-                    exploration_findings = json.loads(raw_findings) if isinstance(raw_findings, str) else raw_findings
-                except (json.JSONDecodeError, TypeError):
-                    pass
+        raw_findings = topic.get("exploration_findings")
+        if raw_findings:
+            import json
+            try:
+                exploration_findings = json.loads(raw_findings) if isinstance(raw_findings, str) else raw_findings
+            except (json.JSONDecodeError, TypeError):
+                pass
+
+        # Get article stats for this topic
+        stats_query = """
+        MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+        WHERE coalesce(a.priority, '') <> 'hidden'
+        RETURN
+            count(a) as total_articles,
+            count(CASE WHEN r.timeframe = 'fundamental' THEN 1 END) as fundamental_count,
+            count(CASE WHEN r.timeframe = 'medium' THEN 1 END) as medium_count,
+            count(CASE WHEN r.timeframe = 'current' THEN 1 END) as current_count
+        """
+        stats_result = run_cypher(stats_query, {"topic_id": topic_id})
+        article_stats = stats_result[0] if stats_result else {
+            "total_articles": 0,
+            "fundamental_count": 0,
+            "medium_count": 0,
+            "current_count": 0
+        }
+
+        # Get relationship counts
+        rel_query = """
+        MATCH (t:Topic {id: $topic_id})
+        OPTIONAL MATCH (t)-[:INFLUENCES]-(influenced:Topic)
+        OPTIONAL MATCH (t)-[:CORRELATES_WITH]-(correlated:Topic)
+        RETURN
+            count(DISTINCT influenced) as influences_count,
+            count(DISTINCT correlated) as correlates_count
+        """
+        rel_result = run_cypher(rel_query, {"topic_id": topic_id})
+        relationships = rel_result[0] if rel_result else {
+            "influences_count": 0,
+            "correlates_count": 0
+        }
+
+        # Get recent articles
+        articles_query = """
+        MATCH (a:Article)-[r:ABOUT]->(t:Topic {id: $topic_id})
+        WHERE coalesce(a.priority, '') <> 'hidden'
+        RETURN
+            a.id as id,
+            a.title as title,
+            a.summary as summary,
+            a.published_at as published_at,
+            a.source as source,
+            a.priority as priority,
+            r.timeframe as timeframe,
+            r.importance_risk as importance_risk,
+            r.importance_opportunity as importance_opportunity,
+            r.importance_trend as importance_trend,
+            r.importance_catalyst as importance_catalyst,
+            r.motivation as motivation,
+            r.implications as implications,
+            r.created_at as linked_at
+        ORDER BY a.published_at DESC
+        LIMIT 20
+        """
+        articles = run_cypher(articles_query, {"topic_id": topic_id})
 
         return {
             "topic_id": topic_id,
             "topic_name": topic_name,
+            "topic_data": topic,
             "sections": sections,
-            "exploration_findings": exploration_findings
+            "reports": sections,  # Alias for frontend compatibility
+            "exploration_findings": exploration_findings,
+            "article_stats": article_stats,
+            "relationships": relationships,
+            "articles": articles
         }
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
@@ -336,6 +407,56 @@ class RewriteSectionRequest(BaseModel):
     current_content: str  # existing section content
 
 
+class ImproveStrategyTextRequest(BaseModel):
+    username: str
+    strategy_id: str
+    current_text: str  # The strategy_text to improve
+    asset: str  # Primary asset for context
+    position_text: Optional[str] = None  # Optional position/outlook text
+
+
+@app.post("/strategy/improve-text")
+def improve_strategy_text_endpoint(request: ImproveStrategyTextRequest):
+    """
+    Improve the user's strategy thesis text using AI.
+    Returns an enhanced version while preserving their voice and core ideas.
+
+    This embodies Saga's philosophy: AI AMPLIFIES human judgment, doesn't replace it.
+    """
+    from src.functions.improve_strategy_text import (
+        improve_strategy_text,
+        get_topic_context_for_strategy,
+    )
+
+    try:
+        # Try to get topic context for richer improvement
+        topic_context = None
+        try:
+            topic_context = get_topic_context_for_strategy(
+                request.username, request.strategy_id
+            )
+        except Exception as e:
+            print(f"Could not fetch topic context: {e}")
+
+        # Improve the strategy text
+        result = improve_strategy_text(
+            strategy_text=request.current_text,
+            asset=request.asset,
+            position_text=request.position_text,
+            topic_context=topic_context,
+        )
+
+        return {
+            "improved_text": result.improved_text,
+            "changes_summary": result.changes_summary,
+        }
+    except Exception as e:
+        import traceback
+        error_detail = f"{str(e)}\n{traceback.format_exc()}"
+        print(f"❌ Improve strategy text error: {error_detail}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.post("/strategy/rewrite-section")
 def rewrite_strategy_section(request: RewriteSectionRequest):
     """
@@ -374,15 +495,21 @@ def get_article_distribution():
     Returns counts per topic for each timeframe × perspective combination.
     """
     # Query to get distribution by topic, timeframe, and perspective
+    # Uses coalesce to handle NULL values, and finds the MAX perspective score
     query = """
     MATCH (a:Article)-[r:ABOUT]->(t:Topic)
     WHERE coalesce(a.priority, '') <> 'hidden'
     WITH t, r.timeframe as timeframe,
+         coalesce(r.importance_risk, 0) as risk,
+         coalesce(r.importance_opportunity, 0) as opp,
+         coalesce(r.importance_trend, 0) as trend,
+         coalesce(r.importance_catalyst, 0) as cat
+    WITH t, timeframe,
          CASE
-           WHEN r.importance_risk > 0.5 THEN 'risk'
-           WHEN r.importance_opportunity > 0.5 THEN 'opportunity'
-           WHEN r.importance_trend > 0.5 THEN 'trend'
-           WHEN r.importance_catalyst > 0.5 THEN 'catalyst'
+           WHEN risk >= opp AND risk >= trend AND risk >= cat AND risk > 0 THEN 'risk'
+           WHEN opp >= risk AND opp >= trend AND opp >= cat AND opp > 0 THEN 'opportunity'
+           WHEN trend >= risk AND trend >= opp AND trend >= cat AND trend > 0 THEN 'trend'
+           WHEN cat >= risk AND cat >= opp AND cat >= trend AND cat > 0 THEN 'catalyst'
            ELSE 'unclassified'
          END as perspective,
          count(*) as count
@@ -400,9 +527,9 @@ def get_article_distribution():
         if topic_id not in distribution:
             distribution[topic_id] = {
                 "name": r["topic_name"],
-                "fundamental": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0},
-                "medium": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0},
-                "current": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0}
+                "fundamental": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0, "unclassified": 0},
+                "medium": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0, "unclassified": 0},
+                "current": {"risk": 0, "opportunity": 0, "trend": 0, "catalyst": 0, "unclassified": 0}
             }
 
         tf = r["timeframe"] or "current"
@@ -420,6 +547,44 @@ def get_article_distribution():
         "distribution": distribution,
         "topic_count": len(distribution),
         "total_articles": total_articles
+    }
+
+
+# ============ GRAPH STATE STATS ============
+
+@app.get("/neo/graph-state")
+def get_graph_state():
+    """
+    Get current graph state for dashboard monitoring.
+    Returns counts for topics, articles, connections, and averages.
+    """
+    # Count topics
+    topic_count_query = "MATCH (t:Topic) RETURN count(t) as count"
+    topic_result = run_cypher(topic_count_query, {})
+    topic_count = topic_result[0]["count"] if topic_result else 0
+
+    # Count articles (in graph, not hidden)
+    article_count_query = """
+    MATCH (a:Article)
+    WHERE coalesce(a.priority, '') <> 'hidden'
+    RETURN count(a) as count
+    """
+    article_result = run_cypher(article_count_query, {})
+    article_count = article_result[0]["count"] if article_result else 0
+
+    # Count connections (all relationships)
+    connection_count_query = "MATCH ()-[r]-() RETURN count(r)/2 as count"
+    connection_result = run_cypher(connection_count_query, {})
+    connection_count = connection_result[0]["count"] if connection_result else 0
+
+    # Calculate average articles per topic
+    avg_articles = round(article_count / topic_count, 1) if topic_count > 0 else 0
+
+    return {
+        "topics": topic_count,
+        "articles": article_count,
+        "connections": connection_count,
+        "avg_articles_per_topic": avg_articles
     }
 
 
@@ -462,10 +627,12 @@ def get_recent_topics(days: int = Query(default=7, le=30)):
     """
     results = run_cypher(query, {"days": days})
 
-    from datetime import datetime, timedelta
-    now = datetime.now()
-    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    yesterday_start = today_start - timedelta(days=1)
+    from datetime import datetime, timedelta, timezone
+
+    # Use UTC for consistent comparisons
+    now_utc = datetime.now(timezone.utc)
+    today_start_utc = now_utc.replace(hour=0, minute=0, second=0, microsecond=0)
+    yesterday_start_utc = today_start_utc - timedelta(days=1)
 
     today = []
     yesterday = []
@@ -475,13 +642,22 @@ def get_recent_topics(days: int = Query(default=7, le=30)):
         created = r.get("created_at")
         topic_info = {"id": r["id"], "name": r["name"]}
 
-        # Neo4j datetime objects need conversion
+        if created is None:
+            this_week.append(topic_info)
+            continue
+
+        # Convert Neo4j datetime to Python datetime
         if hasattr(created, 'to_native'):
             created = created.to_native()
 
-        if created and created >= today_start:
+        # Ensure created is timezone-aware (assume UTC if naive)
+        if created.tzinfo is None:
+            created = created.replace(tzinfo=timezone.utc)
+
+        # Compare timezone-aware datetimes
+        if created >= today_start_utc:
             today.append(topic_info)
-        elif created and created >= yesterday_start:
+        elif created >= yesterday_start_utc:
             yesterday.append(topic_info)
         else:
             this_week.append(topic_info)

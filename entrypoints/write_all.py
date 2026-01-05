@@ -3,11 +3,16 @@
 Write All - Server 3 Entrypoint
 
 Runs the full analysis pipeline for all topics AND user strategies.
-Designed to run continuously on a dedicated writing server with a larger model.
+Designed to run continuously on a dedicated writing server.
 
-Daily schedule:
-- 06:00: Write all user strategies (once per day)
-- Continuous: Write topic analyses for topics that need updates
+Continuous loop priorities (--loop mode):
+1. Daily strategy analysis (6am) - uses COMPLEX tier (DeepSeek)
+2. Topic rewrites when new Tier 3 articles exist - uses MEDIUM tier (120B)
+3. Exploration (risks/opportunities) - uses MEDIUM tier (120B, free via OpenRouter)
+
+The loop is interleaved: after each exploration, it checks if any writes are needed.
+This keeps the system responsive to new articles while continuously improving
+risk/opportunity coverage.
 
 Usage:
     python write_all.py              # Run all topics + strategies once
@@ -70,7 +75,7 @@ def strategy_needs_update(username: str, strategy_id: str) -> tuple[bool, str]:
     if not strategy:
         return False, "strategy_not_found"
 
-    strategy_last_analyzed = strategy.get("last_analyzed_at")
+    strategy_last_analyzed = strategy.get("latest_analysis", {}).get("analyzed_at")
     if not strategy_last_analyzed:
         return True, "never_analyzed"
 
@@ -195,14 +200,14 @@ def write_single_topic(topic_id: str, new_article_ids: Optional[List[str]] = Non
         topic_id: Topic to analyze
         new_article_ids: Optional list of NEW article IDs to highlight to agents.
                         If provided, agents will focus on these new articles.
+
+    Note: Exploration is handled separately in run_one_exploration() to allow
+    interleaving with write tasks for better responsiveness.
     """
     try:
         logger.info(f"🎯 Writing analysis for: {topic_id}")
         if new_article_ids:
             logger.info(f"   📰 Highlighting {len(new_article_ids)} NEW articles to agents")
-
-        # Run exploration BEFORE analysis so findings are available as context
-        run_topic_exploration(topic_id)
 
         # Pass new_article_ids to orchestrator so agents know what's new
         analysis_rewriter_with_agents(topic_id, new_article_ids=new_article_ids)
@@ -376,7 +381,7 @@ def should_run_daily_strategies() -> bool:
     for username in all_users:
         strategies = get_user_strategies(username)
         for strategy in strategies:
-            last_analyzed = strategy.get("last_analyzed_at")
+            last_analyzed = strategy.get("latest_analysis", {}).get("analyzed_at")
             if not last_analyzed:
                 return True
             analyzed_time = date_parser.parse(last_analyzed)
@@ -391,38 +396,116 @@ def should_run_daily_strategies() -> bool:
     return False
 
 
+def find_topic_needing_rewrite() -> Optional[tuple[str, List[str]]]:
+    """
+    Find ONE topic that needs rewriting.
+    Returns (topic_id, new_article_ids) or None if nothing needs rewriting.
+    """
+    from src.analysis.rewrite_policy import should_rewrite_topic
+
+    all_topics = get_all_topics(fields=["id"])
+    random.shuffle(all_topics)  # Randomize for balanced coverage
+
+    for topic in all_topics:
+        topic_id = topic["id"]
+        should_write, reason, new_article_ids = should_rewrite_topic(topic_id)
+        if should_write:
+            return (topic_id, new_article_ids)
+
+    return None
+
+
+def run_one_exploration() -> bool:
+    """
+    Run ONE exploration (risk or opportunity) for ONE strategy or topic.
+    Strategies are prioritized (user-facing).
+
+    Returns True if exploration was run, False if nothing to explore.
+    """
+    from src.exploration_agent.orchestrator import explore_topic, explore_strategy
+    from src.api.backend_client import get_strategy_findings
+    from src.graph.ops.topic_findings import get_topic_findings
+
+    # Priority 1: Strategies (user-facing)
+    all_users = get_all_users()
+    all_strategies = []
+    for username in all_users:
+        for strategy in get_user_strategies(username):
+            all_strategies.append((username, strategy['id']))
+
+    random.shuffle(all_strategies)  # Randomize for balanced coverage
+
+    for username, strategy_id in all_strategies:
+        for mode in ["risk", "opportunity"]:
+            try:
+                logger.info(f"🔍 Exploring {mode} for strategy {username}/{strategy_id}")
+                explore_strategy(username, strategy_id, mode)
+                track("exploration_completed", f"{username}/{strategy_id}:{mode}")
+                return True
+            except Exception as e:
+                logger.warning(f"⚠️ Exploration failed for {username}/{strategy_id} {mode}: {e}")
+                track("exploration_failed", f"{username}/{strategy_id}:{mode}")
+
+    # Priority 2: Topics
+    all_topics = get_all_topics(fields=["id"])
+    random.shuffle(all_topics)
+
+    for topic in all_topics:
+        topic_id = topic["id"]
+        for mode in ["risk", "opportunity"]:
+            try:
+                logger.info(f"🔍 Exploring {mode} for topic {topic_id}")
+                explore_topic(topic_id, mode)
+                track("exploration_completed", f"{topic_id}:{mode}")
+                return True
+            except Exception as e:
+                logger.warning(f"⚠️ Exploration failed for {topic_id} {mode}: {e}")
+                track("exploration_failed", f"{topic_id}:{mode}")
+
+    return False
+
+
 def run_continuous_loop(delay_between_cycles: int = 60):
     """
-    Run continuously:
-    - At 6am: Run all strategies (once per day)
-    - Always: Run all topics, then wait and repeat
+    Run continuously with interleaved priorities:
+
+    1. Daily strategy analysis (6am) - uses COMPLEX (DeepSeek)
+    2. Topic rewrites when new Tier 3 articles exist - uses MEDIUM (120B)
+    3. Exploration (risks/opportunities) - uses MEDIUM (120B, free via OpenRouter)
+
+    The loop checks for writes after each exploration to stay responsive.
     """
     global _last_strategy_date
-    
+
     logger.info("🔄 CONTINUOUS MODE - Write server running")
-    logger.info(f"   Strategies: Daily at 6am")
-    logger.info(f"   Topics: Continuous with {delay_between_cycles}s delay between cycles")
-    
+    logger.info("   Priority 1: Daily strategy analysis (6am)")
+    logger.info("   Priority 2: Topic rewrites (new Tier 3 articles)")
+    logger.info("   Priority 3: Exploration (risks/opportunities)")
+
     while True:
         cycle_start = datetime.datetime.now()
-        logger.info(f"\n{'='*60}")
-        logger.info(f"📅 Cycle started at {cycle_start:%Y-%m-%d %H:%M:%S}")
-        logger.info(f"{'='*60}")
-        
-        # Check for daily strategy run (6am)
+
+        # PRIORITY 1: Daily strategy analysis (6am)
         if should_run_daily_strategies():
-            logger.info("🌅 6am strategy run triggered")
+            logger.info(f"\n{'='*60}")
+            logger.info("🌅 6am strategy analysis triggered")
+            logger.info(f"{'='*60}")
             track("daily_strategy_analysis_started")
             strategy_stats = write_all_strategies()
             _last_strategy_date = cycle_start.date()
             track("daily_strategy_analysis_completed", f"{strategy_stats['success']}/{strategy_stats['total']}")
-        
-        # Always run topics
-        topic_stats = write_all_topics(shuffle=True)
-        
-        # Wait before next cycle
-        logger.info(f"⏳ Waiting {delay_between_cycles}s before next cycle...")
-        time.sleep(delay_between_cycles)
+
+        # PRIORITY 2: Check for ONE topic that needs rewriting
+        topic_to_write = find_topic_needing_rewrite()
+        if topic_to_write:
+            topic_id, new_article_ids = topic_to_write
+            logger.info(f"\n{'='*60}")
+            logger.info(f"📝 REWRITING topic: {topic_id} ({len(new_article_ids)} new articles)")
+            logger.info(f"{'='*60}")
+            write_single_topic(topic_id, new_article_ids=new_article_ids)
+
+        # PRIORITY 3: Exploration (always runs, tries to find better risks/opportunities)
+        run_one_exploration()
 
 
 def main():

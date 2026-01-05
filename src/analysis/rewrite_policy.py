@@ -42,10 +42,13 @@ def should_rewrite_topic(topic_id: str) -> Tuple[bool, str, List[str]]:
         - new_article_ids: List[str] - Article IDs that are NEW since last analysis
     """
     # Get topic's last_analyzed timestamp and new articles in one query
+    # Note: ABOUT relationships use importance_* fields (1-3), not a single "tier" field
+    # Tier 3 = any importance field equals 3
     query = """
     MATCH (t:Topic {id: $topic_id})
     OPTIONAL MATCH (t)<-[r:ABOUT]-(a:Article)
-    WHERE r.tier = 3
+    WHERE (r.importance_risk = 3 OR r.importance_opportunity = 3
+           OR r.importance_trend = 3 OR r.importance_catalyst = 3)
       AND (t.last_analyzed IS NULL OR r.created_at > t.last_analyzed)
     RETURN
         t.last_analyzed AS last_analyzed,
@@ -123,9 +126,11 @@ def get_articles_for_analysis(topic_id: str, new_article_ids: List[str]) -> dict
     new_ids_set = set(new_article_ids)
 
     # Get all Tier 3 articles for this topic
+    # Note: ABOUT relationships use importance_* fields (1-3), not a single "tier" field
     query = """
     MATCH (t:Topic {id: $topic_id})<-[r:ABOUT]-(a:Article)
-    WHERE r.tier = 3
+    WHERE (r.importance_risk = 3 OR r.importance_opportunity = 3
+           OR r.importance_trend = 3 OR r.importance_catalyst = 3)
     RETURN a.id AS id, a.title AS title, a.summary AS summary,
            a.url AS url, a.published_date AS published_date,
            r.created_at AS linked_at
