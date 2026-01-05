@@ -29,6 +29,7 @@ from src.exploration_agent.models import ExplorationMode, ExplorationResult
 from src.exploration_agent.final_critic.agent import FinalCriticAgent
 from src.exploration_agent.final_critic.models import FinalCriticInput, FinalVerdict
 from src.api.backend_client import get_user_strategies
+from src.observability.stats_client import track
 from utils import app_logging
 from utils.env_loader import load_env
 
@@ -67,24 +68,27 @@ def explore_topic(
 ) -> tuple[ExplorationResult, FinalVerdict | None]:
     """
     Run exploration for a topic, then validate with critic.
-    
+
     Args:
         topic_id: Topic to explore for
         mode: "risk" or "opportunity"
         max_steps: Maximum exploration steps
         skip_critic: If True, skip critic validation
-        
+
     Returns:
         (ExplorationResult, FinalVerdict or None)
     """
+    # Track exploration start
+    track("exploration_started", f"topic={topic_id} mode={mode}")
+
     # Phase 1: Explore
     agent = ExplorationAgent(max_steps=max_steps)
     exploration_mode = ExplorationMode(mode)
     result = agent.explore_topic(topic_id, exploration_mode)
-    
+
     if not result.success or skip_critic:
         return result, None
-    
+
     # Phase 2: Critic validation
     verdict = run_critic(result, mode, topic_id)
     return result, verdict
@@ -110,6 +114,9 @@ def explore_strategy(
     Returns:
         (ExplorationResult, FinalVerdict or None)
     """
+    # Track exploration start
+    track("exploration_started", f"strategy={strategy_id} user={strategy_user} mode={mode}")
+
     # Phase 1: Explore
     agent = ExplorationAgent(max_steps=max_steps)
     exploration_mode = ExplorationMode(mode)
@@ -217,6 +224,12 @@ def run_critic(
     # Run final critic
     final_critic = FinalCriticAgent()
     verdict = final_critic.evaluate(critic_input)
+
+    # Track exploration outcome
+    if verdict.accepted:
+        track("exploration_accepted", f"mode={mode} topic={target_topic}")
+    else:
+        track("exploration_rejected", f"mode={mode} topic={target_topic}")
 
     # Save accepted findings
     if verdict.accepted:

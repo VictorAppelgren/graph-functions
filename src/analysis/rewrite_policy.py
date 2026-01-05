@@ -44,12 +44,17 @@ def should_rewrite_topic(topic_id: str) -> Tuple[bool, str, List[str]]:
     # Get topic's last_analyzed timestamp and new articles in one query
     # Note: ABOUT relationships use importance_* fields (1-3), not a single "tier" field
     # Tier 3 = any importance field equals 3
+    # Note: r.created_at may be NULL on older ABOUT relationships (property added later)
+    # When r.created_at IS NULL, comparison with last_analyzed returns NULL (falsy)
+    # So we treat NULL created_at as "new" to ensure these articles get analyzed
     query = """
     MATCH (t:Topic {id: $topic_id})
     OPTIONAL MATCH (t)<-[r:ABOUT]-(a:Article)
     WHERE (r.importance_risk = 3 OR r.importance_opportunity = 3
            OR r.importance_trend = 3 OR r.importance_catalyst = 3)
-      AND (t.last_analyzed IS NULL OR r.created_at > t.last_analyzed)
+      AND (t.last_analyzed IS NULL
+           OR r.created_at IS NULL
+           OR r.created_at > t.last_analyzed)
     RETURN
         t.last_analyzed AS last_analyzed,
         collect(DISTINCT a.id) AS new_article_ids

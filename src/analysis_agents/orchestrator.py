@@ -893,6 +893,10 @@ def run_topic_quality_loop(
             f"source: {len(source_fb.feedback):,} chars"
         )
 
+        # Track the rewrite
+        from src.observability.stats_client import track
+        track("analysis_section_rewrite", f"topic={topic_id} section={section_name}")
+
         # Rewrite using unified Writer
         output = writer.write(
             topic_id=topic_id,
@@ -904,7 +908,7 @@ def run_topic_quality_loop(
             critic_feedback=critic_fb.feedback,
             source_feedback=source_fb.feedback,
         )
-        
+
         revised = output.analysis_text
         logger.info(f"      revised: {len(revised):,} chars")
         current = revised

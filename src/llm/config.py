@@ -30,6 +30,7 @@ from langchain_core.language_models import LanguageModelInput
 from typing import Any, Iterator, AsyncIterator
 
 from utils.app_logging import get_logger
+from src.observability.stats_client import track
 
 logger = get_logger(__name__)
 
@@ -630,8 +631,6 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
             except Exception:
                 pass
             
-            # LLM usage tracking removed - not critical for flow visibility
-            
             # Get LLM for selected server and invoke with busy tracking
             llm = self._get_llm_for_server(server_id)
             with _mark_server_busy(server_id):
@@ -689,7 +688,9 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
                             f"result_value={str(result)[:200]}"
                         )
                     
-                    # Success!
+                    # Success! Track the call
+                    track(f"llm_call_{self.tier.value.lower()}", f"server={server_id}")
+
                     if attempt > 0:
                         logger.info(
                             f"✅ SUCCESS after retry | server={server_id} worked after {list(exclude_servers)} failed | "
