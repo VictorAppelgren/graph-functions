@@ -79,14 +79,24 @@ def explore_graph(topic_id: str, section: str) -> Dict:
     else:
         print(f"[SynthesisScout] NO edges found for topic {topic_id}")
     
-    # Get ALL related topics via graph edges (no limit - we want full market width)
+    # Get ALL related topics via graph edges WITH relationship type (critical for synthesis!)
     query_related = """
     MATCH (t:Topic {id: $topic_id})
-    MATCH (t)-[:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF]-(related:Topic)
+    MATCH (t)-[r:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF|HEDGES]-(related:Topic)
+    WITH related, type(r) as rel_type,
+         CASE
+             WHEN type(r) = 'INFLUENCES' AND startNode(r) = t THEN 'outgoing'
+             WHEN type(r) = 'INFLUENCES' AND endNode(r) = t THEN 'incoming'
+             WHEN type(r) = 'COMPONENT_OF' AND startNode(r) = t THEN 'parent'
+             WHEN type(r) = 'COMPONENT_OF' AND endNode(r) = t THEN 'child'
+             ELSE 'bidirectional'
+         END as direction
     RETURN DISTINCT
         related.id as topic_id,
         related.name as topic_name,
-        related.executive_summary as executive_summary
+        related.executive_summary as executive_summary,
+        rel_type as relationship_type,
+        direction as relationship_direction
     """
     
     related_result = run_cypher(query_related, {"topic_id": topic_id})
@@ -140,12 +150,14 @@ def explore_graph(topic_id: str, section: str) -> Dict:
     top_catalyst_articles = all_catalyst_articles[:MAX_CATALYST_ARTICLES]
     print(f"[SynthesisScout] Using top {len(top_catalyst_articles)} most recent catalyst articles")
     
-    # Build related_topics list with executive summaries (no per-topic articles)
+    # Build related_topics list with executive summaries AND relationship type (critical!)
     related_topics = [
         {
             "topic_id": rel['topic_id'],
             "topic_name": rel['topic_name'],
             "executive_summary": rel.get('executive_summary', ''),
+            "relationship_type": rel.get('relationship_type', 'CORRELATES_WITH'),
+            "relationship_direction": rel.get('relationship_direction', 'bidirectional'),
             "articles": []  # Articles are now in reranked_articles
         }
         for rel in related_result

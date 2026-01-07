@@ -97,13 +97,13 @@ class MarketDataOrchestrator:
         topic_id = topic["id"]
         topic_name = topic["name"] or "Unknown"
         existing_ticker = topic.get("ticker")
-        
+
         # Check if already marked as no ticker
         if existing_ticker == "NO_TICKER":
             logger.info(f"⏭️  Skipping {topic_name} - already marked as no market data")
             self.stats["already_marked_no_ticker"] += 1
             return
-        
+
         # Check if has existing valid ticker
         if existing_ticker and existing_ticker != "NO_TICKER":
             logger.info(f"✅ Using existing ticker: {existing_ticker}")
@@ -112,73 +112,122 @@ class MarketDataOrchestrator:
             if success:
                 self.stats["data_fetched"] += 1
             return
-        
+
         # Use LLM to determine if market data is appropriate
         logger.info(f"🤖 Using LLM to resolve ticker for: {topic_name}")
-        
+
         try:
             from src.market_data.ticker_resolver import resolve_ticker_llm_enhanced
-            
+
             resolution = resolve_ticker_llm_enhanced(topic_name)
-            
-            if resolution.resolved_ticker is None:
+
+            # Check if ANY ticker was found (Yahoo, FRED, or Stooq)
+            has_any_ticker = (resolution.resolved_ticker or resolution.fred_id or resolution.stooq_ticker)
+
+            if not has_any_ticker:
                 # LLM determined no market data appropriate
                 logger.info(f"🚫 LLM determined no market data for: {topic_name} (reason: {resolution.reason})")
                 self.mark_topic_no_ticker(topic_id)
                 self.stats["no_ticker_appropriate"] += 1
                 return
-            
-            # LLM found a ticker
+
+            # LLM found at least one ticker
             if resolution.confidence < 0.8:
                 logger.warning(f"⚠️  Low confidence ({resolution.confidence:.2f}) for {topic_name}, skipping")
                 self.stats["skipped"] += 1
                 return
-            
-            logger.info(f"✅ LLM resolved: {resolution.resolved_ticker} (confidence: {resolution.confidence:.2f})")
+
+            tickers_found = []
+            if resolution.resolved_ticker:
+                tickers_found.append(f"Yahoo:{resolution.resolved_ticker}")
+            if resolution.fred_id:
+                tickers_found.append(f"FRED:{resolution.fred_id}")
+            if resolution.stooq_ticker:
+                tickers_found.append(f"Stooq:{resolution.stooq_ticker}")
+            logger.info(f"✅ LLM resolved: {', '.join(tickers_found)} (confidence: {resolution.confidence:.2f})")
             self.stats["llm_resolved"] += 1
-            
-            # Save ticker and fetch data
-            self.save_ticker(topic_id, resolution.resolved_ticker)
-            success = self.fetch_and_save_market_data(topic_id, topic_name, resolution.resolved_ticker)
+
+            # Save primary ticker (Yahoo preferred, then FRED, then Stooq)
+            primary_ticker = resolution.resolved_ticker or resolution.fred_id or resolution.stooq_ticker
+            self.save_ticker(topic_id, primary_ticker)
+
+            # Fetch data with fallback chain
+            success = self.fetch_and_save_market_data(
+                topic_id, topic_name,
+                ticker=resolution.resolved_ticker,
+                fred_id=resolution.fred_id,
+                stooq_ticker=resolution.stooq_ticker
+            )
             if success:
                 self.stats["data_fetched"] += 1
-                
+
         except Exception as e:
             logger.error(f"❌ LLM resolution failed for {topic_name}: {e}")
             self.stats["errors"] += 1
     
-    def fetch_and_save_market_data(self, topic_id: str, topic_name: str, ticker: str) -> bool:
-        """Fetch market data and save to Neo4j."""
-        try:
-            from src.market_data.yahoo_provider import fetch_market_data_yahoo
-            from src.market_data.neo4j_updater import create_neo4j_update_draft, apply_neo4j_update
-            from src.market_data.models import AssetClass
-            
-            # Determine asset class from ticker pattern
+    def fetch_and_save_market_data(self, topic_id: str, topic_name: str, ticker: str,
+                                      fred_id: str = None, stooq_ticker: str = None) -> bool:
+        """Fetch market data with fallback chain: Yahoo -> FRED -> Stooq."""
+        from src.market_data.neo4j_updater import create_neo4j_update_draft, apply_neo4j_update
+        from src.market_data.models import AssetClass
+
+        # Determine asset class from ticker pattern
+        if ticker:
             if "=" in ticker:
                 asset_class = AssetClass.FX if ticker.endswith("=X") else AssetClass.COMMODITY
             elif ticker.startswith("^"):
                 asset_class = AssetClass.INDEX if "SPX" in ticker or "GSPC" in ticker else AssetClass.RATE
             else:
                 asset_class = AssetClass.STOCK
-            
-            # Fetch market data
-            snapshot = fetch_market_data_yahoo(ticker, asset_class)
-            logger.info(f"📊 Fetched {len(snapshot.data)} fields for {ticker}")
-            
-            # Save to Neo4j
+        else:
+            asset_class = AssetClass.RATE  # Default for FRED-only data
+
+        snapshot = None
+
+        # Try Yahoo Finance first
+        if ticker:
+            try:
+                from src.market_data.yahoo_provider import fetch_market_data_yahoo
+                snapshot = fetch_market_data_yahoo(ticker, asset_class)
+                logger.info(f"📊 Yahoo: Fetched {len(snapshot.data)} fields for {ticker}")
+            except Exception as e:
+                logger.warning(f"⚠️ Yahoo failed for {ticker}: {e}")
+
+        # Fallback to FRED
+        if not snapshot and fred_id:
+            try:
+                from src.market_data.fred_provider import fetch_market_data_fred
+                snapshot = fetch_market_data_fred(fred_id, asset_class)
+                logger.info(f"📊 FRED: Fetched {len(snapshot.data)} fields for {fred_id}")
+            except Exception as e:
+                logger.warning(f"⚠️ FRED failed for {fred_id}: {e}")
+
+        # Fallback to Stooq
+        if not snapshot and stooq_ticker:
+            try:
+                from src.market_data.stooq_provider import fetch_market_data_stooq
+                snapshot = fetch_market_data_stooq(stooq_ticker, asset_class)
+                logger.info(f"📊 Stooq: Fetched {len(snapshot.data)} fields for {stooq_ticker}")
+            except Exception as e:
+                logger.warning(f"⚠️ Stooq failed for {stooq_ticker}: {e}")
+
+        if not snapshot:
+            logger.error(f"❌ All providers failed for {topic_name}")
+            return False
+
+        # Save to Neo4j
+        try:
             neo4j_update = create_neo4j_update_draft(topic_id, snapshot)
             success = apply_neo4j_update(neo4j_update)
-            
+
             if success:
-                logger.info(f"💾 Saved {len(neo4j_update.properties)} market data properties")
+                logger.info(f"💾 Saved {len(neo4j_update.properties)} market data properties from {snapshot.source}")
                 return True
             else:
                 logger.error(f"❌ Failed to save market data for {topic_name}")
                 return False
-                
         except Exception as e:
-            logger.error(f"❌ Failed to fetch/save data for {topic_name}: {e}")
+            logger.error(f"❌ Failed to save data for {topic_name}: {e}")
             return False
     
     def save_ticker(self, topic_id: str, ticker: str) -> None:

@@ -106,14 +106,24 @@ class TopicMapperAgent(BaseStrategyAgent):
             self._log(f"⚠️ Filtered {filtered_count} invalid topic IDs from LLM response", level="warning")
         
         self._log(f"Topics discovered | primary={len(primary)} drivers={len(drivers)}")
-        
-        # Step 5: Expand with graph relationships (correlated topics)
-        correlated = self._discover_correlated_topics(primary, valid_ids, graph_data)
-        
+
+        # Step 5: Expand with ALL graph relationship types
+        related = self._discover_related_topics(primary, drivers, valid_ids, graph_data)
+
+        self._log(
+            f"Related topics via graph | correlated={len(related['correlated'])} "
+            f"hedges={len(related['hedges'])} peers={len(related['peers'])} "
+            f"influenced={len(related['influenced'])} influencers={len(related['influencers'])}"
+        )
+
         return {
             "primary": primary,
             "drivers": drivers,
-            "correlated": correlated,
+            "correlated": related["correlated"],
+            "hedges": related["hedges"],
+            "peers": related["peers"],
+            "influenced": related["influenced"],
+            "influencers": related["influencers"],
             "reasoning": mapping.reasoning
         }
     
@@ -124,30 +134,47 @@ class TopicMapperAgent(BaseStrategyAgent):
             lines.append(f"  {t['id']} | {t['name']}")
         return "\n".join(lines)
     
-    def _discover_correlated_topics(
+    def _discover_related_topics(
         self,
         primary_topic_ids: List[str],
+        driver_topic_ids: List[str],
         valid_ids: set,
-        graph_data: Dict,
-        limit: int = 5
-    ) -> List[str]:
+        graph_data: Dict
+    ) -> Dict[str, List[str]]:
         """
-        Discover correlated topics via graph relationships.
-        Returns up to `limit` correlated topic IDs.
+        Discover related topics via ALL graph relationship types.
+
+        Returns:
+            {
+                "correlated": [...],  # co-moving topics
+                "hedges": [...],      # risk offset topics
+                "peers": [...],       # substitute/competitor topics
+                "influenced": [...],  # topics driven by primaries
+                "influencers": [...]  # topics that drive primaries
+            }
         """
         if not primary_topic_ids:
-            return []
-        
-        # Get correlations from graph_data (already fetched)
-        correlations = graph_data.get("correlations", {})
-        
-        correlated = []
-        for topic_id in primary_topic_ids:
-            if topic_id in correlations:
-                correlated.extend(correlations[topic_id])
-        
-        # Deduplicate and filter valid
-        correlated = list(set(correlated))
-        correlated = [tid for tid in correlated if tid in valid_ids and tid not in primary_topic_ids]
-        
-        return correlated[:limit]
+            return {"correlated": [], "hedges": [], "peers": [], "influenced": [], "influencers": []}
+
+        relationships = graph_data.get("relationships", {})
+        all_selected = set(primary_topic_ids + driver_topic_ids)
+
+        def collect_related(rel_key: str, max_count: int = 5) -> List[str]:
+            """Collect related topics from a relationship type."""
+            rel_dict = relationships.get(rel_key, {})
+            related = []
+            for topic_id in primary_topic_ids:
+                if topic_id in rel_dict:
+                    related.extend(rel_dict[topic_id])
+            # Deduplicate, validate, exclude already selected
+            related = list(set(related))
+            related = [tid for tid in related if tid in valid_ids and tid not in all_selected]
+            return related[:max_count]
+
+        return {
+            "correlated": collect_related("correlates_with", 5),
+            "hedges": collect_related("hedges", 3),
+            "peers": collect_related("peers", 3),
+            "influenced": collect_related("influences", 3),
+            "influencers": collect_related("influenced_by", 3)
+        }

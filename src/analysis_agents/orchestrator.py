@@ -19,7 +19,7 @@ from src.analysis_agents.writer.agent import WriterAgent
 from src.analysis_agents.critic.agent import CriticAgent
 from src.analysis_agents.source_checker.agent import SourceCheckerAgent
 from src.analysis_agents.section_config import AGENT_SECTIONS, AGENT_SECTION_CONFIGS
-from src.analysis.citations.validator import validate_citations
+from src.citations import validate_citations
 from src.llm.llm_router import get_llm, ModelTier
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
 from src.market_data.loader import get_market_context_for_prompt

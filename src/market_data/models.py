@@ -25,6 +25,9 @@ class TickerResolution(BaseModel):
     confidence: float
     reason: str = "ticker_found"  # ticker_found|no_market_data|uncertain
     motivation: str
+    # Alternative tickers for fallback providers
+    fred_id: Optional[str] = None  # FRED series ID (e.g., "SOFR", "DFF")
+    stooq_ticker: Optional[str] = None  # Stooq ticker (e.g., "^spx", "eurusd")
 
 
 class MarketSnapshot(BaseModel):

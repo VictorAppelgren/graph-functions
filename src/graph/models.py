@@ -57,7 +57,7 @@ class Article(TypedDict, total=False):
 class Link(TypedDict, total=False):
     """Neo4j link properties"""
 
-    type: str  # "INFLUENCES" | "CORRELATES_WITH" | "PEERS" | "ABOUT"
+    type: str  # "INFLUENCES" | "CORRELATES_WITH" | "PEERS" | "COMPONENT_OF" | "HEDGES" | "ABOUT"
     strength: Optional[float]
     evidence: Optional[str]
     created_at: str  # ISO timestamp

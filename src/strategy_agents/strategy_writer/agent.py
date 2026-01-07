@@ -4,7 +4,7 @@ Strategy Writer Agent
 MISSION: Write world-class personalized strategy analysis.
 """
 
-from typing import Dict, Any
+from typing import Dict, Any, Set
 from pydantic import BaseModel, Field
 from src.strategy_agents.base_agent import BaseStrategyAgent
 from src.strategy_agents.strategy_writer.prompt import (
@@ -17,6 +17,7 @@ from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.sanitizer import run_llm_decision
 from src.llm.prompts.system_prompts import SYSTEM_MISSION, SYSTEM_CONTEXT
+from src.citations import validate_citations, validate_and_fix_citations
 
 
 class StrategyAnalysis(BaseModel):
@@ -167,9 +168,16 @@ class StrategyWriterAgent(BaseStrategyAgent):
             opportunity_assessment=opportunity_summary,
         )
         
+        # Get allowed article IDs from material package
+        allowed_ids = self._get_allowed_article_ids(material_package)
+        self._log(f"Allowed article IDs for citation validation: {len(allowed_ids)}")
+
         # Get LLM analysis
         llm = get_llm(ModelTier.COMPLEX)
         analysis = run_llm_decision(llm, prompt, StrategyAnalysis)
+
+        # Validate citations and retry if needed
+        analysis = self._validate_and_fix_analysis(llm, prompt, analysis, allowed_ids)
 
         # In thesis monitoring mode, de-emphasize the dedicated Position Analysis section
         # so that the frontend can simply hide it based on an empty string.
@@ -178,6 +186,92 @@ class StrategyWriterAgent(BaseStrategyAgent):
 
         # Log output summary
         self._log_output_summary(analysis)
+
+        return analysis
+
+    def _get_allowed_article_ids(self, material_package: Dict[str, Any]) -> Set[str]:
+        """Extract allowed article IDs from material package."""
+        allowed = set()
+
+        # From referenced_articles dict
+        referenced = material_package.get("referenced_articles", {})
+        if isinstance(referenced, dict):
+            allowed.update(referenced.keys())
+
+        # Also extract from topic analyses (in case some weren't fetched)
+        from src.citations import extract_article_ids
+        topic_analyses = material_package.get("topic_analyses", "")
+        if topic_analyses:
+            allowed.update(extract_article_ids(topic_analyses))
+
+        return allowed
+
+    def _validate_and_fix_analysis(
+        self,
+        llm,
+        prompt: str,
+        analysis: StrategyAnalysis,
+        allowed_ids: Set[str],
+    ) -> StrategyAnalysis:
+        """
+        Validate citations in analysis and retry ONCE if invalid.
+
+        Combines all sections into one text, validates, and if invalid,
+        retries the entire generation with error feedback.
+        """
+        # Combine all sections for validation
+        all_text = "\n".join([
+            analysis.executive_summary,
+            analysis.position_analysis,
+            analysis.risk_analysis,
+            analysis.opportunity_analysis,
+            analysis.recommendation,
+            analysis.scenarios_and_catalysts,
+            analysis.structuring_and_risk_management,
+            analysis.context_and_alignment,
+        ])
+
+        # Validate
+        report = validate_citations(all_text, allowed_article_ids=allowed_ids)
+
+        if report.is_valid:
+            self._log("Citation validation PASSED")
+            return analysis
+
+        # Invalid - need to retry
+        self._log(f"Citation validation FAILED | invalid_ids={sorted(report.invalid_article_ids)} | retrying...")
+
+        # Build retry prompt with error feedback
+        from src.citations import build_citation_fix_prompt
+        retry_prompt = build_citation_fix_prompt(
+            original_prompt=prompt,
+            original_output=all_text,
+            report=report,
+        )
+
+        # Retry generation
+        try:
+            analysis = run_llm_decision(llm, retry_prompt, StrategyAnalysis)
+
+            # Validate again
+            all_text_retry = "\n".join([
+                analysis.executive_summary,
+                analysis.position_analysis,
+                analysis.risk_analysis,
+                analysis.opportunity_analysis,
+                analysis.recommendation,
+                analysis.scenarios_and_catalysts,
+                analysis.structuring_and_risk_management,
+                analysis.context_and_alignment,
+            ])
+            report_retry = validate_citations(all_text_retry, allowed_article_ids=allowed_ids)
+
+            if report_retry.is_valid:
+                self._log("Citation validation PASSED after retry")
+            else:
+                self._log(f"Citation validation still FAILED after retry | invalid_ids={sorted(report_retry.invalid_article_ids)}")
+        except Exception as e:
+            self._log(f"Citation retry failed: {e}")
 
         return analysis
     
@@ -352,13 +446,43 @@ You MUST address this feedback in your rewrite."""
             citation_rules=SHARED_CITATION_AND_METHODOLOGY,
         )
         
+        # Get allowed article IDs from material package
+        allowed_ids = self._get_allowed_article_ids(material_package)
+
         # Get LLM response as plain text
         llm = get_llm(ModelTier.COMPLEX)
         parser = StrOutputParser()
         chain = llm | parser
-        
+
         result = chain.invoke(prompt)
-        
+        result = result.strip()
+
+        # Validate citations and retry if needed
+        report = validate_citations(result, allowed_article_ids=allowed_ids)
+
+        if not report.is_valid:
+            self._log(f"Citation validation FAILED | invalid_ids={sorted(report.invalid_article_ids)} | retrying...")
+
+            # Build retry prompt
+            from src.citations import build_citation_fix_prompt
+            retry_prompt = build_citation_fix_prompt(
+                original_prompt=prompt,
+                original_output=result,
+                report=report,
+            )
+
+            # Retry
+            result = chain.invoke(retry_prompt).strip()
+
+            # Check again
+            report_retry = validate_citations(result, allowed_article_ids=allowed_ids)
+            if report_retry.is_valid:
+                self._log("Citation validation PASSED after retry")
+            else:
+                self._log(f"Citation validation still FAILED after retry | invalid_ids={sorted(report_retry.invalid_article_ids)}")
+        else:
+            self._log("Citation validation PASSED")
+
         self._log(f"Rewritten section: {len(result)} chars")
-        
-        return result.strip()
+
+        return result

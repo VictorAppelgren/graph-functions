@@ -324,7 +324,7 @@ def build_context(request: ContextRequest):
         if include_related:
             related_query = """
             MATCH (t:Topic {id: $topic_id})-[r]-(related:Topic)
-            WHERE type(r) IN ['INFLUENCES', 'CORRELATES_WITH', 'PEERS', 'COMPONENT_OF']
+            WHERE type(r) IN ['INFLUENCES', 'CORRELATES_WITH', 'PEERS', 'COMPONENT_OF', 'HEDGES']
             RETURN DISTINCT
                 related.id as id,
                 related.name as name,

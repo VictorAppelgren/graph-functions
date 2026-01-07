@@ -83,12 +83,19 @@ def explore_graph(topic_id: str, section: str) -> Dict:
             catalyst: r.importance_catalyst
         }) as articles
         
-        // Get related topics for synthesis
-        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF]-(related:Topic)
+        // Get related topics for synthesis WITH direction info
+        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF|HEDGES]-(related:Topic)
         WITH t, articles, collect(DISTINCT {
             id: related.id,
             name: related.name,
             relationship: type(rel),
+            direction: CASE
+                WHEN type(rel) = 'INFLUENCES' AND startNode(rel) = t THEN 'outgoing'
+                WHEN type(rel) = 'INFLUENCES' AND endNode(rel) = t THEN 'incoming'
+                WHEN type(rel) = 'COMPONENT_OF' AND startNode(rel) = t THEN 'parent'
+                WHEN type(rel) = 'COMPONENT_OF' AND endNode(rel) = t THEN 'child'
+                ELSE 'bidirectional'
+            END,
             fundamental: related.fundamental_analysis,
             medium: related.medium_analysis,
             current: related.current_analysis
@@ -158,12 +165,19 @@ def explore_graph(topic_id: str, section: str) -> Dict:
             perspective_score: perspective_score
         }) as articles
         
-        // Get related topics
-        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF]-(related:Topic)
+        // Get related topics WITH direction info
+        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF|HEDGES]-(related:Topic)
         WITH t, articles, collect(DISTINCT {{
             id: related.id,
             name: related.name,
             relationship: type(rel),
+            direction: CASE
+                WHEN type(rel) = 'INFLUENCES' AND startNode(rel) = t THEN 'outgoing'
+                WHEN type(rel) = 'INFLUENCES' AND endNode(rel) = t THEN 'incoming'
+                WHEN type(rel) = 'COMPONENT_OF' AND startNode(rel) = t THEN 'parent'
+                WHEN type(rel) = 'COMPONENT_OF' AND endNode(rel) = t THEN 'child'
+                ELSE 'bidirectional'
+            END,
             {section}: related.{section}
         }}) as related_topics
         
@@ -230,12 +244,19 @@ def explore_graph(topic_id: str, section: str) -> Dict:
             timeframe: r.timeframe
         }) as articles
         
-        // Get related topics for synthesis
-        OPTIONAL MATCH (t)-[rel:RELATED_TO|DRIVES|DRIVEN_BY]-(related:Topic)
+        // Get related topics for synthesis (all 5 canonical relationship types)
+        OPTIONAL MATCH (t)-[rel:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF|HEDGES]-(related:Topic)
         WITH t, articles, collect(DISTINCT {
             id: related.id,
             name: related.name,
-            relationship: type(rel),
+            relationship_type: type(rel),
+            direction: CASE
+                WHEN type(rel) = 'INFLUENCES' AND startNode(rel) = t THEN 'outgoing'
+                WHEN type(rel) = 'INFLUENCES' AND endNode(rel) = t THEN 'incoming'
+                WHEN type(rel) = 'COMPONENT_OF' AND startNode(rel) = t THEN 'parent'
+                WHEN type(rel) = 'COMPONENT_OF' AND endNode(rel) = t THEN 'child'
+                ELSE 'bidirectional'
+            END,
             fundamental: related.fundamental_analysis,
             medium: related.medium_analysis,
             current: related.current_analysis,

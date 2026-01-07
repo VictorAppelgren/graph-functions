@@ -3,11 +3,14 @@ Strategy Agents - Material Builder
 
 MISSION: Build ONE complete material package with ALL relevant data.
 Simple, minimal, complete.
+
+Includes relationship context between topics for richer strategy analysis.
 """
 
 import re
 from typing import Dict, List, Any, Set
 from src.graph.ops.topic import get_topic_analysis_field
+from src.graph.neo4j_client import run_cypher
 from src.api.backend_client import get_article as get_article_by_id
 from src.market_data.loader import load_market_context
 from utils import app_logging
@@ -101,8 +104,15 @@ def build_material_package(
     
     referenced_articles = _fetch_referenced_articles(all_article_ids)
     logger.info(f"📚 Fetched {len(referenced_articles)}/{len(all_article_ids)} articles for strategy material")
-    
+
     articles_reference_str = _build_articles_reference(referenced_articles)
+
+    # Fetch relationships between topics in our material package
+    topic_relationships = _fetch_topic_relationships(all_topic_ids)
+    relationship_context_str = _build_relationship_context(topic_relationships, topics)
+
+    rel_count = sum(len(rels) for rels in topic_relationships.values())
+    logger.info(f"🔗 Fetched {rel_count} relationships between {len(topic_relationships)} topics")
 
     return {
         "user_strategy": user_strategy,
@@ -116,6 +126,9 @@ def build_material_package(
         # Referenced articles extracted from topic analyses
         "referenced_articles": referenced_articles,
         "articles_reference": articles_reference_str,
+        # Topic relationship context for causal/correlation/hedge analysis
+        "topic_relationships": topic_relationships,
+        "relationship_context": relationship_context_str,
     }
 
 
@@ -269,7 +282,7 @@ def _build_articles_reference(articles: Dict[str, Dict]) -> str:
     """Build formatted article reference section for prompts."""
     if not articles:
         return "No referenced articles available."
-    
+
     lines = [f"=== REFERENCED ARTICLES ({len(articles)} articles from topic analyses) ===\n"]
     for article_id, data in articles.items():
         lines.append(f"Article ID: {article_id}")
@@ -282,5 +295,121 @@ def _build_articles_reference(articles: Dict[str, Dict]) -> str:
         if data.get('published_date'):
             lines.append(f"Date: {data.get('published_date')}")
         lines.append("")
-    
+
     return "\n".join(lines)
+
+
+def _fetch_topic_relationships(topic_ids: Set[str]) -> Dict[str, List[Dict]]:
+    """
+    Fetch ALL relationships between topics in our material package.
+
+    Returns dict of topic_id -> list of relationships:
+    {
+        "eurusd": [
+            {"target": "dxy", "type": "INFLUENCES", "direction": "incoming"},
+            {"target": "fed_policy", "type": "INFLUENCES", "direction": "incoming"},
+            {"target": "gold", "type": "HEDGES", "direction": "bidirectional"},
+        ],
+        ...
+    }
+    """
+    if not topic_ids:
+        return {}
+
+    topic_list = list(topic_ids)
+
+    query = """
+    UNWIND $topic_ids as tid
+    MATCH (t:Topic {id: tid})
+
+    // Get all relationships to other topics in our set
+    OPTIONAL MATCH (t)-[r:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF|HEDGES]-(other:Topic)
+    WHERE other.id IN $topic_ids AND other.id <> t.id
+
+    WITH t.id as source_id, other.id as target_id, type(r) as rel_type,
+         CASE
+             WHEN type(r) = 'INFLUENCES' AND startNode(r) = t THEN 'drives'
+             WHEN type(r) = 'INFLUENCES' AND endNode(r) = t THEN 'driven_by'
+             WHEN type(r) = 'COMPONENT_OF' AND startNode(r) = t THEN 'part_of'
+             WHEN type(r) = 'COMPONENT_OF' AND endNode(r) = t THEN 'contains'
+             ELSE 'bidirectional'
+         END as direction
+    WHERE target_id IS NOT NULL
+
+    RETURN source_id, collect(DISTINCT {
+        target: target_id,
+        type: rel_type,
+        direction: direction
+    }) as relationships
+    """
+
+    result = run_cypher(query, {"topic_ids": topic_list})
+
+    relationships = {}
+    if result:
+        for row in result:
+            source = row.get("source_id")
+            rels = row.get("relationships", [])
+            if source and rels:
+                relationships[source] = [r for r in rels if r.get("target")]
+
+    return relationships
+
+
+def _build_relationship_context(relationships: Dict[str, List[Dict]], topics: Dict[str, Dict]) -> str:
+    """
+    Build human-readable relationship context for prompts.
+
+    Format:
+    === TOPIC RELATIONSHIPS ===
+    EURUSD:
+      - driven_by: DXY (INFLUENCES) - Dollar strength drives EUR weakness
+      - driven_by: Fed Policy (INFLUENCES) - Fed rate decisions impact pair
+      - hedges: Gold (HEDGES) - Inverse relationship in risk-off
+    """
+    if not relationships:
+        return "No topic relationships available."
+
+    # Relationship type hints for analysis
+    rel_hints = {
+        "INFLUENCES": {
+            "drives": "causes movement in",
+            "driven_by": "is moved by"
+        },
+        "CORRELATES_WITH": {
+            "bidirectional": "co-moves with (shared drivers)"
+        },
+        "PEERS": {
+            "bidirectional": "competes with / substitutes for"
+        },
+        "COMPONENT_OF": {
+            "part_of": "is a constituent of",
+            "contains": "includes as constituent"
+        },
+        "HEDGES": {
+            "bidirectional": "hedges / moves inversely with"
+        }
+    }
+
+    lines = ["=== TOPIC RELATIONSHIPS (use for causal chains & risk analysis) ===\n"]
+
+    for topic_id, rels in relationships.items():
+        if not rels:
+            continue
+
+        topic_name = topics.get(topic_id, {}).get("name", topic_id.upper())
+        lines.append(f"{topic_name}:")
+
+        for rel in rels:
+            target_id = rel.get("target")
+            rel_type = rel.get("type", "UNKNOWN")
+            direction = rel.get("direction", "bidirectional")
+
+            target_name = topics.get(target_id, {}).get("name", target_id.upper())
+            hint = rel_hints.get(rel_type, {}).get(direction, rel_type.lower())
+
+            lines.append(f"  → {hint}: {target_name}")
+
+        lines.append("")
+
+    return "\n".join(lines) if len(lines) > 1 else "No topic relationships available."

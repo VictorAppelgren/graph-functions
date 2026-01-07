@@ -45,6 +45,16 @@ USER POSITION:
 RELEVANT TOPIC ANALYSES:
 {topic_analyses}
 
+TOPIC RELATIONSHIPS (CAUSAL CHAINS & CORRELATIONS):
+{relationship_context}
+
+Use these relationships to identify opportunities:
+- Causal chains (A INFLUENCES B → if A moves, position in B for follow-through)
+- Correlation plays (A CORRELATES_WITH B → express view via alternative instrument)
+- Hedge structures (A HEDGES B → pair trade for asymmetric risk/reward)
+- Peer arbitrage (A PEERS B → relative value between substitutes)
+- Component plays (A COMPONENT_OF B → index vs constituent divergence)
+
 REFERENCED ARTICLES (source material for citations):
 {articles_reference}
 

@@ -26,6 +26,7 @@ from typing import Optional
 
 from src.exploration_agent.explorer.agent import ExplorationAgent
 from src.exploration_agent.models import ExplorationMode, ExplorationResult
+from src.exploration_agent.normalizer import normalize_confidence
 from src.exploration_agent.final_critic.agent import FinalCriticAgent
 from src.exploration_agent.final_critic.models import FinalCriticInput, FinalVerdict
 from src.api.backend_client import get_user_strategies
@@ -68,6 +69,7 @@ def explore_topic(
 ) -> tuple[ExplorationResult, FinalVerdict | None]:
     """
     Run exploration for a topic, then validate with critic.
+    If critic rejects, gives explorer ONE retry with feedback.
 
     Args:
         topic_id: Topic to explore for
@@ -91,6 +93,23 @@ def explore_topic(
 
     # Phase 2: Critic validation
     verdict = run_critic(result, mode, topic_id)
+
+    # Phase 3: ONE retry if rejected
+    if not verdict.accepted and result.success:
+        logger.info("🔄 Critic rejected - giving explorer ONE retry with feedback")
+        track("exploration_retry", f"topic={topic_id} mode={mode}")
+
+        # Continue exploration with critic feedback (5 more steps)
+        result = agent.continue_with_feedback(
+            critic_feedback=verdict.reasoning,
+            rejection_reasons=verdict.rejection_reasons,
+            max_retry_steps=5
+        )
+
+        if result.success:
+            # Re-run critic on revised finding
+            verdict = run_critic(result, mode, topic_id)
+
     return result, verdict
 
 
@@ -103,6 +122,7 @@ def explore_strategy(
 ) -> tuple[ExplorationResult, FinalVerdict | None]:
     """
     Run exploration for a strategy, then validate with critic.
+    If critic rejects, gives explorer ONE retry with feedback.
 
     Args:
         strategy_user: Username who owns the strategy
@@ -130,6 +150,26 @@ def explore_strategy(
         result, mode, result.target_topic_id,
         strategy_user=strategy_user, strategy_id=strategy_id
     )
+
+    # Phase 3: ONE retry if rejected
+    if not verdict.accepted and result.success:
+        logger.info("🔄 Critic rejected - giving explorer ONE retry with feedback")
+        track("exploration_retry", f"strategy={strategy_id} user={strategy_user} mode={mode}")
+
+        # Continue exploration with critic feedback (5 more steps)
+        result = agent.continue_with_feedback(
+            critic_feedback=verdict.reasoning,
+            rejection_reasons=verdict.rejection_reasons,
+            max_retry_steps=5
+        )
+
+        if result.success:
+            # Re-run critic on revised finding
+            verdict = run_critic(
+                result, mode, result.target_topic_id,
+                strategy_user=strategy_user, strategy_id=strategy_id
+            )
+
     return result, verdict
 
 
@@ -233,12 +273,14 @@ def run_critic(
 
     # Save accepted findings
     if verdict.accepted:
+        # Normalize confidence for frontend compatibility (must be "high", "medium", or "low")
+        normalized_conf = normalize_confidence(verdict.confidence)
         finding_data = {
             "headline": result.headline,
             "rationale": result.rationale,
             "flow_path": result.flow_path,
             "evidence": [e.model_dump() for e in result.evidence],
-            "confidence": verdict.confidence,
+            "confidence": normalized_conf,
             "target_topic": target_topic,
             "exploration_steps": result.exploration_steps,
         }

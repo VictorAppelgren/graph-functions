@@ -79,7 +79,7 @@ def get_topic_snapshot(topic_id: str) -> TopicSnapshot:
 
 def get_connected_topics(topic_id: str) -> List[Dict[str, str]]:
     """
-    Get all topics connected to this one via INFLUENCES, CORRELATES_WITH, PEERS, COMPONENT_OF.
+    Get all topics connected to this one via INFLUENCES, CORRELATES_WITH, PEERS, COMPONENT_OF, HEDGES.
     Returns list of {id, name, relationship_type, direction}.
     """
     query = """
@@ -89,15 +89,17 @@ def get_connected_topics(topic_id: str) -> List[Dict[str, str]]:
     OPTIONAL MATCH (t)-[r3:CORRELATES_WITH]-(correlated:Topic)
     OPTIONAL MATCH (t)-[r4:PEERS]-(peer:Topic)
     OPTIONAL MATCH (t)-[r5:COMPONENT_OF]-(component:Topic)
-    
+    OPTIONAL MATCH (t)-[r6:HEDGES]-(hedged:Topic)
+
     WITH t,
         collect(DISTINCT {id: influenced.id, name: influenced.name, rel: 'INFLUENCES', dir: 'outgoing'}) as influenced_list,
         collect(DISTINCT {id: influencer.id, name: influencer.name, rel: 'INFLUENCED_BY', dir: 'incoming'}) as influencer_list,
         collect(DISTINCT {id: correlated.id, name: correlated.name, rel: 'CORRELATES_WITH', dir: 'both'}) as correlated_list,
         collect(DISTINCT {id: peer.id, name: peer.name, rel: 'PEERS', dir: 'both'}) as peer_list,
-        collect(DISTINCT {id: component.id, name: component.name, rel: 'COMPONENT_OF', dir: 'both'}) as component_list
-    
-    RETURN influenced_list + influencer_list + correlated_list + peer_list + component_list as connections
+        collect(DISTINCT {id: component.id, name: component.name, rel: 'COMPONENT_OF', dir: 'both'}) as component_list,
+        collect(DISTINCT {id: hedged.id, name: hedged.name, rel: 'HEDGES', dir: 'both'}) as hedged_list
+
+    RETURN influenced_list + influencer_list + correlated_list + peer_list + component_list + hedged_list as connections
     """
     
     result = run_cypher(query, {"topic_id": topic_id})

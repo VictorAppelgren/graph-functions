@@ -24,6 +24,7 @@ from src.exploration_agent.models import (
     MessageEntry,
     SavedExcerpt,
 )
+from src.exploration_agent.normalizer import normalize_finding_output
 from src.exploration_agent.explorer.tools import (
     get_topic_snapshot,
     get_initial_context,
@@ -58,16 +59,17 @@ logger = app_logging.get_logger("exploration_agent.explorer")
 class ExplorationAgent:
     """
     Autonomous agent that explores the knowledge graph to find unseen risks/opportunities.
-    
+
     Memory model:
     - TEMPORARY: Articles/sections loaded via read tools. Each gets own message.
                  Auto-deleted when agent takes any action other than save_excerpt.
     - PERMANENT: Saved excerpts via save_excerpt. Survives entire exploration.
     """
-    
+
     def __init__(self, max_steps: int = 20):
         self.max_steps = max_steps
         self.llm = get_llm(ModelTier.MEDIUM)
+        self._last_state: Optional[ExplorationState] = None  # For continue_with_feedback
     
     def explore_topic(
         self,
@@ -97,6 +99,97 @@ class ExplorationAgent:
         )
         
         # Run exploration loop
+        return self._run_loop(state)
+
+    def continue_with_feedback(
+        self,
+        critic_feedback: str,
+        rejection_reasons: List[str],
+        max_retry_steps: int = 5,
+    ) -> ExplorationResult:
+        """
+        Continue exploration after final critic rejection.
+
+        Injects critic feedback and gives agent limited additional steps to fix.
+        Uses the state stored from the most recent explore_topic/explore_strategy call.
+
+        Args:
+            critic_feedback: The critic's reasoning for rejection
+            rejection_reasons: Specific issues to address
+            max_retry_steps: Maximum additional steps (default 5)
+
+        Returns:
+            ExplorationResult after retry attempt
+        """
+        if not self._last_state:
+            logger.error("❌ No state available for retry - explore_topic/explore_strategy not called?")
+            return ExplorationResult(
+                headline="Retry Failed",
+                rationale="No exploration state available for retry",
+                flow_path="",
+                evidence=[],
+                target_topic_id="",
+                target_strategy_id=None,
+                mode=ExplorationMode.RISK,
+                exploration_steps=0,
+                success=False,
+                error="No state available for retry"
+            )
+
+        state = self._last_state
+
+        logger.info("=" * 60)
+        logger.info("🔄 RETRY MODE: Continuing exploration after critic rejection")
+        logger.info("=" * 60)
+
+        # Build feedback message for the agent
+        feedback_parts = [
+            "🚨 **FINAL CRITIC REJECTED YOUR FINDING - ONE RETRY OPPORTUNITY**",
+            "",
+            "The final critic evaluated your finding and determined it doesn't meet quality standards.",
+            "",
+            f"**Critic's Assessment**: {critic_feedback}",
+            "",
+            "**Specific Issues to Address:**"
+        ]
+
+        for i, reason in enumerate(rejection_reasons, 1):
+            feedback_parts.append(f"  {i}. {reason}")
+
+        feedback_parts.extend([
+            "",
+            f"⏱️ **You have {max_retry_steps} more steps to:**",
+            "  1. Read additional evidence if needed",
+            "  2. Save new excerpts to support your claims",
+            "  3. Revise your draft_finding to address the issues",
+            "  4. Call finish when ready",
+            "",
+            "⚠️ **This is your ONLY retry. Make it count!**"
+        ])
+
+        # Inject feedback as user message
+        state.messages.append(MessageEntry(
+            role="user",
+            content="\n".join(feedback_parts),
+            msg_id="critic_retry_feedback",
+            prunable=False
+        ))
+
+        # Reset step counter but limit max steps
+        original_step_count = state.step_count
+        state.step_count = 0
+        state.max_steps = max_retry_steps
+
+        # Clear draft to force agent to create a new one
+        state.draft_finding = None
+
+        # Reset critic feedback flag so it can run again on new draft (optional mid-loop critic)
+        state.critic_feedback_received = False
+
+        logger.info(f"📊 Retry state: {len(state.saved_excerpts)} saved excerpts, {len(state.messages)} messages")
+        logger.info(f"📊 Original steps: {original_step_count}, Retry limit: {max_retry_steps}")
+
+        # Resume the loop
         return self._run_loop(state)
 
     def _ensure_topic_mapping(self, username: str, strategy_id: str, strategy: Dict[str, Any]) -> Dict[str, List[str]]:
@@ -320,6 +413,7 @@ Output ONLY the JSON object, no other text.""",
                         len(state.saved_excerpts),
                     )
                     logger.info("=" * 60)
+                    self._last_state = state  # Store for potential retry
                     return self._build_result(state, success=True)
                 
                 # Add any new messages from tool execution
@@ -339,6 +433,7 @@ Output ONLY the JSON object, no other text.""",
             bool(state.draft_finding),
         )
         logger.warning("=" * 60)
+        self._last_state = state  # Store for potential retry
         return self._build_result(state, success=state.draft_finding is not None)
     
     def _build_step_context(self, state: ExplorationState) -> str:
@@ -432,9 +527,9 @@ What do you want to do next? Output your decision as JSON.
             ))
     
     def _build_result(self, state: ExplorationState, success: bool) -> ExplorationResult:
-        """Build the final exploration result."""
+        """Build the final exploration result with normalization for frontend compatibility."""
         if state.draft_finding:
-            return ExplorationResult(
+            raw_result = ExplorationResult(
                 headline=state.draft_finding.get("headline", "Untitled"),
                 rationale=state.draft_finding.get("rationale", ""),
                 flow_path=state.draft_finding.get("flow_path", ""),
@@ -445,7 +540,9 @@ What do you want to do next? Output your decision as JSON.
                 exploration_steps=state.step_count,
                 success=success,
             )
-        
+            # Normalize for frontend compatibility (FlowPathViz.svelte, FindingsCards.svelte)
+            return normalize_finding_output(raw_result)
+
         return ExplorationResult(
             headline="Exploration Incomplete",
             rationale=f"Completed {state.step_count} steps without drafting a finding",

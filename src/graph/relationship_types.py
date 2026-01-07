@@ -4,7 +4,7 @@ These are the ONLY allowed relationship labels between Topic nodes.
 Use these exact strings in all LLM prompts and Cypher queries.
 
 IMPORTANT CONSTRAINTS (FOR PROMPTS AND CODE):
-- Valid relationship type strings are ONLY: "INFLUENCES", "CORRELATES_WITH", "PEERS", "COMPONENT_OF".
+- Valid relationship type strings are ONLY: "INFLUENCES", "CORRELATES_WITH", "PEERS", "COMPONENT_OF", "HEDGES".
 - NEVER use "DRIVES", "DRIVEN_BY", "IMPACTS", "RELATED_TO" or any other verb as a relationship label.
 - If you would naturally say "A drives B" or "A impacts B", you MUST encode it as "A INFLUENCES B".
 
@@ -16,6 +16,7 @@ INFLUENCES = "INFLUENCES"
 CORRELATES_WITH = "CORRELATES_WITH"
 PEERS = "PEERS"
 COMPONENT_OF = "COMPONENT_OF"
+HEDGES = "HEDGES"
 
 # Human-readable descriptions keyed by canonical relationship name.
 # Safe to use directly in prompts.
@@ -38,5 +39,11 @@ RELATIONSHIP_DESCRIPTIONS = {
     COMPONENT_OF: (
         "COMPONENT_OF: A → B means A is a component or member of B (child → parent). "
         "Use for index/sector/aggregate membership, not generic influence."
+    ),
+    HEDGES: (
+        "HEDGES: A ↔ B means A serves as a hedge or risk offset for B (or vice versa). "
+        "Use for assets that typically move inversely or provide protection against "
+        "specific risks. Examples: gold HEDGES inflation, VIX HEDGES S&P 500, "
+        "USD HEDGES EM risk. Symmetric: either direction is valid."
     ),
 }

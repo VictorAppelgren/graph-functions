@@ -69,6 +69,17 @@ LLM_RETRY_ATTEMPTS = 2  # Reduced from 3 - we have fallback logic now
 DB_RETRY_ATTEMPTS = 5
 DB_RETRY_DELAY = 0.1
 
+# OpenRouter free tier rate limiting (16 req/min = ~4s between calls)
+OPENROUTER_MIN_DELAY_S = 4.0  # Minimum seconds between OpenRouter calls
+_openrouter_last_call: float = 0.0  # Timestamp of last OpenRouter call
+
+# OpenRouter upstream rate limit backoff (when the free model is overloaded globally)
+# Waits: 1m → 5m → 15m → 60m → 60m... (keeps trying hourly for 24/7 operation)
+OPENROUTER_UPSTREAM_BACKOFF_S = [60, 300, 900, 3600, 3600, 3600, 3600, 3600]
+
+# DeepSeek R1 Free has only 8K context - skip it for long prompts
+DEEPSEEK_R1_CONTEXT_LIMIT = 6000  # Leave room for output tokens
+
 # API Keys from environment (loaded from .env above)
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -146,7 +157,7 @@ if not LOCAL_LLM_ONLY:
     # }
     # _init_logger.info("LLM CONFIG: Added external_120b (120B vLLM on :3331)")
 
-    # OpenRouter 120B (free tier - 1000 req/day with $10 credits)
+    # OpenRouter 120B (free tier - 1000 req/day shared across all free models)
     SERVERS['external_120b'] = {
         'provider': 'openai',
         'base_url': 'https://openrouter.ai/api/v1',
@@ -155,14 +166,32 @@ if not LOCAL_LLM_ONLY:
     }
     _init_logger.info("LLM CONFIG: Added external_120b (120B via OpenRouter free tier)")
 
-    # --- COMPLEX tier server (DeepSeek v3.2) ---
-    SERVERS['deepseek'] = {
-        'provider': 'openai',  # DeepSeek uses OpenAI-compatible API
-        'base_url': 'https://api.deepseek.com',
-        'model': 'deepseek-chat',  # DeepSeek v3.2
+    # OpenRouter DeepSeek R1 (free tier - 1000 req/day shared, 8K context only!)
+    SERVERS['deepseek_r1_free'] = {
+        'provider': 'openai',
+        'base_url': 'https://openrouter.ai/api/v1',
+        'model': 'deepseek/deepseek-r1-0528:free',
         'temperature': 0.2,
     }
-    _init_logger.info("LLM CONFIG: Added deepseek (DeepSeek v3.2 API)")
+    _init_logger.info("LLM CONFIG: Added deepseek_r1_free (DeepSeek R1 free, 8K context)")
+
+    # OpenRouter 120B paid (GMICloud - very cheap: $0.02/M input, $0.10/M output)
+    SERVERS['external_120b_paid'] = {
+        'provider': 'openai',
+        'base_url': 'https://openrouter.ai/api/v1',
+        'model': 'openai/gpt-oss-120b',  # Non-free version
+        'temperature': 0.2,
+    }
+    _init_logger.info("LLM CONFIG: Added external_120b_paid (120B via GMICloud, $0.02/M)")
+
+    # DeepSeek paid API (final fallback)
+    SERVERS['deepseek_paid'] = {
+        'provider': 'openai',
+        'base_url': 'https://api.deepseek.com',
+        'model': 'deepseek-chat',
+        'temperature': 0.2,
+    }
+    _init_logger.info("LLM CONFIG: Added deepseek_paid (DeepSeek v3.2 paid API)")
 
     # --- FAST tier server (Anthropic Claude) ---
     SERVERS['anthropic'] = {
@@ -477,25 +506,27 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
             max_retries=0,
         )
 
-        # Handle DeepSeek API (uses OpenAI-compatible endpoint)
-        if server_id == 'deepseek':
+        # Handle DeepSeek paid API (uses OpenAI-compatible endpoint)
+        if server_id == 'deepseek_paid':
             if not DEEPSEEK_API_KEY:
-                raise ValueError("DEEPSEEK_API_KEY not set! Required for COMPLEX tier.")
+                raise ValueError("DEEPSEEK_API_KEY not set! Required for paid DeepSeek.")
             kwargs["base_url"] = base_url
             kwargs["api_key"] = DEEPSEEK_API_KEY
-            kwargs["max_tokens"] = 16384
-        # Handle OpenRouter API (external_120b via OpenRouter)
-        elif server_id == 'external_120b' and 'openrouter.ai' in (base_url or ''):
+            kwargs["max_tokens"] = 8192
+        # Handle OpenRouter APIs (external_120b and deepseek_r1_free)
+        elif 'openrouter.ai' in (base_url or ''):
             if not OPENROUTER_API_KEY:
-                raise ValueError("OPENROUTER_API_KEY not set! Required for MEDIUM tier (OpenRouter).")
+                raise ValueError("OPENROUTER_API_KEY not set! Required for OpenRouter.")
             kwargs["base_url"] = base_url
             kwargs["api_key"] = OPENROUTER_API_KEY
-            kwargs["max_tokens"] = 16384
+            kwargs["max_tokens"] = 8192
         elif base_url:
             # Local vLLM servers (local, external_a, external_b)
+            # These run 20B models with ~32k context
+            # Don't set max_tokens - let model decide based on input size
             kwargs["base_url"] = base_url
             kwargs["api_key"] = os.getenv("OPENAI_API_KEY", "sk-noop")
-            kwargs["max_tokens"] = 16384
+            # max_tokens NOT set - avoids truncation issues with large inputs
 
         return ChatOpenAI(**kwargs).with_retry(stop_after_attempt=LLM_RETRY_ATTEMPTS)
 
@@ -514,58 +545,55 @@ def _build_llm(server_id: str) -> Runnable[LanguageModelInput, BaseMessage]:
 
 
 def _route_request(tier: ModelTier, estimated_tokens: int = 0, exclude: set[str] = None) -> str:
-    """Route request to appropriate server based on tier.
+    """Route request to appropriate server based on tier and token count.
 
-    4-Tier Routing:
-    - FAST: Anthropic Claude (user-facing, expensive but fast)
-    - COMPLEX: DeepSeek v3.2 (strategic reasoning, cheap thinker)
-    - MEDIUM: 120B model on :3331 (research/writing)
-    - SIMPLE: 20B models (local + :8686 + :8787) with load balancing
-
-    Args:
-        tier: Model tier (SIMPLE, MEDIUM, COMPLEX, FAST)
-        estimated_tokens: Estimated token count for the request (used for SIMPLE tier)
-        exclude: Set of server IDs to exclude from selection (e.g., failed servers)
+    Routing chains (tries in order, skips excluded/unavailable):
+    - FAST: anthropic
+    - COMPLEX/MEDIUM: deepseek_r1_free (if <6K tokens) → external_120b → external_120b_paid → deepseek_paid
+    - SIMPLE: local → external_a → external_b (with load balancing)
     """
     exclude = exclude or set()
 
     # --- FAST tier: Anthropic Claude ---
     if tier == ModelTier.FAST:
-        if 'anthropic' not in SERVERS:
-            logger.warning("FAST tier requested but anthropic not available, falling back to MEDIUM")
-            return _route_request(ModelTier.MEDIUM, estimated_tokens, exclude)
-        logger.debug("FAST tier → anthropic (Claude)")
-        return 'anthropic'
+        if 'anthropic' in SERVERS:
+            return 'anthropic'
+        logger.warning("FAST: anthropic unavailable, falling back to MEDIUM")
+        return _route_request(ModelTier.MEDIUM, estimated_tokens, exclude)
 
-    # --- COMPLEX tier: DeepSeek v3.2 ---
-    if tier == ModelTier.COMPLEX:
-        if 'deepseek' not in SERVERS:
-            logger.warning("COMPLEX tier requested but deepseek not available, falling back to MEDIUM")
-            return _route_request(ModelTier.MEDIUM, estimated_tokens, exclude)
-        logger.debug("COMPLEX tier → deepseek (DeepSeek v3.2)")
-        return 'deepseek'
+    # --- COMPLEX/MEDIUM tier: Same fallback chain, token-aware ---
+    if tier in (ModelTier.COMPLEX, ModelTier.MEDIUM):
+        # DeepSeek R1 free: only for short prompts (<6K tokens)
+        if (estimated_tokens < DEEPSEEK_R1_CONTEXT_LIMIT and
+            'deepseek_r1_free' in SERVERS and
+            'deepseek_r1_free' not in exclude):
+            logger.debug(f"{tier.value} → deepseek_r1_free (tokens={estimated_tokens} < {DEEPSEEK_R1_CONTEXT_LIMIT})")
+            return 'deepseek_r1_free'
 
-    # --- MEDIUM tier: 120B model ---
-    if tier == ModelTier.MEDIUM:
-        if 'external_120b' not in SERVERS:
-            logger.warning("MEDIUM tier requested but external_120b not available, falling back to SIMPLE")
-            return _route_request(ModelTier.SIMPLE, estimated_tokens, exclude)
-        logger.debug("MEDIUM tier → external_120b (120B on :3331)")
-        return 'external_120b'
+        # 120B free (long context, but limited to 1000 req/day shared)
+        if 'external_120b' in SERVERS and 'external_120b' not in exclude:
+            logger.debug(f"{tier.value} → external_120b (free, 131K context)")
+            return 'external_120b'
+
+        # 120B paid (cheap fallback: $0.02/M)
+        if 'external_120b_paid' in SERVERS and 'external_120b_paid' not in exclude:
+            logger.debug(f"{tier.value} → external_120b_paid (paid, $0.02/M)")
+            return 'external_120b_paid'
+
+        # DeepSeek paid (final fallback)
+        if 'deepseek_paid' in SERVERS and 'deepseek_paid' not in exclude:
+            logger.debug(f"{tier.value} → deepseek_paid (final fallback)")
+            return 'deepseek_paid'
+
+        logger.warning(f"{tier.value}: no servers available, falling back to SIMPLE")
+        return _route_request(ModelTier.SIMPLE, estimated_tokens, exclude)
 
     # --- SIMPLE tier: 20B models with load balancing ---
     if tier in (ModelTier.SIMPLE, ModelTier.SIMPLE_LONG_CONTEXT):
-        if tier == ModelTier.SIMPLE_LONG_CONTEXT:
-            logger.debug("SIMPLE_LONG_CONTEXT tier → routing as SIMPLE")
-
-        # Check if request is small enough for local
         if estimated_tokens > TOKEN_THRESHOLD:
-            # Large request - prefer external servers
             server_id = router_db.get_next_external_smart(exclude=exclude)
-            logger.debug(f"SIMPLE tier → {server_id} (tokens: {estimated_tokens} > {TOKEN_THRESHOLD})")
+            logger.debug(f"SIMPLE → {server_id} (tokens={estimated_tokens} > {TOKEN_THRESHOLD})")
             return server_id
-
-        # Small request - round-robin across all SIMPLE tier servers
         return router_db.get_next_any_server()
 
     raise ValueError(f"Unknown tier: {tier}")
@@ -591,13 +619,14 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
         return self._llm_cache[server_id]
     
     def invoke(
-        self, 
-        input: LanguageModelInput, 
+        self,
+        input: LanguageModelInput,
         config: Optional[RunnableConfig] = None,
         **kwargs: Any
     ) -> BaseMessage:
         """Invoke LLM with smart routing based on actual input size."""
-        
+        global _openrouter_last_call
+
         # Extract text from input for token estimation
         input_text = ""
         if isinstance(input, str):
@@ -635,6 +664,15 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
             llm = self._get_llm_for_server(server_id)
             with _mark_server_busy(server_id):
                 try:
+                    # OpenRouter free tier rate limiting (applies to all OpenRouter servers)
+                    if 'openrouter.ai' in SERVERS.get(server_id, {}).get('base_url', ''):
+                        elapsed = time.time() - _openrouter_last_call
+                        if elapsed < OPENROUTER_MIN_DELAY_S:
+                            wait_time = OPENROUTER_MIN_DELAY_S - elapsed
+                            logger.debug(f"⏳ OpenRouter rate limit: waiting {wait_time:.1f}s")
+                            time.sleep(wait_time)
+                        _openrouter_last_call = time.time()
+
                     result = llm.invoke(input, config, **kwargs)
                     
                     # Detailed logging of what we got back
@@ -688,8 +726,9 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
                             f"result_value={str(result)[:200]}"
                         )
                     
-                    # Success! Track the call
-                    track(f"llm_call_{self.tier.value.lower()}", f"server={server_id}")
+                    # Success! Track the call (tier + server, no message = no master log spam)
+                    track(f"llm_{self.tier.value.lower()}")  # Tier total: llm_simple, llm_medium, etc.
+                    track(f"llm_server_{server_id}")  # Per-server: llm_server_external_a, etc.
 
                     if attempt > 0:
                         logger.info(
@@ -712,7 +751,16 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
                     )
                     logger.error(f"📋 Error details: {error_full[:500]}")
                     
-                    # Check for specific error patterns
+                    # Check for specific error patterns and handle with fallback
+
+                    # Context/token limit exceeded (400 error) - try next server
+                    if ('exceed' in error_msg or 'max_num_tokens' in error_msg or
+                        ('context' in error_msg and 'length' in error_msg)):
+                        logger.warning(f"CONTEXT EXCEEDED on {server_id} - trying fallback")
+                        exclude_servers.add(server_id)
+                        if attempt < 1:
+                            continue  # Retry with different server
+
                     if 'timeout' in error_msg:
                         logger.error(f"TIMEOUT ERROR - Request took longer than {LLM_CALL_TIMEOUT_S}s")
                     elif 'connection' in error_msg:
@@ -724,26 +772,50 @@ class RoutedLLM(Runnable[LanguageModelInput, BaseMessage]):
                     elif 'rate' in error_msg and 'limit' in error_msg:
                         logger.error(f"RATE LIMIT ERROR - Too many requests")
 
-                    # For API servers (anthropic, deepseek) - fail fast on billing/quota errors
-                    if server_id in ['anthropic', 'deepseek']:
-                        if any(keyword in error_msg for keyword in ['quota', 'billing', 'insufficient', 'credits', 'rate limit']):
-                            logger.error(f"API billing/quota error for {server_id}: {e}")
-                            raise  # Re-raise to fail the request (don't retry)
+                        # OpenRouter upstream rate limit - the free model is overloaded globally
+                        # This requires longer waits (minutes to hours) since it's not our rate limit
+                        is_openrouter = 'openrouter.ai' in SERVERS.get(server_id, {}).get('base_url', '')
+                        if is_openrouter and ('upstream' in error_msg or 'temporarily' in error_msg):
+                            for backoff_attempt, wait_seconds in enumerate(OPENROUTER_UPSTREAM_BACKOFF_S):
+                                wait_mins = wait_seconds / 60
+                                logger.warning(
+                                    f"⏳ OpenRouter upstream rate limit - waiting {wait_mins:.0f}m "
+                                    f"(attempt {backoff_attempt + 1}/{len(OPENROUTER_UPSTREAM_BACKOFF_S)})"
+                                )
+                                time.sleep(wait_seconds)
 
-                    # For SIMPLE tier servers - try fallback
-                    if server_id in ['local', 'external_a', 'external_b']:
-                        exclude_servers.add(server_id)
+                                # Retry the request
+                                try:
+                                    _openrouter_last_call = time.time()
+                                    result = llm.invoke(input, config, **kwargs)
+                                    logger.info(f"✅ OpenRouter recovered after {wait_mins:.0f}m wait")
+                                    return result
+                                except Exception as retry_e:
+                                    retry_msg = str(retry_e).lower()
+                                    if '429' in str(retry_e) or 'rate' in retry_msg:
+                                        logger.warning(f"⏳ Still rate limited, will retry...")
+                                        continue
+                                    else:
+                                        # Different error - re-raise
+                                        raise retry_e
 
-                        if attempt < 1:  # Have more attempts
-                            logger.info(f"RETRYING with different server (excluding {server_id})...")
-                            continue  # Try again with different server
-                        else:
-                            logger.error(
-                                f"ALL SIMPLE TIER SERVERS FAILED | failed_servers={list(exclude_servers)} | "
-                                f"last_error={error_type}: {error_full[:200]}"
-                            )
+                            # Exhausted all backoff attempts
+                            logger.error(f"❌ OpenRouter still rate limited after {sum(OPENROUTER_UPSTREAM_BACKOFF_S)/3600:.1f}h of retries")
+                            raise
 
-                    # Re-raise on last attempt or non-SIMPLE tier servers
+                    # Fail fast on billing/quota errors (no point retrying)
+                    if any(keyword in error_msg for keyword in ['quota', 'billing', 'insufficient', 'credits']):
+                        logger.error(f"BILLING/QUOTA error for {server_id}: {e}")
+                        raise
+
+                    # For any server error - try fallback if we have attempts left
+                    exclude_servers.add(server_id)
+                    if attempt < 1:
+                        logger.info(f"🔄 RETRYING with different server (excluding {server_id})...")
+                        continue
+
+                    # All attempts exhausted
+                    logger.error(f"ALL SERVERS FAILED | excluded={list(exclude_servers)} | last_error={error_type}")
                     raise
     
     async def ainvoke(

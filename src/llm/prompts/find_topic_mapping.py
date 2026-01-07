@@ -14,7 +14,7 @@ find_topic_mapping_prompt = """
         MAPPING PHILOSOPHY:
         - Map articles to PERSISTENT ANALYTICAL ANCHORS (what they're about)
         - NOT to perspectives (how they analyze it) or temporary events
-        - Articles can map to MULTIPLE topics (3-5 if genuinely relevant)
+        - Articles can map to 1-10+ topics IF genuinely relevant (prefer fewer, precise matches over many weak ones)
         - Prioritize existing topics; only suggest new if persistent & recurring
 
         OVERVIEW:
@@ -44,6 +44,13 @@ find_topic_mapping_prompt = """
         - Is this an institution making recurring decisions? → SUGGEST
         - Does it mix asset+perspective or policy+perspective? → DON'T SUGGEST
 
+        IRRELEVANCE DETECTION - CRITICAL:
+        - If article doesn't match ANY existing topics well, return {{"existing": null, "new": ["suggested_topic_name"]}} or {{"existing": null, "new": null}}
+        - Do NOT force-map to tangentially related topics just to return something
+        - A China AI IPO article should NOT map to energy_markets just because both are "markets"
+        - Better to suggest a new topic or return null than pollute existing topics with irrelevant articles
+        - Only map when there's GENUINE analytical relevance, not surface-level keyword overlap
+
         EXISTING NODE NAMES AND IDS:
         {node_list}
 
@@ -62,8 +69,11 @@ find_topic_mapping_prompt = """
         - For 'existing': ONLY use exact IDs from the provided list - never invent or guess topic IDs
         - Suggest 'new' only if persistent (6+ months tracking)
         - Add geographic specificity to new suggestions
-        - Articles can map to 3-5 topics if genuinely relevant
-        
-        STRICT OUTPUT: Only the JSON object. No extra text.
+        - Map to as many or as few topics as genuinely relevant (1 is fine, 10 is fine, 0 is fine if truly irrelevant)
+        - NEVER force weak mappings - quality over quantity
+
+        ⚠️ RESPOND WITH ONLY THE JSON OBJECT. NO THINKING. NO EXPLANATION. NO PREAMBLE.
+        START YOUR RESPONSE WITH A CURLY BRACE AND END WITH A CURLY BRACE.
+
         YOUR RESPONSE:
     """

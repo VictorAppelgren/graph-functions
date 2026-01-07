@@ -17,28 +17,90 @@ logger = get_logger(__name__)
 def discover_topic_relationships(topic_id: str, argos_id: str) -> None:
     """
     Discover INFLUENCES and CORRELATES_WITH relationships for a topic.
-    Throttled for topics with >10 existing relationships (10% chance to run).
+
+    Throttling logic (scaled by relationship count):
+    - >20 relationships: 20% chance to run (well-connected)
+    - >10 relationships: 50% chance to run (moderate)
+    - <=10 relationships: 100% always run (starving topics need connections)
     """
+    import random
+
     # Count existing topic relationships (excluding articles)
     relationship_count_query = """
-    MATCH (t:Topic {id: $topic_id})-[r:INFLUENCES|CORRELATES_WITH]-(other:Topic)
+    MATCH (t:Topic {id: $topic_id})-[r:INFLUENCES|CORRELATES_WITH|PEERS|COMPONENT_OF|HEDGES]-(other:Topic)
     RETURN count(r) as relationship_count
     """
     result = run_cypher(relationship_count_query, {"topic_id": topic_id})
     relationship_count = result[0]["relationship_count"] if result else 0
 
-    # Throttle relationship discovery for topics with >10 relationships
-    should_run_relationship_discovery = True
-    if relationship_count > 10:
-        import random
-        should_run_relationship_discovery = random.random() <= 0.1  # 10% chance to run
-
-    if should_run_relationship_discovery:
-        logger.info(f"Starting relationship discovery for Topic {topic_id}. Because it has {relationship_count} relationships.")
-        find_influences_and_correlates(topic_id)
-        logger.info(f"Completed relationship discovery for Topic {topic_id}")
+    # Scaled throttling: more connections = less frequent discovery
+    if relationship_count > 20:
+        discovery_chance = 0.2   # 20% for well-connected topics
+    elif relationship_count > 10:
+        discovery_chance = 0.5   # 50% for moderately connected
     else:
-        logger.info(f"Skipping relationship discovery for {topic_id} (has {relationship_count} relationships, throttled)")
+        discovery_chance = 1.0   # 100% for starving topics (need connections!)
+
+    should_run = random.random() <= discovery_chance
+
+    if should_run:
+        logger.info(f"Running relationship discovery for {topic_id} (has {relationship_count} rels, {int(discovery_chance*100)}% chance)")
+        find_influences_and_correlates(topic_id)
+        logger.info(f"Completed relationship discovery for {topic_id}")
+    else:
+        logger.info(f"Skipping relationship discovery for {topic_id} (has {relationship_count} rels, throttled at {int(discovery_chance*100)}%)")
+
+    # Starving topic enrichment: if topic has < 10 articles, try to find more
+    # This runs opportunistically during article ingestion (not as a separate job)
+    enrich_starving_topic_if_needed(topic_id)
+
+
+# Threshold for starving topic enrichment (topics with fewer articles get enriched)
+STARVING_TOPIC_THRESHOLD = 10
+
+
+def enrich_starving_topic_if_needed(topic_id: str) -> None:
+    """
+    Check if topic is starving (< STARVING_TOPIC_THRESHOLD articles) and trigger enrichment.
+
+    This runs opportunistically during article ingestion to help starving topics
+    catch up without needing a separate scheduled job.
+
+    Throttled to 20% chance to avoid overwhelming the system during high ingest.
+    """
+    import random
+    from src.config.worker_mode import can_write
+
+    # Only run on write-capable workers
+    if not can_write():
+        return
+
+    # 20% chance to run (avoid overwhelming during high-volume ingestion)
+    if random.random() > 0.2:
+        return
+
+    # Count articles for this topic
+    article_count_query = """
+    MATCH (t:Topic {id: $topic_id})<-[:ABOUT]-(a:Article)
+    RETURN count(a) as article_count
+    """
+    result = run_cypher(article_count_query, {"topic_id": topic_id})
+    article_count = result[0]["article_count"] if result else 0
+
+    if article_count >= STARVING_TOPIC_THRESHOLD:
+        return  # Not starving
+
+    logger.info(f"🔄 Starving topic detected: {topic_id} has only {article_count} articles (< {STARVING_TOPIC_THRESHOLD})")
+    track("starving_topic_enrichment_triggered", f"Topic {topic_id}: {article_count} articles")
+
+    try:
+        from worker.workflows.topic_enrichment import backfill_topic_from_storage
+        enrichment_added = backfill_topic_from_storage(topic_id=topic_id, test=False)
+        logger.info(f"✅ Starving topic enrichment complete for {topic_id}: {enrichment_added} articles added")
+        track("starving_topic_enriched", f"Topic {topic_id}: {enrichment_added} articles added")
+    except Exception as e:
+        logger.warning(f"Starving topic enrichment failed for {topic_id}: {e}")
+        track("starving_topic_enrichment_failed", f"Topic {topic_id}: {e}")
 
 
 def add_article(
@@ -294,21 +356,22 @@ def add_article(
         # Trigger next steps, relationship discovery and replacement analysis
         discover_topic_relationships(topic_id, argos_id)
 
-        # Trigger agent-based analysis for Tier 3 articles only (premium importance)
+        # Trigger agent-based analysis for Tier 2+ articles (standard+ importance)
+        # Changed from Tier 3 only to Tier 2+ for more frequent analysis updates
         # WORKER_MODE check: only write if allowed
-        if not test and classification.overall_importance >= 3 and can_write():
+        if not test and classification.overall_importance >= 2 and can_write():
             from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
             track("analysis.triggered.new_articles", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
             logger.info(f"🤖 Triggering agent analysis for {topic_id} (Tier {classification.overall_importance} article: {argos_id})")
             analysis_rewriter_with_agents(topic_id)
             track("agent_analysis_completed", f"Topic {topic_id}: All sections written")
             logger.info(f"✅ Agent analysis complete for {topic_id}")
-        elif not test and classification.overall_importance >= 3 and not can_write():
+        elif not test and classification.overall_importance >= 2 and not can_write():
             track("agent_analysis_deferred", f"Topic {topic_id}: Tier {classification.overall_importance} - WORKER_MODE=ingest")
             logger.info(f"⏭️  Deferring analysis for {topic_id} (WORKER_MODE=ingest, write server will handle)")
         elif not test:
             track("agent_analysis_skipped", f"Topic {topic_id}: Tier {classification.overall_importance} article {argos_id}")
-            logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 3)")
+            logger.info(f"⏭️  Skipping analysis for {topic_id} (Tier {classification.overall_importance}, need Tier 2+)")
 
         successful_topics += 1
         if not article_already_exists:

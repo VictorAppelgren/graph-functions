@@ -42,6 +42,15 @@ USER POSITION:
 RELEVANT TOPIC ANALYSES:
 {topic_analyses}
 
+TOPIC RELATIONSHIPS (CAUSAL CHAINS & CORRELATIONS):
+{relationship_context}
+
+Use these relationships to identify:
+- Transmission chains (A INFLUENCES B → how does risk cascade?)
+- Correlation risks (A CORRELATES_WITH B → compound exposure)
+- Hedge gaps (A HEDGES B → is there inverse protection?)
+- Peer risks (A PEERS B → competitive pressure from substitutes)
+
 REFERENCED ARTICLES (source material for citations):
 {articles_reference}
 

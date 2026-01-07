@@ -160,14 +160,28 @@ class SynthesisScoutAgent(BaseAgent):
         return "\n".join(lines)
     
     def _format_related_topics(self, related: List[dict]) -> str:
-        """Format related topics for prompt"""
+        """Format related topics for prompt WITH relationship type for better synthesis"""
         if not related:
             return "No related topics found"
-        
+
+        # Relationship type guidance for synthesis
+        rel_type_hints = {
+            "INFLUENCES": "causal driver - look for transmission chains",
+            "CORRELATES_WITH": "co-moves - look for shared drivers",
+            "PEERS": "substitute/competitor - look for divergence opportunities",
+            "COMPONENT_OF": "constituent - look for composition effects",
+            "HEDGES": "risk offset - look for asymmetric protection trades"
+        }
+
         lines = []
         for i, rel in enumerate(related, 1):
+            rel_type = rel.get('relationship_type', 'CORRELATES_WITH')
+            direction = rel.get('relationship_direction', 'bidirectional')
+            hint = rel_type_hints.get(rel_type, "")
+
             lines.append(f"{i}. TOPIC: {rel['topic_name']} ({rel['topic_id']})")
-            
+            lines.append(f"   RELATIONSHIP: {rel_type} ({direction}) - {hint}")
+
             # Format articles from this related topic
             articles = rel.get('articles', [])
             if articles:
@@ -175,15 +189,15 @@ class SynthesisScoutAgent(BaseAgent):
                 lines.append(f"   Articles ({len(articles)}): {', '.join(article_ids)}")
             else:
                 lines.append(f"   Articles: None")
-            
+
             if rel.get('executive_summary'):
                 lines.append(f"   Executive Summary: {rel['executive_summary'][:300]}...")
-            
+
             if rel.get('drivers'):
                 lines.append(f"   Drivers: {rel['drivers'][:300]}...")
-            
+
             lines.append("")
-        
+
         return "\n".join(lines)
     
     def _format_catalyst_articles(self, articles: List[dict]) -> str:

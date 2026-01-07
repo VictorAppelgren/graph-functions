@@ -4,17 +4,18 @@ Contrarian Finder - Graph Strategy
 MISSION: Find contrarian assets and their analysis to challenge consensus.
 
 GRAPH EXPLORATION:
-1. Identify contrarian assets (negatively correlated)
-2. Get their executive_summary and relevant analysis
-3. Return for contrarian angle detection
+1. Query HEDGES relationships from graph (dynamically discovered contrarian pairs)
+2. Fall back to hardcoded pairs if no HEDGES relationships exist
+3. Get their executive_summary and relevant analysis
+4. Return for contrarian angle detection
 """
 
 from typing import Dict, List
 from src.graph.neo4j_client import run_cypher
 
 
-# Contrarian asset mapping (negatively correlated assets)
-CONTRARIAN_PAIRS = {
+# Legacy fallback - only used if no HEDGES relationships exist in graph
+_LEGACY_CONTRARIAN_PAIRS = {
     "eurusd": ["dxy", "usdjpy"],
     "dxy": ["eurusd", "gold"],
     "ust10y": ["spx", "gold"],
@@ -29,22 +30,46 @@ CONTRARIAN_PAIRS = {
 }
 
 
+def _get_hedges_from_graph(topic_id: str) -> List[str]:
+    """
+    Get contrarian/hedge topics from HEDGES relationships in graph.
+    HEDGES = inverse/risk-offset relationship (e.g., gold hedges inflation).
+    """
+    query = """
+    MATCH (t:Topic {id: $topic_id})-[:HEDGES]-(hedge:Topic)
+    RETURN DISTINCT hedge.id as hedge_id
+    """
+    result = run_cypher(query, {"topic_id": topic_id})
+    if result:
+        return [r["hedge_id"] for r in result if r.get("hedge_id")]
+    return []
+
+
 def explore_graph(topic_id: str, section: str) -> Dict:
     """
     Explore graph to find contrarian assets with tier 3 articles.
-    
+
+    Uses HEDGES relationships from graph (dynamically discovered).
+    Falls back to legacy hardcoded pairs if no HEDGES exist.
+
     Returns:
         {
             "topic_name": str,
             "contrarian_assets": List[dict with articles]
         }
     """
-    
-    # Get contrarian asset IDs
-    contrarian_ids = CONTRARIAN_PAIRS.get(topic_id, [])
-    
+
+    # Step 1: Try to get contrarian assets from HEDGES relationships (preferred)
+    contrarian_ids = _get_hedges_from_graph(topic_id)
+
+    # Step 2: Fall back to legacy hardcoded pairs if no HEDGES found
     if not contrarian_ids:
-        print(f"[ContrarianFinder] No predefined contrarian assets for {topic_id}")
+        contrarian_ids = _LEGACY_CONTRARIAN_PAIRS.get(topic_id, [])
+        if contrarian_ids:
+            print(f"[ContrarianFinder] Using legacy pairs for {topic_id} (no HEDGES in graph)")
+
+    if not contrarian_ids:
+        print(f"[ContrarianFinder] No contrarian assets for {topic_id} (no HEDGES or legacy pairs)")
         return {
             "topic_name": topic_id,
             "topic_id": topic_id,

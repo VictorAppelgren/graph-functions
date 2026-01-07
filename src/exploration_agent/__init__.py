@@ -17,6 +17,12 @@ from src.exploration_agent.critic.agent import CriticAgent
 from src.exploration_agent.critic.models import CriticFeedback
 from src.exploration_agent.final_critic.agent import FinalCriticAgent
 from src.exploration_agent.final_critic.models import FinalVerdict
+from src.exploration_agent.normalizer import (
+    normalize_finding_output,
+    normalize_flow_path,
+    normalize_confidence,
+    normalize_headline,
+)
 
 __all__ = [
     "ExplorationAgent",
@@ -26,4 +32,9 @@ __all__ = [
     "CriticFeedback",
     "FinalCriticAgent",
     "FinalVerdict",
+    # Normalizers for frontend compatibility
+    "normalize_finding_output",
+    "normalize_flow_path",
+    "normalize_confidence",
+    "normalize_headline",
 ]

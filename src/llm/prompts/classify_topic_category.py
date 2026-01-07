@@ -17,20 +17,24 @@ PERSPECTIVE-NEUTRAL VALIDATION (CRITICAL):
 ❌ REJECT if topic name contains perspective language:
    - "Risk", "Opportunity", "Trend", "Catalyst", "Impact on", "Effect of"
    - "Upside", "Downside", "Bullish", "Bearish", "Threat"
-   - If perspective-based, output category="INVALID" with motivation explaining the issue
+   - If perspective-based, output category="none" with motivation explaining the issue
 ❌ REJECT if temporary event rather than persistent phenomenon:
    - "Fed Pivot", "Hurricane Milton", "2024 Election"
-   - If temporary, output category="INVALID" with motivation suggesting persistent alternative
+   - If temporary, output category="none" with motivation suggesting persistent alternative
 ✅ ACCEPT persistent analytical anchors:
-   - Tradable assets, policy institutions, macro drivers
-   - Recurring geographic events (florida_hurricanes, california_wildfires)
-   - Tradable sectors with geographic specificity
+   - Assets (use category="asset")
+   - Policy institutions (use category="policy")
+   - Macro drivers (use category="macro")
+   - Geographies (use category="geography")
+   - Companies (use category="company")
+   - Industry sectors (use category="industry_vertical")
 
 STRICT RULES:
-- "industry_vertical" = sectors/sub-sectors/operational niches (e.g., packaging, logistics, advertising, sterilized packaging).
-- If the topic is not clearly a macro driver, asset, policy, geography, or company, choose "ambiguous".
-- Be strict; quality over recall. If in doubt, do NOT place in macro/asset/policy/geography/company.
+- "industry_vertical" = sectors/sub-sectors/operational niches (e.g., packaging, logistics, advertising).
+- If the topic is not clearly macro, asset, policy, geography, company, or industry_vertical, choose "ambiguous".
+- Be strict; quality over recall. If in doubt, use "ambiguous" or "none".
 - Output STRICT JSON. NO arrays, NO extra fields, NO commentary.
+- ONLY use these exact category values: macro, asset, policy, geography, company, industry_vertical, ambiguous, none
 
 TOPIC CANDIDATE:
 - id: {topic_id}
@@ -42,7 +46,7 @@ ARTICLE SUMMARY (optional context):
 {summary}
 
 EXAMPLE OUTPUT:
-{{"motivation": "Rates policy anchor, impacts asset pricing.", "category": "macro_driver"}}
+{{"motivation": "Rates policy anchor, impacts asset pricing.", "category": "macro"}}
 
 YOUR RESPONSE (STRICT JSON ONLY):
 """

@@ -87,7 +87,7 @@ class SuggestLinkCall(BaseModel):
     tool: Literal["suggest_link"] = "suggest_link"
     source_topic: str
     target_topic: str
-    relationship_type: Literal["INFLUENCES", "CORRELATES_WITH", "PEERS"]
+    relationship_type: Literal["INFLUENCES", "CORRELATES_WITH", "PEERS", "COMPONENT_OF", "HEDGES"]
     reason: str
 
 

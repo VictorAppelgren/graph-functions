@@ -6,7 +6,7 @@ Runs the full analysis pipeline for all topics AND user strategies.
 Designed to run continuously on a dedicated writing server.
 
 Continuous loop priorities (--loop mode):
-1. Daily strategy analysis (6am) - uses COMPLEX tier (DeepSeek)
+1. Strategy analysis (6am + 2pm) - uses COMPLEX tier (DeepSeek)
 2. Topic rewrites when new Tier 3 articles exist - uses MEDIUM tier (120B)
 3. Exploration (risks/opportunities) - uses MEDIUM tier (120B, free via OpenRouter)
 
@@ -15,10 +15,21 @@ This keeps the system responsive to new articles while continuously improving
 risk/opportunity coverage.
 
 Usage:
-    python write_all.py              # Run all topics + strategies once
-    python write_all.py --loop       # Run continuously (recommended for Server 3)
-    python write_all.py --topic XYZ  # Run single topic only
-    python write_all.py --strategies # Run strategies only
+    python write_all.py                      # Run all topics + strategies once
+    python write_all.py --loop               # Run continuously (recommended for Server 3)
+    python write_all.py --topic XYZ          # Run single topic only
+    python write_all.py --strategies         # Run strategies only
+    python write_all.py --strategies-explore # Run strategies + exploration (skip topic rewrites)
+
+Quick Commands (copy-paste):
+    # Test strategies + exploration only (no topic rewrites):
+    cd graph-functions && python entrypoints/write_all.py --strategies-explore
+
+    # Force all strategies now (ignore timing):
+    cd graph-functions && python entrypoints/write_all.py --strategies
+
+    # Full continuous loop:
+    cd graph-functions && python entrypoints/write_all.py --loop
 """
 
 import sys
@@ -45,6 +56,7 @@ from src.graph.neo4j_client import run_cypher
 from src.config.worker_mode import get_mode_description
 from src.observability.stats_client import track
 from src.analysis.rewrite_policy import should_rewrite_topic
+from src.maintenance.orphan_cleanup import run_orphan_cleanup
 from utils import app_logging
 from dateutil import parser as date_parser
 
@@ -53,13 +65,18 @@ logger = app_logging.get_logger(__name__)
 # Track last strategy run date to ensure once-per-day at 6am
 _last_strategy_date = None
 
+# Track last orphan cleanup date (runs once per day at 3am)
+_last_orphan_cleanup_date = None
+
 
 def strategy_needs_update(username: str, strategy_id: str) -> tuple[bool, str]:
     """
     Check if strategy needs reanalysis.
 
-    A strategy needs update if ANY of its linked topics have been
-    analyzed more recently than the strategy's last analysis.
+    A strategy needs update if:
+    1. It has never been analyzed
+    2. It has no linked topics (needs topic discovery)
+    3. ANY of its linked topics have been analyzed more recently than the strategy
 
     This ensures strategy analysis reflects the latest topic insights.
 
@@ -91,11 +108,18 @@ def strategy_needs_update(username: str, strategy_id: str) -> tuple[bool, str]:
     # Get linked topics
     topics_data = get_strategy_topics(username, strategy_id)
     if not topics_data:
-        return False, "no_linked_topics"
+        # No topics mapped yet - trigger analysis which will discover topics
+        return True, "needs_topic_discovery"
 
-    topic_ids = topics_data.get("topics", [])
+    # Extract topic IDs from the correct structure: {primary: [], drivers: [], correlated: []}
+    topic_ids = []
+    topic_ids.extend(topics_data.get("primary", []))
+    topic_ids.extend(topics_data.get("drivers", []))
+    topic_ids.extend(topics_data.get("correlated", []))
+
     if not topic_ids:
-        return False, "no_linked_topics"
+        # Has topics structure but empty - trigger topic discovery
+        return True, "needs_topic_discovery"
 
     # Check if any linked topic has newer analysis via Neo4j
     query = """
@@ -355,45 +379,83 @@ def write_all_strategies() -> dict:
 
 def should_run_daily_strategies() -> bool:
     """
-    Check if we should run daily strategy analysis.
-    Returns True if it's after 6am AND we haven't run today yet.
+    Check if we should run strategy analysis.
+
+    Strategy analysis runs at:
+    - 6am: Morning run (before market open)
+    - 2pm (14:00): Afternoon run (after topics have been analyzed with new articles)
+
+    Returns True if we're at a run time AND haven't successfully analyzed today.
     """
     global _last_strategy_date
-    
+
     now = datetime.datetime.now()
     today = now.date()
-    
-    # Not yet 6am? Skip
-    if now.hour < 6:
+    current_hour = now.hour
+
+    # Only run at 6am or 2pm
+    if current_hour not in [6, 14]:
         return False
-    
-    # Already ran today? Skip
+
+    # Already ran successfully today? Skip
     if _last_strategy_date == today:
         return False
-    
-    # Check if any strategy needs analysis (wasn't analyzed after 6am today)
-    today_6am = datetime.datetime.combine(today, datetime.time(6, 0))
-    
+
+    # At valid run time and haven't successfully run today - check if any need update
     all_users = get_all_users()
     if not all_users:
         return False
-    
+
+    # Determine cutoff based on current run time
+    if current_hour == 6:
+        # Morning run: check if analyzed before today's 6am
+        cutoff = datetime.datetime.combine(today, datetime.time(6, 0))
+    else:
+        # Afternoon run: check if analyzed before today's 2pm
+        cutoff = datetime.datetime.combine(today, datetime.time(14, 0))
+
     for username in all_users:
         strategies = get_user_strategies(username)
         for strategy in strategies:
             last_analyzed = strategy.get("latest_analysis", {}).get("analyzed_at")
             if not last_analyzed:
                 return True
-            analyzed_time = date_parser.parse(last_analyzed)
-            # Make analyzed_time naive if it has timezone info
-            if analyzed_time.tzinfo is not None:
-                analyzed_time = analyzed_time.replace(tzinfo=None)
-            if analyzed_time < today_6am:
-                return True
-    
-    # All strategies already analyzed today
-    _last_strategy_date = today
+            try:
+                analyzed_time = date_parser.parse(last_analyzed)
+                if analyzed_time.tzinfo is not None:
+                    analyzed_time = analyzed_time.replace(tzinfo=None)
+                if analyzed_time < cutoff:
+                    return True
+            except Exception:
+                return True  # Can't parse = needs analysis
+
+    # All strategies already analyzed after cutoff
     return False
+
+
+def should_run_orphan_cleanup() -> bool:
+    """
+    Check if we should run orphan cleanup (once per day at 3am).
+
+    Returns True if:
+    - Current hour is 3 (3am)
+    - AND we haven't run successfully today
+    """
+    global _last_orphan_cleanup_date
+
+    now = datetime.datetime.now()
+    today = now.date()
+    current_hour = now.hour
+
+    # Only run at 3am
+    if current_hour != 3:
+        return False
+
+    # Already ran today?
+    if _last_orphan_cleanup_date == today:
+        return False
+
+    return True
 
 
 def find_topic_needing_rewrite() -> Optional[tuple[str, List[str]]]:
@@ -469,30 +531,43 @@ def run_continuous_loop(delay_between_cycles: int = 60):
     """
     Run continuously with interleaved priorities:
 
-    1. Daily strategy analysis (6am) - uses COMPLEX (DeepSeek)
+    1. Strategy analysis (6am + 2pm) - uses COMPLEX (DeepSeek)
     2. Topic rewrites when new Tier 3 articles exist - uses MEDIUM (120B)
     3. Exploration (risks/opportunities) - uses MEDIUM (120B, free via OpenRouter)
 
     The loop checks for writes after each exploration to stay responsive.
+
+    Strategy timing:
+    - 6am: Morning analysis before market open
+    - 2pm: Afternoon analysis after topics have been updated with new articles
+    - Only sets _last_strategy_date when at least one strategy is successfully analyzed
     """
     global _last_strategy_date
 
     logger.info("🔄 CONTINUOUS MODE - Write server running")
-    logger.info("   Priority 1: Daily strategy analysis (6am)")
+    logger.info("   Priority 1: Strategy analysis (6am + 2pm)")
     logger.info("   Priority 2: Topic rewrites (new Tier 3 articles)")
     logger.info("   Priority 3: Exploration (risks/opportunities)")
 
     while True:
         cycle_start = datetime.datetime.now()
 
-        # PRIORITY 1: Daily strategy analysis (6am)
+        # PRIORITY 1: Daily strategy analysis (6am and 2pm)
         if should_run_daily_strategies():
             logger.info(f"\n{'='*60}")
-            logger.info("🌅 6am strategy analysis triggered")
+            logger.info("🌅 Strategy analysis triggered")
             logger.info(f"{'='*60}")
             track("daily_strategy_analysis_started")
             strategy_stats = write_all_strategies()
-            _last_strategy_date = cycle_start.date()
+
+            # Only mark as "done for today" if at least one strategy was analyzed
+            # This prevents locking out strategies when all are skipped early in the day
+            if strategy_stats['success'] > 0:
+                _last_strategy_date = cycle_start.date()
+                logger.info(f"✅ Set _last_strategy_date to {_last_strategy_date} ({strategy_stats['success']} strategies analyzed)")
+            else:
+                logger.warning(f"⚠️ No strategies analyzed - NOT setting _last_strategy_date (will retry later)")
+
             track("daily_strategy_analysis_completed", f"{strategy_stats['success']}/{strategy_stats['total']}")
 
         # PRIORITY 2: Check for ONE topic that needs rewriting
@@ -507,28 +582,81 @@ def run_continuous_loop(delay_between_cycles: int = 60):
         # PRIORITY 3: Exploration (always runs, tries to find better risks/opportunities)
         run_one_exploration()
 
+        # PRIORITY 4: Daily orphan cleanup (once per day at 3am)
+        if should_run_orphan_cleanup():
+            global _last_orphan_cleanup_date
+            logger.info(f"\n{'='*60}")
+            logger.info("🧹 Running daily orphan cleanup")
+            logger.info(f"{'='*60}")
+            track("orphan_cleanup_started")
+            cleanup_stats = run_orphan_cleanup()
+            _last_orphan_cleanup_date = cycle_start.date()
+            track("orphan_cleanup_completed", f"matched={cleanup_stats['matched']},deleted={cleanup_stats['deleted']}")
+            logger.info(f"🧹 Orphan cleanup: matched={cleanup_stats['matched']}, deleted={cleanup_stats['deleted']}")
+
+
+def run_strategies_and_exploration():
+    """
+    Run strategies + exploration only (no topic rewrites).
+
+    Useful for testing/debugging strategy and exploration pipelines
+    without waiting for topic rewrites.
+    """
+    logger.info(f"{'='*60}")
+    logger.info("🎯 STRATEGIES + EXPLORATION MODE")
+    logger.info("   (Skipping topic rewrites)")
+    logger.info(f"{'='*60}")
+
+    # Step 1: Run all strategies
+    logger.info("\n📈 Step 1: Running strategy analysis...")
+    strategy_stats = write_all_strategies()
+
+    # Step 2: Run exploration for all strategies and topics
+    logger.info("\n🔍 Step 2: Running exploration...")
+    exploration_count = 0
+    max_explorations = 20  # Limit to avoid infinite loop
+
+    while exploration_count < max_explorations:
+        ran = run_one_exploration()
+        if not ran:
+            logger.info("   No more explorations to run")
+            break
+        exploration_count += 1
+        logger.info(f"   Completed exploration {exploration_count}/{max_explorations}")
+
+    logger.info(f"\n{'='*60}")
+    logger.info("✅ STRATEGIES + EXPLORATION COMPLETE")
+    logger.info(f"   Strategies analyzed: {strategy_stats['success']}")
+    logger.info(f"   Strategies skipped: {strategy_stats['skipped']}")
+    logger.info(f"   Explorations run: {exploration_count}")
+    logger.info(f"{'='*60}")
+
 
 def main():
     parser = argparse.ArgumentParser(description="Write all topic analyses and strategies")
     parser.add_argument("--topic", type=str, help="Run single topic instead of all")
     parser.add_argument("--strategies", action="store_true", help="Run strategies only")
+    parser.add_argument("--strategies-explore", action="store_true", help="Run strategies + exploration (skip topic rewrites)")
     parser.add_argument("--topics-only", action="store_true", help="Run topics only (no strategies)")
     parser.add_argument("--loop", action="store_true", help="Run continuously")
     parser.add_argument("--no-shuffle", action="store_true", help="Don't randomize topic order")
     parser.add_argument("--delay", type=int, default=60, help="Seconds between loops (default: 60)")
     parser.add_argument("--force", action="store_true", help="Force rewrite all topics (skip cooldown/new article checks)")
-    
+
     args = parser.parse_args()
-    
+
     # Log startup
     logger.info(f"🚀 WRITE ALL - Mode: {get_mode_description()}")
-    
+
     if args.topic:
         # Single topic mode
         write_single_topic(args.topic)
     elif args.strategies:
         # Strategies only
         write_all_strategies()
+    elif args.strategies_explore:
+        # Strategies + exploration (skip topic rewrites)
+        run_strategies_and_exploration()
     elif args.loop:
         # Continuous mode (Server 3)
         run_continuous_loop(delay_between_cycles=args.delay)

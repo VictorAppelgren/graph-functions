@@ -14,7 +14,7 @@ while not os.path.exists(os.path.join(PROJECT_ROOT, "main.py")) and PROJECT_ROOT
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from src.llm.llm_router import get_llm
 from src.llm.config import ModelTier
 from src.llm.sanitizer import run_llm_decision
@@ -27,52 +27,71 @@ logger = app_logging.get_logger(__name__)
 llm = get_llm(ModelTier.SIMPLE)
 
 ENHANCED_TICKER_RESOLUTION_PROMPT = PromptTemplate.from_template("""
-Determine if this topic has tradeable market data and resolve the Yahoo Finance ticker if appropriate.
+Determine if this topic has tradeable market data and resolve tickers for multiple providers.
 
 Topic Name: {topic_name}
 Topic Type: {topic_type}
 
 IMPORTANT: Some topics are concepts, events, or abstract ideas that do NOT have market data.
 
-Return JSON with EXACT fields (no extra fields, no missing fields):
+Return JSON with EXACT fields:
 {{
     "topic_name": "{topic_name}",
-    "resolved_ticker": "EXACT_YAHOO_SYMBOL_OR_NULL",
-    "asset_class": "stock|fx|rate|commodity|index|unknown", 
+    "resolved_ticker": "YAHOO_SYMBOL_OR_NULL",
+    "fred_id": "FRED_SERIES_ID_OR_NULL",
+    "stooq_ticker": "STOOQ_TICKER_OR_NULL",
+    "asset_class": "stock|fx|rate|commodity|index|unknown",
     "confidence": 0.0-1.0,
     "reason": "ticker_found|no_market_data|uncertain",
     "motivation": "brief explanation"
 }}
 
-RULES:
-1. If topic is a tradeable asset/instrument -> return ticker with reason="ticker_found"
-2. If topic is abstract/conceptual/event -> return null ticker with reason="no_market_data" 
-3. If uncertain -> return null ticker with reason="uncertain"
+PROVIDER FORMATS:
 
-Yahoo Finance Symbol Format:
-- Stocks: "AAPL", "MSFT", "TSLA"
-- FX Pairs: "EURUSD=X", "GBPUSD=X", "USDJPY=X" 
-- Rates/Bonds: "^TNX" (10Y), "^FVX" (5Y), "^IRX" (3M)
-- Indices: "^GSPC" (S&P 500), "^DJI" (Dow), "^IXIC" (Nasdaq)
-- Commodities: "GC=F" (Gold), "CL=F" (Oil), "SI=F" (Silver)
+Yahoo Finance:
+- Stocks: "AAPL", "MSFT"
+- FX: "EURUSD=X", "GBPUSD=X"
+- Rates: "^TNX" (10Y), "^FVX" (5Y)
+- Indices: "^GSPC", "^DJI"
+- Commodities: "GC=F" (Gold), "CL=F" (Oil)
+
+FRED (Federal Reserve Economic Data) - BEST for US rates:
+- SOFR: "SOFR"
+- Fed Funds: "DFF" or "FEDFUNDS"
+- 10Y Treasury: "DGS10"
+- 2Y Treasury: "DGS2"
+- 3M T-Bill: "DTB3"
+- Mortgage rates: "MORTGAGE30US"
+- CPI: "CPIAUCSL"
+- Unemployment: "UNRATE"
+
+Stooq - Good for European rates & indices:
+- EURIBOR: "EURIBOR3M.B"
+- STIBOR: Not available
+- Indices: "^SPX", "^DAX"
+- FX: "EURUSD", "GBPUSD"
+
+RULES:
+1. Provide ALL applicable tickers (Yahoo, FRED, Stooq) when available
+2. For US rates/economic data -> always include fred_id
+3. If topic is abstract/conceptual -> return all tickers as null
+4. If Yahoo unavailable but FRED/Stooq works -> still provide those
 
 EXAMPLES:
 
-Input: "Apple Inc"
-Output: {{"topic_name": "Apple Inc", "resolved_ticker": "AAPL", "asset_class": "stock", "confidence": 1.0, "reason": "ticker_found", "motivation": "Direct stock symbol"}}
+Input: "SOFR"
+Output: {{"topic_name": "SOFR", "resolved_ticker": null, "fred_id": "SOFR", "stooq_ticker": null, "asset_class": "rate", "confidence": 1.0, "reason": "ticker_found", "motivation": "SOFR available on FRED, not Yahoo"}}
 
-Input: "EUR/USD" 
-Output: {{"topic_name": "EUR/USD", "resolved_ticker": "EURUSD=X", "asset_class": "fx", "confidence": 1.0, "reason": "ticker_found", "motivation": "Yahoo FX format"}}
+Input: "10Y Treasury"
+Output: {{"topic_name": "10Y Treasury", "resolved_ticker": "^TNX", "fred_id": "DGS10", "stooq_ticker": null, "asset_class": "rate", "confidence": 1.0, "reason": "ticker_found", "motivation": "Available on both Yahoo and FRED"}}
+
+Input: "EUR/USD"
+Output: {{"topic_name": "EUR/USD", "resolved_ticker": "EURUSD=X", "fred_id": null, "stooq_ticker": "EURUSD", "asset_class": "fx", "confidence": 1.0, "reason": "ticker_found", "motivation": "FX pair available on Yahoo and Stooq"}}
 
 Input: "Fed Policy"
-Output: {{"topic_name": "Fed Policy", "resolved_ticker": null, "asset_class": "unknown", "confidence": 0.95, "reason": "no_market_data", "motivation": "Abstract policy concept, not tradeable"}}
+Output: {{"topic_name": "Fed Policy", "resolved_ticker": null, "fred_id": null, "stooq_ticker": null, "asset_class": "unknown", "confidence": 0.95, "reason": "no_market_data", "motivation": "Abstract policy concept"}}
 
-Input: "EU Defense Spending"
-Output: {{"topic_name": "EU Defense Spending", "resolved_ticker": null, "asset_class": "unknown", "confidence": 0.90, "reason": "no_market_data", "motivation": "Economic concept, not a specific tradeable asset"}}
-
-Input: "China Credit Impulse"
-Output: {{"topic_name": "China Credit Impulse", "resolved_ticker": null, "asset_class": "unknown", "confidence": 0.85, "reason": "no_market_data", "motivation": "Economic indicator, not directly tradeable"}}
-
+RESPOND WITH ONLY VALID JSON. NO EXPLANATION.
 JSON:
 """)
 

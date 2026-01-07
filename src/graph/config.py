@@ -3,7 +3,8 @@ import os
 from typing import Any
 
 # Daily limit for new topic creation (controlled graph growth)
-DAILY_TOPIC_LIMIT: int = 2
+# Increased from 2 to 4 for faster topic universe expansion
+DAILY_TOPIC_LIMIT: int = 4
 
 # Human-readable scope with market-based granularity.
 # Granularity: Nordics/US/EU/UK (high) > China/Japan/Korea/India (medium) > Africa/South America/Emerging Asia (low)
