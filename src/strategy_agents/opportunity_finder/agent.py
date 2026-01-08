@@ -86,9 +86,10 @@ class OpportunityFinderAgent(BaseStrategyAgent):
         # Log input summary
         self._log_input_summary(material_package, topic_analyses, market_context)
         
-        # Get articles reference and relationship context from material package
+        # Get articles reference, relationship context, and findings from material package
         articles_reference = material_package.get("articles_reference", "No referenced articles available.")
         relationship_context = material_package.get("relationship_context", "No topic relationships available.")
+        findings_context = material_package.get("findings_context", "No exploration findings available yet.")
 
         # Build prompt
         prompt = OPPORTUNITY_FINDER_PROMPT.format(
@@ -99,6 +100,7 @@ class OpportunityFinderAgent(BaseStrategyAgent):
             position_text=material_package["position_text"],
             topic_analyses=topic_analyses,
             relationship_context=relationship_context,
+            findings_context=findings_context,
             articles_reference=articles_reference,
             market_context=market_context,
             citation_rules=SHARED_CITATION_AND_METHODOLOGY,

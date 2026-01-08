@@ -55,6 +55,12 @@ Use these relationships to identify opportunities:
 - Peer arbitrage (A PEERS B → relative value between substitutes)
 - Component plays (A COMPONENT_OF B → index vs constituent divergence)
 
+AI-DISCOVERED RISKS & OPPORTUNITIES (from graph exploration):
+{findings_context}
+
+These findings were discovered by AI exploring causal chains in the knowledge graph.
+Incorporate relevant opportunities into your analysis. Reference finding IDs (e.g., O_ABC123XY) when citing.
+
 REFERENCED ARTICLES (source material for citations):
 {articles_reference}
 

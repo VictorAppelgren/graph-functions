@@ -50,7 +50,7 @@ load_env()
 from typing import Optional, List
 from src.graph.ops.topic import get_all_topics
 from src.analysis_agents.orchestrator import analysis_rewriter_with_agents
-from src.strategy_agents.orchestrator import analyze_user_strategy
+from src.strategy_agents.orchestrator import analyze_user_strategy, run_strategy_exploration
 from src.api.backend_client import get_user_strategies, get_all_users, get_strategy, get_strategy_topics
 from src.graph.neo4j_client import run_cypher
 from src.config.worker_mode import get_mode_description
@@ -92,7 +92,7 @@ def strategy_needs_update(username: str, strategy_id: str) -> tuple[bool, str]:
     if not strategy:
         return False, "strategy_not_found"
 
-    strategy_last_analyzed = strategy.get("latest_analysis", {}).get("analyzed_at")
+    strategy_last_analyzed = (strategy.get("latest_analysis") or {}).get("analyzed_at")
     if not strategy_last_analyzed:
         return True, "never_analyzed"
 
@@ -187,33 +187,7 @@ def run_topic_exploration(topic_id: str) -> None:
                 track("exploration_failed", f"{topic_id}:{mode}")
 
 
-def run_strategy_exploration(username: str, strategy_id: str) -> None:
-    """
-    Ensure strategy has 3 risks and 3 opportunities.
-
-    - If < 3 findings: run exploration until we have 3
-    - If already 3: run once to potentially improve/refresh
-    """
-    from src.api.backend_client import get_strategy_findings
-    from src.exploration_agent.orchestrator import explore_strategy
-
-    for mode in ["risk", "opportunity"]:
-        existing = get_strategy_findings(username, strategy_id, mode)
-        count = len(existing)
-
-        # Run 3 times if < 3, otherwise run 1 time to refresh
-        runs = 3 - count if count < 3 else 1
-
-        logger.info(f"🔍 {username}/{strategy_id}: {count} {mode}s exist, running {runs} exploration(s)")
-
-        for i in range(runs):
-            try:
-                logger.info(f"   🔍 Explore {username}/{strategy_id} {mode} ({i+1}/{runs})")
-                explore_strategy(username, strategy_id, mode)
-                track("exploration_completed", f"{username}/{strategy_id}:{mode}")
-            except Exception as e:
-                logger.warning(f"   ⚠️ Exploration failed for {username}/{strategy_id} {mode}: {e}")
-                track("exploration_failed", f"{username}/{strategy_id}:{mode}")
+# run_strategy_exploration is now imported from src.strategy_agents.orchestrator
 
 
 def write_single_topic(topic_id: str, new_article_ids: Optional[List[str]] = None) -> bool:
@@ -477,54 +451,129 @@ def find_topic_needing_rewrite() -> Optional[tuple[str, List[str]]]:
     return None
 
 
-def run_one_exploration() -> bool:
+def run_batch_explorations(max_explorations: int = 5) -> int:
     """
-    Run ONE exploration (risk or opportunity) for ONE strategy or topic.
-    Strategies are prioritized (user-facing).
+    Run multiple explorations per cycle with smart prioritization.
 
-    Returns True if exploration was run, False if nothing to explore.
+    Priority system:
+    - 0 findings: 3 exploration runs (critical - needs discovery)
+    - 1-2 findings: 2 exploration runs (incomplete - needs more)
+    - 3 findings: 1 exploration run (complete - refresh only)
+
+    Strategies are prioritized over topics (user-facing).
+
+    Returns number of explorations completed.
     """
     from src.exploration_agent.orchestrator import explore_topic, explore_strategy
     from src.api.backend_client import get_strategy_findings
     from src.graph.ops.topic_findings import get_topic_findings
 
-    # Priority 1: Strategies (user-facing)
+    completed = 0
+
+    # Build priority queue for strategies
+    # Format: [(username, strategy_id, mode, priority), ...]
+    # Priority: 3 = critical (0 findings), 2 = incomplete (<3), 1 = refresh (3)
+    strategy_queue = []
     all_users = get_all_users()
-    all_strategies = []
+
     for username in all_users:
         for strategy in get_user_strategies(username):
-            all_strategies.append((username, strategy['id']))
+            strategy_id = strategy['id']
+            for mode in ["risk", "opportunity"]:
+                try:
+                    findings = get_strategy_findings(username, strategy_id, mode)
+                    count = len(findings) if findings else 0
+                    if count == 0:
+                        priority = 3  # Critical - no findings
+                    elif count < 3:
+                        priority = 2  # Incomplete
+                    else:
+                        priority = 1  # Refresh only
+                    strategy_queue.append((username, strategy_id, mode, priority, count))
+                except Exception:
+                    # If we can't check, assume it needs exploration
+                    strategy_queue.append((username, strategy_id, mode, 3, 0))
 
-    random.shuffle(all_strategies)  # Randomize for balanced coverage
+    # Sort by priority (highest first), then shuffle within same priority
+    strategy_queue.sort(key=lambda x: -x[3])
 
-    for username, strategy_id in all_strategies:
-        for mode in ["risk", "opportunity"]:
-            try:
-                logger.info(f"🔍 Exploring {mode} for strategy {username}/{strategy_id}")
-                explore_strategy(username, strategy_id, mode)
-                track("exploration_completed", f"{username}/{strategy_id}:{mode}")
-                return True
-            except Exception as e:
-                logger.warning(f"⚠️ Exploration failed for {username}/{strategy_id} {mode}: {e}")
-                track("exploration_failed", f"{username}/{strategy_id}:{mode}")
-
-    # Priority 2: Topics
+    # Build priority queue for topics
+    topic_queue = []
     all_topics = get_all_topics(fields=["id"])
-    random.shuffle(all_topics)
 
     for topic in all_topics:
         topic_id = topic["id"]
         for mode in ["risk", "opportunity"]:
             try:
-                logger.info(f"🔍 Exploring {mode} for topic {topic_id}")
+                findings = get_topic_findings(topic_id, mode)
+                count = len(findings) if findings else 0
+                if count == 0:
+                    priority = 3
+                elif count < 3:
+                    priority = 2
+                else:
+                    priority = 1
+                topic_queue.append((topic_id, mode, priority, count))
+            except Exception:
+                topic_queue.append((topic_id, mode, 3, 0))
+
+    topic_queue.sort(key=lambda x: -x[3])
+
+    # Log queue status
+    strat_critical = sum(1 for x in strategy_queue if x[3] == 3)
+    strat_incomplete = sum(1 for x in strategy_queue if x[3] == 2)
+    topic_critical = sum(1 for x in topic_queue if x[3] == 3)
+    topic_incomplete = sum(1 for x in topic_queue if x[3] == 2)
+
+    logger.info(f"🔍 Exploration queue: Strategies [{strat_critical} critical, {strat_incomplete} incomplete] | Topics [{topic_critical} critical, {topic_incomplete} incomplete]")
+
+    # Process strategies first (user-facing priority)
+    for username, strategy_id, mode, priority, count in strategy_queue:
+        if completed >= max_explorations:
+            break
+
+        # Run more explorations for higher priority items
+        runs = 3 if priority == 3 else (2 if priority == 2 else 1)
+        runs = min(runs, max_explorations - completed)  # Don't exceed max
+
+        for i in range(runs):
+            try:
+                logger.info(f"🔍 Strategy {username}/{strategy_id} {mode} (priority={priority}, has={count}, run {i+1}/{runs})")
+                explore_strategy(username, strategy_id, mode)
+                track("exploration_completed", f"{username}/{strategy_id}:{mode}")
+                completed += 1
+            except Exception as e:
+                logger.warning(f"⚠️ Exploration failed for {username}/{strategy_id} {mode}: {e}")
+                track("exploration_failed", f"{username}/{strategy_id}:{mode}")
+                break  # Move to next item on failure
+
+    # Then process topics
+    for topic_id, mode, priority, count in topic_queue:
+        if completed >= max_explorations:
+            break
+
+        runs = 3 if priority == 3 else (2 if priority == 2 else 1)
+        runs = min(runs, max_explorations - completed)
+
+        for i in range(runs):
+            try:
+                logger.info(f"🔍 Topic {topic_id} {mode} (priority={priority}, has={count}, run {i+1}/{runs})")
                 explore_topic(topic_id, mode)
                 track("exploration_completed", f"{topic_id}:{mode}")
-                return True
+                completed += 1
             except Exception as e:
                 logger.warning(f"⚠️ Exploration failed for {topic_id} {mode}: {e}")
                 track("exploration_failed", f"{topic_id}:{mode}")
+                break
 
-    return False
+    logger.info(f"✅ Completed {completed}/{max_explorations} explorations this cycle")
+    return completed
+
+
+# Keep old function for backwards compatibility
+def run_one_exploration() -> bool:
+    """Legacy wrapper - runs batch with max=1."""
+    return run_batch_explorations(max_explorations=1) > 0
 
 
 def run_continuous_loop(delay_between_cycles: int = 60):
@@ -579,8 +628,8 @@ def run_continuous_loop(delay_between_cycles: int = 60):
             logger.info(f"{'='*60}")
             write_single_topic(topic_id, new_article_ids=new_article_ids)
 
-        # PRIORITY 3: Exploration (always runs, tries to find better risks/opportunities)
-        run_one_exploration()
+        # PRIORITY 3: Exploration (batch of 5, with smart prioritization)
+        run_batch_explorations(max_explorations=5)
 
         # PRIORITY 4: Daily orphan cleanup (once per day at 3am)
         if should_run_orphan_cleanup():

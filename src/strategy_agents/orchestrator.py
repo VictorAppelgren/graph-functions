@@ -345,8 +345,40 @@ def analyze_user_strategy(
     
     # Track completion
     track("strategy_analysis_completed", f"{username}/{strategy_id}")
-    
+
     return results
+
+
+def run_strategy_exploration(username: str, strategy_id: str) -> None:
+    """
+    Fill strategy with 3 risks and 3 opportunities.
+
+    - If < 3 findings exist: run exploration until we have 3
+    - If already 3: run once to potentially refresh
+
+    Called by:
+    - graph_api.py on strategy create/update (immediate fill)
+    - write_all.py in scheduled loop (refresh existing)
+    """
+    from src.api.backend_client import get_strategy_findings
+    from src.exploration_agent.orchestrator import explore_strategy
+    from src.observability.stats_client import track
+
+    for mode in ["risk", "opportunity"]:
+        existing = get_strategy_findings(username, strategy_id, mode)
+        count = len(existing)
+        runs = 3 - count if count < 3 else 1
+
+        logger.info(f"🔍 {username}/{strategy_id}: {count} {mode}s exist, running {runs} exploration(s)")
+
+        for i in range(runs):
+            try:
+                logger.info(f"   🔍 Explore {mode} ({i+1}/{runs})")
+                explore_strategy(username, strategy_id, mode)
+                track("exploration_completed", f"{username}/{strategy_id}:{mode}")
+            except Exception as e:
+                logger.warning(f"   ⚠️ Exploration failed for {mode}: {e}")
+                track("exploration_failed", f"{username}/{strategy_id}:{mode}")
 
 
 def analyze_all_user_strategies() -> None:

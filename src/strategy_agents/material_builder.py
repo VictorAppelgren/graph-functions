@@ -114,6 +114,16 @@ def build_material_package(
     rel_count = sum(len(rels) for rels in topic_relationships.values())
     logger.info(f"🔗 Fetched {rel_count} relationships between {len(topic_relationships)} topics")
 
+    # Fetch exploration findings (risks/opportunities) for all topics
+    topic_findings = _fetch_topic_findings(all_topic_ids)
+    findings_context_str = _build_findings_context(topic_findings, topics)
+
+    findings_count = sum(
+        len(f.get("risks", [])) + len(f.get("opportunities", []))
+        for f in topic_findings.values()
+    )
+    logger.info(f"🔍 Fetched {findings_count} exploration findings across {len(topic_findings)} topics")
+
     return {
         "user_strategy": user_strategy,
         "position_text": position_text,
@@ -129,6 +139,9 @@ def build_material_package(
         # Topic relationship context for causal/correlation/hedge analysis
         "topic_relationships": topic_relationships,
         "relationship_context": relationship_context_str,
+        # Exploration findings (AI-discovered risks and opportunities)
+        "topic_findings": topic_findings,
+        "findings_context": findings_context_str,
     }
 
 
@@ -413,3 +426,92 @@ def _build_relationship_context(relationships: Dict[str, List[Dict]], topics: Di
         lines.append("")
 
     return "\n".join(lines) if len(lines) > 1 else "No topic relationships available."
+
+
+def _fetch_topic_findings(topic_ids: Set[str]) -> Dict[str, Dict]:
+    """
+    Fetch exploration findings (risks and opportunities) for all topics.
+
+    Returns dict of topic_id -> {risks: [...], opportunities: [...]}
+    Each finding includes its ID for reference (e.g., R_ABC123XY).
+    """
+    from src.graph.ops.topic_findings import get_topic_findings
+
+    findings = {}
+    for topic_id in topic_ids:
+        try:
+            risks = get_topic_findings(topic_id, "risk")
+            opportunities = get_topic_findings(topic_id, "opportunity")
+
+            if risks or opportunities:
+                findings[topic_id] = {
+                    "risks": risks or [],
+                    "opportunities": opportunities or []
+                }
+        except Exception as e:
+            logger.debug(f"Could not fetch findings for {topic_id}: {e}")
+
+    return findings
+
+
+def _build_findings_context(findings: Dict[str, Dict], topics: Dict[str, Dict]) -> str:
+    """
+    Build human-readable findings context for strategy agent prompts.
+
+    Format includes finding IDs for reference (clickable in UI):
+    === AI-DISCOVERED RISKS & OPPORTUNITIES ===
+
+    EURUSD:
+      🚨 RISK (R_ABC123XY): Dollar liquidity squeeze risk
+         Path: Fed QT → Treasury yields → Bank reserves → USD funding
+         Confidence: high
+
+      💡 OPPORTUNITY (O_XYZ789AB): ECB hawkish pivot benefit
+         Path: Inflation data → ECB signaling → Rate expectations
+         Confidence: medium
+    """
+    if not findings:
+        return "No exploration findings available yet."
+
+    lines = ["=== AI-DISCOVERED RISKS & OPPORTUNITIES (from graph exploration) ===\n"]
+    lines.append("These findings were discovered by exploring causal chains in the knowledge graph.")
+    lines.append("Reference IDs (e.g., R_ABC123XY) can be cited in your analysis.\n")
+
+    for topic_id, data in findings.items():
+        topic_name = topics.get(topic_id, {}).get("name", topic_id.upper())
+        has_content = data.get("risks") or data.get("opportunities")
+
+        if not has_content:
+            continue
+
+        lines.append(f"{topic_name}:")
+
+        # Risks
+        for risk in data.get("risks", []):
+            finding_id = risk.get("id", "")
+            headline = risk.get("headline", "Unknown risk")
+            flow_path = risk.get("flow_path", "")
+            confidence = risk.get("confidence", "unknown")
+
+            lines.append(f"  🚨 RISK ({finding_id}): {headline}")
+            if flow_path:
+                lines.append(f"     Path: {flow_path}")
+            lines.append(f"     Confidence: {confidence}")
+            lines.append("")
+
+        # Opportunities
+        for opp in data.get("opportunities", []):
+            finding_id = opp.get("id", "")
+            headline = opp.get("headline", "Unknown opportunity")
+            flow_path = opp.get("flow_path", "")
+            confidence = opp.get("confidence", "unknown")
+
+            lines.append(f"  💡 OPPORTUNITY ({finding_id}): {headline}")
+            if flow_path:
+                lines.append(f"     Path: {flow_path}")
+            lines.append(f"     Confidence: {confidence}")
+            lines.append("")
+
+        lines.append("")
+
+    return "\n".join(lines) if len(lines) > 3 else "No exploration findings available yet."

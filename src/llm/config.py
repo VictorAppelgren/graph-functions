@@ -73,6 +73,13 @@ DB_RETRY_DELAY = 0.1
 OPENROUTER_MIN_DELAY_S = 4.0  # Minimum seconds between OpenRouter calls
 _openrouter_last_call: float = 0.0  # Timestamp of last OpenRouter call
 
+# Paid 20B cooldown (prevent overspending on SIMPLE tier fallback)
+# At $0.03/M input + $0.14/M output, typical short calls ~$0.00001-0.0001 each
+# 5000 calls/day ~= $0.05-0.50/day max (most calls are very short)
+PAID_20B_DAILY_LIMIT = 5000  # Max calls per day to paid 20B
+_paid_20b_calls_today: int = 0
+_paid_20b_reset_date: str = ""  # ISO date string for reset tracking
+
 # OpenRouter upstream rate limit backoff (when the free model is overloaded globally)
 # Waits: 1m → 5m → 15m → 60m → 60m... (keeps trying hourly for 24/7 operation)
 OPENROUTER_UPSTREAM_BACKOFF_S = [60, 300, 900, 3600, 3600, 3600, 3600, 3600]
@@ -144,8 +151,16 @@ if not LOCAL_LLM_ONLY:
             'model': 'openai/gpt-oss-20b',
             'temperature': 0.2,
         },
+        # Paid 20B fallback via OpenRouter (DeepInfra: $0.03/M input, $0.14/M output)
+        'external_20b_paid': {
+            'provider': 'openai',
+            'base_url': 'https://openrouter.ai/api/v1',
+            'model': 'openai/gpt-oss-20b',  # Non-free version
+            'temperature': 0.2,
+        },
     })
     _init_logger.info("LLM CONFIG: Added external_a, external_b (20B vLLM on :8686, :8787)")
+    _init_logger.info("LLM CONFIG: Added external_20b_paid (20B via DeepInfra, $0.03/M)")
 
     # --- MEDIUM tier server (120B model via OpenRouter) ---
     # Local 120B server (commented out - boss using the server)
@@ -212,6 +227,35 @@ db_lock = Lock()
 def estimate_tokens(text: str) -> int:
     """Estimate token count using word-based heuristic."""
     return int(len(text.split()) * 1.3)
+
+
+def _check_paid_20b_cooldown() -> bool:
+    """Check if we can use paid 20B (under daily limit).
+
+    Returns True if under limit and increments counter.
+    Returns False if limit reached (don't use paid 20B).
+    """
+    global _paid_20b_calls_today, _paid_20b_reset_date
+
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # Reset counter at midnight
+    if _paid_20b_reset_date != today:
+        _paid_20b_calls_today = 0
+        _paid_20b_reset_date = today
+        logger.info(f"🔄 Paid 20B daily counter reset for {today}")
+
+    # Check limit
+    if _paid_20b_calls_today >= PAID_20B_DAILY_LIMIT:
+        logger.warning(f"⚠️  Paid 20B daily limit reached ({_paid_20b_calls_today}/{PAID_20B_DAILY_LIMIT})")
+        return False
+
+    # Increment and allow
+    _paid_20b_calls_today += 1
+    if _paid_20b_calls_today % 50 == 0:  # Log every 50 calls
+        logger.info(f"💰 Paid 20B usage: {_paid_20b_calls_today}/{PAID_20B_DAILY_LIMIT} calls today")
+
+    return True
 
 
 class RouterDB:
@@ -589,12 +633,28 @@ def _route_request(tier: ModelTier, estimated_tokens: int = 0, exclude: set[str]
         return _route_request(ModelTier.SIMPLE, estimated_tokens, exclude)
 
     # --- SIMPLE tier: 20B models with load balancing ---
+    # Fallback chain: local → external_a → external_b → external_20b_paid (with cooldown)
     if tier in (ModelTier.SIMPLE, ModelTier.SIMPLE_LONG_CONTEXT):
         if estimated_tokens > TOKEN_THRESHOLD:
             server_id = router_db.get_next_external_smart(exclude=exclude)
             logger.debug(f"SIMPLE → {server_id} (tokens={estimated_tokens} > {TOKEN_THRESHOLD})")
             return server_id
-        return router_db.get_next_any_server()
+
+        # Try free servers first
+        free_server = router_db.get_next_any_server()
+
+        # If all free servers have been tried (in exclude set), fall back to paid 20B
+        free_servers = {'local', 'external_a', 'external_b'} & set(SERVERS.keys())
+        if free_servers and free_servers.issubset(exclude):
+            # All free servers failed - try paid 20B if under cooldown limit
+            if 'external_20b_paid' in SERVERS and 'external_20b_paid' not in exclude:
+                if _check_paid_20b_cooldown():
+                    logger.info(f"SIMPLE → external_20b_paid (all free servers exhausted)")
+                    return 'external_20b_paid'
+                else:
+                    logger.warning(f"SIMPLE: All free servers exhausted, paid 20B at daily limit")
+
+        return free_server
 
     raise ValueError(f"Unknown tier: {tier}")
 

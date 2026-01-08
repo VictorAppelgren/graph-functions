@@ -383,17 +383,35 @@ def trigger_strategy_analysis(request: Dict[str, str]):
     
     # Run in background thread (non-blocking)
     import threading
-    from src.strategy_agents.orchestrator import analyze_user_strategy
-    
-    def run_analysis():
+    from src.strategy_agents.orchestrator import analyze_user_strategy, run_strategy_exploration
+
+    def run_full_analysis():
+        """
+        Full strategy analysis pipeline:
+        1. Initial analysis (topic mapping + risk/opportunity assessment)
+        2. Fill findings (3 risks + 3 opportunities via exploration)
+        3. Final analysis with findings as context
+        """
         try:
+            # Step 1: Initial analysis
+            print(f"📊 Step 1/3: Running initial analysis for {username}/{strategy_id}")
             analyze_user_strategy(username, strategy_id)
+
+            # Step 2: Fill up risks and opportunities (3 each)
+            print(f"🔍 Step 2/3: Running exploration for {username}/{strategy_id}")
+            run_strategy_exploration(username, strategy_id)
+
+            # Step 3: Re-run analysis with findings as context
+            print(f"📝 Step 3/3: Running final analysis for {username}/{strategy_id}")
+            analyze_user_strategy(username, strategy_id)
+
+            print(f"✅ Full analysis complete for {username}/{strategy_id}")
         except Exception as e:
             print(f"❌ Strategy analysis failed for {username}/{strategy_id}: {e}")
-    
-    thread = threading.Thread(target=run_analysis, daemon=True)
+
+    thread = threading.Thread(target=run_full_analysis, daemon=True)
     thread.start()
-    
+
     return {"status": "triggered", "username": username, "strategy_id": strategy_id}
 
 
@@ -692,6 +710,55 @@ def delete_topic(topic_id: str):
     run_cypher(delete_query, {"id": topic_id})
 
     return {"deleted": True, "topic": topic_info}
+
+
+# ============ FINDING LOOKUP ============
+
+@app.get("/findings/{finding_id}")
+def get_finding_by_id(finding_id: str):
+    """
+    Get a finding by its unique ID.
+
+    Finding IDs:
+    - R_XXXXXXXXX = Risk finding
+    - O_XXXXXXXXX = Opportunity finding
+
+    Returns the finding with topic context.
+    """
+    from src.graph.ops.topic_findings import get_finding_by_id as lookup_finding
+
+    # Validate format
+    if not finding_id or len(finding_id) != 11:
+        raise HTTPException(status_code=400, detail="Invalid finding ID format")
+
+    if not finding_id.startswith("R_") and not finding_id.startswith("O_"):
+        raise HTTPException(status_code=400, detail="Finding ID must start with R_ or O_")
+
+    finding = lookup_finding(finding_id)
+
+    if not finding:
+        raise HTTPException(status_code=404, detail=f"Finding {finding_id} not found")
+
+    # Get topic name for context
+    topic_id = finding.get("topic_id")
+    topic_name = topic_id
+    if topic_id:
+        topic = get_topic_by_id(topic_id)
+        if topic:
+            topic_name = topic.get("name", topic_id)
+
+    return {
+        "id": finding_id,
+        "mode": finding.get("mode", "risk" if finding_id.startswith("R_") else "opportunity"),
+        "topic_id": topic_id,
+        "topic_name": topic_name,
+        "headline": finding.get("headline", ""),
+        "rationale": finding.get("rationale", ""),
+        "flow_path": finding.get("flow_path", ""),
+        "evidence": finding.get("evidence", []),
+        "confidence": finding.get("confidence", ""),
+        "saved_at": finding.get("saved_at", ""),
+    }
 
 
 # ============ HEALTH ============
